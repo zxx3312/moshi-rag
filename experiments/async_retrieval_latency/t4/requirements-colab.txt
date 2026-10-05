@@ -1,0 +1,19 @@
+# Pinned to the versions this code was checked with on the campus cluster (Python 3.12).
+# Web-server-only packages from moshi/pyproject.toml (gradio, fastapi, uvicorn, sounddevice, msgpack) are left out.
+torch==2.9.1
+xformers==0.0.33.post2      # only used by precompute_reference_embeddings.py (ARC encoder)
+transformers==4.55.3        # only used by precompute_reference_embeddings.py (Llama tokenizer)
+bitsandbytes==0.49.2
+sphn==0.2.1
+sentencepiece==0.2.2
+safetensors==0.7.0
+huggingface-hub==0.36.2
+einops==0.8.2
+numpy==2.2.6
+tqdm==4.70.1
+# Imported by moshi.server / moshi.inference_utils even though the sweep does not use them:
+aiohttp==3.11.18
+httpx==0.28.1
+openai==3.24.0
+websockets==17.2
+gradium==0.6.4
