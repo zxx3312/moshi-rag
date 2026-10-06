@@ -125,6 +125,10 @@ def build_encoder(hf_repo: str, device: str, autocast: str, weights_dtype: str):
     if left_on_meta:
         raise RuntimeError(f"encoder tensors not loaded: {left_on_meta[:10]}")
     logger.info("ARC weights assigned (%d unexpected keys ignored)", len(result.unexpected_keys))
+    # Inference only. With requires_grad=True, autocast caches a low-precision copy of every
+    # weight for the whole forward pass (+6 GB for this encoder), which does not fit on a T4.
+    # The cache only avoids recasting, so the computed values are the same either way.
+    cond.requires_grad_(False)
 
     provider = ConditionProvider({CONDITIONER: cond}, device=device)
     fuser = loaders.get_condition_fuser(lm_config)

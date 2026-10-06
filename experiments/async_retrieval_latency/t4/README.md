@@ -93,6 +93,22 @@ python $EXP/analysis/analyze_latency.py $RESULTS/step3_small
 Add `--dry-run` to any of them first: it checks the WAVs, the embedding cache, the resume state and
 the plan, without importing torch.
 
+### Hard-question pilot (notebook section 10)
+
+`configs/samples_hard_pilot.jsonl` (in the parent `configs/`, usable by the A100 runner too) has 12 questions
+from OpenAI's SimpleQA test set (MIT license), questions a 7B model is unlikely to know. They were chosen by
+`scripts/build_simpleqa_pilot.py`: Person/Place answers only (so the answer-string heuristic works), short
+TTS-friendly questions, then a fixed-seed sample (seed 20261006), with no hand-picking. Each reference only
+restates the question and its SimpleQA gold answer, with years spelled out.
+
+```bash
+python $EXP/t4/run_latency_sweep_t4.py --manifest $EXP/configs/samples_hard_pilot.jsonl --run-name pilot_hard $ARGS
+python $EXP/analysis/export_annotation_sheet.py $RESULTS/pilot_hard   # CSV for manual labels
+```
+
+Limitations: Person/Place questions only; synthetic TTS voice; SimpleQA gold answers are not
+error-free (the dataset reports a small label-noise rate).
+
 ### Resume
 
 - Results are appended to `results.jsonl` and fsynced after every run. A run cut off by a disconnect
