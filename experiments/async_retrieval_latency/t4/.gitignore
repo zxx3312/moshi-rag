@@ -1,3 +1,7 @@
 # T4 run outputs and cached embeddings are never committed.
 results/
 reference_cache/
+# Curated Colab results ARE committed: metrics, traces, analysis, 4 example WAVs (full audio stays on Drive).
+# These rules override the repository-level "results*" and "*.wav" ignores for this folder only.
+!colab_results_*/
+!colab_results_*/**

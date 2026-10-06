@@ -1,0 +1,413 @@
+{
+  "experiment": "async_retrieval_latency",
+  "independent_variable": "retrieval latency (stream seconds after the retrieval request)",
+  "args": {
+    "manifest": "/content/moshi-rag/experiments/async_retrieval_latency/configs/samples_hard_pilot.jsonl",
+    "reference_cache": "/content/drive/MyDrive/moshirag_t4/reference_cache",
+    "retrieval_delay": [
+      8.0
+    ],
+    "seeds": [
+      42424242
+    ],
+    "sample_ids": null,
+    "max_samples": null,
+    "output_root": "/content/drive/MyDrive/moshirag_t4/results",
+    "run_name": "pilot_hard",
+    "resume": true,
+    "retry_failed": false,
+    "dry_run": false,
+    "require_env": false,
+    "hf_repo": "kyutai/moshika-rag-pytorch-bf16",
+    "device": "cuda:0",
+    "dtype": "float16",
+    "no_q8": false,
+    "cuda_graphs": "off",
+    "gpu_mem_cap_gb": null,
+    "stt_wait_time": 0.5,
+    "max_reference_tokens": 64,
+    "vad_window_size": 4,
+    "vad_threshold": 0.5,
+    "power_threshold": -65,
+    "init_active_speaker": "user",
+    "max_tail_silence_frames": 40,
+    "max_response_seconds": 30.0,
+    "sample_timeout": 1200.0,
+    "max_consecutive_failures": 3,
+    "speech_db": -45.0,
+    "audible_db": -45.0,
+    "log_level": "INFO"
+  },
+  "frame_rate": 12.5,
+  "delays": [
+    {
+      "condition_s": 8.0,
+      "steps": 100,
+      "effective_s": 8.0
+    }
+  ],
+  "samples": [
+    {
+      "sample_id": "sqa_1009",
+      "wav": "audio/sqa_1009.wav",
+      "question": "Which commune in France is The Pont Serme located in?",
+      "reference_text": "The Pont Serme is located in the French commune of Coursan.",
+      "answer": [
+        "Coursan"
+      ],
+      "answer_type": "Place",
+      "topic": "Geography",
+      "source": "SimpleQA test set (MIT license), row 1009, file sha256 feee3f7e7db3617e",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Pont_Serme",
+        "https://en.wikipedia.org/wiki/Pont_Serme",
+        "https://vici.org/vici/11611/?lang=en"
+      ],
+      "audio_source": "Piper TTS en_US-lessac-medium (synthetic)",
+      "wav_path": "/content/drive/MyDrive/moshirag_t4/audio/sqa_1009.wav"
+    },
+    {
+      "sample_id": "sqa_1155",
+      "wav": "audio/sqa_1155.wav",
+      "question": "Which Singapore island is the nation's easternmost point?",
+      "reference_text": "Pedra Branca is the easternmost point of Singapore.",
+      "answer": [
+        "Pedra Branca"
+      ],
+      "answer_type": "Place",
+      "topic": "Geography",
+      "source": "SimpleQA test set (MIT license), row 1155, file sha256 feee3f7e7db3617e",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Singapore#Geography",
+        "https://en.wikipedia.org/wiki/List_of_countries_by_easternmost_point",
+        "https://en.wikipedia.org/wiki/Singapore",
+        "https://worldpopulationreview.com/country-rankings/easternmost-point-by-country"
+      ],
+      "audio_source": "Piper TTS en_US-lessac-medium (synthetic)",
+      "wav_path": "/content/drive/MyDrive/moshirag_t4/audio/sqa_1155.wav"
+    },
+    {
+      "sample_id": "sqa_1658",
+      "wav": "audio/sqa_1658.wav",
+      "question": "Which was the first smoke-free state of India by abandoning traditional ways of cooking?",
+      "reference_text": "Himachal Pradesh was the first smoke free state of India, by abandoning traditional ways of cooking.",
+      "answer": [
+        "Himachal Pradesh"
+      ],
+      "answer_type": "Place",
+      "topic": "Geography",
+      "source": "SimpleQA test set (MIT license), row 1658, file sha256 feee3f7e7db3617e",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Himachal_Pradesh",
+        "https://blog.mygov.in/himachal-becomes-first-smoke-free-state-of-the-country/",
+        "https://crackittoday.com/current-affairs/himachal-pradesh-first-smoke-free-state-in-india/",
+        "https://economictimes.indiatimes.com/himachal-pradesh-declared-first-smoke-free-state-in-country/articleshow/20882330.cms?from=mdr"
+      ],
+      "audio_source": "Piper TTS en_US-lessac-medium (synthetic)",
+      "wav_path": "/content/drive/MyDrive/moshirag_t4/audio/sqa_1658.wav"
+    },
+    {
+      "sample_id": "sqa_1838",
+      "wav": "audio/sqa_1838.wav",
+      "question": "What Liverpool player scored the most goals in the 2021-2022 season of the FA Cup?",
+      "reference_text": "Takumi Minamino was the Liverpool player who scored the most goals in the twenty twenty one to twenty twenty two FA Cup season.",
+      "answer": [
+        "Takumi Minamino",
+        "Minamino"
+      ],
+      "answer_type": "Person",
+      "topic": "Sports",
+      "source": "SimpleQA test set (MIT license), row 1838, file sha256 feee3f7e7db3617e",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/2021%E2%80%9322_Liverpool_F.C._season#Goals",
+        "https://fbref.com/en/squads/822bd0ba/2021-2022/c514/Liverpool-Stats-FA-Cup",
+        "https://www.lfchistory.net/SeasonArchive/Goalscorers/131",
+        "https://www.transfermarkt.com/liverpool-fc/leistungsdaten/verein/31/plus/0?reldata=FAC%262021"
+      ],
+      "audio_source": "Piper TTS en_US-lessac-medium (synthetic)",
+      "wav_path": "/content/drive/MyDrive/moshirag_t4/audio/sqa_1838.wav"
+    },
+    {
+      "sample_id": "sqa_2105",
+      "wav": "audio/sqa_2105.wav",
+      "question": "What was the name of the perpetrator who slashed Park Geun-hye's face?",
+      "reference_text": "The perpetrator who slashed Park Geun-hye's face was named Ji Chung-ho.",
+      "answer": [
+        "Ji Chung-ho"
+      ],
+      "answer_type": "Person",
+      "topic": "Politics",
+      "source": "SimpleQA test set (MIT license), row 2105, file sha256 feee3f7e7db3617e",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Park_Geun-hye#Presidency_(2013%E2%80%9317)",
+        "https://en.wikipedia.org/wiki/Park_Geun-hye",
+        "https://koreajoongangdaily.joins.com/2006/05/21/politics/Knife-attack-places-Park-under-surgery/2727082.html",
+        "https://www.chosun.com/english/national-en/2006/05/22/O2NQ5IJO7JUCDLF2KMSS6JG7FQ/"
+      ],
+      "audio_source": "Piper TTS en_US-lessac-medium (synthetic)",
+      "wav_path": "/content/drive/MyDrive/moshirag_t4/audio/sqa_2105.wav"
+    },
+    {
+      "sample_id": "sqa_2113",
+      "wav": "audio/sqa_2113.wav",
+      "question": "What actor did Burt Reynolds replace on Gunsmoke?",
+      "reference_text": "On Gunsmoke, Burt Reynolds replaced the actor Dennis Weaver.",
+      "answer": [
+        "Dennis Weaver",
+        "Weaver"
+      ],
+      "answer_type": "Person",
+      "topic": "TV shows",
+      "source": "SimpleQA test set (MIT license), row 2113, file sha256 feee3f7e7db3617e",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Burt_Reynolds",
+        "https://en.wikipedia.org/wiki/Burt_Reynolds#:~:text=In%201962%2C%20Dennis%20Weaver%20wanted,the%20show%20%22until%20it%20ends.",
+        "https://www.imdb.com/title/tt0594225/trivia/"
+      ],
+      "audio_source": "Piper TTS en_US-lessac-medium (synthetic)",
+      "wav_path": "/content/drive/MyDrive/moshirag_t4/audio/sqa_2113.wav"
+    },
+    {
+      "sample_id": "sqa_2885",
+      "wav": "audio/sqa_2885.wav",
+      "question": "Which Indian state is also known as Veer Bhumi?",
+      "reference_text": "Himachal Pradesh is the Indian state also known as Veer Bhumi.",
+      "answer": [
+        "Himachal Pradesh"
+      ],
+      "answer_type": "Place",
+      "topic": "Geography",
+      "source": "SimpleQA test set (MIT license), row 2885, file sha256 feee3f7e7db3617e",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Himachal_Pradesh",
+        "https://en.wikipedia.org/wiki/Himachal_Pradesh#:~:text=Himachal%20Pradesh%20is%20also%20known,'Land%20of%20the%20Brave'.",
+        "https://www.internationalnewsandviews.com/himachal-pradesh-is-known-as-veer-bhoomi/"
+      ],
+      "audio_source": "Piper TTS en_US-lessac-medium (synthetic)",
+      "wav_path": "/content/drive/MyDrive/moshirag_t4/audio/sqa_2885.wav"
+    },
+    {
+      "sample_id": "sqa_3564",
+      "wav": "audio/sqa_3564.wav",
+      "question": "Which U.S. president was the last one to be born in the 18th century?",
+      "reference_text": "James Buchanan was the last United States president born in the eighteenth century.",
+      "answer": [
+        "James Buchanan",
+        "Buchanan"
+      ],
+      "answer_type": "Person",
+      "topic": "Politics",
+      "source": "SimpleQA test set (MIT license), row 3564, file sha256 feee3f7e7db3617e",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/James_Buchanan",
+        "https://en.wikipedia.org/wiki/James_Buchanan",
+        "https://millercenter.org/president/buchanan/life-before-the-presidency",
+        "https://www.loriferber.com/research/presidential-facts-statistics/presidential-birthdates.html"
+      ],
+      "audio_source": "Piper TTS en_US-lessac-medium (synthetic)",
+      "wav_path": "/content/drive/MyDrive/moshirag_t4/audio/sqa_3564.wav"
+    },
+    {
+      "sample_id": "sqa_3934",
+      "wav": "audio/sqa_3934.wav",
+      "question": "What was the original name of the village of Berrien Springs, Michigan?",
+      "reference_text": "The original name of the village of Berrien Springs, Michigan, was Wolf's Prairie.",
+      "answer": [
+        "Wolf's Prairie"
+      ],
+      "answer_type": "Place",
+      "topic": "Geography",
+      "source": "SimpleQA test set (MIT license), row 3934, file sha256 feee3f7e7db3617e",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Berrien_Springs,_Michigan",
+        "https://berrienhistory.org/wp-content/uploads/2020/08/dsp2004.pdf",
+        "https://www.swmpc.org/downloads/final_updateddraftplan.pdf",
+        "https://en.wikipedia.org/wiki/Berrien_Springs,_Michigan"
+      ],
+      "audio_source": "Piper TTS en_US-lessac-medium (synthetic)",
+      "wav_path": "/content/drive/MyDrive/moshirag_t4/audio/sqa_3934.wav"
+    },
+    {
+      "sample_id": "sqa_4052",
+      "wav": "audio/sqa_4052.wav",
+      "question": "Who was awarded The Oceanography Society's Walter Munk Medal in 2015?",
+      "reference_text": "Carl Wunsch was awarded The Oceanography Society's Walter Munk Medal in twenty fifteen.",
+      "answer": [
+        "Carl Wunsch",
+        "Wunsch"
+      ],
+      "answer_type": "Person",
+      "topic": "Science and technology",
+      "source": "SimpleQA test set (MIT license), row 4052, file sha256 feee3f7e7db3617e",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/The_Oceanography_Society",
+        "https://cgcs.mit.edu/carl-wunsch-selected-2015-walter-munk-award-recipient",
+        "https://tos.org/munk-medal",
+        "https://www.researchgate.net/publication/301571349_ACOUSTICAL_NEWS-USA"
+      ],
+      "audio_source": "Piper TTS en_US-lessac-medium (synthetic)",
+      "wav_path": "/content/drive/MyDrive/moshirag_t4/audio/sqa_4052.wav"
+    },
+    {
+      "sample_id": "sqa_4073",
+      "wav": "audio/sqa_4073.wav",
+      "question": "Who wrote the music for the Romanian anthem?",
+      "reference_text": "The music for the Romanian anthem was written by Anton Pann.",
+      "answer": [
+        "Anton Pann",
+        "Pann"
+      ],
+      "answer_type": "Person",
+      "topic": "Music",
+      "source": "SimpleQA test set (MIT license), row 4073, file sha256 feee3f7e7db3617e",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/De%C8%99teapt%C4%83-te,_rom%C3%A2ne!",
+        "https://en.wikipedia.org/wiki/De%C8%99teapt%C4%83-te,_rom%C3%A2ne!",
+        "https://worldpopulationreview.com/countries/romania/anthem",
+        "https://wikisource.org/wiki/De%C8%99teapt%C4%83-te,_rom%C3%A2ne!"
+      ],
+      "audio_source": "Piper TTS en_US-lessac-medium (synthetic)",
+      "wav_path": "/content/drive/MyDrive/moshirag_t4/audio/sqa_4073.wav"
+    },
+    {
+      "sample_id": "sqa_4080",
+      "wav": "audio/sqa_4080.wav",
+      "question": "In which city of Jammu division is KK Birla Garden located?",
+      "reference_text": "The KK Birla Garden is located in the city of Kathua, in the Jammu division.",
+      "answer": [
+        "Kathua"
+      ],
+      "answer_type": "Place",
+      "topic": "Geography",
+      "source": "SimpleQA test set (MIT license), row 4080, file sha256 feee3f7e7db3617e",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/K.K._Birla_Garden",
+        "https://en.wikipedia.org/wiki/K.K._Birla_Garden",
+        "https://www.google.com.pk/travel/hotels/entity/ChoIrdH3mcjVlKfoARoNL2cvMTFqZDgwemN3ZxAE?utm_campaign=sharing&utm_medium=link&utm_source=htls&ved=0CAAQ5JsGahcKEwjQnoLRw42HAxUAAAAAHQAAAAAQAw&ts=CAEaBAoCGgAqBAoAGgA#:~:text=K.K.-,Birla%20Garden,%20is%20a%20botanical%20garden%20in%20Kathua,%20India%20and,Birla.",
+        "https://www.earlytimes.in/newsdet.aspx?q=274923"
+      ],
+      "audio_source": "Piper TTS en_US-lessac-medium (synthetic)",
+      "wav_path": "/content/drive/MyDrive/moshirag_t4/audio/sqa_4080.wav"
+    }
+  ],
+  "num_runs": 12,
+  "variant": "t4_low_memory",
+  "fingerprint": {
+    "args": {
+      "hf_repo": "kyutai/moshika-rag-pytorch-bf16",
+      "dtype": "float16",
+      "no_q8": false,
+      "stt_wait_time": 0.5,
+      "power_threshold": -65,
+      "init_active_speaker": "user",
+      "max_tail_silence_frames": 40,
+      "max_response_seconds": 30.0
+    },
+    "samples": {
+      "sqa_1009": {
+        "wav_sha256": "b67d6291b9523b8e0947ecd30f514fb5cf2eb78514362541b8be87b16b18e339",
+        "reference_sha256": "52b7f2cd237da4527588b1fd8123027ed95cf55b4fd62950ebcc9589d3e29cc6"
+      },
+      "sqa_1155": {
+        "wav_sha256": "9312cff4e614d6fb40f3e5bfe752fbbbf881494e18cbc1ba9086d910aa60fa53",
+        "reference_sha256": "86aab9884c7c83762830cfcbb8ffe7efaff8ac38da5e247a40e606b3330baf39"
+      },
+      "sqa_1658": {
+        "wav_sha256": "cba8ea136d2aac60968ca7e7a4960082b0d738b5c0bdc59d405352d663c73c5c",
+        "reference_sha256": "787d54851b56eb55007715c2ccbc9973eac7f1524a9a07418a5b1ce49e877acc"
+      },
+      "sqa_1838": {
+        "wav_sha256": "fe8a2880769b5003f62a4730ca026d1eaa77dd01f9e8c8966039d152ff15ab54",
+        "reference_sha256": "35d908edc7d053f2f54d45eab5972cab485705d22b3f7b26f263468151e625ca"
+      },
+      "sqa_2105": {
+        "wav_sha256": "432c7210bac8e774f665e4f65c9bc20a2694d5fc40d9d2182e23f81b27f47f2e",
+        "reference_sha256": "b23ef275352e67144920c691c89faea4dbe172202969ad64c5a4122270d53f99"
+      },
+      "sqa_2113": {
+        "wav_sha256": "11df840e321b9c2c21f05eec7a6162011e2128a18bcb074bb7fda1d4c9b2aa37",
+        "reference_sha256": "997d767129b7c95e151a6b58a70c6a5cab9a744eb5489efc2c813d3d85ec9bea"
+      },
+      "sqa_2885": {
+        "wav_sha256": "88a60fa809cab9bb40e74eb3daef8f7ede274ecb935c1dd009563140bce52c2b",
+        "reference_sha256": "25ec6f29eb3b99475f7dd0202abeb830dc010533a279a4f281bfc9a9654e63ad"
+      },
+      "sqa_3564": {
+        "wav_sha256": "e06e7b48dececf0b4d96b4224d1fcf0865d6940fb9cf3bc9a210b2a5eb477528",
+        "reference_sha256": "22e809bac63553e3ca8d7a75390a923688d7a2f9477e7d3fff86f2b40c33a336"
+      },
+      "sqa_3934": {
+        "wav_sha256": "7a90123709b754cacdabea87b3f5d526724eef31b0d7e0ac4d95d5bdbb31de5e",
+        "reference_sha256": "2a8fd171b759033dcc6cddac75ef725e758ca45b99349b5e81c880661f8e0558"
+      },
+      "sqa_4052": {
+        "wav_sha256": "135dbb81c904d53b90a32b7f522f330feb499311dde1e388f8553d96aeae3e7b",
+        "reference_sha256": "8e0164014872d2406fedfb4f159202db497e1b5c6813686be0a4d9857b1ad93f"
+      },
+      "sqa_4073": {
+        "wav_sha256": "aa0ddfe62b202b7fc78821f4bcdc8fb0815844577869d3cd14850540af977321",
+        "reference_sha256": "00ff1ab074831292bbb7c90de27b60658fec49bb0e3c72b149e82ec53e0bcb82"
+      },
+      "sqa_4080": {
+        "wav_sha256": "1ee3932171960b1a51cac33fab8a7b9ef46b9780f228e09136067dd74e26ef71",
+        "reference_sha256": "131304713a54480ed014265d666c0fdc244ee934c9053af91034ca5b30ba6269"
+      }
+    }
+  },
+  "metadata": {
+    "git_commit": "cd2d5f3616f84a20e1676eb2e7480a52d8022d23",
+    "git_branch": "exp/async-retrieval-latency",
+    "git_dirty_files": [],
+    "command": "/usr/bin/python3 /content/moshi-rag/experiments/async_retrieval_latency/t4/run_latency_sweep_t4.py --manifest /content/moshi-rag/experiments/async_retrieval_latency/configs/samples_hard_pilot.jsonl --retrieval-delay 8 --run-name pilot_hard --reference-cache /content/drive/MyDrive/moshirag_t4/reference_cache --output-root /content/drive/MyDrive/moshirag_t4/results --resume",
+    "cwd": "/content",
+    "hostname": "39d80fd8481e",
+    "python_version": "3.13.15 (main, Aug  6 2026, 11:06:22) [GCC 13.3.0]",
+    "platform": "Linux-6.6.122+-x86_64-with-glibc2.39",
+    "started_at": "2026-10-06T01:50:43+00:00",
+    "slurm": {},
+    "cuda_visible_devices": null,
+    "nvidia_smi": "Tesla T4, 15360 MiB, 580.82.07, GPU-c99dfb78-ec63-a394-11f4-0370780b9a25",
+    "env": {
+      "REFERENCE_ENCODER_URL": null,
+      "HF_HOME": "/content/hf_home",
+      "HF_HUB_CACHE": null,
+      "CONDA_DEFAULT_ENV": null
+    },
+    "package_versions": {
+      "torch": "2.9.1",
+      "numpy": "2.2.6",
+      "sphn": "0.2.1",
+      "sentencepiece": "0.2.2",
+      "transformers": "4.55.3",
+      "xformers": "0.0.33.post2",
+      "safetensors": "0.7.0",
+      "huggingface-hub": "0.36.2",
+      "moshi": null
+    }
+  },
+  "runtime": {
+    "variant": "t4_low_memory",
+    "gpu": "Tesla T4",
+    "capability": "sm_75",
+    "torch": "2.9.1+cu128",
+    "q8": true,
+    "dtype": "float16",
+    "cuda_graphs": "off",
+    "stt": "disabled",
+    "frame_rate": 12.5,
+    "stt_wait_steps": 6,
+    "rag_token_id": 4,
+    "sampling": {
+      "use_sampling": true,
+      "temp": 0.8,
+      "temp_text": 0.7,
+      "top_k": 250,
+      "top_k_text": 25
+    },
+    "linear_types": {
+      "QLinear": 338,
+      "nn.Linear": 0
+    },
+    "load_wall_s": 95.0
+  }
+}
