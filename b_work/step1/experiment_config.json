@@ -1,0 +1,60 @@
+{
+  "status": "b_group_v1_for_integration",
+  "schema_version": "1.0",
+  "data_version": "debug-v0",
+  "time_origin": "question_end",
+  "time_unit": "seconds",
+  "clock_modes": [
+    "simulated",
+    "audio_stream"
+  ],
+  "missing_measurement": null,
+  "claim_labels": [
+    "SUPPORTED",
+    "UNRESOLVED",
+    "CONTRADICTED"
+  ],
+  "actions": [
+    "Wait",
+    "Backchannel",
+    "Progress",
+    "Partial Answer",
+    "Final Answer"
+  ],
+  "trace_types": [
+    "controlled_mock",
+    "retrieved"
+  ],
+  "visibility": {
+    "text_replay_rule": "visible_time_s <= current_time_s",
+    "proposed_audio_proxy": "reference_ingestion_end_time - user_end_time",
+    "preserve_raw_times": true,
+    "preserve_negative_times": true,
+    "allow_future_evidence": false,
+    "allow_gold_in_ordinary_model_input": false,
+    "oracle_requires_separate_input_path": true
+  },
+  "debug_data_proposal": {
+    "total_questions": 20,
+    "hotpotqa": 8,
+    "2wikimultihopqa": 8,
+    "custom_multipart": 4,
+    "must_be_separate_from_final_evaluation": true
+  },
+  "completion_rule": "all necessary answer units correctly expressed with support visible at claim output time",
+  "pending_decisions": [
+    "Check C audio adapter compatibility with the v1 visibility proxy",
+    "Define simulated decision and generation costs",
+    "Define claim extraction and audio/text alignment",
+    "Specify citation presentation requirements",
+    "Define conflicting-evidence and correction handling",
+    "Freeze delay schedules after pilot",
+    "Freeze split seed and full dataset sizes"
+  ],
+  "interface_owner": "B",
+  "requires_all_group_signoff_to_start_debug_data": false,
+  "integration_feedback": {
+    "A": "not_yet_recorded",
+    "C": "not_yet_recorded"
+  }
+}
