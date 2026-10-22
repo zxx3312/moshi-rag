@@ -1,0 +1,28 @@
+[
+  {
+    "sample_id": "custom_alpha001",
+    "question": "Who leads Alpha, and when was it released?",
+    "note": "Fictional example from b_work/step1/schema.md; the model cannot know the answer without evidence.",
+    "events": [
+      {"evidence_id": "e1", "visible_time_s": 3.0, "text": "Alpha is led by Alice."},
+      {"evidence_id": "e2", "visible_time_s": 8.0, "text": "Alpha was released on June 1."}
+    ],
+    "units": [
+      {"unit_id": "u1", "necessary": true, "answer": ["Alice"], "support": ["e1"]},
+      {"unit_id": "u2", "necessary": true, "answer": ["June 1", "June first", "first of June"], "support": ["e2"]}
+    ]
+  },
+  {
+    "sample_id": "2wikimultihopqa_062884f40bb011ebab90acde48001122",
+    "question": "Who is Caroline Emily Nevill's paternal grandfather?",
+    "note": "2Wiki debug question. Evidence sentences are made self-contained (the source's second sentence starts with 'The fourth son of ..., he was').",
+    "events": [
+      {"evidence_id": "e1", "visible_time_s": 3.0, "text": "Lady Caroline Emily Nevill was the daughter of William Nevill, 4th Earl of Abergavenny."},
+      {"evidence_id": "e2", "visible_time_s": 8.0, "text": "William Nevill, 4th Earl of Abergavenny, was the fourth son of Henry Nevill, 2nd Earl of Abergavenny."}
+    ],
+    "units": [
+      {"unit_id": "u1", "necessary": false, "answer": ["William Nevill"], "support": ["e1"]},
+      {"unit_id": "u2", "necessary": true, "answer": ["Henry Nevill"], "support": ["e2"]}
+    ]
+  }
+]
