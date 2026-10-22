@@ -98,7 +98,7 @@ def run_real(args) -> int:
     runs = build_runs(samples, args)
     name = args.run_name or datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
     run_dir = args.output_root / name
-    run_dir.mkdir(parents=True, exist_ok=False)
+    (run_dir / "logs").mkdir(parents=True, exist_ok=False)
     setup_logging(args.log_level, run_dir / "logs" / "runner.log")
     config = {"args": {k: str(v) for k, v in vars(args).items()}, "runs": len(runs), "metadata": collect_metadata()}
     write_json(run_dir / "config.json", config)
