@@ -6,7 +6,7 @@
 # Smoke test first:
 #     SAMPLE_IDS="sqa_3564" sbatch a_work/moshirag_control/run_control.slurm
 #
-# Overrides: MANIFEST, CONDITIONS, SEEDS, SAMPLE_IDS, RUN_NAME, CONDA_ENV, HF_HOME.
+# Overrides: MANIFEST, CONDITIONS, SEEDS, SAMPLE_IDS, EXTRA_ARGS, RUN_NAME, CONDA_ENV, HF_HOME.
 #
 #SBATCH --job-name=moshirag-control
 #SBATCH --partition=IllinoisComputes-GPU
@@ -27,6 +27,7 @@ MANIFEST="${MANIFEST:-$A_REL/configs/control_manifest.jsonl}"
 CONDITIONS="${CONDITIONS:-free wait progress notready ours}"
 SEEDS="${SEEDS:-42424242}"
 SAMPLE_IDS="${SAMPLE_IDS:-}"
+EXTRA_ARGS="${EXTRA_ARGS:-}"
 RUN_NAME="${RUN_NAME:-$(date +%Y%m%d_%H%M%S)_job${SLURM_JOB_ID:-local}}"
 HF_RAG_REPO="kyutai/moshika-rag-pytorch-bf16"
 export HF_HOME="${HF_HOME:-/projects/illinois/eng/cs/dilek/xzhu81/hf_home}"
@@ -63,6 +64,7 @@ read -r -a COND_ARR <<< "$CONDITIONS"
 read -r -a SEED_ARR <<< "$SEEDS"
 ARGS=(--manifest "$MANIFEST" --conditions "${COND_ARR[@]}" --seeds "${SEED_ARR[@]}" --run-name "$RUN_NAME")
 if [[ -n "$SAMPLE_IDS" ]]; then read -r -a ID_ARR <<< "$SAMPLE_IDS"; ARGS+=(--sample-ids "${ID_ARR[@]}"); fi
+if [[ -n "$EXTRA_ARGS" ]]; then read -r -a EXTRA_ARR <<< "$EXTRA_ARGS"; ARGS+=("${EXTRA_ARR[@]}"); fi
 
 python "$A_REL/run_control.py" "${ARGS[@]}" --dry-run
 

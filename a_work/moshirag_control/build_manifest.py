@@ -3,6 +3,7 @@ gold answers, and a progressive evidence trace (times in seconds after the quest
 
   * 12 hard SimpleQA questions from the diagnosis pilot: one reference at --delay seconds.
   * configs/multihop.json: two-hop questions with two evidence arrivals.
+  * configs/multipart_debug.json: 16 of B's debug questions as two-evidence traces.
 
 Question audio is synthesized with Piper (same voice as the pilot) when missing:
 
@@ -44,7 +45,8 @@ def main():
     args = ap.parse_args()
 
     samples = list(simpleqa_samples(args.delay))
-    samples += json.loads((HERE / "configs/multihop.json").read_text(encoding="utf-8"))
+    for name in ("multihop.json", "multipart_debug.json"):
+        samples += json.loads((HERE / "configs" / name).read_text(encoding="utf-8"))
 
     audio_dir = args.out.parent / "audio"
     for s in samples:

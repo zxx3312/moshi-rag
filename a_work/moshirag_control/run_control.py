@@ -17,6 +17,7 @@ import signal
 import sys
 import time
 import traceback
+import wave
 from copy import deepcopy
 from pathlib import Path
 from typing import Any
@@ -26,7 +27,8 @@ REPO = HERE.parents[1]
 EXP_DIR = REPO / "experiments/async_retrieval_latency"
 sys.path[:0] = [str(HERE), str(EXP_DIR), str(EXP_DIR / "scripts")]
 
-from conditions import CONDITIONS, build_plan  # noqa: E402
+from conditions import CLIPS, CONDITIONS, MULTI_EVIDENCE_ONLY, build_plan  # noqa: E402
+from control import CLIP  # noqa: E402
 from run_latency_sweep import (  # noqa: E402
     DEFAULT_SEED, DEFAULT_SPEECH_DB, MOSHI_PKG_PARENT, append_jsonl, collect_metadata, setup_logging, write_json,
 )
@@ -42,7 +44,9 @@ def parse_args(argv=None):
     p.add_argument("--conditions", nargs="+", default=list(CONDITIONS), choices=CONDITIONS)
     p.add_argument("--seeds", type=int, nargs="+", default=[DEFAULT_SEED])
     p.add_argument("--sample-ids", nargs="+", default=None)
+    p.add_argument("--multi-evidence-only", action="store_true")
     p.add_argument("--output-root", type=Path, default=HERE / "results")
+    p.add_argument("--clip-dir", type=Path, default=HERE / "configs/clips")
     p.add_argument("--run-name", default=None)
     p.add_argument("--dry-run", action="store_true")
     p.add_argument("--hf-repo", default="kyutai/moshika-rag-pytorch-bf16")
@@ -67,29 +71,49 @@ def load_samples(args) -> list[dict[str, Any]]:
                 samples.append(s)
     if args.sample_ids:
         samples = [s for s in samples if s["sample_id"] in set(args.sample_ids)]
+    if args.multi_evidence_only:
+        samples = [s for s in samples if len(s["events"]) >= 2]
     return samples
 
 
 def build_runs(samples, args):
-    """(sample, condition, seed, plan) for every run. 'ours' equals 'progress' with one evidence item, so it is skipped."""
+    """(sample, condition, seed, plan) for every run. The 'ours' conditions equal their progress
+    counterparts with one evidence item, so they only run on multi-evidence samples."""
     runs = []
     for s in samples:
         for cond in args.conditions:
-            if cond == "ours" and len(s["events"]) < 2:
+            if cond in MULTI_EVIDENCE_ONLY and len(s["events"]) < 2:
                 continue
             for seed in args.seeds:
-                runs.append((s, cond, seed, build_plan(cond, s["events"])))
+                runs.append((s, cond, seed, build_plan(cond, s["events"], s["units"])))
     return runs
+
+
+def load_clips(clip_dir: Path) -> dict[str, tuple[dict, bytes]]:
+    """Clip metadata and 16-bit PCM bytes, for every clip file present."""
+    clips = {}
+    for name in CLIPS:
+        meta_path, wav_path = clip_dir / f"{name}.json", clip_dir / f"{name}.wav"
+        if meta_path.is_file() and wav_path.is_file():
+            with wave.open(str(wav_path), "rb") as wf:
+                clips[name] = (json.loads(meta_path.read_text(encoding="utf-8")), wf.readframes(wf.getnframes()))
+    return clips
+
+
+def clips_needed(runs) -> set[str]:
+    return {g.clip for _, _, _, plan in runs for g in plan.segments if g.mode == CLIP}
 
 
 def dry_run(args) -> int:
     samples = load_samples(args)
     missing = [s["sample_id"] for s in samples if not Path(s["wav_path"]).is_file()]
+    missing += [f"clip:{c}" for c in clips_needed(build_runs(samples, args)) - load_clips(args.clip_dir).keys()]
     for s, cond, seed, plan in build_runs(samples, args):
-        segs = ", ".join(f"{g.start_s:g}s {g.mode}" + (f" '{g.phrase}'" if g.phrase else "") for g in plan.segments)
+        segs = ", ".join(f"{g.start_s:g}s {g.mode}" + (f" '{g.phrase}'" if g.phrase else "")
+                         + (f" {g.clip}->{g.after}" if g.clip else "") for g in plan.segments)
         injs = ", ".join(f"{i.time_s:g}s {i.label}" for i in plan.injections)
         print(f"{s['sample_id'][:28]:<30}{cond:<10} seed={seed}  segments=[{segs or 'none'}]  injections=[{injs}]")
-    print(f"\n{len(build_runs(samples, args))} runs over {len(samples)} samples; missing WAVs: {missing or 'none'}")
+    print(f"\n{len(build_runs(samples, args))} runs over {len(samples)} samples; missing inputs: {missing or 'none'}")
     return 1 if missing else 0
 
 
@@ -126,6 +150,26 @@ def run_real(args) -> int:
     seed_all(args.seeds[0])
     t0 = time.monotonic()
     mimi, text_tokenizer, lm_gen = load_models(model_args)
+    import numpy as np
+    mimi_enc = deepcopy(mimi)  # fresh, non-streaming copy for encoding silence and clips
+    dep_q = lm_gen.lm_model.dep_q
+    frame = int(mimi.sample_rate / mimi.frame_rate)
+
+    def encode_pcm(pcm: np.ndarray) -> torch.Tensor:
+        with torch.no_grad():
+            codes = mimi_enc.encode(torch.from_numpy(pcm)[None, None].to(args.device))
+        return codes[0, :dep_q].to(args.device)
+
+    audio_codes = {"silence": encode_pcm(np.zeros(12 * frame, dtype=np.float32))[:, 6]}
+    clip_tokens = {}
+    for name, (meta, raw) in load_clips(args.clip_dir).items():
+        pcm = np.frombuffer(raw, dtype=np.int16).astype(np.float32) / 32768.0
+        codes = encode_pcm(pcm)
+        if codes.shape[1] < meta["frames"]:
+            raise RuntimeError(f"clip {name}: {codes.shape[1]} code frames < {meta['frames']} steps")
+        audio_codes[name] = codes[:, :meta["frames"]]
+        clip_tokens[name] = meta["text_tokens"]
+    del mimi_enc
     stt = LocalSpeechToText(deepcopy(mimi))
     state = moshi_server.ServerState(
         mimi=mimi, text_tokenizer=text_tokenizer, lm_gen=lm_gen, reference_encoder_url=encoder_url,
@@ -156,7 +200,8 @@ def run_real(args) -> int:
                 seed_all(seed)
                 job = ControlledJob(state, sample=sample, plan=plan, run_id=run_id, run_dir=run_dir, seed=seed,
                                     reference_tensors=tensors, max_tail_silence=args.max_tail_silence_frames,
-                                    max_response_seconds=args.max_response_seconds, speech_db=args.speech_db, stt=stt)
+                                    max_response_seconds=args.max_response_seconds, speech_db=args.speech_db, stt=stt,
+                                    clip_tokens=clip_tokens, audio_codes=audio_codes)
                 await state.wait_acquire_slot(job)
                 status, error = "ok", None
 

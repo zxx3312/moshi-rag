@@ -9,6 +9,9 @@ STT loop, per-step recording and output files. Differences:
    not when the model emits [RET]. The hand-over happens inside the logits hook at
    step k, so the reference is consumed from step k+1 on: exact to the step.
 3. [RET] tokens are only recorded; they start no retrieval.
+4. A third hook can overwrite the step's audio tokens before they are decoded and written
+   to the model's own history: silence codes in muted quiet modes, or the frames of a
+   recorded clip (each codebook shifted by its acoustic delay).
 
 Step clock: hook step k == input frame k == output step k (text sampled at step k is
 delivered with output k), 12.5 steps per second.
@@ -36,7 +39,8 @@ def question_end_step(user_rms_db: list, speech_db: float, input_frames: int) ->
 class ControlledJob(LatencyInferenceJob):
     def __init__(self, server, *, sample: dict[str, Any], plan: Plan, run_id: str, run_dir, seed: int,
                  reference_tensors: dict[str, Any], max_tail_silence: int, max_response_seconds: float,
-                 speech_db: float, stt):
+                 speech_db: float, stt, clip_tokens: dict[str, list[int]] | None = None,
+                 audio_codes: dict[str, torch.Tensor] | None = None):
         base = dict(sample, reference_text=plan.injections[0].text)  # parent needs one; its backend is unused
         super().__init__(server, sample=base, run_id=run_id, run_dir=run_dir, delay_s=0.0, seed=seed,
                          reference_tensors=reference_tensors, max_tail_silence=max_tail_silence,
@@ -45,7 +49,11 @@ class ControlledJob(LatencyInferenceJob):
         self.ids = TokenIds(pad=lm.text_padding_token_id, epad=lm.end_of_text_padding_id, ret=lm.rag_token_id)
         self.q_end = question_end_step(self.trace["user_rms_db"], speech_db, self.input_frames)
         self.ctrl = TextController(plan, question_end_step=self.q_end, frame_rate=self.frame_rate, ids=self.ids,
-                                   encode=lambda s: server.text_tokenizer.encode(s))
+                                   encode=lambda s: server.text_tokenizer.encode(s), clips=clip_tokens)
+        self.audio_codes = audio_codes or {}
+        self.audio_delays = list(lm.delays[1:1 + lm.dep_q])
+        self._audio_action = None
+        self.audio_overrides = {"silence": 0, "clip": 0}
         self.plan = plan
         self.sample = sample
         self._lm_step = 0
@@ -72,6 +80,7 @@ class ControlledJob(LatencyInferenceJob):
             })
             logger.info("[Control] step %d: injected %s (%d steps)", k, inj.label, tensor.shape[0])
         allowed = self.ctrl.allowed(k)
+        self._audio_action = self.ctrl.audio_action
         self._restricted = allowed is not None
         if allowed is not None:
             row = logits[self.slot_idx, 0, 0]
@@ -84,13 +93,29 @@ class ControlledJob(LatencyInferenceJob):
         self.ctrl.on_sampled(self._lm_step, int(tokens[self.slot_idx].item()), self._restricted)
         self._lm_step += 1
 
+    def _on_audio(self, audio_tokens: torch.Tensor) -> None:
+        action = self._audio_action
+        if action is None:
+            return
+        row = audio_tokens[self.slot_idx]
+        if action[0] == "silence":
+            row.copy_(self.audio_codes["silence"].to(row.device))
+        else:
+            _, name, j = action
+            codes = self.audio_codes[name]
+            for c, d in enumerate(self.audio_delays):
+                if 0 <= j - d < codes.shape[1]:
+                    row[c] = codes[c, j - d]
+        self.audio_overrides[action[0]] += 1
+
     async def run(self, rag_task_group) -> None:
         lm_gen = self.server.runner.lm_gen
         lm_gen.on_text_logits_hook, lm_gen.on_text_hook = self._on_logits, self._on_text
+        lm_gen.on_audio_hook = self._on_audio
         try:
             await super().run(rag_task_group)
         finally:
-            lm_gen.on_text_logits_hook, lm_gen.on_text_hook = None, None
+            lm_gen.on_text_logits_hook, lm_gen.on_text_hook, lm_gen.on_audio_hook = None, None, None
 
     # ------------------------------------------------------------------ output loop
 
@@ -143,5 +168,7 @@ class ControlledJob(LatencyInferenceJob):
             "token_ids": {"pad": self.ids.pad, "epad": self.ids.epad, "ret": self.ids.ret},
             "events": self.sample["events"],
             "units": self.sample["units"],
+            "mute_audio": self.plan.mute_audio,
+            "audio_overrides": self.audio_overrides,
         }
         super().write_outputs(status, reason, error)

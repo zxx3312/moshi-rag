@@ -12,6 +12,9 @@ import sys
 from collections import defaultdict
 from pathlib import Path
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from conditions import CONDITIONS  # noqa: E402
+
 AUDIBLE_DB = -45.0
 QUIET_MODES = ("silence", "held")
 CLOSURES = ("anything else", "does that help", "hope that helps")
@@ -105,7 +108,7 @@ def table(rows) -> str:
     head = ("| condition | runs | correct after evidence | answer before evidence | closure before final "
             "| median first word (s) | word leaks in quiet | audible in quiet |")
     lines = [head, "|" + "---|" * 8]
-    for cond in ("free", "wait", "progress", "notready", "ours"):
+    for cond in CONDITIONS:
         rs = by_cond.get(cond)
         if not rs:
             continue
