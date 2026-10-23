@@ -3,14 +3,15 @@
     judge(obs) -> {unit_id: UnitJudgment(label, citations)}
 
 Three planned implementations: OracleJudge (gold support sets, done),
-PromptJudge (LLM prompt, W2), and a LoRA SFT judge (W3).
+PromptJudge (LLM prompt, done), and a LoRA SFT judge (W3).
 """
 from __future__ import annotations
 
-from typing import Dict, Iterable, Mapping, Protocol
+import json
+from typing import Dict, Iterable, List, Mapping, Protocol
 
 from .schema import (
-    CONTRADICTED, FULLY_SUFFICIENT, INSUFFICIENT, PARTIALLY_SUFFICIENT, SUPPORTED,
+    CONTRADICTED, FULLY_SUFFICIENT, INSUFFICIENT, LABELS, PARTIALLY_SUFFICIENT, SUPPORTED,
     UNRESOLVED, Observation, Unit, UnitJudgment,
 )
 
@@ -39,18 +40,97 @@ class OracleJudge:
         for unit in self._gold[obs.sample_id]:
             complete = [s for s in unit["support_sets"] if set(s) <= visible]
             if complete:
-                out[unit["unit_id"]] = UnitJudgment(SUPPORTED, tuple(complete[0]))
+                out[unit["unit_id"]] = UnitJudgment(SUPPORTED, tuple(complete[0]), unit.get("expected_answer"))
             else:
                 out[unit["unit_id"]] = UnitJudgment(UNRESOLVED)
         return out
 
 
+JUDGE_SYSTEM = """You check which answer units are supported by the evidence a voice assistant has received so far.
+
+For every unit give one label:
+- SUPPORTED: the evidence explicitly states the unit's value. Give the value and the ids of the evidence sentences that state it.
+  No inference: "an Italian film directed by X" does not say where X was born.
+  A unit cannot be SUPPORTED unless every unit in its depends_on is SUPPORTED.
+  A conclusion unit (comparison, yes/no) is SUPPORTED when all its depends_on units are SUPPORTED; derive it from their values and cite their evidence.
+- CONTRADICTED: the evidence gives conflicting values for the unit.
+- UNRESOLVED: anything else. Use value null and no citations.
+
+{u1} in a description means the value of unit u1.
+Use only the listed evidence, never your own knowledge. Reply with JSON only."""
+
+JUDGE_SCHEMA = {
+    "type": "object",
+    "properties": {"units": {"type": "array", "items": {
+        "type": "object",
+        "properties": {
+            "unit_id": {"type": "string"},
+            "label": {"type": "string", "enum": list(LABELS)},
+            "value": {"type": ["string", "null"]},
+            "citations": {"type": "array", "items": {"type": "string"}},
+        },
+        "required": ["unit_id", "label", "value", "citations"],
+    }}},
+    "required": ["units"],
+}
+
+
+def judge_messages(obs: Observation) -> List[dict]:
+    units = [{"unit_id": u.unit_id, "description": u.description, "depends_on": list(u.depends_on)}
+             for u in obs.units]
+    evidence = "\n".join(f"[{e.evidence_id}] {e.text}" for e in obs.evidence)
+    user = f"Question: {obs.question}\n\nUnits:\n{json.dumps(units)}\n\nEvidence received so far:\n{evidence}"
+    return [{"role": "system", "content": JUDGE_SYSTEM}, {"role": "user", "content": user}]
+
+
 class PromptJudge:
-    """LLM judge over (question, units, visible evidence). To be implemented in W2."""
+    """LLM judge over (question, units, visible evidence).
+
+    Labels only change when new evidence arrives, so each (sample, visible evidence) is judged
+    once and cached. With no evidence every unit is UNRESOLVED and the model is not called.
+    A SUPPORTED label whose citations are missing or not yet visible is downgraded to UNRESOLVED.
+    """
     name = "prompt"
 
+    def __init__(self, client):
+        self.client = client
+        self._cache: Dict[tuple, Dict[str, UnitJudgment]] = {}
+        self.log: List[dict] = []
+
     def judge(self, obs: Observation) -> Dict[str, UnitJudgment]:
-        raise NotImplementedError("PromptJudge is planned for W2")
+        visible = tuple(e.evidence_id for e in obs.evidence)
+        key = (obs.sample_id, visible, obs.units)
+        if key in self._cache:
+            return self._cache[key]
+        if not visible:
+            out = {u.unit_id: UnitJudgment(UNRESOLVED) for u in obs.units}
+            self._cache[key] = out
+            return out
+
+        n_calls = len(self.client.calls)
+        error, raw = None, {}
+        try:
+            raw = self.client.chat_json(judge_messages(obs), purpose="judge", schema=JUDGE_SCHEMA)
+        except (ValueError, OSError) as e:  # unusable reply or endpoint failure: judge nothing as supported
+            error = repr(e)
+        replies = {r.get("unit_id"): r for r in raw.get("units", []) if isinstance(r, dict)}
+
+        out, downgraded = {}, []
+        for u in obs.units:
+            r = replies.get(u.unit_id, {})
+            label = r.get("label") if r.get("label") in LABELS else UNRESOLVED
+            cites = tuple(c for c in (r.get("citations") or []) if isinstance(c, str))
+            value = r.get("value") if isinstance(r.get("value"), str) else None
+            if label == SUPPORTED and (any(c not in visible for c in cites) or (not cites and not u.depends_on)):
+                downgraded.append(u.unit_id)
+                label, cites, value = UNRESOLVED, (), None
+            out[u.unit_id] = UnitJudgment(label, cites if label != UNRESOLVED else (), value)
+        self._cache[key] = out
+        latency = sum(c.latency_s for c in self.client.calls[n_calls:])
+        self.log.append({"sample_id": obs.sample_id, "time_s": obs.time_s, "evidence": list(visible),
+                         "latency_s": round(latency, 3), "error": error, "downgraded": downgraded,
+                         "labels": {k: v.label for k, v in out.items()}})
+        return out
 
 
 def resolve_dependencies(units: Iterable[Unit], raw: Mapping[str, UnitJudgment]) -> Dict[str, UnitJudgment]:

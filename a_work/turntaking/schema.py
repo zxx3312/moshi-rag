@@ -51,6 +51,7 @@ class Observation:
 class UnitJudgment:
     label: str
     citations: Tuple[str, ...] = ()
+    value: Optional[str] = None
 
 
 @dataclass
