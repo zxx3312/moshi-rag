@@ -10,7 +10,7 @@
 
 不训练模型、只在推理时控制文字流、音频流和证据注入时间，可以在 MoshiRAG 上实现
 Wait、Backchannel/Progress、Final Answer 三类动作。Partial Answer 在 v2 的做法下不可行（0/2），
-正在测试"单元感知注入"（ours_v3，见下文"进行中"）。
+"单元感知注入"（ours_v3）也没有改善，见文末。
 
 | 动作 | 实现方式 | 结果 |
 |---|---|---|
@@ -55,7 +55,7 @@ Wait、Backchannel/Progress、Final Answer 三类动作。Partial Answer 在 v2 
 - 自动统计用字符串匹配，漏判拼写差异，也检测不到错误答案；以本文件人工判读为准。
 - 片段的音频编码是从录音重新编码得到，与原始生成的编码不完全相同；音质需听录音确认。
 
-## 进行中：Partial Answer 的单元感知注入（partial_v3，作业 11729084）
+## Partial Answer 的单元感知注入（partial_v3，作业 11729084）
 
 控制器知道每个答案单元是否已有证据支持，因此在部分证据到达时，注入的参考文本除证据外还写明缺失的部分
 （单元的 `pending` 句，例如 "Where Fernando Di Leo was born is still being searched."）；最后一次注入追加
@@ -65,3 +65,25 @@ Wait、Backchannel/Progress、Final Answer 三类动作。Partial Answer 在 v2 
 （bridge 5、comparison 5、bridge_comparison 2、NASA 多部分 4），加上 Caroline、Alpha，共 18 题；
 证据句做了最小改写以便独立成句，来源记录在每条证据的 `source` 中。pending 句为手写，真实系统中应由 controller 根据单元描述生成。
 条件：free、wait_av_kick、progress_clip、ours_v2、ours_v3，共 90 次。
+
+### 结果（人工判读 3–8 s 之间的话，18 题）
+
+| 条件 | 好的部分回答（只说第一段证据支持的内容） | 只说进度、无事实 | 越界（对缺失部分下结论或说错） |
+|---|---|---|---|
+| ours_v2（只注入证据） | 9/18 | 2/18 | 7/18 |
+| ours_v3（证据 + 缺失说明） | 6/18 | 4/18 | 8/18 |
+
+- 缺失说明没有让模型守住边界：它有时说对了缺失说明（Brian Part："Brian Part is from the United States, but I don't know yet where John Mosca is from"），
+  有时把缺失的对象弄反（Alpha："Alpha's leader is currently unknown"），有时仍然直接给出结论（Gordonia："aren't in the same family"）。
+- 缺失说明会延续到最后：最后一次注入写了 "The search is complete."，仍有 4 题在证据齐全后说"还在找"（Caroline、Nightmare、Margaret、Theal）。
+- 证据齐全后多跳题本身答得不好：progress_clip 在两段证据都到达后，约 6–8/18 给出完整正确答案，常见问题是只复述其中一句证据或比较结论说反。
+  这说明 MoshiRAG 用注入证据做两步推理的能力有限，与控制方式无关。
+- 实现问题：模型在 8 s 时可能还在说话，此时回放 "Oh," 会打断句子（如 "launched on July sixteenth, nineteen | Oh, nineteen sixty-nine"）。
+  release cue 应只在模型安静时回放。
+
+### 结论
+
+免训练控制能决定 MoshiRAG 什么时候说，但不能决定它说哪一部分。Partial Answer 在 MoshiRAG 上不可靠（两种做法越界率都约 40%）。
+按既定预案，5 个动作需要在同一环境中评估，因此端到端实验应改用级联方案（ASR → LLM → TTS）；
+MoshiRAG 作为外部系统对照，本实验的 Wait / Progress / Final Answer 控制结果作为"端到端模型可控性"的分析结论写入报告。
+单种子；待组内确认后执行。
