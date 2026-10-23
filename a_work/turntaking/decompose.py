@@ -25,6 +25,8 @@ Rules by question type:
 
 Constraints:
 - Never answer, guess or hint at any value. Descriptions say what to find, not what it is.
+- Do not make a unit for an entity the question already names; units are things still to be found.
+- Kinship beyond parents (grandfather, grandmother, uncle, ...) is a bridge: first the parent, then that parent's parent or sibling.
 - Use 1 to 5 units with ids u1, u2, ... in order. depends_on may only list earlier units.
 - Reply with JSON only."""
 
@@ -99,6 +101,8 @@ def validate_units(raw: dict) -> Tuple[str, List[Unit]]:
         raise ValueError(f"{len(units)} units, expected 1-5")
     if not any(u.necessary for u in units):
         raise ValueError("no necessary unit")
+    if len(units) == 1:
+        qtype = "single"  # one unit is a single-answer question whatever the label says
     return qtype, units
 
 

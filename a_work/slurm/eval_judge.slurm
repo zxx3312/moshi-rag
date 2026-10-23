@@ -24,6 +24,10 @@ RUN_NAME="${RUN_NAME:-$(date +%Y%m%d_%H%M%S)_job${SLURM_JOB_ID:-local}}"
 EVAL_ARGS="${EVAL_ARGS:-}"
 export HF_HOME="${HF_HOME:-/projects/illinois/eng/cs/dilek/xzhu81/hf_home}"
 export HF_HUB_OFFLINE=1
+# The venv is not activated: put its tools (ninja) on PATH, and use PyTorch sampling instead of
+# FlashInfer's JIT-built sampler (the judge decodes greedily, so the result is the same).
+export PATH="$VLLM_ENV/bin:$PATH"
+export VLLM_USE_FLASHINFER_SAMPLER=0
 PORT="$((20000 + ${SLURM_JOB_ID:-0} % 20000))"
 OUT="a_work/results/judge/$RUN_NAME"
 

@@ -52,6 +52,7 @@ class UnitJudgment:
     label: str
     citations: Tuple[str, ...] = ()
     value: Optional[str] = None
+    by_omission: bool = False  # supported because a defining description does not list the property
 
 
 @dataclass

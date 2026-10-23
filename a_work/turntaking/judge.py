@@ -51,10 +51,16 @@ JUDGE_SYSTEM = """You check which answer units are supported by the evidence a v
 For every unit give one label:
 - SUPPORTED: the evidence explicitly states the unit's value. Give the value and the ids of the evidence sentences that state it.
   No inference: "an Italian film directed by X" does not say where X was born.
+  One exception: if a sentence is the defining description of an entity (e.g. "Y is an American film director and
+  producer.") and the unit asks whether the entity has a property of a kind such a description lists (occupation,
+  nationality, category), a property it does not list counts as "no". Label SUPPORTED with by_omission true.
+  Negations that need outside knowledge (e.g. "Minnesota is not in Europe") stay UNRESOLVED.
   A unit cannot be SUPPORTED unless every unit in its depends_on is SUPPORTED.
   A conclusion unit (comparison, yes/no) is SUPPORTED when all its depends_on units are SUPPORTED; derive it from their values and cite their evidence.
 - CONTRADICTED: the evidence gives conflicting values for the unit.
 - UNRESOLVED: anything else. Use value null and no citations.
+
+Citations are evidence ids such as e1, never unit ids. A conclusion unit cites the evidence of the units it depends on.
 
 {u1} in a description means the value of unit u1.
 Use only the listed evidence, never your own knowledge. Reply with JSON only."""
@@ -68,8 +74,9 @@ JUDGE_SCHEMA = {
             "label": {"type": "string", "enum": list(LABELS)},
             "value": {"type": ["string", "null"]},
             "citations": {"type": "array", "items": {"type": "string"}},
+            "by_omission": {"type": "boolean"},
         },
-        "required": ["unit_id", "label", "value", "citations"],
+        "required": ["unit_id", "label", "value", "citations", "by_omission"],
     }}},
     "required": ["units"],
 }
@@ -89,6 +96,7 @@ class PromptJudge:
     Labels only change when new evidence arrives, so each (sample, visible evidence) is judged
     once and cached. With no evidence every unit is UNRESOLVED and the model is not called.
     A SUPPORTED label whose citations are missing or not yet visible is downgraded to UNRESOLVED.
+    A unit with dependencies may cite those units by id; such citations expand to their evidence.
     """
     name = "prompt"
 
@@ -116,20 +124,29 @@ class PromptJudge:
         replies = {r.get("unit_id"): r for r in raw.get("units", []) if isinstance(r, dict)}
 
         out, downgraded = {}, []
-        for u in obs.units:
+        for u in obs.units:  # in id order, so dependencies are processed first
             r = replies.get(u.unit_id, {})
             label = r.get("label") if r.get("label") in LABELS else UNRESOLVED
-            cites = tuple(c for c in (r.get("citations") or []) if isinstance(c, str))
+            cites = []
+            for c in r.get("citations") or []:
+                if c in u.depends_on and c in out:
+                    cites += [x for x in out[c].citations if x not in cites]
+                elif isinstance(c, str) and c not in cites:
+                    cites.append(c)
+            cites = tuple(cites)
             value = r.get("value") if isinstance(r.get("value"), str) else None
+            if value is not None and value.strip().lower() in ("", "null", "none"):
+                value = None
             if label == SUPPORTED and (any(c not in visible for c in cites) or (not cites and not u.depends_on)):
                 downgraded.append(u.unit_id)
                 label, cites, value = UNRESOLVED, (), None
-            out[u.unit_id] = UnitJudgment(label, cites if label != UNRESOLVED else (), value)
+            omission = label == SUPPORTED and r.get("by_omission") is True
+            out[u.unit_id] = UnitJudgment(label, cites if label != UNRESOLVED else (), value, omission)
         self._cache[key] = out
         latency = sum(c.latency_s for c in self.client.calls[n_calls:])
         self.log.append({"sample_id": obs.sample_id, "time_s": obs.time_s, "evidence": list(visible),
                          "latency_s": round(latency, 3), "error": error, "downgraded": downgraded,
-                         "labels": {k: v.label for k, v in out.items()}})
+                         "labels": {k: v.label for k, v in out.items()}, "reply": raw})
         return out
 
 

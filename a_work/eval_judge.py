@@ -73,6 +73,7 @@ def main():
 
         events = _parse_events(trace)
         expected = {u["unit_id"]: u["expected_answer"] for u in g["units"]}
+        gold_omission = {u["unit_id"]: u.get("by_omission", False) for u in g["units"]}
         for t in sorted({0.0} | {e.visible_time_s for e in events}):
             visible = tuple(e for e in events if e.visible_time_s <= t)
             obs = Observation(sid, trace["question"], t, visible, gold_units, False)
@@ -84,6 +85,7 @@ def main():
                     "sample_id": sid, "question_type": qtype, "time_s": t, "unit_id": uid,
                     "necessary": unit.necessary, "oracle": o[uid].label, "prompt": p[uid].label,
                     "value": p[uid].value, "expected": expected[uid], "citations": list(p[uid].citations),
+                    "by_omission": p[uid].by_omission, "gold_by_omission": bool(gold_omission[uid]),
                     "value_ok": value_match(p[uid].value, expected[uid]) if p[uid].label == SUPPORTED else None,
                     "state_oracle": sufficiency_state(gold_units, o), "state_prompt": sufficiency_state(gold_units, p),
                 })
@@ -126,7 +128,10 @@ def summarize(decomp, steps, calls, client, args):
     lines += ["", f"- label agreement: {pct(agree, n)}",
               f"- false SUPPORTED (would allow an unsupported claim): {pct(len(false_sup), sum(s['oracle'] != SUPPORTED for s in steps))} of oracle-unsupported unit-steps",
               f"- missed SUPPORTED (would delay grounded information): {pct(len(missed), sum(s['oracle'] == SUPPORTED for s in steps))} of oracle-supported unit-steps",
-              f"- value correct when both say SUPPORTED: {pct(sum(bool(s['value_ok']) for s in sup_ok), len(sup_ok))}"]
+              f"- value correct when both say SUPPORTED: {pct(sum(bool(s['value_ok']) for s in sup_ok), len(sup_ok))}",
+              f"- by_omission SUPPORTED: judge {sum(s['by_omission'] for s in steps)}, "
+              f"of which gold also by_omission {sum(s['by_omission'] and s['gold_by_omission'] for s in steps)}; "
+              f"gold by_omission unit-steps {sum(s['gold_by_omission'] and s['oracle'] == SUPPORTED for s in steps)}"]
 
     lines += ["", "| question type | unit-steps | agreement | false SUPPORTED | missed SUPPORTED |", "|---|---|---|---|---|"]
     by_qt = defaultdict(list)

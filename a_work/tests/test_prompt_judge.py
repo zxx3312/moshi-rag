@@ -53,6 +53,11 @@ class DecomposeTest(unittest.TestCase):
         self.assertTrue(fell_back)
         self.assertEqual([(u.unit_id, u.necessary) for u in units], [("u1", True)])
 
+    def test_single_unit_is_single(self):
+        one = {"question_type": "bridge", "units": [
+            {"unit_id": "u1", "description": "x", "necessary": True, "depends_on": []}]}
+        self.assertEqual(validate_units(one)[0], "single")
+
     def test_requires_a_necessary_unit(self):
         bad = json.loads(json.dumps(self.BRIDGE))
         bad["units"][1]["necessary"] = False
@@ -96,6 +101,31 @@ class PromptJudgeTest(unittest.TestCase):
         labels = judge.judge(obs([E1, E2], 8.0))
         self.assertTrue(all(v.label == UNRESOLVED for v in labels.values()))
         self.assertIn("bad reply", judge.log[0]["error"])
+
+    def test_conclusion_may_cite_dependency_units(self):
+        units = (Unit("u1", "birth year of A", False), Unit("u2", "birth year of B", False),
+                 Unit("u3", "who was born later", True, ("u1", "u2")))
+        o = Observation("s2", "Who was born later, A or B?", 8.0, (E1, E2), units, False)
+        client = FakeClient([reply(("u1", SUPPORTED, "1966", ["e1"]), ("u2", SUPPORTED, "1918", ["e2"]),
+                                   ("u3", SUPPORTED, "A", ["u1", "u2"]))])
+        labels = PromptJudge(client).judge(o)
+        self.assertEqual(labels["u3"].label, SUPPORTED)
+        self.assertEqual(labels["u3"].citations, ("e1", "e2"))
+
+    def test_null_string_value_is_none(self):
+        client = FakeClient([reply(("u1", UNRESOLVED, "null", []))])
+        self.assertIsNone(PromptJudge(client).judge(obs([E1], 3.0))["u1"].value)
+
+    def test_by_omission_kept_only_when_supported(self):
+        client = FakeClient([{"units": [
+            {"unit_id": "u1", "label": SUPPORTED, "value": "Fernando Di Leo", "citations": ["e1"], "by_omission": False},
+            {"unit_id": "u2", "label": UNRESOLVED, "value": None, "citations": [], "by_omission": True}]}])
+        labels = PromptJudge(client).judge(obs([E1], 3.0))
+        self.assertFalse(labels["u1"].by_omission)
+        self.assertFalse(labels["u2"].by_omission)
+        client = FakeClient([{"units": [
+            {"unit_id": "u1", "label": SUPPORTED, "value": "no", "citations": ["e1"], "by_omission": True}]}])
+        self.assertTrue(PromptJudge(client).judge(obs([E1], 3.0))["u1"].by_omission)
 
     def test_dependency_still_enforced(self):
         client = FakeClient([reply(("u1", UNRESOLVED, None, []), ("u2", SUPPORTED, "San Ferdinando", ["e2"]))])

@@ -16,17 +16,21 @@ PILOT = REPO / "experiments/async_retrieval_latency/configs/samples_hard_pilot.j
 VERSIONS = {"schema_version": "1.0", "data_version": "a-mock-v0"}
 
 
-def u(uid, desc, necessary, answer, support, deps=()):
-    return {"unit_id": uid, "description": desc, "necessary": necessary, "expected_answer": answer,
+def u(uid, desc, necessary, answer, support, deps=(), by_omission=False):
+    unit = {"unit_id": uid, "description": desc, "necessary": necessary, "expected_answer": answer,
             "depends_on": list(deps), "support_sets": [list(support)]}
+    if by_omission:
+        unit["by_omission"] = True  # unit_schema.md 5.5
+    return unit
 
 
 def bridge(first, final, a1, a2):
     return [u("u1", first, False, a1, ["e1"]), u("u2", final, True, a2, ["e2"], ["u1"])]
 
 
-def comparison(f1, f2, concl, a1, a2, a3):
-    return [u("u1", f1, False, a1, ["e1"]), u("u2", f2, False, a2, ["e2"]),
+def comparison(f1, f2, concl, a1, a2, a3, omission=()):
+    return [u("u1", f1, False, a1, ["e1"], by_omission="u1" in omission),
+            u("u2", f2, False, a2, ["e2"], by_omission="u2" in omission),
             u("u3", concl, True, a3, [], ["u1", "u2"])]
 
 
@@ -70,7 +74,7 @@ GOLD = {
         "1992", "1988", "Emilio Sanchez")),
     "hotpotqa_5adf72d35542992d7e9f9369": ("comparison", comparison(
         "whether William Kronick is a television writer", "whether Jon Turteltaub is a television writer",
-        "whether both are television writers", "yes", "no", "no")),
+        "whether both are television writers", "yes", "no", "no", omission=("u2",))),
     "hotpotqa_5ae3f4fe5542995ad6573ce8": ("comparison", comparison(
         "family of the genus Gordonia", "family of the genus Osbeckia", "whether they are in the same family",
         "Theaceae", "Melastomataceae", "no")),
