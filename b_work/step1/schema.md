@@ -1,8 +1,8 @@
-# Shared Data and Log Interface — B Group v1.1
+# Shared Data and Log Interface — B Group v1.2
 
-Status: B GROUP INTERFACE v1.1 FOR INTEGRATION. B defines this common interface for data preparation and evaluation. A and C should use it for integration and report specific incompatibilities. Their feedback is not a prerequisite for B to start the debug data pipeline. This document does not claim that A/C have reviewed it or that the interface is already implemented in the repository.
+Status: B GROUP INTERFACE v1.2 FOR INTEGRATION. B defines this common interface for data preparation and evaluation. A and C should use it for integration and report specific incompatibilities. Their feedback is not a prerequisite for B to start the debug data pipeline. This document does not claim that A/C have reviewed it or that the interface is already implemented in the repository.
 
-v1.1 adds answer-unit construction rules from A's feedback (`a_work/unit_schema.md` v0.1 draft, branch `a-prompt-judge`) and two optional gold fields. The changes are backward compatible, so `schema_version` remains `1.0`. See Section 7 for the change log.
+v1.1 adds answer-unit construction rules from A's feedback (`a_work/unit_schema.md` v0.1 draft, branch `a-prompt-judge`) and two optional gold fields; v1.2 adds optional question-type fields. The changes are backward compatible, so `schema_version` remains `1.0`. See Section 7 for the change log.
 
 ## 1. Shared conventions
 
@@ -91,6 +91,15 @@ Within each inner support list, all evidence items are needed. Across lists, any
 | `aliases` | list of strings | Other accepted surface forms of `expected_answer`, e.g. `["Roger Thomas Staubach"]`. Defaults to `[]`. |
 | `by_omission` | boolean | `true` when the unit is a negative claim supported only by omission from a defining description (Exception 2 in `labeling_guide.md` Section 1.1). Defaults to `false`. Evaluation reports these units separately. |
 
+Record-level fields (v1.2), next to `sample_id`:
+
+| Field | Type | Meaning |
+|---|---|---|
+| `question_type` | string | Unit-construction type from Section 4.3: `single`, `bridge`, `comparison`, `bridge_comparison`, or `multipart`. Same names as A's `decompose.py`. Use it to report results by question type. |
+| `source_type` | string | The source dataset's own type, kept unchanged (e.g. `compositional`, `inference`, `custom_multipart`). |
+
+Mapping from `source_type`: `bridge`, `compositional`, `inference` → `bridge`; `comparison` → `comparison`; `bridge_comparison` → `bridge_comparison`; `custom_multipart` → `multipart`. Question types are gold-side information and are not added to traces.
+
 ### 4.2 Support-set semantics
 
 - `support_sets` lists only evidence that directly supports this unit. Support for earlier hops is expressed through `depends_on`, not repeated.
@@ -172,3 +181,4 @@ B owns the interface and can proceed with debug data under v1. A provides feedba
 |---|---|---|
 | v1 | 2026-10-15 | Initial interface. |
 | v1.1 | 2026-10-23 | Added optional gold fields `aliases` and `by_omission` (4.1), support-set semantics including `[[]]` (4.2), unit construction rules by question type from A's `unit_schema.md` v0.1 draft (4.3), and validation checks 7–9. No required field changed. |
+| v1.2 | 2026-10-24 | Added optional gold record fields `question_type` and `source_type` (4.1) for reporting by question type. No required field changed. |
