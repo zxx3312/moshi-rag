@@ -77,7 +77,7 @@ class PromptJudgeTest(unittest.TestCase):
         labels = PromptJudge(client).judge(obs([E1], 3.0))
         self.assertEqual(labels["u1"].value, "Fernando Di Leo")
         self.assertEqual(labels["u2"].label, UNRESOLVED)
-        self.assertIn("[e1]", client.messages[0][1]["content"])
+        self.assertIn("Being Twenty is a 1978", client.messages[0][-1]["content"])
 
     def test_future_or_missing_citation_downgraded(self):
         client = FakeClient([reply(("u1", SUPPORTED, "Fernando Di Leo", []), ("u2", SUPPORTED, "Italy", ["e2"]))])

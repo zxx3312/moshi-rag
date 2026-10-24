@@ -57,7 +57,8 @@ For every unit give one label:
   Negations that need outside knowledge (e.g. "Minnesota is not in Europe") stay UNRESOLVED.
   A unit cannot be SUPPORTED unless every unit in its depends_on is SUPPORTED.
   A conclusion unit (comparison, yes/no) is SUPPORTED when all its depends_on units are SUPPORTED; derive it from their values and cite their evidence.
-- CONTRADICTED: the evidence gives conflicting values for the unit.
+- CONTRADICTED: two evidence sentences give conflicting values for the same unit (e.g. one says born 1950, another 1952).
+  A yes/no unit whose answer is "no" is NOT contradicted: label it SUPPORTED with value "no".
 - UNRESOLVED: anything else. Use value null and no citations.
 
 Citations are evidence ids such as e1, never unit ids. A conclusion unit cites the evidence of the units it depends on.
@@ -82,12 +83,36 @@ JUDGE_SCHEMA = {
 }
 
 
+def _judge_request(question: str, units: List[dict], evidence: List[tuple]) -> str:
+    lines = "\n".join(f"[{eid}] {text}" for eid, text in evidence)
+    return f"Question: {question}\n\nUnits:\n{json.dumps(units)}\n\nEvidence received so far:\n{lines}"
+
+
+# Fictional worked example: a "no" conclusion is SUPPORTED, and a property missing from a
+# defining description is SUPPORTED by_omission. No evaluation question is used.
+EXAMPLE = (
+    _judge_request(
+        "Are Mara Lindqvist and Oskar Feld both painters?",
+        [{"unit_id": "u1", "description": "whether Mara Lindqvist is a painter", "depends_on": []},
+         {"unit_id": "u2", "description": "whether Oskar Feld is a painter", "depends_on": []},
+         {"unit_id": "u3", "description": "whether both are painters", "depends_on": ["u1", "u2"]}],
+        [("e1", "Mara Lindqvist is a Swedish painter and illustrator."),
+         ("e2", "Oskar Feld is a Danish architect and furniture designer.")]),
+    {"units": [
+        {"unit_id": "u1", "label": "SUPPORTED", "value": "yes", "citations": ["e1"], "by_omission": False},
+        {"unit_id": "u2", "label": "SUPPORTED", "value": "no", "citations": ["e2"], "by_omission": True},
+        {"unit_id": "u3", "label": "SUPPORTED", "value": "no", "citations": ["e1", "e2"], "by_omission": False}]},
+)
+
+
 def judge_messages(obs: Observation) -> List[dict]:
     units = [{"unit_id": u.unit_id, "description": u.description, "depends_on": list(u.depends_on)}
              for u in obs.units]
-    evidence = "\n".join(f"[{e.evidence_id}] {e.text}" for e in obs.evidence)
-    user = f"Question: {obs.question}\n\nUnits:\n{json.dumps(units)}\n\nEvidence received so far:\n{evidence}"
-    return [{"role": "system", "content": JUDGE_SYSTEM}, {"role": "user", "content": user}]
+    request = _judge_request(obs.question, units, [(e.evidence_id, e.text) for e in obs.evidence])
+    return [{"role": "system", "content": JUDGE_SYSTEM},
+            {"role": "user", "content": EXAMPLE[0]},
+            {"role": "assistant", "content": json.dumps(EXAMPLE[1])},
+            {"role": "user", "content": request}]
 
 
 class PromptJudge:

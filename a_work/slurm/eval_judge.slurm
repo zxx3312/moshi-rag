@@ -12,7 +12,8 @@
 #SBATCH --cpus-per-task=8
 #SBATCH --mem=64G
 #SBATCH --gres=gpu:1
-#SBATCH --constraint=A100|H100|h100|A40|RTXA6000
+# H100 only, so judge latency is comparable across runs.
+#SBATCH --constraint=H100|h100
 #SBATCH --time=01:00:00
 #SBATCH --output=a_work/slurm/logs/%x-%j.out
 
