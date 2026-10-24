@@ -1,0 +1,205 @@
+{
+  "annotation_version": "draft-1",
+  "schema_version": "1.0",
+  "data_version": "debug-v0",
+  "rules": "b_work/step1/schema.md v1.1 Section 4; b_work/step1/labeling_guide.md v1.1 Section 1.1",
+  "evidence_reference": "Each evidence item is [document title, sentence index], as in supporting_facts. build_gold.py converts it to an evidence ID.",
+  "title_assumption": "Evidence is shown together with its document title, as in HotpotQA. A sentence whose subject is the article's topic ('He won...', 'The team was created...') stands alone. Sentences that need an earlier sentence for other content ('The pair...', sentence fragments) are cited together with it.",
+  "drafted_by": "Claude (draft for Tianyu)",
+  "drafted_date": "2026-10-23",
+  "records": [
+    {
+      "sample_id": "custom_nasa_voyager1",
+      "status": "draft",
+      "notes": [
+        "Multipart: both units necessary, no dependencies.",
+        "Debug only: two gold paraphrases, no distractors (review note Q11)."
+      ],
+      "units": [
+        {"unit_id": "u1", "description": "launch date of Voyager 1", "necessary": true,
+         "expected_answer": "September 5, 1977", "depends_on": [],
+         "support_sets": [[["Voyager 1 — launch", 0]]]},
+        {"unit_id": "u2", "description": "date of Voyager 1's closest approach to Jupiter", "necessary": true,
+         "expected_answer": "March 5, 1979", "depends_on": [],
+         "support_sets": [[["Voyager 1 — Jupiter flyby", 0]]]}
+      ]
+    },
+    {
+      "sample_id": "custom_nasa_voyager2",
+      "status": "draft",
+      "notes": [
+        "Multipart: both units necessary, no dependencies.",
+        "u2 is the UT date: closest approach was Aug. 25, 1989, 03:56 UT, which is Aug. 24 in US time zones. No 'August 24, 1989' alias (review note Q12 suggested one), because the only evidence sentence states August 25 and an alias would be accepted as correct while being CONTRADICTED by that evidence."
+      ],
+      "units": [
+        {"unit_id": "u1", "description": "launch date of Voyager 2", "necessary": true,
+         "expected_answer": "August 20, 1977", "depends_on": [],
+         "support_sets": [[["Voyager 2 — launch", 0]]]},
+        {"unit_id": "u2", "description": "date of Voyager 2's Neptune flyby", "necessary": true,
+         "expected_answer": "August 25, 1989", "depends_on": [],
+         "support_sets": [[["Voyager 2 — Neptune flyby", 0]]]}
+      ]
+    },
+    {
+      "sample_id": "hotpotqa_5a77dadd5542997042120b59",
+      "status": "draft",
+      "notes": [
+        "Bridge: u1 finds the co-creator, u2 confirms the nickname.",
+        "Answer normalized from 'Roger Thomas Staubach (born February 5, 1942)' to 'Roger Staubach' (review note Q13).",
+        "Hall of Fame Racing sentence 0 (owners) removed from support (review note Q13).",
+        "u1 already identifies the answer because the question names the other two co-creators; u2 adds the 'Captain Comeback' check."
+      ],
+      "units": [
+        {"unit_id": "u1", "description": "Dallas Cowboys quarterback who co-created Hall of Fame Racing with Troy Aikman and Bill Saunders", "necessary": false,
+         "expected_answer": "Roger Staubach", "aliases": ["Roger Thomas Staubach"], "depends_on": [],
+         "support_sets": [[["Hall of Fame Racing", 1]]]},
+        {"unit_id": "u2", "description": "Hall of Fame Racing co-creator known as \"Captain Comeback\", given {u1}", "necessary": true,
+         "expected_answer": "Roger Staubach", "aliases": ["Roger Thomas Staubach"], "depends_on": ["u1"],
+         "support_sets": [[["Roger Staubach", 0]]]}
+      ]
+    },
+    {
+      "sample_id": "hotpotqa_5a8335d95542993344745ff1",
+      "status": "draft",
+      "notes": [
+        "Comparison: two fact units plus a conclusion unit.",
+        "Emilio Sánchez sentences 3 and 4 removed from support (review note Q14).",
+        "Aliases added per review note Q14.",
+        "Bent-Ove Pedersen sentences 2-3 added as alternative support for u2; sentence 3 alone does not mention the Olympics.",
+        "Caveat: the evidence shows Sánchez competed in 1988 and Norval in 1992, not that these were their first appearances. The comparison follows the source gold."
+      ],
+      "units": [
+        {"unit_id": "u1", "description": "year of an Olympic Games in which Emilio Sánchez competed", "necessary": false,
+         "expected_answer": "1988", "depends_on": [],
+         "support_sets": [[["Emilio Sánchez", 1]]]},
+        {"unit_id": "u2", "description": "year of an Olympic Games in which Piet Norval competed", "necessary": false,
+         "expected_answer": "1992", "depends_on": [],
+         "support_sets": [[["Piet Norval", 1]], [["Bent-Ove Pedersen", 2], ["Bent-Ove Pedersen", 3]]]},
+        {"unit_id": "u3", "description": "which of Piet Norval and Emilio Sánchez appeared in the Olympics first", "necessary": true,
+         "expected_answer": "Sanchez", "aliases": ["Emilio Sánchez", "Emilio Sánchez Vicario"], "depends_on": ["u1", "u2"],
+         "support_sets": [[]]}
+      ]
+    },
+    {
+      "sample_id": "hotpotqa_5a852cd05542997b5ce3ffb0",
+      "status": "draft",
+      "notes": [
+        "Bridge: birthplace (optional) then the bay (necessary)."
+      ],
+      "units": [
+        {"unit_id": "u1", "description": "birthplace of George McCall Theal", "necessary": false,
+         "expected_answer": "Saint John, New Brunswick", "aliases": ["Saint John"], "depends_on": [],
+         "support_sets": [[["George McCall Theal", 0]]]},
+        {"unit_id": "u2", "description": "bay of which {u1} is a port city", "necessary": true,
+         "expected_answer": "Bay of Fundy", "depends_on": ["u1"],
+         "support_sets": [[["Saint John, New Brunswick", 0]]]}
+      ]
+    },
+    {
+      "sample_id": "hotpotqa_5adf72d35542992d7e9f9369",
+      "status": "draft",
+      "notes": [
+        "Comparison (yes/no): two fact units plus a conclusion unit.",
+        "u2 uses the omission exception (labeling_guide.md 1.1, Exception 2): the defining description lists 'film director and producer'. The Jericho documents call him an executive producer, not a writer, so condition 4 holds.",
+        "This replaces the phrasing suggested in review note Q16, which predates the omission rule.",
+        "Open point: 'no' follows from u2 alone, but schema.md 4.3 makes the conclusion depend on both fact units."
+      ],
+      "units": [
+        {"unit_id": "u1", "description": "whether William Kronick is a television writer", "necessary": false,
+         "expected_answer": "yes", "depends_on": [],
+         "support_sets": [[["William Kronick", 0]]]},
+        {"unit_id": "u2", "description": "whether Jon Turteltaub is a television writer", "necessary": false,
+         "expected_answer": "no", "by_omission": true, "depends_on": [],
+         "support_sets": [[["Jon Turteltaub", 0]]]},
+        {"unit_id": "u3", "description": "whether William Kronick and Jon Turteltaub are both television writers", "necessary": true,
+         "expected_answer": "no", "depends_on": ["u1", "u2"],
+         "support_sets": [[]]}
+      ]
+    },
+    {
+      "sample_id": "hotpotqa_5ae0159855429925eb1afc09",
+      "status": "pending_decision",
+      "notes": [
+        "Pending labeling_guide.md Section 5: answers that rely on the question's presupposition.",
+        "Drafted option: the conclusion depends only on Elytis's win and relies on the presupposition that exactly one of the two won.",
+        "No unit for 'Nin did not win': Exception 2 does not cover awards, so it would have support_sets [] and block the conclusion forever.",
+        "Anaïs Nin sentence 0 and Odysseas Elytis sentence 0 from the source supporting facts are not used. Elytis sentence 1 ('In 1979 he was awarded...') resolves 'he' through the document title."
+      ],
+      "units": [
+        {"unit_id": "u1", "description": "whether Odysseas Elytis was awarded the Nobel Prize in Literature", "necessary": false,
+         "expected_answer": "yes", "depends_on": [],
+         "support_sets": [[["Odysseas Elytis", 1]]]},
+        {"unit_id": "u2", "description": "which of Anaïs Nin and Odysseas Elytis was awarded the Nobel Prize in Literature", "necessary": true,
+         "expected_answer": "Odysseas Elytis", "aliases": ["Elytis"], "depends_on": ["u1"],
+         "support_sets": [[]]}
+      ]
+    },
+    {
+      "sample_id": "hotpotqa_5ae250b45542996483e64977",
+      "status": "draft",
+      "notes": [
+        "Bridge: the film year (optional) then the earlier job (necessary).",
+        "Answer normalized from 'former Speaker of the U.S. House of Representatives'; aliases per review note Q18.",
+        "'U.S. Representative' is a second valid answer (Joseph Gaylord sentence 0), not a surface form. It is listed in aliases until the schema has a field for alternative answers.",
+        "Alternative support sets from review note Q18. Congressional Review Act 0-1 and Winning the Future 0-1 date the role (1996, 2005); the other sets say 'former' without a date, as does the source gold (Callista Gingrich sentence 1).",
+        "Political positions of Newt Gingrich sentence 0 ('including as Speaker of the House') added after the trace audit (2026-10-23): it states the role as explicitly as the undated sets."
+      ],
+      "units": [
+        {"unit_id": "u1", "description": "year Newt Gingrich produced Nine Days that Changed the World", "necessary": false,
+         "expected_answer": "2010", "depends_on": [],
+         "support_sets": [[["Nine Days that Changed the World", 0]]]},
+        {"unit_id": "u2", "description": "job Newt Gingrich held before {u1}", "necessary": true,
+         "expected_answer": "Speaker of the U.S. House of Representatives",
+         "aliases": ["Speaker of the House", "House Speaker", "U.S. Representative"], "depends_on": ["u1"],
+         "support_sets": [
+           [["Callista Gingrich", 1]],
+           [["Congressional Review Act", 0], ["Congressional Review Act", 1]],
+           [["Winning the Future", 0], ["Winning the Future", 1]],
+           [["Joseph Gaylord", 0]],
+           [["Rediscovering God in America", 0]],
+           [["Candace Gingrich", 1]],
+           [["Political positions of Newt Gingrich", 0]]
+         ]}
+      ]
+    },
+    {
+      "sample_id": "hotpotqa_5ae3f4fe5542995ad6573ce8",
+      "status": "draft",
+      "notes": [
+        "Comparison (yes/no): two fact units plus a conclusion unit.",
+        "Osbeckia octandra and Osbeckia aspera sentence 0 explicitly name the genus Osbeckia and its family, so they are alternative support for u2.",
+        "The Gordonia species sentences and Osbeckia stellata do not mention the genus; linking a species to its genus by name is an inference, so they are excluded. This narrows review note Q19.",
+        "Strict exclusion kept after the trace audit (2026-10-23): Osbeckia stellata sentence 0 arrives in batch 1 of split traces, so a model that answers from it is scored unsupported. This is an intended hard case.",
+        "Trap: Gondysia similis ('Gordonia Darkwing') is a moth in Noctuidae."
+      ],
+      "units": [
+        {"unit_id": "u1", "description": "family of the genus Gordonia", "necessary": false,
+         "expected_answer": "Theaceae", "depends_on": [],
+         "support_sets": [[["Gordonia (plant)", 0]]]},
+        {"unit_id": "u2", "description": "family of the genus Osbeckia", "necessary": false,
+         "expected_answer": "Melastomataceae", "depends_on": [],
+         "support_sets": [[["Osbeckia", 0]], [["Osbeckia octandra", 0]], [["Osbeckia aspera", 0]]]},
+        {"unit_id": "u3", "description": "whether Gordonia and Osbeckia are in the same family", "necessary": true,
+         "expected_answer": "no", "depends_on": ["u1", "u2"],
+         "support_sets": [[]]}
+      ]
+    },
+    {
+      "sample_id": "hotpotqa_5ae641f65542992ae0d162a3",
+      "status": "draft",
+      "notes": [
+        "Bridge: the singer (optional) then the mononym (necessary).",
+        "My Inspiration sentence 1 says the album is credited under the name Charice but does not call it a mononym, so it is not used (review note Q20: partial support).",
+        "Strict exclusion kept after the trace audit (2026-10-23): that sentence arrives in batch 1 of split traces, so answering 'Charice' from it is scored unsupported. This is an intended hard case."
+      ],
+      "units": [
+        {"unit_id": "u1", "description": "Filipino singer who released the album \"My Inspiration\"", "necessary": false,
+         "expected_answer": "Jake Zyrus", "depends_on": [],
+         "support_sets": [[["My Inspiration", 0]]]},
+        {"unit_id": "u2", "description": "mononym of {u1}", "necessary": true,
+         "expected_answer": "Charice", "depends_on": ["u1"],
+         "support_sets": [[["Jake Zyrus", 0]]]}
+      ]
+    }
+  ]
+}
