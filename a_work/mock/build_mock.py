@@ -104,14 +104,14 @@ def source_of(event):
         return {"sentences": [{"document_id": d, "sentence_index": i} for d, i in src]}
     if isinstance(src, list):
         return {"document_id": src[0], "sentence_index": src[1]}
-    return {"document_id": "unspecified", "sentence_index": None}
+    return {"document_id": None, "sentence_index": None}
 
 
 def records():
     for line in PILOT.read_text(encoding="utf-8").splitlines():
         r = json.loads(line)
         events = [{"evidence_id": "e1", "visible_time_s": 8.0, "text": r["reference_text"],
-                   "source": {"document_id": "simpleqa_reference", "sentence_index": 0}}]
+                   "source": {"document_id": None, "sentence_index": None}}]  # no article title
         units = [u("u1", r["question"], True, r["answer"][0], ["e1"])]
         yield r["sample_id"], r["question"], events, "single", units
     for name in ("multihop.json", "multipart_debug.json"):

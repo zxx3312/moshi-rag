@@ -133,6 +133,31 @@ class PromptJudgeTest(unittest.TestCase):
         self.assertEqual(labels["u2"].label, UNRESOLVED)
 
 
+class TitleAndTypeTest(unittest.TestCase):
+    def test_evidence_shown_with_document_title(self):
+        e = Evidence("d6s1", "He won the silver medal at the 1988 Olympic Games.", 1.0, {"document_id": "Emilio Sanchez"})
+        client = FakeClient([{"units": []}])
+        PromptJudge(client).judge(obs([e], 1.0))
+        self.assertIn("[d6s1] (Emilio Sanchez) He won", client.messages[0][-1]["content"])
+
+    def test_question_type_inferred_from_units(self):
+        import eval_judge
+
+        def unit(uid, nec, deps=(), ss=(("e",),)):
+            return {"unit_id": uid, "necessary": nec, "depends_on": list(deps), "support_sets": [list(x) for x in ss]}
+        cases = {
+            "single": [unit("u1", True)],
+            "bridge": [unit("u1", False), unit("u2", True, ["u1"])],
+            "comparison": [unit("u1", False), unit("u2", False), unit("u3", True, ["u1", "u2"], [()])],
+            "bridge_comparison": [unit("u1", False), unit("u2", False, ["u1"]), unit("u3", False),
+                                  unit("u4", False, ["u3"]), unit("u5", True, ["u2", "u4"], [()])],
+            "multipart": [unit("u1", True), unit("u2", True)],
+        }
+        for expected, units in cases.items():
+            self.assertEqual(eval_judge.question_type({"units": units}), expected)
+        self.assertEqual(eval_judge.question_type({"question_type": "single", "units": cases["bridge"]}), "single")
+
+
 class EvalScriptTest(unittest.TestCase):
     def test_runs_on_mock_data(self):
         import eval_judge
@@ -152,6 +177,7 @@ class EvalScriptTest(unittest.TestCase):
             eval_judge.main()
             summary = (Path(out) / "summary.md").read_text()
         self.assertIn("## Decomposition", summary)
+        self.assertIn("(30 traces)", summary)
         self.assertIn("missed SUPPORTED", summary)
 
 

@@ -29,9 +29,25 @@ def norm(s):
     return re.sub(r"[^a-z0-9 ]", "", (s or "").lower()).strip()
 
 
-def value_match(pred, gold):
-    p, g = norm(pred), norm(gold)
-    return bool(p and g) and (g in p or p in g)
+def value_match(pred, answers):
+    p = norm(pred)
+    return bool(p) and any(g and (g in p or p in g) for g in map(norm, answers))
+
+
+def question_type(gold):
+    """Gold may carry question_type (A's mock); B's gold does not, so infer it from the unit structure."""
+    if gold.get("question_type"):
+        return gold["question_type"]
+    units = gold["units"]
+    if len(units) == 1:
+        return "single"
+    conclusions = [u for u in units if u["support_sets"] == [[]] and len(u["depends_on"]) >= 2]
+    if conclusions:
+        facts = [u for u in units if u not in conclusions]
+        return "bridge_comparison" if any(u["depends_on"] for u in facts) else "comparison"
+    if all(u["necessary"] and not u["depends_on"] for u in units):
+        return "multipart"
+    return "bridge"
 
 
 def shape(units):
@@ -48,22 +64,24 @@ def main():
     ap.add_argument("--out", type=Path, required=True)
     args = ap.parse_args()
 
-    traces = {t["sample_id"]: t for t in load_jsonl(args.trace)}
+    traces = load_jsonl(args.trace)  # B's data has several traces (delay schedules) per question
     golds = load_jsonl(args.gold)
+    gold_by_id = {g["sample_id"]: g for g in golds}
+    question_of = {t["sample_id"]: t["question"] for t in traces}
     extra = {"chat_template_kwargs": {"enable_thinking": args.thinking}}
     client = ChatClient(args.base_url, args.model, extra_body=extra)
     oracle, judge = OracleJudge(golds), PromptJudge(client)
     args.out.mkdir(parents=True, exist_ok=True)
 
     decomp_rows, step_rows = [], []
-    for g in golds:
-        sid, qtype = g["sample_id"], g.get("question_type")
-        trace = traces[sid]
+    for g in golds:  # decomposition sees only the question: once per question
+        sid, qtype = g["sample_id"], question_type(g)
+        if sid not in question_of:
+            continue
         gold_units = tuple(units_without_gold(g))
-
-        pred_type, pred_units, fell_back = decompose(trace["question"], client)
+        pred_type, pred_units, fell_back = decompose(question_of[sid], client)
         decomp_rows.append({
-            "sample_id": sid, "question": trace["question"], "gold_type": qtype, "pred_type": pred_type,
+            "sample_id": sid, "question": question_of[sid], "gold_type": qtype, "pred_type": pred_type,
             "fell_back": fell_back, "type_ok": pred_type == qtype,
             "count_ok": len(pred_units) == len(gold_units), "shape_ok": shape(pred_units) == shape(gold_units),
             "pred_units": [vars(u) | {"depends_on": list(u.depends_on)} for u in pred_units],
@@ -71,8 +89,14 @@ def main():
                             "depends_on": list(u.depends_on)} for u in gold_units],
         })
 
+    for trace in traces:  # labels: every trace, so every delay schedule
+        sid = trace["sample_id"]
+        if sid not in gold_by_id:
+            continue
+        g = gold_by_id[sid]
+        qtype, gold_units = question_type(g), tuple(units_without_gold(g))
         events = _parse_events(trace)
-        expected = {u["unit_id"]: u["expected_answer"] for u in g["units"]}
+        expected = {u["unit_id"]: [u["expected_answer"]] + list(u.get("aliases", [])) for u in g["units"]}
         gold_omission = {u["unit_id"]: u.get("by_omission", False) for u in g["units"]}
         for t in sorted({0.0} | {e.visible_time_s for e in events}):
             visible = tuple(e for e in events if e.visible_time_s <= t)
@@ -82,9 +106,9 @@ def main():
             for unit in gold_units:
                 uid = unit.unit_id
                 step_rows.append({
-                    "sample_id": sid, "question_type": qtype, "time_s": t, "unit_id": uid,
+                    "sample_id": sid, "trace_id": trace["trace_id"], "question_type": qtype, "time_s": t, "unit_id": uid,
                     "necessary": unit.necessary, "oracle": o[uid].label, "prompt": p[uid].label,
-                    "value": p[uid].value, "expected": expected[uid], "citations": list(p[uid].citations),
+                    "value": p[uid].value, "expected": expected[uid][0], "citations": list(p[uid].citations),
                     "by_omission": p[uid].by_omission, "gold_by_omission": bool(gold_omission[uid]),
                     "value_ok": value_match(p[uid].value, expected[uid]) if p[uid].label == SUPPORTED else None,
                     "state_oracle": sufficiency_state(gold_units, o), "state_prompt": sufficiency_state(gold_units, p),
@@ -103,7 +127,9 @@ def pct(n, d):
 
 
 def summarize(decomp, steps, calls, client, args):
-    lines = [f"# Prompt judge evaluation", "", f"model `{args.model}`, thinking={args.thinking}, data `{args.gold}`", ""]
+    lines = ["# Prompt judge evaluation", "",
+             f"model `{args.model}`, thinking={args.thinking}, gold `{args.gold}`, traces `{args.trace}` "
+             f"({len({s['trace_id'] for s in steps})} traces)", ""]
 
     lines += ["## Decomposition", "", "| question type | n | type ok | unit count ok | structure ok | fallback |",
               "|---|---|---|---|---|---|"]
@@ -142,7 +168,7 @@ def summarize(decomp, steps, calls, client, args):
                      f"| {sum(s['prompt'] == SUPPORTED and s['oracle'] != SUPPORTED for s in ss)} "
                      f"| {sum(s['oracle'] == SUPPORTED and s['prompt'] != SUPPORTED for s in ss)} |")
 
-    states = {(s["sample_id"], s["time_s"]): (s["state_oracle"], s["state_prompt"]) for s in steps}
+    states = {(s["trace_id"], s["time_s"]): (s["state_oracle"], s["state_prompt"]) for s in steps}
     lines += ["", f"- sufficiency state agreement (decides the action): "
                   f"{pct(sum(a == b for a, b in states.values()), len(states))} of decision points"]
 
