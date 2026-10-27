@@ -2,12 +2,208 @@
   "annotation_version": "draft-1",
   "schema_version": "1.0",
   "data_version": "debug-v0",
-  "rules": "b_work/step1/schema.md v1.1 Section 4; b_work/step1/labeling_guide.md v1.1 Section 1.1",
+  "rules": "b_work/step1/schema.md v1.2 Section 4; b_work/step1/labeling_guide.md v1.1 Section 1.1",
   "evidence_reference": "Each evidence item is [document title, sentence index], as in supporting_facts. build_gold.py converts it to an evidence ID.",
   "title_assumption": "Evidence is shown together with its document title, as in HotpotQA. A sentence whose subject is the article's topic ('He won...', 'The team was created...') stands alone. Sentences that need an earlier sentence for other content ('The pair...', sentence fragments) are cited together with it.",
   "drafted_by": "Claude (draft for Tianyu)",
   "drafted_date": "2026-10-23",
   "records": [
+    {
+      "sample_id": "2wikimultihopqa_062884f40bb011ebab90acde48001122",
+      "status": "draft",
+      "notes": [
+        "Bridge: Caroline's father (optional) then her paternal grandfather (necessary).",
+        "u1 and u2 follow the father-to-father chain in review note Q1.",
+        "Caroline Emily Nevill sentence 1 and William Nevill sentence 2 use their document titles to identify the subjects."
+      ],
+      "units": [
+        {"unit_id": "u1", "description": "father of Caroline Emily Nevill", "necessary": false,
+         "expected_answer": "William Nevill, 4th Earl of Abergavenny", "depends_on": [],
+         "support_sets": [[["Caroline Emily Nevill", 1]]]},
+        {"unit_id": "u2", "description": "father of {u1}, Caroline Emily Nevill's paternal grandfather", "necessary": true,
+         "expected_answer": "Henry Nevill, 2nd Earl of Abergavenny", "depends_on": ["u1"],
+         "support_sets": [[["William Nevill, 4th Earl of Abergavenny", 2]]]}
+      ]
+    },
+    {
+      "sample_id": "2wikimultihopqa_36ec2b3a086411ebbd5eac1f6bf848b6",
+      "status": "draft",
+      "notes": [
+        "Bridge comparison: two director/date chains plus a conclusion unit.",
+        "u2 depends on u1; u4 depends on u3; u5 compares the death dates (review note Q2).",
+        "Anselmo Duarte sentence 16 added as alternative support for u2.",
+        "Anselmo Duarte sentence 4 excluded from u1: 'His film' does not explicitly state the director role (labeling_guide.md Section 1.1).",
+        "Answer capitalization normalized from 'The Obsessed Of Catule' to 'The Obsessed of Catule'."
+      ],
+      "units": [
+        {"unit_id": "u1", "description": "director of The Obsessed of Catule", "necessary": false,
+         "expected_answer": "Anselmo Duarte", "depends_on": [],
+         "support_sets": [[["The Obsessed of Catule", 0]]]},
+        {"unit_id": "u2", "description": "death date of {u1}", "necessary": false,
+         "expected_answer": "November 7, 2009", "depends_on": ["u1"],
+         "support_sets": [[["Anselmo Duarte", 0]], [["Anselmo Duarte", 16]]]},
+        {"unit_id": "u3", "description": "director of Countess Ironing-Maid", "necessary": false,
+         "expected_answer": "Constantin J. David", "depends_on": [],
+         "support_sets": [[["Countess Ironing-Maid", 0]]]},
+        {"unit_id": "u4", "description": "death date of {u3}", "necessary": false,
+         "expected_answer": "February 19, 1964", "depends_on": ["u3"],
+         "support_sets": [[["Constantin J. David", 0]]]},
+        {"unit_id": "u5", "description": "film whose director died later", "necessary": true,
+         "expected_answer": "The Obsessed of Catule", "depends_on": ["u2", "u4"],
+         "support_sets": [[]]}
+      ]
+    },
+    {
+      "sample_id": "2wikimultihopqa_378759440bdd11eba7f7acde48001122",
+      "status": "draft",
+      "notes": [
+        "Bridge: director (optional) then birthplace (necessary).",
+        "u1 and u2 follow the film-to-director-to-birthplace chain in review note Q3.",
+        "u2 uses the explicit birthplace in Fernando Di Leo sentence 0. Being Twenty sentence 0 describes the film as Italian, which does not support the director's birthplace."
+      ],
+      "units": [
+        {"unit_id": "u1", "description": "director of Being Twenty", "necessary": false,
+         "expected_answer": "Fernando Di Leo", "depends_on": [],
+         "support_sets": [[["Being Twenty", 0]]]},
+        {"unit_id": "u2", "description": "birthplace of {u1}", "necessary": true,
+         "expected_answer": "San Ferdinando di Puglia", "depends_on": ["u1"],
+         "support_sets": [[["Fernando Di Leo", 0]]]}
+      ]
+    },
+    {
+      "sample_id": "2wikimultihopqa_37a7af5a0bb011ebab90acde48001122",
+      "status": "draft",
+      "notes": [
+        "Bridge: Margaret's father (optional) then her paternal grandfather (necessary).",
+        "u1 and u2 follow the father-to-father chain in review note Q4.",
+        "Sampson Lennard sentence 4 added as alternative support for u1.",
+        "Thomas Fiennes sentence 1 uses 'Dacre'; its document title identifies Thomas Fiennes, 9th Baron Dacre."
+      ],
+      "units": [
+        {"unit_id": "u1", "description": "father of Margaret Fiennes, 11th Baroness Dacre", "necessary": false,
+         "expected_answer": "Thomas Fiennes, 9th Baron Dacre", "depends_on": [],
+         "support_sets": [[["Margaret Fiennes, 11th Baroness Dacre", 1]], [["Sampson Lennard", 4]]]},
+        {"unit_id": "u2", "description": "father of {u1}, Margaret Fiennes's paternal grandfather", "necessary": true,
+         "expected_answer": "Sir Thomas Fiennes", "depends_on": ["u1"],
+         "support_sets": [[["Thomas Fiennes, 9th Baron Dacre", 1]]]}
+      ]
+    },
+    {
+      "sample_id": "2wikimultihopqa_39751c8a08d811ebbd9aac1f6bf848b6",
+      "status": "draft",
+      "notes": [
+        "Comparison: two fact units plus a conclusion unit.",
+        "u1 and u2 give the explicit birth dates; u3 compares them under the deterministic-comparison exception (review note Q5)."
+      ],
+      "units": [
+        {"unit_id": "u1", "description": "birth date of Mark Gurr", "necessary": false,
+         "expected_answer": "February 18, 1966", "depends_on": [],
+         "support_sets": [[["Mark Gurr", 0]]]},
+        {"unit_id": "u2", "description": "birth date of William Eythe", "necessary": false,
+         "expected_answer": "April 7, 1918", "depends_on": [],
+         "support_sets": [[["William Eythe", 0]]]},
+        {"unit_id": "u3", "description": "person born later", "necessary": true,
+         "expected_answer": "Mark Gurr", "depends_on": ["u1", "u2"],
+         "support_sets": [[]]}
+      ]
+    },
+    {
+      "sample_id": "2wikimultihopqa_4f8e349e08e111ebbda2ac1f6bf848b6",
+      "status": "draft",
+      "notes": [
+        "Bridge comparison: two director/date chains plus a conclusion unit.",
+        "u2 depends on u1; u4 depends on u3; u5 compares the death dates (review note Q6).",
+        "Answer capitalization normalized from 'Devil'S Doorway' to 'Devil's Doorway'."
+      ],
+      "units": [
+        {"unit_id": "u1", "description": "director of Hotel Paradis", "necessary": false,
+         "expected_answer": "George Schnéevoigt", "depends_on": [],
+         "support_sets": [[["Hotel Paradis", 0]]]},
+        {"unit_id": "u2", "description": "death date of {u1}", "necessary": false,
+         "expected_answer": "February 6, 1961", "depends_on": ["u1"],
+         "support_sets": [[["George Schnéevoigt", 0]]]},
+        {"unit_id": "u3", "description": "director of Devil's Doorway", "necessary": false,
+         "expected_answer": "Anthony Mann", "depends_on": [],
+         "support_sets": [[["Devil's Doorway", 0]]]},
+        {"unit_id": "u4", "description": "death date of {u3}", "necessary": false,
+         "expected_answer": "April 29, 1967", "depends_on": ["u3"],
+         "support_sets": [[["Anthony Mann", 0]]]},
+        {"unit_id": "u5", "description": "film whose director died later", "necessary": true,
+         "expected_answer": "Devil's Doorway", "depends_on": ["u2", "u4"],
+         "support_sets": [[]]}
+      ]
+    },
+    {
+      "sample_id": "2wikimultihopqa_94415cd008e911ebbda7ac1f6bf848b6",
+      "status": "draft",
+      "notes": [
+        "Comparison (yes/no): two fact units plus a conclusion unit.",
+        "Both biographies explicitly say 'American' (review note Q7); u3 compares the country descriptors under the deterministic-comparison exception."
+      ],
+      "units": [
+        {"unit_id": "u1", "description": "country descriptor of Brian Part", "necessary": false,
+         "expected_answer": "American", "depends_on": [],
+         "support_sets": [[["Brian Part", 0]]]},
+        {"unit_id": "u2", "description": "country descriptor of John Mosca", "necessary": false,
+         "expected_answer": "American", "depends_on": [],
+         "support_sets": [[["John Mosca", 1]]]},
+        {"unit_id": "u3", "description": "whether Brian Part and John Mosca are from the same country", "necessary": true,
+         "expected_answer": "yes", "depends_on": ["u1", "u2"],
+         "support_sets": [[]]}
+      ]
+    },
+    {
+      "sample_id": "2wikimultihopqa_d2f969d40bd911eba7f7acde48001122",
+      "status": "draft",
+      "notes": [
+        "Bridge: director (optional) then birthplace (necessary).",
+        "Film sentence 1 replaced with sentence 0 for u1 (review note Q8).",
+        "Answer normalized from 'Jamaican' to 'Jamaica'; the original source form is kept in aliases.",
+        "u2 uses 'Jamaican-born' in Stephen Hopkins sentence 0. The 'British-Australian' descriptor is not used as birthplace support."
+      ],
+      "units": [
+        {"unit_id": "u1", "description": "director of A Nightmare on Elm Street 5: The Dream Child", "necessary": false,
+         "expected_answer": "Stephen Hopkins", "depends_on": [],
+         "support_sets": [[["A Nightmare on Elm Street 5: The Dream Child", 0]]]},
+        {"unit_id": "u2", "description": "birthplace of {u1}", "necessary": true,
+         "expected_answer": "Jamaica", "aliases": ["Jamaican"], "depends_on": ["u1"],
+         "support_sets": [[["Stephen Hopkins (director)", 0]]]}
+      ]
+    },
+    {
+      "sample_id": "custom_nasa_apollo11",
+      "status": "draft",
+      "notes": [
+        "Multipart: both units necessary, no dependencies.",
+        "Both dates have direct support (review note Q9).",
+        "Debug only: two gold paraphrases, no distractors."
+      ],
+      "units": [
+        {"unit_id": "u1", "description": "launch date of Apollo 11", "necessary": true,
+         "expected_answer": "July 16, 1969", "depends_on": [],
+         "support_sets": [[["Apollo 11 — launch", 0]]]},
+        {"unit_id": "u2", "description": "Earth splashdown date of Apollo 11", "necessary": true,
+         "expected_answer": "July 24, 1969", "depends_on": [],
+         "support_sets": [[["Apollo 11 — splashdown", 0]]]}
+      ]
+    },
+    {
+      "sample_id": "custom_nasa_perseverance",
+      "status": "draft",
+      "notes": [
+        "Multipart: both units necessary, no dependencies.",
+        "Both dates have direct support (review note Q10).",
+        "Debug only: two gold paraphrases, no distractors."
+      ],
+      "units": [
+        {"unit_id": "u1", "description": "launch date of Perseverance", "necessary": true,
+         "expected_answer": "July 30, 2020", "depends_on": [],
+         "support_sets": [[["Perseverance — launch", 0]]]},
+        {"unit_id": "u2", "description": "Mars landing date of Perseverance", "necessary": true,
+         "expected_answer": "February 18, 2021", "depends_on": [],
+         "support_sets": [[["Perseverance — Mars landing", 0]]]}
+      ]
+    },
     {
       "sample_id": "custom_nasa_voyager1",
       "status": "draft",
