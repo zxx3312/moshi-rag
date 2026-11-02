@@ -11,7 +11,7 @@ sys.path.insert(0, str(A_WORK))
 from turntaking.decompose import decompose, validate_units  # noqa: E402
 from turntaking.judge import PromptJudge, resolve_dependencies  # noqa: E402
 from turntaking.llm import FakeClient, parse_json_object  # noqa: E402
-from turntaking.schema import SUPPORTED, UNRESOLVED, Evidence, Observation, Unit  # noqa: E402
+from turntaking.schema import CONTRADICTED, SUPPORTED, UNRESOLVED, Evidence, Observation, Unit  # noqa: E402
 
 UNITS = (Unit("u1", "director of Being Twenty", False), Unit("u2", "birthplace of {u1}", True, ("u1",)))
 E1 = Evidence("e1", "Being Twenty is a 1978 Italian film directed by Fernando Di Leo.", 3.0, {})
@@ -126,6 +126,65 @@ class PromptJudgeTest(unittest.TestCase):
         client = FakeClient([{"units": [
             {"unit_id": "u1", "label": SUPPORTED, "value": "no", "citations": ["e1"], "by_omission": True}]}])
         self.assertTrue(PromptJudge(client).judge(obs([E1], 3.0))["u1"].by_omission)
+
+    def test_conclusion_label_derived_from_dependencies(self):
+        units = (Unit("u1", "family of genus A", False), Unit("u2", "family of genus B", False),
+                 Unit("u3", "whether they are in the same family", True, ("u1", "u2")))
+        o = Observation("s3", "Are A and B in the same family?", 8.0, (E1, E2), units, False)
+        # The model says CONTRADICTED for a "no" answer; the code overrides it from the dependencies.
+        client = FakeClient([reply(("u1", SUPPORTED, "Theaceae", ["e1"]), ("u2", SUPPORTED, "Melastomataceae", ["e2"]),
+                                   ("u3", CONTRADICTED, "no", ["e1", "e2"]))])
+        labels = PromptJudge(client).judge(o)
+        self.assertEqual((labels["u3"].label, labels["u3"].value, labels["u3"].citations), (SUPPORTED, "no", ("e1", "e2")))
+        # A conclusion stays UNRESOLVED while a dependency is, whatever the model says.
+        client = FakeClient([reply(("u1", SUPPORTED, "Theaceae", ["e1"]), ("u2", UNRESOLVED, None, []),
+                                   ("u3", SUPPORTED, "no", ["e1"]))])
+        self.assertEqual(PromptJudge(client).judge(o)["u3"].label, UNRESOLVED)
+
+    def _conclusion(self, question, *replies):
+        units = (Unit("u1", "fact about A", False), Unit("u2", "fact about B", False),
+                 Unit("u3", "conclusion", True, ("u1", "u2")))
+        o = Observation("s4", question, 3.0, (E1,), units, False)
+        client = FakeClient([{"units": [dict(zip(("unit_id", "label", "value", "citations", "by_presupposition"), r))
+                                        for r in replies]}])
+        return units, PromptJudge(client).judge(o)
+
+    def test_presupposition_picks_named_candidate(self):
+        units, labels = self._conclusion(
+            "In between Ann Lee and Bo Kim, who won the prize?",
+            ("u1", UNRESOLVED, None, [], False), ("u2", SUPPORTED, "yes", ["e1"], False),
+            ("u3", SUPPORTED, "Bo Kim", ["e1"], True))
+        u3 = resolve_dependencies(units, labels)["u3"]
+        self.assertEqual((u3.label, u3.value, u3.citations, u3.by_presupposition), (SUPPORTED, "Bo Kim", ("e1",), True))
+
+    def test_presupposition_rejected_for_value_comparison(self):
+        _, labels = self._conclusion(
+            "Who was born later, Ann Lee or Bo Kim?",
+            ("u1", SUPPORTED, "1966", ["e1"], False), ("u2", UNRESOLVED, None, [], False),
+            ("u3", SUPPORTED, "Ann Lee", ["e1"], True))
+        self.assertEqual(labels["u3"].label, UNRESOLVED)
+
+    def test_presupposition_rejected_for_both_question(self):
+        _, labels = self._conclusion(
+            "Are Ann Lee and Bo Kim both writers?",
+            ("u1", SUPPORTED, "yes", ["e1"], False), ("u2", UNRESOLVED, None, [], False),
+            ("u3", SUPPORTED, "yes", ["e1"], True))
+        self.assertEqual(labels["u3"].label, UNRESOLVED)
+
+    def test_presupposition_rejected_without_claim_or_named_candidate(self):
+        for answer, claim in (("Bo Kim", False), ("Cy Young", True)):
+            _, labels = self._conclusion(
+                "In between Ann Lee and Bo Kim, who won the prize?",
+                ("u1", UNRESOLVED, None, [], False), ("u2", SUPPORTED, "yes", ["e1"], False),
+                ("u3", SUPPORTED, answer, ["e1"], claim))
+            self.assertEqual(labels["u3"].label, UNRESOLVED, answer)
+
+    def test_presupposition_on_bridge_unit_keeps_flag(self):
+        client = FakeClient([{"units": [
+            {"unit_id": "u1", "label": SUPPORTED, "value": "Rui", "citations": ["e1"], "by_presupposition": False},
+            {"unit_id": "u2", "label": SUPPORTED, "value": "Rui", "citations": ["e1"], "by_presupposition": True}]}])
+        labels = resolve_dependencies(UNITS, PromptJudge(client).judge(obs([E1], 3.0)))
+        self.assertEqual((labels["u2"].label, labels["u2"].by_presupposition), (SUPPORTED, True))
 
     def test_dependency_still_enforced(self):
         client = FakeClient([reply(("u1", UNRESOLVED, None, []), ("u2", SUPPORTED, "San Ferdinando", ["e2"]))])

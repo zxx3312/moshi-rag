@@ -69,7 +69,7 @@ def main():
     gold_by_id = {g["sample_id"]: g for g in golds}
     question_of = {t["sample_id"]: t["question"] for t in traces}
     extra = {"chat_template_kwargs": {"enable_thinking": args.thinking}}
-    client = ChatClient(args.base_url, args.model, extra_body=extra)
+    client = ChatClient(args.base_url, args.model, extra_body=extra, max_tokens=8192 if args.thinking else 1024)
     oracle, judge = OracleJudge(golds), PromptJudge(client)
     args.out.mkdir(parents=True, exist_ok=True)
 
@@ -98,6 +98,7 @@ def main():
         events = _parse_events(trace)
         expected = {u["unit_id"]: [u["expected_answer"]] + list(u.get("aliases", [])) for u in g["units"]}
         gold_omission = {u["unit_id"]: u.get("by_omission", False) for u in g["units"]}
+        gold_presupposition = {u["unit_id"]: u.get("by_presupposition", False) for u in g["units"]}
         for t in sorted({0.0} | {e.visible_time_s for e in events}):
             visible = tuple(e for e in events if e.visible_time_s <= t)
             obs = Observation(sid, trace["question"], t, visible, gold_units, False)
@@ -110,6 +111,7 @@ def main():
                     "necessary": unit.necessary, "oracle": o[uid].label, "prompt": p[uid].label,
                     "value": p[uid].value, "expected": expected[uid][0], "citations": list(p[uid].citations),
                     "by_omission": p[uid].by_omission, "gold_by_omission": bool(gold_omission[uid]),
+                    "by_presupposition": p[uid].by_presupposition, "gold_by_presupposition": bool(gold_presupposition[uid]),
                     "value_ok": value_match(p[uid].value, expected[uid]) if p[uid].label == SUPPORTED else None,
                     "state_oracle": sufficiency_state(gold_units, o), "state_prompt": sufficiency_state(gold_units, p),
                 })
@@ -157,7 +159,10 @@ def summarize(decomp, steps, calls, client, args):
               f"- value correct when both say SUPPORTED: {pct(sum(bool(s['value_ok']) for s in sup_ok), len(sup_ok))}",
               f"- by_omission SUPPORTED: judge {sum(s['by_omission'] for s in steps)}, "
               f"of which gold also by_omission {sum(s['by_omission'] and s['gold_by_omission'] for s in steps)}; "
-              f"gold by_omission unit-steps {sum(s['gold_by_omission'] and s['oracle'] == SUPPORTED for s in steps)}"]
+              f"gold by_omission unit-steps {sum(s['gold_by_omission'] and s['oracle'] == SUPPORTED for s in steps)}",
+              f"- by_presupposition SUPPORTED: judge {sum(s['by_presupposition'] for s in steps)}, "
+              f"of which gold also by_presupposition {sum(s['by_presupposition'] and s['gold_by_presupposition'] for s in steps)}; "
+              f"gold by_presupposition unit-steps {sum(s['gold_by_presupposition'] and s['oracle'] == SUPPORTED for s in steps)}"]
 
     lines += ["", "| question type | unit-steps | agreement | false SUPPORTED | missed SUPPORTED |", "|---|---|---|---|---|"]
     by_qt = defaultdict(list)

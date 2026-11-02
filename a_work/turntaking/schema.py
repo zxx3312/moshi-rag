@@ -53,6 +53,7 @@ class UnitJudgment:
     citations: Tuple[str, ...] = ()
     value: Optional[str] = None
     by_omission: bool = False  # supported because a defining description does not list the property
+    by_presupposition: bool = False  # supported using what the question itself takes as given
 
 
 @dataclass

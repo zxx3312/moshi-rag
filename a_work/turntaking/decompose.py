@@ -26,6 +26,7 @@ Rules by question type:
 Constraints:
 - Never answer, guess or hint at any value. Descriptions say what to find, not what it is.
 - Do not make a unit for an entity the question already names; units are things still to be found.
+- When a comparison picks between named items by a yes/no property ("who of A and B won X"), write each fact unit as "whether A won X".
 - Kinship beyond parents (grandfather, grandmother, uncle, ...) is a bridge: first the parent, then that parent's parent or sibling.
 - Use 1 to 5 units with ids u1, u2, ... in order. depends_on may only list earlier units.
 - Reply with JSON only."""
@@ -40,6 +41,10 @@ EXAMPLES: List[Tuple[str, dict]] = [
         {"unit_id": "u1", "description": "length of the Arlen river", "necessary": False, "depends_on": []},
         {"unit_id": "u2", "description": "length of the Meru river", "necessary": False, "depends_on": []},
         {"unit_id": "u3", "description": "which river is longer", "necessary": True, "depends_on": ["u1", "u2"]}]}),
+    ("In between Ilse Varga and Tomas Reed, who won the Halden Prize?", {"question_type": "comparison", "units": [
+        {"unit_id": "u1", "description": "whether Ilse Varga won the Halden Prize", "necessary": False, "depends_on": []},
+        {"unit_id": "u2", "description": "whether Tomas Reed won the Halden Prize", "necessary": False, "depends_on": []},
+        {"unit_id": "u3", "description": "which of them won the Halden Prize", "necessary": True, "depends_on": ["u1", "u2"]}]}),
     ("Which novel's author was born first, Glass Harbor or The Quiet Field?", {"question_type": "bridge_comparison", "units": [
         {"unit_id": "u1", "description": "author of Glass Harbor", "necessary": False, "depends_on": []},
         {"unit_id": "u2", "description": "birth date of {u1}", "necessary": False, "depends_on": ["u1"]},

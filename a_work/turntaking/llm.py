@@ -27,12 +27,14 @@ class ChatClient:
     timeout_s: float = 120.0
     api_key: str = "EMPTY"
     extra_body: Dict[str, Any] = field(default_factory=dict)  # e.g. vLLM chat_template_kwargs
+    max_tokens: int = 1024  # raise for thinking mode: the reasoning counts against it
     calls: List[CallRecord] = field(default_factory=list)
 
     def chat_json(self, messages: List[dict], *, purpose: str, schema: Optional[dict] = None,
-                  max_tokens: int = 1024) -> dict:
+                  max_tokens: Optional[int] = None) -> dict:
         """Send a chat request and parse the reply as one JSON object."""
-        body = {"model": self.model, "messages": messages, "temperature": 0.0, "max_tokens": max_tokens,
+        body = {"model": self.model, "messages": messages, "temperature": 0.0,
+                "max_tokens": max_tokens or self.max_tokens,
                 **self.extra_body}
         if schema is not None:
             body["response_format"] = {"type": "json_schema", "json_schema": {"name": purpose, "schema": schema}}
@@ -73,7 +75,7 @@ class FakeClient:
         self.calls: List[CallRecord] = []
         self.messages: List[List[dict]] = []
 
-    def chat_json(self, messages, *, purpose, schema=None, max_tokens=1024) -> dict:
+    def chat_json(self, messages, *, purpose, schema=None, max_tokens=None) -> dict:
         self.messages.append(messages)
         self.calls.append(CallRecord(purpose, 0.0, None, None))
         reply = self.replies.pop(0)

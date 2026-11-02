@@ -7,6 +7,8 @@
 #
 #SBATCH --job-name=a-eval-judge
 #SBATCH --partition=secondary
+# Group account: much higher fair-share priority than the default campusclusterusers.
+#SBATCH --account=dilek-ic
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=8
@@ -14,7 +16,7 @@
 #SBATCH --gres=gpu:1
 # H100 only, so judge latency is comparable across runs.
 #SBATCH --constraint=H100|h100
-#SBATCH --time=01:00:00
+#SBATCH --time=02:00:00
 #SBATCH --output=a_work/slurm/logs/%x-%j.out
 
 set -euo pipefail
@@ -51,7 +53,9 @@ cleanup() {
 trap cleanup EXIT
 trap 'exit 143' INT TERM
 
-"$VLLM_ENV/bin/vllm" serve "$MODEL" --port "$PORT" --max-model-len 8192 \
+# The reasoning parser keeps Qwen3's <think> part out of the JSON constraint, so thinking mode works;
+# with thinking off it changes nothing.
+"$VLLM_ENV/bin/vllm" serve "$MODEL" --port "$PORT" --max-model-len 16384 --reasoning-parser qwen3 \
     --gpu-memory-utilization 0.90 > "$OUT/vllm.log" 2>&1 &
 SERVER_PID=$!
 
