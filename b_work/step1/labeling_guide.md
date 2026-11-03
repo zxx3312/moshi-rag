@@ -1,6 +1,6 @@
-# Evidence Labels and Action Meanings — B Group v1.1
+# Evidence Labels and Action Meanings — B Group v1.2
 
-Status: B GROUP LABELING CONVENTIONS v1.1 FOR INTEGRATION. A/C should use these names and report concrete compatibility issues; no all-group sign-off is required to start B data preparation. v1.1 adds the explicit-support rule and its two exceptions (Section 1.1); see Section 6 for the change log.
+Status: B GROUP LABELING CONVENTIONS v1.2 FOR INTEGRATION. A/C should use these names and report concrete compatibility issues; no all-group sign-off is required to start B data preparation. v1.2 adopts the question-presupposition exception from `a_work/unit_schema.md` 5.6; see Section 6 for the change log.
 
 ## 1. Label a specific candidate claim
 
@@ -14,11 +14,11 @@ Assess a candidate factual claim against evidence visible at the time of assessm
 
 Split compound statements into atomic claims before labeling. If a claim has both explicit support and conflicting evidence, mark the example for human review; freeze a conflict-resolution rule before including such cases in automatic scoring or SFT.
 
-### 1.1 What counts as explicit support (v1.1)
+### 1.1 What counts as explicit support (v1.2)
 
 **Rule: explicit statements only.** Evidence must state the candidate value. Inference is not support. Example: "Being Twenty is an Italian film directed by Fernando Di Leo" does not support "Di Leo was born in Italy."
 
-There are two exceptions. Both apply to gold annotation and B's evaluation.
+There are three exceptions. All apply to gold annotation and B's evaluation.
 
 **Exception 1: deterministic comparison.** A comparison conclusion unit (`support_sets: [[]]` in `schema.md` 4.2) is `SUPPORTED` when all its dependency units are `SUPPORTED` and the conclusion follows from their values by a deterministic comparison, such as ordering two dates or checking whether two nationalities are equal. The citation is the dependency units' evidence.
 
@@ -35,6 +35,12 @@ The exception does not cover:
 
 - Negatives that need world knowledge. Example: evidence says an airport is in Minnesota; this does not support "it is not in Europe." Label `UNRESOLVED` until a rule is agreed.
 - Attributes that defining descriptions do not normally list, such as awards, events, or relationships. Example: Anaïs Nin's description ("an essayist and memoirist…") does not support "Nin did not win the Nobel Prize in Literature." Label `UNRESOLVED`.
+
+**Exception 3: question presupposition.** A condition or candidate explicitly named by the question may be treated as given. For example, "Which of A and B won the award?" presupposes that one named candidate won; evidence explicitly confirming B's win is sufficient to answer B without separate evidence that A did not win. Likewise, if a question asks for the third founder alongside named founders X and Y, evidence listing X, Y, and Z identifies Z.
+
+Mark a unit that is permitted to use this exception as `by_presupposition: true` in gold. Its `support_sets` still identify the visible evidence required to complete the derivation, and its dependencies must still be supported. Report these units separately in evaluation.
+
+The exception does not apply to comparisons of two values such as dates, to "both" or "same" questions, or to facts the question does not state. If the question's premise conflicts with evidence, send the item to human review rather than applying the exception automatically.
 
 ## 2. Fictional annotation example
 
@@ -80,7 +86,7 @@ B should check the fictional example and several real examples before expanding 
 - ~~Confirm how useful partial answers are distinguished from internal reasoning facts.~~ Resolved in v1.1: every gold unit, including `necessary: false` intermediate hops, counts as useful grounded information (`schema.md` 4.3).
 - Confirm how conflicting evidence, corrections, and retractions are scored.
 - Keep A's judge predictions separate from B's independent evaluation labels.
-- Decide how to annotate answers that rely on the question's presupposition rather than evidence. Example: "In between Anaïs Nin and Odysseas Elytis, who was awarded the Nobel Prize in Literature?" Elytis's win is explicit, but Nin's non-win has no support under Section 1.1.
+- ~~Decide how to annotate answers that rely on the question's presupposition rather than evidence.~~ Resolved in v1.2: accept explicitly named candidates and conditions as premises under Exception 3, mark the affected gold unit `by_presupposition: true`, and report it separately.
 - Decide whether A's runtime judge may apply Exception 2, or whether it is limited to gold annotation and evaluation.
 - Decide how to label negatives that need world knowledge.
 - Decide whether deterministic comparisons are computed by a rule or by the judge.
@@ -91,3 +97,4 @@ B should check the fictional example and several real examples before expanding 
 |---|---|---|
 | v1 | 2026-10-15 | Initial labeling conventions. |
 | v1.1 | 2026-10-23 | Added Section 1.1: explicit-support rule, deterministic-comparison exception, and omission exception with `by_omission`, from A's `unit_schema.md` v0.1 draft. Marked the partial-answer item resolved and added four pending decisions. |
+| v1.2 | 2026-11-03 | Adopted question presuppositions as Exception 3 following `a_work/unit_schema.md` 5.6. Added `by_presupposition` and resolved the corresponding pending decision. |

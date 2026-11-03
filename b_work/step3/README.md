@@ -1,6 +1,6 @@
 # Step 3 — Gold Units for the Debug Set
 
-Rules: `b_work/step1/schema.md` v1.2 Section 4 and `b_work/step1/labeling_guide.md` v1.1 Section 1.1. Source data: `b_work/step2/prepared/samples_debug.jsonl` (frozen; not modified here). Review decisions: `b_work/step2/review_notes.md`.
+Rules: `b_work/step1/schema.md` v1.3 Section 4 and `b_work/step1/labeling_guide.md` v1.2 Section 1.1. Source data: `b_work/step2/prepared/samples_debug.jsonl` (frozen; not modified here). Review decisions: `b_work/step2/review_notes.md`.
 
 ## Files
 
@@ -37,10 +37,10 @@ Delay schedules are not frozen yet (`experiment_config.json`, `pending_decisions
 - `trace_id` is `<sample_id>_<schedule>`.
 - All 20 debug questions have gold units and checked-in traces. The three schedules are provisional until the delay schedules in `experiment_config.json` are frozen.
 
-The script stops with an error on unknown titles, sentence indices out of range, invalid or cyclic dependencies, `[]` support sets, `[[]]` without dependencies, questions with no necessary unit, and malformed `aliases` / `by_omission`.
+The script stops with an error on unknown titles, sentence indices out of range, invalid or cyclic dependencies, `[]` support sets, `[[]]` without dependencies, questions with no necessary unit, and malformed `aliases` / `by_omission` / `by_presupposition`.
 
 ## Conventions
 
 - **Evidence IDs** are `d<N>s<M>`: `N` is the 1-based document position in the sample's context (the "Document N" numbering in `samples_debug_readable.md`), `M` is the 0-based sentence index. Traces must use the same IDs, which means traces should include every context sentence that a support set cites, including distractor sentences.
 - **Document titles:** evidence is assumed to be shown together with its document title, as in HotpotQA. A sentence whose subject is the article's topic ("He won...", "The team was created...") then stands alone. Sentences that need an earlier sentence for other content ("The pair...", sentence fragments) are cited together with it. If traces or the judge input will not include titles, Q13, Q14 and Q17 need their opening sentences added to the support sets.
-- **Status:** `draft` or `pending_decision`. Q17 is `pending_decision` until the presupposition rule in `labeling_guide.md` Section 5 is agreed.
+- **Status:** `draft` or `pending_decision`. The presupposition rule is agreed in `labeling_guide.md` v1.2; Q13 and Q17 mark affected units with `by_presupposition: true` for separate reporting.

@@ -72,6 +72,8 @@ def validate(record):
             raise ValueError(where + ": necessary must be boolean")
         if not isinstance(unit.get("by_omission", False), bool):
             raise ValueError(where + ": by_omission must be boolean")
+        if not isinstance(unit.get("by_presupposition", False), bool):
+            raise ValueError(where + ": by_presupposition must be boolean")
         aliases = unit.get("aliases", [])
         if not isinstance(aliases, list) or not all(isinstance(a, str) and a.strip() for a in aliases):
             raise ValueError(where + ": aliases must be nonempty strings")
@@ -124,6 +126,8 @@ def build(sample, annotation):
             result["aliases"] = unit["aliases"]
         if unit.get("by_omission", False) is not False:
             result["by_omission"] = unit["by_omission"]
+        if unit.get("by_presupposition", False) is not False:
+            result["by_presupposition"] = unit["by_presupposition"]
         units.append(result)
     if sample["type"] not in QUESTION_TYPES:
         raise ValueError(sample["sample_id"] + ": no question_type for source type " + sample["type"])
@@ -145,6 +149,8 @@ def review_section(number, sample, annotation, record, texts):
             answer += " (aliases: " + "; ".join(unit["aliases"]) + ")"
         if unit.get("by_omission"):
             answer += " **[by_omission]**"
+        if unit.get("by_presupposition"):
+            answer += " **[by_presupposition]**"
         if unit["support_sets"] == [[]]:
             sets = "`[[]]`: no extra evidence, supported when dependencies are"
         else:

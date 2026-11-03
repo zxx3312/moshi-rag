@@ -1,8 +1,8 @@
-# Shared Data and Log Interface — B Group v1.2
+# Shared Data and Log Interface — B Group v1.3
 
-Status: B GROUP INTERFACE v1.2 FOR INTEGRATION. B defines this common interface for data preparation and evaluation. A and C should use it for integration and report specific incompatibilities. Their feedback is not a prerequisite for B to start the debug data pipeline. This document does not claim that A/C have reviewed it or that the interface is already implemented in the repository.
+Status: B GROUP INTERFACE v1.3 FOR INTEGRATION. B defines this common interface for data preparation and evaluation. A and C should use it for integration and report specific incompatibilities. Their feedback is not a prerequisite for B to start the debug data pipeline. This document does not claim that A/C have reviewed it or that the interface is already implemented in the repository.
 
-v1.1 adds answer-unit construction rules from A's feedback (`a_work/unit_schema.md` v0.1 draft, branch `a-prompt-judge`) and two optional gold fields; v1.2 adds optional question-type fields. The changes are backward compatible, so `schema_version` remains `1.0`. See Section 7 for the change log.
+v1.1 adds answer-unit construction rules from A's feedback (`a_work/unit_schema.md` v0.1 draft, branch `a-prompt-judge`) and two optional gold fields; v1.2 adds optional question-type fields; v1.3 adds the optional question-presupposition flag agreed in A's Section 5.6. The changes are backward compatible, so `schema_version` remains `1.0`. See Section 7 for the change log.
 
 ## 1. Shared conventions
 
@@ -90,6 +90,7 @@ Within each inner support list, all evidence items are needed. Across lists, any
 |---|---|---|
 | `aliases` | list of strings | Other accepted surface forms of `expected_answer`, e.g. `["Roger Thomas Staubach"]`. Defaults to `[]`. |
 | `by_omission` | boolean | `true` when the unit is a negative claim supported only by omission from a defining description (Exception 2 in `labeling_guide.md` Section 1.1). Defaults to `false`. Evaluation reports these units separately. |
+| `by_presupposition` | boolean | `true` when the unit is permitted to use a candidate or condition explicitly stated by the question (Exception 3 in `labeling_guide.md` Section 1.1). Defaults to `false`. Evaluation reports these units separately. |
 
 Record-level fields (v1.2), next to `sample_id`:
 
@@ -107,6 +108,7 @@ Mapping from `source_type`: `bridge`, `compositional`, `inference` → `bridge`;
 - `[[]]` means no additional evidence is needed: the unit is supported as soon as all its dependencies are supported. Use it only for comparison conclusion units (Section 4.3), which must have a nonempty `depends_on`.
 - `[]` means no evidence can support the unit. Do not use it for answerable units.
 - Alternative evidence found during review, including distractor sentences, is added as extra inner sets.
+- For a `by_presupposition: true` unit, a support set may contain the evidence that identifies the answer when combined with the question's stated premise; dependencies remain required.
 
 ### 4.3 Unit construction by question type
 
@@ -172,6 +174,7 @@ Minimum shared validation:
 7. `support_sets` equal to `[[]]` appears only on units with a nonempty `depends_on`; `[]` does not appear on answerable units.
 8. Every question has at least one `necessary: true` unit.
 9. `by_omission: true` units are reported separately in evaluation.
+10. `by_presupposition: true` units are reported separately in evaluation and are used only when the question explicitly states the required candidate or condition.
 
 B owns the interface and can proceed with debug data under v1. A provides feedback on policy inputs/actions; C provides feedback on baseline/audio logging. Resolve concrete integration failures as they arise and version incompatible changes. A/C adoption must be recorded only after it is observed. Unmeasurable times remain null; a null measurement cannot be used to report a timing metric.
 
@@ -182,3 +185,4 @@ B owns the interface and can proceed with debug data under v1. A provides feedba
 | v1 | 2026-10-15 | Initial interface. |
 | v1.1 | 2026-10-23 | Added optional gold fields `aliases` and `by_omission` (4.1), support-set semantics including `[[]]` (4.2), unit construction rules by question type from A's `unit_schema.md` v0.1 draft (4.3), and validation checks 7–9. No required field changed. |
 | v1.2 | 2026-10-24 | Added optional gold record fields `question_type` and `source_type` (4.1) for reporting by question type. No required field changed. |
+| v1.3 | 2026-11-03 | Added optional gold field `by_presupposition` from `a_work/unit_schema.md` 5.6 and required separate evaluation reporting. No required field changed. |

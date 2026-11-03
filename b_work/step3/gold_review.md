@@ -326,7 +326,7 @@ Question type: `bridge` (source type `bridge`)
 | Unit | Necessary | Expected answer | Depends on | Support sets |
 |---|---|---|---|---|
 | u1: Dallas Cowboys quarterback who co-created Hall of Fame Racing with Troy Aikman and Bill Saunders | false | Roger Staubach (aliases: Roger Thomas Staubach) | — | [d5s1] |
-| u2: Hall of Fame Racing co-creator known as "Captain Comeback", given {u1} | true | Roger Staubach (aliases: Roger Thomas Staubach) | u1 | [d1s0] |
+| u2: Hall of Fame Racing co-creator known as "Captain Comeback", given {u1} | true | Roger Staubach (aliases: Roger Thomas Staubach) **[by_presupposition]** | u1 | [d1s0] OR [d5s1] |
 
 Evidence:
 
@@ -335,10 +335,11 @@ Evidence:
 
 Notes:
 
-- Bridge: u1 finds the co-creator, u2 confirms the nickname.
+- Bridge: u1 finds the co-creator; u2 accepts either explicit nickname evidence or the question's 'Captain Comeback' presupposition.
 - Answer normalized from 'Roger Thomas Staubach (born February 5, 1942)' to 'Roger Staubach' (review note Q13).
 - Hall of Fame Racing sentence 0 (owners) removed from support (review note Q13).
-- u1 already identifies the answer because the question names the other two co-creators; u2 adds the 'Captain Comeback' check.
+- Hall of Fame Racing sentence 1 identifies Roger Staubach as the third named co-creator; for u2 this relies on the question's 'Captain Comeback' condition and is marked by_presupposition (unit_schema.md 5.6).
+- Roger Staubach sentence 0 remains an explicit alternative for the nickname.
 
 ## Q14 — `hotpotqa_5a8335d95542993344745ff1` (draft)
 
@@ -417,7 +418,7 @@ Notes:
 - This replaces the phrasing suggested in review note Q16, which predates the omission rule.
 - Open point: 'no' follows from u2 alone, but schema.md 4.3 makes the conclusion depend on both fact units.
 
-## Q17 — `hotpotqa_5ae0159855429925eb1afc09` (pending_decision)
+## Q17 — `hotpotqa_5ae0159855429925eb1afc09` (draft)
 
 > In between Anaïs Nin and Odysseas Elytis who was awarded the Nobel Prize in Literature?
 
@@ -428,7 +429,7 @@ Question type: `comparison` (source type `comparison`)
 | Unit | Necessary | Expected answer | Depends on | Support sets |
 |---|---|---|---|---|
 | u1: whether Odysseas Elytis was awarded the Nobel Prize in Literature | false | yes | — | [d5s1] |
-| u2: which of Anaïs Nin and Odysseas Elytis was awarded the Nobel Prize in Literature | true | Odysseas Elytis (aliases: Elytis) | u1 | `[[]]`: no extra evidence, supported when dependencies are |
+| u2: which of Anaïs Nin and Odysseas Elytis was awarded the Nobel Prize in Literature | true | Odysseas Elytis (aliases: Elytis) **[by_presupposition]** | u1 | `[[]]`: no extra evidence, supported when dependencies are |
 
 Evidence:
 
@@ -436,8 +437,8 @@ Evidence:
 
 Notes:
 
-- Pending labeling_guide.md Section 5: answers that rely on the question's presupposition.
-- Drafted option: the conclusion depends only on Elytis's win and relies on the presupposition that exactly one of the two won.
+- Resolved by unit_schema.md 5.6: the conclusion depends on Elytis's explicit win and accepts the question's presupposition that exactly one of the two named candidates won.
+- The conclusion is marked by_presupposition so evaluation can report it separately.
 - No unit for 'Nin did not win': Exception 2 does not cover awards, so it would have support_sets [] and block the conclusion forever.
 - Anaïs Nin sentence 0 and Odysseas Elytis sentence 0 from the source supporting facts are not used. Elytis sentence 1 ('In 1979 he was awarded...') resolves 'he' through the document title.
 
