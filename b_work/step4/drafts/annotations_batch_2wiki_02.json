@@ -1,0 +1,1868 @@
+{
+ "annotation_version": "draft-1",
+ "drafted_by": "Claude subagent",
+ "worksheet": "batch_2wiki_02",
+ "records": [
+  {
+   "sample_id": "2wikimultihopqa_afd5796e0bdb11eba7f7acde48001122",
+   "status": "draft",
+   "notes": [
+    "Bridge (compositional): director (optional) then date of death (necessary)."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "director of film For You I Have Sinned",
+     "necessary": false,
+     "expected_answer": "Mario Costa",
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "For You I Have Sinned",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u2",
+     "description": "date of death of {u1}",
+     "necessary": true,
+     "expected_answer": "22 October 1995",
+     "aliases": [
+      "October 22, 1995"
+     ],
+     "depends_on": [
+      "u1"
+     ],
+     "support_sets": [
+      [
+       [
+        "Mario Costa (director)",
+        0
+       ]
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "sample_id": "2wikimultihopqa_3ac87e2c0baf11ebab90acde48001122",
+   "status": "draft",
+   "notes": [
+    "Bridge (inference): spouse (optional) then her father (necessary).",
+    "u1: Stephen Tomašević of Bosnia sentence 2 only names 'marriage to the heiress Maria of Serbia' as an opportunity; it is cited together with sentence 3 ('Celebrated in April 1459'), which says the marriage took place.",
+    "u1 alternatives: Maria of Serbia, Queen of Bosnia 1 (Helena given in marriage to Stephen Tomašević), Milica Branković 4 ('Maria, wife of King Stephen Tomašević') and Jerina Branković 2 ('Helen (Mary), wife of King Stephen Tomašević'). Name variants from these sentences are in aliases.",
+    "u2: Jerina Branković 1-2 and Milica Branković 1+4 name Lazar Branković as the father of Maria's sisters only; that he is Maria's father would be an inference, so they are not used."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "spouse of Stephen Tomašević of Bosnia",
+     "necessary": false,
+     "expected_answer": "Maria of Serbia",
+     "aliases": [
+      "Maria of Serbia, Queen of Bosnia",
+      "Helena",
+      "Helen",
+      "Maria",
+      "Mary",
+      "Mara Branković"
+     ],
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Stephen Tomašević of Bosnia",
+        2
+       ],
+       [
+        "Stephen Tomašević of Bosnia",
+        3
+       ]
+      ],
+      [
+       [
+        "Maria of Serbia, Queen of Bosnia",
+        1
+       ]
+      ],
+      [
+       [
+        "Milica Branković",
+        4
+       ]
+      ],
+      [
+       [
+        "Jerina Branković (wife of Gjon Kastrioti II)",
+        2
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u2",
+     "description": "father of {u1}, Stephen Tomašević of Bosnia's father-in-law",
+     "necessary": true,
+     "expected_answer": "Lazar Branković",
+     "depends_on": [
+      "u1"
+     ],
+     "support_sets": [
+      [
+       [
+        "Maria of Serbia, Queen of Bosnia",
+        1
+       ]
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "sample_id": "2wikimultihopqa_55627704089111ebbd73ac1f6bf848b6",
+   "status": "draft",
+   "notes": [
+    "Bridge comparison: two director/nationality chains plus a conclusion unit.",
+    "Both director biographies state the nationality explicitly; the film descriptors ('British comedy film', 'Argentine drama film') are not used for the directors.",
+    "Walter Forde sentence 1 (born in Lambeth) is not nationality support.",
+    "Film title capitalization normalized from 'Jack'S The Boy' to 'Jack's the Boy'."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "director of Jack's the Boy",
+     "necessary": false,
+     "expected_answer": "Walter Forde",
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Jack's the Boy",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u2",
+     "description": "nationality of {u1}",
+     "necessary": false,
+     "expected_answer": "British",
+     "aliases": [
+      "United Kingdom"
+     ],
+     "depends_on": [
+      "u1"
+     ],
+     "support_sets": [
+      [
+       [
+        "Walter Forde",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u3",
+     "description": "director of Autumn Sun",
+     "necessary": false,
+     "expected_answer": "Eduardo Mignogna",
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Autumn Sun",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u4",
+     "description": "nationality of {u3}",
+     "necessary": false,
+     "expected_answer": "Argentinian",
+     "aliases": [
+      "Argentine",
+      "Argentina"
+     ],
+     "depends_on": [
+      "u3"
+     ],
+     "support_sets": [
+      [
+       [
+        "Eduardo Mignogna",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u5",
+     "description": "whether the directors of Jack's the Boy and Autumn Sun share the same nationality",
+     "necessary": true,
+     "expected_answer": "no",
+     "depends_on": [
+      "u2",
+      "u4"
+     ],
+     "support_sets": [
+      []
+     ]
+    }
+   ]
+  },
+  {
+   "sample_id": "2wikimultihopqa_889f563108c011ebbd8aac1f6bf848b6",
+   "status": "draft",
+   "notes": [
+    "Comparison (yes/no): two fact units plus a conclusion unit.",
+    "no explicit support: Mancel Thornton Munn sentence 0 gives his birthplace (Plainwell, Michigan), a 'New York State botanist' job and 'early American legislative efforts', none of which states his nationality. The 'American' triple is not in the text, so u1 has support_sets [] and the conclusion cannot become SUPPORTED.",
+    "u2: Burcu Çetinkaya sentence 0 states 'Turkish'."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "nationality of Mancel Thornton Munn",
+     "necessary": false,
+     "expected_answer": "American",
+     "aliases": [
+      "United States"
+     ],
+     "depends_on": [],
+     "support_sets": []
+    },
+    {
+     "unit_id": "u2",
+     "description": "nationality of Burcu Çetinkaya",
+     "necessary": false,
+     "expected_answer": "Turkish",
+     "aliases": [
+      "Turkey"
+     ],
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Burcu Çetinkaya",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u3",
+     "description": "whether Mancel Thornton Munn and Burcu Çetinkaya are from the same country",
+     "necessary": true,
+     "expected_answer": "no",
+     "depends_on": [
+      "u1",
+      "u2"
+     ],
+     "support_sets": [
+      []
+     ]
+    }
+   ]
+  },
+  {
+   "sample_id": "2wikimultihopqa_d764e9480bda11eba7f7acde48001122",
+   "status": "draft",
+   "notes": [
+    "Bridge (compositional): director (optional) then date of death (necessary)."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "director of film More Deadly Than the Male",
+     "necessary": false,
+     "expected_answer": "Robert G. Vignola",
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "More Deadly Than the Male",
+        1
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u2",
+     "description": "date of death of {u1}",
+     "necessary": true,
+     "expected_answer": "October 25, 1953",
+     "aliases": [
+      "25 October 1953"
+     ],
+     "depends_on": [
+      "u1"
+     ],
+     "support_sets": [
+      [
+       [
+        "Robert G. Vignola",
+        0
+       ]
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "sample_id": "2wikimultihopqa_b99cad180baf11ebab90acde48001122",
+   "status": "draft",
+   "notes": [
+    "Bridge (inference): father (optional) then his mother (necessary)."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "father of Scholastique of Champagne",
+     "necessary": false,
+     "expected_answer": "Henry I, Count of Champagne",
+     "aliases": [
+      "Henry I",
+      "Henry the Liberal"
+     ],
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Scholastique of Champagne",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u2",
+     "description": "mother of {u1}, Scholastique of Champagne's paternal grandmother",
+     "necessary": true,
+     "expected_answer": "Matilda of Carinthia",
+     "depends_on": [
+      "u1"
+     ],
+     "support_sets": [
+      [
+       [
+        "Henry I, Count of Champagne",
+        1
+       ]
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "sample_id": "2wikimultihopqa_6be60084088e11ebbd70ac1f6bf848b6",
+   "status": "draft",
+   "notes": [
+    "Bridge comparison: two director/birth-date chains plus a conclusion unit.",
+    "Film title capitalization normalized from 'The Faithful River (Film)' to the document title."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "director of Two Can Play",
+     "necessary": false,
+     "expected_answer": "Nat Ross",
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Two Can Play",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u2",
+     "description": "date of birth of {u1}",
+     "necessary": false,
+     "expected_answer": "June 13, 1902",
+     "aliases": [
+      "13 June 1902"
+     ],
+     "depends_on": [
+      "u1"
+     ],
+     "support_sets": [
+      [
+       [
+        "Nat Ross",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u3",
+     "description": "director of The Faithful River (film)",
+     "necessary": false,
+     "expected_answer": "Tadeusz Chmielewski",
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "The Faithful River (film)",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u4",
+     "description": "date of birth of {u3}",
+     "necessary": false,
+     "expected_answer": "7 June 1927",
+     "aliases": [
+      "June 7, 1927"
+     ],
+     "depends_on": [
+      "u3"
+     ],
+     "support_sets": [
+      [
+       [
+        "Tadeusz Chmielewski",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u5",
+     "description": "which of Two Can Play and The Faithful River has the director born earlier",
+     "necessary": true,
+     "expected_answer": "Two Can Play",
+     "depends_on": [
+      "u2",
+      "u4"
+     ],
+     "support_sets": [
+      []
+     ]
+    }
+   ]
+  },
+  {
+   "sample_id": "2wikimultihopqa_ba5637db098c11ebbdb0ac1f6bf848b6",
+   "status": "draft",
+   "notes": [
+    "Comparison (yes/no): two fact units plus a conclusion unit.",
+    "Both village articles state '... Province, Iran' explicitly."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "country where Nahr-e Shahab is located",
+     "necessary": false,
+     "expected_answer": "Iran",
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Nahr-e Shahab",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u2",
+     "description": "country where Bazm, Fars is located",
+     "necessary": false,
+     "expected_answer": "Iran",
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Bazm, Fars",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u3",
+     "description": "whether Nahr-e Shahab and Bazm, Fars are located in the same country",
+     "necessary": true,
+     "expected_answer": "yes",
+     "depends_on": [
+      "u1",
+      "u2"
+     ],
+     "support_sets": [
+      []
+     ]
+    }
+   ]
+  },
+  {
+   "sample_id": "2wikimultihopqa_4f103f2e0bdb11eba7f7acde48001122",
+   "status": "draft",
+   "notes": [
+    "Bridge (compositional): performer (optional) then award (necessary).",
+    "u1: Don't Bring Me Down (disambiguation) sentence 0 ('is a song by the Electric Light Orchestra') added as alternative support.",
+    "Ambiguity: the context also has 'Don't Bring Me Down' songs by the Animals, the Pretty Things (Montells cover) and Spirits. The question title matches the undisambiguated document, which is the ELO song, as in the source gold; kept as draft.",
+    "u2: Electric Light Orchestra sentence 14 (inducted into the Rock and Roll Hall of Fame). Open point: sentence 10 ('collected 19 CRIA, 21 RIAA, and 38 BPI awards') names other awards; these are not added as aliases."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "performer of song Don't Bring Me Down",
+     "necessary": false,
+     "expected_answer": "Electric Light Orchestra",
+     "aliases": [
+      "ELO",
+      "The Electric Light Orchestra"
+     ],
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Don't Bring Me Down",
+        0
+       ]
+      ],
+      [
+       [
+        "Don't Bring Me Down (disambiguation)",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u2",
+     "description": "award received by {u1}",
+     "necessary": true,
+     "expected_answer": "Rock and Roll Hall of Fame",
+     "aliases": [
+      "induction into the Rock and Roll Hall of Fame"
+     ],
+     "depends_on": [
+      "u1"
+     ],
+     "support_sets": [
+      [
+       [
+        "Electric Light Orchestra",
+        14
+       ]
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "sample_id": "2wikimultihopqa_9eb9f3480baf11ebab90acde48001122",
+   "status": "draft",
+   "notes": [
+    "Bridge (inference): father (optional) then his father (necessary).",
+    "Princess Jeguk sentence 2 says 'Kublai Khan'; the triple uses 'Kublai'."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "father of Princess Jeguk",
+     "necessary": false,
+     "expected_answer": "Kublai Khan",
+     "aliases": [
+      "Kublai"
+     ],
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Princess Jeguk",
+        2
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u2",
+     "description": "father of {u1}, Princess Jeguk's paternal grandfather",
+     "necessary": true,
+     "expected_answer": "Tolui",
+     "depends_on": [
+      "u1"
+     ],
+     "support_sets": [
+      [
+       [
+        "Kublai Khan",
+        3
+       ]
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "sample_id": "2wikimultihopqa_31756c8e085511ebbd59ac1f6bf848b6",
+   "status": "draft",
+   "notes": [
+    "Bridge comparison: two director/nationality chains plus a conclusion unit.",
+    "u1: Robert Reinert sentence 3 ('led him to direct several films, most notably \"Opium\"') added as alternative support.",
+    "u4: Mario Caserini sentence 0 is only the name and half the birth date; the nationality is in sentence 1 ('... was an Italian film director'), whose subject is the document title, so sentence 1 is cited alone. The supporting fact sentence 0 is dropped.",
+    "Film descriptors ('German silent film', 'Italian silent film') are not used for the directors. Reinert's birthplace (Vienna) and Caserini's (Rome) are not nationality support."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "director of Opium (1919 film)",
+     "necessary": false,
+     "expected_answer": "Robert Reinert",
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Opium (1919 film)",
+        0
+       ]
+      ],
+      [
+       [
+        "Robert Reinert",
+        3
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u2",
+     "description": "nationality of {u1}",
+     "necessary": false,
+     "expected_answer": "German",
+     "aliases": [
+      "Germany"
+     ],
+     "depends_on": [
+      "u1"
+     ],
+     "support_sets": [
+      [
+       [
+        "Robert Reinert",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u3",
+     "description": "director of Monna Vanna (1915 film)",
+     "necessary": false,
+     "expected_answer": "Mario Caserini",
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Monna Vanna (1915 film)",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u4",
+     "description": "nationality of {u3}",
+     "necessary": false,
+     "expected_answer": "Italian",
+     "aliases": [
+      "Italy"
+     ],
+     "depends_on": [
+      "u3"
+     ],
+     "support_sets": [
+      [
+       [
+        "Mario Caserini",
+        1
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u5",
+     "description": "whether the directors of Opium (1919 film) and Monna Vanna (1915 film) are from the same country",
+     "necessary": true,
+     "expected_answer": "no",
+     "depends_on": [
+      "u2",
+      "u4"
+     ],
+     "support_sets": [
+      []
+     ]
+    }
+   ]
+  },
+  {
+   "sample_id": "2wikimultihopqa_ec01ce8b08f711ebbdaaac1f6bf848b6",
+   "status": "draft",
+   "notes": [
+    "Comparison: two fact units plus a conclusion unit.",
+    "u1: Faizal Yusof sentence 0 reads '13 June 19781 January 2011' (dash lost); sentence 2 gives the death date 1 January 2011, so the birth date reads as 13 June 1978. Kept as explicit support."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "birth date of Faizal Yusof",
+     "necessary": false,
+     "expected_answer": "13 June 1978",
+     "aliases": [
+      "June 13, 1978"
+     ],
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Faizal Yusof",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u2",
+     "description": "birth date of Lenore Glen Offord",
+     "necessary": false,
+     "expected_answer": "October 24, 1905",
+     "aliases": [
+      "24 October 1905"
+     ],
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Lenore Glen Offord",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u3",
+     "description": "which of Faizal Yusof and Lenore Glen Offord was born earlier",
+     "necessary": true,
+     "expected_answer": "Lenore Glen Offord",
+     "depends_on": [
+      "u1",
+      "u2"
+     ],
+     "support_sets": [
+      []
+     ]
+    }
+   ]
+  },
+  {
+   "sample_id": "2wikimultihopqa_c36700880bdb11eba7f7acde48001122",
+   "status": "draft",
+   "notes": [
+    "Bridge (compositional): director (optional) then place of death (necessary).",
+    "no explicit support: no context sentence states where Cecil B. DeMille died. The supporting fact Cecil B. DeMille sentence 7 says The Squaw Man was the first feature film shot in Hollywood, which is not his place of death; it is dropped and u2 has support_sets []."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "director of film Madam Satan",
+     "necessary": false,
+     "expected_answer": "Cecil B. DeMille",
+     "aliases": [
+      "Cecil Blount DeMille",
+      "DeMille"
+     ],
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Madam Satan",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u2",
+     "description": "place of death of {u1}",
+     "necessary": true,
+     "expected_answer": "Hollywood",
+     "depends_on": [
+      "u1"
+     ],
+     "support_sets": []
+    }
+   ]
+  },
+  {
+   "sample_id": "2wikimultihopqa_97cea0b00baf11ebab90acde48001122",
+   "status": "draft",
+   "notes": [
+    "Bridge (inference): father (optional) then his father (necessary).",
+    "Ramesses-Meryamun-Nebweben sentence 1 ('one of the youngest of Ramesses' sons') needs sentence 0 to identify Ramesses II and adds nothing, so it is not an alternative."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "father of Ramesses-Meryamun-Nebweben",
+     "necessary": false,
+     "expected_answer": "Ramesses II",
+     "aliases": [
+      "Ramesses the Great"
+     ],
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Ramesses-Meryamun-Nebweben",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u2",
+     "description": "father of {u1}, Ramesses-Meryamun-Nebweben's paternal grandfather",
+     "necessary": true,
+     "expected_answer": "Seti I",
+     "depends_on": [
+      "u1"
+     ],
+     "support_sets": [
+      [
+       [
+        "Ramesses II",
+        8
+       ]
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "sample_id": "2wikimultihopqa_77ee511408c111ebbd8bac1f6bf848b6",
+   "status": "draft",
+   "notes": [
+    "Bridge comparison: two director/birth-date chains plus a conclusion unit; 'older' is read as born earlier."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "director of Prairie Badmen",
+     "necessary": false,
+     "expected_answer": "Sam Newfield",
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Prairie Badmen",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u2",
+     "description": "date of birth of {u1}",
+     "necessary": false,
+     "expected_answer": "December 6, 1899",
+     "aliases": [
+      "6 December 1899"
+     ],
+     "depends_on": [
+      "u1"
+     ],
+     "support_sets": [
+      [
+       [
+        "Sam Newfield",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u3",
+     "description": "director of Jimmy, the Boy Wonder",
+     "necessary": false,
+     "expected_answer": "Herschell Gordon Lewis",
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Jimmy, the Boy Wonder",
+        1
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u4",
+     "description": "date of birth of {u3}",
+     "necessary": false,
+     "expected_answer": "June 15, 1926",
+     "aliases": [
+      "15 June 1926"
+     ],
+     "depends_on": [
+      "u3"
+     ],
+     "support_sets": [
+      [
+       [
+        "Herschell Gordon Lewis",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u5",
+     "description": "which of Prairie Badmen and Jimmy, the Boy Wonder has the older director",
+     "necessary": true,
+     "expected_answer": "Prairie Badmen",
+     "depends_on": [
+      "u2",
+      "u4"
+     ],
+     "support_sets": [
+      []
+     ]
+    }
+   ]
+  },
+  {
+   "sample_id": "2wikimultihopqa_c99c2b3d086f11ebbd62ac1f6bf848b6",
+   "status": "draft",
+   "notes": [
+    "Comparison (yes/no): two fact units plus a conclusion unit.",
+    "Both band articles state the country descriptor explicitly ('a Czech metal band', 'an American hip-hop duo')."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "country of origin of Kreyson",
+     "necessary": false,
+     "expected_answer": "Czech",
+     "aliases": [
+      "Czech Republic",
+      "Czechia"
+     ],
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Kreyson",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u2",
+     "description": "country of origin of Menace Clan",
+     "necessary": false,
+     "expected_answer": "American",
+     "aliases": [
+      "United States"
+     ],
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Menace Clan",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u3",
+     "description": "whether Kreyson and Menace Clan are from the same country",
+     "necessary": true,
+     "expected_answer": "no",
+     "depends_on": [
+      "u1",
+      "u2"
+     ],
+     "support_sets": [
+      []
+     ]
+    }
+   ]
+  },
+  {
+   "sample_id": "2wikimultihopqa_36f59e640bdd11eba7f7acde48001122",
+   "status": "draft",
+   "notes": [
+    "Bridge (compositional): director (optional) then date of birth (necessary).",
+    "u1: the document's sentence 0 is only the first half of the title ('Artists in the Big Top:'); sentence 1 states the director and is cited alone, as in the supporting facts.",
+    "The triple uses 'Artists in the Big Top: Perplexed'; the document title is 'Artists Under the Big Top: Perplexed'."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "director of film Artists Under the Big Top: Perplexed",
+     "necessary": false,
+     "expected_answer": "Alexander Kluge",
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Artists Under the Big Top: Perplexed",
+        1
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u2",
+     "description": "date of birth of {u1}",
+     "necessary": true,
+     "expected_answer": "14 February 1932",
+     "aliases": [
+      "February 14, 1932"
+     ],
+     "depends_on": [
+      "u1"
+     ],
+     "support_sets": [
+      [
+       [
+        "Alexander Kluge",
+        0
+       ]
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "sample_id": "2wikimultihopqa_c3c1a5a00baf11ebab90acde48001122",
+   "status": "draft",
+   "notes": [
+    "Bridge (inference): husband (optional) then his father (necessary)."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "husband of Hipparete",
+     "necessary": false,
+     "expected_answer": "Alcibiades",
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Hipparete",
+        1
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u2",
+     "description": "father of {u1}, Hipparete's father-in-law",
+     "necessary": true,
+     "expected_answer": "Cleinias",
+     "depends_on": [
+      "u1"
+     ],
+     "support_sets": [
+      [
+       [
+        "Alcibiades",
+        0
+       ]
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "sample_id": "2wikimultihopqa_85ab0d88084e11ebbd56ac1f6bf848b6",
+   "status": "draft",
+   "notes": [
+    "Bridge comparison: two director/birth-date chains plus a conclusion unit.",
+    "u3 alternatives: Jason Bourne (film) sentence 4 ('director Greengrass') and Paul Greengrass sentence 3 ('Other films he has directed include ... \"Jason Bourne\" (2016)')."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "director of Texas Masquerade",
+     "necessary": false,
+     "expected_answer": "George Archainbaud",
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Texas Masquerade",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u2",
+     "description": "date of birth of {u1}",
+     "necessary": false,
+     "expected_answer": "May 7, 1890",
+     "aliases": [
+      "7 May 1890"
+     ],
+     "depends_on": [
+      "u1"
+     ],
+     "support_sets": [
+      [
+       [
+        "George Archainbaud",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u3",
+     "description": "director of Jason Bourne (film)",
+     "necessary": false,
+     "expected_answer": "Paul Greengrass",
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Jason Bourne (film)",
+        0
+       ]
+      ],
+      [
+       [
+        "Jason Bourne (film)",
+        4
+       ]
+      ],
+      [
+       [
+        "Paul Greengrass",
+        3
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u4",
+     "description": "date of birth of {u3}",
+     "necessary": false,
+     "expected_answer": "13 August 1955",
+     "aliases": [
+      "August 13, 1955"
+     ],
+     "depends_on": [
+      "u3"
+     ],
+     "support_sets": [
+      [
+       [
+        "Paul Greengrass",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u5",
+     "description": "which of Texas Masquerade and Jason Bourne (film) has the director born first",
+     "necessary": true,
+     "expected_answer": "Texas Masquerade",
+     "depends_on": [
+      "u2",
+      "u4"
+     ],
+     "support_sets": [
+      []
+     ]
+    }
+   ]
+  },
+  {
+   "sample_id": "2wikimultihopqa_485a0492085911ebbd5bac1f6bf848b6",
+   "status": "draft",
+   "notes": [
+    "Comparison (yes/no): two fact units plus a conclusion unit.",
+    "Both biographies state the nationality explicitly. Glenn D. Walker (a US Army general) is a distractor with a similar name."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "nationality of Glenn Walker (footballer, born 1998)",
+     "necessary": false,
+     "expected_answer": "Norwegian",
+     "aliases": [
+      "Norway"
+     ],
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Glenn Walker (footballer, born 1998)",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u2",
+     "description": "nationality of Eddie Deezen",
+     "necessary": false,
+     "expected_answer": "American",
+     "aliases": [
+      "United States"
+     ],
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Eddie Deezen",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u3",
+     "description": "whether Glenn Walker (footballer, born 1998) and Eddie Deezen are from the same country",
+     "necessary": true,
+     "expected_answer": "no",
+     "depends_on": [
+      "u1",
+      "u2"
+     ],
+     "support_sets": [
+      []
+     ]
+    }
+   ]
+  },
+  {
+   "sample_id": "2wikimultihopqa_3d884fec0bdd11eba7f7acde48001122",
+   "status": "draft",
+   "notes": [
+    "Bridge (compositional): director (optional) then place of birth (necessary).",
+    "The triple uses 'The Outsider'; the document title is 'The Outsider (2018 film)'. The 1926 and 1939 films are distractors."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "director of film The Outsider (2018 film)",
+     "necessary": false,
+     "expected_answer": "Martin Zandvliet",
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "The Outsider (2018 film)",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u2",
+     "description": "place of birth of {u1}",
+     "necessary": true,
+     "expected_answer": "Fredericia",
+     "depends_on": [
+      "u1"
+     ],
+     "support_sets": [
+      [
+       [
+        "Martin Zandvliet",
+        0
+       ]
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "sample_id": "2wikimultihopqa_2ec600e40bb011ebab90acde48001122",
+   "status": "draft",
+   "notes": [
+    "Bridge (inference): father (optional) then his father (necessary).",
+    "Milo (bishop of Trier) sentence 1 ('preceded his father') does not name the father."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "father of Milo (bishop of Trier)",
+     "necessary": false,
+     "expected_answer": "Leudwinus",
+     "aliases": [
+      "Saint Leudwinus",
+      "St. Leudwinus",
+      "Liutwin"
+     ],
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Milo (bishop of Trier)",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u2",
+     "description": "father of {u1}, Milo's paternal grandfather",
+     "necessary": true,
+     "expected_answer": "Saint Warinus",
+     "aliases": [
+      "Warinus"
+     ],
+     "depends_on": [
+      "u1"
+     ],
+     "support_sets": [
+      [
+       [
+        "Leudwinus",
+        5
+       ]
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "sample_id": "2wikimultihopqa_c751b94c088211ebbd6dac1f6bf848b6",
+   "status": "draft",
+   "notes": [
+    "Bridge comparison: two director/birth-date chains plus a conclusion unit.",
+    "u1 alternative: James B. Clark (director) sentence 4 lists 'Island of the Blue Dolphins' (1964) among the films he directed.",
+    "u3 alternative: House of Women sentence 1 (the first director was fired and replaced by Crane Wilbur).",
+    "Answer capitalization normalized from 'House Of Women'."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "director of Island of the Blue Dolphins (film)",
+     "necessary": false,
+     "expected_answer": "James B. Clark",
+     "aliases": [
+      "James B. Clark Jr."
+     ],
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Island of the Blue Dolphins (film)",
+        0
+       ]
+      ],
+      [
+       [
+        "James B. Clark (director)",
+        4
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u2",
+     "description": "date of birth of {u1}",
+     "necessary": false,
+     "expected_answer": "May 14, 1908",
+     "aliases": [
+      "14 May 1908"
+     ],
+     "depends_on": [
+      "u1"
+     ],
+     "support_sets": [
+      [
+       [
+        "James B. Clark (director)",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u3",
+     "description": "director of House of Women",
+     "necessary": false,
+     "expected_answer": "Crane Wilbur",
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "House of Women",
+        0
+       ]
+      ],
+      [
+       [
+        "House of Women",
+        1
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u4",
+     "description": "date of birth of {u3}",
+     "necessary": false,
+     "expected_answer": "November 17, 1886",
+     "aliases": [
+      "17 November 1886"
+     ],
+     "depends_on": [
+      "u3"
+     ],
+     "support_sets": [
+      [
+       [
+        "Crane Wilbur",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u5",
+     "description": "which of Island of the Blue Dolphins (film) and House of Women has the director born first",
+     "necessary": true,
+     "expected_answer": "House of Women",
+     "aliases": [
+      "House Of Women"
+     ],
+     "depends_on": [
+      "u2",
+      "u4"
+     ],
+     "support_sets": [
+      []
+     ]
+    }
+   ]
+  },
+  {
+   "sample_id": "2wikimultihopqa_a8e8237408a211ebbd7bac1f6bf848b6",
+   "status": "draft",
+   "notes": [
+    "Comparison: two fact units plus a conclusion unit.",
+    "Joey Newby (Joseph Eric Newby, born 1982) is a distractor and is not used for u1."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "birth date of Eric Newby",
+     "necessary": false,
+     "expected_answer": "6 December 1919",
+     "aliases": [
+      "December 6, 1919"
+     ],
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Eric Newby",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u2",
+     "description": "birth date of Raymond Griffith",
+     "necessary": false,
+     "expected_answer": "January 23, 1895",
+     "aliases": [
+      "23 January 1895"
+     ],
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Raymond Griffith",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u3",
+     "description": "which of Eric Newby and Raymond Griffith was born first",
+     "necessary": true,
+     "expected_answer": "Raymond Griffith",
+     "depends_on": [
+      "u1",
+      "u2"
+     ],
+     "support_sets": [
+      []
+     ]
+    }
+   ]
+  },
+  {
+   "sample_id": "2wikimultihopqa_057dd7de0bdd11eba7f7acde48001122",
+   "status": "draft",
+   "notes": [
+    "Bridge (compositional): director (optional) then birthplace (necessary)."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "director of film Two Against the World (1936 film)",
+     "necessary": false,
+     "expected_answer": "William C. McGann",
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Two Against the World (1936 film)",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u2",
+     "description": "place of birth of {u1}",
+     "necessary": true,
+     "expected_answer": "Pittsburgh, Pennsylvania",
+     "aliases": [
+      "Pittsburgh"
+     ],
+     "depends_on": [
+      "u1"
+     ],
+     "support_sets": [
+      [
+       [
+        "William C. McGann",
+        2
+       ]
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "sample_id": "2wikimultihopqa_74c8e33c0baf11ebab90acde48001122",
+   "status": "draft",
+   "notes": [
+    "Bridge (inference): mother (optional) then her mother (necessary)."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "mother of Edmund Mortimer (died 1331)",
+     "necessary": false,
+     "expected_answer": "Joan de Geneville, 2nd Baroness Geneville",
+     "aliases": [
+      "Joan de Geneville",
+      "Jeanne de Joinville"
+     ],
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Edmund Mortimer (died 1331)",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u2",
+     "description": "mother of {u1}, Edmund Mortimer's maternal grandmother",
+     "necessary": true,
+     "expected_answer": "Joan of Lusignan",
+     "depends_on": [
+      "u1"
+     ],
+     "support_sets": [
+      [
+       [
+        "Joan de Geneville, 2nd Baroness Geneville",
+        0
+       ]
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "sample_id": "2wikimultihopqa_8ec76c0808db11ebbd9cac1f6bf848b6",
+   "status": "draft",
+   "notes": [
+    "Bridge comparison: two director/nationality chains plus a conclusion unit.",
+    "u3: Mano Po 6: A Mother's Love sentence 4 ('Joel Lamangan ... was at the helm, in his fifth Mano Po directorial job'). Mano Po 7: Tsinoy sentences 7-8 list films Lamangan directed but the list is truncated and does not name Mano Po 6.",
+    "Film title capitalization normalized from 'Mano Po 6: A Mother'S Love'."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "director of All the Winners",
+     "necessary": false,
+     "expected_answer": "Geoffrey Malins",
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "All the Winners",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u2",
+     "description": "nationality of {u1}",
+     "necessary": false,
+     "expected_answer": "British",
+     "aliases": [
+      "United Kingdom"
+     ],
+     "depends_on": [
+      "u1"
+     ],
+     "support_sets": [
+      [
+       [
+        "Geoffrey Malins",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u3",
+     "description": "director of Mano Po 6: A Mother's Love",
+     "necessary": false,
+     "expected_answer": "Joel Lamangan",
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Mano Po 6: A Mother's Love",
+        4
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u4",
+     "description": "nationality of {u3}",
+     "necessary": false,
+     "expected_answer": "Filipino",
+     "aliases": [
+      "Philippines"
+     ],
+     "depends_on": [
+      "u3"
+     ],
+     "support_sets": [
+      [
+       [
+        "Joel Lamangan",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u5",
+     "description": "whether the directors of All the Winners and Mano Po 6: A Mother's Love are from the same country",
+     "necessary": true,
+     "expected_answer": "no",
+     "depends_on": [
+      "u2",
+      "u4"
+     ],
+     "support_sets": [
+      []
+     ]
+    }
+   ]
+  },
+  {
+   "sample_id": "2wikimultihopqa_640bede1095311ebbdaeac1f6bf848b6",
+   "status": "draft",
+   "notes": [
+    "Comparison (yes/no): two fact units plus a conclusion unit.",
+    "u1: DAHER-SOCATA sentence 1 (headquarters located in Tarbes, France).",
+    "u2: DSF Refractories & Minerals Ltd sentence 0 calls it 'the last major British producer', a country descriptor of the company itself, accepted as in the source triple ('British'). Sentence 1 (Friden, Derbyshire's Peak National Park) and Newhaven, Derbyshire 0-1 would need world knowledge or an inferred link, so they are not used."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "country of DAHER-SOCATA",
+     "necessary": false,
+     "expected_answer": "France",
+     "aliases": [
+      "French"
+     ],
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "DAHER-SOCATA",
+        1
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u2",
+     "description": "country of DSF Refractories & Minerals Ltd",
+     "necessary": false,
+     "expected_answer": "United Kingdom",
+     "aliases": [
+      "British",
+      "UK",
+      "Britain"
+     ],
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "DSF Refractories & Minerals Ltd",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u3",
+     "description": "whether Daher-Socata and DSF Refractories & Minerals Ltd are located in the same country",
+     "necessary": true,
+     "expected_answer": "no",
+     "depends_on": [
+      "u1",
+      "u2"
+     ],
+     "support_sets": [
+      []
+     ]
+    }
+   ]
+  },
+  {
+   "sample_id": "2wikimultihopqa_6968dcf40bdc11eba7f7acde48001122",
+   "status": "draft",
+   "notes": [
+    "Bridge (compositional): husband (optional) then his date of birth (necessary).",
+    "Adele Khoury Graham sentence 0 gives her own birth date (April 4, 1938), a trap."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "husband of Adele Khoury Graham",
+     "necessary": false,
+     "expected_answer": "Bob Graham",
+     "aliases": [
+      "Daniel Robert Graham"
+     ],
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Adele Khoury Graham",
+        1
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u2",
+     "description": "date of birth of {u1}",
+     "necessary": true,
+     "expected_answer": "November 9, 1936",
+     "aliases": [
+      "9 November 1936"
+     ],
+     "depends_on": [
+      "u1"
+     ],
+     "support_sets": [
+      [
+       [
+        "Bob Graham",
+        0
+       ]
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "sample_id": "2wikimultihopqa_363145e20baf11ebab90acde48001122",
+   "status": "draft",
+   "notes": [
+    "Bridge (inference): father (optional) then his father (necessary).",
+    "Helvis of Cyprus sentence 0 names the father 'Amalric II of Jerusalem, King of Cyprus'; the triple subject is 'Helvis of Lusignan'.",
+    "u2: the father's article is titled 'Aimery of Cyprus'. Sentence 2 ('He was the younger son of Hugh VIII of Lusignan') only applies to {u1} through sentence 0, which says Aimery, the first King of Cyprus, was referred to as Amalric; both are cited in one set.",
+    "Aliases for u1 include the Aimery names stated in Aimery of Cyprus sentence 0."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "father of Helvis of Cyprus",
+     "necessary": false,
+     "expected_answer": "Amalric II of Jerusalem",
+     "aliases": [
+      "Amalric II",
+      "Aimery of Cyprus",
+      "Aimery of Lusignan"
+     ],
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Helvis of Cyprus",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u2",
+     "description": "father of {u1}, Helvis of Cyprus's paternal grandfather",
+     "necessary": true,
+     "expected_answer": "Hugh VIII of Lusignan",
+     "depends_on": [
+      "u1"
+     ],
+     "support_sets": [
+      [
+       [
+        "Aimery of Cyprus",
+        0
+       ],
+       [
+        "Aimery of Cyprus",
+        2
+       ]
+      ]
+     ]
+    }
+   ]
+  }
+ ]
+}

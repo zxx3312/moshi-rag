@@ -1,0 +1,51 @@
+{
+  "data_version": "sft-v0",
+  "a_ref": "origin/a-prompt-judge",
+  "a_commit": "806e41013f17f2fe59ce27c1d989dfc9cf9c49e9",
+  "seed": 42,
+  "orders": 3,
+  "max_unchanged": 2,
+  "max_per_question": 10,
+  "few_shot_examples": true,
+  "cross_check_disagreements": [],
+  "train": {
+    "questions": 243,
+    "examples": 1955,
+    "examples_by_question_type": {
+      "bridge_comparison": 310,
+      "bridge": 959,
+      "comparison": 686
+    },
+    "unit_labels": {
+      "SUPPORTED": 3122,
+      "UNRESOLVED": 2393
+    },
+    "by_omission": 29,
+    "by_presupposition": 56,
+    "all_unresolved_examples": 376,
+    "chars_median_max": [
+      8018,
+      44805
+    ]
+  },
+  "dev": {
+    "questions": 57,
+    "examples": 464,
+    "examples_by_question_type": {
+      "bridge": 233,
+      "bridge_comparison": 70,
+      "comparison": 161
+    },
+    "unit_labels": {
+      "UNRESOLVED": 585,
+      "SUPPORTED": 708
+    },
+    "by_omission": 5,
+    "by_presupposition": 6,
+    "all_unresolved_examples": 108,
+    "chars_median_max": [
+      8303,
+      15535
+    ]
+  }
+}

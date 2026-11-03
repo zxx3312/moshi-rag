@@ -1,0 +1,1895 @@
+{
+ "annotation_version": "draft-1",
+ "drafted_by": "Claude subagent",
+ "worksheet": "batch_2wiki_05",
+ "records": [
+  {
+   "sample_id": "2wikimultihopqa_a1ef2dee085311ebbd59ac1f6bf848b6",
+   "status": "draft",
+   "notes": [
+    "Bridge comparison (yes/no): director/nationality chain per film plus a conclusion unit.",
+    "Kim Ki-young sentence 1 is a fragment without a subject; the document title identifies Kim Ki-young (sentence 0 is only the name).",
+    "Lewis Milestone sentence 0 says 'Russian-born American'; 'Russian-born' is a birthplace, so u4 is American. The triples also list Russian citizenship, which the text does not state; the answer 'no' holds either way.",
+    "Kim Ki-young sentence 2 (born in Seoul) is not used for nationality (no inference from birthplace)."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "director of film A Woman's War",
+     "necessary": false,
+     "expected_answer": "Kim Ki-young",
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "A Woman's War",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u2",
+     "description": "nationality of {u1}",
+     "necessary": false,
+     "expected_answer": "South Korean",
+     "aliases": [
+      "South Korea"
+     ],
+     "depends_on": [
+      "u1"
+     ],
+     "support_sets": [
+      [
+       [
+        "Kim Ki-young",
+        1
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u3",
+     "description": "director of film The New Klondike",
+     "necessary": false,
+     "expected_answer": "Lewis Milestone",
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "The New Klondike",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u4",
+     "description": "nationality of {u3}",
+     "necessary": false,
+     "expected_answer": "American",
+     "depends_on": [
+      "u3"
+     ],
+     "support_sets": [
+      [
+       [
+        "Lewis Milestone",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u5",
+     "description": "whether the directors of A Woman's War and The New Klondike are from the same country",
+     "necessary": true,
+     "expected_answer": "no",
+     "depends_on": [
+      "u2",
+      "u4"
+     ],
+     "support_sets": [
+      []
+     ]
+    }
+   ]
+  },
+  {
+   "sample_id": "2wikimultihopqa_b69ced00089911ebbd77ac1f6bf848b6",
+   "status": "draft",
+   "notes": [
+    "Comparison (yes/no): two nationality units plus a conclusion unit.",
+    "Hans Coper sentence 0 says 'German-born British'; 'German-born' is a birthplace, so u2 is British.",
+    "The Wheel of Fortune (novel) sentence 0 describes a fictitious British family, not Howatch's nationality; not used."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "nationality of Susan Howatch",
+     "necessary": false,
+     "expected_answer": "British",
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Susan Howatch",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u2",
+     "description": "nationality of Hans Coper",
+     "necessary": false,
+     "expected_answer": "British",
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Hans Coper",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u3",
+     "description": "whether Susan Howatch and Hans Coper are of the same nationality",
+     "necessary": true,
+     "expected_answer": "yes",
+     "depends_on": [
+      "u1",
+      "u2"
+     ],
+     "support_sets": [
+      []
+     ]
+    }
+   ]
+  },
+  {
+   "sample_id": "2wikimultihopqa_75de80fc0bdb11eba7f7acde48001122",
+   "status": "draft",
+   "notes": [
+    "Bridge: director (optional) then birthplace (necessary).",
+    "Question capitalizes 'A Million'; document title is 'The Boy Who Stole a Million'.",
+    "Trap: The Boy Who Stole the Elephant is a different film."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "director of film The Boy Who Stole a Million",
+     "necessary": false,
+     "expected_answer": "Charles Crichton",
+     "aliases": [
+      "Charles Ainslie Crichton"
+     ],
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "The Boy Who Stole a Million",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u2",
+     "description": "place of birth of {u1}",
+     "necessary": true,
+     "expected_answer": "Wallasey",
+     "aliases": [
+      "Wallasey, Cheshire"
+     ],
+     "depends_on": [
+      "u1"
+     ],
+     "support_sets": [
+      [
+       [
+        "Charles Crichton",
+        1
+       ]
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "sample_id": "2wikimultihopqa_30f1c3da0bb011ebab90acde48001122",
+   "status": "draft",
+   "notes": [
+    "Inference: mother (optional) then her father, the maternal grandfather (necessary).",
+    "Adeliza of Louvain sentence 4 (children with the 1st Earl) does not name the 2nd Earl, so it is not alternative support for u1.",
+    "Question capitalization 'D'Aubigny, 2Nd Earl Of Arundel' differs from the document title 'William d'Aubigny, 2nd Earl of Arundel'."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "mother of William d'Aubigny, 2nd Earl of Arundel",
+     "necessary": false,
+     "expected_answer": "Adeliza of Louvain",
+     "aliases": [
+      "Adelicia of Louvain"
+     ],
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "William d'Aubigny, 2nd Earl of Arundel",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u2",
+     "description": "father of {u1}, maternal grandfather of William d'Aubigny, 2nd Earl of Arundel",
+     "necessary": true,
+     "expected_answer": "Godfrey I, Count of Louvain",
+     "depends_on": [
+      "u1"
+     ],
+     "support_sets": [
+      [
+       [
+        "Adeliza of Louvain",
+        0
+       ]
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "sample_id": "2wikimultihopqa_df25d98608e111ebbda3ac1f6bf848b6",
+   "status": "draft",
+   "notes": [
+    "Bridge comparison (yes/no): director/nationality chain per film plus a conclusion unit.",
+    "She Fell Among Thieves sentence 2 ('It ... was directed by Clive Donner') resolves 'It' through the document title. Sentence 3 ('made by the BBC and Donner') does not state the director role; not used.",
+    "'British television film' and 'American comedy film' describe the films, not the directors; not used for nationality."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "director of film She Fell Among Thieves",
+     "necessary": false,
+     "expected_answer": "Clive Donner",
+     "aliases": [
+      "Clive Stanley Donner"
+     ],
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "She Fell Among Thieves",
+        2
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u2",
+     "description": "nationality of {u1}",
+     "necessary": false,
+     "expected_answer": "British",
+     "depends_on": [
+      "u1"
+     ],
+     "support_sets": [
+      [
+       [
+        "Clive Donner",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u3",
+     "description": "director of film Ernest Rides Again",
+     "necessary": false,
+     "expected_answer": "John R. Cherry III",
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Ernest Rides Again",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u4",
+     "description": "nationality of {u3}",
+     "necessary": false,
+     "expected_answer": "American",
+     "depends_on": [
+      "u3"
+     ],
+     "support_sets": [
+      [
+       [
+        "John R. Cherry III",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u5",
+     "description": "whether the directors of She Fell Among Thieves and Ernest Rides Again have the same nationality",
+     "necessary": true,
+     "expected_answer": "no",
+     "depends_on": [
+      "u2",
+      "u4"
+     ],
+     "support_sets": [
+      []
+     ]
+    }
+   ]
+  },
+  {
+   "sample_id": "2wikimultihopqa_8b1a578708a211ebbd7aac1f6bf848b6",
+   "status": "draft",
+   "notes": [
+    "Comparison: one lifespan unit (birth and death dates, stated in one sentence) per person plus a conclusion unit.",
+    "Lifespans: Tofano about 87 years, Cisneros about 68 years; the conclusion is a deterministic date computation.",
+    "Rosetta Tofano sentence 2 mentions Sergio Tofano without dates; not used."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "birth and death dates of Sergio Tofano",
+     "necessary": false,
+     "expected_answer": "20 August 1886 – 28 October 1973",
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Sergio Tofano",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u2",
+     "description": "birth and death dates of Diego Cisneros",
+     "necessary": false,
+     "expected_answer": "September 27, 1911 – July 15, 1980",
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Diego Cisneros",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u3",
+     "description": "which of Sergio Tofano and Diego Cisneros lived longer",
+     "necessary": true,
+     "expected_answer": "Sergio Tofano",
+     "depends_on": [
+      "u1",
+      "u2"
+     ],
+     "support_sets": [
+      []
+     ]
+    }
+   ]
+  },
+  {
+   "sample_id": "2wikimultihopqa_ed90d08c0bdb11eba7f7acde48001122",
+   "status": "draft",
+   "notes": [
+    "Bridge: director (optional) then date of birth (necessary).",
+    "Triple subject 'Fiend' differs from the document title 'Fiend (film)'."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "director of film Fiend",
+     "necessary": false,
+     "expected_answer": "Don Dohler",
+     "aliases": [
+      "Donald Michael Dohler"
+     ],
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Fiend (film)",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u2",
+     "description": "date of birth of {u1}",
+     "necessary": true,
+     "expected_answer": "January 27, 1946",
+     "depends_on": [
+      "u1"
+     ],
+     "support_sets": [
+      [
+       [
+        "Don Dohler",
+        0
+       ]
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "sample_id": "2wikimultihopqa_5d3e9f4a0baf11ebab90acde48001122",
+   "status": "draft",
+   "notes": [
+    "Inference: father (optional) then his mother, the paternal grandmother (necessary).",
+    "Yolanda of Poland sentence 0 names Maria Laskarina as Yolanda's mother, not Stephen V's; not used.",
+    "Triple subject 'Elizabeth of Hungary' differs from the document title 'Elizabeth of Hungary, Queen of Serbia'."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "father of Elizabeth of Hungary, Queen of Serbia",
+     "necessary": false,
+     "expected_answer": "Stephen V of Hungary",
+     "aliases": [
+      "Stephen V",
+      "King Stephen V of Hungary"
+     ],
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Elizabeth of Hungary, Queen of Serbia",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u2",
+     "description": "mother of {u1}, paternal grandmother of Elizabeth of Hungary, Queen of Serbia",
+     "necessary": true,
+     "expected_answer": "Maria Laskarina",
+     "depends_on": [
+      "u1"
+     ],
+     "support_sets": [
+      [
+       [
+        "Stephen V of Hungary",
+        1
+       ]
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "sample_id": "2wikimultihopqa_43110efa08a311ebbd7bac1f6bf848b6",
+   "status": "draft",
+   "notes": [
+    "Bridge comparison: director/death-date chain per film plus a conclusion unit.",
+    "Answer capitalization normalized from 'Man From Montana'; source form kept in aliases.",
+    "Triple object 'Ray Taylor' matches the document title 'Ray Taylor (director)'."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "director of film The Son of Dr. Jekyll",
+     "necessary": false,
+     "expected_answer": "Seymour Friedman",
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "The Son of Dr. Jekyll",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u2",
+     "description": "date of death of {u1}",
+     "necessary": false,
+     "expected_answer": "April 2, 2003",
+     "depends_on": [
+      "u1"
+     ],
+     "support_sets": [
+      [
+       [
+        "Seymour Friedman",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u3",
+     "description": "director of film Man from Montana",
+     "necessary": false,
+     "expected_answer": "Ray Taylor",
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Man from Montana",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u4",
+     "description": "date of death of {u3}",
+     "necessary": false,
+     "expected_answer": "15 February 1952",
+     "aliases": [
+      "February 15, 1952"
+     ],
+     "depends_on": [
+      "u3"
+     ],
+     "support_sets": [
+      [
+       [
+        "Ray Taylor (director)",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u5",
+     "description": "which of The Son of Dr. Jekyll and Man from Montana has the director who died earlier",
+     "necessary": true,
+     "expected_answer": "Man from Montana",
+     "aliases": [
+      "Man From Montana"
+     ],
+     "depends_on": [
+      "u2",
+      "u4"
+     ],
+     "support_sets": [
+      []
+     ]
+    }
+   ]
+  },
+  {
+   "sample_id": "2wikimultihopqa_6a80c1d408de11ebbd9eac1f6bf848b6",
+   "status": "draft",
+   "notes": [
+    "Comparison: two death-date units plus a conclusion unit.",
+    "Answer capitalization normalized from 'Ernst Ludwig Von Aster'; source form kept in aliases.",
+    "Marc Vignal sentence 1 mentions Tranchefort without a date; not used."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "date of death of François-René Tranchefort",
+     "necessary": false,
+     "expected_answer": "22 May 2019",
+     "aliases": [
+      "May 22, 2019"
+     ],
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "François-René Tranchefort",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u2",
+     "description": "date of death of Ernst Ludwig von Aster",
+     "necessary": false,
+     "expected_answer": "February 10, 1855",
+     "aliases": [
+      "10 February 1855"
+     ],
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Ernst Ludwig von Aster",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u3",
+     "description": "which of François-René Tranchefort and Ernst Ludwig von Aster died first",
+     "necessary": true,
+     "expected_answer": "Ernst Ludwig von Aster",
+     "aliases": [
+      "Ernst Ludwig Von Aster"
+     ],
+     "depends_on": [
+      "u1",
+      "u2"
+     ],
+     "support_sets": [
+      []
+     ]
+    }
+   ]
+  },
+  {
+   "sample_id": "2wikimultihopqa_86790dc00bda11eba7f7acde48001122",
+   "status": "draft",
+   "notes": [
+    "Bridge: husband (optional) then his date of death (necessary).",
+    "Angiolo Vestris sentence 2 (marrying 'Rose Gourgaud, daughter of the comic-actor Dugazon') is not used for u1: linking Rose Gourgaud to Françoise-Rose Gourgaud needs Rose Vestris sentence 0, and Rose Vestris sentence 1 calls her Dugazon's sister, not daughter."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "husband of Rose Vestris",
+     "necessary": false,
+     "expected_answer": "Angiolo Vestris",
+     "aliases": [
+      "Angiolo Maria Gasparo Vestris"
+     ],
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Rose Vestris",
+        2
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u2",
+     "description": "date of death of {u1}",
+     "necessary": true,
+     "expected_answer": "10 June 1809",
+     "aliases": [
+      "June 10, 1809"
+     ],
+     "depends_on": [
+      "u1"
+     ],
+     "support_sets": [
+      [
+       [
+        "Angiolo Vestris",
+        0
+       ]
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "sample_id": "2wikimultihopqa_8971e3ec0baf11ebab90acde48001122",
+   "status": "draft",
+   "notes": [
+    "Inference: husband (optional) then his father, the father-in-law (necessary).",
+    "Trap: Archduke Otto of Austria (1865–1906) sentence 0 names a different Archduke Karl Ludwig of Austria."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "husband of Archduchess Marie Astrid of Austria",
+     "necessary": false,
+     "expected_answer": "Archduke Carl Christian of Austria",
+     "aliases": [
+      "Carl Christian"
+     ],
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Archduchess Marie Astrid of Austria",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u2",
+     "description": "father of {u1}, father-in-law of Archduchess Marie Astrid of Austria",
+     "necessary": true,
+     "expected_answer": "Archduke Carl Ludwig of Austria",
+     "aliases": [
+      "Carl Ludwig"
+     ],
+     "depends_on": [
+      "u1"
+     ],
+     "support_sets": [
+      [
+       [
+        "Archduke Carl Christian of Austria",
+        1
+       ]
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "sample_id": "2wikimultihopqa_604b9ce208bc11ebbd88ac1f6bf848b6",
+   "status": "draft",
+   "notes": [
+    "Bridge comparison: director/death-date chain per film plus a conclusion unit.",
+    "Dead Man's Bluff sentence 1 ('Director Aleksei Balabanov ...') states the director within the film's article.",
+    "The Ringer (1931 film) sentence 3 ('Forde remade the same story in 1938 as The Gaunt Stranger') does not state the director role explicitly; not used for u1.",
+    "Walter Forde sentence 1 gives only the death year (1984), not the full date; not used for u2."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "director of film The Gaunt Stranger",
+     "necessary": false,
+     "expected_answer": "Walter Forde",
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "The Gaunt Stranger",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u2",
+     "description": "date of death of {u1}",
+     "necessary": false,
+     "expected_answer": "7 January 1984",
+     "aliases": [
+      "January 7, 1984"
+     ],
+     "depends_on": [
+      "u1"
+     ],
+     "support_sets": [
+      [
+       [
+        "Walter Forde",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u3",
+     "description": "director of film Dead Man's Bluff",
+     "necessary": false,
+     "expected_answer": "Aleksei Balabanov",
+     "aliases": [
+      "Aleksei Oktyabrinovich Balabanov"
+     ],
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Dead Man's Bluff",
+        1
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u4",
+     "description": "date of death of {u3}",
+     "necessary": false,
+     "expected_answer": "18 May 2013",
+     "aliases": [
+      "May 18, 2013"
+     ],
+     "depends_on": [
+      "u3"
+     ],
+     "support_sets": [
+      [
+       [
+        "Aleksei Balabanov",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u5",
+     "description": "which of The Gaunt Stranger and Dead Man's Bluff has the director who died first",
+     "necessary": true,
+     "expected_answer": "The Gaunt Stranger",
+     "depends_on": [
+      "u2",
+      "u4"
+     ],
+     "support_sets": [
+      []
+     ]
+    }
+   ]
+  },
+  {
+   "sample_id": "2wikimultihopqa_2564e76e089e11ebbd78ac1f6bf848b6",
+   "status": "draft",
+   "notes": [
+    "Comparison: two birth-date units plus a conclusion unit.",
+    "Document text spells 'Jaime Manuel Gomez'; title is 'Jaime Manuel Gómez'."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "date of birth of Jaime Manuel Gómez",
+     "necessary": false,
+     "expected_answer": "June 27, 1972",
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Jaime Manuel Gómez",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u2",
+     "description": "date of birth of Lars Levi Laestadius",
+     "necessary": false,
+     "expected_answer": "10 January 1800",
+     "aliases": [
+      "January 10, 1800"
+     ],
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Lars Levi Laestadius",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u3",
+     "description": "which of Jaime Manuel Gómez and Lars Levi Laestadius was born first",
+     "necessary": true,
+     "expected_answer": "Lars Levi Laestadius",
+     "depends_on": [
+      "u1",
+      "u2"
+     ],
+     "support_sets": [
+      []
+     ]
+    }
+   ]
+  },
+  {
+   "sample_id": "2wikimultihopqa_9e9948280bdc11eba7f7acde48001122",
+   "status": "draft",
+   "notes": [
+    "Bridge: father (optional) then his date of death (necessary).",
+    "Brien Cokayne sentence 1 names 'George Cokayne (originally George Adams), author of The Complete Peerage'; the document title 'George Edward Cokayne' and its sentence 1 (The Complete Peerage) identify him. Aliases cover both names.",
+    "Triple subject 'Brien Ibrican Cokayne, 1st Baron Cullen of Ashbourne' differs from the document title."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "father of Brien Cokayne, 1st Baron Cullen of Ashbourne",
+     "necessary": false,
+     "expected_answer": "George Cokayne",
+     "aliases": [
+      "George Edward Cokayne",
+      "George Adams"
+     ],
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Brien Cokayne, 1st Baron Cullen of Ashbourne",
+        1
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u2",
+     "description": "date of death of {u1}",
+     "necessary": true,
+     "expected_answer": "6 August 1911",
+     "aliases": [
+      "August 6, 1911"
+     ],
+     "depends_on": [
+      "u1"
+     ],
+     "support_sets": [
+      [
+       [
+        "George Edward Cokayne",
+        0
+       ]
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "sample_id": "2wikimultihopqa_1b5c5d6a0baf11ebab90acde48001122",
+   "status": "draft",
+   "notes": [
+    "Inference: father (optional, named in the question) then his father, the paternal grandfather (necessary).",
+    "Tiberius sentence 1 ('co-emperor ... with his father Justinian II') added as alternative support for u1.",
+    "Triple subject 'Tiberius' differs from the document title 'Tiberius (son of Justinian II)'."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "father of Tiberius (son of Justinian II)",
+     "necessary": false,
+     "expected_answer": "Justinian II",
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Tiberius (son of Justinian II)",
+        0
+       ]
+      ],
+      [
+       [
+        "Tiberius (son of Justinian II)",
+        1
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u2",
+     "description": "father of {u1}, paternal grandfather of Tiberius (son of Justinian II)",
+     "necessary": true,
+     "expected_answer": "Constantine IV",
+     "depends_on": [
+      "u1"
+     ],
+     "support_sets": [
+      [
+       [
+        "Justinian II",
+        1
+       ]
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "sample_id": "2wikimultihopqa_8e463167086c11ebbd61ac1f6bf848b6",
+   "status": "draft",
+   "notes": [
+    "Bridge comparison: director/death-date chain per film plus a conclusion unit.",
+    "Victor Upton-Brown sentence 3 (directing 'a movie based on the play How McDougall Topped the Score', released 1924) does not name the film itself; not used as alternative support for u3.",
+    "Distractors about the Purple Heart medal are unrelated."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "director of film The Purple Heart",
+     "necessary": false,
+     "expected_answer": "Lewis Milestone",
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "The Purple Heart",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u2",
+     "description": "date of death of {u1}",
+     "necessary": false,
+     "expected_answer": "September 25, 1980",
+     "aliases": [
+      "25 September 1980"
+     ],
+     "depends_on": [
+      "u1"
+     ],
+     "support_sets": [
+      [
+       [
+        "Lewis Milestone",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u3",
+     "description": "director of film How McDougall Topped the Score",
+     "necessary": false,
+     "expected_answer": "Victor Upton-Brown",
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "How McDougall Topped the Score",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u4",
+     "description": "date of death of {u3}",
+     "necessary": false,
+     "expected_answer": "23 May 1964",
+     "aliases": [
+      "May 23, 1964"
+     ],
+     "depends_on": [
+      "u3"
+     ],
+     "support_sets": [
+      [
+       [
+        "Victor Upton-Brown",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u5",
+     "description": "which of The Purple Heart and How McDougall Topped the Score has the director who died later",
+     "necessary": true,
+     "expected_answer": "The Purple Heart",
+     "depends_on": [
+      "u2",
+      "u4"
+     ],
+     "support_sets": [
+      []
+     ]
+    }
+   ]
+  },
+  {
+   "sample_id": "2wikimultihopqa_f48d9c60093011ebbdaeac1f6bf848b6",
+   "status": "draft",
+   "notes": [
+    "Comparison: two release-date units plus a conclusion unit.",
+    "Upasane sentence 0 ('a 1974 Kannada ... film') is taken as stating the release year.",
+    "Emilio (film) sentence 0 calls it 'a 2008 American drama film' while sentence 1 gives the U.S. theatrical release as November 4, 2016 (the triple's value). Treated as production year vs. theatrical release, not a conflict; the answer is Upasane either way. Flag for review.",
+    "Answer capitalization: question writes 'Emilio (Film)'; document title is 'Emilio (film)'."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "release date of Upasane",
+     "necessary": false,
+     "expected_answer": "1974",
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Upasane",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u2",
+     "description": "release date of Emilio",
+     "necessary": false,
+     "expected_answer": "November 4, 2016",
+     "aliases": [
+      "2016"
+     ],
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Emilio (film)",
+        1
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u3",
+     "description": "which of Upasane and Emilio was released first",
+     "necessary": true,
+     "expected_answer": "Upasane",
+     "depends_on": [
+      "u1",
+      "u2"
+     ],
+     "support_sets": [
+      []
+     ]
+    }
+   ]
+  },
+  {
+   "sample_id": "2wikimultihopqa_ea8045620bdb11eba7f7acde48001122",
+   "status": "draft",
+   "notes": [
+    "Bridge: director (optional) then nationality (necessary).",
+    "Answer normalized from 'India' to 'Indian' for a nationality question; source form kept in aliases.",
+    "Parambrata Chatterjee sentence 0 spells 'Parambrata Chattopadhyay'; the document title identifies him.",
+    "Lorai sentence 0 ('an Indian Bengali ... film') describes the film, not the director; Parambrata Chatterjee sentence 1 (following in West Bengal) is not nationality; neither is used for u2."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "director of film Lorai: Play to Live",
+     "necessary": false,
+     "expected_answer": "Parambrata Chatterjee",
+     "aliases": [
+      "Parambrata Chattopadhyay"
+     ],
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Lorai: Play to Live",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u2",
+     "description": "nationality of {u1}",
+     "necessary": true,
+     "expected_answer": "Indian",
+     "aliases": [
+      "India"
+     ],
+     "depends_on": [
+      "u1"
+     ],
+     "support_sets": [
+      [
+       [
+        "Parambrata Chatterjee",
+        0
+       ]
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "sample_id": "2wikimultihopqa_812e515c0baf11ebab90acde48001122",
+   "status": "draft",
+   "notes": [
+    "Inference: father (optional) then his father, the paternal grandfather (necessary).",
+    "Kaemsekhem sentence 0 says he was 'probably the son of Crown Prince Kawab'. The hedge is kept as support because it is the only statement and the source gold relies on it. Flag for review.",
+    "Kawab sentence 1 is cited alone; its extra content (vizier, burial) is not needed.",
+    "Lead review (2026-11-02): 'probably the son of' is hedged, not an explicit statement; u1 support_sets set to [], so u2 is unreachable."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "father of Kaemsekhem",
+     "necessary": false,
+     "expected_answer": "Kawab",
+     "aliases": [
+      "Crown Prince Kawab"
+     ],
+     "depends_on": [],
+     "support_sets": []
+    },
+    {
+     "unit_id": "u2",
+     "description": "father of {u1}, paternal grandfather of Kaemsekhem",
+     "necessary": true,
+     "expected_answer": "Khufu",
+     "aliases": [
+      "King Khufu"
+     ],
+     "depends_on": [
+      "u1"
+     ],
+     "support_sets": [
+      [
+       [
+        "Kawab",
+        1
+       ]
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "sample_id": "2wikimultihopqa_08d7167e084b11ebbd56ac1f6bf848b6",
+   "status": "draft",
+   "notes": [
+    "Bridge comparison: director/birth-date chain per film plus a conclusion unit.",
+    "Answer capitalization normalized from 'They Came To Cordura'; source form kept in aliases."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "director of film They Came to Cordura",
+     "necessary": false,
+     "expected_answer": "Robert Rossen",
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "They Came to Cordura",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u2",
+     "description": "date of birth of {u1}",
+     "necessary": false,
+     "expected_answer": "March 16, 1908",
+     "depends_on": [
+      "u1"
+     ],
+     "support_sets": [
+      [
+       [
+        "Robert Rossen",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u3",
+     "description": "director of film The Unknown Known",
+     "necessary": false,
+     "expected_answer": "Errol Morris",
+     "aliases": [
+      "Errol Mark Morris"
+     ],
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "The Unknown Known",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u4",
+     "description": "date of birth of {u3}",
+     "necessary": false,
+     "expected_answer": "February 5, 1948",
+     "depends_on": [
+      "u3"
+     ],
+     "support_sets": [
+      [
+       [
+        "Errol Morris",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u5",
+     "description": "which of They Came to Cordura and The Unknown Known has the director born earlier",
+     "necessary": true,
+     "expected_answer": "They Came to Cordura",
+     "aliases": [
+      "They Came To Cordura"
+     ],
+     "depends_on": [
+      "u2",
+      "u4"
+     ],
+     "support_sets": [
+      []
+     ]
+    }
+   ]
+  },
+  {
+   "sample_id": "2wikimultihopqa_1ec8b764099211ebbdb0ac1f6bf848b6",
+   "status": "draft",
+   "notes": [
+    "Comparison (yes/no): two country units plus a conclusion unit.",
+    "The other Selivanovsky District localities are distractors about different villages; not used."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "country of Ilyinskoye, Selivanovsky District, Vladimir Oblast",
+     "necessary": false,
+     "expected_answer": "Russia",
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Ilyinskoye, Selivanovsky District, Vladimir Oblast",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u2",
+     "description": "country of Chal Lal",
+     "necessary": false,
+     "expected_answer": "Iran",
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Chal Lal",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u3",
+     "description": "whether Ilyinskoye, Selivanovsky District, Vladimir Oblast and Chal Lal are located in the same country",
+     "necessary": true,
+     "expected_answer": "no",
+     "depends_on": [
+      "u1",
+      "u2"
+     ],
+     "support_sets": [
+      []
+     ]
+    }
+   ]
+  },
+  {
+   "sample_id": "2wikimultihopqa_533e994a0bdd11eba7f7acde48001122",
+   "status": "draft",
+   "notes": [
+    "Bridge: director (optional) then date of death (necessary).",
+    "Film sentence 0 spells the title 'Muhammad bin Thughluq'; the document title identifies the film.",
+    "Film sentence 2 ('Both the play and the film were ... directed by Cho') added as alternative support for u1; 'Cho' is in aliases, and Cho Ramaswamy sentence 0 ('better known as Cho Ramaswamy') links the name."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "director of film Muhammad bin Tughluq",
+     "necessary": false,
+     "expected_answer": "Cho Ramaswamy",
+     "aliases": [
+      "Cho",
+      "Srinivasa Iyer Ramaswamy"
+     ],
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Muhammad bin Tughluq (film)",
+        0
+       ]
+      ],
+      [
+       [
+        "Muhammad bin Tughluq (film)",
+        2
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u2",
+     "description": "date of death of {u1}",
+     "necessary": true,
+     "expected_answer": "7 December 2016",
+     "aliases": [
+      "December 7, 2016"
+     ],
+     "depends_on": [
+      "u1"
+     ],
+     "support_sets": [
+      [
+       [
+        "Cho Ramaswamy",
+        0
+       ]
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "sample_id": "2wikimultihopqa_a1f3671a0baf11ebab90acde48001122",
+   "status": "draft",
+   "notes": [
+    "Inference: father (optional) then mother (necessary), following the triples father -> spouse.",
+    "No explicit support for u2: John Wayles sentence 4 says Wayles' relationship with Betty Hemings produced six children including Sally Hemings, and James Hemings sentence 1 calls James Sally's older brother sharing John Wayles as father; no sentence states that Betty Hemings is James's mother (inference via sibling, and Wayles was married three times). u2 has support_sets [].",
+    "The triple 'John Wayles spouse Betty Hemings' is not stated in the text (it is a relationship, not a marriage)."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "father of James Hemings",
+     "necessary": false,
+     "expected_answer": "John Wayles",
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "James Hemings",
+        1
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u2",
+     "description": "mother of James Hemings, given his father {u1}",
+     "necessary": true,
+     "expected_answer": "Betty Hemings",
+     "depends_on": [
+      "u1"
+     ],
+     "support_sets": []
+    }
+   ]
+  },
+  {
+   "sample_id": "2wikimultihopqa_3addeb19089411ebbd75ac1f6bf848b6",
+   "status": "draft",
+   "notes": [
+    "Bridge comparison: director/birth-date chain per film plus a conclusion unit.",
+    "Six Hours to Lose sentence 0 names two directors, Alex Joffé and Jean Lévitte; u1 follows the triple (Alex Joffé). Lévitte's birth date is not in the documents. The answer holds through Joffé. Flag for review (co-directed film).",
+    "Alex Joffé sentence 2 added as alternative support for u2.",
+    "Catherine Hardwicke sentence 1 ('Her directorial work includes ... Red Riding Hood (2011)') added as alternative support for u3.",
+    "Answer capitalization normalized from 'Six Hours To Lose'; source form kept in aliases.",
+    "Trap: Red Riding Hood (2003 film) has a different director."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "director of film Six Hours to Lose",
+     "necessary": false,
+     "expected_answer": "Alex Joffé",
+     "aliases": [
+      "Alexandre Joffé"
+     ],
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Six Hours to Lose",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u2",
+     "description": "date of birth of {u1}",
+     "necessary": false,
+     "expected_answer": "18 November 1918",
+     "aliases": [
+      "November 18, 1918"
+     ],
+     "depends_on": [
+      "u1"
+     ],
+     "support_sets": [
+      [
+       [
+        "Alex Joffé",
+        0
+       ]
+      ],
+      [
+       [
+        "Alex Joffé",
+        2
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u3",
+     "description": "director of film Red Riding Hood (2011 film)",
+     "necessary": false,
+     "expected_answer": "Catherine Hardwicke",
+     "aliases": [
+      "Helen Catherine Hardwicke"
+     ],
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Red Riding Hood (2011 film)",
+        0
+       ]
+      ],
+      [
+       [
+        "Catherine Hardwicke",
+        1
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u4",
+     "description": "date of birth of {u3}",
+     "necessary": false,
+     "expected_answer": "October 21, 1955",
+     "aliases": [
+      "21 October 1955"
+     ],
+     "depends_on": [
+      "u3"
+     ],
+     "support_sets": [
+      [
+       [
+        "Catherine Hardwicke",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u5",
+     "description": "which of Six Hours to Lose and Red Riding Hood (2011 film) has the director born earlier",
+     "necessary": true,
+     "expected_answer": "Six Hours to Lose",
+     "aliases": [
+      "Six Hours To Lose"
+     ],
+     "depends_on": [
+      "u2",
+      "u4"
+     ],
+     "support_sets": [
+      []
+     ]
+    }
+   ]
+  },
+  {
+   "sample_id": "2wikimultihopqa_9040c5ab097511ebbdb0ac1f6bf848b6",
+   "status": "draft",
+   "notes": [
+    "Comparison (yes/no): two country units plus a conclusion unit.",
+    "Legislative Assembly of Perm Krai sentence 0 (Perm Krai is in Russia) and Afrasiyab dynasty sentence 0 (an Iranian dynasty of Mazandaran) do not mention the villages; not used."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "country of Bol, Mazandaran",
+     "necessary": false,
+     "expected_answer": "Iran",
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Bol, Mazandaran",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u2",
+     "description": "country of Kozmodemyansk, Perm Krai",
+     "necessary": false,
+     "expected_answer": "Russia",
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Kozmodemyansk, Perm Krai",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u3",
+     "description": "whether Bol, Mazandaran and Kozmodemyansk, Perm Krai are located in the same country",
+     "necessary": true,
+     "expected_answer": "no",
+     "depends_on": [
+      "u1",
+      "u2"
+     ],
+     "support_sets": [
+      []
+     ]
+    }
+   ]
+  },
+  {
+   "sample_id": "2wikimultihopqa_fbad88760bdc11eba7f7acde48001122",
+   "status": "draft",
+   "notes": [
+    "Bridge: father (optional) then place of birth (necessary).",
+    "Triple subject 'Julian Ricardo Marley' differs from the document title 'Julian Marley'.",
+    "Bob Marley sentence 0 ('a Jamaican singer') is not birthplace support."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "father of Julian Marley",
+     "necessary": false,
+     "expected_answer": "Bob Marley",
+     "aliases": [
+      "Robert Nesta Marley"
+     ],
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Julian Marley",
+        1
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u2",
+     "description": "place of birth of {u1}",
+     "necessary": true,
+     "expected_answer": "Nine Mile",
+     "aliases": [
+      "Nine Mile, British Jamaica"
+     ],
+     "depends_on": [
+      "u1"
+     ],
+     "support_sets": [
+      [
+       [
+        "Bob Marley",
+        5
+       ]
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "sample_id": "2wikimultihopqa_51190d180baf11ebab90acde48001122",
+   "status": "draft",
+   "notes": [
+    "Inference: sibling (optional) then the sibling's spouse (necessary).",
+    "No explicit support for u2: Kristy Sargeant sentence 1 names Kris Wirtz as her pair-skating partner, and sentence 0's surname 'Sargeant-Wirtz' only suggests a marriage; no sentence states that Wirtz is her spouse. u2 has support_sets [].",
+    "Triple subject ' Sargeant' is truncated; the document title is 'Lisa Sargeant'."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "sibling of Lisa Sargeant",
+     "necessary": false,
+     "expected_answer": "Kristy Sargeant",
+     "aliases": [
+      "Kristy Lee Sargeant-Wirtz"
+     ],
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Lisa Sargeant",
+        1
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u2",
+     "description": "spouse of {u1}, sibling-in-law of Lisa Sargeant",
+     "necessary": true,
+     "expected_answer": "Kris Wirtz",
+     "depends_on": [
+      "u1"
+     ],
+     "support_sets": []
+    }
+   ]
+  },
+  {
+   "sample_id": "2wikimultihopqa_e4e452ca087411ebbd67ac1f6bf848b6",
+   "status": "draft",
+   "notes": [
+    "Bridge comparison: director/birth-date chain per film plus a conclusion unit ('younger' = born later).",
+    "Dudley Murphy sentence 1 added as alternative support for u4.",
+    "Trap: Wanda Whips Wall Street is also known as Stocks and Blondes (1982, directed by Larry Revene); u3 follows the document titled 'Stocks and Blondes'.",
+    "Answer capitalization: question writes 'Stocks And Blondes'."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "director of film The Right Connections",
+     "necessary": false,
+     "expected_answer": "Chuck Vinson",
+     "aliases": [
+      "Chuck Rallen Vinson"
+     ],
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "The Right Connections",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u2",
+     "description": "date of birth of {u1}",
+     "necessary": false,
+     "expected_answer": "July 14, 1956",
+     "depends_on": [
+      "u1"
+     ],
+     "support_sets": [
+      [
+       [
+        "Chuck Vinson",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u3",
+     "description": "director of film Stocks and Blondes",
+     "necessary": false,
+     "expected_answer": "Dudley Murphy",
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Stocks and Blondes",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u4",
+     "description": "date of birth of {u3}",
+     "necessary": false,
+     "expected_answer": "July 10, 1897",
+     "depends_on": [
+      "u3"
+     ],
+     "support_sets": [
+      [
+       [
+        "Dudley Murphy",
+        0
+       ]
+      ],
+      [
+       [
+        "Dudley Murphy",
+        1
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u5",
+     "description": "which of The Right Connections and Stocks and Blondes has the younger director",
+     "necessary": true,
+     "expected_answer": "The Right Connections",
+     "depends_on": [
+      "u2",
+      "u4"
+     ],
+     "support_sets": [
+      []
+     ]
+    }
+   ]
+  },
+  {
+   "sample_id": "2wikimultihopqa_8e43ba54087c11ebbd6aac1f6bf848b6",
+   "status": "draft",
+   "notes": [
+    "Comparison: two release-year units plus a conclusion unit.",
+    "The Dilemma sentence 6 (released January 14, 2011) added as alternative support for u1.",
+    "Let's Be Famous sentence 1 (shooting began November 1938) is not a release date; not used.",
+    "Trap: The Dilemma (1914 film) is a different film."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "release year of The Dilemma",
+     "necessary": false,
+     "expected_answer": "2011",
+     "aliases": [
+      "January 14, 2011"
+     ],
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "The Dilemma",
+        0
+       ]
+      ],
+      [
+       [
+        "The Dilemma",
+        6
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u2",
+     "description": "release year of Let's Be Famous",
+     "necessary": false,
+     "expected_answer": "1939",
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Let's Be Famous",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u3",
+     "description": "which of Let's Be Famous and The Dilemma was released more recently",
+     "necessary": true,
+     "expected_answer": "The Dilemma",
+     "depends_on": [
+      "u1",
+      "u2"
+     ],
+     "support_sets": [
+      []
+     ]
+    }
+   ]
+  }
+ ]
+}

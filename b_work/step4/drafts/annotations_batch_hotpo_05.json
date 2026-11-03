@@ -1,0 +1,1514 @@
+{
+ "annotation_version": "draft-1",
+ "drafted_by": "Claude subagent",
+ "worksheet": "batch_hotpo_05",
+ "records": [
+  {
+   "sample_id": "hotpotqa_5ae5394855429908b6326585",
+   "status": "draft",
+   "notes": [
+    "Bridge (intersection): u1 lists the devices TVPlayer names for free-to-air viewing, u2 selects the one with remote play.",
+    "u1 expected_answer is the full device list as stated in TVPlayer sentence 0.",
+    "Amazon Fire TV sentence 2 ('The device ... play video games with the included remote') resolves 'The device' through the document title."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "smart devices through which TVPlayer's free-to-air channels can be watched",
+     "necessary": false,
+     "expected_answer": "Apple TV 4th Generation and Amazon Fire TV",
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "TVPlayer",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u2",
+     "description": "which of {u1} allows users to play using a remote",
+     "necessary": true,
+     "expected_answer": "Amazon Fire TV",
+     "depends_on": [
+      "u1"
+     ],
+     "support_sets": [
+      [
+       [
+        "Amazon Fire TV",
+        2
+       ]
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "sample_id": "hotpotqa_5a75ebe6554299109176e5d2",
+   "status": "draft",
+   "notes": [
+    "Comparison: two release-year units plus a conclusion unit.",
+    "Five other documents state the 1989 date of Honey, I Shrunk the Kids; all added as alternative support for u2.",
+    "Honey, We Shrunk Ourselves sentence 0 gives no year for the original film, so it is not used."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "release year of the Walt Disney movie Tarzan",
+     "necessary": false,
+     "expected_answer": "1999",
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Tarzan (1999 film)",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u2",
+     "description": "release year of the Walt Disney movie Honey, I Shrunk the Kids",
+     "necessary": false,
+     "expected_answer": "1989",
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Honey, I Shrunk the Kids",
+        0
+       ]
+      ],
+      [
+       [
+        "Honey, I Shrunk the Kids: Movie Set Adventure",
+        1
+       ]
+      ],
+      [
+       [
+        "Robert Oliveri",
+        1
+       ]
+      ],
+      [
+       [
+        "Marcia Strassman",
+        0
+       ]
+      ],
+      [
+       [
+        "Honey, I Shrunk the Kids: The TV Show",
+        0
+       ]
+      ],
+      [
+       [
+        "Honey, I Blew Up the Kid",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u3",
+     "description": "which Walt Disney movie came out first, Tarzan or Honey, I Shrunk the Kids",
+     "necessary": true,
+     "expected_answer": "Honey, I Shrunk the Kids",
+     "depends_on": [
+      "u1",
+      "u2"
+     ],
+     "support_sets": [
+      []
+     ]
+    }
+   ]
+  },
+  {
+   "sample_id": "hotpotqa_5ae130515542997b2ef7d121",
+   "status": "draft",
+   "notes": [
+    "Bridge: u1 finds the author, u2 confirms the descriptor (American writer known for the 1932-1943 children's series), as in the Staubach record.",
+    "List of Little House on the Prairie books sentences 0-1 together state that Wilder wrote These Happy Golden Years; added as alternative support for u1. Sentence 1 alone does not name the author.",
+    "List of Little House on the Prairie books sentence 0 states the 1932-1943 series but not that Wilder is American, so it is not support for u2."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "author of These Happy Golden Years",
+     "necessary": false,
+     "expected_answer": "Laura Ingalls Wilder",
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "These Happy Golden Years",
+        0
+       ]
+      ],
+      [
+       [
+        "List of Little House on the Prairie books",
+        0
+       ],
+       [
+        "List of Little House on the Prairie books",
+        1
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u2",
+     "description": "American writer known for a series of children's books released from 1932 to 1943, given {u1}",
+     "necessary": true,
+     "expected_answer": "Laura Ingalls Wilder",
+     "depends_on": [
+      "u1"
+     ],
+     "support_sets": [
+      [
+       [
+        "Laura Ingalls Wilder",
+        0
+       ]
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "sample_id": "hotpotqa_5ae3fc835542995dadf24288",
+   "status": "draft",
+   "notes": [
+    "Comparison (selection): number of acts of each opera plus a conclusion unit.",
+    "Both fact units have explicit support (three acts vs. two acts), so no presupposition is needed."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "number of acts in the opera Die schweigsame Frau",
+     "necessary": false,
+     "expected_answer": "three",
+     "aliases": [
+      "3"
+     ],
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Die schweigsame Frau",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u2",
+     "description": "number of acts in the opera La straniera",
+     "necessary": false,
+     "expected_answer": "two",
+     "aliases": [
+      "2"
+     ],
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "La straniera",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u3",
+     "description": "which of Die schweigsame Frau and La straniera is an opera in three acts",
+     "necessary": true,
+     "expected_answer": "Die schweigsame Frau",
+     "depends_on": [
+      "u1",
+      "u2"
+     ],
+     "support_sets": [
+      []
+     ]
+    }
+   ]
+  },
+  {
+   "sample_id": "hotpotqa_5ab2989b554299194fa93423",
+   "status": "draft",
+   "notes": [
+    "Bridge (intersection): u1 lists the fighters Matt Hume trained, u2 selects the current UFC Middleweight fighter.",
+    "u1 expected_answer is the trainee list as stated in Matt Hume sentence 1 (gym members Demetrious Johnson and Bibiano Fernandes are not listed as trained).",
+    "Matt Hume sentence 0 removed from support: it does not mention trainees.",
+    "Trap: Jake Collier is also currently in the UFC middleweight division but is not listed as a Hume trainee."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "fighters trained by Matt Hume",
+     "necessary": false,
+     "expected_answer": "Josh Barnett, Tim Boetsch, Bob Sapp, Chris Leben, Hayato Sakurai, Akira Shoji, Matt Brown, Rich Franklin, Mario Miranda and Caros Fodor",
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Matt Hume",
+        1
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u2",
+     "description": "which of {u1} is an American professional mixed martial artist currently fighting in the UFC Middleweight division",
+     "necessary": true,
+     "expected_answer": "Tim Boetsch",
+     "aliases": [
+      "Timothy A. Boetsch",
+      "Timothy Boetsch"
+     ],
+     "depends_on": [
+      "u1"
+     ],
+     "support_sets": [
+      [
+       [
+        "Tim Boetsch",
+        0
+       ]
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "sample_id": "hotpotqa_5ac51d3355429924173fb5be",
+   "status": "draft",
+   "notes": [
+    "Comparison (yes/no): two fact units plus a conclusion unit.",
+    "This Is Nollywood sentence 0 calls Welcome to Nollywood 'the acclaimed 2007 documentary'; added as alternative support for u1.",
+    "Jamie Meltzer sentence 1 lists Welcome to Nollywood among his films without calling it a documentary, so it is not used."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "whether Welcome to Nollywood is a documentary film",
+     "necessary": false,
+     "expected_answer": "yes",
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Welcome to Nollywood",
+        0
+       ]
+      ],
+      [
+       [
+        "This Is Nollywood",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u2",
+     "description": "whether Burma VJ is a documentary film",
+     "necessary": false,
+     "expected_answer": "yes",
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Burma VJ",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u3",
+     "description": "whether Welcome to Nollywood and Burma VJ are both documentary films",
+     "necessary": true,
+     "expected_answer": "yes",
+     "depends_on": [
+      "u1",
+      "u2"
+     ],
+     "support_sets": [
+      []
+     ]
+    }
+   ]
+  },
+  {
+   "sample_id": "hotpotqa_5a7a166f5542990783324e48",
+   "status": "draft",
+   "notes": [
+    "Bridge: u1 identifies the sixth Saw film, u2 the American actor starring in it.",
+    "u2 needs Saw VI sentence 1 (cast list) and Tobin Bell sentence 0 (American actor) together; Tobin Bell sentence 1 names the Saw series but not Saw VI."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "sixth installment in the Saw franchise",
+     "necessary": false,
+     "expected_answer": "Saw VI",
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Saw VI",
+        1
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u2",
+     "description": "American actor who stars in {u1}",
+     "necessary": true,
+     "expected_answer": "Tobin Bell",
+     "depends_on": [
+      "u1"
+     ],
+     "support_sets": [
+      [
+       [
+        "Saw VI",
+        1
+       ],
+       [
+        "Tobin Bell",
+        0
+       ]
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "sample_id": "hotpotqa_5ac16e3055429964131be1f3",
+   "status": "draft",
+   "notes": [
+    "Comparison ('both what type'): one film-type unit per film plus a conclusion unit.",
+    "Dreamers (film) is a different documentary; not support for Big Dreamers."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "type of film Big Dreamers is",
+     "necessary": false,
+     "expected_answer": "documentary film",
+     "aliases": [
+      "documentary"
+     ],
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Big Dreamers",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u2",
+     "description": "type of film This Is Elvis is",
+     "necessary": false,
+     "expected_answer": "documentary film",
+     "aliases": [
+      "documentary"
+     ],
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "This Is Elvis",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u3",
+     "description": "type of film that Big Dreamers and This Is Elvis both are",
+     "necessary": true,
+     "expected_answer": "documentary film",
+     "aliases": [
+      "documentary"
+     ],
+     "depends_on": [
+      "u1",
+      "u2"
+     ],
+     "support_sets": [
+      []
+     ]
+    }
+   ]
+  },
+  {
+   "sample_id": "hotpotqa_5a7bd51b554299683c1c62bf",
+   "status": "draft",
+   "notes": [
+    "Bridge: u1 identifies the king from the Mercia clue, u2 checks the South West of England descriptor (pattern of the Staubach record).",
+    "No explicit support for u2: no sentence states that Edward the Elder ruled in the South West of England. Winchcombeshire sentences 0-1 place the county in the South West and say it was created 'perhaps by King Edward the Elder', which is hedged and does not state where he ruled; Edward the Elder sentence 0 ('King of the Anglo-Saxons') does not name the region.",
+    "Winchcombeshire 0-1 and Edward the Elder 0 from the source supporting facts are therefore not used."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "king who became ruler of Mercia upon the death of his sister",
+     "necessary": false,
+     "expected_answer": "Edward the Elder",
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Edward the Elder",
+        2
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u2",
+     "description": "king who ruled in the South West of England and became ruler of Mercia upon his sister's death, given {u1}",
+     "necessary": true,
+     "expected_answer": "Edward the Elder",
+     "depends_on": [
+      "u1"
+     ],
+     "support_sets": []
+    }
+   ]
+  },
+  {
+   "sample_id": "hotpotqa_5ab27ea3554299340b5254e4",
+   "status": "draft",
+   "notes": [
+    "Comparison (same genre): one genre unit per film plus a conclusion unit.",
+    "Ravi Patel (actor) sentence 1 ('an autobiographical documentary, \"Meet the Patels\"') added as alternative support for u1.",
+    "Arakimentari sentence 0 ('a 2004 American film') replaced by sentence 1, which states the genre.",
+    "Meet the Patels is also a romantic comedy; the shared genre is documentary."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "genre of the film Meet the Patels",
+     "necessary": false,
+     "expected_answer": "documentary",
+     "aliases": [
+      "documentary film"
+     ],
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Meet the Patels",
+        0
+       ]
+      ],
+      [
+       [
+        "Ravi Patel (actor)",
+        1
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u2",
+     "description": "genre of the film Arakimentari",
+     "necessary": false,
+     "expected_answer": "documentary",
+     "aliases": [
+      "documentary film"
+     ],
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Arakimentari",
+        1
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u3",
+     "description": "whether Meet the Patels and Arakimentari are the same genre of film",
+     "necessary": true,
+     "expected_answer": "yes",
+     "depends_on": [
+      "u1",
+      "u2"
+     ],
+     "support_sets": [
+      []
+     ]
+    }
+   ]
+  },
+  {
+   "sample_id": "hotpotqa_5ab48abf5542991779162cd0",
+   "status": "reject",
+   "notes": [
+    "Reject: ill-formed question. It asks when 'Elspeth Campbell And Menzies Campbell' were born, but the source answer ('born January 1940') gives only Elspeth Campbell's date; Menzies Campbell sentence 0 gives 22 May 1941. Read as multipart, the source answer is incomplete; read as a single person, the question is garbled."
+   ],
+   "units": []
+  },
+  {
+   "sample_id": "hotpotqa_5a77287a55429972597f1452",
+   "status": "draft",
+   "notes": [
+    "Comparison: two birth-date units plus a conclusion unit.",
+    "Answer normalized from 'John David Percy \"Speedy\" Keen' to 'Speedy Keen'; full name kept as alias."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "birth date of Speedy Keen",
+     "necessary": false,
+     "expected_answer": "29 March 1945",
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Speedy Keen",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u2",
+     "description": "birth date of Shaun Ryder",
+     "necessary": false,
+     "expected_answer": "23 August 1962",
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Shaun Ryder",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u3",
+     "description": "who is older, Speedy Keen or Shaun Ryder",
+     "necessary": true,
+     "expected_answer": "Speedy Keen",
+     "aliases": [
+      "John David Percy \"Speedy\" Keen",
+      "John \"Speedy\" Keen"
+     ],
+     "depends_on": [
+      "u1",
+      "u2"
+     ],
+     "support_sets": [
+      []
+     ]
+    }
+   ]
+  },
+  {
+   "sample_id": "hotpotqa_5ae60b0d554299546bf8302c",
+   "status": "draft",
+   "notes": [
+    "Bridge: u1 finds the footballer Cheryl Cole divorced, u2 confirms the LA Galaxy left-back descriptor (Staubach pattern).",
+    "Promise This sentence 4 does not say whose divorce it was; it is cited with sentence 0, which names Cheryl Cole as the artist."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "footballer whom Cheryl Cole divorced",
+     "necessary": false,
+     "expected_answer": "Ashley Cole",
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Promise This",
+        0
+       ],
+       [
+        "Promise This",
+        4
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u2",
+     "description": "professional footballer who plays as a left-back for Los Angeles Galaxy whom Cheryl Cole divorced, given {u1}",
+     "necessary": true,
+     "expected_answer": "Ashley Cole",
+     "depends_on": [
+      "u1"
+     ],
+     "support_sets": [
+      [
+       [
+        "Ashley Cole",
+        0
+       ]
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "sample_id": "hotpotqa_5a7769ea55429966f1a36d2f",
+   "status": "draft",
+   "notes": [
+    "Comparison: two death-date units plus a conclusion unit.",
+    "Answer normalized from 'Georg Ferdinand Ludwig Philipp Cantor' to 'Georg Cantor'; full name kept as alias."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "death date of Yuri Linnik",
+     "necessary": false,
+     "expected_answer": "June 30, 1972",
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Yuri Linnik",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u2",
+     "description": "death date of Georg Cantor",
+     "necessary": false,
+     "expected_answer": "January 6, 1918",
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Georg Cantor",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u3",
+     "description": "who died first, Yuri Linnik or Georg Cantor",
+     "necessary": true,
+     "expected_answer": "Georg Cantor",
+     "aliases": [
+      "Georg Ferdinand Ludwig Philipp Cantor",
+      "Cantor"
+     ],
+     "depends_on": [
+      "u1",
+      "u2"
+     ],
+     "support_sets": [
+      []
+     ]
+    }
+   ]
+  },
+  {
+   "sample_id": "hotpotqa_5ae05ae955429945ae959340",
+   "status": "draft",
+   "notes": [
+    "Bridge: u1 identifies the series, u2 the network.",
+    "David Cassidy sentence 1 (Shirley Partridge, played by Shirley Jones, in 'The Partridge Family') added as alternative support for u1.",
+    "The Partridge Family sentences 0-1 do not name the character Shirley Partridge, so they are not used for u1."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "television series in which an American actress portrayed Shirley Partridge along with David Cassidy beginning in 1970",
+     "necessary": false,
+     "expected_answer": "The Partridge Family",
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Shirley Jones",
+        4
+       ]
+      ],
+      [
+       [
+        "David Cassidy",
+        1
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u2",
+     "description": "network on which {u1} aired",
+     "necessary": true,
+     "expected_answer": "ABC",
+     "aliases": [
+      "ABC network",
+      "American Broadcasting Company"
+     ],
+     "depends_on": [
+      "u1"
+     ],
+     "support_sets": [
+      [
+       [
+        "The Partridge Family",
+        2
+       ]
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "sample_id": "hotpotqa_5a7f66cb55429969796c1a32",
+   "status": "draft",
+   "notes": [
+    "Comparison (count): creators of each game plus a conclusion unit; the conclusion compares the counts (two vs. one).",
+    "Cranium, Inc. sentences 1-2 together state that Tait and Alexander co-developed the game; added as alternative support for u1.",
+    "Auf Achse (TV series) is a distractor (a different work).",
+    "Caveat: Cranium sentence 4 also names packaging and artwork contributors; counting them only strengthens the answer."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "people who created the game Cranium",
+     "necessary": false,
+     "expected_answer": "Whit Alexander and Richard Tait",
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Cranium (board game)",
+        0
+       ]
+      ],
+      [
+       [
+        "Cranium, Inc.",
+        1
+       ],
+       [
+        "Cranium, Inc.",
+        2
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u2",
+     "description": "people who created the game Auf Achse",
+     "necessary": false,
+     "expected_answer": "Wolfgang Kramer",
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Auf Achse",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u3",
+     "description": "which game had more people involved in creating it, Cranium or Auf Achse",
+     "necessary": true,
+     "expected_answer": "Cranium",
+     "depends_on": [
+      "u1",
+      "u2"
+     ],
+     "support_sets": [
+      []
+     ]
+    }
+   ]
+  },
+  {
+   "sample_id": "hotpotqa_5adc0b3a5542996e685252b8",
+   "status": "draft",
+   "notes": [
+    "Bridge (intersection): u1 finds a series with Kristen Schaal in the cast, u2 confirms it is a live-action Adult Swim series (Staubach pattern).",
+    "u1 is set-valued (Schaal appears in many series); expected_answer is the member that answers the question. The Heart, She Holler sentence 1 (Schaal plays Hurshe) is alternative support.",
+    "Trap: Dream Corp, LLC and Your Pretty Face Is Going to Hell are also live-action Adult Swim series without Schaal."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "television series in which Kristen Joy Schaal acted",
+     "necessary": false,
+     "expected_answer": "The Heart, She Holler",
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Kristen Schaal",
+        1
+       ]
+      ],
+      [
+       [
+        "The Heart, She Holler",
+        1
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u2",
+     "description": "live-action television series produced for Adult Swim with Kristen Joy Schaal as an actor, given {u1}",
+     "necessary": true,
+     "expected_answer": "The Heart, She Holler",
+     "depends_on": [
+      "u1"
+     ],
+     "support_sets": [
+      [
+       [
+        "The Heart, She Holler",
+        0
+       ]
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "sample_id": "hotpotqa_5a8e28ba5542990e94052a80",
+   "status": "draft",
+   "notes": [
+    "Comparison ('both what type'): one work-type unit per work plus a conclusion unit.",
+    "Dorothy Bond sentence 3 mentions a recording of A Village Romeo and Juliet without stating its type; not used."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "type of work Destiny is",
+     "necessary": false,
+     "expected_answer": "opera",
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Destiny (Janáček)",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u2",
+     "description": "type of work A Village Romeo and Juliet is",
+     "necessary": false,
+     "expected_answer": "opera",
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "A Village Romeo and Juliet",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u3",
+     "description": "type of play that Destiny and A Village Romeo and Juliet both are",
+     "necessary": true,
+     "expected_answer": "opera",
+     "depends_on": [
+      "u1",
+      "u2"
+     ],
+     "support_sets": [
+      []
+     ]
+    }
+   ]
+  },
+  {
+   "sample_id": "hotpotqa_5abe97dc5542994516f453cf",
+   "status": "draft",
+   "notes": [
+    "Bridge: u1 identifies the radical feminist, u2 the band named after her.",
+    "u2 cites S.C.U.M sentences 0 (South East London post-punk/art rock group) and 3 (name from Solanas' manifesto) together, as in the source supporting facts.",
+    "The band took its name from Solanas' SCUM Manifesto; this is accepted as 'took their name from' her, following the source gold."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "American radical feminist best known for attempting to murder artist Andy Warhol",
+     "necessary": false,
+     "expected_answer": "Valerie Solanas",
+     "aliases": [
+      "Valerie Jean Solanas"
+     ],
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Valerie Solanas",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u2",
+     "description": "South East London-based post-punk/art rock group that took its name from {u1}",
+     "necessary": true,
+     "expected_answer": "S.C.U.M",
+     "aliases": [
+      "SCUM"
+     ],
+     "depends_on": [
+      "u1"
+     ],
+     "support_sets": [
+      [
+       [
+        "S.C.U.M (band)",
+        0
+       ],
+       [
+        "S.C.U.M (band)",
+        3
+       ]
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "sample_id": "hotpotqa_5a745a8755429979e288291e",
+   "status": "draft",
+   "notes": [
+    "Comparison ('both what'): one institution-type unit per school plus a conclusion unit; the shared attribute is 'private'.",
+    "Open point: 'both what' is underspecified; 'private' is the only shared attribute the two defining sentences state (a college vs. a university)."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "type of institution Wellesley College is",
+     "necessary": false,
+     "expected_answer": "private women's liberal arts college",
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Wellesley College",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u2",
+     "description": "type of institution Vanderbilt University is",
+     "necessary": false,
+     "expected_answer": "private research university",
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Vanderbilt University",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u3",
+     "description": "what Wellesley College and Vanderbilt University both are",
+     "necessary": true,
+     "expected_answer": "private",
+     "aliases": [
+      "private institutions",
+      "private schools"
+     ],
+     "depends_on": [
+      "u1",
+      "u2"
+     ],
+     "support_sets": [
+      []
+     ]
+    }
+   ]
+  },
+  {
+   "sample_id": "hotpotqa_5a736dc755429901807db04e",
+   "status": "draft",
+   "notes": [
+    "Bridge: u1 identifies the two Hi-Gate members, u2 selects the 1995 No. 1 DJ.",
+    "Judge Jules sentence 2 states the 1995 vote explicitly, so no presupposition is needed. The question does not name the candidates; they come from u1.",
+    "Trap: Aba Shanti-I was voted No. 1 DJ in 1993 and Paul Oakenfold in 1998-1999."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "two members of Hi-Gate",
+     "necessary": false,
+     "expected_answer": "Judge Jules and Paul Masterson",
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Hi-Gate",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u2",
+     "description": "which of {u1} was voted the No. 1 DJ in the world in 1995",
+     "necessary": true,
+     "expected_answer": "Judge Jules",
+     "aliases": [
+      "Julius O'Riordan"
+     ],
+     "depends_on": [
+      "u1"
+     ],
+     "support_sets": [
+      [
+       [
+        "Judge Jules",
+        2
+       ]
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "sample_id": "hotpotqa_5a861e86554299211dda2a72",
+   "status": "draft",
+   "notes": [
+    "Comparison (same nationality): two nationality units plus a conclusion unit.",
+    "Votre Faust sentence 1 ('the French author Michel Butor') added as alternative support for u1."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "nationality of Michel Butor",
+     "necessary": false,
+     "expected_answer": "French",
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Michel Butor",
+        0
+       ]
+      ],
+      [
+       [
+        "Votre Faust",
+        1
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u2",
+     "description": "nationality of Joanne Harris",
+     "necessary": false,
+     "expected_answer": "English",
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Joanne Harris",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u3",
+     "description": "whether Michel Butor and Joanne Harris share the same nationality",
+     "necessary": true,
+     "expected_answer": "no",
+     "depends_on": [
+      "u1",
+      "u2"
+     ],
+     "support_sets": [
+      []
+     ]
+    }
+   ]
+  },
+  {
+   "sample_id": "hotpotqa_5ab2ad8b554299340b525544",
+   "status": "draft",
+   "notes": [
+    "Bridge: u1 identifies the 1953 novel about a postliterate society, u2 its author.",
+    "u1 needs Postliterate society sentence 2 (postliterate) plus a sentence giving 1953 (Fahrenheit 451 sentence 0 or Fahrenheit 451 (film) sentence 1).",
+    "Fahrenheit 451 (film) sentence 1 and Postliterate society sentence 2 ('Ray Bradbury's \"Fahrenheit 451\"') added as alternative support for u2."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "1953 novel about a postliterate society",
+     "necessary": false,
+     "expected_answer": "Fahrenheit 451",
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Postliterate society",
+        2
+       ],
+       [
+        "Fahrenheit 451",
+        0
+       ]
+      ],
+      [
+       [
+        "Postliterate society",
+        2
+       ],
+       [
+        "Fahrenheit 451 (film)",
+        1
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u2",
+     "description": "author of {u1}",
+     "necessary": true,
+     "expected_answer": "Ray Bradbury",
+     "depends_on": [
+      "u1"
+     ],
+     "support_sets": [
+      [
+       [
+        "Fahrenheit 451",
+        0
+       ]
+      ],
+      [
+       [
+        "Fahrenheit 451 (film)",
+        1
+       ]
+      ],
+      [
+       [
+        "Postliterate society",
+        2
+       ]
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "sample_id": "hotpotqa_5ab95b28554299743d22eb09",
+   "status": "draft",
+   "notes": [
+    "Comparison ('both what'): one unit per title plus a conclusion unit.",
+    "'Jack and Jill' is ambiguous across the documents (magazine, Alcott book, film, nursery rhyme); the unit follows the source gold and Jack and Jill (magazine).",
+    "Forbes sentences 5-6 refer to Forbes as 'the magazine' without stating it; only sentence 0 is used."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "what Jack and Jill is",
+     "necessary": false,
+     "expected_answer": "magazine",
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Jack and Jill (magazine)",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u2",
+     "description": "what Forbes is",
+     "necessary": false,
+     "expected_answer": "magazine",
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Forbes",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u3",
+     "description": "what Jack and Jill and Forbes both are",
+     "necessary": true,
+     "expected_answer": "magazine",
+     "aliases": [
+      "magazines"
+     ],
+     "depends_on": [
+      "u1",
+      "u2"
+     ],
+     "support_sets": [
+      []
+     ]
+    }
+   ]
+  },
+  {
+   "sample_id": "hotpotqa_5ab49a7c5542991751b4d7b5",
+   "status": "reject",
+   "notes": [
+    "Reject: ambiguous question. Record shop sentences 1-2 say record shops sold gramophone records only in the late 19th and early 20th centuries, then eight track tapes, cassettes and CDs, and today CDs and vinyl. The question gives no period, so 'gramophone records' is one of several correct formats and other correct answers would be scored wrong."
+   ],
+   "units": []
+  },
+  {
+   "sample_id": "hotpotqa_5ade188e5542990dbb2f7f52",
+   "status": "draft",
+   "notes": [
+    "Comparison (selection): one whether-unit per person plus a conclusion unit.",
+    "u2 uses the omission exception (labeling_guide.md 1.1, Exception 2): the defining description lists nationality 'American' and occupations 'art director and film director'; Italian, actor and screenwriter are not listed and no document states them.",
+    "No presupposition needed: both fact units have support."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "whether Marco Ferreri was an Italian actor and screenwriter from the 1950s",
+     "necessary": false,
+     "expected_answer": "yes",
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Marco Ferreri",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u2",
+     "description": "whether Gordon Wiles was an Italian actor and screenwriter from the 1950s",
+     "necessary": false,
+     "expected_answer": "no",
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Gordon Wiles",
+        0
+       ]
+      ]
+     ],
+     "by_omission": true
+    },
+    {
+     "unit_id": "u3",
+     "description": "which of Marco Ferreri and Gordon Wiles was the Italian actor and screenwriter from the 1950s",
+     "necessary": true,
+     "expected_answer": "Marco Ferreri",
+     "depends_on": [
+      "u1",
+      "u2"
+     ],
+     "support_sets": [
+      []
+     ]
+    }
+   ]
+  },
+  {
+   "sample_id": "hotpotqa_5adfdcf5554299025d62a367",
+   "status": "draft",
+   "notes": [
+    "Bridge: u1 identifies the trainer aircraft, u2 its first-flight year.",
+    "RAF Valley sentence 0 and BAE Systems Hawk sentence 0 removed from support: they do not state the aircraft or the year (sentence 0 of the Hawk only confirms 'advanced trainer')."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "advanced trainer aircraft used by Royal Air Force Valley for fast-jet training",
+     "necessary": false,
+     "expected_answer": "BAE Systems Hawk",
+     "aliases": [
+      "Hawk",
+      "Hawker Siddeley Hawk"
+     ],
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "RAF Valley",
+        1
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u2",
+     "description": "year {u1} was first flown",
+     "necessary": true,
+     "expected_answer": "1974",
+     "depends_on": [
+      "u1"
+     ],
+     "support_sets": [
+      [
+       [
+        "BAE Systems Hawk",
+        1
+       ]
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "sample_id": "hotpotqa_5a7a4cba5542990198eaf114",
+   "status": "draft",
+   "notes": [
+    "Comparison: two birth-date units plus a conclusion unit."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "birth date of Shaun Ryder",
+     "necessary": false,
+     "expected_answer": "23 August 1962",
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Shaun Ryder",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u2",
+     "description": "birth date of Fish",
+     "necessary": false,
+     "expected_answer": "25 April 1958",
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Fish (singer)",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u3",
+     "description": "who is older, Shaun Ryder or Fish",
+     "necessary": true,
+     "expected_answer": "Fish",
+     "aliases": [
+      "Derek William Dick",
+      "Derek Dick"
+     ],
+     "depends_on": [
+      "u1",
+      "u2"
+     ],
+     "support_sets": [
+      []
+     ]
+    }
+   ]
+  },
+  {
+   "sample_id": "hotpotqa_5a78f57a554299148911f9bf",
+   "status": "draft",
+   "notes": [
+    "Bridge (intersection): u1 lists Konopka's NHL teams, u2 selects the Minneapolis-St. Paul area team.",
+    "u2 cites Minnesota Wild sentences 2-3 together (one sentence split by the 'St.' abbreviation).",
+    "Minnesota Wild sentence 0 ('based in St. Paul, Minnesota') removed from support: placing St. Paul in the Minneapolis-St. Paul area is an inference."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "teams Zenon Konopka played for",
+     "necessary": false,
+     "expected_answer": "Mighty Ducks of Anaheim, Columbus Blue Jackets, Tampa Bay Lightning, New York Islanders, Ottawa Senators, Minnesota Wild and Buffalo Sabres",
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Zenon Konopka",
+        1
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u2",
+     "description": "which of {u1} is a Minneapolis-St. Paul area sports team",
+     "necessary": true,
+     "expected_answer": "Minnesota Wild",
+     "depends_on": [
+      "u1"
+     ],
+     "support_sets": [
+      [
+       [
+        "Minnesota Wild",
+        2
+       ],
+       [
+        "Minnesota Wild",
+        3
+       ]
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "sample_id": "hotpotqa_5a8a32305542996c9b8d5e40",
+   "status": "reject",
+   "notes": [
+    "Reject: conflicting values. Morgan Freeman sentence 0 lists 'actor, producer and narrator', while Morgan Freeman on screen and stage sentence 0 calls him an 'actor and director'. Bryan Singer is a film director and producer, so the shared occupations are 'actor, producer' or 'actor, director' depending on the sentence, and the source answer omits director."
+   ],
+   "units": []
+  }
+ ]
+}

@@ -1,0 +1,78 @@
+{
+  "schema_version": "1.0",
+  "data_version": "sft-v0",
+  "stage": "W3_judge_sft_candidates",
+  "seed": 42,
+  "sampling": "round_robin_by_type_after_seeded_shuffle per dataset (prepare_step2.select_stratified); Hotpot then 2Wiki; candidate_rank is the replacement order",
+  "split_rule": "per source type in candidate order, every 5th question is dev",
+  "question_normalization": "same as step2 (prepare_step2.question_key)",
+  "excluded": {
+    "step2_manifest_dir": "/u/tianyu30/project/moshi-rag-b/b_work/step2/prepared",
+    "normalized_questions": 320,
+    "sample_ids": 320
+  },
+  "sources": [
+    {
+      "dataset": "hotpotqa",
+      "source_url": "https://huggingface.co/datasets/hotpotqa/hotpot_qa (distractor, train parquet)",
+      "source_filename": "hotpot_train_v1.1_hf.json",
+      "source_sha256": "09bddf490d45fd2a856060bbe026f00ef7c714bf7a767cb69e7205779a84cf75",
+      "zip_train_member": null,
+      "total_records": 90447,
+      "valid_records_before_question_dedup": 90425,
+      "rejected_by_reason": {
+        "support_index_out_of_range": 22
+      },
+      "primary_type_counts": {
+        "bridge": 75,
+        "comparison": 75
+      },
+      "reserve_type_counts": {
+        "bridge": 15,
+        "comparison": 15
+      }
+    },
+    {
+      "dataset": "2wikimultihopqa",
+      "source_url": "https://www.dropbox.com/s/ms2m13252h6xubs/data_ids_april7.zip?dl=1",
+      "source_filename": "data_ids_april7.zip",
+      "source_sha256": "95df2bf56fdabe034e27aebc580e02264232203cf52552f9efe8a919e5529eef",
+      "zip_train_member": "train.json",
+      "total_records": 167454,
+      "valid_records_before_question_dedup": 155897,
+      "rejected_by_reason": {
+        "ambiguous_duplicate_title": 9583,
+        "support_index_out_of_range": 1974
+      },
+      "primary_type_counts": {
+        "bridge_comparison": 38,
+        "comparison": 38,
+        "compositional": 37,
+        "inference": 37
+      },
+      "reserve_type_counts": {
+        "compositional": 8,
+        "inference": 8,
+        "bridge_comparison": 7,
+        "comparison": 7
+      }
+    }
+  ],
+  "counts": {
+    "candidates": 360,
+    "by_role_and_split": {
+      "primary/train": 242,
+      "primary/dev": 58,
+      "reserve/train": 46,
+      "reserve/dev": 14
+    }
+  },
+  "notes": [
+    "Candidates come from official train only; no debug or reserved evaluation question is included.",
+    "Reserve candidates replace rejected primary questions of the same dataset in candidate_rank order.",
+    "All snapshots and schedules of a question stay in its project_split."
+  ],
+  "output_sha256": {
+    "samples_sft_candidates.jsonl": "8de8f8f23513ecc5e9ed6482425e5f7a6c85b67ebd72b33d7ff35ae47f09c083"
+  }
+}

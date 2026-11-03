@@ -1,0 +1,566 @@
+{
+  "annotation_version": "draft-1",
+  "drafted_by": "Claude subagent",
+  "worksheet": "batch_hotpo_01",
+  "records": [
+    {
+      "sample_id": "hotpotqa_5ac1ca57554299636651990f",
+      "status": "draft",
+      "notes": [
+        "Bridge in the source, but there is only one fact to find: a single unit.",
+        "No explicit support: no sentence states the language Pakhomova speaks. 'Lyudmila Pakhomova' sentence 0 gives a '(Russian: ...)' transliteration and says she competed for the Soviet Union; both are inference.",
+        "Viktor Ryzhkin sentence 0 (source supporting fact) is about Ryzhkin and is not used."
+      ],
+      "units": [
+        {"unit_id": "u1", "description": "language spoken by Lyudmila Alekseyevna Pakhomova", "necessary": true,
+         "expected_answer": "Russian", "depends_on": [],
+         "support_sets": []}
+      ]
+    },
+    {
+      "sample_id": "hotpotqa_5adec3db55429975fa854f83",
+      "status": "draft",
+      "notes": [
+        "Comparison (yes/no): two fact units plus a conclusion unit.",
+        "'Blood Bowl' is ambiguous between the board game and its video game adaptations; every reading is a game, so the video game sentences and Impact! Miniatures sentence 1 ('Fantasy Football games such as ... Blood Bowl') are alternative support for u1. Blood Bowl sentence 1 ('The game was first released...') refers to the title subject as a game.",
+        "Afrikan tähti sentence 1, Kari Mannerla sentence 1 and Inkan aarre sentence 0 each call Afrikan tähti a board game. Kari Mannerla sentence 2 ('The game was published...') needs sentence 1 and adds nothing, so it is not a separate set.",
+        "Online Blood Bowl League Manager sentence 1 mentions 'games' only as league matches; not used."
+      ],
+      "units": [
+        {"unit_id": "u1", "description": "whether Blood Bowl is a game", "necessary": false,
+         "expected_answer": "yes", "depends_on": [],
+         "support_sets": [[["Blood Bowl", 0]], [["Blood Bowl", 1]], [["Blood Bowl (2009 video game)", 0]],
+                          [["Blood Bowl (1995 video game)", 0]], [["Blood Bowl 2", 1]], [["Impact! Miniatures", 1]]]},
+        {"unit_id": "u2", "description": "whether Afrikan tähti is a game", "necessary": false,
+         "expected_answer": "yes", "depends_on": [],
+         "support_sets": [[["Afrikan tähti", 0]], [["Afrikan tähti", 1]], [["Kari Mannerla", 1]], [["Inkan aarre", 0]]]},
+        {"unit_id": "u3", "description": "whether Blood Bowl and Afrikan tähti are both games", "necessary": true,
+         "expected_answer": "yes", "depends_on": ["u1", "u2"],
+         "support_sets": [[]]}
+      ]
+    },
+    {
+      "sample_id": "hotpotqa_5a73301e55429901807dafad",
+      "status": "draft",
+      "notes": [
+        "Bridge: the mother (optional) then the cause of death (necessary).",
+        "Answer normalized from 'a heroin overdose'; the surface form is an alias.",
+        "Paula Yates sentence 1 (relationship with Bob Geldof) removed from support: it does not state the cause of death or that she is Pixie's mother."
+      ],
+      "units": [
+        {"unit_id": "u1", "description": "mother of Pixie Geldof", "necessary": false,
+         "expected_answer": "Paula Yates", "aliases": ["Paula Elizabeth Yates"], "depends_on": [],
+         "support_sets": [[["Pixie Geldof", 1]]]},
+        {"unit_id": "u2", "description": "cause of death of {u1}", "necessary": true,
+         "expected_answer": "heroin overdose", "aliases": ["a heroin overdose"], "depends_on": ["u1"],
+         "support_sets": [[["Paula Yates", 2]]]}
+      ]
+    },
+    {
+      "sample_id": "hotpotqa_5ae176ef5542990adbacf79d",
+      "status": "draft",
+      "notes": [
+        "Comparison (yes/no): two fact units plus a conclusion unit.",
+        "Fumio Watanabe sentence 0 and Kei Satō sentence 2 ('Japanese New Wave director Nagisa Oshima') name a film movement, not his nationality; not used. Films described as 'Japanese film directed by Nagisa Oshima' are not support for the director's nationality.",
+        "David Hewlett sentence 0: 'English-born Canadian'. English is his birthplace, not a stated nationality, so u2 is 'Canadian' only."
+      ],
+      "units": [
+        {"unit_id": "u1", "description": "nationality of Nagisa Oshima", "necessary": false,
+         "expected_answer": "Japanese", "depends_on": [],
+         "support_sets": [[["Nagisa Oshima", 0]]]},
+        {"unit_id": "u2", "description": "nationality of David Hewlett", "necessary": false,
+         "expected_answer": "Canadian", "depends_on": [],
+         "support_sets": [[["David Hewlett", 0]]]},
+        {"unit_id": "u3", "description": "whether Nagisa Oshima and David Hewlett are of the same nationality", "necessary": true,
+         "expected_answer": "no", "depends_on": ["u1", "u2"],
+         "support_sets": [[]]}
+      ]
+    },
+    {
+      "sample_id": "hotpotqa_5aba9af255429901930fa856",
+      "status": "draft",
+      "notes": [
+        "Bridge: the training city (optional) then the sea (necessary).",
+        "Victor Ramos sentence 3 says Ramos trained in Darwin; it does not name Calisto da Costa, so it is not alternative support for u1."
+      ],
+      "units": [
+        {"unit_id": "u1", "description": "city in which Calisto da Costa trained prior to his participation in the Sydney Olympic Games", "necessary": false,
+         "expected_answer": "Darwin", "aliases": ["Darwin, Northern Territory"], "depends_on": [],
+         "support_sets": [[["Calisto da Costa", 2]]]},
+        {"unit_id": "u2", "description": "sea on which {u1} lies", "necessary": true,
+         "expected_answer": "Timor Sea", "depends_on": ["u1"],
+         "support_sets": [[["Darwin, Northern Territory", 1]]]}
+      ]
+    },
+    {
+      "sample_id": "hotpotqa_5a7da4da5542997cc2c47468",
+      "status": "draft",
+      "notes": [
+        "Comparison ('both what genre'): one genre unit per film plus a conclusion unit; the shared value follows deterministically.",
+        "Seal Island (film) sentence 1 ('first installment of the True-Life Adventures series of nature documentaries') is alternative support for u2.",
+        "The other Seal Island documents are islands, not the film."
+      ],
+      "units": [
+        {"unit_id": "u1", "description": "genre of the film Facing Sudan", "necessary": false,
+         "expected_answer": "documentary film", "aliases": ["documentary"], "depends_on": [],
+         "support_sets": [[["Facing Sudan", 0]]]},
+        {"unit_id": "u2", "description": "genre of the film Seal Island", "necessary": false,
+         "expected_answer": "documentary film", "aliases": ["documentary", "nature documentary"], "depends_on": [],
+         "support_sets": [[["Seal Island (film)", 0]], [["Seal Island (film)", 1]]]},
+        {"unit_id": "u3", "description": "genre of movie that Facing Sudan and Seal Island both belong to", "necessary": true,
+         "expected_answer": "documentary film", "aliases": ["documentary"], "depends_on": ["u1", "u2"],
+         "support_sets": [[]]}
+      ]
+    },
+    {
+      "sample_id": "hotpotqa_5ab9d58855429939ce03dc3a",
+      "status": "draft",
+      "notes": [
+        "Bridge: the mentor (optional) then the age (necessary)."
+      ],
+      "units": [
+        {"unit_id": "u1", "description": "expert mentor to the celebrities that perform on \"Splash!\"", "necessary": false,
+         "expected_answer": "Tom Daley", "aliases": ["Thomas Robert Daley"], "depends_on": [],
+         "support_sets": [[["Splash! (UK TV series)", 3]]]},
+        {"unit_id": "u2", "description": "age at which {u1} won the 2009 FINA World Championship in the individual event", "necessary": true,
+         "expected_answer": "15", "aliases": ["age 15", "the age of 15"], "depends_on": ["u1"],
+         "support_sets": [[["Tom Daley", 1]]]}
+      ]
+    },
+    {
+      "sample_id": "hotpotqa_5ab6a56d554299110f219a46",
+      "status": "draft",
+      "notes": [
+        "Comparison (yes/no): one product unit per company plus a conclusion unit.",
+        "LKQ Corporation sentences 0 and 3 are alternative support for u2. Euro Car Parts sentences 0-1 (LKQ bought a car parts distributor) are inference; not used.",
+        "Caveat: 'similar' is a semantic judgment (water technology vs. auto parts), less strictly deterministic than comparing dates."
+      ],
+      "units": [
+        {"unit_id": "u1", "description": "products sold by Xylem Inc.", "necessary": false,
+         "expected_answer": "water technology", "aliases": ["water technology products"], "depends_on": [],
+         "support_sets": [[["Xylem Inc.", 0]]]},
+        {"unit_id": "u2", "description": "products sold by LKQ Corporation", "necessary": false,
+         "expected_answer": "auto parts", "aliases": ["used and refurbished auto parts", "automotive products"], "depends_on": [],
+         "support_sets": [[["LKQ Corporation", 0]], [["LKQ Corporation", 1]], [["LKQ Corporation", 3]]]},
+        {"unit_id": "u3", "description": "whether Xylem Inc. and LKQ Corporation both sell similar products", "necessary": true,
+         "expected_answer": "no", "depends_on": ["u1", "u2"],
+         "support_sets": [[]]}
+      ]
+    },
+    {
+      "sample_id": "hotpotqa_5ab9d4a9554299232ef4a21c",
+      "status": "draft",
+      "notes": [
+        "Bridge: the 2003 first overall pick (optional) then the number of wins (necessary)."
+      ],
+      "units": [
+        {"unit_id": "u1", "description": "Pittsburgh Penguins' first overall pick in the 2003 NHL Entry Draft", "necessary": false,
+         "expected_answer": "Marc-André Fleury", "aliases": ["Marc-Andre Fleury", "Fleury"], "depends_on": [],
+         "support_sets": [[["Marc-André Fleury", 1]]]},
+        {"unit_id": "u2", "description": "number of goalie wins with which {u1} tied the Penguins franchise record", "necessary": true,
+         "expected_answer": "226", "depends_on": ["u1"],
+         "support_sets": [[["2011–12 Pittsburgh Penguins season", 5]]]}
+      ]
+    },
+    {
+      "sample_id": "hotpotqa_5ab406ce55429976abd1bd36",
+      "status": "draft",
+      "notes": [
+        "Comparison (yes/no): one country unit per filmmaker plus a conclusion unit.",
+        "u1: Lev Kuleshov sentence 0 ('Russian and Soviet filmmaker') and Kuleshov effect sentence 0 ('Soviet filmmaker Lev Kuleshov') describe him directly. The film documents ('a 1920 Soviet ... film directed by Lev Kuleshov') state the film's nationality, not where he worked; not used.",
+        "u2: Lo Wei sentence 0 ('Hong Kong film director'). The 'Hong Kong ... film directed by Lo Wei' sentences are excluded for the same reason. To Kill with Intrigue sentence 5 (filmed in Korea) does not change the answer."
+      ],
+      "units": [
+        {"unit_id": "u1", "description": "country in which Lev Kuleshov worked", "necessary": false,
+         "expected_answer": "Soviet Union", "aliases": ["USSR", "Soviet"], "depends_on": [],
+         "support_sets": [[["Lev Kuleshov", 0]], [["Kuleshov effect", 0]]]},
+        {"unit_id": "u2", "description": "country in which Lo Wei worked", "necessary": false,
+         "expected_answer": "Hong Kong", "depends_on": [],
+         "support_sets": [[["Lo Wei", 0]]]},
+        {"unit_id": "u3", "description": "whether Lev Kuleshov and Lo Wei worked in the same country", "necessary": true,
+         "expected_answer": "no", "depends_on": ["u1", "u2"],
+         "support_sets": [[]]}
+      ]
+    },
+    {
+      "sample_id": "hotpotqa_5a8ad70d5542992d82986f94",
+      "status": "draft",
+      "notes": [
+        "Bridge: the song (optional) then the shoemaker it is named after (necessary).",
+        "u1 needs Jimmy Choo (song) sentences 0 (Fetty Wap song) and 1 (produced by K.E. on the Track) together. K.E. on the Track sentence 0 (source supporting fact) only says he is a producer; not used.",
+        "No explicit support for u2: no document mentions the shoemaker Jimmy Choo. The question states the song is named after a shoemaker, so u2 uses presupposition_sets = u1's support (unit_schema 5.6). This is an extension of rule 7(b); see report."
+      ],
+      "units": [
+        {"unit_id": "u1", "description": "song by Fetty Wap produced by K.E. on the Track", "necessary": false,
+         "expected_answer": "Jimmy Choo", "depends_on": [],
+         "support_sets": [[["Jimmy Choo (song)", 0], ["Jimmy Choo (song)", 1]]]},
+        {"unit_id": "u2", "description": "shoemaker after whom {u1} is named", "necessary": true,
+         "expected_answer": "Jimmy Choo", "depends_on": ["u1"],
+         "support_sets": [],
+         "presupposition_sets": [[["Jimmy Choo (song)", 0], ["Jimmy Choo (song)", 1]]]}
+      ]
+    },
+    {
+      "sample_id": "hotpotqa_5a8009885542992e7d278deb",
+      "status": "draft",
+      "notes": [
+        "Comparison (selection between named candidates): two fact units plus a conclusion unit.",
+        "u1 alternatives: 'lead singer Florence Welch' in What the Water Gave Me (song), Spectrum (Say My Name) and Ceremonials Tour sentence 1, each with sentence 0 for the band. Lungs sentence 1 ('Frontwoman') and No Light, No Light sentence 1 ('band members') do not say vocalist; not used.",
+        "No explicit support for u2: Floor Jansen sentence 1 says she is the vocalist of Nightwish; band membership is not an Exception 2 attribute, so no by_omission.",
+        "The conclusion uses presupposition_sets = u1's support (rule 7a). Floor Jansen sentence 0 (source supporting fact) is not used.",
+        "Answer normalized from 'Florence Leontine Mary Welch'; the full name is an alias."
+      ],
+      "units": [
+        {"unit_id": "u1", "description": "whether Florence Welch is the vocalist of indie rock band Florence and the Machine", "necessary": false,
+         "expected_answer": "yes", "depends_on": [],
+         "support_sets": [[["Florence Welch", 0]],
+                          [["What the Water Gave Me (song)", 0], ["What the Water Gave Me (song)", 1]],
+                          [["Spectrum (Say My Name)", 0], ["Spectrum (Say My Name)", 1]],
+                          [["Ceremonials Tour", 0], ["Ceremonials Tour", 1]]]},
+        {"unit_id": "u2", "description": "whether Floor Jansen is the vocalist of indie rock band Florence and the Machine", "necessary": false,
+         "expected_answer": "no", "depends_on": [],
+         "support_sets": []},
+        {"unit_id": "u3", "description": "which of Florence Welch and Floor Jansen is best known as the vocalist of indie rock band Florence and the Machine", "necessary": true,
+         "expected_answer": "Florence Welch", "aliases": ["Florence Leontine Mary Welch", "Welch"], "depends_on": ["u1", "u2"],
+         "support_sets": [[]],
+         "presupposition_sets": [[["Florence Welch", 0]],
+                                 [["What the Water Gave Me (song)", 0], ["What the Water Gave Me (song)", 1]],
+                                 [["Spectrum (Say My Name)", 0], ["Spectrum (Say My Name)", 1]],
+                                 [["Ceremonials Tour", 0], ["Ceremonials Tour", 1]]]}
+      ]
+    },
+    {
+      "sample_id": "hotpotqa_5ae71f455542996d980e7ca9",
+      "status": "draft",
+      "notes": [
+        "Bridge: the console (optional) then the announcement month (necessary).",
+        "Soul Axiom sentence 4 names PlayStation 4 and Xbox One ports but not which is Microsoft's; u1 needs Xbox One sentence 0 (developed by Microsoft) or sentence 4 (marketed by Microsoft) in the same set.",
+        "Answer 'May 2013' kept; 'May' is an alias because the question asks for the month."
+      ],
+      "units": [
+        {"unit_id": "u1", "description": "Microsoft game console for which Soul Axiom included a port", "necessary": false,
+         "expected_answer": "Xbox One", "depends_on": [],
+         "support_sets": [[["Soul Axiom", 4], ["Xbox One", 0]], [["Soul Axiom", 4], ["Xbox One", 4]]]},
+        {"unit_id": "u2", "description": "month in which {u1} was announced", "necessary": true,
+         "expected_answer": "May 2013", "aliases": ["May"], "depends_on": ["u1"],
+         "support_sets": [[["Xbox One", 1]]]}
+      ]
+    },
+    {
+      "sample_id": "hotpotqa_5a72253f55429971e9dc92e5",
+      "status": "draft",
+      "notes": [
+        "Comparison ('both ... what sport'): one sport unit per player plus a conclusion unit.",
+        "Answer normalized from 'professional tennis player.' to 'tennis'.",
+        "Liezel Huber sentence 1 (source supporting fact) lists titles but does not name the sport; replaced by sentence 0 ('retired tennis player').",
+        "1995 Wimbledon Championships – Women's Singles sentence 1 (Graf defeated Sánchez Vicario in the final for the tennis title) is alternative support for u2. Other tournament sentences do not name the sport.",
+        "Caveat: the 'six time' premise is not checked by any unit and does not match the documents exactly (Huber: 5 women's doubles + 2 mixed; Sánchez Vicario: 6 women's doubles)."
+      ],
+      "units": [
+        {"unit_id": "u1", "description": "sport of Liezel Huber", "necessary": false,
+         "expected_answer": "tennis", "depends_on": [],
+         "support_sets": [[["Liezel Huber", 0]]]},
+        {"unit_id": "u2", "description": "sport of Arantxa Sánchez Vicario", "necessary": false,
+         "expected_answer": "tennis", "depends_on": [],
+         "support_sets": [[["Arantxa Sánchez Vicario", 0]], [["1995 Wimbledon Championships – Women's Singles", 1]]]},
+        {"unit_id": "u3", "description": "sport in which Liezel Huber and Arantxa Sánchez Vicario are both six-time Grand Slam title winners", "necessary": true,
+         "expected_answer": "tennis", "aliases": ["professional tennis", "professional tennis player"], "depends_on": ["u1", "u2"],
+         "support_sets": [[]]}
+      ]
+    },
+    {
+      "sample_id": "hotpotqa_5ae64a2155429908198fa575",
+      "status": "draft",
+      "notes": [
+        "Bridge with several constraints on one film, built like step 3 Q13: u1 identifies the film from director, writer and star; u2 adds the 2007 TIFF premiere.",
+        "u1 needs Juno (film) sentence 0 (director and writer) plus a star sentence: Juno (film) sentence 1 or Ellen Page sentence 3.",
+        "Ellen Page sentence 0 (source supporting fact) removed. Young Adult (film) sentence 1 ('Reitman and Cody worked together previously on Juno') does not state their roles; not used."
+      ],
+      "units": [
+        {"unit_id": "u1", "description": "movie starring Ellen Page that was directed by Jason Reitman and written by Diablo Cody", "necessary": false,
+         "expected_answer": "Juno", "depends_on": [],
+         "support_sets": [[["Juno (film)", 0], ["Juno (film)", 1]], [["Juno (film)", 0], ["Ellen Page", 3]]]},
+        {"unit_id": "u2", "description": "movie starring Ellen Page, directed by Jason Reitman and written by Diablo Cody, that premiered at the 2007 Toronto International Film Festival, given {u1}", "necessary": true,
+         "expected_answer": "Juno", "depends_on": ["u1"],
+         "support_sets": [[["Juno (film)", 4]]]}
+      ]
+    },
+    {
+      "sample_id": "hotpotqa_5ab272f2554299340b5254cf",
+      "status": "draft",
+      "notes": [
+        "Comparison (yes/no): two family units plus a conclusion unit.",
+        "No explicit support for u2: Chrysobalanus sentence 0 describes the plants and who named the genus but not its family. The expected value (Chrysobalanaceae) is from world knowledge, so the conclusion is unreachable. Not by_omission: the description lists no family.",
+        "Only two context documents for this question."
+      ],
+      "units": [
+        {"unit_id": "u1", "description": "family of the genus Orychophragmus", "necessary": false,
+         "expected_answer": "Brassicaceae", "aliases": ["mustard family"], "depends_on": [],
+         "support_sets": [[["Orychophragmus", 0]]]},
+        {"unit_id": "u2", "description": "family of the genus Chrysobalanus", "necessary": false,
+         "expected_answer": "Chrysobalanaceae", "depends_on": [],
+         "support_sets": []},
+        {"unit_id": "u3", "description": "whether Orychophragmus and Chrysobalanus are genera of the same family", "necessary": true,
+         "expected_answer": "no", "depends_on": ["u1", "u2"],
+         "support_sets": [[]]}
+      ]
+    },
+    {
+      "sample_id": "hotpotqa_5a8e88875542990e94052b36",
+      "status": "draft",
+      "notes": [
+        "Bridge: the 2004-05 coach (optional) then his current NBA team (necessary).",
+        "2004–05 Florida Gators men's basketball team sentence 2 ('They were led by head coach Billy Donovan') refers to the title subject; sentence 0 (source supporting fact) is not needed.",
+        "The other season documents and Billy Donovan sentence 1 do not name the 2004-05 season; not used."
+      ],
+      "units": [
+        {"unit_id": "u1", "description": "head coach of the 2004-05 Florida Gators men's basketball team", "necessary": false,
+         "expected_answer": "Billy Donovan", "aliases": ["William John Donovan Jr."], "depends_on": [],
+         "support_sets": [[["2004–05 Florida Gators men's basketball team", 2]]]},
+        {"unit_id": "u2", "description": "National Basketball Association team for which {u1} is currently head coach", "necessary": true,
+         "expected_answer": "Oklahoma City Thunder", "depends_on": ["u1"],
+         "support_sets": [[["Billy Donovan", 0]]]}
+      ]
+    },
+    {
+      "sample_id": "hotpotqa_5a905fb455429916514e7496",
+      "status": "draft",
+      "notes": [
+        "Comparison (yes/no 'both'): two fact units plus a conclusion unit.",
+        "Gin pahit sentence 1 ('bitter gin') is a name translation, not an ingredient statement; not used.",
+        "No explicit support for u2: Springbokkie sentence 0 lists creme de menthe ('or substitutes') and Amarula, but ingredients are not an Exception 2 attribute (occupation, nationality, category), and '(or substitutes)' leaves the recipe open. So no by_omission and the conclusion is unreachable; see report."
+      ],
+      "units": [
+        {"unit_id": "u1", "description": "whether Gin pahit has gin in it", "necessary": false,
+         "expected_answer": "yes", "depends_on": [],
+         "support_sets": [[["Gin pahit", 0]]]},
+        {"unit_id": "u2", "description": "whether Springbokkie has gin in it", "necessary": false,
+         "expected_answer": "no", "depends_on": [],
+         "support_sets": []},
+        {"unit_id": "u3", "description": "whether Gin pahit and Springbokkie both have gin in them", "necessary": true,
+         "expected_answer": "no", "depends_on": ["u1", "u2"],
+         "support_sets": [[]]}
+      ]
+    },
+    {
+      "sample_id": "hotpotqa_5adbf5d8554299438c868cec",
+      "status": "draft",
+      "notes": [
+        "Bridge: the superhero (optional) then the publisher (necessary).",
+        "Answer normalized to 'Marvel Comics'; source 'Marvel' is an alias.",
+        "Doctor Strange sentence 3 (created 'to bring ... mysticism to Marvel Comics') does not state where he appears; not used. Zota sentence 0 is about Zota, not the superhero."
+      ],
+      "units": [
+        {"unit_id": "u1", "description": "superhero of whom Zota was a foe", "necessary": false,
+         "expected_answer": "Doctor Strange", "aliases": ["Stephen Strange", "Doctor Stephen Vincent Strange"], "depends_on": [],
+         "support_sets": [[["Zota", 1]]]},
+        {"unit_id": "u2", "description": "company publishing the comic books in which {u1} appears", "necessary": true,
+         "expected_answer": "Marvel Comics", "aliases": ["Marvel"], "depends_on": ["u1"],
+         "support_sets": [[["Doctor Strange", 0]]]}
+      ]
+    },
+    {
+      "sample_id": "hotpotqa_5a87e93155429938390d3ea4",
+      "status": "draft",
+      "notes": [
+        "Comparison (yes/no 'both'): two fact units plus a conclusion unit.",
+        "Purbanchal University sentence 1 (established by the government) is inference for 'public'; not used. California State University, San Bernardino sentence 0 is a different campus."
+      ],
+      "units": [
+        {"unit_id": "u1", "description": "whether Purbanchal University is a public university", "necessary": false,
+         "expected_answer": "yes", "depends_on": [],
+         "support_sets": [[["Purbanchal University", 0]]]},
+        {"unit_id": "u2", "description": "whether California State University, Northridge is a public university", "necessary": false,
+         "expected_answer": "yes", "depends_on": [],
+         "support_sets": [[["California State University, Northridge", 0]]]},
+        {"unit_id": "u3", "description": "whether Purbanchal University and California State University, Northridge are both public universities", "necessary": true,
+         "expected_answer": "yes", "depends_on": ["u1", "u2"],
+         "support_sets": [[]]}
+      ]
+    },
+    {
+      "sample_id": "hotpotqa_5ab292b4554299449642c901",
+      "status": "draft",
+      "notes": [
+        "Bridge: the top brand (optional) then the brewer (necessary).",
+        "Answer normalized from 'the state-owned Taedonggang Brewing Company'; the surface form is an alias."
+      ],
+      "units": [
+        {"unit_id": "u1", "description": "top brand of beer in North Korea", "necessary": false,
+         "expected_answer": "Taedonggang", "aliases": ["Taedonggang Beer"], "depends_on": [],
+         "support_sets": [[["Beer in North Korea", 1]]]},
+        {"unit_id": "u2", "description": "company that brews {u1}", "necessary": true,
+         "expected_answer": "Taedonggang Brewing Company", "aliases": ["the state-owned Taedonggang Brewing Company"], "depends_on": ["u1"],
+         "support_sets": [[["Taedonggang", 0]]]}
+      ]
+    },
+    {
+      "sample_id": "hotpotqa_5ae1af93554299492dc91b69",
+      "status": "draft",
+      "notes": [
+        "Comparison (yes/no): one nationality unit per player plus a conclusion unit.",
+        "u2: Heinz Günthardt sentence 0 says 'a former tennis player from Switzerland'; 'born ... in Zürich' alone would not be support. The tournament documents give no nationality."
+      ],
+      "units": [
+        {"unit_id": "u1", "description": "nationality of Horia Tecău", "necessary": false,
+         "expected_answer": "Romanian", "aliases": ["Romania"], "depends_on": [],
+         "support_sets": [[["Horia Tecău", 0]]]},
+        {"unit_id": "u2", "description": "nationality of Heinz Günthardt", "necessary": false,
+         "expected_answer": "Swiss", "aliases": ["Switzerland"], "depends_on": [],
+         "support_sets": [[["Heinz Günthardt", 0]]]},
+        {"unit_id": "u3", "description": "whether Horia Tecău and Heinz Günthardt are nationals of the same country", "necessary": true,
+         "expected_answer": "no", "depends_on": ["u1", "u2"],
+         "support_sets": [[]]}
+      ]
+    },
+    {
+      "sample_id": "hotpotqa_5ab8292c55429934fafe6cfe",
+      "status": "draft",
+      "notes": [
+        "Bridge: the place (optional) then its 2010 population (necessary).",
+        "Waimea, Hawaii County, Hawaii sentence 0 (source supporting fact; says it is a CDP) removed from u2: it does not state the population, and the CDP status is the question's premise.",
+        "'Kamuela' is an alias: Waimea sentence 2 gives it as the official post office name."
+      ],
+      "units": [
+        {"unit_id": "u1", "description": "census-designated place in which the former cattle ranch Anna Ranch Heritage Center is located", "necessary": false,
+         "expected_answer": "Waimea, Hawaii County, Hawaii", "aliases": ["Waimea", "Kamuela"], "depends_on": [],
+         "support_sets": [[["Anna Ranch Heritage Center", 0]]]},
+        {"unit_id": "u2", "description": "population of {u1} in 2010", "necessary": true,
+         "expected_answer": "9,212", "aliases": ["9212"], "depends_on": ["u1"],
+         "support_sets": [[["Waimea, Hawaii County, Hawaii", 1]]]}
+      ]
+    },
+    {
+      "sample_id": "hotpotqa_5ac445975542995c82c4ad16",
+      "status": "draft",
+      "notes": [
+        "Comparison (selection between named candidates): two fact units plus a conclusion unit.",
+        "Riverside Church sentence 5 ('a stronghold of activism ... throughout its 75-year history') is close but not the same claim (no 'focal point', no 'global'); not used. Riverside Church sentence 0 (source supporting fact) removed.",
+        "No explicit support for u2: 1 Wall Street sentence 2 (former bank headquarters; source supporting fact) says nothing about activism. The conclusion uses presupposition_sets = u1's support (rule 7a)."
+      ],
+      "units": [
+        {"unit_id": "u1", "description": "whether Riverside Church has been a focal point of global and national activism since its inception", "necessary": false,
+         "expected_answer": "yes", "depends_on": [],
+         "support_sets": [[["Riverside Church", 6]]]},
+        {"unit_id": "u2", "description": "whether 1 Wall Street has been a focal point of global and national activism since its inception", "necessary": false,
+         "expected_answer": "no", "depends_on": [],
+         "support_sets": []},
+        {"unit_id": "u3", "description": "which of 1 Wall Street and Riverside Church has been a focal point of global and national activism since its inception", "necessary": true,
+         "expected_answer": "Riverside Church", "depends_on": ["u1", "u2"],
+         "support_sets": [[]],
+         "presupposition_sets": [[["Riverside Church", 6]]]}
+      ]
+    },
+    {
+      "sample_id": "hotpotqa_5ae0b79355429945ae95943c",
+      "status": "draft",
+      "notes": [
+        "Bridge with two constraints on one person, built like step 3 Q13: u1 finds the person born on June 26, 1970 (unique among the documents), u2 adds the starring role in The Founder.",
+        "A 'star of The Founder' unit alone is not unique (Michael Keaton, John Carroll Lynch), so the birth date comes first.",
+        "The Founder sentence 0 (source supporting fact) removed. The other June 26 births (Ronzio 1920, Coleman 1950, Apap 1918) are traps."
+      ],
+      "units": [
+        {"unit_id": "u1", "description": "person born on June 26, 1970", "necessary": false,
+         "expected_answer": "Nick Offerman", "aliases": ["Nicholas Offerman"], "depends_on": [],
+         "support_sets": [[["Nick Offerman", 0]]]},
+        {"unit_id": "u2", "description": "star of the movie The Founder who was born on June 26, 1970, given {u1}", "necessary": true,
+         "expected_answer": "Nick Offerman", "aliases": ["Nicholas Offerman"], "depends_on": ["u1"],
+         "support_sets": [[["The Founder", 2]]]}
+      ]
+    },
+    {
+      "sample_id": "hotpotqa_5a899d165542993b751ca961",
+      "status": "draft",
+      "notes": [
+        "Comparison (selection between named candidates): two fact units plus a conclusion unit.",
+        "Gregory v. Helvering sentence 0 and Ableman v. Booth sentence 0 (source supporting facts) do not mention the doctrine; removed.",
+        "No explicit support for u2: no sentence says Ableman v. Booth is not cited for the doctrine. The conclusion uses presupposition_sets = u1's support (rule 7a)."
+      ],
+      "units": [
+        {"unit_id": "u1", "description": "whether Gregory v. Helvering is cited as the business purpose doctrine", "necessary": false,
+         "expected_answer": "yes", "depends_on": [],
+         "support_sets": [[["Gregory v. Helvering", 1]]]},
+        {"unit_id": "u2", "description": "whether Ableman v. Booth is cited as the business purpose doctrine", "necessary": false,
+         "expected_answer": "no", "depends_on": [],
+         "support_sets": []},
+        {"unit_id": "u3", "description": "which of Gregory v. Helvering and Ableman v. Booth is cited as the business purpose doctrine", "necessary": true,
+         "expected_answer": "Gregory v. Helvering", "depends_on": ["u1", "u2"],
+         "support_sets": [[]],
+         "presupposition_sets": [[["Gregory v. Helvering", 1]]]}
+      ]
+    },
+    {
+      "sample_id": "hotpotqa_5addad5c5542995b365fab5c",
+      "status": "draft",
+      "notes": [
+        "Bridge: the competitor (optional) then the year (necessary).",
+        "No explicit support for u1: no sentence calls TAAG a competitor of Air 26. Air 26 sentence 2 shows both are Angolan airlines and TAAG Angola Airlines sentence 0 says TAAG is state-owned; 'competitor' is the question's premise. u1 therefore uses presupposition_sets with that pair (extension of rule 7(b); see report).",
+        "Air 26 sentence 0 (source supporting fact) is not needed: sentence 2 already names Air 26 as an Angolan airline."
+      ],
+      "units": [
+        {"unit_id": "u1", "description": "state-owned competitor of Air 26", "necessary": false,
+         "expected_answer": "TAAG Angola Airlines", "aliases": ["TAAG", "TAAG Linhas Aéreas de Angola"], "depends_on": [],
+         "support_sets": [],
+         "presupposition_sets": [[["Air 26", 2], ["TAAG Angola Airlines", 0]]]},
+        {"unit_id": "u2", "description": "year in which {u1} gained flag carrier status", "necessary": true,
+         "expected_answer": "1975", "depends_on": ["u1"],
+         "support_sets": [[["TAAG Angola Airlines", 2]]]}
+      ]
+    },
+    {
+      "sample_id": "hotpotqa_5a8b848d5542997f31a41d5c",
+      "status": "draft",
+      "notes": [
+        "Comparison (yes/no 'both'): two fact units plus a conclusion unit.",
+        "u2 uses the omission exception (labeling_guide.md 1.1, Exception 2): Luther George Simjian sentence 0 is a defining description listing his occupation as inventor; no document calls him a professor."
+      ],
+      "units": [
+        {"unit_id": "u1", "description": "whether Haig P. Manoogian is a professor", "necessary": false,
+         "expected_answer": "yes", "depends_on": [],
+         "support_sets": [[["Haig P. Manoogian", 0]]]},
+        {"unit_id": "u2", "description": "whether Luther George Simjian is a professor", "necessary": false,
+         "expected_answer": "no", "by_omission": true, "depends_on": [],
+         "support_sets": [[["Luther George Simjian", 0]]]},
+        {"unit_id": "u3", "description": "whether Haig P. Manoogian and Luther George Simjian are both professors", "necessary": true,
+         "expected_answer": "no", "depends_on": ["u1", "u2"],
+         "support_sets": [[]]}
+      ]
+    },
+    {
+      "sample_id": "hotpotqa_5ae517665542990ba0bbb1b2",
+      "status": "draft",
+      "notes": [
+        "Bridge with two constraints on one singer, built like step 3 Q13: u1 finds the singer who was in The Verve, u2 adds that the Tiny Dancers supported him.",
+        "The Verve-labelled documents (Verve Records) are a label, not the band; traps."
+      ],
+      "units": [
+        {"unit_id": "u1", "description": "singer who was in the band The Verve", "necessary": false,
+         "expected_answer": "Richard Ashcroft", "aliases": ["Richard Paul Ashcroft"], "depends_on": [],
+         "support_sets": [[["Richard Ashcroft", 1]]]},
+        {"unit_id": "u2", "description": "singer supported by the Tiny Dancers who was in The Verve, given {u1}", "necessary": true,
+         "expected_answer": "Richard Ashcroft", "aliases": ["Richard Paul Ashcroft"], "depends_on": ["u1"],
+         "support_sets": [[["Tiny Dancers", 2]]]}
+      ]
+    },
+    {
+      "sample_id": "hotpotqa_5a7755e05542993735360237",
+      "status": "draft",
+      "notes": [
+        "Comparison (dates): two release-year units plus a conclusion unit. No presupposition: value comparison.",
+        "u1 alternatives: Jumbo (film) sentence 2 ('the 2006 Thai film Khan Kluay') and Kantana Group sentence 3 ('the 2006 feature film Khan Kluay'). Khan Kluay (franchise) sentence 0 gives no year.",
+        "u2 needs A Christmas Carol (2009 film) sentences 0 (2009) and 1 (stars Jim Carrey) together, as in the source supporting facts, because the question picks the version by its star."
+      ],
+      "units": [
+        {"unit_id": "u1", "description": "release year of the film Khan Kluay", "necessary": false,
+         "expected_answer": "2006", "depends_on": [],
+         "support_sets": [[["Khan Kluay", 0]], [["Jumbo (film)", 2]], [["Kantana Group", 3]]]},
+        {"unit_id": "u2", "description": "release year of the film A Christmas Carol starring Jim Carrey", "necessary": false,
+         "expected_answer": "2009", "depends_on": [],
+         "support_sets": [[["A Christmas Carol (2009 film)", 0], ["A Christmas Carol (2009 film)", 1]]]},
+        {"unit_id": "u3", "description": "which of Khan Kluay and A Christmas Carol starring Jim Carrey was released first", "necessary": true,
+         "expected_answer": "Khan Kluay", "depends_on": ["u1", "u2"],
+         "support_sets": [[]]}
+      ]
+    }
+  ]
+}

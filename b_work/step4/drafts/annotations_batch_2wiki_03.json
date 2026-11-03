@@ -1,0 +1,1827 @@
+{
+ "annotation_version": "draft-1",
+ "drafted_by": "Claude subagent",
+ "worksheet": "batch_2wiki_03",
+ "records": [
+  {
+   "sample_id": "2wikimultihopqa_cdd42e23087c11ebbd6aac1f6bf848b6",
+   "status": "draft",
+   "notes": [
+    "Bridge comparison: director and nationality chain per film, then a same-country conclusion.",
+    "A Doll's House (1917 film) sentence 1 says 'Joe De Grasse'; the Joseph De Grasse document (Joseph Louis De Grasse) is linked by name. Aliases cover both forms.",
+    "u2 uses 'Canadian film director' (Joseph De Grasse 0); the Bathurst, New Brunswick birthplace (sentence 1) is not used for nationality.",
+    "u4 uses Srdan Golubović 0. Circles (film) 0 calls the film Serbian, which does not support the director's nationality.",
+    "Distractors: other A Doll's House films (1959, 1973, 1943) have different directors."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "director of A Doll's House (1917 film)",
+     "necessary": false,
+     "expected_answer": "Joe De Grasse",
+     "aliases": [
+      "Joseph De Grasse",
+      "Joseph Louis De Grasse"
+     ],
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "A Doll's House (1917 film)",
+        1
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u2",
+     "description": "nationality of {u1}",
+     "necessary": false,
+     "expected_answer": "Canadian",
+     "aliases": [
+      "Canada"
+     ],
+     "depends_on": [
+      "u1"
+     ],
+     "support_sets": [
+      [
+       [
+        "Joseph De Grasse",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u3",
+     "description": "director of Circles (film)",
+     "necessary": false,
+     "expected_answer": "Srdan Golubović",
+     "aliases": [
+      "Srdan Golubovic"
+     ],
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Circles (film)",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u4",
+     "description": "nationality of {u3}",
+     "necessary": false,
+     "expected_answer": "Serbian",
+     "aliases": [
+      "Serbia"
+     ],
+     "depends_on": [
+      "u3"
+     ],
+     "support_sets": [
+      [
+       [
+        "Srdan Golubović",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u5",
+     "description": "whether the directors of A Doll's House (1917 film) and Circles (film) are from the same country",
+     "necessary": true,
+     "expected_answer": "no",
+     "depends_on": [
+      "u2",
+      "u4"
+     ],
+     "support_sets": [
+      []
+     ]
+    }
+   ]
+  },
+  {
+   "sample_id": "2wikimultihopqa_8d777f1a095911ebbdaeac1f6bf848b6",
+   "status": "draft",
+   "notes": [
+    "Comparison (yes/no): two country-of-origin units plus a conclusion unit.",
+    "Both film articles state the country descriptor in the opening sentence ('Philippine film', 'Filipino war film'). Normalized to 'Philippines'; both descriptors kept as aliases so the conclusion compares equal countries.",
+    "The Lost Battalion (1919 film) is an American distractor with a similar title."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "country of origin of Melancholia (2008 film)",
+     "necessary": false,
+     "expected_answer": "Philippines",
+     "aliases": [
+      "Philippine",
+      "Filipino"
+     ],
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Melancholia (2008 film)",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u2",
+     "description": "country of origin of Lost Battalion (1960 film)",
+     "necessary": false,
+     "expected_answer": "Philippines",
+     "aliases": [
+      "Filipino",
+      "Philippine"
+     ],
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Lost Battalion (1960 film)",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u3",
+     "description": "whether Melancholia (2008 film) and Lost Battalion (1960 film) are from the same country",
+     "necessary": true,
+     "expected_answer": "yes",
+     "depends_on": [
+      "u1",
+      "u2"
+     ],
+     "support_sets": [
+      []
+     ]
+    }
+   ]
+  },
+  {
+   "sample_id": "2wikimultihopqa_aaf6d2540bda11eba7f7acde48001122",
+   "status": "draft",
+   "notes": [
+    "Bridge: director (optional) then place of death (necessary).",
+    "Otis Turner sentence 2 states both birthplace and death place; only 'died in Los Angeles' is used."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "director of film The Island of Desire",
+     "necessary": false,
+     "expected_answer": "Otis Turner",
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "The Island of Desire",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u2",
+     "description": "place of death of {u1}",
+     "necessary": true,
+     "expected_answer": "Los Angeles",
+     "depends_on": [
+      "u1"
+     ],
+     "support_sets": [
+      [
+       [
+        "Otis Turner",
+        2
+       ]
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "sample_id": "2wikimultihopqa_b6f259dc0baf11ebab90acde48001122",
+   "status": "draft",
+   "notes": [
+    "Bridge (inference): father (optional) then the father's mother, i.e. the paternal grandmother (necessary).",
+    "Ptolemy V Epiphanes sentence 0 ('son of the siblings Ptolemy IV Philopator and Arsinoe III of Egypt') names the mother explicitly.",
+    "Conall Collamrach, Titus Manlius Torquatus and Harsiesi mention Ptolemy VIII but not his parents."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "father of Ptolemy VIII Physcon",
+     "necessary": false,
+     "expected_answer": "Ptolemy V Epiphanes",
+     "aliases": [
+      "Ptolemy V"
+     ],
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Ptolemy VIII Physcon",
+        2
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u2",
+     "description": "mother of {u1}, Ptolemy VIII Physcon's paternal grandmother",
+     "necessary": true,
+     "expected_answer": "Arsinoe III of Egypt",
+     "aliases": [
+      "Arsinoe III"
+     ],
+     "depends_on": [
+      "u1"
+     ],
+     "support_sets": [
+      [
+       [
+        "Ptolemy V Epiphanes",
+        0
+       ]
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "sample_id": "2wikimultihopqa_75141b5d086911ebbd5eac1f6bf848b6",
+   "status": "draft",
+   "notes": [
+    "Bridge comparison: director and nationality chain per film, then a same-country conclusion.",
+    "Both director biographies say 'American' explicitly. Triple value 'America' kept as an alias.",
+    "Americanizing Shelley 0 calls the film a Hollywood comedy; not used for the director's nationality.",
+    "Trail Guide 0 (another Selander film) does not state Road Agent's director, so it is not alternative support."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "director of Americanizing Shelley",
+     "necessary": false,
+     "expected_answer": "Lorraine Senna",
+     "aliases": [
+      "Lorraine Senna Ferrara"
+     ],
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Americanizing Shelley",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u2",
+     "description": "nationality of {u1}",
+     "necessary": false,
+     "expected_answer": "American",
+     "aliases": [
+      "United States",
+      "America"
+     ],
+     "depends_on": [
+      "u1"
+     ],
+     "support_sets": [
+      [
+       [
+        "Lorraine Senna",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u3",
+     "description": "director of Road Agent (1952 film)",
+     "necessary": false,
+     "expected_answer": "Lesley Selander",
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Road Agent (1952 film)",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u4",
+     "description": "nationality of {u3}",
+     "necessary": false,
+     "expected_answer": "American",
+     "aliases": [
+      "United States",
+      "America"
+     ],
+     "depends_on": [
+      "u3"
+     ],
+     "support_sets": [
+      [
+       [
+        "Lesley Selander",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u5",
+     "description": "whether the directors of Americanizing Shelley and Road Agent (1952 film) are from the same country",
+     "necessary": true,
+     "expected_answer": "yes",
+     "depends_on": [
+      "u2",
+      "u4"
+     ],
+     "support_sets": [
+      []
+     ]
+    }
+   ]
+  },
+  {
+   "sample_id": "2wikimultihopqa_2547e59c089b11ebbd78ac1f6bf848b6",
+   "status": "draft",
+   "notes": [
+    "Comparison: two death dates plus a conclusion unit.",
+    "Many Hesse-Kassel distractors; only Landgravine Sophie of Hesse-Kassel 0 gives Sophie's death date."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "date of death of Landgravine Sophie of Hesse-Kassel",
+     "necessary": false,
+     "expected_answer": "22 November 1670",
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Landgravine Sophie of Hesse-Kassel",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u2",
+     "description": "date of death of Juan Riba",
+     "necessary": false,
+     "expected_answer": "20 April 1973",
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Juan Riba",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u3",
+     "description": "which of Landgravine Sophie of Hesse-Kassel and Juan Riba died later",
+     "necessary": true,
+     "expected_answer": "Juan Riba",
+     "aliases": [
+      "Juan Riba Guixà"
+     ],
+     "depends_on": [
+      "u1",
+      "u2"
+     ],
+     "support_sets": [
+      []
+     ]
+    }
+   ]
+  },
+  {
+   "sample_id": "2wikimultihopqa_a73a3fc80bdc11eba7f7acde48001122",
+   "status": "draft",
+   "notes": [
+    "Bridge: director (optional) then birthplace (necessary).",
+    "no explicit support: Michael Simon (DJ) 0 says he is 'a German DJ and musician from Hamburg'; 'from Hamburg' does not state the birthplace, so u2 has support_sets [].",
+    "Further caveat: the DJ article does not say he directed films; linking it to The Love Patient's director rests on the shared name only (as in the source triples)."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "director of film The Love Patient",
+     "necessary": false,
+     "expected_answer": "Michael Simon",
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "The Love Patient",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u2",
+     "description": "place of birth of {u1}",
+     "necessary": true,
+     "expected_answer": "Hamburg",
+     "depends_on": [
+      "u1"
+     ],
+     "support_sets": []
+    }
+   ]
+  },
+  {
+   "sample_id": "2wikimultihopqa_32e5e2840bb011ebab90acde48001122",
+   "status": "draft",
+   "notes": [
+    "Inference question that asks the father directly: one necessary unit. The source chain (mother, then mother's spouse) is not split into hops because Grand Duchess Elizabeth Mikhailovna sentence 1 names the father directly and a decomposer would write a single unit.",
+    "Sentence 1 is a fragment ('(Moscow, ...) was the second child and daughter of ...'), so it is cited with sentence 0.",
+    "Not used: Princess Charlotte of Württemberg 0 (spouse) plus the mother link would be an inference about paternity; Grand Duchess Catherine Mikhailovna 0 is about a sister.",
+    "Text says 'Mikhail Pavlovich'; source answer 'Michael Pavlovich'. Both forms in aliases."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "father of Grand Duchess Elizabeth Mikhailovna of Russia",
+     "necessary": true,
+     "expected_answer": "Grand Duke Michael Pavlovich of Russia",
+     "aliases": [
+      "Grand Duke Mikhail Pavlovich of Russia",
+      "Michael Pavlovich",
+      "Mikhail Pavlovich"
+     ],
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Grand Duchess Elizabeth Mikhailovna of Russia",
+        0
+       ],
+       [
+        "Grand Duchess Elizabeth Mikhailovna of Russia",
+        1
+       ]
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "sample_id": "2wikimultihopqa_b2fd9eb4089d11ebbd78ac1f6bf848b6",
+   "status": "draft",
+   "notes": [
+    "Bridge comparison: director and birth-date chain per film, then a conclusion unit.",
+    "Jiří Menzel sentence 7 ('his dark comedy \"My Sweet Little Village\"') does not explicitly state the director role, so it is not alternative support for u3."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "director of Ferocious Pal",
+     "necessary": false,
+     "expected_answer": "Spencer Gordon Bennet",
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Ferocious Pal",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u2",
+     "description": "date of birth of {u1}",
+     "necessary": false,
+     "expected_answer": "January 5, 1893",
+     "depends_on": [
+      "u1"
+     ],
+     "support_sets": [
+      [
+       [
+        "Spencer Gordon Bennet",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u3",
+     "description": "director of My Sweet Little Village",
+     "necessary": false,
+     "expected_answer": "Jiří Menzel",
+     "aliases": [
+      "Jiri Menzel"
+     ],
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "My Sweet Little Village",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u4",
+     "description": "date of birth of {u3}",
+     "necessary": false,
+     "expected_answer": "23 February 1938",
+     "depends_on": [
+      "u3"
+     ],
+     "support_sets": [
+      [
+       [
+        "Jiří Menzel",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u5",
+     "description": "which of the two films has the director born later",
+     "necessary": true,
+     "expected_answer": "My Sweet Little Village",
+     "depends_on": [
+      "u2",
+      "u4"
+     ],
+     "support_sets": [
+      []
+     ]
+    }
+   ]
+  },
+  {
+   "sample_id": "2wikimultihopqa_8f49c34c089011ebbd72ac1f6bf848b6",
+   "status": "draft",
+   "notes": [
+    "Comparison (yes/no): two country-of-origin units plus a conclusion unit.",
+    "Both opening sentences state the country descriptor ('French film', 'Swedish drama film'). Normalized to country names; descriptors kept as aliases.",
+    "The New England Patriots documents are distractors."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "country of origin of The Patriots (film)",
+     "necessary": false,
+     "expected_answer": "France",
+     "aliases": [
+      "French"
+     ],
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "The Patriots (film)",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u2",
+     "description": "country of origin of Kungajakt",
+     "necessary": false,
+     "expected_answer": "Sweden",
+     "aliases": [
+      "Swedish"
+     ],
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Kungajakt",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u3",
+     "description": "whether The Patriots (film) and Kungajakt are from the same country",
+     "necessary": true,
+     "expected_answer": "no",
+     "depends_on": [
+      "u1",
+      "u2"
+     ],
+     "support_sets": [
+      []
+     ]
+    }
+   ]
+  },
+  {
+   "sample_id": "2wikimultihopqa_0b4d4cb20bdd11eba7f7acde48001122",
+   "status": "draft",
+   "notes": [
+    "Bridge: director (optional) then place of death (necessary).",
+    "Mountains (Prince song) 8 says Prince directed a music video, not the film; not used for u1.",
+    "Prince (musician) 19 states he died at Paisley Park in Chanhassen, Minnesota."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "director of film Under the Cherry Moon",
+     "necessary": false,
+     "expected_answer": "Prince",
+     "aliases": [
+      "Prince Rogers Nelson"
+     ],
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Under the Cherry Moon",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u2",
+     "description": "place of death of {u1}",
+     "necessary": true,
+     "expected_answer": "Chanhassen, Minnesota",
+     "aliases": [
+      "Chanhassen"
+     ],
+     "depends_on": [
+      "u1"
+     ],
+     "support_sets": [
+      [
+       [
+        "Prince (musician)",
+        19
+       ]
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "sample_id": "2wikimultihopqa_c09bb4380baf11ebab90acde48001122",
+   "status": "draft",
+   "notes": [
+    "Bridge (inference): spouse (optional) then the spouse's father, i.e. the father-in-law (necessary).",
+    "Evidence triple subject 'Ultrogothe' differs from the document title 'Ultragotha'.",
+    "Ultragotha 0 ('via her marriage to Childebert I') states the spouse; Childebert I 0 ('third of the four sons of Clovis I') states the father.",
+    "The other father-in-law documents are distractors."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "spouse of Ultragotha",
+     "necessary": false,
+     "expected_answer": "Childebert I",
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Ultragotha",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u2",
+     "description": "father of {u1}, Ultragotha's father-in-law",
+     "necessary": true,
+     "expected_answer": "Clovis I",
+     "depends_on": [
+      "u1"
+     ],
+     "support_sets": [
+      [
+       [
+        "Childebert I",
+        0
+       ]
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "sample_id": "2wikimultihopqa_f96c965908dd11ebbd9eac1f6bf848b6",
+   "status": "draft",
+   "notes": [
+    "Bridge comparison: director and birth-date chain per film, then a conclusion unit.",
+    "Omoni Oboli 1 lists Wives on Strike among her screenplays, not as a directing credit; not used for u1.",
+    "Triple subject 'Malcolm St. Clair' vs document title 'Malcolm St. Clair (filmmaker)'."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "director of Wives on Strike",
+     "necessary": false,
+     "expected_answer": "Omoni Oboli",
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Wives on Strike",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u2",
+     "description": "date of birth of {u1}",
+     "necessary": false,
+     "expected_answer": "22 April 1978",
+     "depends_on": [
+      "u1"
+     ],
+     "support_sets": [
+      [
+       [
+        "Omoni Oboli",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u3",
+     "description": "director of Sporting Goods",
+     "necessary": false,
+     "expected_answer": "Malcolm St. Clair",
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Sporting Goods",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u4",
+     "description": "date of birth of {u3}",
+     "necessary": false,
+     "expected_answer": "May 17, 1897",
+     "depends_on": [
+      "u3"
+     ],
+     "support_sets": [
+      [
+       [
+        "Malcolm St. Clair (filmmaker)",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u5",
+     "description": "which of the two films has the director born earlier",
+     "necessary": true,
+     "expected_answer": "Sporting Goods",
+     "depends_on": [
+      "u2",
+      "u4"
+     ],
+     "support_sets": [
+      []
+     ]
+    }
+   ]
+  },
+  {
+   "sample_id": "2wikimultihopqa_36df83c7084b11ebbd56ac1f6bf848b6",
+   "status": "draft",
+   "notes": [
+    "Comparison: two birth dates plus a conclusion unit.",
+    "Other 'de Mello' and 'Cardoso' documents are distractors."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "date of birth of Eberhard Nestle",
+     "necessary": false,
+     "expected_answer": "May 1, 1851",
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Eberhard Nestle",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u2",
+     "description": "date of birth of Zélia Cardoso de Mello",
+     "necessary": false,
+     "expected_answer": "September 20, 1953",
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Zélia Cardoso de Mello",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u3",
+     "description": "which of Eberhard Nestle and Zélia Cardoso de Mello was born earlier",
+     "necessary": true,
+     "expected_answer": "Eberhard Nestle",
+     "depends_on": [
+      "u1",
+      "u2"
+     ],
+     "support_sets": [
+      []
+     ]
+    }
+   ]
+  },
+  {
+   "sample_id": "2wikimultihopqa_4ef665780bda11eba7f7acde48001122",
+   "status": "draft",
+   "notes": [
+    "Bridge: director (optional) then date of death (necessary).",
+    "Toto in Madrid (directed by Steno) is a distractor."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "director of film Toto in Paris",
+     "necessary": false,
+     "expected_answer": "Camillo Mastrocinque",
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Toto in Paris",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u2",
+     "description": "date of death of {u1}",
+     "necessary": true,
+     "expected_answer": "23 April 1969",
+     "depends_on": [
+      "u1"
+     ],
+     "support_sets": [
+      [
+       [
+        "Camillo Mastrocinque",
+        0
+       ]
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "sample_id": "2wikimultihopqa_cb2146660baf11ebab90acde48001122",
+   "status": "draft",
+   "notes": [
+    "Bridge (inference): father (optional) then the father's father, i.e. the paternal grandfather (necessary).",
+    "Erik the Red 1 ('as the son of Thorvald Asvaldsson') states the father; the patronymic in sentence 2 does not name Asvaldsson.",
+    "Erik the Red 4 (Leif is Erik's son) and Thorvald Eiriksson 4 (brother of Leif) do not state Thorvald's father."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "father of Thorvald Eiriksson",
+     "necessary": false,
+     "expected_answer": "Erik the Red",
+     "aliases": [
+      "Erik Thorvaldsson"
+     ],
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Thorvald Eiriksson",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u2",
+     "description": "father of {u1}, Thorvald Eiriksson's paternal grandfather",
+     "necessary": true,
+     "expected_answer": "Thorvald Asvaldsson",
+     "depends_on": [
+      "u1"
+     ],
+     "support_sets": [
+      [
+       [
+        "Erik the Red",
+        1
+       ]
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "sample_id": "2wikimultihopqa_bc7761cc088511ebbd6dac1f6bf848b6",
+   "status": "draft",
+   "notes": [
+    "Bridge comparison: director and nationality chain per film, then a same-country conclusion.",
+    "u4 uses 'Austrian director' (Richard Oswald 0). Figures of the Night 0 calls the film German, which does not support the director's nationality.",
+    "Joe Somebody 5 ('Allen and Pasquin's third feature together') does not explicitly state the director role; not used."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "director of Joe Somebody",
+     "necessary": false,
+     "expected_answer": "John Pasquin",
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Joe Somebody",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u2",
+     "description": "nationality of {u1}",
+     "necessary": false,
+     "expected_answer": "American",
+     "aliases": [
+      "United States"
+     ],
+     "depends_on": [
+      "u1"
+     ],
+     "support_sets": [
+      [
+       [
+        "John Pasquin",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u3",
+     "description": "director of Figures of the Night",
+     "necessary": false,
+     "expected_answer": "Richard Oswald",
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Figures of the Night",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u4",
+     "description": "nationality of {u3}",
+     "necessary": false,
+     "expected_answer": "Austrian",
+     "aliases": [
+      "Austria"
+     ],
+     "depends_on": [
+      "u3"
+     ],
+     "support_sets": [
+      [
+       [
+        "Richard Oswald",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u5",
+     "description": "whether the directors of Joe Somebody and Figures of the Night are from the same country",
+     "necessary": true,
+     "expected_answer": "no",
+     "depends_on": [
+      "u2",
+      "u4"
+     ],
+     "support_sets": [
+      []
+     ]
+    }
+   ]
+  },
+  {
+   "sample_id": "2wikimultihopqa_d690e9a809bc11ebbdb0ac1f6bf848b6",
+   "status": "draft",
+   "notes": [
+    "Comparison (yes/no): two country units plus a conclusion unit.",
+    "Both opening sentences end with 'United States'. Other 'Valley High School' documents are distractors."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "country where Warwick Valley High School is located",
+     "necessary": false,
+     "expected_answer": "United States",
+     "aliases": [
+      "USA",
+      "U.S."
+     ],
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Warwick Valley High School",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u2",
+     "description": "country where Yoncalla High School is located",
+     "necessary": false,
+     "expected_answer": "United States",
+     "aliases": [
+      "USA",
+      "U.S."
+     ],
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Yoncalla High School",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u3",
+     "description": "whether Warwick Valley High School and Yoncalla High School are located in the same country",
+     "necessary": true,
+     "expected_answer": "yes",
+     "depends_on": [
+      "u1",
+      "u2"
+     ],
+     "support_sets": [
+      []
+     ]
+    }
+   ]
+  },
+  {
+   "sample_id": "2wikimultihopqa_3a2fe93e0bda11eba7f7acde48001122",
+   "status": "draft",
+   "notes": [
+    "Bridge: wife (optional) then nationality (necessary).",
+    "no explicit support: no sentence calls Mavis Batey British. Mavis Batey 0 says 'an English code-breaker'; English to British needs world knowledge. The supporting fact Mavis Batey 3 is an award (Member of the Order of the British Empire), not a nationality. u2 has support_sets [].",
+    "Open point: 'English' is the explicitly stated descriptor; it is not added as an alias because it is a different value from the source answer. Reviewer may prefer expected_answer 'English' with support Mavis Batey 0."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "wife of Keith Batey",
+     "necessary": false,
+     "expected_answer": "Mavis Batey",
+     "aliases": [
+      "Mavis Lilian Batey"
+     ],
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Keith Batey",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u2",
+     "description": "nationality of {u1}",
+     "necessary": true,
+     "expected_answer": "British",
+     "depends_on": [
+      "u1"
+     ],
+     "support_sets": []
+    }
+   ]
+  },
+  {
+   "sample_id": "2wikimultihopqa_d996cdce0baf11ebab90acde48001122",
+   "status": "draft",
+   "notes": [
+    "Inference question that asks the child directly: one necessary unit. Swanandi Tikekar 1 ('She is daughter of Uday Tikekar and Aarti Ankalikar') states it directly, so the source chain (spouse, then spouse's child) is not split into hops.",
+    "The source supporting facts (Uday Tikekar 2 + Arati Ankalikar-Tikekar 4) are not used: wife's daughter does not explicitly state Uday's child."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "child of Uday Tikekar",
+     "necessary": true,
+     "expected_answer": "Swanandi Tikekar",
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Swanandi Tikekar",
+        1
+       ]
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "sample_id": "2wikimultihopqa_c16ac4b4088311ebbd6dac1f6bf848b6",
+   "status": "draft",
+   "notes": [
+    "Bridge comparison: director and death-date chain per film, then a conclusion unit.",
+    "Trap: Crimson Curtain (1952 film) is a different film directed by André Barsacq.",
+    "Answer capitalization normalized from 'Brewster Mccloud' to 'Brewster McCloud'; source form kept in aliases."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "director of Brewster McCloud",
+     "necessary": false,
+     "expected_answer": "Robert Altman",
+     "aliases": [
+      "Robert Bernard Altman"
+     ],
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Brewster McCloud",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u2",
+     "description": "date of death of {u1}",
+     "necessary": false,
+     "expected_answer": "November 20, 2006",
+     "depends_on": [
+      "u1"
+     ],
+     "support_sets": [
+      [
+       [
+        "Robert Altman",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u3",
+     "description": "director of The Crimson Curtain (1953 film)",
+     "necessary": false,
+     "expected_answer": "Alexandre Astruc",
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "The Crimson Curtain (1953 film)",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u4",
+     "description": "date of death of {u3}",
+     "necessary": false,
+     "expected_answer": "19 May 2016",
+     "depends_on": [
+      "u3"
+     ],
+     "support_sets": [
+      [
+       [
+        "Alexandre Astruc",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u5",
+     "description": "which of the two films has the director who died first",
+     "necessary": true,
+     "expected_answer": "Brewster McCloud",
+     "aliases": [
+      "Brewster Mccloud"
+     ],
+     "depends_on": [
+      "u2",
+      "u4"
+     ],
+     "support_sets": [
+      []
+     ]
+    }
+   ]
+  },
+  {
+   "sample_id": "2wikimultihopqa_b14d20df097211ebbdb0ac1f6bf848b6",
+   "status": "draft",
+   "notes": [
+    "Comparison (yes/no): two country units plus a conclusion unit.",
+    "The other Lumnezia municipality documents state their own country and only list Vella in the merger sentence; that would be an inference, so they are not alternative support for u2."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "country where Marzian, Lorestan is located",
+     "necessary": false,
+     "expected_answer": "Iran",
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Marzian, Lorestan",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u2",
+     "description": "country where Vella is located",
+     "necessary": false,
+     "expected_answer": "Switzerland",
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Vella",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u3",
+     "description": "whether Marzian, Lorestan and Vella are located in the same country",
+     "necessary": true,
+     "expected_answer": "no",
+     "depends_on": [
+      "u1",
+      "u2"
+     ],
+     "support_sets": [
+      []
+     ]
+    }
+   ]
+  },
+  {
+   "sample_id": "2wikimultihopqa_5637d4a60bdb11eba7f7acde48001122",
+   "status": "draft",
+   "notes": [
+    "Bridge: director (optional) then birthplace (necessary)."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "director of film Happy Easter",
+     "necessary": false,
+     "expected_answer": "Georges Lautner",
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Happy Easter",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u2",
+     "description": "place of birth of {u1}",
+     "necessary": true,
+     "expected_answer": "Nice",
+     "depends_on": [
+      "u1"
+     ],
+     "support_sets": [
+      [
+       [
+        "Georges Lautner",
+        2
+       ]
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "sample_id": "2wikimultihopqa_600955300baf11ebab90acde48001122",
+   "status": "draft",
+   "notes": [
+    "Bridge (inference): father (optional) then the father's father, i.e. the paternal grandfather (necessary).",
+    "Document title 'George III Dadiani' vs article text and triple 'Giorgi III Dadiani'.",
+    "Mamia IV Dadiani 1 and 3 (younger son of Levan I; brother of Giorgi III) are not used for u1: sibling to shared father is an inference."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "father of George III Dadiani",
+     "necessary": false,
+     "expected_answer": "Levan I Dadiani",
+     "aliases": [
+      "Levan I"
+     ],
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "George III Dadiani",
+        1
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u2",
+     "description": "father of {u1}, George III Dadiani's paternal grandfather",
+     "necessary": true,
+     "expected_answer": "Mamia III Dadiani",
+     "aliases": [
+      "Mamia III"
+     ],
+     "depends_on": [
+      "u1"
+     ],
+     "support_sets": [
+      [
+       [
+        "Levan I Dadiani",
+        1
+       ]
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "sample_id": "2wikimultihopqa_6670d044088d11ebbd70ac1f6bf848b6",
+   "status": "draft",
+   "notes": [
+    "Bridge comparison: director and nationality chain per film, then a same-country conclusion.",
+    "Peter Sullivan (screenwriter) 13 ('In 2018, Sullivan directed the Netflix psychological thriller \"Secret Obsession\"') added as alternative support for u1.",
+    "u2 uses 'American screenwriter, film director' (sentence 0); the Shrewsbury, Massachusetts birthplace is not used.",
+    "Trap: Beneath the Surface (1997 film) has the French title 'Descente aux Enfers' and is a Swedish film by Daniel Fridell. The question follows the document titled 'Descente aux enfers' (1986, Francis Girod)."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "director of Secret Obsession",
+     "necessary": false,
+     "expected_answer": "Peter Sullivan",
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Secret Obsession",
+        0
+       ]
+      ],
+      [
+       [
+        "Peter Sullivan (screenwriter)",
+        13
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u2",
+     "description": "nationality of {u1}",
+     "necessary": false,
+     "expected_answer": "American",
+     "aliases": [
+      "United States"
+     ],
+     "depends_on": [
+      "u1"
+     ],
+     "support_sets": [
+      [
+       [
+        "Peter Sullivan (screenwriter)",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u3",
+     "description": "director of Descente aux enfers",
+     "necessary": false,
+     "expected_answer": "Francis Girod",
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Descente aux enfers",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u4",
+     "description": "nationality of {u3}",
+     "necessary": false,
+     "expected_answer": "French",
+     "aliases": [
+      "France"
+     ],
+     "depends_on": [
+      "u3"
+     ],
+     "support_sets": [
+      [
+       [
+        "Francis Girod",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u5",
+     "description": "whether the directors of Secret Obsession and Descente aux enfers are from the same country",
+     "necessary": true,
+     "expected_answer": "no",
+     "depends_on": [
+      "u2",
+      "u4"
+     ],
+     "support_sets": [
+      []
+     ]
+    }
+   ]
+  },
+  {
+   "sample_id": "2wikimultihopqa_297ea8fb097011ebbdb0ac1f6bf848b6",
+   "status": "draft",
+   "notes": [
+    "Comparison (yes/no): two country units plus a conclusion unit.",
+    "Both opening sentences end with 'Iran'. The other '-ye Yek' villages are distractors."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "country where Aghol Beyk-e Olya is located",
+     "necessary": false,
+     "expected_answer": "Iran",
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Aghol Beyk-e Olya",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u2",
+     "description": "country where Bardiyeh-ye Yek is located",
+     "necessary": false,
+     "expected_answer": "Iran",
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Bardiyeh-ye Yek",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u3",
+     "description": "whether Aghol Beyk-e Olya and Bardiyeh-ye Yek are located in the same country",
+     "necessary": true,
+     "expected_answer": "yes",
+     "depends_on": [
+      "u1",
+      "u2"
+     ],
+     "support_sets": [
+      []
+     ]
+    }
+   ]
+  },
+  {
+   "sample_id": "2wikimultihopqa_b063b1ae0bd911eba7f7acde48001122",
+   "status": "draft",
+   "notes": [
+    "Bridge: director (optional) then birthplace (necessary).",
+    "Ralph Staub 0 gives the birth date and place in the '(July 21, 1899 in Chicago, Illinois – ...)' pattern, which states the birthplace."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "director of film Keystone Hotel",
+     "necessary": false,
+     "expected_answer": "Ralph Staub",
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Keystone Hotel (film)",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u2",
+     "description": "place of birth of {u1}",
+     "necessary": true,
+     "expected_answer": "Chicago",
+     "aliases": [
+      "Chicago, Illinois"
+     ],
+     "depends_on": [
+      "u1"
+     ],
+     "support_sets": [
+      [
+       [
+        "Ralph Staub",
+        0
+       ]
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "sample_id": "2wikimultihopqa_a1f429840baf11ebab90acde48001122",
+   "status": "draft",
+   "notes": [
+    "Bridge (inference): father (optional) then the father's mother, i.e. the paternal grandmother (necessary).",
+    "William IV, Duke of Bavaria 1 ('born in Munich to Albert IV and Kunigunde of Austria') names the mother explicitly.",
+    "Mechthild of Sayn and the other grandmother documents are distractors."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "father of Mechthild of Bavaria",
+     "necessary": false,
+     "expected_answer": "William IV, Duke of Bavaria",
+     "aliases": [
+      "William IV"
+     ],
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Mechthild of Bavaria",
+        1
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u2",
+     "description": "mother of {u1}, Mechthild of Bavaria's paternal grandmother",
+     "necessary": true,
+     "expected_answer": "Kunigunde of Austria",
+     "depends_on": [
+      "u1"
+     ],
+     "support_sets": [
+      [
+       [
+        "William IV, Duke of Bavaria",
+        1
+       ]
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "sample_id": "2wikimultihopqa_015ccd41087711ebbd67ac1f6bf848b6",
+   "status": "draft",
+   "notes": [
+    "Bridge comparison: director and nationality chain per film, then a same-country conclusion.",
+    "The Enigma of the Folies-Bergere sentence 0 is a fragment ('(French:'); the director is in sentence 1, so u1 cites sentences 0 and 1 together. The source supporting fact lists only sentence 0.",
+    "u2 uses 'a French film theorist, critic and filmmaker' (Jean Mitry 0); the Soissons birthplace is not used. The film's 'French' and 'Greek' descriptors are not used for the directors."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "director of The Enigma of the Folies-Bergere",
+     "necessary": false,
+     "expected_answer": "Jean Mitry",
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "The Enigma of the Folies-Bergere",
+        0
+       ],
+       [
+        "The Enigma of the Folies-Bergere",
+        1
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u2",
+     "description": "nationality of {u1}",
+     "necessary": false,
+     "expected_answer": "French",
+     "aliases": [
+      "France"
+     ],
+     "depends_on": [
+      "u1"
+     ],
+     "support_sets": [
+      [
+       [
+        "Jean Mitry",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u3",
+     "description": "director of Deep Soul (film)",
+     "necessary": false,
+     "expected_answer": "Pantelis Voulgaris",
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Deep Soul (film)",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u4",
+     "description": "nationality of {u3}",
+     "necessary": false,
+     "expected_answer": "Greek",
+     "aliases": [
+      "Greece"
+     ],
+     "depends_on": [
+      "u3"
+     ],
+     "support_sets": [
+      [
+       [
+        "Pantelis Voulgaris",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u5",
+     "description": "whether the directors of The Enigma of the Folies-Bergere and Deep Soul (film) are from the same country",
+     "necessary": true,
+     "expected_answer": "no",
+     "depends_on": [
+      "u2",
+      "u4"
+     ],
+     "support_sets": [
+      []
+     ]
+    }
+   ]
+  },
+  {
+   "sample_id": "2wikimultihopqa_f05c2009099111ebbdb0ac1f6bf848b6",
+   "status": "draft",
+   "notes": [
+    "Comparison (yes/no): two country units plus a conclusion unit.",
+    "Triple value 'Holland' vs text 'Netherlands'; 'Holland' kept as an alias.",
+    "Zaandijk Zaanse Schans railway station 0 ('Zaandijk, both neighbourhoods of the municipality of Zaandam, Netherlands') added as alternative support for u2.",
+    "A8 motorway (Netherlands) 0-1 not used: a Dutch motorway passing Zaandijk does not state Zaandijk's country."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "country where Pociūnai (Prienai) is located",
+     "necessary": false,
+     "expected_answer": "Lithuania",
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Pociūnai (Prienai)",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u2",
+     "description": "country where Zaandijk is located",
+     "necessary": false,
+     "expected_answer": "Netherlands",
+     "aliases": [
+      "Holland",
+      "The Netherlands"
+     ],
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Zaandijk",
+        0
+       ]
+      ],
+      [
+       [
+        "Zaandijk Zaanse Schans railway station",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u3",
+     "description": "whether Pociūnai (Prienai) and Zaandijk are located in the same country",
+     "necessary": true,
+     "expected_answer": "no",
+     "depends_on": [
+      "u1",
+      "u2"
+     ],
+     "support_sets": [
+      []
+     ]
+    }
+   ]
+  }
+ ]
+}

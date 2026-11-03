@@ -1,0 +1,1842 @@
+{
+ "annotation_version": "draft-1",
+ "drafted_by": "Claude subagent",
+ "worksheet": "batch_hotpo_04",
+ "records": [
+  {
+   "sample_id": "hotpotqa_5ae31f4455429928c423961b",
+   "status": "draft",
+   "notes": [
+    "Bridge: the club (optional) then its colours (necessary).",
+    "A.F.C. Telford United sentence 0 (based in Telford) removed from support: it states the location given in the question, not the colours.",
+    "A.F.C. Telford United sentence 3 ('Their colours ...') resolves 'Their' through the document title."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "football club for which Jordan Lussey plays as a midfielder",
+     "necessary": false,
+     "expected_answer": "A.F.C. Telford United",
+     "aliases": [
+      "AFC Telford United"
+     ],
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Jordan Lussey",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u2",
+     "description": "colours of {u1}",
+     "necessary": true,
+     "expected_answer": "white with navy blue and red trim",
+     "depends_on": [
+      "u1"
+     ],
+     "support_sets": [
+      [
+       [
+        "A.F.C. Telford United",
+        3
+       ]
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "sample_id": "hotpotqa_5a7329c65542992359bc3256",
+   "status": "draft",
+   "notes": [
+    "Comparison (selection between named candidates): two fact units plus a conclusion unit.",
+    "No explicit support for u2: Con Mine sentence 0 places it just south of Yellowknife, Northwest Territories; 'not in Timmins' needs world knowledge (labeling_guide 1.1, Minnesota/Europe example).",
+    "Presupposition (unit_schema 5.6): the question names the two candidates, so the conclusion gets presupposition_sets = u1's support sets.",
+    "Con Mine sentence 0 removed from support."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "whether Dome Mine is situated in the City of Timmins, Ontario, Canada",
+     "necessary": false,
+     "expected_answer": "yes",
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Dome Mine",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u2",
+     "description": "whether Con Mine is situated in the City of Timmins, Ontario, Canada",
+     "necessary": false,
+     "expected_answer": "no",
+     "depends_on": [],
+     "support_sets": []
+    },
+    {
+     "unit_id": "u3",
+     "description": "which of Dome Mine and Con Mine is situated in the City of Timmins, Ontario, Canada",
+     "necessary": true,
+     "expected_answer": "Dome Mine",
+     "depends_on": [
+      "u1",
+      "u2"
+     ],
+     "support_sets": [
+      []
+     ],
+     "presupposition_sets": [
+      [
+       [
+        "Dome Mine",
+        0
+       ]
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "sample_id": "hotpotqa_5abb155c55429966062416c8",
+   "status": "draft",
+   "notes": [
+    "Bridge: the narrator (optional) then the Channel 4 series (necessary)."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "narrator of \"Pound Shop Wars\"",
+     "necessary": false,
+     "expected_answer": "Caroline Aherne",
+     "aliases": [
+      "Caroline Mary Aherne"
+     ],
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Pound Shop Wars",
+        1
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u2",
+     "description": "Channel 4 reality television series {u1} narrated from its inception in 2013 until April 2016",
+     "necessary": true,
+     "expected_answer": "Gogglebox",
+     "depends_on": [
+      "u1"
+     ],
+     "support_sets": [
+      [
+       [
+        "Caroline Aherne",
+        1
+       ]
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "sample_id": "hotpotqa_5a84fd2a5542994c784ddabb",
+   "status": "draft",
+   "notes": [
+    "Comparison (count of instruments): two fact units plus a conclusion unit; no presupposition (value comparison).",
+    "u1: Matt Shultz sentence 0 ('occasional guitarist') and sentence 1 ('also plays guitar') each state guitar.",
+    "u2 uses the omission exception: Paul Roberts (musician) sentence 0 is a defining description listing the occupation 'singer' (lead singer of The Stranglers) and no instrument. No document states that this Paul Roberts plays an instrument (Soulsec 0 calls him frontman; K-Klass and the 1942 song concern other people named Paul Roberts), so condition 4 holds.",
+    "Open point: treating 'plays an instrument' (instrumentalist) as an occupation attribute is a judgment call.",
+    "Cage the Elephant sentence 1 ('lead vocalist Matt Shultz') states no instrument and is not used."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "musical instruments Matt Shultz plays",
+     "necessary": false,
+     "expected_answer": "guitar",
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Matt Shultz (singer)",
+        0
+       ]
+      ],
+      [
+       [
+        "Matt Shultz (singer)",
+        1
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u2",
+     "description": "musical instruments Paul Roberts plays",
+     "necessary": false,
+     "expected_answer": "none",
+     "aliases": [
+      "no instrument"
+     ],
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Paul Roberts (musician)",
+        0
+       ]
+      ]
+     ],
+     "by_omission": true
+    },
+    {
+     "unit_id": "u3",
+     "description": "which of Matt Shultz and Paul Roberts plays more musical instruments",
+     "necessary": true,
+     "expected_answer": "Matt Shultz",
+     "aliases": [
+      "Matthew Ray \"Matt\" Shultz",
+      "Matthew Ray Shultz"
+     ],
+     "depends_on": [
+      "u1",
+      "u2"
+     ],
+     "support_sets": [
+      []
+     ]
+    }
+   ]
+  },
+  {
+   "sample_id": "hotpotqa_5a84b72b5542991dd0999dab",
+   "status": "draft",
+   "notes": [
+    "Bridge: genre of a Merrivale book (optional) then the genre that usually involves a mysterious death (necessary).",
+    "u1 is the book's genre rather than a book title, because nine context books feature Merrivale and any one of them answers the question.",
+    "Each u1 set pairs sentence 0 ('a mystery novel by ... Carr') with sentence 1 ('features the series detective Sir Henry Merrivale'); neither sentence alone states both. All nine Merrivale books are listed as alternative sets.",
+    "u2: Mystery fiction sentence 0 states the genre usually involving a mysterious death; linking 'mystery novel' to 'mystery fiction' is lexical, not an inference about content."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "genre of a book featuring detective Sir Henry Merrivale",
+     "necessary": false,
+     "expected_answer": "mystery novel",
+     "aliases": [
+      "mystery"
+     ],
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "The Reader is Warned",
+        0
+       ],
+       [
+        "The Reader is Warned",
+        1
+       ]
+      ],
+      [
+       [
+        "He Wouldn't Kill Patience",
+        0
+       ],
+       [
+        "He Wouldn't Kill Patience",
+        1
+       ]
+      ],
+      [
+       [
+        "Night at the Mocking Widow",
+        0
+       ],
+       [
+        "Night at the Mocking Widow",
+        1
+       ]
+      ],
+      [
+       [
+        "Murder in the Submarine Zone",
+        0
+       ],
+       [
+        "Murder in the Submarine Zone",
+        1
+       ]
+      ],
+      [
+       [
+        "And So to Murder",
+        0
+       ],
+       [
+        "And So to Murder",
+        1
+       ]
+      ],
+      [
+       [
+        "The Gilded Man",
+        0
+       ],
+       [
+        "The Gilded Man",
+        1
+       ]
+      ],
+      [
+       [
+        "The Curse of the Bronze Lamp",
+        0
+       ],
+       [
+        "The Curse of the Bronze Lamp",
+        1
+       ]
+      ],
+      [
+       [
+        "My Late Wives",
+        0
+       ],
+       [
+        "My Late Wives",
+        1
+       ]
+      ],
+      [
+       [
+        "Death in Five Boxes",
+        0
+       ],
+       [
+        "Death in Five Boxes",
+        1
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u2",
+     "description": "genre usually involving a mysterious death to which {u1} belongs",
+     "necessary": true,
+     "expected_answer": "mystery fiction",
+     "depends_on": [
+      "u1"
+     ],
+     "support_sets": [
+      [
+       [
+        "Mystery fiction",
+        0
+       ]
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "sample_id": "hotpotqa_5a84f8b65542997b5ce3ff94",
+   "status": "draft",
+   "notes": [
+    "Comparison (selection between named candidates): two fact units plus a conclusion unit.",
+    "No explicit support for u1: no sentence states whether Luma tolerates sandy soil and low rainfall (Luma sentence 1 only gives its native rain forests).",
+    "Presupposition (unit_schema 5.6): the question names Luma and cowpea as candidates, so the conclusion gets presupposition_sets = u2's support sets. The 'flowering plant' part is also taken from the premise: Cowpea sentence 0 says 'legume', not 'flowering plant'.",
+    "Luma (plant) sentence 0 and Cowpea sentence 0 removed from support: they do not state the soil/rainfall tolerance."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "whether Luma tolerates sandy soil and low rainfall",
+     "necessary": false,
+     "expected_answer": "no",
+     "depends_on": [],
+     "support_sets": []
+    },
+    {
+     "unit_id": "u2",
+     "description": "whether cowpea tolerates sandy soil and low rainfall",
+     "necessary": false,
+     "expected_answer": "yes",
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Cowpea",
+        1
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u3",
+     "description": "which of Luma and cowpea is a flowering plant that tolerates sandy soil and low rainfall",
+     "necessary": true,
+     "expected_answer": "cowpea",
+     "aliases": [
+      "Vigna unguiculata"
+     ],
+     "depends_on": [
+      "u1",
+      "u2"
+     ],
+     "support_sets": [
+      []
+     ],
+     "presupposition_sets": [
+      [
+       [
+        "Cowpea",
+        1
+       ]
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "sample_id": "hotpotqa_5ae533495542992663a4f159",
+   "status": "draft",
+   "notes": [
+    "Bridge: the brand she models for (optional) then its parent company (necessary).",
+    "The question's 'Barbara Linares' matches 'Barbara \"Barbie\" Linhares Ferreira' (Barbie Ferreira sentence 0) up to spelling; treated as the same person. u1 cites sentence 0 for the name together with sentence 1 ('She models for Aerie').",
+    "u2: Barbie Ferreira sentence 1 ('Aerie, a brand of clothing from American Eagle Outfitters') is alternative support next to American Eagle Outfitters sentence 3."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "brand that Barbara Linares models for",
+     "necessary": false,
+     "expected_answer": "Aerie",
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Barbie Ferreira",
+        0
+       ],
+       [
+        "Barbie Ferreira",
+        1
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u2",
+     "description": "parent company of {u1}",
+     "necessary": true,
+     "expected_answer": "American Eagle Outfitters",
+     "aliases": [
+      "American Eagle Outfitters, Inc.",
+      "American Eagle"
+     ],
+     "depends_on": [
+      "u1"
+     ],
+     "support_sets": [
+      [
+       [
+        "American Eagle Outfitters",
+        3
+       ]
+      ],
+      [
+       [
+        "Barbie Ferreira",
+        1
+       ]
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "sample_id": "hotpotqa_5a7565475542992d0ec05f84",
+   "status": "draft",
+   "notes": [
+    "Comparison (selection between named candidates): two fact units plus a conclusion unit.",
+    "No explicit support for u1: Picos de Europa sentences place it in a mountain range in northern Spain and in three autonomous communities; 'not on an island' needs world knowledge.",
+    "Presupposition (unit_schema 5.6): conclusion gets presupposition_sets = u2's support sets.",
+    "Idafe Rock sentence 0 ('Caldera de Taburiente National Park on the island of La Palma') is alternative support for u2.",
+    "Picos de Europa National Park sentence 1 and Caldera de Taburiente sentence 1 removed from support (sentence 1 needs sentence 0 for the island, and sentence 0 alone suffices)."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "whether Picos de Europa National Park is on an island",
+     "necessary": false,
+     "expected_answer": "no",
+     "depends_on": [],
+     "support_sets": []
+    },
+    {
+     "unit_id": "u2",
+     "description": "whether Caldera de Taburiente National Park is on an island",
+     "necessary": false,
+     "expected_answer": "yes",
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Caldera de Taburiente National Park",
+        0
+       ]
+      ],
+      [
+       [
+        "Idafe Rock",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u3",
+     "description": "which of Picos de Europa National Park and Caldera de Taburiente National Park is on an island",
+     "necessary": true,
+     "expected_answer": "Caldera de Taburiente National Park",
+     "aliases": [
+      "Caldera de Taburiente",
+      "Parque Nacional de la Caldera de Taburiente"
+     ],
+     "depends_on": [
+      "u1",
+      "u2"
+     ],
+     "support_sets": [
+      []
+     ],
+     "presupposition_sets": [
+      [
+       [
+        "Caldera de Taburiente National Park",
+        0
+       ]
+      ],
+      [
+       [
+        "Idafe Rock",
+        0
+       ]
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "sample_id": "hotpotqa_5a9060f05542990a98493604",
+   "status": "draft",
+   "notes": [
+    "Bridge: the novelist (optional) then the adapted novel (necessary).",
+    "u2 needs both sentences of The Scarlet Letter (1922 film): sentence 0 (British silent drama film) and sentence 1 (adaptation of the novel by Hawthorne).",
+    "Answer normalized to 'The Scarlet Letter'; the source and document spelling 'The Scarlett Letter' is kept as an alias."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "American novelist born in 1804",
+     "necessary": false,
+     "expected_answer": "Nathaniel Hawthorne",
+     "aliases": [
+      "Hawthorne"
+     ],
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Nathaniel Hawthorne",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u2",
+     "description": "novel by {u1} adapted into a British silent drama film",
+     "necessary": true,
+     "expected_answer": "The Scarlet Letter",
+     "aliases": [
+      "The Scarlett Letter",
+      "Scarlet Letter"
+     ],
+     "depends_on": [
+      "u1"
+     ],
+     "support_sets": [
+      [
+       [
+        "The Scarlet Letter (1922 film)",
+        0
+       ],
+       [
+        "The Scarlet Letter (1922 film)",
+        1
+       ]
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "sample_id": "hotpotqa_5ab850d75542990e739ec8c0",
+   "status": "draft",
+   "notes": [
+    "Comparison (selection between named candidates): two fact units plus a conclusion unit.",
+    "No explicit support for u1: Mary Gordon's description ('American writer', 'novels, memoirs and literary criticism') does not state she did not write Harry Potter; Exception 2 does not cover authorship of a work.",
+    "Presupposition (unit_schema 5.6): conclusion gets presupposition_sets = u2's support sets.",
+    "u2 alternatives: every sentence attributing the Harry Potter series/novels to Rowling ('by J. K. Rowling', '\"Harry Potter\" author', 'the author of the series', 'J. K. Rowling's Harry Potter ... series'). Possessive forms (Parodies 0, Magical Worlds 1) are counted as explicit authorship.",
+    "Fantastic Beasts sentence 0 is not used: it is a different book set in the Harry Potter universe.",
+    "Mary Gordon (writer) sentence 0 removed from support."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "whether Mary Gordon wrote Harry Potter",
+     "necessary": false,
+     "expected_answer": "no",
+     "depends_on": [],
+     "support_sets": []
+    },
+    {
+     "unit_id": "u2",
+     "description": "whether J. K. Rowling wrote Harry Potter",
+     "necessary": false,
+     "expected_answer": "yes",
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "J. K. Rowling",
+        0
+       ]
+      ],
+      [
+       [
+        "Warner Bros. Entertainment Inc. v. RDR Books",
+        1
+       ]
+      ],
+      [
+       [
+        "Harry Potter and the Deathly Hallows",
+        0
+       ]
+      ],
+      [
+       [
+        "Parodies of Harry Potter",
+        0
+       ]
+      ],
+      [
+       [
+        "Harry Potter (film series)",
+        0
+       ]
+      ],
+      [
+       [
+        "Religious debates over the Harry Potter series",
+        0
+       ]
+      ],
+      [
+       [
+        "Religious debates over the Harry Potter series",
+        4
+       ]
+      ],
+      [
+       [
+        "A Very Potter Musical",
+        1
+       ]
+      ],
+      [
+       [
+        "The Magical Worlds of Harry Potter",
+        1
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u3",
+     "description": "which of Mary Gordon and J. K. Rowling wrote Harry Potter",
+     "necessary": true,
+     "expected_answer": "J. K. Rowling",
+     "aliases": [
+      "Joanne Rowling",
+      "Rowling"
+     ],
+     "depends_on": [
+      "u1",
+      "u2"
+     ],
+     "support_sets": [
+      []
+     ],
+     "presupposition_sets": [
+      [
+       [
+        "J. K. Rowling",
+        0
+       ]
+      ],
+      [
+       [
+        "Warner Bros. Entertainment Inc. v. RDR Books",
+        1
+       ]
+      ],
+      [
+       [
+        "Harry Potter and the Deathly Hallows",
+        0
+       ]
+      ],
+      [
+       [
+        "Parodies of Harry Potter",
+        0
+       ]
+      ],
+      [
+       [
+        "Harry Potter (film series)",
+        0
+       ]
+      ],
+      [
+       [
+        "Religious debates over the Harry Potter series",
+        0
+       ]
+      ],
+      [
+       [
+        "Religious debates over the Harry Potter series",
+        4
+       ]
+      ],
+      [
+       [
+        "A Very Potter Musical",
+        1
+       ]
+      ],
+      [
+       [
+        "The Magical Worlds of Harry Potter",
+        1
+       ]
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "sample_id": "hotpotqa_5a75d0325542992db94736d2",
+   "status": "draft",
+   "notes": [
+    "Bridge: the university (optional) then the 1907 captain (necessary).",
+    "1907 Villanova Wildcats football team sentence 1 ('The Wildcats team captain was Joseph Slavin') resolves 'The Wildcats' through the document title, which names the 1907 Villanova team."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "oldest Catholic university in the Commonwealth of Pennsylvania",
+     "necessary": false,
+     "expected_answer": "Villanova University",
+     "aliases": [
+      "Villanova"
+     ],
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Villanova University",
+        1
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u2",
+     "description": "1907 football team captain for {u1}",
+     "necessary": true,
+     "expected_answer": "Joseph Slavin",
+     "depends_on": [
+      "u1"
+     ],
+     "support_sets": [
+      [
+       [
+        "1907 Villanova Wildcats football team",
+        1
+       ]
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "sample_id": "hotpotqa_5ac250355542992f1f2b384b",
+   "status": "draft",
+   "notes": [
+    "Comparison (count of film credits): two fact units plus a conclusion unit; no presupposition (value comparison).",
+    "u1 and u2 take the role lists from the defining descriptions: seven roles for Burnett, 'documentary film director' for Guzman. Nostalgia for the Light sentence 2 adds that Guzman narrated one documentary; the comparison holds either way.",
+    "Killer of Sheep sentence 0 (written, directed, produced, shot) lists only part of Burnett's roles and is not alternative support for the full list.",
+    "Caveat: the conclusion treats the defining descriptions as complete role lists, as the source gold does."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "film credits (roles) of Charles Burnett",
+     "necessary": false,
+     "expected_answer": "film director, film producer, writer, editor, actor, photographer, and cinematographer",
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Charles Burnett (director)",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u2",
+     "description": "film credits (roles) of Patricio Guzmán",
+     "necessary": false,
+     "expected_answer": "documentary film director",
+     "aliases": [
+      "film director",
+      "director"
+     ],
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Patricio Guzmán",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u3",
+     "description": "which of Charles Burnett and Patricio Guzmán had more diverse credits in films",
+     "necessary": true,
+     "expected_answer": "Charles Burnett",
+     "aliases": [
+      "Burnett"
+     ],
+     "depends_on": [
+      "u1",
+      "u2"
+     ],
+     "support_sets": [
+      []
+     ]
+    }
+   ]
+  },
+  {
+   "sample_id": "hotpotqa_5ab8f1ae55429916710eb0c8",
+   "status": "draft",
+   "notes": [
+    "Bridge: u1 finds the capital standards behind banks' minimum capital requirements, u2 confirms they are the BCBS banking-regulation recommendations.",
+    "u2: Basel II sentence 0 ('the Basel Accords, ... which are recommendations on banking laws and regulations issued by the Basel Committee on Banking Supervision') is alternative support next to Basel Accords sentence 0.",
+    "Basel I sentences 0-1 name only the 1988 Basel Accord (Basel I), not the Basel Accords, and are not used."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "international set of capital standards on which banks' minimum capital requirements are based",
+     "necessary": false,
+     "expected_answer": "Basel Accords",
+     "aliases": [
+      "Basel Accord"
+     ],
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Bank",
+        3
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u2",
+     "description": "banking regulation recommendations issued by the Basel Committee on Banking Supervision, given {u1}",
+     "necessary": true,
+     "expected_answer": "Basel Accords",
+     "aliases": [
+      "Basel Accord"
+     ],
+     "depends_on": [
+      "u1"
+     ],
+     "support_sets": [
+      [
+       [
+        "Basel Accords",
+        0
+       ]
+      ],
+      [
+       [
+        "Basel II",
+        0
+       ]
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "sample_id": "hotpotqa_5adde7085542990dbb2f7f01",
+   "status": "draft",
+   "notes": [
+    "Comparison (shared category): two fact units plus a conclusion unit.",
+    "u1: Dichondra sentence 0 ('genus of flowering plants') and sentence 1 ('They are ... herbaceous plants') each state it.",
+    "u2: Peperomia sentence 0 calls it 'radiator plant' and List of Peperomia diseases sentence 0 says the genus includes radiator plant, baby rubber tree, etc. Both rely on the common name; accepted as explicit, but this is the weakest evidence in the record. 'Genus of the Piperaceae family' alone would be an inference.",
+    "Species sentences (Peperomia caperata, wheeleri, argyreia, blanda, alata, tetraphylla) are not used: linking a species to its genus by name is an inference (step3 Osbeckia precedent)."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "what kind of organism Dichondra is",
+     "necessary": false,
+     "expected_answer": "plant",
+     "aliases": [
+      "flowering plant",
+      "genus of flowering plants"
+     ],
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Dichondra",
+        0
+       ]
+      ],
+      [
+       [
+        "Dichondra",
+        1
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u2",
+     "description": "what kind of organism Peperomia is",
+     "necessary": false,
+     "expected_answer": "plant",
+     "aliases": [
+      "radiator plant",
+      "genus of plants"
+     ],
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Peperomia",
+        0
+       ]
+      ],
+      [
+       [
+        "List of Peperomia diseases",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u3",
+     "description": "what Dichondra and Peperomia both are",
+     "necessary": true,
+     "expected_answer": "plants",
+     "aliases": [
+      "plant",
+      "plant genera",
+      "genera of plants"
+     ],
+     "depends_on": [
+      "u1",
+      "u2"
+     ],
+     "support_sets": [
+      []
+     ]
+    }
+   ]
+  },
+  {
+   "sample_id": "hotpotqa_5ade07a95542997dc790712e",
+   "status": "draft",
+   "notes": [
+    "Bridge: the pilot (optional) then the birth year (necessary)."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "pilot for whom Baleine, Nova Scotia is best known as the landing site",
+     "necessary": false,
+     "expected_answer": "Beryl Markham",
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Baleine, Nova Scotia",
+        1
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u2",
+     "description": "birth year of {u1}",
+     "necessary": true,
+     "expected_answer": "1902",
+     "depends_on": [
+      "u1"
+     ],
+     "support_sets": [
+      [
+       [
+        "Beryl Markham",
+        0
+       ]
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "sample_id": "hotpotqa_5a8661f85542991e7718162b",
+   "status": "draft",
+   "notes": [
+    "Comparison ('which, or both'): two fact units plus a conclusion unit.",
+    "No explicit support for u2: Virgilia (plant) sentence 0 calls it a genus of Southern African trees; 'did not originate in Turkey and Central Asia' needs world knowledge.",
+    "No presupposition: the question allows 'both', so it does not presuppose that exactly one candidate qualifies. The conclusion therefore can never be SUPPORTED under the current rules (open point).",
+    "Virgilia (plant) sentence 0 removed from support."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "whether tulips originated in Turkey and Central Asia",
+     "necessary": false,
+     "expected_answer": "yes",
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Tulip",
+        7
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u2",
+     "description": "whether Virgilia trees originated in Turkey and Central Asia",
+     "necessary": false,
+     "expected_answer": "no",
+     "depends_on": [],
+     "support_sets": []
+    },
+    {
+     "unit_id": "u3",
+     "description": "which of tulips and Virgilia trees, or both, originated in Turkey and Central Asia",
+     "necessary": true,
+     "expected_answer": "tulips",
+     "aliases": [
+      "Tulipa",
+      "tulip"
+     ],
+     "depends_on": [
+      "u1",
+      "u2"
+     ],
+     "support_sets": [
+      []
+     ]
+    }
+   ]
+  },
+  {
+   "sample_id": "hotpotqa_5ab7f9b65542991d322237f0",
+   "status": "draft",
+   "notes": [
+    "Bridge: the parent company (optional) then the executive-office city (necessary).",
+    "Metro Broadcast sentence 1 ('The company is a wholly owned subsidiary of WPP plc') resolves 'The company' through the document title."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "company of which Metro Broadcast is a wholly owned subsidiary",
+     "necessary": false,
+     "expected_answer": "WPP plc",
+     "aliases": [
+      "WPP"
+     ],
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Metro Broadcast",
+        1
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u2",
+     "description": "city in which {u1} has its executive office",
+     "necessary": true,
+     "expected_answer": "Dublin",
+     "aliases": [
+      "Dublin, Ireland"
+     ],
+     "depends_on": [
+      "u1"
+     ],
+     "support_sets": [
+      [
+       [
+        "WPP plc",
+        0
+       ]
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "sample_id": "hotpotqa_5a8ad7ae5542992d82986f97",
+   "status": "draft",
+   "notes": [
+    "Comparison (yes/no 'same'): two fact units plus a conclusion unit.",
+    "u1: Hailey, Idaho sentence 2 ('Hailey is the site of Friedman Memorial Airport') is alternative support; the document title gives the state.",
+    "Ketchum, Idaho sentence 4 and Sun Valley, Idaho sentence 4 place the airport 'in Hailey' without stating Hailey's state; not used.",
+    "New York State Route 12F sentence 4 says the route serves Watertown International Airport, not that the airport is in New York; not used."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "state in which Friedman Memorial Airport is located",
+     "necessary": false,
+     "expected_answer": "Idaho",
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Friedman Memorial Airport",
+        0
+       ]
+      ],
+      [
+       [
+        "Hailey, Idaho",
+        2
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u2",
+     "description": "state in which Watertown International Airport is located",
+     "necessary": false,
+     "expected_answer": "New York",
+     "aliases": [
+      "New York State"
+     ],
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Watertown International Airport",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u3",
+     "description": "whether Friedman Memorial Airport and Watertown International Airport are in the same state",
+     "necessary": true,
+     "expected_answer": "no",
+     "depends_on": [
+      "u1",
+      "u2"
+     ],
+     "support_sets": [
+      []
+     ]
+    }
+   ]
+  },
+  {
+   "sample_id": "hotpotqa_5ab2a4a7554299295394678b",
+   "status": "draft",
+   "notes": [
+    "Bridge: the founder (optional) then the birth year (necessary)."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "founder of Mac Fisheries",
+     "necessary": false,
+     "expected_answer": "William Lever, 1st Viscount Leverhulme",
+     "aliases": [
+      "William Lever",
+      "William Hesketh Lever",
+      "Lord Leverhulme"
+     ],
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Mac Fisheries",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u2",
+     "description": "birth year of {u1}",
+     "necessary": true,
+     "expected_answer": "1851",
+     "depends_on": [
+      "u1"
+     ],
+     "support_sets": [
+      [
+       [
+        "William Lever, 1st Viscount Leverhulme",
+        0
+       ]
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "sample_id": "hotpotqa_5ab298ff554299340b52552a",
+   "status": "draft",
+   "notes": [
+    "Comparison (shared nationality): two fact units plus a conclusion unit; no presupposition (shared-value question).",
+    "No explicit support for u2: Strawberry Saroyan sentence 1 says she spent her childhood in Bolinas, California; nationality from a childhood place is an inference. Sentence 0 ('journalist and author') lists no nationality. The conclusion therefore can never be SUPPORTED (open point).",
+    "Strawberry Saroyan sentence 1 removed from support."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "nationality of Peter Boghossian",
+     "necessary": false,
+     "expected_answer": "American",
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Peter Boghossian",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u2",
+     "description": "nationality of Strawberry Saroyan",
+     "necessary": false,
+     "expected_answer": "American",
+     "depends_on": [],
+     "support_sets": []
+    },
+    {
+     "unit_id": "u3",
+     "description": "nationality shared by Peter Boghossian and Strawberry Saroyan",
+     "necessary": true,
+     "expected_answer": "American",
+     "depends_on": [
+      "u1",
+      "u2"
+     ],
+     "support_sets": [
+      []
+     ]
+    }
+   ]
+  },
+  {
+   "sample_id": "hotpotqa_5ac11f47554299294b2190ae",
+   "status": "draft",
+   "notes": [
+    "Bridge: u1 finds the running back drafted by the 1983 Rams, u2 confirms the Hall of Fame induction.",
+    "1983 Los Angeles Rams season sentence 1 ('The franchise drafted a future Hall of Fame Running Back in Eric Dickerson') resolves 'The franchise' through the title and supports both units.",
+    "Eric Dickerson sentence 2 is not used for u1: it says he was selected in the 1983 draft and played for the Rams, not that the Rams drafted him. Sentence 0 (running back) and 1983 season sentence 0 are not needed.",
+    "Answer normalized from 'Eric Demetric Dickerson'."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "running back drafted by the 1983 Los Angeles Rams",
+     "necessary": false,
+     "expected_answer": "Eric Dickerson",
+     "aliases": [
+      "Eric Demetric Dickerson"
+     ],
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "1983 Los Angeles Rams season",
+        1
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u2",
+     "description": "running back drafted by the 1983 Los Angeles Rams who was later inducted into the Hall of Fame, given {u1}",
+     "necessary": true,
+     "expected_answer": "Eric Dickerson",
+     "aliases": [
+      "Eric Demetric Dickerson"
+     ],
+     "depends_on": [
+      "u1"
+     ],
+     "support_sets": [
+      [
+       [
+        "Eric Dickerson",
+        5
+       ]
+      ],
+      [
+       [
+        "1983 Los Angeles Rams season",
+        1
+       ]
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "sample_id": "hotpotqa_5a7a46785542990783324ee5",
+   "status": "draft",
+   "notes": [
+    "Comparison (shared category): two fact units plus a conclusion unit.",
+    "u1 alternatives: every sentence calling Popular Mechanics a magazine (Benjamin Chertoff 2, Popular Mechanics for Kids 0, Parker Jeanie's Teenie 1, William Gurstelle 2) and Mechanix Illustrated 0 ('an American magazine ... to compete against the older \"Popular Science\" and \"Popular Mechanics\"', read as 'older magazines').",
+    "SpaceCub sentence 5, Atlas Press 1 and Michael Belfiore 2 mention Popular Mechanics without calling it a magazine; not used.",
+    "u2: Sojourners sentences 2 and 4 ('The magazine ...') refer to the title subject and are alternative support."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "type of publication Popular Mechanics is",
+     "necessary": false,
+     "expected_answer": "magazine",
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Popular Mechanics",
+        0
+       ]
+      ],
+      [
+       [
+        "Benjamin Chertoff",
+        2
+       ]
+      ],
+      [
+       [
+        "Popular Mechanics for Kids",
+        0
+       ]
+      ],
+      [
+       [
+        "Parker Jeanie's Teenie",
+        1
+       ]
+      ],
+      [
+       [
+        "William Gurstelle",
+        2
+       ]
+      ],
+      [
+       [
+        "Mechanix Illustrated",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u2",
+     "description": "type of publication Sojourners is",
+     "necessary": false,
+     "expected_answer": "magazine",
+     "aliases": [
+      "monthly magazine"
+     ],
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Sojourners",
+        0
+       ]
+      ],
+      [
+       [
+        "Sojourners",
+        2
+       ]
+      ],
+      [
+       [
+        "Sojourners",
+        4
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u3",
+     "description": "type of publication that Popular Mechanics and Sojourners both are",
+     "necessary": true,
+     "expected_answer": "magazine",
+     "depends_on": [
+      "u1",
+      "u2"
+     ],
+     "support_sets": [
+      []
+     ]
+    }
+   ]
+  },
+  {
+   "sample_id": "hotpotqa_5ac04afa5542996f0d89cb80",
+   "status": "draft",
+   "notes": [
+    "Bridge: the Bushey school (optional) then its south location (necessary).",
+    "Purcell School sentence 0 supports both units. Wells Cathedral School sentence 1 lists the Purcell School among the five specialist schools but does not locate it in Bushey, so it is not used for u1.",
+    "Answer kept as 'Hertfordshire'; 'south Hertfordshire' added as an alias."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "specialist music school for children located in the town of Bushey",
+     "necessary": false,
+     "expected_answer": "Purcell School",
+     "aliases": [
+      "The Purcell School for Young Musicians",
+      "The Purcell School"
+     ],
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Purcell School",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u2",
+     "description": "south location in which {u1} is located",
+     "necessary": true,
+     "expected_answer": "Hertfordshire",
+     "aliases": [
+      "south Hertfordshire"
+     ],
+     "depends_on": [
+      "u1"
+     ],
+     "support_sets": [
+      [
+       [
+        "Purcell School",
+        0
+       ]
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "sample_id": "hotpotqa_5a809152554299485f598658",
+   "status": "draft",
+   "notes": [
+    "Comparison (shared occupation): two fact units plus a conclusion unit.",
+    "u1: The Rasmus sentence 1 ('Lauri Ylonen (lead singer/songwriter)') is alternative support. Sentences calling him only 'lead singer' or saying a song 'was written by' him state part of the value and are not used."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "main occupation of Lauri Ylönen",
+     "necessary": false,
+     "expected_answer": "singer-songwriter",
+     "aliases": [
+      "singer and songwriter"
+     ],
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Lauri Ylönen",
+        0
+       ]
+      ],
+      [
+       [
+        "The Rasmus",
+        1
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u2",
+     "description": "main occupation of Kim Jong-hyun",
+     "necessary": false,
+     "expected_answer": "singer-songwriter",
+     "aliases": [
+      "singer and songwriter"
+     ],
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Kim Jong-hyun (singer)",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u3",
+     "description": "main occupation shared by Lauri Ylönen and Kim Jong-hyun",
+     "necessary": true,
+     "expected_answer": "singer-songwriter",
+     "aliases": [
+      "singer and songwriter"
+     ],
+     "depends_on": [
+      "u1",
+      "u2"
+     ],
+     "support_sets": [
+      []
+     ]
+    }
+   ]
+  },
+  {
+   "sample_id": "hotpotqa_5a7fc61155429969796c1b57",
+   "status": "draft",
+   "notes": [
+    "Bridge: the singer (optional) then his college (necessary)."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "black singer whose announced concert was the catalyst for the Peekskill riots",
+     "necessary": false,
+     "expected_answer": "Paul Robeson",
+     "aliases": [
+      "Paul Leroy Robeson"
+     ],
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Peekskill riots",
+        1
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u2",
+     "description": "college at which {u1} played football",
+     "necessary": true,
+     "expected_answer": "Rutgers College",
+     "aliases": [
+      "Rutgers"
+     ],
+     "depends_on": [
+      "u1"
+     ],
+     "support_sets": [
+      [
+       [
+        "Paul Robeson",
+        1
+       ]
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "sample_id": "hotpotqa_5a8af03c55429950cd6afc19",
+   "status": "draft",
+   "notes": [
+    "Comparison (yes/no 'both'): two fact units plus a conclusion unit.",
+    "No explicit support for u2: Frank R. Strayer sentence 0 ('an actor, film writer, director and producer') lists no nationality or ethnicity, so Exception 2 condition 3 fails. Film sentences call his films 'American', which says nothing about his ethnicity. The conclusion therefore can never be SUPPORTED (open point).",
+    "Frank R. Strayer sentence 0 removed from support."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "whether Charles Burnett is African-American",
+     "necessary": false,
+     "expected_answer": "yes",
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Charles Burnett (director)",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u2",
+     "description": "whether Frank R. Strayer is African-American",
+     "necessary": false,
+     "expected_answer": "no",
+     "depends_on": [],
+     "support_sets": []
+    },
+    {
+     "unit_id": "u3",
+     "description": "whether Charles Burnett and Frank R. Strayer are both African-Americans",
+     "necessary": true,
+     "expected_answer": "no",
+     "depends_on": [
+      "u1",
+      "u2"
+     ],
+     "support_sets": [
+      []
+     ]
+    }
+   ]
+  },
+  {
+   "sample_id": "hotpotqa_5a7a572e5542990783324f1c",
+   "status": "draft",
+   "notes": [
+    "Bridge in the source, but the question names May Sinclair (and her real name), so only the final hop remains: one necessary unit.",
+    "Stream of consciousness (narrative mode) sentence 0 restates the question's premise and is not support for the count."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "number of novels, short stories and poetry May Sinclair wrote",
+     "necessary": true,
+     "expected_answer": "two dozen",
+     "aliases": [
+      "about two dozen",
+      "24"
+     ],
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "May Sinclair",
+        0
+       ]
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "sample_id": "hotpotqa_5ab781f255429928e1fe3862",
+   "status": "draft",
+   "notes": [
+    "Comparison (yes/no 'same'): two fact units plus a conclusion unit."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "music genre of School of Fish",
+     "necessary": false,
+     "expected_answer": "alternative rock",
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "School of Fish",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u2",
+     "description": "music genre of The Commuters",
+     "necessary": false,
+     "expected_answer": "alternative rock",
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "The Commuters",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u3",
+     "description": "whether School of Fish and The Commuters performed music in the same genre",
+     "necessary": true,
+     "expected_answer": "yes",
+     "depends_on": [
+      "u1",
+      "u2"
+     ],
+     "support_sets": [
+      []
+     ]
+    }
+   ]
+  },
+  {
+   "sample_id": "hotpotqa_5ae1e7275542997f29b3c18b",
+   "status": "draft",
+   "notes": [
+    "Bridge: the video game (optional) then its developer (necessary).",
+    "Fallout Shelter sentence 0 names the same developer but for a different game; not used."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "video game in which Paul Eiding has the role of the Vault Tec Rep",
+     "necessary": false,
+     "expected_answer": "Fallout 4",
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Paul Eiding",
+        1
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u2",
+     "description": "company that developed {u1}",
+     "necessary": true,
+     "expected_answer": "Bethesda Game Studios",
+     "aliases": [
+      "Bethesda"
+     ],
+     "depends_on": [
+      "u1"
+     ],
+     "support_sets": [
+      [
+       [
+        "Fallout 4",
+        0
+       ]
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "sample_id": "hotpotqa_5a88b15b5542994846c1ceba",
+   "status": "draft",
+   "notes": [
+    "Comparison (shared nationality): two fact units plus a conclusion unit.",
+    "Team Sleep sentence 0 calls the group American, not Moreno himself; not used for u1."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "nationality of Chino Moreno",
+     "necessary": false,
+     "expected_answer": "American",
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Chino Moreno",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u2",
+     "description": "nationality of Needtobreathe",
+     "necessary": false,
+     "expected_answer": "American",
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Needtobreathe",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u3",
+     "description": "nationality shared by Chino Moreno and Needtobreathe",
+     "necessary": true,
+     "expected_answer": "American",
+     "depends_on": [
+      "u1",
+      "u2"
+     ],
+     "support_sets": [
+      []
+     ]
+    }
+   ]
+  }
+ ]
+}

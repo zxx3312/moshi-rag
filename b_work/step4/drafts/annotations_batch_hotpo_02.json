@@ -1,0 +1,1619 @@
+{
+ "annotation_version": "draft-1",
+ "drafted_by": "Claude subagent",
+ "worksheet": "batch_hotpo_02",
+ "records": [
+  {
+   "sample_id": "hotpotqa_5ae74ae95542997b22f6a688",
+   "status": "draft",
+   "notes": [
+    "Bridge: u1 finds the queen Velu Nachiyar came before, u2 confirms she was a leading figure of the 1857 rebellion.",
+    "Laxmibai Nagar sentences 1-2 say the Rani of Jhansi fought in the 1857 rebellion but not that she was a leading figure, so they are not alternative support for u2.",
+    "Aliases: Lakshmibai is the Rani of Jhansi's personal name (Rani of Jhansi sentence 0)."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "famous queen whom Rani Velu Nachiyar came before in fighting the British",
+     "necessary": false,
+     "expected_answer": "Rani of Jhansi",
+     "aliases": [
+      "Lakshmibai",
+      "Rani Lakshmibai",
+      "Lakshmibai, the Rani of Jhansi"
+     ],
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Velu Nachiyar",
+        1
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u2",
+     "description": "queen who was a leading figure of the Indian Rebellion of 1857, given {u1}",
+     "necessary": true,
+     "expected_answer": "Rani of Jhansi",
+     "aliases": [
+      "Lakshmibai",
+      "Rani Lakshmibai",
+      "Lakshmibai, the Rani of Jhansi"
+     ],
+     "depends_on": [
+      "u1"
+     ],
+     "support_sets": [
+      [
+       [
+        "Rani of Jhansi",
+        1
+       ]
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "sample_id": "hotpotqa_5ae266c35542996483e6499a",
+   "status": "draft",
+   "notes": [
+    "Comparison: two fact units plus a conclusion unit.",
+    "Fritillaria sentence 0 gives the range through 'a genus of Eurasian, North African, and North American plants'; Teucrium sentence 5 ('They are found all over the world') resolves 'They' through the document title.",
+    "Teucrium sentence 0 from the source supporting facts is not used: it states the family, not the range.",
+    "The conclusion is a deterministic comparison: a worldwide range contains the three regions listed for Fritillaria.",
+    "Trap: the 'larger range' sentences in mountain, camera and truck documents are unrelated."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "geographic range of the genus Fritillaria",
+     "necessary": false,
+     "expected_answer": "Eurasia, North Africa, and North America",
+     "aliases": [
+      "Eurasian, North African, and North American"
+     ],
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Fritillaria",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u2",
+     "description": "geographic range of the genus Teucrium",
+     "necessary": false,
+     "expected_answer": "worldwide",
+     "aliases": [
+      "all over the world"
+     ],
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Teucrium",
+        5
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u3",
+     "description": "which of Fritillaria and Teucrium has a larger range",
+     "necessary": true,
+     "expected_answer": "Teucrium",
+     "depends_on": [
+      "u1",
+      "u2"
+     ],
+     "support_sets": [
+      []
+     ]
+    }
+   ]
+  },
+  {
+   "sample_id": "hotpotqa_5add24625542994734353874",
+   "status": "draft",
+   "notes": [
+    "Bridge: u1 finds the sequel, u2 confirms Anne Archer starred in it.",
+    "Anne Archer sentence 0 from the source supporting facts is not used: it does not mention the film.",
+    "Patriot Games (film) sentence 1 states both the sequel relation and Anne Archer's role, so it supports u1 and u2; Anne Archer sentence 2 is alternative support for u2.",
+    "Trap: The Art of War (film) stars Anne Archer and has sequels, but is not a sequel to The Hunt for Red October."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "film that is a sequel to The Hunt for Red October",
+     "necessary": false,
+     "expected_answer": "Patriot Games",
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Patriot Games (film)",
+        1
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u2",
+     "description": "film starring Anne Archer that was a sequel to The Hunt for Red October, given {u1}",
+     "necessary": true,
+     "expected_answer": "Patriot Games",
+     "depends_on": [
+      "u1"
+     ],
+     "support_sets": [
+      [
+       [
+        "Patriot Games (film)",
+        1
+       ]
+      ],
+      [
+       [
+        "Anne Archer",
+        2
+       ]
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "sample_id": "hotpotqa_5a825f5955429954d2e2eb1c",
+   "status": "draft",
+   "notes": [
+    "Comparison (yes/no): two fact units plus a conclusion unit.",
+    "Hypoxis sentence 5 ('The genus is the largest of the Hypoxidaceae family') is alternative support for u1."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "family of the genus Hypoxis",
+     "necessary": false,
+     "expected_answer": "Hypoxidaceae",
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Hypoxis",
+        0
+       ]
+      ],
+      [
+       [
+        "Hypoxis",
+        5
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u2",
+     "description": "family of the genus Monarda",
+     "necessary": false,
+     "expected_answer": "Lamiaceae",
+     "aliases": [
+      "mint family"
+     ],
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Monarda",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u3",
+     "description": "whether Hypoxis and Monarda belong to the same family",
+     "necessary": true,
+     "expected_answer": "no",
+     "depends_on": [
+      "u1",
+      "u2"
+     ],
+     "support_sets": [
+      []
+     ]
+    }
+   ]
+  },
+  {
+   "sample_id": "hotpotqa_5a7a168a5542996a35c170c7",
+   "status": "draft",
+   "notes": [
+    "Bridge: the mother (optional) then her birth date (necessary).",
+    "Princess Stephanie of Windisch-Graetz sentence 0 also names Elisabeth Marie's parents, so it is alternative support for u1.",
+    "Stéphanie Windisch-Graetz sentence 1 names only the father and is not used.",
+    "Answer kept as '21 May 1864'; 'May 21, 1864' added as an alias."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "mother of Archduchess Elisabeth Marie of Austria",
+     "necessary": false,
+     "expected_answer": "Princess Stéphanie of Belgium",
+     "aliases": [
+      "Stéphanie of Belgium",
+      "Princess Stephanie of Belgium",
+      "Crown Princess Stéphanie"
+     ],
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Archduchess Elisabeth Marie of Austria",
+        0
+       ]
+      ],
+      [
+       [
+        "Princess Stephanie of Windisch-Graetz",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u2",
+     "description": "birth date of {u1}",
+     "necessary": true,
+     "expected_answer": "21 May 1864",
+     "aliases": [
+      "May 21, 1864"
+     ],
+     "depends_on": [
+      "u1"
+     ],
+     "support_sets": [
+      [
+       [
+        "Princess Stéphanie of Belgium",
+        0
+       ]
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "sample_id": "hotpotqa_5ae5397d55429960a22e0276",
+   "status": "draft",
+   "notes": [
+    "Comparison: one fact unit per player plus a conclusion unit naming the shared sport.",
+    "Alternative support for u1: 1978 New Zealand Open sentences 0+3 (a tennis tournament, Teltscher won its singles title) and 1981 Grand Marnier Tennis Games – Doubles sentence 0, whose document title names the tennis event.",
+    "Not used for u1: the Congoleum Classic, Birmingham Open, 1979 New Zealand Open and 1983 French Open mixed doubles sentences do not say tennis.",
+    "Anastasia Myskina sentences 1 and 2 call her a 'Russian female tennis player', so they are alternative support for u2. The Wismilak and J&S Cup sentences do not say tennis.",
+    "Rule question: whether a document title such as '1981 Grand Marnier Tennis Games – Doubles' may supply the sport for its sentence."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "sport Eliot Teltscher played",
+     "necessary": false,
+     "expected_answer": "tennis",
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Eliot Teltscher",
+        0
+       ]
+      ],
+      [
+       [
+        "1978 New Zealand Open",
+        0
+       ],
+       [
+        "1978 New Zealand Open",
+        3
+       ]
+      ],
+      [
+       [
+        "1981 Grand Marnier Tennis Games – Doubles",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u2",
+     "description": "sport Anastasia Myskina played",
+     "necessary": false,
+     "expected_answer": "tennis",
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Anastasia Myskina",
+        0
+       ]
+      ],
+      [
+       [
+        "Anastasia Myskina",
+        1
+       ]
+      ],
+      [
+       [
+        "Anastasia Myskina",
+        2
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u3",
+     "description": "sport that both Eliot Teltscher and Anastasia Myskina played",
+     "necessary": true,
+     "expected_answer": "tennis",
+     "depends_on": [
+      "u1",
+      "u2"
+     ],
+     "support_sets": [
+      []
+     ]
+    }
+   ]
+  },
+  {
+   "sample_id": "hotpotqa_5ab679e1554299110f219a16",
+   "status": "draft",
+   "notes": [
+    "Bridge: the station (optional) then what it also broadcasts on (necessary).",
+    "Graham Gold sentence 0 from the source supporting facts is not used: it does not name the station. Sentence 1 states the Friday-night broadcasts on Kiss.",
+    "Kiss (UK radio station) sentence 0 ('broadcasts on FM and National DAB') is alternative support for u2; 'DAB' added as an alias."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "radio station on which Graham Gold's sets broadcast live on Friday nights",
+     "necessary": false,
+     "expected_answer": "Kiss",
+     "aliases": [
+      "Kiss (UK radio station)",
+      "Kiss FM"
+     ],
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Graham Gold",
+        1
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u2",
+     "description": "what {u1} also broadcasts on around the UK",
+     "necessary": true,
+     "expected_answer": "DAB Digital Radio",
+     "aliases": [
+      "DAB",
+      "DAB digital radio",
+      "National DAB"
+     ],
+     "depends_on": [
+      "u1"
+     ],
+     "support_sets": [
+      [
+       [
+        "Kiss (UK radio station)",
+        1
+       ]
+      ],
+      [
+       [
+        "Kiss (UK radio station)",
+        0
+       ]
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "sample_id": "hotpotqa_5abcff15554299114383a1c2",
+   "status": "draft",
+   "notes": [
+    "Comparison (yes/no): two fact units plus a conclusion unit.",
+    "Trap: Inside Job (1946 film) was directed by Jean Yarbrough, but it is a crime film noir, not the documentary."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "director of the documentary Powaqqatsi",
+     "necessary": false,
+     "expected_answer": "Godfrey Reggio",
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Powaqqatsi",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u2",
+     "description": "director of the documentary Inside Job",
+     "necessary": false,
+     "expected_answer": "Charles H. Ferguson",
+     "aliases": [
+      "Charles Ferguson"
+     ],
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Inside Job (2010 film)",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u3",
+     "description": "whether Powaqqatsi and Inside Job were directed by the same person",
+     "necessary": true,
+     "expected_answer": "no",
+     "depends_on": [
+      "u1",
+      "u2"
+     ],
+     "support_sets": [
+      []
+     ]
+    }
+   ]
+  },
+  {
+   "sample_id": "hotpotqa_5a7a51485542990783324f0e",
+   "status": "draft",
+   "notes": [
+    "Bridge: u1 finds an actress in the film, u2 confirms the April 1927 birth date.",
+    "u1 is not unique on its own (the film also stars Carol Lynley and Imogene Coca); the answer is fixed jointly with u2, as in step3 Q13.",
+    "Trap: Robert Lansing was in the film but is a man born June 5, 1928."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "actress who starred in Under the Yum Yum Tree",
+     "necessary": false,
+     "expected_answer": "Edie Adams",
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Under the Yum Yum Tree",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u2",
+     "description": "Under the Yum Yum Tree actress born in April 1927, given {u1}",
+     "necessary": true,
+     "expected_answer": "Edie Adams",
+     "aliases": [
+      "Edith Elizabeth Enke"
+     ],
+     "depends_on": [
+      "u1"
+     ],
+     "support_sets": [
+      [
+       [
+        "Edie Adams",
+        0
+       ]
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "sample_id": "hotpotqa_5ac149705542994d76dccdd0",
+   "status": "draft",
+   "notes": [
+    "Comparison: two founding years plus a conclusion unit.",
+    "Glamour sentence 1 gives 1939 (founded and first published); W sentence 1 gives 1971 (created).",
+    "Distractors use 'come first' in unrelated senses."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "year Glamour magazine was founded",
+     "necessary": false,
+     "expected_answer": "1939",
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Glamour (magazine)",
+        1
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u2",
+     "description": "year W magazine was founded",
+     "necessary": false,
+     "expected_answer": "1971",
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "W (magazine)",
+        1
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u3",
+     "description": "which of Glamour and W came first",
+     "necessary": true,
+     "expected_answer": "Glamour",
+     "aliases": [
+      "Glamour magazine"
+     ],
+     "depends_on": [
+      "u1",
+      "u2"
+     ],
+     "support_sets": [
+      []
+     ]
+    }
+   ]
+  },
+  {
+   "sample_id": "hotpotqa_5ac1334b55429964131be184",
+   "status": "draft",
+   "notes": [
+    "Bridge: u1 finds the author of the novel, u2 confirms she is the American author known for Outlander.",
+    "The question truncates the title to 'A Breath of Snow'; the document is A Breath of Snow and Ashes.",
+    "Jamie Fraser (character) sentence 0 ('the Outlander series ... by American author Diana Gabaldon') is alternative support for u2. The Lord John documents do not say she is American and are not used."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "author of A Breath of Snow, the sixth novel of the Outlander series",
+     "necessary": false,
+     "expected_answer": "Diana Gabaldon",
+     "aliases": [
+      "Diana J. Gabaldon"
+     ],
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "A Breath of Snow and Ashes",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u2",
+     "description": "American author known for the Outlander series of novels, given {u1}",
+     "necessary": true,
+     "expected_answer": "Diana Gabaldon",
+     "aliases": [
+      "Diana J. Gabaldon"
+     ],
+     "depends_on": [
+      "u1"
+     ],
+     "support_sets": [
+      [
+       [
+        "Diana Gabaldon",
+        0
+       ]
+      ],
+      [
+       [
+        "Jamie Fraser (character)",
+        0
+       ]
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "sample_id": "hotpotqa_5adbf7d855429947ff173879",
+   "status": "draft",
+   "notes": [
+    "Comparison: two species counts plus a conclusion unit.",
+    "Trap: the 'group contains ... species' sentences in Chrysidinae, Piperaceae, Swiftlet and other distractors are unrelated."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "number of species of willow",
+     "necessary": false,
+     "expected_answer": "around 400",
+     "aliases": [
+      "400"
+     ],
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Willow",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u2",
+     "description": "number of species in the genus Stipa",
+     "necessary": false,
+     "expected_answer": "around 300",
+     "aliases": [
+      "300"
+     ],
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Stipa",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u3",
+     "description": "which of Willow and Stipa contains more species",
+     "necessary": true,
+     "expected_answer": "Willow",
+     "aliases": [
+      "Willows",
+      "Salix"
+     ],
+     "depends_on": [
+      "u1",
+      "u2"
+     ],
+     "support_sets": [
+      []
+     ]
+    }
+   ]
+  },
+  {
+   "sample_id": "hotpotqa_5ab42d235542991751b4d6d1",
+   "status": "draft",
+   "notes": [
+    "Bridge, three hops: Minton's better-known name, the Walt Disney Television movie, its director.",
+    "u2 needs Double Agent sentence 0 (made for TV film from Walt Disney Television) together with sentence 2 (Big John Studd in the cast), because the question describes the film as a Walt Disney Television movie (as in step3 Q13, the qualifier must be stated)."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "name by which John William Minton is better known",
+     "necessary": false,
+     "expected_answer": "Big John Studd",
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Big John Studd",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u2",
+     "description": "Walt Disney Television movie in which {u1} was a cast member",
+     "necessary": false,
+     "expected_answer": "Double Agent",
+     "aliases": [
+      "Double Agent (1987 film)"
+     ],
+     "depends_on": [
+      "u1"
+     ],
+     "support_sets": [
+      [
+       [
+        "Double Agent (1987 film)",
+        0
+       ],
+       [
+        "Double Agent (1987 film)",
+        2
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u3",
+     "description": "director of {u2}",
+     "necessary": true,
+     "expected_answer": "Michael Vejar",
+     "depends_on": [
+      "u2"
+     ],
+     "support_sets": [
+      [
+       [
+        "Double Agent (1987 film)",
+        0
+       ]
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "sample_id": "hotpotqa_5adea8a655429939a52fe92c",
+   "status": "draft",
+   "notes": [
+    "Comparison (yes/no): two fact units plus a conclusion unit.",
+    "Alexander Vvedensky (poet) sentence 2 ('writers such as Andrei Platonov') is alternative support for u1.",
+    "u2 treats 'playwright' as stating 'writer' (a playwright is a writer of plays). The Zoo Story sentence 0 and Edward F. Albee Foundation sentence 0 also call Albee a playwright and are alternative support.",
+    "Not used: sentences that only say a work is 'by' Platonov or Albee (The Cow, Three Brothers, The Lonely Voice of Man, At Home at the Zoo); authorship of a work is not the occupation label."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "whether Andrei Platonov is a writer",
+     "necessary": false,
+     "expected_answer": "yes",
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Andrei Platonov",
+        0
+       ]
+      ],
+      [
+       [
+        "Alexander Vvedensky (poet)",
+        2
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u2",
+     "description": "whether Edward Albee is a writer",
+     "necessary": false,
+     "expected_answer": "yes",
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Edward Albee",
+        0
+       ]
+      ],
+      [
+       [
+        "The Zoo Story",
+        0
+       ]
+      ],
+      [
+       [
+        "Edward F. Albee Foundation",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u3",
+     "description": "whether Andrei Platonov and Edward Albee are both writers",
+     "necessary": true,
+     "expected_answer": "yes",
+     "depends_on": [
+      "u1",
+      "u2"
+     ],
+     "support_sets": [
+      []
+     ]
+    }
+   ]
+  },
+  {
+   "sample_id": "hotpotqa_5abdc7fb55429965af743e3a",
+   "status": "draft",
+   "notes": [
+    "Bridge: the statesman (optional) then the office of which he was Britain's oldest holder (necessary).",
+    "u1 needs John Ramsay sentence 0 (full name John William Maule Ramsay) with sentence 1 (Secretary for Scotland in Gladstone's administration), and William Ewart Gladstone sentence 0 for the 'British Liberal statesman' qualifier.",
+    "Gladstone sentence 1 (Prime Minister four times) does not say oldest and is not used for u2.",
+    "Trap: Herbert Gladstone and Edward Grey are also described as British Liberal statesmen."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "British Liberal statesman in whose administration John William Maule Ramsay served as Secretary for Scotland",
+     "necessary": false,
+     "expected_answer": "William Ewart Gladstone",
+     "aliases": [
+      "Gladstone",
+      "William Gladstone"
+     ],
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "John Ramsay, 13th Earl of Dalhousie",
+        0
+       ],
+       [
+        "John Ramsay, 13th Earl of Dalhousie",
+        1
+       ],
+       [
+        "William Ewart Gladstone",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u2",
+     "description": "office of which {u1} was Britain's oldest holder",
+     "necessary": true,
+     "expected_answer": "Prime Minister",
+     "aliases": [
+      "Britain's oldest Prime Minister",
+      "PM"
+     ],
+     "depends_on": [
+      "u1"
+     ],
+     "support_sets": [
+      [
+       [
+        "William Ewart Gladstone",
+        2
+       ]
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "sample_id": "hotpotqa_5ae0c1c25542993d6555ec43",
+   "status": "draft",
+   "notes": [
+    "Comparison (yes/no): two fact units plus a conclusion unit.",
+    "u1: Timo Kotipelto sentence 0 gives only a Finnish birthplace and a Finnish band, which is not support. Fourth Dimension (Stratovarius album) sentence 1 says the album features Kotipelto and is the last Stratovarius album 'featuring an all-Finnish line-up'; it is used as the only support. Flag for review: this is entailment within one sentence, not a direct statement of his nationality.",
+    "Kotipelto sentence 1 ('their native Finland') is about the band, not the person, and is not used.",
+    "u2 uses the omission exception (labeling_guide.md 1.1, Exception 2): John Waite sentence 0 is a defining description listing 'English'; no sentence calls him Finnish.",
+    "Timo Kotipelto sentence 0 from the source supporting facts is dropped."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "whether Timo Kotipelto is Finnish",
+     "necessary": false,
+     "expected_answer": "yes",
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Fourth Dimension (Stratovarius album)",
+        1
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u2",
+     "description": "whether John Waite is Finnish",
+     "necessary": false,
+     "expected_answer": "no",
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "John Waite",
+        0
+       ]
+      ]
+     ],
+     "by_omission": true
+    },
+    {
+     "unit_id": "u3",
+     "description": "whether Timo Kotipelto and John Waite are both Finnish",
+     "necessary": true,
+     "expected_answer": "no",
+     "depends_on": [
+      "u1",
+      "u2"
+     ],
+     "support_sets": [
+      []
+     ]
+    }
+   ]
+  },
+  {
+   "sample_id": "hotpotqa_5ab4da805542996a3a969fd8",
+   "status": "draft",
+   "notes": [
+    "Bridge: the boxer (optional) then the year his IBO title ended (necessary).",
+    "u1 needs Joe Smith Jr. sentence 1 (2016 knockout over Fonfara) with Andrzej Fonfara sentence 0 for the 'Polish professional boxer' qualifier.",
+    "Trap: Glen Johnson and Umar Salamov also held IBO light heavyweight titles."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "Polish professional boxer who lost to Joe Smith Jr. by knockout in 2016",
+     "necessary": false,
+     "expected_answer": "Andrzej Fonfara",
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Joe Smith Jr.",
+        1
+       ],
+       [
+        "Andrzej Fonfara",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u2",
+     "description": "year until which {u1} held the IBO light heavyweight title",
+     "necessary": true,
+     "expected_answer": "2013",
+     "depends_on": [
+      "u1"
+     ],
+     "support_sets": [
+      [
+       [
+        "Andrzej Fonfara",
+        0
+       ]
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "sample_id": "hotpotqa_5ae015e0554299603e4183e6",
+   "status": "reject",
+   "replacement_sample_id": "hotpotqa_5ab3c3b155429969a97a81b6",
+   "notes": [
+    "Reject: the context never states the running time of The World Without US, so the comparison cannot be resolved from the supplied evidence.",
+    "Replaced by reserve hotpotqa_5ab3c3b155429969a97a81b6, which keeps the HotpotQA comparison/train stratum and has explicit release years for both films.",
+    "Comparison: two lengths plus a conclusion unit.",
+    "no explicit support: u1, no document gives the length of The World Without US (The World Without US sentences 0-1 and Mitch Anderson (director) give creators, year and topic only).",
+    "Because this is a value comparison, presupposition does not apply; the conclusion can never be SUPPORTED from these documents. Kept as draft per the instructions.",
+    "expected_answer 'unknown' marks the unsupported unit: no document gives its value.",
+    "Trap: The World Without Us (book by Alan Weisman) is a different work."
+   ],
+   "units": []
+  },
+  {
+   "sample_id": "hotpotqa_5a8715fb5542991e771816bb",
+   "status": "draft",
+   "notes": [
+    "Bridge: the saint (optional) then her birth year (necessary).",
+    "A Time for Miracles sentence 4 (Kate Mulgrew as Elizabeth Seton) does not say the film chronicles her life story and is not used.",
+    "Emmitsburg, Maryland sentence 2 calls Seton the first native-born US saint but gives no birth year."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "America's first native born saint whose life story A Time for Miracles chronicles",
+     "necessary": false,
+     "expected_answer": "Elizabeth Ann Seton",
+     "aliases": [
+      "Elizabeth Ann Bayley Seton",
+      "Elizabeth Seton"
+     ],
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "A Time for Miracles",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u2",
+     "description": "birth year of {u1}",
+     "necessary": true,
+     "expected_answer": "1774",
+     "depends_on": [
+      "u1"
+     ],
+     "support_sets": [
+      [
+       [
+        "Elizabeth Ann Seton",
+        0
+       ]
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "sample_id": "hotpotqa_5a81d03d55429903bc27b9c7",
+   "status": "draft",
+   "notes": [
+    "Comparison (yes/no): two fact units plus a conclusion unit.",
+    "u1: Gurinder Chadha sentence 0 calls her an 'English film director'.",
+    "u2 uses the omission exception (labeling_guide.md 1.1, Exception 2): Hou Hsiao-hsien sentence 0 is a defining description listing 'Taiwanese'; no sentence says he is from England.",
+    "'Taiwanese director Hou' in film documents (Dust in the Wind, The Assassin, Cute Girl) are not defining descriptions of Hou and are not used for the omission."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "whether Gurinder Chadha is from England",
+     "necessary": false,
+     "expected_answer": "yes",
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Gurinder Chadha",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u2",
+     "description": "whether Hou Hsiao-hsien is from England",
+     "necessary": false,
+     "expected_answer": "no",
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Hou Hsiao-hsien",
+        0
+       ]
+      ]
+     ],
+     "by_omission": true
+    },
+    {
+     "unit_id": "u3",
+     "description": "whether Gurinder Chadha and Hou Hsiao-hsien are both from England",
+     "necessary": true,
+     "expected_answer": "no",
+     "depends_on": [
+      "u1",
+      "u2"
+     ],
+     "support_sets": [
+      []
+     ]
+    }
+   ]
+  },
+  {
+   "sample_id": "hotpotqa_5ac3aa9955429939154138a5",
+   "status": "draft",
+   "notes": [
+    "Bridge: the franchise (optional) then the Chinese novel that inspired it (necessary).",
+    "Trap: Lucario (Pokémon) also lists Schemmel as a voice actor, but not as his most notable role."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "franchise of Sean Schemmel's most notable voice role",
+     "necessary": false,
+     "expected_answer": "Dragon Ball",
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Sean Schemmel",
+        1
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u2",
+     "description": "Chinese novel that inspired {u1}",
+     "necessary": true,
+     "expected_answer": "Journey to the West",
+     "depends_on": [
+      "u1"
+     ],
+     "support_sets": [
+      [
+       [
+        "Dragon Ball",
+        2
+       ]
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "sample_id": "hotpotqa_5a74797655429929fddd843f",
+   "status": "draft",
+   "notes": [
+    "Comparison between named candidates with presupposition (unit_schema.md 5.6, rule 7a): only Papa Murphy's merger is stated.",
+    "no explicit support: u2, no sentence says how Hungry Howie's Pizza was created; Hungry Howie's Pizza sentence 0 from the source supporting facts does not state it and is dropped.",
+    "u3 keeps support_sets [[]] and has presupposition_sets = u1's support sets.",
+    "Source answer is the Papa Murphy's merger sentence, not a name; expected answer normalized to 'Papa Murphy's'. Papa Murphy's sentence 0 is dropped (it does not mention the merger)."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "whether Papa Murphy's was created by a company merger",
+     "necessary": false,
+     "expected_answer": "yes",
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Papa Murphy's",
+        1
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u2",
+     "description": "whether Hungry Howie's Pizza was created by a company merger",
+     "necessary": false,
+     "expected_answer": "no",
+     "depends_on": [],
+     "support_sets": []
+    },
+    {
+     "unit_id": "u3",
+     "description": "which of Papa Murphy's and Hungry Howie's Pizza was created by a company merger",
+     "necessary": true,
+     "expected_answer": "Papa Murphy's",
+     "depends_on": [
+      "u1",
+      "u2"
+     ],
+     "support_sets": [
+      []
+     ],
+     "presupposition_sets": [
+      [
+       [
+        "Papa Murphy's",
+        1
+       ]
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "sample_id": "hotpotqa_5ae1fe0b5542997283cd2317",
+   "status": "draft",
+   "notes": [
+    "Bridge: the city (optional) then its county (necessary).",
+    "David B. Williams (academic) sentence 1 ('the University of Alabama in Huntsville in Huntsville, Alabama') is alternative support for u1.",
+    "Huntsville, Alabama sentence 1 ('county seat of Madison County') is alternative support for u2.",
+    "Caveat: Huntsville sentence 2 says the city extends into Limestone County; the answer follows sentence 0 ('primarily in Madison County') and the source gold.",
+    "Not used for u1: Cummings Research Park sentences (the park is in Huntsville and UAH is its anchor tenant), which needs an inference."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "city in which the University of Alabama in Huntsville is located",
+     "necessary": false,
+     "expected_answer": "Huntsville, Alabama",
+     "aliases": [
+      "Huntsville"
+     ],
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "University of Alabama in Huntsville",
+        0
+       ]
+      ],
+      [
+       [
+        "David B. Williams (academic)",
+        1
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u2",
+     "description": "county in which {u1} is located",
+     "necessary": true,
+     "expected_answer": "Madison County",
+     "aliases": [
+      "Madison"
+     ],
+     "depends_on": [
+      "u1"
+     ],
+     "support_sets": [
+      [
+       [
+        "Huntsville, Alabama",
+        0
+       ]
+      ],
+      [
+       [
+        "Huntsville, Alabama",
+        1
+       ]
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "sample_id": "hotpotqa_5ac296a4554299218029daac",
+   "status": "reject",
+   "notes": [
+    "Reject: ill-formed question. The question text embeds its own answer ('A1: Svetlana Kuznetsova') and asks about 'ranked matches' won, which no document states for either player.",
+    "The source supporting facts (Kuznetsova's Grand Slam finals, Benneteau never winning a title) compare titles, not ranked matches, so no fact unit matching the question can be supported."
+   ],
+   "units": []
+  },
+  {
+   "sample_id": "hotpotqa_5ae234405542992decbdcc5a",
+   "status": "draft",
+   "notes": [
+    "Bridge: the rail network of the Tin Yuet stop (optional) then the city it serves (necessary).",
+    "Tin Yuet Stop sentence 1 describes the stop the question already names and is not needed for u1.",
+    "Alternative support for u2: Sha Tin Station sentence 0 ('Hong Kong's Mass Transit Railway (MTR) system') and Fo Tan Station sentence 0 ('the Mass Transit Railway (MTR) system in Hong Kong').",
+    "Not used: Tin Yat Stop and Tin Tsz Stop sentence 1 place other stops in Hong Kong, not Tin Yuet; MTR sentence 1 names Hong Kong Island, Kowloon and the New Territories, not the city."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "rail network that the Tin Yuet stop belongs to",
+     "necessary": false,
+     "expected_answer": "MTR Light Rail",
+     "aliases": [
+      "MTR",
+      "Mass Transit Railway",
+      "Light Rail"
+     ],
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Tin Yuet Stop",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u2",
+     "description": "city served by {u1}",
+     "necessary": true,
+     "expected_answer": "Hong Kong",
+     "depends_on": [
+      "u1"
+     ],
+     "support_sets": [
+      [
+       [
+        "MTR",
+        0
+       ]
+      ],
+      [
+       [
+        "Sha Tin Station",
+        0
+       ]
+      ],
+      [
+       [
+        "Fo Tan Station",
+        0
+       ]
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "sample_id": "hotpotqa_5a88ec08554299206df2b3ad",
+   "status": "draft",
+   "notes": [
+    "Comparison between named candidates with presupposition (unit_schema.md 5.6, rule 7a): only Polygala's common names are stated.",
+    "no explicit support: u2, Nothofagus sentence 0 gives 'southern beeches'; common names are not an attribute covered by the omission exception, so 'not milkworts' is unsupported.",
+    "u3 keeps support_sets [[]] and has presupposition_sets = u1's support sets.",
+    "Polygala sentences 0 and 3 and Nothofagus sentence 0 from the source supporting facts are dropped (they do not state the common names asked about).",
+    "Not used for u1: Polygala lutea and Polygala amarella sentence 0 name single species 'milkwort', not the genus."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "whether Polygala is commonly known as milkworts or snakeroots",
+     "necessary": false,
+     "expected_answer": "yes",
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Polygala",
+        1
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u2",
+     "description": "whether Nothofagus is commonly known as milkworts or snakeroots",
+     "necessary": false,
+     "expected_answer": "no",
+     "depends_on": [],
+     "support_sets": []
+    },
+    {
+     "unit_id": "u3",
+     "description": "which of Nothofagus and Polygala is commonly known as milkworts or snakeroots",
+     "necessary": true,
+     "expected_answer": "Polygala",
+     "depends_on": [
+      "u1",
+      "u2"
+     ],
+     "support_sets": [
+      []
+     ],
+     "presupposition_sets": [
+      [
+       [
+        "Polygala",
+        1
+       ]
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "sample_id": "hotpotqa_5adcdfe05542992c1e3a2448",
+   "status": "draft",
+   "notes": [
+    "Bridge: the pre-World War I hobby (optional) then the Minnesota town hosting a weekly event of it (necessary).",
+    "u1 is identified jointly with u2: Dirt track racing sentence 1 says it began before World War I.",
+    "u2 needs Ogilvie Raceway sentences 0 (dirt clay oval race track near Ogilvie, Minnesota), 1 (Ogilvie is a town) and 2 (weekly racing program) together.",
+    "Caveats: the question calls racing a 'hobby', and the track is 'near' the town rather than in it; a dirt oval track's racing program is read as dirt track racing. Follows the source gold. Flag for review.",
+    "Aliases include the source surface form 'town Ogilvie'."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "pre-World War I hobby on which the weekly event is based",
+     "necessary": false,
+     "expected_answer": "dirt track racing",
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Dirt track racing",
+        1
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u2",
+     "description": "town in Minnesota that hosts a weekly {u1} event",
+     "necessary": true,
+     "expected_answer": "Ogilvie",
+     "aliases": [
+      "Ogilvie, Minnesota",
+      "town Ogilvie"
+     ],
+     "depends_on": [
+      "u1"
+     ],
+     "support_sets": [
+      [
+       [
+        "Ogilvie Raceway",
+        0
+       ],
+       [
+        "Ogilvie Raceway",
+        1
+       ],
+       [
+        "Ogilvie Raceway",
+        2
+       ]
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "sample_id": "hotpotqa_5ae143aa55429920d523435d",
+   "status": "draft",
+   "notes": [
+    "Comparison (yes/no): two fact units plus a conclusion unit.",
+    "u1: Skunk Anansie sentence 0 and Hedonism (Just Because You Feel Good) sentence 0 say 'British'; Skunk Anansie discography sentence 0 says 'English'. These do not conflict (England is part of the UK), so all are support, with British/English forms in aliases.",
+    "Not used: Brazen (Weep) sentence 2 ('their home country') and UK chart sentences, which need an inference."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "country Skunk Anansie is from",
+     "necessary": false,
+     "expected_answer": "United Kingdom",
+     "aliases": [
+      "UK",
+      "Britain",
+      "British",
+      "England",
+      "English"
+     ],
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Skunk Anansie",
+        0
+       ]
+      ],
+      [
+       [
+        "Hedonism (Just Because You Feel Good)",
+        0
+       ]
+      ],
+      [
+       [
+        "Skunk Anansie discography",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u2",
+     "description": "country Anberlin is from",
+     "necessary": false,
+     "expected_answer": "United States",
+     "aliases": [
+      "US",
+      "USA",
+      "American"
+     ],
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "Anberlin",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u3",
+     "description": "whether Skunk Anansie and Anberlin are from the same country",
+     "necessary": true,
+     "expected_answer": "no",
+     "depends_on": [
+      "u1",
+      "u2"
+     ],
+     "support_sets": [
+      []
+     ]
+    }
+   ]
+  },
+  {
+   "sample_id": "hotpotqa_5ade960d554299728e26c747",
+   "status": "draft",
+   "notes": [
+    "Bridge: the top scorer (optional) then his nationality (necessary).",
+    "Trap: 2011-12 and 2010-11 Primeira Liga give other top scorers."
+   ],
+   "units": [
+    {
+     "unit_id": "u1",
+     "description": "top scorer of the 2012–13 Primeira Liga",
+     "necessary": false,
+     "expected_answer": "Jackson Martínez",
+     "aliases": [
+      "Jackson Martinez",
+      "Jackson Arley Martínez Valencia"
+     ],
+     "depends_on": [],
+     "support_sets": [
+      [
+       [
+        "2012–13 Primeira Liga",
+        4
+       ]
+      ]
+     ]
+    },
+    {
+     "unit_id": "u2",
+     "description": "nationality of {u1}",
+     "necessary": true,
+     "expected_answer": "Colombian",
+     "aliases": [
+      "Colombia"
+     ],
+     "depends_on": [
+      "u1"
+     ],
+     "support_sets": [
+      [
+       [
+        "Jackson Martínez",
+        0
+       ]
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "sample_id": "hotpotqa_5add999a5542997dc7907006",
+   "status": "reject",
+   "replacement_sample_id": "hotpotqa_5ae29b615542992decbdcd4f",
+   "notes": [
+    "Reject: the context never states the length of Glenn Danzig's music career, so the comparison cannot be resolved from the supplied evidence.",
+    "Replaced by reserve hotpotqa_5ae29b615542992decbdcd4f, which keeps the HotpotQA comparison/dev stratum and has explicit evidence for both compared country values.",
+    "Comparison: two career lengths plus a conclusion unit.",
+    "u1: Stevie Ray Vaughan sentence 1 gives a 'mainstream career spanning seven years'. Sentence 2 from the source supporting facts does not state a length and is dropped.",
+    "no explicit support: u2, no document gives the length of Glenn Danzig's music career (Glenn Danzig sentences 0-2 give birth date, bands and businesses, no dates for the career). Sentences 0 and 2 from the source supporting facts are dropped.",
+    "Because this is a value comparison, presupposition does not apply; the conclusion can never be SUPPORTED from these documents. Kept as draft per the instructions.",
+    "expected_answer 'unknown' marks the unsupported unit: no document gives its value."
+   ],
+   "units": []
+  }
+ ]
+}

@@ -1,0 +1,1777 @@
+{
+  "annotation_version": "draft-1",
+  "drafted_by": "Claude subagent",
+  "worksheet": "batch_2wiki_01",
+  "records": [
+    {
+      "sample_id": "2wikimultihopqa_9be7c0dc088f11ebbd72ac1f6bf848b6",
+      "status": "draft",
+      "notes": [
+        "Bridge comparison: director and birth date per film, then a conclusion comparing the birth dates.",
+        "Robin Campillo sentence 1 ('known for his work on ... They Came Back') excluded from u1: it does not state the director role.",
+        "Captain Scarlett sentence 0 calls the film American; not used for anything about the director."
+      ],
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "director of film They Came Back",
+          "necessary": false,
+          "expected_answer": "Robin Campillo",
+          "depends_on": [],
+          "support_sets": [
+            [
+              [
+                "They Came Back",
+                0
+              ]
+            ]
+          ]
+        },
+        {
+          "unit_id": "u2",
+          "description": "date of birth of {u1}",
+          "necessary": false,
+          "expected_answer": "16 August 1962",
+          "depends_on": [
+            "u1"
+          ],
+          "support_sets": [
+            [
+              [
+                "Robin Campillo",
+                0
+              ]
+            ]
+          ]
+        },
+        {
+          "unit_id": "u3",
+          "description": "director of film Captain Scarlett",
+          "necessary": false,
+          "expected_answer": "Thomas Carr",
+          "depends_on": [],
+          "support_sets": [
+            [
+              [
+                "Captain Scarlett",
+                0
+              ]
+            ]
+          ]
+        },
+        {
+          "unit_id": "u4",
+          "description": "date of birth of {u3}",
+          "necessary": false,
+          "expected_answer": "July 4, 1907",
+          "depends_on": [
+            "u3"
+          ],
+          "support_sets": [
+            [
+              [
+                "Thomas Carr (director)",
+                0
+              ]
+            ]
+          ]
+        },
+        {
+          "unit_id": "u5",
+          "description": "which of the two films has the older director",
+          "necessary": true,
+          "expected_answer": "Captain Scarlett",
+          "depends_on": [
+            "u2",
+            "u4"
+          ],
+          "support_sets": [
+            []
+          ]
+        }
+      ]
+    },
+    {
+      "sample_id": "2wikimultihopqa_d351b58f088d11ebbd70ac1f6bf848b6",
+      "status": "draft",
+      "notes": [
+        "Comparison (yes/no): country of origin of each film, then a conclusion unit.",
+        "no explicit support: u1 (Go Quiet = Iceland). Go Quiet sentence 2 (supporting fact) says the film was filmed in Reykjavik and shows New Year's Eve in Iceland; filming location is not country of origin. No other document states it. u3 therefore cannot become SUPPORTED.",
+        "u2: Five for Hell sentence 0 ('a 1969 Italian ... war film') states the film's country of origin; normalized to Italy, source form 'Italian' kept as alias."
+      ],
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "country of origin of Go Quiet",
+          "necessary": false,
+          "expected_answer": "Iceland",
+          "aliases": [
+            "Icelandic"
+          ],
+          "depends_on": [],
+          "support_sets": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "country of origin of Five for Hell",
+          "necessary": false,
+          "expected_answer": "Italy",
+          "aliases": [
+            "Italian"
+          ],
+          "depends_on": [],
+          "support_sets": [
+            [
+              [
+                "Five for Hell",
+                0
+              ]
+            ]
+          ]
+        },
+        {
+          "unit_id": "u3",
+          "description": "whether Go Quiet and Five for Hell are from the same country",
+          "necessary": true,
+          "expected_answer": "no",
+          "depends_on": [
+            "u1",
+            "u2"
+          ],
+          "support_sets": [
+            []
+          ]
+        }
+      ]
+    },
+    {
+      "sample_id": "2wikimultihopqa_f0864eb00bdc11eba7f7acde48001122",
+      "status": "draft",
+      "notes": [
+        "Bridge (compositional): director (optional) then date of death (necessary).",
+        "Arthur Hoerl sentence 7 ('directed four films between 1932 and 1934') does not name the film; not used for u1."
+      ],
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "director of film The Shadow Laughs",
+          "necessary": false,
+          "expected_answer": "Arthur Hoerl",
+          "depends_on": [],
+          "support_sets": [
+            [
+              [
+                "The Shadow Laughs (film)",
+                0
+              ]
+            ]
+          ]
+        },
+        {
+          "unit_id": "u2",
+          "description": "date of death of {u1}",
+          "necessary": true,
+          "expected_answer": "February 6, 1968",
+          "depends_on": [
+            "u1"
+          ],
+          "support_sets": [
+            [
+              [
+                "Arthur Hoerl",
+                0
+              ]
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "sample_id": "2wikimultihopqa_481d8b620baf11ebab90acde48001122",
+      "status": "draft",
+      "notes": [
+        "Bridge (inference): Catherine's spouse (optional) then his mother = her mother-in-law (necessary).",
+        "Stefan Dragutin sentence 4 ('Bela IV of Hungary who was the grandfather of Dragutin's wife, Catherine') added as alternative support for u1.",
+        "Document title 'Stefan Dragutin' differs from the triple subject '\"Stefan\" Dragutin' and the question-side form 'Stephen Dragutin'; both forms kept as aliases."
+      ],
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "spouse of Catherine of Hungary, Queen of Serbia",
+          "necessary": false,
+          "expected_answer": "Stefan Dragutin",
+          "aliases": [
+            "Stephen Dragutin",
+            "Stephen Dragutin of Serbia",
+            "Dragutin"
+          ],
+          "depends_on": [],
+          "support_sets": [
+            [
+              [
+                "Catherine of Hungary, Queen of Serbia",
+                1
+              ]
+            ],
+            [
+              [
+                "Stefan Dragutin",
+                4
+              ]
+            ]
+          ]
+        },
+        {
+          "unit_id": "u2",
+          "description": "mother of {u1}, Catherine of Hungary's mother-in-law",
+          "necessary": true,
+          "expected_answer": "Helen of Anjou",
+          "depends_on": [
+            "u1"
+          ],
+          "support_sets": [
+            [
+              [
+                "Stefan Dragutin",
+                3
+              ]
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "sample_id": "2wikimultihopqa_e4fbf9c1088311ebbd6dac1f6bf848b6",
+      "status": "draft",
+      "notes": [
+        "Bridge comparison (yes/no): director and country descriptor per film, then a conclusion unit.",
+        "u4: Robert G. Vignola sentence 0 says 'Italian-born American'; only American is stated as a country descriptor. The triple 'country of citizenship Italian' is not stated in the text (Italian-born is a birthplace), so it is not used. Both directors share American, so the answer yes holds either way.",
+        "The film sentences call both films American; not used for the directors' country."
+      ],
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "director of film One Exciting Week",
+          "necessary": false,
+          "expected_answer": "William Beaudine",
+          "aliases": [
+            "William Washington Beaudine"
+          ],
+          "depends_on": [],
+          "support_sets": [
+            [
+              [
+                "One Exciting Week",
+                0
+              ]
+            ]
+          ]
+        },
+        {
+          "unit_id": "u2",
+          "description": "country descriptor of {u1}",
+          "necessary": false,
+          "expected_answer": "American",
+          "depends_on": [
+            "u1"
+          ],
+          "support_sets": [
+            [
+              [
+                "William Beaudine",
+                0
+              ]
+            ]
+          ]
+        },
+        {
+          "unit_id": "u3",
+          "description": "director of film The Woman God Changed",
+          "necessary": false,
+          "expected_answer": "Robert G. Vignola",
+          "depends_on": [],
+          "support_sets": [
+            [
+              [
+                "The Woman God Changed",
+                0
+              ]
+            ]
+          ]
+        },
+        {
+          "unit_id": "u4",
+          "description": "country descriptor of {u3}",
+          "necessary": false,
+          "expected_answer": "American",
+          "depends_on": [
+            "u3"
+          ],
+          "support_sets": [
+            [
+              [
+                "Robert G. Vignola",
+                0
+              ]
+            ]
+          ]
+        },
+        {
+          "unit_id": "u5",
+          "description": "whether the directors of One Exciting Week and The Woman God Changed are from the same country",
+          "necessary": true,
+          "expected_answer": "yes",
+          "depends_on": [
+            "u2",
+            "u4"
+          ],
+          "support_sets": [
+            []
+          ]
+        }
+      ]
+    },
+    {
+      "sample_id": "2wikimultihopqa_d49e4dfd089311ebbd75ac1f6bf848b6",
+      "status": "draft",
+      "notes": [
+        "Comparison (yes/no): country of each place, then a conclusion unit."
+      ],
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "country of Pass Island, Newfoundland and Labrador",
+          "necessary": false,
+          "expected_answer": "Canada",
+          "depends_on": [],
+          "support_sets": [
+            [
+              [
+                "Pass Island, Newfoundland and Labrador",
+                0
+              ]
+            ]
+          ]
+        },
+        {
+          "unit_id": "u2",
+          "description": "country of Elvalandet",
+          "necessary": false,
+          "expected_answer": "Norway",
+          "depends_on": [],
+          "support_sets": [
+            [
+              [
+                "Elvalandet",
+                0
+              ]
+            ]
+          ]
+        },
+        {
+          "unit_id": "u3",
+          "description": "whether Pass Island, Newfoundland and Labrador and Elvalandet are located in the same country",
+          "necessary": true,
+          "expected_answer": "no",
+          "depends_on": [
+            "u1",
+            "u2"
+          ],
+          "support_sets": [
+            []
+          ]
+        }
+      ]
+    },
+    {
+      "sample_id": "2wikimultihopqa_71900dca0bdd11eba7f7acde48001122",
+      "status": "draft",
+      "notes": [
+        "Bridge (compositional): director (optional) then place of birth (necessary).",
+        "Gillies MacKinnon sentence 0 '(born 8 January 1948, Glasgow)' states the birthplace; sentence 1 (Glasgow School of Art) does not."
+      ],
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "director of film A Simple Twist of Fate",
+          "necessary": false,
+          "expected_answer": "Gillies MacKinnon",
+          "depends_on": [],
+          "support_sets": [
+            [
+              [
+                "A Simple Twist of Fate",
+                0
+              ]
+            ]
+          ]
+        },
+        {
+          "unit_id": "u2",
+          "description": "place of birth of {u1}",
+          "necessary": true,
+          "expected_answer": "Glasgow",
+          "depends_on": [
+            "u1"
+          ],
+          "support_sets": [
+            [
+              [
+                "Gillies MacKinnon",
+                0
+              ]
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "sample_id": "2wikimultihopqa_f52b042e0baf11ebab90acde48001122",
+      "status": "draft",
+      "notes": [
+        "Bridge (inference): father (optional) then his mother = paternal grandmother (necessary).",
+        "Margaret of Artois and Louis, Count of Evreux mention a different Philip of Artois; not used."
+      ],
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "father of Charles of Artois, Count of Eu",
+          "necessary": false,
+          "expected_answer": "Philip of Artois, Count of Eu",
+          "aliases": [
+            "Philip of Artois"
+          ],
+          "depends_on": [],
+          "support_sets": [
+            [
+              [
+                "Charles of Artois, Count of Eu",
+                0
+              ]
+            ]
+          ]
+        },
+        {
+          "unit_id": "u2",
+          "description": "mother of {u1}, Charles of Artois's paternal grandmother",
+          "necessary": true,
+          "expected_answer": "Isabeau of Melun",
+          "depends_on": [
+            "u1"
+          ],
+          "support_sets": [
+            [
+              [
+                "Philip of Artois, Count of Eu",
+                0
+              ]
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "sample_id": "2wikimultihopqa_ed17b36008b511ebbd88ac1f6bf848b6",
+      "status": "draft",
+      "notes": [
+        "Bridge comparison: director and birth date per film, then a conclusion comparing the birth dates.",
+        "Nagesh Kukunoor sentence 9 ('In 2015 he directed the road movie, Dhanak') added as alternative support for u3; sentence 1 ('known for his works ... Dhanak') excluded."
+      ],
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "director of film Desperado City",
+          "necessary": false,
+          "expected_answer": "Vadim Glowna",
+          "depends_on": [],
+          "support_sets": [
+            [
+              [
+                "Desperado City",
+                0
+              ]
+            ]
+          ]
+        },
+        {
+          "unit_id": "u2",
+          "description": "date of birth of {u1}",
+          "necessary": false,
+          "expected_answer": "26 September 1941",
+          "depends_on": [
+            "u1"
+          ],
+          "support_sets": [
+            [
+              [
+                "Vadim Glowna",
+                0
+              ]
+            ]
+          ]
+        },
+        {
+          "unit_id": "u3",
+          "description": "director of film Dhanak",
+          "necessary": false,
+          "expected_answer": "Nagesh Kukunoor",
+          "depends_on": [],
+          "support_sets": [
+            [
+              [
+                "Dhanak",
+                0
+              ]
+            ],
+            [
+              [
+                "Nagesh Kukunoor",
+                9
+              ]
+            ]
+          ]
+        },
+        {
+          "unit_id": "u4",
+          "description": "date of birth of {u3}",
+          "necessary": false,
+          "expected_answer": "30 March 1967",
+          "depends_on": [
+            "u3"
+          ],
+          "support_sets": [
+            [
+              [
+                "Nagesh Kukunoor",
+                0
+              ]
+            ]
+          ]
+        },
+        {
+          "unit_id": "u5",
+          "description": "which of the two films has the director born first",
+          "necessary": true,
+          "expected_answer": "Desperado City",
+          "depends_on": [
+            "u2",
+            "u4"
+          ],
+          "support_sets": [
+            []
+          ]
+        }
+      ]
+    },
+    {
+      "sample_id": "2wikimultihopqa_e1675412087411ebbd67ac1f6bf848b6",
+      "status": "draft",
+      "notes": [
+        "Comparison (yes/no): country of origin of each film, then a conclusion unit.",
+        "Country names normalized from the film descriptors ('Chinese', 'Swedish'); source forms kept as aliases.",
+        "Other Balala the Fairies films (Princess Camellia, The Magic Trial) are different films; not used."
+      ],
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "country of origin of Balala the Fairies: The Movie",
+          "necessary": false,
+          "expected_answer": "China",
+          "aliases": [
+            "Chinese"
+          ],
+          "depends_on": [],
+          "support_sets": [
+            [
+              [
+                "Balala the Fairies: the Movie",
+                0
+              ]
+            ]
+          ]
+        },
+        {
+          "unit_id": "u2",
+          "description": "country of origin of Swedenhielms",
+          "necessary": false,
+          "expected_answer": "Sweden",
+          "aliases": [
+            "Swedish"
+          ],
+          "depends_on": [],
+          "support_sets": [
+            [
+              [
+                "Swedenhielms",
+                0
+              ]
+            ]
+          ]
+        },
+        {
+          "unit_id": "u3",
+          "description": "whether Balala the Fairies: The Movie and Swedenhielms are from the same country",
+          "necessary": true,
+          "expected_answer": "no",
+          "depends_on": [
+            "u1",
+            "u2"
+          ],
+          "support_sets": [
+            []
+          ]
+        }
+      ]
+    },
+    {
+      "sample_id": "2wikimultihopqa_e092ab3c0bd911eba7f7acde48001122",
+      "status": "draft",
+      "notes": [
+        "Bridge (compositional): performer (optional) then nationality (necessary).",
+        "u1: Revolver sentence 0 says the EP consists of outtakes from Lewis Black's album sessions. Sentence 2 ('Black's earlier release') needs sentence 1 for its subject and is weaker; not added.",
+        "u1's value appears in the question title; it is still kept as a hop."
+      ],
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "performer of song Revolver (Lewis Black EP)",
+          "necessary": false,
+          "expected_answer": "Lewis Black",
+          "aliases": [
+            "Lewis Niles Black"
+          ],
+          "depends_on": [],
+          "support_sets": [
+            [
+              [
+                "Revolver (Lewis Black EP)",
+                0
+              ]
+            ]
+          ]
+        },
+        {
+          "unit_id": "u2",
+          "description": "nationality of {u1}",
+          "necessary": true,
+          "expected_answer": "American",
+          "depends_on": [
+            "u1"
+          ],
+          "support_sets": [
+            [
+              [
+                "Lewis Black",
+                0
+              ]
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "sample_id": "2wikimultihopqa_a383cf200baf11ebab90acde48001122",
+      "status": "draft",
+      "notes": [
+        "Bridge (inference): spouse (optional) then his father = father-in-law (necessary).",
+        "Theodora of Khazaria sentence 1 is a fragment continuing sentence 0 '(Greek:'; its subject comes from the document title and its content needs nothing from sentence 0, so it is cited alone (it is the supporting fact)."
+      ],
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "spouse of Theodora of Khazaria",
+          "necessary": false,
+          "expected_answer": "Justinian II",
+          "depends_on": [],
+          "support_sets": [
+            [
+              [
+                "Theodora of Khazaria",
+                1
+              ]
+            ]
+          ]
+        },
+        {
+          "unit_id": "u2",
+          "description": "father of {u1}, Theodora of Khazaria's father-in-law",
+          "necessary": true,
+          "expected_answer": "Constantine IV",
+          "depends_on": [
+            "u1"
+          ],
+          "support_sets": [
+            [
+              [
+                "Justinian II",
+                1
+              ]
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "sample_id": "2wikimultihopqa_f5a1f18c088b11ebbd6fac1f6bf848b6",
+      "status": "draft",
+      "notes": [
+        "Bridge comparison: director and death date per film, then a conclusion comparing the death dates.",
+        "J. Sasikumar sentence 4 ('He died in 2014') gives only the year; not added as support for the full date."
+      ],
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "director of film Maravil Thirivu Sookshikkuka",
+          "necessary": false,
+          "expected_answer": "J. Sasikumar",
+          "aliases": [
+            "Sasikumar",
+            "Nambiathusseril Varkey John"
+          ],
+          "depends_on": [],
+          "support_sets": [
+            [
+              [
+                "Maravil Thirivu Sookshikkuka",
+                0
+              ]
+            ]
+          ]
+        },
+        {
+          "unit_id": "u2",
+          "description": "date of death of {u1}",
+          "necessary": false,
+          "expected_answer": "17 July 2014",
+          "depends_on": [
+            "u1"
+          ],
+          "support_sets": [
+            [
+              [
+                "J. Sasikumar",
+                0
+              ]
+            ]
+          ]
+        },
+        {
+          "unit_id": "u3",
+          "description": "director of film Beloved Liar",
+          "necessary": false,
+          "expected_answer": "Hans Schweikart",
+          "depends_on": [],
+          "support_sets": [
+            [
+              [
+                "Beloved Liar",
+                0
+              ]
+            ]
+          ]
+        },
+        {
+          "unit_id": "u4",
+          "description": "date of death of {u3}",
+          "necessary": false,
+          "expected_answer": "1 December 1975",
+          "depends_on": [
+            "u3"
+          ],
+          "support_sets": [
+            [
+              [
+                "Hans Schweikart",
+                0
+              ]
+            ]
+          ]
+        },
+        {
+          "unit_id": "u5",
+          "description": "which of the two films has the director who died first",
+          "necessary": true,
+          "expected_answer": "Beloved Liar",
+          "depends_on": [
+            "u2",
+            "u4"
+          ],
+          "support_sets": [
+            []
+          ]
+        }
+      ]
+    },
+    {
+      "sample_id": "2wikimultihopqa_70718d42089f11ebbd78ac1f6bf848b6",
+      "status": "reject",
+      "notes": [
+        "Reject: 'which film has more directors' needs director counts, and no sentence states a count. The Missing Link (1927 film) sentence 0 names one director (Charles Reisner) but does not say he was the only one, so the comparison of counts is not a deterministic comparison of stated values (rule 9 example)."
+      ],
+      "units": []
+    },
+    {
+      "sample_id": "2wikimultihopqa_d09d82000bda11eba7f7acde48001122",
+      "status": "draft",
+      "notes": [
+        "Bridge (compositional): performer (optional) then date of birth (necessary)."
+      ],
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "performer of song Down to the Honkytonk",
+          "necessary": false,
+          "expected_answer": "Jake Owen",
+          "aliases": [
+            "Joshua Ryan Owen"
+          ],
+          "depends_on": [],
+          "support_sets": [
+            [
+              [
+                "Down to the Honkytonk",
+                0
+              ]
+            ]
+          ]
+        },
+        {
+          "unit_id": "u2",
+          "description": "date of birth of {u1}",
+          "necessary": true,
+          "expected_answer": "August 28, 1981",
+          "depends_on": [
+            "u1"
+          ],
+          "support_sets": [
+            [
+              [
+                "Jake Owen",
+                0
+              ]
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "sample_id": "2wikimultihopqa_c3c8e96e0baf11ebab90acde48001122",
+      "status": "draft",
+      "notes": [
+        "Bridge (inference): father (optional) then his mother = paternal grandmother (necessary).",
+        "John de Southeray sentence 0 ('illegitimate son of King Edward III of England') states the father explicitly."
+      ],
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "father of John de Southeray",
+          "necessary": false,
+          "expected_answer": "Edward III of England",
+          "aliases": [
+            "Edward III",
+            "King Edward III of England"
+          ],
+          "depends_on": [],
+          "support_sets": [
+            [
+              [
+                "John de Southeray",
+                0
+              ]
+            ]
+          ]
+        },
+        {
+          "unit_id": "u2",
+          "description": "mother of {u1}, John de Southeray's paternal grandmother",
+          "necessary": true,
+          "expected_answer": "Isabella of France",
+          "depends_on": [
+            "u1"
+          ],
+          "support_sets": [
+            [
+              [
+                "Edward III of England",
+                3
+              ]
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "sample_id": "2wikimultihopqa_4dc594f408cd11ebbd93ac1f6bf848b6",
+      "status": "draft",
+      "notes": [
+        "Bridge comparison: director and death date per film, then a conclusion comparing the death dates.",
+        "Mario Soffici sentence 4 ('He died in Buenos Aires in 1977') gives only the year; not added."
+      ],
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "director of film Schwarzwaldmelodie",
+          "necessary": false,
+          "expected_answer": "Géza von Bolváry",
+          "aliases": [
+            "Géza Maria von Bolváry-Zahn"
+          ],
+          "depends_on": [],
+          "support_sets": [
+            [
+              [
+                "Schwarzwaldmelodie",
+                0
+              ]
+            ]
+          ]
+        },
+        {
+          "unit_id": "u2",
+          "description": "date of death of {u1}",
+          "necessary": false,
+          "expected_answer": "10 August 1961",
+          "depends_on": [
+            "u1"
+          ],
+          "support_sets": [
+            [
+              [
+                "Géza von Bolváry",
+                0
+              ]
+            ]
+          ]
+        },
+        {
+          "unit_id": "u3",
+          "description": "director of film Vacations in the Other World",
+          "necessary": false,
+          "expected_answer": "Mario Soffici",
+          "depends_on": [],
+          "support_sets": [
+            [
+              [
+                "Vacations in the Other World",
+                0
+              ]
+            ]
+          ]
+        },
+        {
+          "unit_id": "u4",
+          "description": "date of death of {u3}",
+          "necessary": false,
+          "expected_answer": "10 May 1977",
+          "depends_on": [
+            "u3"
+          ],
+          "support_sets": [
+            [
+              [
+                "Mario Soffici",
+                0
+              ]
+            ]
+          ]
+        },
+        {
+          "unit_id": "u5",
+          "description": "which of the two films has the director who died earlier",
+          "necessary": true,
+          "expected_answer": "Schwarzwaldmelodie",
+          "depends_on": [
+            "u2",
+            "u4"
+          ],
+          "support_sets": [
+            []
+          ]
+        }
+      ]
+    },
+    {
+      "sample_id": "2wikimultihopqa_5ea97157099411ebbdb0ac1f6bf848b6",
+      "status": "draft",
+      "notes": [
+        "Comparison (yes/no): country of each village, then a conclusion unit.",
+        "Rasas sentence 2 (Syria Central Bureau of Statistics census) does not state the location; not added."
+      ],
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "country of Rasas",
+          "necessary": false,
+          "expected_answer": "Syria",
+          "depends_on": [],
+          "support_sets": [
+            [
+              [
+                "Rasas",
+                0
+              ]
+            ]
+          ]
+        },
+        {
+          "unit_id": "u2",
+          "description": "country of Barakuh, Roshtkhar",
+          "necessary": false,
+          "expected_answer": "Iran",
+          "depends_on": [],
+          "support_sets": [
+            [
+              [
+                "Barakuh, Roshtkhar",
+                0
+              ]
+            ]
+          ]
+        },
+        {
+          "unit_id": "u3",
+          "description": "whether Rasas and Barakuh, Roshtkhar are located in the same country",
+          "necessary": true,
+          "expected_answer": "no",
+          "depends_on": [
+            "u1",
+            "u2"
+          ],
+          "support_sets": [
+            []
+          ]
+        }
+      ]
+    },
+    {
+      "sample_id": "2wikimultihopqa_bf1ebaa80bda11eba7f7acde48001122",
+      "status": "draft",
+      "notes": [
+        "Bridge (compositional): mother (optional) then date of death (necessary).",
+        "The mother's document title is 'Louisa Hamilton, Duchess of Abercorn'; its sentence 0 gives her maiden name 'Lady Louisa Jane Russell', which links it to u1. Married name kept as alias."
+      ],
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "mother of Lord Frederick Spencer Hamilton",
+          "necessary": false,
+          "expected_answer": "Lady Louisa Jane Russell",
+          "aliases": [
+            "Louisa Jane Russell",
+            "Louisa Hamilton, Duchess of Abercorn",
+            "Louisa Jane Hamilton, Duchess of Abercorn"
+          ],
+          "depends_on": [],
+          "support_sets": [
+            [
+              [
+                "Lord Frederick Spencer Hamilton",
+                0
+              ]
+            ]
+          ]
+        },
+        {
+          "unit_id": "u2",
+          "description": "date of death of {u1}",
+          "necessary": true,
+          "expected_answer": "31 March 1905",
+          "depends_on": [
+            "u1"
+          ],
+          "support_sets": [
+            [
+              [
+                "Louisa Hamilton, Duchess of Abercorn",
+                0
+              ]
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "sample_id": "2wikimultihopqa_7728ea720bb011ebab90acde48001122",
+      "status": "draft",
+      "notes": [
+        "Bridge (inference): spouse (optional) then his father = father-in-law (necessary).",
+        "Mariota sentence 1 ('her husband Domhnall of Islay, Lord of the Isles') states the spouse; sentences 9 and 11 mention Domhnall without stating the marriage.",
+        "Document title 'Donald of Islay, Lord of the Isles' and triple subject 'Donald, Lord of the Isles' differ from the text's 'Domhnall'; its sentence 1 gives the Gaelic form 'Dómhnall'. Sentence 1 is cited alone (subject from title, sentence 0 is only the name)."
+      ],
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "spouse of Mariota, Countess of Ross",
+          "necessary": false,
+          "expected_answer": "Domhnall of Islay, Lord of the Isles",
+          "aliases": [
+            "Donald of Islay, Lord of the Isles",
+            "Donald, Lord of the Isles",
+            "Domhnall of Islay"
+          ],
+          "depends_on": [],
+          "support_sets": [
+            [
+              [
+                "Mariota, Countess of Ross",
+                1
+              ]
+            ]
+          ]
+        },
+        {
+          "unit_id": "u2",
+          "description": "father of {u1}, Mariota's father-in-law",
+          "necessary": true,
+          "expected_answer": "John of Islay",
+          "aliases": [
+            "John of Islay, Lord of the Isles"
+          ],
+          "depends_on": [
+            "u1"
+          ],
+          "support_sets": [
+            [
+              [
+                "Donald of Islay, Lord of the Isles",
+                1
+              ]
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "sample_id": "2wikimultihopqa_bd95c40f08bc11ebbd89ac1f6bf848b6",
+      "status": "draft",
+      "notes": [
+        "Bridge comparison (yes/no): director and country descriptor per film, then a conclusion unit.",
+        "William Berke sentence 3 (born in Milwaukee) and Scott Sidney sentence 2 (died in London) are birth/death places, not nationality; not used."
+      ],
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "director of film Bad Men of the Hills",
+          "necessary": false,
+          "expected_answer": "William Berke",
+          "aliases": [
+            "William A. Berke"
+          ],
+          "depends_on": [],
+          "support_sets": [
+            [
+              [
+                "Bad Men of the Hills",
+                0
+              ]
+            ]
+          ]
+        },
+        {
+          "unit_id": "u2",
+          "description": "country descriptor of {u1}",
+          "necessary": false,
+          "expected_answer": "American",
+          "depends_on": [
+            "u1"
+          ],
+          "support_sets": [
+            [
+              [
+                "William Berke",
+                0
+              ]
+            ]
+          ]
+        },
+        {
+          "unit_id": "u3",
+          "description": "director of film Desert Thieves",
+          "necessary": false,
+          "expected_answer": "Scott Sidney",
+          "depends_on": [],
+          "support_sets": [
+            [
+              [
+                "Desert Thieves",
+                0
+              ]
+            ]
+          ]
+        },
+        {
+          "unit_id": "u4",
+          "description": "country descriptor of {u3}",
+          "necessary": false,
+          "expected_answer": "American",
+          "depends_on": [
+            "u3"
+          ],
+          "support_sets": [
+            [
+              [
+                "Scott Sidney",
+                0
+              ]
+            ]
+          ]
+        },
+        {
+          "unit_id": "u5",
+          "description": "whether the directors of Bad Men of the Hills and Desert Thieves are from the same country",
+          "necessary": true,
+          "expected_answer": "yes",
+          "depends_on": [
+            "u2",
+            "u4"
+          ],
+          "support_sets": [
+            []
+          ]
+        }
+      ]
+    },
+    {
+      "sample_id": "2wikimultihopqa_94e510f308c411ebbd8eac1f6bf848b6",
+      "status": "draft",
+      "notes": [
+        "Comparison: release year of each film, then a conclusion comparing the years.",
+        "River's End (1940 film) sentence 1 and River's End (1930 film) sentence 2 mention a 1920 adaptation but do not identify it as The River's End (film); not added.",
+        "Source answer has no capitalization issue; question form 'The River'S End' normalized in descriptions."
+      ],
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "release year of Trafic",
+          "necessary": false,
+          "expected_answer": "1971",
+          "depends_on": [],
+          "support_sets": [
+            [
+              [
+                "Trafic",
+                0
+              ]
+            ]
+          ]
+        },
+        {
+          "unit_id": "u2",
+          "description": "release year of The River's End (film)",
+          "necessary": false,
+          "expected_answer": "1920",
+          "depends_on": [],
+          "support_sets": [
+            [
+              [
+                "The River's End (film)",
+                0
+              ]
+            ]
+          ]
+        },
+        {
+          "unit_id": "u3",
+          "description": "which film was released more recently, Trafic or The River's End",
+          "necessary": true,
+          "expected_answer": "Trafic",
+          "depends_on": [
+            "u1",
+            "u2"
+          ],
+          "support_sets": [
+            []
+          ]
+        }
+      ]
+    },
+    {
+      "sample_id": "2wikimultihopqa_11f7f17c0bdb11eba7f7acde48001122",
+      "status": "draft",
+      "notes": [
+        "Bridge (compositional): director (optional) then nationality (necessary).",
+        "Supporting fact Higher Than a Kite sentence 0 is only the word 'Higher'; u1 cites sentence 1 ('Than a Kite is a 1943 short subject directed by Del Lord'), whose subject comes from the title."
+      ],
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "director of film Higher Than a Kite",
+          "necessary": false,
+          "expected_answer": "Del Lord",
+          "aliases": [
+            "Delmar Lord"
+          ],
+          "depends_on": [],
+          "support_sets": [
+            [
+              [
+                "Higher Than a Kite",
+                1
+              ]
+            ]
+          ]
+        },
+        {
+          "unit_id": "u2",
+          "description": "nationality of {u1}",
+          "necessary": true,
+          "expected_answer": "Canadian",
+          "depends_on": [
+            "u1"
+          ],
+          "support_sets": [
+            [
+              [
+                "Del Lord",
+                0
+              ]
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "sample_id": "2wikimultihopqa_c526bfac0baf11ebab90acde48001122",
+      "status": "draft",
+      "notes": [
+        "Bridge (inference): father (optional) then his mother = paternal grandmother (necessary).",
+        "Julia Livia sentence 0 is about Drusus Julius Caesar (Drusus the Younger), a different Drusus; not used."
+      ],
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "father of Drusus Caesar",
+          "necessary": false,
+          "expected_answer": "Germanicus",
+          "depends_on": [],
+          "support_sets": [
+            [
+              [
+                "Drusus Caesar",
+                1
+              ]
+            ]
+          ]
+        },
+        {
+          "unit_id": "u2",
+          "description": "mother of {u1}, Drusus Caesar's paternal grandmother",
+          "necessary": true,
+          "expected_answer": "Antonia Minor",
+          "depends_on": [
+            "u1"
+          ],
+          "support_sets": [
+            [
+              [
+                "Germanicus",
+                1
+              ]
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "sample_id": "2wikimultihopqa_972b911e087f11ebbd6cac1f6bf848b6",
+      "status": "draft",
+      "notes": [
+        "Bridge comparison (yes/no): director and country descriptor per film, then a conclusion unit.",
+        "u2: Arthur B. Woods sentence 3 ('the only British film director to do so') states British; sentence 0 says 'English film director'. Both accepted (English as alias); either differs from Indian.",
+        "u4: Bharathan sentence 0 'Indian film maker'; sentence 5 (born in Kerala, India) is a birthplace and not used. Source triple form 'India' kept as alias.",
+        "Possible entity mismatch: Azhagiya Tamil Magan is a 2007 film, but the Bharathan document says he died in 1998. 2Wiki links the name; kept as draft for human review."
+      ],
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "director of film Irish for Luck",
+          "necessary": false,
+          "expected_answer": "Arthur B. Woods",
+          "aliases": [
+            "Arthur Bickerstaffe Woods"
+          ],
+          "depends_on": [],
+          "support_sets": [
+            [
+              [
+                "Irish for Luck",
+                1
+              ]
+            ]
+          ]
+        },
+        {
+          "unit_id": "u2",
+          "description": "country descriptor of {u1}",
+          "necessary": false,
+          "expected_answer": "British",
+          "aliases": [
+            "English"
+          ],
+          "depends_on": [
+            "u1"
+          ],
+          "support_sets": [
+            [
+              [
+                "Arthur B. Woods",
+                3
+              ]
+            ],
+            [
+              [
+                "Arthur B. Woods",
+                0
+              ]
+            ]
+          ]
+        },
+        {
+          "unit_id": "u3",
+          "description": "director of film Azhagiya Tamil Magan",
+          "necessary": false,
+          "expected_answer": "Bharathan",
+          "depends_on": [],
+          "support_sets": [
+            [
+              [
+                "Azhagiya Tamil Magan",
+                0
+              ]
+            ]
+          ]
+        },
+        {
+          "unit_id": "u4",
+          "description": "country descriptor of {u3}",
+          "necessary": false,
+          "expected_answer": "Indian",
+          "aliases": [
+            "India"
+          ],
+          "depends_on": [
+            "u3"
+          ],
+          "support_sets": [
+            [
+              [
+                "Bharathan",
+                0
+              ]
+            ]
+          ]
+        },
+        {
+          "unit_id": "u5",
+          "description": "whether the directors of Irish for Luck and Azhagiya Tamil Magan are from the same country",
+          "necessary": true,
+          "expected_answer": "no",
+          "depends_on": [
+            "u2",
+            "u4"
+          ],
+          "support_sets": [
+            []
+          ]
+        }
+      ]
+    },
+    {
+      "sample_id": "2wikimultihopqa_ba94e15808c211ebbd8cac1f6bf848b6",
+      "status": "draft",
+      "notes": [
+        "Comparison: birth date of each person, then a conclusion comparing the dates.",
+        "Source surface form 'Suzy Mckee Charnas' kept as alias."
+      ],
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "date of birth of Suzy McKee Charnas",
+          "necessary": false,
+          "expected_answer": "22 October 1939",
+          "depends_on": [],
+          "support_sets": [
+            [
+              [
+                "Suzy McKee Charnas",
+                0
+              ]
+            ]
+          ]
+        },
+        {
+          "unit_id": "u2",
+          "description": "date of birth of Tariq Anam Khan",
+          "necessary": false,
+          "expected_answer": "10 May 1953",
+          "depends_on": [],
+          "support_sets": [
+            [
+              [
+                "Tariq Anam Khan",
+                0
+              ]
+            ]
+          ]
+        },
+        {
+          "unit_id": "u3",
+          "description": "who was born earlier, Suzy McKee Charnas or Tariq Anam Khan",
+          "necessary": true,
+          "expected_answer": "Suzy McKee Charnas",
+          "aliases": [
+            "Suzy Mckee Charnas"
+          ],
+          "depends_on": [
+            "u1",
+            "u2"
+          ],
+          "support_sets": [
+            []
+          ]
+        }
+      ]
+    },
+    {
+      "sample_id": "2wikimultihopqa_218b92b40bdc11eba7f7acde48001122",
+      "status": "draft",
+      "notes": [
+        "Bridge (compositional): director (optional) then place of birth (necessary).",
+        "Felix E. Feist sentence 0 says 'born in New York City'; normalized to New York City, source form 'New York' kept as alias.",
+        "I Can Do Bad All by Myself (film) is a different film; not used."
+      ],
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "director of film All by Myself",
+          "necessary": false,
+          "expected_answer": "Felix E. Feist",
+          "aliases": [
+            "Felix Ellison Feist"
+          ],
+          "depends_on": [],
+          "support_sets": [
+            [
+              [
+                "All by Myself (film)",
+                0
+              ]
+            ]
+          ]
+        },
+        {
+          "unit_id": "u2",
+          "description": "place of birth of {u1}",
+          "necessary": true,
+          "expected_answer": "New York City",
+          "aliases": [
+            "New York"
+          ],
+          "depends_on": [
+            "u1"
+          ],
+          "support_sets": [
+            [
+              [
+                "Felix E. Feist",
+                0
+              ]
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "sample_id": "2wikimultihopqa_8f3c6e140baf11ebab90acde48001122",
+      "status": "draft",
+      "notes": [
+        "Bridge (inference): father (optional) then his father = paternal grandfather (necessary).",
+        "Edward Montagu, 3rd Earl of Sandwich sentences 2+3 ('They had two children, ... Edward Richard Montagu, Viscount Hinchingbrooke') added as alternative support for u1; sentence 3 needs sentence 2 for 'They'.",
+        "Ambiguity noted: the 3rd Earl was himself styled Viscount Hinchingbrooke 1672-1688 (sentence 1). The question uses the son's document title, so the son is assumed."
+      ],
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "father of Edward Montagu, Viscount Hinchingbrooke",
+          "necessary": false,
+          "expected_answer": "Edward Montagu, 3rd Earl of Sandwich",
+          "depends_on": [],
+          "support_sets": [
+            [
+              [
+                "Edward Montagu, Viscount Hinchingbrooke",
+                1
+              ]
+            ],
+            [
+              [
+                "Edward Montagu, 3rd Earl of Sandwich",
+                2
+              ],
+              [
+                "Edward Montagu, 3rd Earl of Sandwich",
+                3
+              ]
+            ]
+          ]
+        },
+        {
+          "unit_id": "u2",
+          "description": "father of {u1}, Edward Montagu, Viscount Hinchingbrooke's paternal grandfather",
+          "necessary": true,
+          "expected_answer": "Edward Montagu, 2nd Earl of Sandwich",
+          "depends_on": [
+            "u1"
+          ],
+          "support_sets": [
+            [
+              [
+                "Edward Montagu, 3rd Earl of Sandwich",
+                0
+              ]
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "sample_id": "2wikimultihopqa_565e3072087711ebbd67ac1f6bf848b6",
+      "status": "draft",
+      "notes": [
+        "Bridge comparison: director and birth date per film, then a conclusion comparing the birth dates.",
+        "u3: Germany Year 90 Nine Zero sentence 4 ('the 1948 Roberto Rossellini film Germany, Year Zero'), Roberto Rossellini sentence 1 ('films such as') and Fear (1954 film) sentence 4 ('his previous German film') do not state the director role; not added."
+      ],
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "director of film Cross Shot",
+          "necessary": false,
+          "expected_answer": "Stelvio Massi",
+          "depends_on": [],
+          "support_sets": [
+            [
+              [
+                "Cross Shot",
+                0
+              ]
+            ]
+          ]
+        },
+        {
+          "unit_id": "u2",
+          "description": "date of birth of {u1}",
+          "necessary": false,
+          "expected_answer": "26 March 1929",
+          "depends_on": [
+            "u1"
+          ],
+          "support_sets": [
+            [
+              [
+                "Stelvio Massi",
+                0
+              ]
+            ]
+          ]
+        },
+        {
+          "unit_id": "u3",
+          "description": "director of film Germany, Year Zero",
+          "necessary": false,
+          "expected_answer": "Roberto Rossellini",
+          "depends_on": [],
+          "support_sets": [
+            [
+              [
+                "Germany, Year Zero",
+                0
+              ]
+            ]
+          ]
+        },
+        {
+          "unit_id": "u4",
+          "description": "date of birth of {u3}",
+          "necessary": false,
+          "expected_answer": "8 May 1906",
+          "depends_on": [
+            "u3"
+          ],
+          "support_sets": [
+            [
+              [
+                "Roberto Rossellini",
+                0
+              ]
+            ]
+          ]
+        },
+        {
+          "unit_id": "u5",
+          "description": "which of the two films has the younger director",
+          "necessary": true,
+          "expected_answer": "Cross Shot",
+          "depends_on": [
+            "u2",
+            "u4"
+          ],
+          "support_sets": [
+            []
+          ]
+        }
+      ]
+    },
+    {
+      "sample_id": "2wikimultihopqa_5f7ce04c099111ebbdb0ac1f6bf848b6",
+      "status": "draft",
+      "notes": [
+        "Comparison (yes/no): country of each village, then a conclusion unit."
+      ],
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "country of Mar, Isfahan",
+          "necessary": false,
+          "expected_answer": "Iran",
+          "depends_on": [],
+          "support_sets": [
+            [
+              [
+                "Mar, Isfahan",
+                0
+              ]
+            ]
+          ]
+        },
+        {
+          "unit_id": "u2",
+          "description": "country of Anjir Bazuiyeh",
+          "necessary": false,
+          "expected_answer": "Iran",
+          "depends_on": [],
+          "support_sets": [
+            [
+              [
+                "Anjir Bazuiyeh",
+                0
+              ]
+            ]
+          ]
+        },
+        {
+          "unit_id": "u3",
+          "description": "whether Mar, Isfahan and Anjir Bazuiyeh are located in the same country",
+          "necessary": true,
+          "expected_answer": "yes",
+          "depends_on": [
+            "u1",
+            "u2"
+          ],
+          "support_sets": [
+            []
+          ]
+        }
+      ]
+    }
+  ]
+}

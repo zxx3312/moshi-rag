@@ -1,0 +1,68 @@
+# Step 4 — Judge SFT Data (300 Training Questions)
+
+Plan and open decisions: `sft_plan.md`. Rules: `b_work/step1/schema.md` v1.3 Section 4, `b_work/step1/labeling_guide.md` v1.2 Section 1.1, and A's `a_work/unit_schema.md` 5.5–5.6 (branch `a-prompt-judge`).
+
+Status: **gold units are Claude drafts, not human-reviewed.** Every record has `status: "draft"`. The SFT files built from them are `sft-v0` drafts until the review in Section 4 is done.
+
+## Files
+
+| File | Edit by hand? | Content |
+|---|---|---|
+| `convert_hotpot_parquet.py` | — | HotpotQA train parquet (Hugging Face) → original JSON layout. Needs `pyarrow`. |
+| `prepare_sft.py` | — | Samples 180 candidates per dataset from official train (150 primary + 30 reserve), excluding all debug and reserved evaluation questions. |
+| `prepared/samples_sft_candidates.jsonl`, `prepared/sft_manifest.json` | No (generated) | Candidates with `project_split` (train/dev), `candidate_rank`, `candidate_role`; seed, hashes, counts. |
+| `make_batches.py` | — | Annotation worksheets, 30 questions each. |
+| `drafts/batch_*.md` | No (generated) | Worksheets: question, answer, supporting facts, 2Wiki triples, all documents with sentence numbers. |
+| `drafts/annotations_batch_*.json` | Yes | Unit annotations per worksheet, in the step3 format plus the extensions below. |
+| `build_gold_sft.py` | — | Validates annotations, selects the final 300 (rejected primaries use an explicit same-type/split reserve when named, otherwise the next reserve in rank order), writes gold. |
+| `gold_sft.jsonl`, `gold_sft_review.md` | No (generated) | Gold records (`data_version: sft-v0`) and a review copy with the cited sentences. |
+| `build_sft.py` | — | Training traces, snapshots, judge inputs (A's `judge_messages()`), and targets. |
+| `sft/sft_train.jsonl`, `sft/sft_dev.jsonl`, `sft/sft_stats.json` | No (generated) | Chat-format SFT examples with metadata; label statistics and cross-checks. |
+
+## Run
+
+From the repository root. Raw files go to `b_work/step2/raw/` and stay out of Git.
+
+```bash
+# 1. Data (see b_work/step2/README.md for the 2Wiki archive)
+curl -L -o b_work/step2/raw/hotpot_train_parquet/train-00000-of-00002.parquet \
+  https://huggingface.co/datasets/hotpotqa/hotpot_qa/resolve/main/distractor/train-00000-of-00002.parquet
+curl -L -o b_work/step2/raw/hotpot_train_parquet/train-00001-of-00002.parquet \
+  https://huggingface.co/datasets/hotpotqa/hotpot_qa/resolve/main/distractor/train-00001-of-00002.parquet
+python3 b_work/step4/convert_hotpot_parquet.py b_work/step2/raw/hotpot_train_parquet/*.parquet \
+  --out b_work/step2/raw/hotpot_train_v1.1_hf.json
+
+# 2. Candidates and worksheets (existing outputs are never overwritten)
+python3 b_work/step4/prepare_sft.py --hotpot b_work/step2/raw/hotpot_train_v1.1_hf.json \
+  --twowiki b_work/step2/raw/data_ids_april7.zip
+python3 b_work/step4/make_batches.py
+
+# 3. Gold, after annotating the worksheets
+python3 b_work/step4/build_gold_sft.py --annotations b_work/step4/drafts/annotations_batch_*.json
+
+# 4. SFT examples (reads A's judge code from origin/a-prompt-judge; run `git fetch` first)
+python3 b_work/step4/build_sft.py
+```
+
+Source hashes (SHA256): HotpotQA parquet `76d3bb30…e68` and `71366162…63f` (Hugging Face LFS IDs); converted JSON `09bddf49…cf75`; `data_ids_april7.zip` `95df2bf5…eef` (same file as step2). Full hashes are in `prepared/sft_manifest.json`.
+
+## SFT-only presupposition support sets
+
+Schema v1.3 standardizes the gold-side `by_presupposition` flag. The SFT builder additionally uses the following support-set representation to decide at which snapshot that flag becomes active:
+
+- `presupposition_sets`: support sets that support the unit only when the question's premise is taken as given. SUPPORTED `by_presupposition` when one is visible and at least one dependency is SUPPORTED. Matches A's `resolve_dependencies` and `derive_conclusion`.
+- `support_sets: []` on a unit whose value no sentence states explicitly (e.g. the losing candidate in "which of A and B won X", or a Wikidata triple the text does not state). The unit is never SUPPORTED except through `presupposition_sets`.
+
+## SFT examples
+
+- **Training traces:** 3 random document orders per question, one document per second. These are training-only schedules, never used for latency results.
+- **Snapshots kept:** a label changes; a unit becomes blocked (its own evidence visible, a dependency not yet supported); up to 2 distractor-only snapshots; and the snapshot with all evidence. At most 10 per question, deduplicated by visible set.
+- **Input:** A's `judge_messages()` at the commit recorded in `sft_stats.json` (system prompt + 3 few-shot examples + request); `--no-examples` drops the few-shot pairs. Units are gold descriptions and `depends_on` without answers.
+- **Target:** A's `JUDGE_SCHEMA` reply. `value` is the gold `expected_answer`; citations are the first visible support set (a conclusion cites its dependencies' evidence).
+- **Checks** (the build fails on any): no overlap with debug or reserved evaluation questions; no question in both splits; citations visible in the request; UNRESOLVED targets carry no value or citations. `sft_stats.json` also lists disagreements with A's `OracleJudge` + `resolve_dependencies` and `derive_conclusion`.
+
+## Known limits
+
+- **No `CONTRADICTED` targets.** Questions with conflicting evidence are rejected.
+- **Gold descriptions, not decomposer units.** Runtime units come from A's decomposer and may be worded differently.
+- **Unreachable questions are kept.** Some questions have a necessary unit that no sentence supports under the explicit-only rule (counted in `gold_sft_review.md`). They teach the judge to stay UNRESOLVED, but they never reach a supported answer.
