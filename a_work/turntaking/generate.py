@@ -16,10 +16,10 @@ GROUNDED_SYSTEM = """You are a voice assistant answering a question while a sear
 Rules:
 - State every fact listed under "Say" in natural speech, with each value written exactly as given. Add nothing else, not even from your own knowledge.
 - Say only those facts: nothing about what is left to do.
-- Do not greet, read out these headings, or use lists. Keep it under 20 words in total.
+- Use as few words as natural speech allows, without repeating the question. Do not greet, read out these headings, or use lists.
 Reply with JSON only."""
 
-FREE_SYSTEM = """You are a voice assistant answering a question. Using the evidence you have so far, give your best answer now in one or two short spoken sentences, without lists.
+FREE_SYSTEM = """You are a voice assistant answering a question. Using the evidence you have so far, give your best answer now in one short spoken sentence, without lists. Use as few words as natural speech allows, without repeating the question.
 Also list the answer alone in as few words as possible, for example a name, a date, "yes" or "no". List only what the question asks for, one item per thing asked, never supporting details: "Who was born later, A or B?" has one answer, the name; "When did X start and end?" has two.
 Reply with JSON only."""
 
@@ -82,9 +82,9 @@ class Generator:
 
     def grounded(self, question: str, say: Sequence[Tuple[str, str]], missing: Sequence[str],
                  search_finished: bool) -> Tuple[str, float]:
-        """say: (description, value). Returns (text, latency). The tail is fixed: the model's own ran as long
-        as the facts and kept the Final Answer waiting, and it said "still checking" when nothing was."""
-        tail = "I could not confirm the rest." if search_finished else "I'm still checking the rest."
+        """say: (description, value). Returns (text, latency). While the search runs this is the facts alone: the
+        policy decides what follows them once they are said, when it knows whether the search has caught up."""
+        tail = "I could not confirm the rest." if search_finished else ""
         if not say:
             return (tail if missing else "That's all I found."), 0.0
         facts = "\n".join(f"- {d}: {v}" for d, v in say)
@@ -96,7 +96,7 @@ class Generator:
                 and "still checking" not in text.lower() and not adds_terms(text, request)):
             self.fallbacks += 1
             text = " ".join(f"{d}: {v}." for d, v in say)
-        return f"{text} {tail}" if missing else text, latency
+        return f"{text} {tail}" if missing and tail else text, latency
 
     def free(self, question: str, evidence: Sequence[Tuple[Optional[str], str]]) -> Tuple[str, List[str], float]:
         """Returns (text, answers, latency). An unusable or abstaining reply has no answers, so it claims nothing."""

@@ -80,10 +80,7 @@ def _render(decision: Decision, units: Mapping[str, Unit]):
             "start": offset, "end": offset + CLAIM_S,
         })
         offset += CLAIM_S
-    if decision.action == PARTIAL:
-        pieces.append("I'm still checking the rest.")
-        offset += SHORT_UTTERANCE_S
-    elif not pieces:
+    if not pieces:
         pieces.append("That's all I could confirm.")
         offset += SHORT_UTTERANCE_S
     return " ".join(pieces), offset, spans
@@ -152,7 +149,11 @@ def replay(
     max_extra_s: float = 5.0,
     seed: int = 0,
     generator=None,
+    concurrent: bool = False,
 ) -> List[dict]:
+    """With concurrent, judging and generation keep running while the agent speaks, from the moment their
+    inputs exist, so the next utterance can start as soon as the current one ends. Otherwise they start at the
+    first decision after it ends. Models that share a server may slow each other; that is not simulated."""
     events = _parse_events(trace)
     complete: Optional[float] = trace.get("retrieval_complete_time_s")
     if complete is None and events:
@@ -163,6 +164,7 @@ def replay(
 
     policy.reset()
     records, busy_until, step = [], float("-inf"), 0
+    speaking_until, work_from = None, 0.0  # work_from: when the model finished its last utterance
     known: Dict[str, str] = {}
     t = 0.0
     while t <= max(end_t, busy_until + tick_s):  # an utterance past the horizon still gets its next decision
@@ -176,15 +178,24 @@ def replay(
             )
             decision = policy.decide(obs)
             cost = decision_cost_s + decision.cost_s
+            decided, earliest = t, t
+            if concurrent and speaking_until is not None:
+                inputs = [work_from, setup_cost_s]
+                inputs += [visible[-1].visible_time_s] if visible else []
+                inputs += [complete] if obs.retrieval_done else []
+                decided, earliest = max(inputs), speaking_until
             if decision.action == WAIT:
-                busy_until = t + cost  # still thinking: no new decision before the judge returns
+                busy_until = max(t, decided + cost)  # still thinking: no new decision before the judge returns
+                speaking_until = None
             else:
                 generation_cost = 0.0
                 if generator is not None and decision.action in (PARTIAL, FINAL):
                     text, duration, spans, generation_cost = _generate(decision, obs, unit_map, generator, known)
                 else:
                     text, duration, spans = _render(decision, unit_map)
-                start = t + cost + generation_cost
+                    if generator is not None and decision.action == PROGRESS:
+                        duration = _speech_s(text)
+                start = max(earliest, decided + cost + generation_cost)
                 for s in spans:
                     s["start"] += start
                     s["end"] += start
@@ -198,7 +209,7 @@ def replay(
                     "seed": seed,
                     "time_origin": trace["time_origin"],
                     "clock": trace["clock"],
-                    "decision_time_s": t,
+                    "decision_time_s": decided,
                     "decision_cost_s": cost,
                     "generation_cost_s": generation_cost,
                     "action": decision.action,
@@ -210,7 +221,8 @@ def replay(
                     "status": "ok",
                     "unit_labels": decision.unit_labels,
                 })
-                busy_until = start + duration
+                busy_until = speaking_until = start + duration
+                work_from = start
                 if decision.action == FINAL:
                     break
         step += 1

@@ -71,7 +71,7 @@ class GroundedTest(unittest.TestCase):
         running = Generator(Client()).grounded("q", [("leader", "Alice")], ["date"], False)[0]
         done = Generator(Client()).grounded("q", [("leader", "Alice")], [], True)[0]
         self.assertEqual(finished, "It is Alice so far. I could not confirm the rest.")
-        self.assertEqual(running, "It is Alice so far. I'm still checking the rest.")
+        self.assertEqual(running, "It is Alice so far.")  # the policy says what follows, once it knows
         self.assertEqual(done, "It is Alice so far.")
 
     def test_nothing_to_say_needs_no_model(self):
@@ -125,7 +125,7 @@ class GroundedTest(unittest.TestCase):
                 return {"text": "I'm still checking the date."}
         generator = Generator(Vague())
         text, _ = generator.grounded("q", [("leader", "Alice")], ["date"], False)
-        self.assertEqual(text, "leader: Alice. I'm still checking the rest.")
+        self.assertEqual(text, "leader: Alice.")
         self.assertEqual(generator.fallbacks, 1)
 
     def test_rambling_reply_falls_back_to_facts(self):
@@ -140,6 +140,40 @@ class GroundedTest(unittest.TestCase):
         _, records = self.run_policy(latency=1.0)
         partial = next(r for r in records if r["action"] == "Partial Answer")
         self.assertEqual((partial["decision_time_s"], partial["generation_cost_s"], partial["output_start_time_s"]), (2.0, 1.0, 3.0))
+
+    def wordy_records(self, concurrent, latency=1.0, trace=TRACE):
+        class Wordy(Client):
+            def chat_json(self, messages, *, purpose, schema=None, max_tokens=None):
+                reply = super().chat_json(messages, purpose=purpose, schema=schema)
+                return {"text": reply["text"] + " word" * 20}
+        return replay(trace, units_without_gold(GOLD), EvidenceAware(OracleJudge([GOLD])),
+                      generator=Generator(Wordy(latency)), concurrent=concurrent)
+
+    def test_no_progress_when_search_caught_up_during_partial(self):
+        records = self.wordy_records(False)  # evidence arrives at 8 s, the Partial ends after that
+        self.assertEqual([r["action"] for r in records], ["Backchannel", "Partial Answer", "Final Answer"])
+
+    def test_progress_when_search_is_still_behind_after_partial(self):
+        _, records = self.run_policy()
+        actions = [r["action"] for r in records]
+        self.assertEqual(actions[:3], ["Backchannel", "Partial Answer", "Progress"])
+        self.assertEqual(actions[-1], "Final Answer")
+        progress = records[2]
+        self.assertEqual(progress["output_end_time_s"] - progress["output_start_time_s"], 2.0)  # at speaking rate
+
+    def test_concurrent_work_starts_final_when_partial_ends(self):
+        waiting, working = self.wordy_records(False), self.wordy_records(True)
+        partial, final = working[-2:]
+        self.assertEqual(final["output_start_time_s"], partial["output_end_time_s"])
+        self.assertGreaterEqual(final["decision_time_s"], partial["output_start_time_s"])
+        self.assertLess(final["output_start_time_s"], waiting[-1]["output_start_time_s"])
+
+    def test_concurrent_work_cannot_start_before_its_input_exists(self):
+        late = dict(TRACE, events=[TRACE["events"][0], dict(TRACE["events"][1], visible_time_s=20.0)],
+                    retrieval_complete_time_s=20.0)
+        final = self.wordy_records(True, trace=late)[-1]
+        self.assertEqual(final["decision_time_s"], 20.0)
+        self.assertEqual(final["output_start_time_s"], 21.0)
 
     def test_backchannel_needs_no_model(self):
         client, records = self.run_policy()
@@ -216,6 +250,18 @@ class ValueSpanTest(unittest.TestCase):
         self.assertEqual(_value_span("abc", None, 3.0), (0.0, 3.0, False))
         self.assertEqual(_value_span("I know", "no", 6.0), (0.0, 6.0, False))
         self.assertEqual(_value_span("No, it is not.", "no", 14.0), (0.0, 2.0, True))
+
+
+class PairedTableTest(unittest.TestCase):
+    def test_counts_traces_only_one_side_answered(self):
+        import run_replay
+        def row(trace, policy, ttca, correct):
+            return {"trace_id": trace, "schedule": "short", "policy": policy, "ttfgi": ttca, "ttca": ttca, "final_correct": correct}
+        rows = [row("a", "wait_all", 5.0, True), row("a", "ours", 3.0, True),
+                row("b", "wait_all", None, False), row("b", "ours", 9.0, True),
+                row("c", "wait_all", 4.0, True), row("c", "ours", None, False)]
+        line = run_replay.paired_with_wait_all(rows)[2]
+        self.assertEqual(line, "| short | ours | +2.0 (1/1) | +2.0 (1/1) | 1 | 1 |")
 
 
 class RunReplayGenerateTest(unittest.TestCase):

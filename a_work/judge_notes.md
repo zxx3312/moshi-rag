@@ -133,4 +133,19 @@ by_presupposition 规则（3.11）是在这三轮之后加的，还没有在 GPU
 - **从"种"推断"属"**：提示词规则没有效果（3.9），还需要别的办法。
 - **"艺名是 Jake"**（mock 上唯一的错判有证据）：只看到"歌手是 Jake Zyrus"就给出艺名。
 - **拆题**：国歌题多拆；Burt Reynolds、Hall of Fame、Newt Gingrich 的拆法与 gold 不同，但都说得通。
-- **尚未接入回放流程**：judge 的延迟还没有计入策略的时钟，也还没有"真实 judge 版 vs Oracle 版"的策略对比。
+
+## 6. 接入回放后的结果（B 组 20 题，v4）
+
+judge 延迟已计入回放时钟，每种 judge 都有回放结果，其中 LoRA 见 `lora_judge.md`。下面是自查指标，以 B 组的 evaluator 为准；20 题各跑三种延迟，60 条 trace 并不独立。
+
+| 策略 | 问题要的答案答对 | 无依据 / 声明数 |
+|---|---|---|
+| Wait-All | 52/60 | 3/75 |
+| Time-Only | 45/60 | 12/74 |
+| First-Evidence | 38/60 | 23/73 |
+| Oracle | 60/60 | 0/104 |
+| Prompt 14B（gold 单元） | 48/60 | 7/92 |
+| Prompt 14B（模型拆题） | 44/60 | 9/87 |
+
+- **"无依据"不能单独看**：按值计分时，问祖父答成父亲也能对上 gold 的中间单元，算作有依据。所以新增了"答对"一项（`final_correct`）。"没答对"也包括老实说 could not confirm 的情况。
+- **比较要点**：prompt judge 的无依据比例低于 Time-Only 和 First-Evidence，但答对数没有超过 Wait-All。

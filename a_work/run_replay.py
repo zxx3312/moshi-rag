@@ -61,6 +61,30 @@ def table(rows, group_key):
     return lines
 
 
+def paired_with_wait_all(rows):
+    """Each policy against Wait-All on the same traces. Medians alone hide who answered at all: TTCA compares only
+    traces both completed, so the last two columns count the traces where just one side got the asked answer."""
+    wait_all = {r["trace_id"]: r for r in rows if r["policy"] == "wait_all"}
+    lines = ["| schedule | policy | TTFGI earlier by (earlier in / pairs) | TTCA earlier by (earlier in / pairs) | only this correct | only Wait-All correct |",
+             "|---|---|---|---|---|---|"]
+
+    def earlier(pairs, metric):
+        diffs = [w[metric] - r[metric] for r, w in pairs if r[metric] is not None and w[metric] is not None]
+        if not diffs:
+            return "-"
+        return f"{statistics.median(diffs):+.1f} ({sum(d > 0 for d in diffs)}/{len(diffs)})"
+
+    for schedule in sorted({r["schedule"] for r in rows}):
+        for policy in dict.fromkeys(r["policy"] for r in rows):
+            if policy == "wait_all":
+                continue
+            pairs = [(r, wait_all[r["trace_id"]]) for r in rows if r["policy"] == policy and r["schedule"] == schedule]
+            lines.append(f"| {schedule} | {policy} | {earlier(pairs, 'ttfgi')} | {earlier(pairs, 'ttca')} "
+                         f"| {sum(r['final_correct'] and not w['final_correct'] for r, w in pairs)} "
+                         f"| {sum(w['final_correct'] and not r['final_correct'] for r, w in pairs)} |")
+    return lines + [""]
+
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--trace", type=Path, default=HERE / "mock/trace.jsonl")
@@ -73,6 +97,7 @@ def main():
     ap.add_argument("--no-examples", action="store_true", help="Judge without few-shot examples (LoRA).")
     ap.add_argument("--thinking", action="store_true")
     ap.add_argument("--generate", action="store_true", help="Write real sentences with the LLM.")
+    ap.add_argument("--concurrent", action="store_true", help="Judge and generate while the agent speaks.")
     ap.add_argument("--out", type=Path, required=True)
     args = ap.parse_args()
 
@@ -106,7 +131,7 @@ def main():
         runs += [(p, gold_units, 0.0, False) for p in (oracle, prompt)]
         runs.append((prompt_real, real_units, setup_cost, True))
         for policy, units, setup, by_value in runs:
-            records = replay(trace, units, policy, setup_cost_s=setup, generator=generator)
+            records = replay(trace, units, policy, setup_cost_s=setup, generator=generator, concurrent=args.concurrent)
             logs += records
             metrics = preview_metrics(records, trace, gold, by_value=by_value)
             rows.append({"trace_id": trace["trace_id"], "sample_id": sid, "policy": policy.name,
@@ -122,11 +147,12 @@ def main():
         print(f"generation: {len(generator.log)} calls, {generator.fallbacks} replaced by plain facts")
     report = ["# Replay with real judge latency", "",
               f"model `{args.model}`, judge `{args.judge_model or args.model}` ({args.judge_name}), "
-              f"thinking={args.thinking}, generate={args.generate}, "
+              f"thinking={args.thinking}, generate={args.generate}, concurrent={args.concurrent}, "
               f"traces `{args.trace}`, gold `{args.gold}`", "",
               "Times are medians in seconds after the question ends. Self-check metrics: B's evaluator is authoritative.", "",
               "## All traces", ""]
     report += table([dict(r, scope="all") for r in rows], "scope")
+    report += ["## Paired with Wait-All", "", "Positive means earlier than Wait-All.", ""] + paired_with_wait_all(rows)
     report += ["## By delay schedule", ""] + table(rows, "schedule")
     report += ["## By question type", ""] + table(rows, "question_type")
     text = "\n".join(report) + "\n"

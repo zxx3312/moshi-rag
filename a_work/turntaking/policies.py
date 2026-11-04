@@ -85,7 +85,8 @@ class EvidenceAware(Policy):
     """Ours: map the judged sufficiency state to an action.
 
     insufficient -> Backchannel once, Progress once after progress_after_s, else Wait
-    partial      -> Partial Answer with newly supported units, else as insufficient
+    partial      -> Partial Answer with newly supported units, then Progress once if nothing has followed it,
+                    else as insufficient
     full         -> Final Answer with the necessary units not yet said
     Retrieval finished but still not full -> Final Answer with only the supported units.
     """
@@ -100,6 +101,7 @@ class EvidenceAware(Policy):
         self._said_units: Set[str] = set()
         self._said_backchannel = False
         self._said_progress = False
+        self._owes_progress = False
         self._judged_evidence = None
 
     def _judge(self, obs):
@@ -129,7 +131,11 @@ class EvidenceAware(Policy):
         if obs.retrieval_done and obs.units_ready:  # before the units exist nothing has been judged yet
             return claim(FINAL, new)
         if new:
+            self._owes_progress = True
             return claim(PARTIAL, new)
+        if self._owes_progress:  # only now is it known that the search has not caught up
+            self._owes_progress = False
+            return Decision(PROGRESS, unit_labels=label_names, cost_s=cost)
         if not self._said_backchannel:
             self._said_backchannel = True
             return Decision(BACKCHANNEL, unit_labels=label_names, cost_s=cost)
