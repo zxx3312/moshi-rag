@@ -15,9 +15,8 @@ GROUNDED_SYSTEM = """You are a voice assistant answering a question while a sear
 
 Rules:
 - State every fact listed under "Say" in natural speech, with each value written exactly as given. Add nothing else, not even from your own knowledge.
-- If "Still checking" lists anything, end with at most 8 words on what you are still checking. Do not guess it.
-- If "Could not confirm" lists anything, end by saying you could not confirm it.
-- Do not greet, read out these headings, or use lists. Keep it under 25 words in total.
+- Say only those facts: nothing about what is left to do.
+- Do not greet, read out these headings, or use lists. Keep it under 20 words in total.
 Reply with JSON only."""
 
 FREE_SYSTEM = """You are a voice assistant answering a question. Using the evidence you have so far, give your best answer now in one or two short spoken sentences, without lists.
@@ -37,6 +36,13 @@ def find_value(text: str, value: Optional[str]) -> int:
         return -1
     m = re.search(rf"(?<!\w){re.escape(value)}(?!\w)", text, re.IGNORECASE)
     return m.start() if m else -1
+
+
+def adds_terms(text: str, request: str) -> bool:
+    """Numbers, or capitalised words past a sentence start, that the request does not contain: facts nobody judged."""
+    known = {w.lower() for w in re.findall(r"[\w'-]+", request)}
+    terms = re.findall(r"(?<![.!?]\s)(?<!^)\b[A-Z][\w'-]*|\b\d+(?:,\d+)*\b", text)
+    return any(t.lower() not in known and t.lower().removesuffix("'s") not in known for t in terms)
 
 
 def _is_abstention(answer: str) -> bool:
@@ -76,22 +82,21 @@ class Generator:
 
     def grounded(self, question: str, say: Sequence[Tuple[str, str]], missing: Sequence[str],
                  search_finished: bool) -> Tuple[str, float]:
-        """say: (description, value). Returns (text, latency)."""
-        facts = "\n".join(f"- {d}: {v}" for d, v in say) or "(nothing new)"
-        heading = "Could not confirm" if search_finished else "Still checking"
-        pending = f"{heading}:\n" + "\n".join(f"- {m}" for m in missing) + "\n\n" if missing else ""
-        request = f"Question: {question}\n\nSay:\n{facts}\n\n{pending}".rstrip()
+        """say: (description, value). Returns (text, latency). The tail is fixed: the model's own ran as long
+        as the facts and kept the Final Answer waiting, and it said "still checking" when nothing was."""
+        tail = "I could not confirm the rest." if search_finished else "I'm still checking the rest."
+        if not say:
+            return (tail if missing else "That's all I found."), 0.0
+        facts = "\n".join(f"- {d}: {v}" for d, v in say)
+        request = f"Question: {question}\n\nSay:\n{facts}"
         raw, latency = self._call([{"role": "system", "content": GROUNDED_SYSTEM}, {"role": "user", "content": request}],
                                   GROUNDED_SCHEMA)
         text = raw.get("text") if isinstance(raw.get("text"), str) else None
-        says_checking = search_finished or not missing  # nothing is being checked: the words would be false
-        if (text and len(text.split()) <= MAX_SPOKEN_WORDS and all(find_value(text, v) >= 0 for _, v in say if v)
-                and not (says_checking and "still checking" in text.lower())):
-            return text, latency
-        self.fallbacks += 1
-        plain = " ".join(f"{d}: {v}." for d, v in say)
-        tail = "I could not confirm the rest." if search_finished else "I'm still checking the rest."
-        return " ".join(p for p in (plain, tail if missing or not plain else "") if p), latency
+        if not (text and len(text.split()) <= MAX_SPOKEN_WORDS and all(find_value(text, v) >= 0 for _, v in say if v)
+                and "still checking" not in text.lower() and not adds_terms(text, request)):
+            self.fallbacks += 1
+            text = " ".join(f"{d}: {v}." for d, v in say)
+        return f"{text} {tail}" if missing else text, latency
 
     def free(self, question: str, evidence: Sequence[Tuple[Optional[str], str]]) -> Tuple[str, List[str], float]:
         """Returns (text, answers, latency). An unusable or abstaining reply has no answers, so it claims nothing."""

@@ -122,7 +122,7 @@ class EvidenceAware(Policy):
             ids = tuple(u.unit_id for u in units)
             self._said_units.update(ids)
             return Decision(action, ids, {i: labels[i].citations for i in ids}, label_names,
-                            {i: labels[i].value for i in ids}, cost)
+                            {u.unit_id: labels[u.unit_id].value for u in supported}, cost)  # later units refer to these
 
         if sufficiency_state(obs.units, labels) == FULLY_SUFFICIENT:
             return claim(FINAL, [u for u in new if u.necessary])

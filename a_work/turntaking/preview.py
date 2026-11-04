@@ -65,6 +65,14 @@ def claim_supported(claim: Mapping, gold_units: Mapping[str, Mapping], trace: Ma
     return bool(supported_claim_units(claim, gold_units, trace, by_value))
 
 
+def final_correct(claims: Sequence[Mapping], gold_units: Mapping[str, Mapping], by_value: bool = False) -> bool:
+    """Was what the question asks stated correctly, whatever else was said? Unsupported counts cannot tell: with
+    by_value, naming the father when asked for the grandfather matches a gold unit and counts as supported."""
+    used = {d for u in gold_units.values() for d in u["depends_on"]}
+    said = {uid for c in claims for uid in claimed_gold_units(c, gold_units, by_value)}
+    return all(uid in said for uid, u in gold_units.items() if u["necessary"] and uid not in used)
+
+
 def preview_metrics(records: List[Mapping], trace: Mapping, gold: Mapping, by_value: bool = False) -> Dict[str, Optional[float]]:
     gold_units = {u["unit_id"]: u for u in gold["units"]}
     claims = [c for r in records for c in r["claim_spans"]]
@@ -87,6 +95,7 @@ def preview_metrics(records: List[Mapping], trace: Mapping, gold: Mapping, by_va
         "ttca": max(first_ok_end[u] for u in necessary) if complete else None,
         "claims": len(claims),
         "unsupported": unsupported,
+        "final_correct": final_correct(claims, gold_units, by_value),
         "judge_cost_s": sum(r.get("decision_cost_s", 0.0) for r in records),
         "generation_cost_s": sum(r.get("generation_cost_s", 0.0) for r in records),
         "value_not_in_text": sum(c.get("value_in_text") is False for c in claims),

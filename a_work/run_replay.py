@@ -46,8 +46,8 @@ def table(rows, group_key):
     lines = []
     for group in sorted(groups):
         lines += [f"### {group_key} = {group}", "",
-                  "| policy | traces | TTFR | TTFGI (traces with any) | TTCA (completed) | unsupported / claims | judge s per trace | generation s per trace | values not in text |",
-                  "|---|---|---|---|---|---|---|---|---|"]
+                  "| policy | traces | TTFR | TTFGI (traces with any) | TTCA (completed) | unsupported / claims | asked answer correct | judge s per trace | generation s per trace | values not in text |",
+                  "|---|---|---|---|---|---|---|---|---|---|"]
         for policy in dict.fromkeys(r["policy"] for r in rows):
             rs = [r for r in groups[group] if r["policy"] == policy]
             if rs:
@@ -55,7 +55,7 @@ def table(rows, group_key):
                 lines.append(
                     f"| {policy} | {n} | {fmt([r['ttfr'] for r in rs])} | {fmt([r['ttfgi'] for r in rs], n)} "
                     f"| {fmt([r['ttca'] for r in rs], n)} | {sum(r['unsupported'] for r in rs)}/{sum(r['claims'] for r in rs)} "
-                    f"| {statistics.mean(r['judge_cost_s'] for r in rs):.2f} "
+                    f"| {sum(r['final_correct'] for r in rs)}/{n} | {statistics.mean(r['judge_cost_s'] for r in rs):.2f} "
                     f"| {statistics.mean(r['generation_cost_s'] for r in rs):.2f} | {sum(r['value_not_in_text'] for r in rs)} |")
         lines.append("")
     return lines

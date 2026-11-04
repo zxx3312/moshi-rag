@@ -55,12 +55,46 @@ class GroundedTest(unittest.TestCase):
         self.assertNotIn("Led by Alice.", request)  # the model read evidence aloud
         self.assertNotIn("June 1", request)
         self.assertNotIn("Released on", request)
-        self.assertIn("Still checking:\n- release date of Alice", request)  # placeholder filled from the known value
+        self.assertNotIn("release date", request)  # the tail is fixed, so what is missing stays out
 
-    def test_finished_search_reports_what_is_unconfirmed(self):
+    def test_placeholder_filled_from_value_never_claimed(self):
+        gold = {"sample_id": "s", "units": [
+            {"unit_id": "u1", "description": "leader", "necessary": False, "expected_answer": "Alice", "depends_on": [], "support_sets": [["e1"]]},
+            {"unit_id": "u2", "description": "release date of {u1}", "necessary": True, "expected_answer": "June 1", "depends_on": ["u1"], "support_sets": [["e2"]]}]}
+        trace = dict(TRACE, events=[dict(e, visible_time_s=0.0) for e in TRACE["events"]], retrieval_complete_time_s=0.0)
         client = Client()
-        Generator(client).grounded("q", [("leader", "Alice")], ["date"], True)
-        self.assertIn("Could not confirm:\n- date", client.messages[0][-1]["content"])
+        replay(trace, units_without_gold(gold), EvidenceAware(OracleJudge([gold])), generator=Generator(client))
+        self.assertIn("- release date of Alice: June 1", client.messages[0][-1]["content"])
+
+    def test_tail_says_where_the_search_stands(self):
+        finished = Generator(Client()).grounded("q", [("leader", "Alice")], ["date"], True)[0]
+        running = Generator(Client()).grounded("q", [("leader", "Alice")], ["date"], False)[0]
+        done = Generator(Client()).grounded("q", [("leader", "Alice")], [], True)[0]
+        self.assertEqual(finished, "It is Alice so far. I could not confirm the rest.")
+        self.assertEqual(running, "It is Alice so far. I'm still checking the rest.")
+        self.assertEqual(done, "It is Alice so far.")
+
+    def test_nothing_to_say_needs_no_model(self):
+        client = Client()
+        self.assertEqual(Generator(client).grounded("q", [], ["date"], True), ("I could not confirm the rest.", 0.0))
+        self.assertEqual(client.calls, [])
+
+    def test_fact_nobody_judged_falls_back_to_facts(self):
+        class Adding(Client):
+            def __init__(self, text):
+                super().__init__()
+                self.text = text
+
+            def chat_json(self, messages, *, purpose, schema=None, max_tokens=None):
+                super().chat_json(messages, purpose=purpose, schema=schema)
+                return {"text": self.text}
+        say = [("splashdown date", "July 24")]
+        self.assertEqual(Generator(Adding("It launched on July 16 and landed on July 24.")).grounded("q", say, [], True)[0],
+                         "splashdown date: July 24.")
+        self.assertEqual(Generator(Adding("It left Florida and landed on July 24.")).grounded("q", say, [], True)[0],
+                         "splashdown date: July 24.")
+        self.assertEqual(Generator(Adding("Its splashdown was on July 24.")).grounded("q", say, [], True)[0],
+                         "Its splashdown was on July 24.")
 
     def test_earlier_turns_are_not_passed(self):
         client, _ = self.run_policy()
@@ -73,8 +107,6 @@ class GroundedTest(unittest.TestCase):
                 super().chat_json(messages, purpose=purpose, schema=schema)
                 return {"text": "It is Alice. Still checking the date."}
         self.assertEqual(Generator(Copying()).grounded("q", [("leader", "Alice")], [], True)[0], "leader: Alice.")
-        self.assertEqual(Generator(Copying()).grounded("q", [("leader", "Alice")], ["date"], False)[0],
-                         "It is Alice. Still checking the date.")
 
     def test_long_partial_does_not_cut_off_final(self):
         class Wordy(Client):
@@ -149,6 +181,24 @@ class BaselineTest(unittest.TestCase):
         self.assertLess(records[-1]["claim_spans"][0]["start"], records[-1]["claim_spans"][1]["start"])
         metrics = preview_metrics(records, TRACE, GOLD, by_value=True)
         self.assertEqual((metrics["claims"], metrics["unsupported"]), (2, 1))  # e2 is not visible yet
+
+    def test_intermediate_value_is_supported_but_not_the_asked_answer(self):
+        gold = {"sample_id": "s", "units": [
+            {"unit_id": "u1", "description": "father", "necessary": True, "expected_answer": "Alice", "depends_on": [], "support_sets": [["e1"]]},
+            {"unit_id": "u2", "description": "father of {u1}", "necessary": True, "expected_answer": "June 1", "depends_on": ["u1"], "support_sets": [["e2"]]}]}
+        class Named(Client):
+            def __init__(self, answer):
+                super().__init__()
+                self.answer = answer
+
+            def chat_json(self, messages, *, purpose, schema=None, max_tokens=None):
+                super().chat_json(messages, purpose=purpose, schema=schema)
+                return {"text": f"It is {self.answer}.", "answers": [self.answer]}
+        def metrics(answer):
+            records = replay(TRACE, units_without_gold(gold), FirstEvidence(), generator=Generator(Named(answer)))
+            return preview_metrics(records, TRACE, gold, by_value=True)
+        self.assertEqual((metrics("Alice")["unsupported"], metrics("Alice")["final_correct"]), (0, False))
+        self.assertTrue(metrics("June 1")["final_correct"])
 
     def test_cache_reports_latency_again(self):
         generator = Generator(Client(2.0))
