@@ -57,6 +57,26 @@ class GroundedTest(unittest.TestCase):
         self.assertNotIn("Released on", request)
         self.assertIn("Still missing:\n- release date of Alice", request)  # placeholder filled from the known value
 
+    def test_long_partial_does_not_cut_off_final(self):
+        class Wordy(Client):
+            def chat_json(self, messages, *, purpose, schema=None, max_tokens=None):
+                reply = super().chat_json(messages, purpose=purpose, schema=schema)
+                return {"text": reply["text"] + " word" * 60}
+        records = replay(TRACE, units_without_gold(GOLD), EvidenceAware(OracleJudge([GOLD])), generator=Generator(Wordy()))
+        self.assertEqual(records[-1]["action"], "Final Answer")
+        self.assertEqual(preview_metrics(records, TRACE, GOLD)["unsupported"], 0)
+        self.assertIsNotNone(preview_metrics(records, TRACE, GOLD)["ttca"])
+
+    def test_reply_without_value_falls_back_to_facts(self):
+        class Vague(Client):
+            def chat_json(self, messages, *, purpose, schema=None, max_tokens=None):
+                super().chat_json(messages, purpose=purpose, schema=schema)
+                return {"text": "I'm still checking the date."}
+        generator = Generator(Vague())
+        text, _ = generator.grounded("q", [("leader", "Alice", [])], ["date"], [], False)
+        self.assertEqual(text, "leader: Alice. I'm still checking the rest.")
+        self.assertEqual(generator.fallbacks, 1)
+
     def test_later_turn_knows_what_was_said(self):
         client, _ = self.run_policy()
         self.assertIn("It is Alice so far.", client.messages[1][-1]["content"])
@@ -80,6 +100,16 @@ class BaselineTest(unittest.TestCase):
         metrics = preview_metrics(records, TRACE, GOLD, by_value=True)
         self.assertEqual((metrics["claims"], metrics["unsupported"]), (1, 1))
 
+    def test_abstention_makes_no_claim(self):
+        class Abstain(Client):
+            def chat_json(self, messages, *, purpose, schema=None, max_tokens=None):
+                super().chat_json(messages, purpose=purpose, schema=schema)
+                return {"text": "The evidence does not say.", "answer": "Unknown."}
+        records = replay(TRACE, units_without_gold(GOLD), FirstEvidence(), generator=Generator(Abstain()))
+        self.assertEqual(records[-1]["claim_spans"], [])
+        metrics = preview_metrics(records, TRACE, GOLD, by_value=True)
+        self.assertEqual((metrics["claims"], metrics["unsupported"], metrics["ttfgi"]), (0, 0, None))
+
     def test_unusable_reply_is_no_answer(self):
         def bad(messages):
             raise ValueError("bad reply")
@@ -97,9 +127,11 @@ class BaselineTest(unittest.TestCase):
 
 class ValueSpanTest(unittest.TestCase):
     def test_value_position_in_speech(self):
-        self.assertEqual(_value_span("abcdefghij", "fgh", 10.0), (5.0, 8.0, True))
+        self.assertEqual(_value_span("abcd fgh j", "fgh", 10.0), (5.0, 8.0, True))
         self.assertEqual(_value_span("abc", "zzz", 3.0), (0.0, 3.0, False))
         self.assertEqual(_value_span("abc", None, 3.0), (0.0, 3.0, False))
+        self.assertEqual(_value_span("I know", "no", 6.0), (0.0, 6.0, False))
+        self.assertEqual(_value_span("No, it is not.", "no", 14.0), (0.0, 2.0, True))
 
 
 class RunReplayGenerateTest(unittest.TestCase):

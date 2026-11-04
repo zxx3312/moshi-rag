@@ -13,6 +13,7 @@ import re
 from pathlib import Path
 from typing import Dict, Iterable, List, Mapping, Optional
 
+from .generate import find_value
 from .policies import Policy
 from .schema import (
     BACKCHANNEL, FINAL, PARTIAL, PROGRESS, SCHEMA_VERSION, SUPPORTED, WAIT,
@@ -94,7 +95,7 @@ def _speech_s(text: str) -> float:
 
 def _value_span(text: str, value: Optional[str], duration: float) -> tuple:
     """(start, end, found): the part of the utterance that says the value, by its position in the text."""
-    i = text.lower().find(value.lower()) if value else -1
+    i = find_value(text, value)
     if i < 0:
         return 0.0, duration, False
     return duration * i / len(text), duration * (i + len(value)) / len(text), True
@@ -111,6 +112,8 @@ def _generate(decision: Decision, obs: Observation, units: Mapping[str, Unit], g
     if decision.free_answer:
         text, answer, latency = generator.free(obs.question, cited(list(evidence)))
         duration = _speech_s(text)
+        if answer is None:  # abstained: no claim to score
+            return text, duration, [], latency
         start, end, found = _value_span(text, answer, duration)
         spans = [{"text": text, "controller_unit_id": "answer", "value": answer, "cited_evidence_ids": list(evidence),
                   "start": start, "end": end, "value_in_text": found}]
@@ -164,7 +167,7 @@ def replay(
     said: List[str] = []
     known: Dict[str, str] = {}
     t = 0.0
-    while t <= end_t:
+    while t <= max(end_t, busy_until + tick_s):  # an utterance past the horizon still gets its next decision
         if t >= busy_until:
             visible = tuple(e for e in events if e.visible_time_s <= t)
             obs = Observation(

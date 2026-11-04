@@ -7,15 +7,16 @@ evidence and give their best answer, so they can be wrong; the short answer they
 from __future__ import annotations
 
 import json
+import re
 from typing import Dict, List, Optional, Sequence, Tuple
 
 GROUNDED_SYSTEM = """You are a voice assistant answering a question while a search is still running. Write what to say aloud next.
 
 Rules:
-- State only the facts listed under "Say", using their exact values. Add nothing else, not even from your own knowledge.
-- If anything is listed under "Still missing", end by saying briefly what you are still checking. Do not guess it.
+- First state every fact listed under "Say", with each value written exactly as given. Add nothing else, not even from your own knowledge.
+- If anything is listed under "Still missing", end with a few words on what you are still checking. Do not guess it.
 - If "Search finished" is yes and something is still missing, say you could not confirm it.
-- Do not repeat what you already said. Do not greet or use lists. One or two short spoken sentences.
+- Do not repeat what you already said. Do not greet or use lists. Keep it under 25 words in total.
 Reply with JSON only."""
 
 FREE_SYSTEM = """You are a voice assistant answering a question. Using the evidence you have so far, give your best answer now in one or two short spoken sentences, without lists.
@@ -27,17 +28,34 @@ FREE_SCHEMA = {"type": "object", "properties": {"text": {"type": "string"}, "ans
                "required": ["text", "answer"]}
 
 
+def find_value(text: str, value: Optional[str]) -> int:
+    """Position of the value in the text as whole words, or -1, so "no" is not found in "know"."""
+    if not value:
+        return -1
+    m = re.search(rf"(?<!\w){re.escape(value)}(?!\w)", text, re.IGNORECASE)
+    return m.start() if m else -1
+
+
+def _is_abstention(answer: str) -> bool:
+    return answer.strip().strip(".").lower() in {"", "unknown", "not sure", "n/a", "none", "no answer"}
+
+
 def _evidence_lines(evidence: Sequence[Tuple[Optional[str], str]]) -> str:
     return "\n".join(f"({title}) {text}" if title else text for title, text in evidence) or "(none)"
 
 
 class Generator:
     """Results are cached, and the real call's latency is reported again on a cache hit: another
-    delay schedule would have waited for that call too."""
+    delay schedule would have waited for that call too.
+
+    A grounded reply that leaves out a value is replaced by the plain facts: what was never said must not
+    earn credit. An abstaining baseline reports no answer, which makes no claim.
+    """
 
     def __init__(self, client):
         self.client = client
         self._cache: Dict[str, tuple] = {}
+        self.fallbacks = 0
         self.log: List[dict] = []
 
     def _call(self, messages: List[dict], schema: dict) -> Tuple[dict, float]:
@@ -64,7 +82,11 @@ class Generator:
         raw, latency = self._call([{"role": "system", "content": GROUNDED_SYSTEM}, {"role": "user", "content": request}],
                                   GROUNDED_SCHEMA)
         text = raw.get("text") if isinstance(raw.get("text"), str) else None
-        return (text or " ".join(f"{d}: {v}." for d, v, _ in say) or "I could not confirm that."), latency
+        if text and all(find_value(text, v) >= 0 for _, v, _ in say if v):
+            return text, latency
+        self.fallbacks += 1
+        plain = " ".join(f"{d}: {v}." for d, v, _ in say) or "I could not confirm that."
+        return plain + (" I'm still checking the rest." if missing and not search_finished else ""), latency
 
     def free(self, question: str, evidence: Sequence[Tuple[Optional[str], str]]) -> Tuple[str, Optional[str], float]:
         """Returns (text, short answer, latency). An unusable reply counts as no answer."""
@@ -73,4 +95,4 @@ class Generator:
                                   FREE_SCHEMA)
         text = raw.get("text") if isinstance(raw.get("text"), str) else None
         answer = raw.get("answer") if isinstance(raw.get("answer"), str) else None
-        return text or "I'm not sure.", answer, latency
+        return text or "I'm not sure.", None if answer is None or _is_abstention(answer) else answer, latency

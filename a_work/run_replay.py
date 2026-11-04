@@ -114,6 +114,7 @@ def main():
     write_jsonl(args.out / "judge_calls.jsonl", judge.log)
     if generator is not None:
         write_jsonl(args.out / "generate_calls.jsonl", generator.log)
+        print(f"generation: {len(generator.log)} calls, {generator.fallbacks} replaced by plain facts")
     report = ["# Replay with real judge latency", "",
               f"model `{args.model}`, thinking={args.thinking}, generate={args.generate}, "
               f"traces `{args.trace}`, gold `{args.gold}`", "",
