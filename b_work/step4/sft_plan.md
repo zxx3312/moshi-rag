@@ -1,6 +1,6 @@
 # Step 4 — Judge SFT Dataset (300 Questions): Execution Plan
 
-Status (2026-11-02): Steps 2–4 and 6–8 are implemented (see `README.md`). Gold units are Claude drafts; the human review in Step 5 and the rule freeze in Step 1 are still open.
+Status (2026-11-03): Steps 2–4 and 6–8 are implemented (see `README.md`), and the selected 300 gold questions have completed human review. After the 31-question replacement audit, 300 annotation records are `reviewed` and 41 are `reject`; all 300 reviewed records are selected. The planned double-review agreement record in Step 5 is still open.
 
 Goal: build supervised fine-tuning data for A's LoRA judge (W3, `a_work/turntaking/judge.py` on branch `a-prompt-judge`). One training example is one judge call: the question, the answer units (without answers), and the evidence visible at time `t`, mapped to a label, value, and citations for each unit.
 
@@ -9,7 +9,7 @@ Goal: build supervised fine-tuning data for A's LoRA judge (W3, `a_work/turntaki
 - **Source: official train splits only.** The 300 reserved questions in `b_work/step2/prepared/samples_eval_reserved.jsonl` are final evaluation data and must not be used for training, prompt tuning, or model selection (`b_work/step2/README.md`). The 20 debug questions are not used either.
 - **No overlap.** Exclude every debug and reserved `sample_id`, and every exact normalized question text (same normalization as `prepare_step2.py`), including overlap between the two source datasets.
 - **One question, one split.** All schedules and snapshots of a question go to the same split (train or dev).
-- **Same input format as the runtime judge.** The SFT prompt is produced by A's `judge_messages()` code, not retyped, so training and inference inputs cannot drift apart.
+- **Same input format as the runtime judge.** The SFT prompt is produced by A's `judge_messages()` code. B appends one documented sentence for the approved two-candidate elimination form of `by_presupposition`; A's runtime prompt must adopt the same rule before evaluation.
 - **No conflict cases.** Examples with both supporting and conflicting evidence are excluded until a conflict rule is frozen (`labeling_guide.md` Section 1; `unit_schema.md` 5.6).
 - **Data version:** `sft-v0` on every generated record.
 
@@ -19,7 +19,7 @@ Mass annotation multiplies every unresolved rule by 300. Agree on these and reco
 
 | Decision | Proposed default | Where it is pending |
 |---|---|---|
-| Question presuppositions | Accepted as premises. The answer entity itself still needs evidence; evidence that contradicts the premise goes to human review. Flag affected units `by_presupposition: true`. | `labeling_guide.md` v1.2 Section 1.1 |
+| Question presuppositions | Accepted as premises. Evidence may confirm the answer directly or, for exactly two named candidates with one unique answer, explicitly rule out the other candidate. Contradictory premises go to human review. Flag affected units `by_presupposition: true`. | `labeling_guide.md` v1.2 Section 1.1 |
 | Negatives that need world knowledge | `UNRESOLVED` (current rule) | `labeling_guide.md` Section 5 |
 | Deterministic comparison | The judge produces it (as in A's prompt) | `labeling_guide.md` Section 5 |
 | Citation target when several support sets are complete | The first complete set in gold order | new |
@@ -52,7 +52,7 @@ Manual annotation at the debug-set level of detail (about 10 minutes per questio
 - **2Wiki:** build units from `type` + `evidences` triples (one triple per fact unit, then a conclusion unit for comparisons) following `schema.md` 4.3. Map each triple to its supporting sentence for `support_sets`. Take aliases from the alias table.
 - **HotpotQA:** build units from `type` + `supporting_facts`. Bridge: one unit per supporting document in hop order. Comparison: one fact unit per entity, then a conclusion unit. An LLM may draft unit descriptions; every draft is reviewed.
 - **Alternative support:** search the distractor sentences for other sentences that state the same value (string match on answer and aliases, plus an optional LLM check), and add them as candidate extra sets **marked for review**. Missing alternative support produces wrong `UNRESOLVED` targets, the main source of label noise.
-- Output: `gold_annotations_sft.json` in the same format as `b_work/step3/gold_annotations.json`, with `status: "auto_draft"`.
+- Output: `drafts/annotations_batch_*.json` in the same format as `b_work/step3/gold_annotations.json`. Drafts are changed to `status: "reviewed"` after human review; rejected candidates use `status: "reject"`.
 
 ## 5. Human review
 

@@ -108,7 +108,7 @@ Mapping from `source_type`: `bridge`, `compositional`, `inference` → `bridge`;
 - `[[]]` means no additional evidence is needed: the unit is supported as soon as all its dependencies are supported. Use it only for comparison conclusion units (Section 4.3), which must have a nonempty `depends_on`.
 - `[]` means no evidence can support the unit. Do not use it for answerable units.
 - Alternative evidence found during review, including distractor sentences, is added as extra inner sets.
-- For a `by_presupposition: true` unit, a support set may contain the evidence that identifies the answer when combined with the question's stated premise; dependencies remain required.
+- Every unit with `presupposition_sets` must set `by_presupposition: true`. A presupposition set may contain evidence that identifies the answer when combined with the question's stated premise. When exactly two candidates are named and one unique answer is presupposed, evidence explicitly ruling out one candidate may identify the other.
 
 ### 4.3 Unit construction by question type
 

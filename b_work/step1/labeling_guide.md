@@ -36,9 +36,9 @@ The exception does not cover:
 - Negatives that need world knowledge. Example: evidence says an airport is in Minnesota; this does not support "it is not in Europe." Label `UNRESOLVED` until a rule is agreed.
 - Attributes that defining descriptions do not normally list, such as awards, events, or relationships. Example: Anaïs Nin's description ("an essayist and memoirist…") does not support "Nin did not win the Nobel Prize in Literature." Label `UNRESOLVED`.
 
-**Exception 3: question presupposition.** A condition or candidate explicitly named by the question may be treated as given. For example, "Which of A and B won the award?" presupposes that one named candidate won; evidence explicitly confirming B's win is sufficient to answer B without separate evidence that A did not win. Likewise, if a question asks for the third founder alongside named founders X and Y, evidence listing X, Y, and Z identifies Z.
+**Exception 3: question presupposition.** A condition or candidate explicitly named by the question may be treated as given. For example, "Which of A and B won the award?" presupposes that one named candidate won; evidence explicitly confirming B's win is sufficient to answer B without separate evidence that A did not win. When exactly two candidates are named and the question presupposes one unique answer, evidence explicitly ruling out A also identifies B. Likewise, if a question asks for the third founder alongside named founders X and Y, evidence listing X, Y, and Z identifies Z.
 
-Mark a unit that is permitted to use this exception as `by_presupposition: true` in gold. Its `support_sets` still identify the visible evidence required to complete the derivation, and its dependencies must still be supported. Report these units separately in evaluation.
+Mark a unit that is permitted to use this exception as `by_presupposition: true` in gold. Every unit with `presupposition_sets` must carry this static flag. Its support or presupposition sets still identify the visible evidence required to complete the derivation. Report these units separately in evaluation.
 
 The exception does not apply to comparisons of two values such as dates, to "both" or "same" questions, or to facts the question does not state. If the question's premise conflicts with evidence, send the item to human review rather than applying the exception automatically.
 

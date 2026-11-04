@@ -1,11 +1,12 @@
 """Build judge-SFT gold records from annotations and validate them (standard library only).
 
-Same annotation format and evidence IDs as b_work/step3/build_gold.py, plus two proposed extensions
-(schema.md v1.3 candidates) needed by A's by_presupposition rule (a_work/unit_schema.md 5.6):
+Same annotation format and evidence IDs as b_work/step3/build_gold.py, plus the support-set representation
+needed to schedule the schema v1.3 `by_presupposition` rule (a_work/unit_schema.md 5.6):
 
 - presupposition_sets: support sets, in the same [title, index] form, that support the unit only
   when the question's premise is taken as given. Such a unit is SUPPORTED by_presupposition when one of
-  these sets is visible and at least one of its depends_on units is SUPPORTED (all, if it has none).
+  these sets is visible and at least one of its depends_on units is SUPPORTED (or it has none). Every
+  unit using this representation must also carry the static gold flag by_presupposition: true.
 - support_sets []: no context sentence states the unit's value (e.g. Nin's non-win). The unit can
   only be SUPPORTED through presupposition_sets, or never.
 
@@ -27,7 +28,7 @@ from build_gold import QUESTION_TYPES, SCHEMA_VERSION, has_cycle, resolve  # noq
 DATA_VERSION = "sft-v0"
 STATUSES = ("draft", "reviewed", "reject")
 UNIT_KEYS = {"unit_id", "description", "necessary", "expected_answer", "aliases", "depends_on",
-             "support_sets", "presupposition_sets", "by_omission"}
+             "support_sets", "presupposition_sets", "by_omission", "by_presupposition"}
 
 
 def norm(text):
@@ -82,6 +83,8 @@ def validate(record, question):
         check(isinstance(unit.get("expected_answer"), str) and unit["expected_answer"].strip(), where, "empty expected_answer")
         check(isinstance(unit.get("necessary"), bool), where, "necessary must be boolean")
         check(isinstance(unit.get("by_omission", False), bool), where, "by_omission must be boolean")
+        check(isinstance(unit.get("by_presupposition", False), bool), where,
+              "by_presupposition must be boolean")
         aliases = unit.get("aliases", [])
         check(isinstance(aliases, list) and all(isinstance(a, str) and a.strip() for a in aliases), where, "bad aliases")
         for parent in unit["depends_on"]:
@@ -99,6 +102,8 @@ def validate(record, question):
         presupposed = unit.get("presupposition_sets", [])
         check(isinstance(presupposed, list) and all(inner for inner in presupposed), where,
               "presupposition_sets must be a list of nonempty sets")
+        check(not presupposed or unit.get("by_presupposition") is True, where,
+              "presupposition_sets requires by_presupposition true")
         check(not (unit.get("by_omission") and not sets), where, "by_omission needs a support set")
     check(not has_cycle(units), sample_id, "dependency cycle")
     necessary = [u for u in units if u["necessary"]]
@@ -121,6 +126,8 @@ def build(sample, annotation):
             result["aliases"] = unit["aliases"]
         if unit.get("by_omission"):
             result["by_omission"] = True
+        if unit.get("by_presupposition"):
+            result["by_presupposition"] = True
         if unit.get("presupposition_sets"):
             result["presupposition_sets"] = resolve_sets(sample, unit["presupposition_sets"], texts)
         units.append(result)
@@ -135,10 +142,13 @@ def select(candidates, annotations):
     """Primary questions that are not rejected, with rejected slots filled by reserves.
 
     A rejected primary may name an explicit ``replacement_sample_id`` in its annotation.  The
-    replacement must be an accepted reserve from the same dataset, source type, and project split.
+    replacement must be an accepted reserve from the same project split. Dataset and source type are
+    normally preserved, but an explicit mapping may cross them when the remaining same-category
+    candidates fail review; the final composition is reported by the build.
     Remaining rejected slots are filled by annotated reserves in rank order, as before.
     """
     chosen, missing = [], Counter()
+    explicit_ids_global = set()
     by_id = {c["sample_id"]: c for c in candidates}
     for dataset in sorted({c["dataset"] for c in candidates}):
         rows = sorted((c for c in candidates if c["dataset"] == dataset), key=lambda c: c["candidate_rank"])
@@ -158,14 +168,15 @@ def select(candidates, annotations):
             replacement = by_id[replacement_id]
             check(replacement["candidate_role"] == "reserve", source["sample_id"],
                   "replacement must be a reserve question")
-            check(all(replacement[key] == source[key] for key in ["dataset", "type", "project_split"]),
-                  source["sample_id"], "replacement must keep dataset, type, and project_split")
+            check(replacement["project_split"] == source["project_split"], source["sample_id"],
+                  "replacement must keep project_split")
             replacement_annotation = annotations.get(replacement_id)
             check(replacement_annotation is not None and replacement_annotation["status"] != "reject",
                   source["sample_id"], "replacement is unannotated or rejected: " + replacement_id)
-            check(replacement_id not in {c["sample_id"] for c in explicit}, source["sample_id"],
+            check(replacement_id not in explicit_ids_global, source["sample_id"],
                   "replacement selected twice: " + replacement_id)
             explicit.append(replacement)
+            explicit_ids_global.add(replacement_id)
         accepted += explicit
         explicit_ids = {c["sample_id"] for c in explicit}
         needed = len(primary) - len(accepted) - len(unannotated)

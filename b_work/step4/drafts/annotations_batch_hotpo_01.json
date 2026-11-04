@@ -5,7 +5,8 @@
   "records": [
     {
       "sample_id": "hotpotqa_5ac1ca57554299636651990f",
-      "status": "draft",
+      "status": "reject",
+      "replacement_sample_id": "hotpotqa_5a79188455429974737f7984",
       "notes": [
         "Bridge in the source, but there is only one fact to find: a single unit.",
         "No explicit support: no sentence states the language Pakhomova speaks. 'Lyudmila Pakhomova' sentence 0 gives a '(Russian: ...)' transliteration and says she competed for the Soviet Union; both are inference.",
@@ -19,7 +20,7 @@
     },
     {
       "sample_id": "hotpotqa_5adec3db55429975fa854f83",
-      "status": "draft",
+      "status": "reviewed",
       "notes": [
         "Comparison (yes/no): two fact units plus a conclusion unit.",
         "'Blood Bowl' is ambiguous between the board game and its video game adaptations; every reading is a game, so the video game sentences and Impact! Miniatures sentence 1 ('Fantasy Football games such as ... Blood Bowl') are alternative support for u1. Blood Bowl sentence 1 ('The game was first released...') refers to the title subject as a game.",
@@ -41,7 +42,7 @@
     },
     {
       "sample_id": "hotpotqa_5a73301e55429901807dafad",
-      "status": "draft",
+      "status": "reviewed",
       "notes": [
         "Bridge: the mother (optional) then the cause of death (necessary).",
         "Answer normalized from 'a heroin overdose'; the surface form is an alias.",
@@ -58,7 +59,7 @@
     },
     {
       "sample_id": "hotpotqa_5ae176ef5542990adbacf79d",
-      "status": "draft",
+      "status": "reviewed",
       "notes": [
         "Comparison (yes/no): two fact units plus a conclusion unit.",
         "Fumio Watanabe sentence 0 and Kei Satō sentence 2 ('Japanese New Wave director Nagisa Oshima') name a film movement, not his nationality; not used. Films described as 'Japanese film directed by Nagisa Oshima' are not support for the director's nationality.",
@@ -78,7 +79,7 @@
     },
     {
       "sample_id": "hotpotqa_5aba9af255429901930fa856",
-      "status": "draft",
+      "status": "reviewed",
       "notes": [
         "Bridge: the training city (optional) then the sea (necessary).",
         "Victor Ramos sentence 3 says Ramos trained in Darwin; it does not name Calisto da Costa, so it is not alternative support for u1."
@@ -94,7 +95,7 @@
     },
     {
       "sample_id": "hotpotqa_5a7da4da5542997cc2c47468",
-      "status": "draft",
+      "status": "reviewed",
       "notes": [
         "Comparison ('both what genre'): one genre unit per film plus a conclusion unit; the shared value follows deterministically.",
         "Seal Island (film) sentence 1 ('first installment of the True-Life Adventures series of nature documentaries') is alternative support for u2.",
@@ -114,7 +115,7 @@
     },
     {
       "sample_id": "hotpotqa_5ab9d58855429939ce03dc3a",
-      "status": "draft",
+      "status": "reviewed",
       "notes": [
         "Bridge: the mentor (optional) then the age (necessary)."
       ],
@@ -129,7 +130,8 @@
     },
     {
       "sample_id": "hotpotqa_5ab6a56d554299110f219a46",
-      "status": "draft",
+      "status": "reject",
+      "replacement_sample_id": "2wikimultihopqa_794cefac08cb11ebbd92ac1f6bf848b6",
       "notes": [
         "Comparison (yes/no): one product unit per company plus a conclusion unit.",
         "LKQ Corporation sentences 0 and 3 are alternative support for u2. Euro Car Parts sentences 0-1 (LKQ bought a car parts distributor) are inference; not used.",
@@ -149,7 +151,7 @@
     },
     {
       "sample_id": "hotpotqa_5ab9d4a9554299232ef4a21c",
-      "status": "draft",
+      "status": "reviewed",
       "notes": [
         "Bridge: the 2003 first overall pick (optional) then the number of wins (necessary)."
       ],
@@ -164,7 +166,7 @@
     },
     {
       "sample_id": "hotpotqa_5ab406ce55429976abd1bd36",
-      "status": "draft",
+      "status": "reviewed",
       "notes": [
         "Comparison (yes/no): one country unit per filmmaker plus a conclusion unit.",
         "u1: Lev Kuleshov sentence 0 ('Russian and Soviet filmmaker') and Kuleshov effect sentence 0 ('Soviet filmmaker Lev Kuleshov') describe him directly. The film documents ('a 1920 Soviet ... film directed by Lev Kuleshov') state the film's nationality, not where he worked; not used.",
@@ -184,7 +186,7 @@
     },
     {
       "sample_id": "hotpotqa_5a8ad70d5542992d82986f94",
-      "status": "draft",
+      "status": "reviewed",
       "notes": [
         "Bridge: the song (optional) then the shoemaker it is named after (necessary).",
         "u1 needs Jimmy Choo (song) sentences 0 (Fetty Wap song) and 1 (produced by K.E. on the Track) together. K.E. on the Track sentence 0 (source supporting fact) only says he is a producer; not used.",
@@ -197,12 +199,13 @@
         {"unit_id": "u2", "description": "shoemaker after whom {u1} is named", "necessary": true,
          "expected_answer": "Jimmy Choo", "depends_on": ["u1"],
          "support_sets": [],
+         "by_presupposition": true,
          "presupposition_sets": [[["Jimmy Choo (song)", 0], ["Jimmy Choo (song)", 1]]]}
       ]
     },
     {
       "sample_id": "hotpotqa_5a8009885542992e7d278deb",
-      "status": "draft",
+      "status": "reviewed",
       "notes": [
         "Comparison (selection between named candidates): two fact units plus a conclusion unit.",
         "u1 alternatives: 'lead singer Florence Welch' in What the Water Gave Me (song), Spectrum (Say My Name) and Ceremonials Tour sentence 1, each with sentence 0 for the band. Lungs sentence 1 ('Frontwoman') and No Light, No Light sentence 1 ('band members') do not say vocalist; not used.",
@@ -223,6 +226,7 @@
         {"unit_id": "u3", "description": "which of Florence Welch and Floor Jansen is best known as the vocalist of indie rock band Florence and the Machine", "necessary": true,
          "expected_answer": "Florence Welch", "aliases": ["Florence Leontine Mary Welch", "Welch"], "depends_on": ["u1", "u2"],
          "support_sets": [[]],
+         "by_presupposition": true,
          "presupposition_sets": [[["Florence Welch", 0]],
                                  [["What the Water Gave Me (song)", 0], ["What the Water Gave Me (song)", 1]],
                                  [["Spectrum (Say My Name)", 0], ["Spectrum (Say My Name)", 1]],
@@ -231,7 +235,7 @@
     },
     {
       "sample_id": "hotpotqa_5ae71f455542996d980e7ca9",
-      "status": "draft",
+      "status": "reviewed",
       "notes": [
         "Bridge: the console (optional) then the announcement month (necessary).",
         "Soul Axiom sentence 4 names PlayStation 4 and Xbox One ports but not which is Microsoft's; u1 needs Xbox One sentence 0 (developed by Microsoft) or sentence 4 (marketed by Microsoft) in the same set.",
@@ -248,7 +252,8 @@
     },
     {
       "sample_id": "hotpotqa_5a72253f55429971e9dc92e5",
-      "status": "draft",
+      "status": "reject",
+      "replacement_sample_id": "2wikimultihopqa_b902985208d411ebbd97ac1f6bf848b6",
       "notes": [
         "Comparison ('both ... what sport'): one sport unit per player plus a conclusion unit.",
         "Answer normalized from 'professional tennis player.' to 'tennis'.",
@@ -270,7 +275,7 @@
     },
     {
       "sample_id": "hotpotqa_5ae64a2155429908198fa575",
-      "status": "draft",
+      "status": "reviewed",
       "notes": [
         "Bridge with several constraints on one film, built like step 3 Q13: u1 identifies the film from director, writer and star; u2 adds the 2007 TIFF premiere.",
         "u1 needs Juno (film) sentence 0 (director and writer) plus a star sentence: Juno (film) sentence 1 or Ellen Page sentence 3.",
@@ -287,7 +292,8 @@
     },
     {
       "sample_id": "hotpotqa_5ab272f2554299340b5254cf",
-      "status": "draft",
+      "status": "reject",
+      "replacement_sample_id": "hotpotqa_5a752d375542996c70cfaea4",
       "notes": [
         "Comparison (yes/no): two family units plus a conclusion unit.",
         "No explicit support for u2: Chrysobalanus sentence 0 describes the plants and who named the genus but not its family. The expected value (Chrysobalanaceae) is from world knowledge, so the conclusion is unreachable. Not by_omission: the description lists no family.",
@@ -307,7 +313,7 @@
     },
     {
       "sample_id": "hotpotqa_5a8e88875542990e94052b36",
-      "status": "draft",
+      "status": "reviewed",
       "notes": [
         "Bridge: the 2004-05 coach (optional) then his current NBA team (necessary).",
         "2004–05 Florida Gators men's basketball team sentence 2 ('They were led by head coach Billy Donovan') refers to the title subject; sentence 0 (source supporting fact) is not needed.",
@@ -324,7 +330,8 @@
     },
     {
       "sample_id": "hotpotqa_5a905fb455429916514e7496",
-      "status": "draft",
+      "status": "reject",
+      "replacement_sample_id": "hotpotqa_5a908d1f55429916514e74f1",
       "notes": [
         "Comparison (yes/no 'both'): two fact units plus a conclusion unit.",
         "Gin pahit sentence 1 ('bitter gin') is a name translation, not an ingredient statement; not used.",
@@ -344,7 +351,7 @@
     },
     {
       "sample_id": "hotpotqa_5adbf5d8554299438c868cec",
-      "status": "draft",
+      "status": "reviewed",
       "notes": [
         "Bridge: the superhero (optional) then the publisher (necessary).",
         "Answer normalized to 'Marvel Comics'; source 'Marvel' is an alias.",
@@ -361,7 +368,7 @@
     },
     {
       "sample_id": "hotpotqa_5a87e93155429938390d3ea4",
-      "status": "draft",
+      "status": "reviewed",
       "notes": [
         "Comparison (yes/no 'both'): two fact units plus a conclusion unit.",
         "Purbanchal University sentence 1 (established by the government) is inference for 'public'; not used. California State University, San Bernardino sentence 0 is a different campus."
@@ -380,7 +387,7 @@
     },
     {
       "sample_id": "hotpotqa_5ab292b4554299449642c901",
-      "status": "draft",
+      "status": "reviewed",
       "notes": [
         "Bridge: the top brand (optional) then the brewer (necessary).",
         "Answer normalized from 'the state-owned Taedonggang Brewing Company'; the surface form is an alias."
@@ -396,7 +403,7 @@
     },
     {
       "sample_id": "hotpotqa_5ae1af93554299492dc91b69",
-      "status": "draft",
+      "status": "reviewed",
       "notes": [
         "Comparison (yes/no): one nationality unit per player plus a conclusion unit.",
         "u2: Heinz Günthardt sentence 0 says 'a former tennis player from Switzerland'; 'born ... in Zürich' alone would not be support. The tournament documents give no nationality."
@@ -415,7 +422,7 @@
     },
     {
       "sample_id": "hotpotqa_5ab8292c55429934fafe6cfe",
-      "status": "draft",
+      "status": "reviewed",
       "notes": [
         "Bridge: the place (optional) then its 2010 population (necessary).",
         "Waimea, Hawaii County, Hawaii sentence 0 (source supporting fact; says it is a CDP) removed from u2: it does not state the population, and the CDP status is the question's premise.",
@@ -432,7 +439,7 @@
     },
     {
       "sample_id": "hotpotqa_5ac445975542995c82c4ad16",
-      "status": "draft",
+      "status": "reviewed",
       "notes": [
         "Comparison (selection between named candidates): two fact units plus a conclusion unit.",
         "Riverside Church sentence 5 ('a stronghold of activism ... throughout its 75-year history') is close but not the same claim (no 'focal point', no 'global'); not used. Riverside Church sentence 0 (source supporting fact) removed.",
@@ -448,12 +455,13 @@
         {"unit_id": "u3", "description": "which of 1 Wall Street and Riverside Church has been a focal point of global and national activism since its inception", "necessary": true,
          "expected_answer": "Riverside Church", "depends_on": ["u1", "u2"],
          "support_sets": [[]],
+         "by_presupposition": true,
          "presupposition_sets": [[["Riverside Church", 6]]]}
       ]
     },
     {
       "sample_id": "hotpotqa_5ae0b79355429945ae95943c",
-      "status": "draft",
+      "status": "reviewed",
       "notes": [
         "Bridge with two constraints on one person, built like step 3 Q13: u1 finds the person born on June 26, 1970 (unique among the documents), u2 adds the starring role in The Founder.",
         "A 'star of The Founder' unit alone is not unique (Michael Keaton, John Carroll Lynch), so the birth date comes first.",
@@ -470,7 +478,7 @@
     },
     {
       "sample_id": "hotpotqa_5a899d165542993b751ca961",
-      "status": "draft",
+      "status": "reviewed",
       "notes": [
         "Comparison (selection between named candidates): two fact units plus a conclusion unit.",
         "Gregory v. Helvering sentence 0 and Ableman v. Booth sentence 0 (source supporting facts) do not mention the doctrine; removed.",
@@ -486,12 +494,13 @@
         {"unit_id": "u3", "description": "which of Gregory v. Helvering and Ableman v. Booth is cited as the business purpose doctrine", "necessary": true,
          "expected_answer": "Gregory v. Helvering", "depends_on": ["u1", "u2"],
          "support_sets": [[]],
+         "by_presupposition": true,
          "presupposition_sets": [[["Gregory v. Helvering", 1]]]}
       ]
     },
     {
       "sample_id": "hotpotqa_5addad5c5542995b365fab5c",
-      "status": "draft",
+      "status": "reviewed",
       "notes": [
         "Bridge: the competitor (optional) then the year (necessary).",
         "No explicit support for u1: no sentence calls TAAG a competitor of Air 26. Air 26 sentence 2 shows both are Angolan airlines and TAAG Angola Airlines sentence 0 says TAAG is state-owned; 'competitor' is the question's premise. u1 therefore uses presupposition_sets with that pair (extension of rule 7(b); see report).",
@@ -501,6 +510,7 @@
         {"unit_id": "u1", "description": "state-owned competitor of Air 26", "necessary": false,
          "expected_answer": "TAAG Angola Airlines", "aliases": ["TAAG", "TAAG Linhas Aéreas de Angola"], "depends_on": [],
          "support_sets": [],
+         "by_presupposition": true,
          "presupposition_sets": [[["Air 26", 2], ["TAAG Angola Airlines", 0]]]},
         {"unit_id": "u2", "description": "year in which {u1} gained flag carrier status", "necessary": true,
          "expected_answer": "1975", "depends_on": ["u1"],
@@ -509,7 +519,7 @@
     },
     {
       "sample_id": "hotpotqa_5a8b848d5542997f31a41d5c",
-      "status": "draft",
+      "status": "reviewed",
       "notes": [
         "Comparison (yes/no 'both'): two fact units plus a conclusion unit.",
         "u2 uses the omission exception (labeling_guide.md 1.1, Exception 2): Luther George Simjian sentence 0 is a defining description listing his occupation as inventor; no document calls him a professor."
@@ -528,7 +538,7 @@
     },
     {
       "sample_id": "hotpotqa_5ae517665542990ba0bbb1b2",
-      "status": "draft",
+      "status": "reviewed",
       "notes": [
         "Bridge with two constraints on one singer, built like step 3 Q13: u1 finds the singer who was in The Verve, u2 adds that the Tiny Dancers supported him.",
         "The Verve-labelled documents (Verve Records) are a label, not the band; traps."
@@ -544,7 +554,7 @@
     },
     {
       "sample_id": "hotpotqa_5a7755e05542993735360237",
-      "status": "draft",
+      "status": "reviewed",
       "notes": [
         "Comparison (dates): two release-year units plus a conclusion unit. No presupposition: value comparison.",
         "u1 alternatives: Jumbo (film) sentence 2 ('the 2006 Thai film Khan Kluay') and Kantana Group sentence 3 ('the 2006 feature film Khan Kluay'). Khan Kluay (franchise) sentence 0 gives no year.",

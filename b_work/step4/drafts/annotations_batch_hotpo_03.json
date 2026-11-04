@@ -1,5 +1,5 @@
 {"annotation_version": "draft-1", "drafted_by": "Claude subagent", "worksheet": "batch_hotpo_03", "records": [
-{"sample_id": "hotpotqa_5abbdaaa5542996606241732", "status": "draft",
+{"sample_id": "hotpotqa_5abbdaaa5542996606241732", "status": "reviewed",
  "notes": ["Bridge: the Team2015 founder (optional) then his former ministry (necessary).",
            "Alias 'Department for International Development' added for the full department name."],
  "units": [
@@ -9,7 +9,7 @@
    "expected_answer": "International Development", "aliases": ["Department for International Development"],
    "depends_on": ["u1"], "support_sets": [[["Grant Shapps", 0]]]}]},
 
-{"sample_id": "hotpotqa_5a7aa2135542995eb53be882", "status": "draft",
+{"sample_id": "hotpotqa_5a7aa2135542995eb53be882", "status": "reviewed",
  "notes": ["Comparison: two birth-date fact units plus a conclusion unit.",
            "Answer normalized from 'Robert Traill Spence Lowell IV' to 'Robert Lowell'; full name kept as alias.",
            "Lord Weary's Castle sentence 0 ('when Lowell was only thirty') does not state a birth date and is not used."],
@@ -22,7 +22,7 @@
    "expected_answer": "Robert Lowell", "aliases": ["Robert Traill Spence Lowell IV", "Lowell"],
    "depends_on": ["u1", "u2"], "support_sets": [[]]}]},
 
-{"sample_id": "hotpotqa_5ade9914554299728e26c759", "status": "draft",
+{"sample_id": "hotpotqa_5ade9914554299728e26c759", "status": "reviewed",
  "notes": ["Bridge: the actress (optional) then the novels (necessary).",
            "u1 needs both the cast list (Burying the Ex 1) and the Alice Cullen role (Ashley Greene 1): the film has two actresses in its cast. 'American' (Ashley Greene 0) is descriptive and not required.",
            "Burying the Ex sentence 0 and Ashley Greene sentence 0 from the source supporting facts do not state either unit's value.",
@@ -35,7 +35,7 @@
    "expected_answer": "Twilight", "aliases": ["Twilight novels", "Stephenie Meyer's Twilight novels", "Twilight series"],
    "depends_on": ["u1"], "support_sets": [[["Ashley Greene", 1]]]}]},
 
-{"sample_id": "hotpotqa_5a82f8e955429966c78a6abf", "status": "draft",
+{"sample_id": "hotpotqa_5a82f8e955429966c78a6abf", "status": "reviewed",
  "notes": ["Comparison (yes/no): two nationality fact units plus a conclusion unit.",
            "Midland (band) 0 ('American country music group consisting of Mark Wystrach') and the Australian-band documents for Doc Neeson give the band's nationality, not the member's; excluded as inference."],
  "units": [
@@ -46,7 +46,7 @@
   {"unit_id": "u3", "description": "whether Mark Wystrach and Doc Neeson are of the same nationality", "necessary": true,
    "expected_answer": "no", "depends_on": ["u1", "u2"], "support_sets": [[]]}]},
 
-{"sample_id": "hotpotqa_5ac561725542993e66e823ad", "status": "draft",
+{"sample_id": "hotpotqa_5ac561725542993e66e823ad", "status": "reject", "replacement_sample_id": "hotpotqa_5ae752255542995703ce8be5",
  "notes": ["Bridge: the war (optional) then the fortification (necessary).",
            "Fort Ligonier sentence 0 (source supporting fact) says 'British fortification' but not the post-of-passage role or Pontiac's War; sentence 3 states both and mentions the British supply lines, so it alone supports u2.",
            "Caveat: sentence 3 says it was a post of passage to Fort Pitt and, during Pontiac's War, a vital link; the question merges the two. Follows the source gold."],
@@ -57,7 +57,7 @@
   {"unit_id": "u2", "description": "British fortification that was a post of passage during {u1}", "necessary": true,
    "expected_answer": "Fort Ligonier", "depends_on": ["u1"], "support_sets": [[["Fort Ligonier", 3]]]}]},
 
-{"sample_id": "hotpotqa_5a79289d55429907847277cf", "status": "draft",
+{"sample_id": "hotpotqa_5a79289d55429907847277cf", "status": "reviewed",
  "notes": ["Comparison: two formation-year fact units plus a conclusion unit.",
            "Royal Blood discography sentence 0 ('Formed in Brighton in January 2013, Royal Blood is a duo') added as alternative support for u2."],
  "units": [
@@ -68,7 +68,7 @@
   {"unit_id": "u3", "description": "which of Weezer and Royal Blood was formed first", "necessary": true,
    "expected_answer": "Weezer", "depends_on": ["u1", "u2"], "support_sets": [[]]}]},
 
-{"sample_id": "hotpotqa_5a730a5555429901807daf72", "status": "draft",
+{"sample_id": "hotpotqa_5a730a5555429901807daf72", "status": "reviewed",
  "notes": ["Bridge: the film's stars (optional) then the eight-time nominee among them (necessary).",
            "u1 lists both stars because the film sentence names two; the descriptor selects Jack Lemmon.",
            "Distractors: Kyle Townsend 1 has an '8-time Academy Award nominated songwriter' (Diane Warren), unrelated to the film."],
@@ -80,7 +80,7 @@
    "expected_answer": "Jack Lemmon", "aliases": ["John Uhler Lemmon III", "John Uhler \"Jack\" Lemmon III"],
    "depends_on": ["u1"], "support_sets": [[["Jack Lemmon", 1]]]}]},
 
-{"sample_id": "hotpotqa_5a83c3a95542996488c2e4c1", "status": "draft",
+{"sample_id": "hotpotqa_5a83c3a95542996488c2e4c1", "status": "reviewed",
  "notes": ["Comparison (selection between named candidates): one fact unit per case plus a conclusion unit.",
            "by_presupposition (unit_schema 5.6): the question presupposes one of the two struck down the sodomy law. u3 has presupposition_sets = u2's support sets.",
            "no explicit support: u1, no sentence states that Gonzales v. Carhart did not strike down a sodomy law (it upheld the Partial-Birth Abortion Ban Act); omission rule does not cover case holdings.",
@@ -92,9 +92,10 @@
    "expected_answer": "yes", "depends_on": [], "support_sets": [[["Lawrence v. Texas", 1]]]},
   {"unit_id": "u3", "description": "which of Gonzales v. Carhart and Lawrence v. Texas struck down the sodomy law", "necessary": true,
    "expected_answer": "Lawrence v. Texas", "depends_on": ["u1", "u2"], "support_sets": [[]],
+   "by_presupposition": true,
    "presupposition_sets": [[["Lawrence v. Texas", 1]]]}]},
 
-{"sample_id": "hotpotqa_5a7aa8565542995eb53be88b", "status": "draft",
+{"sample_id": "hotpotqa_5a7aa8565542995eb53be88b", "status": "reviewed",
  "notes": ["Bridge: Katy Mixon's films (optional) then the one directed by Seth Gordon (necessary).",
            "u1 is a partial list ('films such as'); Sarah Dunn 1 (American Housewife) is a TV series, not a film, and is not used.",
            "Four Christmases 4 ('director Seth Gordon's first studio feature film') states the director; the cast sentence 3 does not list Mixon."],
@@ -105,7 +106,7 @@
   {"unit_id": "u2", "description": "film among {u1} directed by Seth Gordon", "necessary": true,
    "expected_answer": "Four Christmases", "depends_on": ["u1"], "support_sets": [[["Four Christmases", 4]]]}]},
 
-{"sample_id": "hotpotqa_5ab2585855429970612095e6", "status": "draft",
+{"sample_id": "hotpotqa_5ab2585855429970612095e6", "status": "reviewed",
  "notes": ["Comparison: two size fact units plus a conclusion unit.",
            "Sizes are categories ('large breed' vs 'medium-sized breed'); ordering them is a deterministic comparison (Exception 1)."],
  "units": [
@@ -117,7 +118,7 @@
   {"unit_id": "u3", "description": "which of the Akita and the Boykin Spaniel is the larger dog breed", "necessary": true,
    "expected_answer": "Akita", "depends_on": ["u1", "u2"], "support_sets": [[]]}]},
 
-{"sample_id": "hotpotqa_5ac119595542992a796dede5", "status": "draft",
+{"sample_id": "hotpotqa_5ac119595542992a796dede5", "status": "reviewed",
  "notes": ["Bridge: u1 finds the impounded river, u2 confirms the Kingsport-to-Knoxville descriptor.",
            "Cherokee Dam 0 + 2 (dam on the Holston River that impounds Cherokee Lake) added as alternative support for u1; the pair states the impoundment directly.",
            "Distractor: Lake Red Rock 3 mentions a Knoxville (Iowa)."],
@@ -129,7 +130,7 @@
    "expected_answer": "Holston River", "aliases": ["Holston"], "depends_on": ["u1"],
    "support_sets": [[["Holston River", 0]]]}]},
 
-{"sample_id": "hotpotqa_5a8492b65542997b5ce3fec5", "status": "draft",
+{"sample_id": "hotpotqa_5a8492b65542997b5ce3fec5", "status": "reviewed",
  "notes": ["Comparison (common attribute): one type fact unit per entity plus a conclusion unit (equal values, Exception 1).",
            "Sentences that call the entity 'the band' in its own article (Pylon (band) 1; Bullet for My Valentine 1, 6, 7, 8) are counted as stating the category, per the title convention.",
            "Alternative support for u2 from distractors: Matthew Tuck 1 and 2, Rare Cuts (EP) 0, Jeff Killed John (EP) 0."],
@@ -145,7 +146,7 @@
   {"unit_id": "u3", "description": "type of musical organization that Pylon and Bullet for My Valentine both are", "necessary": true,
    "expected_answer": "band", "depends_on": ["u1", "u2"], "support_sets": [[]]}]},
 
-{"sample_id": "hotpotqa_5a78aee6554299148911f91f", "status": "draft",
+{"sample_id": "hotpotqa_5a78aee6554299148911f91f", "status": "reviewed",
  "notes": ["Bridge: the goal scorer (optional) then his full name (necessary)."],
  "units": [
   {"unit_id": "u1", "description": "Portuguese footballer who scored the winning goal in the 2004 Coupe de France Final", "necessary": false,
@@ -153,7 +154,7 @@
   {"unit_id": "u2", "description": "full name of {u1}", "necessary": true,
    "expected_answer": "Pedro Miguel Carreiro Resendes", "depends_on": ["u1"], "support_sets": [[["Pauleta", 0]]]}]},
 
-{"sample_id": "hotpotqa_5ae1b052554299492dc91b6b", "status": "draft",
+{"sample_id": "hotpotqa_5ae1b052554299492dc91b6b", "status": "reviewed",
  "notes": ["Comparison: two act-count fact units plus a conclusion unit.",
            "Trap: Aroldo 0 (four acts) is the later reworking of Stiffelio, not Stiffelio itself."],
  "units": [
@@ -164,7 +165,7 @@
   {"unit_id": "u3", "description": "which of the operas Ernani and Stiffelio has more acts", "necessary": true,
    "expected_answer": "Ernani", "depends_on": ["u1", "u2"], "support_sets": [[]]}]},
 
-{"sample_id": "hotpotqa_5abca3065542993a06baf93a", "status": "draft",
+{"sample_id": "hotpotqa_5abca3065542993a06baf93a", "status": "reviewed",
  "notes": ["Bridge: u1 finds the program from its creators, u2 confirms Harrison Chad's role.",
            "Go, Diego, Go! sentence 2 alone identifies the program (created and executive produced by Gifford and Walsh); sentence 1 adds descriptive genre only.",
            "Answer normalized from '\"Go, Diego, Go!' (stray quote) to 'Go, Diego, Go!'.",
@@ -177,7 +178,7 @@
    "expected_answer": "Go, Diego, Go!", "aliases": ["Go Diego Go", "\"Go, Diego, Go!"], "depends_on": ["u1"],
    "support_sets": [[["Harrison Chad", 1]]]}]},
 
-{"sample_id": "hotpotqa_5a75b40f5542992d0ec05fe6", "status": "draft",
+{"sample_id": "hotpotqa_5a75b40f5542992d0ec05fe6", "status": "reject", "replacement_sample_id": "hotpotqa_5abc47d055429959677d6a70",
  "notes": ["Comparison (common attribute): one fact unit per player plus a conclusion unit.",
            "no explicit support: u1, Vania King 1 says she won two women's doubles titles, which does not state that she specializes in doubles.",
            "Vania King sentence 1 from the source supporting facts is therefore not used. The doubles tournament documents for Suk are co-occurrence only.",
@@ -190,7 +191,7 @@
   {"unit_id": "u3", "description": "type of tennis play that both Vania King and Cyril Suk III specialize in", "necessary": true,
    "expected_answer": "doubles", "depends_on": ["u1", "u2"], "support_sets": [[]]}]},
 
-{"sample_id": "hotpotqa_5ab25a9d5542993be8fa98df", "status": "draft",
+{"sample_id": "hotpotqa_5ab25a9d5542993be8fa98df", "status": "reviewed",
  "notes": ["Bridge: the designer (optional) then the fashion house (necessary).",
            "u1 needs the tour sentence (three designers) plus Jeremy Scott 0 to pick the American one; they form one inner set."],
  "units": [
@@ -200,7 +201,7 @@
   {"unit_id": "u2", "description": "fashion house of which {u1} is the director", "necessary": true,
    "expected_answer": "Moschino", "depends_on": ["u1"], "support_sets": [[["Jeremy Scott", 1]]]}]},
 
-{"sample_id": "hotpotqa_5ae13d9d55429920d523433d", "status": "draft",
+{"sample_id": "hotpotqa_5ae13d9d55429920d523433d", "status": "reviewed",
  "notes": ["Comparison (yes/no): two province fact units plus a conclusion unit.",
            "Alternative support for u1: Tangshan Sannühe Airport 0, North China University of Science and Technology 0 and CRRC Tangshan 0 each state 'Tangshan, Hebei Province'.",
            "Excluded as inference: Tangshan No.1 High School 0 (the school is in Hebei), Yutian County 0 (a Hebei county administered by Tangshan), Huangdian 0 and Jinhua 0-2 (Lanxi only via other places in Zhejiang)."],
@@ -214,7 +215,7 @@
   {"unit_id": "u3", "description": "whether Tangshan and Lanxi, Zhejiang are in the same province of China", "necessary": true,
    "expected_answer": "no", "depends_on": ["u1", "u2"], "support_sets": [[]]}]},
 
-{"sample_id": "hotpotqa_5a7cfdb755429909bec768e2", "status": "draft",
+{"sample_id": "hotpotqa_5a7cfdb755429909bec768e2", "status": "reviewed",
  "notes": ["Bridge: the armed forces (optional) then the kingdom (necessary).",
            "Alias 'Denmark' added for the short form."],
  "units": [
@@ -225,7 +226,7 @@
    "expected_answer": "Kingdom of Denmark", "aliases": ["Denmark"], "depends_on": ["u1"],
    "support_sets": [[["Danish Defence", 0]]]}]},
 
-{"sample_id": "hotpotqa_5a7fab3a5542995d8a8ddeea", "status": "draft",
+{"sample_id": "hotpotqa_5a7fab3a5542995d8a8ddeea", "status": "reject", "replacement_sample_id": "hotpotqa_5a77a8365542995d83181250",
  "notes": ["Comparison (yes/no): two member-nationality fact units plus a conclusion unit.",
            "no explicit support: u1 and u2, the documents give only the bands' nationality (The Telescopes 0 'English band'; Ubiquitous Synergy Seeker 0 'Canadian duo', Questamation 0, New World Alphabet 0 'Canadian band'); members' nationality from the band's is inference (rule 4, cf. 'an American film').",
            "Source supporting facts kept out for that reason. Reviewer may decide to reinterpret the units as the bands' nationality, which would give English vs Canadian with explicit support."],
@@ -237,7 +238,7 @@
   {"unit_id": "u3", "description": "whether The Telescopes and Ubiquitous Synergy Seeker have members of the same nationality", "necessary": true,
    "expected_answer": "no", "depends_on": ["u1", "u2"], "support_sets": [[]]}]},
 
-{"sample_id": "hotpotqa_5ab5b95d554299637185c5f8", "status": "draft",
+{"sample_id": "hotpotqa_5ab5b95d554299637185c5f8", "status": "reject", "replacement_sample_id": "hotpotqa_5a8b85f355429971feec4731",
  "notes": ["Bridge: u1 finds the actress from School of Rock, u2 confirms the iCarly role.",
            "Answer normalized from 'Miranda Taylor Cosgrove' to 'Miranda Cosgrove'; full name kept as alias.",
            "Caveat: Miranda Cosgrove 2 states her film debut, while sentence 1 says her career began with commercials at 3; 'got her start' follows the source gold.",
@@ -251,7 +252,7 @@
    "expected_answer": "Miranda Cosgrove", "aliases": ["Miranda Taylor Cosgrove"], "depends_on": ["u1"],
    "support_sets": [[["ICarly (season 1)", 1]], [["Miranda Cosgrove", 4]]]}]},
 
-{"sample_id": "hotpotqa_5ab461c25542991751b4d754", "status": "draft",
+{"sample_id": "hotpotqa_5ab461c25542991751b4d754", "status": "reviewed",
  "notes": ["Comparison (selection between named candidates): one fact unit per chain plus a conclusion unit.",
            "by_presupposition (unit_schema 5.6): the question presupposes one of the two was founded in 1994. u3 has presupposition_sets = u2's support sets.",
            "no explicit support: u1, no sentence gives Pizza Inn's founding year. Pizza Inn 0 from the source supporting facts is not used."],
@@ -262,9 +263,10 @@
    "expected_answer": "yes", "depends_on": [], "support_sets": [[["Extreme Pizza", 0]]]},
   {"unit_id": "u3", "description": "which of Pizza Inn and Extreme Pizza was founded in 1994", "necessary": true,
    "expected_answer": "Extreme Pizza", "depends_on": ["u1", "u2"], "support_sets": [[]],
+   "by_presupposition": true,
    "presupposition_sets": [[["Extreme Pizza", 0]]]}]},
 
-{"sample_id": "hotpotqa_5a78fb5955429970f5fffe09", "status": "draft",
+{"sample_id": "hotpotqa_5a78fb5955429970f5fffe09", "status": "reviewed",
  "notes": ["Bridge: the philosopher (optional) then the festival (necessary).",
            "Kanakadasa Jayanthi 0 (source supporting fact) states the Karnataka celebration but not whom it celebrates; sentence 1 states the link to Kanaka Dasa and alone supports u2. 'Celebrated by the people of Karnataka' is a descriptor shared by distractor festivals.",
            "Kanakadasa Jayanthi 2-3 mention Kanaka Dasa's birthday celebrations but do not name the festival."],
@@ -275,7 +277,7 @@
    "expected_answer": "Kanakadasa Jayanthi", "aliases": ["Kanakadasa Jayanti"], "depends_on": ["u1"],
    "support_sets": [[["Kanakadasa Jayanthi", 1]]]}]},
 
-{"sample_id": "hotpotqa_5ae0bf2955429906c02dab1f", "status": "draft",
+{"sample_id": "hotpotqa_5ae0bf2955429906c02dab1f", "status": "reviewed",
  "notes": ["Comparison: two formation-year fact units plus a conclusion unit.",
            "My Morning Jacket discography 1 (signed with Darla in 1998) does not state the formation year and is not used."],
  "units": [
@@ -286,7 +288,7 @@
   {"unit_id": "u3", "description": "which of Radiohead and My Morning Jacket was formed first", "necessary": true,
    "expected_answer": "Radiohead", "depends_on": ["u1", "u2"], "support_sets": [[]]}]},
 
-{"sample_id": "hotpotqa_5ab5344c5542991751b4d7c5", "status": "draft",
+{"sample_id": "hotpotqa_5ab5344c5542991751b4d7c5", "status": "reviewed",
  "notes": ["Bridge: the older brother (optional) then his birth year (necessary).",
            "Robbie Tarrant 1 ('younger brother of former Collingwood and Fremantle player, Chris Tarrant') states the relation and the Collingwood link. Robbie Tarrant 0 from the source supporting facts does not state either value."],
  "units": [
@@ -295,11 +297,11 @@
   {"unit_id": "u2", "description": "birth year of {u1}", "necessary": true,
    "expected_answer": "1980", "depends_on": ["u1"], "support_sets": [[["Chris Tarrant (footballer)", 0]]]}]},
 
-{"sample_id": "hotpotqa_5ade1b7755429975fa854e55", "status": "draft",
+{"sample_id": "hotpotqa_5ade1b7755429975fa854e55", "status": "reviewed",
  "notes": ["Comparison (selection between named candidates): one fact unit per band plus a conclusion unit.",
            "u1 'no' follows from the stated year 1994 (Foo Fighters 0, List of Foo Fighters band members 0, Foo Fighters live performances 0).",
-           "no explicit support: u2, no sentence gives Goon Moon's founding date; the 2005 mini-LP (Goon Moon 1) only implies it. Goon Moon 0, 1, 3 from the source supporting facts are not used.",
-           "No presupposition_sets: rule 7a needs the winner's fact to be explicit; here only the loser's is. The conclusion is therefore never supported. Open point: elimination by presupposition (loser confirmed 'no')."],
+           "No explicit support for u2: no sentence gives Goon Moon's founding date; the 2005 mini-LP (Goon Moon 1) only implies it. Goon Moon 0, 1, 3 from the source supporting facts are not used.",
+           "The question names exactly two candidates and presupposes a unique answer. Once Foo Fighters is explicitly ruled out, u3 identifies Goon Moon by presupposition; u3 therefore uses presupposition_sets = u1's support sets."],
  "units": [
   {"unit_id": "u1", "description": "whether Foo Fighters was founded in the 21st century", "necessary": false,
    "expected_answer": "no", "depends_on": [],
@@ -307,9 +309,10 @@
   {"unit_id": "u2", "description": "whether Goon Moon was founded in the 21st century", "necessary": false,
    "expected_answer": "yes", "depends_on": [], "support_sets": []},
   {"unit_id": "u3", "description": "which of Foo Fighters and Goon Moon was founded in the 21st century", "necessary": true,
-   "expected_answer": "Goon Moon", "depends_on": ["u1", "u2"], "support_sets": [[]]}]},
+   "expected_answer": "Goon Moon", "depends_on": ["u1", "u2"], "support_sets": [[]], "by_presupposition": true,
+   "presupposition_sets": [[["Foo Fighters", 0]], [["List of Foo Fighters band members", 0]], [["Foo Fighters live performances", 0]]]}]},
 
-{"sample_id": "hotpotqa_5a8dd9b8554299068b959e06", "status": "draft",
+{"sample_id": "hotpotqa_5a8dd9b8554299068b959e06", "status": "reviewed",
  "notes": ["Bridge: u1 finds the islands from the fish's range, u2 confirms the 'Nansei' name.",
            "Okinawa Island 0 ('the Ryukyu (\"Nansei\") Islands of Japan') added as alternative support for u2: it states the name equivalence, though not that it is the Japanese name.",
            "Tokara Islands 0 names both the Nansei Islands and the Ryukyu Archipelago without equating them; not used."],
@@ -321,7 +324,7 @@
    "expected_answer": "Ryukyu Islands", "aliases": ["Ryūkyū Islands"], "depends_on": ["u1"],
    "support_sets": [[["Ryukyu Islands", 0]], [["Okinawa Island", 0]]]}]},
 
-{"sample_id": "hotpotqa_5ab443ca5542991779162c43", "status": "draft",
+{"sample_id": "hotpotqa_5ab443ca5542991779162c43", "status": "reviewed",
  "notes": ["Comparison (common attribute): one occupation fact unit per person plus a conclusion unit (equal values, Exception 1).",
            "Alternative support for u1: Thursday's Children 4 ('Filmmakers Lindsay Anderson and Guy Brenton') and The White Bus 0 ('British director Lindsay Anderson').",
            "Sentences that only say a film was 'directed by Lindsay Anderson' (O Lucky Man! 2, Thursday's Children 0, In Celebration 0) state an event, not the occupation; not used.",
@@ -336,7 +339,7 @@
   {"unit_id": "u3", "description": "what Lindsay Anderson and Aaron Kozak have in common", "necessary": true,
    "expected_answer": "filmmaker", "aliases": ["filmmakers", "both are filmmakers"], "depends_on": ["u1", "u2"], "support_sets": [[]]}]},
 
-{"sample_id": "hotpotqa_5a75dc7a5542992d0ec06004", "status": "draft",
+{"sample_id": "hotpotqa_5a75dc7a5542992d0ec06004", "status": "reviewed",
  "notes": ["Bridge: u1 finds the term from its definition, u2 confirms HCL provides it.",
            "Alias 'Digital & Analytics' is the service name in HCL Technologies 4.",
            "Trap: Data mining 0 ('discovering patterns in large data sets') is a near-match definition."],
@@ -347,7 +350,7 @@
    "expected_answer": "Analytics", "aliases": ["Digital & Analytics"], "depends_on": ["u1"],
    "support_sets": [[["HCL Technologies", 4]]]}]},
 
-{"sample_id": "hotpotqa_5ab7eff35542993667794059", "status": "draft",
+{"sample_id": "hotpotqa_5ab7eff35542993667794059", "status": "reviewed",
  "notes": ["Comparison (common attribute): one fact unit per musician plus a conclusion unit (equal values, Exception 1).",
            "Alternative support for u2: Stephen Malkmus and the Jicks 1, Cut Your Hair 1, Crooked Rain, Crooked Rain: LA's Desert Origins 2 ('vocalist'). The Crust Brothers 2 ('sang lead on') is an event and is not used.",
            "'Songwriter' is also common to both (Neil Hannon 0; Stephen Malkmus and the Jicks 1, Cut Your Hair 1) but is not listed as an alias: Stephen Malkmus 0 does not state it, so an alias would be scored supported from that sentence."],

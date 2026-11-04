@@ -10,7 +10,9 @@ For every question in gold_sft.jsonl:
    git, applied to the gold unit descriptions and depends_on without answers, as in A's eval_judge.py.
 4. Target: computed from gold. A unit is SUPPORTED when a support set is visible and all its
    dependencies are SUPPORTED, citing that set ([[]] cites the dependencies' evidence); otherwise when a
-   presupposition set is visible and at least one dependency is SUPPORTED, by_presupposition. Else UNRESOLVED.
+   presupposition set is visible and at least one dependency is SUPPORTED (or the unit has no dependencies),
+   by_presupposition. For a question naming exactly two candidates with a unique answer, explicitly ruling
+   out one candidate may identify the other by presupposition. Else UNRESOLVED.
 
 Snapshots with the same visible set are kept once per question. A snapshot is "changed" when a label
 changes, or a unit becomes blocked (its own evidence is visible but a dependency is unsupported).
@@ -38,6 +40,11 @@ from prepare_step2 import question_key  # noqa: E402
 
 DATA_VERSION = "sft-v0"
 SUPPORTED, UNRESOLVED = "SUPPORTED", "UNRESOLVED"
+PRESUPPOSITION_EXTENSION = (
+    "\n  For exactly two named candidates where the question presupposes one unique answer, evidence "
+    "explicitly ruling out one candidate also identifies the other. Label the conclusion SUPPORTED with "
+    "by_presupposition true."
+)
 
 
 def load_a_judge(ref):
@@ -124,7 +131,14 @@ def cross_check(judge, schema, gold, sample, evidence, targets):
     for unit, target in zip(units, targets):
         if not presupposed(unit.unit_id) and oracle[unit.unit_id].label != target["label"]:
             problems.append(unit.unit_id + ": oracle " + oracle[unit.unit_id].label)
-        if target["by_presupposition"] and judge.is_conclusion(unit):
+        # A's current derive_conclusion implements the positive-candidate form of Section 5.6 only.
+        # The approved B-side extension also permits a unique answer after one of exactly two named
+        # candidates is explicitly ruled out. Cross-check the former against A and treat the latter as
+        # an intentional extension until A adopts the same rule.
+        supported_parent_values = [labels[p].value for p in unit.depends_on
+                                   if labels[p].label == SUPPORTED]
+        has_confirmed_positive = any(str(value).casefold() == "yes" for value in supported_parent_values)
+        if target["by_presupposition"] and judge.is_conclusion(unit) and has_confirmed_positive:
             label, _, _ = judge.derive_conclusion(unit, labels, target["value"], True, sample["question"])
             if label != SUPPORTED:
                 problems.append(unit.unit_id + ": derive_conclusion " + label)
@@ -177,6 +191,8 @@ def examples_for(sample, gold, args, judge, schema):
         obs = schema.Observation(sample["sample_id"], sample["question"], snapshot["time_s"],
                                  tuple(snapshot["evidence"]), tuple(units), snapshot["time_s"] == len(documents))
         messages = judge.judge_messages(obs)
+        messages = [dict(message) for message in messages]
+        messages[0]["content"] += PRESUPPOSITION_EXTENSION
         if args.no_examples:
             messages = messages[:1] + messages[-1:]
         reply = {"units": snapshot["targets"]}

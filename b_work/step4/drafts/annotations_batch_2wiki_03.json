@@ -5,7 +5,7 @@
  "records": [
   {
    "sample_id": "2wikimultihopqa_cdd42e23087c11ebbd6aac1f6bf848b6",
-   "status": "draft",
+   "status": "reviewed",
    "notes": [
     "Bridge comparison: director and nationality chain per film, then a same-country conclusion.",
     "A Doll's House (1917 film) sentence 1 says 'Joe De Grasse'; the Joseph De Grasse document (Joseph Louis De Grasse) is linked by name. Aliases cover both forms.",
@@ -108,7 +108,7 @@
   },
   {
    "sample_id": "2wikimultihopqa_8d777f1a095911ebbdaeac1f6bf848b6",
-   "status": "draft",
+   "status": "reviewed",
    "notes": [
     "Comparison (yes/no): two country-of-origin units plus a conclusion unit.",
     "Both film articles state the country descriptor in the opening sentence ('Philippine film', 'Filipino war film'). Normalized to 'Philippines'; both descriptors kept as aliases so the conclusion compares equal countries.",
@@ -170,7 +170,7 @@
   },
   {
    "sample_id": "2wikimultihopqa_aaf6d2540bda11eba7f7acde48001122",
-   "status": "draft",
+   "status": "reviewed",
    "notes": [
     "Bridge: director (optional) then place of death (necessary).",
     "Otis Turner sentence 2 states both birthplace and death place; only 'died in Los Angeles' is used."
@@ -212,7 +212,7 @@
   },
   {
    "sample_id": "2wikimultihopqa_b6f259dc0baf11ebab90acde48001122",
-   "status": "draft",
+   "status": "reviewed",
    "notes": [
     "Bridge (inference): father (optional) then the father's mother, i.e. the paternal grandmother (necessary).",
     "Ptolemy V Epiphanes sentence 0 ('son of the siblings Ptolemy IV Philopator and Arsinoe III of Egypt') names the mother explicitly.",
@@ -261,7 +261,7 @@
   },
   {
    "sample_id": "2wikimultihopqa_75141b5d086911ebbd5eac1f6bf848b6",
-   "status": "draft",
+   "status": "reviewed",
    "notes": [
     "Bridge comparison: director and nationality chain per film, then a same-country conclusion.",
     "Both director biographies say 'American' explicitly. Triple value 'America' kept as an alias.",
@@ -361,7 +361,7 @@
   },
   {
    "sample_id": "2wikimultihopqa_2547e59c089b11ebbd78ac1f6bf848b6",
-   "status": "draft",
+   "status": "reviewed",
    "notes": [
     "Comparison: two death dates plus a conclusion unit.",
     "Many Hesse-Kassel distractors; only Landgravine Sophie of Hesse-Kassel 0 gives Sophie's death date."
@@ -417,7 +417,8 @@
   },
   {
    "sample_id": "2wikimultihopqa_a73a3fc80bdc11eba7f7acde48001122",
-   "status": "draft",
+   "status": "reject",
+   "replacement_sample_id": "2wikimultihopqa_254e9ee20bdb11eba7f7acde48001122",
    "notes": [
     "Bridge: director (optional) then birthplace (necessary).",
     "no explicit support: Michael Simon (DJ) 0 says he is 'a German DJ and musician from Hamburg'; 'from Hamburg' does not state the birthplace, so u2 has support_sets [].",
@@ -453,23 +454,22 @@
   },
   {
    "sample_id": "2wikimultihopqa_32e5e2840bb011ebab90acde48001122",
-   "status": "draft",
+   "status": "reviewed",
    "notes": [
-    "Inference question that asks the father directly: one necessary unit. The source chain (mother, then mother's spouse) is not split into hops because Grand Duchess Elizabeth Mikhailovna sentence 1 names the father directly and a decomposer would write a single unit.",
-    "Sentence 1 is a fragment ('(Moscow, ...) was the second child and daughter of ...'), so it is cited with sentence 0.",
-    "Not used: Princess Charlotte of Württemberg 0 (spouse) plus the mother link would be an inference about paternity; Grand Duchess Catherine Mikhailovna 0 is about a sister.",
+        "Inference structure standardized to two hops: Elizabeth's mother, then the mother's husband/father named by the documents.",
+        "Grand Duchess Elizabeth Mikhailovna sentences 0-1 identify Princess Charlotte as her mother; sentence 1 is a fragment and is cited with sentence 0.",
+        "Princess Charlotte of Württemberg sentence 0 identifies her husband as Grand Duke Michael Pavlovich; Grand Duchess Elizabeth Mikhailovna sentences 0-1 are alternative direct support for the final father unit.",
+        "Grand Duchess Catherine Mikhailovna 0 is about a sister and is not used.",
     "Text says 'Mikhail Pavlovich'; source answer 'Michael Pavlovich'. Both forms in aliases."
    ],
    "units": [
     {
      "unit_id": "u1",
-     "description": "father of Grand Duchess Elizabeth Mikhailovna of Russia",
-     "necessary": true,
-     "expected_answer": "Grand Duke Michael Pavlovich of Russia",
+          "description": "mother of Grand Duchess Elizabeth Mikhailovna of Russia",
+          "necessary": false,
+          "expected_answer": "Princess Charlotte of Württemberg",
      "aliases": [
-      "Grand Duke Mikhail Pavlovich of Russia",
-      "Michael Pavlovich",
-      "Mikhail Pavlovich"
+            "Grand Duchess Elena Pavlovna"
      ],
      "depends_on": [],
      "support_sets": [
@@ -484,12 +484,44 @@
        ]
       ]
      ]
+        },
+        {
+          "unit_id": "u2",
+          "description": "father of Grand Duchess Elizabeth Mikhailovna of Russia, given {u1} as her mother",
+          "necessary": true,
+          "expected_answer": "Grand Duke Michael Pavlovich of Russia",
+          "aliases": [
+            "Grand Duke Mikhail Pavlovich of Russia",
+            "Michael Pavlovich",
+            "Mikhail Pavlovich"
+          ],
+          "depends_on": [
+            "u1"
+          ],
+          "support_sets": [
+            [
+              [
+                "Princess Charlotte of Württemberg",
+                0
+              ]
+            ],
+            [
+              [
+                "Grand Duchess Elizabeth Mikhailovna of Russia",
+                0
+              ],
+              [
+                "Grand Duchess Elizabeth Mikhailovna of Russia",
+                1
+              ]
+            ]
+          ]
     }
    ]
   },
   {
    "sample_id": "2wikimultihopqa_b2fd9eb4089d11ebbd78ac1f6bf848b6",
-   "status": "draft",
+   "status": "reviewed",
    "notes": [
     "Bridge comparison: director and birth-date chain per film, then a conclusion unit.",
     "Jiří Menzel sentence 7 ('his dark comedy \"My Sweet Little Village\"') does not explicitly state the director role, so it is not alternative support for u3."
@@ -579,7 +611,7 @@
   },
   {
    "sample_id": "2wikimultihopqa_8f49c34c089011ebbd72ac1f6bf848b6",
-   "status": "draft",
+   "status": "reviewed",
    "notes": [
     "Comparison (yes/no): two country-of-origin units plus a conclusion unit.",
     "Both opening sentences state the country descriptor ('French film', 'Swedish drama film'). Normalized to country names; descriptors kept as aliases.",
@@ -639,7 +671,7 @@
   },
   {
    "sample_id": "2wikimultihopqa_0b4d4cb20bdd11eba7f7acde48001122",
-   "status": "draft",
+   "status": "reviewed",
    "notes": [
     "Bridge: director (optional) then place of death (necessary).",
     "Mountains (Prince song) 8 says Prince directed a music video, not the film; not used for u1.",
@@ -688,7 +720,7 @@
   },
   {
    "sample_id": "2wikimultihopqa_c09bb4380baf11ebab90acde48001122",
-   "status": "draft",
+   "status": "reviewed",
    "notes": [
     "Bridge (inference): spouse (optional) then the spouse's father, i.e. the father-in-law (necessary).",
     "Evidence triple subject 'Ultrogothe' differs from the document title 'Ultragotha'.",
@@ -732,7 +764,7 @@
   },
   {
    "sample_id": "2wikimultihopqa_f96c965908dd11ebbd9eac1f6bf848b6",
-   "status": "draft",
+   "status": "reviewed",
    "notes": [
     "Bridge comparison: director and birth-date chain per film, then a conclusion unit.",
     "Omoni Oboli 1 lists Wives on Strike among her screenplays, not as a directing credit; not used for u1.",
@@ -820,7 +852,7 @@
   },
   {
    "sample_id": "2wikimultihopqa_36df83c7084b11ebbd56ac1f6bf848b6",
-   "status": "draft",
+   "status": "reviewed",
    "notes": [
     "Comparison: two birth dates plus a conclusion unit.",
     "Other 'de Mello' and 'Cardoso' documents are distractors."
@@ -873,7 +905,7 @@
   },
   {
    "sample_id": "2wikimultihopqa_4ef665780bda11eba7f7acde48001122",
-   "status": "draft",
+   "status": "reviewed",
    "notes": [
     "Bridge: director (optional) then date of death (necessary).",
     "Toto in Madrid (directed by Steno) is a distractor."
@@ -915,7 +947,7 @@
   },
   {
    "sample_id": "2wikimultihopqa_cb2146660baf11ebab90acde48001122",
-   "status": "draft",
+   "status": "reviewed",
    "notes": [
     "Bridge (inference): father (optional) then the father's father, i.e. the paternal grandfather (necessary).",
     "Erik the Red 1 ('as the son of Thorvald Asvaldsson') states the father; the patronymic in sentence 2 does not name Asvaldsson.",
@@ -961,7 +993,7 @@
   },
   {
    "sample_id": "2wikimultihopqa_bc7761cc088511ebbd6dac1f6bf848b6",
-   "status": "draft",
+   "status": "reviewed",
    "notes": [
     "Bridge comparison: director and nationality chain per film, then a same-country conclusion.",
     "u4 uses 'Austrian director' (Richard Oswald 0). Figures of the Night 0 calls the film German, which does not support the director's nationality.",
@@ -1055,7 +1087,7 @@
   },
   {
    "sample_id": "2wikimultihopqa_d690e9a809bc11ebbdb0ac1f6bf848b6",
-   "status": "draft",
+   "status": "reviewed",
    "notes": [
     "Comparison (yes/no): two country units plus a conclusion unit.",
     "Both opening sentences end with 'United States'. Other 'Valley High School' documents are distractors."
@@ -1116,11 +1148,11 @@
   },
   {
    "sample_id": "2wikimultihopqa_3a2fe93e0bda11eba7f7acde48001122",
-   "status": "draft",
+   "status": "reviewed",
    "notes": [
     "Bridge: wife (optional) then nationality (necessary).",
-    "no explicit support: no sentence calls Mavis Batey British. Mavis Batey 0 says 'an English code-breaker'; English to British needs world knowledge. The supporting fact Mavis Batey 3 is an award (Member of the Order of the British Empire), not a nationality. u2 has support_sets [].",
-    "Open point: 'English' is the explicitly stated descriptor; it is not added as an alias because it is a different value from the source answer. Reviewer may prefer expected_answer 'English' with support Mavis Batey 0."
+        "English and British are treated as equivalent nationality descriptors for this task. Mavis Batey sentence 0 explicitly says 'an English code-breaker', so it supports source answer British with English as an alias.",
+        "Mavis Batey sentence 3 is an award (Member of the Order of the British Empire), not nationality evidence, and is not used."
    ],
    "units": [
     {
@@ -1146,41 +1178,79 @@
      "description": "nationality of {u1}",
      "necessary": true,
      "expected_answer": "British",
+          "aliases": [
+            "English"
+          ],
      "depends_on": [
       "u1"
      ],
-     "support_sets": []
+          "support_sets": [
+            [
+              [
+                "Mavis Batey",
+                0
+              ]
+            ]
+          ]
     }
    ]
   },
   {
    "sample_id": "2wikimultihopqa_d996cdce0baf11ebab90acde48001122",
-   "status": "draft",
+   "status": "reviewed",
    "notes": [
-    "Inference question that asks the child directly: one necessary unit. Swanandi Tikekar 1 ('She is daughter of Uday Tikekar and Aarti Ankalikar') states it directly, so the source chain (spouse, then spouse's child) is not split into hops.",
-    "The source supporting facts (Uday Tikekar 2 + Arati Ankalikar-Tikekar 4) are not used: wife's daughter does not explicitly state Uday's child."
+        "Inference structure standardized to two hops: Uday Tikekar's spouse, then that spouse's daughter.",
+        "Uday Tikekar sentence 2 identifies Arati Ankalikar-Tikekar as his wife; Arati Ankalikar-Tikekar sentence 4 identifies Swanandi as her daughter.",
+        "Swanandi Tikekar sentence 1 directly names both parents and is alternative support for the final unit."
    ],
    "units": [
     {
      "unit_id": "u1",
-     "description": "child of Uday Tikekar",
-     "necessary": true,
-     "expected_answer": "Swanandi Tikekar",
+          "description": "spouse of Uday Tikekar",
+          "necessary": false,
+          "expected_answer": "Arati Ankalikar-Tikekar",
+          "aliases": [
+            "Aarti Ankalikar",
+            "Arati Ankalikar"
+          ],
      "depends_on": [],
      "support_sets": [
       [
        [
-        "Swanandi Tikekar",
-        1
+                "Uday Tikekar",
+                2
        ]
       ]
      ]
+        },
+        {
+          "unit_id": "u2",
+          "description": "child of Uday Tikekar, given {u1} as his spouse",
+          "necessary": true,
+          "expected_answer": "Swanandi Tikekar",
+          "depends_on": [
+            "u1"
+          ],
+          "support_sets": [
+            [
+              [
+                "Arati Ankalikar-Tikekar",
+                4
+              ]
+            ],
+            [
+              [
+                "Swanandi Tikekar",
+                1
+              ]
+            ]
+          ]
     }
    ]
   },
   {
    "sample_id": "2wikimultihopqa_c16ac4b4088311ebbd6dac1f6bf848b6",
-   "status": "draft",
+   "status": "reviewed",
    "notes": [
     "Bridge comparison: director and death-date chain per film, then a conclusion unit.",
     "Trap: Crimson Curtain (1952 film) is a different film directed by André Barsacq.",
@@ -1274,7 +1344,7 @@
   },
   {
    "sample_id": "2wikimultihopqa_b14d20df097211ebbdb0ac1f6bf848b6",
-   "status": "draft",
+   "status": "reviewed",
    "notes": [
     "Comparison (yes/no): two country units plus a conclusion unit.",
     "The other Lumnezia municipality documents state their own country and only list Vella in the merger sentence; that would be an inference, so they are not alternative support for u2."
@@ -1327,7 +1397,7 @@
   },
   {
    "sample_id": "2wikimultihopqa_5637d4a60bdb11eba7f7acde48001122",
-   "status": "draft",
+   "status": "reviewed",
    "notes": [
     "Bridge: director (optional) then birthplace (necessary)."
    ],
@@ -1368,7 +1438,7 @@
   },
   {
    "sample_id": "2wikimultihopqa_600955300baf11ebab90acde48001122",
-   "status": "draft",
+   "status": "reviewed",
    "notes": [
     "Bridge (inference): father (optional) then the father's father, i.e. the paternal grandfather (necessary).",
     "Document title 'George III Dadiani' vs article text and triple 'Giorgi III Dadiani'.",
@@ -1417,7 +1487,7 @@
   },
   {
    "sample_id": "2wikimultihopqa_6670d044088d11ebbd70ac1f6bf848b6",
-   "status": "draft",
+   "status": "reviewed",
    "notes": [
     "Bridge comparison: director and nationality chain per film, then a same-country conclusion.",
     "Peter Sullivan (screenwriter) 13 ('In 2018, Sullivan directed the Netflix psychological thriller \"Secret Obsession\"') added as alternative support for u1.",
@@ -1518,7 +1588,7 @@
   },
   {
    "sample_id": "2wikimultihopqa_297ea8fb097011ebbdb0ac1f6bf848b6",
-   "status": "draft",
+   "status": "reviewed",
    "notes": [
     "Comparison (yes/no): two country units plus a conclusion unit.",
     "Both opening sentences end with 'Iran'. The other '-ye Yek' villages are distractors."
@@ -1571,7 +1641,7 @@
   },
   {
    "sample_id": "2wikimultihopqa_b063b1ae0bd911eba7f7acde48001122",
-   "status": "draft",
+   "status": "reviewed",
    "notes": [
     "Bridge: director (optional) then birthplace (necessary).",
     "Ralph Staub 0 gives the birth date and place in the '(July 21, 1899 in Chicago, Illinois – ...)' pattern, which states the birthplace."
@@ -1616,7 +1686,7 @@
   },
   {
    "sample_id": "2wikimultihopqa_a1f429840baf11ebab90acde48001122",
-   "status": "draft",
+   "status": "reviewed",
    "notes": [
     "Bridge (inference): father (optional) then the father's mother, i.e. the paternal grandmother (necessary).",
     "William IV, Duke of Bavaria 1 ('born in Munich to Albert IV and Kunigunde of Austria') names the mother explicitly.",
@@ -1662,7 +1732,7 @@
   },
   {
    "sample_id": "2wikimultihopqa_015ccd41087711ebbd67ac1f6bf848b6",
-   "status": "draft",
+   "status": "reviewed",
    "notes": [
     "Bridge comparison: director and nationality chain per film, then a same-country conclusion.",
     "The Enigma of the Folies-Bergere sentence 0 is a fragment ('(French:'); the director is in sentence 1, so u1 cites sentences 0 and 1 together. The source supporting fact lists only sentence 0.",
@@ -1760,7 +1830,7 @@
   },
   {
    "sample_id": "2wikimultihopqa_f05c2009099111ebbdb0ac1f6bf848b6",
-   "status": "draft",
+   "status": "reviewed",
    "notes": [
     "Comparison (yes/no): two country units plus a conclusion unit.",
     "Triple value 'Holland' vs text 'Netherlands'; 'Holland' kept as an alias.",

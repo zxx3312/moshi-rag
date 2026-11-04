@@ -1,0 +1,261 @@
+{
+  "annotation_version": "reviewed-1",
+  "drafted_by": "Codex replacement audit",
+  "worksheet": "replacements_31",
+  "records": [
+    {
+      "sample_id": "2wikimultihopqa_b3a5431b08cc11ebbd93ac1f6bf848b6",
+      "status": "reviewed",
+      "notes": ["Bridge comparison: both director and nationality chains are explicitly supported."],
+      "units": [
+        {"unit_id": "u1", "description": "director of film One on One (1977 film)", "necessary": false, "expected_answer": "Lamont Johnson", "depends_on": [], "support_sets": [[["One on One (1977 film)", 1]]]},
+        {"unit_id": "u2", "description": "nationality of {u1}", "necessary": false, "expected_answer": "American", "aliases": ["United States"], "depends_on": ["u1"], "support_sets": [[["Lamont Johnson", 0]]]},
+        {"unit_id": "u3", "description": "director of film Ready Money", "necessary": false, "expected_answer": "Oscar Apfel", "depends_on": [], "support_sets": [[["Ready Money (film)", 0]]]},
+        {"unit_id": "u4", "description": "nationality of {u3}", "necessary": false, "expected_answer": "American", "aliases": ["United States"], "depends_on": ["u3"], "support_sets": [[["Oscar Apfel", 0]]]},
+        {"unit_id": "u5", "description": "whether the directors of One on One and Ready Money share the same nationality", "necessary": true, "expected_answer": "yes", "depends_on": ["u2", "u4"], "support_sets": [[]]}
+      ]
+    },
+    {
+      "sample_id": "2wikimultihopqa_ef3a400a087811ebbd67ac1f6bf848b6",
+      "status": "reviewed",
+      "notes": ["Bridge comparison: both films have one relevant director whose American nationality is explicit."],
+      "units": [
+        {"unit_id": "u1", "description": "director of film Itty Bitty Titty Committee", "necessary": false, "expected_answer": "Jamie Babbit", "depends_on": [], "support_sets": [[["Itty Bitty Titty Committee", 0]]]},
+        {"unit_id": "u2", "description": "nationality of {u1}", "necessary": false, "expected_answer": "American", "aliases": ["United States"], "depends_on": ["u1"], "support_sets": [[["Jamie Babbit", 0]]]},
+        {"unit_id": "u3", "description": "director of film Desperate Journey", "necessary": false, "expected_answer": "Raoul Walsh", "depends_on": [], "support_sets": [[["Desperate Journey", 0]]]},
+        {"unit_id": "u4", "description": "nationality of {u3}", "necessary": false, "expected_answer": "American", "aliases": ["United States"], "depends_on": ["u3"], "support_sets": [[["Raoul Walsh", 0]]]},
+        {"unit_id": "u5", "description": "whether the directors of Itty Bitty Titty Committee and Desperate Journey share the same nationality", "necessary": true, "expected_answer": "yes", "depends_on": ["u2", "u4"], "support_sets": [[]]}
+      ]
+    },
+    {
+      "sample_id": "2wikimultihopqa_d2e0be5a08b611ebbd88ac1f6bf848b6",
+      "status": "reviewed",
+      "notes": ["Bridge comparison: director identities and death dates are explicit; 2002 is later than 1961."],
+      "units": [
+        {"unit_id": "u1", "description": "director of film Panam Paduthum Padu", "necessary": false, "expected_answer": "Y. R. Swamy", "depends_on": [], "support_sets": [[["Panam Paduthum Padu", 0]]]},
+        {"unit_id": "u2", "description": "date of death of {u1}", "necessary": false, "expected_answer": "21 October 2002", "depends_on": ["u1"], "support_sets": [[["Y. R. Swamy", 0]]]},
+        {"unit_id": "u3", "description": "director of film Taxi!", "necessary": false, "expected_answer": "Roy Del Ruth", "depends_on": [], "support_sets": [[["Taxi!", 0]]]},
+        {"unit_id": "u4", "description": "date of death of {u3}", "necessary": false, "expected_answer": "April 27, 1961", "depends_on": ["u3"], "support_sets": [[["Roy Del Ruth", 0]]]},
+        {"unit_id": "u5", "description": "which of Panam Paduthum Padu and Taxi! has the director who died later", "necessary": true, "expected_answer": "Panam Paduthum Padu", "depends_on": ["u2", "u4"], "support_sets": [[]]}
+      ]
+    },
+    {
+      "sample_id": "2wikimultihopqa_fc76b898099011ebbdb0ac1f6bf848b6",
+      "status": "reviewed",
+      "notes": ["Comparison: both village descriptions explicitly end with Iran."],
+      "units": [
+        {"unit_id": "u1", "description": "country of Boneh-ye Khiraleh", "necessary": false, "expected_answer": "Iran", "depends_on": [], "support_sets": [[["Boneh-ye Khiraleh", 0]]]},
+        {"unit_id": "u2", "description": "country of Askaru", "necessary": false, "expected_answer": "Iran", "depends_on": [], "support_sets": [[["Askaru", 0]]]},
+        {"unit_id": "u3", "description": "whether Boneh-ye Khiraleh and Askaru are located in the same country", "necessary": true, "expected_answer": "yes", "depends_on": ["u1", "u2"], "support_sets": [[]]}
+      ]
+    },
+    {
+      "sample_id": "2wikimultihopqa_0ae4bb72086111ebbd5dac1f6bf848b6",
+      "status": "reviewed",
+      "notes": ["Comparison: both death dates are explicit; 1971 precedes 2016."],
+      "units": [
+        {"unit_id": "u1", "description": "date of death of Maude Fealy", "necessary": false, "expected_answer": "November 9, 1971", "depends_on": [], "support_sets": [[["Maude Fealy", 0]]]},
+        {"unit_id": "u2", "description": "date of death of Lars Gustafsson", "necessary": false, "expected_answer": "3 April 2016", "depends_on": [], "support_sets": [[["Lars Gustafsson", 0]]]},
+        {"unit_id": "u3", "description": "who died first, Maude Fealy or Lars Gustafsson", "necessary": true, "expected_answer": "Maude Fealy", "depends_on": ["u1", "u2"], "support_sets": [[]]}
+      ]
+    },
+    {
+      "sample_id": "2wikimultihopqa_b902985208d411ebbd97ac1f6bf848b6",
+      "status": "reviewed",
+      "notes": ["Comparison: Finnish and Norwegian are explicitly stated nationalities."],
+      "units": [
+        {"unit_id": "u1", "description": "nationality of Sami Yli-Sirniö", "necessary": false, "expected_answer": "Finnish", "aliases": ["Finland"], "depends_on": [], "support_sets": [[["Sami Yli-Sirniö", 0]]]},
+        {"unit_id": "u2", "description": "nationality of Torger Nergård", "necessary": false, "expected_answer": "Norwegian", "aliases": ["Norway"], "depends_on": [], "support_sets": [[["Torger Nergård", 0]]]},
+        {"unit_id": "u3", "description": "whether Sami Yli-Sirniö and Torger Nergård have the same nationality", "necessary": true, "expected_answer": "no", "depends_on": ["u1", "u2"], "support_sets": [[]]}
+      ]
+    },
+    {
+      "sample_id": "2wikimultihopqa_794cefac08cb11ebbd92ac1f6bf848b6",
+      "status": "reviewed",
+      "notes": ["Comparison: both birth dates are explicit; 1880 precedes 1983."],
+      "units": [
+        {"unit_id": "u1", "description": "date of birth of Charles School Blakely", "necessary": false, "expected_answer": "November 6, 1880", "depends_on": [], "support_sets": [[["Charles School Blakely", 0]]]},
+        {"unit_id": "u2", "description": "date of birth of Mike Nickeas", "necessary": false, "expected_answer": "February 13, 1983", "depends_on": [], "support_sets": [[["Mike Nickeas", 0]]]},
+        {"unit_id": "u3", "description": "who was born first, Charles School Blakely or Mike Nickeas", "necessary": true, "expected_answer": "Charles School Blakely", "depends_on": ["u1", "u2"], "support_sets": [[]]}
+      ]
+    },
+    {
+      "sample_id": "2wikimultihopqa_461f74380bdc11eba7f7acde48001122",
+      "status": "reviewed",
+      "notes": ["Bridge: film director and birthplace are both explicit."],
+      "units": [
+        {"unit_id": "u1", "description": "director of film Jîn", "necessary": false, "expected_answer": "Reha Erdem", "depends_on": [], "support_sets": [[["Jîn", 0]]]},
+        {"unit_id": "u2", "description": "place of birth of {u1}", "necessary": true, "expected_answer": "Istanbul", "depends_on": ["u1"], "support_sets": [[["Reha Erdem", 0]]]}
+      ]
+    },
+    {
+      "sample_id": "2wikimultihopqa_920f21380bda11eba7f7acde48001122",
+      "status": "reviewed",
+      "notes": ["Bridge: publisher and founder are explicitly named."],
+      "units": [
+        {"unit_id": "u1", "description": "publisher of The Friend (LDS magazine)", "necessary": false, "expected_answer": "The Church of Jesus Christ of Latter-day Saints", "aliases": ["LDS Church"], "depends_on": [], "support_sets": [[["The Friend (LDS magazine)", 0]]]},
+        {"unit_id": "u2", "description": "founder of {u1}", "necessary": true, "expected_answer": "Joseph Smith", "depends_on": ["u1"], "support_sets": [[["The Church of Jesus Christ of Latter-day Saints", 4]]]}
+      ]
+    },
+    {
+      "sample_id": "2wikimultihopqa_cbcd85f00bd911eba7f7acde48001122",
+      "status": "reviewed",
+      "notes": ["Bridge: Bessie Smith is explicitly the recording vocalist and is explicitly American. Country answer is normalized to United States."],
+      "units": [
+        {"unit_id": "u1", "description": "performer of song Backwater Blues", "necessary": false, "expected_answer": "Bessie Smith", "depends_on": [], "support_sets": [[["Backwater Blues", 1]]]},
+        {"unit_id": "u2", "description": "country of {u1}", "necessary": true, "expected_answer": "United States", "aliases": ["American"], "depends_on": ["u1"], "support_sets": [[["Bessie Smith", 0]]]}
+      ]
+    },
+    {
+      "sample_id": "2wikimultihopqa_16a707100bb011ebab90acde48001122",
+      "status": "reviewed",
+      "notes": ["Inference: the child-parent relation and the father's father are explicit."],
+      "units": [
+        {"unit_id": "u1", "description": "father of Princess Mangkubumi", "necessary": false, "expected_answer": "Hamengkubuwono X", "depends_on": [], "support_sets": [[["Princess Mangkubumi", 1]]]},
+        {"unit_id": "u2", "description": "father of {u1}, Princess Mangkubumi's paternal grandfather", "necessary": true, "expected_answer": "Hamengkubuwono IX", "depends_on": ["u1"], "support_sets": [[["Hamengkubuwono X", 2]]]}
+      ]
+    },
+    {
+      "sample_id": "2wikimultihopqa_7b9cef6a0bdb11eba7f7acde48001122",
+      "status": "reviewed",
+      "notes": ["Bridge: film director and cause of death are explicit."],
+      "units": [
+        {"unit_id": "u1", "description": "director of film The Magic of Lassie", "necessary": false, "expected_answer": "Don Chaffey", "depends_on": [], "support_sets": [[["The Magic of Lassie", 0]]]},
+        {"unit_id": "u2", "description": "cause of death of {u1}", "necessary": true, "expected_answer": "heart failure", "depends_on": ["u1"], "support_sets": [[["Don Chaffey", 2]]]}
+      ]
+    },
+    {
+      "sample_id": "2wikimultihopqa_008905100baf11ebab90acde48001122",
+      "status": "reviewed",
+      "notes": ["Inference: spouse and spouse's father are explicitly stated."],
+      "units": [
+        {"unit_id": "u1", "description": "spouse of Apama III", "necessary": false, "expected_answer": "Prusias I of Bithynia", "depends_on": [], "support_sets": [[["Apama III", 8]]]},
+        {"unit_id": "u2", "description": "father of {u1}, Apama III's father-in-law", "necessary": true, "expected_answer": "Ziaelas of Bithynia", "depends_on": ["u1"], "support_sets": [[["Prusias I of Bithynia", 5]]]}
+      ]
+    },
+    {
+      "sample_id": "2wikimultihopqa_e5f6937a0bae11ebab90acde48001122",
+      "status": "reviewed",
+      "notes": ["Inference: Tiberius Gemellus is explicitly Livilla's son and Livilla is explicitly Drusus's daughter."],
+      "units": [
+        {"unit_id": "u1", "description": "mother of Tiberius Gemellus", "necessary": false, "expected_answer": "Livilla", "aliases": ["Claudia Livia Julia"], "depends_on": [], "support_sets": [[["Tiberius Gemellus", 3]]]},
+        {"unit_id": "u2", "description": "father of {u1}, Tiberius Gemellus's maternal grandfather", "necessary": true, "expected_answer": "Nero Claudius Drusus", "depends_on": ["u1"], "support_sets": [[["Livilla", 0]]]}
+      ]
+    },
+    {
+      "sample_id": "hotpotqa_5add1b765542990d50227de3",
+      "status": "reviewed",
+      "notes": ["Bridge: the decree's issuer and his chancellorship years are explicit."],
+      "units": [
+        {"unit_id": "u1", "description": "German politician who issued the Nero Decree", "necessary": false, "expected_answer": "Adolf Hitler", "depends_on": [], "support_sets": [[["Nero Decree", 0]]]},
+        {"unit_id": "u2", "description": "years during which {u1} was Chancellor of Germany", "necessary": true, "expected_answer": "1933 to 1945", "aliases": ["1933–1945"], "depends_on": ["u1"], "support_sets": [[["Adolf Hitler", 0]]]}
+      ]
+    },
+    {
+      "sample_id": "hotpotqa_5a8b85f355429971feec4731",
+      "status": "reviewed",
+      "notes": ["Bridge: the remake relation identifies Dead End; its writers/directors are explicit."],
+      "units": [
+        {"unit_id": "u1", "description": "2003 film of which Mumbai 125 KM is a remake", "necessary": false, "expected_answer": "Dead End", "depends_on": [], "support_sets": [[["Mumbai 125 KM", 1]]]},
+        {"unit_id": "u2", "description": "film written and directed by Jean-Baptiste Andrea, given {u1}", "necessary": true, "expected_answer": "Dead End", "depends_on": ["u1"], "support_sets": [[["Dead End (2003 film)", 0]]]}
+      ]
+    },
+    {
+      "sample_id": "hotpotqa_5ae752255542995703ce8be5",
+      "status": "reviewed",
+      "notes": ["Bridge: the river route and Downtown Louisville boundary are explicit."],
+      "units": [
+        {"unit_id": "u1", "description": "river that streams westward from Pittsburgh to Cairo, Illinois", "necessary": false, "expected_answer": "Ohio River", "depends_on": [], "support_sets": [[["Ohio River", 0]]]},
+        {"unit_id": "u2", "description": "river forming the northern boundary of Downtown Louisville, given {u1}", "necessary": true, "expected_answer": "Ohio River", "depends_on": ["u1"], "support_sets": [[["Downtown Louisville", 1]]]}
+      ]
+    },
+    {
+      "sample_id": "hotpotqa_5ae340c45542992f92d82273",
+      "status": "reviewed",
+      "notes": ["Bridge: the completion date and Singapore identify The Red Tour; its gross is stated as over $150 million."],
+      "units": [
+        {"unit_id": "u1", "description": "Taylor Swift tour that concluded in Singapore on June 12, 2014", "necessary": false, "expected_answer": "The Red Tour", "aliases": ["Red Tour"], "depends_on": [], "support_sets": [[["The Red Tour", 1]], [["Red (Taylor Swift album)", 5]]]},
+        {"unit_id": "u2", "description": "amount grossed by {u1}", "necessary": true, "expected_answer": "over $150 million", "aliases": ["$150 million"], "depends_on": ["u1"], "support_sets": [[["Red (Taylor Swift album)", 5]]]}
+      ]
+    },
+    {
+      "sample_id": "hotpotqa_5ab33cec554299753aec595c",
+      "status": "reviewed",
+      "notes": ["Bridge: Too Much to Ask is explicitly Flicker's third single and the album release date is explicit."],
+      "units": [
+        {"unit_id": "u1", "description": "album for which Too Much to Ask was the third single", "necessary": false, "expected_answer": "Flicker", "depends_on": [], "support_sets": [[["Too Much to Ask", 2]]]},
+        {"unit_id": "u2", "description": "release date of {u1}", "necessary": true, "expected_answer": "October 20, 2017", "depends_on": ["u1"], "support_sets": [[["Flicker (album)", 1]]]}
+      ]
+    },
+    {
+      "sample_id": "hotpotqa_5ae3f3cb5542995ad6573cd9",
+      "status": "reviewed",
+      "notes": ["Comparison: Apache is explicitly a petroleum company; Alexion's defining category is pharmaceutical, supporting the negative by omission."],
+      "units": [
+        {"unit_id": "u1", "description": "whether Apache Corporation works with petroleum", "necessary": false, "expected_answer": "yes", "depends_on": [], "support_sets": [[["Apache Corporation", 0]]]},
+        {"unit_id": "u2", "description": "whether Alexion Pharmaceuticals works with petroleum", "necessary": false, "expected_answer": "no", "depends_on": [], "support_sets": [[["Alexion Pharmaceuticals", 0]]], "by_omission": true},
+        {"unit_id": "u3", "description": "which of Apache Corporation and Alexion Pharmaceuticals works with petroleum", "necessary": true, "expected_answer": "Apache Corporation", "depends_on": ["u1", "u2"], "support_sets": [[]]}
+      ]
+    },
+    {
+      "sample_id": "hotpotqa_5a733a2e5542994cef4bc4df",
+      "status": "reviewed",
+      "notes": ["Comparison: Paul Boghossian is explicitly an NYU professor; Kazarian's defining occupation list supports the negative by omission."],
+      "units": [
+        {"unit_id": "u1", "description": "whether Frankie Kazarian worked as a professor at New York University", "necessary": false, "expected_answer": "no", "depends_on": [], "support_sets": [[["Frankie Kazarian", 0]]], "by_omission": true},
+        {"unit_id": "u2", "description": "whether Paul Boghossian worked as a professor at New York University", "necessary": false, "expected_answer": "yes", "depends_on": [], "support_sets": [[["Paul Boghossian", 0]]]},
+        {"unit_id": "u3", "description": "which of Frankie Kazarian and Paul Boghossian worked as a professor at New York University", "necessary": true, "expected_answer": "Paul Boghossian", "depends_on": ["u1", "u2"], "support_sets": [[]]}
+      ]
+    },
+    {
+      "sample_id": "hotpotqa_5a752d375542996c70cfaea4",
+      "status": "reviewed",
+      "notes": ["Comparison: both descriptions explicitly call the entities dog breeds."],
+      "units": [
+        {"unit_id": "u1", "description": "animal of which the American Hairless Terrier is a breed", "necessary": false, "expected_answer": "dog", "depends_on": [], "support_sets": [[["American Hairless Terrier", 0]]]},
+        {"unit_id": "u2", "description": "animal of which the Old Danish Pointer is a breed", "necessary": false, "expected_answer": "dog", "depends_on": [], "support_sets": [[["Old Danish Pointer", 0]]]},
+        {"unit_id": "u3", "description": "animal of which both the American Hairless Terrier and Old Danish Pointer are breeds", "necessary": true, "expected_answer": "dog", "depends_on": ["u1", "u2"], "support_sets": [[]]}
+      ]
+    },
+    {
+      "sample_id": "hotpotqa_5a908d1f55429916514e74f1",
+      "status": "reviewed",
+      "notes": ["Comparison: both nationalities are explicitly American."],
+      "units": [
+        {"unit_id": "u1", "description": "nationality of Rachel Carson", "necessary": false, "expected_answer": "American", "aliases": ["United States"], "depends_on": [], "support_sets": [[["Rachel Carson", 0]]]},
+        {"unit_id": "u2", "description": "nationality of Walter Mosley", "necessary": false, "expected_answer": "American", "aliases": ["United States"], "depends_on": [], "support_sets": [[["Walter Mosley", 0]]]},
+        {"unit_id": "u3", "description": "nationality shared by Rachel Carson and Walter Mosley", "necessary": true, "expected_answer": "American", "aliases": ["United States"], "depends_on": ["u1", "u2"], "support_sets": [[]]}
+      ]
+    },
+    {
+      "sample_id": "hotpotqa_5adf9e59554299025d62a2e9",
+      "status": "reviewed",
+      "notes": ["Comparison: Pixies formed in 1986 and Pierre Bouvier was born in 1979, so he was seven and therefore a child."],
+      "units": [
+        {"unit_id": "u1", "description": "year in which the Pixies formed as a rock band", "necessary": false, "expected_answer": "1986", "depends_on": [], "support_sets": [[["Pixies", 0]]]},
+        {"unit_id": "u2", "description": "date of birth of Pierre Bouvier", "necessary": false, "expected_answer": "9 May 1979", "depends_on": [], "support_sets": [[["Pierre Bouvier", 0]]]},
+        {"unit_id": "u3", "description": "whether the Pixies was a rock band when Pierre Bouvier was a child", "necessary": true, "expected_answer": "yes", "depends_on": ["u1", "u2"], "support_sets": [[]]}
+      ]
+    },
+    {
+      "sample_id": "hotpotqa_5a77a8365542995d83181250",
+      "status": "reviewed",
+      "notes": ["Comparison: both entities are explicitly described as bands."],
+      "units": [
+        {"unit_id": "u1", "description": "type of musical organization Gândul Mâței is", "necessary": false, "expected_answer": "band", "depends_on": [], "support_sets": [[["Gândul Mâței", 0]]]},
+        {"unit_id": "u2", "description": "type of musical organization KMFDM is", "necessary": false, "expected_answer": "band", "depends_on": [], "support_sets": [[["KMFDM", 0]]]},
+        {"unit_id": "u3", "description": "type of musical organization shared by Gândul Mâței and KMFDM", "necessary": true, "expected_answer": "band", "depends_on": ["u1", "u2"], "support_sets": [[]]}
+      ]
+    },
+    {
+      "sample_id": "hotpotqa_5a7f359f55429930675136a9",
+      "status": "reviewed",
+      "notes": ["Comparison: Sidney Olcott explicitly satisfies the nationality and occupation list; Randal Kirk's defining description supports the negative by omission."],
+      "units": [
+        {"unit_id": "u1", "description": "whether Randal Kirk II was a Canadian film producer, director, actor and screenwriter", "necessary": false, "expected_answer": "no", "depends_on": [], "support_sets": [[["Randal Kirk II", 0]]], "by_omission": true},
+        {"unit_id": "u2", "description": "whether Sidney Olcott was a Canadian film producer, director, actor and screenwriter", "necessary": false, "expected_answer": "yes", "depends_on": [], "support_sets": [[["Sidney Olcott", 0]]]},
+        {"unit_id": "u3", "description": "which of Randal Kirk II and Sidney Olcott was a Canadian film producer, director, actor and screenwriter", "necessary": true, "expected_answer": "Sidney Olcott", "depends_on": ["u1", "u2"], "support_sets": [[]]}
+      ]
+    }
+  ]
+}

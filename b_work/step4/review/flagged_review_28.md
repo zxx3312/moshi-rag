@@ -1,6 +1,18 @@
-# 待复核题目（28 题，train 和 dev）
+# 原待复核题目（28 题，历史记录）
 
-由 `sample_review.py --flagged` 生成：起草备注中要求复核的全部题目（匹配 review、flag for、borderline、open point、caveat 等措辞），按复核原因分组排列。
+由 `sample_review.py --flagged` 生成的替换前复核材料。2026-11-03 的替换审计已从最终 gold 中移除其中 21 题；保留的 7 题为 `2wikimultihopqa_3a2fe93e…`、`hotpotqa_5ade1b77…`、`hotpotqa_5a7f66cb…`、`hotpotqa_5ac25035…`、`hotpotqa_5adde708…`、`hotpotqa_5a745a87…`、`2wikimultihopqa_f48d9c60…`。下文主体保留原始证据和历史争议说明；当前裁决以源 annotation 和下面的决议摘要为准。
+
+## 2026-11-03 最终决议摘要
+
+1. `2wikimultihopqa_3a2fe93e…`：English/British 视为等价，English 作为 British 的 alias，并用 Mavis Batey 句 0 显式支持。
+2. `hotpotqa_5ade1b77…`：允许“两个点名候选且预设唯一答案”时由证据排除一方确定另一方；结论使用 `presupposition_sets` 和静态 `by_presupposition: true`。
+3. `hotpotqa_5a7f66cb…`：事实 unit 改为文档明确点名的 creator/designer 数量，Cranium 2、Auf Achse 1。
+4. `hotpotqa_5ac25035…`：事实和结论统一为文档明确列出的不同电影职务数量，Charles Burnett 7、Patricio Guzmán 1。
+5. `hotpotqa_5adde708…`：正式名或 common name 中明确含 `plant` 可作为显式类别证据，保留。
+6. `hotpotqa_5a745a87…`：两篇定义句都明确含 `private`，共享属性限定清楚，保留。
+7. `2wikimultihopqa_f48d9c60…`：u2 明确定义为 Emilio 的 U.S. theatrical release date。
+
+此外，原附录 C 的 5 道单-unit bridge/inference 题均已统一为两跳结构；当前 15 个带 `presupposition_sets` 的 Gold unit 均有静态 `by_presupposition: true`。
 
 | # | sample_id | 数据集 / 题型 | 划分 | 特殊情况 | 复核原因 |
 |---|---|---|---|---|---|
