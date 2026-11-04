@@ -36,7 +36,21 @@ This is a debug snapshot, not a standalone runnable package.
 Scripts retain paths to the original cluster project and model assets.
 Model weights, tokenizer assets, and audio files are not included.
 Audio locations in result files refer to the cluster.
-A shared audio location remains to be added.
+The response audio archive is available on Google Drive.
+
+## Shared audio
+[Download moshi-debug-audio-v1.zip](https://drive.google.com/file/d/1nepM0hwd74NF3n8FJSV9o7sez5z1tk5_/view?usp=sharing)
+
+The archive contains 42 response WAV files:
+- 20 no-reference batch responses.
+- 20 with-reference batch responses.
+- 2 Apollo 11 single-question comparison responses.
+
+Extract the archive and open audio_index.csv to match questions
+with their no-reference and with-reference audio files.
+Paths in audio_index.csv are relative to the extracted archive.
+These recordings are debug experiment outputs, not a blind human-evaluation set.
+
 
 ## Next work
 Audio review, B interface adaptation, progressive trace replay,
