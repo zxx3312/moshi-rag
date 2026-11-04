@@ -3,7 +3,8 @@
 #
 # Submit FROM THE REPOSITORY ROOT:
 #     sbatch a_work/slurm/eval_judge.slurm
-# Overrides: MODEL, RUN_NAME, EVAL_ARGS (e.g. "--thinking"), SCRIPT, RESULT_GROUP, VLLM_ENV, HF_HOME.
+# Overrides: MODEL, RUN_NAME, EVAL_ARGS (e.g. "--thinking"), SCRIPT, RESULT_GROUP, VLLM_ARGS, VLLM_ENV, HF_HOME.
+# A LoRA judge: VLLM_ARGS="--enable-lora --lora-modules judge=ADAPTER_DIR" with --judge-model judge in EVAL_ARGS.
 #
 #SBATCH --job-name=a-eval-judge
 #SBATCH --partition=secondary
@@ -34,6 +35,7 @@ export VLLM_USE_FLASHINFER_SAMPLER=0
 PORT="$((20000 + ${SLURM_JOB_ID:-0} % 20000))"
 SCRIPT="${SCRIPT:-a_work/eval_judge.py}"
 OUT="a_work/results/${RESULT_GROUP:-judge}/$RUN_NAME"
+read -r -a VLLM_EXTRA <<< "${VLLM_ARGS:-}"
 
 cd "${SLURM_SUBMIT_DIR:-$(pwd)}"
 [[ -f "$SCRIPT" ]] || { echo "submit from the repository root" >&2; exit 2; }
@@ -57,7 +59,7 @@ trap 'exit 143' INT TERM
 # The reasoning parser keeps Qwen3's <think> part out of the JSON constraint, so thinking mode works;
 # with thinking off it changes nothing.
 "$VLLM_ENV/bin/vllm" serve "$MODEL" --port "$PORT" --max-model-len 16384 --reasoning-parser qwen3 \
-    --gpu-memory-utilization 0.90 > "$OUT/vllm.log" 2>&1 &
+    --gpu-memory-utilization 0.90 "${VLLM_EXTRA[@]}" > "$OUT/vllm.log" 2>&1 &
 SERVER_PID=$!
 
 deadline=$((SECONDS + 1200))

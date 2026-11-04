@@ -42,15 +42,32 @@ class OracleJudge:
         return 0.0
 
     def judge(self, obs: Observation) -> Dict[str, UnitJudgment]:
+        """Same rule as the SFT targets (b_work/step4/build_sft.py): a support set needs every dependency,
+        a presupposition set at least one; a [[]] conclusion cites its dependencies' evidence."""
         visible = {e.evidence_id for e in obs.evidence}
-        out = {}
-        for unit in self._gold[obs.sample_id]:
-            complete = [s for s in unit["support_sets"] if set(s) <= visible]
-            if complete:
-                out[unit["unit_id"]] = UnitJudgment(SUPPORTED, tuple(complete[0]), unit.get("expected_answer"),
-                                                    unit.get("by_omission", False), unit.get("by_presupposition", False))
-            else:
-                out[unit["unit_id"]] = UnitJudgment(UNRESOLVED)
+        units = {u["unit_id"]: u for u in self._gold[obs.sample_id]}
+        out: Dict[str, UnitJudgment] = {}
+
+        def visit(uid: str) -> UnitJudgment:
+            if uid not in out:
+                unit = units[uid]
+                parents = [visit(d) for d in unit["depends_on"]]
+                ok = [p.label == SUPPORTED for p in parents]
+                complete = [s for s in unit["support_sets"] if set(s) <= visible]
+                presupposed = [s for s in unit.get("presupposition_sets", []) if set(s) <= visible]
+                if complete and all(ok):
+                    cites = complete[0] or [c for p in parents for c in p.citations]
+                    out[uid] = UnitJudgment(SUPPORTED, tuple(dict.fromkeys(cites)), unit.get("expected_answer"),
+                                            unit.get("by_omission", False))
+                elif presupposed and (any(ok) or not ok):
+                    out[uid] = UnitJudgment(SUPPORTED, tuple(presupposed[0]), unit.get("expected_answer"),
+                                            by_presupposition=True)
+                else:
+                    out[uid] = UnitJudgment(UNRESOLVED)
+            return out[uid]
+
+        for uid in units:
+            visit(uid)
         return out
 
 
@@ -79,7 +96,8 @@ Citations are evidence ids such as e1, never unit ids. A conclusion unit cites t
 
 {u1} in a description means the value of unit u1.
 Each evidence sentence is shown with its document title in parentheses; a pronoun such as "he" or "the team" refers to the title's subject.
-Use only the listed evidence, never your own knowledge. Reply with JSON only."""
+Use only the listed evidence, never your own knowledge. Reply with JSON only.
+  For exactly two named candidates where the question presupposes one unique answer, evidence explicitly ruling out one candidate also identifies the other. Label the conclusion SUPPORTED with by_presupposition true."""
 
 JUDGE_SCHEMA = {
     "type": "object",
@@ -146,13 +164,13 @@ EXAMPLES = [(
 )]
 
 
-def judge_messages(obs: Observation) -> List[dict]:
+def judge_messages(obs: Observation, with_examples: bool = True) -> List[dict]:
     units = [{"unit_id": u.unit_id, "description": u.description, "depends_on": list(u.depends_on)}
              for u in obs.units]
     request = _judge_request(obs.question, units,
                              [(e.evidence_id, (e.source or {}).get("document_id"), e.text) for e in obs.evidence])
     messages = [{"role": "system", "content": JUDGE_SYSTEM}]
-    for example_request, example_reply in EXAMPLES:
+    for example_request, example_reply in EXAMPLES if with_examples else ():
         messages += [{"role": "user", "content": example_request},
                      {"role": "assistant", "content": json.dumps(example_reply)}]
     return messages + [{"role": "user", "content": request}]
@@ -170,10 +188,11 @@ class PromptJudge:
     is CONTRADICTED, else UNRESOLVED. The model still provides the value ("no", "Mark Gurr"). One shortcut:
     derive_conclusion accepts a by_presupposition choice between candidates the question names.
     """
-    name = "prompt"
-
-    def __init__(self, client):
+    def __init__(self, client, with_examples: bool = True, name: str = "prompt"):
+        """A trained LoRA judge uses the same class with its adapter's client and with_examples=False."""
         self.client = client
+        self.with_examples = with_examples
+        self.name = name
         self._cache: Dict[tuple, Dict[str, UnitJudgment]] = {}
         self._latency: Dict[tuple, float] = {}
         self.log: List[dict] = []
@@ -200,35 +219,10 @@ class PromptJudge:
         n_calls = len(self.client.calls)
         error, raw = None, {}
         try:
-            raw = self.client.chat_json(judge_messages(obs), purpose="judge", schema=JUDGE_SCHEMA)
+            raw = self.client.chat_json(judge_messages(obs, self.with_examples), purpose="judge", schema=JUDGE_SCHEMA)
         except (ValueError, OSError) as e:  # unusable reply or endpoint failure: judge nothing as supported
             error = repr(e)
-        replies = {r.get("unit_id"): r for r in raw.get("units", []) if isinstance(r, dict)}
-
-        out, downgraded = {}, []
-        for u in obs.units:  # in id order, so dependencies are processed first
-            r = replies.get(u.unit_id, {})
-            label = r.get("label") if r.get("label") in LABELS else UNRESOLVED
-            cites = []
-            for c in r.get("citations") or []:
-                if c in u.depends_on and c in out:
-                    cites += [x for x in out[c].citations if x not in cites]
-                elif isinstance(c, str) and c not in cites:
-                    cites.append(c)
-            cites = tuple(cites)
-            value = r.get("value") if isinstance(r.get("value"), str) else None
-            if value is not None and value.strip().lower() in ("", "null", "none"):
-                value = None
-            presupposed = r.get("by_presupposition") is True
-            if is_conclusion(u):
-                label, cites, presupposed = derive_conclusion(u, out, value, presupposed, obs.question)
-                value = value if label == SUPPORTED else None
-            elif label == SUPPORTED and (any(c not in visible for c in cites) or (not cites and not u.depends_on)):
-                downgraded.append(u.unit_id)
-                label, cites, value = UNRESOLVED, (), None
-            supported = label == SUPPORTED
-            out[u.unit_id] = UnitJudgment(label, cites if label != UNRESOLVED else (), value,
-                                          supported and r.get("by_omission") is True, supported and presupposed)
+        out, downgraded = normalize_reply(raw, obs.units, visible, obs.question)
         self._cache[key] = out
         latency = sum(c.latency_s for c in self.client.calls[n_calls:])
         self._latency[key] = latency
@@ -236,6 +230,37 @@ class PromptJudge:
                          "latency_s": round(latency, 3), "error": error, "downgraded": downgraded,
                          "labels": {k: v.label for k, v in out.items()}, "reply": raw})
         return out
+
+
+def normalize_reply(raw: Mapping, units: Iterable[Unit], visible: Iterable[str], question: str):
+    """Validate one model reply: ({unit_id: UnitJudgment}, ids downgraded for invalid citations)."""
+    visible = set(visible)
+    replies = {r.get("unit_id"): r for r in raw.get("units", []) if isinstance(r, dict)}
+    out, downgraded = {}, []
+    for u in units:  # in id order, so dependencies are processed first
+        r = replies.get(u.unit_id, {})
+        label = r.get("label") if r.get("label") in LABELS else UNRESOLVED
+        cites = []
+        for c in r.get("citations") or []:
+            if c in u.depends_on and c in out:
+                cites += [x for x in out[c].citations if x not in cites]
+            elif isinstance(c, str) and c not in cites:
+                cites.append(c)
+        cites = tuple(cites)
+        value = r.get("value") if isinstance(r.get("value"), str) else None
+        if value is not None and value.strip().lower() in ("", "null", "none"):
+            value = None
+        presupposed = r.get("by_presupposition") is True
+        if is_conclusion(u):
+            label, cites, presupposed = derive_conclusion(u, out, value, presupposed, question)
+            value = value if label == SUPPORTED else None
+        elif label == SUPPORTED and (any(c not in visible for c in cites) or (not cites and not u.depends_on)):
+            downgraded.append(u.unit_id)
+            label, cites, value = UNRESOLVED, (), None
+        supported = label == SUPPORTED
+        out[u.unit_id] = UnitJudgment(label, cites if label != UNRESOLVED else (), value,
+                                      supported and r.get("by_omission") is True, supported and presupposed)
+    return out, downgraded
 
 
 def is_conclusion(unit: Unit) -> bool:
@@ -248,7 +273,8 @@ def derive_conclusion(unit: Unit, labels: Mapping[str, UnitJudgment], value, cla
 
     With only some dependencies SUPPORTED the conclusion normally stays open. The exception needs the model's
     by_presupposition claim and two structural checks, so comparisons of values (dates) and "both" questions
-    cannot pass: a dependency confirmed as "yes", and a value that is a candidate named in the question.
+    cannot pass: a dependency settled as "yes" (or "no", which rules out one of exactly two candidates), and
+    a value that is a candidate named in the question.
     """
     deps = [labels.get(d, UnitJudgment(UNRESOLVED)) for d in unit.depends_on]
 
@@ -262,7 +288,8 @@ def derive_conclusion(unit: Unit, labels: Mapping[str, UnitJudgment], value, cla
         return CONTRADICTED, (), False
     if all(d.label == SUPPORTED for d in deps):
         return SUPPORTED, citations(deps), False
-    confirmed = [d for d in deps if d.label == SUPPORTED and (d.value or "").strip().lower() == "yes"]
+    accepted = ("yes", "no") if len(deps) == 2 else ("yes",)
+    confirmed = [d for d in deps if d.label == SUPPORTED and (d.value or "").strip().lower() in accepted]
     answer = (value or "").strip().lower()
     if claims_presupposition and confirmed and answer not in ("", "yes", "no") and answer in question.lower():
         return SUPPORTED, citations(confirmed), True

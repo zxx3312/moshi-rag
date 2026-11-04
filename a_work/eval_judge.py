@@ -51,6 +51,8 @@ def main():
     ap.add_argument("--gold", type=Path, default=HERE / "mock/gold.jsonl")
     ap.add_argument("--base-url", default="http://127.0.0.1:8000/v1")
     ap.add_argument("--model", default="Qwen/Qwen3-14B")
+    ap.add_argument("--judge-model", default=None, help="Served name for labeling (a LoRA adapter); default --model.")
+    ap.add_argument("--no-examples", action="store_true", help="Judge prompt without few-shot examples (LoRA).")
     ap.add_argument("--thinking", action="store_true", help="Enable Qwen3 thinking mode (slower).")
     ap.add_argument("--out", type=Path, required=True)
     args = ap.parse_args()
@@ -61,7 +63,9 @@ def main():
     question_of = {t["sample_id"]: t["question"] for t in traces}
     extra = {"chat_template_kwargs": {"enable_thinking": args.thinking}}
     client = ChatClient(args.base_url, args.model, extra_body=extra, max_tokens=8192 if args.thinking else 1024)
-    oracle, judge = OracleJudge(golds), PromptJudge(client)
+    judge_client = ChatClient(args.base_url, args.judge_model or args.model, extra_body=extra,
+                              max_tokens=8192 if args.thinking else 1024)
+    oracle, judge = OracleJudge(golds), PromptJudge(judge_client, with_examples=not args.no_examples)
     args.out.mkdir(parents=True, exist_ok=True)
 
     decomp_rows, step_rows = [], []
@@ -110,7 +114,7 @@ def main():
     write_jsonl(args.out / "decompositions.jsonl", decomp_rows)
     write_jsonl(args.out / "judge_steps.jsonl", step_rows)
     write_jsonl(args.out / "judge_calls.jsonl", judge.log)
-    report = summarize(decomp_rows, step_rows, judge.log, client, args)
+    report = summarize(decomp_rows, step_rows, judge.log, judge_client, args)
     (args.out / "summary.md").write_text(report, encoding="utf-8")
     print(report)
 
