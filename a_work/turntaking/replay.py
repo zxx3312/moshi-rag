@@ -9,18 +9,20 @@ Wait ticks are not logged; only actions that produce output are (open question f
 from __future__ import annotations
 
 import json
+import re
 from pathlib import Path
-from typing import Iterable, List, Mapping, Optional
+from typing import Dict, Iterable, List, Mapping, Optional
 
 from .policies import Policy
 from .schema import (
-    BACKCHANNEL, FINAL, PARTIAL, PROGRESS, SCHEMA_VERSION, WAIT,
+    BACKCHANNEL, FINAL, PARTIAL, PROGRESS, SCHEMA_VERSION, SUPPORTED, WAIT,
     Decision, Evidence, Observation, Unit,
 )
 
-# Simulated speaking time per output piece; placeholder until a TTS-based cost model exists.
+# Simulated speaking time; placeholders until a TTS-based cost model exists.
 SHORT_UTTERANCE_S = 1.0
 CLAIM_S = 2.0
+WORDS_PER_S = 2.5
 
 FIXED_TEXT = {
     BACKCHANNEL: "Mm, let me check.",
@@ -86,6 +88,57 @@ def _render(decision: Decision, units: Mapping[str, Unit]):
     return " ".join(pieces), offset, spans
 
 
+def _speech_s(text: str) -> float:
+    return max(SHORT_UTTERANCE_S, len(text.split()) / WORDS_PER_S)
+
+
+def _value_span(text: str, value: Optional[str], duration: float) -> tuple:
+    """(start, end, found): the part of the utterance that says the value, by its position in the text."""
+    i = text.lower().find(value.lower()) if value else -1
+    if i < 0:
+        return 0.0, duration, False
+    return duration * i / len(text), duration * (i + len(value)) / len(text), True
+
+
+def _generate(decision: Decision, obs: Observation, units: Mapping[str, Unit], generator, said: List[str],
+              known: Dict[str, str]):
+    """Real sentences instead of the placeholder. Returns (text, duration_s, claim_spans, latency_s)."""
+    evidence = {e.evidence_id: e for e in obs.evidence}
+
+    def cited(ids):
+        return [((evidence[i].source or {}).get("document_id"), evidence[i].text) for i in ids if i in evidence]
+
+    if decision.free_answer:
+        text, answer, latency = generator.free(obs.question, cited(list(evidence)))
+        duration = _speech_s(text)
+        start, end, found = _value_span(text, answer, duration)
+        spans = [{"text": text, "controller_unit_id": "answer", "value": answer, "cited_evidence_ids": list(evidence),
+                  "start": start, "end": end, "value_in_text": found}]
+        return text, duration, spans, latency
+
+    def describe(uid):
+        d = units[uid].description
+        for k, v in known.items():
+            d = d.replace("{" + k + "}", v)
+        return re.sub(r"\{\w+\}", "the earlier result", d)  # the model must never see a raw placeholder
+
+    known.update({u: v for u, v in decision.values.items() if v})
+    labels = decision.unit_labels or {}
+    claimed = set(decision.claimed_units)
+    missing = [describe(u) for u, unit in units.items()
+               if u not in claimed and labels.get(u) != SUPPORTED and (unit.necessary or decision.action == PARTIAL)]
+    say = [(describe(u), decision.values.get(u) or "", cited(decision.citations.get(u, ()))) for u in decision.claimed_units]
+    text, latency = generator.grounded(obs.question, say, missing, said, obs.retrieval_done)
+    duration = _speech_s(text)
+    spans = []
+    for uid in decision.claimed_units:
+        start, end, found = _value_span(text, decision.values.get(uid), duration)
+        spans.append({"text": text, "controller_unit_id": uid, "value": decision.values.get(uid),
+                      "cited_evidence_ids": list(decision.citations.get(uid, ())), "start": start, "end": end,
+                      "value_in_text": found})
+    return text, duration, spans, latency
+
+
 def replay(
     trace: Mapping,
     units: List[Unit],
@@ -96,6 +149,7 @@ def replay(
     setup_cost_s: float = 0.0,
     max_extra_s: float = 5.0,
     seed: int = 0,
+    generator=None,
 ) -> List[dict]:
     events = _parse_events(trace)
     complete: Optional[float] = trace.get("retrieval_complete_time_s")
@@ -107,6 +161,8 @@ def replay(
 
     policy.reset()
     records, busy_until, step = [], float("-inf"), 0
+    said: List[str] = []
+    known: Dict[str, str] = {}
     t = 0.0
     while t <= end_t:
         if t >= busy_until:
@@ -122,8 +178,13 @@ def replay(
             if decision.action == WAIT:
                 busy_until = t + cost  # still thinking: no new decision before the judge returns
             else:
-                text, duration, spans = _render(decision, unit_map)
-                start = t + cost
+                generation_cost = 0.0
+                if generator is not None and decision.action in (PARTIAL, FINAL):
+                    text, duration, spans, generation_cost = _generate(decision, obs, unit_map, generator, said, known)
+                else:
+                    text, duration, spans = _render(decision, unit_map)
+                said.append(text)
+                start = t + cost + generation_cost
                 for s in spans:
                     s["start"] += start
                     s["end"] += start
@@ -139,6 +200,7 @@ def replay(
                     "clock": trace["clock"],
                     "decision_time_s": t,
                     "decision_cost_s": cost,
+                    "generation_cost_s": generation_cost,
                     "action": decision.action,
                     "text": text,
                     "evidence_snapshot_ids": [e.evidence_id for e in visible],

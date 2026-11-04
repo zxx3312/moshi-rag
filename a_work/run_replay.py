@@ -7,8 +7,9 @@ Evidence-aware runs: `+oracle` (gold labels, the upper bound), `+prompt` (prompt
 descriptions, so the gap to oracle is the judge's) and `+prompt_real` (the real system: the question is
 decomposed by the LLM, that time delays the first judgment, and claims are scored by value).
 
-Claims are still placeholders, not generated sentences. Baselines state no value, so a baseline claim
-counts as correct whenever its gold support is visible: their unsupported counts are a lower bound.
+With --generate the LLM writes real sentences and every policy states a value: a baseline's best answer is
+scored against gold by value, so it can be wrong. Without it, claims are placeholders, baselines state no
+value, and their unsupported counts are a lower bound.
 """
 import argparse
 import statistics
@@ -20,6 +21,7 @@ HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
 
 from turntaking.decompose import decompose  # noqa: E402
+from turntaking.generate import Generator  # noqa: E402
 from turntaking.judge import OracleJudge, PromptJudge  # noqa: E402
 from turntaking.llm import ChatClient  # noqa: E402
 from turntaking.policies import EvidenceAware, FirstEvidence, FixedProgress, TimeOnly, WaitAll  # noqa: E402
@@ -46,8 +48,8 @@ def table(rows, group_key):
     lines = []
     for group in sorted(groups):
         lines += [f"### {group_key} = {group}", "",
-                  "| policy | traces | TTFR | TTFGI (traces with any) | TTCA (completed) | unsupported / claims | judge s per trace |",
-                  "|---|---|---|---|---|---|---|"]
+                  "| policy | traces | TTFR | TTFGI (traces with any) | TTCA (completed) | unsupported / claims | judge s per trace | generation s per trace | values not in text |",
+                  "|---|---|---|---|---|---|---|---|---|"]
         for policy in ORDER:
             rs = [r for r in groups[group] if r["policy"] == policy]
             if rs:
@@ -55,7 +57,8 @@ def table(rows, group_key):
                 lines.append(
                     f"| {policy} | {n} | {fmt([r['ttfr'] for r in rs])} | {fmt([r['ttfgi'] for r in rs], n)} "
                     f"| {fmt([r['ttca'] for r in rs], n)} | {sum(r['unsupported'] for r in rs)}/{sum(r['claims'] for r in rs)} "
-                    f"| {statistics.mean(r['judge_cost_s'] for r in rs):.2f} |")
+                    f"| {statistics.mean(r['judge_cost_s'] for r in rs):.2f} "
+                    f"| {statistics.mean(r['generation_cost_s'] for r in rs):.2f} | {sum(r['value_not_in_text'] for r in rs)} |")
         lines.append("")
     return lines
 
@@ -67,6 +70,7 @@ def main():
     ap.add_argument("--base-url", default="http://127.0.0.1:8000/v1")
     ap.add_argument("--model", default="Qwen/Qwen3-14B")
     ap.add_argument("--thinking", action="store_true")
+    ap.add_argument("--generate", action="store_true", help="Write real sentences with the LLM.")
     ap.add_argument("--out", type=Path, required=True)
     args = ap.parse_args()
 
@@ -75,6 +79,7 @@ def main():
     client = ChatClient(args.base_url, args.model, max_tokens=8192 if args.thinking else 1024,
                         extra_body={"chat_template_kwargs": {"enable_thinking": args.thinking}})
     judge = PromptJudge(client)
+    generator = Generator(client) if args.generate else None
     rules = [WaitAll(), FixedProgress(), TimeOnly(), FirstEvidence()]
     oracle = EvidenceAware(OracleJudge(golds.values()))
     prompt = EvidenceAware(judge, name="evidence_aware+prompt")
@@ -92,10 +97,11 @@ def main():
             decomposed[sid] = (units, sum(c.latency_s for c in client.calls[n_calls:]), fell_back)
         real_units, setup_cost, _ = decomposed[sid]
         gold_units = units_without_gold(gold)
-        runs = [(p, gold_units, 0.0, False) for p in rules + [oracle, prompt]]
+        runs = [(p, gold_units, 0.0, args.generate) for p in rules]
+        runs += [(p, gold_units, 0.0, False) for p in (oracle, prompt)]
         runs.append((prompt_real, real_units, setup_cost, True))
         for policy, units, setup, by_value in runs:
-            records = replay(trace, units, policy, setup_cost_s=setup)
+            records = replay(trace, units, policy, setup_cost_s=setup, generator=generator)
             logs += records
             metrics = preview_metrics(records, trace, gold, by_value=by_value)
             rows.append({"trace_id": trace["trace_id"], "sample_id": sid, "policy": policy.name,
@@ -106,8 +112,11 @@ def main():
     write_jsonl(args.out / "policy_log.jsonl", logs)
     write_jsonl(args.out / "trace_metrics.jsonl", rows)
     write_jsonl(args.out / "judge_calls.jsonl", judge.log)
+    if generator is not None:
+        write_jsonl(args.out / "generate_calls.jsonl", generator.log)
     report = ["# Replay with real judge latency", "",
-              f"model `{args.model}`, thinking={args.thinking}, traces `{args.trace}`, gold `{args.gold}`", "",
+              f"model `{args.model}`, thinking={args.thinking}, generate={args.generate}, "
+              f"traces `{args.trace}`, gold `{args.gold}`", "",
               "Times are medians in seconds after the question ends. Self-check metrics: B's evaluator is authoritative.", "",
               "## All traces", ""]
     report += table([dict(r, scope="all") for r in rows], "scope")

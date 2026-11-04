@@ -18,7 +18,7 @@ def _answer_everything(obs: Observation) -> Decision:
     """Naive full answer: claim every necessary unit, citing whatever is visible."""
     cited = tuple(e.evidence_id for e in obs.evidence)
     units = tuple(u.unit_id for u in obs.units if u.necessary)
-    return Decision(FINAL, units, {uid: cited for uid in units})
+    return Decision(FINAL, units, {uid: cited for uid in units}, free_answer=True)
 
 
 class Policy:

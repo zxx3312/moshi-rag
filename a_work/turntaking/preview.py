@@ -88,4 +88,6 @@ def preview_metrics(records: List[Mapping], trace: Mapping, gold: Mapping, by_va
         "claims": len(claims),
         "unsupported": unsupported,
         "judge_cost_s": sum(r.get("decision_cost_s", 0.0) for r in records),
+        "generation_cost_s": sum(r.get("generation_cost_s", 0.0) for r in records),
+        "value_not_in_text": sum(c.get("value_in_text") is False for c in claims),
     }
