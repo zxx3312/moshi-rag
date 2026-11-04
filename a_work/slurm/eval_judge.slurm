@@ -1,9 +1,9 @@
 #!/bin/bash
-# Serve the judge LLM with vLLM on one GPU and run a_work/eval_judge.py against it.
+# Serve the judge LLM with vLLM on one GPU and run a script against it (a_work/eval_judge.py by default).
 #
 # Submit FROM THE REPOSITORY ROOT:
 #     sbatch a_work/slurm/eval_judge.slurm
-# Overrides: MODEL, RUN_NAME, EVAL_ARGS (e.g. "--thinking"), VLLM_ENV, HF_HOME.
+# Overrides: MODEL, RUN_NAME, EVAL_ARGS (e.g. "--thinking"), SCRIPT, RESULT_GROUP, VLLM_ENV, HF_HOME.
 #
 #SBATCH --job-name=a-eval-judge
 #SBATCH --partition=secondary
@@ -32,10 +32,11 @@ export HF_HUB_OFFLINE=1
 export PATH="$VLLM_ENV/bin:$PATH"
 export VLLM_USE_FLASHINFER_SAMPLER=0
 PORT="$((20000 + ${SLURM_JOB_ID:-0} % 20000))"
-OUT="a_work/results/judge/$RUN_NAME"
+SCRIPT="${SCRIPT:-a_work/eval_judge.py}"
+OUT="a_work/results/${RESULT_GROUP:-judge}/$RUN_NAME"
 
 cd "${SLURM_SUBMIT_DIR:-$(pwd)}"
-[[ -f a_work/eval_judge.py ]] || { echo "submit from the repository root" >&2; exit 2; }
+[[ -f "$SCRIPT" ]] || { echo "submit from the repository root" >&2; exit 2; }
 mkdir -p "$OUT"
 echo "job ${SLURM_JOB_ID:-local} on $(hostname); repo @ $(git rev-parse --abbrev-ref HEAD) $(git rev-parse --short HEAD)"
 nvidia-smi --query-gpu=name,memory.total --format=csv || true
@@ -68,5 +69,5 @@ done
 echo "vLLM ready after ${SECONDS}s"
 
 read -r -a EXTRA <<< "$EVAL_ARGS"
-"$VLLM_ENV/bin/python" a_work/eval_judge.py --base-url "http://127.0.0.1:$PORT/v1" --model "$MODEL" \
+"$VLLM_ENV/bin/python" "$SCRIPT" --base-url "http://127.0.0.1:$PORT/v1" --model "$MODEL" \
     --out "$OUT" "${EXTRA[@]}"

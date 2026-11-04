@@ -9,7 +9,6 @@
 """
 import argparse
 import json
-import re
 import statistics
 import sys
 from collections import Counter, defaultdict
@@ -21,17 +20,9 @@ sys.path.insert(0, str(HERE))
 from turntaking.decompose import decompose  # noqa: E402
 from turntaking.judge import OracleJudge, PromptJudge, resolve_dependencies, sufficiency_state  # noqa: E402
 from turntaking.llm import ChatClient  # noqa: E402
+from turntaking.preview import value_match  # noqa: E402
 from turntaking.replay import _parse_events, load_jsonl, units_without_gold, write_jsonl  # noqa: E402
 from turntaking.schema import LABELS, SUPPORTED, UNRESOLVED, Observation  # noqa: E402
-
-
-def norm(s):
-    return re.sub(r"[^a-z0-9 ]", "", (s or "").lower()).strip()
-
-
-def value_match(pred, answers):
-    p = norm(pred)
-    return bool(p) and any(g and (g in p or p in g) for g in map(norm, answers))
 
 
 def question_type(gold):

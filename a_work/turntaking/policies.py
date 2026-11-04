@@ -5,12 +5,12 @@ decide() is only called while the agent is not speaking.
 """
 from __future__ import annotations
 
-from typing import Set
+from typing import Optional, Set
 
 from .judge import Judge, resolve_dependencies, sufficiency_state
 from .schema import (
-    BACKCHANNEL, FINAL, FULLY_SUFFICIENT, PARTIAL, PROGRESS, SUPPORTED, WAIT,
-    Decision, Observation,
+    BACKCHANNEL, FINAL, FULLY_SUFFICIENT, PARTIAL, PROGRESS, SUPPORTED, UNRESOLVED, WAIT,
+    Decision, Observation, UnitJudgment,
 )
 
 
@@ -91,18 +91,29 @@ class EvidenceAware(Policy):
     """
     name = "evidence_aware"
 
-    def __init__(self, judge: Judge, progress_after_s: float = 3.0):
+    def __init__(self, judge: Judge, progress_after_s: float = 3.0, name: Optional[str] = None):
         self.judge = judge
         self.progress_after_s = progress_after_s
-        self.name = f"evidence_aware+{judge.name}"
+        self.name = name or f"evidence_aware+{judge.name}"
 
     def reset(self):
         self._said_units: Set[str] = set()
         self._said_backchannel = False
         self._said_progress = False
+        self._judged_evidence = None
+
+    def _judge(self, obs):
+        """(labels, cost): the judge's time is charged once per evidence set within a trace."""
+        if not obs.units_ready:  # decomposition still running: nothing can be judged yet
+            return {u.unit_id: UnitJudgment(UNRESOLVED) for u in obs.units}, 0.0
+        raw = self.judge.judge(obs)
+        evidence = tuple(e.evidence_id for e in obs.evidence)
+        cost = 0.0 if evidence == self._judged_evidence else self.judge.latency_s(obs)
+        self._judged_evidence = evidence
+        return resolve_dependencies(obs.units, raw), cost
 
     def decide(self, obs):
-        labels = resolve_dependencies(obs.units, self.judge.judge(obs))
+        labels, cost = self._judge(obs)
         label_names = {uid: j.label for uid, j in labels.items()}
         supported = [u for u in obs.units if labels[u.unit_id].label == SUPPORTED]
         new = [u for u in supported if u.unit_id not in self._said_units]
@@ -110,18 +121,19 @@ class EvidenceAware(Policy):
         def claim(action, units):
             ids = tuple(u.unit_id for u in units)
             self._said_units.update(ids)
-            return Decision(action, ids, {i: labels[i].citations for i in ids}, label_names)
+            return Decision(action, ids, {i: labels[i].citations for i in ids}, label_names,
+                            {i: labels[i].value for i in ids}, cost)
 
         if sufficiency_state(obs.units, labels) == FULLY_SUFFICIENT:
             return claim(FINAL, [u for u in new if u.necessary])
-        if obs.retrieval_done:
+        if obs.retrieval_done and obs.units_ready:  # before the units exist nothing has been judged yet
             return claim(FINAL, new)
         if new:
             return claim(PARTIAL, new)
         if not self._said_backchannel:
             self._said_backchannel = True
-            return Decision(BACKCHANNEL, unit_labels=label_names)
+            return Decision(BACKCHANNEL, unit_labels=label_names, cost_s=cost)
         if not self._said_progress and not self._said_units and obs.time_s >= self.progress_after_s:
             self._said_progress = True
-            return Decision(PROGRESS, unit_labels=label_names)
-        return Decision(WAIT, unit_labels=label_names)
+            return Decision(PROGRESS, unit_labels=label_names, cost_s=cost)
+        return Decision(WAIT, unit_labels=label_names, cost_s=cost)

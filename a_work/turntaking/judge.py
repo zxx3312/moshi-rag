@@ -21,6 +21,10 @@ class Judge(Protocol):
 
     def judge(self, obs: Observation) -> Dict[str, UnitJudgment]: ...
 
+    def latency_s(self, obs: Observation) -> float:
+        """Measured time of the judgment for this observation; charged to the simulated clock."""
+        ...
+
 
 class OracleJudge:
     """Upper bound: a unit is SUPPORTED once any gold support set is fully visible.
@@ -33,6 +37,9 @@ class OracleJudge:
 
     def __init__(self, gold_records: Iterable[Mapping]):
         self._gold = {r["sample_id"]: r["units"] for r in gold_records}
+
+    def latency_s(self, obs: Observation) -> float:
+        return 0.0
 
     def judge(self, obs: Observation) -> Dict[str, UnitJudgment]:
         visible = {e.evidence_id for e in obs.evidence}
@@ -168,11 +175,21 @@ class PromptJudge:
     def __init__(self, client):
         self.client = client
         self._cache: Dict[tuple, Dict[str, UnitJudgment]] = {}
+        self._latency: Dict[tuple, float] = {}
         self.log: List[dict] = []
+
+    @staticmethod
+    def _key(obs: Observation) -> tuple:
+        return obs.sample_id, tuple(e.evidence_id for e in obs.evidence), obs.units
+
+    def latency_s(self, obs: Observation) -> float:
+        """Latency of the real model call, also when the result now comes from the cache: a replay
+        of another delay schedule would have had to wait for that call too."""
+        return self._latency.get(self._key(obs), 0.0)
 
     def judge(self, obs: Observation) -> Dict[str, UnitJudgment]:
         visible = tuple(e.evidence_id for e in obs.evidence)
-        key = (obs.sample_id, visible, obs.units)
+        key = self._key(obs)
         if key in self._cache:
             return self._cache[key]
         if not visible:
@@ -214,6 +231,7 @@ class PromptJudge:
                                           supported and r.get("by_omission") is True, supported and presupposed)
         self._cache[key] = out
         latency = sum(c.latency_s for c in self.client.calls[n_calls:])
+        self._latency[key] = latency
         self.log.append({"sample_id": obs.sample_id, "time_s": obs.time_s, "evidence": list(visible),
                          "latency_s": round(latency, 3), "error": error, "downgraded": downgraded,
                          "labels": {k: v.label for k, v in out.items()}, "reply": raw})

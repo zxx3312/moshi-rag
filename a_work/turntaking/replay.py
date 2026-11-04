@@ -1,9 +1,10 @@
 """Text-level trace replay: step a simulated clock, show each policy only the
 evidence visible so far, and write one policy_log record per non-Wait action.
 
-Open questions for B (kept as parameters until agreed):
-  * decision_cost_s: how much simulated time a judge/LLM call consumes (pending).
-  * Wait ticks are not logged; only actions that produce output are.
+The judge's measured latency (Decision.cost_s) is charged to the clock: output starts when the judge
+returns, and no new decision is made before that. Decomposition time (setup_cost_s) delays the first
+judgment. Fixed costs stay parameters until agreed with B (decision_cost_s).
+Wait ticks are not logged; only actions that produce output are (open question for B).
 """
 from __future__ import annotations
 
@@ -67,10 +68,12 @@ def _render(decision: Decision, units: Mapping[str, Unit]):
     pieces, spans, offset = [], [], 0.0
     for uid in decision.claimed_units:
         cites = list(decision.citations.get(uid, ()))
-        piece = f"[{uid}: {units[uid].description} <- {','.join(cites) or 'no evidence'}]"
+        value = decision.values.get(uid)
+        said = f" = {value}" if value else ""
+        piece = f"[{uid}: {units[uid].description}{said} <- {','.join(cites) or 'no evidence'}]"
         pieces.append(piece)
         spans.append({
-            "text": piece, "controller_unit_id": uid, "cited_evidence_ids": cites,
+            "text": piece, "controller_unit_id": uid, "value": value, "cited_evidence_ids": cites,
             "start": offset, "end": offset + CLAIM_S,
         })
         offset += CLAIM_S
@@ -90,6 +93,7 @@ def replay(
     *,
     tick_s: float = 0.5,
     decision_cost_s: float = 0.0,
+    setup_cost_s: float = 0.0,
     max_extra_s: float = 5.0,
     seed: int = 0,
 ) -> List[dict]:
@@ -111,11 +115,15 @@ def replay(
                 sample_id=trace["sample_id"], question=trace["question"], time_s=t,
                 evidence=visible, units=tuple(units),
                 retrieval_done=complete is not None and t >= complete,
+                units_ready=t >= setup_cost_s,
             )
             decision = policy.decide(obs)
-            if decision.action != WAIT:
+            cost = decision_cost_s + decision.cost_s
+            if decision.action == WAIT:
+                busy_until = t + cost  # still thinking: no new decision before the judge returns
+            else:
                 text, duration, spans = _render(decision, unit_map)
-                start = t + decision_cost_s
+                start = t + cost
                 for s in spans:
                     s["start"] += start
                     s["end"] += start
@@ -130,6 +138,7 @@ def replay(
                     "time_origin": trace["time_origin"],
                     "clock": trace["clock"],
                     "decision_time_s": t,
+                    "decision_cost_s": cost,
                     "action": decision.action,
                     "text": text,
                     "evidence_snapshot_ids": [e.evidence_id for e in visible],
