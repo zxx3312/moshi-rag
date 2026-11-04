@@ -59,12 +59,22 @@ class GroundedTest(unittest.TestCase):
 
     def test_finished_search_reports_what_is_unconfirmed(self):
         client = Client()
-        Generator(client).grounded("q", [("leader", "Alice")], ["date"], [], True)
+        Generator(client).grounded("q", [("leader", "Alice")], ["date"], True)
         self.assertIn("Could not confirm:\n- date", client.messages[0][-1]["content"])
 
-    def test_backchannel_not_passed_as_said(self):
+    def test_earlier_turns_are_not_passed(self):
         client, _ = self.run_policy()
         self.assertNotIn("let me check", client.messages[0][-1]["content"])
+        self.assertNotIn("It is Alice so far.", client.messages[1][-1]["content"])  # the model copied them
+
+    def test_final_cannot_claim_to_be_still_checking(self):
+        class Copying(Client):
+            def chat_json(self, messages, *, purpose, schema=None, max_tokens=None):
+                super().chat_json(messages, purpose=purpose, schema=schema)
+                return {"text": "It is Alice. Still checking the date."}
+        self.assertEqual(Generator(Copying()).grounded("q", [("leader", "Alice")], [], True)[0], "leader: Alice.")
+        self.assertEqual(Generator(Copying()).grounded("q", [("leader", "Alice")], ["date"], False)[0],
+                         "It is Alice. Still checking the date.")
 
     def test_long_partial_does_not_cut_off_final(self):
         class Wordy(Client):
@@ -82,7 +92,7 @@ class GroundedTest(unittest.TestCase):
                 super().chat_json(messages, purpose=purpose, schema=schema)
                 return {"text": "I'm still checking the date."}
         generator = Generator(Vague())
-        text, _ = generator.grounded("q", [("leader", "Alice")], ["date"], [], False)
+        text, _ = generator.grounded("q", [("leader", "Alice")], ["date"], False)
         self.assertEqual(text, "leader: Alice. I'm still checking the rest.")
         self.assertEqual(generator.fallbacks, 1)
 
@@ -91,12 +101,8 @@ class GroundedTest(unittest.TestCase):
             def chat_json(self, messages, *, purpose, schema=None, max_tokens=None):
                 super().chat_json(messages, purpose=purpose, schema=schema)
                 return {"text": "Alice" + " word" * 40}
-        text, _ = Generator(Rambling()).grounded("q", [("leader", "Alice")], [], [], True)
+        text, _ = Generator(Rambling()).grounded("q", [("leader", "Alice")], [], True)
         self.assertEqual(text, "leader: Alice.")
-
-    def test_later_turn_knows_what_was_said(self):
-        client, _ = self.run_policy()
-        self.assertIn("It is Alice so far.", client.messages[1][-1]["content"])
 
     def test_generation_latency_delays_output(self):
         _, records = self.run_policy(latency=1.0)
@@ -182,6 +188,33 @@ class RunReplayGenerateTest(unittest.TestCase):
             rows = [json.loads(l) for l in (Path(out) / "trace_metrics.jsonl").read_text(encoding="utf-8").splitlines()]
             self.assertTrue((Path(out) / "generate_calls.jsonl").exists())
         self.assertGreater(max(r["generation_cost_s"] for r in rows if r["policy"] == "wait_all"), 0)
+
+    def test_judge_can_be_served_separately(self):
+        import run_replay
+        made = []
+
+        class C(FakeClient):
+            def __init__(self, base_url, model, **k):
+                super().__init__([])
+                self.model = model
+                made.append(self)
+
+            def chat_json(self, messages, *, purpose, schema=None, max_tokens=None):
+                self.calls.append(CallRecord(purpose, 0.1, None, None))
+                return {"decompose": {"question_type": "single", "units": [
+                            {"unit_id": "u1", "description": "answer", "necessary": True, "depends_on": []}]},
+                        "judge": {"units": []}, "generate": {"text": "Yes.", "answers": ["yes"]}}[purpose]
+
+        argv = ["run_replay.py", "--generate", "--judge-base-url", "http://j/v1", "--judge-model", "judge",
+                "--judge-name", "lora", "--no-examples"]
+        with tempfile.TemporaryDirectory() as out, mock.patch.object(run_replay, "ChatClient", C), \
+                mock.patch.object(sys, "argv", argv + ["--out", out]), mock.patch("builtins.print"):
+            run_replay.main()
+            policies = {json.loads(l)["policy"] for l in (Path(out) / "trace_metrics.jsonl").read_text(encoding="utf-8").splitlines()}
+        self.assertLessEqual({"evidence_aware+lora", "evidence_aware+lora_real"}, policies)
+        by_model = {c.model: {x.purpose for x in c.calls} for c in made}
+        self.assertEqual(by_model["judge"], {"judge"})
+        self.assertEqual(by_model["Qwen/Qwen3-14B"], {"decompose", "generate"})
 
 
 if __name__ == "__main__":

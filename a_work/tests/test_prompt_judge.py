@@ -261,8 +261,9 @@ class RunReplayTest(unittest.TestCase):
             summary = (Path(out) / "summary.md").read_text(encoding="utf-8")
             rows = [json.loads(l) for l in (Path(out) / "trace_metrics.jsonl").read_text(encoding="utf-8").splitlines()]
         self.assertIn("evidence_aware+prompt_real", summary)
-        self.assertEqual({r["policy"] for r in rows}, set(run_replay.ORDER))
-        real = [r for r in rows if r["policy"] == run_replay.REAL]
+        self.assertEqual({r["policy"] for r in rows}, {"wait_all", "fixed_progress", "time_only", "first_evidence", "evidence_aware+oracle",
+                                                      "evidence_aware+prompt", "evidence_aware+prompt_real"})
+        real = [r for r in rows if r["policy"] == "evidence_aware+prompt_real"]
         self.assertEqual({r["setup_cost_s"] for r in real}, {0.5})
 
 

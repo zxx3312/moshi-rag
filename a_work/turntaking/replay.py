@@ -101,8 +101,7 @@ def _value_span(text: str, value: Optional[str], duration: float) -> tuple:
     return duration * i / len(text), duration * (i + len(value)) / len(text), True
 
 
-def _generate(decision: Decision, obs: Observation, units: Mapping[str, Unit], generator, said: List[str],
-              known: Dict[str, str]):
+def _generate(decision: Decision, obs: Observation, units: Mapping[str, Unit], generator, known: Dict[str, str]):
     """Real sentences instead of the placeholder. Returns (text, duration_s, claim_spans, latency_s)."""
     evidence = {e.evidence_id: e for e in obs.evidence}
 
@@ -131,7 +130,7 @@ def _generate(decision: Decision, obs: Observation, units: Mapping[str, Unit], g
     missing = [describe(u) for u, unit in units.items()
                if u not in claimed and labels.get(u) != SUPPORTED and (unit.necessary or decision.action == PARTIAL)]
     say = [(describe(u), decision.values.get(u) or "") for u in decision.claimed_units]
-    text, latency = generator.grounded(obs.question, say, missing, said, obs.retrieval_done)
+    text, latency = generator.grounded(obs.question, say, missing, obs.retrieval_done)
     duration = _speech_s(text)
     spans = []
     for uid in decision.claimed_units:
@@ -164,7 +163,6 @@ def replay(
 
     policy.reset()
     records, busy_until, step = [], float("-inf"), 0
-    said: List[str] = []
     known: Dict[str, str] = {}
     t = 0.0
     while t <= max(end_t, busy_until + tick_s):  # an utterance past the horizon still gets its next decision
@@ -183,8 +181,7 @@ def replay(
             else:
                 generation_cost = 0.0
                 if generator is not None and decision.action in (PARTIAL, FINAL):
-                    text, duration, spans, generation_cost = _generate(decision, obs, unit_map, generator, said, known)
-                    said.append(text)  # facts only: fixed phrases like the backchannel got echoed
+                    text, duration, spans, generation_cost = _generate(decision, obs, unit_map, generator, known)
                 else:
                     text, duration, spans = _render(decision, unit_map)
                 start = t + cost + generation_cost

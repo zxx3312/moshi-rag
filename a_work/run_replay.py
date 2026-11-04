@@ -7,6 +7,9 @@ Evidence-aware runs: `+oracle` (gold labels, the upper bound), `+prompt` (prompt
 descriptions, so the gap to oracle is the judge's) and `+prompt_real` (the real system: the question is
 decomposed by the LLM, that time delays the first judgment, and claims are scored by value).
 
+To change only the judge, serve it separately: --judge-base-url URL --judge-model judge --judge-name lora
+--no-examples. Decomposition and generation stay on --model.
+
 With --generate the LLM writes real sentences and every policy states a value: a baseline's best answer is
 scored against gold by value, so it can be wrong. Without it, claims are placeholders, baselines state no
 value, and their unsupported counts are a lower bound.
@@ -28,11 +31,6 @@ from turntaking.policies import EvidenceAware, FirstEvidence, FixedProgress, Tim
 from turntaking.preview import preview_metrics  # noqa: E402
 from turntaking.replay import load_jsonl, replay, units_without_gold, write_jsonl  # noqa: E402
 
-REAL = "evidence_aware+prompt_real"
-ORDER = ["wait_all", "fixed_progress", "time_only", "first_evidence",
-         "evidence_aware+oracle", "evidence_aware+prompt", REAL]
-
-
 def fmt(values, total=None):
     present = [v for v in values if v is not None]
     if not present:
@@ -50,7 +48,7 @@ def table(rows, group_key):
         lines += [f"### {group_key} = {group}", "",
                   "| policy | traces | TTFR | TTFGI (traces with any) | TTCA (completed) | unsupported / claims | judge s per trace | generation s per trace | values not in text |",
                   "|---|---|---|---|---|---|---|---|---|"]
-        for policy in ORDER:
+        for policy in dict.fromkeys(r["policy"] for r in rows):
             rs = [r for r in groups[group] if r["policy"] == policy]
             if rs:
                 n = len(rs)
@@ -69,6 +67,10 @@ def main():
     ap.add_argument("--gold", type=Path, default=HERE / "mock/gold.jsonl")
     ap.add_argument("--base-url", default="http://127.0.0.1:8000/v1")
     ap.add_argument("--model", default="Qwen/Qwen3-14B")
+    ap.add_argument("--judge-base-url", default=None, help="Server of the judge; default --base-url.")
+    ap.add_argument("--judge-model", default=None, help="Served name of the judge; default --model.")
+    ap.add_argument("--judge-name", default="prompt", help="Name in the policy column.")
+    ap.add_argument("--no-examples", action="store_true", help="Judge without few-shot examples (LoRA).")
     ap.add_argument("--thinking", action="store_true")
     ap.add_argument("--generate", action="store_true", help="Write real sentences with the LLM.")
     ap.add_argument("--out", type=Path, required=True)
@@ -78,12 +80,15 @@ def main():
     golds = {g["sample_id"]: g for g in load_jsonl(args.gold)}
     client = ChatClient(args.base_url, args.model, max_tokens=8192 if args.thinking else 1024,
                         extra_body={"chat_template_kwargs": {"enable_thinking": args.thinking}})
-    judge = PromptJudge(client)
+    judge_client = ChatClient(args.judge_base_url or args.base_url, args.judge_model or args.model,
+                              max_tokens=8192 if args.thinking else 1024,
+                              extra_body={"chat_template_kwargs": {"enable_thinking": args.thinking}})
+    judge = PromptJudge(judge_client, with_examples=not args.no_examples, name=args.judge_name)
     generator = Generator(client) if args.generate else None
     rules = [WaitAll(), FixedProgress(), TimeOnly(), FirstEvidence()]
     oracle = EvidenceAware(OracleJudge(golds.values()))
-    prompt = EvidenceAware(judge, name="evidence_aware+prompt")
-    prompt_real = EvidenceAware(judge, name=REAL)
+    prompt = EvidenceAware(judge, name=f"evidence_aware+{args.judge_name}")
+    prompt_real = EvidenceAware(judge, name=f"evidence_aware+{args.judge_name}_real")
 
     decomposed, logs, rows = {}, [], []
     for trace in traces:
@@ -116,7 +121,8 @@ def main():
         write_jsonl(args.out / "generate_calls.jsonl", generator.log)
         print(f"generation: {len(generator.log)} calls, {generator.fallbacks} replaced by plain facts")
     report = ["# Replay with real judge latency", "",
-              f"model `{args.model}`, thinking={args.thinking}, generate={args.generate}, "
+              f"model `{args.model}`, judge `{args.judge_model or args.model}` ({args.judge_name}), "
+              f"thinking={args.thinking}, generate={args.generate}, "
               f"traces `{args.trace}`, gold `{args.gold}`", "",
               "Times are medians in seconds after the question ends. Self-check metrics: B's evaluator is authoritative.", "",
               "## All traces", ""]

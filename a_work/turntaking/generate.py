@@ -17,11 +17,11 @@ Rules:
 - State every fact listed under "Say" in natural speech, with each value written exactly as given. Add nothing else, not even from your own knowledge.
 - If "Still checking" lists anything, end with at most 8 words on what you are still checking. Do not guess it.
 - If "Could not confirm" lists anything, end by saying you could not confirm it.
-- Do not repeat anything under "Already said". Do not greet, read out these headings, or use lists. Keep it under 25 words in total.
+- Do not greet, read out these headings, or use lists. Keep it under 25 words in total.
 Reply with JSON only."""
 
 FREE_SYSTEM = """You are a voice assistant answering a question. Using the evidence you have so far, give your best answer now in one or two short spoken sentences, without lists.
-Also list each answer alone in as few words as possible, one item per thing the question asks, for example a name, a date, "yes" or "no".
+Also list the answer alone in as few words as possible, for example a name, a date, "yes" or "no". List only what the question asks for, one item per thing asked, never supporting details: "Who was born later, A or B?" has one answer, the name; "When did X start and end?" has two.
 Reply with JSON only."""
 
 GROUNDED_SCHEMA = {"type": "object", "properties": {"text": {"type": "string"}}, "required": ["text"]}
@@ -75,17 +75,18 @@ class Generator:
         return self._cache[key]
 
     def grounded(self, question: str, say: Sequence[Tuple[str, str]], missing: Sequence[str],
-                 said: Sequence[str], search_finished: bool) -> Tuple[str, float]:
+                 search_finished: bool) -> Tuple[str, float]:
         """say: (description, value). Returns (text, latency)."""
         facts = "\n".join(f"- {d}: {v}" for d, v in say) or "(nothing new)"
         heading = "Could not confirm" if search_finished else "Still checking"
         pending = f"{heading}:\n" + "\n".join(f"- {m}" for m in missing) + "\n\n" if missing else ""
-        request = (f"Question: {question}\n\nSay:\n{facts}\n\n{pending}"
-                   f"Already said: {' '.join(said) or '(nothing)'}")
+        request = f"Question: {question}\n\nSay:\n{facts}\n\n{pending}".rstrip()
         raw, latency = self._call([{"role": "system", "content": GROUNDED_SYSTEM}, {"role": "user", "content": request}],
                                   GROUNDED_SCHEMA)
         text = raw.get("text") if isinstance(raw.get("text"), str) else None
-        if text and len(text.split()) <= MAX_SPOKEN_WORDS and all(find_value(text, v) >= 0 for _, v in say if v):
+        says_checking = search_finished or not missing  # nothing is being checked: the words would be false
+        if (text and len(text.split()) <= MAX_SPOKEN_WORDS and all(find_value(text, v) >= 0 for _, v in say if v)
+                and not (says_checking and "still checking" in text.lower())):
             return text, latency
         self.fallbacks += 1
         plain = " ".join(f"{d}: {v}." for d, v in say)
