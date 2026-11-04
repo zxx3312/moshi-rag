@@ -1,0 +1,72 @@
+#!/bin/bash
+# Serve the judge LLM with vLLM on one GPU and run a_work/eval_judge.py against it.
+#
+# Submit FROM THE REPOSITORY ROOT:
+#     sbatch a_work/slurm/eval_judge.slurm
+# Overrides: MODEL, RUN_NAME, EVAL_ARGS (e.g. "--thinking"), VLLM_ENV, HF_HOME.
+#
+#SBATCH --job-name=a-eval-judge
+#SBATCH --partition=secondary
+# Group account: much higher fair-share priority than the default campusclusterusers.
+#SBATCH --account=dilek-ic
+#SBATCH --nodes=1
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=8
+#SBATCH --mem=64G
+#SBATCH --gres=gpu:1
+# H100 only, so judge latency is comparable across runs.
+#SBATCH --constraint=H100|h100
+#SBATCH --time=02:00:00
+#SBATCH --output=a_work/slurm/logs/%x-%j.out
+
+set -euo pipefail
+
+MODEL="${MODEL:-Qwen/Qwen3-14B}"
+VLLM_ENV="${VLLM_ENV:-/projects/illinois/eng/cs/dilek/xzhu81/envs/vllm}"
+RUN_NAME="${RUN_NAME:-$(date +%Y%m%d_%H%M%S)_job${SLURM_JOB_ID:-local}}"
+EVAL_ARGS="${EVAL_ARGS:-}"
+export HF_HOME="${HF_HOME:-/projects/illinois/eng/cs/dilek/xzhu81/hf_home}"
+export HF_HUB_OFFLINE=1
+# The venv is not activated: put its tools (ninja) on PATH, and use PyTorch sampling instead of
+# FlashInfer's JIT-built sampler (the judge decodes greedily, so the result is the same).
+export PATH="$VLLM_ENV/bin:$PATH"
+export VLLM_USE_FLASHINFER_SAMPLER=0
+PORT="$((20000 + ${SLURM_JOB_ID:-0} % 20000))"
+OUT="a_work/results/judge/$RUN_NAME"
+
+cd "${SLURM_SUBMIT_DIR:-$(pwd)}"
+[[ -f a_work/eval_judge.py ]] || { echo "submit from the repository root" >&2; exit 2; }
+mkdir -p "$OUT"
+echo "job ${SLURM_JOB_ID:-local} on $(hostname); repo @ $(git rev-parse --abbrev-ref HEAD) $(git rev-parse --short HEAD)"
+nvidia-smi --query-gpu=name,memory.total --format=csv || true
+
+SERVER_PID=""
+cleanup() {
+    local rc=$?
+    trap - EXIT INT TERM
+    if [[ -n "$SERVER_PID" ]] && kill -0 "$SERVER_PID" 2>/dev/null; then
+        kill -TERM "$SERVER_PID"; sleep 5; kill -KILL "$SERVER_PID" 2>/dev/null || true
+    fi
+    echo "[cleanup] exit code $rc at $(date -Is)"
+    exit "$rc"
+}
+trap cleanup EXIT
+trap 'exit 143' INT TERM
+
+# The reasoning parser keeps Qwen3's <think> part out of the JSON constraint, so thinking mode works;
+# with thinking off it changes nothing.
+"$VLLM_ENV/bin/vllm" serve "$MODEL" --port "$PORT" --max-model-len 16384 --reasoning-parser qwen3 \
+    --gpu-memory-utilization 0.90 > "$OUT/vllm.log" 2>&1 &
+SERVER_PID=$!
+
+deadline=$((SECONDS + 1200))
+until curl -sf "http://127.0.0.1:$PORT/v1/models" > /dev/null; do
+    kill -0 "$SERVER_PID" 2>/dev/null || { echo "vLLM exited:" >&2; tail -n 40 "$OUT/vllm.log" >&2; exit 3; }
+    (( SECONDS < deadline )) || { echo "vLLM not ready after 1200 s" >&2; tail -n 40 "$OUT/vllm.log" >&2; exit 3; }
+    sleep 10
+done
+echo "vLLM ready after ${SECONDS}s"
+
+read -r -a EXTRA <<< "$EVAL_ARGS"
+"$VLLM_ENV/bin/python" a_work/eval_judge.py --base-url "http://127.0.0.1:$PORT/v1" --model "$MODEL" \
+    --out "$OUT" "${EXTRA[@]}"
