@@ -1,0 +1,69 @@
+{
+  "checked_date": "2026-11-03",
+  "b_data_commit": "a2808f17558076291ec439d2ced8a00be8c52281",
+  "a_runner_commit": "12d899984ddc182c525f80a7716cb8d8aa78df44",
+  "evaluator_state": "Draft structured-claim scorer; not a full semantic evaluation.",
+  "unit_tests": {
+    "command": "python3 -m unittest discover -s b_work/eval/tests -v",
+    "passed": 31,
+    "failed": 0
+  },
+  "a_log_check": {
+    "questions": 20,
+    "traces": 60,
+    "runs": 300,
+    "log_rows": 417,
+    "policies": [
+      "evidence_aware+oracle",
+      "first_evidence",
+      "fixed_progress",
+      "time_only",
+      "wait_all"
+    ],
+    "invalid_runs": 0,
+    "missing_expected_runs": 0,
+    "status_counts": {
+      "placeholder": 300
+    },
+    "method": "A replay with four rule policies and OracleJudge; generator=None; model network calls blocked.",
+    "model_calls": 0,
+    "diagnostic_oracle_claims": 104,
+    "diagnostic_oracle_unsupported_claims": 0,
+    "baseline_claims_needing_values": 288
+  },
+  "support_rule_cross_check": {
+    "snapshots": 140,
+    "disagreements": 0
+  },
+  "fictional_example": {
+    "cli_passed": true,
+    "unit_em": 1.0,
+    "unit_f1": 1.0,
+    "structured_ucr": 0.0,
+    "ttfr_s": 0.0,
+    "ttfgi_s": 2.0,
+    "ttca_s": 9.0,
+    "claims_needing_review_without_mappings": 2
+  },
+  "inputs": [
+    {
+      "path": "b_work/step3/traces_debug.jsonl",
+      "sha256": "3b50bd415ed44c5e0d20bc685a33cbfee3cebf80f234be36e6dc431850bdbf49"
+    },
+    {
+      "path": "b_work/step3/gold_debug.jsonl",
+      "sha256": "29629fa9dba1fabddb5f39d62063fc56e28df37ca6ce01f55d1da0c9b8ab4567"
+    }
+  ],
+  "limits": [
+    "The A runs use placeholder text. They are code checks, not real model quality or latency results.",
+    "Diagnostic Oracle scores are a gold-path check, not a learned policy result.",
+    "Scoring uses supplied structured claims and gold values, not full semantic judgments.",
+    "Atomic fact extraction, whole-answer scoring, model-based support checks, and bootstrap intervals remain open.",
+    "TTFGI uses claim start, not full-fact commitment time; useful-to-question checks remain open.",
+    "Value matching can miss negation and wrong relationships in a claim.",
+    "Explicit corrections still need review before completion and TTCA can be scored.",
+    "A does not log Wait calls or all model errors in its policy log.",
+    "A speech timing is estimated, not measured from audio."
+  ]
+}
