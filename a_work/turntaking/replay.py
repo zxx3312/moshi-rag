@@ -110,13 +110,13 @@ def _generate(decision: Decision, obs: Observation, units: Mapping[str, Unit], g
         return [((evidence[i].source or {}).get("document_id"), evidence[i].text) for i in ids if i in evidence]
 
     if decision.free_answer:
-        text, answer, latency = generator.free(obs.question, cited(list(evidence)))
+        text, answers, latency = generator.free(obs.question, cited(list(evidence)))
         duration = _speech_s(text)
-        if answer is None:  # abstained: no claim to score
-            return text, duration, [], latency
-        start, end, found = _value_span(text, answer, duration)
-        spans = [{"text": text, "controller_unit_id": "answer", "value": answer, "cited_evidence_ids": list(evidence),
-                  "start": start, "end": end, "value_in_text": found}]
+        spans = []
+        for answer in answers:
+            start, end, found = _value_span(text, answer, duration)
+            spans.append({"text": text, "controller_unit_id": "answer", "value": answer,
+                          "cited_evidence_ids": list(evidence), "start": start, "end": end, "value_in_text": found})
         return text, duration, spans, latency
 
     def describe(uid):
@@ -130,7 +130,7 @@ def _generate(decision: Decision, obs: Observation, units: Mapping[str, Unit], g
     claimed = set(decision.claimed_units)
     missing = [describe(u) for u, unit in units.items()
                if u not in claimed and labels.get(u) != SUPPORTED and (unit.necessary or decision.action == PARTIAL)]
-    say = [(describe(u), decision.values.get(u) or "", cited(decision.citations.get(u, ()))) for u in decision.claimed_units]
+    say = [(describe(u), decision.values.get(u) or "") for u in decision.claimed_units]
     text, latency = generator.grounded(obs.question, say, missing, said, obs.retrieval_done)
     duration = _speech_s(text)
     spans = []
@@ -184,9 +184,9 @@ def replay(
                 generation_cost = 0.0
                 if generator is not None and decision.action in (PARTIAL, FINAL):
                     text, duration, spans, generation_cost = _generate(decision, obs, unit_map, generator, said, known)
+                    said.append(text)  # facts only: fixed phrases like the backchannel got echoed
                 else:
                     text, duration, spans = _render(decision, unit_map)
-                said.append(text)
                 start = t + cost + generation_cost
                 for s in spans:
                     s["start"] += start

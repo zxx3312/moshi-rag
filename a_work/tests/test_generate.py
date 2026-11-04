@@ -37,7 +37,7 @@ class Client(FakeClient):
         self.calls.append(CallRecord(purpose, self.latency, None, None))
         request = messages[-1]["content"]
         if "Evidence so far" in request:
-            return {"text": "I think it is Bob.", "answer": "Bob"} if "June 1" not in request else {"text": "It is Alice.", "answer": "Alice"}
+            return {"text": "I think it is Bob.", "answers": ["Bob"]} if "June 1" not in request else {"text": "It is Alice.", "answers": ["Alice"]}
         said = "Alice" if "- leader: Alice" in request else "June 1"
         return {"text": f"It is {said} so far."}
 
@@ -52,16 +52,25 @@ class GroundedTest(unittest.TestCase):
         client, records = self.run_policy()
         request = client.messages[0][-1]["content"]
         self.assertIn("- leader: Alice", request)
-        self.assertIn("Led by Alice.", request)
+        self.assertNotIn("Led by Alice.", request)  # the model read evidence aloud
         self.assertNotIn("June 1", request)
         self.assertNotIn("Released on", request)
-        self.assertIn("Still missing:\n- release date of Alice", request)  # placeholder filled from the known value
+        self.assertIn("Still checking:\n- release date of Alice", request)  # placeholder filled from the known value
+
+    def test_finished_search_reports_what_is_unconfirmed(self):
+        client = Client()
+        Generator(client).grounded("q", [("leader", "Alice")], ["date"], [], True)
+        self.assertIn("Could not confirm:\n- date", client.messages[0][-1]["content"])
+
+    def test_backchannel_not_passed_as_said(self):
+        client, _ = self.run_policy()
+        self.assertNotIn("let me check", client.messages[0][-1]["content"])
 
     def test_long_partial_does_not_cut_off_final(self):
         class Wordy(Client):
             def chat_json(self, messages, *, purpose, schema=None, max_tokens=None):
                 reply = super().chat_json(messages, purpose=purpose, schema=schema)
-                return {"text": reply["text"] + " word" * 60}
+                return {"text": reply["text"] + " word" * 30}
         records = replay(TRACE, units_without_gold(GOLD), EvidenceAware(OracleJudge([GOLD])), generator=Generator(Wordy()))
         self.assertEqual(records[-1]["action"], "Final Answer")
         self.assertEqual(preview_metrics(records, TRACE, GOLD)["unsupported"], 0)
@@ -73,9 +82,17 @@ class GroundedTest(unittest.TestCase):
                 super().chat_json(messages, purpose=purpose, schema=schema)
                 return {"text": "I'm still checking the date."}
         generator = Generator(Vague())
-        text, _ = generator.grounded("q", [("leader", "Alice", [])], ["date"], [], False)
+        text, _ = generator.grounded("q", [("leader", "Alice")], ["date"], [], False)
         self.assertEqual(text, "leader: Alice. I'm still checking the rest.")
         self.assertEqual(generator.fallbacks, 1)
+
+    def test_rambling_reply_falls_back_to_facts(self):
+        class Rambling(Client):
+            def chat_json(self, messages, *, purpose, schema=None, max_tokens=None):
+                super().chat_json(messages, purpose=purpose, schema=schema)
+                return {"text": "Alice" + " word" * 40}
+        text, _ = Generator(Rambling()).grounded("q", [("leader", "Alice")], [], [], True)
+        self.assertEqual(text, "leader: Alice.")
 
     def test_later_turn_knows_what_was_said(self):
         client, _ = self.run_policy()
@@ -104,7 +121,7 @@ class BaselineTest(unittest.TestCase):
         class Abstain(Client):
             def chat_json(self, messages, *, purpose, schema=None, max_tokens=None):
                 super().chat_json(messages, purpose=purpose, schema=schema)
-                return {"text": "The evidence does not say.", "answer": "Unknown."}
+                return {"text": "The evidence does not say.", "answers": ["Unknown."]}
         records = replay(TRACE, units_without_gold(GOLD), FirstEvidence(), generator=Generator(Abstain()))
         self.assertEqual(records[-1]["claim_spans"], [])
         metrics = preview_metrics(records, TRACE, GOLD, by_value=True)
@@ -114,7 +131,18 @@ class BaselineTest(unittest.TestCase):
         def bad(messages):
             raise ValueError("bad reply")
         text, answer, _ = Generator(FakeClient([bad])).free("q", [])
-        self.assertEqual((text, answer), ("I'm not sure.", None))
+        self.assertEqual((text, answer), ("I'm not sure.", []))
+
+    def test_each_answer_is_one_claim(self):
+        class Two(Client):
+            def chat_json(self, messages, *, purpose, schema=None, max_tokens=None):
+                super().chat_json(messages, purpose=purpose, schema=schema)
+                return {"text": "It was Alice on June 1.", "answers": ["Alice", "June 1"]}
+        records = replay(TRACE, units_without_gold(GOLD), FirstEvidence(), generator=Generator(Two()))
+        self.assertEqual([c["value"] for c in records[-1]["claim_spans"]], ["Alice", "June 1"])
+        self.assertLess(records[-1]["claim_spans"][0]["start"], records[-1]["claim_spans"][1]["start"])
+        metrics = preview_metrics(records, TRACE, GOLD, by_value=True)
+        self.assertEqual((metrics["claims"], metrics["unsupported"]), (2, 1))  # e2 is not visible yet
 
     def test_cache_reports_latency_again(self):
         generator = Generator(Client(2.0))
@@ -146,7 +174,7 @@ class RunReplayGenerateTest(unittest.TestCase):
 
             def chat_json(self, messages, *, purpose, schema=None, max_tokens=None):
                 self.calls.append(CallRecord(purpose, 0.1, None, None))
-                return {"decompose": decomp, "judge": {"units": []}, "generate": {"text": "Yes.", "answer": "yes"}}[purpose]
+                return {"decompose": decomp, "judge": {"units": []}, "generate": {"text": "Yes.", "answers": ["yes"]}}[purpose]
 
         with tempfile.TemporaryDirectory() as out, mock.patch.object(run_replay, "ChatClient", C), \
                 mock.patch.object(sys, "argv", ["run_replay.py", "--out", out, "--generate"]), mock.patch("builtins.print"):
