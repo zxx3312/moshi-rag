@@ -1,46 +1,110 @@
-# Step 3 — Gold Units for the Debug Set
+# Step 3 Gold and Reviews
 
-Rules: `b_work/step1/schema.md` v1.3 Section 4 and `b_work/step1/labeling_guide.md` v1.2 Section 1.1. Source data: `b_work/step2/prepared/samples_debug.jsonl` (frozen; not modified here). Review decisions: `b_work/step2/review_notes.md`.
+## Completed
 
-## Files
+- Saves draft gold for all 20 debug questions.
+- Saves 60 debug traces and their review copy.
+- Builds reviews with units, aliases, special flags, support quotes, Notes,
+  and all source context.
+- Can rebuild a review from saved gold without writing gold files.
 
 | File | Edit by hand? | Content |
 |---|---|---|
-| `gold_annotations.json` | Yes | Units per question, with evidence cited as `[document title, sentence index]` and annotation notes. |
-| `build_gold.py` | — | Converts annotations to gold records and validates them. |
-| `gold_debug.jsonl` | No (generated) | Gold records in the `schema.md` Section 4 format, one per line; currently questions 1–20. |
-| `gold_review.md` | No (generated) | Review copy: units, the cited sentence text, and notes for each question. |
-| `build_traces.py` | — | Builds controlled mock traces for every question that has gold units, and validates them. |
-| `traces_debug.jsonl` | No (generated) | Traces in the `schema.md` Section 3 format: questions 1–20 × 3 schedules. |
-| `traces_review.md` | No (generated) | Review copy: which documents arrive in each batch, and when each gold unit becomes supported. |
+| `gold_annotations.json` | Yes | Units, support references, and notes. |
+| `build_gold.py` | Code | Builds debug gold or reviews of saved gold. |
+| `gold_debug.jsonl` | No | The 20 debug gold records. |
+| `gold_review.md` | Generated | The debug review copy. |
+| `build_traces.py` | Code | Builds full-context controlled mock traces. |
+| `traces_debug.jsonl` | No | The 60 debug traces. |
+| `traces_review.md` | Generated | Arrival batches and support times. |
 
-Run from the repository root, gold first because the trace builder reads it:
+### New parts in build_gold.py
+
+1. **Review-only mode.** `--review-from-gold` reads saved gold and writes only
+   the review. It keeps gold files unchanged.
+2. **Input checks.** Checks versions, sample IDs, and answer units. Review mode
+   accepts both `d1s0` and `[document title, sentence index]` references.
+3. **Draft support.** Shows unfinished units with `support_sets: []` for human
+   review. This does not approve their answers. Normal gold generation stays strict.
+4. **More review content.** Adds all source context and support that uses facts
+   given by the question. Shows empty support clearly. Existing source issues stay
+   in Notes. The table still shows aliases and special flags.
+5. **File safety and table layout.** Stops the review from overwriting input
+   files. Handles `|` and line breaks so table cells stay readable.
+
+New and updated code blocks use `#-------------#` and simple English comments.
+
+## Rules
+
+- Follow `schema.md` v1.3 Section 4 and `labeling_guide.md` v1.2 Section 1.1.
+- The record field `schema_version` remains `1.0`.
+- Keep the frozen Step2 source files unchanged.
+- Gold edits belong in annotations. Keep any review comments before rebuilding.
+- Debug annotations use `[document title, sentence index]` support references.
+- Review-only mode also accepts annotations with evidence IDs such as `d1s0`.
+- The ordinary gold builder keeps strict support checks. Empty support lists
+  are allowed only when displaying saved drafts for human review.
+- Review-only mode checks versions, IDs, dependencies, and matching gold units.
+  Invalid inputs leave the old review file unchanged.
+- Reviews show `aliases`, `by_omission`, `by_presupposition`, and support sets.
+  Existing source issues stay in Notes.
+- For two named candidates with one unique answer, keep only the facts needed
+  to confirm or rule out a candidate. The answer depends on those facts.
+- Mark that answer with `by_presupposition: true`. Use `support_sets` and
+  `depends_on` for its evidence. The flag does not replace evidence.
+- Do not use this shortcut for date comparisons or "both" and "same" questions.
+- A sentence's document title identifies its subject. If titles will be hidden
+  from the judge, check whether more source sentences are needed for pronouns.
+- Generating a review does not mean that a person has approved the gold.
+
+Run from the repository root to build debug gold and its review:
 
 ```bash
 python3 b_work/step3/build_gold.py
+```
+
+To rebuild only a review of saved gold:
+
+```bash
+python3 b_work/step3/build_gold.py \
+  --samples b_work/step2/prepared/samples_eval_reserved.jsonl \
+  --annotations b_work/test_set/batches/batch_01/annotations.json \
+  --review-from-gold b_work/test_set/batches/batch_01/gold.jsonl \
+  --review b_work/test_set/batches/batch_01/review.md
+```
+
+This reads the saved gold and writes only the review. It does not write `--out`.
+Saved gold units must match the annotations. Notes may change.
+
+The existing debug trace command is:
+
+```bash
 python3 b_work/step3/build_traces.py
 ```
 
-## Trace schedules (provisional)
+- Each context sentence is an event, including distractors.
+- Whole documents arrive together. Scheduled and visible times are equal.
+- Supporting-fact documents are split in citation order across two batches.
+- Alternative gold-support documents arrive with their matching support batch.
+- Other documents alternate between batches in original document order.
+- Trace IDs use `<sample_id>_<schedule>`.
 
-Delay schedules are not frozen yet (`experiment_config.json`, `pending_decisions`). The batch times are set in `SCHEDULES` at the top of `build_traces.py`, anchored on the existing 0–8 s pilot sweep:
+Current debug schedules are provisional:
 
-| Schedule | Batch 1 | Batch 2 |
+| Schedule | First batch | Second batch |
 |---|---|---|
-| `immediate` | all documents at 0.0 s | — |
-| `short` | 1.0 s | 3.0 s |
-| `long` | 2.0 s | 8.0 s |
+| `immediate` | All documents at 0 seconds | None |
+| `short` | 1 second | 3 seconds |
+| `long` | 2 seconds | 8 seconds |
 
-- Every context sentence is an event, including distractors. Documents arrive whole; `visible_time_s` equals `scheduled_time_s` (controlled text replay).
-- The documents cited by `supporting_facts` are split in citation order: the first half in batch 1, the rest in batch 2. This puts the first hop in batch 1 for bridge questions. For bridge-comparison questions 2 and 6, both film documents arrive in batch 1 and both director biographies in batch 2.
-- A document cited only as alternative support in `gold_debug.jsonl` arrives with the `supporting_facts` document of the same unit. Other distractors alternate between batches in document order.
-- `trace_id` is `<sample_id>_<schedule>`.
-- All 20 debug questions have gold units and checked-in traces. The three schedules are provisional until the delay schedules in `experiment_config.json` are frozen.
+## Next steps
 
-The script stops with an error on unknown titles, sentence indices out of range, invalid or cyclic dependencies, `[]` support sets, `[[]]` without dependencies, questions with no necessary unit, and malformed `aliases` / `by_omission` / `by_presupposition`.
+- Review the 300 test-question gold drafts using their batch review copies.
+- Support test-set gold export after review. Keep the existing Step3 script.
+- Generate test-set traces only after the user finishes gold review.
 
-## Conventions
+## Needs review
 
-- **Evidence IDs** are `d<N>s<M>`: `N` is the 1-based document position in the sample's context (the "Document N" numbering in `samples_debug_readable.md`), `M` is the 0-based sentence index. Traces must use the same IDs, which means traces should include every context sentence that a support set cites, including distractor sentences.
-- **Document titles:** evidence is assumed to be shown together with its document title, as in HotpotQA. A sentence whose subject is the article's topic ("He won...", "The team was created...") then stands alone. Sentences that need an earlier sentence for other content ("The pair...", sentence fragments) are cited together with it. If traces or the judge input will not include titles, Q13, Q14 and Q17 need their opening sentences added to the support sets.
-- **Status:** `draft` or `pending_decision`. The presupposition rule is agreed in `labeling_guide.md` v1.2; Q13 and Q17 mark affected units with `by_presupposition: true` for separate reporting.
+- Gold answers, dependencies, support sets, aliases, and special flags.
+- Draft units with empty support and notes about source issues.
+- Final delay settings before main experiments.
