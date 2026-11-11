@@ -10,7 +10,7 @@ sys.path.insert(0, str(A_WORK))
 
 from turntaking.decompose import decompose, validate_units  # noqa: E402
 from turntaking.judge import PromptJudge, resolve_dependencies  # noqa: E402
-from turntaking.llm import FakeClient, parse_json_object  # noqa: E402
+from turntaking.llm import CallRecord, FakeClient, parse_json_object  # noqa: E402
 from turntaking.schema import CONTRADICTED, SUPPORTED, UNRESOLVED, Evidence, Observation, Unit  # noqa: E402
 
 UNITS = (Unit("u1", "director of Being Twenty", False), Unit("u2", "birthplace of {u1}", True, ("u1",)))
@@ -238,6 +238,33 @@ class EvalScriptTest(unittest.TestCase):
         self.assertIn("## Decomposition", summary)
         self.assertIn("(30 traces)", summary)
         self.assertIn("missed SUPPORTED", summary)
+
+
+
+class RunReplayTest(unittest.TestCase):
+    def test_runs_on_mock_data(self):
+        import run_replay
+        decomp = {"question_type": "single", "units": [
+            {"unit_id": "u1", "description": "answer", "necessary": True, "depends_on": []}]}
+
+        class Client(FakeClient):
+            def __init__(self, *a, **k):
+                super().__init__([])
+
+            def chat_json(self, messages, *, purpose, schema=None, max_tokens=None):
+                self.calls.append(CallRecord(purpose, 0.5, None, None))
+                return decomp if purpose == "decompose" else {"units": []}
+
+        with tempfile.TemporaryDirectory() as out, mock.patch.object(run_replay, "ChatClient", Client), \
+                mock.patch.object(sys, "argv", ["run_replay.py", "--out", out]), mock.patch("builtins.print"):
+            run_replay.main()
+            summary = (Path(out) / "summary.md").read_text(encoding="utf-8")
+            rows = [json.loads(l) for l in (Path(out) / "trace_metrics.jsonl").read_text(encoding="utf-8").splitlines()]
+        self.assertIn("evidence_aware+prompt_real", summary)
+        self.assertEqual({r["policy"] for r in rows}, {"wait_all", "fixed_progress", "time_only", "first_evidence", "evidence_aware+oracle",
+                                                      "evidence_aware+prompt", "evidence_aware+prompt_real"})
+        real = [r for r in rows if r["policy"] == "evidence_aware+prompt_real"]
+        self.assertEqual({r["setup_cost_s"] for r in real}, {0.5})
 
 
 if __name__ == "__main__":

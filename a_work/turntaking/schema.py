@@ -45,6 +45,7 @@ class Observation:
     evidence: Tuple[Evidence, ...]
     units: Tuple[Unit, ...]
     retrieval_done: bool
+    units_ready: bool = True  # False while the question is still being decomposed
 
 
 @dataclass(frozen=True)
@@ -62,3 +63,6 @@ class Decision:
     claimed_units: Tuple[str, ...] = ()
     citations: Dict[str, Tuple[str, ...]] = field(default_factory=dict)
     unit_labels: Optional[Dict[str, str]] = None
+    values: Dict[str, Optional[str]] = field(default_factory=dict)  # judged value of each claimed unit
+    cost_s: float = 0.0  # time spent deciding (judge latency); charged to the simulated clock
+    free_answer: bool = False  # rule baseline: answer from all visible evidence, not from judged units
