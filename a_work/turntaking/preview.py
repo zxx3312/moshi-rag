@@ -8,11 +8,13 @@ gold does not list counts as unsupported.
 from __future__ import annotations
 
 import re
+import unicodedata
 from typing import Dict, List, Mapping, Optional, Sequence
 
 
 def norm(text: Optional[str]) -> str:
-    return re.sub(r"[^a-z0-9 ]", "", (text or "").lower()).strip()
+    text = unicodedata.normalize("NFKD", text or "").lower()  # accents become separate marks, dropped below
+    return re.sub(r"[^a-z0-9 ]", "", text).strip()
 
 
 def value_match(pred: Optional[str], answers: Sequence[str]) -> bool:
@@ -98,5 +100,6 @@ def preview_metrics(records: List[Mapping], trace: Mapping, gold: Mapping, by_va
         "final_correct": final_correct(claims, gold_units, by_value),
         "judge_cost_s": sum(r.get("decision_cost_s", 0.0) for r in records),
         "generation_cost_s": sum(r.get("generation_cost_s", 0.0) for r in records),
+        "tts_cost_s": sum(r.get("tts_cost_s", 0.0) for r in records),
         "value_not_in_text": sum(c.get("value_in_text") is False for c in claims),
     }

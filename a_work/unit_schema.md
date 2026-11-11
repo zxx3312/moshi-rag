@@ -157,6 +157,9 @@ judge 在时刻 t 只看 `visible_time_s <= t` 的证据，对每个单元给出
 3. 检索结束仍不充分时的动作（第 6 节最后一条）。
 4. 冲突证据的处理规则（v1 待定项）。
 5. 控制器拆题用哪个 LLM、拆题结果与 gold 单元不一致时如何统计。
+6. 问共同属性的题（"A and B are of which nationality?"）只有一边有证据时能否给出结论：未定。3.3 写的是不能；5.6 的例外只排除了"是否都是""是否相同"，B 组指南排除的是 "both or same questions"，两处写法不一致。A 组建议明确为：这类题不适用问题预设，两边都要有证据（SFT 里 15 道这类题，只有约 3 道的属性是单值的）。
+7. "是否都是"类是非题，一边已确认为"否"时，结论逻辑上已经是"否"，是否允许不等另一边：未定。目前 `derive_conclusion` 要求两边都 SUPPORTED。改规则需要 gold、judge 和评估三处同时改。
+8. 依赖链没有成立、但答案所在的句子已经可见（例如桥接题的中间实体还没被证实）：目前判 UNRESOLVED。LoRA 的错判里这类占了一部分，见 `results/lora_eval/lora_false_supported_triage.md`。
 
 ## 附：完整示例（gold 单元）
 

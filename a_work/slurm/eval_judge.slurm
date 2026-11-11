@@ -7,6 +7,8 @@
 # A LoRA judge: VLLM_ARGS="--enable-lora --lora-modules judge=ADAPTER_DIR" with --judge-model judge in EVAL_ARGS.
 # A second server on the same GPU, for run_replay.py: JUDGE_BASE=MODEL JUDGE_VLLM_ARGS=... with GPU_UTIL and
 # JUDGE_GPU_UTIL summing under 1; --judge-base-url is added for you.
+# The cascade: PYTHON=TTS_ENV/bin/python runs the script where piper-tts is installed (the script itself needs
+# only the standard library), and PRE_CMD="..." runs first on the GPU, before the servers take it (run_asr.py).
 #
 #SBATCH --job-name=a-eval-judge
 #SBATCH --partition=secondary
@@ -42,11 +44,17 @@ read -r -a JUDGE_EXTRA <<< "${JUDGE_VLLM_ARGS:-}"
 JUDGE_BASE="${JUDGE_BASE:-}"
 JUDGE_PORT="$((PORT + 1))"
 
+PYTHON="${PYTHON:-$VLLM_ENV/bin/python}"
+
 cd "${SLURM_SUBMIT_DIR:-$(pwd)}"
 [[ -f "$SCRIPT" ]] || { echo "submit from the repository root" >&2; exit 2; }
 mkdir -p "$OUT"
 echo "job ${SLURM_JOB_ID:-local} on $(hostname); repo @ $(git rev-parse --abbrev-ref HEAD) $(git rev-parse --short HEAD)"
 nvidia-smi --query-gpu=name,memory.total --format=csv || true
+if [[ -n "${PRE_CMD:-}" ]]; then
+    echo "[pre] $PRE_CMD"
+    bash -c "$PRE_CMD"
+fi
 
 SERVER_PID=""
 JUDGE_PID=""
@@ -89,5 +97,5 @@ if [[ -n "$JUDGE_BASE" ]]; then  # started second: vLLM checks free GPU memory a
     wait_ready "$JUDGE_PORT" "$JUDGE_PID" "$OUT/vllm_judge.log"
     EXTRA+=(--judge-base-url "http://127.0.0.1:$JUDGE_PORT/v1")
 fi
-"$VLLM_ENV/bin/python" "$SCRIPT" --base-url "http://127.0.0.1:$PORT/v1" --model "$MODEL" \
+"$PYTHON" "$SCRIPT" --base-url "http://127.0.0.1:$PORT/v1" --model "$MODEL" \
     --out "$OUT" "${EXTRA[@]}"

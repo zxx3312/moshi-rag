@@ -8,7 +8,8 @@ from unittest import mock
 A_WORK = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(A_WORK))
 
-from turntaking.generate import Generator  # noqa: E402
+from turntaking.cascade import Speech  # noqa: E402
+from turntaking.generate import Generator, find_value  # noqa: E402
 from turntaking.judge import OracleJudge  # noqa: E402
 from turntaking.llm import CallRecord, FakeClient  # noqa: E402
 from turntaking.policies import EvidenceAware, FirstEvidence  # noqa: E402
@@ -234,6 +235,15 @@ class BaselineTest(unittest.TestCase):
         self.assertEqual((metrics("Alice")["unsupported"], metrics("Alice")["final_correct"]), (0, False))
         self.assertTrue(metrics("June 1")["final_correct"])
 
+    def test_grounded_sentences_can_come_from_a_smaller_model(self):
+        large, small = Client(2.0), Client(0.5)
+        generator = Generator(large, small)
+        _, latency = generator.grounded("q", [("leader", "Alice")], [], True)
+        generator.free("q", [("t", "x")])
+        self.assertEqual((latency, len(small.calls), len(large.calls)), (0.5, 1, 1))
+        self.assertIn("Say:", small.messages[0][-1]["content"])
+        self.assertIn("Evidence so far", large.messages[0][-1]["content"])
+
     def test_cache_reports_latency_again(self):
         generator = Generator(Client(2.0))
         first = generator.free("q", [("t", "x")])
@@ -244,12 +254,20 @@ class BaselineTest(unittest.TestCase):
 
 
 class ValueSpanTest(unittest.TestCase):
+    def span(self, text, value, duration):
+        return _value_span(text, value, Speech(duration, 0.0, lambda i: duration * i / len(text)))
+
     def test_value_position_in_speech(self):
-        self.assertEqual(_value_span("abcd fgh j", "fgh", 10.0), (5.0, 8.0, True))
-        self.assertEqual(_value_span("abc", "zzz", 3.0), (0.0, 3.0, False))
-        self.assertEqual(_value_span("abc", None, 3.0), (0.0, 3.0, False))
-        self.assertEqual(_value_span("I know", "no", 6.0), (0.0, 6.0, False))
-        self.assertEqual(_value_span("No, it is not.", "no", 14.0), (0.0, 2.0, True))
+        self.assertEqual(self.span("abcd fgh j", "fgh", 10.0), (5.0, 8.0, True))
+        self.assertEqual(self.span("abc", "zzz", 3.0), (0.0, 3.0, False))
+        self.assertEqual(self.span("abc", None, 3.0), (0.0, 3.0, False))
+        self.assertEqual(self.span("I know", "no", 6.0), (0.0, 6.0, False))
+        self.assertEqual(self.span("No, it is not.", "no", 14.0), (0.0, 2.0, True))
+
+    def test_accents_and_case_do_not_hide_a_value(self):
+        self.assertEqual(find_value("Emilio Sánchez went first.", "Sanchez"), 7)
+        self.assertEqual(find_value("It was SANCHEZ.", "Sánchez"), 7)
+        self.assertEqual(find_value("Sanchezes", "Sanchez"), -1)
 
 
 class PairedTableTest(unittest.TestCase):

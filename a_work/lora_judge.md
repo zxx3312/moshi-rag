@@ -1,6 +1,13 @@
 # LoRA judge
 
-状态：`qwen3_4b_v1` 已训练并做过初步比较，正式对比要等 B 组的 judge 验证集。结果见文末。
+状态：`qwen3_4b_v1` 已训练并做过初步比较，正式对比要等 B 组的 judge 验证集。
+下文 v4 保留为开发历史；2026-11-10 已核对完成的 v5 和 B 组评分见
+[`evaluation_notes.md`](evaluation_notes.md)。2026-11-11 查询确认：v7 的 prompt 与 LoRA 两轮
+已完成，结果分别在 `results/replay/b_q1_20_gen_v7/` 和 `results/replay/b_q1_20_gen_v7_lora/`。
+作业号为 12307493、12307492，均使用 A100-SXM4-80GB，退出码为 0；尚未用 B evaluator 评分。
+运行来自 `results/code_snapshots/replay_gen_q1_20_v7/`，父 commit 为 `9fb9adc`，有未提交改动；
+输入为 `results/inputs/b_debug_q1_20_gold13/` 的 debug 数据，B 来源 commit 待核。
+这些是文字回放开发运行，不是 H100 正式结果；当前代码也不完全等于 v7 快照。
 
 用途：分工要求比较三种 judge：Oracle、prompt judge（Qwen3-14B）、LoRA SFT 小模型。LoRA judge 由 `train_lora_judge.py` 训练，推理时仍走 `PromptJudge`（换成 adapter 的模型名、不带 few-shot），所有校验逻辑相同。
 
