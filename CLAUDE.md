@@ -92,15 +92,6 @@ python3 -m unittest discover -s b_work/eval/tests      # B 分支，原记录 31
   只用 Python 标准库。训练、vLLM、MoshiRAG 相关脚本可用已有依赖。
   新增依赖前问用户。现有代码若违反约束，先报告，不借整理文档擅自重构。
 - GPU 任务一律 `sbatch`，不在登录节点运行模型。
-- 每次提交前实时检查 `scontrol show reservation -o`、`sinfo -R`、候选分区/节点状态和账号权限。
-  优先选没有受维护影响、且满足 GPU 型号、显存与时限的分区；同分区部分节点维护时，
-  使用未受影响的合格节点，不把整个分区都当作停机。检查运行时段是否与已公告维护窗口重叠。
-  排队原因 `Priority` / `Resources` 不等于维护；分区 `UP` 也不保证立即有空卡。
-- H100 评估目前默认 `secondary`；以后每次重查，不永久依赖本次状态。
-  不为绕开维护擅自换显卡或账号，不使用不满足实验要求的 MIG 切片。
-  备用分区需确认权限、时限及抢占/重排队条件；`scavenger` 不自动作为默认回退。
-  无合格资源时说明原因并等待；用户只要求后续调度时，不取消、迁移或重复提交已有作业。
-  可以先用 `sbatch --test-only` 验证资源申请；它不实际创建 GPU 运行。
 - 结果写 `a_work/results/<category>/<run_name>/`，不进 git。
   跨分支复制输入放 `a_work/results/inputs/`，记录来源分支、完整 commit 和文件 hash。
 - 不改上游代码 `moshi/`、`rust/`、`client/`，除非任务明确要求。

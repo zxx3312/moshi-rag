@@ -26,7 +26,7 @@ python3 a_work/run_demo.py                      # two hand-made traces with plac
 | `eval_with_b.py` | Scores a run with B's evaluator (unpacked from B's branch) next to the self-check |
 | `make_question_audio.py`, `run_asr.py` | Speak the questions with Piper; transcribe them with Whisper |
 | `eval_judge.py`, `eval_sft.py`, `train_lora_judge.py` | Judge evaluation on traces, on B's SFT dev set, and LoRA training |
-| `slurm/` | Model serving, LoRA training, and cascade smoke submission scripts; check maintenance and resource eligibility before each submission |
+| `slurm/` | `eval_judge.slurm` serves the models and runs a script; `train_lora.slurm` |
 | `unit_schema.md`, `judge_notes.md`, `lora_judge.md`, `cascade.md`, `evaluation_notes.md` | Rules, speech setup, and development/evaluation notes (Chinese) |
 
 ## Data flow
@@ -66,14 +66,6 @@ RUN_NAME=my_run GPU_UTIL=0.55 JUDGE_GPU_UTIL=0.30 JUDGE_BASE=Qwen/Qwen3-4B \
 
 The A100 command above is a development example. Formal results require H100 under
 `docs/experiment_spec.md`. Latency is only comparable between runs on the same GPU type.
-
-Before each submission, check `scontrol show reservation -o`, `sinfo -R`, the candidate nodes,
-account access, and the requested wall time. Select unaffected resources with the required GPU type;
-`UP` does not mean idle, and `Priority` is not a maintenance reason. The H100 evaluation default is
-`secondary`; recheck availability each time. Validate with `sbatch --test-only` when useful.
-Do not automatically move to a different GPU type, MIG slice, or preemptible partition.
-See `../CLAUDE.md` for the submission rule and `../docs/plan.md` for the dated cluster check.
-
 
 ## Replaying a finished run without a GPU
 
