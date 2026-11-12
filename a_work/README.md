@@ -27,7 +27,8 @@ python3 a_work/run_demo.py                      # two hand-made traces with plac
 | `make_question_audio.py`, `run_asr.py` | Speak the questions with Piper; transcribe them with Whisper |
 | `eval_judge.py`, `eval_sft.py`, `train_lora_judge.py` | Judge evaluation on traces, on B's SFT dev set, and LoRA training |
 | `slurm/` | `eval_judge.slurm` serves the models and runs a script; `train_lora.slurm` |
-| `unit_schema.md`, `judge_notes.md`, `lora_judge.md`, `cascade.md`, `evaluation_notes.md` | Rules, speech setup, and development/evaluation notes (Chinese) |
+| `unit_schema.md`, `judge_notes.md`, `lora_judge.md`, `cascade.md`, `evaluation_notes.md` | Rules, speech setup, and development notes; `evaluation_notes.md` includes v5/v6/v7 scores, paired timing, coverage, and limitations (Chinese) |
+| `../docs/plan.md` | Next work on `a-eval-refinement`: combined omission/presupposition cases, benchmark metrics, Wait-All comparison, development parameter sweep, frozen evaluation, and C's audio review |
 
 ## Data flow
 
@@ -67,6 +68,9 @@ RUN_NAME=my_run GPU_UTIL=0.55 JUDGE_GPU_UTIL=0.30 JUDGE_BASE=Qwen/Qwen3-4B \
 The A100 command above is a development example. Formal results require H100 under
 `docs/experiment_spec.md`. Latency is only comparable between runs on the same GPU type.
 
+Use the authorized `dilek-ic` account. Check partition tiers and actual priority weights separately:
+a larger fair-share value does not add job priority when its configured weight is zero.
+
 ## Replaying a finished run without a GPU
 
 Every run writes `llm_calls.jsonl`. Timing settings can then be changed and replayed anywhere:
@@ -92,8 +96,8 @@ these mappings were reviewed by Codex and do not constitute independent human an
 
 ## Not done yet
 
-- The ASR/Piper smoke job is still pending as of 2026-11-11; the implementation is not yet GPU-validated.
-- The two v7 text replay jobs completed on A100, but still need B evaluator scoring. See `lora_judge.md`.
+- The ASR/Piper smoke job 12308419 failed during ASR startup (`No CUDA GPUs are available`); the speech chain is not yet validated.
+- The v6 LoRA and both v7 text replays have now been scored with fixed B evaluator `15f0e024` (2026-11-12). Validation passed, but claim mappings still need independent review. See `evaluation_notes.md` for scores and paired timing; overall UCR stays null where reviews remain.
 
 - The formal three-judge comparison waits for B's judge validation set; the 300 reserved traces are run once at the end.
 - The cascade uses synthetic question audio (Piper) until C's recordings are shared, and Whisper is not streaming.

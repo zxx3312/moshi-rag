@@ -4,8 +4,83 @@
 D 编号对应 spec 第 11 节。一次只做一步；只做部分就标“进行中”。
 
 截止日期：待用户填写学期结束日期、目标会议截稿日期。
-最后核对：2026-11-11。当前任务只处理 **P0 的文档整理和进度核对**。
+最后核对：2026-11-12。当前任务是**安排下述六项工作并建立对应分支**；
+本次不执行模型实验、预留集最终评估或人评上传。
 **用户自行提交。助手不 commit、不 push，不自行创建其他工作区或仓库副本。**
+
+## 下一轮六项工作的执行顺序（2026-11-12）
+
+用户列出六项工作；按依赖调整为 **原第 1 → 2 → 6 → 4 → 3 → 5 项**。
+先处理标签与评分，再做 Wait-All 对照和开发参数比较，之后冻结并最终评估，最后交付人评音频。
+参数选择在最终评估前完成；不能用预留集结果反向选阈值或修改方法。
+这是一份实施排期，不代表新指标、标签规则或参数已经获全组批准。
+
+本轮工作分支为 `a-eval-refinement`，从原工作区 `a-cascade` 的
+`c23d6ae6e7250b793c026e7ec01ae9166728f5af` 创建并切换。
+切换前后已核对暂存与未暂存 diff 指纹，既有修改完全保留；没有 stash、commit、push 或新建工作树。
+后续代码按 A 的流程集成到 `a-method-integration`；共享计划仍待用户安排同步到 main。
+
+| 执行序号 | 对应用户项 / 现有步骤 | 工作内容 | 开始条件 | 完成标准与产物 | 当前状态 |
+|---|---|---|---|---|---|
+| R1 | 原 1；A4、D14/D15 | 研究 `by_omission` 与 `by_presupposition` 的组合 | 用户已确认这两种标记 | 组合情形表、反例和候选规则；A/B 确认语义后，A 实现与 B gold/evaluator 口径一致；适用回归通过 | 待开始；本次只完成含义确认与排期 |
+| R2 | 原 2；A2、B4、D6/D10/D11 | 阅读 Full-Duplex-Bench 和 TurnBench，制定适合自由回答的评分候选方案 | R1 的问题分类已梳理；两篇论文已确定 | 原文和官方 scorer 对照表；区分语义正确性、证据支持、交互检测和自然度；说明缺失、别名、矛盾、纠错与分母；经 A/B 确认后再改评分 | 待开始；只核对论文身份与摘要，未完成细读 |
+| R3 | 原 6；A5/A6、D4/D9 | 与 Wait-All 做公平的配对诊断 | R1/R2 口径可用于开发评分，待复核映射有处理方案 | 相同 trace、硬件和计时下的质量/覆盖/TTFGI/TTCA 表；区分策略与生成差异；是否增加 Wait-All 先 judge 的消融由 D9 决定 | 待开始 |
+| R4 | 原 4；A3、D2/D3 | 开发数据上的参数对比 | R3 的对照可比，计时和失败记录可靠 | 参数候选清单、扫描结果和成本；人确认选定配置并记录到 spec；调参只用获准开发数据 | 待开始；不预设扫描数值 |
+| R5 | 原 3；P1、B1/B2/B4、F1 | 冻结后用约定的完整评测数据跑全部已定配置 | R1–R4 验收、相关 D 项冻结、数据验收、用户明确最终运行 | 冻结代码/数据/模型/配置及 hash；完整运行清单、失败和缺失记录；固定 evaluator 评分及配对汇总 | 未开始；完整数据范围尚待确认，不读取预留题 |
+| R6 | 原 5；S1、C2 | 整理并上传语音文件，交 C 组人评 | 语音链路验收；正式交付采用冻结配置与预先约定的人评方案 | 配对音频、匿名编号、索引、版本/hash、评分表和上传链接；C 确认接收 | 待开始；上传位置与人评方案待 C 确认 |
+
+### R1：特殊标记组合要回答的问题
+
+用户已确认指 `by_omission` 和 `by_presupposition`。它们是判断依据标记，
+不是在 SUPPORTED / UNRESOLVED / CONTRADICTED 之外新增两类标签。
+先用虚构样例和获准 debug/SFT 分析，分别处理：
+
+- 同一单元同时涉及两种依据，是否允许两个标记同时为 true，还是只记录实际采用的路径。
+- 一个依赖单元按 omission 支持，结论再通过 presupposition 提前成立的情况。
+- 二选一、双方是否都满足、共同属性和日期比较能否使用相同规则；不能把它们混为一类。
+- 明确支持、缺省否定、问题预设和冲突证据相遇时如何处理；证据未到时不得提前推定。
+- gold 的 `support_sets` / `presupposition_sets`、运行时 judge 与 evaluator 如何表达同一条依据。
+
+本轮先产出候选与反例，不直接决定优先级或更改“已定”规则。
+A 不修改 B 的 gold 或 evaluator；需要的接口变化形成清单交 B 对齐。
+
+### R2：论文对象与评分范围
+
+用户指定的论文已核对为：
+
+1. Lin et al. (2025), [Full-Duplex-Bench: A Benchmark to Evaluate Full-duplex Spoken Dialogue Models on Turn-taking Capabilities](https://arxiv.org/abs/2503.04721)，
+   [官方代码](https://github.com/DanielLin94144/Full-Duplex-Bench)。按用户引用核对该论文对应版本，不能直接用仓库后续版本替代。
+2. Jiang et al. (2026), [TurnBench: A Multi-Domain Benchmark for Turn-Taking Dynamics in Spoken Dialogue](https://arxiv.org/abs/2608.25218)，
+   [官方代码](https://github.com/SesameAILabs/turnbench)。
+
+从摘要看，两者分别关注全双工交互行为与 end-of-turn / interruption 检测。
+本项目应借鉴它们的交互评价，但自由回答的事实正确性与“决策时有无证据”仍需单独适配。
+不能把检测准确率直接当作回答正确率，也不能假定论文已经提供适用本任务的语义 scorer。
+
+现有 B evaluator 已有规范化和 gold 别名匹配，并非未经处理的逐字比较；
+当前不足包括等价改写、关系是否对应问题、正文未登记事实、纠错和 claim 映射。
+下一步读原文指标定义、官方实现、判定窗口、分母和缺失规则，逐项列出可借鉴部分与不适用部分。
+保留 EM/F1 作为可复现的参考，同时提出语义判定及人工复核方案；
+若使用模型辅助判定，需核对人工一致性并遵守现有 Qwen3/本地部署约束。
+任何评分规则变更先由人确认，不为了提高当前分数增加别名或改变 gold。
+
+### R3–R6 的共同前置条件
+
+- 开发诊断先复核 v7 待定映射，分别报告正确性、支持性、覆盖和延迟。
+  原 Wait-All 保留；是否新增相同 judge/生成方式的消融仍属于 D9，不能偷偷替换 baseline。
+- 参数比较前核对回放终止边界、失败调用耗时、声明时间估计和串行/并发成本。
+  未修复或未验收的计时问题不能当作真实收益。候选阈值范围待人确认。
+- ASR/Piper smoke 的故障修复、TTS 校准与音频对齐作为语音交付前置工作。
+  可在方法开发阶段准备 debug 音频包供流程检查，但不当作正式人评结果。
+- “完整数据”具体是否包括预留 300 题、额外 multipart 及 C 外部对照，需要先列清单。
+  train/dev/debug 不合并为最终评测集。正式结果按现有 spec 用 H100。
+- 按 `CLAUDE.md` 的数据条款，含预留集的 F1 必须在冻结后、用户明确表示“这是最终运行”时执行。
+  当前排期不解除开发期间禁读要求，也不授权启动最终 GPU 作业。
+- 在正式运行前约定人评题目选择、策略、维度、评分人数和匿名随机化办法，避免按结果挑音频。
+  上传前准备可审阅的包与 manifest；目的地、C 的接收方式待确认，本次不发送文件或消息。
+
+本次交付范围为上述排期、已创建分支和文档更新。六项研究工作均未被标为完成。
+尚未提交新 GPU 作业、访问预留数据、改变实验定义或上传音频。
 
 ## 现状与证据
 
@@ -15,8 +90,8 @@ D 编号对应 spec 第 11 节。一次只做一步；只做部分就标“进�
 | MoshiRAG 可控性 | Wait / Progress / Final 有开发结果，Partial 不可靠 | `a_work/moshirag_control/FINDINGS.md`；单种子、第二人复核未完成 |
 | A 控制器与 judge | 四个规则 baseline、Evidence-Aware、prompt / LoRA / oracle、模型拆题与生成 | 远端 `a-answer-gen` @ `9fb9adc`；不等于最终配置已冻结 |
 | A v5 回放 | 本地记录显示已运行并经固定 B evaluator 评分；部分映射由助手辅助复核 | `a_work/evaluation_notes.md`（未提交）；仍有待复核项，不能当整体 UCR 或独立人工复核 |
-| A 后续优化 | 两轮 v7 在 2026-11-11 完成，退出 0；仍未经过 B evaluator | 作业 12307492 / 12307493，A100，text/rate；当前代码与运行快照不同，不能算整分支验收 |
-| A ASR / TTS | 本地有 Whisper、Piper、调用回放和 smoke 脚本；作业 12308419 查询仍排队 | 2026-11-11，PENDING / Priority，申请 A100；主时间轴仍模拟，smoke 未验收，S1 未完成 |
+| A 后续优化 | v6 LoRA 与两轮 v7 已完成；2026-11-12 补齐固定 B evaluator 评分，均退出 0、校验问题 0 | v7 主方法已确认完整 Prompt 37/60、LoRA 42/60；待复核声明 8/10，整体 UCR 为 null；详见 A evaluation notes |
+| A ASR / TTS | 本地有 Whisper、Piper、调用回放和 smoke 脚本；作业 12308419 已失败，退出 1 | A100；ASR 报 No CUDA GPUs are available；主时间轴仍模拟，S1 未完成，见后文结束状态记录 |
 | B 数据 | debug gold / trace、SFT 已有；预留 gold 有新增草稿提交 | B `638027b` 的提交元数据；未读取任何预留题、gold、trace，未验收 B1 |
 | B evaluator | 有结构化声明评分、校验、映射复核队列和测试；A 本地已接入真实回放 | B eval README、A evaluation notes；语义抽取、纠错和 CI 仍待做 |
 | C 外部对照 | 新增按三档延迟的 debug 交付 | C `10d2394` 的 `trace-v1-debug-12189299/README.md`；执行检查通过不等于正式评分，音频对齐和听评待做 |
@@ -61,7 +136,7 @@ plan 是分工，不是自动执行 commit、push、PR、合并、tag 或 GPU �
 | ID | 任务 | 负责 | 依赖 | 完成标准 | 状态 |
 |---|---|---|---|---|---|
 | A1 | 核对 v4 / v5 显卡、代码、数据版本；H100 上补齐可比回放，保留旧结果 | A | P0 | v4/v5 summary 与逐次运行记录完整；写明 B 输入 commit；v5 TTCA 与旧离线估算对照，估算继续标注 | 进行中：v5 已有本地记录，H100 可比性和 provenance 未验收 |
-| A2 | 用固定 B evaluator 评分真实回放；复核 claim 映射；确认 Wait 日志要求 | A+B | A1 | run_eval 退出 0；全部 review queue 复核；自查差异有解释，不能仅凭退出 0 宣告通过 | 进行中：有原始与辅助评分，待独立复核；不是整体正式分数 |
+| A2 | 用固定 B evaluator 评分真实回放；复核 claim 映射；确认 Wait 日志要求 | A+B | A1 | run_eval 退出 0；全部 review queue 复核；自查差异有解释，不能仅凭退出 0 宣告通过 | 进行中：2026-11-12 已补 v6/v7 原始评分与配对分析；映射、语义抽取和独立复核仍缺，不是整体正式分数 |
 | A3 | 参数扫描 Time-Only、Fixed Progress、Evidence-Aware progress 阈值，画 TTFGI–UCR | A | A2 | 图表和选定参数；人确认后写入 D3 | 未开始 |
 | A4 | by_presupposition GPU 验证；by_omission 只选对应标题再判断的候选改法；种到属的错误 | A | P0 | judge notes 新增真实运行行；错判 SUPPORTED 不增加；研究规则变更先确认 | 未开始，原 notes 仍写部分 GPU 验证待做 |
 | A5 | 分析只有 Wait-All 答对的 trace，分拆题、judge、生成归因 | A | A2 | 逐条归因表；据此讨论 D4、D9 | 未开始 |
@@ -187,3 +262,63 @@ A 被测 Python 源码集合的 SHA256：
 本次重新运行 A 测试：91 项通过；控制实验：19 项通过；均退出 0，不使用 GPU。
 B evaluator 未改动，之前固定 B commit 的 31 项通过记录仍保留。
 代码提交表示保存开发进度，不表示 S1 或最终评估验收完成。
+
+
+### 账号权限与优先级核对（2026-11-11 12:26 CST）
+
+用户要求检查现有权限是否生效。核对来源为 scontrol、squeue、sprio、sacctmgr、sshare。
+核对开始时 HEAD 为 `3380a7b`，整理期间工作区 HEAD 已更新为 `c23d6ae`（维护规则记录提交）；
+助手未执行 commit。本次只改说明和注释，不改运行参数、不改队列、不重新提交任务。
+
+- `xzhu81` 的授权关联包含 `dilek-ic` 与 `campusclusterusers`，允许的 association QoS 为 normal。
+  三个既有作业实际都是 `Account=dilek-ic`、`QOS=normal`，不是误用默认公共账号。
+- 既有作业 scontrol 数值 Priority 为 2151–2154；同一时点 IllinoisComputes-GPU 的
+  待运行作业数值范围为 0–3000，说明用户不是最低数值优先级。资源申请不同，不能据此给出精确候位排名。
+- `IllinoisComputes-GPU` 的 `PriorityTier=3`，`secondary` 为 1；分区层级与数值 Priority 是两回事。
+- Slurm 当前权重：Age=1000、Partition=2000，FairShare=0、Assoc=0、QOS=0、JobSize=0。
+  虽然 sshare 显示组账号下的 FairShare 大于公共账号下的值，它目前不参与数值 Priority 加分。
+  原 eval_judge.slurm 的“组账号带来更高 fair-share priority”注释不准确，已仅修正文案。
+- 旧 judge 作业 `12306379`、`12306380` 的 Nice=5；smoke `12308419` 的 Nice=0。
+  当前脚本与本会话 SBATCH 环境变量都没有设置 nice，旧值来源待核。正 nice 会降低数值优先级，
+  后续不无故增加；不擅自改已结束任务或尝试未授权 QoS。
+- Illinois Computes 的官方政策区分 Primary、De-prioritized Primary、Secondary；不能把
+  normal QoS 直接解释为最低权限，也不能仅看一个 Priority 数字判断所有资源的调度先后。
+  正式 H100 仍受型号约束，不能为了较高层级擅自换 A100/H200 或 MIG。
+
+官方解释：[Campus Cluster 队列政策](https://campuscluster.illinois.edu/access/illinois-computes/)、
+[Slurm 优先级和分区层级](https://slurm.schedmd.com/priority_multifactor.html)。
+
+查询期间三个旧作业均已结束；之前 RUNNING / PENDING 的记录保留为当时状态：
+
+| 日期 | 运行名 | 数据来源 | 代码 / 快照 | 显卡 / 节点 | 作业号 | 结果路径 | 状态与限制 |
+|---|---|---|---|---|---|---|---|
+| 2026-11-11 | `b_q1_20_gen_v6_lora` | `a_work/results/inputs/b_debug_q1_20_gold13/`，debug；B commit 待核 | 运行日志 HEAD `3380a7b`；v6 快照及其源码哈希待进一步核实，不能以 HEAD 代替 | A100-SXM4-80GB / ccc0387 | 12306379 | `a_work/results/replay/b_q1_20_gen_v6_lora/` | COMPLETED，退出 0；已有回放 summary，正式评分待验收 |
+| 2026-11-11 | `b_q1_20_gen_v6_lora_conc` | 同一 debug 来源，提交时参数仍待核 | 日志 HEAD `3380a7b`；实际快照版本待核 | A100-SXM4-80GB / ccc0388 | 12306380 | `a_work/results/replay/b_q1_20_gen_v6_lora_conc/`；Slurm 日志 `a_work/slurm/logs/a-eval-judge-12306380.out` | FAILED，退出 3；vLLM Engine core initialization failed；不是排队或权限拒绝，根因待定位 |
+| 2026-11-11 | `cascade_smoke_20261110_v1`（结束状态补录） | 已冻结 debug 子集，输入 manifest 见上方旧提交记录 | `a_work/results/code_snapshots/cascade_smoke_20261110_v1/`；日志 HEAD `3380a7b` | A100-SXM4-80GB / ccc0388 | 12308419 | `a_work/results/replay/cascade_smoke_20261110_v1/`；Slurm 日志 `a_work/slurm/logs/a-cascade-smoke-12308419.out` | FAILED，退出 1；ASR 启动报 No CUDA GPUs are available，尚未完成链路验收 |
+
+以上是操作状态，未新增实验性能结果。两个失败保留原始日志，不作优先级问题处理；
+本次只记录，不启动故障修复或重跑。当前用户队列查询为空，没有仍待调高优先级的现有作业。
+
+### 新完成 debug 回放的评分整理（2026-11-12，A2）
+
+用户要求整理新分数并分析报告。本次只补 CPU 评分和汇总，不启动 GPU 实验、不调参数。
+基线 `a-cascade` @ `c23d6ae6e7250b793c026e7ec01ae9166728f5af` + dirty；保留原有暂存与工作区修改。
+详细报告见 `a_work/evaluation_notes.md` 的 2026-11-12 节；汇总与 hash 清单在
+`a_work/results/analysis/debug_scores_20261112/`，不进 Git。
+
+| 原 GPU 运行 | 作业 / 显卡 | 原代码来源 | 本次评分输入与产物 | 本次结果 |
+|---|---|---|---|---|
+| `b_q1_20_gen_v6_lora` | 12306379 / A100-SXM4-80GB | 日志 HEAD `3380a7b`；候选 v6 快照存在，实际加载绑定待补 | `b_debug_q1_20_gold13/` debug；`results/replay/b_q1_20_gen_v6_lora/b_eval/` | 420 个 policy runs；退出 0；validation issues 0；全配置待复核声明 34；主方法已确认完整 38/60 |
+| `b_q1_20_gen_v7` | 12307493 / A100-SXM4-80GB | `replay_gen_q1_20_v7/`；父 `9fb9adc` + dirty，快照 hash 见上文及 A notes | 同一 debug 输入；`results/replay/b_q1_20_gen_v7/b_eval/` | 600 个 policy runs；退出 0；validation issues 0；全配置待复核声明 40；主方法已确认完整 37/60 |
+| `b_q1_20_gen_v7_lora` | 12307492 / A100-SXM4-80GB | 同一 v7 快照 | 同一 debug 输入；`results/replay/b_q1_20_gen_v7_lora/b_eval/` | 600 个 policy runs；退出 0；validation issues 0；全配置待复核声明 44；主方法已确认完整 42/60 |
+
+固定 B evaluator `15f0e0246cc91443bd74b477ccee941432794ef6`，与 v5 原始评分一致；
+31 项现有 evaluator 测试通过、退出 0。新运行输入 SOURCE 指向
+`a2808f17558076291ec439d2ced8a00be8c52281`，已核对 debug trace/gold SHA256 一致；完整 hash 见 A notes。
+五轮 B 评分配置所记录的实际输入 hash 相同；v5 旧 SOURCE 的 gold 版本不吻合，最初运行来源仍待补。
+
+主方法待复核声明为 Prompt 8、LoRA 10，整体 Structured UCR 保留 null。
+long 档有更早给出信息的开发信号，short 无稳定收益，TTCA 仍较 Wait-All 晚；
+并发是模拟调度收益，不能当作真实共享 GPU 或 ASR/Piper 的实测。
+A2 保持进行中：独立映射复核、完整语义抽取、别名规则和运行 provenance 尚未验收。
+本次未改 gold、B evaluator 或提示词，未读取预留评测数据，未 commit/push。

@@ -4,7 +4,12 @@
 下文 v4 保留为开发历史；2026-11-10 已核对完成的 v5 和 B 组评分见
 [`evaluation_notes.md`](evaluation_notes.md)。2026-11-11 查询确认：v7 的 prompt 与 LoRA 两轮
 已完成，结果分别在 `results/replay/b_q1_20_gen_v7/` 和 `results/replay/b_q1_20_gen_v7_lora/`。
-作业号为 12307493、12307492，均使用 A100-SXM4-80GB，退出码为 0；尚未用 B evaluator 评分。
+作业号为 12307493、12307492，均使用 A100-SXM4-80GB，退出码为 0。
+2026-11-12 已用固定 B evaluator `15f0e0246cc91443bd74b477ccee941432794ef6` 补评，
+两轮均退出 0、校验问题 0。`_real` 已确认完整数为 Prompt 37/60、LoRA 42/60；
+分别有 8、10 条声明待复核，整体 UCR 仍为 null，不能按已评分子集直接宣布胜负。
+LoRA 的 long 档 TTFGI 配对中位数比 Wait-All 早 4.25 秒（10 对），short 晚 0.23 秒（10 对）；
+完整回答仍较晚。详细覆盖、时间、版本比较和错误分析见 `evaluation_notes.md` 的 2026-11-12 节。
 运行来自 `results/code_snapshots/replay_gen_q1_20_v7/`，父 commit 为 `9fb9adc`，有未提交改动；
 输入为 `results/inputs/b_debug_q1_20_gold13/` 的 debug 数据，B 来源 commit 待核。
 这些是文字回放开发运行，不是 H100 正式结果；当前代码也不完全等于 v7 快照。

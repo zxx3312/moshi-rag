@@ -12,7 +12,7 @@
 #
 #SBATCH --job-name=a-eval-judge
 #SBATCH --partition=secondary
-# Group account: much higher fair-share priority than the default campusclusterusers.
+# Use the authorized project account; priority depends on partition tier and site policy.
 #SBATCH --account=dilek-ic
 #SBATCH --nodes=1
 #SBATCH --ntasks=1

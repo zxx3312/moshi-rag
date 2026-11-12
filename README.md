@@ -9,7 +9,7 @@
 |---|---|
 | [`CLAUDE.md`](CLAUDE.md) / [`AGENTS.md`](AGENTS.md) | 同一份助手规则；数据隔离、任务前后操作、测试、Git；由用户提交 |
 | [`docs/experiment_spec.md`](docs/experiment_spec.md) | 实验定义、已有约定、暂定参数与待定决定 |
-| [`docs/plan.md`](docs/plan.md) | 各组进度、剩余步骤、验收标准、运行记录 |
+| [`docs/plan.md`](docs/plan.md) | 各组进度、剩余步骤、验收标准、运行记录；含标签组合、评分论文、Wait-All、参数实验、完整评测和语音人评的六项排期 |
 | `docs/proposal.pdf` | Proposal 约定位置；当前缺失，待提供 |
 
 A/B/C 的代码与说明尚在各自分支，位置和版本见 plan。以下保留上游使用说明；研究任务遵守上述项目规则。

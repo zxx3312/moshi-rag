@@ -92,6 +92,10 @@ python3 -m unittest discover -s b_work/eval/tests      # B 分支，原记录 31
   只用 Python 标准库。训练、vLLM、MoshiRAG 相关脚本可用已有依赖。
   新增依赖前问用户。现有代码若违反约束，先报告，不借整理文档擅自重构。
 - GPU 任务一律 `sbatch`，不在登录节点运行模型。
+- 提交使用已授权的 `dilek-ic`；权限、分区 `PriorityTier`、作业数值 Priority 和 QoS 分开核对。
+  不把组账号或 fair-share 值较高直接解释成调度加成，先检查 Slurm 的实际权重。
+  当前观测 `PriorityWeightFairShare=0`，不是永久保证；后续以实时配置为准。
+  没有用户要求时不额外增加正 nice，也不擅自使用未授权的 high/tier1 QoS。
 - 结果写 `a_work/results/<category>/<run_name>/`，不进 git。
   跨分支复制输入放 `a_work/results/inputs/`，记录来源分支、完整 commit 和文件 hash。
 - 不改上游代码 `moshi/`、`rust/`、`client/`，除非任务明确要求。
