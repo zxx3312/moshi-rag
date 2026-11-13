@@ -11,7 +11,7 @@ Edit annotations for data changes. Keep review comments when rebuilding this fil
 | single | bridge | 1 |
 | **Total** | | **30** |
 
-## Q271 — `hotpotqa_5adbe0df554299438c868cc0` (draft)
+## Q271 🚩 — `hotpotqa_5adbe0df554299438c868cc0` (draft)
 
 > Which writer was ordained to priesthood, W. Somerset Maugham or Thomas Merton?
 
@@ -28,7 +28,9 @@ Evidence:
 
 - `d8s2` Thomas Merton [2]: In 1949, he was ordained to the priesthood and given the name Father Louis.
 
-Notes:
+Notes: 检查是否跟拆词器规则一致，d9s0可以按现有规则考虑by_omission排除Maugham，是否需要为另一候选建unit，并支持两边各自推出答案的链路。
+
+- **🚩 逻辑审核（2026-11-11）[中]：** 预设结论只依赖 Merton 一边的事实。Maugham 的定义性介绍 `d9s0`（'British playwright, novelist and short story writer'）按 guide v1.3 可以用 by_omission 排除他，现有 Notes 不认可这一点，需要审核者决定。SFT 数据对这类题是每个候选各建一个事实 unit。
 
 - The positive ordination statement identifies the unique named writer. A missing ordination in Maugham's definition is not negative evidence.
 
@@ -57,7 +59,7 @@ Notes:
 - `d7s1` St. Joseph's Intermediate and Commercial School [1]: The school was later renamed to Thomas Merton Academy (Thomas Merton, TMA, or Merton) in 1985 after the Anglo-American monk Thomas Merton.
 - `d8s0` Thomas Merton [0]: Thomas Merton, O.C.S.O. (January 31, 1915 – December 10, 1968) was an American Catholic writer, theologian and mystic.
 - `d8s1` Thomas Merton [1]: A Trappist monk of the Abbey of Gethsemani, Kentucky, he was a poet, social activist, and student of comparative religion.
-- `d8s2` Thomas Merton [2]: In 1949, he was ordained to the priesthood and given the name Father Louis.
+- ★u1 `d8s2` Thomas Merton [2]: In 1949, he was ordained to the priesthood and given the name Father Louis.
 - `d9s0` W. Somerset Maugham [0]: William Somerset Maugham CH ( ; 25 January 1874 – 16 December 1965), better known as W. Somerset Maugham, was a British playwright, novelist and short story writer.
 - `d9s1` W. Somerset Maugham [1]: He was among the most popular writers of his era and reputedly the highest-paid author during the 1930s.
 - `d10s0` Trio (film) [0]: Trio (also known as W. Somerset Maugham's Trio) is a 1950 British anthology film based on three short stories by W. Somerset Maugham: "The Verger", "Mr. Know-All" and "Sanatorium".
@@ -106,7 +108,7 @@ Notes:
 - `d4s1` István Tisza [1]: The prominent event in his life was Austria-Hungary's entry into the First World War when he was prime minister for the second time.
 - `d4s2` István Tisza [2]: He was later assassinated during the Chrysanthemum Revolution on 31 October 1918 - the same day that Hungary terminated its political union with Austria.
 - `d4s3` István Tisza [3]: Tisza supported the dual monarchy of Austria-Hungary and was representative of the then "liberal-conservative consent".
-- `d5s0` McKinley Tariff [0]: The Tariff Act of 1890, commonly called the McKinley Tariff, was an act of the United States Congress framed by Representative William McKinley that became law on October 1, 1890.
+- ★u1 `d5s0` McKinley Tariff [0]: The Tariff Act of 1890, commonly called the McKinley Tariff, was an act of the United States Congress framed by Representative William McKinley that became law on October 1, 1890.
 - `d5s1` McKinley Tariff [1]: The tariff raised the average duty on imports to almost fifty percent, an act designed to protect domestic industries from foreign competition.
 - `d5s2` McKinley Tariff [2]: Protectionism, a tactic supported by Republicans, was fiercely debated by politicians and condemned by Democrats.
 - `d5s3` McKinley Tariff [3]: The McKinley Tariff was replaced with the Wilson–Gorman Tariff Act in 1894, which promptly lowered tariff rates.
@@ -123,14 +125,14 @@ Notes:
 - `d8s2` Dingley Act [2]: 151 , July 24, 1897), introduced by U.S. Representative Nelson Dingley, Jr., of Maine, raised tariffs in United States to counteract the Wilson–Gorman Tariff Act of 1894, which had lowered rates.
 - `d8s3` Dingley Act [3]: Came into effect under William McKinley the first year that he was in office.
 - `d8s4` Dingley Act [4]: The McKinley administration wanted to slowly bring back the protectionism that was proposed by the Tariff of 1890.
-- `d9s0` William McKinley [0]: William McKinley (January 29, 1843 – September 14, 1901) was the 25th President of the United States from March 4, 1897 until his assassination in September 1901, six months into his second term.
+- ★u2 `d9s0` William McKinley [0]: William McKinley (January 29, 1843 – September 14, 1901) was the 25th President of the United States from March 4, 1897 until his assassination in September 1901, six months into his second term.
 - `d9s1` William McKinley [1]: McKinley led the nation to victory in the Spanish–American War, raised protective tariffs to promote American industry, and maintained the nation on the gold standard in a rejection of inflationary proposals.
 - `d10s0` Thomas Bowman (Iowa politician) [0]: Thomas Bowman (May 25, 1848 – December 1, 1917) was a local official, newspaper publisher, and one-term Democratic U.S. Representative from Iowa's 9th congressional district.
 - `d10s1` Thomas Bowman (Iowa politician) [1]: Benefiting from an electoral backlash in 1890 against Republicans for their support of the McKinley Tariff, Bowman's election was a rare nineteenth century Democratic win in traditionally Republican southwestern Iowa.
 
 </details>
 
-## Q273 — `hotpotqa_5adcdea85542992c1e3a2441` (draft)
+## Q273 🚩 — `hotpotqa_5adcdea85542992c1e3a2441` (draft)
 
 > What film adaptation do both Jerome Bernard and Ira Lewis have in common?
 
@@ -149,7 +151,9 @@ Evidence:
 - `d4s1` Ira Lewis [1]: Lewis was best known for his one-act play, "Chinese Coffee", which opened at the Circle in the Square Theatre in 1992, starring Al Pacino.
 - `d4s2` Ira Lewis [2]: A film adaptation of "Chinese Coffee", also starring Pacino, as well as Jerry Orbach, was released in 2000.
 
-Notes:
+Notes: 能不能调换顺序，先从Ira Lewis的作品找到电影和演员，再核对Jerome Bernard的姓名？只凭这个部分姓名不能唯一选Orbach，如果调整后仍不合理就换一道题。另外d8s0是社会学家，不符合旧审核中“actor”的描述。
+
+- **🚩 逻辑审核（2026-11-11）[中]：** u1 'actor identified by the name Jerome Bernard' 不唯一：`d3s0` Orbach、`d1s0` Gerome Ragni（本名 Jerome Bernard Ragni）、`d8s0` Jerome Karabel 都符合。gold 选 Orbach 只是因为他能通向答案。
 
 
 <details><summary>All source context</summary>
@@ -158,10 +162,10 @@ Notes:
 - `d2s0` Les Misérables (1934 film) [0]: Les Misérables is a 1934 film adaptation of Victor Hugo's novel of the same name.
 - `d2s1` Les Misérables (1934 film) [1]: It was written and directed by Raymond Bernard and stars Harry Baur as Jean Valjean and Charles Vanel as Javert.
 - `d2s2` Les Misérables (1934 film) [2]: The film lasts four and a half hours and is considered by critics to be the greatest adaptation of the novel, due to its in-depth development of the themes and characters in comparison with most shorter adaptations.
-- `d3s0` Jerry Orbach [0]: Jerome Bernard "Jerry" Orbach (October 20, 1935 – December 28, 2004) was an American actor and singer, described at the time of his death as "one of the last" bona fide" leading men of the Broadway musical and global celebrity on television" and a "versatile stage and film actor".
+- ★u1 `d3s0` Jerry Orbach [0]: Jerome Bernard "Jerry" Orbach (October 20, 1935 – December 28, 2004) was an American actor and singer, described at the time of his death as "one of the last" bona fide" leading men of the Broadway musical and global celebrity on television" and a "versatile stage and film actor".
 - `d4s0` Ira Lewis [0]: Ira Lewis Metsky (27 August 1932 — 4 April 2015) was an American actor, writer, and playwright.
-- `d4s1` Ira Lewis [1]: Lewis was best known for his one-act play, "Chinese Coffee", which opened at the Circle in the Square Theatre in 1992, starring Al Pacino.
-- `d4s2` Ira Lewis [2]: A film adaptation of "Chinese Coffee", also starring Pacino, as well as Jerry Orbach, was released in 2000.
+- ★u2 `d4s1` Ira Lewis [1]: Lewis was best known for his one-act play, "Chinese Coffee", which opened at the Circle in the Square Theatre in 1992, starring Al Pacino.
+- ★u2 `d4s2` Ira Lewis [2]: A film adaptation of "Chinese Coffee", also starring Pacino, as well as Jerry Orbach, was released in 2000.
 - `d4s3` Ira Lewis [3]: Ira Lewis wrote the film's screenplay, while Pacino directed the adaptation.
 - `d5s0` Never Gonna Dance [0]: Never Gonna Dance is a Broadway musical featuring the music of Jerome Kern.
 - `d5s1` Never Gonna Dance [1]: The musical was based on the 1936 Fred Astaire/Ginger Rogers film "Swing Time".
@@ -210,14 +214,14 @@ Evidence:
 - `d2s0` J. Edgar Hoover [0]: John Edgar Hoover (January 1, 1895 – May 2, 1972), better known as J. Edgar Hoover, was the first Director of the Federal Bureau of Investigation (FBI) of the United States.
 - `d2s1` J. Edgar Hoover [1]: He was appointed as the fifth director of the Bureau of Investigation — the FBI's predecessor — in 1924 and was instrumental in founding the FBI in 1935, where he remained director until his death in 1972 at the age of 77.
 
-Notes:
+Notes: full name不需要单独作为一跳，可以接受FBI作为答案；但1935年成立是题干的筛选条件，需要检查是否仍要验证d2s1。另检查d4s0能否作为u1的备选，是否符合拆词器逻辑。
 
 
 <details><summary>All source context</summary>
 
-- `d1s0` FBI Ten Most Wanted Fugitives by year, 1960 [0]: In 1960, the United States FBI, under Director J. Edgar Hoover, continued for an eleventh year to maintain a public list of the people it regarded as the Ten Most Wanted Fugitives.
-- `d2s0` J. Edgar Hoover [0]: John Edgar Hoover (January 1, 1895 – May 2, 1972), better known as J. Edgar Hoover, was the first Director of the Federal Bureau of Investigation (FBI) of the United States.
-- `d2s1` J. Edgar Hoover [1]: He was appointed as the fifth director of the Bureau of Investigation — the FBI's predecessor — in 1924 and was instrumental in founding the FBI in 1935, where he remained director until his death in 1972 at the age of 77.
+- ★u1 `d1s0` FBI Ten Most Wanted Fugitives by year, 1960 [0]: In 1960, the United States FBI, under Director J. Edgar Hoover, continued for an eleventh year to maintain a public list of the people it regarded as the Ten Most Wanted Fugitives.
+- ★u2 `d2s0` J. Edgar Hoover [0]: John Edgar Hoover (January 1, 1895 – May 2, 1972), better known as J. Edgar Hoover, was the first Director of the Federal Bureau of Investigation (FBI) of the United States.
+- ★u2 `d2s1` J. Edgar Hoover [1]: He was appointed as the fifth director of the Bureau of Investigation — the FBI's predecessor — in 1924 and was instrumental in founding the FBI in 1935, where he remained director until his death in 1972 at the age of 77.
 - `d2s2` J. Edgar Hoover [2]: Hoover has been credited with building the FBI into a larger crime-fighting agency than it was at its inception and with instituting a number of modernizations to police technology, such as a centralized fingerprint file and forensic laboratories.
 - `d3s0` Civil forfeiture in the United States [0]: Civil forfeiture in the United States, also called civil asset forfeiture or civil judicial forfeiture or occasionally civil seizure, is a controversial legal process in which law enforcement officers take assets from persons suspected of involvement with crime or illegal activity without necessarily charging the owners with wrongdoing.
 - `d3s1` Civil forfeiture in the United States [1]: While civil procedure, as opposed to criminal procedure, generally involves a dispute between two private citizens, civil forfeiture involves a dispute between law enforcement and "property" such as a pile of cash or a house or a boat, such that the thing is suspected of being involved in a crime.
@@ -288,9 +292,9 @@ Notes:
 - `d3s2` X-Men: Days of Future Past [2]: The story, inspired by the 1981 "Uncanny X-Men" storyline "Days of Future Past" by Chris Claremont and John Byrne, focuses on two time periods, with Wolverine traveling back in time to 1973 to change history and prevent an event that results in doom for both humans and mutants.
 - `d3s3` X-Men: Days of Future Past [3]: The film features an ensemble cast, including Hugh Jackman, James McAvoy, Michael Fassbender, Jennifer Lawrence, Halle Berry, Anna Paquin, Ellen Page, Peter Dinklage, Ian McKellen and Patrick Stewart.
 - `d3s4` X-Men: Days of Future Past [4]: Simon Kinberg wrote the screenplay from a story conceived by Jane Goldman, himself, and Matthew Vaughn.
-- `d4s0` X-Men: God Loves, Man Kills [0]: X-Men: God Loves, Man Kills ("Marvel Graphic Novel" #5) is an original graphic novel published in 1982 by Marvel Comics, starring their popular superhero team the X-Men.
-- `d4s1` X-Men: God Loves, Man Kills [1]: It was written by Chris Claremont and illustrated by Brent Anderson.
-- `d4s2` X-Men: God Loves, Man Kills [2]: The book was the basis for the film "X2".
+- ★u2 `d4s0` X-Men: God Loves, Man Kills [0]: X-Men: God Loves, Man Kills ("Marvel Graphic Novel" #5) is an original graphic novel published in 1982 by Marvel Comics, starring their popular superhero team the X-Men.
+- ★u3 `d4s1` X-Men: God Loves, Man Kills [1]: It was written by Chris Claremont and illustrated by Brent Anderson.
+- ★u2 `d4s2` X-Men: God Loves, Man Kills [2]: The book was the basis for the film "X2".
 - `d5s0` X-Men (film) [0]: X-Men is a 2000 American superhero film based on the Marvel Comics superhero team of the same name, distributed by 20th Century Fox.
 - `d5s1` X-Men (film) [1]: The film, directed by Bryan Singer and written by David Hayter, features an ensemble cast that includes Hugh Jackman, Patrick Stewart, Ian McKellen, Halle Berry, Famke Janssen, James Marsden, Bruce Davison, Rebecca Romijn-Stamos, Ray Park, Tyler Mane, and Anna Paquin.
 - `d5s2` X-Men (film) [2]: It depicts a world in which a small proportion of people are mutants, whose possession of superhuman powers makes them distrusted by normal humans.
@@ -306,9 +310,9 @@ Notes:
 - `d8s1` X-Men: Apocalypse [1]: It is the ninth installment in the "X-Men" film series and a sequel to "".
 - `d8s2` X-Men: Apocalypse [2]: Directed by Bryan Singer, with a screenplay by Simon Kinberg from a story conceived by Singer, Kinberg, Michael Dougherty and Dan Harris, the film stars James McAvoy, Michael Fassbender, Jennifer Lawrence, Oscar Isaac, Nicholas Hoult, Rose Byrne, Tye Sheridan, Sophie Turner, Olivia Munn and Lucas Till.
 - `d8s3` X-Men: Apocalypse [3]: The ancient mutant En Sabah Nur awakens in 1983 and plans to wipe out modern civilization and take over the world, leading the X-Men to try to stop him and defeat his team of renegade mutants.
-- `d9s0` X2 (film) [0]: X2 (often promoted as X2: X-Men United and internationally as X-Men 2) is a 2003 American superhero film based on the X-Men superhero team appearing in Marvel Comics.
+- ★u1 `d9s0` X2 (film) [0]: X2 (often promoted as X2: X-Men United and internationally as X-Men 2) is a 2003 American superhero film based on the X-Men superhero team appearing in Marvel Comics.
 - `d9s1` X2 (film) [1]: It is the sequel to 2000's "X-Men", and the second installment in the "X-Men" film series.
-- `d9s2` X2 (film) [2]: The film was directed by Bryan Singer, written by Michael Dougherty, Dan Harris, and David Hayter, and features an ensemble cast including Hugh Jackman, Patrick Stewart, Ian McKellen, Halle Berry, Famke Janssen, James Marsden, Rebecca Romijn-Stamos, Brian Cox, Alan Cumming, Bruce Davison, Shawn Ashmore, Aaron Stanford, Kelly Hu, and Anna Paquin.
+- ★u1 `d9s2` X2 (film) [2]: The film was directed by Bryan Singer, written by Michael Dougherty, Dan Harris, and David Hayter, and features an ensemble cast including Hugh Jackman, Patrick Stewart, Ian McKellen, Halle Berry, Famke Janssen, James Marsden, Rebecca Romijn-Stamos, Brian Cox, Alan Cumming, Bruce Davison, Shawn Ashmore, Aaron Stanford, Kelly Hu, and Anna Paquin.
 - `d9s3` X2 (film) [3]: The plot, inspired by the graphic novel "", pits the X-Men and their enemies, the Brotherhood, against the genocidal Colonel William Stryker (Brian Cox).
 - `d9s4` X2 (film) [4]: He leads an assault on Professor Xavier's school to build his own version of Xavier's mutant-tracking computer Cerebro, in order to destroy every mutant on Earth and to save the human race from them.
 - `d10s0` X-Men: First Class [0]: X-Men: First Class (stylized onscreen as X: First Class) is a 2011 American superhero film, based on the X-Men characters appearing in Marvel Comics.
@@ -336,7 +340,7 @@ Evidence:
 
 - `d3s0` A Cure for Wellness [0]: A Cure for Wellness is a 2016 science fiction psychological horror
 
-Notes:
+Notes: 题目看起来是yes/no，d3s0已经明确说明是science fiction，可以把答案改成yes，原来的年份和类型片段作为说明，检查答案格式是否跟拆词器一致。
 
 - The source gives a genre fragment. The question appears to ask yes/no, while its answer repeats a year and genre phrase. Review the target answer format.
 - Source check: `question_and_answer_form`.
@@ -350,7 +354,7 @@ Notes:
 - `d2s1` Severna Park (writer) [1]: Her first novel, "Speaking Dreams" from 1992, was a Lambda Literary Award nominee.
 - `d2s2` Severna Park (writer) [2]: She now writes mainstream fiction.
 - `d2s3` Severna Park (writer) [3]: Employed as a teacher, she lives with her partner of twenty-five years in Maryland.
-- `d3s0` A Cure for Wellness [0]: A Cure for Wellness is a 2016 science fiction psychological horror
+- ★u1 `d3s0` A Cure for Wellness [0]: A Cure for Wellness is a 2016 science fiction psychological horror
 - `d4s0` Starship Highlander [0]: Raumschiff Highlander (translated: Starship Highlander) is a fan-created science fiction film and novel series.
 - `d4s1` Starship Highlander [1]: The series was initiated in 1993 by Robert Amper.
 - `d4s2` Starship Highlander [2]: Originally, a fan club of science fiction, especially for "" (aka "ST:TOS" or just "TOS"), and the Star Wars movies, whose members met regularly.
@@ -389,7 +393,7 @@ Notes:
 
 </details>
 
-## Q277 — `hotpotqa_5ade18df5542990dbb2f7f53` (draft)
+## Q277 🚩 — `hotpotqa_5ade18df5542990dbb2f7f53` (draft)
 
 > Which television network that aired Gameshow Marathon has been owned by the Bell Media division of BCE, Inc since 2000?
 
@@ -407,7 +411,9 @@ Evidence:
 - `d3s2` Gameshow Marathon (U.S. TV series) [2]: It also aired in Canada on CTV.
 - `d8s1` CTV Television Network [1]: Since 2000 it is owned by the Bell Media division of BCE, Inc. It is Canada's largest privately or commercially owned network, and has consistently been placed as Canada's top-rated network in total viewers and in key demographics since 2002, after several years trailing the rival Global Television Network in key markets.
 
-Notes:
+Notes: 能不能调换顺序，先用d8s1确定符合所有权条件的CTV，再用d3s2验证播出了Gameshow Marathon？去掉u1里题干没有的Canadian，避免从CBS和CTV中事后挑选。
+
+- **🚩 逻辑审核（2026-11-11）[中]：** u1 的描述加了题目里没有的 'Canadian'。去掉它，Gameshow Marathon 在 CBS（`d3s0`）和 CTV（`d3s2`）都播出过，u1 不唯一；'Canadian' 是事后加的。
 
 
 <details><summary>All source context</summary>
@@ -418,7 +424,7 @@ Notes:
 - `d2s0` Bell Media Radio [0]: Bell Media Radio is the Canadian radio broadcasting division of Bell Media which is owned by BCE Inc. The division owns the bulk of the radio properties owned by CHUM Limited in 2007 when it was purchased by CTVglobemedia (now Bell Media), and Astral Media when it was purchased by Bell in 2013.
 - `d3s0` Gameshow Marathon (U.S. TV series) [0]: Game$how Marathon is an American television program which aired on CBS from May 31, 2006 to June 29, 2006.
 - `d3s1` Gameshow Marathon (U.S. TV series) [1]: It is based on the United Kingdom series "Ant & Dec's Gameshow Marathon" which aired on ITV in 2005.
-- `d3s2` Gameshow Marathon (U.S. TV series) [2]: It also aired in Canada on CTV.
+- ★u1 `d3s2` Gameshow Marathon (U.S. TV series) [2]: It also aired in Canada on CTV.
 - `d4s0` Card Sharks [0]: Card Sharks is an American television game show created by Chester Feldman for Mark Goodson-Bill Todman Productions.
 - `d4s1` Card Sharks [1]: Based on the card game Acey Deucey, the game has two contestants compete for control of a row of oversized playing cards by answering questions posed by the host and then guessing if the next card is higher or lower in value than the previous one.
 - `d4s2` Card Sharks [2]: The concept has been made into a series four separate times since its debut in 1978, and also appeared as part of CBS's "Gameshow Marathon".
@@ -434,7 +440,7 @@ Notes:
 - `d7s1` The Sports Network [1]: Established by the Labatt Brewing Company in 1984 as part of the first group of Canadian specialty cable channels, since 2001, TSN has been majority-owned by communications conglomerate Bell Canada (presently through its broadcasting subsidiary Bell Media) with a minority stake held by ESPN Inc. via a 20% share in the Bell Media subsidiary CTV Specialty Television.
 - `d7s2` The Sports Network [2]: TSN is the largest specialty channel in Canada in terms of gross revenue, with a total of $400.4 million in revenue in 2013.
 - `d8s0` CTV Television Network [0]: CTV is an English-language broadcast television network in Canada launched in 1961.
-- `d8s1` CTV Television Network [1]: Since 2000 it is owned by the Bell Media division of BCE, Inc. It is Canada's largest privately or commercially owned network, and has consistently been placed as Canada's top-rated network in total viewers and in key demographics since 2002, after several years trailing the rival Global Television Network in key markets.
+- ★u2 `d8s1` CTV Television Network [1]: Since 2000 it is owned by the Bell Media division of BCE, Inc. It is Canada's largest privately or commercially owned network, and has consistently been placed as Canada's top-rated network in total viewers and in key demographics since 2002, after several years trailing the rival Global Television Network in key markets.
 - `d9s0` Bell Media [0]: Bell Media Inc. ("French": Bell Média) is the mass media subsidiary of BCE Inc. (also known as Bell Canada Enterprises, the parent company of the former telephone monopoly Bell Canada).
 - `d9s1` Bell Media [1]: Its operations include television broadcasting and production (including the CTV and CTV Two television networks), radio broadcasting (through Bell Media Radio), digital media (including CraveTV) and Internet properties including Sympatico.
 - `d9s2` Bell Media [2]: ca.
@@ -479,7 +485,7 @@ Notes:
 - `d2s1` Bert Leedy Round Barn [1]: Built in 1924, it was listed on the National Register of Historic Places in 1993.
 - `d2s2` Bert Leedy Round Barn [2]: The listing was consistent with terms of a National Park Service "Multiple Property Documentation" study on "Round and Polygonal Barns of Indiana" that was prepared in 1991.
 - `d2s3` Bert Leedy Round Barn [3]: The Round Barn was moved to its current site, an open-air museum, in 1989 after it was struck by a tornado.
-- `d3s0` Kent Dairy Round Barn [0]: The Kent Dairy Round Barn near Red Lodge, Montana is a round barn that was built during 1939-1941 and is believed to be one of the last round dairy barns built in the United States.
+- ★u1 `d3s0` Kent Dairy Round Barn [0]: The Kent Dairy Round Barn near Red Lodge, Montana is a round barn that was built during 1939-1941 and is believed to be one of the last round dairy barns built in the United States.
 - `d3s1` Kent Dairy Round Barn [1]: It has an adjoining rectangular milkhouse.
 - `d3s2` Kent Dairy Round Barn [2]: The barn was built under supervision of master barn builder, Emery McNamee, by Ephraim Kent and sons Armas, Harry, James, Leo, and Waino.
 - `d4s0` James Bruce Round Barn [0]: The James Bruce Round Barn is a round barn located near the Stephenson County, Illinois city of Freeport, United States.
@@ -496,7 +502,7 @@ Notes:
 - `d6s2` Virginia Tillery Round Barn [2]: With a 36 ft diameter, the barn is relatively small for an Illinois round barn; the median diameter of Illinois round barns was 60 ft .
 - `d6s3` Virginia Tillery Round Barn [3]: Its size suggests that it served as a general-purpose barn, not a dairy barn like the state's larger round barns.
 - `d6s4` Virginia Tillery Round Barn [4]: Brown tile blocks were used to build the barn, which is topped by a wood shingle roof with a cupola.
-- `d7s0` Red Lodge, Montana [0]: Red Lodge is a city in and the county seat of Carbon County, Montana, United States.
+- ★u2 `d7s0` Red Lodge, Montana [0]: Red Lodge is a city in and the county seat of Carbon County, Montana, United States.
 - `d7s1` Red Lodge, Montana [1]: It is part of the Billings Metropolitan Statistical Area.
 - `d7s2` Red Lodge, Montana [2]: The population was 2,125 at the United States Census, 2010.
 - `d8s0` University of Illinois round barns [0]: The three University of Illinois round barns played a special role in the promotion and popularity of the American round barn.
@@ -540,14 +546,14 @@ Evidence:
 - `d1s0` Stanford University [0]: Stanford University (Stanford; officially Leland Stanford Junior University, colloquially the Farm) is a private research university in Stanford, California, adjacent to Palo Alto and between San Jose and San Francisco.
 - `d7s0` Rice University [0]: Rice University, officially William Marsh Rice University, is a private research university located on a 295-acre campus in Houston, Texas, United States.
 
-Notes:
+Notes: 与Q270一样，检查地理方位比较是否符合拆词器规则。如果只给地点无法推出谁更西且没有其他support，就换一道题。
 
 - The excerpts give locations but no longitude or relative westward position. No geographic fact is added to the visible evidence.
 - Source check: `longitude_evidence_missing`.
 
 <details><summary>All source context</summary>
 
-- `d1s0` Stanford University [0]: Stanford University (Stanford; officially Leland Stanford Junior University, colloquially the Farm) is a private research university in Stanford, California, adjacent to Palo Alto and between San Jose and San Francisco.
+- ★u2 `d1s0` Stanford University [0]: Stanford University (Stanford; officially Leland Stanford Junior University, colloquially the Farm) is a private research university in Stanford, California, adjacent to Palo Alto and between San Jose and San Francisco.
 - `d1s1` Stanford University [1]: Stanford's undergraduate program is the most selective in America.
 - `d1s2` Stanford University [2]: Due to its academic strength, wealth, and proximity to Silicon Valley it is often cited as one of the world's most prestigious universities.
 - `d2s0` Digital Media Academy [0]: Digital Media Academy (commonly referred to as "DMA") is a digital art and technology training company, located in Los Gatos, CA, offering Stanford University Continuing Studies accredited courses for adults as well as summer camp programs for kids, age 6-18, tech camps at several universities in the US and Canada.
@@ -573,7 +579,7 @@ Notes:
 - `d6s6` Education Program for Gifted Youth [6]: The EPGY courses themselves were offered by a number of institutions including Stanford and Johns Hopkins.
 - `d6s7` Education Program for Gifted Youth [7]: Currently, the individualized online courses are available through GiftedandTalented.com.
 - `d6s8` Education Program for Gifted Youth [8]: The residential programs housed at Stanford University continue to be offered through Stanford Pre-Collegiate Studies.
-- `d7s0` Rice University [0]: Rice University, officially William Marsh Rice University, is a private research university located on a 295-acre campus in Houston, Texas, United States.
+- ★u1 `d7s0` Rice University [0]: Rice University, officially William Marsh Rice University, is a private research university located on a 295-acre campus in Houston, Texas, United States.
 - `d7s1` Rice University [1]: The university is situated near the Houston Museum District and is adjacent to the Texas Medical Center.
 - `d7s2` Rice University [2]: Rice is generally considered the top university and the most selective institution of higher education in the state of Texas.
 - `d8s0` Helen Redfield [0]: Helen Redfield (born May 5, 1900 in Archbold, Ohio, died 1988), was an American geneticist.
@@ -614,7 +620,7 @@ Evidence:
 - `d1s3` BBC [3]: The total number of staff is 35,402 when part-time, flexible, and fixed contract staff are included.
 - `d2s0` HyperNormalisation [0]: HyperNormalisation is a 2016 BBC documentary by British filmmaker Adam Curtis.
 
-Notes:
+Notes: 检查d2s2是否也可以作为u1的support，题干问的是发布该片的广播机构，这句直接写了在BBC iPlayer发布；如需从平台对应到BBC，可以与d2s0组合。
 
 - The number belongs to the source snapshot. It is not a current staffing claim.
 
@@ -623,8 +629,8 @@ Notes:
 - `d1s0` BBC [0]: The British Broadcasting Corporation (BBC) is a British public service broadcaster with its headquarters at Broadcasting House in London.
 - `d1s1` BBC [1]: The BBC is the world's oldest national broadcasting organisation and the largest broadcaster in the world by number of employees.
 - `d1s2` BBC [2]: It employs over 20,950 staff in total, 16,672 of whom are in public sector broadcasting.
-- `d1s3` BBC [3]: The total number of staff is 35,402 when part-time, flexible, and fixed contract staff are included.
-- `d2s0` HyperNormalisation [0]: HyperNormalisation is a 2016 BBC documentary by British filmmaker Adam Curtis.
+- ★u2 `d1s3` BBC [3]: The total number of staff is 35,402 when part-time, flexible, and fixed contract staff are included.
+- ★u1 `d2s0` HyperNormalisation [0]: HyperNormalisation is a 2016 BBC documentary by British filmmaker Adam Curtis.
 - `d2s1` HyperNormalisation [1]: In the film, Curtis argues that since the 1970s, governments, financiers, and technological utopians have given up on the complex "real world" and built a simple "fake world" that is run by corporations and kept stable by politicians.
 - `d2s2` HyperNormalisation [2]: The film was released on 16 October 2016 on the BBC iPlayer.
 - `d3s0` The One (company) [0]: The One Total Home Experience, stylized THE One, is a furniture retail company founded by Swedish entrepreneur and philanthropist Thomas Lundgren.
@@ -723,9 +729,9 @@ Notes:
 - `d1s2` Eragrostis intermedia [2]: Its range may extend to South America.
 - `d2s0` Eragrostis curvula [0]: Eragrostis curvula is a species of grass known by the common name weeping lovegrass.
 - `d2s1` Eragrostis curvula [1]: Other common names include Boer lovegrass, curved lovegrass, Catalina lovegrass, and African lovegrass.
-- `d3s0` Rhexia [0]: Rhexia is a plant genus of Melastomataceae (ca. 4500 species in 150 genera) family.
+- ★u2 `d3s0` Rhexia [0]: Rhexia is a plant genus of Melastomataceae (ca. 4500 species in 150 genera) family.
 - `d3s1` Rhexia [1]: "Rhexia" species are commonly called “meadow beauty” and 11 to 13 species of "Rhexia" have been recognized depending on different taxonomic treatments.
-- `d4s0` Eragrostis [0]: Eragrostis is a large and widespread genus of plants in the grass family, found in many countries on all inhabited continents and many islands.
+- ★u1 `d4s0` Eragrostis [0]: Eragrostis is a large and widespread genus of plants in the grass family, found in many countries on all inhabited continents and many islands.
 - `d5s0` Cyperus eragrostis [0]: Cyperus eragrostis is a species of sedge known by several common names, including tall flatsedge, nutgrass, tall nutgrass, umbrella sedge, chufa, Earth almond, zula nuts, edible galingale and pale galingale.
 - `d6s0` Hawaiian tropical low shrublands [0]: The Hawaiian tropical low shrublands are a tropical savanna ecoregion in the Hawaiian Islands.
 - `d6s1` Hawaiian tropical low shrublands [1]: These shrublands cover an area of 1500 km2 in the leeward lowlands of the main islands and most of the smaller islands, including the Northwestern Hawaiian Islands.
@@ -770,7 +776,7 @@ Evidence:
 - `d2s0` Sidney Lumet [0]: Sidney Arthur Lumet ( ; June 25, 1924 – April 9, 2011) was an American director, producer and screenwriter with over 50 films to his credit.
 - `d9s0` Albert Ward (film director) [0]: Albert Ward (1870-1956) was a British screenwriter and film director.
 
-Notes:
+Notes: 两边除了screenwriter也都包含director，检查是否应该同时接受这两个共同职业，不能把director的正确回答判错。按拆词器规则决定是列出共同职业集合还是接受不同的有效答案。
 
 - Screenwriter is the source answer, but director is also shared. Review the accepted answer set before final scoring.
 - Source check: `multiple_shared_occupations`.
@@ -779,7 +785,7 @@ Notes:
 
 - `d1s0` Gotham Independent Film Awards 1998 [0]: The 8th Annual Gotham Independent Film Awards were held on September 23, 1998 and were hosted by Stanley Tucci.
 - `d1s1` Gotham Independent Film Awards 1998 [1]: At the ceremony, Sidney Lumet was honoured with a Career Tribute, Frances McDormand received the Actor Award, Richard LaGravenese was given the Writer Award and David V. Picker was awarded the Producer/Industry Executive Award.
-- `d2s0` Sidney Lumet [0]: Sidney Arthur Lumet ( ; June 25, 1924 – April 9, 2011) was an American director, producer and screenwriter with over 50 films to his credit.
+- ★u1 `d2s0` Sidney Lumet [0]: Sidney Arthur Lumet ( ; June 25, 1924 – April 9, 2011) was an American director, producer and screenwriter with over 50 films to his credit.
 - `d2s1` Sidney Lumet [1]: He was nominated for the Academy Award for Best Director for "12 Angry Men" (1957), "Dog Day Afternoon" (1975), "Network" (1976), and "The Verdict" (1982).
 - `d2s2` Sidney Lumet [2]: He did not win an individual Academy Award, but he did receive an Academy Honorary Award and 14 of his films were nominated for various Oscars, such as "Network", which was nominated for ten, winning four.
 - `d3s0` Night Falls on Manhattan [0]: Night Falls on Manhattan is a 1997 American crime drama film directed by Sidney Lumet, set and filmed on location in New York City.
@@ -808,7 +814,7 @@ Notes:
 - `d8s0` ...One Third of a Nation... [0]: ...One Third of a Nation... is a 1939 American drama film directed by Dudley Murphy and written by Oliver H.P. Garrett and Dudley Murphy.
 - `d8s1` ...One Third of a Nation... [1]: The film stars Sylvia Sidney, Leif Erickson, Myron McCormick, Hiram Sherman, the future director Sidney Lumet and Muriel Hutchison.
 - `d8s2` ...One Third of a Nation... [2]: The film was released on February 10, 1939, by Paramount Pictures.
-- `d9s0` Albert Ward (film director) [0]: Albert Ward (1870-1956) was a British screenwriter and film director.
+- ★u2 `d9s0` Albert Ward (film director) [0]: Albert Ward (1870-1956) was a British screenwriter and film director.
 - `d9s1` Albert Ward (film director) [1]: He also play the role of William Shakespeare in the 1914 biopic of the playwright's career "The Life of Shakespeare".
 - `d10s0` Jean Aurenche [0]: Jean Aurenche (1903–1992) was a French screenwriter.
 - `d10s1` Jean Aurenche [1]: During his career, he wrote 80 films for directors such as René Clément, Bertrand Tavernier, Marcel Carné, Jean Delannoy, Sidney Lumet and Claude Autant Lara.
@@ -845,14 +851,14 @@ Notes:
 - `d2s1` Shrek Forever After (video game) [1]: It was released on May 18, 2010, in North America.
 - `d2s2` Shrek Forever After (video game) [2]: It is the fourth and final video game based on the movie series of "Shrek".
 - `d2s3` Shrek Forever After (video game) [3]: This was also the last Shrek game to be developed by Activison.
-- `d3s0` Catwoman (film) [0]: Catwoman is a 2004 American action superhero film loosely based on the DC Comics character of the same name directed by Pitof, produced by Denise Di Novi and Edward McDonnell, and written by John Rogers, John Brancato and Michael Ferris, with music by Klaus Badelt.
+- ★u2 `d3s0` Catwoman (film) [0]: Catwoman is a 2004 American action superhero film loosely based on the DC Comics character of the same name directed by Pitof, produced by Denise Di Novi and Edward McDonnell, and written by John Rogers, John Brancato and Michael Ferris, with music by Klaus Badelt.
 - `d3s1` Catwoman (film) [1]: It stars Halle Berry, Sharon Stone, Benjamin Bratt, Lambert Wilson, Frances Conroy, and Alex Borstein.
 - `d4s0` Lego Star Wars: The Video Game [0]: Lego Star Wars: The Video Game is a Lego-themed, action-adventure video game based on the Lego Star Wars line of toys, and the first game in TT Games' Lego video game franchise.
 - `d4s1` Lego Star Wars: The Video Game [1]: It was first released on 29 March 2005, and is a video game adaptation of the "Star Wars" prequel trilogy: "" (1999), "" (2002) and "" (2005), with a bonus segment from "A New Hope" (1977).
 - `d5s0` X-Men: The Official Game [0]: X-Men: The Official Game (also known as X3: The Official Game) is Activision's tie-in video game to the 2006 film "".
 - `d5s1` X-Men: The Official Game [1]: The game covers the events of the films "X2" and "", specifically following the characters of Wolverine, Iceman, and Nightcrawler.
 - `d5s2` X-Men: The Official Game [2]: It also bridges the gap between the two films, explaining why Nightcrawler is not present for "The Last Stand", and also introduces new foes to the "X-Men" film canon, such as HYDRA.
-- `d6s0` Catwoman (video game) [0]: Catwoman is an action-adventure tie-in video game based on the 2004 film of the same name based on the fictional character.
+- ★u1 `d6s0` Catwoman (video game) [0]: Catwoman is an action-adventure tie-in video game based on the 2004 film of the same name based on the fictional character.
 - `d6s1` Catwoman (video game) [1]: It features the likeness of the film's lead actress, Halle Berry, though the character's voice is provided by actress Jennifer Hale.
 - `d7s0` Lego Knights' Kingdom [0]: Lego Knights' Kingdom is an action-adventure video game based on the Lego toy brand.
 - `d7s1` Lego Knights' Kingdom [1]: It was developed by Razorback Developments and published in 2004 by THQ for the Game Boy Advance handheld system.
@@ -932,12 +938,12 @@ Notes:
 - `d5s6` Trinidad and Tobago Pro Bowl [6]: With this programme the communities are expected to adopt the clubs and pledge their support to them during the tournament.
 - `d5s7` Trinidad and Tobago Pro Bowl [7]: The prize money will be the amount received from gate receipts and TT$100,000, courtesy of tournament sponsors Digicel.
 - `d6s0` Los Angeles Memorial Coliseum [0]: The Los Angeles Memorial Coliseum is an American sports stadium located in the Exposition Park neighborhood of Los Angeles, California.
-- `d6s1` Los Angeles Memorial Coliseum [1]: The stadium serves as the home to the University of Southern California (USC) Trojans football team, and as the temporary home of the Los Angeles Rams of the National Football League (NFL).
+- ★u2 `d6s1` Los Angeles Memorial Coliseum [1]: The stadium serves as the home to the University of Southern California (USC) Trojans football team, and as the temporary home of the Los Angeles Rams of the National Football League (NFL).
 - `d6s2` Los Angeles Memorial Coliseum [2]: The Coliseum was home to the Rams from 1946 to 1979, when they moved to Anaheim Stadium in Anaheim, California, and is serving as their home stadium again until the completion of Los Angeles Stadium at Hollywood Park in Inglewood, California.
 - `d6s3` Los Angeles Memorial Coliseum [3]: The facility has a permanent seating capacity of 93,607 for USC football games, making it the largest football stadium in the Pac-12 Conference.
 - `d6s4` Los Angeles Memorial Coliseum [4]: For Rams games, capacity is at 93,607, giving it the largest capacity in the NFL.
 - `d7s0` 1958 Pro Bowl [0]: The 1958 Pro Bowl was the NFL's eighth annual all-star game which featured the outstanding performers from the 1957 season.
-- `d7s1` 1958 Pro Bowl [1]: The game was played on January 12, 1958, at the Los Angeles Memorial Coliseum in Los Angeles, California in front of 66,634 fans.
+- ★u1 `d7s1` 1958 Pro Bowl [1]: The game was played on January 12, 1958, at the Los Angeles Memorial Coliseum in Los Angeles, California in front of 66,634 fans.
 - `d7s2` 1958 Pro Bowl [2]: The West squad defeated the East by a score of 26–7.
 - `d8s0` 2013 Trinidad and Tobago Pro Bowl [0]: The 2013 Trinidad and Tobago Pro Bowl was the ninth season of the "Digicel Pro Bowl", which is a knockout football tournament for Trinidad and Tobago teams competing in the TT Pro League.
 - `d8s1` 2013 Trinidad and Tobago Pro Bowl [1]: For the third consecutive season, the Pro Bowl concluded the Pro League calendar.
@@ -985,7 +991,7 @@ Notes:
 - `d2s0` Business waste [0]: Business (or commercial and industrial) waste – cover the commercial waste and industrial waste types .
 - `d2s1` Business waste [1]: Generally, businesses are expected to make their own arrangements for the collection, treatment and disposal of their wastes.
 - `d2s2` Business waste [2]: Waste from smaller shops and trading estates where local authority waste collection agreements are in place will generally be treated as municipal waste.
-- `d3s0` Shikashika [0]: Shikashika is a shaved ice drink made from glacier ice in Peru and Bolivia.
+- ★u2 `d3s0` Shikashika [0]: Shikashika is a shaved ice drink made from glacier ice in Peru and Bolivia.
 - `d3s1` Shikashika [1]: In some rural communities, the extraction and sale of ice continues to be a primary natural resource for local economies.
 - `d3s2` Shikashika [2]: Ice merchants extract the blocks with an axe by hand and transport them down from the mountains atop mules.
 - `d3s3` Shikashika [3]: The unit of sale is usually an ice block weighing approximately 40 kilos which is sold to Shikashika vendors.
@@ -1018,7 +1024,7 @@ Notes:
 - `d7s1` Civic amenity site [1]: Civic amenity sites are run by the local authority in a given area.
 - `d7s2` Civic amenity site [2]: Collection points for recyclable waste such as green waste, metals, glass and other waste types (including WVO) are available.
 - `d7s3` Civic amenity site [3]: Items that cannot be collected by local waste collection schemes such as bulky waste are also provided.
-- `d8s0` Waste Land (film) [0]: Waste Land is a 2010 British-Brazilian documentary film directed by Lucy Walker.
+- ★u1 `d8s0` Waste Land (film) [0]: Waste Land is a 2010 British-Brazilian documentary film directed by Lucy Walker.
 - `d8s1` Waste Land (film) [1]: The film chronicles artist Vik Muniz, who travels to the world's largest landfill, Jardim Gramacho outside Rio de Janeiro, to collaborate with a lively group of catadores of recyclable materials, who find a way to the most prestigious auction house in London via the surprising transformation of refuse into contemporary art.
 - `d8s2` Waste Land (film) [2]: The catadores work in a co-operative founded and led by Sebastião Carlos Dos Santos, the ACAMJG, or Association of Pickers of Jardim Gramacho, who dreamed of improving life for his community.
 - `d8s3` Waste Land (film) [3]: The money created by the selling of the artworks was given back to the catadores and the ACAMJG, as well as the prize money from the film awards, to help the catadores and their community.
@@ -1064,7 +1070,7 @@ Notes:
 
 <details><summary>All source context</summary>
 
-- `d1s0` William Beaudine [0]: William Washington Beaudine (January 15, 1892 – March 18, 1970) was an American film actor and director.
+- ★u1 `d1s0` William Beaudine [0]: William Washington Beaudine (January 15, 1892 – March 18, 1970) was an American film actor and director.
 - `d1s1` William Beaudine [1]: He was one of Hollywood's most prolific directors, turning out films in remarkable numbers and in a wide variety of genres.
 - `d2s0` Penrod and Sam (1931 film) [0]: Penrod and Sam is a 1931 American Pre-Code comedy film directed by William Beaudine and starring Leon Janney and Frank Coghlan Jr. It is an adaptation of the novel "Penrod and Sam" by Booth Tarkington.
 - `d2s1` Penrod and Sam (1931 film) [1]: Beaudine had previously directed a 1923 silent version "Penrod and Sam", and was invited to remake his earlier success.
@@ -1076,7 +1082,7 @@ Notes:
 - `d4s1` Adventures of Kitty O'Day [1]: It was a sequel to the 1944 film "Detective Kitty O'Day".
 - `d4s2` Adventures of Kitty O'Day [2]: The two films were an attempt to create a new detective series but no further films were made.
 - `d4s3` Adventures of Kitty O'Day [3]: A third film, "Fashion Model", also directed by Beaudine, was made using a similar formula but with another actress playing a heroine with a different name.
-- `d5s0` Richard Benjamin [0]: Richard Samuel Benjamin (born May 22, 1938) is an American actor and film director.
+- ★u2 `d5s0` Richard Benjamin [0]: Richard Samuel Benjamin (born May 22, 1938) is an American actor and film director.
 - `d6s0` Boy of Mine [0]: Boy of Mine is a 1923 American silent family drama film directed by William Beaudine.
 - `d6s1` Boy of Mine [1]: It stars Ben Alexander, Rockliffe Fellowes, and Henry B. Walthall.
 - `d6s2` Boy of Mine [2]: Wendy L. Marshall stated that "Beaudine had the Midas touch when it came to directing children" in films like this and "Penrod and Sam".
@@ -1118,7 +1124,7 @@ Evidence:
 
 - `d5s0` Meri Beti [0]: Meri Beti (English: "My Daughter" ) is a Pakistani drama serial that aired on ARY Digital, directed by Badar Mehmood, written by Mohsin Ali and produced by Fahad Mustafa and Ali Kazmi under the banner of Big Bang Entertainment.
 
-Notes:
+Notes: 检查u2是否真的有support，d8s1说的是ARY Group创始人，不能直接等同于ARY Digital创始人。如果没有网络创始人的证据，就换一道题。
 
 - ARY Digital is a subsidiary of ARY Group (d8s0). The founder statement in d8s1 is about the holding company, not explicitly the network.
 - Source check: `parent_company_founder_not_network_founder`.
@@ -1142,7 +1148,7 @@ Notes:
 - `d4s0` Meri Maa (Geo TV) [0]: Meri Maa (Urdu: میری ماں‎ , English "my mother") is a Pakistani drama serial airing on Geo TV is directed by Wajahat Hussain Gilani, written by Kishor Asmal and Raheel Ahmed.
 - `d4s1` Meri Maa (Geo TV) [1]: It is an A & B Productions drama.
 - `d4s2` Meri Maa (Geo TV) [2]: The drama was first aired 22 August 2013 on Geo TV This drama is based on social, tragic and emotional issues of the typical society
-- `d5s0` Meri Beti [0]: Meri Beti (English: "My Daughter" ) is a Pakistani drama serial that aired on ARY Digital, directed by Badar Mehmood, written by Mohsin Ali and produced by Fahad Mustafa and Ali Kazmi under the banner of Big Bang Entertainment.
+- ★u1 `d5s0` Meri Beti [0]: Meri Beti (English: "My Daughter" ) is a Pakistani drama serial that aired on ARY Digital, directed by Badar Mehmood, written by Mohsin Ali and produced by Fahad Mustafa and Ali Kazmi under the banner of Big Bang Entertainment.
 - `d5s1` Meri Beti [1]: The first episode of the drama was first aired on 9 October 2013 starring Arij Fatyma, Sabreen Hisbani and Samina Peerzada in lead roles, and it ended its run on 2 April 2014.
 - `d6s0` Aansoo [0]: Aansoo (English: Tears) was a popular 2000 Pakistani drama which was shown on the Pakistan Television network in 2000.
 - `d6s1` Aansoo [1]: The drama was written by the legendary writer Haseena Moin and directed by Ali Rizvi.
@@ -1168,7 +1174,7 @@ Notes:
 
 </details>
 
-## Q288 — `hotpotqa_5ae1d5a3554299234fd04319` (draft)
+## Q288 🚩 — `hotpotqa_5ae1d5a3554299234fd04319` (draft)
 
 > Which football player that topped the 10,000-yard career rushing mark has played for the New England Patriots?
 
@@ -1186,7 +1192,9 @@ Evidence:
 - `d4s3` Paul Boudreau [3]: Boudreau’s stellar offensive lines over the years have helped pave the way for five running backs to top the 10,000-yard career rushing mark, including Barry Sanders, Curtis Martin, Thurman Thomas, Fred Taylor and Steven Jackson.
 - `d6s0` Curtis Martin [0]: Curtis James Martin Jr. (born May 1, 1973) is a former American football running back who played in the National Football League (NFL) for the New England Patriots and New York Jets.
 
-Notes:
+Notes: 换一道题。Fred Taylor的d5s2+d5s3和Corey Dillon的d7s2+d7s3都符合题干，不能只接受Curtis Martin；调换unit顺序也解决不了答案不唯一。
+
+- **🚩 逻辑审核（2026-11-11）[高]：** 答案不唯一。Fred Taylor 在 `d4s3` 的名单里，`d5s2` 写他效力过 Patriots；Corey Dillon 也突破了 10,000 码（`d7s3`）并效力过 Patriots（`d7s2`）。gold 只接受 Curtis Martin。另外 u1 的值是一个五人名单，不是单一值。
 
 
 <details><summary>All source context</summary>
@@ -1216,13 +1224,13 @@ Notes:
 - `d4s0` Paul Boudreau [0]: Paul T. Boudreau (born December 30, 1949) is an American football coach who last served as offensive line coach for the Los Angeles Rams of the National Football League (NFL).
 - `d4s1` Paul Boudreau [1]: He has served as the offensive line coach for eight different NFL teams, one Canadian Football League (CFL) team, and four college teams.
 - `d4s2` Paul Boudreau [2]: No offensive line coach in the NFL has more experience as an assistant at the professional level than Boudreau, who entered his 29th season in 2015.
-- `d4s3` Paul Boudreau [3]: Boudreau’s stellar offensive lines over the years have helped pave the way for five running backs to top the 10,000-yard career rushing mark, including Barry Sanders, Curtis Martin, Thurman Thomas, Fred Taylor and Steven Jackson.
+- ★u1 `d4s3` Paul Boudreau [3]: Boudreau’s stellar offensive lines over the years have helped pave the way for five running backs to top the 10,000-yard career rushing mark, including Barry Sanders, Curtis Martin, Thurman Thomas, Fred Taylor and Steven Jackson.
 - `d4s4` Paul Boudreau [4]: This is his second stint with the Rams organization, having previously coached them in the 2006 and 2007 seasons.
 - `d5s0` Fred Taylor (American football) [0]: Frederick Antwon Taylor (born January 27, 1976) is a former college and professional American football player who was a running back in the National Football League (NFL) for thirteen seasons during the 1990s and 2000s.
 - `d5s1` Fred Taylor (American football) [1]: He played college football for the University of Florida, and was recognized as an All-American.
 - `d5s2` Fred Taylor (American football) [2]: Taylor was selected by the Jacksonville Jaguars with the ninth overall pick in the 1998 NFL Draft, and played for the Jaguars and New England Patriots of the NFL.
 - `d5s3` Fred Taylor (American football) [3]: Taylor is a member of the 10,000 yard rushing club.
-- `d6s0` Curtis Martin [0]: Curtis James Martin Jr. (born May 1, 1973) is a former American football running back who played in the National Football League (NFL) for the New England Patriots and New York Jets.
+- ★u2 `d6s0` Curtis Martin [0]: Curtis James Martin Jr. (born May 1, 1973) is a former American football running back who played in the National Football League (NFL) for the New England Patriots and New York Jets.
 - `d6s1` Curtis Martin [1]: Martin began his professional career with the Patriots, who selected him in the third round of the 1995 NFL Draft.
 - `d6s2` Curtis Martin [2]: As a free agent in 1998, he joined the Jets where he finished his career in 2006 due to a career-ending knee injury.
 - `d6s3` Curtis Martin [3]: He retired as the fourth leading rusher in NFL history.
@@ -1251,7 +1259,7 @@ Notes:
 
 </details>
 
-## Q289 — `hotpotqa_5ae222ec5542996483e648ff` (draft)
+## Q289 🚩 — `hotpotqa_5ae222ec5542996483e648ff` (draft)
 
 > What production company was co-created by the lead singer of the band Poison?
 
@@ -1269,13 +1277,15 @@ Evidence:
 - `d1s1` Bret Michaels [1]: He gained fame as the lead singer of the glam metal band Poison who have sold over 50 million records worldwide and 15 million records in the United States alone.
 - `d8s0` In God's Hands (film) [0]: In God's Hands (1998) is a film by Zalman King released through "Sheen Michaels Entertainment" a production company created by actor Charlie Sheen and Bret Michaels.
 
-Notes:
+Notes: 加上备选：u1的d3s0、d4s0、d6s0、d7s0、d9s0、d10s1，u2的d9s2。d9s0+d9s2可以走完整链路，不必等原来的两个文档。
+
+- **🚩 逻辑审核（2026-11-11）[中]：** u1 漏了备选证据：`d3s0`、`d4s0`、`d6s0`、`d7s0`、`d9s0`、`d10s1` 都写了 Bret Michaels 是 Poison 的主唱。u2 漏了 `d9s2`（Sheen Michaels Entertainment 'a company created by Bret Michaels and actor Charlie Sheen'）。
 
 
 <details><summary>All source context</summary>
 
 - `d1s0` Bret Michaels [0]: Bret Michael Sychak (born March 15, 1963), professionally known as Bret Michaels, is an American singer-songwriter and musician.
-- `d1s1` Bret Michaels [1]: He gained fame as the lead singer of the glam metal band Poison who have sold over 50 million records worldwide and 15 million records in the United States alone.
+- ★u1 `d1s1` Bret Michaels [1]: He gained fame as the lead singer of the glam metal band Poison who have sold over 50 million records worldwide and 15 million records in the United States alone.
 - `d1s2` Bret Michaels [2]: The band has also charted ten singles to the Top 40 of the "Billboard" Hot 100, including six Top 10 singles and a number-one single, "Every Rose Has Its Thorn".
 - `d2s0` Shut Up, Make Love [0]: "Shut Up, Make Love" is a song by American rock band Poison; released in 2000, it was the first single presented to radio stations from their 2000 "Crack a Smile...and More!
 - `d2s1` Shut Up, Make Love [1]: " album.
@@ -1297,7 +1307,7 @@ Notes:
 - `d6s1` Ballads, Blues &amp; Stories [1]: Released in 2001 it consists of Bret Michaels' solo music and Poison songs, with a recorded story before each song, about how the songs were created and written.
 - `d7s0` A Letter from Death Row (album) [0]: A Letter from Death Row is the debut solo album by Bret Michaels, the lead singer of the rock band Poison.
 - `d7s1` A Letter from Death Row (album) [1]: The album was released August 25, 1998, and is a soundtrack to the movie "A Letter from Death Row" which Bret Michaels wrote, directed and starred in.
-- `d8s0` In God's Hands (film) [0]: In God's Hands (1998) is a film by Zalman King released through "Sheen Michaels Entertainment" a production company created by actor Charlie Sheen and Bret Michaels.
+- ★u2 `d8s0` In God's Hands (film) [0]: In God's Hands (1998) is a film by Zalman King released through "Sheen Michaels Entertainment" a production company created by actor Charlie Sheen and Bret Michaels.
 - `d8s1` In God's Hands (film) [1]: The basic story is of three young surfers on a roller coaster action tour of the globe's most exotic and dangerous surfing spots.
 - `d8s2` In God's Hands (film) [2]: They travel to Madagascar, Mexico, Bali and Hawaii seeking the ultimate wave, a 40-foot force of nature that travels at speeds up to 35 miles per hour.
 - `d9s0` A Letter from Death Row (film) [0]: A Letter From Death Row is a 1998 psychological thriller film directed by Marvin Baker and Bret Michaels, lead singer of the hard rock band Poison.
@@ -1315,7 +1325,7 @@ Notes:
 
 </details>
 
-## Q290 — `hotpotqa_5ae26af3554299492dc91c1c` (draft)
+## Q290 🚩 — `hotpotqa_5ae26af3554299492dc91c1c` (draft)
 
 > Which building is taller Bertelsmann Building or 432 Park Avenue?
 
@@ -1334,7 +1344,9 @@ Evidence:
 - `d3s0` Bertelsmann Building [0]: The former Bertelsmann Building, now known as 1540 Broadway, is a 44-story, 733 foot (223 m) office tower in Times Square in Manhattan, New York City, standing at West 45th Street.
 - `d10s1` 432 Park Avenue [1]: Originally proposed to be 1300 ft in 2011, the structure topped out at 1396 ft .
 
-Notes:
+Notes: 加上d9s3作为u2的备选证据。
+
+- **🚩 逻辑审核（2026-11-11）[中]：** u2 漏了备选证据：`d9s3`（432 Park Avenue 'standing at 1396 ft'）。
 
 - Use the completed 1396-foot height, not the earlier 1300-foot proposal.
 
@@ -1349,7 +1361,7 @@ Notes:
 - `d2s1` 655 Park Avenue [1]: It was developed in 1924 by Dwight P. Robinson & Company.
 - `d2s2` 655 Park Avenue [2]: The building at 655 Park Avenue was designed by architects James Edwin Ruthven Carpenter, Jr., often referred to by the initials "J.E.R. Carpenter", and Mott B. Schmidt.
 - `d2s3` 655 Park Avenue [3]: Carpenter is considered the leading architect for luxury residential high-rise buildings in New York City in the early 1900s, while Schmidt is known for his buildings in the American Georgian Classical style, including Sutton Place and houses for New York City's society figures and business elite.
-- `d3s0` Bertelsmann Building [0]: The former Bertelsmann Building, now known as 1540 Broadway, is a 44-story, 733 foot (223 m) office tower in Times Square in Manhattan, New York City, standing at West 45th Street.
+- ★u1 `d3s0` Bertelsmann Building [0]: The former Bertelsmann Building, now known as 1540 Broadway, is a 44-story, 733 foot (223 m) office tower in Times Square in Manhattan, New York City, standing at West 45th Street.
 - `d3s1` Bertelsmann Building [1]: The building was the North American headquarters of media conglomerate Bertelsmann from 1992 until the company vacated and sold the property, of which they occupied all office-use floors, in 2004.
 - `d3s2` Bertelsmann Building [2]: The building housed US satellites of central functions such as Corporate Development, Corporate Communications and the Office of the Chairman and CEO, as well as serving as worldwide headquarters for the Bertelsmann Music Group and Bertelsmann Book Group (what has later taken on the umbrella brand name Random House).
 - `d3s3` Bertelsmann Building [3]: Today's office tenants include Viacom, China Central Television, KEMP Technologies, Adobe and Pillsbury Winthrop Shaw Pittman.
@@ -1380,7 +1392,7 @@ Notes:
 - `d9s3` List of tallest buildings in New York City [3]: The second-tallest building in the city is 432 Park Avenue, standing at 1396 ft , and the third-tallest is the 102-story Empire State Building in Midtown Manhattan, which was finished in 1931 and rises to 1250 ft , increased to 1454 ft by its antenna.
 - `d9s4` List of tallest buildings in New York City [4]: It is the fifth-tallest building in the United States and the 25th-tallest building in the world.
 - `d10s0` 432 Park Avenue [0]: 432 Park Avenue is a residential skyscraper in New York City that overlooks Central Park.
-- `d10s1` 432 Park Avenue [1]: Originally proposed to be 1300 ft in 2011, the structure topped out at 1396 ft .
+- ★u2 `d10s1` 432 Park Avenue [1]: Originally proposed to be 1300 ft in 2011, the structure topped out at 1396 ft .
 - `d10s2` 432 Park Avenue [2]: It was developed by CIM Group and features 104 condominium apartments.
 - `d10s3` 432 Park Avenue [3]: Construction began in 2012 and was completed on December 23, 2015.
 
@@ -1405,7 +1417,7 @@ Evidence:
 - `d10s0` Forrest Gump [0]: Forrest Gump is a 1994 American comedy-drama film based on the 1986 novel of the same name by Winston Groom.
 - `d10s2` Forrest Gump [2]: The story depicts several decades in the life of Forrest Gump, a slow-witted but kind-hearted, good-natured and athletically prodigious man from Alabama, who witnesses, and in some cases influences, some of the defining events of the latter half of the 20th century in the United States; more specifically, the period between Forrest's birth in 1944 and 1982.
 
-Notes:
+Notes: 检查能否先确定1994年改编电影中的角色，再验证是否是Lichtsteiner的昵称，避免u1先输出两个昵称。另检查d10s0+d2s0能否作为u2的备选，不必固定等d10s2。
 
 
 <details><summary>All source context</summary>
@@ -1436,10 +1448,10 @@ Notes:
 - `d8s2` List of accolades received by Forrest Gump [2]: "Forrest Gump" grossed $677 million and was at its time the fourth highest grossing film of all time (behind only "E.T. the Extra-Terrestrial", "Star Wars IV: A New Hope", and "Jurassic Park").
 - `d8s3` List of accolades received by Forrest Gump [3]: Despite its praise, it has only a 72% approval rating on Rotten Tomatoes.
 - `d9s0` Stephan Lichtsteiner [0]: Stephan Lichtsteiner (born 16 January 1984) is a Swiss professional footballer who plays for Italian club Juventus and the Switzerland national team.
-- `d9s1` Stephan Lichtsteiner [1]: An attacking right-back or wing-back, he is known for his energetic runs down the right wing, as well as his stamina and athleticism, which earned him the nicknames "Forrest Gump" and "The Swiss Express".
-- `d10s0` Forrest Gump [0]: Forrest Gump is a 1994 American comedy-drama film based on the 1986 novel of the same name by Winston Groom.
+- ★u1 `d9s1` Stephan Lichtsteiner [1]: An attacking right-back or wing-back, he is known for his energetic runs down the right wing, as well as his stamina and athleticism, which earned him the nicknames "Forrest Gump" and "The Swiss Express".
+- ★u2 `d10s0` Forrest Gump [0]: Forrest Gump is a 1994 American comedy-drama film based on the 1986 novel of the same name by Winston Groom.
 - `d10s1` Forrest Gump [1]: The film was directed by Robert Zemeckis and stars Tom Hanks, Robin Wright, Gary Sinise, Mykelti Williamson, and Sally Field.
-- `d10s2` Forrest Gump [2]: The story depicts several decades in the life of Forrest Gump, a slow-witted but kind-hearted, good-natured and athletically prodigious man from Alabama, who witnesses, and in some cases influences, some of the defining events of the latter half of the 20th century in the United States; more specifically, the period between Forrest's birth in 1944 and 1982.
+- ★u2 `d10s2` Forrest Gump [2]: The story depicts several decades in the life of Forrest Gump, a slow-witted but kind-hearted, good-natured and athletically prodigious man from Alabama, who witnesses, and in some cases influences, some of the defining events of the latter half of the 20th century in the United States; more specifically, the period between Forrest's birth in 1944 and 1982.
 - `d10s3` Forrest Gump [3]: The film differs substantially from Winston Groom's novel, including Gump's personality and several events that were depicted.
 
 </details>
@@ -1462,7 +1474,7 @@ Evidence:
 
 - `d9s0` Guildford Cathedral [0]: The Cathedral Church of the Holy Spirit, Guildford is the Anglican cathedral at Guildford, Surrey, England.
 
-Notes:
+Notes: 检查这类城市到国家的推理是否符合拆词器规则，d1s0只写London，不能把English Baroque当作所在地证据。如果允许London对应England就补全链路，否则找不到support就换一道题。
 
 - St Paul's excerpt gives London but does not state England. English Baroque names a style, not a country location.
 - Source check: `city_to_country_mapping_missing`.
@@ -1498,7 +1510,7 @@ Notes:
 - `d7s2` Diocese of Guildford [2]: Of the two provinces of the church it falls within the Province of Canterbury.
 - `d8s0` Barry Rose [0]: Barry Michael Rose OBE, FRAM, FRSCM, Hon.D.Mus, Hon.FGCM, Hon FRCO, M.Univ., (Surrey), born 24 May 1934) is a choir trainer and organist.
 - `d8s1` Barry Rose [1]: He is best known for founding the choir and the pattern of daily sung Worship at the new Guildford Cathedral in 1961, and later, on 29 July 1981, directing the music at the wedding of Charles, Prince of Wales and Diana, Princess of Wales formerly Lady Diana Frances Spencer, at St Paul's Cathedral in London.
-- `d9s0` Guildford Cathedral [0]: The Cathedral Church of the Holy Spirit, Guildford is the Anglican cathedral at Guildford, Surrey, England.
+- ★u1 `d9s0` Guildford Cathedral [0]: The Cathedral Church of the Holy Spirit, Guildford is the Anglican cathedral at Guildford, Surrey, England.
 - `d9s1` Guildford Cathedral [1]: The Lord Onslow donated the land on which the Cathedral was built with a covenant for this purpose.
 - `d9s2` Guildford Cathedral [2]: Designed by Sir Edward Maufe and built between 1936 and 1961, it is the seat of the Diocese of Guildford.
 - `d10s0` Katherine Dienes [0]: Katherine Dienes (born 1970) is a New Zealand-born organist, conductor and composer.
@@ -1532,8 +1544,8 @@ Notes:
 
 <details><summary>All source context</summary>
 
-- `d1s0` The Facts Behind the Helsinki Roccamatios [0]: The Facts Behind the Helsinki Roccamatios and Other Stories is a book of short stories by Canadian author Yann Martel.
-- `d1s1` The Facts Behind the Helsinki Roccamatios [1]: First published as a paperback by Knopf Canada in the spring of 1993, it received little attention outside Canada until 2004, after Martel's award-winning "Life of Pi" gained worldwide popularity and people became interested in the author's work.
+- ★u1 `d1s0` The Facts Behind the Helsinki Roccamatios [0]: The Facts Behind the Helsinki Roccamatios and Other Stories is a book of short stories by Canadian author Yann Martel.
+- ★u2 `d1s1` The Facts Behind the Helsinki Roccamatios [1]: First published as a paperback by Knopf Canada in the spring of 1993, it received little attention outside Canada until 2004, after Martel's award-winning "Life of Pi" gained worldwide popularity and people became interested in the author's work.
 - `d2s0` Silvana De Mari [0]: Silvana De Mari is an Italian doctor and children's writer known in the English-speaking world for "The Last Dragon", an award-winning fantasy novel published in English in 2006.
 - `d2s1` Silvana De Mari [1]: As of 2014 it remains the only one of her many books to be translated into English.
 - `d3s0` Watership Down [0]: Watership Down is a fantasy adventure novel by English author Richard Adams, published by Rex Collings Ltd of London in 1972.
@@ -1554,7 +1566,7 @@ Notes:
 - `d8s0` Sofia Samatar [0]: Sofia Samatar (born October 24, 1971) is a Somali American educator, poet and writer.
 - `d8s1` Sofia Samatar [1]: She is an Assistant Professor of English at James Madison University, and serves as a nonfiction and poetry editor for "Interfictions: A Journal of Interstitial Arts".
 - `d8s2` Sofia Samatar [2]: In 2013, she published the award-winning fantasy novel "A Stranger in Olondria".
-- `d9s0` Life of Pi [0]: Life of Pi is a Canadian fantasy adventure novel by Yann Martel published in 2001.
+- ★u2,u3 `d9s0` Life of Pi [0]: Life of Pi is a Canadian fantasy adventure novel by Yann Martel published in 2001.
 - `d9s1` Life of Pi [1]: The protagonist is Piscine Molitor "Pi" Patel, an Indian boy from Pondicherry who explores issues of spirituality and practicality from an early age.
 - `d9s2` Life of Pi [2]: He survives 227 days after a shipwreck while stranded on a lifeboat in the Pacific Ocean with a Bengal tiger named Richard Parker.
 - `d10s0` The Serpent's Shadow (Riordan novel) [0]: The Serpent's Shadow is a 2012 fantasy adventure novel based on Egyptian mythology written by American author Rick Riordan.
@@ -1608,17 +1620,17 @@ Notes:
 - `d4s3` Dark Horse Records [3]: The label was distributed internationally by A&M Records for the first two years of its operation.
 - `d4s4` Dark Horse Records [4]: Following a highly publicised split with A&M, Harrison and Dark Horse formed a long-term partnership with Warner Bros.
 - `d4s5` Dark Horse Records [5]: Records that lasted until the expiration of his contract in 1994.
-- `d5s0` Teardrops (George Harrison song) [0]: "Teardrops" is a single by George Harrison, released on 20 July 1981 in the United States and 31 July in the UK.
-- `d5s1` Teardrops (George Harrison song) [1]: It was the second single from the album "Somewhere in England" and reached number 51 on the US "Billboard" Top Tracks chart and number 102 on the "Billboard" Bubbling Under the Hot 100 chart.
+- ★u3 `d5s0` Teardrops (George Harrison song) [0]: "Teardrops" is a single by George Harrison, released on 20 July 1981 in the United States and 31 July in the UK.
+- ★u2 `d5s1` Teardrops (George Harrison song) [1]: It was the second single from the album "Somewhere in England" and reached number 51 on the US "Billboard" Top Tracks chart and number 102 on the "Billboard" Bubbling Under the Hot 100 chart.
 - `d5s2` Teardrops (George Harrison song) [2]: In Japan, it was released on 25 September.
 - `d6s0` Soft Touch [0]: "Soft Touch" is a song by English musician George Harrison from his 1979 album "George Harrison".
 - `d6s1` Soft Touch [1]: It was also issued as the B-side of the album's lead single, "Blow Away", apart from in North America, where it was the B-side of the second single, "Love Comes to Everyone".
 - `d6s2` Soft Touch [2]: Harrison wrote the song while in the Virgin Islands with his future wife, Olivia Arias, shortly before recording his 1976 album "Thirty Three & 1/3".
 - `d6s3` Soft Touch [3]: The song is a love song in which Harrison also conveys his wonder at the idyllic island setting.
-- `d7s0` Somewhere in England [0]: Somewhere in England is the ninth studio album by George Harrison, released in 1981.
+- ★u1 `d7s0` Somewhere in England [0]: Somewhere in England is the ninth studio album by George Harrison, released in 1981.
 - `d7s1` Somewhere in England [1]: The album was recorded as Harrison was becoming increasingly frustrated with the music industry.
-- `d7s2` Somewhere in England [2]: The album's making was a long one, during which conflicts with Warner Bros.
-- `d7s3` Somewhere in England [3]: Records arose.
+- ★u1 `d7s2` Somewhere in England [2]: The album's making was a long one, during which conflicts with Warner Bros.
+- ★u1 `d7s3` Somewhere in England [3]: Records arose.
 - `d7s4` Somewhere in England [4]: "Somewhere in England" was the first Harrison album to be released after the death of his former Beatles bandmate John Lennon; the lyrics of its first single, "All Those Years Ago", pay tribute to Lennon.
 - `d8s0` Best of Dark Horse 1976–1989 [0]: Best of Dark Horse 1976–1989 is a compilation album by English musician George Harrison, released in October 1989.
 - `d8s1` Best of Dark Horse 1976–1989 [1]: His second compilation, after the Capitol/EMI collection "The Best of George Harrison" (1976), it contains songs from Harrison's releases on his Dark Horse record label between 1976 and 1987.
@@ -1659,7 +1671,7 @@ Evidence:
 - `d1s0` Jiujiang, Guangdong [0]: Jiujiang Town () is a town in Nanhai District, Foshan, Guangdong, Southern China.
 - `d7s0` Ruzhou [0]: Ruzhou () is a city in Henan province, China.
 
-Notes:
+Notes: u1是district，u2是province，先检查能否统一比较层级，并按不同省份排除同一区；如果拆词器不允许这种行政层级推理就换一道题。另外d10s2可以支持u1，d5s0可以支持目前u2的Henan province，检查后加上备选。
 
 - Ruzhou's excerpt gives Henan province, not a district. Different provinces do not give matching district-level values without an additional hierarchy rule.
 - Source check: `district_vs_province`.
@@ -1667,7 +1679,7 @@ Notes:
 
 <details><summary>All source context</summary>
 
-- `d1s0` Jiujiang, Guangdong [0]: Jiujiang Town () is a town in Nanhai District, Foshan, Guangdong, Southern China.
+- ★u1 `d1s0` Jiujiang, Guangdong [0]: Jiujiang Town () is a town in Nanhai District, Foshan, Guangdong, Southern China.
 - `d1s1` Jiujiang, Guangdong [1]: It covers an area of 94.75 km2 with a registered population of 99,600 and a migrant population of 55,000.
 - `d1s2` Jiujiang, Guangdong [2]: It is an important production base for clothing, electronics, packaging and rice wine in Foshan.
 - `d1s3` Jiujiang, Guangdong [3]: It connects with Heshan by the famous Jiujiang Bridge across the Xi River.
@@ -1697,7 +1709,7 @@ Notes:
 - `d6s2` Mount Lu [2]: The oval-shaped mountains are about 25 km long and 10 km wide, and neighbors Jiujiang city and the Yangtze River to the north, Nanchang city to the south, and Poyang Lake to the east.
 - `d6s3` Mount Lu [3]: Its highest point is Dahanyang Peak (大汉阳峰), reaching 1,474 m above sea level, and is one of the hundreds of steep peaks that towers above a sea of clouds that encompass the mountains for almost 200 days out of the year.
 - `d6s4` Mount Lu [4]: Mount Lu is known for its grandeur, steepness, and beauty, and is part of Lushan National Park, a UNESCO World Heritage Site since 1996, and a prominent tourist attraction, especially during the summer months when the weather is cooler.
-- `d7s0` Ruzhou [0]: Ruzhou () is a city in Henan province, China.
+- ★u2 `d7s0` Ruzhou [0]: Ruzhou () is a city in Henan province, China.
 - `d7s1` Ruzhou [1]: It was called Linru County (临汝县) until 1988.
 - `d7s2` Ruzhou [2]: It has more than 100,000 inhabitants.
 - `d7s3` Ruzhou [3]: The Fengxue Temple of Ruzhou features the Qizu Pagoda, built in 738 during the Tang Dynasty (618–907).
@@ -1740,12 +1752,12 @@ Notes:
 <details><summary>All source context</summary>
 
 - `d1s0` Maroon 5 [0]: Maroon 5 is an American pop rock band that originated in Los Angeles, California.
-- `d1s1` Maroon 5 [1]: It currently consists of lead vocalist Adam Levine, keyboardist and rhythm guitarist Jesse Carmichael, bassist Mickey Madden, lead guitarist James Valentine, drummer Matt Flynn and keyboardist PJ Morton.
+- ★u2 `d1s1` Maroon 5 [1]: It currently consists of lead vocalist Adam Levine, keyboardist and rhythm guitarist Jesse Carmichael, bassist Mickey Madden, lead guitarist James Valentine, drummer Matt Flynn and keyboardist PJ Morton.
 - `d2s0` Timothy &quot;Yogi&quot; Watts [0]: Timothy "Yogi" Watts is second and current drummer for the Christian Metal band, Demon Hunter.
 - `d2s1` Timothy &quot;Yogi&quot; Watts [1]: He was the fourth drummer for The Showdown, original drummer for The Lonely Hearts (originally named Holland), and fill-in drummer for Throwdown as well as The Becoming.
 - `d3s0` Mark Castillo [0]: Mark Castillo, (born October 10, 1980) is an American musician.
 - `d3s1` Mark Castillo [1]: He is a former drummer of the deathcore band Emmure, a former drummer of the hard rock band Crossfade, a former drummer of the progressive metal band Between the Buried and Me, and a founding member and current drummer of American metalcore band Bury Your Dead.
-- `d4s0` What Lovers Do [0]: "What Lovers Do" is a song by American pop rock band Maroon 5 featuring American R&B singer Sza.
+- ★u1 `d4s0` What Lovers Do [0]: "What Lovers Do" is a song by American pop rock band Maroon 5 featuring American R&B singer Sza.
 - `d4s1` What Lovers Do [1]: It was released on August 30, 2017, as the third single from the band's upcoming sixth studio album (2017).
 - `d4s2` What Lovers Do [2]: The song contains an interpolation of the 2016 song "Sexual" by Neiked featuring Dyo, therefore Victor Rådström, Dyo and Elina Stridh are credited as songwriters.
 - `d5s0` 4 Tune Kookies [0]: 4 Tune Kookies is an Indian classic-rock band formed about thirty-five years ago (as ‘People’).
@@ -1818,7 +1830,7 @@ Notes:
 - `d2s5` Kevin Harvick [5]: Harvick is also the third winningest driver in Xfinity Series history with 46 wins.
 - `d3s0` Martin Truex Jr. [0]: Martin Lee Truex Jr. (born June 29, 1980) is an American championship professional stock car racing driver.
 - `d3s1` Martin Truex Jr. [1]: He currently competes full-time in the Monster Energy NASCAR Cup Series, driving the No. 78 Toyota Camry for Furniture Row Racing.
-- `d3s2` Martin Truex Jr. [2]: Truex is a two-time Xfinity Series champion; having won the title in 2004 and 2005.
+- ★u2 `d3s2` Martin Truex Jr. [2]: Truex is a two-time Xfinity Series champion; having won the title in 2004 and 2005.
 - `d3s3` Martin Truex Jr. [3]: His younger brother, Ryan is a champion in the K&N Pro Series East division and currently races in the Camping World Truck Series, while his cousin Curtis raced for JR Motorsports.
 - `d4s0` 2013 Bojangles' Southern 500 [0]: The 2013 Bojangles' Southern 500, the 64th running of the event, was a NASCAR Sprint Cup Series stock car race held on May 11, 2013, at Darlington Raceway in Darlington, South Carolina, United States.
 - `d4s1` 2013 Bojangles' Southern 500 [1]: The race was contested over 367 laps on the 1.366–mile (2.198 km) oval, it was the eleventh race of the 2013 Sprint Cup Series championship.
@@ -1832,7 +1844,7 @@ Notes:
 - `d6s2` O'Reilly Auto Parts 300 (fall race) [2]: With Darlington Raceway forced to forfeit its Southern 500 weekend as a result of the lawsuit, TMS gained a second weekend on the schedule for the Monster Energy NASCAR Cup Series and Xfinity Series racing, and fifth race for the NASCAR Xfinity Series playoffs.
 - `d7s0` 2016 Bojangles' Southern 500 [0]: The 2016 Bojangles' Southern 500, the 67th running of the event, was a NASCAR Sprint Cup Series stock car race that was held on September 4, 2016 at Darlington Raceway in Darlington, South Carolina.
 - `d7s1` 2016 Bojangles' Southern 500 [1]: Contested over 367 laps on the 1.366 mi egg-shaped oval, it was the 25th race of the 2016 NASCAR Sprint Cup Series season.
-- `d7s2` 2016 Bojangles' Southern 500 [2]: Furniture Row Racing's Martin Truex Jr. won the race by holding off Kevin Harvick to earn his second victory of the 2016 season.
+- ★u1 `d7s2` 2016 Bojangles' Southern 500 [2]: Furniture Row Racing's Martin Truex Jr. won the race by holding off Kevin Harvick to earn his second victory of the 2016 season.
 - `d8s0` List of NASCAR race wins by Kevin Harvick [0]: Kevin Harvick is an American racing driver who won a Monster Energy NASCAR Cup Series championship.
 - `d8s1` List of NASCAR race wins by Kevin Harvick [1]: Over the course of his racing career, Harvick has won multiple races, 36 of which were in Monster Energy NASCAR Cup Series as well as 46 in Xfinity Series and 14 in Camping World Truck Series for a total of 96 wins across NASCAR's top 3 Series.
 - `d9s0` 2014 Bojangles' Southern 500 [0]: The 2014 Bojangles' Southern 500, the 58th running of the event that traces its lineage to the 1957 Rebel 300, was a NASCAR Sprint Cup Series stock car race held on April 12, 2014, at Darlington Raceway in Darlington, South Carolina.
@@ -1866,7 +1878,7 @@ Evidence:
 
 - `d5s0` Chilopsis [0]: Chilopsis is a monotypic genus of flowering plants containing the single species Chilopsis linearis.
 
-Notes:
+Notes: 检查是否符合拆词器规则，另一候选d10s0写的是one or two，不能当作明确的“不是一种”。如果唯一答案预设仍可使用，保留Chilopsis的正向链路；如果无法接受这个歧义，就换一道题。
 
 - Chilopsis explicitly has one species. Cunninghamia is given as one or two. The unique named-candidate premise identifies Chilopsis; review the uncertain taxonomy before freezing.
 - Source check: `other_candidate_species_count_uncertain`.
@@ -1899,7 +1911,7 @@ Notes:
 - `d4s6` Anthocharis [6]: Only one species inhabits also the northern districts of the Palearctic region, all the others are found in the south of the Palearctic region, also some species occur in North America, but not one species extends into the tropics.
 - `d4s7` Anthocharis [7]: The Anthocharis species have only one brood.
 - `d4s8` Anthocharis [8]: The butterflies occur in spring.
-- `d5s0` Chilopsis [0]: Chilopsis is a monotypic genus of flowering plants containing the single species Chilopsis linearis.
+- ★u1 `d5s0` Chilopsis [0]: Chilopsis is a monotypic genus of flowering plants containing the single species Chilopsis linearis.
 - `d6s0` Megacheira [0]: Megacheira ("Great Hands") is an extinct class of predatory arthropods that possessed a pair of short enlarged appendages (the source of the class' name).
 - `d6s1` Megacheira [1]: They strongly resemble early chelicerates.
 - `d6s2` Megacheira [2]: Most of them were found in marine environments throughout the world from the lower to middle Cambrian.
@@ -1929,7 +1941,7 @@ Notes:
 
 </details>
 
-## Q299 — `hotpotqa_5ae5b25d5542990ba0bbb2bb` (draft)
+## Q299 🚩 — `hotpotqa_5ae5b25d5542990ba0bbb2bb` (draft)
 
 > Who has a wider scope of profession, Christopher Guest or  Roman Karmen?
 
@@ -1948,7 +1960,9 @@ Evidence:
 - `d4s0` Christopher Guest [0]: Christopher Haden-Guest, 5th Baron Haden-Guest (born February 5, 1948), simply known as Christopher Guest, is an English-American screenwriter, composer, musician, director, actor, and comedian who holds dual British and American citizenship.
 - `d5s0` Roman Karmen [0]: Roman Lazarevich Karmen (Russian: Рома́н Ла́заревич Карме́н ; 29 November [O.S. 16 November] 1906 in Odessa – 28 April 1978 in Moscow) was a Soviet war camera-man and film director and one of the most influential figures in documentary film making.
 
-Notes:
+Notes: 加上Christopher Guest这个答案别名，没有必要强制回答全名。另外检查“职业范围更广”是否可以按文档列出的职业数比较，与拆词器规则保持一致。
+
+- **🚩 逻辑审核（2026-11-11）[中]：** 结论的答案 'Christopher Haden-Guest' 没有 'Christopher Guest' 这个别名，而题目用的正是这个名字；正确回答会在取值匹配时被判错。
 
 - The draft interprets wider scope as the number of distinct listed professions: six versus two. The question does not define this measure.
 - Source check: `profession_scope_measure`.
@@ -1966,11 +1980,11 @@ Notes:
 - `d3s2` Oleg Makara [2]: He then went on to study film directing at All States Institute (now Gerasimov Institute of Cinematography) in Moscow under Roman Karmen.
 - `d3s3` Oleg Makara [3]: A pseudonym is after his grandfather, art carpenter, Eduard Kalmáry.
 - `d3s4` Oleg Makara [4]: E. Kalmáry was a chief manager of water sawmill in Remetské Hámre, East Slovakia, owned by family Vanderbilts.
-- `d4s0` Christopher Guest [0]: Christopher Haden-Guest, 5th Baron Haden-Guest (born February 5, 1948), simply known as Christopher Guest, is an English-American screenwriter, composer, musician, director, actor, and comedian who holds dual British and American citizenship.
+- ★u1 `d4s0` Christopher Guest [0]: Christopher Haden-Guest, 5th Baron Haden-Guest (born February 5, 1948), simply known as Christopher Guest, is an English-American screenwriter, composer, musician, director, actor, and comedian who holds dual British and American citizenship.
 - `d4s1` Christopher Guest [1]: Guest is most widely known in Hollywood for having written, directed and starred in his series of comedy films shot in mock-documentary (mockumentary) style.
 - `d4s2` Christopher Guest [2]: Many scenes and character backgrounds in Guest's films are written and directed, although actors have no rehearsal time and the ensemble improvise scenes while filming them.
 - `d4s3` Christopher Guest [3]: The series of films began with "This Is Spinal Tap" (directed by Rob Reiner), and continued with "Waiting for Guffman", "Best In Show", "A Mighty Wind", "For Your Consideration", and "Mascots".
-- `d5s0` Roman Karmen [0]: Roman Lazarevich Karmen (Russian: Рома́н Ла́заревич Карме́н ; 29 November [O.S. 16 November] 1906 in Odessa – 28 April 1978 in Moscow) was a Soviet war camera-man and film director and one of the most influential figures in documentary film making.
+- ★u2 `d5s0` Roman Karmen [0]: Roman Lazarevich Karmen (Russian: Рома́н Ла́заревич Карме́н ; 29 November [O.S. 16 November] 1906 in Odessa – 28 April 1978 in Moscow) was a Soviet war camera-man and film director and one of the most influential figures in documentary film making.
 - `d6s0` Music for Dogs [0]: Music for Dogs is the third studio album by American indie rock band Gardens & Villa.
 - `d6s1` Music for Dogs [1]: Released on 21 August 2015 by independent record label Secretly Canadian.
 - `d6s2` Music for Dogs [2]: The album was orchestrated with the help of visionary producer Jacob Portrait of Unknown Mortal Orchestra.
@@ -2012,7 +2026,7 @@ Evidence:
 
 - `d9s1` A Rather Blustery Day [1]: It was written by Robert & Richard Sherman and sung by Jim Cummings as "Pooh".
 
-Notes:
+Notes: 换一道题。d6s1写的是为Dr. Robotnik配音，Sonic the Hedgehog是作品名，不是他配音的刺猬角色，不能拿这句补u2的support。
 
 - Jim Cummings d6s1 names Dr. Robotnik from Sonic the Hedgehog, not the hedgehog Sonic. The franchise title does not establish that he voiced its title character.
 - Source check: `character_vs_franchise_name`.
@@ -2061,7 +2075,7 @@ Notes:
 - `d8s4` Winnie the Pooh and the Blustery Day [4]: The music was written by Richard M. Sherman and Robert B. Sherman.
 - `d8s5` Winnie the Pooh and the Blustery Day [5]: It was notable for being the last animated short produced by Walt Disney, who died during its production.
 - `d9s0` A Rather Blustery Day [0]: "A Rather Blustery Day" is a whimsical song from the Walt Disney musical film featurette, "Winnie the Pooh and the Blustery Day".
-- `d9s1` A Rather Blustery Day [1]: It was written by Robert & Richard Sherman and sung by Jim Cummings as "Pooh".
+- ★u1 `d9s1` A Rather Blustery Day [1]: It was written by Robert & Richard Sherman and sung by Jim Cummings as "Pooh".
 - `d10s0` Little Black Rain Cloud [0]: "Little Black Rain Cloud" is a song from the 1966 musical film featurette "Winnie the Pooh and the Honey Tree".
 - `d10s1` Little Black Rain Cloud [1]: An instrumental version is played in the next featurette "Winnie the Pooh and the Blustery Day".
 - `d10s2` Little Black Rain Cloud [2]: The song was also subsequently incorporated into the 1977 musical film, "The Many Adventures of Winnie the Pooh" which is an amalgamation of the three previous Winnie-the-Pooh featurettes including "Honey Tree".

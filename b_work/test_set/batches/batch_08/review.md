@@ -46,8 +46,8 @@ Notes:
 - `d2s1` Time Lapse Consortium [1]: Their sound is described as Psychedelic, Jazz, and Funk.
 - `d2s2` Time Lapse Consortium [2]: The group consists of current Incubus members Mike Einziger on Guitar, Jose Pasillas on drums, Ben Kenney on Bass (although he was not a member of Incubus at the time of joining Time Lapse Consortium), Neal Evans of Soulive on Organ, and Suzie Katayama contributing on string arrangements.
 - `d3s0` Incubus (band) [0]: Incubus is an American rock band from Calabasas, California.
-- `d3s1` Incubus (band) [1]: The band was formed in 1991 by vocalist Brandon Boyd, lead guitarist Mike Einziger, and drummer Jose Pasillas while enrolled in Calabasas High School and later expanded to include bassist Alex "Dirk Lance" Katunich, and Gavin "DJ Lyfe" Koppell; both of whom were eventually replaced by bassist Ben Kenney and DJ Kilmore respectively.
-- `d4s0` Swervedriver [0]: Swervedriver are an English alternative rock band formed in Oxford in 1989 around core members Adam Franklin and Jimmy Hartridge.
+- ★u2 `d3s1` Incubus (band) [1]: The band was formed in 1991 by vocalist Brandon Boyd, lead guitarist Mike Einziger, and drummer Jose Pasillas while enrolled in Calabasas High School and later expanded to include bassist Alex "Dirk Lance" Katunich, and Gavin "DJ Lyfe" Koppell; both of whom were eventually replaced by bassist Ben Kenney and DJ Kilmore respectively.
+- ★u1 `d4s0` Swervedriver [0]: Swervedriver are an English alternative rock band formed in Oxford in 1989 around core members Adam Franklin and Jimmy Hartridge.
 - `d4s1` Swervedriver [1]: Between 1989 and 1998, the band released four studio albums and numerous EPs and singles despite a considerable flux of members, managers, and record labels.
 - `d4s2` Swervedriver [2]: By 1993 the band’s lineup had settled with Franklin on vocals/guitar, Hartridge on guitar, Jez Hindmarsh on drums, and Steve George on bass.
 - `d4s3` Swervedriver [3]: They had emerged with a heavier rock sound than their shoegaze contemporaries, and over the next five years it evolved to include elements of psychedelia, classic pop, and indie rock.
@@ -126,7 +126,7 @@ Notes:
 - `d3s4` Georgette Leblanc [4]: Leblanc also appeared in a couple of French films, most notably "L'Inhumaine" in 1924.
 - `d3s5` Georgette Leblanc [5]: In the last few decades of her life she turned to writing, producing two commercially successful autobiographies and several children's books and travelogues.
 - `d4s0` Ariane et Barbe-bleue [0]: Ariane et Barbe-bleue ("Ariadne and Bluebeard") is an opera in three acts by Paul Dukas.
-- `d4s1` Ariane et Barbe-bleue [1]: The French libretto is adapted (with very few changes) from the symbolist play of the same name by Maurice Maeterlinck, itself loosely based on the French literary tale "La Barbe bleue" by Charles Perrault.
+- ★u2 `d4s1` Ariane et Barbe-bleue [1]: The French libretto is adapted (with very few changes) from the symbolist play of the same name by Maurice Maeterlinck, itself loosely based on the French literary tale "La Barbe bleue" by Charles Perrault.
 - `d5s0` Yseult Island [0]: Yseult Island is a small rocky island 0.7 nmi east of Tristan Island and 0.4 nmi north of the east point on Cape Jules.
 - `d5s1` Yseult Island [1]: Photographed from the air by U.S. Navy Operation Highjump, 1946-47.
 - `d5s2` Yseult Island [2]: Charted by the French Antarctic Expedition under Barre, 1951–52, and so named because of its twin relationship with Tristan Island.
@@ -135,7 +135,7 @@ Notes:
 - `d6s1` Paul Dukas [1]: A studious man, of retiring personality, he was intensely self-critical, and he abandoned and destroyed many of his compositions.
 - `d6s2` Paul Dukas [2]: His best known work is the orchestral piece "The Sorcerer's Apprentice" ("L'apprenti sorcier"), the fame of which has eclipsed that of his other surviving works.
 - `d6s3` Paul Dukas [3]: Among these are the opera "Ariane et Barbe-bleue", a symphony, two substantial works for solo piano, and a ballet, "La Péri".
-- `d7s0` Tristan und Isolde [0]: Tristan und Isolde ("Tristan and Isolde", or "Tristan and Isolda", or "Tristran and Ysolt") is an opera, or music drama, in three acts by Richard Wagner to a German libretto by the composer, based largely on the romance by Gottfried von Strassburg.
+- ★u1 `d7s0` Tristan und Isolde [0]: Tristan und Isolde ("Tristan and Isolde", or "Tristan and Isolda", or "Tristran and Ysolt") is an opera, or music drama, in three acts by Richard Wagner to a German libretto by the composer, based largely on the romance by Gottfried von Strassburg.
 - `d7s1` Tristan und Isolde [1]: It was composed between 1857 and 1859 and premiered at the Königliches Hof- und Nationaltheater in Munich on 10 June 1865 with Hans von Bülow conducting.
 - `d7s2` Tristan und Isolde [2]: Wagner referred to the work not as an opera, but called it "eine Handlung" (literally "a drama", "a plot" or "an action"), which was the equivalent of the term used by the Spanish playwright Calderón for his dramas.
 - `d8s0` Fire and Sword [0]: Fire and Sword ("Feuer und Schwert – Die Legende von Tristan und Isolde") is a 1982 German romance/adventure film, directed by .
@@ -215,7 +215,7 @@ Notes:
 - `d7s7` Nan, Thailand [7]: Nan is a small city, primarily devoted to commercial, administrative, educational, and hospital activities.
 - `d7s8` Nan, Thailand [8]: The old heart of the city, where Wat Phumin, the national museum and other tourist attractions are located, is being restored.
 - `d7s9` Nan, Thailand [9]: The city's industrial and tourist development remains limited until now, but should be improved by the complete opening of the border towards Laos and beyond towards China.
-- `d8s0` Nan'an, Fujian [0]: Nan'an () is a county-level city of southern Fujian province, People's Republic of China.
+- ★u2 `d8s0` Nan'an, Fujian [0]: Nan'an () is a county-level city of southern Fujian province, People's Republic of China.
 - `d8s1` Nan'an, Fujian [1]: It is under the administration of Quanzhou City and as of 2010, had a total population of 1,500,000.
 - `d8s2` Nan'an, Fujian [2]: More than 3,000,000 overseas Chinese trace their ancestry to Nan'an.
 - `d9s0` Fujian Medical University [0]: Fujian Medical University () is a university located in Fuzhou, Fujian, China.
@@ -224,7 +224,7 @@ Notes:
 - `d9s3` Fujian Medical University [3]: In 1969, after merging with Fujian Chinese Traditional Medical College and the medical department of Huaqiao University, Fujian Medical University was founded and moved to Quanzhou, Fujian.
 - `d9s4` Fujian Medical University [4]: It was moved back to Fuzhou in 1978.
 - `d9s5` Fujian Medical University [5]: The name of the school was changed back to Fujian Medical College in 1982 and then changed back to the present name in April 1996.
-- `d10s0` Zhangye [0]: Zhangye, formerly romanized as Changyeh or known as Kanchow, is a prefecture-level city in central Gansu Province in the People's Republic of China.
+- ★u1 `d10s0` Zhangye [0]: Zhangye, formerly romanized as Changyeh or known as Kanchow, is a prefecture-level city in central Gansu Province in the People's Republic of China.
 - `d10s1` Zhangye [1]: It borders Inner Mongolia on the north and Qinghai on the south.
 - `d10s2` Zhangye [2]: Its central district is Ganzhou, formerly a city of the Western Xia and one of the most important outposts of western China.
 
@@ -286,9 +286,9 @@ Notes:
 - `d6s4` 1950s in jazz [4]: Cool jazz later became strongly identified with the West Coast jazz scene, but also had a particular resonance in Europe, especially Scandinavia, with emergence of such major figures as baritone saxophonist Lars Gullin and pianist Bengt Hallberg.
 - `d6s5` 1950s in jazz [5]: The theoretical underpinnings of cool jazz were set out by the blind Chicago pianist Lennie Tristano, and its influence stretches into such later developments as Bossa nova, modal jazz, and even free jazz.
 - `d6s6` 1950s in jazz [6]: See also the list of cool jazz and West Coast musicians for further detail.
-- `d7s0` Chicken Ranch (film) [0]: Chicken Ranch is a 1983 documentary film by Nick Broomfield about the famous legalised brothel, the Chicken Ranch, in Pahrump, Nevada.
+- ★u1 `d7s0` Chicken Ranch (film) [0]: Chicken Ranch is a 1983 documentary film by Nick Broomfield about the famous legalised brothel, the Chicken Ranch, in Pahrump, Nevada.
 - `d7s1` Chicken Ranch (film) [1]: Photographed by Sandi Sissel.
-- `d8s0` The End of Suburbia [0]: The End of Suburbia: Oil Depletion and the Collapse of The American Dream is a 2004 documentary film concerning peak oil and its implications for the suburban lifestyle, written and directed by Toronto-based filmmaker Gregory Greene.
+- ★u2 `d8s0` The End of Suburbia [0]: The End of Suburbia: Oil Depletion and the Collapse of The American Dream is a 2004 documentary film concerning peak oil and its implications for the suburban lifestyle, written and directed by Toronto-based filmmaker Gregory Greene.
 - `d9s0` Escape from Suburbia [0]: Escape from Suburbia: Beyond the American Dream is a 2007 Canadian documentary film written and directed by Gregory Greene, as a sequel to Greene's film "The End of Suburbia", and set to address what is termed "the upcoming energy crisis".
 - `d9s1` Escape from Suburbia [1]: Through interviews with individuals, Gregory Greene outlines potential solutions to the coming energy crisis.
 - `d10s0` La Grange (song) [0]: La Grange is a song by the American rock group ZZ Top, from their 1973 album "Tres Hombres".
@@ -317,16 +317,16 @@ Evidence:
 - `d5s0` WIBW-TV [0]: WIBW-TV, virtual and VHF digital channel 13, is a CBS-affiliated television station licensed to Topeka, Kansas, United States.
 - `d5s2` WIBW-TV [2]: WIBW-TV maintains studio facilities located on Commerce Place (next to the interchange of I-70, I-470, US 40, US 75 and K-4) in southwestern Topeka, and its transmitter is located on Windy Hill Road in Maple Hill.
 
-Notes:
+Notes: 检查一下标签是否有问题
 
 - The station is licensed to Topeka. Its transmitter is explicitly in Maple Hill. The location premise in the question needs review.
 - Source check: `station_city_vs_transmitter_city`.
 
 <details><summary>All source context</summary>
 
-- `d1s0` WIBW-DT2 [0]: WIBW-DT2 is a primary MyNetworkTV- and secondary MeTV-affiliated television station located in Topeka, Kansas, United States.
+- ★u1 `d1s0` WIBW-DT2 [0]: WIBW-DT2 is a primary MyNetworkTV- and secondary MeTV-affiliated television station located in Topeka, Kansas, United States.
 - `d1s1` WIBW-DT2 [1]: It operates as a second digital subchannel of CBS affiliate WIBW-TV (channel 13), which is owned by Gray Television.
-- `d1s2` WIBW-DT2 [2]: Over-the-air, it broadcasts a standard definition digital signal on VHF channel 13.2 from a transmitter located on Windy Hill Road in Maple Hill.
+- ★u1 `d1s2` WIBW-DT2 [2]: Over-the-air, it broadcasts a standard definition digital signal on VHF channel 13.2 from a transmitter located on Windy Hill Road in Maple Hill.
 - `d1s3` WIBW-DT2 [3]: WIBW-TV maintains studio facilities located on Commerce Place (next to the interchange of I-70, I-470, US 40, US 75 and K-4) in southwestern Topeka.
 - `d2s0` Broadcast transmitter [0]: A broadcast transmitter refers to an installation used for broadcasting, including radio transmitter or television transmitter equipment, the antenna, and often the location of the broadcasting station.
 - `d3s0` North Hessary Tor transmitting station [0]: Situated on the summit of North Hessary Tor in Devon, England is an FM radio and television transmitter which uses as aerial a 196 m high guyed mast.
@@ -336,9 +336,9 @@ Notes:
 - `d3s4` North Hessary Tor transmitting station [4]: It is owned and operated by Arqiva.
 - `d4s0` Transmitter/studio link [0]: The transmitter/studio link (or TSL) of a radio station or television station is a return link which sends telemetry data from the remotely located radio transmitter or television transmitter back to the studio for monitoring purposes.
 - `d4s1` Transmitter/studio link [1]: The TSL may return the same way as the studio/transmitter link (STL), or it can be embedded in the station's regular broadcast signal as a subcarrier (for analog stations) or a separate data channel (for digital stations).
-- `d5s0` WIBW-TV [0]: WIBW-TV, virtual and VHF digital channel 13, is a CBS-affiliated television station licensed to Topeka, Kansas, United States.
+- ★u1 `d5s0` WIBW-TV [0]: WIBW-TV, virtual and VHF digital channel 13, is a CBS-affiliated television station licensed to Topeka, Kansas, United States.
 - `d5s1` WIBW-TV [1]: The station is owned by Gray Television.
-- `d5s2` WIBW-TV [2]: WIBW-TV maintains studio facilities located on Commerce Place (next to the interchange of I-70, I-470, US 40, US 75 and K-4) in southwestern Topeka, and its transmitter is located on Windy Hill Road in Maple Hill.
+- ★u1 `d5s2` WIBW-TV [2]: WIBW-TV maintains studio facilities located on Commerce Place (next to the interchange of I-70, I-470, US 40, US 75 and K-4) in southwestern Topeka, and its transmitter is located on Windy Hill Road in Maple Hill.
 - `d5s3` WIBW-TV [3]: To serve portions of the market that cannot adequately receive the main signal, WIBW-TV operates a digital fill-in translator in Topeka, WIBW-LD, which broadcasts on UHF channel 44.
 - `d6s0` KTVF [0]: KTVF is an NBC-affiliated television station located in Fairbanks, Alaska, United States.
 - `d6s1` KTVF [1]: KTVF is owned by Gray Television, as the sister stations of Fox affiliate KFXF-LD and CBS affiliate KXDF-CD.
@@ -392,7 +392,7 @@ Notes:
 
 <details><summary>All source context</summary>
 
-- `d1s0` Charlotte of Mecklenburg-Strelitz [0]: Charlotte of Mecklenburg-Strelitz (Sophia Charlotte; 19 May 1744 – 17 November 1818) was by marriage to King George III the Queen of Great Britain and Ireland from her wedding in 1761 until the union of the two kingdoms in 1801, after which she was Queen of the United Kingdom of Great Britain and Ireland until her death in 1818.
+- ★u1 `d1s0` Charlotte of Mecklenburg-Strelitz [0]: Charlotte of Mecklenburg-Strelitz (Sophia Charlotte; 19 May 1744 – 17 November 1818) was by marriage to King George III the Queen of Great Britain and Ireland from her wedding in 1761 until the union of the two kingdoms in 1801, after which she was Queen of the United Kingdom of Great Britain and Ireland until her death in 1818.
 - `d1s1` Charlotte of Mecklenburg-Strelitz [1]: She was also the Electress of Hanover in the Holy Roman Empire until the promotion of her husband to King of Hanover on 12 October 1814, after which she was also queen consort of Hanover.
 - `d2s0` Irish migration to Great Britain [0]: Irish migration to Great Britain has occurred from the earliest recorded history to the present.
 - `d2s1` Irish migration to Great Britain [1]: There has been a continuous movement of people between the islands of Ireland and Great Britain due to their proximity.
@@ -425,7 +425,7 @@ Notes:
 - `d7s4` Great Britain at the 2016 Summer Olympics [4]: In 2016 Northern Ireland born representatives in Team GB included returning rowers Alan Campbell, Peter Chambers and Richard Chambers, archer Patrick Huston and four members of the men's field hockey team: David Ames, Mark Gleghorne, Iain Lewers and Ian Sloan.
 - `d7s5` Great Britain at the 2016 Summer Olympics [5]: The team also represents, and included representation from, the Crown dependencies, among which were Guernsey's Heather Watson and Carl Hester, and from the ten of the thirteen British Overseas Territories represented by the BOA rather than their own NOC, whose representatives include Turks and Caicos-born sprinter Delano Williams and Anguillan-born long jumper Shara Proctor
 - `d8s0` Jeremiah Meyer [0]: Jeremiah Meyer {'1': ", '2': ", '3': ", '4': "} (born "Jeremias Majer"; 18 January 1735 – 20 January 1789) was an 18th-century English miniature painter.
-- `d8s1` Jeremiah Meyer [1]: He was Painter in Miniatures to Queen Charlotte, Painter in Enamels to King George III and was one of the founder members of the Royal Academy.
+- ★u2 `d8s1` Jeremiah Meyer [1]: He was Painter in Miniatures to Queen Charlotte, Painter in Enamels to King George III and was one of the founder members of the Royal Academy.
 - `d9s0` United Kingdom [0]: The United Kingdom of Great Britain and Northern Ireland, commonly known as the United Kingdom (UK) and colloquially Great Britain (GB) or simply Britain, is a sovereign country in western Europe.
 - `d9s1` United Kingdom [1]: Lying off the north-western coast of the European mainland, the United Kingdom includes the island of Great Britain, the north-eastern part of the island of Ireland and many smaller islands.
 - `d9s2` United Kingdom [2]: Northern Ireland is the only part of the United Kingdom that shares a land border with another sovereign statethe Republic of Ireland.
@@ -470,8 +470,8 @@ Notes:
 <details><summary>All source context</summary>
 
 - `d1s0` Iguazú National Park [0]: The Iguazú National Park (Spanish: "Parque Nacional Iguazú" ) is a national park of Argentina, located in the Iguazú Department, in the north of the province of Misiones, Argentine Mesopotamia.
-- `d1s1` Iguazú National Park [1]: It has an area of 672 km2 .
-- `d2s0` Rainforest Ecological Train [0]: The Rainforest Ecological Train or Waterfalls Train ("Tren Ecológico de la Selva" or "Tren de las Cataratas") is an environmentally friendly, narrow gauge train that runs through the forest inside Iguazú National Park in the north of the province of Misiones of Argentina.
+- ★u2 `d1s1` Iguazú National Park [1]: It has an area of 672 km2 .
+- ★u1 `d2s0` Rainforest Ecological Train [0]: The Rainforest Ecological Train or Waterfalls Train ("Tren Ecológico de la Selva" or "Tren de las Cataratas") is an environmentally friendly, narrow gauge train that runs through the forest inside Iguazú National Park in the north of the province of Misiones of Argentina.
 - `d3s0` Sajama National Park [0]: Sajama National Park is a national park located in the Oruro Department, Bolivia.
 - `d3s1` Sajama National Park [1]: It borders Lauca National Park in Chile.
 - `d3s2` Sajama National Park [2]: The park is home to indigenous people, known as the Aymara, whose influential ancient culture can be seen in various aspects throughout the park.
@@ -529,7 +529,7 @@ Notes:
 
 </details>
 
-## Q218 — `hotpotqa_5a90b7f355429916514e752d` (draft)
+## Q218 🚩 — `hotpotqa_5a90b7f355429916514e752d` (draft)
 
 > In which city did he painter and printmaker associated with "Les Nabis" found Salon d'Automne?
 
@@ -548,14 +548,16 @@ Evidence:
 - `d8s0` Salon d'Automne [0]: The Salon d'Automne (Autumn Salon), or Société du Salon d'automne, is an annual art exhibition held in Paris, France since 1903; it is currently held on the Champs-Élysées, between the Grand Palais and the Petit Palais, in mid October .
 - `d8s1` Salon d'Automne [1]: The first Salon d'Automne was created under the initiative of the Belgian architect, literary man and art collector Frantz Jourdain, along with the architect Hector Guimard, the painters Georges Desvallières, Eugène Carrière, Félix Vallotton, Édouard Vuillard and the Maison Jansen, a Paris-based interior decoration office (the first truly global design firm) founded in 1880 by Dutch-born Jean-Henri Jansen.
 
-Notes:
+Notes: 是否需要讲u2和u1顺序调换，如果逻辑仍然不合理就换一道题
+
+- **🚩 逻辑审核（2026-11-11）[中]：** u1 不唯一：`d1s0` Vallotton、`d5s0` Vuillard、`d9s0` Bonnard 都是 Nabis 派画家兼版画家，Vuillard 也在 Salon d'Automne 创办者名单里（`d8s1`）。gold 选 Vallotton 是事后挑选。另外题干已点名 Salon d'Automne，`d8s0` 直接给出 Paris，画家这一跳不应挡住 u2。
 
 - The source gives Paris as the exhibition location since 1903 and names Vallotton among its creators. Review whether this states the founding location clearly enough.
 - Source check: `exhibition_location_vs_founding_location`.
 
 <details><summary>All source context</summary>
 
-- `d1s0` Félix Vallotton [0]: Félix Edouard Vallotton (December 28, 1865December 29, 1925) was a Swiss/French painter and printmaker associated with "Les Nabis".
+- ★u1 `d1s0` Félix Vallotton [0]: Félix Edouard Vallotton (December 28, 1865December 29, 1925) was a Swiss/French painter and printmaker associated with "Les Nabis".
 - `d1s1` Félix Vallotton [1]: He was an important figure in the development of the modern woodcut.
 - `d2s0` Ker-Xavier Roussel [0]: Ker-Xavier Roussel (10 December 1867 – 6 June 1944) was a French painter associated with Les Nabis.
 - `d3s0` Groupe de femmes [0]: Groupe de femmes, also called Groupe de trois femmes, or Groupe de trois personnages, is an early Cubist sculpture created circa 1911 by the Hungarian avant-garde, sculptor, and graphic artist Joseph Csaky (1888–1971).
@@ -576,8 +578,8 @@ Notes:
 - `d6s8` 20th-century art [8]: Dadaism, with its most notable exponents, Marcel Duchamp, who rejected conventional art styles altogether by exhibiting found objects, notably a urinal, and too Francis Picabia, with his "Portraits Mécaniques".
 - `d7s0` Maurice Denis [0]: Maurice Denis (] ; 25 November 1870 – 13 November 1943) was a French painter and writer, and a member of the Symbolist and Les Nabis movements.
 - `d7s1` Maurice Denis [1]: His theories contributed to the foundations of cubism, fauvism, and abstract art.
-- `d8s0` Salon d'Automne [0]: The Salon d'Automne (Autumn Salon), or Société du Salon d'automne, is an annual art exhibition held in Paris, France since 1903; it is currently held on the Champs-Élysées, between the Grand Palais and the Petit Palais, in mid October .
-- `d8s1` Salon d'Automne [1]: The first Salon d'Automne was created under the initiative of the Belgian architect, literary man and art collector Frantz Jourdain, along with the architect Hector Guimard, the painters Georges Desvallières, Eugène Carrière, Félix Vallotton, Édouard Vuillard and the Maison Jansen, a Paris-based interior decoration office (the first truly global design firm) founded in 1880 by Dutch-born Jean-Henri Jansen.
+- ★u2 `d8s0` Salon d'Automne [0]: The Salon d'Automne (Autumn Salon), or Société du Salon d'automne, is an annual art exhibition held in Paris, France since 1903; it is currently held on the Champs-Élysées, between the Grand Palais and the Petit Palais, in mid October .
+- ★u2 `d8s1` Salon d'Automne [1]: The first Salon d'Automne was created under the initiative of the Belgian architect, literary man and art collector Frantz Jourdain, along with the architect Hector Guimard, the painters Georges Desvallières, Eugène Carrière, Félix Vallotton, Édouard Vuillard and the Maison Jansen, a Paris-based interior decoration office (the first truly global design firm) founded in 1880 by Dutch-born Jean-Henri Jansen.
 - `d9s0` Pierre Bonnard [0]: Pierre Bonnard (] ; 3 October 1867 — 23 January 1947) was a French painter and printmaker, as well as a founding member of the Post-Impressionist group of avant-garde painters Les Nabis.
 - `d9s1` Pierre Bonnard [1]: Bonnard preferred to work from memory, using drawings as a reference, and his paintings are often characterized by a dreamlike quality.
 - `d9s2` Pierre Bonnard [2]: The intimate domestic scenes, for which he is perhaps best known, often include his wife Marthe de Meligny.
@@ -620,10 +622,10 @@ Notes:
 - `d2s2` Welsh League Cup [2]: Unlike the Welsh Cup, where 135 teams entered in 2008–09, the competition is only open to the members of the Welsh Premier League and a very select few other clubs.
 - `d2s3` Welsh League Cup [3]: It should not be confused with the Welsh Football League Cup, which is for the clubs in the Welsh Football League, which despite its name only covers the south and centre of Wales.
 - `d3s0` 1980 Welsh Cup Final [0]: The 1980 Welsh Cup Final was the final of the 93rd season of the main domestic football cup competition in Wales, the Welsh Cup.
-- `d3s1` 1980 Welsh Cup Final [1]: The final was contested between Newport County and Shrewsbury Town over two legs.
+- ★u1 `d3s1` 1980 Welsh Cup Final [1]: The final was contested between Newport County and Shrewsbury Town over two legs.
 - `d3s2` 1980 Welsh Cup Final [2]: Newport County won 5–1 on aggregate, winning both legs.
 - `d4s0` 1991 Welsh Cup Final [0]: The 1991 Welsh Cup Final saw Swansea City win the Welsh Cup for the tenth time, by beating Wrexham 2–0 at National Stadium in the 104th Welsh Cup Final.
-- `d5s0` Newport County A.F.C. [0]: Newport County Association Football Club (Welsh: "Clwb Pêl-droed Sir Casnewydd" ) is a professional association football club based in the city of Newport, South Wales.
+- ★u2 `d5s0` Newport County A.F.C. [0]: Newport County Association Football Club (Welsh: "Clwb Pêl-droed Sir Casnewydd" ) is a professional association football club based in the city of Newport, South Wales.
 - `d5s1` Newport County A.F.C. [1]: The team play in League Two, the fourth tier of the English football league system.
 - `d5s2` Newport County A.F.C. [2]: Most recently reformed in 1989, the club is a continuation of the Newport County club which was founded in 1912 and was a founder member of the Football League's new Third Division in 1920.
 - `d6s0` Richard Johnson (rugby) [0]: Richard Johnston, born (26-02-1980) in Neath, Wales, first started his career at Neath RFC in 1998 where he gained representative honours for Wales under 18/19's.
@@ -670,8 +672,8 @@ Notes:
 
 <details><summary>All source context</summary>
 
-- `d1s0` Robert Stone (novelist) [0]: Robert Stone (August 21, 1937 – January 10, 2015) was an American novelist.
-- `d2s0` Truman Capote [0]: Truman Garcia Capote ( ; born Truman Streckfus Persons, September 30, 1924 – August 25, 1984) was an American novelist, screenwriter, playwright, and actor.
+- ★u1 `d1s0` Robert Stone (novelist) [0]: Robert Stone (August 21, 1937 – January 10, 2015) was an American novelist.
+- ★u2 `d2s0` Truman Capote [0]: Truman Garcia Capote ( ; born Truman Streckfus Persons, September 30, 1924 – August 25, 1984) was an American novelist, screenwriter, playwright, and actor.
 - `d2s1` Truman Capote [1]: Many of Capote's short stories, novels, plays, and nonfiction are recognized as literary classics, including the novella "Breakfast at Tiffany's" (1958) and the true crime novel "In Cold Blood" (1966), which he labeled a "nonfiction novel".
 - `d2s2` Truman Capote [2]: At least 20 films and television dramas have been produced of Capote novels, stories, and plays.
 - `d3s0` Dallas John Baker [0]: Dallas John Baker (born Dallas John Angguish Baker on 19 February 1968) is an Australian writer and academic noted for poetry, short stories and travel writing whose work deals with themes of alienation, otherness and sexuality.
@@ -707,7 +709,7 @@ Notes:
 
 </details>
 
-## Q221 — `hotpotqa_5ab344fc55429969a97a811e` (draft)
+## Q221 🚩 — `hotpotqa_5ab344fc55429969a97a811e` (draft)
 
 > Do Bloody Mary and Sidecar share any ingredients in common?
 
@@ -726,7 +728,9 @@ Evidence:
 - `d9s0` Sidecar (cocktail) [0]: The sidecar is a cocktail traditionally made with cognac, orange liqueur (Cointreau, Grand Marnier, Grand Gala or another triple sec), and lemon juice.
 - `d10s0` Bloody Mary (cocktail) [0]: A Bloody Mary is a cocktail containing vodka, tomato juice, and combinations of other spices and flavorings including Worcestershire sauce, Hot Sauce, piri piri sauce, beef consommé or bouillon, horseradish, celery, olives, salt, black pepper, cayenne pepper, lemon juice, lime juice and/or celery salt.
 
-Notes:
+Notes: 这道题如果明确了u1u2的support中有相同成分，就改一下答案，让u3可以被推出来
+
+- **🚩 逻辑审核（2026-11-11）[中]：** 证据与源答案矛盾：两种鸡尾酒都含柠檬汁（`d10s0`、`d9s0`），但 u3 仍保留 'no' 且 support 为 `[]`。需要决定是改答案还是剔除这道题。
 
 - Both definitions include lemon juice. Their shared ingredient contradicts the source answer no. Keep that answer pending review, with no accepted support for the conclusion.
 - Source check: `source_answer_conflicts_with_shared_ingredient`.
@@ -767,13 +771,13 @@ Notes:
 - `d8s5` Typhoon Mary (1960) [5]: Mary made landfall in Hong Kong on June 8, and moved through Guangdong and Fujian.
 - `d8s6` Typhoon Mary (1960) [6]: It reemerged back to the Pacific Ocean, and restrengthened into a typhoon temporarily.
 - `d8s7` Typhoon Mary (1960) [7]: It then traveled east, weakening and becoming extratropical on June 12.
-- `d9s0` Sidecar (cocktail) [0]: The sidecar is a cocktail traditionally made with cognac, orange liqueur (Cointreau, Grand Marnier, Grand Gala or another triple sec), and lemon juice.
+- ★u2 `d9s0` Sidecar (cocktail) [0]: The sidecar is a cocktail traditionally made with cognac, orange liqueur (Cointreau, Grand Marnier, Grand Gala or another triple sec), and lemon juice.
 - `d9s1` Sidecar (cocktail) [1]: In its ingredients, the drink is perhaps most closely related to the older brandy crusta, which differs both in presentation and in proportions of its components.
-- `d10s0` Bloody Mary (cocktail) [0]: A Bloody Mary is a cocktail containing vodka, tomato juice, and combinations of other spices and flavorings including Worcestershire sauce, Hot Sauce, piri piri sauce, beef consommé or bouillon, horseradish, celery, olives, salt, black pepper, cayenne pepper, lemon juice, lime juice and/or celery salt.
+- ★u1 `d10s0` Bloody Mary (cocktail) [0]: A Bloody Mary is a cocktail containing vodka, tomato juice, and combinations of other spices and flavorings including Worcestershire sauce, Hot Sauce, piri piri sauce, beef consommé or bouillon, horseradish, celery, olives, salt, black pepper, cayenne pepper, lemon juice, lime juice and/or celery salt.
 
 </details>
 
-## Q222 — `hotpotqa_5ab42f3c55429942dd415ebc` (draft)
+## Q222 🚩 — `hotpotqa_5ab42f3c55429942dd415ebc` (draft)
 
 > What is the translation of the name of the river on which Widnes is located ?
 
@@ -791,7 +795,9 @@ Evidence:
 - `d2s1` River Mersey [1]: Its name is derived from the Anglo-Saxon language and translates as "boundary river".
 - `d8s0` Listed buildings in Widnes [0]: Widnes is an industrial town in the Borough of Halton, Cheshire, England, on the north bank of the River Mersey where it narrows at Runcorn Gap.
 
-Notes:
+Notes: 加上备选，修改一下u1的描述，再检查逻辑和标签合不合理
+
+- **🚩 逻辑审核（2026-11-11）[中]：** u1 漏了备选证据：`d7s3`（'Directly to the north across the River Mersey is the town of Widnes'）。另外 u1 的描述（'north bank'）比题目（'river on which Widnes is located'）窄。
 
 
 <details><summary>All source context</summary>
@@ -803,7 +809,7 @@ Notes:
 - `d1s4` Silver Jubilee Bridge [4]: It carries the A533 road and a cantilevered footway.
 - `d1s5` Silver Jubilee Bridge [5]: The bridge is recorded in the National Heritage List for England as a designated Grade II listed building.
 - `d2s0` River Mersey [0]: The River Mersey is a river in the North West of England.
-- `d2s1` River Mersey [1]: Its name is derived from the Anglo-Saxon language and translates as "boundary river".
+- ★u2 `d2s1` River Mersey [1]: Its name is derived from the Anglo-Saxon language and translates as "boundary river".
 - `d2s2` River Mersey [2]: The river may have been the border between the ancient kingdoms of Mercia and Northumbria and for centuries it formed part of the boundary between the historic counties of Lancashire and Cheshire.
 - `d3s0` Deschutes River (Washington) [0]: The Deschutes River is a 50 mi river in Washington, United States.
 - `d3s1` Deschutes River (Washington) [1]: Its source is in the Gifford Pinchot National Forest in Lewis County, and it empties into Budd Inlet of Puget Sound at Olympia in Thurston County.
@@ -825,7 +831,7 @@ Notes:
 - `d7s2` Runcorn [2]: The town is on the southern bank of the River Mersey, where the estuary narrows to form the Runcorn Gap.
 - `d7s3` Runcorn [3]: Directly to the north across the River Mersey is the town of Widnes.
 - `d7s4` Runcorn [4]: Upstream and 8 mi to the northeast is the town of Warrington, and downstream 16 mi to the west is the city of Liverpool.
-- `d8s0` Listed buildings in Widnes [0]: Widnes is an industrial town in the Borough of Halton, Cheshire, England, on the north bank of the River Mersey where it narrows at Runcorn Gap.
+- ★u1 `d8s0` Listed buildings in Widnes [0]: Widnes is an industrial town in the Borough of Halton, Cheshire, England, on the north bank of the River Mersey where it narrows at Runcorn Gap.
 - `d8s1` Listed buildings in Widnes [1]: The town contains 21 buildings that are recorded in the National Heritage List for England as designated listed buildings. Of these, 5 are classified at Grade II*, and 16 at Grade II; Widnes has no Grade I listed buildings.
 - `d8s2` Listed buildings in Widnes [2]: In the United Kingdom, the term "listed building" refers to a building or other structure officially designated as being of special architectural, historical, or cultural significance.
 - `d8s3` Listed buildings in Widnes [3]: Listed buildings are categorised in three grades: Grade I consists of buildings of outstanding architectural or historical interest; Grade II* includes particularly significant buildings of more than local interest; Grade II consists of buildings of special architectural or historical interest.
@@ -843,7 +849,7 @@ Notes:
 
 </details>
 
-## Q223 — `hotpotqa_5ab4355555429942dd415ee3` (draft)
+## Q223 🚩 — `hotpotqa_5ab4355555429942dd415ee3` (draft)
 
 > What novella was "Eyes Wide Shut," starring Vinessa Elizabeth Shaw, based on?
 
@@ -863,6 +869,8 @@ Evidence:
 
 Notes:
 
+- **🚩 逻辑审核（2026-11-11）[高]：** 题干已点名 'Eyes Wide Shut'，`d3s1` 直接写了改编自哪部中篇小说。u1（Vinessa Shaw 出演的电影，`d9s3`）只是核对题干前提，但 u2 依赖它，所以 Shaw 的文档到达前答案一直无法被支持。这题大概应该是 single。
+
 
 <details><summary>All source context</summary>
 
@@ -872,7 +880,7 @@ Notes:
 - `d2s1` Elizabeth Shaw (confectionery company) [1]: The company has recently extended its range to include Flutes, and a Crisp Collection gift box, featuring products based on its unique honeycomb crisp inclusion.
 - `d2s2` Elizabeth Shaw (confectionery company) [2]: It also markets a range of 100g bars, featuring its best loved flavours.
 - `d3s0` Eyes Wide Shut [0]: Eyes Wide Shut is a 1999 erotic drama film directed, produced, and co-written by Stanley Kubrick.
-- `d3s1` Eyes Wide Shut [1]: Based on Arthur Schnitzler's 1926 novella "Traumnovelle" ("Dream Story"), the story is transferred from early 20th century Vienna to 1990s New York City.
+- ★u2 `d3s1` Eyes Wide Shut [1]: Based on Arthur Schnitzler's 1926 novella "Traumnovelle" ("Dream Story"), the story is transferred from early 20th century Vienna to 1990s New York City.
 - `d3s2` Eyes Wide Shut [2]: The film follows the sexually-charged adventures of Dr. Bill Harford, who is shocked when his wife, Alice, reveals that she had contemplated having an affair a year earlier.
 - `d3s3` Eyes Wide Shut [3]: He embarks on a night-long adventure, during which he infiltrates a massive masked orgy of an unnamed secret society.
 - `d4s0` Rudolf Sieczyński [0]: Rudolf Sieczyński (1879, Vienna – 1952, Vienna) was an Austrian composer of Polish ancestry.
@@ -896,7 +904,7 @@ Notes:
 - `d9s0` Vinessa Shaw [0]: Vinessa Elizabeth Shaw (born July 19, 1976) is an American film actress and model.
 - `d9s1` Vinessa Shaw [1]: Shaw has starred in numerous motion pictures since the early 1990s and was a supporting cast member in the Showtime Drama "Ray Donovan".
 - `d9s2` Vinessa Shaw [2]: Her breakout role was in Disney's 1993 Halloween comedy-fantasy hit film "Hocus Pocus".
-- `d9s3` Vinessa Shaw [3]: She also was in "Ladybugs" (1992), Stanley Kubrick's "Eyes Wide Shut" (1999), the 2006 remake of Wes Craven's horror picture "The Hills Have Eyes", and "40 Days and 40 Nights", as Josh Hartnett's character's sadistic ex-girlfriend.
+- ★u1 `d9s3` Vinessa Shaw [3]: She also was in "Ladybugs" (1992), Stanley Kubrick's "Eyes Wide Shut" (1999), the 2006 remake of Wes Craven's horror picture "The Hills Have Eyes", and "40 Days and 40 Nights", as Josh Hartnett's character's sadistic ex-girlfriend.
 - `d9s4` Vinessa Shaw [4]: She stars as Dr. Jane Mathis in the 2017 Netflix original "Clinical".
 - `d10s0` Influence of Stanley Kubrick [0]: Stanley Kubrick is regarded by film critics and historians as one of the most influential directors of all time.
 - `d10s1` Influence of Stanley Kubrick [1]: Leading directors, including Martin Scorsese, Steven Spielberg, George Lucas, James Cameron, Woody Allen, Terry Gilliam, the Coen Brothers, Ridley Scott, Paul Thomas Anderson, Christopher Nolan, David Lynch, and George A. Romero, have cited Kubrick as a source of inspiration, and in the case of Spielberg, collaboration.
@@ -905,7 +913,7 @@ Notes:
 
 </details>
 
-## Q224 — `hotpotqa_5ab439bd55429942dd415eee` (draft)
+## Q224 🚩 — `hotpotqa_5ab439bd55429942dd415eee` (draft)
 
 > Who won more Grand Slam Titles, Liezel Huber or Billie Jean King?
 
@@ -925,6 +933,8 @@ Evidence:
 - `d6s1` Liezel Huber [1]: Huber has won four Grand Slam titles in women's doubles with partner Cara Black, one with Lisa Raymond, and two mixed doubles titles with Bob Bryan.
 
 Notes:
+
+- **🚩 逻辑审核（2026-11-11）[中]：** u1 = 7 原文没有直接写，是 `d6s1` 里 4 + 1 + 2 相加得到的。比较结论不受影响，但这个值是推算出来的，需要决定求和算不算明确写出。
 
 - Huber has four plus one women's doubles titles and two mixed doubles titles, for seven in total.
 
@@ -954,13 +964,13 @@ Notes:
 - `d4s2` 2013 New Haven Open at Yale – Doubles [2]: Huber and Llagostera Vives defeated Pennetta and Raymond in the first round, but lost to Anabel Medina Garrigues and Katarina Srebotnik in the semifinals.
 - `d4s3` 2013 New Haven Open at Yale – Doubles [3]: <br>
 - `d5s0` Billie Jean King [0]: Billie Jean King ("née" Moffitt; born November 22, 1943) is an American former World No. 1 professional tennis player.
-- `d5s1` Billie Jean King [1]: King won 39 Grand Slam titles: 12 in singles, 16 in women's doubles, and 11 in mixed doubles.
+- ★u2 `d5s1` Billie Jean King [1]: King won 39 Grand Slam titles: 12 in singles, 16 in women's doubles, and 11 in mixed doubles.
 - `d5s2` Billie Jean King [2]: King won the singles title at the inaugural WTA Tour Championships.
 - `d5s3` Billie Jean King [3]: King often represented the United States in the Federation Cup and the Wightman Cup.
 - `d5s4` Billie Jean King [4]: She was a member of the victorious United States team in seven Federation Cups and nine Wightman Cups.
 - `d5s5` Billie Jean King [5]: For three years, King was the United States' captain in the Federation Cup.
 - `d6s0` Liezel Huber [0]: Liezel Huber (née Horn; born 21 August 1976) is a South African-American retired tennis player who represents the United States internationally.
-- `d6s1` Liezel Huber [1]: Huber has won four Grand Slam titles in women's doubles with partner Cara Black, one with Lisa Raymond, and two mixed doubles titles with Bob Bryan.
+- ★u1 `d6s1` Liezel Huber [1]: Huber has won four Grand Slam titles in women's doubles with partner Cara Black, one with Lisa Raymond, and two mixed doubles titles with Bob Bryan.
 - `d6s2` Liezel Huber [2]: On 12 November 2007, she became the co-World No. 1 in doubles with Cara Black.
 - `d6s3` Liezel Huber [3]: On 19 April 2010, Huber became the sole No. 1 for the first time in her career.
 - `d7s0` Tennis at the 2012 Summer Olympics [0]: The tennis tournaments at the 2012 Summer Olympics in London were staged at the All England Club in Wimbledon, from 28 July to 5 August.
@@ -1021,9 +1031,9 @@ Notes:
 - `d6s0` Sharp County Regional Airport [0]: Sharp County Regional Airport (IATA: CKK, ICAO: KCVK, FAA LID: CVK) is a public-use airport in Sharp County, Arkansas, United States.
 - `d6s1` Sharp County Regional Airport [1]: It is located three nautical miles (4 mi, 6 km) northeast of the central business district of Ash Flat, Arkansas.
 - `d6s2` Sharp County Regional Airport [2]: The airport is owned by the Sharp County Regional Airport Authority.
-- `d7s0` Albany International Airport [0]: Albany International Airport (IATA: ALB, ICAO: KALB, FAA LID: ALB) is a public airport seven miles (11 km) northwest of Albany, in Albany County, New York, United States.
+- ★u1 `d7s0` Albany International Airport [0]: Albany International Airport (IATA: ALB, ICAO: KALB, FAA LID: ALB) is a public airport seven miles (11 km) northwest of Albany, in Albany County, New York, United States.
 - `d7s1` Albany International Airport [1]: It is owned by the Albany County Airport Authority.
-- `d8s0` Dane County Regional Airport [0]: Dane County Regional Airport (DCRA) (IATA: MSN, ICAO: KMSN, FAA LID: MSN) (Truax Field) is a civil-military airport located six miles northeast of downtown Madison, the capital of Wisconsin.
+- ★u2 `d8s0` Dane County Regional Airport [0]: Dane County Regional Airport (DCRA) (IATA: MSN, ICAO: KMSN, FAA LID: MSN) (Truax Field) is a civil-military airport located six miles northeast of downtown Madison, the capital of Wisconsin.
 - `d8s1` Dane County Regional Airport [1]: In the Federal Aviation Administration (FAA) National Plan of Integrated Airport Systems for 2017–2021, it is categorized as a small-hub primary commercial service facility.
 - `d9s0` Truax Field Air National Guard Base [0]: Truax Field Air National Guard Base (IATA: MSN, ICAO: KMSN, FAA LID: MSN) , also known as Truax Field, is a military facility located at Dane County Regional Airport.
 - `d9s1` Truax Field Air National Guard Base [1]: It is located five miles (8 km) northeast of the center of Madison, a city in Dane County, Wisconsin, United States.
@@ -1035,7 +1045,7 @@ Notes:
 
 </details>
 
-## Q226 — `hotpotqa_5ab4da5b55429942dd415f96` (draft)
+## Q226 🚩 — `hotpotqa_5ab4da5b55429942dd415f96` (draft)
 
 > Are Floor Jansen and John McCrea from the same band?
 
@@ -1054,7 +1064,9 @@ Evidence:
 - `d1s1` Floor Jansen [1]: She is the lead vocalist of Finnish symphonic metal band Nightwish.
 - `d7s1` John McCrea (musician) [1]: He is a founding member of the band Cake.
 
-Notes:
+Notes: 换一道题
+
+- **🚩 逻辑审核（2026-11-11）[中]：** u1 'band named for Floor Jansen' 不唯一：ReVamp（`d4s0`）和 After Forever（`d6s1`）也符合。漏了备选证据：u1 的 `d10s2`、`d8s3`、`d5s2`（Nightwish），u2 的 `d2s1`（Cake）。
 
 - Compare only the bands stated here, not all groups they may ever have joined.
 - Source check: `band_membership_scope`.
@@ -1062,7 +1074,7 @@ Notes:
 <details><summary>All source context</summary>
 
 - `d1s0` Floor Jansen [0]: Floor Jansen (] ; born 21 February 1981 in Goirle) is a Dutch singer, songwriter, and vocal coach.
-- `d1s1` Floor Jansen [1]: She is the lead vocalist of Finnish symphonic metal band Nightwish.
+- ★u1 `d1s1` Floor Jansen [1]: She is the lead vocalist of Finnish symphonic metal band Nightwish.
 - `d2s0` Cake (band) [0]: Cake (stylized CAKE) is an American alternative rock band from Sacramento, California.
 - `d2s1` Cake (band) [1]: Consisting of singer John McCrea, trumpeter Vince DiFiore, guitarist Xan McCurdy, bassist Gabe Nelson and drummer Paulo Baldi, the band has been noted for McCrea's sarcastic lyrics and monotone vocals, DiFiore's trumpet parts, and their wide-ranging musical influences, including country music, Mariachi, rock, funk, Iranian folk music and hip hop.
 - `d3s0` Hitman (DC Comics) [0]: Hitman (Tommy Monaghan) is a fictional character, a superpowered hitman in the DC Comics Universe.
@@ -1076,7 +1088,7 @@ Notes:
 - `d6s2` Decipher (After Forever album) [2]: Thrown in the mix are also a duet of soprano and tenor voices in "Imperfect Tenses" and the recording of the late Israeli PM Yizhak Rabin voice during the Peace treaty signing ceremony on October 26, 1994 on "Forlorn Hope".
 - `d6s3` Decipher (After Forever album) [3]: This is the last After Forever album with guitarist and founder Mark Jansen, who left the band soon after its release.
 - `d7s0` John McCrea (musician) [0]: John McCrea (born June 25, 1964) is an American singer and musician.
-- `d7s1` John McCrea (musician) [1]: He is a founding member of the band Cake.
+- ★u2 `d7s1` John McCrea (musician) [1]: He is a founding member of the band Cake.
 - `d7s2` John McCrea (musician) [2]: He is the vocalist and primary lyricist for the band, in addition to playing rhythm acoustic guitar, vibraslap, and piano.
 - `d7s3` John McCrea (musician) [3]: He also programs drums and does mixing work while he and the rest of the band have produced all of their albums.
 - `d8s0` Showtime, Storytime [0]: Showtime, Storytime is a video release, released as a double Blu-ray, DVD and CD from Finnish symphonic metal band Nightwish.
@@ -1126,7 +1138,7 @@ Notes:
 - `d2s1` New York Private Bank &amp; Trust [1]: Howard Milstein is the Chairman, President & Chief Executive Officer.
 - `d2s2` New York Private Bank &amp; Trust [2]: As of early 2007, it had $17.3 billion in assets and was the 50th largest bank holding company in the United States.
 - `d2s3` New York Private Bank &amp; Trust [3]: The company has over 1211 employees.
-- `d3s0` CIT Group [0]: CIT Group Inc. is a financial holding company founded in 1908 headquartered in New York City.
+- ★u2 `d3s0` CIT Group [0]: CIT Group Inc. is a financial holding company founded in 1908 headquartered in New York City.
 - `d3s1` CIT Group [1]: The company's name is an abbreviation of an early corporate name, Commercial Investment Trust.
 - `d3s2` CIT Group [2]: It provides financing and leasing capital to customers in over 30 industries.
 - `d3s3` CIT Group [3]: CIT also operates CIT Bank, an FDIC insured bank, its primary bank subsidiary.
@@ -1156,7 +1168,7 @@ Notes:
 - `d8s0` General Mediterranean Holding [0]: The General Mediterranean Holding (GMH) is a financial holding company established in 1979 in Luxembourg City, in southern Luxembourg, founded by Anglo-Iraqi businessman Nadhmi Auchi.
 - `d9s0` Nelson Chai [0]: Nelson Joosuk Chai (born 1965) is an American investment banker and financial executive.
 - `d9s1` Nelson Chai [1]: He formerly served as the chief financial officer of American financial services company Merrill Lynch and briefly as Bank of America's president for the Asia-Pacific region.
-- `d9s2` Nelson Chai [2]: He is the former president of CIT Group and reported directly to then CEO John Thain.
+- ★u1 `d9s2` Nelson Chai [2]: He is the former president of CIT Group and reported directly to then CEO John Thain.
 - `d10s0` The Bank of New York Mellon [0]: The Bank of New York Mellon Corporation, which does business as BNY Mellon, is an American worldwide banking and financial services holding company headquartered in New York City.
 - `d10s1` The Bank of New York Mellon [1]: It was formed on July 1, 2007, as a result of the merger of The Bank of New York and Mellon Financial Corporation.
 - `d10s2` The Bank of New York Mellon [2]: The merger made the company one of the world's largest custodian banks and asset servicing companies.
@@ -1180,7 +1192,7 @@ Evidence:
 
 - `d4s3` The Four Seasons (band) [3]: In 1960, the group known as the Four Lovers evolved into the Four Seasons, with Frankie Valli as the lead singer, Bob Gaudio (formerly of the Royal Teens) on keyboards and tenor vocals, Tommy DeVito on lead guitar and baritone vocals, and Nick Massi on electric bass and bass vocals.
 
-Notes:
+Notes: 是否符合拆词器规则
 
 - The explicit lead-singer statement establishes the unique named band. Its band name alone is not used as evidence of a singing role.
 
@@ -1199,7 +1211,7 @@ Notes:
 - `d4s0` The Four Seasons (band) [0]: The Four Seasons is an American rock and pop band that became internationally successful in the 1960s and 1970s.
 - `d4s1` The Four Seasons (band) [1]: The Vocal Group Hall of Fame has stated that the group was the most popular rock band before the Beatles.
 - `d4s2` The Four Seasons (band) [2]: Since 1970, they have also been known at times as Frankie Valli and the Four Seasons.
-- `d4s3` The Four Seasons (band) [3]: In 1960, the group known as the Four Lovers evolved into the Four Seasons, with Frankie Valli as the lead singer, Bob Gaudio (formerly of the Royal Teens) on keyboards and tenor vocals, Tommy DeVito on lead guitar and baritone vocals, and Nick Massi on electric bass and bass vocals.
+- ★u1 `d4s3` The Four Seasons (band) [3]: In 1960, the group known as the Four Lovers evolved into the Four Seasons, with Frankie Valli as the lead singer, Bob Gaudio (formerly of the Royal Teens) on keyboards and tenor vocals, Tommy DeVito on lead guitar and baritone vocals, and Nick Massi on electric bass and bass vocals.
 - `d5s0` Bobby Fox [0]: Bobby Fox is an Irish born Australian actor who originated the role of Franki Valli in the Australian production of "Jersey Boys".
 - `d5s1` Bobby Fox [1]: He is a former 4 times World Irish Dance Champion and toured with dance productions "Riverdance", "Dancing on Dangerous Ground" (principal understudy), "To Dance on the Moon" (principal dancer) and starred in the revival of Australian musical "Hot Shoe Shuffle" as Spring.
 - `d5s2` Bobby Fox [2]: Fox has also had roles in "Ladies in Black", "Blood Brothers", "Mamma Mia!
@@ -1272,7 +1284,7 @@ Notes:
 - `d1s2` His Last Walk [2]: The album was released before Blessthefall started to play on the Taste of Chaos tour.
 - `d1s3` His Last Walk [3]: Four singles were released for the album: "Higinia", "Guys Like You Make Us Look Bad", "A Message to the Unknown", and "Rise Up."
 - `d1s4` His Last Walk [4]: The last song, "His Last Walk", features a bonus song (at the end of the same track) called "Purple Dog", which is a joke song made by the band members in which all members sing the song and clap their hands.
-- `d2s0` Jason Scheff [0]: Jason Randolph Scheff (born April 16, 1962, in San Diego) is an American bassist, singer, and songwriter.
+- ★u2 `d2s0` Jason Scheff [0]: Jason Randolph Scheff (born April 16, 1962, in San Diego) is an American bassist, singer, and songwriter.
 - `d2s1` Jason Scheff [1]: From 1985 to 2016 he was the bassist and singer for the veteran pop-rock band Chicago.
 - `d3s0` Hollow Bodies [0]: Hollow Bodies is the fourth studio album by American metalcore band Blessthefall.
 - `d3s1` Hollow Bodies [1]: It was released on August 20, 2013 through Fearless Records and produced by Joey Sturgis.
@@ -1284,7 +1296,7 @@ Notes:
 - `d4s4` Blessthefall [4]: Their third studio album, "Awakening", was released on October 4, 2011.
 - `d4s5` Blessthefall [5]: Their fourth studio album, "Hollow Bodies", was released on August 20, 2013. "
 - `d4s6` Blessthefall [6]: To Those Left Behind" is the band's fifth full-length album, released on September 18, 2015.
-- `d5s0` Beau Bokan [0]: Beau Mark Bokan (born November 30, 1981) is an American musician and singer.
+- ★u1 `d5s0` Beau Bokan [0]: Beau Mark Bokan (born November 30, 1981) is an American musician and singer.
 - `d5s1` Beau Bokan [1]: He is best known as the lead vocalist and keyboardist of Blessthefall, and the former vocalist of Take the Crown.
 - `d5s2` Beau Bokan [2]: Bokan runs his own clothing line titled "Golden Hearts Shine Forever" which was launched in March 2011.
 - `d5s3` Beau Bokan [3]: Bokan is Roman Catholic.
@@ -1315,7 +1327,7 @@ Notes:
 
 </details>
 
-## Q230 — `hotpotqa_5ab64cfa55429953192ad2b7` (draft)
+## Q230 🚩 — `hotpotqa_5ab64cfa55429953192ad2b7` (draft)
 
 > Who lived longer Ellen Glasgow or N. Scott Momaday ?
 
@@ -1333,7 +1345,9 @@ Evidence:
 
 - `d6s0` Ellen Glasgow [0]: Ellen Anderson Gholson Glasgow (April 22, 1873 – November 21, 1945) was an American novelist who portrayed the changing world of the contemporary South.
 
-Notes:
+Notes: 可以算u2有证据。
+
+- **🚩 逻辑审核（2026-11-11）[中]：** u2 可能有证据：`d3s3`（2007 年获 National Medal of Arts）加上 `d3s0`（生于 1934）可以推出 Momaday 至少活了 72 年 10 个月，长于 Glasgow 的 72 年 7 个月。但这要依赖'该奖只颁给在世者'这个前提，需要审核者决定。
 
 - Momaday's excerpt gives a birth date but no death date or explicit dated living-age bound. Do not use the present date or assume a blank death date is a lifespan.
 - Source check: `lifespan_endpoint_missing`.
@@ -1355,7 +1369,7 @@ Notes:
 - `d5s0` Ellen Glasgow House [0]: The Ellen Glasgow House, also known as the Branch-Glascow House, is a historic house at 1 West Main Street in Richmond, Virginia.
 - `d5s1` Ellen Glasgow House [1]: Built in 1841, it is nationally significant as the home of writer Ellen Glasgow (1873-1945) from 1887 until her death.
 - `d5s2` Ellen Glasgow House [2]: It was declared a National Historic Landmark in 1971.
-- `d6s0` Ellen Glasgow [0]: Ellen Anderson Gholson Glasgow (April 22, 1873 – November 21, 1945) was an American novelist who portrayed the changing world of the contemporary South.
+- ★u1 `d6s0` Ellen Glasgow [0]: Ellen Anderson Gholson Glasgow (April 22, 1873 – November 21, 1945) was an American novelist who portrayed the changing world of the contemporary South.
 - `d7s0` The Shadowy Third and Other Stories [0]: The Shadowy Third and Other Stories is a 1923 short story collection by Ellen Glasgow.
 - `d7s1` The Shadowy Third and Other Stories [1]: Glasgow published only this one short story collection during her lifetime, which included seven stories.
 - `d7s2` The Shadowy Third and Other Stories [2]: While Glasgow's novels receive more critical attention, scholarship on her stories continues into the twenty-first century.
@@ -1372,7 +1386,7 @@ Notes:
 
 </details>
 
-## Q231 — `hotpotqa_5ab672165542995eadeeffe0` (draft)
+## Q231 🚩 — `hotpotqa_5ab672165542995eadeeffe0` (draft)
 
 > Which genus has more species, Azorina or Azadirachta?
 
@@ -1391,19 +1405,21 @@ Evidence:
 - `d1s0` Azorina [0]: Azorina is a monotypic genus of flowering plants within the family Campanulaceae, whose sole species, the Azorina vidalii, is endemic to the Azores.
 - `d3s0` Azadirachta [0]: Azadirachta is a genus of two species of trees in the mahogany (Meliaceae) family.
 
-Notes:
+Notes: 加上备选
+
+- **🚩 逻辑审核（2026-11-11）[中]：** u2（2 个物种）漏了备选证据：`d2s1`（'one of two species in the genus Azadirachta'）和 `d3s1`。
 
 
 <details><summary>All source context</summary>
 
-- `d1s0` Azorina [0]: Azorina is a monotypic genus of flowering plants within the family Campanulaceae, whose sole species, the Azorina vidalii, is endemic to the Azores.
+- ★u1 `d1s0` Azorina [0]: Azorina is a monotypic genus of flowering plants within the family Campanulaceae, whose sole species, the Azorina vidalii, is endemic to the Azores.
 - `d1s1` Azorina [1]: Its fragmented population is made up of fewer than 1000 mature plants limited to the coastlines of several of the islands.
 - `d2s0` Azadirachta indica [0]: Azadirachta indica (commonly known as neem, nimtree and Indian lilac) is a tree in the mahogany family Meliaceae.
 - `d2s1` Azadirachta indica [1]: It is one of two species in the genus "Azadirachta", and is native to the Indian subcontinent, i.e. India, Nepal, Pakistan, Bangladesh, Sri Lanka, and Maldives.
 - `d2s2` Azadirachta indica [2]: It typically is grown in tropical and semi-tropical regions.
 - `d2s3` Azadirachta indica [3]: Neem trees now also grow in islands located in the southern part of Iran.
 - `d2s4` Azadirachta indica [4]: Its fruits and seeds are the source of neem oil.
-- `d3s0` Azadirachta [0]: Azadirachta is a genus of two species of trees in the mahogany (Meliaceae) family.
+- ★u2 `d3s0` Azadirachta [0]: Azadirachta is a genus of two species of trees in the mahogany (Meliaceae) family.
 - `d3s1` Azadirachta [1]: Numerous species have been proposed for the genus but only two are currently recognized, "Azadirachta excelsa" and the economically important tree "Azadirachta indica".
 - `d3s2` Azadirachta [2]: The latter is informally called the Neem tree; see also Neem oil.
 - `d3s3` Azadirachta [3]: Both species are native to the Indomalaysian region, and "A. indica" is also widely cultivated and naturalized outside its native range.
@@ -1472,15 +1488,15 @@ Notes:
 - `d8s2` Great American Bathroom Book [2]: 2 and Vol.
 - `d8s3` Great American Bathroom Book [3]: 3, published in 1992, 1993 and 1994, respectively.
 - `d8s4` Great American Bathroom Book [4]: The books were published by Compact Classics, a small US publishing house.
-- `d9s0` October Sky (novel) [0]: October Sky (originally published as Rocket Boys) is the first memoir in a series of three, by Homer Hickam, Jr. It is a story of growing up in a mining town, and a boy's pursuit of amateur rocketry in a coal mining town.
+- ★u1 `d9s0` October Sky (novel) [0]: October Sky (originally published as Rocket Boys) is the first memoir in a series of three, by Homer Hickam, Jr. It is a story of growing up in a mining town, and a boy's pursuit of amateur rocketry in a coal mining town.
 - `d9s1` October Sky (novel) [1]: It won the W.D. Weatherford Award in 1998, the year of its release.
 - `d9s2` October Sky (novel) [2]: Today, it is one of the most often picked community/library reads in the United States.
-- `d9s3` October Sky (novel) [3]: It is also studied in many school systems around the world.
+- ★u1 `d9s3` October Sky (novel) [3]: It is also studied in many school systems around the world.
 - `d9s4` October Sky (novel) [4]: "October Sky" was followed by "The Coalwood Way" (2000) and "Sky of Stone" (2002).
-- `d10s0` The Coalwood Way [0]: The Coalwood Way (2000) is the second memoir in a series of three, by Homer Hickam, Jr. "The Coalwood Way" is a story of the Rocket Boys and Coalwood.
+- ★u1 `d10s0` The Coalwood Way [0]: The Coalwood Way (2000) is the second memoir in a series of three, by Homer Hickam, Jr. "The Coalwood Way" is a story of the Rocket Boys and Coalwood.
 - `d10s1` The Coalwood Way [1]: Homer calls it an "equal," rather than a sequel because the story happens during the same timeframe as the first book.
 - `d10s2` The Coalwood Way [2]: Today, it is one of the most often picked community/library reads in the United States.
-- `d10s3` The Coalwood Way [3]: It is also studied in many school systems around the world.
+- ★u1 `d10s3` The Coalwood Way [3]: It is also studied in many school systems around the world.
 - `d10s4` The Coalwood Way [4]: The Coalwood Way (2000) is followed by "Sky of Stone" (2002), and preceded by "October Sky" (1998).
 
 </details>
@@ -1508,7 +1524,7 @@ Notes:
 
 <details><summary>All source context</summary>
 
-- `d1s0` Inklings [0]: The Inklings was an informal literary discussion group associated with the University of Oxford, England, for nearly two decades between the early 1930s and late 1949.
+- ★u2 `d1s0` Inklings [0]: The Inklings was an informal literary discussion group associated with the University of Oxford, England, for nearly two decades between the early 1930s and late 1949.
 - `d1s1` Inklings [1]: The Inklings were literary enthusiasts who praised the value of narrative in fiction and encouraged the writing of fantasy.
 - `d2s0` Colin Hardie [0]: Colin Graham Hardie (16 February 1906 – 17 October 1998) was a British classicist and academic.
 - `d2s1` Colin Hardie [1]: From 1933 to 1936, he was Director of the British School at Rome.
@@ -1534,7 +1550,7 @@ Notes:
 - `d6s4` Charles Leslie Wrenn [4]: Some of the work published by Wrenn includes "The English Language" (1949), "A Study of Old English Literature" (1967)"," and "An Old English Grammar," written with Randolph Quirk (1955, rev. 1957).
 - `d6s5` Charles Leslie Wrenn [5]: His literary interests were primarily comparative literature and later poets including T. S. Elliot.
 - `d7s0` Adam Fox [0]: Adam Fox (1883 – 1977), Canon, was the Dean of Divinity at Magdalen College, Oxford.
-- `d7s1` Adam Fox [1]: He was one of the first members of the "Inklings", a literary group which also included C.S. Lewis and J.R.R. Tolkien.
+- ★u1 `d7s1` Adam Fox [1]: He was one of the first members of the "Inklings", a literary group which also included C.S. Lewis and J.R.R. Tolkien.
 - `d7s2` Adam Fox [2]: Between 1938 and 1942 he was Professor of Poetry.
 - `d7s3` Adam Fox [3]: Later he became Canon of Westminster Abbey and he is buried there in Poet's Corner.
 - `d7s4` Adam Fox [4]: He was also Warden (Headmaster) of the famous Radley College.
@@ -1582,7 +1598,7 @@ Notes:
 - `d2s2` Qayyarah [2]: It has a population of 15,000.
 - `d2s3` Qayyarah [3]: The town is located near the Qayyarah oil field and has an oil refinery on its south-western outskirts.
 - `d2s4` Qayyarah [4]: The Qayyarah Airfield West is 20 kilometers west of the town.
-- `d3s0` Menindee, New South Wales [0]: Menindee, frequently but erroneously spelled "Menindie", is a small town in the far west of New South Wales, Australia, in Central Darling Shire, on the banks of the Darling River, with a sign-posted population of 980 and a 2011 census population of 449.
+- ★u2 `d3s0` Menindee, New South Wales [0]: Menindee, frequently but erroneously spelled "Menindie", is a small town in the far west of New South Wales, Australia, in Central Darling Shire, on the banks of the Darling River, with a sign-posted population of 980 and a 2011 census population of 449.
 - `d4s0` Boundary, Washington [0]: Boundary is a ghost town located in Stevens County, Washington, United States.
 - `d4s1` Boundary, Washington [1]: The town was located near the Canada–US border and near the Columbia River.
 - `d4s2` Boundary, Washington [2]: Boundary's peak years were during the 1890s.
@@ -1596,7 +1612,7 @@ Notes:
 - `d5s2` Menindee County [2]: Menindee is at its north-eastern edge.
 - `d5s3` Menindee County [3]: The Menindee Lakes are located there.
 - `d6s0` Menindee Lakes [0]: The Menindee Lakes is a chain of shallow ephemeral freshwater lakes connected to the Darling River to form a storage system.
-- `d6s1` Menindee Lakes [1]: The lakes lie in the far west region of New South Wales, Australia, near the town of Menindee.
+- ★u1 `d6s1` Menindee Lakes [1]: The lakes lie in the far west region of New South Wales, Australia, near the town of Menindee.
 - `d7s0` Gregory, Queensland [0]: Gregory is a small town located near the Gregory River in the Shire of Burke, Queensland, Australia.
 - `d7s1` Gregory, Queensland [1]: The town had a population of 40 people in 2008 and is situated on the banks of the perennial Gregory River.
 - `d7s2` Gregory, Queensland [2]: The Gregory River was named by explorer William Landsborough on 19 November 1861, after Augustus Charles Gregory explorer and first Surveyor General of Queensland.
@@ -1650,8 +1666,8 @@ Notes:
 - `d1s0` Richard DeVos [0]: Richard Marvin DeVos Sr. (born March 4, 1926) is an American businessman, co-founder of Amway along with Jay Van Andel (company restructured as Alticor in 2000), and owner of the Orlando Magic NBA basketball team.
 - `d1s1` Richard DeVos [1]: In 2012, "Forbes" magazine listed him as the 60th wealthiest person in the United States, and the 205th richest in the world, with an estimated net worth of $5.1 billion.
 - `d1s2` Richard DeVos [2]: At one point, he was one of the 10 wealthiest Americans.
-- `d2s0` James C. Kennedy [0]: James Cox Kennedy (born 1948) is an American media executive and the current chair of Cox Enterprises, the media conglomerate founded by his grandfather, James M. Cox.
-- `d2s1` James C. Kennedy [1]: According to the Forbes billionaires list from 2017, he is the 105th richest person in the world, the thirty-seventh richest person in the United States, and the richest person in the state of Georgia, surpassing his aunt, Anne Cox Chambers, for the title.
+- ★u2 `d2s0` James C. Kennedy [0]: James Cox Kennedy (born 1948) is an American media executive and the current chair of Cox Enterprises, the media conglomerate founded by his grandfather, James M. Cox.
+- ★u1 `d2s1` James C. Kennedy [1]: According to the Forbes billionaires list from 2017, he is the 105th richest person in the world, the thirty-seventh richest person in the United States, and the richest person in the state of Georgia, surpassing his aunt, Anne Cox Chambers, for the title.
 - `d2s2` James C. Kennedy [2]: He was featured in a Forbes article entitled "This Billionaire Knows The Secret To Saving A Family Business".
 - `d3s0` Jean Coutu (pharmacist) [0]: Jean Coutu, {'1': ", '2': ", '3': ", '4': "} (born May 29, 1927) is a Canadian pharmacist and businessman.
 - `d3s1` Jean Coutu (pharmacist) [1]: He is the founder and Chairman of the Jean Coutu Group which he started in 1969.
@@ -1663,7 +1679,7 @@ Notes:
 - `d5s1` Nagpur division [1]: Nagpur is the most eastern division in the state, with an administrative headquarters in the city of Nagpur.
 - `d5s2` Nagpur division [2]: It covers 51,336 km² (19,821 mi²).
 - `d5s3` Nagpur division [3]: The Amravati and Nagpur divisions make up the region of Vidarbha.
-- `d6s0` Anne Cox Chambers [0]: Anne Beau Cox Chambers (born December 1, 1919) is an American media proprietor, who has a stake of interest in Cox Enterprises, a privately held media empire that includes newspapers, television, radio, cable television, and other businesses.
+- ★u3 `d6s0` Anne Cox Chambers [0]: Anne Beau Cox Chambers (born December 1, 1919) is an American media proprietor, who has a stake of interest in Cox Enterprises, a privately held media empire that includes newspapers, television, radio, cable television, and other businesses.
 - `d7s0` List of Catholic dioceses in Brazil [0]: The Catholic Church in Brazil comprises forty-four ecclesiastical provinces each headed by a Metropolitan archbishop.
 - `d7s1` List of Catholic dioceses in Brazil [1]: The provinces are in turn subdivided into 215 dioceses (including 4 eparchies), 45 archdioceses and 12 territorial prelatures, each headed by a bishop or an archbishop.
 - `d7s2` List of Catholic dioceses in Brazil [2]: These 272 divisions make the largest number of Catholic dioceses in any country.
@@ -1682,7 +1698,7 @@ Notes:
 
 </details>
 
-## Q236 — `hotpotqa_5ab7f3285542992aa3b8c88f` (draft)
+## Q236 🚩 — `hotpotqa_5ab7f3285542992aa3b8c88f` (draft)
 
 > Suzanne Simone Baptiste Louverture is the wife of the leader of which revolution?
 
@@ -1700,12 +1716,14 @@ Evidence:
 - `d1s0` Suzanne Simone Baptiste Louverture [0]: Suzanne Simone Baptiste Louverture (around 1742 – May 19, 1816 in Agen, France) was the wife of Toussaint Louverture and the "Dame-Consort" of the French colony of Saint-Domingue.
 - `d6s0` Toussaint Louverture [0]: François-Dominique Toussaint Louverture (] 20 May 1743 – 7 April 1803), also known as Toussaint L'Ouverture or Toussaint Bréda, was the best-known leader of the Haitian Revolution.
 
-Notes:
+Notes: 加上备选证据
+
+- **🚩 逻辑审核（2026-11-11）[中]：** u2 漏了备选证据：`d4s2`（'Toussaint Louverture, the leader of the Haitian Revolution'）和 `d10s1`。
 
 
 <details><summary>All source context</summary>
 
-- `d1s0` Suzanne Simone Baptiste Louverture [0]: Suzanne Simone Baptiste Louverture (around 1742 – May 19, 1816 in Agen, France) was the wife of Toussaint Louverture and the "Dame-Consort" of the French colony of Saint-Domingue.
+- ★u1 `d1s0` Suzanne Simone Baptiste Louverture [0]: Suzanne Simone Baptiste Louverture (around 1742 – May 19, 1816 in Agen, France) was the wife of Toussaint Louverture and the "Dame-Consort" of the French colony of Saint-Domingue.
 - `d2s0` War of Knives [0]: The War of Knives (French: "Guerre des couteaux"), also known as the War of the South, was a civil war from June 1799 to July 1800 between the Haitian revolutionary Toussaint Louverture, a black ex-slave who controlled the north of Saint-Domingue (modern-day Haiti), and his adversary André Rigaud, a free colored person of mixed race who controlled the south.
 - `d2s1` War of Knives [1]: Louverture and Rigaud fought over de facto control of the French colony of Saint-Domingue during the war, which took place after the two men had successfully expelled foreign forces from the colony as part of the Haitian Revolution.
 - `d2s2` War of Knives [2]: The war resulted in Toussaint taking control of the entirety of Saint-Domingue, and Rigaud fleeing into exile.
@@ -1720,7 +1738,7 @@ Notes:
 - `d4s3` Toussaint L'Overture County Cemetery [3]: The earliest recorded burials date from 1869, but it wasn't officially incorporated until 1884.
 - `d4s4` Toussaint L'Overture County Cemetery [4]: It is "the oldest African American institution in continuous use" in Williamson County.
 - `d5s0` Sanité Bélair [0]: Suzanne Bélair, called "Sanité Bélair", (1781 – 5 October 1802), was a Haitian Freedom fighter and revolutionary, lieutenant in the army of Toussaint Louverture.
-- `d6s0` Toussaint Louverture [0]: François-Dominique Toussaint Louverture (] 20 May 1743 – 7 April 1803), also known as Toussaint L'Ouverture or Toussaint Bréda, was the best-known leader of the Haitian Revolution.
+- ★u2 `d6s0` Toussaint Louverture [0]: François-Dominique Toussaint Louverture (] 20 May 1743 – 7 April 1803), also known as Toussaint L'Ouverture or Toussaint Bréda, was the best-known leader of the Haitian Revolution.
 - `d6s1` Toussaint Louverture [1]: His military and political acumen saved the gains of the first Black insurrection in November 1791.
 - `d6s2` Toussaint Louverture [2]: He first fought for the Spanish against the French; then for France against Spain and Great Britain; and finally, for Saint-Domingue against Napoleonic France.
 - `d6s3` Toussaint Louverture [3]: He then helped transform the insurgency into a revolutionary movement, which by 1800 had turned Saint-Domingue, the most prosperous slave colony of the time, into the first free colonial society to have explicitly rejected race as the basis of social ranking.
@@ -1793,7 +1811,7 @@ Notes:
 - `d3s1` Stafford Regional Airport [1]: The airport is southwest of the intersection of Route 630 and U.S. Route 1 near Interstate 95, approximately 40 mi south of Washington, D.C. and 60 mi north of Richmond.
 - `d3s2` Stafford Regional Airport [2]: It is owned and operated by the Stafford Regional Airport Authority, an independent body of representatives from Stafford and Prince William Counties and the City of Fredericksburg.
 - `d4s0` Southwest Oregon Regional Airport [0]: Southwest Oregon Regional Airport (IATA: OTH, ICAO: KOTH, FAA LID: OTH) , formerly North Bend Municipal Airport, is a public airport in North Bend, Coos County, Oregon.
-- `d4s1` Southwest Oregon Regional Airport [1]: It is operated by the Coos County Airport District.
+- ★u1 `d4s1` Southwest Oregon Regional Airport [1]: It is operated by the Coos County Airport District.
 - `d5s0` History of Lawton, Oklahoma [0]: The History of Lawton, Oklahoma refers to the history of the southwestern Oklahoma city of Lawton, Oklahoma.
 - `d5s1` History of Lawton, Oklahoma [1]: Lawton's history starts with opening of American Indian reservation lands in the early 1900s and has seen population and economic growth throughout the 20th Century due to its proximity with Fort Sill.
 - `d6s0` Manassas Regional Airport [0]: Manassas Regional Airport (IATA: KHEF, ICAO: HEF) , also known as Harry P. Davis Field, is a city-owned public-use airport located four nautical miles (7 km) southwest of the central business district of Manassas, in a section of Manassas that was carved out of Prince William County specifically for the purpose of containing the airport.
@@ -1818,7 +1836,7 @@ Notes:
 
 </details>
 
-## Q238 — `hotpotqa_5ab811395542990e739ec80f` (draft)
+## Q238 🚩 — `hotpotqa_5ab811395542990e739ec80f` (draft)
 
 > Which continent have a distribution of both the Ternstroemia and Cussonia genus of plants?
 
@@ -1837,7 +1855,9 @@ Evidence:
 - `d5s1` Cussonia [1]: It originated in Africa and has its center of distribution in South Africa and the Mascarene Islands.
 - `d7s1` Ternstroemia [1]: It is distributed in tropical and subtropical regions in Africa, Asia, and the Americas.
 
-Notes:
+Notes: u1的描述可以改成跟u2一样，d5s1和d5s0都可以作为备选证据。同时检查为什么u3无法推出
+
+- **🚩 逻辑审核（2026-11-11）[中]：** u1 的描述（'continent of origin'）与题目不符，题目问的是分布；`d5s1` 写的是 'originated in Africa'，`d5s0`（'native to the Afrotropics'）可能更贴切。u3 用的是 `[]`，即使 u1、u2 都被支持，u3 也永远不会被支持。
 
 - Cussonia's sentence gives African origin and a distribution center in South Africa and the Mascarene Islands. Origin alone does not establish the continent of current distribution. A geographic mapping rule is not part of this draft.
 - Source check: `origin_vs_distribution`.
@@ -1861,7 +1881,7 @@ Notes:
 - `d4s2` Owenia (plant) [2]: There are five species in the genus, most from New South Wales and living in conditions ranging from wet rainforest to the verges of the desert.
 - `d4s3` Owenia (plant) [3]: Like many plants, it plays its part in patch dynamics.
 - `d5s0` Cussonia [0]: Cussonia is a genus of plants of family Araliaceae, which is native to the Afrotropics.
-- `d5s1` Cussonia [1]: It originated in Africa and has its center of distribution in South Africa and the Mascarene Islands.
+- ★u1 `d5s1` Cussonia [1]: It originated in Africa and has its center of distribution in South Africa and the Mascarene Islands.
 - `d5s2` Cussonia [2]: Due to their striking habit, they are a conspicuous and easily recognizable group of plants.
 - `d5s3` Cussonia [3]: Their genus name commemorates the botanist Pierre Cusson.
 - `d5s4` Cussonia [4]: The Afro-Malagasy and Asian "Schefflera", and Afrotropical "Seemannaralia" genera are related taxa that share several of its morphological characteristics, among which the leaves borne on the end of branches, inflorescences carried on terminal branches or stems, and reduced leaf complexity in developing inflorescences.
@@ -1871,7 +1891,7 @@ Notes:
 - `d6s3` Luzula [3]: Possible origins of the genus name include the Italian "lucciola" ("to shine, sparkle") or the Latin "luzulae" or "luxulae", from "lux" ("light"), inspired by the way the plants sparkle when wet with dew.
 - `d6s4` Luzula [4]: Another etymology sometimes given is that it does derive from lucciola but that this meant a midsummerfield, or from the Latin luculus, meaning a small place; the same source also states that this name was applied by Luigi Anguillara (an Italian botanist) in 1561.
 - `d7s0` Ternstroemia [0]: Ternstroemia is a genus of flowering plants in the family Pentaphylacaceae.
-- `d7s1` Ternstroemia [1]: It is distributed in tropical and subtropical regions in Africa, Asia, and the Americas.
+- ★u2 `d7s1` Ternstroemia [1]: It is distributed in tropical and subtropical regions in Africa, Asia, and the Americas.
 - `d8s0` Eugenia [0]: Eugenia is a genus of flowering plants in the myrtle family Myrtaceae.
 - `d8s1` Eugenia [1]: It has a worldwide, although highly uneven, distribution in tropical and subtropical regions.
 - `d8s2` Eugenia [2]: The bulk of the approximately 1,000 species occur in the New World tropics, especially in the northern Andes, the Caribbean, and the Atlantic Forest (coastal forests) of eastern Brazil.
@@ -1912,7 +1932,7 @@ Evidence:
 
 - `d1s1` Hewlett Packard Enterprise [1]: HPE is a business-focused organization with four divisions: Enterprise Group, which works in servers, storage, networking, consulting and support; Services; Software; and Financial Services.
 
-Notes:
+Notes: 检查u1是否真的没有support，是的话就换一道题
 
 - WPX Energy's definition does not give a division count. The proposed bound is required by the source answer but has no accepted support. Silence cannot be treated as zero.
 - Source check: `missing_company_division_count`.
@@ -1920,7 +1940,7 @@ Notes:
 <details><summary>All source context</summary>
 
 - `d1s0` Hewlett Packard Enterprise [0]: Hewlett Packard Enterprise Company (commonly referred to as Hewlett Packard Enterprise or HPE) is an American multinational enterprise information technology company based in Palo Alto, California, founded on 1 November 2015 as part of splitting of the Hewlett-Packard company.
-- `d1s1` Hewlett Packard Enterprise [1]: HPE is a business-focused organization with four divisions: Enterprise Group, which works in servers, storage, networking, consulting and support; Services; Software; and Financial Services.
+- ★u2 `d1s1` Hewlett Packard Enterprise [1]: HPE is a business-focused organization with four divisions: Enterprise Group, which works in servers, storage, networking, consulting and support; Services; Software; and Financial Services.
 - `d2s0` HP Discover [0]: HP Discover was Hewlett-Packard's showcase technology event for business and government customers.
 - `d2s1` HP Discover [1]: In 2011, HP Enterprise Business, along with participating independent user groups, combined its annual HP Software Universe, HP Technology Forum and HP Technology@Work into a single event, HP Discover.
 - `d2s2` HP Discover [2]: There we two HP Discover events annually, one for the Americas and one for Europe, Middle East and Africa (EMEA).
@@ -1959,7 +1979,7 @@ Notes:
 
 </details>
 
-## Q240 — `hotpotqa_5ab870ee5542990e739ec8f6` (draft)
+## Q240 🚩 — `hotpotqa_5ab870ee5542990e739ec8f6` (draft)
 
 > A Wind in the Door is part of a series written by who?
 
@@ -1977,7 +1997,9 @@ Evidence:
 - `d2s1` A Wind in the Door [1]: It is a companion book to "A Wrinkle in Time", and part of the Time Quintet.
 - `d7s0` Time Quintet [0]: The Time Quintet is a fantasy/science fiction series of five young adult novels written by Madeleine L'Engle.
 
-Notes:
+Notes: 能否设置两种链路：如果直接检索到d2s0，可以直接完成回答，这种情况作为single unit。如果检索到d2s1，可以回答u1，需要再检索到d7s0来回答u2
+
+- **🚩 逻辑审核（2026-11-11）[中]：** `d2s0`（'A Wind in the Door is ... a novel by Madeleine L'Engle'）直接给出了作者；系列这一跳（u1，`d2s1`）让 u2 要等 `d7s0` 到达。需要决定这本书的作者能否当作系列的作者。
 
 
 <details><summary>All source context</summary>
@@ -1986,7 +2008,7 @@ Notes:
 - `d1s1` Codename: Kids Next Door [1]: The series centers on the adventures of five children who operate from a high-tech tree house, fighting against adult and teen villains with advanced 2×4 technology.
 - `d1s2` Codename: Kids Next Door [2]: Using their codenames (Numbuh 1, Numbuh 2, Numbuh 3, Numbuh 4, and Numbuh 5), they are Sector V, part of a global organization called the Kids Next Door.
 - `d2s0` A Wind in the Door [0]: A Wind in the Door is a young adult science fantasy novel by Madeleine L'Engle.
-- `d2s1` A Wind in the Door [1]: It is a companion book to "A Wrinkle in Time", and part of the Time Quintet.
+- ★u1 `d2s1` A Wind in the Door [1]: It is a companion book to "A Wrinkle in Time", and part of the Time Quintet.
 - `d3s0` The Four Winds of Love [0]: The Four Winds of Love is the overall title for a series of six novels written by Compton Mackenzie, "The East Wind of Love" (1937), "The South Wind of Love" (1938), "The West Wind of Love" (1940), "West to North" (1942), "The North Wind of Love, Book 1" (1944) and "The North Wind of Love, Book 2" (1945), which taken together constitute a major fictional chronicle of the first forty years of the twentieth century.
 - `d3s1` The Four Winds of Love [1]: The main protagonist of the hexalogy is the semi-autobiographical character of John Ogilvie.
 - `d4s0` Door to Door (Modern Family) [0]: "Door to Door" is the fourth episode of the third season of the American sitcom "Modern Family", and the series' 52nd episode overall.
@@ -2001,7 +2023,7 @@ Notes:
 - `d6s1` Kaze Hikaru [1]: "Shining Wind") is a Japanese manga series written and illustrated by Taeko Watanabe.
 - `d6s2` Kaze Hikaru [2]: Set in the "bakumatsu" period, the series follows Tominaga Sei, a young girl who poses as a boy named Kamiya Seizaburo so she can join the Mibu-Roshi (Special Police; later known as the Shinsengumi).
 - `d6s3` Kaze Hikaru [3]: She befriends her sensei, Okita Sōji, who discovers her secret.
-- `d7s0` Time Quintet [0]: The Time Quintet is a fantasy/science fiction series of five young adult novels written by Madeleine L'Engle.
+- ★u2 `d7s0` Time Quintet [0]: The Time Quintet is a fantasy/science fiction series of five young adult novels written by Madeleine L'Engle.
 - `d8s0` Close the Last Door [0]: Close the Last Door (Japanese: 最後のドアを閉めろ!
 - `d8s1` Close the Last Door [1]: , Hepburn: Saigo no Door wo Shimero! )
 - `d8s2` Close the Last Door [2]: is a yaoi manga series written by Yugi Yamada.

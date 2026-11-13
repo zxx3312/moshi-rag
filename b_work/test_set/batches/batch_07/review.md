@@ -28,7 +28,7 @@ Evidence:
 - `d5s0` Black cat [0]: A black cat is a domestic cat with black fur that may be a mixed or specific breed.
 - `d6s0` Oscar (bionic cat) [0]: Oscar is an all black cat owned by Kate Allan and Mike Nolan who lives on the Channel Island of Jersey.
 
-Notes:
+Notes: 检查一下，这道题是不是回答完u1就可以结束了
 
 
 <details><summary>All source context</summary>
@@ -52,12 +52,12 @@ Notes:
 - `d4s1` Carriage dog [1]: Dogs of this type were usually bred and trained to trot alongside carriages to protect the occupants from banditry or other interference.
 - `d4s2` Carriage dog [2]: They were usually owned and used by the wealthy or traders and merchants.
 - `d4s3` Carriage dog [3]: The dogs were trained to attack the horses used by highwaymen, giving the owners' human security time to respond to the actual robbers.
-- `d5s0` Black cat [0]: A black cat is a domestic cat with black fur that may be a mixed or specific breed.
+- ★u2 `d5s0` Black cat [0]: A black cat is a domestic cat with black fur that may be a mixed or specific breed.
 - `d5s1` Black cat [1]: The Cat Fanciers' Association (CFA) recognizes 22 cat breeds that can come with solid black coats.
 - `d5s2` Black cat [2]: The Bombay breed is exclusively black.
 - `d5s3` Black cat [3]: All-black fur pigmentation is slightly more prevalent in male cats than female cats.
 - `d5s4` Black cat [4]: Their high melanin pigment content causes most black cats to have yellow (golden) eyes (irises).
-- `d6s0` Oscar (bionic cat) [0]: Oscar is an all black cat owned by Kate Allan and Mike Nolan who lives on the Channel Island of Jersey.
+- ★u1 `d6s0` Oscar (bionic cat) [0]: Oscar is an all black cat owned by Kate Allan and Mike Nolan who lives on the Channel Island of Jersey.
 - `d6s1` Oscar (bionic cat) [1]: In 2009 Oscar had both hind paws severed by a combine harvester.
 - `d6s2` Oscar (bionic cat) [2]: Since then he has undergone a pioneering operation to add prosthetic feet.
 - `d6s3` Oscar (bionic cat) [3]: The treatment has since been considered for use with humans.
@@ -108,7 +108,7 @@ Notes:
 
 <details><summary>All source context</summary>
 
-- `d1s0` Charles Burnett (director) [0]: Charles Burnett (born April 13, 1944, in Vicksburg, Mississippi) is an African-American film director, film producer, writer, editor, actor, photographer, and cinematographer.
+- ★u1 `d1s0` Charles Burnett (director) [0]: Charles Burnett (born April 13, 1944, in Vicksburg, Mississippi) is an African-American film director, film producer, writer, editor, actor, photographer, and cinematographer.
 - `d1s1` Charles Burnett (director) [1]: His most popular films include "Killer of Sheep" (1978), "My Brother's Wedding" (1983), "To Sleep with Anger" (1990), "The Glass Shield" (1994), and "" (2007).
 - `d1s2` Charles Burnett (director) [2]: He has been involved in other types of motion pictures including shorts, documentaries, and a TV series.
 - `d2s0` Orphans (1987 film) [0]: Orphans is a 1987 American drama film directed by Alan J. Pakula.
@@ -117,7 +117,7 @@ Notes:
 - `d3s0` The Pelican Brief (film) [0]: The Pelican Brief is a 1993 American legal political thriller based on the novel of the same name by John Grisham.
 - `d3s1` The Pelican Brief (film) [1]: Directed by Alan J. Pakula, the film stars Julia Roberts in the role of young law student Darby Shaw and Denzel Washington as "Washington Herald" reporter Gray Grantham.
 - `d3s2` The Pelican Brief (film) [2]: The film, which features music composed by James Horner, was the last film that featured Pakula as a writer or producer before his death.
-- `d4s0` Alan J. Pakula [0]: Alan Jay Pakula ( ; April 7, 1928 – November 19, 1998) was an American film director, writer and producer.
+- ★u2 `d4s0` Alan J. Pakula [0]: Alan Jay Pakula ( ; April 7, 1928 – November 19, 1998) was an American film director, writer and producer.
 - `d4s1` Alan J. Pakula [1]: He was nominated for three Academy Awards: Best Picture for "To Kill a Mockingbird" (1962), Best Director for "All the President's Men" (1976) and Best Adapted Screenplay for "Sophie's Choice" (1982).
 - `d5s0` Presumed Innocent (film) [0]: Presumed Innocent is a 1990 American legal drama film based on the 1987 novel of the same name by Scott Turow.
 - `d5s1` Presumed Innocent (film) [1]: Directed by Alan J. Pakula, and written by Pakula and Frank Pierson, it stars Harrison Ford, Brian Dennehy, Raúl Juliá, Bonnie Bedelia, Paul Winfield and Greta Scacchi.
@@ -182,10 +182,10 @@ Notes:
 - `d5s3` The Ruffian on the Stair [3]: The title and play are based on a few lines from poet and dramatist William Ernest Henley: "Madam Life's a piece in bloom, / Death goes dogging everywhere: / She's the tenant of the room, / He's the ruffian on the stair."
 - `d5s4` The Ruffian on the Stair [4]: "Ruffian" is not as renowned as other works such as "Loot" and "What the Butler Saw", but it is still staged on occasion.
 - `d6s0` Simon Bent [0]: Simon Bent is a British screenwriter and playwright, notable for work including BBC TV drama "" (2006), the screenplay for the feature film "Christie Malry's Own Double-Entry" (2000), and the Joe Orton biographical play "Prick Up Your Ears" based on John Lahr's book.
-- `d7s0` Joe Orton [0]: John Kingsley "Joe" Orton (1 January 1933 – 9 August 1967) was an English playwright and author.
-- `d7s1` Joe Orton [1]: His public career was short but prolific, lasting from 1964 until his death three years later.
-- `d7s2` Joe Orton [2]: During this brief period he shocked, outraged, and amused audiences with his scandalous black comedies.
-- `d7s3` Joe Orton [3]: The adjective "Ortonesque" is sometimes used to refer to work characterised by a similarly dark yet farcical cynicism.
+- ★u1 `d7s0` Joe Orton [0]: John Kingsley "Joe" Orton (1 January 1933 – 9 August 1967) was an English playwright and author.
+- ★u1 `d7s1` Joe Orton [1]: His public career was short but prolific, lasting from 1964 until his death three years later.
+- ★u1 `d7s2` Joe Orton [2]: During this brief period he shocked, outraged, and amused audiences with his scandalous black comedies.
+- ★u1 `d7s3` Joe Orton [3]: The adjective "Ortonesque" is sometimes used to refer to work characterised by a similarly dark yet farcical cynicism.
 - `d8s0` Plain Clothes Theatre Productions [0]: Plain Clothes Theatre Productions is a Bristol-based theatre company producing contemporary plays from around the globe.
 - `d8s1` Plain Clothes Theatre Productions [1]: Formed in 2003 by artistic director Sam Berger, the company has produced work in London, Bristol, Cheltenham, Toronto and Vancouver.
 - `d8s2` Plain Clothes Theatre Productions [2]: Their work has included plays by Joe Orton, Laura Wade and David Mamet, and their style is based around the teachings of American acting coach Sanford Meisner.
@@ -241,10 +241,10 @@ Notes:
 - `d4s1` Eagle Ridge Mall [1]: This mall has two anchor stores: JCPenney and Dillard's.
 - `d4s2` Eagle Ridge Mall [2]: It also has a Regal Cinemas, which has twelve theatres, and a large entertainment center, which contains a bowling alley, a large video arcade, a restaurant and meeting rooms.
 - `d4s3` Eagle Ridge Mall [3]: On the north side of the mall is a large food court and a carousel.
-- `d4s4` Eagle Ridge Mall [4]: Sears relocated from an existing mall, Winter Haven Mall, in nearby Winter Haven.
+- ★u2 `d4s4` Eagle Ridge Mall [4]: Sears relocated from an existing mall, Winter Haven Mall, in nearby Winter Haven.
 - `d5s0` Winter Haven, Florida [0]: Winter Haven is a city in Polk County, Florida, United States.
 - `d5s1` Winter Haven, Florida [1]: The population was 33,874 at the 2010 census.
-- `d5s2` Winter Haven, Florida [2]: According to the U.S. Census Bureau's 2015 estimates, the city had a population of 37,689, making it the second most populated city in Polk County.
+- ★u1 `d5s2` Winter Haven, Florida [2]: According to the U.S. Census Bureau's 2015 estimates, the city had a population of 37,689, making it the second most populated city in Polk County.
 - `d5s3` Winter Haven, Florida [3]: It is a principal city of the Lakeland-Winter Haven, Florida Metropolitan Statistical Area.
 - `d6s0` Tenoroc High School [0]: Tenoroc High School (THS) is a public secondary school in Lakeland, Florida.
 - `d6s1` Tenoroc High School [1]: The current principal is Jason Looney, and is assisted by four Assistant principals, Bradley Hardesty, Haley Mason, Summer Fisher and Brandi Blanchard.
@@ -318,7 +318,7 @@ Notes:
 - `d4s2` Supreme Life Building [2]: The company, originally known as the Liberty Life Insurance Company, was the first African-American owned insurance company in the northern United States.
 - `d4s3` Supreme Life Building [3]: Since white-owned insurance firms regularly denied black customers life insurance when the firm was founded, the firm played an important role in providing life insurance to Chicago's African-American community.
 - `d4s4` Supreme Life Building [4]: The company ultimately became the largest African-American owned business in the northern states and became a symbol of the predominantly black Bronzeville neighborhood's economic success from the 1920s to the 1950s.
-- `d5s0` Manhattan Life Insurance Building [0]: The Manhattan Life Insurance Building was a 348 ft tower at 64-66 Broadway in New York City completed in 1894 to the designs of the architects of Kimball & Thompson and slightly extended north in 1904 making its new address 64-70 Broadway.
+- ★u2 `d5s0` Manhattan Life Insurance Building [0]: The Manhattan Life Insurance Building was a 348 ft tower at 64-66 Broadway in New York City completed in 1894 to the designs of the architects of Kimball & Thompson and slightly extended north in 1904 making its new address 64-70 Broadway.
 - `d5s1` Manhattan Life Insurance Building [1]: It was the first skyscraper to pass 100 m in Manhattan.
 - `d6s0` New York Life Insurance Building (Montreal) [0]: Montreal's New York Life Insurance Building (also known as the Quebec Bank Building) is an office building at Place d'Armes in what is now known as Old Montreal, erected in 1887-1889.
 - `d6s1` New York Life Insurance Building (Montreal) [1]: At the time of its completion, it was the tallest commercial building in Montreal with the first eight floors were designed for retail office space, that quickly filled with the city's best lawyers and financiers.
@@ -328,7 +328,7 @@ Notes:
 - `d7s1` Francis H. Kimball [1]: He was an associate with the firm Kimball & Thompson.
 - `d7s2` Francis H. Kimball [2]: His work includes the Empire Building, Manhattan Life Insurance Building, and Casino Theatre (Broadway).
 - `d7s3` Francis H. Kimball [3]: All but one of Kimball's work was in the United States.
-- `d8s0` 712 Fifth Avenue [0]: 712 5th Avenue is a 650 ft skyscraper at 56th Street and Fifth Avenue in the Midtown neighborhood of Manhattan, New York City.
+- ★u1 `d8s0` 712 Fifth Avenue [0]: 712 5th Avenue is a 650 ft skyscraper at 56th Street and Fifth Avenue in the Midtown neighborhood of Manhattan, New York City.
 - `d8s1` 712 Fifth Avenue [1]: It was constructed from 1990 to 1991 and is the 53rd tallest building in New York City.
 - `d8s2` 712 Fifth Avenue [2]: The tower's design had to accommodate the landmarked facades of the Coty and Rizzoli Buildings at the base of the tower.
 - `d8s3` 712 Fifth Avenue [3]: It was purchased by the Bannister Trust in 2007 in a "Private Treaty", and placed in "Property Fund #1" managed by JP Morgan.
@@ -346,7 +346,7 @@ Notes:
 
 </details>
 
-## Q186 — `hotpotqa_5a83a7e15542992ef85e2347` (draft)
+## Q186 🚩 — `hotpotqa_5a83a7e15542992ef85e2347` (draft)
 
 > Who voices Homer Simpson's character on the animated television series?
 
@@ -365,7 +365,9 @@ Evidence:
 - `d3s1` Homer Simpson [1]: He is voiced by Dan Castellaneta and first appeared on television, along with the rest of his family, in "The Tracey Ullman Show" short "Good Night" on April 19, 1987.
 - `d4s0` Dan Castellaneta [0]: Daniel Louis Castellaneta ( ; born October 29, 1957) is an American actor, voice actor, comedian and screenwriter.
 
-Notes:
+Notes: 1. d3s0是不是没法能够回答u1的问题，是的话把这条去掉。2. 可以把d5s1加上，作为u1的support。3. full name如果不是必须的话，就把这一跳删掉，然后把答案改成能推出来的名字就可以，或者加个full name的别名
+
+- **🚩 逻辑审核（2026-11-11）[中]：** u1（Dan Castellaneta）已经回答了 'who voices Homer'；必需的 'full name' 这一跳只是照抄源答案的写法，使完成时间推迟到 `d4s0` 到达。u1 漏了备选证据：`d5s1`（'Dan Castellaneta, who voices Homer Simpson'）和 `d4s1`。
 
 
 <details><summary>All source context</summary>
@@ -377,13 +379,13 @@ Notes:
 - `d2s1` Homer Simpson, This Is Your Wife [1]: It originally aired on the Fox network in the United States on March 26, 2006, and was watched by around ten million people during that broadcast.
 - `d2s2` Homer Simpson, This Is Your Wife [2]: In the episode, Homer signs the Simpson family up for a reality show in which the mothers of two families switch places.
 - `d2s3` Homer Simpson, This Is Your Wife [3]: Marge gets to live with a friendly man named Charles and his perfect son, while Homer, Bart, and Lisa must spend time with Charles' strict wife Verity.
-- `d3s0` Homer Simpson [0]: Homer Jay Simpson is a fictional character and the main protagonist of the American animated television series "The Simpsons" as the patriarch of the eponymous family.
-- `d3s1` Homer Simpson [1]: He is voiced by Dan Castellaneta and first appeared on television, along with the rest of his family, in "The Tracey Ullman Show" short "Good Night" on April 19, 1987.
+- ★u1 `d3s0` Homer Simpson [0]: Homer Jay Simpson is a fictional character and the main protagonist of the American animated television series "The Simpsons" as the patriarch of the eponymous family.
+- ★u1 `d3s1` Homer Simpson [1]: He is voiced by Dan Castellaneta and first appeared on television, along with the rest of his family, in "The Tracey Ullman Show" short "Good Night" on April 19, 1987.
 - `d3s2` Homer Simpson [2]: Homer was created and designed by cartoonist Matt Groening while he was waiting in the lobby of James L. Brooks' office.
 - `d3s3` Homer Simpson [3]: Groening had been called to pitch a series of shorts based on his comic strip "Life in Hell" but instead decided to create a new set of characters.
 - `d3s4` Homer Simpson [4]: He named the character after his father, Homer Groening.
 - `d3s5` Homer Simpson [5]: After appearing for three seasons on "The Tracey Ullman Show", the Simpson family got their own series on Fox that debuted December 17, 1989.
-- `d4s0` Dan Castellaneta [0]: Daniel Louis Castellaneta ( ; born October 29, 1957) is an American actor, voice actor, comedian and screenwriter.
+- ★u2 `d4s0` Dan Castellaneta [0]: Daniel Louis Castellaneta ( ; born October 29, 1957) is an American actor, voice actor, comedian and screenwriter.
 - `d4s1` Dan Castellaneta [1]: Noted for his long-running role as Homer Simpson on the animated television series "The Simpsons", he also voices many other characters for the show, including Abraham "Grampa" Simpson, Barney Gumble, Krusty the Clown, Sideshow Mel, Groundskeeper Willie, Mayor Quimby and Hans Moleman.
 - `d5s0` Citizen Joe [0]: "Citizen Joe" is the fifteenth episode for season eight of the Canadian-American military science fiction television series "Stargate SG-1".
 - `d5s1` Citizen Joe [1]: The episode features known voice actor Dan Castellaneta, who voices Homer Simpson in "The Simpsons".
@@ -463,9 +465,9 @@ Notes:
 - `d5s1` Reconquest of Angola [1]: In 1641 Johan Maurits sent an expedition under Admiral Cornelis Jol from Recife in Dutch Brazil to seize the Angolan capital of Luanda.
 - `d5s2` Reconquest of Angola [2]: The Dutch were able to easily capture Luanda in August as the Portuguese forces were occupied inland in a campaign against the Kingdom of Kongo.
 - `d5s3` Reconquest of Angola [3]: The two countries fought to a stalemate over Angola, until in 1648 the governor of Rio de Janeiro and Angola, Salvador de Sá, reached Luanda and finding the port defended by only 50 Dutch troops, regained it for Angola exactly seven years after its loss.
-- `d6s0` Frederick III of Denmark [0]: Frederick III (Danish: "Frederik" ; 18 March 1609 – 9 February 1670) was king of Denmark and Norway from 1648 until his death in 1670.
+- ★u2 `d6s0` Frederick III of Denmark [0]: Frederick III (Danish: "Frederik" ; 18 March 1609 – 9 February 1670) was king of Denmark and Norway from 1648 until his death in 1670.
 - `d6s1` Frederick III of Denmark [1]: He also governed under the name Frederick II as diocesan administrator (colloquially referred to as prince-bishop) of the Prince-Bishopric of Verden (1623–29 and again 1634–44), and the Prince-Archbishopric of Bremen (1635–45).
-- `d7s0` HDMS Sophia Amalia [0]: The Sophia Amalia was a ship of the Royal Dano-Norwegian Navy named after Sophia Amalia, the wife of King Frederick III.
+- ★u1 `d7s0` HDMS Sophia Amalia [0]: The Sophia Amalia was a ship of the Royal Dano-Norwegian Navy named after Sophia Amalia, the wife of King Frederick III.
 - `d7s1` HDMS Sophia Amalia [1]: The ship was built at Hovedøen in Christiania under the direction of English shipbuilder James Robbins and was launched in 1650.
 - `d7s2` HDMS Sophia Amalia [2]: She was 51.8 meters long and at that time one of the largest naval vessels in the world.
 - `d7s3` HDMS Sophia Amalia [3]: She was commissioned by King Christian IV specifically to surpass the British ship  .
@@ -509,7 +511,7 @@ Evidence:
 - `d3s2` 2014 Baylor Bears football team [2]: Playing their 116th football season, this was the team's first in the new McLane Stadium in Waco, Texas.
 - `d4s2` McLane Stadium [2]: Originally named "Baylor Stadium", the name was changed to McLane Stadium in December 2013 to honor alumnus and business magnate Drayton McLane, Jr., who provided the lead gift for the stadium construction.
 
-Notes:
+Notes: 检查一下u1的描述是否合理。
 
 
 <details><summary>All source context</summary>
@@ -523,13 +525,13 @@ Notes:
 - `d2s3` 2014 Baylor Bears baseball team [3]: Twenty year head coach Steve Smith leads the Bears, a former pitcher for the team during the 1982 and 1983 seasons.
 - `d3s0` 2014 Baylor Bears football team [0]: The 2014 Baylor Bears football team represented Baylor University in the 2014 NCAA Division I FBS football season.
 - `d3s1` 2014 Baylor Bears football team [1]: The Bears were coached by Art Briles.
-- `d3s2` 2014 Baylor Bears football team [2]: Playing their 116th football season, this was the team's first in the new McLane Stadium in Waco, Texas.
+- ★u1 `d3s2` 2014 Baylor Bears football team [2]: Playing their 116th football season, this was the team's first in the new McLane Stadium in Waco, Texas.
 - `d3s3` 2014 Baylor Bears football team [3]: The Bears were members of the Big 12 Conference.
 - `d3s4` 2014 Baylor Bears football team [4]: They finished the season 11–2, 8–1 in Big 12 play to win a share of the Big 12 title with TCU.
 - `d3s5` 2014 Baylor Bears football team [5]: They were invited to the Cotton Bowl Classic where they lost to Michigan State.
 - `d4s0` McLane Stadium [0]: McLane Stadium is an American football stadium in Waco, Texas.
 - `d4s1` McLane Stadium [1]: It is owned and operated by Baylor University.
-- `d4s2` McLane Stadium [2]: Originally named "Baylor Stadium", the name was changed to McLane Stadium in December 2013 to honor alumnus and business magnate Drayton McLane, Jr., who provided the lead gift for the stadium construction.
+- ★u2 `d4s2` McLane Stadium [2]: Originally named "Baylor Stadium", the name was changed to McLane Stadium in December 2013 to honor alumnus and business magnate Drayton McLane, Jr., who provided the lead gift for the stadium construction.
 - `d4s3` McLane Stadium [3]: Baylor's first game at McLane was played August 31, 2014, with the Bears defeating SMU 45–0.
 - `d4s4` McLane Stadium [4]: The stadium has a capacity of 45,140 spectators and is expandable to 55,000.
 - `d4s5` McLane Stadium [5]: McLane Stadium replaced Floyd Casey Stadium as the home field for the Baylor Bears football program.
@@ -589,14 +591,14 @@ Evidence:
 - `d1s0` Brainerd Lakes Regional Airport [0]: Brainerd Lakes Regional Airport (IATA: BRD, ICAO: KBRD, FAA LID: BRD) is a public use airport located three nautical miles (6 km) northeast of the central business district of Brainerd, a city in Crow Wing County, Minnesota, United States.
 - `d6s0` Sawyer International Airport [0]: Sawyer International Airport (IATA: MQT, ICAO: KSAW, FAA LID: SAW) is a county owned public use airport in Marquette County, Michigan, United States.
 
-Notes:
+Notes: u3不是已经被u1u2推出来了吗，为什么还是 []: no accepted support。
 
 - The source places both airports in the United States but does not state its continent. The Europe conclusion needs an additional geographic rule or evidence.
 - Source check: `continent_mapping_missing`.
 
 <details><summary>All source context</summary>
 
-- `d1s0` Brainerd Lakes Regional Airport [0]: Brainerd Lakes Regional Airport (IATA: BRD, ICAO: KBRD, FAA LID: BRD) is a public use airport located three nautical miles (6 km) northeast of the central business district of Brainerd, a city in Crow Wing County, Minnesota, United States.
+- ★u1 `d1s0` Brainerd Lakes Regional Airport [0]: Brainerd Lakes Regional Airport (IATA: BRD, ICAO: KBRD, FAA LID: BRD) is a public use airport located three nautical miles (6 km) northeast of the central business district of Brainerd, a city in Crow Wing County, Minnesota, United States.
 - `d1s1` Brainerd Lakes Regional Airport [1]: The airport is owned by the city and county.
 - `d1s2` Brainerd Lakes Regional Airport [2]: It is mostly used for general aviation but is also served by one commercial airline.
 - `d2s0` Pensacola International Airport [0]: Pensacola International Airport (IATA: PNS, ICAO: KPNS, FAA LID: PNS) , formerly Pensacola Gulf Coast Regional Airport and Pensacola Regional Airport (Hagler Field), is a public use airport three nautical miles (6 km) northeast of the central business district of Pensacola, in Escambia County, Florida, United States.
@@ -613,7 +615,7 @@ Notes:
 - `d5s1` Cleveland Hopkins International Airport [1]: It is the primary airport serving Northeast Ohio and is the largest and busiest airport in the state of Ohio.
 - `d5s2` Cleveland Hopkins International Airport [2]: The metropolitan area is also served by Burke Lakefront Airport and by Akron-Canton Regional Airport.
 - `d5s3` Cleveland Hopkins International Airport [3]: Cleveland Hopkins International Airport and Cleveland Burke Lakefront Airport together comprise the Cleveland Airport System, operated by the City of Cleveland's Department of Port Control.
-- `d6s0` Sawyer International Airport [0]: Sawyer International Airport (IATA: MQT, ICAO: KSAW, FAA LID: SAW) is a county owned public use airport in Marquette County, Michigan, United States.
+- ★u2 `d6s0` Sawyer International Airport [0]: Sawyer International Airport (IATA: MQT, ICAO: KSAW, FAA LID: SAW) is a county owned public use airport in Marquette County, Michigan, United States.
 - `d6s1` Sawyer International Airport [1]: It is located 17 nmi south of the central business district of the city of Marquette.
 - `d6s2` Sawyer International Airport [2]: It is included in the Federal Aviation Administration (FAA) National Plan of Integrated Airport Systems for 2017–2021, in which it is categorized as a non-hub primary commercial service facility.
 - `d7s0` Marquette County Airport [0]: Marquette County Airport (IATA: MQT, ICAO: KMQT, FAA LID: MQT) is a former airport in Negaunee, Michigan.
@@ -649,7 +651,7 @@ Evidence:
 
 - `d2s1` Mastodon (band) [1]: Formed in 2000, the group is composed of bassist Troy Sanders, guitarists Brent Hinds and Bill Kelliher, and drummer Brann Dailor, all of whom perform vocals in studio (except Bill Kelliher).
 
-Notes:
+Notes: 检查一下是否真的没有u2u3对应的support语句。
 
 - Hole d10s0 names two founders, not a complete two-person band. Sentence 1 mentions other bassists and drummers. Do not compare four Mastodon members with two Hole founders.
 - Source check: `founder_count_not_band_size`.
@@ -665,7 +667,7 @@ Notes:
 - `d1s5` Team Hole in the Wall [5]: The number of Team Hole in the Wall members and events has risen each year since.
 - `d1s6` Team Hole in the Wall [6]: In 2010, more than 1,800 Team Hole in the Wall members are expected to participate in 20 athletic events.
 - `d2s0` Mastodon (band) [0]: Mastodon is an American heavy metal band from Atlanta, Georgia.
-- `d2s1` Mastodon (band) [1]: Formed in 2000, the group is composed of bassist Troy Sanders, guitarists Brent Hinds and Bill Kelliher, and drummer Brann Dailor, all of whom perform vocals in studio (except Bill Kelliher).
+- ★u1 `d2s1` Mastodon (band) [1]: Formed in 2000, the group is composed of bassist Troy Sanders, guitarists Brent Hinds and Bill Kelliher, and drummer Brann Dailor, all of whom perform vocals in studio (except Bill Kelliher).
 - `d2s2` Mastodon (band) [2]: They all perform vocals at live shows.
 - `d2s3` Mastodon (band) [3]: Their musical style features progressive concepts and unique instrumentation.
 - `d2s4` Mastodon (band) [4]: Mastodon has released seven studio albums, as well as a number of other records.
@@ -707,7 +709,7 @@ Notes:
 
 </details>
 
-## Q191 — `hotpotqa_5a843f305542996488c2e51d` (draft)
+## Q191 🚩 — `hotpotqa_5a843f305542996488c2e51d` (draft)
 
 > When will Flicker, created by a member of One Direction, be released?
 
@@ -726,7 +728,9 @@ Evidence:
 - `d3s0` Flicker (album) [0]: Flicker is the upcoming debut studio album by Irish singer and songwriter Niall Horan.
 - `d3s1` Flicker (album) [1]: It is scheduled for release on October 20, 2017, through Neon Haze Music and Capitol Records. "
 
-Notes:
+Notes: 如果属于不必要的桥接，就改成single unit
+
+- **🚩 逻辑审核（2026-11-11）[中]：** 题干已点名 Flicker，u1 = 'Flicker' 不是桥接值。`d3s1` 直接给出了发行日期，但 u2 要等 u1（`d3s0` + `d2s3`）。u1 的描述还写了题干里没有的 Niall Horan。如果保留 u1，还漏了 `d2s1` 作为证据。
 
 - Keep the scheduled date in this historical source. This is not a claim about its current release status.
 
@@ -738,10 +742,10 @@ Notes:
 - `d2s0` Niall Horan [0]: Niall James Horan (born 13 September 1993) is an Irish singer and songwriter.
 - `d2s1` Niall Horan [1]: He is best known as a member of the boy band One Direction.
 - `d2s2` Niall Horan [2]: In 2010, Horan auditioned as a solo artist for British televised singing competition "The X Factor".
-- `d2s3` Niall Horan [3]: After being eliminated as a solo performer, Horan joined four other contestants to form One Direction.
+- ★u1 `d2s3` Niall Horan [3]: After being eliminated as a solo performer, Horan joined four other contestants to form One Direction.
 - `d2s4` Niall Horan [4]: The band has released five commercially successful albums, performed on four worldwide tours, and won a number of awards.
-- `d3s0` Flicker (album) [0]: Flicker is the upcoming debut studio album by Irish singer and songwriter Niall Horan.
-- `d3s1` Flicker (album) [1]: It is scheduled for release on October 20, 2017, through Neon Haze Music and Capitol Records. "
+- ★u1 `d3s0` Flicker (album) [0]: Flicker is the upcoming debut studio album by Irish singer and songwriter Niall Horan.
+- ★u2 `d3s1` Flicker (album) [1]: It is scheduled for release on October 20, 2017, through Neon Haze Music and Capitol Records. "
 - `d3s2` Flicker (album) [2]: This Town" was released on 29 September 2016, as the album's lead single, followed by 2017 singles "Slow Hands" and "Too Much to Ask".
 - `d4s0` One Direction: Where We Are – The Concert Film [0]: One Direction: Where We Are – The Concert Film, also known as One Direction: Where We Are - Live from San Siro Stadium is the second concert film by English-Irish boy band One Direction and the sequel to "".
 - `d4s1` One Direction: Where We Are – The Concert Film [1]: The film takes place during the 28 and 29 June 2014 shows of the band's Where We Are Tour at San Siro Stadium in Milan, Italy.
@@ -833,7 +837,7 @@ Notes:
 - `d7s0` George Orwell bibliography [0]: The bibliography of George Orwell includes journalism, essays, novels and non-fiction books written by the British writer Eric Blair (1903–50), either under his own name or, more usually, under his pen name George Orwell.
 - `d7s1` George Orwell bibliography [1]: Orwell was a prolific writer on topics related to contemporary English society and literary criticism, whom the British newsweekly "The Economist" in 2008 declared "perhaps the 20th century's best chronicler of English culture."
 - `d7s2` George Orwell bibliography [2]: His non-fiction cultural and political criticism constitutes the majority of his work, but Orwell also wrote in several genres of fictional literature.
-- `d8s0` George Orwell [0]: Eric Arthur Blair (25 June 1903 – 21 January 1950), better known by his pen name George Orwell, was an English novelist, essayist, journalist, and critic.
+- ★u1 `d8s0` George Orwell [0]: Eric Arthur Blair (25 June 1903 – 21 January 1950), better known by his pen name George Orwell, was an English novelist, essayist, journalist, and critic.
 - `d8s1` George Orwell [1]: His work is marked by lucid prose, awareness of social injustice, opposition to totalitarianism, and outspoken support of democratic socialism.
 - `d9s0` The Panther (novel) [0]: The Panther is a 2012 novel by American author Nelson DeMille.
 - `d9s1` The Panther (novel) [1]: It is the sixth of DeMille's novels to feature Detective John Corey, now working as a contractor for the fictional FBI Anti-Terrorist Task Force in New York City.
@@ -842,7 +846,7 @@ Notes:
 - `d9s4` The Panther (novel) [4]: Also featured in this novel is DeMille’s other fictional character, Paul Brenner, who appears in The General's Daughter and Up Country.
 - `d10s0` Nelson DeMille [0]: Nelson Richard DeMille (born August 23, 1943) is an American author of action adventure and suspense novels.
 - `d10s1` Nelson DeMille [1]: His novels include "Plum Island", "The Charm School", and "The Gold Coast".
-- `d10s2` Nelson DeMille [2]: DeMille has also written under the pen names Jack Cannon, Kurt Ladner, Ellen Kay and Brad Matthews.
+- ★u2 `d10s2` Nelson DeMille [2]: DeMille has also written under the pen names Jack Cannon, Kurt Ladner, Ellen Kay and Brad Matthews.
 
 </details>
 
@@ -865,13 +869,13 @@ Evidence:
 - `d1s0` P. G. Wodehouse [0]: Sir Pelham Grenville Wodehouse {'1': ", '2': ", '3': ", '4': "} ( ; 15 October 188114 February 1975) was an English author and one of the most widely read humorists of the 20th century.
 - `d3s0` Barry Unsworth [0]: Unsworth was born on 10 August 1930 in Wingate, a mining village in County Durham, England, to a family of miners.
 
-Notes:
+Notes: 是否符合当前拆词器规则
 
 - English is normalized to England for the question about where the authors are from. Do not turn birthplace into a separate citizenship claim.
 
 <details><summary>All source context</summary>
 
-- `d1s0` P. G. Wodehouse [0]: Sir Pelham Grenville Wodehouse {'1': ", '2': ", '3': ", '4': "} ( ; 15 October 188114 February 1975) was an English author and one of the most widely read humorists of the 20th century.
+- ★u2 `d1s0` P. G. Wodehouse [0]: Sir Pelham Grenville Wodehouse {'1': ", '2': ", '3': ", '4': "} ( ; 15 October 188114 February 1975) was an English author and one of the most widely read humorists of the 20th century.
 - `d1s1` P. G. Wodehouse [1]: Born in Guildford, the son of a British magistrate based in Hong Kong, Wodehouse spent happy teenage years at Dulwich College, to which he remained devoted all his life.
 - `d1s2` P. G. Wodehouse [2]: After leaving school he was employed by a bank but disliked the work and turned to writing in his spare time.
 - `d1s3` P. G. Wodehouse [3]: His early novels were mostly school stories, but he later switched to comic fiction, creating several regular characters who became familiar to the public over the years.
@@ -879,7 +883,7 @@ Notes:
 - `d2s0` The Greeks Have a Word For It [0]: The Greeks Have a Word For It is the second novel by Booker Prize-winning author Barry Unsworth published by Hutchinson in 1967.
 - `d2s1` The Greeks Have a Word For It [1]: It has since been republished by Weidenfeld & Nicolson in 1993 and W. W. Norton & Company in 2002.
 - `d2s2` The Greeks Have a Word For It [2]: It has been praised for its 'utterly convincing characterizations'.
-- `d3s0` Barry Unsworth [0]: Unsworth was born on 10 August 1930 in Wingate, a mining village in County Durham, England, to a family of miners.
+- ★u1 `d3s0` Barry Unsworth [0]: Unsworth was born on 10 August 1930 in Wingate, a mining village in County Durham, England, to a family of miners.
 - `d3s1` Barry Unsworth [1]: His father first entered the mines at age 12 and ordinarily Unsworth would have followed him as a miner.
 - `d3s2` Barry Unsworth [2]: However, when his father was 19, he travelled to the United States for a few years and on returning to Britain entered the insurance business and thus began moving his family up the economic ladder and out of the mines.
 - `d3s3` Barry Unsworth [3]: "He rescued my brother and me from that long chain of continuity that happens in mining villages," Unsworth said.
@@ -935,8 +939,8 @@ Notes:
 - `d2s2` Minhlange [2]: He was only about seven years old.
 - `d2s3` Minhlange [3]: The ambush was arranged by Thihathu's powerful queen Shin Bo-Me who wanted to place her lover, Kale Kyetaungnyo, the Saopha of Kale, on the throne.
 - `d2s4` Minhlange [4]: About three months later, Shin Bo-Me poisoned the young king in early November 1425 and made Kyetaungnyo king a few days later.
-- `d3s0` Harald V of Norway [0]: Harald V (] ; born 21 February 1937) is the King of Norway, having ascended the throne following the death of his father on 17 January 1991.
-- `d4s0` MS Kronprins Harald [0]: Several motor ships have borne the name Kronprins Harald, after Harald V of Norway:
+- ★u1 `d3s0` Harald V of Norway [0]: Harald V (] ; born 21 February 1937) is the King of Norway, having ascended the throne following the death of his father on 17 January 1991.
+- ★u2 `d4s0` MS Kronprins Harald [0]: Several motor ships have borne the name Kronprins Harald, after Harald V of Norway:
 - `d5s0` Martanda Cinkaiariyan [0]: Martanda Cinkaiariyan (Tamil: மார்த்தாண்ட சிங்கையாரியன் ) (died 1348) ascended the throne of Jaffna Kingdom under the throne name Pararasasekaram III.
 - `d5s1` Martanda Cinkaiariyan [1]: He is one of the early Aryacakravarti kings about whom historical and epigraphical evidence is available.
 - `d5s2` Martanda Cinkaiariyan [2]: He was noted by Ibn Battuta in his well-known travelogue as well as he has left behind a few inscriptions.
@@ -1005,7 +1009,7 @@ Evidence:
 
 - `d9s4` Alex Rodriguez [4]: He is a 14-time All-Star and won three American League (AL) Most Valuable Player (MVP) Awards, ten Silver Slugger Awards, and two Gold Glove Awards.
 
-Notes:
+Notes: 检查一下，u2是否真的没有support
 
 - Rawlings d2s4 explicitly created the award. The title and creator statement do not explicitly establish the sponsor relation.
 - Source check: `award_creator_not_explicit_sponsor`.
@@ -1066,7 +1070,7 @@ Notes:
 - `d9s1` Alex Rodriguez [1]: He played 22 seasons in Major League Baseball (MLB) for the Seattle Mariners, Texas Rangers, and New York Yankees.
 - `d9s2` Alex Rodriguez [2]: Rodriguez was one of the sport's most highly touted prospects and is considered one of the greatest baseball players of all time.
 - `d9s3` Alex Rodriguez [3]: Rodriguez amassed a .297 batting average, 696 home runs, over 2,000 runs batted in (RBI), over 2,000 runs scored, and over 3,000 hits.
-- `d9s4` Alex Rodriguez [4]: He is a 14-time All-Star and won three American League (AL) Most Valuable Player (MVP) Awards, ten Silver Slugger Awards, and two Gold Glove Awards.
+- ★u1 `d9s4` Alex Rodriguez [4]: He is a 14-time All-Star and won three American League (AL) Most Valuable Player (MVP) Awards, ten Silver Slugger Awards, and two Gold Glove Awards.
 - `d9s5` Alex Rodriguez [5]: Rodríguez is the career record holder for grand slams with 25.
 - `d9s6` Alex Rodriguez [6]: However, he led a highly controversial career due to signing two of the most lucrative sports contracts in history while incurring criticism from the media for his behavior and use of illegal performance-enhancing drugs.
 - `d10s0` Berk Communications [0]: Berk Communication and Marketing Group is an American public relations firm.
@@ -1100,8 +1104,7 @@ Evidence:
 
 - `d6s0` Ulrich Walter [0]: Prof. Dr. Ulrich Hans Walter (born February 9, 1954) is a German physicist/engineer and a former DFVLR astronaut.
 
-Notes:
-
+Notes: d5s0 Léopold Eyharts [0] 这一条是不是可以证明u2？
 - Eyharts is described as a general in the French Air Force, not explicitly as French or born in France. No both/same premise exception applies.
 - Source check: `military_role_not_country_of_origin`.
 
@@ -1120,7 +1123,7 @@ Notes:
 - `d4s1` Kreuzlingen Abbey [1]: In 1848 the government of the Canton of Thurgau dissolved the monastery and took over its property.
 - `d4s2` Kreuzlingen Abbey [2]: The former abbey church of Saint Ulrich and Saint Afra, decorated in the Baroque style, is noteworthy.
 - `d5s0` Léopold Eyharts [0]: Léopold Eyharts (born April 28, 1957) is a Brigadier General in the French Air Force, an engineer and ESA astronaut.
-- `d6s0` Ulrich Walter [0]: Prof. Dr. Ulrich Hans Walter (born February 9, 1954) is a German physicist/engineer and a former DFVLR astronaut.
+- ★u1 `d6s0` Ulrich Walter [0]: Prof. Dr. Ulrich Hans Walter (born February 9, 1954) is a German physicist/engineer and a former DFVLR astronaut.
 - `d7s0` Schwächen [0]: "Schwächen" [Weaknesses] (Bert Brecht), is a work by Juan María Solare for any voice and any melodic instrument.
 - `d7s1` Schwächen [1]: It was composed in Cologne, Germany in November 1993, and lasts two minutes.
 - `d7s2` Schwächen [2]: It was first performed in two versions: by Ligia Liberatori (soprano) and Ulrich Krieger (tenor saxophone), and by Richard Mix (bass) and Ulrich Krieger during the Vacation Courses of New Music in Darmstadt, Germany, on 3 August 1994.
@@ -1168,7 +1171,7 @@ Notes:
 
 <details><summary>All source context</summary>
 
-- `d1s0` Hampton University [0]: Hampton University (also HU, or Home by the Sea) is a private historically black university located in Hampton, Virginia, United States.
+- ★u2 `d1s0` Hampton University [0]: Hampton University (also HU, or Home by the Sea) is a private historically black university located in Hampton, Virginia, United States.
 - `d1s1` Hampton University [1]: It was founded in 1868 by black and white leaders of the American Missionary Association after the American Civil War to provide education to freedmen.
 - `d1s2` Hampton University [2]: In 1878, it established a program for teaching Native Americans, which lasted until 1923.
 - `d2s0` Seantrel Henderson [0]: Seantrel Henderson (born January 21, 1992) is an American football offensive tackle for the Buffalo Bills of the National Football League (NFL).
@@ -1180,7 +1183,7 @@ Notes:
 - `d3s2` Jamal Anderson [2]: He played high school football at El Camino Real High School, where he was named to the CIF Los Angeles City Section 4-A All-City first team in 1989.
 - `d3s3` Jamal Anderson [3]: He went on to play college football at Moorpark College for the Moorpark College Raiders before playing at Utah.
 - `d4s0` Jamal Brooks [0]: Jamal Benjamin Brooks (born November 9, 1976) is a former American football linebacker in the National Football League for the Dallas Cowboys and St. Louis Rams.
-- `d4s1` Jamal Brooks [1]: He played college football at Hampton University.
+- ★u1 `d4s1` Jamal Brooks [1]: He played college football at Hampton University.
 - `d5s0` 1891 Purdue football team [0]: The 1891 Purdue football team was an American football team that represented Purdue University during the 1891 college football season.
 - `d5s1` 1891 Purdue football team [1]: The team compiled a 4–0 record in the university's fourth season fielding an intercollegiate football team.
 - `d5s2` 1891 Purdue football team [2]: For the 1891 season, Purdue hired Knowlton Ames as its football coach.
@@ -1241,7 +1244,7 @@ Notes:
 <details><summary>All source context</summary>
 
 - `d1s0` Jörgen Smit [0]: Jörgen Smit (July 21, 1916 in Bergen – May 10, 1991 in Arlesheim) was a Norwegian teacher, teachers teacher, speaker and writer, mainly in the context of the Anthroposophical Society and the Waldorfschool Movement.
-- `d1s1` Jörgen Smit [1]: He was the general secretary of the Norwegian Anthroposophical Society, co-founder of the Rudolf Steiner Seminar in Järna, Sweden and member of the Executive Council of the General Anthroposophical Society at the Goetheanum in Dornach, Switzerland.
+- ★u2 `d1s1` Jörgen Smit [1]: He was the general secretary of the Norwegian Anthroposophical Society, co-founder of the Rudolf Steiner Seminar in Järna, Sweden and member of the Executive Council of the General Anthroposophical Society at the Goetheanum in Dornach, Switzerland.
 - `d2s0` Triodos Bank [0]: Triodos Bank N.V. is a bank based in the Netherlands with branches in Belgium, Germany, United Kingdom and Spain.
 - `d2s1` Triodos Bank [1]: It claims to be a pioneer in ethical banking.
 - `d2s2` Triodos Bank [2]: Triodos Bank finances companies which it thinks add cultural value and benefit both people and the environment.
@@ -1271,7 +1274,7 @@ Notes:
 - `d8s5` U.S. Bank Tower (Los Angeles) [5]: Construction began in 1987 with completion in 1989.
 - `d8s6` U.S. Bank Tower (Los Angeles) [6]: The building was designed by Henry N. Cobb of the architectural firm Pei Cobb Freed & Partners and cost $350 million to build.
 - `d8s7` U.S. Bank Tower (Los Angeles) [7]: It is one of the most recognizable buildings in Los Angeles, and often appears in establishing shots for the city in films and television programs.
-- `d9s0` Goetheanum [0]: The Goetheanum, located in Dornach (near Basel), Switzerland, is the world center for the anthroposophical movement.
+- ★u1 `d9s0` Goetheanum [0]: The Goetheanum, located in Dornach (near Basel), Switzerland, is the world center for the anthroposophical movement.
 - `d9s1` Goetheanum [1]: The building was designed by Rudolf Steiner and named after Johann Wolfgang von Goethe.
 - `d9s2` Goetheanum [2]: It includes two performance halls (1500 seats), gallery and lecture spaces, a library, a bookstore, and administrative spaces for the Anthroposophical Society; neighboring buildings house the Society's research and educational facilities.
 - `d9s3` Goetheanum [3]: Conferences focusing on themes of general interest or directed toward teachers, farmers, doctors, therapists, and other professionals are held at the center throughout the year.
@@ -1348,8 +1351,8 @@ Notes:
 - `d9s0` Fayard Nicholas [0]: Fayard Antonio Nicholas (October 20, 1914 – January 24, 2006) was an American choreographer, dancer and actor.
 - `d9s1` Fayard Nicholas [1]: He and his younger brother Harold Nicholas made up the Nicholas Brothers tap-dance duo, who starred in the MGM musicals "An All-Colored Vaudeville Show" (1935), "Stormy Weather" (1943), "The Pirate" (1948), and "Hard Four" (2007).
 - `d9s2` Fayard Nicholas [2]: The Nicholas brothers also starred in the 20th Century-Fox musicals "Down Argentine Way" (1940), "Sun Valley Serenade" (1941), and "Orchestra Wives" (1942).
-- `d10s0` Moonstruck [0]: Moonstruck is a 1987 American romantic comedy film directed by Norman Jewison and written by John Patrick Shanley.
-- `d10s1` Moonstruck [1]: It is about a widowed 37-year-old Italian-American woman (Cher) who falls in love with her fiancé's (Danny Aiello) estranged, hot-tempered younger brother (Nicolas Cage).
+- ★u2 `d10s0` Moonstruck [0]: Moonstruck is a 1987 American romantic comedy film directed by Norman Jewison and written by John Patrick Shanley.
+- ★u1 `d10s1` Moonstruck [1]: It is about a widowed 37-year-old Italian-American woman (Cher) who falls in love with her fiancé's (Danny Aiello) estranged, hot-tempered younger brother (Nicolas Cage).
 - `d10s2` Moonstruck [2]: Vincent Gardenia and Olympia Dukakis play supporting roles.
 
 </details>
@@ -1372,7 +1375,7 @@ Evidence:
 - `d3s0` Ryan Zinke [0]: Ryan Keith Zinke (born November 1, 1961) is an American politician and businessman who is currently the 52nd United States Secretary of the Interior, serving in the Trump administration.
 - `d7s1` Greg Gianforte [1]: On May 25, 2017, he won the special election following Rep. Ryan Zinke's resignation to become Secretary of the Interior.
 
-Notes:
+Notes: 检查一下d7s1足够回答u1吗，可以作为u1的support吗
 
 - The word current refers to the source date, not today.
 
@@ -1383,7 +1386,7 @@ Notes:
 - `d2s0` Beth Turner [0]: Beth P. Turner (born 13 May 1958 in Maine) is an American politician from Maine.
 - `d2s1` Beth Turner [1]: A Republican, Turner represents portions of Aroostook County and Penobscot County in the Maine House of Representatives.
 - `d2s2` Beth Turner [2]: She was first elected in March 2011 in a special election following the death of Rep. Everett McLeod in December 2010.
-- `d3s0` Ryan Zinke [0]: Ryan Keith Zinke (born November 1, 1961) is an American politician and businessman who is currently the 52nd United States Secretary of the Interior, serving in the Trump administration.
+- ★u2 `d3s0` Ryan Zinke [0]: Ryan Keith Zinke (born November 1, 1961) is an American politician and businessman who is currently the 52nd United States Secretary of the Interior, serving in the Trump administration.
 - `d3s1` Ryan Zinke [1]: Zinke served as the U.S. representative for Montana's at-large congressional district from 2015 until 2017.
 - `d3s2` Ryan Zinke [2]: From 2009 to 2013, he served as a member of the Montana Senate, representing the 2nd district.
 - `d4s0` David Jacoby [0]: David "Dave" Jacoby (born 1956) is the Iowa State Representative from the 30th District.
@@ -1395,7 +1398,7 @@ Notes:
 - `d6s0` San Diego mayoral special election, 2005 [0]: The 2005 San Diego mayoral special election was a special election held on Tuesday, November 8, 2005, to elect the mayor for San Diego.
 - `d6s1` San Diego mayoral special election, 2005 [1]: The special election was necessary due to the resignation of former Mayor Dick Murphy.
 - `d7s0` Greg Gianforte [0]: Gregory Richard Gianforte (born April 17, 1961) is an American businessman, engineer, and politician who is the U.S. Representative for Montana's at-large congressional district.
-- `d7s1` Greg Gianforte [1]: On May 25, 2017, he won the special election following Rep. Ryan Zinke's resignation to become Secretary of the Interior.
+- ★u1 `d7s1` Greg Gianforte [1]: On May 25, 2017, he won the special election following Rep. Ryan Zinke's resignation to become Secretary of the Interior.
 - `d7s2` Greg Gianforte [2]: Gianforte and his wife founded RightNow Technologies, a customer relationship management software company.
 - `d8s0` Louisiana State Treasurer special election, 2017 [0]: The Louisiana State Treasurer special election will take place on October 14, 2017, to elect the State Treasurer of Louisiana, with a runoff election to be held on November 18, 2017, if necessary.
 - `d8s1` Louisiana State Treasurer special election, 2017 [1]: Incumbent Republican State Treasurer John Kennedy was elected to the U.S. Senate in 2016.
@@ -1435,7 +1438,7 @@ Evidence:
 - `d7s0` Long Island MacArthur Airport [0]: Long Island MacArthur Airport (also known as Islip Airport) (IATA: ISP, ICAO: KISP, FAA LID: ISP) is a public airport on Long Island, in Ronkonkoma, Town of Islip, Suffolk County, New York.
 - `d7s1` Long Island MacArthur Airport [1]: The Town owns and operates the airport, which serves about two million commercial passengers a year, as well as general aviation.
 
-Notes:
+Notes: 这道题的标准答案是不是有问题啊，为什么u3回答不了，如果有问题的话可以把这道题换掉
 
 - The owners are explicit. The context does not state that county government ranks above town government.
 - Source check: `government_hierarchy_not_stated`.
@@ -1460,8 +1463,8 @@ Notes:
 - `d4s1` New York State Route 454 [1]: It spans from NY 25 (Jericho Turnpike) in Commack to NY 27 (Sunrise Highway) in Holbrook.
 - `d4s2` New York State Route 454 [2]: The route provides access to the Long Island MacArthur Airport, as well as New York State and Suffolk County government offices, and at one time the Long Island Arena.
 - `d4s3` New York State Route 454 [3]: NY 454 serves as the northern terminus for the Northern State Parkway in Hauppauge, where a concurrency with NY 347 begins.
-- `d5s0` Wilkes-Barre/Scranton International Airport [0]: Wilkes-Barre/Scranton International Airport (IATA: AVP, ICAO: KAVP, FAA LID: AVP) is primarily in Pittston Township, Pennsylvania, and spans the border between Luzerne County and Lackawanna County.
-- `d5s1` Wilkes-Barre/Scranton International Airport [1]: It is owned and operated jointly between the two counties, and it is located approximately 7 miles away from Scranton and 8 miles away from Wilkes-Barre.
+- ★u1 `d5s0` Wilkes-Barre/Scranton International Airport [0]: Wilkes-Barre/Scranton International Airport (IATA: AVP, ICAO: KAVP, FAA LID: AVP) is primarily in Pittston Township, Pennsylvania, and spans the border between Luzerne County and Lackawanna County.
+- ★u1 `d5s1` Wilkes-Barre/Scranton International Airport [1]: It is owned and operated jointly between the two counties, and it is located approximately 7 miles away from Scranton and 8 miles away from Wilkes-Barre.
 - `d5s2` Wilkes-Barre/Scranton International Airport [2]: It is the fifth largest airport in Pennsylvania measured by passenger boarding and calls itself "your gateway to Northeastern Pennsylvania and the Pocono Mountains".
 - `d5s3` Wilkes-Barre/Scranton International Airport [3]: This is the primary airport of Northeast/Northeast Central PA and of the Wyoming Valley.
 - `d6s0` Lidy Creek [0]: Lidy Creek (also known as Leidys Creek or Lidy's Creek) is a tributary of Mill Creek in Luzerne County, Pennsylvania, in the United States.
@@ -1469,8 +1472,8 @@ Notes:
 - `d6s2` Lidy Creek [2]: The watershed of the creek has an area of 1.50 sqmi .
 - `d6s3` Lidy Creek [3]: It is a Coldwater Fishery and is not impaired.
 - `d6s4` Lidy Creek [4]: The creek is in the vicinity of the Wilkes-Barre/Scranton International Airport and the International Trade Zone Industrial Park.
-- `d7s0` Long Island MacArthur Airport [0]: Long Island MacArthur Airport (also known as Islip Airport) (IATA: ISP, ICAO: KISP, FAA LID: ISP) is a public airport on Long Island, in Ronkonkoma, Town of Islip, Suffolk County, New York.
-- `d7s1` Long Island MacArthur Airport [1]: The Town owns and operates the airport, which serves about two million commercial passengers a year, as well as general aviation.
+- ★u2 `d7s0` Long Island MacArthur Airport [0]: Long Island MacArthur Airport (also known as Islip Airport) (IATA: ISP, ICAO: KISP, FAA LID: ISP) is a public airport on Long Island, in Ronkonkoma, Town of Islip, Suffolk County, New York.
+- ★u2 `d7s1` Long Island MacArthur Airport [1]: The Town owns and operates the airport, which serves about two million commercial passengers a year, as well as general aviation.
 - `d7s2` Long Island MacArthur Airport [2]: Long Island MacArthur Airport (LIMA) covers 1,311 acres (531 ha) and has four runways and two helipads.
 - `d8s0` Pennsylvania Route 315 [0]: Pennsylvania Route 315 (PA 315) is an 8.2 mi state highway located in Luzerne County, Pennsylvania.
 - `d8s1` Pennsylvania Route 315 [1]: The southern terminus is at an interchange with the PA 309 freeway in Wilkes-Barre.
@@ -1525,7 +1528,7 @@ Notes:
 - `d4s2` Texas Senate, District 24 [2]: In 2015, he announced his intention to retire from the office in January 2017.
 - `d5s0` Dick Durbin [0]: Richard Joseph Durbin (born November 21, 1944) is an American politician who is the senior United States Senator from Illinois, in office since 1997.
 - `d5s1` Dick Durbin [1]: He has been the Assistant Democratic Leader (whip), the second highest position in the Democratic Party leadership in the Senate, since 2005, serving as Minority Whip from 2005 to 2007, Majority Whip from 2007 to 2015, and Minority Whip again since 2015.
-- `d6s0` Ben Cardin [0]: Benjamin Louis Cardin (born October 5, 1943) is an American politician and member of the Democratic Party who serves as the senior United States Senator from Maryland, in office since 2007.
+- ★u2 `d6s0` Ben Cardin [0]: Benjamin Louis Cardin (born October 5, 1943) is an American politician and member of the Democratic Party who serves as the senior United States Senator from Maryland, in office since 2007.
 - `d6s1` Ben Cardin [1]: Before his election to the Senate, Cardin was previously a member of the United States House of Representatives, representing  's 3 congressional district (1987–2007).
 - `d6s2` Ben Cardin [2]: He also served in the Maryland House of Delegates (1967–87), serving as Speaker (1979–87).
 - `d6s3` Ben Cardin [3]: He was the youngest Speaker in Maryland history.
@@ -1538,7 +1541,7 @@ Notes:
 - `d8s0` Jon S. Cardin [0]: Jon S. Cardin (born January 12, 1970) is an American politician from Maryland and a member of the Democratic Party.
 - `d8s1` Jon S. Cardin [1]: Previously he served in the Maryland House of Delegates, representing Maryland's District 11 in Baltimore County, and was a member of the Ways and Means Committee.
 - `d8s2` Jon S. Cardin [2]: Cardin chaired the Election Law Subcommittee.
-- `d8s3` Jon S. Cardin [3]: Cardin is the nephew of Ben Cardin, a United States Senator from Maryland.
+- ★u1 `d8s3` Jon S. Cardin [3]: Cardin is the nephew of Ben Cardin, a United States Senator from Maryland.
 - `d9s0` Rob Portman [0]: Robert Jones Portman (born December 19, 1955) is an American lawyer and the junior United States Senator from Ohio, and a member of the Republican Party.
 - `d9s1` Rob Portman [1]: He has been in office since 2011.
 - `d9s2` Rob Portman [2]: Previously he served as a congressman, as the 14th United States Trade Representative, and as the 35th Director of the Office of Management and Budget.
@@ -1549,7 +1552,7 @@ Notes:
 
 </details>
 
-## Q203 — `hotpotqa_5a8b036d55429971feec45fe` (draft)
+## Q203 🚩 — `hotpotqa_5a8b036d55429971feec45fe` (draft)
 
 > Which is a record producer, Zach Bogosian or Daron Malakian?
 
@@ -1566,7 +1569,9 @@ Evidence:
 
 - `d8s0` Daron Malakian [0]: Daron Vartan Malakian (Armenian: Տարօն/Տարոն Վարդան Մալաքեան, born July 18, 1975) is an Armenian–American singer-songwriter, multi-instrumentalist, and record producer.
 
-Notes:
+Notes: 检查是否跟拆词器规则一致
+
+- **🚩 逻辑审核（2026-11-11）[中]：** 预设结论只依赖 Malakian 一边的事实。Bogosian 的定义性介绍（`d5s0`+`d5s1`：'American professional ice hockey defenseman'）按 guide v1.3 可以用 by_omission 排除他，但没有为他建 unit。现有 Notes（'No negative occupation unit is needed'）与 v1.3 冲突。
 
 - The explicit producer statement identifies Daron Malakian among the two named candidates.
 - No negative occupation unit is needed for Bogosian.
@@ -1601,7 +1606,7 @@ Notes:
 - `d7s1` Odell Borg [1]: He has produced records with Jan 'Looking Wolf', Zach Farley, Harry Seavey, Travis Terry, and Naomi Littletree.
 - `d7s2` Odell Borg [2]: Before making flutes, Odell was a leather craftsman and a draftsman.
 - `d7s3` Odell Borg [3]: In 1988, Odell received his first native flute as a gift, and after a few of years playing it he began making flutes of his own.
-- `d8s0` Daron Malakian [0]: Daron Vartan Malakian (Armenian: Տարօն/Տարոն Վարդան Մալաքեան, born July 18, 1975) is an Armenian–American singer-songwriter, multi-instrumentalist, and record producer.
+- ★u1 `d8s0` Daron Malakian [0]: Daron Vartan Malakian (Armenian: Տարօն/Տարոն Վարդան Մալաքեան, born July 18, 1975) is an Armenian–American singer-songwriter, multi-instrumentalist, and record producer.
 - `d8s1` Daron Malakian [1]: He is best known as the guitarist, songwriter and second vocalist of the rock band System of a Down and as the lead vocalist, lead guitarist and songwriter of the band Scars on Broadway.
 - `d8s2` Daron Malakian [2]: Like the rest of the Hollywood-based band System of a Down, he is of Armenian ancestry, but he is the only member to have been born in the United States.
 - `d8s3` Daron Malakian [3]: Daron Malakian is known for his distinctive playing and is ranked 40th in Loudwire's list of "Top 50 Hard Rock + Metal Guitarists Of All Time" and #11 in MusicRadar's poll, "The 20 Greatest Metal Guitarists Ever".
@@ -1638,10 +1643,10 @@ Notes:
 - `d2s1` Flying Gold [1]: A shipment of gold being flown from Paris to Budapest is robbed in mid-air.
 - `d2s2` Flying Gold [2]: A French-language version "Rouletabille aviateur" was also released.
 - `d3s0` Steve Sekely [0]: Steve Sekely (1899-1979) was a Hungarian film director.
-- `d3s1` Steve Sekely [1]: Born Székely István, he was known by several names, based on his changing professional and immigration status, including Stefan Szekely.
+- ★u1 `d3s1` Steve Sekely [1]: Born Székely István, he was known by several names, based on his changing professional and immigration status, including Stefan Szekely.
 - `d4s0` King Baggot [0]: William King Baggot (November 7, 1879 – July 11, 1948) was an American actor, film director and screenwriter.
 - `d4s1` King Baggot [1]: He was an internationally famous movie star of the silent film era.
-- `d4s2` King Baggot [2]: The first individually publicized leading man in America, Baggot was referred to as "King of the Movies," "The Most Photographed Man in the World" and "The Man Whose Face Is As Familiar As The Man In The Moon."
+- ★u2 `d4s2` King Baggot [2]: The first individually publicized leading man in America, Baggot was referred to as "King of the Movies," "The Most Photographed Man in the World" and "The Man Whose Face Is As Familiar As The Man In The Moon."
 - `d5s0` The Fabulous Suzanne [0]: The Fabulous Suzanne is a 1946 American romantic comedy film directed by Steve Sekely and starring Barbara Britton, Rudy Vallee and Otto Kruger.
 - `d5s1` The Fabulous Suzanne [1]: A waitress inherits a fortune from one of her customers.
 - `d6s0` Number 111 (1938 film) [0]: Number 111 is a 1938 Hungarian thriller film directed by Steve Sekely and starring Jenő Törzs, Pál Jávor and Mária Lázár.
@@ -1681,7 +1686,7 @@ Evidence:
 - `d2s0` Multinational Monitor [0]: The Multinational Monitor was a bimonthly magazine founded by Ralph Nader in 1980.
 - `d5s0` In These Times [0]: In These Times is an American politically progressive/democratic socialist monthly magazine of news and opinion published in Chicago, Illinois.
 
-Notes:
+Notes: 为什么是[]: no accepted support，u3可以根据u1u2推出来的
 
 - Bimonthly can mean twice a month or every two months. No numeric frequency resolves it here. Keep the source answer pending review.
 - Source check: `bimonthly_ambiguous`.
@@ -1693,7 +1698,7 @@ Notes:
 - `d1s1` Iiyama Vision Master Pro 17 computer monitor [1]: This CRT monitor was manufactured in the 1990s, and has been discontinued.
 - `d1s2` Iiyama Vision Master Pro 17 computer monitor [2]: For a year from April 1997 to April 1998, this monitor was at the top of PCWorld's chart as a Best Buy.
 - `d1s3` Iiyama Vision Master Pro 17 computer monitor [3]: According to PC Pro magazine, it dominated the UK monitor market at around that period.
-- `d2s0` Multinational Monitor [0]: The Multinational Monitor was a bimonthly magazine founded by Ralph Nader in 1980.
+- ★u2 `d2s0` Multinational Monitor [0]: The Multinational Monitor was a bimonthly magazine founded by Ralph Nader in 1980.
 - `d2s1` Multinational Monitor [1]: It was published by Essential Information.
 - `d2s2` Multinational Monitor [2]: The magazine was formerly published on a monthly basis.
 - `d2s3` Multinational Monitor [3]: Although its primary focus was on analysis of corporations, it also published articles on labor issues and occupational safety and health, the environment, globalization, privatization, the global economy, and developing nations.
@@ -1704,7 +1709,7 @@ Notes:
 - `d4s0` Concord Monitor [0]: The Concord Monitor is the daily newspaper for Concord, the state capital of New Hampshire.
 - `d4s1` Concord Monitor [1]: It also covers surrounding towns in Merrimack, most of Belknap county, as well as portions of Grafton, Rockingham and Hillsborough counties.
 - `d4s2` Concord Monitor [2]: The "Monitor" has several times been named as one of the best small papers in America and in April 2008, the "Monitor" became a Pulitzer Prize winning paper, when photographer Preston Gannaway was honored for feature photography.
-- `d5s0` In These Times [0]: In These Times is an American politically progressive/democratic socialist monthly magazine of news and opinion published in Chicago, Illinois.
+- ★u1 `d5s0` In These Times [0]: In These Times is an American politically progressive/democratic socialist monthly magazine of news and opinion published in Chicago, Illinois.
 - `d6s0` The Monitor (Sydney) [0]: The Monitor was a biweekly English language newspaper published in Sydney, New South Wales and founded in 1826.
 - `d6s1` The Monitor (Sydney) [1]: It is one of the earlier newspapers in the colony commencing publication twenty three years after the Sydney Gazette, the first paper to appear in 1803, and more than seventy years before the federation of Australia.
 - `d6s2` The Monitor (Sydney) [2]: "The Monitor" changed name several times, subsequently being known as "The Sydney Monitor" and "Sydney Monitor and Commercial Advertiser".
@@ -1744,7 +1749,7 @@ Evidence:
 - `d7s0` United States Senate election in Nevada, 2016 [0]: The 2016 United States Senate election in Nevada was held on November 8, 2016 to elect a member of the United States Senate to represent the State of Nevada, concurrently with the 2016 U.S. presidential election, as well as other elections to the United States Senate in other states and elections to the United States House of Representatives and various state and local elections.
 - `d9s2` Bob Beers (Nevada) [2]: He ran unsuccessfully for the Republican nomination for Governor of Nevada in 2006 and in January 2014, he announced that he would run against Democratic Senator Harry Reid in the 2016 U.S. Senate election, but he withdrew from the race in June 2015.
 
-Notes:
+Notes: 我觉得full name没有必要，回答出u1的答案即可。
 
 - The evidence is a planned challenge announced in 2014. It does not establish Reid's attendance or actual candidacy in the final 2016 election.
 - Source check: `question_participation_ambiguous`.
@@ -1779,13 +1784,13 @@ Notes:
 - `d6s11` Lula J. Davis [11]: Davis told Senators what they could and could not do when it came to rules and procedure.
 - `d6s12` Lula J. Davis [12]: Consequently, Davis was called “one of the most powerful unelected people in the U.S. Senate.”
 - `d6s13` Lula J. Davis [13]: Davis retired at the end of the 111th Congress.
-- `d7s0` United States Senate election in Nevada, 2016 [0]: The 2016 United States Senate election in Nevada was held on November 8, 2016 to elect a member of the United States Senate to represent the State of Nevada, concurrently with the 2016 U.S. presidential election, as well as other elections to the United States Senate in other states and elections to the United States House of Representatives and various state and local elections.
+- ★u2 `d7s0` United States Senate election in Nevada, 2016 [0]: The 2016 United States Senate election in Nevada was held on November 8, 2016 to elect a member of the United States Senate to represent the State of Nevada, concurrently with the 2016 U.S. presidential election, as well as other elections to the United States Senate in other states and elections to the United States House of Representatives and various state and local elections.
 - `d7s1` United States Senate election in Nevada, 2016 [1]: The state primary election was held on June 14, 2016.
 - `d8s0` United States Senate election in Nevada, 2004 [0]: The 2004 United States Senate election in Nevada was held on November 2, 2004.
 - `d8s1` United States Senate election in Nevada, 2004 [1]: Incumbent Democratic U.S. Senator Harry Reid, the Senate Minority Whip, won re-election to a fourth term.
 - `d9s0` Bob Beers (Nevada) [0]: Robert T. Beers (born October 14, 1959) is an American accountant (CPA) and member of the Republican Party who currently serves as a member of the Las Vegas City Council, representing Ward 2.
 - `d9s1` Bob Beers (Nevada) [1]: He was previously a member of the Nevada Assembly from 1998 to 2004 and the Nevada Senate from 2005 to 2008.
-- `d9s2` Bob Beers (Nevada) [2]: He ran unsuccessfully for the Republican nomination for Governor of Nevada in 2006 and in January 2014, he announced that he would run against Democratic Senator Harry Reid in the 2016 U.S. Senate election, but he withdrew from the race in June 2015.
+- ★u1 `d9s2` Bob Beers (Nevada) [2]: He ran unsuccessfully for the Republican nomination for Governor of Nevada in 2006 and in January 2014, he announced that he would run against Democratic Senator Harry Reid in the 2016 U.S. Senate election, but he withdrew from the race in June 2015.
 - `d10s0` Rory Reid [0]: Rory Jason Reid (born July 11, 1963) is an American attorney and politician.
 - `d10s1` Rory Reid [1]: He served as elected Chairman of the Clark County Commission in Clark County, Nevada and was the Democratic nominee for Governor of Nevada in the 2010 gubernatorial election.
 - `d10s2` Rory Reid [2]: Reid is a member of the Democratic Party and a son of former United States Senator Harry Reid.
@@ -1841,7 +1846,7 @@ Notes:
 - `d5s0` Don't Let the Sun Catch You Crying [0]: "Don't Let the Sun Catch You Crying" is a song written and originally performed by British beat group Gerry and the Pacemakers.
 - `d5s1` Don't Let the Sun Catch You Crying [1]: The songwriting is credited to Gerry Marsden and the other band members, Freddie Marsden, Les Chadwick and Les Maguire.
 - `d5s2` Don't Let the Sun Catch You Crying [2]: It was first recorded by Louise Cordet, and then recorded by the group themselves in early 1964.
-- `d6s0` Daryl Hall [0]: Daryl Franklin Hohl (born October 11, 1946), known professionally as Daryl Hall, is an American rock, R&B, and soul singer; keyboardist, guitarist, songwriter, and producer, best known as the co-founder and lead vocalist of Hall & Oates (with guitarist and songwriter John Oates).
+- ★u1 `d6s0` Daryl Hall [0]: Daryl Franklin Hohl (born October 11, 1946), known professionally as Daryl Hall, is an American rock, R&B, and soul singer; keyboardist, guitarist, songwriter, and producer, best known as the co-founder and lead vocalist of Hall & Oates (with guitarist and songwriter John Oates).
 - `d7s0` Ferry Cross the Mersey [0]: "Ferry Cross the Mersey" (sometimes written Ferry 'Cross the Mersey) is a song written by Gerry Marsden.
 - `d7s1` Ferry Cross the Mersey [1]: It was first recorded by his band Gerry and the Pacemakers and released in late 1964 in the UK and in 1965 in the United States.
 - `d7s2` Ferry Cross the Mersey [2]: It was a hit on both sides of the Atlantic, reaching number six in the United States and number eight in the UK.
@@ -1856,7 +1861,7 @@ Notes:
 - `d9s2` Hall &amp; Oates [2]: John Oates primarily plays electric guitar and provides backing vocals.
 - `d9s3` Hall &amp; Oates [3]: The two write most of the songs they perform, either separately or in collaboration.
 - `d9s4` Hall &amp; Oates [4]: They achieved their greatest fame from the late 1970s to the mid-1980s with a fusion of rock and roll and rhythm and blues.
-- `d10s0` Gerry Marsden [0]: Gerard Marsden MBE (born 24 September 1942) is an English musician and television personality, best known for being leader of the British Merseybeat band Gerry and the Pacemakers.
+- ★u2 `d10s0` Gerry Marsden [0]: Gerard Marsden MBE (born 24 September 1942) is an English musician and television personality, best known for being leader of the British Merseybeat band Gerry and the Pacemakers.
 
 </details>
 
@@ -1877,7 +1882,7 @@ Evidence:
 
 - `d4s5` Sigmund Freud [5]: In 1938 Freud left Austria to escape the Nazis.
 
-Notes:
+Notes: 你需要看一下是否有对另一位候选的描述
 
 - Freud is the explicit positive match among two named candidates. Do not infer a negative fact about Waugh from the titles of his novels.
 
@@ -1898,7 +1903,7 @@ Notes:
 - `d4s2` Sigmund Freud [2]: He qualified as a doctor of medicine in 1881 at the University of Vienna.
 - `d4s3` Sigmund Freud [3]: Upon completing his habilitation in 1885, he was appointed a docent in neuropathology and became an affiliated professor in 1902.
 - `d4s4` Sigmund Freud [4]: Freud lived and worked in Vienna, having set up his clinical practice there in 1886.
-- `d4s5` Sigmund Freud [5]: In 1938 Freud left Austria to escape the Nazis.
+- ★u1 `d4s5` Sigmund Freud [5]: In 1938 Freud left Austria to escape the Nazis.
 - `d4s6` Sigmund Freud [6]: He died in exile in the United Kingdom in 1939.
 - `d5s0` Sigmund Freud Prize [0]: The Sigmund Freud Prize or Sigmund Freud Prize for Scientific Prose (German "Sigmund Freud-Preis für wissenschaftliche Prosa") is a German literary award named after Sigmund Freud and awarded by the Deutsche Akademie für Sprache und Dichtung.
 - `d5s1` Sigmund Freud Prize [1]: It was first awarded in 1964.
@@ -1940,7 +1945,7 @@ Evidence:
 - `d3s0` Bodie, California [0]: Bodie ( ) is a ghost town in the Bodie Hills east of the Sierra Nevada mountain range in Mono County, California, United States, about 75 mi southeast of Lake Tahoe.
 - `d5s0` Bodie and Benton Railway and Commercial Company [0]: The Bodie & Benton Railway was a narrow gauge common carrier railroad in California, from the Mono Mills to a terminus in Bodie, now a ghost town, in Mono County.
 
-Notes:
+Notes: 1. u1的答案是不是可以从题干里推出，这样只需要u2就可以了。2. 如果只要u2，是否符合拆词器规则
 
 
 <details><summary>All source context</summary>
@@ -1955,14 +1960,14 @@ Notes:
 - `d1s7` Kauai Railway [7]: The last train ran 1947, with rail operations replaced by trucks.
 - `d1s8` Kauai Railway [8]: The company continues to exist as the present-day Kauai Commercial Company.
 - `d2s0` Oahu Railway and Land Company [0]: The Oahu Railway and Land Company, or OR&L, was a narrow gauge common carrier railway that served much of the Hawaiian island of Oahu, and was the largest narrow gauge class one common carrier in the U.S, until its dissolution in 1947.
-- `d3s0` Bodie, California [0]: Bodie ( ) is a ghost town in the Bodie Hills east of the Sierra Nevada mountain range in Mono County, California, United States, about 75 mi southeast of Lake Tahoe.
+- ★u2 `d3s0` Bodie, California [0]: Bodie ( ) is a ghost town in the Bodie Hills east of the Sierra Nevada mountain range in Mono County, California, United States, about 75 mi southeast of Lake Tahoe.
 - `d3s1` Bodie, California [1]: It is located 12 mi east-southeast of Bridgeport, at an elevation of 8379 feet (2554 m).
 - `d3s2` Bodie, California [2]: As Bodie Historic District, the U.S. Department of the Interior recognizes it as a National Historic Landmark.
 - `d4s0` Lakeside and Marblehead Railroad [0]: Incorporated on April 17, 1886, at Marblehead, Ohio, the Lakeside and Marblehead Railroad (L&M) was a short standard gauge railroad that spanned about seven miles (11.3 km) in length.
 - `d4s1` Lakeside and Marblehead Railroad [1]: It extended from Marblehead through Lakeside to a connection with the Lake Shore and Michigan Southern Railway (later the New York Central Railroad) at Danbury (an unincorporated hamlet bordering Sandusky Bay).
 - `d4s2` Lakeside and Marblehead Railroad [2]: A common carrier, it carried both freight and passengers.
 - `d4s3` Lakeside and Marblehead Railroad [3]: It was abandoned as a common carrier railroad July 31, 1964, operated for the last time as a private industrial railroad in Summer 1978, and its tracks were removed in Fall 1997.
-- `d5s0` Bodie and Benton Railway and Commercial Company [0]: The Bodie & Benton Railway was a narrow gauge common carrier railroad in California, from the Mono Mills to a terminus in Bodie, now a ghost town, in Mono County.
+- ★u1 `d5s0` Bodie and Benton Railway and Commercial Company [0]: The Bodie & Benton Railway was a narrow gauge common carrier railroad in California, from the Mono Mills to a terminus in Bodie, now a ghost town, in Mono County.
 - `d5s1` Bodie and Benton Railway and Commercial Company [1]: It was unusual among U.S. railroads in that it was completely isolated from the rest of the railroad system.
 - `d6s0` Sandy River Railroad [0]: The Sandy River Railroad was a narrow gauge railway built to serve the towns of Strong and Phillips in the Sandy River valley upstream of Farmington.
 - `d6s1` Sandy River Railroad [1]: The Sandy River Railroad was the first narrow gauge common carrier railroad built in the State of Maine.
@@ -1991,11 +1996,11 @@ Question type: `bridge` (source type `bridge`)
 | u1: occupations explicitly stated for Vanessa Bley | false | singer, composer, producer, musician | — | [d10s0] |
 | u2: whether {u1} establishes that Vanessa Bley is an impresario | true | impresario | u1 | `[]`: no accepted support |
 
-Evidence:
+Evidence: 
 
 - `d10s0` Vanessa Bley [0]: Vanessa Bley is a New York City and Los Angeles–based singer, composer, producer, and musician.
-
-Notes:
+ 
+Notes: 这道题的拆分逻辑是不是有问题，可以换一道
 
 - The impresario definition describes a role similar to a producer. It does not state that every producer is an impresario or that Bley held that role.
 - Source check: `producer_not_necessarily_impresario`.
@@ -2050,7 +2055,7 @@ Notes:
 - `d9s0` Mozarteum Argentino [0]: The Mozarteum Argentino is a private, non-profit musical institution in Argentina.
 - `d9s1` Mozarteum Argentino [1]: It is one of the most important musical institutions in the country and provides scholarships to some of Argentina's most able musicians.
 - `d9s2` Mozarteum Argentino [2]: The Mozarteum Argentino was established in 1952 and also organizes concerts, often over 50 a year.
-- `d10s0` Vanessa Bley [0]: Vanessa Bley is a New York City and Los Angeles–based singer, composer, producer, and musician.
+- ★u1 `d10s0` Vanessa Bley [0]: Vanessa Bley is a New York City and Los Angeles–based singer, composer, producer, and musician.
 - `d10s1` Vanessa Bley [1]: She is daughter of jazz pianist Paul Bley and pioneer video artist Carol Goss.
 
 </details>

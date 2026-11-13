@@ -11,7 +11,7 @@ Edit annotations for data changes. Keep review comments when rebuilding this fil
 | comparison | comparison | 15 |
 | **Total** | | **30** |
 
-## Q241 — `hotpotqa_5ab8723c55429934fafe6dbc` (draft)
+## Q241 🚩 — `hotpotqa_5ab8723c55429934fafe6dbc` (draft)
 
 > The 2013–14 Phoenix Suns season brought back a player who now plays for what team?
 
@@ -29,7 +29,9 @@ Evidence:
 - `d2s4` 2013–14 Phoenix Suns season [4]: When the Suns began the regular season, Goran Dragić, P. J. Tucker, Markieff Morris, and his twin brother Marcus Morris were the only players returning from playing with last season's team (while Channing Frye was still on last season's team, he didn't play any games due to a life-threatening heart ailment he had at the time).
 - `d6s0` P. J. Tucker [0]: Anthony Leon "P. J." Tucker Jr. (born May 5, 1985) is an American professional basketball player for the Houston Rockets of the National Basketball Association (NBA).
 
-Notes:
+Notes: u1列了四名回归球员，不能因为只提供了Tucker的个人条目就选他。如果题干无法唯一确定球员，就换一道题。
+
+- **🚩 逻辑审核（2026-11-11）[中]：** u1 'returning player' 不唯一：`d2s4` 列了四名回归球员（Dragić、Tucker、Markieff 和 Marcus Morris）。gold 选 Tucker 只是因为原文里只有他的条目，描述里的 'identified by the provided player article' 就是这种事后挑选。
 
 - The season article lists four returning players. Tucker is one of them, not the only one. The word now refers to the source snapshot.
 - Source check: `multiple_returning_players`.
@@ -44,7 +46,7 @@ Notes:
 - `d2s1` 2013–14 Phoenix Suns season [1]: This season marked the first time that purple was not a primary color for the team (although it was still involved with their system).
 - `d2s2` 2013–14 Phoenix Suns season [2]: It was also the first time since the beginning of the 1987–88 NBA season that the Suns ended up drafting in the top 5 of a draft.
 - `d2s3` 2013–14 Phoenix Suns season [3]: In addition, it was the first time since the beginning of the 2000–01 NBA season that the Suns made complete changes in not only their logos, but also their jerseys.
-- `d2s4` 2013–14 Phoenix Suns season [4]: When the Suns began the regular season, Goran Dragić, P. J. Tucker, Markieff Morris, and his twin brother Marcus Morris were the only players returning from playing with last season's team (while Channing Frye was still on last season's team, he didn't play any games due to a life-threatening heart ailment he had at the time).
+- ★u1 `d2s4` 2013–14 Phoenix Suns season [4]: When the Suns began the regular season, Goran Dragić, P. J. Tucker, Markieff Morris, and his twin brother Marcus Morris were the only players returning from playing with last season's team (while Channing Frye was still on last season's team, he didn't play any games due to a life-threatening heart ailment he had at the time).
 - `d2s5` 2013–14 Phoenix Suns season [5]: The Phoenix Suns, despite their winning record, failed to make the playoffs.
 - `d2s6` 2013–14 Phoenix Suns season [6]: This drew criticism from many fans regarding the conference system as multiple sub-.500 teams in the Eastern Conference managed to make playoffs, with the Suns holding a Top 4 Eastern Conference seeded team had they been a part of that conference that year instead.
 - `d3s0` 1988–89 Phoenix Suns season [0]: The 1988–89 Phoenix Suns season was the 20th season for the Phoenix Suns of the National Basketball Association.
@@ -63,7 +65,7 @@ Notes:
 - `d5s2` 1986–87 Phoenix Suns season [2]: Suns management decided to replace the longstanding MacLeod with Dick Van Arsdale, a former Suns player from the Finals team coached then by MacLeod.
 - `d5s3` 1986–87 Phoenix Suns season [3]: With Van Arsdale, the Suns would finish the season going 14–12 in their last 26 games of the regular season.
 - `d5s4` 1986–87 Phoenix Suns season [4]: All Suns home games were played at Arizona Veterans Memorial Coliseum.
-- `d6s0` P. J. Tucker [0]: Anthony Leon "P. J." Tucker Jr. (born May 5, 1985) is an American professional basketball player for the Houston Rockets of the National Basketball Association (NBA).
+- ★u2 `d6s0` P. J. Tucker [0]: Anthony Leon "P. J." Tucker Jr. (born May 5, 1985) is an American professional basketball player for the Houston Rockets of the National Basketball Association (NBA).
 - `d7s0` 1975–76 Phoenix Suns season [0]: The 1975–76 Phoenix Suns season was the eighth season for the Phoenix Suns of the National Basketball Association.
 - `d7s1` 1975–76 Phoenix Suns season [1]: The season included an improbable run to the NBA Finals by a team that had never won a playoff series and made the playoffs only one other season in the franchise's existence.
 - `d7s2` 1975–76 Phoenix Suns season [2]: With a regular season record of 42–40, the Suns had finished third in the Pacific division standings and improved upon last season's win total by 10 games.
@@ -113,7 +115,7 @@ Evidence:
 - `d9s0` Stephenie Meyer [0]: Stephenie Meyer (née Morgan; ; born December 24, 1973) is an American young adult fiction writer and film producer, best known for her vampire romance series "Twilight".
 - `d10s0` Twilight (novel series) [0]: Twilight is a series of four vampire-themed fantasy romance novels by American author Stephenie Meyer.
 
-Notes:
+Notes: 检查一下u1的描述，题干没有直接给出Twilight，能不能改成“四部吸血鬼题材奇幻爱情小说的美国作者”，避免把中间结果提前写进描述。
 
 
 <details><summary>All source context</summary>
@@ -148,11 +150,11 @@ Notes:
 - `d8s6` Tagalog pocketbooks [6]: Authors such as Maria Teresa Cruz San Diego, who used the pen names Maia Jose and Tisha Nicole, ventured into the fantasy romance genre, and into topics that are related to politics, ecology, gender issues, prostitution, mail-order bride syndicates, white slavery, non-governmental organizations, and breastfeeding programs.
 - `d8s7` Tagalog pocketbooks [7]: Apart from writing about ideal lovers (men and women) and ideal situations, other novelists wrote about true-to-life settings, or at least based the stories from personal experiences.
 - `d8s8` Tagalog pocketbooks [8]: Thus, Tagalog romance novels came to mirror or replicate the "roles that women and men play" in Philippine society.
-- `d9s0` Stephenie Meyer [0]: Stephenie Meyer (née Morgan; ; born December 24, 1973) is an American young adult fiction writer and film producer, best known for her vampire romance series "Twilight".
+- ★u2 `d9s0` Stephenie Meyer [0]: Stephenie Meyer (née Morgan; ; born December 24, 1973) is an American young adult fiction writer and film producer, best known for her vampire romance series "Twilight".
 - `d9s1` Stephenie Meyer [1]: The "Twilight" novels have gained worldwide recognition and sold over 100 million copies, with translations into 37 different languages.
 - `d9s2` Stephenie Meyer [2]: Meyer was the bestselling author of 2008 and 2009 in America, having sold over 29 million books in 2008, and 26.5 million books in 2009.
 - `d9s3` Stephenie Meyer [3]: "Twilight" was the best-selling book of 2008 in US bookstores.
-- `d10s0` Twilight (novel series) [0]: Twilight is a series of four vampire-themed fantasy romance novels by American author Stephenie Meyer.
+- ★u1 `d10s0` Twilight (novel series) [0]: Twilight is a series of four vampire-themed fantasy romance novels by American author Stephenie Meyer.
 - `d10s1` Twilight (novel series) [1]: Released annually from 2005 through 2008, the four books chart the later teen years of Isabella "Bella" Swan, a girl who moves to Forks, Washington, and falls in love with a 104-year-old vampire named Edward Cullen.
 - `d10s2` Twilight (novel series) [2]: The series is told primarily from Bella's point of view, with the epilogue of "Eclipse" and Part II of "Breaking Dawn" being told from the viewpoint of character Jacob Black, a werewolf.
 - `d10s3` Twilight (novel series) [3]: The unpublished "Midnight Sun" is a retelling of the first book, "Twilight", from Edward Cullen's point of view.
@@ -185,7 +187,7 @@ Notes:
 
 <details><summary>All source context</summary>
 
-- `d1s0` Boise State University [0]: Boise State University (BSU) is a public college in Boise, Idaho.
+- ★u1 `d1s0` Boise State University [0]: Boise State University (BSU) is a public college in Boise, Idaho.
 - `d1s1` Boise State University [1]: Founded in 1932 by the Episcopal Church, it became an independent junior college in 1934, and has been awarding baccalaureate and master's degrees since 1965.
 - `d2s0` 2002 Boise State Broncos football team [0]: The 2002 Boise State Broncos football team represented Boise State University in the 2002 NCAA Division I-A football season.
 - `d2s1` 2002 Boise State Broncos football team [1]: Boise State competed as a member of the Western Athletic Conference (WAC), and played their home games at Bronco Stadium in Boise, Idaho.
@@ -200,7 +202,7 @@ Notes:
 - `d4s1` 2009–10 Boise State Broncos men's basketball team [1]: This was head coach Greg Graham's eighth and final season at Boise State as he was fired at the end of the season.
 - `d4s2` 2009–10 Boise State Broncos men's basketball team [2]: The Broncos competed in the Western Athletic Conference and played their home games at the Taco Bell Arena.
 - `d4s3` 2009–10 Boise State Broncos men's basketball team [3]: Boise State finished the season 15–17, 5–11 in WAC play and lost in the quarterfinals of the 2010 WAC Men's Basketball Tournament to Utah State.
-- `d5s0` Syracuse University [0]: Syracuse University (commonly referred to as Syracuse, 'Cuse, or SU) is a private research university in Syracuse, New York, United States.
+- ★u2 `d5s0` Syracuse University [0]: Syracuse University (commonly referred to as Syracuse, 'Cuse, or SU) is a private research university in Syracuse, New York, United States.
 - `d5s1` Syracuse University [1]: The institution's roots can be traced to the Genesee Wesleyan Seminary (later becoming Genesee College), founded in 1831 by the Methodist Episcopal Church in Lima, New York.
 - `d5s2` Syracuse University [2]: After several years of debate over relocating the college to Syracuse, the university was established in 1870, independent of the college.
 - `d5s3` Syracuse University [3]: Since 1920, the university has identified itself as nonsectarian, although it maintains a relationship with The United Methodist Church.
@@ -279,9 +281,9 @@ Notes:
 - `d5s2` Grand Sky [2]: The park consists of 217 acres and includes access to the Grand Forks Air Force Base runway for large UAS flights.
 - `d6s0` Grand Forks Municipal Airport [0]: Grand Forks Municipal Airport is a former airport, located within current city limits approximately 3 mi west-northwest of central Grand Forks, North Dakota.
 - `d6s1` Grand Forks Municipal Airport [1]: It was closed shortly after World War II and is now redeveloped as part of the urban area of Grand Forks.
-- `d7s0` Grand Forks International Airport [0]: Grand Forks International Airport (IATA: GFK, ICAO: KGFK, FAA LID: GFK) is a public airport five miles (8 km) northwest of Grand Forks, in Grand Forks County, North Dakota.
+- ★u2 `d7s0` Grand Forks International Airport [0]: Grand Forks International Airport (IATA: GFK, ICAO: KGFK, FAA LID: GFK) is a public airport five miles (8 km) northwest of Grand Forks, in Grand Forks County, North Dakota.
 - `d7s1` Grand Forks International Airport [1]: GFK has no scheduled passenger flights out of the country but has an "international" title (like many other airports) because it has customs service for arrivals from Canada and other countries.
-- `d8s0` Rick Husband Amarillo International Airport [0]: Rick Husband Amarillo International Airport (IATA: AMA, ICAO: KAMA, FAA LID: AMA) is a public airport six miles (10 km) east of downtown Amarillo, in Potter and Randall Counties, Texas, United States.
+- ★u1 `d8s0` Rick Husband Amarillo International Airport [0]: Rick Husband Amarillo International Airport (IATA: AMA, ICAO: KAMA, FAA LID: AMA) is a public airport six miles (10 km) east of downtown Amarillo, in Potter and Randall Counties, Texas, United States.
 - `d8s1` Rick Husband Amarillo International Airport [1]: The airport was renamed in 2003 after NASA astronaut and Amarillo native Rick Husband, who died in the Space Shuttle "Columbia" disaster in February of that year.
 - `d9s0` Emerado, North Dakota [0]: Emerado is a city in Grand Forks County, North Dakota, United States located near Grand Forks Air Force Base.
 - `d9s1` Emerado, North Dakota [1]: It is part of the "Grand Forks, ND-MN Metropolitan Statistical Area" or "Greater Grand Forks".
@@ -322,7 +324,7 @@ Notes:
 
 - `d1s0` Maggie (film) [0]: Maggie is a 2015 post-apocalyptic horror drama film directed by Henry Hobson, in his directorial debut, written by John Scott 3, and starring Arnold Schwarzenegger, Abigail Breslin and Joely Richardson.
 - `d1s1` Maggie (film) [1]: "Maggie" is a dramatic departure for Schwarzenegger, who is better known for his action film roles.
-- `d2s0` Land of the Dead [0]: Land of the Dead (also known as George A. Romero's Land of the Dead) is a 2005 post-apocalyptic horror film written and directed by George A. Romero; the fourth of Romero's six "Living Dead" movies, it is preceded by "Night of the Living Dead", "Dawn of the Dead" and "Day of the Dead", and succeeded by "Diary of the Dead" and "Survival of the Dead".
+- ★u1,u2 `d2s0` Land of the Dead [0]: Land of the Dead (also known as George A. Romero's Land of the Dead) is a 2005 post-apocalyptic horror film written and directed by George A. Romero; the fourth of Romero's six "Living Dead" movies, it is preceded by "Night of the Living Dead", "Dawn of the Dead" and "Day of the Dead", and succeeded by "Diary of the Dead" and "Survival of the Dead".
 - `d2s1` Land of the Dead [1]: It was released in 2005, with a budget of $15–19 million, the highest in the series, and became a success, grossing over $46 million.
 - `d3s0` Viman [0]: Viman (Tamil: விமான்) is an upcoming Malaysian Tamil supernatural film written & directed by A.M. Kishok, produced by Avaraa Creationz, co-produced by Garuda Utama Production, had musical score by Daddy Shaq and choreographed by Vassan Kumaran.
 - `d3s1` Viman [1]: Starring Kishok in the lead role with Jasmin Michael.The film revolves around a middle-aged man and the mysterious happenings in him with one objective, one mission and vision.
@@ -344,14 +346,14 @@ Notes:
 - `d8s0` 28 Days Later [0]: 28 Days Later is a 2002 British post-apocalyptic horror film directed by Danny Boyle, written by Alex Garland, and starring Cillian Murphy, Naomie Harris, Brendan Gleeson, Megan Burns, and Christopher Eccleston.
 - `d8s1` 28 Days Later [1]: The plot depicts the breakdown of society following the accidental release of a highly contagious virus and focuses upon the struggle of four survivors to cope with the destruction of the life they once knew.
 - `d9s0` Jasmin Geljo [0]: Jasmin Geljo (born September 18, 1959) is a Bosnian-Canadian actor.
-- `d9s1` Jasmin Geljo [1]: He is best known for his roles on Cube Zero as Ryjkin and in the films "Land of the Dead", "Assault on Precinct 13" and "The Sentinel".
+- ★u1 `d9s1` Jasmin Geljo [1]: He is best known for his roles on Cube Zero as Ryjkin and in the films "Land of the Dead", "Assault on Precinct 13" and "The Sentinel".
 - `d10s0` The Walking Dead (season 1) [0]: The first season of "The Walking Dead", an American post-apocalyptic horror television series on AMC, premiered on October 31, 2010, and concluded on December 5, 2010, consisting of 6 episodes.
 - `d10s1` The Walking Dead (season 1) [1]: Developed for television by Frank Darabont, who wrote or co-wrote four of the season's six episodes and directed the pilot episode, "Days Gone Bye", the series is based on the eponymous series of comic books by Robert Kirkman, Tony Moore, and Charlie Adlard.
 - `d10s2` The Walking Dead (season 1) [2]: It was executive produced by Darabont, Kirkman, David Alpert, Charles H. Eglee, and Gale Anne Hurd, with Darabont assuming the role of showrunner.
 
 </details>
 
-## Q246 — `hotpotqa_5aba637a55429939ce03dcbb` (draft)
+## Q246 🚩 — `hotpotqa_5aba637a55429939ce03dcbb` (draft)
 
 > Are Brooklyn and Tower 49 both part of New York City?
 
@@ -370,7 +372,9 @@ Evidence:
 - `d3s0` Tower 49 [0]: Tower 49 is an office skyscraper in the Midtown Manhattan district of New York City.
 - `d7s0` Brooklyn [0]: Brooklyn ( ) is the most populous borough of New York City, with a Census-estimated 2,629,150 residents in 2016.
 
-Notes:
+Notes: 加上u1的备选证据：d2s0、d4s0、d5s0、d10s0都说明Brooklyn属于New York City。
+
+- **🚩 逻辑审核（2026-11-11）[中]：** u1（Brooklyn 属于 New York City）漏了备选证据：`d2s0`、`d10s0`、`d5s0`（'the New York City borough of Brooklyn'）。
 
 
 <details><summary>All source context</summary>
@@ -386,7 +390,7 @@ Notes:
 - `d2s4` Brooklyn Heights [4]: Brooklyn's first art gallery, the Brooklyn Arts Gallery, was opened in Brooklyn Heights in 1958.
 - `d2s5` Brooklyn Heights [5]: In 1965, a large part of Brooklyn Heights was protected from unchecked development by the creation of the Brooklyn Heights Historic District, the first such district in New York City.
 - `d2s6` Brooklyn Heights [6]: The district was added to the National Register of Historic Places in 1966.
-- `d3s0` Tower 49 [0]: Tower 49 is an office skyscraper in the Midtown Manhattan district of New York City.
+- ★u2 `d3s0` Tower 49 [0]: Tower 49 is an office skyscraper in the Midtown Manhattan district of New York City.
 - `d3s1` Tower 49 [1]: The lot is fronted on both 48th Street and 49th Street between 5th Avenue and Madison Avenue.
 - `d3s2` Tower 49 [2]: The street frontages were offset by about the width of an NYC brownstone lot on both sides.
 - `d4s0` Fulton Street Line (elevated) [0]: The Fulton Street Line, also called the Fulton Street Elevated or Kings County Line, was an elevated rail line mostly in Brooklyn, New York City, United States.
@@ -407,7 +411,7 @@ Notes:
 - `d6s3` One Worldwide Plaza [3]: Skidmore, Owings & Merrill was the designer for the office complex, and the residential complex was designed by Frank Williams.
 - `d6s4` One Worldwide Plaza [4]: The complex, whose component skyscrapers are among the list of tallest buildings in New York City, occupies an entire city block, bounded by Eighth Avenue, Ninth Avenue, 49th Street, and 50th Street.
 - `d6s5` One Worldwide Plaza [5]: Located on the west side of Eighth Avenue, One Worldwide Plaza is built on the site of New York City's third Madison Square Garden.
-- `d7s0` Brooklyn [0]: Brooklyn ( ) is the most populous borough of New York City, with a Census-estimated 2,629,150 residents in 2016.
+- ★u1 `d7s0` Brooklyn [0]: Brooklyn ( ) is the most populous borough of New York City, with a Census-estimated 2,629,150 residents in 2016.
 - `d7s1` Brooklyn [1]: It borders the borough of Queens at the southwestern end of Long Island, and has several bridge connections to the nearby boroughs of Staten Island and Manhattan.
 - `d7s2` Brooklyn [2]: Since 1896, Brooklyn has had the same boundaries as Kings County, the most populous county in the U.S. state of New York and the second-most densely populated county in the United States, after the county of New York (which is coextensive with the borough of Manhattan).
 - `d8s0` Queens [0]: Queens is the easternmost and largest in area of the five boroughs of New York City.
@@ -450,7 +454,7 @@ Evidence:
 
 - `d7s0` California State Polytechnic University, Pomona [0]: California State Polytechnic University, Pomona (CPP, Cal Poly Pomona, or Cal Poly) is a public polytechnic university located in Pomona, California, United States.
 
-Notes:
+Notes: 检查u1是否真的没有support，d8s0–d8s5没有明确说明公立性质，如果不能支持就换一道题。另检查d6s0+d6s2能否作为u2的备选证据。
 
 - Ural's name, former State universities, and regional research role do not explicitly establish its public status.
 - Source check: `university_public_status_missing`.
@@ -482,7 +486,7 @@ Notes:
 - `d6s1` Cal Poly Pomona College of Engineering [1]: Well known for its "learn by doing" philosophy, the college's motto is: ""making imagination real"".
 - `d6s2` Cal Poly Pomona College of Engineering [2]: Cal Poly has one of the top engineering college among public schools in California and, with over 5,600 students (as of fall 2015), it is also the largest engineering college in Southern California, the second largest college of engineering in the California State University system, and the seventeenth largest engineering college in the United States.
 - `d6s3` Cal Poly Pomona College of Engineering [3]: In the 2017 "U.S. News & World Report" the College of Engineering is ranked the 5th best undergraduate program among public universities (11th overall) in the West for Master's-granting universities, and "has one of the top ranked engineering programs, and graduates roughly 1 of every 14 engineers in the state of California."
-- `d7s0` California State Polytechnic University, Pomona [0]: California State Polytechnic University, Pomona (CPP, Cal Poly Pomona, or Cal Poly) is a public polytechnic university located in Pomona, California, United States.
+- ★u2 `d7s0` California State Polytechnic University, Pomona [0]: California State Polytechnic University, Pomona (CPP, Cal Poly Pomona, or Cal Poly) is a public polytechnic university located in Pomona, California, United States.
 - `d7s1` California State Polytechnic University, Pomona [1]: It is one of two polytechnics in the California State University system.
 - `d8s0` Ural Federal University [0]: The Ural Federal University named after the first President of Russia B. N. Yeltsin (Russian: Уральский федеральный университет имени первого Президента России Б.Н.
 - `d8s1` Ural Federal University [1]: Ельцина, "Uralʹskiĭ federalʹnyĭ universitet imeni pervogo Prezidenta Rossii B.N. Yelʹtsina", often shortened to UrFU, УрФУ ) (formed by a merger of the Ural State Technical University and Ural State University) is one of the leading educational institutions in the Ural region.
@@ -532,7 +536,7 @@ Notes:
 - `d3s1` My Funny Friend and Me [1]: It was written by Sting and David Hartley for Walt Disney Pictures' 40th animated feature film "The Emperor's New Groove".
 - `d3s2` My Funny Friend and Me [2]: When the film began development in 1994 under the title "Kingdom of the Sun", Sting was hired to write the film's songs.
 - `d3s3` My Funny Friend and Me [3]: Released in November 2000, the track reached 24 on the American "Billboard" Adult Contemporary Singles chart, and was nominated for the Academy Award for Best Original Song at the 73rd Academy Awards in 2001.
-- `d4s0` Cinderella (1950 film) [0]: Cinderella is a 1950 American animated musical fantasy film produced by Walt Disney and originally released by RKO Radio Pictures.
+- ★u1 `d4s0` Cinderella (1950 film) [0]: Cinderella is a 1950 American animated musical fantasy film produced by Walt Disney and originally released by RKO Radio Pictures.
 - `d4s1` Cinderella (1950 film) [1]: Based on the fairy tale "Cinderella" by Charles Perrault, it is the twelfth Disney animated feature film.
 - `d4s2` Cinderella (1950 film) [2]: Directing credits go to Clyde Geronimi, Hamilton Luske, and Wilfred Jackson.
 - `d4s3` Cinderella (1950 film) [3]: Songs were written by Mack David, Jerry Livingston, and Al Hoffman.
@@ -541,7 +545,7 @@ Notes:
 - `d5s0` List of The Emperor's New Groove characters [0]: The following are fictional characters from Disney's 2000 film "The Emperor's New Groove", its direct-to-video sequel "Kronk's New Groove", and the spin-off television series "The Emperor's New School".
 - `d6s0` The Emperor's New School [0]: The Emperor's New School is an American animated television series on Disney Channel, based on the 2000 film "The Emperor's New Groove".
 - `d6s1` The Emperor's New School [1]: It follows the adventures of a temporarily-dethroned Kuzco as he completes his education in order to return to the throne, while Yzma, as the school's principal, will stop at nothing to prevent Kuzco from passing all of his classes.
-- `d7s0` The Emperor's New Groove [0]: The Emperor's New Groove is a 2000 American animated buddy comedy film created by Walt Disney Feature Animation and released by Walt Disney Pictures.
+- ★u2 `d7s0` The Emperor's New Groove [0]: The Emperor's New Groove is a 2000 American animated buddy comedy film created by Walt Disney Feature Animation and released by Walt Disney Pictures.
 - `d7s1` The Emperor's New Groove [1]: It is the 40th Disney animated feature film.
 - `d7s2` The Emperor's New Groove [2]: It was directed by Mark Dindal, produced by Randy Fullmer, written by David Reynolds, and stars David Spade, John Goodman, Eartha Kitt, Patrick Warburton and Wendie Malick.
 - `d8s0` Kronk's New Groove [0]: Kronk's New Groove (also known as The Emperor's New Groove 2: Kronk's New Groove) is a 2005 American direct-to-video animated musical comedy film released by The Walt Disney Company on December 13, 2005.
@@ -575,7 +579,7 @@ Evidence:
 - `d2s2` Third Eye Blind [2]: The band released their self-titled album, "Third Eye Blind", in 1997, with the band largely consisting of Jenkins (lead vocals, rhythm guitar), Cadogan (lead guitar), Arion Salazar (bass guitar), and Brad Hargreaves (drums).
 - `d2s3` Third Eye Blind [3]: Shortly after the release of the band's second album in 1999, "Blue", with the same line-up, Cadogan was released from the band under controversial circumstances.
 
-Notes:
+Notes: 检查一下“原始成员”的口径，d4s6只说第五张专辑换了主唱，不能证明前四张一直是原始阵容；u2也只是前两张专辑的阵容。如果原始阵容的专辑数量无法确定，就换一道题。
 
 - Sick Puppies changed vocalist before album five, but that does not establish an unchanged original lineup for albums one through four. Third Eye Blind's excerpt describes the first two albums' lineup, not necessarily the formation lineup.
 - Source check: `original_lineup_not_established`.
@@ -586,8 +590,8 @@ Notes:
 - `d1s1` Third Eye Blind (album) [1]: The album spawned five singles, including the top ten chart hits "Semi-Charmed Life", "Jumper", and "How's It Going to Be".
 - `d2s0` Third Eye Blind [0]: Third Eye Blind is an American rock band formed in San Francisco in 1993.
 - `d2s1` Third Eye Blind [1]: The songwriting duo of Stephan Jenkins and Kevin Cadogan signed the band's first major label recording contract with Elektra Records in 1996, which was later reported as the largest publishing deal ever for an unsigned artist.
-- `d2s2` Third Eye Blind [2]: The band released their self-titled album, "Third Eye Blind", in 1997, with the band largely consisting of Jenkins (lead vocals, rhythm guitar), Cadogan (lead guitar), Arion Salazar (bass guitar), and Brad Hargreaves (drums).
-- `d2s3` Third Eye Blind [3]: Shortly after the release of the band's second album in 1999, "Blue", with the same line-up, Cadogan was released from the band under controversial circumstances.
+- ★u2 `d2s2` Third Eye Blind [2]: The band released their self-titled album, "Third Eye Blind", in 1997, with the band largely consisting of Jenkins (lead vocals, rhythm guitar), Cadogan (lead guitar), Arion Salazar (bass guitar), and Brad Hargreaves (drums).
+- ★u2 `d2s3` Third Eye Blind [3]: Shortly after the release of the band's second album in 1999, "Blue", with the same line-up, Cadogan was released from the band under controversial circumstances.
 - `d3s0` Kevin Cadogan [0]: Kevin Rene Cadogan (born August 14, 1970) is an American singer/songwriter, producer and rock guitarist.
 - `d3s1` Kevin Cadogan [1]: A founding member of the band Third Eye Blind, he performed with the band from 1993 to 2000.
 - `d3s2` Kevin Cadogan [2]: He co-wrote some of Third Eye Blind's most notable hits, including "How's It Going to Be", "Losing a Whole Year", and "Graduate", and 10 of the 14 songs on their debut album "Third Eye Blind".
@@ -623,7 +627,7 @@ Notes:
 
 </details>
 
-## Q250 — `hotpotqa_5abc7bf75542993a06baf8f0` (draft)
+## Q250 🚩 — `hotpotqa_5abc7bf75542993a06baf8f0` (draft)
 
 > Which has more species Laurus or Liriodendron?
 
@@ -642,7 +646,9 @@ Evidence:
 - `d2s1` Laurus [1]: The genus includes three or more species.
 - `d9s0` Liriodendron [0]: Liriodendron is a genus of two species of characteristically large deciduous trees in the magnolia family (Magnoliaceae).
 
-Notes:
+Notes: 加上备选：u1可以检查d1s1+d1s2，u2加上d10s0。u1保留“至少3种”就足够比较，不一定要强行改成精确的3种。
+
+- **🚩 逻辑审核（2026-11-11）[中]：** u1 = '3 or more' 这个取值很奇怪；`d1s2` 直接写了 'The genus includes three species'（`d1s1` 指明是 Laurus 属）。u2 漏了备选证据：`d10s0`（'two-species genus'）。
 
 - The lower bound of three exceeds two; an exact count for Laurus is not needed.
 
@@ -654,7 +660,7 @@ Notes:
 - `d1s3` Laurus novocanariensis [3]: Under favorable conditions it is an impressive tree of 3 to 20 m. tall.
 - `d1s4` Laurus novocanariensis [4]: It is native of rich soils in the cloud zone of always moist spots in subtropical climate with a high air-humidity, on the Canary and Madeira islands.
 - `d2s0` Laurus [0]: Laurus is a genus of evergreen trees belonging to the Laurel family, Lauraceae.
-- `d2s1` Laurus [1]: The genus includes three or more species.
+- ★u1 `d2s1` Laurus [1]: The genus includes three or more species.
 - `d3s0` Phytophthora kernoviae [0]: Phytophthora kernoviae is a plant pathogen that mainly infects European beech ("Fagus sylvatica") and "Rhododendron ponticum".
 - `d3s1` Phytophthora kernoviae [1]: It was first identified in 2003 in Cornwall, UK when scientists were surveying for the presence of "Phytophthora ramorum".
 - `d3s2` Phytophthora kernoviae [2]: This made it the third new "Phytophthora" species to be found in the UK in a decade.
@@ -687,7 +693,7 @@ Notes:
 - `d8s0` Laurus azorica [0]: Laurus azorica (also called Azores laurel or Macaronesian laurel) is a species of plant in the Lauraceae family, related to "Laurus nobilis".
 - `d8s1` Laurus azorica [1]: It is a small aromatic tree.
 - `d8s2` Laurus azorica [2]: A recent study found considerable genetic diversity within "L. nobilis", and that "L. azorica" is not genetically or morphologically distinct.
-- `d9s0` Liriodendron [0]: Liriodendron is a genus of two species of characteristically large deciduous trees in the magnolia family (Magnoliaceae).
+- ★u2 `d9s0` Liriodendron [0]: Liriodendron is a genus of two species of characteristically large deciduous trees in the magnolia family (Magnoliaceae).
 - `d10s0` Liriodendron tulipifera [0]: Liriodendron tulipifera—known as the tulip tree, American tulip tree, tuliptree, tulip poplar, whitewood, fiddletree, and yellow-poplar—is the Western Hemisphere representative of the two-species genus "Liriodendron," and the tallest eastern hardwood.
 - `d10s1` Liriodendron tulipifera [1]: It is native to eastern North America from Southern Ontario and Illinois eastward to southeastern Massachusetts and Rhode Island, and south to central Florida and Louisiana.
 - `d10s2` Liriodendron tulipifera [2]: It can grow to more than 50 m in virgin cove forests of the Appalachian Mountains, often with no limbs until it reaches 25 – in height, making it a very valuable timber tree.
@@ -732,9 +738,9 @@ Notes:
 - `d2s3` Wight [3]: More recently, the word has been used within the fantasy genre of literature to describe undead: corpses with a part of their decayed soul still in residence, often draining life from their victims.
 - `d2s4` Wight [4]: The earliest example of this usage in English is in William Morris's translation of the Grettis Saga, where draug is translated as "barrow wight".
 - `d2s5` Wight [5]: Notable later examples include the undead Barrow-wights from the works of J. R. R. Tolkien, the reanimated creatures killed by the Others from the works of George R. R. Martin and in the HBO adaption of A Song of Ice and Fire, and the level-draining wights of "Dungeons & Dragons" role-playing game franchise.
-- `d3s0` HNoMS Draug [0]: Two ships of the Royal Norwegian Navy have borne the name HNoMS "Draug", after the sea revenant Draugr:
+- ★u1 `d3s0` HNoMS Draug [0]: Two ships of the Royal Norwegian Navy have borne the name HNoMS "Draug", after the sea revenant Draugr:
 - `d4s0` HNoMS Troll [0]: Two ships of the Royal Norwegian Navy have borne the name HNoMS "Troll", after the Norse mythological creature Troll:
-- `d5s0` Draugr [0]: The draugr or draug (Old Norse: "draugr" , plural draugar ; modern Icelandic: "draugur" , Faroese: "dreygur" and Danish, Swedish, and Norwegian: "draug" ), also called aptrganga or aptrgangr , literally "again-walker" (Icelandic: "afturganga" ) is an undead creature from Norse mythology.
+- ★u2 `d5s0` Draugr [0]: The draugr or draug (Old Norse: "draugr" , plural draugar ; modern Icelandic: "draugur" , Faroese: "dreygur" and Danish, Swedish, and Norwegian: "draug" ), also called aptrganga or aptrgangr , literally "again-walker" (Icelandic: "afturganga" ) is an undead creature from Norse mythology.
 - `d6s0` HNoMS Vidar (N52) [0]: HNoMS "Vidar" (N52) was a Royal Norwegian Navy minelayer and command vessel.
 - `d6s1` HNoMS Vidar (N52) [1]: "Vidar" was built by Mjellem & Karlsen in Bergen in 1977, and named after Odin's son Vidar from Norse mythology.
 - `d6s2` HNoMS Vidar (N52) [2]: The vessel was the command ship for NATO's "Mine Counter Measures Force North" (MCMFORNORTH) in 2004 and 2005.
@@ -757,7 +763,7 @@ Notes:
 
 </details>
 
-## Q252 — `hotpotqa_5abd848455429924427fd03a` (draft)
+## Q252 🚩 — `hotpotqa_5abd848455429924427fd03a` (draft)
 
 > Are Edward F. Cline and Floyd Mutrux both screenwriters?
 
@@ -776,7 +782,9 @@ Evidence:
 - `d4s0` Edward F. Cline [0]: Edward Francis Cline (November 4, 1891 – May 22, 1961) was an American screenwriter, actor, writer and director best known for his work with comedians W. C. Fields and Buster Keaton.
 - `d9s0` Floyd Mutrux [0]: Floyd Mutrux (born June 21, 1941) is an American stage and film director, writer, producer, and screenwriter.
 
-Notes:
+Notes: 加上u2的备选证据，检查d10s0以及d10s0+d10s2；后一组可以把screenwriter Mutrux对应到Floyd Mutrux。
+
+- **🚩 逻辑审核（2026-11-11）[中]：** u2 漏了备选证据：`d10s2`（'screenwriter Mutrux'）。
 
 
 <details><summary>All source context</summary>
@@ -792,7 +800,7 @@ Notes:
 - `d3s2` Sun Records (TV series) [2]: The series stars Drake Milligan, Trevor Donovan, Kevin Fonteyne, Christian Lees, Dustin Ingram, Billy Gardell, Jonah Lees, Chad Michael Murray and Jennifer Holland.
 - `d3s3` Sun Records (TV series) [3]: The series premiered on CMT on February 23, 2017 and concluded on April 13, 2017.
 - `d3s4` Sun Records (TV series) [4]: While originally intended to be a three-night event, CMT extended the show to an eight episode miniseries and hinted that future episodes could be a possibility due to the show's success.
-- `d4s0` Edward F. Cline [0]: Edward Francis Cline (November 4, 1891 – May 22, 1961) was an American screenwriter, actor, writer and director best known for his work with comedians W. C. Fields and Buster Keaton.
+- ★u1 `d4s0` Edward F. Cline [0]: Edward Francis Cline (November 4, 1891 – May 22, 1961) was an American screenwriter, actor, writer and director best known for his work with comedians W. C. Fields and Buster Keaton.
 - `d4s1` Edward F. Cline [1]: He was born in Kenosha, Wisconsin and died in Hollywood, California.
 - `d5s0` Edward F. Caldwell &amp; Co. [0]: Edward F. Caldwell & Co., of New York City, was one of the premier designers and manufacturers of electric light fixtures and decorative metalwork from the late 19th to the mid-20th centuries.
 - `d5s1` Edward F. Caldwell &amp; Co. [1]: Founded in 1895 by Edward F. Caldwell (1851–1914) and Victor F. von Lossberg (1853–1942), the firm left a legacy of custom designed and finely-made, metal gates, lanterns, chandeliers, ceiling and wall fixtures, floor and table lamps, and other decorative objects that can be found today in many metropolitan area churches, public buildings, offices, clubs, and residences including, the White House (1902 renovation), St. Patrick's Cathedral, New York, New York Public Library, and Rockefeller Center.
@@ -808,7 +816,7 @@ Notes:
 - `d8s2` Gen. Edward F. Jones House [2]: It was part of a large estate assembled by General Edward F. Jones (1828–1913) by 1883.
 - `d8s3` Gen. Edward F. Jones House [3]: The foundation and first floor are constructed of brick while the upper stories are of wood with shingle, beaded board, and clapboard siding.
 - `d8s4` Gen. Edward F. Jones House [4]: It is an exceptional example of the Queen Anne style.
-- `d9s0` Floyd Mutrux [0]: Floyd Mutrux (born June 21, 1941) is an American stage and film director, writer, producer, and screenwriter.
+- ★u2 `d9s0` Floyd Mutrux [0]: Floyd Mutrux (born June 21, 1941) is an American stage and film director, writer, producer, and screenwriter.
 - `d10s0` American Me [0]: American Me is a 1992 biographical crime drama film produced and directed by Edward James Olmos, his first film as a director, and written by Floyd Mutrux and Desmond Nakano.
 - `d10s1` American Me [1]: Olmos also stars as the film's protagonist, Montoya Santana.
 - `d10s2` American Me [2]: Executive producers included record producer Lou Adler, screenwriter Mutrux, and Irwin Young.
@@ -816,7 +824,7 @@ Notes:
 
 </details>
 
-## Q253 — `hotpotqa_5abdd8d95542991f6610606a` (draft)
+## Q253 🚩 — `hotpotqa_5abdd8d95542991f6610606a` (draft)
 
 > How many episodes did the season of The Simpsons which featured the voice of Lisa Kudrow contain?
 
@@ -836,15 +844,17 @@ Evidence:
 - `d1s3` Lard of the Dance [3]: Meanwhile, Lisa becomes jealous that a new student (voiced by Lisa Kudrow) is distracting all her friends by using her fashionable personality.
 - `d4s1` The Simpsons (season 10) [1]: It contains twenty-three episodes, starting with "Lard of the Dance".
 
-Notes:
+Notes: 把d4s1加为u2的备选证据，如果需要解析It就连同d4s0一起。这样d1s3与第10季文档到达后就可以回答，不必再等d1s0，检查当前依赖关系是否合理。
+
+- **🚩 逻辑审核（2026-11-11）[中]：** `d4s1`（'It contains twenty-three episodes, starting with "Lard of the Dance"'）直接把这一集和第 10 季联系起来，但 u2 只引用了 `d1s0`，整条链要等 `d1s0` 到达。
 
 
 <details><summary>All source context</summary>
 
-- `d1s0` Lard of the Dance [0]: "Lard of the Dance" is the first episode of "The Simpsons"' tenth season.
+- ★u2 `d1s0` Lard of the Dance [0]: "Lard of the Dance" is the first episode of "The Simpsons"' tenth season.
 - `d1s1` Lard of the Dance [1]: It originally aired on the Fox network in the United States on August 23, 1998.
 - `d1s2` Lard of the Dance [2]: Homer discovers he can make money by stealing and reselling grease, but eventually stops after negative encounters with Groundskeeper Willie and the Springfield Grease Company.
-- `d1s3` Lard of the Dance [3]: Meanwhile, Lisa becomes jealous that a new student (voiced by Lisa Kudrow) is distracting all her friends by using her fashionable personality.
+- ★u1 `d1s3` Lard of the Dance [3]: Meanwhile, Lisa becomes jealous that a new student (voiced by Lisa Kudrow) is distracting all her friends by using her fashionable personality.
 - `d1s4` Lard of the Dance [4]: The episode was written by Jane O'Brien and directed by Dominic Polcino.
 - `d2s0` The Comeback (TV series) [0]: The Comeback is an American television comedy-drama series produced by HBO that stars actress Lisa Kudrow as sitcom actress Valerie Cherish in modern-day Los Angeles.
 - `d2s1` The Comeback (TV series) [1]: It was created by Kudrow and Michael Patrick King, a former executive producer of "Sex and the City".
@@ -855,7 +865,7 @@ Notes:
 - `d3s1` List of Web Therapy webisodes [1]: Lisa Kudrow appears as the self-absorbed therapist Fiona Wallice who offers three-minute therapy sessions via webcam over the internet.
 - `d3s2` List of Web Therapy webisodes [2]: Each webisode stars Kudrow video chatting with one or more guest stars.
 - `d4s0` The Simpsons (season 10) [0]: "The Simpsons"' tenth season was originally broadcast on the Fox network in the United States between August 23, 1998, and May 16, 1999.
-- `d4s1` The Simpsons (season 10) [1]: It contains twenty-three episodes, starting with "Lard of the Dance".
+- ★u3 `d4s1` The Simpsons (season 10) [1]: It contains twenty-three episodes, starting with "Lard of the Dance".
 - `d4s2` The Simpsons (season 10) [2]: "The Simpsons" is a satire of a middle class American lifestyle epitomized by its family of the same name, which consists of Homer, Marge, Bart, Lisa and Maggie.
 - `d4s3` The Simpsons (season 10) [3]: Set in the fictional city of Springfield, the show lampoons American culture, society, television, and many aspects of the human condition.
 - `d5s0` List of Friends characters [0]: Various characters appeared in the sitcom "Friends", which aired for ten seasons on NBC from 1994 to 2004.
@@ -903,7 +913,7 @@ Evidence:
 - `d5s0` Territory of Hawaii [0]: The Territory of Hawaii or Hawaii Territory was an organized incorporated territory of the United States that existed from August 12, 1898, until August 21, 1959, when its territory was admitted to the Union as the fiftieth U.S. state, the State of Hawaii.
 - `d8s0` 1920 Politics (Hawaii) [0]: 1920 Politics also referred to as “Jim Crow” circa 1930, was a Republican political strategy to reassert the authority of the white race and promote American Anglo-Saxon values, in what was then the US Territory of Hawaii.
 
-Notes:
+Notes: 检查一下u1回答出Territory of Hawaii后，是否已经可以按地名归一化回答Hawaii；如果可以就简化成single unit。如果必须证明领地变为州，再保留u2，并检查是否符合拆词器规则。
 
 - The strategy operated before statehood. The question calls that location a state.
 - Source check: `historical_territory_called_state`.
@@ -918,7 +928,7 @@ Notes:
 - `d3s1` Fifty-state strategy [1]: In a presidential campaign, it is usually implemented as an appeal to a broad base of the American public in an attempt to win, even if marginally, every state, since even a marginal victory is effectively total victory for electoral purposes.
 - `d3s2` Fifty-state strategy [2]: It can also refer to an overall long-term strategy for a political movement such as a political party.
 - `d4s0` Angela McGlowan [0]: Angela McGlowan is an American political commentator, best selling author, and CEO of Political Strategies & Insights (PSI), a government affairs, political strategy, public relations, and advocacy consulting firm based in Oxford, Mississippi, with an office in Washington, D.C. In 2010, she placed third in the Republican primary for a Congressional seat in Mississippi.
-- `d5s0` Territory of Hawaii [0]: The Territory of Hawaii or Hawaii Territory was an organized incorporated territory of the United States that existed from August 12, 1898, until August 21, 1959, when its territory was admitted to the Union as the fiftieth U.S. state, the State of Hawaii.
+- ★u2 `d5s0` Territory of Hawaii [0]: The Territory of Hawaii or Hawaii Territory was an organized incorporated territory of the United States that existed from August 12, 1898, until August 21, 1959, when its territory was admitted to the Union as the fiftieth U.S. state, the State of Hawaii.
 - `d5s1` Territory of Hawaii [1]: The Hawaii Admission Act specified that the State of Hawaii would not include Palmyra Atoll, the Midway Islands, Kingman Reef, and Johnston Atoll, which includes Johnston (or Kalama) Island and Sand Island.
 - `d6s0` Uneven and combined development [0]: Uneven and combined development (or unequal and combined development) is a Marxist concept to describe the overall dynamics of human history.
 - `d6s1` Uneven and combined development [1]: It was originally used by the Russian revolutionary Leon Trotsky around the turn of the 20th century, when he was analyzing the developmental possibilities that existed for the economy and civilization in the Russian empire, and the likely future of the Tsarist regime in Russia.
@@ -928,7 +938,7 @@ Notes:
 - `d6s5` Uneven and combined development [5]: The concept is still used today by Trotskyists and other Marxists concerned with world politics.
 - `d7s0` Theodore W. Allen [0]: Theodore William "Ted" Allen (August 23, 1919January 19, 2005) was an American intellectual, writer, and activist, best known for his pioneering writings since the 1960s on "white skin privilege" and the "invention" of the "white race," particularly his seminal "Class Struggle and the Origin of Racial Slavery: The Invention of the White Race," published as a pamphlet in 1975, and published the next year in expanded form.
 - `d7s1` Theodore W. Allen [1]: He stressed that the "white race" was invented as "a ruling class social control formation."
-- `d8s0` 1920 Politics (Hawaii) [0]: 1920 Politics also referred to as “Jim Crow” circa 1930, was a Republican political strategy to reassert the authority of the white race and promote American Anglo-Saxon values, in what was then the US Territory of Hawaii.
+- ★u1 `d8s0` 1920 Politics (Hawaii) [0]: 1920 Politics also referred to as “Jim Crow” circa 1930, was a Republican political strategy to reassert the authority of the white race and promote American Anglo-Saxon values, in what was then the US Territory of Hawaii.
 - `d9s0` White nationalism [0]: White nationalism is a type of nationalism or pan-nationalism which holds the belief that white people are a race and seeks to develop and maintain a white national identity.
 - `d9s1` White nationalism [1]: Its proponents identify with and are attached to the concept of a white nation.
 - `d9s2` White nationalism [2]: White nationalists say they seek to ensure the survival of the white race, and the cultures of historically white states.
@@ -942,7 +952,7 @@ Notes:
 
 </details>
 
-## Q255 — `hotpotqa_5ac047a3554299294b218f70` (draft)
+## Q255 🚩 — `hotpotqa_5ac047a3554299294b218f70` (draft)
 
 > Which bank has more branches, China CITIC Bank or UniCredit?
 
@@ -961,7 +971,9 @@ Evidence:
 - `d2s4` China CITIC Bank [4]: The bank operates 78 branches in the mainland, and 622 sub-branches, located in economically developed regions of China.
 - `d6s1` UniCredit [1]: Its network spans 50 markets in 17 countries, with more than 8,500 branches and over 147,000 employees.
 
-Notes:
+Notes: 先统一u1的数量口径：d2s4是78家分行和622家支行，d2s5是2011年第四季度773家机构，不能直接作为同一个精确值的备选。比较结果不受影响，检查能否按可比较的数量界限处理。
+
+- **🚩 逻辑审核（2026-11-11）[中]：** u1 的值不唯一：`d2s4`（78 家分行和 622 家支行）与 `d2s5`（773 家分支机构）不一致。比较结论不受影响。
 
 - UniCredit exceeds both 78 main branches and the combined 700 branches and sub-branches stated for CITIC. The geographic network scopes differ.
 - Source check: `branch_network_scope`.
@@ -975,7 +987,7 @@ Notes:
 - `d2s1` China CITIC Bank [1]: It was known as CITIC Industrial Bank until it changed its name in August 2005.
 - `d2s2` China CITIC Bank [2]: China CITIC Bank, established in 1987, is a nationally comprehensive and internationally oriented commercial bank.
 - `d2s3` China CITIC Bank [3]: The bank operates in almost 130 countries, and maintains a strong foothold on the mainland banking industry.
-- `d2s4` China CITIC Bank [4]: The bank operates 78 branches in the mainland, and 622 sub-branches, located in economically developed regions of China.
+- ★u1 `d2s4` China CITIC Bank [4]: The bank operates 78 branches in the mainland, and 622 sub-branches, located in economically developed regions of China.
 - `d2s5` China CITIC Bank [5]: In total, there are 773 branch offices in China, as of Q4 2011.
 - `d3s0` UniCredit Bank Slovakia [0]: UniCredit Bank Slovakia was a Slovak bank, formed by the merger of HVB Bank Slovakia and UniBanka in 2007, both owned by Italy-based UniCredit Group.
 - `d3s1` UniCredit Bank Slovakia [1]: In 2013 it was absorbed by UniCredit Bank Czech Republic, forming UniCredit Bank Czech Republic and Slovakia.
@@ -985,7 +997,7 @@ Notes:
 - `d5s1` China Investment Bank [1]: It was became a subsidiary of China Construction Bank in 1994.
 - `d5s2` China Investment Bank [2]: In 1998 it was absorbed by China Development Bank, with some business was received by China CITIC Bank.
 - `d6s0` UniCredit [0]: UniCredit S.p.A. is an Italian global banking and financial services company.
-- `d6s1` UniCredit [1]: Its network spans 50 markets in 17 countries, with more than 8,500 branches and over 147,000 employees.
+- ★u2 `d6s1` UniCredit [1]: Its network spans 50 markets in 17 countries, with more than 8,500 branches and over 147,000 employees.
 - `d6s2` UniCredit [2]: Its strategic position in Western and Eastern Europe gives the group one of the region's highest market shares.
 - `d6s3` UniCredit [3]: The company is a component of the Euro Stoxx 50 stock market index.
 - `d7s0` Zhong Tian Plaza [0]: China CITIC Bank Mansion (), formerly Zhong Tian Plaza () is a 59-floor/229-meter tall skyscraper in Urumqi, Xinjiang, People's Republic of China.
@@ -1002,7 +1014,7 @@ Notes:
 
 </details>
 
-## Q256 — `hotpotqa_5ac0cfb45542997d64295a58` (draft)
+## Q256 🚩 — `hotpotqa_5ac0cfb45542997d64295a58` (draft)
 
 > What statistical area is the suburban city that houses the Charles Hosmer Morse Museum of American Art?
 
@@ -1020,7 +1032,9 @@ Evidence:
 - `d5s1` Charles Hosmer Morse Museum of American Art [1]: It is located in Winter Park, Florida, USA.
 - `d9s2` Winter Park, Florida [2]: It is part of the Orlando–Kissimmee–Sanford, Florida Metropolitan Statistical Area.
 
-Notes:
+Notes: 加上d2s1作为u1的备选证据。
+
+- **🚩 逻辑审核（2026-11-11）[中]：** u1 漏了备选证据：`d2s1`（博物馆 'in Winter Park, Florida'）。
 
 
 <details><summary>All source context</summary>
@@ -1042,7 +1056,7 @@ Notes:
 - `d4s4` Charles Hosmer Morse [4]: He was promoted to the New York office, and then to Chicago, eventually establishing a branch that would go on to be known as Fairbanks-Morse corporation.
 - `d4s5` Charles Hosmer Morse [5]: He was also an early resident of and influential figure in the city of Winter Park, Florida.
 - `d5s0` Charles Hosmer Morse Museum of American Art [0]: The Charles Hosmer Morse Museum of American Art houses the most comprehensive collection of the works of Louis Comfort Tiffany found anywhere, a major collection of American art pottery, and fine collections of late-19th- and early-20th-century American paintings, graphics and the decorative arts.
-- `d5s1` Charles Hosmer Morse Museum of American Art [1]: It is located in Winter Park, Florida, USA.
+- ★u1 `d5s1` Charles Hosmer Morse Museum of American Art [1]: It is located in Winter Park, Florida, USA.
 - `d6s0` Ethel Scull 36 Times [0]: Ethel Scull 36 Times is a 1963 painting by American artist Andy Warhol, is currently on view at the Whitney Museum of American Art and is part of the collections of both the Metropolitan Museum of Art and the Whitney Museum of American Art.
 - `d6s1` Ethel Scull 36 Times [1]: It was Warhol's first commissioned work.
 - `d6s2` Ethel Scull 36 Times [2]: The work consists of four rows of nine equal columns, depicting Ethel Redner Scull, a well-known collector of modern art.
@@ -1058,7 +1072,7 @@ Notes:
 - `d8s4` Anthony Waichulis [4]: In January 2006, Anthony became the first Trompe L'Oeil painter to be granted Living Master status with The Art Renewal Center.
 - `d9s0` Winter Park, Florida [0]: Winter Park is a suburban city in Orange County, Florida, United States.
 - `d9s1` Winter Park, Florida [1]: The population was 27,852 at the 2010 United States Census.
-- `d9s2` Winter Park, Florida [2]: It is part of the Orlando–Kissimmee–Sanford, Florida Metropolitan Statistical Area.
+- ★u2 `d9s2` Winter Park, Florida [2]: It is part of the Orlando–Kissimmee–Sanford, Florida Metropolitan Statistical Area.
 - `d10s0` Lisa Hoke [0]: Lisa Hoke (born 1952 in Virginia) is an American installation artist and sculptor living and working in New York.
 - `d10s1` Lisa Hoke [1]: She received a BFA from Virginia Commonwealth University in Richmond, Virginia and was awarded the Edwin Austin Abbey Fellowship from the National Academy Museum, New York and a Joan Mitchell Foundation Grant.
 - `d10s2` Lisa Hoke [2]: Her work has exhibited nationally notably at the Sarasota Museum of Art, Oklahoma City Museum of Art, New Britain Museum of American Art, MASS MoCA, Aldrich Museum, The Hudson Valley Center for Contemporary Art, Cleveland Institute of Art, Serpentine Gallery, Corcoran Gallery of Art and the New Museum.
@@ -1084,7 +1098,7 @@ Evidence:
 
 - `d8s0` The Seine Meets Paris [0]: The Seine Meets Paris (French: La Seine a rencontré Paris ) is a 1957 French short documentary film directed by Joris Ivens from a screenplay by Jacques Prévert.
 
-Notes:
+Notes: 检查是否符合拆词器规则，另一位候选有d6s0的定义性描述，是否可以按by_omission建立排除链路。不能只凭PBS就补出美国国籍。
 
 - The unique named-candidate premise and the explicit French documentary definition identify the answer. PBS alone is not treated as a country statement.
 
@@ -1120,7 +1134,7 @@ Notes:
 - `d7s2` North Point State Park [2]: The park features restored remnants of the old amusement park as well as facilities for swimming, picnicking, bicycling, and hiking.
 - `d7s3` North Point State Park [3]: Black Marsh, a 667 acre state wildlands area, makes up half the park's area.
 - `d7s4` North Point State Park [4]: The park is administered by the Maryland Department of Natural Resources.
-- `d8s0` The Seine Meets Paris [0]: The Seine Meets Paris (French: La Seine a rencontré Paris ) is a 1957 French short documentary film directed by Joris Ivens from a screenplay by Jacques Prévert.
+- ★u1 `d8s0` The Seine Meets Paris [0]: The Seine Meets Paris (French: La Seine a rencontré Paris ) is a 1957 French short documentary film directed by Joris Ivens from a screenplay by Jacques Prévert.
 - `d8s1` The Seine Meets Paris [1]: Told from the perspective of a boat trip through the city, it features scenes of daily life along the river.
 - `d8s2` The Seine Meets Paris [2]: The film won the short film Palme d'Or at the 1958 Cannes Film Festival.
 - `d9s0` List of amusement park rankings [0]: Amusement parks and theme parks are terms for a group of entertainment attractions, rides, and other events in a location for the enjoyment of large numbers of people.
@@ -1163,9 +1177,9 @@ Notes:
 <details><summary>All source context</summary>
 
 - `d1s0` National Weather Service Topeka, Kansas [0]: National Weather Service – Topeka, Kansas (Abbreviation TOP) is a local National Weather Service forecast office based in Topeka, the state capital of Kansas.
-- `d1s1` National Weather Service Topeka, Kansas [1]: Its offices are located near Philip Billard Municipal Airport.
+- ★u3 `d1s1` National Weather Service Topeka, Kansas [1]: Its offices are located near Philip Billard Municipal Airport.
 - `d1s2` National Weather Service Topeka, Kansas [2]: It provides weather and emergency information to 23 counties in north-central, northeast, and east-central Kansas.
-- `d1s3` National Weather Service Topeka, Kansas [3]: Communities that rely on the Topeka Weather Office for forecasts and severe storm warnings include Abilene, Clay Center, Concordia, Council Grove, Emporia, Hiawatha, Junction City, Lawrence, Manhattan, Marysville, Ottawa, and Topeka.
+- ★u2 `d1s3` National Weather Service Topeka, Kansas [3]: Communities that rely on the Topeka Weather Office for forecasts and severe storm warnings include Abilene, Clay Center, Concordia, Council Grove, Emporia, Hiawatha, Junction City, Lawrence, Manhattan, Marysville, Ottawa, and Topeka.
 - `d2s0` Treaty of Fort Clark [0]: The Treaty of Fort Clark (also known as the Treaty with the Osage or the Osage Treaty) was signed at Fort Osage (then called Fort Clark) on November 10, 1808 (ratified on April 28, 1810) in which the Osage Nation ceded all the land east of the fort in Missouri and Arkansas north of the Arkansas River to the United States.
 - `d2s1` Treaty of Fort Clark [1]: The Fort Clark treaty and the Treaty of St. Louis in which the Sac (tribe) and Fox (tribe) ceded northeastern Missouri along with northern Illinois and southern Wisconsin were the first two major treaties in the newly acquired Louisiana Purchase.
 - `d2s2` Treaty of Fort Clark [2]: The affected tribes, upset with the terms, were to side with the British in the War of 1812.
@@ -1194,7 +1208,7 @@ Notes:
 - `d6s4` Osage Treaty (1825) [4]: The accord was proclaimed on December 30, 1825.
 - `d7s0` Council Grove, Kansas [0]: Council Grove is a city and county seat in Morris County, Kansas, United States.
 - `d7s1` Council Grove, Kansas [1]: This city is fifty-five miles southwest of Topeka.
-- `d7s2` Council Grove, Kansas [2]: It was named after an agreement between European Americans and the Osage Nation about allowing settlers' wagon trains to pass through the area and proceed to the West.
+- ★u1 `d7s2` Council Grove, Kansas [2]: It was named after an agreement between European Americans and the Osage Nation about allowing settlers' wagon trains to pass through the area and proceed to the West.
 - `d7s3` Council Grove, Kansas [3]: Pioneers gathered at a grove of trees so that wagons could band together for their trip west.
 - `d7s4` Council Grove, Kansas [4]: As of the 2010 census, the city population was 2,182.
 - `d8s0` KID77 [0]: KID77 (sometimes referred to as Kansas City All Hazards) is a NOAA Weather Radio station that serves the Kansas City metropolitan area and surrounding cities.
@@ -1262,7 +1276,7 @@ Notes:
 - `d4s2` Baron Trevor [2]: For information on this creation, which became extinct in 1706, see Viscount Dungannon.
 - `d5s0` CJ the DJ [0]: CJ the DJ is an Australian animated TV series created first broadcast on ABC3.
 - `d5s1` CJ the DJ [1]: The show was created by Mark Gravas of "Yakkity Yak" fame and writer Stu Connolly.
-- `d6s0` Soaps In Depth [0]: Soaps In Depth is a series of magazines created in 1997 by Bauer Publications to give American soap opera viewers more variety in their soap-related magazine purchases.
+- ★u2 `d6s0` Soaps In Depth [0]: Soaps In Depth is a series of magazines created in 1997 by Bauer Publications to give American soap opera viewers more variety in their soap-related magazine purchases.
 - `d6s1` Soaps In Depth [1]: Instead of buying a magazine like "Soap Opera Digest", in which all soap operas are covered, "Soaps In Depth" gave the soap viewer and potential shopper individual choices from the "Big Three" networks: ABC Soaps In Depth, CBS Soaps In Depth, and NBC Soaps In Depth.
 - `d6s2` Soaps In Depth [2]: Each magazine is devoted to only the shows on the network the edition covers and is published biweekly.
 - `d7s0` Soap Opera Update [0]: Soap Opera Update was a magazine dedicated to the coverage of soap operas, co-founded by Angela Shapiro in 1988.
@@ -1282,13 +1296,13 @@ Notes:
 - `d9s5` Thomas Browne, 4th Viscount Kenmare [5]: The first and second viscounts had fought for James II but seem never to have been formally attainted under William.
 - `d9s6` Thomas Browne, 4th Viscount Kenmare [6]: Consequently, the peerage remained on the Irish patent roll in a constitutionally ambiguous position, but was not formally recognised by the Protestant political establishment.
 - `d10s0` Macworld [0]: Macworld is a web site dedicated to products and software of Apple Inc., published by Mac Publishing, which is headquartered in San Francisco, California.
-- `d10s1` Macworld [1]: It started life as a print magazine in 1984 and had the largest audited circulation (both total and newsstand) of Macintosh-focused magazines in North America, more than double its nearest competitor, "MacLife" (formerly "MacAddict").
+- ★u1 `d10s1` Macworld [1]: It started life as a print magazine in 1984 and had the largest audited circulation (both total and newsstand) of Macintosh-focused magazines in North America, more than double its nearest competitor, "MacLife" (formerly "MacAddict").
 - `d10s2` Macworld [2]: "Macworld" was founded by David Bunnell (publisher) and Andrew Fluegelman (editor).
 - `d10s3` Macworld [3]: It was the oldest Macintosh magazine still in publication, until September 10, 2014, when IDG, its parent company, announced it was discontinuing the print edition and laid off most of the staff, while continuing an online version.
 
 </details>
 
-## Q260 — `hotpotqa_5ac2ae4155429921a00ab030` (draft)
+## Q260 🚩 — `hotpotqa_5ac2ae4155429921a00ab030` (draft)
 
 > which  Australian politician represented  Electoral district of Goulburn
 
@@ -1306,7 +1320,9 @@ Evidence:
 - `d3s0` Pru Goward [0]: Prudence Jane Goward (born 2 September 1952 in Adelaide), an Australian politician, is the New South Wales Minister for Family and Community Services and Minister for Social Housing, since January 2017 in the Berejiklian government, and the Minister for Prevention of Domestic Violence and Sexual Assault, since 2015.
 - `d9s1` Electoral district of Goulburn [1]: It is represented by Pru Goward of the Liberal Party of Australia.
 
-Notes:
+Notes: full name没有必要，u1已经回答了问题，可以改成single unit，接受Pru Goward和Prudence Jane Goward。检查d3s3能否作为备选，需要姓名对应时加上d3s0，不要单独增加姓名转换这一跳。
+
+- **🚩 逻辑审核（2026-11-11）[中]：** u1（Pru Goward）已经回答了问题；u2 只是把它对应到源答案的部分名字。漏了证据：`d3s3`（'Goward ... representing Goulburn'）。这题大概应该是一个带 aliases 的 single unit。
 
 - The source answer Jane Goward is a shortened part of Prudence Jane Goward. The district article uses Pru Goward. Review the accepted name forms.
 - Source check: `source_answer_partial_name`.
@@ -1322,7 +1338,7 @@ Notes:
 - `d1s6` Electoral district of Broken Hill [6]: In 1968 "Sturt" was renamed Broken Hill and included all of the city of Broken Hill.
 - `d1s7` Electoral district of Broken Hill [7]: In 1999, it was merged with part of "Murray" and renamed the electoral district of Murray-Darling.
 - `d2s0` Joshua Arthur [0]: Joshua George Arthur (27 January 1906 – 20 May 1974) was an Australian politician who represented the Electoral district of Hamilton (1935–50) and the Electoral district of Kahibah (1950–53) for the Australian Labor Party.
-- `d3s0` Pru Goward [0]: Prudence Jane Goward (born 2 September 1952 in Adelaide), an Australian politician, is the New South Wales Minister for Family and Community Services and Minister for Social Housing, since January 2017 in the Berejiklian government, and the Minister for Prevention of Domestic Violence and Sexual Assault, since 2015.
+- ★u2 `d3s0` Pru Goward [0]: Prudence Jane Goward (born 2 September 1952 in Adelaide), an Australian politician, is the New South Wales Minister for Family and Community Services and Minister for Social Housing, since January 2017 in the Berejiklian government, and the Minister for Prevention of Domestic Violence and Sexual Assault, since 2015.
 - `d3s1` Pru Goward [1]: She has previously served as the Minister for Mental Health, Minister for Medical Research, and Assistant Minister for Health between April 2015 and January 2017, and the Minister for Women between 2011 and January 2017, in the second Baird government and the Minister for Planning during 2014 and 2015.
 - `d3s2` Pru Goward [2]: With the first Berejiklian government she returned to Community Services portfolio which she previously held between 2011 and 2014, in the O'Farrell and first Baird governments.
 - `d3s3` Pru Goward [3]: Goward is a member of the New South Wales Legislative Assembly representing Goulburn for the Liberal Party of Australia since 2007.
@@ -1341,7 +1357,7 @@ Notes:
 - `d8s0` Electoral district of Goulburn (Victoria) [0]: Electoral district of Goulburn was an electoral district of the Legislative Assembly in the Australian state of Victoria.
 - `d8s1` Electoral district of Goulburn (Victoria) [1]: It was preceded by the Electoral district of Goulburn Valley, which was abolished in 1945.
 - `d9s0` Electoral district of Goulburn [0]: Goulburn is an electoral district of the Legislative Assembly in the Australian state of New South Wales.
-- `d9s1` Electoral district of Goulburn [1]: It is represented by Pru Goward of the Liberal Party of Australia.
+- ★u1 `d9s1` Electoral district of Goulburn [1]: It is represented by Pru Goward of the Liberal Party of Australia.
 - `d10s0` Electoral district of Goulburn Valley [0]: The Electoral district of Goulburn Valley was an electoral district of the Victorian Legislative Assembly.
 - `d10s1` Electoral district of Goulburn Valley [1]: The district was replaced by the district of Goulburn in 1945.
 
@@ -1366,7 +1382,7 @@ Evidence:
 - `d1s1` Río Grande, Tierra del Fuego [1]: It has a population of 67,038, and is the industrial capital of the Tierra del Fuego Province.
 - `d9s1` Tolhuin [1]: It has 1,382 inhabitants as per the 2001 census .
 
-Notes:
+Notes: 检查d9s3是否足够支持u2：“third largest ... after Ushuaia and Río Grande”是否明确给出了前两名的顺序。如果不能确定Río Grande之后紧接着Tolhuin，就换一道题。
 
 - Tolhuin is third after Ushuaia and Río Grande, but the excerpt does not explicitly rank Río Grande second. The next-smaller link needs review.
 - Source check: `relative_settlement_rank_not_explicit`.
@@ -1374,7 +1390,7 @@ Notes:
 <details><summary>All source context</summary>
 
 - `d1s0` Río Grande, Tierra del Fuego [0]: Río Grande is a city in Argentina, on the north coast of the eastern part of the Isla Grande de Tierra del Fuego.
-- `d1s1` Río Grande, Tierra del Fuego [1]: It has a population of 67,038, and is the industrial capital of the Tierra del Fuego Province.
+- ★u1 `d1s1` Río Grande, Tierra del Fuego [1]: It has a population of 67,038, and is the industrial capital of the Tierra del Fuego Province.
 - `d2s0` National University of Tierra del Fuego [0]: The National University of Tierra del Fuego, Antarctica and South Atlantic Islands (Spanish: "Universidad Nacional de Tierra del Fuego, Antártida e Islas del Atlántico Sur" ) is an Argentine national university in Tierra del Fuego Province.
 - `d2s1` National University of Tierra del Fuego [1]: The campus university is located in the city of Ushuaia.
 - `d2s2` National University of Tierra del Fuego [2]: The institution was founded through National Law 26.559, enacted by Congress on November 14, 2009, and was formally established on December 28, 2010.
@@ -1398,7 +1414,7 @@ Notes:
 - `d8s0` Tierra del Fuego National Park [0]: Tierra del Fuego National Park (Spanish: "Parque Nacional Tierra del Fuego" ) is a national park on the Argentine part of the island of Tierra del Fuego, within Tierra del Fuego Province in the ecoregion of Patagonic Forest and Altos Andes, a part of the subantarctic forest.
 - `d8s1` Tierra del Fuego National Park [1]: Established on 15 October 1960 under the Law 15.554 and expanded in 1966, it was the first shoreline national park to be established in Argentina.
 - `d9s0` Tolhuin [0]: Tolhuin is a town in the province of Tierra del Fuego, Argentina.
-- `d9s1` Tolhuin [1]: It has 1,382 inhabitants as per the 2001 census .
+- ★u3 `d9s1` Tolhuin [1]: It has 1,382 inhabitants as per the 2001 census .
 - `d9s2` Tolhuin [2]: It is located on the eastern shore of Lake Fagnano, in the southern part of the Isla Grande de Tierra del Fuego.
 - `d9s3` Tolhuin [3]: It is the third largest settlement on the Argentine side of Tierra del Fuego after Ushuaia and Río Grande.
 - `d10s0` Chonan languages [0]: The Chonan languages were spoken in Tierra del Fuego and Patagonia.
@@ -1431,11 +1447,11 @@ Notes:
 
 <details><summary>All source context</summary>
 
-- `d1s0` Monstera [0]: Monstera is a genus of about 50 species of flowering plants in the arum family, Araceae, native to tropical regions of the Americas.
+- ★u1 `d1s0` Monstera [0]: Monstera is a genus of about 50 species of flowering plants in the arum family, Araceae, native to tropical regions of the Americas.
 - `d1s1` Monstera [1]: The genus is named from the Latin word for "monstrous" or "abnormal", and refers to the unusual leaves with natural holes that members of the genus have.
 - `d2s0` Rhaphidophora tetrasperma [0]: Rhaphidophora tetrasperma (common names: "Mini Monstera", Philodendron "Ginny", Philodendron "Piccolo") is a species of plant in the family Araceae, genus "Rhaphidophora".
 - `d2s1` Rhaphidophora tetrasperma [1]: It is native to Southern Thailand and to Malaysia.
-- `d3s0` Cercis [0]: Cercis , is a genus of about 10 species in the subfamily Cercidoideae of the pea family Fabaceae, native to warm temperate regions.
+- ★u2 `d3s0` Cercis [0]: Cercis , is a genus of about 10 species in the subfamily Cercidoideae of the pea family Fabaceae, native to warm temperate regions.
 - `d3s1` Cercis [1]: It contains small deciduous trees or large shrubs commonly known as redbuds.
 - `d3s2` Cercis [2]: They are characterised by simple, rounded to heart-shaped leaves and pinkish-red flowers borne in the early spring on bare leafless shoots, on both branches and trunk ("cauliflory").
 - `d3s3` Cercis [3]: Cercis is derived from the Greek word κερκις ("kerkis") meaning "weaver's shuttle", which was applied by Theophrastus to "C. siliquastrum".
@@ -1477,7 +1493,7 @@ Notes:
 - `d2s0` William Merrigan Daly [0]: William Merrigan Daly, Jr., known to friends and colleagues as Bill Daly (1 September 1887, in Cincinnati – 3 December 1936, in New York City), was a pianist, composer, songwriter, orchestrator, musical director and conductor.
 - `d3s0` Gary Bettman [0]: Gary Bruce Bettman (born June 2, 1952) is the commissioner of the National Hockey League (NHL), a post he has held since February 1, 1993.
 - `d3s1` Gary Bettman [1]: Previously, Bettman was a senior vice president and general counsel to the National Basketball Association (NBA).
-- `d3s2` Gary Bettman [2]: Bettman is a graduate of Cornell University and New York University School of Law.
+- ★u2 `d3s2` Gary Bettman [2]: Bettman is a graduate of Cornell University and New York University School of Law.
 - `d4s0` Leinster Ladies Senior Club Football Championship [0]: The Leinster Ladies senior football club championship has been running since 1978.
 - `d4s1` Leinster Ladies Senior Club Football Championship [1]: The trophy is named after the man who presented it, Bill Daly, a Cavanman who lived in Dublin and was involved with Ballyboden St Endas.
 - `d4s2` Leinster Ladies Senior Club Football Championship [2]: Foxrock Cabinteely (Dublin) are the current holders having secured their second ever title and will represent Leinster in the All Ireland series, where they will face Carnacon of Mayo.
@@ -1502,7 +1518,7 @@ Notes:
 - `d10s0` Bill Daly [0]: William "Bill" L. Daly III (born May 1, 1964) is an American attorney and the current deputy commissioner and chief legal officer of the National Hockey League (NHL) under commissioner, Gary Bettman.
 - `d10s1` Bill Daly [1]: He is also a Hockey Hall of Fame board member and former NHL vice president and chief legal officer.
 - `d10s2` Bill Daly [2]: Before joining the NHL front office he worked for the New York law firm of Skadden, Arps, Slate, Meagher & Flom, LLP.
-- `d10s3` Bill Daly [3]: He received his bachelor's degree from Dartmouth College and his law degree from New York University School of Law.
+- ★u1 `d10s3` Bill Daly [3]: He received his bachelor's degree from Dartmouth College and his law degree from New York University School of Law.
 - `d10s4` Bill Daly [4]: He is a big fan of the Miami Dolphins, and currently resides in Bethesda, Maryland.
 
 </details>
@@ -1526,7 +1542,7 @@ Evidence:
 - `d4s2` Henry W. Bloch School of Management [2]: It is named after Alumnus Henry W. Bloch, founder of H&R Block.
 - `d9s1` H&amp;R Block [1]: The Kansas City-based company also offers payroll, and business consulting services.
 
-Notes:
+Notes: d4s2可以同时回答u1、u2，是否需要拆成两跳？检查能否直接把“以学校冠名人物创办的公司”作为u1，再查询公司所在地，与拆词器逻辑保持一致。
 
 
 <details><summary>All source context</summary>
@@ -1545,7 +1561,7 @@ Notes:
 - `d3s8` American Tax Funding [8]: In fact, the sale of liens to third party purchasers often extends redemption periods and allows flexible repayment agreements for delinquent tax payers.
 - `d4s0` Henry W. Bloch School of Management [0]: Henry W. Bloch School of Management (formerly known as Henry W. Bloch School of Business and Public Administration) is an AACSB accredited business school founded in 1952 at the University of Missouri-Kansas City in Kansas City, Missouri.
 - `d4s1` Henry W. Bloch School of Management [1]: It offers undergraduate and graduate degrees in Business, Accounting and Public Administration.
-- `d4s2` Henry W. Bloch School of Management [2]: It is named after Alumnus Henry W. Bloch, founder of H&R Block.
+- ★u1,u2 `d4s2` Henry W. Bloch School of Management [2]: It is named after Alumnus Henry W. Bloch, founder of H&R Block.
 - `d4s3` Henry W. Bloch School of Management [3]: The Bloch School also offers NASPAA accredited degrees in Public administration.
 - `d5s0` TurboTax [0]: TurboTax is an American tax preparation software package developed by Michael A. Chipman of Chipsoft in the mid-1980s.
 - `d5s1` TurboTax [1]: Intuit acquired Chipsoft, based in San Diego, in 1993.
@@ -1562,7 +1578,7 @@ Notes:
 - `d8s3` Liberty Tax Service [3]: In 1998, the company became Liberty Tax Service and opened five offices in the United States.
 - `d8s4` Liberty Tax Service [4]: Liberty Tax Service is the primary subsidiary of Liberty Tax, Inc., a NASDAQ-traded company.
 - `d9s0` H&amp;R Block [0]: H&R Block is an American tax preparation company in North America, Australia, and India.
-- `d9s1` H&amp;R Block [1]: The Kansas City-based company also offers payroll, and business consulting services.
+- ★u3 `d9s1` H&amp;R Block [1]: The Kansas City-based company also offers payroll, and business consulting services.
 - `d10s0` Nicholas Peroff [0]: Nicholas C. Peroff (born May 19, 1944) is an American political scientist, public administrator and professor in Native American studies and Complexity Theory at the Henry W. Bloch School of Management at the University of Missouri-Kansas City, he formerly held teaching positions in Taiwan, South Korea and South Africa.
 
 </details>
@@ -1585,7 +1601,7 @@ Evidence:
 - `d3s1` Devilment [1]: The band experienced problems finding a stable vocalist until Dani Filth from the extreme metal band Cradle of Filth joined.
 - `d5s0` Dani Filth [0]: Dani Filth (born Daniel Lloyd Davey) is the lyricist, vocalist and founding member of the metal band Cradle of Filth.
 
-Notes:
+Notes: 能否设置两种链路：d3s1已经给出了Cradle of Filth，若题干的创始成员条件可以作为前提，是否允许直接回答；需要验证founding member时，再走d3s1+d5s0。先检查拆词器规则，不能把普通成员关系直接当成创始成员。
 
 
 <details><summary>All source context</summary>
@@ -1594,7 +1610,7 @@ Notes:
 - `d1s1` Ronnie Radke [1]: He is the founding member and current lead vocalist, keyboardist, and recently guitarist for the rock band Falling in Reverse, and is the former vocalist and founding member of post-hardcore band Escape the Fate.
 - `d2s0` I Finally Found My Way [0]: "I Finally Found My Way" is a song by the American hard rock band Kiss released on their 1998 album "Psycho Circus".
 - `d3s0` Devilment [0]: Devilment are a British heavy metal band originally formed in late 2011.
-- `d3s1` Devilment [1]: The band experienced problems finding a stable vocalist until Dani Filth from the extreme metal band Cradle of Filth joined.
+- ★u1 `d3s1` Devilment [1]: The band experienced problems finding a stable vocalist until Dani Filth from the extreme metal band Cradle of Filth joined.
 - `d3s2` Devilment [2]: They released their first studio album, "The Great And Secret Show", on 3 November 2014.
 - `d4s0` The Next Step (Kurt Rosenwinkel album) [0]: The Next Step is Kurt Rosenwinkel's fourth album as a band leader.
 - `d4s1` The Next Step (Kurt Rosenwinkel album) [1]: It is his second release on Verve, and regarded as a major step in his creative evolution.
@@ -1605,7 +1621,7 @@ Notes:
 - `d4s6` The Next Step (Kurt Rosenwinkel album) [6]: This material was developed by the band during their frequent gigs at Smalls Jazz Club in New York City.
 - `d4s7` The Next Step (Kurt Rosenwinkel album) [7]: Mitch Borden, the club's owner recalled that "Kurt Rosenwinkel's band played with such dramatic fire, that it would consume everyone present".
 - `d4s8` The Next Step (Kurt Rosenwinkel album) [8]: The Next Step features several songs with alternate guitar tunings, as well as Kurt Rosenwinkel's piano playing on one tune.
-- `d5s0` Dani Filth [0]: Dani Filth (born Daniel Lloyd Davey) is the lyricist, vocalist and founding member of the metal band Cradle of Filth.
+- ★u2 `d5s0` Dani Filth [0]: Dani Filth (born Daniel Lloyd Davey) is the lyricist, vocalist and founding member of the metal band Cradle of Filth.
 - `d6s0` Dan Finch [0]: Daniel J Finch (born 21 December 1977) is a metal vocalist and guitarist.
 - `d6s1` Dan Finch [1]: He is currently in The Dead Soul Communion and The Devils Music.
 - `d6s2` Dan Finch [2]: Finch has also released a number of sample and loops packages.
@@ -1649,14 +1665,14 @@ Evidence:
 
 - `d1s0` The Australian Women's Weekly [0]: The Australian Women's Weekly, sometimes known as simply "The Weekly", is an Australian monthly women's magazine published by Bauer Media Group in Sydney.
 
-Notes:
+Notes: 检查u1是否真的没有support，d3s0–d3s2只写了出版年份和更名，没有monthly。如果找不到频率证据，就换一道题。
 
 - Ainslee's excerpt gives its publication years and name history, not a monthly frequency. Do not infer monthly from periodical.
 - Source check: `magazine_frequency_missing`.
 
 <details><summary>All source context</summary>
 
-- `d1s0` The Australian Women's Weekly [0]: The Australian Women's Weekly, sometimes known as simply "The Weekly", is an Australian monthly women's magazine published by Bauer Media Group in Sydney.
+- ★u2 `d1s0` The Australian Women's Weekly [0]: The Australian Women's Weekly, sometimes known as simply "The Weekly", is an Australian monthly women's magazine published by Bauer Media Group in Sydney.
 - `d1s1` The Australian Women's Weekly [1]: For many years it was the number one magazine in Australia but it is now outsold by the Australian edition of the American publication "Better Homes and Gardens".
 - `d2s0` Blue's Country Magazine [0]: Blue’s Country Magazine is a rural affairs magazine owned by Bauer Media Group.
 - `d2s1` Blue's Country Magazine [1]: It is distributed across the sub-tropical and tropical farming belt of Australia.
@@ -1733,8 +1749,8 @@ Notes:
 - `d2s2` Alexander Armstrong's Big Ask [2]: The guests on the pilot were Robert Webb, Katy Brand and Griff Rhys Jones.
 - `d2s3` Alexander Armstrong's Big Ask [3]: After a positive reaction to the pilot, Dave ordered a full series which was filmed in October 2011 and broadcast from 6 February 2012.
 - `d2s4` Alexander Armstrong's Big Ask [4]: A second series began 26 February 2013.
-- `d3s0` Armstrong and Miller [0]: Armstrong and Miller are an English stand-up comedy double act consisting of the actor-comedians Alexander Armstrong and Ben Miller.
-- `d3s1` Armstrong and Miller [1]: They have performed in two eponymous television sketch shows, the satirical "Timeghost" podcast, and many individual television appearances.
+- ★u1 `d3s0` Armstrong and Miller [0]: Armstrong and Miller are an English stand-up comedy double act consisting of the actor-comedians Alexander Armstrong and Ben Miller.
+- ★u1 `d3s1` Armstrong and Miller [1]: They have performed in two eponymous television sketch shows, the satirical "Timeghost" podcast, and many individual television appearances.
 - `d4s0` Don't Ask Me Ask Britain [0]: Don't Ask Me Ask Britain is a British television comedy panel game show that has aired on ITV since 18 April 2017 and is hosted by Alexander Armstrong with Frank Skinner and Jonathan Ross as the team captains.
 - `d4s1` Don't Ask Me Ask Britain [1]: The series is produced by Chalkboard TV for ITV.
 - `d4s2` Don't Ask Me Ask Britain [2]: The goal is for the two teams to second-guess what the viewers will vote for in various questions by using an app and voting along live.
@@ -1751,7 +1767,7 @@ Notes:
 - `d8s0` Ben Miller [0]: Bennet Evan "Ben" Miller (born 24 February 1966) is an English comedian, actor and director.
 - `d8s1` Ben Miller [1]: He is best known as one half of comedy double act Armstrong and Miller, with Alexander Armstrong.
 - `d8s2` Ben Miller [2]: Miller and Armstrong wrote and starred in the Channel 4 sketch show "Armstrong and Miller", as well as the BBC sketch show "The Armstrong & Miller Show".
-- `d8s3` Ben Miller [3]: Miller is also known for playing the lead role of DI Richard Poole in the first 2 series of the BBC Crime Drama "Death in Paradise".
+- ★u2 `d8s3` Ben Miller [3]: Miller is also known for playing the lead role of DI Richard Poole in the first 2 series of the BBC Crime Drama "Death in Paradise".
 - `d9s0` Saurabh Pandey [0]: Saurabh Pandey(born 11 May 1988) is an Indian Television and Bollywood actor.
 - `d9s1` Saurabh Pandey [1]: His debut TV show as lead was Siddharth Basu's first Fiction TV show Jiya Jale for 9X TV in (2007).
 - `d9s2` Saurabh Pandey [2]: He later played the role of Shaurya in his second TV show titled "Shaurya aur Suhani" for Star Plus channel.
@@ -1761,7 +1777,7 @@ Notes:
 
 </details>
 
-## Q268 — `hotpotqa_5ac3b04f55429939154138b7` (draft)
+## Q268 🚩 — `hotpotqa_5ac3b04f55429939154138b7` (draft)
 
 > Which railway is a part of Summerseat and also runs between Heywood and Rawtenstall?
 
@@ -1779,7 +1795,9 @@ Evidence:
 - `d5s1` Summerseat railway station [1]: It is part of the Heritage East Lancashire Railway (which runs for 12 miles from Heywood-Rawtenstall).
 - `d6s0` East Lancashire Railway [0]: The East Lancashire Railway is a 12+1/2 mi heritage railway line in north west England which runs between Heywood and Rawtenstall with intermediate stations at Bury Bolton Street, Burrs Country Park , Summerseat, Ramsbottom and Irwell Vale.
 
-Notes:
+Notes: 改成single unit，d5s1、d6s0各自都能回答完整问题，可以作为两个备选support，不需要强制两句都到达。
+
+- **🚩 逻辑审核（2026-11-11）[中]：** 题目对同一条铁路给了两个条件，不是多跳链。`d5s1` 和 `d6s0` 各自都同时写了两个条件，但 u2 依赖 u1，结果要求两句都到。大概应该改成一个 unit，support 为 [[d5s1],[d6s0]]。
 
 
 <details><summary>All source context</summary>
@@ -1802,8 +1820,8 @@ Notes:
 - `d4s2` Swanage railway station [2]: It has since reopened as a station on the Swanage Railway, a heritage railway that currently runs from Norden station just north of Corfe Castle to Swanage station.
 - `d4s3` Swanage railway station [3]: It now also runs to Wareham on certain services, but not on regular services due to signalling problems.
 - `d5s0` Summerseat railway station [0]: Summerseat railway station is a preserved railway station that serves the village of Summerseat in Greater Manchester, England.
-- `d5s1` Summerseat railway station [1]: It is part of the Heritage East Lancashire Railway (which runs for 12 miles from Heywood-Rawtenstall).
-- `d6s0` East Lancashire Railway [0]: The East Lancashire Railway is a 12+1/2 mi heritage railway line in north west England which runs between Heywood and Rawtenstall with intermediate stations at Bury Bolton Street, Burrs Country Park , Summerseat, Ramsbottom and Irwell Vale.
+- ★u1 `d5s1` Summerseat railway station [1]: It is part of the Heritage East Lancashire Railway (which runs for 12 miles from Heywood-Rawtenstall).
+- ★u2 `d6s0` East Lancashire Railway [0]: The East Lancashire Railway is a 12+1/2 mi heritage railway line in north west England which runs between Heywood and Rawtenstall with intermediate stations at Bury Bolton Street, Burrs Country Park , Summerseat, Ramsbottom and Irwell Vale.
 - `d7s0` Rawtenstall to Bacup Line [0]: The Rawtenstall to Bacup railway line opened in two stages, from Rawtenstall to Waterfoot in 1848, and from Waterfoot to the Bacup terminus in 1852.
 - `d7s1` Rawtenstall to Bacup Line [1]: There were stations at Rawtenstall, Cloughfold, Stacksteads and Bacup.
 - `d7s2` Rawtenstall to Bacup Line [2]: The line was doubled in 1880, at the same time as the line from Bacup to Rochdale was also opened (closed 1947).
@@ -1831,7 +1849,7 @@ Notes:
 
 </details>
 
-## Q269 — `hotpotqa_5ac3b39e554299204fd21e09` (draft)
+## Q269 🚩 — `hotpotqa_5ac3b39e554299204fd21e09` (draft)
 
 > Do Dillingham Airport and Rafael Hernández Airport both handle civilian (passenger) service?
 
@@ -1849,7 +1867,9 @@ Evidence:
 
 - `d9s1` Dillingham Airport [1]: Scheduled passenger service is available at this airport.
 
-Notes:
+Notes: 检查d3s0+d3s3能否证明u2的民用客运，d8s1的包机也可以一起核实。如果接受这些证据，就补上u2，并把u3改成可由u1、u2推出的[[]]。
+
+- **🚩 逻辑审核（2026-11-11）[中]：** u2 是 `[]`，但 `d3s0` 写 Rafael Hernández 是 'joint civil-military airport'，`d8s1` 也提到有从该机场出发的包机。需要决定这算不算民用客运。另外 u3 用的是 `[]` 而不是 `[[]]`。
 
 - Rafael Hernandez is explicitly a joint civil-military airport and serves Puerto Rican westerners. The excerpt does not explicitly name passenger service. Review whether that wording is sufficient for the passenger condition.
 - Source check: `civil_status_vs_explicit_passenger_service`.
@@ -1883,7 +1903,7 @@ Notes:
 - `d8s1` Fina Air [1]: It operated charter flights to the Dominican Republic from Luis Muñoz Marín International Airport in San Juan, Rafael Hernández Airport in Aguadilla and Eugenio María de Hostos Airport in Mayagüez.
 - `d8s2` Fina Air [2]: The airline has now ceased operations.
 - `d9s0` Dillingham Airport [0]: Dillingham Airport (IATA: DLG, ICAO: PADL, FAA LID: DLG) is a state owned, public use airport located two nautical miles (4 km) west of the central business district of Dillingham, a city in the Dillingham Census Area of the U.S. state of Alaska.
-- `d9s1` Dillingham Airport [1]: Scheduled passenger service is available at this airport.
+- ★u1 `d9s1` Dillingham Airport [1]: Scheduled passenger service is available at this airport.
 - `d10s0` Twin Hills Airport [0]: Twin Hills Airport (IATA: TWA, FAA LID: A63) is a state-owned, public-use airport serving Twin Hills, in the Dillingham Census Area of the U.S. state of Alaska.
 - `d10s1` Twin Hills Airport [1]: Scheduled airline service to Dillingham Airport is provided by Peninsula Airways (PenAir).
 
@@ -1908,7 +1928,7 @@ Evidence:
 - `d1s1` California State University, Dominguez Hills [1]: It is located in the city of Carson, California in the South Bay region of Los Angeles County and was founded in 1960.
 - `d2s0` Ohio State University [0]: The Ohio State University, commonly referred to as Ohio State or OSU, is a large, primarily residential, public university in Columbus, Ohio.
 
-Notes:
+Notes: 检查这类东西方位比较是否符合拆词器规则，当前文档只有地点，没有经度或相对方位。若不允许地理常识推理且没有其他support，就换一道题。
 
 - The context gives cities and states but no longitude or relative east-west position. Do not add geographic knowledge as visible evidence.
 - Source check: `longitude_evidence_missing`.
@@ -1916,8 +1936,8 @@ Notes:
 <details><summary>All source context</summary>
 
 - `d1s0` California State University, Dominguez Hills [0]: California State University, Dominguez Hills (also known as CSUDH, Dominguez Hills, or Cal State Dominguez Hills) is a public university within the 23-school California State University (CSU) system.
-- `d1s1` California State University, Dominguez Hills [1]: It is located in the city of Carson, California in the South Bay region of Los Angeles County and was founded in 1960.
-- `d2s0` Ohio State University [0]: The Ohio State University, commonly referred to as Ohio State or OSU, is a large, primarily residential, public university in Columbus, Ohio.
+- ★u2 `d1s1` California State University, Dominguez Hills [1]: It is located in the city of Carson, California in the South Bay region of Los Angeles County and was founded in 1960.
+- ★u1 `d2s0` Ohio State University [0]: The Ohio State University, commonly referred to as Ohio State or OSU, is a large, primarily residential, public university in Columbus, Ohio.
 - `d2s1` Ohio State University [1]: Founded in 1870 as a land-grant university and ninth university in Ohio with the Morrill Act of 1862, the university was originally known as the Ohio Agricultural and Mechanical College (Mech).
 - `d2s2` Ohio State University [2]: The college began with a focus on training students in various agricultural and mechanical disciplines but was developed into a comprehensive university under the direction of then Governor (later, President) Rutherford B. Hayes, and in 1878 the Ohio General Assembly passed a law changing the name to "The Ohio State University".
 - `d2s3` Ohio State University [3]: It has since grown into the third-largest university campus in the United States.

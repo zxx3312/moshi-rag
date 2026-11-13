@@ -44,9 +44,9 @@ Notes:
 - `d3s0` Civil War (college football game) [0]: The Civil War is the colloquial name for an American college football rivalry game played annually in Oregon, between the Ducks of the University of Oregon in Eugene and the Beavers of Oregon State University in Corvallis.
 - `d3s1` Civil War (college football game) [1]: First played in 1894, it is the fifth most played college football rivalry game in NCAA Division I Football Bowl Subdivision.
 - `d3s2` Civil War (college football game) [2]: Both universities are members of the North Division of the Pac-12 Conference.
-- `d4s0` Clube Atlético Mineiro [0]: Clube Atlético Mineiro (] ), commonly known as Atlético Mineiro or Atlético, and colloquially as Galo (] , "Rooster"), is a professional football club based in Belo Horizonte, Minas Gerais, Brazil.
+- ★u2 `d4s0` Clube Atlético Mineiro [0]: Clube Atlético Mineiro (] ), commonly known as Atlético Mineiro or Atlético, and colloquially as Galo (] , "Rooster"), is a professional football club based in Belo Horizonte, Minas Gerais, Brazil.
 - `d4s1` Clube Atlético Mineiro [1]: The team competes in the Campeonato Brasileiro Série A, the first level of Brazilian football, as well as in the Campeonato Mineiro, the top tier state league of Minas Gerais.
-- `d5s0` Fred (footballer) [0]: Frederico Chaves Guedes (born 3 October 1983), known as Fred (] ), is a Brazilian professional footballer who plays as a striker for Campeonato Brasileiro Série A club Atlético Mineiro.
+- ★u1 `d5s0` Fred (footballer) [0]: Frederico Chaves Guedes (born 3 October 1983), known as Fred (] ), is a Brazilian professional footballer who plays as a striker for Campeonato Brasileiro Série A club Atlético Mineiro.
 - `d6s0` Greensburg Athletic Association [0]: The Greensburg Athletic Association was an early organized football team, based in Greensburg, Pennsylvania, that played in the unofficial Western Pennsylvania Professional Football Circuit from 1890 until 1900.
 - `d6s1` Greensburg Athletic Association [1]: At times referred to as the Greensburg Athletic Club, the team began as an amateur football club in 1890 and was composed primarily of locals before several professional players were added for the 1895 season.
 - `d6s2` Greensburg Athletic Association [2]: In 1894 it was discovered that the team had secretly paid formerly Indiana Normal (now Indiana University of Pennsylvania) player, Lawson Fiscus, to play football and retained his services on salary.
@@ -82,7 +82,7 @@ Notes:
 
 </details>
 
-## Q152 — `hotpotqa_5a7336d05542992359bc3293` (draft)
+## Q152 🚩 — `hotpotqa_5a7336d05542992359bc3293` (draft)
 
 > Lady Elizabeth Delmé and Her Children (1779) is a portrait given to the National Gallery of Art in 1937, which is located in which state?
 
@@ -103,13 +103,16 @@ Evidence:
 
 Notes:
 
+- **🚩 逻辑审核（2026-11-11）[中]：** 题干已点名 National Gallery of Art，u2（所在地）不需要经过画作这一跳：`d9s0` 直接写了 Washington, D.C.，但 u2 依赖 u1，要等 `d1s0`+`d1s1` 到达（属于题干前提，见 guide Exception 3）。另外 u2 漏了备选证据：`d10s0`、`d3s2` 都写了该美术馆在 Washington, D.C.。
+
 - The source says Washington, D.C. The question calls it a state.
 - Source check: `question_calls_district_a_state`.
+- 修改：既然题干已经提及了美术馆信息，是否可以拆分成一个unit，此外，把备选证据加上
 
 <details><summary>All source context</summary>
 
-- `d1s0` Lady Elizabeth Delmé and Her Children [0]: Lady Elizabeth Delmé and Her Children (1779) is an oil on canvas portrait by Joshua Reynolds.
-- `d1s1` Lady Elizabeth Delmé and Her Children [1]: It was given to the National Gallery of Art in 1937.
+- ★u1 `d1s0` Lady Elizabeth Delmé and Her Children [0]: Lady Elizabeth Delmé and Her Children (1779) is an oil on canvas portrait by Joshua Reynolds.
+- ★u1 `d1s1` Lady Elizabeth Delmé and Her Children [1]: It was given to the National Gallery of Art in 1937.
 - `d1s2` Lady Elizabeth Delmé and Her Children [2]: The NGA describes the work as a "majestic group portrait".
 - `d2s0` National Portrait Gallery, London [0]: The National Portrait Gallery (NPG) is an art gallery in London housing a collection of portraits of historically important and famous British people.
 - `d2s1` National Portrait Gallery, London [1]: It was the first portrait gallery in the world when it opened in 1856.
@@ -153,7 +156,7 @@ Notes:
 - `d8s2` List of painters in the National Gallery of Art [2]: The artist's name is followed by a title of one of their works and its ID number.
 - `d8s3` List of painters in the National Gallery of Art [3]: For artists with more than one work in the collection, or for works by unnamed or unattributed artists, see the National Gallery of Art website or the corresponding Wikimedia Commons category.
 - `d8s4` List of painters in the National Gallery of Art [4]: Of artists listed, there are only 18 women, including Rosalba Carriera, Mary Cassatt, Angelica Kauffmann, Judith Leyster, Georgia O'Keeffe, Elisabeth Louise Vigée-LeBrun, and Marguerite Zorach.
-- `d9s0` National Gallery of Art [0]: The National Gallery of Art, and its attached Sculpture Garden, is a national art museum in Washington, D.C., located on the National Mall, between 3rd and 9th Streets, at Constitution Avenue NW.
+- ★u2 `d9s0` National Gallery of Art [0]: The National Gallery of Art, and its attached Sculpture Garden, is a national art museum in Washington, D.C., located on the National Mall, between 3rd and 9th Streets, at Constitution Avenue NW.
 - `d9s1` National Gallery of Art [1]: Open to the public and free of charge, the museum was privately established in 1937 for the American people by a joint resolution of the United States Congress.
 - `d9s2` National Gallery of Art [2]: Andrew W. Mellon donated a substantial art collection and funds for construction.
 - `d9s3` National Gallery of Art [3]: The core collection includes major works of art donated by Paul Mellon, Ailsa Mellon Bruce, Lessing J. Rosenwald, Samuel Henry Kress, Rush Harrison Kress, Peter Arrell Brown Widener, Joseph E. Widener, and Chester Dale.
@@ -163,7 +166,7 @@ Notes:
 
 </details>
 
-## Q153 — `hotpotqa_5a7344e95542991f9a20c6ce` (draft)
+## Q153 🚩 — `hotpotqa_5a7344e95542991f9a20c6ce` (draft)
 
 > What song was number 4 on the charts when a song from FutureSex/LoveSounds was number 1?
 
@@ -182,8 +185,11 @@ Evidence:
 
 Notes:
 
+- **🚩 逻辑审核（2026-11-11）[中]：** u1 是事后挑出的：原文里出现了专辑 FutureSex/LoveSounds 的三首歌（`d8s0` SexyBack、`d3s3` My Love、`d6s0` FutureSex/LoveSound），u1 选 SexyBack 只是因为 `d10s3`，而 u1 并没有引用 `d10s3`。现有 flag 只覆盖了 u2。
+
 - Rudebox d10s3 gives its number-four position but does not give the number-one rank to SexyBack.
 - Source check: `chart_number_one_not_established`.
+- 讲一下这道题属于什么类型的问题，我没太看懂，现在的文档里是不是没有正确答案，应该如何修改
 
 <details><summary>All source context</summary>
 
@@ -232,7 +238,7 @@ Notes:
 - `d7s2` I Want to Be Loved Like That [2]: The song spent twenty weeks on the Hot Country Songs charts, reaching a peak of number 3.
 - `d7s3` I Want to Be Loved Like That [3]: It also went to number 2 on "Gavin Report" and number 1 on "Radio & Records".
 - `d7s4` I Want to Be Loved Like That [4]: The song also peaked at number 4 on the "RPM" Country Tracks charts dated for January 24, 1994.
-- `d8s0` SexyBack [0]: "SexyBack" is a song recorded by American singer-songwriter Justin Timberlake for his second studio album, "FutureSex/LoveSounds" (2006).
+- ★u1 `d8s0` SexyBack [0]: "SexyBack" is a song recorded by American singer-songwriter Justin Timberlake for his second studio album, "FutureSex/LoveSounds" (2006).
 - `d8s1` SexyBack [1]: It was released on July 18, 2006, to US mainstream and rhythmic radio stations by Jive Records as the lead single from the album.
 - `d8s2` SexyBack [2]: The song was written and produced by Nate Hills, Tim Mosley, and Timberlake himself.
 - `d8s3` SexyBack [3]: Discussing "SexyBack", Timberlake revealed that he went "left", singing the song in a rock style, not an R&B style.
@@ -295,7 +301,7 @@ Notes:
 - `d4s4` Shadowland (song) [4]: album, as "Refugee" had premiered on radio a week earlier.
 - `d4s5` Shadowland (song) [5]: "Shadowlands received its world premiere by Billy Sloan on his Sunday night radio show on March 14, 2010 and then appeared on the Lostboy!
 - `d4s6` Shadowland (song) [6]: AKA YouTube Channel the next day along with a remixed single version of the track.
-- `d5s0` Shirley Manson [0]: Shirley Ann Manson (born 26 August 1966) is a Scottish singer, songwriter and actress.
+- ★u1 `d5s0` Shirley Manson [0]: Shirley Ann Manson (born 26 August 1966) is a Scottish singer, songwriter and actress.
 - `d5s1` Shirley Manson [1]: She is the lead vocalist of the alternative rock band Garbage.
 - `d5s2` Shirley Manson [2]: For much of her international career Manson commuted between her home city of Edinburgh and the United States to record with Garbage; she now lives and works in Los Angeles.
 - `d5s3` Shirley Manson [3]: Manson gained media attention for her forthright style, rebellious attitude and distinctive voice.
@@ -318,7 +324,7 @@ Notes:
 - `d8s4` Not Your Kind of People [4]: Like getting on a bicycle...with three other people."
 - `d8s5` Not Your Kind of People [5]: The band emphasized that they did not want to reinvent themselves, but embrace their sonic identity, reflecting their classic sound whilst updating it for 2012.
 - `d8s6` Not Your Kind of People [6]: Although Shirley Manson's morose dispositions have a presence on the record, many of the songs share a more optimistic outlook on life, influenced by some of Manson's personal experiences during their hiatus.
-- `d9s0` Jim Kerr [0]: James Kerr (born 9 July 1959) is a Scottish musician and singer-songwriter, best known as lead singer of the rock band Simple Minds, who achieved five UK No. 1 albums and a No. 1 single "Belfast Child".
+- ★u2 `d9s0` Jim Kerr [0]: James Kerr (born 9 July 1959) is a Scottish musician and singer-songwriter, best known as lead singer of the rock band Simple Minds, who achieved five UK No. 1 albums and a No. 1 single "Belfast Child".
 - `d9s1` Jim Kerr [1]: He released his first solo album, "Lostboy!
 - `d9s2` Jim Kerr [2]: AKA Jim Kerr", on 27 May 2010.
 - `d9s3` Jim Kerr [3]: Kerr's voice has been described as "David Bowie's rich baritone melded with Bryan Ferry's velvety croon".
@@ -351,6 +357,7 @@ Notes:
 
 - Providence d4s1 gives its founding year, not an explicit opening date.
 - Source check: `opening_vs_founding`.
+- 修改：我觉得可以把founding year算作opening date。这样unit2才有答案。
 
 <details><summary>All source context</summary>
 
@@ -391,7 +398,7 @@ Notes:
 - `d7s5` Loreta Janeta Velázquez [5]: She remarried three more times, being widowed in each instance.
 - `d7s6` Loreta Janeta Velázquez [6]: According to William C Davis, she died in January 1923 under the name Loretta J. Beard after many years away from the public eye in a public psychiatric facility, St. Elizabeths Hospital.
 - `d7s7` Loreta Janeta Velázquez [7]: She spied on the Union for about 5 years.
-- `d8s0` St. Elizabeths Hospital [0]: St. Elizabeths Hospital opened in 1855 as the first federally operated psychiatric hospital in the United States.
+- ★u1 `d8s0` St. Elizabeths Hospital [0]: St. Elizabeths Hospital opened in 1855 as the first federally operated psychiatric hospital in the United States.
 - `d8s1` St. Elizabeths Hospital [1]: Housing over 8,000 patients at its peak in the 1950s, the hospital at one point had a fully functioning medical-surgical unit, a school of nursing, and accredited internships and psychiatric residencies.
 - `d8s2` St. Elizabeths Hospital [2]: Its campus was designated a National Historic Landmark in 1990.
 - `d9s0` Vassar Brothers Medical Center [0]: Vassar Brother Medical Center (locally known as Vassar Hospital or VBMC) is a major medical facility located in the city of Poughkeepsie, New York that is a member of the Health Quest network, a nonprofit family of hospitals and healthcare centers in the Hudson Valley area.
@@ -408,7 +415,7 @@ Notes:
 
 </details>
 
-## Q156 — `hotpotqa_5a74325055429979e28828b3` (draft)
+## Q156 🚩 — `hotpotqa_5a74325055429979e28828b3` (draft)
 
 > BOTH Skyang Kangri and Pumari Chhish are both what?
 
@@ -429,12 +436,15 @@ Evidence:
 
 Notes:
 
+- **🚩 逻辑审核（2026-11-11）[高]：** 结论无法由两个事实值推出：u1 = 'high peak of the Baltoro Muztagh'，u2 = 'high peak of the Hispar Muztagh'，两者不同。源答案 'subrange of the Karakoram range' 描述的是山脉的分支，不是山峰（`d10s0`、`d1s0`）。共同值应为 'high peaks in the Karakoram range'，源答案看起来有误。
+
 - The named entities are peaks. The subranges are Baltoro Muztagh and Hispar Muztagh. Do not transfer the subrange category to the peaks.
 - Source check: `source_answer_category_mismatch`.
+- 修改：这道题不合理，从训练集中重新换一道构建。
 
 <details><summary>All source context</summary>
 
-- `d1s0` Pumari Chhish [0]: Pumari Chhish (Urdu: ‎ ), (or Pumarikish, Peak 11) is a high peak of the Hispar Muztagh, a subrange of the Karakoram range.
+- ★u2 `d1s0` Pumari Chhish [0]: Pumari Chhish (Urdu: ‎ ), (or Pumarikish, Peak 11) is a high peak of the Hispar Muztagh, a subrange of the Karakoram range.
 - `d1s1` Pumari Chhish [1]: It lies about 4 km east of Khunyang Chhish, in the heart of the Hispar, north of the Hispar Glacier.
 - `d2s0` Sabaya [0]: Sabaya is a small town in the Bolivian Oruro Department.
 - `d2s1` Sabaya [1]: In 2001 it had a population of 573 inhabitants in 2001.
@@ -468,7 +478,7 @@ Notes:
 - `d9s2` Baltoro Kangri [2]: It lies to the south of the Gasherbrums and east of Chogolisa Peak (7,665 m).
 - `d9s3` Baltoro Kangri [3]: The huge Baltoro Glacier (which is one of the largest glaciers outside polar regions) rises from the foot of Baltoro Kangri.
 - `d9s4` Baltoro Kangri [4]: In the north of Baltoro Kangri is the Abruzzi Glacier.
-- `d10s0` Skyang Kangri [0]: Skyang Kangri (Urdu: ‎ ), or Staircase Peak, is a high peak of the Baltoro Muztagh, a subrange of the Karakoram range.
+- ★u1 `d10s0` Skyang Kangri [0]: Skyang Kangri (Urdu: ‎ ), or Staircase Peak, is a high peak of the Baltoro Muztagh, a subrange of the Karakoram range.
 - `d10s1` Skyang Kangri [1]: It lies on the Pakistan-China border, about 7 km northeast of K2, the world's second-highest mountain.
 - `d10s2` Skyang Kangri [2]: The name "Staircase Peak" refers to the East Ridge, which resembles a giant staircase with five steps.
 
@@ -515,11 +525,11 @@ Notes:
 - `d5s4` Ranald MacDonald of Smerby [4]: Ranald died in 1616, and was buried at Saddell Abbey.
 - `d6s0` Sir Guy Campbell, 1st Baronet [0]: Major-General Sir Guy Campbell, 1st Baronet, CB (22 January 1786 – 26 January 1849) was a British Army officer, the eldest son of Lieutenant-General Colin Campbell and his wife Mary, daughter of Guy Johnson (or Johnstone).
 - `d6s1` Sir Guy Campbell, 1st Baronet [1]: His branch of the Campbell baronets is referred to as St Cross Mede.
-- `d7s0` Lee Grant [0]: Lee Grant (born Lyova Haskell Rosenthal; October 31, during the mid 1920s) is an American actress and film director.
+- ★u1 `d7s0` Lee Grant [0]: Lee Grant (born Lyova Haskell Rosenthal; October 31, during the mid 1920s) is an American actress and film director.
 - `d8s0` Sir Colin Campbell, 1st Baronet, of Lundie [0]: Sir Colin Campbell of Lundie, 1st Baronet (died c. 1650) was a Scottish noble.
 - `d8s1` Sir Colin Campbell, 1st Baronet, of Lundie [1]: He was the son of Colin Campbell of Lundie, who was youngest son of Colin Campbell, 6th Earl of Argyll.
 - `d8s2` Sir Colin Campbell, 1st Baronet, of Lundie [2]: Sir Colin was created a baronet in 1627.
-- `d9s0` Colin Campbell (director) [0]: James Colin Campbell (11 October 1859 – 26 August 1928) was a Scottish-born film director, actor and screenwriter.
+- ★u2 `d9s0` Colin Campbell (director) [0]: James Colin Campbell (11 October 1859 – 26 August 1928) was a Scottish-born film director, actor and screenwriter.
 - `d9s1` Colin Campbell (director) [1]: He directed 177 films between 1911 and 1924.
 - `d9s2` Colin Campbell (director) [2]: He also wrote for 60 films between 1911 and 1922.
 - `d9s3` Colin Campbell (director) [3]: He was born in Scotland, and died in Hollywood, California.
@@ -548,7 +558,8 @@ Evidence:
 - `d4s0` Khan Kluay [0]: Khan Kluay (Thai: ก้านกล้วย) is a 2006 Thai 3D computer-animated Action adventure comedy family feature film set during Ayutthaya-era Siam about a Thai elephant who wanders away from his mother and eventually becomes the war elephant for King Naresuan.
 - `d9s0` Fantastic Mr. Fox (film) [0]: Fantastic Mr. Fox is a 2009 American stop-motion animated comedy film based on Roald Dahl's children's novel of the same name.
 
-Notes:
+Notes: 检查一下d1s3 是否也是u1的support
+
 
 
 <details><summary>All source context</summary>
@@ -569,7 +580,7 @@ Notes:
 - `d3s1` State of Wonder [1]: Anders Eckman, her co-worker at the pharmaceutical company Vogel, has reportedly died at Dr. Swenson’s research site in the Amazonian rainforest.
 - `d3s2` State of Wonder [2]: Dr. Eckman’s widow begs Marina to find out what happened, and Mr. Fox agrees to send her.
 - `d3s3` State of Wonder [3]: Mr. Fox’s other motive is that Dr. Swenson has been given a blank check to conduct research into a new miracle drug, and refuses to inform him of her progress.
-- `d4s0` Khan Kluay [0]: Khan Kluay (Thai: ก้านกล้วย) is a 2006 Thai 3D computer-animated Action adventure comedy family feature film set during Ayutthaya-era Siam about a Thai elephant who wanders away from his mother and eventually becomes the war elephant for King Naresuan.
+- ★u2 `d4s0` Khan Kluay [0]: Khan Kluay (Thai: ก้านกล้วย) is a 2006 Thai 3D computer-animated Action adventure comedy family feature film set during Ayutthaya-era Siam about a Thai elephant who wanders away from his mother and eventually becomes the war elephant for King Naresuan.
 - `d4s1` Khan Kluay [1]: It is based on "Chao Praya Prab Hongsawadee" by Ariya Jintapanichkarn.
 - `d4s2` Khan Kluay [2]: It was officially released as Jumbo in India and The Blue Elephant in the United States.
 - `d4s3` Khan Kluay [3]: There is a sequel to this movie, known as "Khan Kluay 2".
@@ -592,7 +603,7 @@ Notes:
 - `d8s2` Khan Kluay 2 [2]: It is set during the war between Ayutthaya and Bago.
 - `d8s3` Khan Kluay 2 [3]: Its theme is the need to protect family and country.
 - `d8s4` Khan Kluay 2 [4]: The movie grossed 79 million baht.
-- `d9s0` Fantastic Mr. Fox (film) [0]: Fantastic Mr. Fox is a 2009 American stop-motion animated comedy film based on Roald Dahl's children's novel of the same name.
+- ★u1 `d9s0` Fantastic Mr. Fox (film) [0]: Fantastic Mr. Fox is a 2009 American stop-motion animated comedy film based on Roald Dahl's children's novel of the same name.
 - `d9s1` Fantastic Mr. Fox (film) [1]: The film is about a fox who steals food each night from three mean and wealthy farmers.
 - `d9s2` Fantastic Mr. Fox (film) [2]: They are fed up with Mr. Fox's theft and try to kill him, so they dig their way into the foxes' home, but the animals are able to outwit the farmers and live underground.
 - `d10s0` Jason Schwartzman [0]: Jason Francesco Schwartzman (born June 26, 1980) is an American actor, screenwriter and musician.
@@ -601,7 +612,7 @@ Notes:
 
 </details>
 
-## Q159 — `hotpotqa_5a74c1c05542996c70cfadd8` (draft)
+## Q159 🚩 — `hotpotqa_5a74c1c05542996c70cfadd8` (draft)
 
 > What flag features 13 stars, and has a creator who also has a memorial bridge named after her connecting Pennsylvania and New Jersey?
 
@@ -621,9 +632,12 @@ Evidence:
 
 Notes:
 
+- **🚩 逻辑审核（2026-11-11）[高]：** u2 的描述是一面旗（'thirteen-star flag attributed to {u1}'），取值却是人名 'Betsy Ross'。`d9s0` + `d9s2` 明确写了 Betsy Ross flag 及其 13 颗星，support 却是 `[]`。描述、取值和题目（'What flag ...'）三者对不上。
+
 - The flag article says the creator attribution is very likely incorrect. The source answer names a person although the question asks for a flag. Review the premise and answer form.
 - Source check: `question_premise_conflicts_with_source`.
 - Source check: `source_answer_is_person_name`.
+- 修改：可以把答案也改成Betsy Ross flag，补充u2的support
 
 <details><summary>All source context</summary>
 
@@ -633,8 +647,8 @@ Notes:
 - `d1s3` New Jersey Route 60 [3]: From there it would have continued east and ended at Ocean City.
 - `d1s4` New Jersey Route 60 [4]: It was designed as a connection between South Jersey and points west via the Delaware Memorial Bridge.
 - `d1s5` New Jersey Route 60 [5]: However, the nearby Atlantic City Expressway, combined with a fiscal crisis in the mid-1970s, prevented the freeway from being built.
-- `d2s0` Betsy Ross Bridge [0]: The Betsy Ross Bridge, also known as the Ross Memorial Bridge is a continuous steel truss bridge spanning the Delaware River from the City of Philadelphia in Pennsylvania to Pennsauken, New Jersey.
-- `d2s1` Betsy Ross Bridge [1]: Built from 1969 to 1974, and opened in April 1976, during the American Bicentennial Year, it was originally planned to be named as the "Delair Bridge", after a paralleling vertical lift bridge owned by Pennsylvania Railroad (which is now used by Conrail and New Jersey Transit's Atlantic City Line), but was instead later named for Betsy Ross, a Philadelphia seamstress and reputed creator of the first American flag in 1776, making it the first automotive bridge named for a woman in America and the second bridge overall (after Iowa's Boone High Bridge was renamed the Kate Shelley High Bridge in 1912).
+- ★u1 `d2s0` Betsy Ross Bridge [0]: The Betsy Ross Bridge, also known as the Ross Memorial Bridge is a continuous steel truss bridge spanning the Delaware River from the City of Philadelphia in Pennsylvania to Pennsauken, New Jersey.
+- ★u1 `d2s1` Betsy Ross Bridge [1]: Built from 1969 to 1974, and opened in April 1976, during the American Bicentennial Year, it was originally planned to be named as the "Delair Bridge", after a paralleling vertical lift bridge owned by Pennsylvania Railroad (which is now used by Conrail and New Jersey Transit's Atlantic City Line), but was instead later named for Betsy Ross, a Philadelphia seamstress and reputed creator of the first American flag in 1776, making it the first automotive bridge named for a woman in America and the second bridge overall (after Iowa's Boone High Bridge was renamed the Kate Shelley High Bridge in 1912).
 - `d3s0` Delaware River–Turnpike Toll Bridge [0]: The Delaware River–Turnpike Toll Bridge is a four-lane, steel, arch-shaped, continuous truss bridge that connects the Pennsylvania Turnpike's East-West Mainline with the main trunk of the New Jersey Turnpike, via the Pearl Harbor Memorial Turnpike Extension (formerly known as the Pennsylvania Extension).
 - `d3s1` Delaware River–Turnpike Toll Bridge [1]: The bridge crosses the Delaware River, connecting Bristol Township, Pennsylvania and Burlington Township, New Jersey.
 - `d3s2` Delaware River–Turnpike Toll Bridge [2]: The bridge was closed to traffic on January 20, 2017, after a crack was discovered in a steel truss; it reopened on March 9 of that year.
@@ -720,7 +734,7 @@ Notes:
 - `d4s2` Pico Humboldt [2]: The peak with its sister peak Pico Bonpland, and the surrounding páramos are protected by the Sierra Nevada National Park.
 - `d5s0` Sierra Nevada National Park (Spain) [0]: The Parque Nacional de Sierra Nevada (known as the Sierra Nevada National Park in English) is a national park located in the provinces of Granada, Almería, and Málaga in Andalusia, Spain.
 - `d5s1` Sierra Nevada National Park (Spain) [1]: It was declared a national park on 14 January 1999.
-- `d5s2` Sierra Nevada National Park (Spain) [2]: It stretches from the Alpujarra to El Marquesado and the Lecrin Valley, covering a total area of 85,883 hectares, making it the largest national park in Spain.
+- ★u2 `d5s2` Sierra Nevada National Park (Spain) [2]: It stretches from the Alpujarra to El Marquesado and the Lecrin Valley, covering a total area of 85,883 hectares, making it the largest national park in Spain.
 - `d5s3` Sierra Nevada National Park (Spain) [3]: It incorporates the municipalities of Abla, Abrucena, Alboloduy, Alsodux, Bayárcal, Beires, Canjáyar, Fiñana, Fondón, Laujar de Andarax, Nacimiento, Ohanes, Paterna del Río, Rágol, Las Tres Villas, Aldeire, Alpujarra de La Sierra, Bérchules, Bubión, Busquístar, Cáñar, Capileira, Dílar, Dólar, Dúrcal, Ferreira, Güéjar Sierra, Huéneja, Jerez del Marquesado, Juviles, Lanjarón, Lanteira, Lecrín, Lugros, Monachil, Nevada, Nigüelas, Pampaneira, Pórtugos, Soportújar, La Taha, Trevélez, Valor and La Zubia.
 - `d6s0` Kings Canyon National Park [0]: Kings Canyon National Park is a national park in the southern Sierra Nevada, in Fresno and Tulare Counties, California in the United States.
 - `d6s1` Kings Canyon National Park [1]: Originally established in 1890 as General Grant National Park, it was greatly expanded and renamed to Kings Canyon National Park on March 4, 1940.
@@ -740,12 +754,12 @@ Notes:
 - `d9s1` Sierra Nevada National Park (Venezuela) [1]: It was created on May 2, 1952, by decree of President Germán Suárez Flamerich, in order to protect the Sierra Nevada de Mérida in the Andes.
 - `d10s0` Timanfaya National Park [0]: Timanfaya National Park (Spanish: "Parque Nacional de Timanfaya" ) is a Spanish national park in the southwestern part of the island of Lanzarote, Canary Islands.
 - `d10s1` Timanfaya National Park [1]: It covers parts of the municipalities Tinajo and Yaiza.
-- `d10s2` Timanfaya National Park [2]: The area is 51.07 km2 .
+- ★u1 `d10s2` Timanfaya National Park [2]: The area is 51.07 km2 .
 - `d10s3` Timanfaya National Park [3]: The parkland is entirely made up of volcanic soil.
 
 </details>
 
-## Q161 — `hotpotqa_5a75e7b255429976ec32bc95` (draft)
+## Q161 🚩 — `hotpotqa_5a75e7b255429976ec32bc95` (draft)
 
 > Which games, Strange Synergy or Qwirkle,  is a card game published by Steve Jackson Games?
 
@@ -764,7 +778,10 @@ Evidence:
 
 Notes:
 
+- **🚩 逻辑审核（2026-11-11）[中]：** 预设结论只依赖 Strange Synergy 一边的事实，Qwirkle 一边的证据永远无法判定结论。`d2s0`（Qwirkle：'tile-based game ... published by MindWare'）是定义性介绍，按 guide v1.3 可以用 by_omission 排除 Qwirkle。SFT 数据对这类题是每个候选各建一个事实 unit。
+
 - The question names exactly two candidates and presupposes a unique answer. Strange Synergy explicitly meets the full condition; no negative fact about Qwirkle is assumed from silence.
+- 看一下拆词器对于这种题是怎么处理的。
 
 <details><summary>All source context</summary>
 
@@ -784,7 +801,7 @@ Notes:
 - `d3s4` Pyramid (magazine) [4]: It replaced Steve Jackson Games' previous magazine "Roleplayer".
 - `d4s0` Frag (game) [0]: Frag is a first-person shooter-themed board game published by Steve Jackson Games in the summer of 2001.
 - `d4s1` Frag (game) [1]: It was developed by Steve Jackson and Philip Reed, and illustrated by Alex Fernandez.
-- `d5s0` Strange Synergy [0]: Strange Synergy is a card game published by Steve Jackson Games in which players build a team of super heroes to battle an opponent's team.
+- ★u1 `d5s0` Strange Synergy [0]: Strange Synergy is a card game published by Steve Jackson Games in which players build a team of super heroes to battle an opponent's team.
 - `d6s0` Car Wars The Card Game [0]: Car Wars: The Card Game is a card game version of Steve Jackson Games' Car Wars miniatures game.
 - `d6s1` Car Wars The Card Game [1]: Players have a card in front of them to represent the car that they're using to battle other players.
 - `d6s2` Car Wars The Card Game [2]: In turn, each player plays attack cards to try to do damage to the other players' cars, and the other players respond with armor and maneuver cards to avoid the damage.
@@ -805,7 +822,7 @@ Notes:
 
 </details>
 
-## Q162 — `hotpotqa_5a773ae055429972597f14b0` (draft)
+## Q162 🚩 — `hotpotqa_5a773ae055429972597f14b0` (draft)
 
 > What actress with the last name Saravanan starred in the 2004 Tamil film Arul?
 
@@ -823,7 +840,9 @@ Evidence:
 - `d3s0` Jyothika [0]: Jyothika Saravanan (née Jyothika Sadanah on 18 October 1977) is an Indian actress who predominantly appears in Tamil films.
 - `d5s0` Arul [0]: Arul (English: "Grace") is a 2004 Indian Tamil action family drama film written and directed by Hari starring Vikram, Jyothika, Pasupathy, Vadivelu, Sarath Babu, Vinu Chakravarthy and Vaiyapuri.
 
-Notes:
+Notes: 修改：能不能换一下顺序，u1判断对应Full name的女演员，u2判断是否这个人starred
+
+- **🚩 逻辑审核（2026-11-11）[中]：** u1 的描述 'actress credited as Jyothika in Arul' 本身就写出了答案。演员表 `d5s0` 没有说明谁是女演员，选 Jyothika 是靠 `d3s0` 的姓氏倒推的（事后挑选）。
 
 
 <details><summary>All source context</summary>
@@ -833,12 +852,12 @@ Notes:
 - `d2s0` Madana (film) [0]: Madana is a 2006 Indian Kannada film directed by actor Jai Jagadish, making his directorial debut.
 - `d2s1` Madana (film) [1]: The film, a remake of the successful 2004 Tamil film "Manmadhan", written by Silambarasan Rajendar, stars Aditya in the title role with Samiksha, Charmila, Shobaraj, Ramesh Bhat and Bullet Prakash playing supporting roles.
 - `d2s2` Madana (film) [2]: The film was released in 3 November 2006 to poor reviews and failed to attract the audience, ending up as box office bomb.
-- `d3s0` Jyothika [0]: Jyothika Saravanan (née Jyothika Sadanah on 18 October 1977) is an Indian actress who predominantly appears in Tamil films.
+- ★u2 `d3s0` Jyothika [0]: Jyothika Saravanan (née Jyothika Sadanah on 18 October 1977) is an Indian actress who predominantly appears in Tamil films.
 - `d3s1` Jyothika [1]: She also acted in some Kannada, Malayalam, Telugu and Hindi films.
 - `d4s0` Gilli (film) [0]: Gilli is a 2009 Kannada-language drama film directed by Raghav Loki.
 - `d4s1` Gilli (film) [1]: The film, a remake of the 2004 Tamil film "7G Rainbow Colony", directed by Selvaraghavan, marks the acting debut of actor Jaggesh's sons Gururaj and Yethiraj and actress Rakul Preet Singh, who enact the lead roles, originally played by Ravi Krishna, Suman Setty and Sonia Agarwal, whilst Sudha Belavadi, Srinivas and Veena Venkatesh play supporting roles.
 - `d4s2` Gilli (film) [2]: The film, with music scored by noted Tamil composer Yuvan Shankar Raja and cinematography handled by "Mungaru Male" fame Krishna, was launched in February 2009 and released on 16 October 2009, coinciding with Diwali.
-- `d5s0` Arul [0]: Arul (English: "Grace") is a 2004 Indian Tamil action family drama film written and directed by Hari starring Vikram, Jyothika, Pasupathy, Vadivelu, Sarath Babu, Vinu Chakravarthy and Vaiyapuri.
+- ★u1 `d5s0` Arul [0]: Arul (English: "Grace") is a 2004 Indian Tamil action family drama film written and directed by Hari starring Vikram, Jyothika, Pasupathy, Vadivelu, Sarath Babu, Vinu Chakravarthy and Vaiyapuri.
 - `d5s1` Arul [1]: The music is composed by Harris Jayaraj.
 - `d5s2` Arul [2]: The story tells how a man is rejected by his family but then finds his way back.
 - `d5s3` Arul [3]: The film opened to mixed reviews from both critics as well as audience.
@@ -886,7 +905,7 @@ Evidence:
 - `d4s1` Tony Hendra [1]: Educated at St Albans School (where he was a classmate of Stephen Hawking) and at Cambridge University, he was a member of the Cambridge University Footlights revue in 1962, alongside John Cleese, Graham Chapman and Tim Brooke-Taylor.
 - `d5s0` Stephen Hawking [0]: Stephen William Hawking, {'1': ", '2': ", '3': ", '4': "} ( born 8 January 1942) is an English theoretical physicist, cosmologist, author and Director of Research at the Centre for Theoretical Cosmology within the University of Cambridge.
 
-Notes:
+Notes: 是否还有别的文档可以support u2，检查一下
 
 
 <details><summary>All source context</summary>
@@ -899,8 +918,8 @@ Notes:
 - `d3s0` Centre for Theoretical Cosmology [0]: The Centre for Theoretical Cosmology is a department within the Centre for Mathematical Sciences at the University of Cambridge.
 - `d3s1` Centre for Theoretical Cosmology [1]: Founded by Stephen Hawking in 2007, it encourages new thinking on some of the most challenging problems in science, with an aim to advance the scientific understanding of the Universe.
 - `d4s0` Tony Hendra [0]: Tony Hendra (born 10 July 1941) is an English satirist, actor and writer who has worked mostly in the United States.
-- `d4s1` Tony Hendra [1]: Educated at St Albans School (where he was a classmate of Stephen Hawking) and at Cambridge University, he was a member of the Cambridge University Footlights revue in 1962, alongside John Cleese, Graham Chapman and Tim Brooke-Taylor.
-- `d5s0` Stephen Hawking [0]: Stephen William Hawking, {'1': ", '2': ", '3': ", '4': "} ( born 8 January 1942) is an English theoretical physicist, cosmologist, author and Director of Research at the Centre for Theoretical Cosmology within the University of Cambridge.
+- ★u1 `d4s1` Tony Hendra [1]: Educated at St Albans School (where he was a classmate of Stephen Hawking) and at Cambridge University, he was a member of the Cambridge University Footlights revue in 1962, alongside John Cleese, Graham Chapman and Tim Brooke-Taylor.
+- ★u2 `d5s0` Stephen Hawking [0]: Stephen William Hawking, {'1': ", '2': ", '3': ", '4': "} ( born 8 January 1942) is an English theoretical physicist, cosmologist, author and Director of Research at the Centre for Theoretical Cosmology within the University of Cambridge.
 - `d5s1` Stephen Hawking [1]: His scientific works include a collaboration with Roger Penrose on gravitational singularity theorems in the framework of general relativity and the theoretical prediction that black holes emit radiation, often called Hawking radiation.
 - `d5s2` Stephen Hawking [2]: Hawking was the first to set out a theory of cosmology explained by a union of the general theory of relativity and quantum mechanics.
 - `d5s3` Stephen Hawking [3]: He is a vigorous supporter of the many-worlds interpretation of quantum mechanics.
@@ -922,7 +941,7 @@ Notes:
 
 </details>
 
-## Q164 — `hotpotqa_5a77769e5542997042120a65` (draft)
+## Q164 🚩 — `hotpotqa_5a77769e5542997042120a65` (draft)
 
 > When Budweiser created a dog mascot to promote Bud Light in the 1980s, which rival brewer (with its own character Alex the Dog) were they competing with?
 
@@ -940,7 +959,9 @@ Evidence:
 - `d5s0` Spuds MacKenzie [0]: Spuds MacKenzie is a fictional dog character created for use in an extensive advertising campaign marketing Bud Light beer in the late 1980s.
 - `d9s0` Alex the Dog [0]: Alex the Dog was the advertising mascot for Stroh's beer in the 1980s and precursor to Budweiser's Spuds MacKenzie.
 
-Notes:
+Notes: 题干中如果已经说明u1，可以把unit简化成一个，不需要依赖关系。
+
+- **🚩 逻辑审核（2026-11-11）[中]：** 题干已点名 Alex the Dog，`d9s0`（'Alex the Dog was the advertising mascot for Stroh's beer in the 1980s'）可以直接回答。Spuds MacKenzie 这一跳（u1，`d5s0`）不需要，但 u2 依赖它。
 
 - Alex is explicitly described as the precursor to Budweiser's mascot. The competition wording needs review.
 - Source check: `competition_relation_wording`.
@@ -964,7 +985,7 @@ Notes:
 - `d4s3` Alex Cross (film) [3]: Cross was previously portrayed by Morgan Freeman in "Kiss the Girls" (1997) and "Along Came a Spider" (2001).
 - `d4s4` Alex Cross (film) [4]: In 2010, Idris Elba was hired to play Cross, but was replaced by Perry.
 - `d4s5` Alex Cross (film) [5]: Filming took place in 2011, and "Alex Cross" was released on October 19, 2012 in the United States and Canada.
-- `d5s0` Spuds MacKenzie [0]: Spuds MacKenzie is a fictional dog character created for use in an extensive advertising campaign marketing Bud Light beer in the late 1980s.
+- ★u1 `d5s0` Spuds MacKenzie [0]: Spuds MacKenzie is a fictional dog character created for use in an extensive advertising campaign marketing Bud Light beer in the late 1980s.
 - `d5s1` Spuds MacKenzie [1]: The Spuds MacKenzie mascot and campaign were created by a 23-year-old art director, Jon Moore.
 - `d5s2` Spuds MacKenzie [2]: At the time he was working at Needham, Harper & Steers, a Chicago, Illinois, advertising agency.
 - `d5s3` Spuds MacKenzie [3]: The dog first showed up in a Bud Light Super Bowl XXI ad in 1987.
@@ -981,7 +1002,7 @@ Notes:
 - `d8s0` Bud Bowl [0]: The Bud Bowl was a stop motion animated Super Bowl advertising campaign first aired in 1989, and sporadically during the 1990s.
 - `d8s1` Bud Bowl [1]: It served as an advertisement for Anheuser-Busch's Budweiser family of beers.
 - `d8s2` Bud Bowl [2]: It featured anthropomorphized Budweiser bottles playing a football game against Bud Light bottles.
-- `d9s0` Alex the Dog [0]: Alex the Dog was the advertising mascot for Stroh's beer in the 1980s and precursor to Budweiser's Spuds MacKenzie.
+- ★u2 `d9s0` Alex the Dog [0]: Alex the Dog was the advertising mascot for Stroh's beer in the 1980s and precursor to Budweiser's Spuds MacKenzie.
 - `d9s1` Alex the Dog [1]: At the peak of his career, Alex appeared in parades, on "Good Morning America", and the "Today" show.
 - `d9s2` Alex the Dog [2]: He even inspired a series of toys, posters, cologne, shampoo and hand lotion.
 - `d9s3` Alex the Dog [3]: Hip-hop artist Tone Loc referenced Alex the Dog in his song "Funky Cold Medina".
@@ -1010,7 +1031,7 @@ Evidence:
 - `d7s2` Hugh Jackman [2]: He is known for his long-running role as Wolverine in the "X-Men" film series, as well as for his lead roles in films such as the romantic-comedy fantasy "Kate & Leopold" (2001), the action-horror film "Van Helsing" (2004), the magic-themed drama "The Prestige" (2006), the epic fantasy drama "The Fountain" (2006), the epic historical romantic drama "Australia" (2008), the film version of "Les Misérables" (2012), and the thriller "Prisoners" (2013).
 - `d9s0` The Prestige (film) [0]: The Prestige is a 2006 British-American mystery thriller film directed by Christopher Nolan, from a screenplay adapted by Nolan and his brother Jonathan from Christopher Priest's 1995 novel of the same name.
 
-Notes:
+Notes: d9s0是可以同时回答u1，u2吗，核实当前的依赖关系是否正确。
 
 
 <details><summary>All source context</summary>
@@ -1042,11 +1063,11 @@ Notes:
 - `d6s2` Memento (film) [2]: It stars Guy Pearce, Carrie-Anne Moss, and Joe Pantoliano.
 - `d7s0` Hugh Jackman [0]: Hugh Michael Jackman (born 12 October 1968) is an Australian actor, singer, and producer.
 - `d7s1` Hugh Jackman [1]: Jackman has won international recognition for his roles in a variety of film genres.
-- `d7s2` Hugh Jackman [2]: He is known for his long-running role as Wolverine in the "X-Men" film series, as well as for his lead roles in films such as the romantic-comedy fantasy "Kate & Leopold" (2001), the action-horror film "Van Helsing" (2004), the magic-themed drama "The Prestige" (2006), the epic fantasy drama "The Fountain" (2006), the epic historical romantic drama "Australia" (2008), the film version of "Les Misérables" (2012), and the thriller "Prisoners" (2013).
+- ★u1 `d7s2` Hugh Jackman [2]: He is known for his long-running role as Wolverine in the "X-Men" film series, as well as for his lead roles in films such as the romantic-comedy fantasy "Kate & Leopold" (2001), the action-horror film "Van Helsing" (2004), the magic-themed drama "The Prestige" (2006), the epic fantasy drama "The Fountain" (2006), the epic historical romantic drama "Australia" (2008), the film version of "Les Misérables" (2012), and the thriller "Prisoners" (2013).
 - `d7s3` Hugh Jackman [3]: His work in "Les Misérables" earned him his first Academy Award nomination for Best Actor and his first Golden Globe Award for Best Actor – Motion Picture Musical or Comedy in 2013.
 - `d8s0` Jeremy Theobald [0]: Jeremy Theobald is a British actor best known for his portrayal of "The Young Man", the main character in Christopher Nolan's 1998 major picture debut "Following", and for which Theobald was also a producer, Filming was scheduled around their day jobs.
 - `d8s1` Jeremy Theobald [1]: Jonathan Romney, writing in the "New Statesman", noted that "Nolan and his cast are terrific finds: I wouldn't normally say this to struggling artists, but they might want to give up their day jobs."
-- `d9s0` The Prestige (film) [0]: The Prestige is a 2006 British-American mystery thriller film directed by Christopher Nolan, from a screenplay adapted by Nolan and his brother Jonathan from Christopher Priest's 1995 novel of the same name.
+- ★u1,u2 `d9s0` The Prestige (film) [0]: The Prestige is a 2006 British-American mystery thriller film directed by Christopher Nolan, from a screenplay adapted by Nolan and his brother Jonathan from Christopher Priest's 1995 novel of the same name.
 - `d9s1` The Prestige (film) [1]: Its story follows Robert Angier and Alfred Borden, rival stage magicians in London at the end of the 19th century.
 - `d9s2` The Prestige (film) [2]: Obsessed with creating the best stage illusion, they engage in competitive one-upmanship with tragic results.
 - `d9s3` The Prestige (film) [3]: The film stars Hugh Jackman as Robert Angier, Christian Bale as Alfred Borden, and David Bowie as Nikola Tesla.
@@ -1059,7 +1080,7 @@ Notes:
 
 </details>
 
-## Q166 — `hotpotqa_5a7929c8554299029c4b5f11` (draft)
+## Q166 🚩 — `hotpotqa_5a7929c8554299029c4b5f11` (draft)
 
 > Which breed of dog has origins outside of the United States, Old German Shepherd Dog or Black Mouth Cur?
 
@@ -1076,7 +1097,9 @@ Evidence:
 
 - `d8s0` Black Mouth Cur [0]: The Black Mouth Cur is a hunting and cattle dog that has its origins in Southern United States.
 
-Notes:
+Notes: u2也可以被直接推出来，不一定是necessary，也不依赖u1。此外，观察拆词器对于这道题的划分方法。
+
+- **🚩 逻辑审核（2026-11-11）[中]：** 预设结论只依赖排除 Black Mouth Cur 这一边。另一边其实有证据：`d5s0` 写 old German shepherd dogs 'from Germany'（`d2s0` 也写了 German Shepherd 'originated in Germany'）。现有 Notes 说只有名字可用，请判断 `d5s0` 能否确认 Old German Shepherd Dog。
 
 - The named-candidate question allows exclusion of Black Mouth Cur from its explicit U.S. origin. The German name alone is not origin evidence for the other candidate.
 
@@ -1103,7 +1126,7 @@ Notes:
 - `d6s0` Czechoslovakian Wolfdog [0]: The Czechoslovakian Wolfdog (, Slovak: "Československý vlčiak" ) is a relatively new dog breed that traces its original lineage to an experiment conducted in 1955 in Czechoslovakia.
 - `d6s1` Czechoslovakian Wolfdog [1]: After initially breeding working line German Shepherd Dogs with Carpathian wolves "(Canis lupus lupus)", a plan was worked out to create a breed that would have the temperament, pack mentality, and trainability of the German Shepherd Dog and the strength, physical build, and stamina of the Carpathian wolf.
 - `d7s0` United Schutzhund Clubs of America [0]: The United Schutzhund Clubs of America (USA) is a US German Shepherd Dog breed club that sponsors all-breed Schutzhund trials and German Shepherd Dog conformation shows.
-- `d8s0` Black Mouth Cur [0]: The Black Mouth Cur is a hunting and cattle dog that has its origins in Southern United States.
+- ★u1 `d8s0` Black Mouth Cur [0]: The Black Mouth Cur is a hunting and cattle dog that has its origins in Southern United States.
 - `d9s0` Old German Shepherd Dog [0]: Old German Shepherd Dog (German: "Altdeutscher Schäferhund" ) is a controversial name for the long-haired variation of the German Shepherd Dog (German: "Langstockhaariger Deutscher Schäferhund" ), which is not a separate breed recognized by the Fédération Cynologique Internationale.
 - `d9s1` Old German Shepherd Dog [1]: Nonetheless, there are efforts to establish this variety as a separate breed.
 - `d10s0` Berger Blanc Suisse [0]: The Berger Blanc Suisse (English: White Swiss Shepherd , German: "Weisser Schweizer Schäferhund" , Italian: "Pastore Svizzero Bianco" ) is a breed of dog from Switzerland.
@@ -1130,7 +1153,7 @@ Evidence:
 - `d3s0` Teru (singer) [0]: Teruhiko Kobashi (小橋　照彦 , Kobashi Teruhiko , born June 8, 1971 in Hakodate, Hokkaidō) , better known by his stagename TERU, is a Japanese singer and musician.
 - `d4s0` Mike Shinoda [0]: Michael Kenji Shinoda ( , born February 11, 1977) is an American musician, songwriter, record producer and graphic designer.
 
-Notes:
+Notes: 是否符合拆词器逻辑
 
 
 <details><summary>All source context</summary>
@@ -1143,9 +1166,9 @@ Notes:
 - `d2s1` The Raid: Redemption (soundtrack) [1]: The first official single from the album is "Razors Out" by Chino Moreno and Shinoda.
 - `d2s2` The Raid: Redemption (soundtrack) [2]: The second single released for the film is "Suicide Music" by Get Busy Committee and Shinoda.
 - `d2s3` The Raid: Redemption (soundtrack) [3]: The two singles were released as a double single on March 16, 2012.
-- `d3s0` Teru (singer) [0]: Teruhiko Kobashi (小橋　照彦 , Kobashi Teruhiko , born June 8, 1971 in Hakodate, Hokkaidō) , better known by his stagename TERU, is a Japanese singer and musician.
+- ★u1 `d3s0` Teru (singer) [0]: Teruhiko Kobashi (小橋　照彦 , Kobashi Teruhiko , born June 8, 1971 in Hakodate, Hokkaidō) , better known by his stagename TERU, is a Japanese singer and musician.
 - `d3s1` Teru (singer) [1]: He is best known as vocalist of the rock band GLAY, for which he was initially the drummer.
-- `d4s0` Mike Shinoda [0]: Michael Kenji Shinoda ( , born February 11, 1977) is an American musician, songwriter, record producer and graphic designer.
+- ★u2 `d4s0` Mike Shinoda [0]: Michael Kenji Shinoda ( , born February 11, 1977) is an American musician, songwriter, record producer and graphic designer.
 - `d4s1` Mike Shinoda [1]: He co-founded Linkin Park in 1996 and is the band's rhythm guitarist, primary songwriter, keyboardist, producer, and lead vocalist.
 - `d4s2` Mike Shinoda [2]: Shinoda later created a hip-hop-driven side project, Fort Minor, in 2004.
 - `d4s3` Mike Shinoda [3]: He served as a producer for tracks and albums by Lupe Fiasco, Styles of Beyond, and The X-Ecutioners.
@@ -1221,7 +1244,7 @@ Notes:
 - `d5s3` Cody B. Ware [3]: According to Verdecias, Bad Rabbits "blessed" him with the stage name Cody B. Ware after Retired Pro Wrestler Koko B. Ware.
 - `d5s4` Cody B. Ware [4]: Verdecias says that growing up, his musical influences in hip-hop were Nas, Andre 3000, Big Pun, Khujo Goodie of Goodie Mob and he was also inspired by rock artists such as Daryl Palumbo of Glassjaw and Jacob Bannon of Converge.
 - `d6s0` Tom Johnston [0]: Tom Johnston, Thomas Johnston or Tommy Johnston may refer to:
-- `d7s0` Daryl Palumbo [0]: Daryl Palumbo (born February 10, 1979) is an American musician, originally from Elmira, New York.
+- ★u2 `d7s0` Daryl Palumbo [0]: Daryl Palumbo (born February 10, 1979) is an American musician, originally from Elmira, New York.
 - `d7s1` Daryl Palumbo [1]: He is the frontman of the bands Glassjaw, Head Automatica and Color Film.
 - `d7s2` Daryl Palumbo [2]: As a youth he was a member of the Long Island straight edge band "XbustedX."
 - `d7s3` Daryl Palumbo [3]: In 1993 he met guitarist Justin Beck, who would become his good friend.
@@ -1229,7 +1252,7 @@ Notes:
 - `d8s0` Glassjaw [0]: Glassjaw is an American post-hardcore band from Long Island, New York.
 - `d8s1` Glassjaw [1]: The band is fronted by vocalist Daryl Palumbo and guitarist Justin Beck.
 - `d8s2` Glassjaw [2]: The band has been influential in the progression of the underground music scene in the eastern United States and United Kingdom and on the post-hardcore genre, and are known for their intense live shows and frequent line-up changes.
-- `d9s0` Tom Johnston (musician) [0]: Charles Thomas "Tom" Johnston (born August 15, 1948) is an American musician.
+- ★u1 `d9s0` Tom Johnston (musician) [0]: Charles Thomas "Tom" Johnston (born August 15, 1948) is an American musician.
 - `d9s1` Tom Johnston (musician) [1]: He is a guitarist and vocalist, known principally as a founder, guitarist, lead vocalist and songwriter for the rock group The Doobie Brothers, as well as for his own solo career.
 - `d9s2` Tom Johnston (musician) [2]: His off-and-on career with The Doobie Brothers spans more than 40 years, during which time the band exhibited numerous successful styles.
 - `d10s0` Head Automatica [0]: Head Automatica is an American rock band from Long Island, New York fronted by Daryl Palumbo (also of Glassjaw).
@@ -1268,7 +1291,7 @@ Notes:
 - `d1s4` Minoru Inuzuka [4]: He published his autobiography in 2002, and died in 2007 at the age of 106.
 - `d1s5` Minoru Inuzuka [5]: When he died, he was called the last surviving director to have directed a silent film in the 1920s.
 - `d1s6` Minoru Inuzuka [6]: Inuzuka wrote scripts for over 150 films and directed over 50.
-- `d2s0` Don O. Newland [0]: Don Oliver Newland (1896–1951) was an American film director and producer whose career consisted largely of itinerant work.
+- ★u2 `d2s0` Don O. Newland [0]: Don Oliver Newland (1896–1951) was an American film director and producer whose career consisted largely of itinerant work.
 - `d2s1` Don O. Newland [1]: From the 1920s until his death, he traveled to cities throughout the United States making films that employed local citizens as stars and extras.
 - `d2s2` Don O. Newland [2]: Using a standard script, Newland personalized each film according to its location – "Belvidere's Hero", "Staunton's Hero", "Janesville's Hero", "Huntingdon's Hero", "Tyrone's Hero", "Wilmington's Hero", and so on.
 - `d3s0` A Page of Madness [0]: A Page of Madness (狂った一頁 , Kurutta Ippēji or Kurutta Ichipeiji ) is a silent film by Japanese film director Teinosuke Kinugasa, made in 1926.
@@ -1282,7 +1305,7 @@ Notes:
 - `d6s0` Dedication of the Great Buddha [0]: Dedication of the Great Buddha (大仏開眼 , Daibutsu kaigen ) is a 1952 Japanese film directed by Teinosuke Kinugasa.
 - `d6s1` Dedication of the Great Buddha [1]: It was entered into the 1953 Cannes Film Festival.
 - `d7s0` A Girl Isn't Allowed to Love [0]: A Girl Isn't Allowed to Love a.k.a. "The Rose Again" (薔薇いくたびか , Bara ikutabika ) is a 1955 Japanese film directed by Teinosuke Kinugasa.
-- `d8s0` Teinosuke Kinugasa [0]: Teinosuke Kinugasa (衣笠 貞之助 , Kinugasa Teinosuke ) (1 January 1896 – 26 February 1982) was a Japanese actor and film director.
+- ★u1 `d8s0` Teinosuke Kinugasa [0]: Teinosuke Kinugasa (衣笠 貞之助 , Kinugasa Teinosuke ) (1 January 1896 – 26 February 1982) was a Japanese actor and film director.
 - `d8s1` Teinosuke Kinugasa [1]: He was born in Kameyama, Mie Prefecture and died in Kyoto.
 - `d8s2` Teinosuke Kinugasa [2]: Kinugasa won the 1954 Palme d'or at Cannes for "Jigokumon" ("The Gate of Hell").
 - `d9s0` The Romance of Yushima [0]: The Romance of Yushima (婦系図 湯島の白梅 , Onna Keizu Yushima no Shiraume ) (おんなけいず ゆしまのしらうめ), aka "The White Plum of Yushima", is a 1955 black-and-white Japanese film directed by Teinosuke Kinugasa.
@@ -1307,14 +1330,14 @@ Evidence:
 
 - `d1s1` Hot toddy [1]: Hot toddy recipes vary and are traditionally drunk before retiring for the night, or in wet or cold weather.
 
-Notes:
+Notes: 检查与是否一致拆词器逻辑
 
 - The question names two candidates and a unique answer. The positive Hot toddy evidence is enough; the Kir definition is not evidence of a negative habit.
 
 <details><summary>All source context</summary>
 
 - `d1s0` Hot toddy [0]: A hot toddy, also known as hot whiskey in Ireland, is typically a mixed drink made of liquor and water with honey (or, in some recipes, sugar), herbs (such as tea) and spices, and served hot.
-- `d1s1` Hot toddy [1]: Hot toddy recipes vary and are traditionally drunk before retiring for the night, or in wet or cold weather.
+- ★u1 `d1s1` Hot toddy [1]: Hot toddy recipes vary and are traditionally drunk before retiring for the night, or in wet or cold weather.
 - `d1s2` Hot toddy [2]: Some believe the drink relieves the symptoms of the cold and flu—in "How to Drink", Victoria Moore describes the drink as "the vitamin C for health, the honey to soothe, the alcohol to numb".
 - `d2s0` Nadar climber [0]: Nadar climbers (also known as Pannayeri Nadars or Pannayeri Shanars ) constituted the major bulk of today’s Nadar community.
 - `d2s1` Nadar climber [1]: They were considered as the "largest sub sect" of today's Nadar community.
@@ -1376,7 +1399,7 @@ Notes:
 - `d2s2` Battleground (TV series) [2]: Walsh serves as executive producer alongside Hagai Shaham and Marc Webb.
 - `d3s0` 500 Days of Summer [0]: 500 Days of Summer (stylized as (500) Days of Summer) is a 2009 American romantic comedy-drama film directed by Marc Webb from a screenplay written by Scott Neustadter and Michael H. Weber, and produced by Mark Waters.
 - `d3s1` 500 Days of Summer [1]: The film stars Joseph Gordon-Levitt and Zooey Deschanel, and employs a nonlinear narrative structure, with the story based upon its male protagonist and his memories of a failed relationship.
-- `d4s0` Tony Kaye (director) [0]: Tony Kaye (born 8 July 1952) is a British director of films, music videos, advertisements, and documentaries.
+- ★u1 `d4s0` Tony Kaye (director) [0]: Tony Kaye (born 8 July 1952) is a British director of films, music videos, advertisements, and documentaries.
 - `d5s0` Badger (band) [0]: Badger were a British rock band from the early 1970s.
 - `d5s1` Badger (band) [1]: They were co-founded by keyboardist Tony Kaye after he left Yes, with bassist and vocalist David Foster.
 - `d5s2` Badger (band) [2]: Foster had been in the Warriors with Jon Anderson before Anderson co-founded Yes.
@@ -1396,7 +1419,7 @@ Notes:
 - `d8s2` Scott Connor [2]: He is a veteran of the Los Angeles music club scene and has toured in the United States as well as Europe with super group Yoso (with Billy Sherwood, Bobby Kimball and Tony Kaye).
 - `d8s3` Scott Connor [3]: Connor was the drummer for actor William Shatner's 2013 record "Ponder the Mystery".
 - `d8s4` Scott Connor [4]: He is currently a member of CIRCA: with Sherwood, Kaye and Ricky Tierney.
-- `d9s0` Marc Webb [0]: Marc Preston Webb (born August 31, 1974) is an American music video, short film, and film director.
+- ★u2 `d9s0` Marc Webb [0]: Marc Preston Webb (born August 31, 1974) is an American music video, short film, and film director.
 - `d9s1` Marc Webb [1]: He made his feature film directorial debut with the 2009 romantic comedy-drama "(500) Days of Summer", and went on to direct the 2012 "Spider-Man" reboot "The Amazing Spider-Man", its 2014 sequel, "The Amazing Spider-Man 2", and the 2017 comedy-drama films "Gifted" and "The Only Living Boy in New York".
 - `d10s0` Tony Kaye (musician) [0]: Tony Kaye (born Anthony John Selvidge, 11 January 1946) is an English keyboardist and songwriter.
 - `d10s1` Tony Kaye (musician) [1]: Kaye was the original keyboard player for the progressive rock group Yes, from 1968 to 1971, and toured with David Bowie from 1975 to 76 for the "Station to Station" tour.
@@ -1431,7 +1454,7 @@ Notes:
 
 <details><summary>All source context</summary>
 
-- `d1s0` Jorge Amado [0]: Jorge Leal Amado de Faria (] , 10 August 1912 – 6 August 2001) was a Brazilian writer of the modernist school.
+- ★u1 `d1s0` Jorge Amado [0]: Jorge Leal Amado de Faria (] , 10 August 1912 – 6 August 2001) was a Brazilian writer of the modernist school.
 - `d1s1` Jorge Amado [1]: He remains the best known of modern Brazilian writers, with his work having been translated into some 49 languages and popularized in film, notably "Dona Flor and Her Two Husbands" in 1978.
 - `d1s2` Jorge Amado [2]: His work reflects the image of a Mestiço Brazil and is marked by religious syncretism.
 - `d1s3` Jorge Amado [3]: He depicted a cheerful and optimistic country that was beset, at the same time, with deep social and economic differences.
@@ -1453,7 +1476,7 @@ Notes:
 - `d6s1` Ilhéus Jorge Amado Airport [1]: Since March 12, 2002 it is named after the writer Jorge Amado de Faria (1912–2001), who was born in the nearby city of Itabuna.
 - `d7s0` Zélia Gattai [0]: Zélia Gattai Amado de Faria (July 2, 1916 – May 17, 2008) was a Brazilian photographer, memoirist, novelist and author of children's literature, as well as a member of the Brazilian Academy of Letters.
 - `d7s1` Zélia Gattai [1]: She was married to internationally famous writer Jorge Amado from 1945 until his death in 2001.
-- `d8s0` James Leo Herlihy [0]: James Leo Herlihy ( ; February 27, 1927 – October 21, 1993) was an American novelist, playwright and actor.
+- ★u2 `d8s0` James Leo Herlihy [0]: James Leo Herlihy ( ; February 27, 1927 – October 21, 1993) was an American novelist, playwright and actor.
 - `d9s0` Sea of Death [0]: Sea of Death (Portuguese: Mar Morto) is a Brazilian Modernist novel written by Jorge Amado.
 - `d9s1` Sea of Death [1]: Amado wrote the novel in response to his first arrest for "being a communist".
 - `d9s2` Sea of Death [2]: The novel follows the lives of poor fishermen around Bahia, and their relationship with the Afro-Brazilian religion Candomblé, especially the sea goddess Iemanjá.
@@ -1480,21 +1503,21 @@ Evidence:
 - `d2s1` Division of Barton [1]: The division was created in 1922 and is named for Sir Edmund Barton, the first Prime Minister of Australia.
 - `d4s4` James Tully (Australian politician) [4]: In 1928, he was elected to the Australian House of Representatives as the Labor member for Barton, defeating incumbent Nationalist Thomas Ley.
 
-Notes:
+Notes: 这个问题是什么意思
 
 
 <details><summary>All source context</summary>
 
 - `d1s0` Jim Beatty [0]: James Tully Beatty (born October 28, 1934 in New York, New York) is a former American track and field athlete who is best remembered as the first person to break the four-minute mile barrier on an indoor track when he ran 3:58.9 on February 10, 1962 at the Los Angeles Invitational in the Los Angeles Sports Arena in Los Angeles, California.
 - `d2s0` Division of Barton [0]: The Division of Barton is an Australian electoral division in the state of New South Wales.
-- `d2s1` Division of Barton [1]: The division was created in 1922 and is named for Sir Edmund Barton, the first Prime Minister of Australia.
+- ★u2 `d2s1` Division of Barton [1]: The division was created in 1922 and is named for Sir Edmund Barton, the first Prime Minister of Australia.
 - `d3s0` Market towns of Østfold and Akershus counties [0]: The Market towns of Østfold and Akershus counties (Norwegian: "Kjøpstedene i Østfold og Akershus fylker" ) was an electoral district for parliamentary elections in Norway.
 - `d3s1` Market towns of Østfold and Akershus counties [1]: It comprised the market towns (Norwegian: "kjøpsteder" ) of Fredrikstad, Halden (until 1928 named Fredrikshald), Moss and Sarpsborg in Østfold county and Drøbak in Akershus county.
 - `d4s0` James Tully (Australian politician) [0]: James Thomas Tully (1877 – 15 October 1962) was an Australian politician.
 - `d4s1` James Tully (Australian politician) [1]: Born in Grafton, New South Wales, he was educated at state schools before becoming a farmer and teacher in Tullamore.
 - `d4s2` James Tully (Australian politician) [2]: In 1919, he unsuccessfully contested the federal seat of New England for the Australian Labor Party.
 - `d4s3` James Tully (Australian politician) [3]: He moved to Sydney in 1922, where he continued to teach.
-- `d4s4` James Tully (Australian politician) [4]: In 1928, he was elected to the Australian House of Representatives as the Labor member for Barton, defeating incumbent Nationalist Thomas Ley.
+- ★u1 `d4s4` James Tully (Australian politician) [4]: In 1928, he was elected to the Australian House of Representatives as the Labor member for Barton, defeating incumbent Nationalist Thomas Ley.
 - `d4s5` James Tully (Australian politician) [5]: He retained the seat until 1931, when he was challenged by both the United Australia Party's Albert Lane and Lang Labor's John Eldridge, the member for Martin.
 - `d4s6` James Tully (Australian politician) [6]: Lane won the seat, making it the only time in Australian history that two sitting members have been simultaneously defeated for the same seat.
 - `d5s0` Bradgate Electoral Division [0]: Bradgate Electoral Division is a County Council electoral division in Leicestershire, England, taking its name from Bradgate Park which is at the centre of the division.
@@ -1552,7 +1575,7 @@ Evidence:
 - `d7s1` Imo's Pizza [1]: It is headquartered in St. Louis, Missouri.
 - `d8s0` Pizza Fusion [0]: Pizza Fusion is a Deerfield Beach, Florida-based pizza restaurant chain.
 
-Notes:
+Notes: 检查该类型的题目与拆词器逻辑是否一致
 
 - The context gives cities but no latitude or relative north-south position. This ordering needs outside geographic knowledge.
 - Source check: `latitude_evidence_missing`.
@@ -1587,9 +1610,9 @@ Notes:
 - `d6s1` Yellow Cab Pizza [1]: In 2001, Yellow Cab Pizza Company was founded by Eric Puno, Henry Lee, and Albert Tan.
 - `d6s2` Yellow Cab Pizza [2]: Max's Group, owner of restaurant chain Max's of Manila, owns the brand.
 - `d6s3` Yellow Cab Pizza [3]: The restaurant also operates 145 branches in Qatar, United Arab Emirates, and China.
-- `d7s0` Imo's Pizza [0]: Imo's Pizza is a U.S. chain of pizza restaurants based in the greater St. Louis, Missouri area.
-- `d7s1` Imo's Pizza [1]: It is headquartered in St. Louis, Missouri.
-- `d8s0` Pizza Fusion [0]: Pizza Fusion is a Deerfield Beach, Florida-based pizza restaurant chain.
+- ★u2 `d7s0` Imo's Pizza [0]: Imo's Pizza is a U.S. chain of pizza restaurants based in the greater St. Louis, Missouri area.
+- ★u2 `d7s1` Imo's Pizza [1]: It is headquartered in St. Louis, Missouri.
+- ★u1 `d8s0` Pizza Fusion [0]: Pizza Fusion is a Deerfield Beach, Florida-based pizza restaurant chain.
 - `d8s1` Pizza Fusion [1]: Using mostly organic ingredients and emphasizing green building methods, the restaurants operate under the tagline Saving the Earth, One Pizza at a Time.
 - `d9s0` Pizza Ranch [0]: The Pizza Ranch, Inc., founded in 1981, is a "fast casual" restaurant chain.
 - `d9s1` Pizza Ranch [1]: Pizza Ranch offers pizza, chicken, a salad bar, and a pizza and chicken buffet.
@@ -1631,9 +1654,9 @@ Notes:
 - `d1s0` 1983 Volvo International – Doubles [0]: Sherwood Stewart and Ferdi Taygan were the defending champions but they competed with different partners that year, Stewart with Mark Edmondson and Taygan with Cássio Motta.
 - `d2s0` 1982 French Open – Men's Doubles [0]: The Men's Doubles tournament at the 1982 French Open was held from 24 May until 6 June 1982 on the outdoor clay courts at the Stade Roland Garros in Paris, France.
 - `d2s1` 1982 French Open – Men's Doubles [1]: Sherwood Stewart and Ferdi Taygan won the title, defeating Hans Gildemeister and Belus Prajoux in the final.
-- `d3s0` Ferdi Taygan [0]: Ferdi Taygan (born December 5, 1956), is a former professional tennis player from the United States.
+- ★u1 `d3s0` Ferdi Taygan [0]: Ferdi Taygan (born December 5, 1956), is a former professional tennis player from the United States.
 - `d3s1` Ferdi Taygan [1]: He is of Turkish descent.
-- `d4s0` Mahesh Bhupathi [0]: Mahesh Shrinivas Bhupathi (born 7 June 1974) is a retired Indian professional tennis player.
+- ★u2 `d4s0` Mahesh Bhupathi [0]: Mahesh Shrinivas Bhupathi (born 7 June 1974) is a retired Indian professional tennis player.
 - `d4s1` Mahesh Bhupathi [1]: In 1997, he became the first Indian to win a Grand Slam tournament (with Rika Hiraki).
 - `d4s2` Mahesh Bhupathi [2]: With his win at the Australian Open mixed doubles in 2006, he joined the elite group of eight tennis players who have achieved a career Grand Slam in mixed doubles.
 - `d4s3` Mahesh Bhupathi [3]: He is also the founder of International Premier Tennis League.
@@ -1680,7 +1703,7 @@ Notes:
 - `d1s2` The Dark Tower (series) [2]: The series, and its use of the Dark Tower, expands upon Stephen King's multiverse and in doing so, links together many of his other novels.
 - `d1s3` The Dark Tower (series) [3]: King has described the series as his "magnum opus".
 - `d1s4` The Dark Tower (series) [4]: In addition to the eight novels of the series proper that comprise 4,250 pages, many of King's other books relate to the story, introducing concepts and characters that come into play as the series progresses.
-- `d2s0` Dark Tower (game) [0]: Dark Tower is a 1981 electronic board game by Milton Bradley Company, for one to four players.
+- ★u2 `d2s0` Dark Tower (game) [0]: Dark Tower is a 1981 electronic board game by Milton Bradley Company, for one to four players.
 - `d2s1` Dark Tower (game) [1]: The object of the game is to amass an army, collect the three keys to the Tower, and defeat the evil within.
 - `d2s2` Dark Tower (game) [2]: The game came out during the height of the role-playing game craze in the early 1980s.
 - `d2s3` Dark Tower (game) [3]: Advertising for the game included a television commercial featuring Orson Welles.
@@ -1690,7 +1713,7 @@ Notes:
 - `d3s3` Almoayyed Tower [3]: It was a tallest tower in Bahrain until the Bahrain Financial Harbour, Bahrain WTC and the Abraj Al Lulu was constructed.
 - `d3s4` Almoayyed Tower [4]: Almoayyed Tower is also known as "Dark Tower" because of its dark coloring.
 - `d3s5` Almoayyed Tower [5]: Almoayyed Tower is currently managed by Cluttons.
-- `d4s0` Downfall (game) [0]: Downfall is a two-player game for players aged 7 and older, first marketed by the Milton Bradley Company in 1970.
+- ★u1 `d4s0` Downfall (game) [0]: Downfall is a two-player game for players aged 7 and older, first marketed by the Milton Bradley Company in 1970.
 - `d5s0` The Dark Tower II: The Drawing of the Three [0]: The Drawing of the Three is a fantasy novel by American writer Stephen King, the second book in "The Dark Tower" series, published by Grant in 1987.
 - `d5s1` The Dark Tower II: The Drawing of the Three [1]: The series was inspired by "Childe Roland to the Dark Tower Came" by Robert Browning.
 - `d5s2` The Dark Tower II: The Drawing of the Three [2]: The story is a continuation of "" and follows Roland of Gilead and his quest towards the Dark Tower.
@@ -1742,7 +1765,7 @@ Notes:
 - `d1s0` Masatoshi Ichikawa [0]: Masatoshi Ichikawa (市川 雅敏 , Ichikawa Masatoshi , born 11 January 1961, in Tokyo) was a pioneering Japanese professional racing cyclist.
 - `d1s1` Masatoshi Ichikawa [1]: He was the first Japanese to ride professionally in Europe, riding for such teams as the Belgian team Hitachi and the Swiss team Bleiker in the late 1980s and early 1990s.
 - `d1s2` Masatoshi Ichikawa [2]: He was also the first to complete a Grand Tour event, finishing 50th in the Giro d'Italia in 1990.
-- `d2s0` Al-Karaji [0]: Abū Bakr ibn Muḥammad ibn al Ḥusayn al-Karajī (c. 953 – c. 1029) was a 10th-century Persian mathematician and engineer who flourished at Baghdad.
+- ★u1 `d2s0` Al-Karaji [0]: Abū Bakr ibn Muḥammad ibn al Ḥusayn al-Karajī (c. 953 – c. 1029) was a 10th-century Persian mathematician and engineer who flourished at Baghdad.
 - `d2s1` Al-Karaji [1]: He was born in Karaj, a city near Tehran.
 - `d2s2` Al-Karaji [2]: His three principal surviving works are mathematical: "Al-Badi' fi'l-hisab" ("Wonderful on calculation"), "Al-Fakhri fi'l-jabr wa'l-muqabala" ("Glorious on algebra"), and "Al-Kafi fi'l-hisab" ("Sufficient on calculation").
 - `d3s0` Wale Adebanwi [0]: Professor Wale Adebanwi, (born 1969), is a Nigerian - born first Black African Rhodes Professor at Oxford University
@@ -1761,7 +1784,7 @@ Notes:
 - `d8s2` Masatoshi Ono [2]: In 1992, he released his first solo single, "Pure ni Nare", on Sony Records.
 - `d8s3` Masatoshi Ono [3]: But it wasn't until his third single, "You're the Only...", that he hit it big.
 - `d8s4` Masatoshi Ono [4]: The single helped Ono win the "Rookie of the Year" award at the 34th Japan Record Awards and an invitation to that year's "Kōhaku Uta Gassen".
-- `d9s0` Masatoshi Gündüz Ikeda [0]: Masatoşi Gündüz İkeda (Japanese: 池田 正敏 ギュンドゥズ Ikeda Masatoshi Gyunduzu ) (25 February 1926 – 9 February 2003), was a Turkish mathematician of Japanese ancestry, known for his contributions to the field of algebraic number theory.
+- ★u2 `d9s0` Masatoshi Gündüz Ikeda [0]: Masatoşi Gündüz İkeda (Japanese: 池田 正敏 ギュンドゥズ Ikeda Masatoshi Gyunduzu ) (25 February 1926 – 9 February 2003), was a Turkish mathematician of Japanese ancestry, known for his contributions to the field of algebraic number theory.
 - `d10s0` Despoina [0]: In Greek mythology, Despoina, Despoena or Despoine, was the daughter of Demeter and Poseidon and sister of Arion.
 - `d10s1` Despoina [1]: She was the goddess of mysteries of Arcadian cults worshipped under the title "Despoina", "the mistress" alongside her mother Demeter, one of the goddesses of the Eleusinian mysteries.
 - `d10s2` Despoina [2]: Her real name could not be revealed to anyone except those initiated to her mysteries.
@@ -1800,7 +1823,7 @@ Notes:
 - `d1s3` Aleksander Toots [3]: He was the chief of Virumaa department since 2002.
 - `d1s4` Aleksander Toots [4]: In March 2008, he became the deputy chief of the Estonian Security Police.
 - `d1s5` Aleksander Toots [5]: He has graduated from Paikuse police school, Estonian Academy of Security Sciences in Nomme and the Police College.
-- `d2s0` Ghana Police Academy [0]: The Ghana Police College was established in 1959 in Tesano, Accra to policemen and women in Ghana.
+- ★u1 `d2s0` Ghana Police Academy [0]: The Ghana Police College was established in 1959 in Tesano, Accra to policemen and women in Ghana.
 - `d2s1` Ghana Police Academy [1]: Before its establishment all Senior Police Officers were trained in the United Kingdom.
 - `d3s0` Ethiopian Police University College [0]: The Ethiopian Police University College Formerly Called Aba Dina Police College is a public institution of higher education in Ethiopia dedicated to training police officers. Its main campus is located in Sendafa, a town 38 kilometers north of Addis Ababa.
 - `d4s0` Royal Malaysian Police College Kuala Lumpur [0]: The Royal Malaysian Police College Kuala Lumpur or "Maktab Polis Diraja Malaysia Kuala Lumpur" is a police educational institution located in Kuala Lumpur, Malaysia.
@@ -1820,7 +1843,7 @@ Notes:
 - `d8s3` Avery Building [3]: The library at the New South Wales Police College has been named The J.K. Avery Resource Centre in recognition of former Commissioner Avery.
 - `d9s0` Tesano [0]: Tesano is a suburb of Accra, Ghana.
 - `d9s1` Tesano [1]: It is on the main Accra Kumasi Highway before Achimota.
-- `d9s2` Tesano [2]: The main campus of Ghana Technology University College is located in Tesano.
+- ★u2 `d9s2` Tesano [2]: The main campus of Ghana Technology University College is located in Tesano.
 - `d10s0` Maame Yaa Tiwaa Addo-Danquah [0]: Maame Yaa Tiwaa Addo-Danquah (born 19 August 1969) is currently the first female Commandant of the Ghana Police Command and Staff College (GPCSC) located in Winneba, the Central Region of Ghana to be precise.
 
 </details>
@@ -1841,7 +1864,7 @@ Evidence:
 
 - `d7s4` Abraham Lincoln Neiman [4]: Therefore, they relinquished rights to sales territories in the nascent soft drink concern for $25,000 which the Neiman and Marcus families used to open Neiman Marcus in Dallas in 1907.
 
-Notes:
+Notes: 检查一下是否还有其他的evidence语句
 
 - The question already names Neiman Marcus. The opening city and year are stated directly; do not add an unnecessary family hop.
 
@@ -1879,7 +1902,7 @@ Notes:
 - `d7s1` Abraham Lincoln Neiman [1]: He met his first wife Carrie Marcus Neiman in Dallas, Texas, while they were working at A. Harris & Company.
 - `d7s2` Abraham Lincoln Neiman [2]: They married in 1905 and then moved to Atlanta, Georgia, with Carrie's brother Herbert Marcus and sister in law Minnie Lichtenstein Marcus to do sales promotion work.
 - `d7s3` Abraham Lincoln Neiman [3]: The Coca-Cola Company is known as their most notable client although at the time they weren't too enthusiastic about its future.
-- `d7s4` Abraham Lincoln Neiman [4]: Therefore, they relinquished rights to sales territories in the nascent soft drink concern for $25,000 which the Neiman and Marcus families used to open Neiman Marcus in Dallas in 1907.
+- ★u1 `d7s4` Abraham Lincoln Neiman [4]: Therefore, they relinquished rights to sales territories in the nascent soft drink concern for $25,000 which the Neiman and Marcus families used to open Neiman Marcus in Dallas in 1907.
 - `d8s0` Neiman Marcus [0]: Neiman Marcus, originally Neiman-Marcus, is an American department store owned by the Neiman Marcus Group, headquartered in Dallas, Texas.
 - `d8s1` Neiman Marcus [1]: The company also owns the Bergdorf Goodman department stores and operates a direct marketing division, Neiman Marcus Direct, which operates catalog and online operations under the Horchow, Neiman Marcus and Bergdorf Goodman names.
 - `d8s2` Neiman Marcus [2]: Neiman Marcus is currently owned by the Toronto-based Canada Pension Plan Investment Board and Los Angeles-based Ares Management.
@@ -1922,9 +1945,9 @@ Notes:
 - `d1s1` Martin Metcalfe [1]: He previously played in Goodbye Mr. Mackenzie, Angelfish and Isa & the Filthy Tongues.
 - `d1s2` Martin Metcalfe [2]: He is currently in a band called The Fornicators, and also paints.
 - `d2s0` Chvrches [0]: Chvrches (pronounced and written as "churches" in Roman form and stylised as CHVRCHΞS) are a Scottish synth-pop band from Glasgow, formed in September 2011.
-- `d2s1` Chvrches [1]: The band consists of Lauren Mayberry (lead vocals, drums, additional synthesisers, samplers), Iain Cook (synthesisers, guitar, bass, vocals) and Martin Doherty (synthesisers, samplers, vocals).
+- ★u1 `d2s1` Chvrches [1]: The band consists of Lauren Mayberry (lead vocals, drums, additional synthesisers, samplers), Iain Cook (synthesisers, guitar, bass, vocals) and Martin Doherty (synthesisers, samplers, vocals).
 - `d3s0` Goodbye Mr. Mackenzie [0]: Goodbye Mr Mackenzie (known informally as "The Mackenzies") was a Scottish 1980s and 1990s rock group formed in Bathgate, near Edinburgh, Scotland.
-- `d3s1` Goodbye Mr. Mackenzie [1]: At the band's commercial peak, the line-up consisted of Martin Metcalfe on vocals, John Duncan on guitar, Fin Wilson on bass guitar, Shirley Manson and Rona Scobie on keyboards and backing vocals, and Derek Kelly on drums.
+- ★u2 `d3s1` Goodbye Mr. Mackenzie [1]: At the band's commercial peak, the line-up consisted of Martin Metcalfe on vocals, John Duncan on guitar, Fin Wilson on bass guitar, Shirley Manson and Rona Scobie on keyboards and backing vocals, and Derek Kelly on drums.
 - `d4s0` Jacob's Ladder (album) [0]: Jacob's Ladder is the first album from the Scottish group The Filthy Tongues and was self-released in 2016 by the band on their own label Blokshok Records, in association with Neon Tetra.
 - `d4s1` Jacob's Ladder (album) [1]: The album follows "Addiction" and "Dark Passenger", two records recorded by an earlier incarnation of the band known as Isa & the Filthy Tongues, as well as following the albums released by the members earlier major label bands Goodbye Mr. Mackenzie and Angelfish.
 - `d5s0` Angelfish (album) [0]: Angelfish is the 1994 self-titled debut and only studio album released by Scottish alternative rock group Angelfish, fronted by Shirley Manson.
