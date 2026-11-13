@@ -1,0 +1,1525 @@
+{
+  "schema_version": "1.0",
+  "data_version": "eval-revised-v1",
+  "records": [
+    {
+      "question_number": 241,
+      "sample_id": "hotpotqa_5a7906f55542990784727792",
+      "status": "draft",
+      "question_type": "bridge",
+      "units": [
+        {
+          "description": "son of Fannie Lee Chaney",
+          "expected_answer": "James Chaney",
+          "support_sets": [
+            [
+              "d10s0"
+            ]
+          ],
+          "depends_on": [],
+          "necessary": false,
+          "unit_id": "u1"
+        },
+        {
+          "description": "date of birth of {u1}",
+          "expected_answer": "May 30, 1943",
+          "support_sets": [
+            [
+              "d6s0"
+            ]
+          ],
+          "depends_on": [
+            "u1"
+          ],
+          "necessary": true,
+          "unit_id": "u2"
+        }
+      ],
+      "review_flags": [],
+      "notes": [
+        "替换：四名回归球员，题干没有唯一定位条件。 新题保留原source type，人工核对两条显式事实及答案。"
+      ],
+      "revision": {
+        "original_sample_id": "hotpotqa_5ab8723c55429934fafe6dbc",
+        "disposition": "replaced",
+        "original_review_note": "u1列了四名回归球员，不能因为只提供了Tucker的个人条目就选他。如果题干无法唯一确定球员，就换一道题。\n\n- **🚩 逻辑审核（2026-11-11）[中]：** u1 'returning player' 不唯一：`d2s4` 列了四名回归球员（Dragić、Tucker、Markieff 和 Marcus Morris）。gold 选 Tucker 只是因为原文里只有他的条目，描述里的 'identified by the provided player article' 就是这种事后挑选。\n\n- The season article lists four returning players. Tucker is one of them, not the only one. The word now refers to the source snapshot.\n- Source check: `multiple_returning_players`."
+      }
+    },
+    {
+      "question_number": 242,
+      "sample_id": "hotpotqa_5ab8756755429934fafe6dd3",
+      "status": "draft",
+      "question_type": "bridge",
+      "review_flags": [],
+      "notes": [
+        "删除题干未给出的Twilight，避免描述提前泄漏中间信息。"
+      ],
+      "units": [
+        {
+          "description": "American author of a series of four vampire-themed fantasy romance novels",
+          "expected_answer": "Stephenie Meyer",
+          "support_sets": [
+            [
+              "d10s0"
+            ]
+          ],
+          "depends_on": [],
+          "unit_id": "u1",
+          "necessary": false
+        },
+        {
+          "description": "date of birth of {u1}",
+          "expected_answer": "December 24, 1973",
+          "support_sets": [
+            [
+              "d9s0"
+            ]
+          ],
+          "depends_on": [
+            "u1"
+          ],
+          "unit_id": "u2",
+          "necessary": true
+        }
+      ],
+      "revision": {
+        "original_sample_id": "hotpotqa_5ab8756755429934fafe6dd3",
+        "disposition": "adjusted",
+        "original_review_note": "检查一下u1的描述，题干没有直接给出Twilight，能不能改成“四部吸血鬼题材奇幻爱情小说的美国作者”，避免把中间结果提前写进描述。"
+      }
+    },
+    {
+      "question_number": 243,
+      "sample_id": "hotpotqa_5ab8b02d5542991b5579efdb",
+      "status": "draft",
+      "question_type": "comparison",
+      "review_flags": [],
+      "notes": [
+        "将public or private答案选项从unit描述移至属性名institutional funding classification，避免SFT描述泄漏校验误判。",
+        "将public or private答案选项从unit描述移至属性名institutional funding classification，避免SFT描述泄漏校验误判。"
+      ],
+      "units": [
+        {
+          "description": "institutional funding classification of Boise State University",
+          "expected_answer": "public",
+          "support_sets": [
+            [
+              "d1s0"
+            ]
+          ],
+          "depends_on": [],
+          "unit_id": "u1",
+          "necessary": false
+        },
+        {
+          "description": "institutional funding classification of Syracuse University",
+          "expected_answer": "private",
+          "support_sets": [
+            [
+              "d5s0"
+            ]
+          ],
+          "depends_on": [],
+          "unit_id": "u2",
+          "necessary": false
+        },
+        {
+          "description": "Are both, Boise State University and Syracuse University, public colleges?",
+          "expected_answer": "no",
+          "support_sets": [
+            []
+          ],
+          "depends_on": [
+            "u1",
+            "u2"
+          ],
+          "unit_id": "u3",
+          "necessary": true
+        }
+      ],
+      "revision": {
+        "original_sample_id": "hotpotqa_5ab8b02d5542991b5579efdb",
+        "disposition": "adjusted",
+        "original_review_note": ""
+      }
+    },
+    {
+      "question_number": 244,
+      "sample_id": "hotpotqa_5ab9b4a555429970cfb8eb75",
+      "status": "draft",
+      "question_type": "comparison",
+      "review_flags": [],
+      "notes": [
+        "无待处理note，保留原标注。"
+      ],
+      "units": [
+        {
+          "description": "distance from Rick Husband Amarillo International Airport to downtown Amarillo",
+          "expected_answer": "6 miles",
+          "support_sets": [
+            [
+              "d8s0"
+            ]
+          ],
+          "depends_on": [],
+          "unit_id": "u1",
+          "necessary": false
+        },
+        {
+          "description": "distance from Grand Forks International Airport to Grand Forks",
+          "expected_answer": "5 miles",
+          "support_sets": [
+            [
+              "d7s0"
+            ]
+          ],
+          "depends_on": [],
+          "unit_id": "u2",
+          "necessary": false
+        },
+        {
+          "description": "Is Rick Husband Amarillo International Airport or Grand Forks International Airport closer to the town it is near?",
+          "expected_answer": "Grand Forks International Airport",
+          "support_sets": [
+            []
+          ],
+          "depends_on": [
+            "u1",
+            "u2"
+          ],
+          "unit_id": "u3",
+          "necessary": true
+        }
+      ],
+      "revision": {
+        "original_sample_id": "hotpotqa_5ab9b4a555429970cfb8eb75",
+        "disposition": "retained",
+        "original_review_note": ""
+      }
+    },
+    {
+      "question_number": 245,
+      "sample_id": "hotpotqa_5ab9df1f554299232ef4a239",
+      "status": "draft",
+      "question_type": "bridge",
+      "review_flags": [],
+      "notes": [
+        "无待处理note，保留原标注。"
+      ],
+      "units": [
+        {
+          "description": "2005 post-apocalyptic horror film featuring Jasmin Geljo",
+          "expected_answer": "Land of the Dead",
+          "support_sets": [
+            [
+              "d9s1",
+              "d2s0"
+            ]
+          ],
+          "depends_on": [],
+          "unit_id": "u1",
+          "necessary": false
+        },
+        {
+          "description": "writer and director of {u1}",
+          "expected_answer": "George A. Romero",
+          "support_sets": [
+            [
+              "d2s0"
+            ]
+          ],
+          "depends_on": [
+            "u1"
+          ],
+          "unit_id": "u2",
+          "necessary": true
+        }
+      ],
+      "revision": {
+        "original_sample_id": "hotpotqa_5ab9df1f554299232ef4a239",
+        "disposition": "retained",
+        "original_review_note": ""
+      }
+    },
+    {
+      "question_number": 246,
+      "sample_id": "hotpotqa_5aba637a55429939ce03dcbb",
+      "status": "draft",
+      "question_type": "comparison",
+      "review_flags": [],
+      "notes": [
+        "补齐四条Brooklyn属于New York City的明确备选证据。"
+      ],
+      "units": [
+        {
+          "description": "city containing Brooklyn",
+          "expected_answer": "New York City",
+          "support_sets": [
+            [
+              "d7s0"
+            ],
+            [
+              "d2s0"
+            ],
+            [
+              "d4s0"
+            ],
+            [
+              "d5s0"
+            ],
+            [
+              "d10s0"
+            ]
+          ],
+          "depends_on": [],
+          "unit_id": "u1",
+          "necessary": false
+        },
+        {
+          "description": "city containing Tower 49",
+          "expected_answer": "New York City",
+          "support_sets": [
+            [
+              "d3s0"
+            ]
+          ],
+          "depends_on": [],
+          "unit_id": "u2",
+          "necessary": false
+        },
+        {
+          "description": "Are Brooklyn and Tower 49 both part of New York City?",
+          "expected_answer": "yes",
+          "support_sets": [
+            []
+          ],
+          "depends_on": [
+            "u1",
+            "u2"
+          ],
+          "unit_id": "u3",
+          "necessary": true
+        }
+      ],
+      "revision": {
+        "original_sample_id": "hotpotqa_5aba637a55429939ce03dcbb",
+        "disposition": "adjusted",
+        "original_review_note": "加上u1的备选证据：d2s0、d4s0、d5s0、d10s0都说明Brooklyn属于New York City。\n\n- **🚩 逻辑审核（2026-11-11）[中]：** u1（Brooklyn 属于 New York City）漏了备选证据：`d2s0`、`d10s0`、`d5s0`（'the New York City borough of Brooklyn'）。"
+      }
+    },
+    {
+      "question_number": 247,
+      "sample_id": "hotpotqa_5a89eca455429946c8d6ea11",
+      "status": "draft",
+      "question_type": "comparison",
+      "units": [
+        {
+          "description": "film year of Beyond the Gates of Splendor",
+          "expected_answer": "2004",
+          "support_sets": [
+            [
+              "d6s0"
+            ]
+          ],
+          "depends_on": [],
+          "necessary": false,
+          "unit_id": "u1"
+        },
+        {
+          "description": "film year of Jesus Camp",
+          "expected_answer": "2006",
+          "support_sets": [
+            [
+              "d8s0"
+            ]
+          ],
+          "depends_on": [],
+          "necessary": false,
+          "unit_id": "u2"
+        },
+        {
+          "description": "Was Beyond the Gates of Splendor or Jesus Camp released first?",
+          "expected_answer": "Beyond the Gates of Splendor",
+          "support_sets": [
+            []
+          ],
+          "depends_on": [
+            "u1",
+            "u2"
+          ],
+          "necessary": true,
+          "unit_id": "u3"
+        }
+      ],
+      "review_flags": [],
+      "notes": [
+        "替换：Ural上下文未说明公立性质；前身名称不能补出合并后性质。 新题保留原source type，人工核对两条显式事实及答案。"
+      ],
+      "revision": {
+        "original_sample_id": "hotpotqa_5aba74ad55429955dce3ee35",
+        "disposition": "replaced",
+        "original_review_note": "检查u1是否真的没有support，d8s0–d8s5没有明确说明公立性质，如果不能支持就换一道题。另检查d6s0+d6s2能否作为u2的备选证据。\n\n- Ural's name, former State universities, and regional research role do not explicitly establish its public status.\n- Source check: `university_public_status_missing`."
+      }
+    },
+    {
+      "question_number": 248,
+      "sample_id": "hotpotqa_5abaee4f5542996cc5e49f15",
+      "status": "draft",
+      "question_type": "comparison",
+      "review_flags": [],
+      "notes": [
+        "无待处理note，保留原标注。"
+      ],
+      "units": [
+        {
+          "description": "original releasing company of Cinderella",
+          "expected_answer": "RKO Radio Pictures",
+          "support_sets": [
+            [
+              "d4s0"
+            ]
+          ],
+          "depends_on": [],
+          "unit_id": "u1",
+          "necessary": false
+        },
+        {
+          "description": "releasing company of The Emperor's New Groove",
+          "expected_answer": "Walt Disney Pictures",
+          "support_sets": [
+            [
+              "d7s0"
+            ]
+          ],
+          "depends_on": [],
+          "unit_id": "u2",
+          "necessary": false
+        },
+        {
+          "description": "Were Cinderella and The Emperor's New Groove released by the same picture company?",
+          "expected_answer": "no",
+          "support_sets": [
+            []
+          ],
+          "depends_on": [
+            "u1",
+            "u2"
+          ],
+          "unit_id": "u3",
+          "necessary": true
+        }
+      ],
+      "revision": {
+        "original_sample_id": "hotpotqa_5abaee4f5542996cc5e49f15",
+        "disposition": "retained",
+        "original_review_note": ""
+      }
+    },
+    {
+      "question_number": 249,
+      "sample_id": "hotpotqa_5a793e77554299029c4b5f36",
+      "status": "draft",
+      "question_type": "comparison",
+      "units": [
+        {
+          "description": "birth year of Martin Heidegger",
+          "expected_answer": "1889",
+          "support_sets": [
+            [
+              "d8s0"
+            ]
+          ],
+          "depends_on": [],
+          "necessary": false,
+          "unit_id": "u1"
+        },
+        {
+          "description": "birth year of Lydia Davis",
+          "expected_answer": "1947",
+          "support_sets": [
+            [
+              "d10s0"
+            ]
+          ],
+          "depends_on": [],
+          "necessary": false,
+          "unit_id": "u2"
+        },
+        {
+          "description": "Who was born first, Martin Heidegger or Lydia Davis?",
+          "expected_answer": "Martin Heidegger",
+          "support_sets": [
+            []
+          ],
+          "depends_on": [
+            "u1",
+            "u2"
+          ],
+          "necessary": true,
+          "unit_id": "u3"
+        }
+      ],
+      "review_flags": [],
+      "notes": [
+        "替换：缺少原始阵容及保持原阵容录制的专辑数，不能由主唱离队倒推。 新题保留原source type，人工核对两条显式事实及答案。"
+      ],
+      "revision": {
+        "original_sample_id": "hotpotqa_5abc25b6554299700f9d77f9",
+        "disposition": "replaced",
+        "original_review_note": "检查一下“原始成员”的口径，d4s6只说第五张专辑换了主唱，不能证明前四张一直是原始阵容；u2也只是前两张专辑的阵容。如果原始阵容的专辑数量无法确定，就换一道题。\n\n- Sick Puppies changed vocalist before album five, but that does not establish an unchanged original lineup for albums one through four. Third Eye Blind's excerpt describes the first two albums' lineup, not necessarily the formation lineup.\n- Source check: `original_lineup_not_established`."
+      }
+    },
+    {
+      "question_number": 250,
+      "sample_id": "hotpotqa_5abc7bf75542993a06baf8f0",
+      "status": "draft",
+      "question_type": "comparison",
+      "review_flags": [],
+      "notes": [
+        "保留至少3的下界，精确3也支持该下界；补Laurus和Liriodendron备选。"
+      ],
+      "units": [
+        {
+          "description": "species count lower bound of Laurus",
+          "expected_answer": "3 or more",
+          "support_sets": [
+            [
+              "d2s1"
+            ],
+            [
+              "d1s1",
+              "d1s2"
+            ]
+          ],
+          "depends_on": [],
+          "unit_id": "u1",
+          "necessary": false
+        },
+        {
+          "description": "species count of Liriodendron",
+          "expected_answer": "2",
+          "support_sets": [
+            [
+              "d9s0"
+            ],
+            [
+              "d10s0"
+            ]
+          ],
+          "depends_on": [],
+          "unit_id": "u2",
+          "necessary": false
+        },
+        {
+          "description": "Which has more species Laurus or Liriodendron?",
+          "expected_answer": "Laurus",
+          "support_sets": [
+            []
+          ],
+          "depends_on": [
+            "u1",
+            "u2"
+          ],
+          "unit_id": "u3",
+          "necessary": true
+        }
+      ],
+      "revision": {
+        "original_sample_id": "hotpotqa_5abc7bf75542993a06baf8f0",
+        "disposition": "adjusted",
+        "original_review_note": "加上备选：u1可以检查d1s1+d1s2，u2加上d10s0。u1保留“至少3种”就足够比较，不一定要强行改成精确的3种。\n\n- **🚩 逻辑审核（2026-11-11）[中]：** u1 = '3 or more' 这个取值很奇怪；`d1s2` 直接写了 'The genus includes three species'（`d1s1` 指明是 Laurus 属）。u2 漏了备选证据：`d10s0`（'two-species genus'）。\n\n- The lower bound of three exceeds two; an exact count for Laurus is not needed."
+      }
+    },
+    {
+      "question_number": 251,
+      "sample_id": "hotpotqa_5abd6cb955429933744ab7cd",
+      "status": "draft",
+      "question_type": "bridge",
+      "review_flags": [],
+      "notes": [
+        "无待处理note，保留原标注。"
+      ],
+      "units": [
+        {
+          "description": "mythical creature after which HNoMS Draug was named",
+          "expected_answer": "Draugr",
+          "support_sets": [
+            [
+              "d3s0"
+            ]
+          ],
+          "depends_on": [],
+          "unit_id": "u1",
+          "necessary": false
+        },
+        {
+          "description": "mythology of {u1}",
+          "expected_answer": "Norse",
+          "support_sets": [
+            [
+              "d5s0"
+            ]
+          ],
+          "depends_on": [
+            "u1"
+          ],
+          "unit_id": "u2",
+          "necessary": true
+        }
+      ],
+      "revision": {
+        "original_sample_id": "hotpotqa_5abd6cb955429933744ab7cd",
+        "disposition": "retained",
+        "original_review_note": ""
+      }
+    },
+    {
+      "question_number": 252,
+      "sample_id": "hotpotqa_5abd848455429924427fd03a",
+      "status": "draft",
+      "question_type": "comparison",
+      "review_flags": [],
+      "notes": [
+        "电影written by已支持编剧职业；另收录全名与screenwriter Mutrux的组合，避免单靠姓氏对应。"
+      ],
+      "units": [
+        {
+          "description": "whether Edward F. Cline is a screenwriter",
+          "expected_answer": "yes",
+          "support_sets": [
+            [
+              "d4s0"
+            ]
+          ],
+          "depends_on": [],
+          "unit_id": "u1",
+          "necessary": false
+        },
+        {
+          "description": "whether Floyd Mutrux is a screenwriter",
+          "expected_answer": "yes",
+          "support_sets": [
+            [
+              "d9s0"
+            ],
+            [
+              "d10s0"
+            ],
+            [
+              "d10s0",
+              "d10s2"
+            ]
+          ],
+          "depends_on": [],
+          "unit_id": "u2",
+          "necessary": false
+        },
+        {
+          "description": "Are Edward F. Cline and Floyd Mutrux both screenwriters?",
+          "expected_answer": "yes",
+          "support_sets": [
+            []
+          ],
+          "depends_on": [
+            "u1",
+            "u2"
+          ],
+          "unit_id": "u3",
+          "necessary": true
+        }
+      ],
+      "revision": {
+        "original_sample_id": "hotpotqa_5abd848455429924427fd03a",
+        "disposition": "adjusted",
+        "original_review_note": "加上u2的备选证据，检查d10s0以及d10s0+d10s2；后一组可以把screenwriter Mutrux对应到Floyd Mutrux。\n\n- **🚩 逻辑审核（2026-11-11）[中]：** u2 漏了备选证据：`d10s2`（'screenwriter Mutrux'）。"
+      }
+    },
+    {
+      "question_number": 253,
+      "sample_id": "hotpotqa_5abdd8d95542991f6610606a",
+      "status": "draft",
+      "question_type": "bridge",
+      "review_flags": [],
+      "notes": [
+        "标题The Simpsons (season 10)提供季名，d4s1同时说明首集和集数，可独立替代d1s0。"
+      ],
+      "units": [
+        {
+          "description": "episode featuring Lisa Kudrow's voice",
+          "expected_answer": "Lard of the Dance",
+          "support_sets": [
+            [
+              "d1s3"
+            ]
+          ],
+          "depends_on": [],
+          "unit_id": "u1",
+          "necessary": false
+        },
+        {
+          "description": "season containing {u1}",
+          "expected_answer": "The Simpsons season 10",
+          "support_sets": [
+            [
+              "d1s0"
+            ],
+            [
+              "d4s1"
+            ]
+          ],
+          "depends_on": [
+            "u1"
+          ],
+          "unit_id": "u2",
+          "necessary": false
+        },
+        {
+          "description": "number of episodes in {u2}",
+          "expected_answer": "It contains twenty-three episodes",
+          "support_sets": [
+            [
+              "d4s1"
+            ]
+          ],
+          "depends_on": [
+            "u2"
+          ],
+          "aliases": [
+            "23",
+            "twenty-three",
+            "23 episodes"
+          ],
+          "unit_id": "u3",
+          "necessary": true
+        }
+      ],
+      "revision": {
+        "original_sample_id": "hotpotqa_5abdd8d95542991f6610606a",
+        "disposition": "adjusted",
+        "original_review_note": "把d4s1加为u2的备选证据，如果需要解析It就连同d4s0一起。这样d1s3与第10季文档到达后就可以回答，不必再等d1s0，检查当前依赖关系是否合理。\n\n- **🚩 逻辑审核（2026-11-11）[中]：** `d4s1`（'It contains twenty-three episodes, starting with \"Lard of the Dance\"'）直接把这一集和第 10 季联系起来，但 u2 只引用了 `d1s0`，整条链要等 `d1s0` 到达。"
+      }
+    },
+    {
+      "question_number": 254,
+      "sample_id": "hotpotqa_5abec90a5542994516f45438",
+      "status": "draft",
+      "question_type": "single",
+      "review_flags": [],
+      "notes": [
+        "题干澄清：改为历史领地，不把1920年的Hawaii称为当时的州；Territory of Hawaii与Hawaii作为名称归一化。",
+        "删除领地升州的额外桥接，用d8s0直接回答。"
+      ],
+      "units": [
+        {
+          "description": "location where the 1920 Politics strategy operated",
+          "expected_answer": "Hawaii",
+          "support_sets": [
+            [
+              "d8s0"
+            ]
+          ],
+          "depends_on": [],
+          "necessary": true,
+          "aliases": [
+            "Territory of Hawaii"
+          ],
+          "unit_id": "u1"
+        }
+      ],
+      "revision": {
+        "original_sample_id": "hotpotqa_5abec90a5542994516f45438",
+        "disposition": "adjusted",
+        "original_review_note": "检查一下u1回答出Territory of Hawaii后，是否已经可以按地名归一化回答Hawaii；如果可以就简化成single unit。如果必须证明领地变为州，再保留u2，并检查是否符合拆词器规则。\n\n- The strategy operated before statehood. The question calls that location a state.\n- Source check: `historical_territory_called_state`."
+      }
+    },
+    {
+      "question_number": 255,
+      "sample_id": "hotpotqa_5ac047a3554299294b218f70",
+      "status": "draft",
+      "question_type": "comparison",
+      "review_flags": [],
+      "notes": [
+        "题干澄清：限定为原文提供的两个网络口径，不推断同一时点全球网点总量。",
+        "u1采用共同上界773：78+622=700及2011年的773都满足；与UniCredit的>8500比较，避免把两个不同值当作同一个精确值。"
+      ],
+      "units": [
+        {
+          "description": "upper bound on the mainland branch-office counts reported for China CITIC Bank",
+          "expected_answer": "at most 773",
+          "support_sets": [
+            [
+              "d2s4"
+            ],
+            [
+              "d2s5"
+            ]
+          ],
+          "depends_on": [],
+          "unit_id": "u1",
+          "necessary": false
+        },
+        {
+          "description": "number of UniCredit network branches",
+          "expected_answer": "more than 8,500",
+          "support_sets": [
+            [
+              "d6s1"
+            ]
+          ],
+          "depends_on": [],
+          "unit_id": "u2",
+          "necessary": false
+        },
+        {
+          "description": "Using the branch counts stated in the context, which is larger: China CITIC Bank's mainland branch network or UniCredit's network?",
+          "expected_answer": "UniCredit",
+          "support_sets": [
+            []
+          ],
+          "depends_on": [
+            "u1",
+            "u2"
+          ],
+          "unit_id": "u3",
+          "necessary": true
+        }
+      ],
+      "revision": {
+        "original_sample_id": "hotpotqa_5ac047a3554299294b218f70",
+        "disposition": "adjusted",
+        "original_review_note": "先统一u1的数量口径：d2s4是78家分行和622家支行，d2s5是2011年第四季度773家机构，不能直接作为同一个精确值的备选。比较结果不受影响，检查能否按可比较的数量界限处理。\n\n- **🚩 逻辑审核（2026-11-11）[中]：** u1 的值不唯一：`d2s4`（78 家分行和 622 家支行）与 `d2s5`（773 家分支机构）不一致。比较结论不受影响。\n\n- UniCredit exceeds both 78 main branches and the combined 700 branches and sub-branches stated for CITIC. The geographic network scopes differ.\n- Source check: `branch_network_scope`."
+      }
+    },
+    {
+      "question_number": 256,
+      "sample_id": "hotpotqa_5ac0cfb45542997d64295a58",
+      "status": "draft",
+      "question_type": "bridge",
+      "review_flags": [],
+      "notes": [
+        "补博物馆位于Winter Park的备选d2s1。"
+      ],
+      "units": [
+        {
+          "description": "city containing the Charles Hosmer Morse Museum of American Art",
+          "expected_answer": "Winter Park",
+          "support_sets": [
+            [
+              "d5s1"
+            ],
+            [
+              "d2s1"
+            ]
+          ],
+          "depends_on": [],
+          "unit_id": "u1",
+          "necessary": false
+        },
+        {
+          "description": "metropolitan statistical area containing {u1}",
+          "expected_answer": "Orlando–Kissimmee–Sanford",
+          "support_sets": [
+            [
+              "d9s2"
+            ]
+          ],
+          "depends_on": [
+            "u1"
+          ],
+          "unit_id": "u2",
+          "necessary": true
+        }
+      ],
+      "revision": {
+        "original_sample_id": "hotpotqa_5ac0cfb45542997d64295a58",
+        "disposition": "adjusted",
+        "original_review_note": "加上d2s1作为u1的备选证据。\n\n- **🚩 逻辑审核（2026-11-11）[中]：** u1 漏了备选证据：`d2s1`（博物馆 'in Winter Park, Florida'）。"
+      }
+    },
+    {
+      "question_number": 257,
+      "sample_id": "hotpotqa_5ac11a8d5542992a796dedee",
+      "status": "draft",
+      "question_type": "comparison",
+      "review_flags": [],
+      "notes": [
+        "补另一候选unit。d6s0列PBS和作者而未列国籍，不满足“已列出该属性其他值”的omission条件，故仅保留正向确认。"
+      ],
+      "units": [
+        {
+          "description": "whether The Seine Meets Paris is a French documentary",
+          "expected_answer": "yes",
+          "support_sets": [
+            [
+              "d8s0"
+            ]
+          ],
+          "depends_on": [],
+          "necessary": false,
+          "unit_id": "u1"
+        },
+        {
+          "description": "whether Great Old Amusement Parks is a French documentary",
+          "expected_answer": "no",
+          "support_sets": [],
+          "depends_on": [],
+          "necessary": false,
+          "unit_id": "u2"
+        },
+        {
+          "description": "Which is a French documentary, The Seine Meets Paris and Great Old Amusement Parks?",
+          "expected_answer": "The Seine Meets Paris",
+          "support_sets": [
+            []
+          ],
+          "depends_on": [
+            "u1",
+            "u2"
+          ],
+          "necessary": true,
+          "by_presupposition": true,
+          "presupposition_sets": [
+            [
+              "d8s0"
+            ]
+          ],
+          "unit_id": "u3"
+        }
+      ],
+      "revision": {
+        "original_sample_id": "hotpotqa_5ac11a8d5542992a796dedee",
+        "disposition": "adjusted",
+        "original_review_note": "检查是否符合拆词器规则，另一位候选有d6s0的定义性描述，是否可以按by_omission建立排除链路。不能只凭PBS就补出美国国籍。\n\n- The unique named-candidate premise and the explicit French documentary definition identify the answer. PBS alone is not treated as a country statement."
+      }
+    },
+    {
+      "question_number": 258,
+      "sample_id": "hotpotqa_5ac1a6a85542994ab5c67db6",
+      "status": "draft",
+      "question_type": "bridge",
+      "review_flags": [],
+      "notes": [
+        "无待处理note，保留原标注。"
+      ],
+      "units": [
+        {
+          "description": "Kansas city named after the stated agreement",
+          "expected_answer": "Council Grove",
+          "support_sets": [
+            [
+              "d7s2"
+            ]
+          ],
+          "depends_on": [],
+          "unit_id": "u1",
+          "necessary": false
+        },
+        {
+          "description": "weather office serving {u1}",
+          "expected_answer": "National Weather Service Topeka, Kansas",
+          "support_sets": [
+            [
+              "d1s3"
+            ]
+          ],
+          "depends_on": [
+            "u1"
+          ],
+          "unit_id": "u2",
+          "necessary": false
+        },
+        {
+          "description": "office location of {u2}",
+          "expected_answer": "near Philip Billard Municipal Airport",
+          "support_sets": [
+            [
+              "d1s1"
+            ]
+          ],
+          "depends_on": [
+            "u2"
+          ],
+          "unit_id": "u3",
+          "necessary": true
+        }
+      ],
+      "revision": {
+        "original_sample_id": "hotpotqa_5ac1a6a85542994ab5c67db6",
+        "disposition": "retained",
+        "original_review_note": ""
+      }
+    },
+    {
+      "question_number": 259,
+      "sample_id": "hotpotqa_5ac294b955429921a00aafd0",
+      "status": "draft",
+      "question_type": "comparison",
+      "review_flags": [],
+      "notes": [
+        "无待处理note，保留原标注。"
+      ],
+      "units": [
+        {
+          "description": "start year of Macworld as a print magazine",
+          "expected_answer": "1984",
+          "support_sets": [
+            [
+              "d10s1"
+            ]
+          ],
+          "depends_on": [],
+          "unit_id": "u1",
+          "necessary": false
+        },
+        {
+          "description": "creation year of Soaps In Depth",
+          "expected_answer": "1997",
+          "support_sets": [
+            [
+              "d6s0"
+            ]
+          ],
+          "depends_on": [],
+          "unit_id": "u2",
+          "necessary": false
+        },
+        {
+          "description": "Which magazine was created first, Macworld or Soaps In Depth?",
+          "expected_answer": "Macworld",
+          "support_sets": [
+            []
+          ],
+          "depends_on": [
+            "u1",
+            "u2"
+          ],
+          "unit_id": "u3",
+          "necessary": true
+        }
+      ],
+      "revision": {
+        "original_sample_id": "hotpotqa_5ac294b955429921a00aafd0",
+        "disposition": "retained",
+        "original_review_note": ""
+      }
+    },
+    {
+      "question_number": 260,
+      "sample_id": "hotpotqa_5ac2ae4155429921a00ab030",
+      "status": "draft",
+      "question_type": "single",
+      "review_flags": [],
+      "notes": [
+        "删除全名桥接，按标题可解析Goward，补d3s3备选；接受Pru和全名以及源短名。"
+      ],
+      "units": [
+        {
+          "description": "Australian politician representing Goulburn in the source",
+          "expected_answer": "Pru Goward",
+          "support_sets": [
+            [
+              "d9s1"
+            ],
+            [
+              "d3s3"
+            ]
+          ],
+          "depends_on": [],
+          "necessary": true,
+          "aliases": [
+            "Prudence Jane Goward",
+            "Jane Goward"
+          ],
+          "unit_id": "u1"
+        }
+      ],
+      "revision": {
+        "original_sample_id": "hotpotqa_5ac2ae4155429921a00ab030",
+        "disposition": "adjusted",
+        "original_review_note": "full name没有必要，u1已经回答了问题，可以改成single unit，接受Pru Goward和Prudence Jane Goward。检查d3s3能否作为备选，需要姓名对应时加上d3s0，不要单独增加姓名转换这一跳。\n\n- **🚩 逻辑审核（2026-11-11）[中]：** u1（Pru Goward）已经回答了问题；u2 只是把它对应到源答案的部分名字。漏了证据：`d3s3`（'Goward ... representing Goulburn'）。这题大概应该是一个带 aliases 的 single unit。\n\n- The source answer Jane Goward is a shortened part of Prudence Jane Goward. The district article uses Pru Goward. Review the accepted name forms.\n- Source check: `source_answer_partial_name`."
+      }
+    },
+    {
+      "question_number": 261,
+      "sample_id": "hotpotqa_5ae65d055542996d980e7b14",
+      "status": "draft",
+      "question_type": "bridge",
+      "units": [
+        {
+          "description": "city where Foeke Booy was born",
+          "expected_answer": "Leeuwarden",
+          "support_sets": [
+            [
+              "d5s0"
+            ]
+          ],
+          "depends_on": [],
+          "necessary": false,
+          "unit_id": "u1"
+        },
+        {
+          "description": "population of {u1} in the source",
+          "expected_answer": "108,249",
+          "support_sets": [
+            [
+              "d1s0"
+            ]
+          ],
+          "depends_on": [
+            "u1"
+          ],
+          "necessary": true,
+          "unit_id": "u2"
+        }
+      ],
+      "review_flags": [],
+      "notes": [
+        "替换：third after A and B未明确两者顺序，不能支持紧邻的next smaller关系。 新题保留原source type，人工核对两条显式事实及答案。"
+      ],
+      "revision": {
+        "original_sample_id": "hotpotqa_5ac2cb3e5542996773102627",
+        "disposition": "replaced",
+        "original_review_note": "检查d9s3是否足够支持u2：“third largest ... after Ushuaia and Río Grande”是否明确给出了前两名的顺序。如果不能确定Río Grande之后紧接着Tolhuin，就换一道题。\n\n- Tolhuin is third after Ushuaia and Río Grande, but the excerpt does not explicitly rank Río Grande second. The next-smaller link needs review.\n- Source check: `relative_settlement_rank_not_explicit`."
+      }
+    },
+    {
+      "question_number": 262,
+      "sample_id": "hotpotqa_5ac2ed41554299218029db96",
+      "status": "draft",
+      "question_type": "comparison",
+      "review_flags": [],
+      "notes": [
+        "无待处理note，保留原标注。"
+      ],
+      "units": [
+        {
+          "description": "species count of Monstera",
+          "expected_answer": "about 50",
+          "support_sets": [
+            [
+              "d1s0"
+            ]
+          ],
+          "depends_on": [],
+          "unit_id": "u1",
+          "necessary": false
+        },
+        {
+          "description": "species count of Cercis",
+          "expected_answer": "about 10",
+          "support_sets": [
+            [
+              "d3s0"
+            ]
+          ],
+          "depends_on": [],
+          "unit_id": "u2",
+          "necessary": false
+        },
+        {
+          "description": "Which genus has more species, Monstera or Cercis?",
+          "expected_answer": "Monstera",
+          "support_sets": [
+            []
+          ],
+          "depends_on": [
+            "u1",
+            "u2"
+          ],
+          "unit_id": "u3",
+          "necessary": true
+        }
+      ],
+      "revision": {
+        "original_sample_id": "hotpotqa_5ac2ed41554299218029db96",
+        "disposition": "retained",
+        "original_review_note": ""
+      }
+    },
+    {
+      "question_number": 263,
+      "sample_id": "hotpotqa_5ac2f34455429921a00ab0b6",
+      "status": "draft",
+      "question_type": "comparison",
+      "review_flags": [],
+      "notes": [
+        "无待处理note，保留原标注。"
+      ],
+      "units": [
+        {
+          "description": "schools from which Bill Daly received degrees",
+          "expected_answer": "Dartmouth College; New York University School of Law",
+          "support_sets": [
+            [
+              "d10s3"
+            ]
+          ],
+          "depends_on": [],
+          "unit_id": "u1",
+          "necessary": false
+        },
+        {
+          "description": "schools from which Gary Bettman graduated",
+          "expected_answer": "Cornell University; New York University School of Law",
+          "support_sets": [
+            [
+              "d3s2"
+            ]
+          ],
+          "depends_on": [],
+          "unit_id": "u2",
+          "necessary": false
+        },
+        {
+          "description": "school common to {u1} and {u2}",
+          "expected_answer": "New York University School of Law",
+          "support_sets": [
+            []
+          ],
+          "depends_on": [
+            "u1",
+            "u2"
+          ],
+          "unit_id": "u3",
+          "necessary": true
+        }
+      ],
+      "revision": {
+        "original_sample_id": "hotpotqa_5ac2f34455429921a00ab0b6",
+        "disposition": "retained",
+        "original_review_note": ""
+      }
+    },
+    {
+      "question_number": 264,
+      "sample_id": "hotpotqa_5ac2f6b8554299677310265f",
+      "status": "draft",
+      "question_type": "bridge",
+      "review_flags": [],
+      "notes": [
+        "同句给出冠名人物及公司，合并为公司定位unit，保留公司到所在地的真正第二跳。"
+      ],
+      "units": [
+        {
+          "description": "company founded by the person after whom Henry W. Bloch School of Management is named",
+          "expected_answer": "H&R Block",
+          "support_sets": [
+            [
+              "d4s2"
+            ]
+          ],
+          "depends_on": [],
+          "necessary": false,
+          "unit_id": "u1"
+        },
+        {
+          "description": "city where {u1} is based",
+          "expected_answer": "Kansas City",
+          "support_sets": [
+            [
+              "d9s1"
+            ]
+          ],
+          "depends_on": [
+            "u1"
+          ],
+          "necessary": true,
+          "unit_id": "u2"
+        }
+      ],
+      "revision": {
+        "original_sample_id": "hotpotqa_5ac2f6b8554299677310265f",
+        "disposition": "adjusted",
+        "original_review_note": "d4s2可以同时回答u1、u2，是否需要拆成两跳？检查能否直接把“以学校冠名人物创办的公司”作为u1，再查询公司所在地，与拆词器逻辑保持一致。"
+      }
+    },
+    {
+      "question_number": 265,
+      "sample_id": "hotpotqa_5ac300905542996773102682",
+      "status": "draft",
+      "question_type": "bridge",
+      "review_flags": [],
+      "notes": [
+        "保留d3s1→d5s0两跳。d3s1只说明来自Cradle of Filth，未说明创始成员；题干没有点名该乐队，也不能排除他在多个乐队任职，故不把一般成员关系直接升级为founder捷径。"
+      ],
+      "units": [
+        {
+          "description": "stable vocalist who joined Devilment",
+          "expected_answer": "Dani Filth",
+          "support_sets": [
+            [
+              "d3s1"
+            ]
+          ],
+          "depends_on": [],
+          "unit_id": "u1",
+          "necessary": false
+        },
+        {
+          "description": "band of which {u1} is a founding member",
+          "expected_answer": "Cradle of Filth",
+          "support_sets": [
+            [
+              "d5s0"
+            ]
+          ],
+          "depends_on": [
+            "u1"
+          ],
+          "unit_id": "u2",
+          "necessary": true
+        }
+      ],
+      "revision": {
+        "original_sample_id": "hotpotqa_5ac300905542996773102682",
+        "disposition": "retained",
+        "original_review_note": "能否设置两种链路：d3s1已经给出了Cradle of Filth，若题干的创始成员条件可以作为前提，是否允许直接回答；需要验证founding member时，再走d3s1+d5s0。先检查拆词器规则，不能把普通成员关系直接当成创始成员。"
+      }
+    },
+    {
+      "question_number": 266,
+      "sample_id": "hotpotqa_5a7b5e55554299042af8f755",
+      "status": "draft",
+      "question_type": "comparison",
+      "units": [
+        {
+          "description": "birth year of Lorraine Hansberry",
+          "expected_answer": "1930",
+          "support_sets": [
+            [
+              "d4s0"
+            ]
+          ],
+          "depends_on": [],
+          "necessary": false,
+          "unit_id": "u1"
+        },
+        {
+          "description": "birth year of Sandra Gulland",
+          "expected_answer": "1944",
+          "support_sets": [
+            [
+              "d6s0"
+            ]
+          ],
+          "depends_on": [],
+          "necessary": false,
+          "unit_id": "u2"
+        },
+        {
+          "description": "Which author was born first, Lorraine Hansberry or Sandra Gulland?",
+          "expected_answer": "Lorraine Hansberry",
+          "support_sets": [
+            []
+          ],
+          "depends_on": [
+            "u1",
+            "u2"
+          ],
+          "necessary": true,
+          "aliases": [
+            "Lorraine Vivian Hansberry"
+          ],
+          "unit_id": "u3"
+        }
+      ],
+      "review_flags": [],
+      "notes": [
+        "替换：Ainslee文档未给出版频率。 新题保留原source type，人工核对两条显式事实及答案。"
+      ],
+      "revision": {
+        "original_sample_id": "hotpotqa_5ac31ad4554299741d48a1ee",
+        "disposition": "replaced",
+        "original_review_note": "检查u1是否真的没有support，d3s0–d3s2只写了出版年份和更名，没有monthly。如果找不到频率证据，就换一道题。\n\n- Ainslee's excerpt gives its publication years and name history, not a monthly frequency. Do not infer monthly from periodical.\n- Source check: `magazine_frequency_missing`."
+      }
+    },
+    {
+      "question_number": 267,
+      "sample_id": "hotpotqa_5ac3295d5542995ef918c14d",
+      "status": "draft",
+      "question_type": "bridge",
+      "review_flags": [],
+      "notes": [
+        "无待处理note，保留原标注。"
+      ],
+      "units": [
+        {
+          "description": "performer with Alexander Armstrong in Timeghost",
+          "expected_answer": "Ben Miller",
+          "support_sets": [
+            [
+              "d3s0",
+              "d3s1"
+            ]
+          ],
+          "depends_on": [],
+          "unit_id": "u1",
+          "necessary": false
+        },
+        {
+          "description": "role played by {u1} in Death in Paradise",
+          "expected_answer": "Richard Poole",
+          "support_sets": [
+            [
+              "d8s3"
+            ]
+          ],
+          "depends_on": [
+            "u1"
+          ],
+          "aliases": [
+            "DI Richard Poole"
+          ],
+          "unit_id": "u2",
+          "necessary": true
+        }
+      ],
+      "revision": {
+        "original_sample_id": "hotpotqa_5ac3295d5542995ef918c14d",
+        "disposition": "retained",
+        "original_review_note": ""
+      }
+    },
+    {
+      "question_number": 268,
+      "sample_id": "hotpotqa_5ac3b04f55429939154138b7",
+      "status": "draft",
+      "question_type": "single",
+      "review_flags": [],
+      "notes": [
+        "每句都同时满足两个条件，合并为single且两句互为备选。"
+      ],
+      "units": [
+        {
+          "description": "railway serving Summerseat and running between Heywood and Rawtenstall",
+          "expected_answer": "East Lancashire Railway",
+          "support_sets": [
+            [
+              "d5s1"
+            ],
+            [
+              "d6s0"
+            ]
+          ],
+          "depends_on": [],
+          "necessary": true,
+          "unit_id": "u1"
+        }
+      ],
+      "revision": {
+        "original_sample_id": "hotpotqa_5ac3b04f55429939154138b7",
+        "disposition": "adjusted",
+        "original_review_note": "改成single unit，d5s1、d6s0各自都能回答完整问题，可以作为两个备选support，不需要强制两句都到达。\n\n- **🚩 逻辑审核（2026-11-11）[中]：** 题目对同一条铁路给了两个条件，不是多跳链。`d5s1` 和 `d6s0` 各自都同时写了两个条件，但 u2 依赖 u1，结果要求两句都到。大概应该改成一个 unit，support 为 [[d5s1],[d6s0]]。"
+      }
+    },
+    {
+      "question_number": 269,
+      "sample_id": "hotpotqa_5ac3b39e554299204fd21e09",
+      "status": "draft",
+      "question_type": "comparison",
+      "review_flags": [],
+      "notes": [
+        "民军两用且主要服务居住于美国东部的波多黎各人，组合明确描述民用旅客服务；补u2并使u3可推导。d8s1只说charter，未区分客运货运，不单独接受。"
+      ],
+      "units": [
+        {
+          "description": "whether Dillingham Airport handles passenger service",
+          "expected_answer": "yes",
+          "support_sets": [
+            [
+              "d9s1"
+            ]
+          ],
+          "depends_on": [],
+          "unit_id": "u1",
+          "necessary": false
+        },
+        {
+          "description": "whether Rafael Hernandez Airport handles passenger service",
+          "expected_answer": "yes",
+          "support_sets": [
+            [
+              "d3s0",
+              "d3s3"
+            ]
+          ],
+          "depends_on": [],
+          "unit_id": "u2",
+          "necessary": false
+        },
+        {
+          "description": "Do Dillingham Airport and Rafael Hernández Airport both handle civilian (passenger) service?",
+          "expected_answer": "yes",
+          "support_sets": [
+            []
+          ],
+          "depends_on": [
+            "u1",
+            "u2"
+          ],
+          "unit_id": "u3",
+          "necessary": true
+        }
+      ],
+      "revision": {
+        "original_sample_id": "hotpotqa_5ac3b39e554299204fd21e09",
+        "disposition": "adjusted",
+        "original_review_note": "检查d3s0+d3s3能否证明u2的民用客运，d8s1的包机也可以一起核实。如果接受这些证据，就补上u2，并把u3改成可由u1、u2推出的[[]]。\n\n- **🚩 逻辑审核（2026-11-11）[中]：** u2 是 `[]`，但 `d3s0` 写 Rafael Hernández 是 'joint civil-military airport'，`d8s1` 也提到有从该机场出发的包机。需要决定这算不算民用客运。另外 u3 用的是 `[]` 而不是 `[[]]`。\n\n- Rafael Hernandez is explicitly a joint civil-military airport and serves Puerto Rican westerners. The excerpt does not explicitly name passenger service. Review whether that wording is sufficient for the passenger condition.\n- Source check: `civil_status_vs_explicit_passenger_service`."
+      }
+    },
+    {
+      "question_number": 270,
+      "sample_id": "hotpotqa_5a90b93f5542995651fb51ca",
+      "status": "draft",
+      "question_type": "comparison",
+      "units": [
+        {
+          "description": "film year of Almost Sunrise",
+          "expected_answer": "2016",
+          "support_sets": [
+            [
+              "d5s0"
+            ]
+          ],
+          "depends_on": [],
+          "necessary": false,
+          "unit_id": "u1"
+        },
+        {
+          "description": "film year of 51 Birch Street",
+          "expected_answer": "2005",
+          "support_sets": [
+            [
+              "d10s0"
+            ]
+          ],
+          "depends_on": [],
+          "necessary": false,
+          "unit_id": "u2"
+        },
+        {
+          "description": "Which documentary was released earlier, Almost Sunrise or 51 Birch Street?",
+          "expected_answer": "51 Birch Street",
+          "support_sets": [
+            []
+          ],
+          "depends_on": [
+            "u1",
+            "u2"
+          ],
+          "necessary": true,
+          "unit_id": "u3"
+        }
+      ],
+      "review_flags": [],
+      "notes": [
+        "替换：缺少东西相对方位或经度。 新题保留原source type，人工核对两条显式事实及答案。"
+      ],
+      "revision": {
+        "original_sample_id": "hotpotqa_5ac41f1d5542991943173924",
+        "disposition": "replaced",
+        "original_review_note": "检查这类东西方位比较是否符合拆词器规则，当前文档只有地点，没有经度或相对方位。若不允许地理常识推理且没有其他support，就换一道题。\n\n- The context gives cities and states but no longitude or relative east-west position. Do not add geographic knowledge as visible evidence.\n- Source check: `longitude_evidence_missing`."
+      }
+    }
+  ]
+}

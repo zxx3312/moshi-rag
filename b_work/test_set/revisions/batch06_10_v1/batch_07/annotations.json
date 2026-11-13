@@ -1,0 +1,1440 @@
+{
+  "schema_version": "1.0",
+  "data_version": "eval-revised-v1",
+  "records": [
+    {
+      "question_number": 181,
+      "sample_id": "hotpotqa_5a81ff1a554299676cceb1c2",
+      "status": "draft",
+      "question_type": "single",
+      "review_flags": [],
+      "notes": [
+        "u1已给出完整答案，移除黑猫定义的重复桥接。"
+      ],
+      "units": [
+        {
+          "description": "animal type of Oscar",
+          "expected_answer": "black cat",
+          "support_sets": [
+            [
+              "d6s0"
+            ]
+          ],
+          "depends_on": [],
+          "necessary": true,
+          "unit_id": "u1"
+        }
+      ],
+      "revision": {
+        "original_sample_id": "hotpotqa_5a81ff1a554299676cceb1c2",
+        "disposition": "adjusted",
+        "original_review_note": "检查一下，这道题是不是回答完u1就可以结束了"
+      }
+    },
+    {
+      "question_number": 182,
+      "sample_id": "hotpotqa_5a822a5e55429926c1cdae43",
+      "status": "draft",
+      "question_type": "comparison",
+      "review_flags": [],
+      "notes": [
+        "Take the common roles. Producer is used in the film context of both defining sentences.",
+        "复核后保留原标注；原note为说明或未发现需要修改的证据/依赖问题。"
+      ],
+      "units": [
+        {
+          "description": "occupations of Charles Burnett",
+          "expected_answer": "film director, film producer, writer, editor, actor, photographer, cinematographer",
+          "support_sets": [
+            [
+              "d1s0"
+            ]
+          ],
+          "depends_on": [],
+          "unit_id": "u1",
+          "necessary": false
+        },
+        {
+          "description": "occupations of Alan J. Pakula",
+          "expected_answer": "film director, writer, producer",
+          "support_sets": [
+            [
+              "d4s0"
+            ]
+          ],
+          "depends_on": [],
+          "unit_id": "u2",
+          "necessary": false
+        },
+        {
+          "description": "What occupations do Charles Burnett and Alan J. Pakula have in common?",
+          "expected_answer": "film director, film producer, writer",
+          "support_sets": [
+            []
+          ],
+          "depends_on": [
+            "u1",
+            "u2"
+          ],
+          "unit_id": "u3",
+          "necessary": true
+        }
+      ],
+      "revision": {
+        "original_sample_id": "hotpotqa_5a822a5e55429926c1cdae43",
+        "disposition": "retained",
+        "original_review_note": "- Take the common roles. Producer is used in the film context of both defining sentences."
+      }
+    },
+    {
+      "question_number": 183,
+      "sample_id": "hotpotqa_5a829fab55429954d2e2eb83",
+      "status": "draft",
+      "question_type": "comparison",
+      "review_flags": [],
+      "notes": [
+        "保留正向确认链路；补题干短名Joe Orton为答案别名，不从Henry James的职业介绍推断作品命名关系。"
+      ],
+      "units": [
+        {
+          "description": "whether Ortonesque refers to the work of Joe Orton",
+          "expected_answer": "yes",
+          "support_sets": [
+            [
+              "d7s0",
+              "d7s1",
+              "d7s2",
+              "d7s3"
+            ]
+          ],
+          "depends_on": [],
+          "unit_id": "u1",
+          "necessary": false
+        },
+        {
+          "description": "Between Joe Orton and Henry James, which author is the adjective \"Ortonesque\" used to refer to his work?",
+          "expected_answer": "John Kingsley \"Joe\" Orton",
+          "support_sets": [
+            []
+          ],
+          "depends_on": [
+            "u1"
+          ],
+          "by_presupposition": true,
+          "unit_id": "u2",
+          "necessary": true,
+          "aliases": [
+            "Joe Orton",
+            "John Kingsley Orton"
+          ]
+        }
+      ],
+      "revision": {
+        "original_sample_id": "hotpotqa_5a829fab55429954d2e2eb83",
+        "disposition": "adjusted",
+        "original_review_note": "- Use the unique named-candidate premise and the explicit Joe Orton passage. No negative claim about Henry James is inferred."
+      }
+    },
+    {
+      "question_number": 184,
+      "sample_id": "hotpotqa_5a82efe355429966c78a6aa1",
+      "status": "draft",
+      "question_type": "bridge",
+      "review_flags": [],
+      "notes": [
+        "无待处理note，保留原标注。"
+      ],
+      "units": [
+        {
+          "description": "second most populated city in Polk County in the stated 2015 estimates",
+          "expected_answer": "Winter Haven",
+          "support_sets": [
+            [
+              "d5s2"
+            ]
+          ],
+          "depends_on": [],
+          "unit_id": "u1",
+          "necessary": false
+        },
+        {
+          "description": "mall in {u1}",
+          "expected_answer": "Winter Haven Mall",
+          "support_sets": [
+            [
+              "d4s4"
+            ]
+          ],
+          "depends_on": [
+            "u1"
+          ],
+          "unit_id": "u2",
+          "necessary": true
+        }
+      ],
+      "revision": {
+        "original_sample_id": "hotpotqa_5a82efe355429966c78a6aa1",
+        "disposition": "retained",
+        "original_review_note": ""
+      }
+    },
+    {
+      "question_number": 185,
+      "sample_id": "hotpotqa_5a834ed95542990548d0b1ca",
+      "status": "draft",
+      "question_type": "comparison",
+      "review_flags": [],
+      "notes": [
+        "无待处理note，保留原标注。"
+      ],
+      "units": [
+        {
+          "description": "height of 712 Fifth Avenue",
+          "expected_answer": "650 ft",
+          "support_sets": [
+            [
+              "d8s0"
+            ]
+          ],
+          "depends_on": [],
+          "unit_id": "u1",
+          "necessary": false
+        },
+        {
+          "description": "height of Manhattan Life Insurance Building",
+          "expected_answer": "348 ft",
+          "support_sets": [
+            [
+              "d5s0"
+            ]
+          ],
+          "depends_on": [],
+          "unit_id": "u2",
+          "necessary": false
+        },
+        {
+          "description": "Which tower is taller, 712 Fifth Avenue or Manhattan Life Insurance Building?",
+          "expected_answer": "712 5th Avenue",
+          "support_sets": [
+            []
+          ],
+          "depends_on": [
+            "u1",
+            "u2"
+          ],
+          "unit_id": "u3",
+          "necessary": true
+        }
+      ],
+      "revision": {
+        "original_sample_id": "hotpotqa_5a834ed95542990548d0b1ca",
+        "disposition": "retained",
+        "original_review_note": ""
+      }
+    },
+    {
+      "question_number": 186,
+      "sample_id": "hotpotqa_5a83a7e15542992ef85e2347",
+      "status": "draft",
+      "question_type": "single",
+      "review_flags": [],
+      "notes": [
+        "合并为single，移除全名转换；d3s0仅介绍角色，按标题可解析He时不单独要求该句；补d5s1、d4s1备选。"
+      ],
+      "units": [
+        {
+          "description": "actor who voices Homer Simpson",
+          "expected_answer": "Dan Castellaneta",
+          "support_sets": [
+            [
+              "d3s1"
+            ],
+            [
+              "d5s1"
+            ],
+            [
+              "d4s1"
+            ]
+          ],
+          "depends_on": [],
+          "necessary": true,
+          "aliases": [
+            "Daniel Louis Castellaneta"
+          ],
+          "unit_id": "u1"
+        }
+      ],
+      "revision": {
+        "original_sample_id": "hotpotqa_5a83a7e15542992ef85e2347",
+        "disposition": "adjusted",
+        "original_review_note": "1. d3s0是不是没法能够回答u1的问题，是的话把这条去掉。2. 可以把d5s1加上，作为u1的support。3. full name如果不是必须的话，就把这一跳删掉，然后把答案改成能推出来的名字就可以，或者加个full name的别名\n\n- **🚩 逻辑审核（2026-11-11）[中]：** u1（Dan Castellaneta）已经回答了 'who voices Homer'；必需的 'full name' 这一跳只是照抄源答案的写法，使完成时间推迟到 `d4s0` 到达。u1 漏了备选证据：`d5s1`（'Dan Castellaneta, who voices Homer Simpson'）和 `d4s1`。"
+      }
+    },
+    {
+      "question_number": 187,
+      "sample_id": "hotpotqa_5a83b4d35542996488c2e495",
+      "status": "draft",
+      "question_type": "bridge",
+      "review_flags": [],
+      "notes": [
+        "无待处理note，保留原标注。"
+      ],
+      "units": [
+        {
+          "description": "king whose wife gave the Sophia Amalia her name",
+          "expected_answer": "Frederick III",
+          "support_sets": [
+            [
+              "d7s0"
+            ]
+          ],
+          "depends_on": [],
+          "unit_id": "u1",
+          "necessary": false
+        },
+        {
+          "description": "countries ruled by {u1} starting in 1648",
+          "expected_answer": "Denmark and Norway",
+          "support_sets": [
+            [
+              "d6s0"
+            ]
+          ],
+          "depends_on": [
+            "u1"
+          ],
+          "unit_id": "u2",
+          "necessary": true
+        }
+      ],
+      "revision": {
+        "original_sample_id": "hotpotqa_5a83b4d35542996488c2e495",
+        "disposition": "retained",
+        "original_review_note": ""
+      }
+    },
+    {
+      "question_number": 188,
+      "sample_id": "hotpotqa_5a83c2e25542996488c2e4bc",
+      "status": "draft",
+      "question_type": "bridge",
+      "review_flags": [],
+      "notes": [
+        "删除题干没有的新体育场限定new，其余链路由d3s2和d4s2明确支持。"
+      ],
+      "units": [
+        {
+          "description": "stadium used by the 2014 Baylor Bears football team",
+          "expected_answer": "McLane Stadium",
+          "support_sets": [
+            [
+              "d3s2"
+            ]
+          ],
+          "depends_on": [],
+          "unit_id": "u1",
+          "necessary": false
+        },
+        {
+          "description": "month and year when {u1} received that name",
+          "expected_answer": "December 2013",
+          "support_sets": [
+            [
+              "d4s2"
+            ]
+          ],
+          "depends_on": [
+            "u1"
+          ],
+          "unit_id": "u2",
+          "necessary": true
+        }
+      ],
+      "revision": {
+        "original_sample_id": "hotpotqa_5a83c2e25542996488c2e4bc",
+        "disposition": "adjusted",
+        "original_review_note": "检查一下u1的描述是否合理。"
+      }
+    },
+    {
+      "question_number": 189,
+      "sample_id": "hotpotqa_5a77bd595542995d83181291",
+      "status": "draft",
+      "question_type": "comparison",
+      "units": [
+        {
+          "description": "birth year of Kim Clijsters",
+          "expected_answer": "1983",
+          "support_sets": [
+            [
+              "d8s0"
+            ]
+          ],
+          "depends_on": [],
+          "necessary": false,
+          "unit_id": "u1"
+        },
+        {
+          "description": "birth year of Mary Pierce",
+          "expected_answer": "1975",
+          "support_sets": [
+            [
+              "d9s0"
+            ]
+          ],
+          "depends_on": [],
+          "necessary": false,
+          "unit_id": "u2"
+        },
+        {
+          "description": "Between two tennis players Kim Clijsters and Mary Pierce, who is older?",
+          "expected_answer": "Mary Pierce",
+          "support_sets": [
+            []
+          ],
+          "depends_on": [
+            "u1",
+            "u2"
+          ],
+          "necessary": true,
+          "unit_id": "u3"
+        }
+      ],
+      "review_flags": [],
+      "notes": [
+        "替换：美国到非欧洲需要额外地理映射，当前guide明确不允许。 新题保留原source type，人工核对两条显式事实及答案。"
+      ],
+      "revision": {
+        "original_sample_id": "hotpotqa_5a83f07455429933447460be",
+        "disposition": "replaced",
+        "original_review_note": "u3不是已经被u1u2推出来了吗，为什么还是 []: no accepted support。\n\n- The source places both airports in the United States but does not state its continent. The Europe conclusion needs an additional geographic rule or evidence.\n- Source check: `continent_mapping_missing`."
+      }
+    },
+    {
+      "question_number": 190,
+      "sample_id": "hotpotqa_5a769ac95542993569682c4f",
+      "status": "draft",
+      "question_type": "comparison",
+      "units": [
+        {
+          "description": "birth year of Odysseas Elytis",
+          "expected_answer": "1911",
+          "support_sets": [
+            [
+              "d6s0"
+            ]
+          ],
+          "depends_on": [],
+          "necessary": false,
+          "unit_id": "u1"
+        },
+        {
+          "description": "birth year of Cornel West",
+          "expected_answer": "1953",
+          "support_sets": [
+            [
+              "d1s0"
+            ]
+          ],
+          "depends_on": [],
+          "necessary": false,
+          "unit_id": "u2"
+        },
+        {
+          "description": "Who was born first, Odysseas Elytis or Cornel West?",
+          "expected_answer": "Odysseas Elytis",
+          "support_sets": [
+            []
+          ],
+          "depends_on": [
+            "u1",
+            "u2"
+          ],
+          "necessary": true,
+          "unit_id": "u3"
+        }
+      ],
+      "review_flags": [],
+      "notes": [
+        "替换：Hole的两个创办者不是完整阵容；未找到可比较的成员总数。 新题保留原source type，人工核对两条显式事实及答案。"
+      ],
+      "revision": {
+        "original_sample_id": "hotpotqa_5a840e8a5542992ef85e239e",
+        "disposition": "replaced",
+        "original_review_note": "检查一下是否真的没有u2u3对应的support语句。\n\n- Hole d10s0 names two founders, not a complete two-person band. Sentence 1 mentions other bassists and drummers. Do not compare four Mastodon members with two Hole founders.\n- Source check: `founder_count_not_band_size`.\n- Source check: `lineup_time_scope`."
+      }
+    },
+    {
+      "question_number": 191,
+      "sample_id": "hotpotqa_5a843f305542996488c2e51d",
+      "status": "draft",
+      "question_type": "single",
+      "review_flags": [],
+      "notes": [
+        "Flicker已在题干中，删除演员/歌手桥接；保留来源当时的计划发行日期。"
+      ],
+      "units": [
+        {
+          "description": "scheduled release date of Flicker in the source",
+          "expected_answer": "October 20, 2017",
+          "support_sets": [
+            [
+              "d3s1"
+            ]
+          ],
+          "depends_on": [],
+          "necessary": true,
+          "unit_id": "u1"
+        }
+      ],
+      "revision": {
+        "original_sample_id": "hotpotqa_5a843f305542996488c2e51d",
+        "disposition": "adjusted",
+        "original_review_note": "如果属于不必要的桥接，就改成single unit\n\n- **🚩 逻辑审核（2026-11-11）[中]：** 题干已点名 Flicker，u1 = 'Flicker' 不是桥接值。`d3s1` 直接给出了发行日期，但 u2 要等 u1（`d3s0` + `d2s3`）。u1 的描述还写了题干里没有的 Niall Horan。如果保留 u1，还漏了 `d2s1` 作为证据。\n\n- Keep the scheduled date in this historical source. This is not a claim about its current release status."
+      }
+    },
+    {
+      "question_number": 192,
+      "sample_id": "hotpotqa_5a84de255542991dd0999e06",
+      "status": "draft",
+      "question_type": "comparison",
+      "review_flags": [],
+      "notes": [
+        "题干澄清：限定为文档列举的笔名数量，不断言终身总数。",
+        "继续比较1与4，新增题干短名Nelson DeMille。"
+      ],
+      "units": [
+        {
+          "description": "pen names explicitly listed for George Orwell",
+          "expected_answer": "1",
+          "support_sets": [
+            [
+              "d8s0"
+            ]
+          ],
+          "depends_on": [],
+          "unit_id": "u1",
+          "necessary": false
+        },
+        {
+          "description": "pen names explicitly listed for Nelson DeMille",
+          "expected_answer": "4",
+          "support_sets": [
+            [
+              "d10s2"
+            ]
+          ],
+          "depends_on": [],
+          "unit_id": "u2",
+          "necessary": false
+        },
+        {
+          "description": "Who has more pen names explicitly listed in the context, George Orwell or Nelson DeMille?",
+          "expected_answer": "Nelson Richard DeMille",
+          "support_sets": [
+            []
+          ],
+          "depends_on": [
+            "u1",
+            "u2"
+          ],
+          "unit_id": "u3",
+          "necessary": true,
+          "aliases": [
+            "Nelson DeMille"
+          ]
+        }
+      ],
+      "revision": {
+        "original_sample_id": "hotpotqa_5a84de255542991dd0999e06",
+        "disposition": "adjusted",
+        "original_review_note": "- The excerpts list one and four pen names. They do not prove a complete lifetime count.\n- Source check: `listed_count_not_exhaustive`."
+      }
+    },
+    {
+      "question_number": 193,
+      "sample_id": "hotpotqa_5a8549c65542997b5ce3ffe6",
+      "status": "draft",
+      "question_type": "comparison",
+      "review_flags": [],
+      "notes": [
+        "English is normalized to England for the question about where the authors are from. Do not turn birthplace into a separate citizenship claim.",
+        "保留。English→England是国别形容词归一化；题干问from而非公民身份，出生地与国别描述可用于本题。"
+      ],
+      "units": [
+        {
+          "description": "country of origin stated for Barry Unsworth",
+          "expected_answer": "England",
+          "support_sets": [
+            [
+              "d3s0"
+            ]
+          ],
+          "depends_on": [],
+          "unit_id": "u1",
+          "necessary": false
+        },
+        {
+          "description": "country descriptor of P. G. Wodehouse",
+          "expected_answer": "England",
+          "support_sets": [
+            [
+              "d1s0"
+            ]
+          ],
+          "depends_on": [],
+          "unit_id": "u2",
+          "necessary": false
+        },
+        {
+          "description": "Are both Barry Unsworth and P. G. Wodehouse from the same country?",
+          "expected_answer": "yes",
+          "support_sets": [
+            []
+          ],
+          "depends_on": [
+            "u1",
+            "u2"
+          ],
+          "unit_id": "u3",
+          "necessary": true
+        }
+      ],
+      "revision": {
+        "original_sample_id": "hotpotqa_5a8549c65542997b5ce3ffe6",
+        "disposition": "retained",
+        "original_review_note": "是否符合当前拆词器规则\n\n- English is normalized to England for the question about where the authors are from. Do not turn birthplace into a separate citizenship claim."
+      }
+    },
+    {
+      "question_number": 194,
+      "sample_id": "hotpotqa_5a85f5115542991dd0999ed9",
+      "status": "draft",
+      "question_type": "bridge",
+      "review_flags": [],
+      "notes": [
+        "无待处理note，保留原标注。"
+      ],
+      "units": [
+        {
+          "description": "King of Norway who ascended the throne in 1991",
+          "expected_answer": "Harald V",
+          "support_sets": [
+            [
+              "d3s0"
+            ]
+          ],
+          "depends_on": [],
+          "unit_id": "u1",
+          "necessary": false
+        },
+        {
+          "description": "kind of ships bearing a name after {u1}",
+          "expected_answer": "motor ships",
+          "support_sets": [
+            [
+              "d4s0"
+            ]
+          ],
+          "depends_on": [
+            "u1"
+          ],
+          "unit_id": "u2",
+          "necessary": true
+        }
+      ],
+      "revision": {
+        "original_sample_id": "hotpotqa_5a85f5115542991dd0999ed9",
+        "disposition": "retained",
+        "original_review_note": ""
+      }
+    },
+    {
+      "question_number": 195,
+      "sample_id": "hotpotqa_5ac2c3545542990b17b1548b",
+      "status": "draft",
+      "question_type": "bridge",
+      "units": [
+        {
+          "description": "historical period in Korea when Chang Ucchin was born",
+          "expected_answer": "Japanese colonial rule",
+          "support_sets": [
+            [
+              "d10s1"
+            ]
+          ],
+          "depends_on": [],
+          "necessary": false,
+          "unit_id": "u1"
+        },
+        {
+          "description": "war whose conclusion ended {u1} in Korea",
+          "expected_answer": "World War II",
+          "support_sets": [
+            [
+              "d5s0"
+            ]
+          ],
+          "depends_on": [
+            "u1"
+          ],
+          "necessary": true,
+          "unit_id": "u2"
+        }
+      ],
+      "review_flags": [],
+      "notes": [
+        "替换：创建奖项不等于赞助奖项；上下文没有明确赞助关系。 新题保留原source type，人工核对两条显式事实及答案。"
+      ],
+      "revision": {
+        "original_sample_id": "hotpotqa_5a862da855429960ec39b640",
+        "disposition": "replaced",
+        "original_review_note": "检查一下，u2是否真的没有support\n\n- Rawlings d2s4 explicitly created the award. The title and creator statement do not explicitly establish the sponsor relation.\n- Source check: `award_creator_not_explicit_sponsor`."
+      }
+    },
+    {
+      "question_number": 196,
+      "sample_id": "hotpotqa_5ab808755542990e739ec7f2",
+      "status": "draft",
+      "question_type": "comparison",
+      "units": [
+        {
+          "description": "film year of The Hunchback of Notre Dame",
+          "expected_answer": "1996",
+          "support_sets": [
+            [
+              "d7s0"
+            ]
+          ],
+          "depends_on": [],
+          "necessary": false,
+          "unit_id": "u1"
+        },
+        {
+          "description": "film year of Saludos Amigos",
+          "expected_answer": "1942",
+          "support_sets": [
+            [
+              "d9s0"
+            ]
+          ],
+          "depends_on": [],
+          "necessary": false,
+          "unit_id": "u2"
+        },
+        {
+          "description": "Which movie was released first, The Hunchback of Notre Dame or Saludos Amigos?",
+          "expected_answer": "Saludos Amigos",
+          "support_sets": [
+            []
+          ],
+          "depends_on": [
+            "u1",
+            "u2"
+          ],
+          "necessary": true,
+          "unit_id": "u3"
+        }
+      ],
+      "review_flags": [],
+      "notes": [
+        "替换：French Air Force任职不等于法国来源/国籍；没有其他支持u2的句子。 新题保留原source type，人工核对两条显式事实及答案。"
+      ],
+      "revision": {
+        "original_sample_id": "hotpotqa_5a864d9e5542994775f6073d",
+        "disposition": "replaced",
+        "original_review_note": "d5s0 Léopold Eyharts [0] 这一条是不是可以证明u2？\n- Eyharts is described as a general in the French Air Force, not explicitly as French or born in France. No both/same premise exception applies.\n- Source check: `military_role_not_country_of_origin`."
+      }
+    },
+    {
+      "question_number": 197,
+      "sample_id": "hotpotqa_5a87191155429960ec39b73d",
+      "status": "draft",
+      "question_type": "bridge",
+      "review_flags": [],
+      "notes": [
+        "无待处理note，保留原标注。"
+      ],
+      "units": [
+        {
+          "description": "university where Jamal Brooks played college football",
+          "expected_answer": "Hampton University",
+          "support_sets": [
+            [
+              "d4s1"
+            ]
+          ],
+          "depends_on": [],
+          "unit_id": "u1",
+          "necessary": false
+        },
+        {
+          "description": "private university in Virginia identified by {u1}",
+          "expected_answer": "Hampton University",
+          "support_sets": [
+            [
+              "d1s0"
+            ]
+          ],
+          "depends_on": [
+            "u1"
+          ],
+          "unit_id": "u2",
+          "necessary": true
+        }
+      ],
+      "revision": {
+        "original_sample_id": "hotpotqa_5a87191155429960ec39b73d",
+        "disposition": "retained",
+        "original_review_note": ""
+      }
+    },
+    {
+      "question_number": 198,
+      "sample_id": "hotpotqa_5a87411d5542994846c1cd37",
+      "status": "draft",
+      "question_type": "bridge",
+      "review_flags": [],
+      "notes": [
+        "无待处理note，保留原标注。"
+      ],
+      "units": [
+        {
+          "description": "world center for the anthroposophical movement",
+          "expected_answer": "Goetheanum",
+          "support_sets": [
+            [
+              "d9s0"
+            ]
+          ],
+          "depends_on": [],
+          "unit_id": "u1",
+          "necessary": false
+        },
+        {
+          "description": "job Jorgen Smit held at {u1}",
+          "expected_answer": "member of the Executive Council of the General Anthroposophical Society",
+          "support_sets": [
+            [
+              "d1s1"
+            ]
+          ],
+          "depends_on": [
+            "u1"
+          ],
+          "unit_id": "u2",
+          "necessary": true
+        }
+      ],
+      "revision": {
+        "original_sample_id": "hotpotqa_5a87411d5542994846c1cd37",
+        "disposition": "retained",
+        "original_review_note": ""
+      }
+    },
+    {
+      "question_number": 199,
+      "sample_id": "hotpotqa_5a88f7855542993b751ca8da",
+      "status": "draft",
+      "question_type": "bridge",
+      "review_flags": [],
+      "notes": [
+        "Nicholas in the question is a spelling variant of Nicolas Cage in the source.",
+        "复核后保留原标注；原note为说明或未发现需要修改的证据/依赖问题。"
+      ],
+      "units": [
+        {
+          "description": "film in which Nicolas Cage and Cher both starred",
+          "expected_answer": "Moonstruck",
+          "support_sets": [
+            [
+              "d10s1"
+            ]
+          ],
+          "depends_on": [],
+          "unit_id": "u1",
+          "necessary": false
+        },
+        {
+          "description": "film year of {u1}",
+          "expected_answer": "1987",
+          "support_sets": [
+            [
+              "d10s0"
+            ]
+          ],
+          "depends_on": [
+            "u1"
+          ],
+          "unit_id": "u2",
+          "necessary": true
+        }
+      ],
+      "revision": {
+        "original_sample_id": "hotpotqa_5a88f7855542993b751ca8da",
+        "disposition": "retained",
+        "original_review_note": "- Nicholas in the question is a spelling variant of Nicolas Cage in the source."
+      }
+    },
+    {
+      "question_number": 200,
+      "sample_id": "hotpotqa_5a8a21a455429930ff3c0caf",
+      "status": "draft",
+      "question_type": "bridge",
+      "review_flags": [],
+      "notes": [
+        "d7s1本来已支持u1，同时直接说明辞职后任Secretary of the Interior，补作u2备选；无需等d3s0扩展官职名称。"
+      ],
+      "units": [
+        {
+          "description": "politician whose resignation preceded Greg Gianforte's 2017 special-election win",
+          "expected_answer": "Ryan Zinke",
+          "support_sets": [
+            [
+              "d7s1"
+            ]
+          ],
+          "depends_on": [],
+          "unit_id": "u1",
+          "necessary": false
+        },
+        {
+          "description": "office held by {u1} in the historical source",
+          "expected_answer": "United States Secretary of the Interior",
+          "support_sets": [
+            [
+              "d3s0"
+            ],
+            [
+              "d7s1"
+            ]
+          ],
+          "depends_on": [
+            "u1"
+          ],
+          "unit_id": "u2",
+          "necessary": true,
+          "aliases": [
+            "Secretary of the Interior"
+          ]
+        }
+      ],
+      "revision": {
+        "original_sample_id": "hotpotqa_5a8a21a455429930ff3c0caf",
+        "disposition": "adjusted",
+        "original_review_note": "检查一下d7s1足够回答u1吗，可以作为u1的support吗\n\n- The word current refers to the source date, not today."
+      }
+    },
+    {
+      "question_number": 201,
+      "sample_id": "hotpotqa_5a7cbd7c554299452d57b9e6",
+      "status": "draft",
+      "question_type": "comparison",
+      "units": [
+        {
+          "description": "birth year of Neil LaBute",
+          "expected_answer": "1963",
+          "support_sets": [
+            [
+              "d8s0"
+            ]
+          ],
+          "depends_on": [],
+          "necessary": false,
+          "unit_id": "u1"
+        },
+        {
+          "description": "birth year of H. Bruce Humberstone",
+          "expected_answer": "1901",
+          "support_sets": [
+            [
+              "d2s0"
+            ]
+          ],
+          "depends_on": [],
+          "necessary": false,
+          "unit_id": "u2"
+        },
+        {
+          "description": "Who was born first Neil LaBute or H. Bruce Humberstone?",
+          "expected_answer": "H. Bruce Humberstone",
+          "support_sets": [
+            []
+          ],
+          "depends_on": [
+            "u1",
+            "u2"
+          ],
+          "necessary": true,
+          "aliases": [
+            "H. Bruce \"Lucky\" Humberstone"
+          ],
+          "unit_id": "u3"
+        }
+      ],
+      "review_flags": [],
+      "notes": [
+        "替换：没有县与镇的政府层级规则，不能从两地所有者直接推出higher。 新题保留原source type，人工核对两条显式事实及答案。"
+      ],
+      "revision": {
+        "original_sample_id": "hotpotqa_5a8abb115542992d82986f66",
+        "disposition": "replaced",
+        "original_review_note": "这道题的标准答案是不是有问题啊，为什么u3回答不了，如果有问题的话可以把这道题换掉\n\n- The owners are explicit. The context does not state that county government ranks above town government.\n- Source check: `government_hierarchy_not_stated`."
+      }
+    },
+    {
+      "question_number": 202,
+      "sample_id": "hotpotqa_5a8af94455429971feec45b6",
+      "status": "draft",
+      "question_type": "bridge",
+      "review_flags": [],
+      "notes": [
+        "无待处理note，保留原标注。"
+      ],
+      "units": [
+        {
+          "description": "senator who is Jon S. Cardin's uncle",
+          "expected_answer": "Ben Cardin",
+          "support_sets": [
+            [
+              "d8s3"
+            ]
+          ],
+          "depends_on": [],
+          "unit_id": "u1",
+          "necessary": false
+        },
+        {
+          "description": "start of {u1}'s service as U.S. Senator",
+          "expected_answer": "since 2007",
+          "support_sets": [
+            [
+              "d6s0"
+            ]
+          ],
+          "depends_on": [
+            "u1"
+          ],
+          "aliases": [
+            "2007"
+          ],
+          "unit_id": "u2",
+          "necessary": true
+        }
+      ],
+      "revision": {
+        "original_sample_id": "hotpotqa_5a8af94455429971feec45b6",
+        "disposition": "retained",
+        "original_review_note": ""
+      }
+    },
+    {
+      "question_number": 203,
+      "sample_id": "hotpotqa_5a8b036d55429971feec45fe",
+      "status": "draft",
+      "question_type": "comparison",
+      "review_flags": [],
+      "notes": [
+        "按SFT两候选格式补建Bogosian的职业排除unit；确认与排除各自可完成结论，补短名别名。"
+      ],
+      "units": [
+        {
+          "description": "whether Zach Bogosian is a record producer",
+          "expected_answer": "no",
+          "support_sets": [
+            [
+              "d5s0",
+              "d5s1"
+            ]
+          ],
+          "depends_on": [],
+          "necessary": false,
+          "by_omission": true,
+          "unit_id": "u1"
+        },
+        {
+          "description": "whether Daron Malakian is a record producer",
+          "expected_answer": "yes",
+          "support_sets": [
+            [
+              "d8s0"
+            ]
+          ],
+          "depends_on": [],
+          "necessary": false,
+          "unit_id": "u2"
+        },
+        {
+          "description": "Which is a record producer, Zach Bogosian or Daron Malakian?",
+          "expected_answer": "Daron Vartan Malakian",
+          "support_sets": [
+            []
+          ],
+          "depends_on": [
+            "u1",
+            "u2"
+          ],
+          "necessary": true,
+          "aliases": [
+            "Daron Malakian"
+          ],
+          "by_presupposition": true,
+          "presupposition_sets": [
+            [
+              "d5s0",
+              "d5s1"
+            ],
+            [
+              "d8s0"
+            ]
+          ],
+          "unit_id": "u3"
+        }
+      ],
+      "revision": {
+        "original_sample_id": "hotpotqa_5a8b036d55429971feec45fe",
+        "disposition": "adjusted",
+        "original_review_note": "检查是否跟拆词器规则一致\n\n- **🚩 逻辑审核（2026-11-11）[中]：** 预设结论只依赖 Malakian 一边的事实。Bogosian 的定义性介绍（`d5s0`+`d5s1`：'American professional ice hockey defenseman'）按 guide v1.3 可以用 by_omission 排除他，但没有为他建 unit。现有 Notes（'No negative occupation unit is needed'）与 v1.3 冲突。\n\n- The explicit producer statement identifies Daron Malakian among the two named candidates.\n- No negative occupation unit is needed for Bogosian."
+      }
+    },
+    {
+      "question_number": 204,
+      "sample_id": "hotpotqa_5a8b78f055429971feec471a",
+      "status": "draft",
+      "question_type": "comparison",
+      "review_flags": [],
+      "notes": [
+        "无待处理note，保留原标注。"
+      ],
+      "units": [
+        {
+          "description": "whether Steve Sekely was known by several names",
+          "expected_answer": "yes",
+          "support_sets": [
+            [
+              "d3s1"
+            ]
+          ],
+          "depends_on": [],
+          "unit_id": "u1",
+          "necessary": false
+        },
+        {
+          "description": "whether King Baggot was known by multiple nicknames",
+          "expected_answer": "yes",
+          "support_sets": [
+            [
+              "d4s2"
+            ]
+          ],
+          "depends_on": [],
+          "unit_id": "u2",
+          "necessary": false
+        },
+        {
+          "description": "Was Steve Sekely and Willian King Baggot known by multiple names or nicknames?",
+          "expected_answer": "yes",
+          "support_sets": [
+            []
+          ],
+          "depends_on": [
+            "u1",
+            "u2"
+          ],
+          "unit_id": "u3",
+          "necessary": true
+        }
+      ],
+      "revision": {
+        "original_sample_id": "hotpotqa_5a8b78f055429971feec471a",
+        "disposition": "retained",
+        "original_review_note": ""
+      }
+    },
+    {
+      "question_number": 205,
+      "sample_id": "hotpotqa_5a79f2185542996a35c1703d",
+      "status": "draft",
+      "question_type": "comparison",
+      "units": [
+        {
+          "description": "birth year of George Marshall",
+          "expected_answer": "1891",
+          "support_sets": [
+            [
+              "d4s0"
+            ]
+          ],
+          "depends_on": [],
+          "necessary": false,
+          "unit_id": "u1"
+        },
+        {
+          "description": "birth year of Allan Dwan",
+          "expected_answer": "1885",
+          "support_sets": [
+            [
+              "d9s0"
+            ]
+          ],
+          "depends_on": [],
+          "necessary": false,
+          "unit_id": "u2"
+        },
+        {
+          "description": "Who was born first George Marshall or Allan Dwan ?",
+          "expected_answer": "Allan Dwan",
+          "support_sets": [
+            []
+          ],
+          "depends_on": [
+            "u1",
+            "u2"
+          ],
+          "necessary": true,
+          "unit_id": "u3"
+        }
+      ],
+      "review_flags": [],
+      "notes": [
+        "替换：bimonthly在上下文未消歧，无法确定比monthly多还是少。 新题保留原source type，人工核对两条显式事实及答案。"
+      ],
+      "revision": {
+        "original_sample_id": "hotpotqa_5a8baf4b5542996e8ac889c5",
+        "disposition": "replaced",
+        "original_review_note": "为什么是[]: no accepted support，u3可以根据u1u2推出来的\n\n- Bimonthly can mean twice a month or every two months. No numeric frequency resolves it here. Keep the source answer pending review.\n- Source check: `bimonthly_ambiguous`.\n- Source check: `source_answer_frequency_conflict`."
+      }
+    },
+    {
+      "question_number": 206,
+      "sample_id": "hotpotqa_5a8bc1565542996e8ac88a0c",
+      "status": "draft",
+      "question_type": "single",
+      "review_flags": [],
+      "notes": [
+        "题干澄清：将含混的was at限定为原文记载的2014年竞选宣布，不暗示实际参加或出席2016年选举。",
+        "删除全名桥接，d9s2即可回答；保留完整选举名称为别名。"
+      ],
+      "units": [
+        {
+          "description": "election Bob Beers announced in January 2014 he would enter against Harry Reid",
+          "expected_answer": "2016 U.S. Senate election",
+          "support_sets": [
+            [
+              "d9s2"
+            ]
+          ],
+          "depends_on": [],
+          "necessary": true,
+          "aliases": [
+            "The 2016 United States Senate election",
+            "2016 United States Senate election in Nevada"
+          ],
+          "unit_id": "u1"
+        }
+      ],
+      "revision": {
+        "original_sample_id": "hotpotqa_5a8bc1565542996e8ac88a0c",
+        "disposition": "adjusted",
+        "original_review_note": "我觉得full name没有必要，回答出u1的答案即可。\n\n- The evidence is a planned challenge announced in 2014. It does not establish Reid's attendance or actual candidacy in the final 2016 election.\n- Source check: `question_participation_ambiguous`."
+      }
+    },
+    {
+      "question_number": 207,
+      "sample_id": "hotpotqa_5a8c5569554299240d9c2126",
+      "status": "draft",
+      "question_type": "comparison",
+      "review_flags": [],
+      "notes": [
+        "Singer and instrumentalist roles explicitly establish work as a musician.",
+        "复核后保留原标注；原note为说明或未发现需要修改的证据/依赖问题。"
+      ],
+      "units": [
+        {
+          "description": "musical occupations of Daryl Hall",
+          "expected_answer": "singer, keyboardist, guitarist, songwriter, producer",
+          "support_sets": [
+            [
+              "d6s0"
+            ]
+          ],
+          "depends_on": [],
+          "unit_id": "u1",
+          "necessary": false
+        },
+        {
+          "description": "musical occupation of Gerry Marsden",
+          "expected_answer": "musician",
+          "support_sets": [
+            [
+              "d10s0"
+            ]
+          ],
+          "depends_on": [],
+          "unit_id": "u2",
+          "necessary": false
+        },
+        {
+          "description": "Are Daryl Hall and Gerry Marsden both musicians?",
+          "expected_answer": "yes",
+          "support_sets": [
+            []
+          ],
+          "depends_on": [
+            "u1",
+            "u2"
+          ],
+          "unit_id": "u3",
+          "necessary": true
+        }
+      ],
+      "revision": {
+        "original_sample_id": "hotpotqa_5a8c5569554299240d9c2126",
+        "disposition": "retained",
+        "original_review_note": "- Singer and instrumentalist roles explicitly establish work as a musician."
+      }
+    },
+    {
+      "question_number": 208,
+      "sample_id": "hotpotqa_5a8cd381554299653c1aa12b",
+      "status": "draft",
+      "question_type": "comparison",
+      "review_flags": [],
+      "notes": [
+        "已检查d10s0–d10s3的Waugh介绍，没有逃离纳粹的信息；历史事件不能用职业遗漏排除。补候选unit但仅启用Freud正向链路。"
+      ],
+      "units": [
+        {
+          "description": "whether Sigmund Freud left to escape the Nazis",
+          "expected_answer": "yes",
+          "support_sets": [
+            [
+              "d4s5"
+            ]
+          ],
+          "depends_on": [],
+          "necessary": false,
+          "unit_id": "u1"
+        },
+        {
+          "description": "whether Evelyn Waugh left to escape the Nazis",
+          "expected_answer": "no",
+          "support_sets": [],
+          "depends_on": [],
+          "necessary": false,
+          "unit_id": "u2"
+        },
+        {
+          "description": "who had to escape nazis, Sigmund Freud or Evelyn Waugh?",
+          "expected_answer": "Sigmund Freud",
+          "support_sets": [
+            []
+          ],
+          "depends_on": [
+            "u1",
+            "u2"
+          ],
+          "necessary": true,
+          "by_presupposition": true,
+          "presupposition_sets": [
+            [
+              "d4s5"
+            ]
+          ],
+          "unit_id": "u3"
+        }
+      ],
+      "revision": {
+        "original_sample_id": "hotpotqa_5a8cd381554299653c1aa12b",
+        "disposition": "adjusted",
+        "original_review_note": "你需要看一下是否有对另一位候选的描述\n\n- Freud is the explicit positive match among two named candidates. Do not infer a negative fact about Waugh from the titles of his novels."
+      }
+    },
+    {
+      "question_number": 209,
+      "sample_id": "hotpotqa_5a8d50fb55429941ae14dfa2",
+      "status": "draft",
+      "question_type": "bridge",
+      "review_flags": [],
+      "notes": [
+        "保留两跳。铁路名称含Bodie不等于题干明确给出终点；d5s0仍是确认ghost-town terminus所需证据，不能仅按名称跳过。"
+      ],
+      "units": [
+        {
+          "description": "ghost-town terminus of the Bodie and Benton Railway",
+          "expected_answer": "Bodie",
+          "support_sets": [
+            [
+              "d5s0"
+            ]
+          ],
+          "depends_on": [],
+          "unit_id": "u1",
+          "necessary": false
+        },
+        {
+          "description": "distance between {u1} and Lake Tahoe",
+          "expected_answer": "75 mi",
+          "support_sets": [
+            [
+              "d3s0"
+            ]
+          ],
+          "depends_on": [
+            "u1"
+          ],
+          "unit_id": "u2",
+          "necessary": true
+        }
+      ],
+      "revision": {
+        "original_sample_id": "hotpotqa_5a8d50fb55429941ae14dfa2",
+        "disposition": "retained",
+        "original_review_note": "1. u1的答案是不是可以从题干里推出，这样只需要u2就可以了。2. 如果只要u2，是否符合拆词器规则"
+      }
+    },
+    {
+      "question_number": 210,
+      "sample_id": "hotpotqa_5adf8d5b5542995534e8c7e1",
+      "status": "draft",
+      "question_type": "bridge",
+      "units": [
+        {
+          "description": "winner of the 2016 Marrakesh ePrix",
+          "expected_answer": "Sébastien Buemi",
+          "support_sets": [
+            [
+              "d5s2"
+            ]
+          ],
+          "depends_on": [],
+          "necessary": false,
+          "unit_id": "u1"
+        },
+        {
+          "description": "birth year of {u1}",
+          "expected_answer": "1988",
+          "support_sets": [
+            [
+              "d7s0"
+            ]
+          ],
+          "depends_on": [
+            "u1"
+          ],
+          "necessary": true,
+          "unit_id": "u2"
+        }
+      ],
+      "review_flags": [],
+      "notes": [
+        "替换：producer不能直接等同impresario；按用户要求替换。 新题保留原source type，人工核对两条显式事实及答案。"
+      ],
+      "revision": {
+        "original_sample_id": "hotpotqa_5a8da81e554299068b959d7e",
+        "disposition": "replaced",
+        "original_review_note": "这道题的拆分逻辑是不是有问题，可以换一道\n\n- The impresario definition describes a role similar to a producer. It does not state that every producer is an impresario or that Bley held that role.\n- Source check: `producer_not_necessarily_impresario`."
+      }
+    }
+  ]
+}

@@ -1,0 +1,1539 @@
+{
+  "schema_version": "1.0",
+  "data_version": "eval-revised-v1",
+  "records": [
+    {
+      "question_number": 151,
+      "sample_id": "hotpotqa_5a7248665542990c210a40b1",
+      "status": "draft",
+      "question_type": "bridge",
+      "review_flags": [],
+      "notes": [
+        "无待处理note，保留原标注。"
+      ],
+      "units": [
+        {
+          "description": "club where Fred plays as a striker",
+          "expected_answer": "Atlético Mineiro",
+          "support_sets": [
+            [
+              "d5s0"
+            ]
+          ],
+          "depends_on": [],
+          "unit_id": "u1",
+          "necessary": false
+        },
+        {
+          "description": "English translation of the colloquial name of {u1}",
+          "expected_answer": "Rooster",
+          "support_sets": [
+            [
+              "d4s0"
+            ]
+          ],
+          "depends_on": [
+            "u1"
+          ],
+          "aliases": [
+            "Galo"
+          ],
+          "unit_id": "u2",
+          "necessary": true
+        }
+      ],
+      "revision": {
+        "original_sample_id": "hotpotqa_5a7248665542990c210a40b1",
+        "disposition": "retained",
+        "original_review_note": ""
+      }
+    },
+    {
+      "question_number": 152,
+      "sample_id": "hotpotqa_5a7336d05542992359bc3293",
+      "status": "draft",
+      "question_type": "single",
+      "review_flags": [],
+      "notes": [
+        "题干已点名美术馆，删除画作桥接；新增d10s0、d3s2备选。",
+        "题干澄清：Washington, D.C.不是州，改问城市，保留原题及源答案供追溯。"
+      ],
+      "units": [
+        {
+          "description": "location of the National Gallery of Art",
+          "expected_answer": "Washington, D.C.",
+          "support_sets": [
+            [
+              "d9s0"
+            ],
+            [
+              "d10s0"
+            ],
+            [
+              "d3s2"
+            ]
+          ],
+          "depends_on": [],
+          "necessary": true,
+          "aliases": [
+            "Washington DC"
+          ],
+          "unit_id": "u1"
+        }
+      ],
+      "revision": {
+        "original_sample_id": "hotpotqa_5a7336d05542992359bc3293",
+        "disposition": "adjusted",
+        "original_review_note": "- **🚩 逻辑审核（2026-11-11）[中]：** 题干已点名 National Gallery of Art，u2（所在地）不需要经过画作这一跳：`d9s0` 直接写了 Washington, D.C.，但 u2 依赖 u1，要等 `d1s0`+`d1s1` 到达（属于题干前提，见 guide Exception 3）。另外 u2 漏了备选证据：`d10s0`、`d3s2` 都写了该美术馆在 Washington, D.C.。\n\n- The source says Washington, D.C. The question calls it a state.\n- Source check: `question_calls_district_a_state`.\n- 修改：既然题干已经提及了美术馆信息，是否可以拆分成一个unit，此外，把备选证据加上"
+      }
+    },
+    {
+      "question_number": 153,
+      "sample_id": "hotpotqa_5a879ab05542996e4f30887e",
+      "status": "draft",
+      "question_type": "bridge",
+      "units": [
+        {
+          "description": "hotel company associated with the Oberoi family",
+          "expected_answer": "The Oberoi Group",
+          "support_sets": [
+            [
+              "d2s0"
+            ]
+          ],
+          "depends_on": [],
+          "necessary": false,
+          "unit_id": "u1"
+        },
+        {
+          "description": "city of the head office of {u1}",
+          "expected_answer": "Delhi",
+          "support_sets": [
+            [
+              "d7s0"
+            ]
+          ],
+          "depends_on": [
+            "u1"
+          ],
+          "necessary": true,
+          "unit_id": "u2"
+        }
+      ],
+      "review_flags": [],
+      "notes": [
+        "替换：u1不唯一且d10s3未给SexyBack第一名；这是桥接定位和关键排名缺证据，不能据源答案补造。 新题保留原source type，人工核对两条显式事实及答案。"
+      ],
+      "revision": {
+        "original_sample_id": "hotpotqa_5a7344e95542991f9a20c6ce",
+        "disposition": "replaced",
+        "original_review_note": "- **🚩 逻辑审核（2026-11-11）[中]：** u1 是事后挑出的：原文里出现了专辑 FutureSex/LoveSounds 的三首歌（`d8s0` SexyBack、`d3s3` My Love、`d6s0` FutureSex/LoveSound），u1 选 SexyBack 只是因为 `d10s3`，而 u1 并没有引用 `d10s3`。现有 flag 只覆盖了 u2。\n\n- Rudebox d10s3 gives its number-four position but does not give the number-one rank to SexyBack.\n- Source check: `chart_number_one_not_established`.\n- 讲一下这道题属于什么类型的问题，我没太看懂，现在的文档里是不是没有正确答案，应该如何修改"
+      }
+    },
+    {
+      "question_number": 154,
+      "sample_id": "hotpotqa_5a734acf5542991f9a20c6ec",
+      "status": "draft",
+      "question_type": "comparison",
+      "review_flags": [],
+      "notes": [
+        "无待处理note，保留原标注。"
+      ],
+      "units": [
+        {
+          "description": "date of birth of Shirley Manson",
+          "expected_answer": "26 August 1966",
+          "support_sets": [
+            [
+              "d5s0"
+            ]
+          ],
+          "depends_on": [],
+          "unit_id": "u1",
+          "necessary": false
+        },
+        {
+          "description": "date of birth of Jim Kerr",
+          "expected_answer": "9 July 1959",
+          "support_sets": [
+            [
+              "d9s0"
+            ]
+          ],
+          "depends_on": [],
+          "unit_id": "u2",
+          "necessary": false
+        },
+        {
+          "description": "Which singer is younger, Shirley Manson or Jim Kerr?",
+          "expected_answer": "Shirley Ann Manson",
+          "support_sets": [
+            []
+          ],
+          "depends_on": [
+            "u1",
+            "u2"
+          ],
+          "unit_id": "u3",
+          "necessary": true
+        }
+      ],
+      "revision": {
+        "original_sample_id": "hotpotqa_5a734acf5542991f9a20c6ec",
+        "disposition": "retained",
+        "original_review_note": ""
+      }
+    },
+    {
+      "question_number": 155,
+      "sample_id": "hotpotqa_5a738b855542992d56e7e363",
+      "status": "draft",
+      "question_type": "comparison",
+      "review_flags": [
+        "explicit_local_annotation_convention"
+      ],
+      "notes": [
+        "按用户明确口径，用d4s1的1861支持u2；u3继续按年份比较。",
+        "本题局部约定：按用户note，本题将founding year作为opening date；不推广到其他题。"
+      ],
+      "units": [
+        {
+          "description": "opening year of St. Elizabeths Hospital",
+          "expected_answer": "1855",
+          "support_sets": [
+            [
+              "d8s0"
+            ]
+          ],
+          "depends_on": [],
+          "unit_id": "u1",
+          "necessary": false
+        },
+        {
+          "description": "opening year of Providence Hospital",
+          "expected_answer": "1861",
+          "support_sets": [
+            [
+              "d4s1"
+            ]
+          ],
+          "depends_on": [],
+          "unit_id": "u2",
+          "necessary": false
+        },
+        {
+          "description": "Which hospital opened first, St. Elizabeths Hospital or Providence Hospital?",
+          "expected_answer": "St. Elizabeths Hospital",
+          "support_sets": [
+            []
+          ],
+          "depends_on": [
+            "u1",
+            "u2"
+          ],
+          "unit_id": "u3",
+          "necessary": true
+        }
+      ],
+      "revision": {
+        "original_sample_id": "hotpotqa_5a738b855542992d56e7e363",
+        "disposition": "adjusted",
+        "original_review_note": "- Providence d4s1 gives its founding year, not an explicit opening date.\n- Source check: `opening_vs_founding`.\n- 修改：我觉得可以把founding year算作opening date。这样unit2才有答案。"
+      }
+    },
+    {
+      "question_number": 156,
+      "sample_id": "hotpotqa_5a7a02235542996c55b2dcd3",
+      "status": "draft",
+      "question_type": "comparison",
+      "units": [
+        {
+          "description": "birth year of Pablo Trapero",
+          "expected_answer": "1971",
+          "support_sets": [
+            [
+              "d3s0"
+            ]
+          ],
+          "depends_on": [],
+          "necessary": false,
+          "unit_id": "u1"
+        },
+        {
+          "description": "birth year of Aleksander Ford",
+          "expected_answer": "1908",
+          "support_sets": [
+            [
+              "d9s0"
+            ]
+          ],
+          "depends_on": [],
+          "necessary": false,
+          "unit_id": "u2"
+        },
+        {
+          "description": "Who was born first, Pablo Trapero or Aleksander Ford?",
+          "expected_answer": "Aleksander Ford",
+          "support_sets": [
+            []
+          ],
+          "depends_on": [
+            "u1",
+            "u2"
+          ],
+          "necessary": true,
+          "unit_id": "u3"
+        }
+      ],
+      "review_flags": [],
+      "notes": [
+        "替换：山峰被错标为subrange；按用户要求替换。 新题保留原source type，人工核对两条显式事实及答案。"
+      ],
+      "revision": {
+        "original_sample_id": "hotpotqa_5a74325055429979e28828b3",
+        "disposition": "replaced",
+        "original_review_note": "- **🚩 逻辑审核（2026-11-11）[高]：** 结论无法由两个事实值推出：u1 = 'high peak of the Baltoro Muztagh'，u2 = 'high peak of the Hispar Muztagh'，两者不同。源答案 'subrange of the Karakoram range' 描述的是山脉的分支，不是山峰（`d10s0`、`d1s0`）。共同值应为 'high peaks in the Karakoram range'，源答案看起来有误。\n\n- The named entities are peaks. The subranges are Baltoro Muztagh and Hispar Muztagh. Do not transfer the subrange category to the peaks.\n- Source check: `source_answer_category_mismatch`.\n- 修改：这道题不合理，从训练集中重新换一道构建。"
+      }
+    },
+    {
+      "question_number": 157,
+      "sample_id": "hotpotqa_5a74b66a55429929fddd84cb",
+      "status": "draft",
+      "question_type": "comparison",
+      "review_flags": [],
+      "notes": [
+        "The coarse 1920s period is enough to compare against 1859.",
+        "复核后保留原标注；原note为说明或未发现需要修改的证据/依赖问题。"
+      ],
+      "units": [
+        {
+          "description": "birth period of Lee Grant",
+          "expected_answer": "October 31 during the mid 1920s",
+          "support_sets": [
+            [
+              "d7s0"
+            ]
+          ],
+          "depends_on": [],
+          "unit_id": "u1",
+          "necessary": false
+        },
+        {
+          "description": "date of birth of Colin Campbell",
+          "expected_answer": "11 October 1859",
+          "support_sets": [
+            [
+              "d9s0"
+            ]
+          ],
+          "depends_on": [],
+          "unit_id": "u2",
+          "necessary": false
+        },
+        {
+          "description": "Was Lee Grant or Colin Campbell born first?",
+          "expected_answer": "James Colin Campbell",
+          "support_sets": [
+            []
+          ],
+          "depends_on": [
+            "u1",
+            "u2"
+          ],
+          "unit_id": "u3",
+          "necessary": true
+        }
+      ],
+      "revision": {
+        "original_sample_id": "hotpotqa_5a74b66a55429929fddd84cb",
+        "disposition": "retained",
+        "original_review_note": "- The coarse 1920s period is enough to compare against 1859."
+      }
+    },
+    {
+      "question_number": 158,
+      "sample_id": "hotpotqa_5a74bc1555429929fddd84dd",
+      "status": "draft",
+      "question_type": "comparison",
+      "review_flags": [],
+      "notes": [
+        "d1s3写的是Khan Kluay，因此补入u2而非u1；另补u2的d6s2与u1的d10s1。"
+      ],
+      "units": [
+        {
+          "description": "film year of Fantastic Mr. Fox",
+          "expected_answer": "2009",
+          "support_sets": [
+            [
+              "d9s0"
+            ],
+            [
+              "d10s1"
+            ]
+          ],
+          "depends_on": [],
+          "unit_id": "u1",
+          "necessary": false
+        },
+        {
+          "description": "film year of Khan Kluay",
+          "expected_answer": "2006",
+          "support_sets": [
+            [
+              "d4s0"
+            ],
+            [
+              "d1s3"
+            ],
+            [
+              "d6s2"
+            ]
+          ],
+          "depends_on": [],
+          "unit_id": "u2",
+          "necessary": false
+        },
+        {
+          "description": "Which movie was released first, Fantastic Mr. Fox or Khan Kluay?",
+          "expected_answer": "Khan Kluay",
+          "support_sets": [
+            []
+          ],
+          "depends_on": [
+            "u1",
+            "u2"
+          ],
+          "unit_id": "u3",
+          "necessary": true
+        }
+      ],
+      "revision": {
+        "original_sample_id": "hotpotqa_5a74bc1555429929fddd84dd",
+        "disposition": "adjusted",
+        "original_review_note": "检查一下d1s3 是否也是u1的support"
+      }
+    },
+    {
+      "question_number": 159,
+      "sample_id": "hotpotqa_5a74c1c05542996c70cfadd8",
+      "status": "draft",
+      "question_type": "bridge",
+      "review_flags": [],
+      "notes": [
+        "题干澄清：将creator改为popularly attributed，避免把原文明确存疑的归属写成事实。",
+        "将人名答案改为Betsy Ross flag；用d9s0+d9s2支持旗帜及13颗星，保留桥梁人物定位。"
+      ],
+      "units": [
+        {
+          "description": "person after whom the bridge was named",
+          "expected_answer": "Betsy Ross",
+          "support_sets": [
+            [
+              "d2s0",
+              "d2s1"
+            ]
+          ],
+          "depends_on": [],
+          "unit_id": "u1",
+          "necessary": false
+        },
+        {
+          "description": "thirteen-star flag attributed to {u1}",
+          "expected_answer": "Betsy Ross flag",
+          "support_sets": [
+            [
+              "d9s0",
+              "d9s2"
+            ]
+          ],
+          "depends_on": [
+            "u1"
+          ],
+          "unit_id": "u2",
+          "necessary": true
+        }
+      ],
+      "revision": {
+        "original_sample_id": "hotpotqa_5a74c1c05542996c70cfadd8",
+        "disposition": "adjusted",
+        "original_review_note": "- **🚩 逻辑审核（2026-11-11）[高]：** u2 的描述是一面旗（'thirteen-star flag attributed to {u1}'），取值却是人名 'Betsy Ross'。`d9s0` + `d9s2` 明确写了 Betsy Ross flag 及其 13 颗星，support 却是 `[]`。描述、取值和题目（'What flag ...'）三者对不上。\n\n- The flag article says the creator attribution is very likely incorrect. The source answer names a person although the question asks for a flag. Review the premise and answer form.\n- Source check: `question_premise_conflicts_with_source`.\n- Source check: `source_answer_is_person_name`.\n- 修改：可以把答案也改成Betsy Ross flag，补充u2的support"
+      }
+    },
+    {
+      "question_number": 160,
+      "sample_id": "hotpotqa_5a7577145542996c70cfaf03",
+      "status": "draft",
+      "question_type": "comparison",
+      "review_flags": [],
+      "notes": [
+        "Compare the stated areas after unit conversion.",
+        "复核后保留原标注；原note为说明或未发现需要修改的证据/依赖问题。"
+      ],
+      "units": [
+        {
+          "description": "area of Timanfaya National Park",
+          "expected_answer": "51.07 km2",
+          "support_sets": [
+            [
+              "d10s2"
+            ]
+          ],
+          "depends_on": [],
+          "unit_id": "u1",
+          "necessary": false
+        },
+        {
+          "description": "area of Sierra Nevada National Park",
+          "expected_answer": "85,883 hectares",
+          "support_sets": [
+            [
+              "d5s2"
+            ]
+          ],
+          "depends_on": [],
+          "unit_id": "u2",
+          "necessary": false
+        },
+        {
+          "description": "Which park is larger, Timanfaya National Park or Sierra Nevada National Park?",
+          "expected_answer": "Sierra Nevada National Park",
+          "support_sets": [
+            []
+          ],
+          "depends_on": [
+            "u1",
+            "u2"
+          ],
+          "unit_id": "u3",
+          "necessary": true
+        }
+      ],
+      "revision": {
+        "original_sample_id": "hotpotqa_5a7577145542996c70cfaf03",
+        "disposition": "retained",
+        "original_review_note": "- Compare the stated areas after unit conversion."
+      }
+    },
+    {
+      "question_number": 161,
+      "sample_id": "hotpotqa_5a75e7b255429976ec32bc95",
+      "status": "draft",
+      "question_type": "comparison",
+      "review_flags": [],
+      "notes": [
+        "每个候选各建一个非necessary事实unit；Qwirkle的定义支持类别排除，结论支持确认和排除两条预设链路。"
+      ],
+      "units": [
+        {
+          "description": "whether Strange Synergy is a card game published by Steve Jackson Games",
+          "expected_answer": "yes",
+          "support_sets": [
+            [
+              "d5s0"
+            ]
+          ],
+          "depends_on": [],
+          "necessary": false,
+          "unit_id": "u1"
+        },
+        {
+          "description": "whether Qwirkle is a card game published by Steve Jackson Games",
+          "expected_answer": "no",
+          "support_sets": [
+            [
+              "d2s0"
+            ]
+          ],
+          "depends_on": [],
+          "necessary": false,
+          "by_omission": true,
+          "unit_id": "u2"
+        },
+        {
+          "description": "Which games, Strange Synergy or Qwirkle,  is a card game published by Steve Jackson Games?",
+          "expected_answer": "Strange Synergy",
+          "support_sets": [
+            []
+          ],
+          "depends_on": [
+            "u1",
+            "u2"
+          ],
+          "necessary": true,
+          "by_presupposition": true,
+          "presupposition_sets": [
+            [
+              "d5s0"
+            ],
+            [
+              "d2s0"
+            ]
+          ],
+          "unit_id": "u3"
+        }
+      ],
+      "revision": {
+        "original_sample_id": "hotpotqa_5a75e7b255429976ec32bc95",
+        "disposition": "adjusted",
+        "original_review_note": "- **🚩 逻辑审核（2026-11-11）[中]：** 预设结论只依赖 Strange Synergy 一边的事实，Qwirkle 一边的证据永远无法判定结论。`d2s0`（Qwirkle：'tile-based game ... published by MindWare'）是定义性介绍，按 guide v1.3 可以用 by_omission 排除 Qwirkle。SFT 数据对这类题是每个候选各建一个事实 unit。\n\n- The question names exactly two candidates and presupposes a unique answer. Strange Synergy explicitly meets the full condition; no negative fact about Qwirkle is assumed from silence.\n- 看一下拆词器对于这种题是怎么处理的。"
+      }
+    },
+    {
+      "question_number": 162,
+      "sample_id": "hotpotqa_5a773ae055429972597f14b0",
+      "status": "draft",
+      "question_type": "bridge",
+      "review_flags": [],
+      "notes": [
+        "先按题干姓氏定位女演员，再验证出演Arul；删除提前泄漏Jyothika的描述。"
+      ],
+      "units": [
+        {
+          "description": "actress with the surname Saravanan",
+          "expected_answer": "Jyothika Saravanan",
+          "support_sets": [
+            [
+              "d3s0"
+            ]
+          ],
+          "depends_on": [],
+          "necessary": false,
+          "aliases": [
+            "Jyothika"
+          ],
+          "unit_id": "u1"
+        },
+        {
+          "description": "actress {u1} who starred in the 2004 Tamil film Arul",
+          "expected_answer": "Jyothika Saravanan",
+          "support_sets": [
+            [
+              "d5s0"
+            ]
+          ],
+          "depends_on": [
+            "u1"
+          ],
+          "necessary": true,
+          "aliases": [
+            "Jyothika"
+          ],
+          "unit_id": "u2"
+        }
+      ],
+      "revision": {
+        "original_sample_id": "hotpotqa_5a773ae055429972597f14b0",
+        "disposition": "adjusted",
+        "original_review_note": "修改：能不能换一下顺序，u1判断对应Full name的女演员，u2判断是否这个人starred\n\n- **🚩 逻辑审核（2026-11-11）[中]：** u1 的描述 'actress credited as Jyothika in Arul' 本身就写出了答案。演员表 `d5s0` 没有说明谁是女演员，选 Jyothika 是靠 `d3s0` 的姓氏倒推的（事后挑选）。"
+      }
+    },
+    {
+      "question_number": 163,
+      "sample_id": "hotpotqa_5a775bd65542993569682d6b",
+      "status": "draft",
+      "question_type": "bridge",
+      "review_flags": [],
+      "notes": [
+        "已检索完整上下文；d3s1只说明Hawking创办中心，不能替代Director of Research证据。保留d5s0及现有链路。"
+      ],
+      "units": [
+        {
+          "description": "classmate of Tony Hendra",
+          "expected_answer": "Stephen Hawking",
+          "support_sets": [
+            [
+              "d4s1"
+            ]
+          ],
+          "depends_on": [],
+          "unit_id": "u1",
+          "necessary": false
+        },
+        {
+          "description": "classmate {u1} who holds the stated research director role",
+          "expected_answer": "Stephen Hawking",
+          "support_sets": [
+            [
+              "d5s0"
+            ]
+          ],
+          "depends_on": [
+            "u1"
+          ],
+          "aliases": [
+            "Stephen William Hawking"
+          ],
+          "unit_id": "u2",
+          "necessary": true
+        }
+      ],
+      "revision": {
+        "original_sample_id": "hotpotqa_5a775bd65542993569682d6b",
+        "disposition": "retained",
+        "original_review_note": "是否还有别的文档可以support u2，检查一下"
+      }
+    },
+    {
+      "question_number": 164,
+      "sample_id": "hotpotqa_5a77769e5542997042120a65",
+      "status": "draft",
+      "question_type": "single",
+      "review_flags": [],
+      "notes": [
+        "Alex the Dog已在题干出现，删除Spuds MacKenzie桥接；d9s0直接定位品牌。"
+      ],
+      "units": [
+        {
+          "description": "brewer whose advertising mascot was Alex the Dog",
+          "expected_answer": "Stroh's",
+          "support_sets": [
+            [
+              "d9s0"
+            ]
+          ],
+          "depends_on": [],
+          "necessary": true,
+          "aliases": [
+            "Stroh"
+          ],
+          "unit_id": "u1"
+        }
+      ],
+      "revision": {
+        "original_sample_id": "hotpotqa_5a77769e5542997042120a65",
+        "disposition": "adjusted",
+        "original_review_note": "题干中如果已经说明u1，可以把unit简化成一个，不需要依赖关系。\n\n- **🚩 逻辑审核（2026-11-11）[中]：** 题干已点名 Alex the Dog，`d9s0`（'Alex the Dog was the advertising mascot for Stroh's beer in the 1980s'）可以直接回答。Spuds MacKenzie 这一跳（u1，`d5s0`）不需要，但 u2 依赖它。\n\n- Alex is explicitly described as the precursor to Budweiser's mascot. The competition wording needs review.\n- Source check: `competition_relation_wording`."
+      }
+    },
+    {
+      "question_number": 165,
+      "sample_id": "hotpotqa_5a77a41a5542997042120ab9",
+      "status": "draft",
+      "question_type": "bridge",
+      "review_flags": [],
+      "notes": [
+        "d9s0单独没有magic主题，不能独自定位电影；增加d9s0+d9s1链路，并补d7s2的2006作为年份备选。"
+      ],
+      "units": [
+        {
+          "description": "magic-themed drama linked to Christopher Nolan",
+          "expected_answer": "The Prestige",
+          "support_sets": [
+            [
+              "d7s2",
+              "d9s0"
+            ],
+            [
+              "d9s0",
+              "d9s1"
+            ]
+          ],
+          "depends_on": [],
+          "unit_id": "u1",
+          "necessary": false
+        },
+        {
+          "description": "film year of {u1}",
+          "expected_answer": "2006",
+          "support_sets": [
+            [
+              "d9s0"
+            ],
+            [
+              "d7s2"
+            ]
+          ],
+          "depends_on": [
+            "u1"
+          ],
+          "unit_id": "u2",
+          "necessary": true
+        }
+      ],
+      "revision": {
+        "original_sample_id": "hotpotqa_5a77a41a5542997042120ab9",
+        "disposition": "adjusted",
+        "original_review_note": "d9s0是可以同时回答u1，u2吗，核实当前的依赖关系是否正确。"
+      }
+    },
+    {
+      "question_number": 166,
+      "sample_id": "hotpotqa_5a7929c8554299029c4b5f11",
+      "status": "draft",
+      "question_type": "comparison",
+      "review_flags": [],
+      "notes": [
+        "补建两候选事实unit，保留由Black Mouth Cur的美国起源排除得到答案的链路。d5s0是另一种传统牧羊犬群体，d2s0是German Shepherd，均不强行作为目标变种的直接起源证据；u1仍UNRESOLVED但不阻塞结论。"
+      ],
+      "units": [
+        {
+          "description": "whether Old German Shepherd Dog has origins outside the United States",
+          "expected_answer": "yes",
+          "support_sets": [],
+          "depends_on": [],
+          "necessary": false,
+          "unit_id": "u1"
+        },
+        {
+          "description": "whether Black Mouth Cur has origins outside the United States",
+          "expected_answer": "no",
+          "support_sets": [
+            [
+              "d8s0"
+            ]
+          ],
+          "depends_on": [],
+          "necessary": false,
+          "unit_id": "u2"
+        },
+        {
+          "description": "Which breed of dog has origins outside of the United States, Old German Shepherd Dog or Black Mouth Cur?",
+          "expected_answer": "Old German Shepherd Dog",
+          "support_sets": [
+            []
+          ],
+          "depends_on": [
+            "u1",
+            "u2"
+          ],
+          "necessary": true,
+          "by_presupposition": true,
+          "presupposition_sets": [
+            [
+              "d8s0"
+            ]
+          ],
+          "unit_id": "u3"
+        }
+      ],
+      "revision": {
+        "original_sample_id": "hotpotqa_5a7929c8554299029c4b5f11",
+        "disposition": "adjusted",
+        "original_review_note": "u2也可以被直接推出来，不一定是necessary，也不依赖u1。此外，观察拆词器对于这道题的划分方法。\n\n- **🚩 逻辑审核（2026-11-11）[中]：** 预设结论只依赖排除 Black Mouth Cur 这一边。另一边其实有证据：`d5s0` 写 old German shepherd dogs 'from Germany'（`d2s0` 也写了 German Shepherd 'originated in Germany'）。现有 Notes 说只有名字可用，请判断 `d5s0` 能否确认 Old German Shepherd Dog。\n\n- The named-candidate question allows exclusion of Black Mouth Cur from its explicit U.S. origin. The German name alone is not origin evidence for the other candidate."
+      }
+    },
+    {
+      "question_number": 167,
+      "sample_id": "hotpotqa_5a79cd665542994bb94570bf",
+      "status": "draft",
+      "question_type": "comparison",
+      "review_flags": [],
+      "notes": [
+        "出生日期比较符合规则；补齐题干艺名Teru及全名别名，避免只接受Teruhiko。"
+      ],
+      "units": [
+        {
+          "description": "date of birth of Teru",
+          "expected_answer": "June 8, 1971",
+          "support_sets": [
+            [
+              "d3s0"
+            ]
+          ],
+          "depends_on": [],
+          "unit_id": "u1",
+          "necessary": false
+        },
+        {
+          "description": "date of birth of Mike Shinoda",
+          "expected_answer": "February 11, 1977",
+          "support_sets": [
+            [
+              "d4s0"
+            ]
+          ],
+          "depends_on": [],
+          "unit_id": "u2",
+          "necessary": false
+        },
+        {
+          "description": "Who was born first, Teru or Mike Shinoda?",
+          "expected_answer": "Teruhiko",
+          "support_sets": [
+            []
+          ],
+          "depends_on": [
+            "u1",
+            "u2"
+          ],
+          "unit_id": "u3",
+          "necessary": true,
+          "aliases": [
+            "Teru",
+            "TERU",
+            "Teruhiko Kobashi"
+          ]
+        }
+      ],
+      "revision": {
+        "original_sample_id": "hotpotqa_5a79cd665542994bb94570bf",
+        "disposition": "adjusted",
+        "original_review_note": "是否符合拆词器逻辑"
+      }
+    },
+    {
+      "question_number": 168,
+      "sample_id": "hotpotqa_5a7a1d305542990783324e66",
+      "status": "draft",
+      "question_type": "comparison",
+      "review_flags": [],
+      "notes": [
+        "无待处理note，保留原标注。"
+      ],
+      "units": [
+        {
+          "description": "defining profession descriptor of Tom Johnston",
+          "expected_answer": "American musician",
+          "support_sets": [
+            [
+              "d9s0"
+            ]
+          ],
+          "depends_on": [],
+          "unit_id": "u1",
+          "necessary": false
+        },
+        {
+          "description": "defining profession descriptor of Daryl Palumbo",
+          "expected_answer": "American musician",
+          "support_sets": [
+            [
+              "d7s0"
+            ]
+          ],
+          "depends_on": [],
+          "unit_id": "u2",
+          "necessary": false
+        },
+        {
+          "description": "What are the professions of Tom Johnston and Daryl Palumbo?",
+          "expected_answer": "American musician",
+          "support_sets": [
+            []
+          ],
+          "depends_on": [
+            "u1",
+            "u2"
+          ],
+          "unit_id": "u3",
+          "necessary": true
+        }
+      ],
+      "revision": {
+        "original_sample_id": "hotpotqa_5a7a1d305542990783324e66",
+        "disposition": "retained",
+        "original_review_note": ""
+      }
+    },
+    {
+      "question_number": 169,
+      "sample_id": "hotpotqa_5a7ae38c5542992d025e6721",
+      "status": "draft",
+      "question_type": "comparison",
+      "review_flags": [],
+      "notes": [
+        "Both were born in 1896; the death years make the lifespan ordering unambiguous.",
+        "复核后保留原标注；原note为说明或未发现需要修改的证据/依赖问题。"
+      ],
+      "units": [
+        {
+          "description": "lifespan of Teinosuke Kinugasa",
+          "expected_answer": "1 January 1896 to 26 February 1982",
+          "support_sets": [
+            [
+              "d8s0"
+            ]
+          ],
+          "depends_on": [],
+          "unit_id": "u1",
+          "necessary": false
+        },
+        {
+          "description": "lifespan of Don O. Newland",
+          "expected_answer": "1896 to 1951",
+          "support_sets": [
+            [
+              "d2s0"
+            ]
+          ],
+          "depends_on": [],
+          "unit_id": "u2",
+          "necessary": false
+        },
+        {
+          "description": "Who was older when they died, Teinosuke Kinugasa or Don O. Newland",
+          "expected_answer": "Teinosuke Kinugasa",
+          "support_sets": [
+            []
+          ],
+          "depends_on": [
+            "u1",
+            "u2"
+          ],
+          "unit_id": "u3",
+          "necessary": true
+        }
+      ],
+      "revision": {
+        "original_sample_id": "hotpotqa_5a7ae38c5542992d025e6721",
+        "disposition": "retained",
+        "original_review_note": "- Both were born in 1896; the death years make the lifespan ordering unambiguous."
+      }
+    },
+    {
+      "question_number": 170,
+      "sample_id": "hotpotqa_5a7b76735542997c3ec9719f",
+      "status": "draft",
+      "question_type": "comparison",
+      "review_flags": [],
+      "notes": [
+        "补建Kir事实unit，定义未记载饮用习惯，不能by_omission；Hot toddy正向证据独立完成结论。"
+      ],
+      "units": [
+        {
+          "description": "whether Hot toddy is traditionally drunk before bed",
+          "expected_answer": "yes",
+          "support_sets": [
+            [
+              "d1s1"
+            ]
+          ],
+          "depends_on": [],
+          "necessary": false,
+          "unit_id": "u1"
+        },
+        {
+          "description": "whether Kir is traditionally drunk before bed",
+          "expected_answer": "no",
+          "support_sets": [],
+          "depends_on": [],
+          "necessary": false,
+          "unit_id": "u2"
+        },
+        {
+          "description": "which is traditionally drunk before retiring to bed, Hot toddy or Kir?",
+          "expected_answer": "Hot toddy",
+          "support_sets": [
+            []
+          ],
+          "depends_on": [
+            "u1",
+            "u2"
+          ],
+          "necessary": true,
+          "by_presupposition": true,
+          "presupposition_sets": [
+            [
+              "d1s1"
+            ]
+          ],
+          "unit_id": "u3"
+        }
+      ],
+      "revision": {
+        "original_sample_id": "hotpotqa_5a7b76735542997c3ec9719f",
+        "disposition": "adjusted",
+        "original_review_note": "检查与是否一致拆词器逻辑\n\n- The question names two candidates and a unique answer. The positive Hot toddy evidence is enough; the Kir definition is not evidence of a negative habit."
+      }
+    },
+    {
+      "question_number": 171,
+      "sample_id": "hotpotqa_5a7b9f1f554299294a54aa2a",
+      "status": "draft",
+      "question_type": "comparison",
+      "review_flags": [],
+      "notes": [
+        "无待处理note，保留原标注。"
+      ],
+      "units": [
+        {
+          "description": "date of birth of Tony Kaye",
+          "expected_answer": "8 July 1952",
+          "support_sets": [
+            [
+              "d4s0"
+            ]
+          ],
+          "depends_on": [],
+          "unit_id": "u1",
+          "necessary": false
+        },
+        {
+          "description": "date of birth of Marc Webb",
+          "expected_answer": "August 31, 1974",
+          "support_sets": [
+            [
+              "d9s0"
+            ]
+          ],
+          "depends_on": [],
+          "unit_id": "u2",
+          "necessary": false
+        },
+        {
+          "description": "Which director was born more recently, Tony Kaye or Marc Webb?",
+          "expected_answer": "Marc Preston Webb",
+          "support_sets": [
+            []
+          ],
+          "depends_on": [
+            "u1",
+            "u2"
+          ],
+          "unit_id": "u3",
+          "necessary": true
+        }
+      ],
+      "revision": {
+        "original_sample_id": "hotpotqa_5a7b9f1f554299294a54aa2a",
+        "disposition": "retained",
+        "original_review_note": ""
+      }
+    },
+    {
+      "question_number": 172,
+      "sample_id": "hotpotqa_5a7bacf35542997c3ec9724b",
+      "status": "draft",
+      "question_type": "comparison",
+      "review_flags": [],
+      "notes": [
+        "无待处理note，保留原标注。"
+      ],
+      "units": [
+        {
+          "description": "date of birth of Jorge Amado",
+          "expected_answer": "10 August 1912",
+          "support_sets": [
+            [
+              "d1s0"
+            ]
+          ],
+          "depends_on": [],
+          "unit_id": "u1",
+          "necessary": false
+        },
+        {
+          "description": "date of birth of James Leo Herlihy",
+          "expected_answer": "February 27, 1927",
+          "support_sets": [
+            [
+              "d8s0"
+            ]
+          ],
+          "depends_on": [],
+          "unit_id": "u2",
+          "necessary": false
+        },
+        {
+          "description": "Who was born first, Jorge Amado or James Leo Herlihy?",
+          "expected_answer": "Jorge Leal Amado de Faria",
+          "support_sets": [
+            []
+          ],
+          "depends_on": [
+            "u1",
+            "u2"
+          ],
+          "unit_id": "u3",
+          "necessary": true
+        }
+      ],
+      "revision": {
+        "original_sample_id": "hotpotqa_5a7bacf35542997c3ec9724b",
+        "disposition": "retained",
+        "original_review_note": ""
+      }
+    },
+    {
+      "question_number": 173,
+      "sample_id": "hotpotqa_5a7c67c15542990527d55498",
+      "status": "draft",
+      "question_type": "bridge",
+      "review_flags": [],
+      "notes": [
+        "问题意思是“James Tully于1928年当选代表的选区，以谁命名？”d4s4先定位Barton，d2s1再给出Sir Edmund Barton，现有两跳正确。"
+      ],
+      "units": [
+        {
+          "description": "division James Tully represented after the 1928 election",
+          "expected_answer": "Barton",
+          "support_sets": [
+            [
+              "d4s4"
+            ]
+          ],
+          "depends_on": [],
+          "unit_id": "u1",
+          "necessary": false
+        },
+        {
+          "description": "person after whom {u1} was named",
+          "expected_answer": "Sir Edmund Barton",
+          "support_sets": [
+            [
+              "d2s1"
+            ]
+          ],
+          "depends_on": [
+            "u1"
+          ],
+          "unit_id": "u2",
+          "necessary": true
+        }
+      ],
+      "revision": {
+        "original_sample_id": "hotpotqa_5a7c67c15542990527d55498",
+        "disposition": "retained",
+        "original_review_note": "这个问题是什么意思"
+      }
+    },
+    {
+      "question_number": 174,
+      "sample_id": "hotpotqa_5a736bfa5542991f29ee2e03",
+      "status": "draft",
+      "question_type": "comparison",
+      "units": [
+        {
+          "description": "birth year of Glenn Hughes",
+          "expected_answer": "1951",
+          "support_sets": [
+            [
+              "d5s0"
+            ]
+          ],
+          "depends_on": [],
+          "necessary": false,
+          "unit_id": "u1"
+        },
+        {
+          "description": "birth year of Ross Lynch",
+          "expected_answer": "1995",
+          "support_sets": [
+            [
+              "d3s0"
+            ]
+          ],
+          "depends_on": [],
+          "necessary": false,
+          "unit_id": "u2"
+        },
+        {
+          "description": "Who is older Glenn Hughes or Ross Lynch?",
+          "expected_answer": "Glenn Hughes",
+          "support_sets": [
+            []
+          ],
+          "depends_on": [
+            "u1",
+            "u2"
+          ],
+          "necessary": true,
+          "unit_id": "u3"
+        }
+      ],
+      "review_flags": [],
+      "notes": [
+        "替换：只有城市，无南北方位或纬度；当前guide不允许隐含地理知识。 新题保留原source type，人工核对两条显式事实及答案。"
+      ],
+      "revision": {
+        "original_sample_id": "hotpotqa_5a7ca33f5542990527d554ee",
+        "disposition": "replaced",
+        "original_review_note": "检查该类型的题目与拆词器逻辑是否一致\n\n- The context gives cities but no latitude or relative north-south position. This ordering needs outside geographic knowledge.\n- Source check: `latitude_evidence_missing`."
+      }
+    },
+    {
+      "question_number": 175,
+      "sample_id": "hotpotqa_5a7d2afd5542995f4f402221",
+      "status": "draft",
+      "question_type": "comparison",
+      "review_flags": [],
+      "notes": [
+        "无待处理note，保留原标注。"
+      ],
+      "units": [
+        {
+          "description": "date of birth of Ferdi Taygan",
+          "expected_answer": "December 5, 1956",
+          "support_sets": [
+            [
+              "d3s0"
+            ]
+          ],
+          "depends_on": [],
+          "unit_id": "u1",
+          "necessary": false
+        },
+        {
+          "description": "date of birth of Mahesh Bhupathi",
+          "expected_answer": "7 June 1974",
+          "support_sets": [
+            [
+              "d4s0"
+            ]
+          ],
+          "depends_on": [],
+          "unit_id": "u2",
+          "necessary": false
+        },
+        {
+          "description": "Who is older, Ferdi Taygan or Mahesh Bhupathi?",
+          "expected_answer": "Ferdi Taygan",
+          "support_sets": [
+            []
+          ],
+          "depends_on": [
+            "u1",
+            "u2"
+          ],
+          "unit_id": "u3",
+          "necessary": true
+        }
+      ],
+      "revision": {
+        "original_sample_id": "hotpotqa_5a7d2afd5542995f4f402221",
+        "disposition": "retained",
+        "original_review_note": ""
+      }
+    },
+    {
+      "question_number": 176,
+      "sample_id": "hotpotqa_5a7da9ae5542995f4f4022b1",
+      "status": "draft",
+      "question_type": "comparison",
+      "review_flags": [],
+      "notes": [
+        "无待处理note，保留原标注。"
+      ],
+      "units": [
+        {
+          "description": "first marketed year of Downfall",
+          "expected_answer": "1970",
+          "support_sets": [
+            [
+              "d4s0"
+            ]
+          ],
+          "depends_on": [],
+          "unit_id": "u1",
+          "necessary": false
+        },
+        {
+          "description": "game year of Dark Tower",
+          "expected_answer": "1981",
+          "support_sets": [
+            [
+              "d2s0"
+            ]
+          ],
+          "depends_on": [],
+          "unit_id": "u2",
+          "necessary": false
+        },
+        {
+          "description": "What is older, Downfall or Dark Tower?",
+          "expected_answer": "Downfall",
+          "support_sets": [
+            []
+          ],
+          "depends_on": [
+            "u1",
+            "u2"
+          ],
+          "unit_id": "u3",
+          "necessary": true
+        }
+      ],
+      "revision": {
+        "original_sample_id": "hotpotqa_5a7da9ae5542995f4f4022b1",
+        "disposition": "retained",
+        "original_review_note": ""
+      }
+    },
+    {
+      "question_number": 177,
+      "sample_id": "hotpotqa_5a7e08305542995f4f4023ab",
+      "status": "draft",
+      "question_type": "comparison",
+      "review_flags": [],
+      "notes": [
+        "无待处理note，保留原标注。"
+      ],
+      "units": [
+        {
+          "description": "birth year of Al-Karaji",
+          "expected_answer": "c. 953",
+          "support_sets": [
+            [
+              "d2s0"
+            ]
+          ],
+          "depends_on": [],
+          "unit_id": "u1",
+          "necessary": false
+        },
+        {
+          "description": "date of birth of Masatoshi Gündüz Ikeda",
+          "expected_answer": "25 February 1926",
+          "support_sets": [
+            [
+              "d9s0"
+            ]
+          ],
+          "depends_on": [],
+          "unit_id": "u2",
+          "necessary": false
+        },
+        {
+          "description": "Who was born first Al-Karaji or Masatoshi Gündüz Ikeda?",
+          "expected_answer": "Abū Bakr ibn Muḥammad ibn al Ḥusayn al-Karajī",
+          "support_sets": [
+            []
+          ],
+          "depends_on": [
+            "u1",
+            "u2"
+          ],
+          "unit_id": "u3",
+          "necessary": true
+        }
+      ],
+      "revision": {
+        "original_sample_id": "hotpotqa_5a7e08305542995f4f4023ab",
+        "disposition": "retained",
+        "original_review_note": ""
+      }
+    },
+    {
+      "question_number": 178,
+      "sample_id": "hotpotqa_5a7e513a5542994959419996",
+      "status": "draft",
+      "question_type": "bridge",
+      "review_flags": [],
+      "notes": [
+        "无待处理note，保留原标注。"
+      ],
+      "units": [
+        {
+          "description": "suburb where Ghana Police College is located",
+          "expected_answer": "Tesano",
+          "support_sets": [
+            [
+              "d2s0"
+            ]
+          ],
+          "depends_on": [],
+          "unit_id": "u1",
+          "necessary": false
+        },
+        {
+          "description": "other school with its main campus in {u1}",
+          "expected_answer": "Ghana Technology University College",
+          "support_sets": [
+            [
+              "d9s2"
+            ]
+          ],
+          "depends_on": [
+            "u1"
+          ],
+          "unit_id": "u2",
+          "necessary": true
+        }
+      ],
+      "revision": {
+        "original_sample_id": "hotpotqa_5a7e513a5542994959419996",
+        "disposition": "retained",
+        "original_review_note": ""
+      }
+    },
+    {
+      "question_number": 179,
+      "sample_id": "hotpotqa_5a80a7f6554299485f598680",
+      "status": "draft",
+      "question_type": "single",
+      "review_flags": [],
+      "notes": [
+        "补充d3s5和d10s0：均联系Neiman Marcus、Dallas及1907；不使用只说明现在总部的d8s0。"
+      ],
+      "units": [
+        {
+          "description": "Abraham Lincoln Neiman and his wife Carrie Marcus Neiman cofounded Neiman Marcus with Carrie's brother Herbert in which American city in 1907?",
+          "expected_answer": "Dallas",
+          "support_sets": [
+            [
+              "d7s4"
+            ],
+            [
+              "d3s5"
+            ],
+            [
+              "d10s0"
+            ]
+          ],
+          "depends_on": [],
+          "unit_id": "u1",
+          "necessary": true
+        }
+      ],
+      "revision": {
+        "original_sample_id": "hotpotqa_5a80a7f6554299485f598680",
+        "disposition": "adjusted",
+        "original_review_note": "检查一下是否还有其他的evidence语句\n\n- The question already names Neiman Marcus. The opening city and year are stated directly; do not add an unnecessary family hop."
+      }
+    },
+    {
+      "question_number": 180,
+      "sample_id": "hotpotqa_5a81e8a0554299676cceb157",
+      "status": "draft",
+      "question_type": "comparison",
+      "review_flags": [],
+      "notes": [
+        "题干澄清：限定为文档列出的阵容，避免比较当前阵容与历史全体成员。"
+      ],
+      "units": [
+        {
+          "description": "number of Chvrches members explicitly listed",
+          "expected_answer": "3",
+          "support_sets": [
+            [
+              "d2s1"
+            ]
+          ],
+          "depends_on": [],
+          "unit_id": "u1",
+          "necessary": false
+        },
+        {
+          "description": "number of Goodbye Mr. Mackenzie members listed at their commercial peak",
+          "expected_answer": "6",
+          "support_sets": [
+            [
+              "d3s1"
+            ]
+          ],
+          "depends_on": [],
+          "unit_id": "u2",
+          "necessary": false
+        },
+        {
+          "description": "Comparing the lineups stated in the context, which band has more members, Chvrches or Goodbye Mr. Mackenzie?",
+          "expected_answer": "Goodbye Mr Mackenzie",
+          "support_sets": [
+            []
+          ],
+          "depends_on": [
+            "u1",
+            "u2"
+          ],
+          "unit_id": "u3",
+          "necessary": true
+        }
+      ],
+      "revision": {
+        "original_sample_id": "hotpotqa_5a81e8a0554299676cceb157",
+        "disposition": "adjusted",
+        "original_review_note": "- Compare the listed lineups, not every person who ever belonged to either band. The source descriptions use different time scopes.\n- Source check: `lineup_time_scope`."
+      }
+    }
+  ]
+}
