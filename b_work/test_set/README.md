@@ -8,6 +8,10 @@
 - Review copies include the support quotes and all source context.
 - Uses the Step3 formatter to show aliases, special flags, and support sets.
 - Gold draft checks are in [validation_report.json](validation_report.json).
+- Revised Q1–Q150 data is in [batch01_05_v1](revisions/batch01_05_v1/README.md):
+  150 paired samples and 453 gold units, built by the original Step3 script.
+- The separate [batch06_10_v1](revisions/batch06_10_v1/README.md) revision holds
+  Q151–Q300. Keep each revision's samples and gold paired.
 
 | Batch | Questions | Source | Review |
 |---|---|---|---|
@@ -24,14 +28,15 @@
 
 ## Rules
 
-- All 300 annotations are drafts. Human review is needed before final evaluation.
-- Review and edit `batches/batch_NN/annotations.json` first.
+- The original 300 annotations remain drafts. Revised data has its own files.
+- Edit the annotations for the version you intend to use.
 - Keep each unit's value, dependencies, and support sets clear.
 - Evidence IDs use the source document position and sentence index: `d1s0`.
 - Empty `support_sets: []` marks support that still needs review. It does not
   establish an answer or a negative fact.
-- A unique-choice answer may use `by_presupposition: true`. Its `depends_on`
-  lists only the needed facts, with evidence in their `support_sets`.
+- A question premise may use `by_presupposition: true`. Separate premise paths
+  go in `presupposition_sets`, with real evidence IDs. Normal paths still use
+  `support_sets` and require all dependencies.
 - Generate traces only after the gold review is complete.
 - Reuse [Step3's trace script](../step3/build_traces.py).
 - Traces must include every context sentence. Use the supporting facts and gold
@@ -60,8 +65,9 @@ the review. The saved gold units must match the annotations. Notes may change.
 
 ## Needs review
 
-- All 300 draft answers and their necessary support chains.
-- 82 questions have review flags. Of all 300 questions, 52 lack complete
+- Final selection of paired revision files for the main experiment.
+- In the original drafts, 82 questions have review flags and 52 lack complete
   accepted gold support even with all source context.
 - Source entity links, weak supporting facts, missing support, and question premises.
-- Trace generation is pending gold review.
+- The original trace builder still needs data-version and premise-path support.
+- Trace generation is pending input selection and delay settings.
