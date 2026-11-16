@@ -57,6 +57,9 @@ Wait、Backchannel/Progress、Final Answer 三类动作。Partial Answer 在 v2 
 
 ## Partial Answer 的单元感知注入（partial_v3，作业 11729084）
 
+运行来源补核（2026-11-16）：`280d875d3be224434387aa8b5a63af2550476e5f`，
+RTX A6000，90/90 完成；前两轮 full_v1/full_v2 使用 H100。这里比较行为，不跨显卡比较延迟。
+
 控制器知道每个答案单元是否已有证据支持，因此在部分证据到达时，注入的参考文本除证据外还写明缺失的部分
 （单元的 `pending` 句，例如 "Where Fernando Di Leo was born is still being searched."）；最后一次注入追加
 "The search is complete."，以抵消前面的缺失说明（progress_inj 显示"未就绪"注入会污染后续回答）。

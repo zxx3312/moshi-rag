@@ -27,7 +27,7 @@ python3 a_work/run_demo.py                      # two hand-made traces with plac
 | `make_question_audio.py`, `run_asr.py` | Speak the questions with Piper; transcribe them with Whisper |
 | `eval_judge.py`, `eval_sft.py`, `train_lora_judge.py` | Judge evaluation on traces, on B's SFT dev set, and LoRA training |
 | `slurm/` | `eval_judge.slurm` serves the models and runs a script; `train_lora.slurm` |
-| `unit_schema.md`, `judge_notes.md`, `lora_judge.md`, `cascade.md`, `evaluation_notes.md` | Rules, speech setup, and development notes; `evaluation_notes.md` includes v5/v6/v7 scores, paired timing, coverage, and limitations (Chinese) |
+| `unit_schema.md`, `judge_notes.md`, `lora_judge.md`, `cascade.md`, `evaluation_notes.md` | Rules and development notes; `judge_notes.md` section 8 discusses combined omission/presupposition risks and proposed rules; `evaluation_notes.md` includes the 2026-11-16 project audit covering training, judges, all replay versions, control runs, T4 diagnostics and C's AI review (Chinese) |
 | `../docs/plan.md` | Next work on `a-eval-refinement`: combined omission/presupposition cases, benchmark metrics, Wait-All comparison, development parameter sweep, frozen evaluation, and C's audio review |
 
 ## Data flow

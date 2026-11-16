@@ -11,7 +11,8 @@
 LoRA 的 long 档 TTFGI 配对中位数比 Wait-All 早 4.25 秒（10 对），short 晚 0.23 秒（10 对）；
 完整回答仍较晚。详细覆盖、时间、版本比较和错误分析见 `evaluation_notes.md` 的 2026-11-12 节。
 运行来自 `results/code_snapshots/replay_gen_q1_20_v7/`，父 commit 为 `9fb9adc`，有未提交改动；
-输入为 `results/inputs/b_debug_q1_20_gold13/` 的 debug 数据，B 来源 commit 待核。
+输入为 `results/inputs/b_debug_q1_20_gold13/` 的 debug 数据，SOURCE 为
+`a2808f17558076291ec439d2ced8a00be8c52281`；2026-11-12 已核对 trace/gold hash，见 evaluation notes。
 这些是文字回放开发运行，不是 H100 正式结果；当前代码也不完全等于 v7 快照。
 
 用途：分工要求比较三种 judge：Oracle、prompt judge（Qwen3-14B）、LoRA SFT 小模型。LoRA judge 由 `train_lora_judge.py` 训练，推理时仍走 `PromptJudge`（换成 adapter 的模型名、不带 few-shot），所有校验逻辑相同。

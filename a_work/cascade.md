@@ -22,8 +22,9 @@ Apollo 11 的发射和溅落日期；各跑 immediate / short / long，共 6 条
 
 2026-11-10 已提交作业 **12308419**，输出名 `cascade_smoke_20261110_v1`。
 快照与提交参数位于 `results/code_snapshots/cascade_smoke_20261110_v1/`，
-输入位于 `results/inputs/cascade_smoke_20261110_v1/`。2026-11-11 查询仍为 PENDING，
-原因 Priority，申请 A100；尚未验收，不能写成链路已跑通。正式结果按 spec 使用 H100。
+输入位于 `results/inputs/cascade_smoke_20261110_v1/`。作业已结束：A100-SXM4-80GB，
+FAILED，退出 1，ASR 启动报 `No CUDA GPUs are available`；2026-11-16 再核状态未变。
+尚未重跑或验收，不能写成链路已跑通。正式结果按 spec 使用 H100。
 
 作业脚本：`slurm/cascade_smoke.slurm`。在仓库根目录提交，设置：
 
@@ -74,4 +75,5 @@ sbatch a_work/slurm/cascade_smoke.slurm
 
 smoke 通过后，再在同型号 GPU、相同输入和相同评估规则下做 text/rate、text/Piper、ASR/Piper
 对照，并补充音频对齐与真实调度测量。v7 两轮文字回放已完成，没有启用真实语音；
-作业及来源见 `lora_judge.md`。仍有两个 judge 作业排队，其完整运行参数待核。
+作业及来源见 `lora_judge.md`。v6 LoRA 作业 12306379 已成功结束；独立并发作业 12306380
+在 vLLM 初始化时失败、退出 3。当前用户队列为空，不能继续把它们记作排队中。
