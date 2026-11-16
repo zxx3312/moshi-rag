@@ -7,11 +7,15 @@
 - Builds reviews with units, aliases, special flags, support quotes, Notes,
   and all source context.
 - Can rebuild a review from saved gold without writing gold files.
+- Exports paired test-set gold using the annotation data version and reviewed
+  question type. Debug export keeps its existing data format.
+- Supports `presupposition_sets` in gold exports and saved-gold reviews.
+- Rebuilt the revised Q1–Q150 data with this script: 150 questions and 453 units.
 
 | File | Edit by hand? | Content |
 |---|---|---|
 | `gold_annotations.json` | Yes | Units, support references, and notes. |
-| `build_gold.py` | Code | Builds debug gold or reviews of saved gold. |
+| `build_gold.py` | Code | Builds gold from paired annotations and samples, or reviews saved gold. |
 | `gold_debug.jsonl` | No | The 20 debug gold records. |
 | `gold_review.md` | Generated | The debug review copy. |
 | `build_traces.py` | Code | Builds full-context controlled mock traces. |
@@ -22,15 +26,20 @@
 
 1. **Review-only mode.** `--review-from-gold` reads saved gold and writes only
    the review. It keeps gold files unchanged.
-2. **Input checks.** Checks versions, sample IDs, and answer units. Review mode
-   accepts both `d1s0` and `[document title, sentence index]` references.
+2. **Input checks.** Checks versions, sample IDs, answer units, and evidence.
+   Both modes accept `d1s0` and `[document title, sentence index]` references.
 3. **Draft support.** Shows unfinished units with `support_sets: []` for human
-   review. This does not approve their answers. Normal gold generation stays strict.
+   review. Normal exports require a complete support path for each final answer.
 4. **More review content.** Adds all source context and support that uses facts
    given by the question. Shows empty support clearly. Existing source issues stay
    in Notes. The table still shows aliases and special flags.
 5. **File safety and table layout.** Stops the review from overwriting input
    files. Handles `|` and line breaks so table cells stay readable.
+6. **Premise paths.** Checks and keeps `presupposition_sets`. Shows a separate
+   table column and quotes its evidence when a question uses this field.
+7. **Revised data.** Keeps the annotation data version, reviewed question type,
+   original question numbers, original questions, and revised final answers.
+   `--include-unit-json` adds copyable answer units to a review.
 
 New and updated code blocks use `#-------------#` and simple English comments.
 
@@ -41,17 +50,22 @@ New and updated code blocks use `#-------------#` and simple English comments.
 - Keep the frozen Step2 source files unchanged.
 - Gold edits belong in annotations. Keep any review comments before rebuilding.
 - Debug annotations use `[document title, sentence index]` support references.
-- Review-only mode also accepts annotations with evidence IDs such as `d1s0`.
-- The ordinary gold builder keeps strict support checks. Empty support lists
-  are allowed only when displaying saved drafts for human review.
+- Both modes accept evidence IDs such as `d1s0` in both support fields.
+- A normal export needs the samples and annotations to use the same data version.
+- A test-set export must use separate output paths, away from the debug files.
+- An empty normal support list gives no direct support. A final answer still
+  needs a complete normal or premise path. An unknown candidate may stay open
+  only when a valid premise path can complete the answer.
 - Review-only mode checks versions, IDs, dependencies, and matching gold units.
   Invalid inputs leave the old review file unchanged.
-- Reviews show `aliases`, `by_omission`, `by_presupposition`, and support sets.
+- Reviews show `aliases`, `by_omission`, `by_presupposition`, and both support fields.
   Existing source issues stay in Notes.
-- For two named candidates with one unique answer, keep only the facts needed
-  to confirm or rule out a candidate. The answer depends on those facts.
-- Mark that answer with `by_presupposition: true`. Use `support_sets` and
-  `depends_on` for its evidence. The flag does not replace evidence.
+- Normal `support_sets` need all units in `depends_on` to be supported.
+- `presupposition_sets` lists separate evidence paths that use a fact given by
+  the question. Each group must contain evidence. Empty groups are rejected.
+- A premise path needs at least one supported dependency, or no dependencies.
+- Every unit with nonempty `presupposition_sets` needs `by_presupposition: true`.
+  The flag alone does not skip dependencies or provide support.
 - Do not use this shortcut for date comparisons or "both" and "same" questions.
 - A sentence's document title identifies its subject. If titles will be hidden
   from the judge, check whether more source sentences are needed for pronouns.
@@ -75,6 +89,20 @@ python3 b_work/step3/build_gold.py \
 
 This reads the saved gold and writes only the review. It does not write `--out`.
 Saved gold units must match the annotations. Notes may change.
+
+To rebuild revised Batch 1 gold and its review:
+
+```bash
+python3 b_work/step3/build_gold.py \
+  --samples b_work/test_set/revisions/batch01_05_v1/batch_01/samples.jsonl \
+  --annotations b_work/test_set/revisions/batch01_05_v1/batch_01/annotations.json \
+  --out b_work/test_set/revisions/batch01_05_v1/batch_01/gold.jsonl \
+  --review b_work/test_set/revisions/batch01_05_v1/batch_01/review.md \
+  --include-unit-json
+```
+
+For Batches 2–5, change `batch_01` in all four paths. Keep reviewed Notes in
+annotations before rebuilding. The original Step2 source stays unchanged.
 
 The existing debug trace command is:
 
@@ -100,7 +128,9 @@ Current debug schedules are provisional:
 ## Next steps
 
 - Review the 300 test-question gold drafts using their batch review copies.
-- Support test-set gold export after review. Keep the existing Step3 script.
+- Apply any later accepted review edits to the matching revision annotations.
+- Add data-version and premise-path support to `build_traces.py` before using
+  it with revised test-set gold. The current trace script handles debug data.
 - Generate test-set traces only after the user finishes gold review.
 
 ## Needs review

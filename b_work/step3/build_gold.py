@@ -30,16 +30,20 @@ def evidence_id(doc_number, sentence_index):
 
 
 def resolve(sample, title, sentence_index):
+    """Resolve one title and sentence index to its original evidence ID."""
+    if not isinstance(title, str):
+        raise ValueError(sample["sample_id"] + ": document title must be text")
     matches = [n for n, (name, _) in enumerate(sample["context"], start=1) if name == title]
     if len(matches) != 1:
         raise ValueError(sample["sample_id"] + ": title must match exactly one document: " + title)
     sentences = sample["context"][matches[0] - 1][1]
-    if not isinstance(sentence_index, int) or not 0 <= sentence_index < len(sentences):
+    if type(sentence_index) is not int or not 0 <= sentence_index < len(sentences):
         raise ValueError(sample["sample_id"] + ": sentence index out of range: " + title + " " + str(sentence_index))
     return evidence_id(matches[0], sentence_index), sentences[sentence_index].strip()
 
 
 def has_cycle(units):
+    """Find a dependency cycle before checking any support path."""
     graph = {unit["unit_id"]: unit["depends_on"] for unit in units}
     state = {}
 
@@ -57,25 +61,71 @@ def has_cycle(units):
 
 
 #-------------#
-# Updated: show unfinished support only when reviewing saved drafts.
-# Normal gold generation still needs accepted support.
+# Added: both support fields use nonempty evidence IDs inside each group.
+def validate_support_sets(sets, where, allow_empty_group=False):
+    """Check evidence groups without accepting an empty premise as support."""
+    if not isinstance(sets, list):
+        raise ValueError(where + ": support sets must be a list")
+    for group in sets:
+        if not isinstance(group, list) or not all(isinstance(e, str) and e.strip() for e in group):
+            raise ValueError(where + ": evidence groups must contain nonempty IDs")
+        if len(group) != len(set(group)):
+            raise ValueError(where + ": duplicate evidence ID")
+        if not group and not allow_empty_group:
+            raise ValueError(where + ": an empty presupposition set is not allowed")
 #-------------#
+
+
+#-------------#
+# Added: check that every required answer has a complete path in a gold export.
+def validate_answer_paths(record):
+    """Allow an open candidate only when a supported path still gives the answer."""
+    units = {u["unit_id"]: u for u in record["units"]}
+    found = {}
+
+    def reachable(uid):
+        """Normal paths need all parents; premise paths need any parent or none."""
+        if uid not in found:
+            unit = units[uid]
+            parents = [reachable(parent) for parent in unit["depends_on"]]
+            direct = bool(unit["support_sets"]) and all(parents)
+            premise = bool(unit.get("presupposition_sets")) and (any(parents) or not parents)
+            found[uid] = direct or premise
+        return found[uid]
+
+    for uid, unit in units.items():
+        if unit["necessary"] and not reachable(uid):
+            raise ValueError(record["sample_id"] + " " + uid + ": no complete support_sets or presupposition_sets path")
+#-------------#
+
+
+#-------------#
+# Updated: accept premise paths while keeping unfinished answers out of exports.
 def validate(record, allow_unresolved=False):
-    """Check gold structure. Only saved draft reviews may keep empty support."""
+    """Check unit structure and premise flags. Saved reviews may show open drafts."""
     sample_id = record["sample_id"]
     units = record["units"]
-    # Keep Step3 units within the original support/dependency fields.
+    if not isinstance(units, list) or not units or not all(isinstance(u, dict) for u in units):
+        raise ValueError(sample_id + ": units must be a nonempty list of objects")
     allowed_fields = {"unit_id", "description", "necessary", "expected_answer", "depends_on",
-                      "support_sets", "aliases", "by_omission", "by_presupposition"}
+                      "support_sets", "presupposition_sets", "aliases", "by_omission", "by_presupposition"}
+    required_fields = {"unit_id", "description", "necessary", "expected_answer", "depends_on", "support_sets"}
+    if any(required_fields - set(unit) for unit in units):
+        raise ValueError(sample_id + ": missing required unit fields")
     ids = [unit["unit_id"] for unit in units]
+    if not all(isinstance(uid, str) and uid.strip() for uid in ids):
+        raise ValueError(sample_id + ": unit IDs must be nonempty strings")
     if len(ids) != len(set(ids)):
         raise ValueError(sample_id + ": duplicate unit_id")
     if not any(unit["necessary"] is True for unit in units):
         raise ValueError(sample_id + ": no necessary unit")
+    premise_paths = any(unit.get("presupposition_sets") for unit in units)
     for unit in units:
         where = sample_id + " " + unit["unit_id"]
         if set(unit) - allowed_fields:
             raise ValueError(where + ": unsupported gold unit fields")
+        if not isinstance(unit["description"], str) or not unit["description"].strip():
+            raise ValueError(where + ": empty description")
         if not isinstance(unit.get("expected_answer"), str) or not unit["expected_answer"].strip():
             raise ValueError(where + ": empty expected_answer")
         if not isinstance(unit.get("necessary"), bool):
@@ -87,12 +137,22 @@ def validate(record, allow_unresolved=False):
         aliases = unit.get("aliases", [])
         if not isinstance(aliases, list) or not all(isinstance(a, str) and a.strip() for a in aliases):
             raise ValueError(where + ": aliases must be nonempty strings")
-        for parent in unit["depends_on"]:
+        parents = unit["depends_on"]
+        if not isinstance(parents, list) or not all(isinstance(parent, str) for parent in parents):
+            raise ValueError(where + ": depends_on must be a list of unit IDs")
+        if len(parents) != len(set(parents)):
+            raise ValueError(where + ": duplicate dependency")
+        for parent in parents:
             if parent not in ids or parent == unit["unit_id"]:
                 raise ValueError(where + ": invalid dependency " + parent)
         sets = unit["support_sets"]
-        # Empty support may stay in a draft review, but not in a normal gold build.
-        if sets == [] and not allow_unresolved:
+        presets = unit.get("presupposition_sets", [])
+        validate_support_sets(sets, where + " support_sets", allow_empty_group=True)
+        validate_support_sets(presets, where + " presupposition_sets")
+        if presets and unit.get("by_presupposition") is not True:
+            raise ValueError(where + ": presupposition_sets requires by_presupposition: true")
+        # An unknown candidate may stay open if a separate premise path answers the question.
+        if sets == [] and not allow_unresolved and not presets and (unit["necessary"] or not premise_paths):
             raise ValueError(where + ": support_sets [] is not allowed on an answerable unit")
         if any(len(inner) == 0 for inner in sets):
             if sets != [[]]:
@@ -116,42 +176,33 @@ def validate(record, allow_unresolved=False):
     allowed_sets = ([[]], []) if allow_unresolved else ([[]],)
     if kind in ("comparison", "bridge_comparison") and necessary[0]["support_sets"] not in allowed_sets:
         raise ValueError(sample_id + ": the comparison conclusion must have support_sets [[]]")
+    if not allow_unresolved:
+        validate_answer_paths(record)
+#-------------#
 
 
-def build(sample, annotation):
-    units = []
-    texts = {}
-    for unit in annotation["units"]:
-        sets = []
-        for inner in unit["support_sets"]:
-            ids = []
-            for title, index in inner:
-                eid, text = resolve(sample, title, index)
-                ids.append(eid)
-                texts[eid] = (title, index, text)
-            sets.append(ids)
-        result = {
-            "unit_id": unit["unit_id"],
-            "description": unit["description"],
-            "necessary": unit["necessary"],
-            "expected_answer": unit["expected_answer"],
-            "depends_on": unit["depends_on"],
-            "support_sets": sets,
-        }
-        if unit.get("aliases", []) != []:
-            result["aliases"] = unit["aliases"]
-        if unit.get("by_omission", False) is not False:
-            result["by_omission"] = unit["by_omission"]
-        if unit.get("by_presupposition", False) is not False:
-            result["by_presupposition"] = unit["by_presupposition"]
-        units.append(result)
-    if sample["type"] not in QUESTION_TYPES:
+#-------------#
+# Updated: use reviewed types, data versions, and either evidence-reference form.
+def build(sample, annotation, data_version=DATA_VERSION):
+    """Build gold from annotations without losing optional support paths."""
+    available = source_texts(sample)
+    units = normalized_units(sample, annotation["units"], available)
+    kind = annotation.get("question_type", QUESTION_TYPES.get(sample["type"]))
+    if kind is None:
         raise ValueError(sample["sample_id"] + ": no question_type for source type " + sample["type"])
-    record = {"schema_version": SCHEMA_VERSION, "data_version": DATA_VERSION,
-              "sample_id": sample["sample_id"], "question_type": QUESTION_TYPES[sample["type"]],
+    record = {"schema_version": SCHEMA_VERSION, "data_version": data_version,
+              "sample_id": sample["sample_id"], "question_type": kind,
               "source_type": sample["type"], "units": units}
     validate(record)
+    # Keep the old debug field order so unchanged exports stay byte for byte the same.
+    field_order = ("unit_id", "description", "necessary", "expected_answer", "depends_on", "support_sets",
+                   "aliases", "by_omission", "by_presupposition", "presupposition_sets")
+    record["units"] = [{field: unit[field] for field in field_order if field in unit} for unit in units]
+    cited = {eid for unit in units for field in ("support_sets", "presupposition_sets")
+             for group in unit.get(field, []) for eid in group}
+    texts = {eid: available[eid] for eid in cited}
     return record, texts
+#-------------#
 
 
 #-------------#
@@ -165,32 +216,50 @@ def source_texts(sample):
 
 
 #-------------#
-# Added: use the same evidence IDs when comparing the two files.
+# Added: share evidence conversion between gold exports and saved reviews.
+def normalized_support_sets(sample, sets, available):
+    """Accept evidence IDs or title/index pairs, and check every location."""
+    if not isinstance(sets, list) or not all(isinstance(group, list) for group in sets):
+        raise ValueError(sample["sample_id"] + ": support sets must be lists of lists")
+    result = []
+    for group in sets:
+        ids = []
+        for reference in group:
+            if isinstance(reference, str):
+                eid = reference
+            elif isinstance(reference, (list, tuple)) and len(reference) == 2:
+                eid, _ = resolve(sample, reference[0], reference[1])
+            else:
+                raise ValueError(sample["sample_id"] + ": invalid evidence reference")
+            if eid not in available:
+                raise ValueError(sample["sample_id"] + ": unknown evidence ID " + eid)
+            ids.append(eid)
+        result.append(ids)
+    return result
+#-------------#
+
+
+#-------------#
+# Updated: normalize both support fields without changing the input annotations.
 def normalized_units(sample, units, available):
     """Compare saved gold with annotations that use IDs or title/index pairs."""
+    if not isinstance(units, list) or not all(isinstance(unit, dict) for unit in units):
+        raise ValueError(sample["sample_id"] + ": units must be a list of objects")
     result = []
     for unit in units:
         # Work on a copy so the input annotation stays unchanged.
         item = dict(unit)
-        sets = []
-        for inner in item["support_sets"]:
-            ids = []
-            for reference in inner:
-                if isinstance(reference, str):
-                    # New annotations already use IDs such as d1s0.
-                    eid = reference
-                else:
-                    # Older annotations use a document title and sentence number.
-                    title, index = reference
-                    eid, _ = resolve(sample, title, index)
-                if eid not in available:
-                    raise ValueError(sample["sample_id"] + ": unknown evidence ID " + eid)
-                ids.append(eid)
-            sets.append(ids)
-        item["support_sets"] = sets
+        if "support_sets" not in item:
+            raise ValueError(sample["sample_id"] + ": missing support_sets")
+        for field in ("support_sets", "presupposition_sets"):
+            if field in item:
+                item[field] = normalized_support_sets(sample, item[field], available)
         # Treat missing and empty optional fields as the same value.
-        for field in ("aliases", "by_omission", "by_presupposition"):
-            if not item.get(field):
+        for field in ("aliases", "presupposition_sets"):
+            if item.get(field) == []:
+                item.pop(field, None)
+        for field in ("by_omission", "by_presupposition"):
+            if item.get(field, False) is False:
                 item.pop(field, None)
         result.append(item)
     return result
@@ -214,8 +283,9 @@ def saved_review_texts(sample, annotation, record, versions):
     # Stop if annotations changed but the saved gold was not updated.
     if normalized_units(sample, annotation["units"], available) != normalized_units(sample, record["units"], available):
         raise ValueError(sample["sample_id"] + ": gold units differ from annotations; update gold before rebuilding its review")
-    # Question-based reasoning uses the same support sets and required facts.
-    cited = {eid for unit in record["units"] for inner in unit["support_sets"] for eid in inner}
+    # Quote premise evidence too, even when it is not part of the normal path.
+    cited = {eid for unit in record["units"] for field in ("support_sets", "presupposition_sets")
+             for inner in unit.get(field, []) for eid in inner}
     return {eid: available[eid] for eid in cited}
 #-------------#
 
@@ -241,15 +311,27 @@ def table_cell(value):
 #-------------#
 
 
-def review_section(number, sample, annotation, record, texts):
+def review_section(number, sample, annotation, record, texts, include_unit_json=False):
     """Show units, cited evidence, notes, and every source sentence."""
     #-------------#
     # Updated: show all unit fields needed for a human review.
     lines = ["## Q" + str(number) + " — `" + sample["sample_id"] + "` (" + annotation["status"] + ")", "",
-             "> " + sample["question"].rstrip(), "", "Source answer: " + sample["answer"], "",
-             "Question type: `" + record["question_type"] + "` (source type `" + record["source_type"] + "`)", "",
-             "| Unit | Necessary | Expected answer | Depends on | Support sets |",
-             "|---|---|---|---|---|"]
+             "> " + sample["question"].rstrip(), ""]
+    if sample.get("original_question"):
+        lines += ["Original question: " + sample["original_question"].rstrip(), ""]
+    lines += ["Source answer: " + sample["answer"], ""]
+    if "gold_answer" in sample:
+        answer = "; ".join(unit["expected_answer"] for unit in record["units"] if unit["necessary"])
+        lines += ["Gold final answer: " + answer, ""]
+    lines += ["Question type: `" + record["question_type"] + "` (source type `" + record["source_type"] + "`)", ""]
+    # Keep the old table layout when the record has no premise paths.
+    show_presets = any(unit.get("presupposition_sets") for unit in record["units"])
+    columns = "| Unit | Necessary | Expected answer | Depends on | Support sets |"
+    separator = "|---|---|---|---|---|"
+    if show_presets:
+        columns += " Presupposition sets |"
+        separator += "---|"
+    lines += [columns, separator]
     for unit in record["units"]:
         answer = unit["expected_answer"]
         if unit.get("aliases"):
@@ -258,9 +340,21 @@ def review_section(number, sample, annotation, record, texts):
             answer += " **[by_omission]**"
         if unit.get("by_presupposition"):
             answer += " **[by_presupposition]**"
+        direct = support_text(unit["support_sets"])
+        if not unit["support_sets"] and unit.get("presupposition_sets"):
+            direct = "`[]`: no direct support; use the premise path"
         cells = [unit["unit_id"] + ": " + unit["description"], str(unit["necessary"]).lower(), answer,
-                 ", ".join(unit["depends_on"]) or "—", support_text(unit["support_sets"])]
+                 ", ".join(unit["depends_on"]) or "—", direct]
+        if show_presets:
+            cells.append(support_text(unit["presupposition_sets"]) if unit.get("presupposition_sets") else "—")
         lines.append("| " + " | ".join(table_cell(cell) for cell in cells) + " |")
+    #-------------#
+    #-------------#
+    # Added: keep copyable units in revised reviews when the caller asks for them.
+    if include_unit_json:
+        lines += ["", "<details><summary>Answer units (JSON)</summary>", "", "```json",
+                  json.dumps({"units": record["units"]}, ensure_ascii=False, indent=2),
+                  "```", "", "</details>"]
     #-------------#
     lines += ["", "Evidence:", ""]
     for eid in sorted(texts, key=lambda e: [int(x) for x in e[1:].split("s")]):
@@ -287,7 +381,7 @@ def review_section(number, sample, annotation, record, texts):
 
 
 def main():
-    """Build debug gold, or rebuild only a review from saved gold drafts."""
+    """Build paired gold from annotations, or rebuild only a saved-gold review."""
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--samples", type=Path, default=HERE.parent / "step2" / "prepared" / "samples_debug.jsonl")
     parser.add_argument("--annotations", type=Path, default=HERE / "gold_annotations.json")
@@ -297,6 +391,8 @@ def main():
     # Added: choose saved gold when only the review needs to be rebuilt.
     parser.add_argument("--review-from-gold", type=Path,
                         help="Read existing gold and write only the review; do not write --out.")
+    parser.add_argument("--include-unit-json", action="store_true",
+                        help="Include copyable answer units in the review.")
     #-------------#
     args = parser.parse_args()
 
@@ -307,18 +403,29 @@ def main():
         inputs.append(args.review_from_gold)
     if args.review.resolve() in {path.resolve() for path in inputs}:
         parser.error("Review output must not overwrite an input file")
+    if not args.review_from_gold:
+        if args.out.resolve() in {path.resolve() for path in inputs}:
+            parser.error("Gold output must not overwrite an input file")
+        if args.out.resolve() == args.review.resolve():
+            parser.error("Gold and review outputs must use different files")
     #-------------#
 
     with args.samples.open("r", encoding="utf-8") as file:
-        samples = [json.loads(line) for line in file]
+        samples = [json.loads(line) for line in file if line.strip()]
     with args.annotations.open("r", encoding="utf-8") as file:
         annotations = json.load(file)
     #-------------#
-    # Updated: saved reviews may use a data version other than debug-v0.
-    # The saved gold must still match that version when each question is checked.
-    if annotations["schema_version"] != SCHEMA_VERSION or (
-            not args.review_from_gold and annotations["data_version"] != DATA_VERSION):
-        raise ValueError("Annotation versions do not match " + SCHEMA_VERSION + " / " + DATA_VERSION)
+    # Updated: use the annotation data version for both debug and test-set exports.
+    version = annotations.get("data_version")
+    if annotations.get("schema_version") != SCHEMA_VERSION or not isinstance(version, str) or not version.strip():
+        raise ValueError("Annotations need schema_version " + SCHEMA_VERSION + " and a nonempty data_version")
+    if not args.review_from_gold and version != DATA_VERSION and (
+            args.out.resolve() == (HERE / "gold_debug.jsonl").resolve() or
+            args.review.resolve() == (HERE / "gold_review.md").resolve()):
+        parser.error("Non-debug exports need separate --out and --review files")
+    sample_ids = [sample["sample_id"] for sample in samples]
+    if len(sample_ids) != len(set(sample_ids)):
+        raise ValueError("Duplicate sample IDs")
     #-------------#
     by_id = {}
     for annotation in annotations["records"]:
@@ -358,10 +465,19 @@ def main():
             record = saved_gold[sample["sample_id"]]
             texts = saved_review_texts(sample, annotation, record, annotations)
         else:
-            record, texts = build(sample, annotation)
+            # A normal export needs samples paired with this annotation version.
+            if sample.get("schema_version", SCHEMA_VERSION) != SCHEMA_VERSION or sample.get("data_version", version) != version:
+                raise ValueError(sample["sample_id"] + ": sample and annotation versions differ")
+            record, texts = build(sample, annotation, data_version=version)
         #-------------#
         records.append(record)
-        sections += review_section(number, sample, annotation, record, texts)
+        question_number = annotation.get("question_number", number)
+        if type(question_number) is not int or question_number < 1:
+            raise ValueError(sample["sample_id"] + ": invalid question_number")
+        sections += review_section(question_number, sample, annotation, record, texts,
+                                   include_unit_json=args.include_unit_json)
+    if not records:
+        raise ValueError("No annotated samples to export or review")
     counts = {}
     for record in records:
         key = (record["question_type"], record["source_type"])
