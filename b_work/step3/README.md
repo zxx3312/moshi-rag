@@ -11,6 +11,9 @@
   question type. Debug export keeps its existing data format.
 - Supports `presupposition_sets` in gold exports and saved-gold reviews.
 - Rebuilt the revised Q1–Q150 data with this script: 150 questions and 453 units.
+- Builds version-matched traces from both paired test-set revisions.
+- Saves [900 revised test traces](../test_set/traces/eval_revised_v1/README.md),
+  with all context and checks for normal and premise support times.
 
 | File | Edit by hand? | Content |
 |---|---|---|
@@ -42,6 +45,21 @@
    `--include-unit-json` adds copyable answer units to a review.
 
 New and updated code blocks use `#-------------#` and simple English comments.
+
+### New parts in build_traces.py
+
+1. **Paired inputs.** Reads several samples and gold files. Checks matching IDs,
+   data versions, source types, dependencies, and both support fields.
+2. **Premise timing.** Uses normal and premise evidence to arrange documents.
+   A normal path waits for every parent. A premise path waits for one supported
+   parent, or no parents. The first complete path sets the support time.
+3. **Public trace checks.** Keeps all source sentences and document titles.
+   Checks evidence IDs, text, whole-document arrivals, and the fixed trace fields.
+   Gold answers and support fields stay outside the trace.
+4. **Separate outputs.** Revised data cannot overwrite the default debug outputs.
+   Invalid inputs leave existing outputs unchanged.
+5. **Delay and check files.** `--schedule-config` reads one or two arrival times
+   per schedule. `--report` saves a separate check report with support times.
 
 ## Rules
 
@@ -114,10 +132,18 @@ python3 b_work/step3/build_traces.py
 - Whole documents arrive together. Scheduled and visible times are equal.
 - Supporting-fact documents are split in citation order across two batches.
 - Alternative gold-support documents arrive with their matching support batch.
+- Both normal and premise support can provide alternative documents. If source
+  supporting facts are absent, gold evidence sets provide the document order.
 - Other documents alternate between batches in original document order.
 - Trace IDs use `<sample_id>_<schedule>`.
+- Traces contain source text, sources, and arrival times. They do not contain
+  gold answers, units, support sets, or special gold flags.
+- Trace reviews and check reports contain gold-based support times. Keep them
+  outside ordinary model input. Only the separate Oracle path may use gold.
+- The test-trace [README](../test_set/traces/eval_revised_v1/README.md) gives
+  the command to rebuild the 900 traces from paired revision files.
 
-Current debug schedules are provisional:
+Current debug and revised test schedules are provisional:
 
 | Schedule | First batch | Second batch |
 |---|---|---|
@@ -129,9 +155,9 @@ Current debug schedules are provisional:
 
 - Review the 300 test-question gold drafts using their batch review copies.
 - Apply any later accepted review edits to the matching revision annotations.
-- Add data-version and premise-path support to `build_traces.py` before using
-  it with revised test-set gold. The current trace script handles debug data.
-- Generate test-set traces only after the user finishes gold review.
+- Check the generated test-trace batches and support times.
+- Agree on final paired inputs and delay settings before main experiments.
+- Rebuild traces and check reports after any accepted input or delay changes.
 
 ## Needs review
 

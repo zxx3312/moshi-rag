@@ -12,6 +12,9 @@
   150 paired samples and 453 gold units, built by the original Step3 script.
 - The separate [batch06_10_v1](revisions/batch06_10_v1/README.md) revision holds
   Q151–Q300. Keep each revision's samples and gold paired.
+- Saves [900 full-context traces](traces/eval_revised_v1/README.md) for these
+  300 revised questions. Each question has three provisional delay schedules.
+- Trace checks agree with A's Oracle and B's evaluator at 2,100 snapshots.
 
 | Batch | Questions | Source | Review |
 |---|---|---|---|
@@ -37,10 +40,14 @@
 - A question premise may use `by_presupposition: true`. Separate premise paths
   go in `presupposition_sets`, with real evidence IDs. Normal paths still use
   `support_sets` and require all dependencies.
-- Generate traces only after the gold review is complete.
+- Use the paired revision inputs for the generated traces. The original draft
+  gold files in `batches/` are not the inputs to these traces.
 - Reuse [Step3's trace script](../step3/build_traces.py).
 - Traces must include every context sentence. Use the supporting facts and gold
   support to arrange whole documents into arrival batches, as Step3 does.
+- Gold answers and both support fields stay outside public trace records.
+- Keep trace reviews and check reports outside ordinary model input.
+- Mock traces use set arrival times. The final experiment delays still need agreement.
 - Keep all test questions out of training, prompt tuning, and model selection.
 
 To rebuild a review from its saved gold, run this from the repository root:
@@ -61,7 +68,9 @@ the review. The saved gold units must match the annotations. Notes may change.
 - Review each batch's units, support sets, and notes.
 - Resolve source issues and confirm the accepted gold answers.
 - After review, update gold outputs and review copies using the Step3 scripts.
-- Then use Step3's trace script to make and check the full-context traces.
+- Review the generated trace batches and support times.
+- Agree on final paired inputs and delays. Rebuild traces after accepted changes.
+- Use A's runner for policy and model runs after the inputs are fixed.
 
 ## Needs review
 
@@ -69,5 +78,4 @@ the review. The saved gold units must match the annotations. Notes may change.
 - In the original drafts, 82 questions have review flags and 52 lack complete
   accepted gold support even with all source context.
 - Source entity links, weak supporting facts, missing support, and question premises.
-- The original trace builder still needs data-version and premise-path support.
-- Trace generation is pending input selection and delay settings.
+- The generated traces use provisional delays. Confirm them before main experiments.

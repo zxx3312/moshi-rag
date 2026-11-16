@@ -13,6 +13,9 @@
   support disagreements. Checks 1,743 supported citations too.
 - Five batch rebuilds produce identical gold and review files.
 - Keeps the original Step2 samples and original batch data unchanged.
+- Includes these 150 questions in the shared
+  [900-trace set](../../traces/eval_revised_v1/README.md). It uses paired samples
+  and gold from both revision folders and keeps all source context.
 
 | Batch | Questions | Units | Review |
 |---|---|---:|---|
@@ -64,10 +67,10 @@ The combined files are copies of the five batch outputs, not separate inputs.
 ## Next steps
 
 - Agree with the team on the final paired 300-question revision.
-- Add version and premise-path support to the original Step3 trace builder.
-- Generate full-context traces after those inputs and the delay schedules are set.
+- Review the shared trace batches and support times.
+- Rebuild the shared traces after any accepted input or delay changes.
 
 ## Needs review
 
 - Final experiment inputs and delay schedules.
-- Trace generation remains pending. No trace files were generated here.
+- Traces use provisional times. Policy and model experiments have not been run.

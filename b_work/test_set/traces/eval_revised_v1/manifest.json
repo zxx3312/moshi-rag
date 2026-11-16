@@ -1,0 +1,43 @@
+{
+  "schema_version": "1.0",
+  "data_version": "eval-revised-v1",
+  "created_date": "2026-11-16",
+  "status": "controlled_mock_ready_for_review",
+  "builder": "b_work/step3/build_traces.py",
+  "trace_type": "controlled_mock",
+  "time_origin": "question_end",
+  "clock": "simulated",
+  "inputs": [
+    {
+      "questions": "Q1-Q150",
+      "question_count": 150,
+      "gold_unit_count": 453,
+      "samples": "b_work/test_set/revisions/batch01_05_v1/samples.jsonl",
+      "gold": "b_work/test_set/revisions/batch01_05_v1/gold.jsonl"
+    },
+    {
+      "questions": "Q151-Q300",
+      "question_count": 150,
+      "gold_unit_count": 364,
+      "samples": "b_work/test_set/revisions/batch06_10_v1/samples.jsonl",
+      "gold": "b_work/test_set/revisions/batch06_10_v1/gold.jsonl"
+    }
+  ],
+  "question_count": 300,
+  "trace_count": 900,
+  "gold_unit_count": 817,
+  "presupposition_units": 11,
+  "evidence_event_count": 30384,
+  "schedule_config": "b_work/test_set/traces/eval_revised_v1/schedules.json",
+  "schedules_frozen_for_main_experiment": false,
+  "outputs": {
+    "public_trace": "b_work/test_set/traces/eval_revised_v1/traces.jsonl",
+    "private_review": "b_work/test_set/traces/eval_revised_v1/review.md",
+    "private_builder_report": "b_work/test_set/traces/eval_revised_v1/validation_report.json",
+    "integration_report": "b_work/test_set/traces/eval_revised_v1/integration_report.json"
+  },
+  "all_source_context_preserved": true,
+  "gold_fields_in_public_trace": false,
+  "human_gold_approval_recorded": false,
+  "model_or_main_experiment_run": false
+}

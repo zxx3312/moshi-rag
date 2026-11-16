@@ -1,0 +1,85 @@
+{
+  "passed": true,
+  "check_date": "2026-11-16",
+  "data_version": "eval-revised-v1",
+  "question_count": 300,
+  "trace_count": 900,
+  "gold_unit_count": 817,
+  "presupposition_units": 11,
+  "presupposition_question_numbers": [
+    55,
+    161,
+    166,
+    170,
+    203,
+    208,
+    228,
+    237,
+    240,
+    257,
+    271
+  ],
+  "total_evidence_events": 30384,
+  "traces_by_schedule": {
+    "immediate": 300,
+    "short": 300,
+    "long": 300
+  },
+  "support_time_counts_by_schedule": {
+    "immediate": {
+      "0.0": 300
+    },
+    "short": {
+      "3.0": 273,
+      "1.0": 27
+    },
+    "long": {
+      "8.0": 273,
+      "2.0": 27
+    }
+  },
+  "a_reference_commit": "12d899984ddc182c525f80a7716cb8d8aa78df44",
+  "a_checks": [
+    "replay.load_jsonl",
+    "replay._parse_events",
+    "OracleJudge",
+    "resolve_dependencies"
+  ],
+  "b_checks": [
+    "prepare_inputs",
+    "supported_units",
+    "citation_support"
+  ],
+  "evidence_snapshots": 2100,
+  "unit_support_comparisons": 5719,
+  "support_disagreements": 0,
+  "earliest_support_time_disagreements": 0,
+  "supported_citation_checks": 3086,
+  "unresolved_optional_units_at_full_context": 7,
+  "all_necessary_units_supported_at_full_context": true,
+  "all_source_context_preserved": true,
+  "public_trace_fields_checked": true,
+  "whole_document_arrivals_checked": true,
+  "a_trace_parsing_passed": true,
+  "rebuild_byte_identical": [
+    "traces.jsonl",
+    "review.md",
+    "validation_report.json"
+  ],
+  "debug_regression_byte_identical": [
+    "traces.jsonl",
+    "review.md"
+  ],
+  "tests": {
+    "step3_gold": 15,
+    "step3_traces": 16,
+    "b_eval": 31,
+    "total_passed": 62
+  },
+  "limits": [
+    "Controlled mock traces use simulated arrival times.",
+    "Delay schedules are provisional.",
+    "No model or main experiment was run.",
+    "These checks do not replace human review of the gold."
+  ]
+}
