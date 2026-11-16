@@ -10,6 +10,7 @@
 | [`CLAUDE.md`](CLAUDE.md) / [`AGENTS.md`](AGENTS.md) | 同一份助手规则；数据隔离、任务前后操作、测试、Git；由用户提交 |
 | [`docs/experiment_spec.md`](docs/experiment_spec.md) | 实验定义、已有约定、暂定参数与待定决定 |
 | [`docs/plan.md`](docs/plan.md) | 各组进度、剩余步骤、验收标准、运行记录 |
+| [`a_work/README.md`](a_work/README.md#main-experiments-on-the-revised-900-traces) | `a-main-experiments`：900 条修订 trace 的检查、冻结、H100 批量运行与统一评分入口 |
 | `docs/proposal.pdf` | Proposal 约定位置；当前缺失，待提供 |
 
 A/B/C 的代码与说明尚在各自分支，位置和版本见 plan。以下保留上游使用说明；研究任务遵守上述项目规则。

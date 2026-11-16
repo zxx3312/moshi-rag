@@ -4,7 +4,8 @@
 D 编号对应 spec 第 11 节。一次只做一步；只做部分就标“进行中”。
 
 截止日期：待用户填写学期结束日期、目标会议截稿日期。
-最后核对：2026-11-11。当前任务只处理 **P0 的文档整理和进度核对**。
+最后核对：2026-11-16。当前任务是 **F1 的主实验运行准备**，尚未启动最终模型运行。
+下方历史状态表保留当时记录；本分支的当前进展见文末“900 条修订 trace 的主实验准备”。
 **用户自行提交。助手不 commit、不 push，不自行创建其他工作区或仓库副本。**
 
 ## 现状与证据
@@ -187,3 +188,113 @@ A 被测 Python 源码集合的 SHA256：
 本次重新运行 A 测试：91 项通过；控制实验：19 项通过；均退出 0，不使用 GPU。
 B evaluator 未改动，之前固定 B commit 的 31 项通过记录仍保留。
 代码提交表示保存开发进度，不表示 S1 或最终评估验收完成。
+
+## 900 条修订 trace 的主实验准备（2026-11-16）
+
+用户指定 `b_work/test_set/traces/eval_revised_v1/traces.jsonl`，要求检查用途、起草主实验代码、
+使用账号优先级并隔离分支。已在原目录创建 `a-main-experiments`，父 commit 为
+`bc412d5911d79c7bb39a615b41cb8d2597738291`（`origin/a-method-integration`）。
+`a-eval-refinement` 保持独立；没有合并评分规则讨论、commit/push 或新建工作树。
+授权覆盖指定数据的结构检查、匹配 gold 接口核对和运行准备；没有用预留内容训练、
+改提示词、选参数或选模型。F1 只完成运行准备，最终模型运行未开始。
+
+### 数据核对
+
+固定 B commit：`ea390574eadd301354d5de46f0d28d328cca5bad`。
+trace SHA256：`34da9ee54e0d494f1c6701d7332febf0088f22d925c4f6543b48a3af58ae30ac`。
+必须配对以下修订 gold，不能用原 `batches/` gold：
+
+| 输入 | 题数 | SHA256 |
+|---|---|---|
+| `b_work/test_set/revisions/batch01_05_v1/gold.jsonl` | 150 | `c6936dd4068bb52a949285bb92465c3b95f9d086b54bacd8a37f31be89a74a72` |
+| `b_work/test_set/revisions/batch06_10_v1/gold.jsonl` | 150 | `742970f46b9b753ca7ec0a28c6ef52061ce2a924ef9a9dd71756939985e82108` |
+
+实际核对：300 题、900 条 trace、817 个 gold 单元、30,384 个证据事件。
+HotpotQA / 2Wiki 各 150 题；三档各 300 条，分别为 0 秒、1/3 秒、2/8 秒。
+修订后的单元题型为 bridge 129、comparison 116、bridge_comparison 35、single 20；没有 multipart。
+`source_type` 保留原数据集分类，与单元题型不同。数据用于控制检索到达时间的策略比较，
+不是 900 道独立问题，也不是实测检索时间。
+
+同题三档的问题和完整证据一致，文档同时到达，没有 gold 字段混入公开 trace；
+trace/gold ID 与版本对应。每条 11–73 个事件；原文空白句对应 3 个空事件，原样保留并计数。
+与 debug 20 题、SFT 300 题的 sample ID 交集均为 0，仅证明 ID 不重叠。
+omission 标志 3 个，presupposition 标志 13 个，其中 11 个有 presupposition_sets；
+同单元双标志为 0，不排除依赖路径组合，也不代替 R1 规则研究。
+
+用当前 A 代码重做离线兼容性检查：2,100 个证据快照、5,719 次单元支持比较、
+3,086 次有效引用均与固定 B 规则一致；全部必要单元在完整证据后获支持。
+7 个不同 optional 单元最终未解决，对应三档 21 个 trace-unit 对，符合可选单元定义。
+这属于代码/数据校验，不是模型正确率。
+
+B manifest 仍为 `controlled_mock_ready_for_review`，gold 人工批准和主实验延迟冻结未记录。
+此次检查不替代三组最终批准；缺少的 multipart、语义评分与人评也没有自动完成。
+
+### 矩阵、脚本与产物
+
+| 配置 | 数量 | 用途 |
+|---|---|---|
+| Wait-All、Fixed Progress、Time-Only、First-Evidence | 4 | 现有规则对照 |
+| Prompt `_real`：串行、并发 | 2 | 只看问题拆题的主方法 |
+| LoRA `_real`：串行、并发 | 2 | 相同 14B 拆题/生成，替换 judge |
+| Oracle：串行、并发 | 2 | 独立 gold 输入上界 |
+
+共 10 个配置、预期 9,000 条 policy runs；这是设计规模，没有新模型性能结果。
+普通进程不接收 gold，Oracle 另起子进程并接收单独 gold 路径。
+模型只看到问题、问题拆解和当前可见证据；历史 gold 描述诊断不进入普通主方法。
+保留现有模型、提示词、阈值、生成保护和 RateTTS/并发模拟，没有改变研究定义。
+D9 消融、参数网格与新语义 scorer 仍需各自的决定，不擅自加入默认主表。
+
+- `a_work/main_experiments.py`：固定数据/代码/adapter/evaluator，核验 hash，打印/试检调度命令，收集评分。
+- `a_work/run_main_experiments.py`：按题分进程，保存进度、调用记录、失败与超时。
+- `a_work/slurm/main_experiments.slurm`：H100 Slurm array；不在登录节点运行模型。
+- `a_work/tests/test_main_experiments.py`：13 项虚构测试，检查隔离、一致性、快照、失败和试检命令。
+
+当前规范快照为 `main_eval_revised_v1_20261116_v3`：
+
+| 类别 | 路径 |
+|---|---|
+| 公开 trace 与 private gold | `a_work/results/inputs/main_eval_revised_v1_20261116_v3/` |
+| 冻结代码、evaluator、adapter 和 manifest | `a_work/results/code_snapshots/main_eval_revised_v1_20261116_v3/` |
+| 预定 GPU 结果，当前尚无结果 | `a_work/results/replay/main_eval_revised_v1_20261116_v3/shard_NNN/` |
+| ID 隔离检查 | `a_work/results/analysis/main_dataset_audit_20261116/overlap_check.json` |
+| 虚构 HTTP 贯通检查 | `a_work/results/analysis/main_experiments_smoke_20261116/summary.json` |
+
+v1/v2 为保留的准备历史，没有 GPU 运行；v2 虚构 HTTP 检查通过，v3 追加完整试检命令记录
+和中断状态处理。输入/快照均 ignored；manifest 如实记录父 commit + dirty 和文件 hash。
+用户提交后可另制干净 commit 快照，不能把当前快照冒充干净源码。
+准备、验证、打印调度命令与收集用法见 A README 的 Main experiments 节。
+
+默认 30 shard，每 shard 10 题及其全部三档、300 条策略运行，array 同时运行上限 2。
+每任务 1 张完整 H100 80GB、8 CPU、64GB RAM、4 小时；已有 adapter 复制并 hash 固定。
+14B 与 4B 的显存比例沿用 0.55/0.30；真实双服务启动尚未 GPU 验证。
+每普通/Oracle 问题进程有 1,800 秒 watchdog；成功、失败和中断均保留，resume 不自动重试失败。
+不改底层 Wait 终止和 HTTP 失败计时定义，以 worker 失败清单容纳这些限制；模拟并发不含同卡竞争。
+收集时固定全部预期策略，不漏掉未跑和失败；B 映射待复核时 UCR 仍可能为 null。
+配对延迟报告有效数与覆盖，不擅自选择 bootstrap 方法。
+
+### 优先级与实际验证
+
+本次实时核对：`xzhu81` 已授权 `dilek-ic`、normal QoS。
+`scavenger` 提供完整 H100、PriorityTier 3；`secondary` 为 tier 1 的 H100 备选。
+`IllinoisComputes-GPU` 当前只有 A100/H200，不满足正式 H100 约束。
+脚本使用 `--partition=scavenger,secondary --account=dilek-ic --qos=normal --nice=0`；
+不降低 nice 优先级，不用未经授权的 QoS。FairShare 权重当前为 0，账号不自动带来该项加分。
+分区层级不保证开始时间；抢占和缺失保留。
+
+当前父 `bc412d5` + dirty：A 共 104 项（原 91 + 新 13）、控制 19 项、固定 B evaluator 31 项
+全部通过、退出 0，共 154 项 CPU 测试；shell 语法检查通过。
+虚构 HTTP 端点贯通 runner 子进程与 B scorer：30 条策略运行、零校验问题，runner/scorer 均退出 0。
+没有真实模型调用，这不是 debug 或 main 性能分数。
+
+早期 v1 `sbatch --test-only` 返回 0；后续试检被自动审批拒绝，原因是把输出编号 12490525
+解释为实际提交。没有重试调度。只读核对 squeue 无任务、sacct 无该作业；
+本机 Slurm 手册说明 `--test-only` 不提交作业。原试检日志记的是待提交命令，漏记实际执行的
+`--test-only`，已改为完整实际命令并加 mock 测试；旧日志保留。
+v3 没有再次执行 Slurm 试检或实际提交，只有离线校验和命令打印。
+当前没有 GPU 作业号、主实验分数或新的人评交付；最终批准与模型运行尚未完成。
+
+已另备 `a_work/results/code_snapshots/main_debug_smoke_20261116/`，固定同版 debug 输入与代码。
+`smoke_command.json` 保存实际待提交命令：仅 array task 0、首道 debug 题的三档 × 十配置，
+共 30 条策略运行，1 张 H100、30 分钟上限；没有执行命令。
+完整 debug bundle 共有 20 个 task，但本次 smoke 命令只选择一个，不隐式提交整套 debug。
+建议先验收该 GPU smoke 的模型启动和日志，再决定正式提交主实验。
