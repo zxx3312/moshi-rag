@@ -26,7 +26,9 @@ python3 a_work/run_demo.py                      # two hand-made traces with plac
 | `main_experiments.py` | Prepare and verify pinned public/private inputs, code, checkpoint and evaluator; print/test a Slurm command; collect B scores and paired latency |
 | `run_main_experiments.py` | Run a main-experiment shard with question-only ordinary policies, a separate Oracle process, per-question checkpoints and timeout accounting |
 | `slurm/main_experiments.slurm` | H100 array on authorized `dilek-ic`, normal QoS, nice 0; higher-tier scavenger with secondary fallback |
+| `eval_main_smoke.py`, `slurm/validate_main_smoke.slurm` | CPU-only execution/log gate between the debug GPU smoke and the main array; checks all expected runs with the pinned B evaluator |
 | `tests/test_main_experiments.py` | Fictional tests for input isolation, cross-schedule consistency, snapshot integrity and failure retention |
+| `tests/test_main_smoke_gate.py` | Fictional tests that missing, duplicate or failed smoke work cannot pass the gate |
 | `eval_with_b.py` | Scores a run with B's evaluator (unpacked from B's branch) next to the self-check |
 | `make_question_audio.py`, `run_asr.py` | Speak the questions with Piper; transcribe them with Whisper |
 | `eval_judge.py`, `eval_sft.py`, `train_lora_judge.py` | Judge evaluation on traces, on B's SFT dev set, and LoRA training |
@@ -172,3 +174,10 @@ output, sample counts and missing coverage. No confidence interval method is sil
 The data manifest still says `controlled_mock_ready_for_review`, with gold approval and final delay
 freeze unrecorded. Preparation is not a declaration of final approval, a GPU run or a result.
 See `docs/plan.md` for the actual checks and pending work.
+
+On 2026-11-16 the user authorized the main submission. Smoke job `12490825`, CPU validation job
+`12490921` and main array `12490887` are submitted. Dependencies are smoke → successful validation →
+main, so no manual release is needed after a passing gate. Failure keeps the main array blocked.
+The gate checks execution completeness and B log validity; it does not require high semantic scores.
+The submitted main array raises concurrency from the preparation default of two to four H100 GPUs;
+all 30 shards retain the same frozen code and inputs. See the plan for current queue state.

@@ -298,3 +298,66 @@ v3 没有再次执行 Slurm 试检或实际提交，只有离线校验和命令�
 共 30 条策略运行，1 张 H100、30 分钟上限；没有执行命令。
 完整 debug bundle 共有 20 个 task，但本次 smoke 命令只选择一个，不隐式提交整套 debug。
 建议先验收该 GPU smoke 的模型启动和日志，再决定正式提交主实验。
+
+### 开发集 GPU smoke 提交（2026-11-16）
+
+用户明确要求先提交已准备的开发集 smoke，并询问增加并行卡数。
+本次提交范围是 `main_debug_smoke_20261116` 的 task 0：1 道 debug 题 × 三档 × 十配置，
+共 30 条策略运行，1 张完整 H100、30 分钟，`dilek-ic`、normal、nice 0、scavenger/secondary。
+提交前已核验冻结包 51 个文件 hash；没有使用预留题运行模型。
+作业号与提交回执在实际提交后立即补录；目前这段是提交意图，不代表作业已创建或成功。
+
+实际提交回执：2026-11-16 16:20 CST，作业 **12490825**（array task 0），sbatch 退出 0。
+提交时工作区 HEAD 为 `7dd78302156ce206c5c0756d5fcb340e0d589c4c`；执行的是既有冻结包，
+其父 commit 为 `bc412d5` + dirty，全部文件 hash 校验通过，不用工作区 HEAD 冒充运行源码。
+
+| 运行名 | 数据 / 配置 | 作业号 | GPU | 结果位置 | 当前状态 |
+|---|---|---|---|---|---|
+| `main_debug_smoke_20261116` task 0 | 固定 B `ea39057` 的第一道 debug 题、三档、十配置；30 条预期运行 | 12490825 | 请求 1 × H100 80GB，未分配 | `a_work/results/replay/main_debug_smoke_20261116/shard_000/` | PENDING / Priority；没有性能分数 |
+
+已用 scontrol 核实 Account=dilek-ic、QOS=normal、Nice=0、Priority=2000、30 分钟、
+scavenger/secondary、H100 约束。提交回执保存在冻结包的 `submission_20261116.json`。
+用户同时询问更多卡：已提出把主实验 30 个分片一次入队、上限 4 张 H100；
+当前仅 smoke 已授权并提交，主实验最终运行确认仍待回复，不自动提交或放行。
+
+用户随后明确选择“先只提交开发集 smoke”。本轮范围据此限定为现有作业 12490825；
+不提交、挂起排队或放行主实验，不再把此前的多卡询问解释为最终运行授权。
+
+### 主实验批量提交（2026-11-16）
+
+用户随后明确要求“主实验一起提交”，覆盖上一条仅 smoke 的范围限制。
+本次以既有冻结包 `main_eval_revised_v1_20261116_v3` 提交全部 30 个分片，最多 4 张完整 H100
+同时运行，预期 9,000 条策略运行。模型、标签、阈值、计时和评分配置保持冻结包原值。
+先挂起主实验，待 smoke 执行及独立日志/评分校验通过后再允许启动；不改 gold 或用主实验调参。
+作业号和依赖关系在实际提交后立即补录。此段为提交意图，不代表作业已创建或 smoke 已验收。
+
+实际主实验提交于 2026-11-16 16:24 CST，作业 **12490887**，sbatch 退出 0。
+已校验冻结包全部 332 个文件；最初加 user hold，在建立下述依赖后移除 hold。
+新增 CPU 校验任务 **12490921** 于 16:27 CST 提交，1 CPU、2GB、5 分钟、无 GPU，
+使用同一授权账号、QoS、nice 和分区。依赖链为：
+
+`12490825` smoke 成功 → `12490921` 执行/日志校验成功 → `12490887` 主实验可开始调度。
+
+校验任务确认普通/Oracle worker 完整、30 条策略执行均完成且不重复、日志有输出，
+再用冻结 B evaluator 检查全部预期配置和记录有效性。允许语义映射待复核，不以分数高低筛选。
+任一执行或校验失败则主实验不能启动；全部通过后由 Slurm 自动处理依赖，无需另一次人工 release。
+主实验不再处于 user hold，当前等待的是尚未满足的成功依赖。
+
+| 独立运行 | 作业号 | 资源 / 时限 | 来源和产物 | 16:28 CST 核对状态 |
+|---|---|---|---|---|
+| debug smoke task 0 | 12490825 | 1 H100 / 30 分钟 | 既有 debug 冻结包，`results/replay/main_debug_smoke_20261116/shard_000/` | PENDING / Priority，未分配 GPU |
+| smoke 执行/评分校验 | 12490921 | 1 CPU、2GB / 5 分钟 | `results/code_snapshots/main_smoke_validation_20261116/`；输出 `results/analysis/main_debug_smoke_12490825_gate/` | PENDING / Dependency |
+| 主实验全 30 分片 | 12490887 | 每片 1 H100 / 4 小时，最多 4 片并行 | `results/code_snapshots/main_eval_revised_v1_20261116_v3/`；`results/replay/main_eval_revised_v1_20261116_v3/` | PENDING，Dependency=afterok:12490921，未分配 GPU |
+
+主实验回执在主冻结包 `submission_20261116.json`，含提交、依赖修改和 release 的实际命令及退出码。
+校验脚本单独复制冻结并记录 SHA256，回执在 `main_smoke_validation_20261116/submission.json`。
+主实验冻结包仍是原 v3，未将新校验脚本混入或修改已提交的模型/策略代码。
+新增源码是 `eval_main_smoke.py`、`slurm/validate_main_smoke.slurm` 和 4 项虚构 gate 测试。
+本轮 A 全部 108 项测试、shell 语法检查通过，退出 0；本轮不重复未变更的控制和 B 测试。
+
+目前 `squeue --start` 对 smoke 和主实验均返回 N/A，不能承诺开始日期或固定队列名次。
+16:26 CST 的快照中，适用分区有 27 条 H100 请求的数值 Priority 高于本任务 2000；
+array 聚合、资源拟合、分区层级和回填不同，不能解释为“前面只有 27 个任务”。
+smoke 未运行，故还没有可用于外推主实验墙钟耗时的实测。
+在四卡持续满载且每片均用满四小时时，30 片需要 8 批、32 小时配置预算；
+这是不含排队的上限预算，不是实际耗时预测；超时和失败仍按原规则保留。
