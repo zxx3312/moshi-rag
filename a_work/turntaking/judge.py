@@ -10,6 +10,7 @@ from __future__ import annotations
 import json
 from typing import Dict, Iterable, List, Mapping, Protocol
 
+from .premise import candidate_relation, explicitly_excludes, mentioned, states_unique, words
 from .schema import (
     CONTRADICTED, FULLY_SUFFICIENT, INSUFFICIENT, LABELS, PARTIALLY_SUFFICIENT, SUPPORTED,
     UNRESOLVED, Observation, Unit, UnitJudgment,
@@ -188,11 +189,12 @@ class PromptJudge:
     is CONTRADICTED, else UNRESOLVED. The model still provides the value ("no", "Mark Gurr"). One shortcut:
     derive_conclusion accepts a by_presupposition choice between candidates the question names.
     """
-    def __init__(self, client, with_examples: bool = True, name: str = "prompt"):
+    def __init__(self, client, with_examples: bool = True, name: str = "prompt", *, strict_candidate_paths: bool = False):
         """A trained LoRA judge uses the same class with its adapter's client and with_examples=False."""
         self.client = client
         self.with_examples = with_examples
         self.name = name
+        self.strict_candidate_paths = strict_candidate_paths
         self._cache: Dict[tuple, Dict[str, UnitJudgment]] = {}
         self._latency: Dict[tuple, float] = {}
         self.log: List[dict] = []
@@ -222,22 +224,30 @@ class PromptJudge:
             raw = self.client.chat_json(judge_messages(obs, self.with_examples), purpose="judge", schema=JUDGE_SCHEMA)
         except (ValueError, OSError) as e:  # unusable reply or endpoint failure: judge nothing as supported
             error = repr(e)
-        out, downgraded = normalize_reply(raw, obs.units, visible, obs.question)
+        evidence = {e.evidence_id: e for e in obs.evidence} if self.strict_candidate_paths else None
+        out, downgraded = normalize_reply(raw, obs.units, visible, obs.question, candidate_evidence=evidence)
         self._cache[key] = out
         latency = sum(c.latency_s for c in self.client.calls[n_calls:])
         self._latency[key] = latency
-        self.log.append({"sample_id": obs.sample_id, "time_s": obs.time_s, "evidence": list(visible),
-                         "latency_s": round(latency, 3), "error": error, "downgraded": downgraded,
-                         "labels": {k: v.label for k, v in out.items()}, "reply": raw})
+        record = {"sample_id": obs.sample_id, "time_s": obs.time_s, "evidence": list(visible),
+                  "latency_s": round(latency, 3), "error": error, "downgraded": downgraded,
+                  "labels": {k: v.label for k, v in out.items()}, "reply": raw}
+        if self.strict_candidate_paths:
+            record["candidate_paths"] = {uid: {"kind": "exclusion" if j.by_presupposition else "direct",
+                                               "depends_on": list(j.support_dependencies),
+                                               "citations": list(j.citations)}
+                                         for uid, j in out.items() if j.support_dependencies is not None}
+        self.log.append(record)
         return out
 
 
-def normalize_reply(raw: Mapping, units: Iterable[Unit], visible: Iterable[str], question: str):
+def normalize_reply(raw: Mapping, units: Iterable[Unit], visible: Iterable[str], question: str, *, candidate_evidence=None):
     """Validate one model reply: ({unit_id: UnitJudgment}, ids downgraded for invalid citations)."""
     visible = set(visible)
+    units = {u.unit_id: u for u in units}
     replies = {r.get("unit_id"): r for r in raw.get("units", []) if isinstance(r, dict)}
     out, downgraded = {}, []
-    for u in units:  # in id order, so dependencies are processed first
+    for u in units.values():  # in id order, so dependencies are processed first
         r = replies.get(u.unit_id, {})
         label = r.get("label") if r.get("label") in LABELS else UNRESOLVED
         cites = []
@@ -251,16 +261,71 @@ def normalize_reply(raw: Mapping, units: Iterable[Unit], visible: Iterable[str],
         if value is not None and value.strip().lower() in ("", "null", "none"):
             value = None
         presupposed = r.get("by_presupposition") is True
+        support_dependencies = None
         if is_conclusion(u):
-            label, cites, presupposed = derive_conclusion(u, out, value, presupposed, question)
+            choice = (strict_candidate_conclusion(u, units, out, value, question, candidate_evidence)
+                      if candidate_evidence is not None else None)
+            if choice is None:
+                label, cites, presupposed = derive_conclusion(u, out, value, presupposed, question)
+            else:
+                label, cites, presupposed, support_dependencies = choice
             value = value if label == SUPPORTED else None
         elif label == SUPPORTED and (any(c not in visible for c in cites) or (not cites and not u.depends_on)):
             downgraded.append(u.unit_id)
             label, cites, value = UNRESOLVED, (), None
         supported = label == SUPPORTED
         out[u.unit_id] = UnitJudgment(label, cites if label != UNRESOLVED else (), value,
-                                      supported and r.get("by_omission") is True, supported and presupposed)
+                                      supported and support_dependencies is None and r.get("by_omission") is True,
+                                      supported and presupposed, support_dependencies)
     return out, downgraded
+
+
+def strict_candidate_conclusion(unit, units, labels, value, question, evidence):
+    """Select one admissible support route. Return None for conclusions outside this rule."""
+    q, answer = words(question), words(value or "")
+    if len(unit.depends_on) != 2:
+        return None
+    dependencies = [units[uid] for uid in unit.depends_on]
+    deps = [labels.get(d.unit_id, UnitJudgment(UNRESOLVED)) for d in dependencies]
+    relation = candidate_relation(*(d.description for d in dependencies))
+    blocked = (UNRESOLVED, (), False, None)
+    if q.startswith("whether "):
+        return blocked if answer not in {"", "yes", "no"} else None
+    asks_candidate = q.startswith(("which ", "who ", "what ", "in between ", "between ", "exactly one ", "only one "))
+    named_boolean_choice = mentioned(answer, q) and any(words(j.value or "") in {"yes", "no"} for j in deps)
+    if not (relation and asks_candidate) and not named_boolean_choice:
+        return None
+    if any(d.label == CONTRADICTED for d in deps):
+        return CONTRADICTED, (), False, None
+    if relation is None:
+        return blocked
+    left, right, predicate = relation
+    if not all(mentioned(name, q) for name in (left, right)) or answer not in (left, right):
+        return blocked
+    winning = 0 if answer == left else 1
+    losing = 1 - winning
+
+    def supported_without_assumptions(uid):
+        judgment = labels.get(uid, UnitJudgment(UNRESOLVED))
+        parents = judgment.support_dependencies
+        if parents is None:
+            parents = units[uid].depends_on
+        return (judgment.label == SUPPORTED and not judgment.by_omission and not judgment.by_presupposition
+                and all(supported_without_assumptions(p) for p in parents))
+
+    def supports(index, desired):
+        judgment = deps[index]
+        uid = dependencies[index].unit_id
+        return (supported_without_assumptions(uid) and words(judgment.value or "") == desired and judgment.citations
+                and all(cite in evidence for cite in judgment.citations))
+
+    if supports(winning, "yes"):
+        return SUPPORTED, deps[winning].citations, False, (dependencies[winning].unit_id,)
+    if (words(deps[winning].value or "") != "no" and words(deps[losing].value or "") != "yes"
+            and supports(losing, "no") and states_unique(question, left, right, predicate)
+            and explicitly_excludes((left, right)[losing], predicate, deps[losing].citations, evidence)):
+        return SUPPORTED, deps[losing].citations, True, (dependencies[losing].unit_id,)
+    return blocked
 
 
 def is_conclusion(unit: Unit) -> bool:
@@ -305,8 +370,9 @@ def resolve_dependencies(units: Iterable[Unit], raw: Mapping[str, UnitJudgment])
     def visit(uid: str) -> UnitJudgment:
         if uid not in resolved:
             own = raw.get(uid, UnitJudgment(UNRESOLVED))
-            deps = [visit(d).label == SUPPORTED for d in by_id[uid].depends_on]
-            deps_ok = all(deps) or (own.by_presupposition and any(deps))
+            deps = [visit(d).label == SUPPORTED for d in (own.support_dependencies
+                    if own.support_dependencies is not None else by_id[uid].depends_on)]
+            deps_ok = all(deps) or (own.support_dependencies is None and own.by_presupposition and any(deps))
             resolved[uid] = own if own.label != SUPPORTED or deps_ok else UnitJudgment(UNRESOLVED)
         return resolved[uid]
 

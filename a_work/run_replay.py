@@ -128,6 +128,7 @@ def main():
     ap.add_argument("--judge-model", default=None, help="Served name of the judge; default --model.")
     ap.add_argument("--judge-name", default="prompt", help="Name in the policy column.")
     ap.add_argument("--no-examples", action="store_true", help="Judge without few-shot examples (LoRA).")
+    ap.add_argument("--strict-candidate-paths", action="store_true", help="Validate how a binary candidate answer was supported.")
     ap.add_argument("--grounded-model", default=None,
                     help="Model on the judge's server that phrases evidence-aware sentences; default --model.")
     ap.add_argument("--thinking", action="store_true")
@@ -150,7 +151,8 @@ def main():
                   replay=load_tape(args.tape) if args.tape else None, allow_misses=args.allow_tape_misses)
     client = ChatClient(args.base_url, args.model, **shared)
     judge_client = ChatClient(args.judge_base_url or args.base_url, args.judge_model or args.model, **shared)
-    judge = PromptJudge(judge_client, with_examples=not args.no_examples, name=args.judge_name)
+    judge = PromptJudge(judge_client, with_examples=not args.no_examples, name=args.judge_name,
+                        strict_candidate_paths=args.strict_candidate_paths)
     grounded_client = (ChatClient(args.judge_base_url or args.base_url, args.grounded_model, **shared)
                        if args.grounded_model else client)
     generator = Generator(client, grounded_client) if args.generate else None
