@@ -16,7 +16,7 @@ python3 a_work/run_demo.py                      # two hand-made traces with plac
 | `turntaking/schema.py` | Action and label names from B's interface v1; observation and decision types |
 | `turntaking/decompose.py` | Splits a question into answer units (sees the question only) |
 | `turntaking/judge.py` | `OracleJudge` (gold support sets), `PromptJudge` (few-shot LLM, or a LoRA adapter without examples), dependency resolution, sufficiency state |
-| `turntaking/premise.py` | Conservative checks for the candidate-selection evidence and an explicit uniqueness premise |
+| `turntaking/premise.py` | Conservative checks for candidate-selection evidence and an explicit uniqueness premise; preserves candidate spelling when recovering a missing conclusion value |
 | `turntaking/policies.py` | `EvidenceAware` (ours), `WaitAll`, `FixedProgress`, `TimeOnly`, `FirstEvidence` |
 | `turntaking/generate.py` | Writes what the agent says; guards that replace a sentence that drops a value or adds facts |
 | `turntaking/cascade.py` | Speech ends of the cascade: `Heard` (ASR result), `Speech`, `RateTTS`, `PiperTTS` |

@@ -55,6 +55,38 @@ class PremisePathsTest(unittest.TestCase):
                 result, _ = self.evaluate(obs, judgment('u1', 'no', ('e3',)), judgment('u3', 'Bea Vale', premise=True))
                 self.assertEqual(result['u3'].label, UNRESOLVED)
 
+    def test_missing_conclusion_value_uses_only_an_admissible_path(self):
+        cases = (
+            ('omission_only', judgment('u1', 'no', ('e1',), omitted=True), judgment('u2', None)),
+            ('direct_confirmation', judgment('u1', None), judgment('u2', 'yes', ('e2',))),
+            ('explicit_exclusion', judgment('u1', 'no', ('e3',)), judgment('u2', None)),
+            ('omission_plus_direct', judgment('u1', 'no', ('e1',), omitted=True), judgment('u2', 'yes', ('e2',))),
+            ('which_of_without_uniqueness', judgment('u1', 'no', ('e3',)), judgment('u2', None)),
+            ('interrogative_uniqueness', judgment('u1', 'no', ('e3',)), judgment('u2', None)),
+            ('reject_unconfirmed_choice', judgment('u1', 'yes', ('e4',)), judgment('u2', None)),
+        )
+        for case, left, right in cases:
+            with self.subTest(case=case):
+                obs, expected = self.cases[case]
+                result, _ = self.evaluate(obs, left, right, judgment('u3', None))
+                actual = result['u3']
+                self.assertEqual((actual.label, actual.value, actual.citations, actual.by_presupposition), expected)
+
+    def test_missing_value_cannot_choose_between_two_confirmed_candidates(self):
+        obs, _ = self.cases['omission_plus_direct']
+        obs = replace(obs, evidence=(*obs.evidence, Evidence('e4', 'Ari Lane won the Amber Prize.', 0, {})))
+        result, _ = self.evaluate(obs, judgment('u1', 'yes', ('e4',)), judgment('u2', 'yes', ('e2',)),
+                                  judgment('u3', None))
+        self.assertEqual(result['u3'].label, UNRESOLVED)
+
+    def test_missing_value_can_infer_the_first_candidate(self):
+        obs, _ = self.cases['explicit_exclusion']
+        obs = replace(obs, evidence=(Evidence('e3', 'Bea Vale did not win the Amber Prize.', 0, {}),))
+        result, paths = self.evaluate(obs, judgment('u1', None), judgment('u2', 'no', ('e3',)),
+                                      judgment('u3', None))
+        self.assertEqual((result['u3'].label, result['u3'].value), (SUPPORTED, 'Ari Lane'))
+        self.assertEqual(paths['u3'], {'kind': 'exclusion', 'depends_on': ['u2'], 'citations': ['e3']})
+
     def test_cannot_use_omission_through_an_intermediate_unit(self):
         obs, _ = self.cases['explicit_exclusion']
         obs = replace(obs, units=(Unit('u0', 'source of negative inference', False),

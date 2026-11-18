@@ -13,6 +13,13 @@ def mentioned(name, text):
     return bool(name) and f" {name} " in f" {text} "
 
 
+def candidate_name(description, normalized_name):
+    """Read a candidate's original spelling from its 'whether NAME ...' unit."""
+    text = unicodedata.normalize("NFKC", description)
+    tokens = list(re.finditer(r"[^\W_]+", text))
+    return text[tokens[1].start():tokens[len(normalized_name.split())].end()]
+
+
 def candidate_relation(left, right):
     """Recover names and their shared predicate from two 'whether NAME PREDICATE' units."""
     left, right = words(left).split(), words(right).split()

@@ -10,7 +10,7 @@ from __future__ import annotations
 import json
 from typing import Dict, Iterable, List, Mapping, Protocol
 
-from .premise import candidate_relation, explicitly_excludes, mentioned, states_unique, words
+from .premise import candidate_name, candidate_relation, explicitly_excludes, mentioned, states_unique, words
 from .schema import (
     CONTRADICTED, FULLY_SUFFICIENT, INSUFFICIENT, LABELS, PARTIALLY_SUFFICIENT, SUPPORTED,
     UNRESOLVED, Observation, Unit, UnitJudgment,
@@ -268,7 +268,8 @@ def normalize_reply(raw: Mapping, units: Iterable[Unit], visible: Iterable[str],
             if choice is None:
                 label, cites, presupposed = derive_conclusion(u, out, value, presupposed, question)
             else:
-                label, cites, presupposed, support_dependencies = choice
+                label, cites, value = choice.label, choice.citations, choice.value
+                presupposed, support_dependencies = choice.by_presupposition, choice.support_dependencies
             value = value if label == SUPPORTED else None
         elif label == SUPPORTED and (any(c not in visible for c in cites) or (not cites and not u.depends_on)):
             downgraded.append(u.unit_id)
@@ -288,7 +289,7 @@ def strict_candidate_conclusion(unit, units, labels, value, question, evidence):
     dependencies = [units[uid] for uid in unit.depends_on]
     deps = [labels.get(d.unit_id, UnitJudgment(UNRESOLVED)) for d in dependencies]
     relation = candidate_relation(*(d.description for d in dependencies))
-    blocked = (UNRESOLVED, (), False, None)
+    blocked = UnitJudgment(UNRESOLVED)
     if q.startswith("whether "):
         return blocked if answer not in {"", "yes", "no"} else None
     asks_candidate = q.startswith(("which ", "who ", "what ", "in between ", "between ", "exactly one ", "only one "))
@@ -296,14 +297,12 @@ def strict_candidate_conclusion(unit, units, labels, value, question, evidence):
     if not (relation and asks_candidate) and not named_boolean_choice:
         return None
     if any(d.label == CONTRADICTED for d in deps):
-        return CONTRADICTED, (), False, None
+        return UnitJudgment(CONTRADICTED)
     if relation is None:
         return blocked
     left, right, predicate = relation
-    if not all(mentioned(name, q) for name in (left, right)) or answer not in (left, right):
+    if not all(mentioned(name, q) for name in (left, right)) or answer not in ("", left, right):
         return blocked
-    winning = 0 if answer == left else 1
-    losing = 1 - winning
 
     def supported_without_assumptions(uid):
         judgment = labels.get(uid, UnitJudgment(UNRESOLVED))
@@ -319,12 +318,21 @@ def strict_candidate_conclusion(unit, units, labels, value, question, evidence):
         return (supported_without_assumptions(uid) and words(judgment.value or "") == desired and judgment.citations
                 and all(cite in evidence for cite in judgment.citations))
 
-    if supports(winning, "yes"):
-        return SUPPORTED, deps[winning].citations, False, (dependencies[winning].unit_id,)
-    if (words(deps[winning].value or "") != "no" and words(deps[losing].value or "") != "yes"
-            and supports(losing, "no") and states_unique(question, left, right, predicate)
-            and explicitly_excludes((left, right)[losing], predicate, deps[losing].citations, evidence)):
-        return SUPPORTED, deps[losing].citations, True, (dependencies[losing].unit_id,)
+    if not answer and all(supports(index, "yes") for index in (0, 1)):
+        return blocked
+    for winning, name in enumerate((left, right)):
+        if answer and answer != name:
+            continue
+        losing = 1 - winning
+        inferred_value = value or candidate_name(dependencies[winning].description, name)
+        if supports(winning, "yes"):
+            return UnitJudgment(SUPPORTED, deps[winning].citations, inferred_value,
+                                support_dependencies=(dependencies[winning].unit_id,))
+        if (words(deps[winning].value or "") != "no" and words(deps[losing].value or "") != "yes"
+                and supports(losing, "no") and states_unique(question, left, right, predicate)
+                and explicitly_excludes((left, right)[losing], predicate, deps[losing].citations, evidence)):
+            return UnitJudgment(SUPPORTED, deps[losing].citations, inferred_value, by_presupposition=True,
+                                support_dependencies=(dependencies[losing].unit_id,))
     return blocked
 
 
