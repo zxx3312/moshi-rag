@@ -16,6 +16,7 @@ python3 a_work/run_demo.py                      # two hand-made traces with plac
 | `turntaking/schema.py` | Action and label names from B's interface v1; observation and decision types |
 | `turntaking/decompose.py` | Splits a question into answer units (sees the question only) |
 | `turntaking/judge.py` | `OracleJudge` (gold support sets), `PromptJudge` (few-shot LLM, or a LoRA adapter without examples), dependency resolution, sufficiency state |
+| `turntaking/premise.py` | Conservative checks for the candidate-selection evidence and an explicit uniqueness premise |
 | `turntaking/policies.py` | `EvidenceAware` (ours), `WaitAll`, `FixedProgress`, `TimeOnly`, `FirstEvidence` |
 | `turntaking/generate.py` | Writes what the agent says; guards that replace a sentence that drops a value or adds facts |
 | `turntaking/cascade.py` | Speech ends of the cascade: `Heard` (ASR result), `Speech`, `RateTTS`, `PiperTTS` |
@@ -26,6 +27,7 @@ python3 a_work/run_demo.py                      # two hand-made traces with plac
 | `eval_with_b.py` | Scores a run with B's evaluator (unpacked from B's branch) next to the self-check |
 | `make_question_audio.py`, `run_asr.py` | Speak the questions with Piper; transcribe them with Whisper |
 | `eval_judge.py`, `eval_sft.py`, `train_lora_judge.py` | Judge evaluation on traces, on B's SFT dev set, and LoRA training |
+| `eval_premise_paths.py` | Compare candidate validation on identical saved or live judge outputs using debug traces and fictional controls |
 | `slurm/` | `eval_judge.slurm` serves the models and runs a script; `train_lora.slurm` |
 | `unit_schema.md`, `judge_notes.md`, `lora_judge.md`, `cascade.md`, `evaluation_notes.md` | Rules and development notes; `judge_notes.md` section 8 discusses combined omission/presupposition risks and proposed rules; `evaluation_notes.md` includes the 2026-11-16 project audit covering training, judges, all replay versions, control runs, T4 diagnostics and C's AI review (Chinese) |
 | `../docs/plan.md` | Next work on `a-eval-refinement`: combined omission/presupposition cases, benchmark metrics, Wait-All comparison, development parameter sweep, frozen evaluation, and C's audio review |
@@ -61,6 +63,7 @@ RUN_NAME=my_run GPU_UTIL=0.55 JUDGE_GPU_UTIL=0.30 JUDGE_BASE=Qwen/Qwen3-4B \
 - `--concurrent` adds a `+concurrent` copy of each evidence-aware policy that judges and generates while
   the agent speaks.
 - `--grounded-model Qwen/Qwen3-4B` lets the judge's base model phrase the evidence-aware sentences.
+- `--strict-candidate-paths` checks binary candidate decisions and records selected dependencies and citations in `judge_calls.jsonl`.
 - The cascade: add `PYTHON=$TTS_ENV/bin/python` and `--tts piper:VOICE.onnx --save-audio`; for ASR also
   `PRE_CMD="$VLLM_ENV/bin/python $S/run_asr.py --audio $I/question_audio --out OUT/asr.jsonl"` and
   `--asr OUT/asr.jsonl`. See `cascade.md`.
@@ -103,3 +106,14 @@ these mappings were reviewed by Codex and do not constitute independent human an
 - The cascade uses synthetic question audio (Piper) until C's recordings are shared, and Whisper is not streaming.
 - Models that share a GPU may slow each other when they run concurrently; the replay does not simulate that.
 - Only non-Wait actions are logged.
+
+## Main experiment results
+
+As checked on 2026-11-18, all 30 main tasks finished on November 16 at 19:51:40 CST, with 600 completed
+workers and 9,000 completed policy runs. Actual peak parallelism was one H100 task. The fixed B scorer
+returned exit 0 with no invalid log rows, while 1,427 claim records still need review. Full results are in
+`results/analysis/main_eval_revised_v1_20261118/`; `analyze.py` reproduces aggregate tables and hashes.
+See [the main analysis](evaluation_notes.md#主实验结果分析2026-11-18). High conditional Unit EM is affected
+by value-based mapping and does not establish whole-answer accuracy. Long-delay first information is
+earlier on measurable pairs, while short-delay and complete-answer speed do not show a general win.
+No main prompts, labels, values, aliases or thresholds were changed after these results.
