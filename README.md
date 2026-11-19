@@ -1,251 +1,265 @@
-# MoshiRAG: Asynchronous Knowledge Retrieval for Full-Duplex Speech Language Models
+# CascadeSystem: Evidence-Aware Spoken Retrieval
 
-## 课程研究项目
+This fork contains a standalone conversational retrieval prototype for
+**Computation-Aware Turn-Taking for Full-Duplex Spoken Agents**.
 
-本 fork 用于 **Computation-Aware Turn-Taking for Full-Duplex Spoken Agents**。
-开始任务前先读助手规则、实验定义和剩余工作计划。共享文档当前在工作区整理，尚待用户提交和同步到 main。
+The current application uses Tinker `openai/gpt-oss-120b`, Wikipedia retrieval,
+evidence checks, and optional local speech recognition and synthesis. A controller
+decides when to acknowledge a question, wait, give a partial answer, finish, or
+state that information could not be confirmed.
 
-| 文件 | 内容 |
+The application runs independently of Moshi. Original MoshiRAG code remains in
+`moshi/`, `rust/`, and `client/`; its instructions are preserved in
+[Original MoshiRAG documentation](docs/upstream_moshirag_README.md).
+
+## Guides
+
+| Guide | Contents |
 |---|---|
-| [`CLAUDE.md`](CLAUDE.md) / [`AGENTS.md`](AGENTS.md) | 同一份助手规则；数据隔离、任务前后操作、测试、Git；由用户提交 |
-| [`docs/experiment_spec.md`](docs/experiment_spec.md) | 实验定义、已有约定、暂定参数与待定决定 |
-| [`docs/plan.md`](docs/plan.md) | 各组进度、剩余步骤、验收标准、运行记录 |
-| `docs/proposal.pdf` | Proposal 约定位置；当前缺失，待提供 |
+| [CascadeSystem](cascadesystem/README.md) | Application flow, configuration, text/voice conversations, interruption, outputs, and file reference. |
+| [Debug20 evaluation](<eval debug20/README.md>) | B's fixed debug evidence, original B scoring, direct WAV generation, and playback. |
+| [GPT+LoRA final 900](<eval gpt900/README.md>) | Explicit final-run entry for the revised 300-question/900-trace set, with the saved GPT judge checkpoint and B scorer. |
+| [GPT-OSS judge LoRA](cascadesystem/training/README.md) | SFT data preparation, Tinker training/dev comparison, and running a saved judge checkpoint. |
+| [Experiment specification](docs/experiment_spec.md) | Research definitions and pending decisions, separate from prototype features. |
+| [Work plan](docs/plan.md) | Progress, validation, source versions, and run records. |
+| [Repository rules](CLAUDE.md) / [agent entry](AGENTS.md) | Data isolation and contribution instructions. |
 
-A/B/C 的代码与说明尚在各自分支，位置和版本见 plan。以下保留上游使用说明；研究任务遵守上述项目规则。
+## Quick start
 
-![precommit badge](https://github.com/kyutai-labs/moshi-rag/workflows/precommit/badge.svg)
-![rust ci badge](https://github.com/kyutai-labs/moshi-rag/workflows/Rust%20CI/badge.svg)
+Run commands from the **repository root**. The core requires Python 3.10+.
+The Windows examples use installed system voices. Microphone recognition has
+separate optional dependencies described in the application guide.
 
-[[Read the paper]][moshi-rag] [[Hugging Face]](https://hf.co/collections/kyutai/moshirag-release)
+Try a fictional example without API calls:
 
-[MoshiRAG][moshi-rag] is a compact **full-duplex** speech language model augmented with asynchronous knowledge retrieval to improve factuality without sacrificing real-time interactivity. Built on top of [Moshi][moshi] and [Mimi][moshi], MoshiRAG predicts when a query needs external knowledge, retrieves references within the natural response delay, and grounds answers in stronger knowledge sources.
-
-This repository is based on the [Moshi repo](https://github.com/kyutai-labs/moshi), augmented with RAG-related implementation.
-Please visit the original Moshi repo if you would like to test the original Moshi model.
-
-## Organisation of the repository
-
-This repository includes two main codebases:
-
-- **[PyTorch](#pytorch-implementation)** for research and experimentation, located in [`moshi/`](moshi/).
-- **[Rust](#rust-implementation)** for production use, located in [`rust/`](rust/).
-
-Finally, the code for the web UI client is provided in the [`client/`](client/) directory.
- 
-## System design
-
-MoshiRAG uses a modular front-end/back-end design:
-- **Front-end** is a full-duplex speech model based on Moshi that handles real-time conversation.
-- **Back end** is an asynchronous retrieval system running in parallel to fetch factual information when needed.
-
-The front end keeps listening and speaking continuously. When the model predicts a retrieval trigger token, conversation context is sent to the retrieval back end while the dialogue continues.  During this period, the model can produce lightweight pre-RAG content (for example, short acknowledgments or coarse responses) so the interaction stays natural.
-
-The back end is text-in/text-out and can be implemented with different retrieval methods (LLM-based retrieval or search-based retrieval, etc).  The retrieval back end takes conversation context (derived by combining the text predicted by Moshi inner monologue and the user transcription predicted by a streaming ASR component) as inputs, and then returns the reference text. Once the retrieval is completed, the reference text is encoded and injected back into Moshi as a stream, allowing later response segments to be grounded in external knowledge without interrupting the ongoing conversation.
-
-<p align="center">
-<img src="./front_back_end.png" alt="Illustration of the front-end and back-end components in MoshiRAG. When the model needs external information, it outputs a <ret> token. The conversation transcript is sent to the back end which operates asynchronously. Once ready, the result is injected into Moshi which then adapts its response with no interruption."
-width="650px"></p>
-
-<p align="center">
-<img src="./streams.png" alt="Text and audio token streams of the inputs and outputs of MoshiRAG. Front-end Moshi receives at all time its previous step token predictions and the user speech tokens. When the retrieval result is ready, its representation is summed with the embeddings from other token streams and ingested over a number of time steps."
-width="650px"></p>
-
-
-## Models
-
-We release the MoshiRAG model fine-tuned on a female synthetic voice (Moshika). Here is the list of associated HuggingFace repos of the model in different formats.
-
-- MoshiRAG (Moshika) for PyTorch (bf16): [kyutai/moshika-rag-pytorch-bf16](https://huggingface.co/kyutai/moshika-rag-pytorch-bf16), .
-- MoshiRAG (Moshika) for Rust/Candle (bf16): [kyutai/moshika-rag-candle-bf16](https://huggingface.co/kyutai/moshika-rag-candle-bf16).
-
-All models are released under the CC-BY 4.0 license.
-
-## Requirements
-
-You will need at least Python 3.10, with 3.12 recommended. For specific requirements, please check the individual backends
-directories. You can install the PyTorch and MLX clients with the following:
-
-```bash
-pip install -U -e "git+https://git@github.com/kyutai-labs/moshi-rag.git#egg=moshi&subdirectory=moshi"
-pip install rustymimi  # mimi, rust implementation with Python bindings from PyPI
+```powershell
+python -m cascadesystem --demo
 ```
 
-If you are not using Python 3.12, you might get an error when installing `ruVstymimi`. Then, you will need to install the [Rust toolchain](https://rustup.rs/), or switch to Python 3.12.
+Create the local API configuration only if it does not already exist:
 
-While we hope that the present codebase will work on Windows, we do not provide official support for it. At the moment, we do not support quantization for the PyTorch version, so you will need a GPU with a significant amount of memory (24GB) for the front-end Moshi model. The reference encoder can run on a second GPU, or on the **same GPU** as Moshi if you have enough VRAM. The back end can be run either on a local device or a web API can be used. An additional GPU is required if the back end is run locally.
-
-For using the Rust backend, you will need a recent version of the [Rust toolchain](https://rustup.rs/).
-To compile GPU support, you will also need the [CUDA](https://developer.nvidia.com/cuda-toolkit) properly installed for your GPU, in particular with `nvcc`.
-
-## PyTorch implementation
-
-The PyTorch based API can be found in the `moshi` directory.
-
-### Back end (retrieval LLM)
-
-It is recommended to run a local OpenAI-compatible LLM with vLLM so retrieval stays low-latency and stable. MoshiRAG is sensitive to retrieval delays over 3 seconds; slower or flaky APIs can hurt response quality.
-
-Example vLLM (served on port `8002`; set `LLM_BASE_URL` to `http://localhost:8002/v1` and `LLM_MODEL_NAME` to `google/gemma-3-27b-it`):
-
-```bash
-vllm serve google/gemma-3-27b-it --host 0.0.0.0 --port 8002
-```
-
-Alternatively, if you wish to use online APIs, feel free to skip this server but do configurate `LLM_BASE_URL`, `LLM_API_KEY`, and `LLM_MODEL_NAME` properly when running the front end. Choosing low-latency API provider significantly stabilizes MoshiRAG's performance.
-
-### Front end (main Moshi server + reference encoder)
-
-To run MoshiRAG interactively with the web UI, you start two cooperating processes:
-
-1. **Main Moshi server** (`python -m moshi.moshi.server`) — full-duplex speech model. It calls out to a retrieval LLM over HTTP (OpenAI-compatible API) when RAG triggers.
-2. **Reference text encoder** (`python -m moshi.moshi.server_conditioner`) — a separate service that encodes retrieved reference strings so they can be injected into Moshi's conditioning path (`REFERENCE_ENCODER_URL` points at this service).
-
-This split keeps the conversational stack modular. The Moshi model and reference encoder can run on the same GPU if you have enough memory, or on separate GPUs (but ideally on the same machine). The main server also streams user audio to an STT (speech-to-text / streaming ASR) endpoint to transcribe user speech into text.
-
-Set the environment variables appropriately before starting the main server (replace placeholders with your keys and endpoints):
-
-| Variable | Role |
-| -------- | ---- |
-| `REFERENCE_ENCODER_URL` | Base URL of the reference text conditioner (e.g. `http://localhost:8001`). |
-| `STT_URL` | Streaming ASR API. We recommend [Gradium](https://gradium.ai/) `wss://eu.api.gradium.ai/api/speech/asr`. Not necessary if `--gradium-stt` is not set and a local STT model will be run instead. |
-| `STT_API_KEY` | API key for the STT service of Gradium. Not necessary if `--gradium-stt` is not set and a local STT model will be run instead. |
-| `LLM_BASE_URL` | Base URL of the OpenAI-compatible API used for retrieval. We recommend using a local VLLM server. |
-| `LLM_API_KEY` | API key for the retrieval LLM. |
-| `LLM_MODEL_NAME` | Model id passed to the retrieval API. |
-| `MOSHI_RETRIEVAL_LLMS_JSON` | Optional multi-backend retrieval config. When set, it overrides single-backend retrieval selection. |
-
-**1. Start the reference text encoder** (config and checkpoints can be downloaded from [Hugging Face](https://huggingface.co/kyutai/moshika-rag-pytorch-bf16) ):
-
-```bash
-python -m moshi.moshi.server_conditioner \
-    --config hf://kyutai/moshika-rag-pytorch-bf16/config.json \
-    --moshi-weight hf://kyutai/moshika-rag-pytorch-bf16/model.safetensors \
-    --cuda-device 0 \
-    --conditioner reference_with_time \
-    --port 8001
-```
-
-**2. Start the main server**:
-
-```bash
-export REFERENCE_ENCODER_URL=http://localhost:8001
-export STT_URL=wss://eu.api.gradium.ai/api/speech/asr
-export STT_API_KEY=YOUR_API_KEY
-export LLM_BASE_URL=http://localhost:8002/v1
-export LLM_API_KEY=dummy
-export LLM_MODEL_NAME=google/gemma-3-27b-it
-
-python -m moshi.moshi.server \
-  --gradio-tunnel \
-  --static "./client/dist" \
-  --init-active-speaker model \
-  --gradium-stt
-```
-
-You can also configure multiple retrieval backends with `MOSHI_RETRIEVAL_LLMS_JSON`, which overrides single `LLM_BASE_URL`/`LLM_MODEL_NAME` selection for retrieval calls. Example:
-
-```bash
-export MOSHI_RETRIEVAL_LLMS_JSON='[{"id": "gpt-oss-20b", "base_url": "https://api.groq.com/openai/v1", "model": "openai/gpt-oss-20b", "prompt_style": "simplified"},  {"id": "gemma-3-27b-it", "base_url": "http://localhost:8002/v1", "model": "google/gemma-3-27b-it", "default": true, "prompt_style": "original"}]'
-export LLM_API_KEY=YOUR_API_KEY
-export REFERENCE_ENCODER_URL=http://localhost:8001
-export STT_URL=wss://eu.api.gradium.ai/api/speech/asr
-export STT_API_KEY=YOUR_API_KEY
-
-python -m moshi.moshi.server \
-  --gradio-tunnel \
-  --static "./client/dist" \
-  --init-active-speaker model \
-  --gradium-stt
-```
-
-- Each array item is one retrieval profile (`id`, `base_url`, `model`, optional `api_key`, optional `prompt_style`).
-- `default: true` marks the fallback profile (exactly one required when there are 2+ profiles) which will be used if any retrieval model fails.
-- `prompt_style` controls which bundled reference prompt template is used for that profile (`original` or `simplified`; default is `original` for local LLM instances).
-- If a profile omits `api_key`, the global `LLM_API_KEY` is used (as in the example).
-
-Run the conditioner, the retrieval LLM (when local), and the main server on the same machine when you can, to reduce networking issues and simplify debugging.
-
-### Web UI
-
-Access the web UI on [localhost:8998](http://localhost:8998).
-If your GPU is on a distant machine this will not work because for security reasons, websites using HTTP
-are not allowed to use the microphone. There are two ways to get around this:
-- Forward the remote 8998 port to your localhost using ssh `-L` flag. Then
-  connects to [localhost:8998](http://localhost:8998) as mentioned previously.
-- Use the `--gradio-tunnel` argument, setting up a tunnel with a URL accessible from anywhere.
-  Keep in mind that this tunnel goes through the US and can add significant
-  latency (up to 500ms from Europe). You can use `--gradio-tunnel-token` to set a
-  fixed secret token and reuse the same address over time.
-
-Accessing a server that is not localhost via http may cause issues with using
-the microphone in the web UI (in some browsers this is only allowed using
-https).
-
-### Inference script
-
-We also provide an inference script which runs the PyTorch MoshiRAG pipeline on a folder of WAV audio files, and writes output WAVs and JSON logs to the specified destination. Set up `LLM_BASE_URL`, `LLM_API_KEY`, and `LLM_MODEL_NAME` as previously mentioned for MoshiRAG to obtain reference text.
-
-```bash
-export REFERENCE_ENCODER_URL=http://localhost:8001
-export LLM_BASE_URL=http://localhost:8002/v1
-export LLM_API_KEY=dummy
-export LLM_MODEL_NAME=google/gemma-3-27b-it
-
-python -m moshi.moshi.run_inference \
-  --input-dir INPUT_DIR \
-  --output-dir OUTPUT_DIR \
-  --max-consecutive-silence-frames 40
-```
-
-
-## Rust implementation
-
-In order to run the Rust inference server, set up environment variables `LLM_BASE_URL`, `LLM_API_KEY`, and `LLM_MODEL_NAME`, and use the following command from within the `rust` directory:
-
-```bash
-export LLM_BASE_URL=http://localhost:8002/v1
-export LLM_API_KEY=dummy
-export LLM_MODEL_NAME=google/gemma-3-27b-it
-
-cargo run --features cuda --bin moshi-backend -r -- --config moshi-backend/config.json standalone
-```
-
-When using macOS, you can replace `--features cuda` with `--features metal`.
-Refer to `rust/README.md` for more details regarding the config.
-
-Once the server has printed 'standalone worker listening', you can use the web
-UI. By default the Rust server uses https so it will be at
-[localhost:8998](https://localhost:8998).
-
-You will get warnings about the site being unsafe. When using chrome you
-can bypass these by selecting "Details" or "Advanced", then "Visit this unsafe
-site" or "Proceed to localhost (unsafe)."
-
-## License
-
-The present code is provided under the MIT license for the Python parts, and Apache license for the Rust backend.
-The web client code is provided under the MIT license.
-Note that parts of this code is based on [AudioCraft](https://github.com/facebookresearch/audiocraft), released under
-the MIT license.
-
-The weights for the models are released under the CC-BY 4.0 license.
-
-## Citation
-
-Please cite the following paper if you find this implementation useful.
-
-```
-@misc{chien2026moshirag,
-      title={MoshiRAG: Asynchronous Knowledge Retrieval for Full-Duplex Speech Language Models}, 
-      author={Chung-Ming Chien and Manu Orsini and Eugene Kharitonov and Neil Zeghidour and Karen Livescu and Alexandre D{\'e}fossez},
-      year={2026},
-      eprint={2604.12928},
-      archivePrefix={arXiv},
-      primaryClass={cs.CL},
-      url={https://arxiv.org/abs/2604.12928}, 
+```powershell
+if (!(Test-Path cascadesystem/.env)) {
+    Copy-Item cascadesystem/.env.example cascadesystem/.env
 }
 ```
 
-[moshi]: https://arxiv.org/abs/2410.00037
-[moshi-rag]: https://arxiv.org/abs/2604.12928
+Set `TINKER_API_KEY` in `cascadesystem/.env`. The default model is
+`openai/gpt-oss-120b`. Keep the key local; the file is ignored by Git.
+Existing environment variables override the local file.
+
+Ask a question using live Wikipedia and hear the reply:
+
+```powershell
+python -m cascadesystem --question "Which city is the Eiffel Tower in, and when did it open?" --tts windows --play --show-sources
+```
+
+Continuous text conversation with spoken replies:
+
+```powershell
+python -m cascadesystem --chat --tts windows --play
+```
+
+After installing the optional local ASR environment, use a microphone:
+
+```powershell
+python -m cascadesystem --listen --tts windows --play
+python -m cascadesystem --listen --barge-in --tts windows --play
+```
+
+Use a headset for interruption mode; there is no acoustic echo cancellation.
+See the [application guide](cascadesystem/README.md) for setup, device selection,
+Chinese/English recognition, recordings, and session commands.
+
+## What happens to a question
+
+```text
+Text / microphone / recording
+        |
+Optional ASR -> resolve follow-ups -> question-only decomposition + plan review
+        |
+Visible evidence -> judge support, citations, quotes, and dependencies
+        |
+Select supported facts not already output
+        |
+Generate natural sentences -> verify the selected facts and dependency context
+        |
+Text output -> optional sentence TTS and playback
+```
+
+When retrieval ends with necessary units still unresolved, the controller can
+make one final evidence-only recheck. A failed recheck does not authorize an
+answer from model memory. Correctly supported negative answers use
+`SUPPORTED`; `CONTRADICTED` is not the ordinary label for an answer of "No."
+
+Each API stage has a different input:
+
+| Stage | Input |
+|---|---|
+| Decomposition | The question, without gold answers or evidence. |
+| Plan review | The question and proposed units; checks relation depth, dependencies, and coverage before retrieval. |
+| Evidence judgment | The question, generated units, and currently ingested evidence. |
+| Answer generation | The selected, approved facts for this output. |
+| Answer verification | Those facts plus their visible dependency evidence. |
+| Waiting response | The question and the current execution state. |
+
+Reading evidence does not guarantee that the model interprets it correctly.
+The system validates structure, visible citations, exact quotes, and dependencies,
+but semantic support and question interpretation still depend on model judgment.
+Tinker performs one extra question-only plan review per turn. The final semantic
+recheck can also repair a rejected quote once using the same visible sources,
+without changing supported values or adding new facts. These checks add API
+latency; their effect on real answers needs a fresh run.
+
+### Waiting responses
+
+The controller decides **when** to request a response and **what kind** is allowed.
+The API supplies the wording.
+
+- `Backchannel` is the code label for an opening acknowledgment, such as
+  "I'll look up the launch and return dates." In conversation terminology this
+  is closer to an acknowledgment than a listener's brief "uh-huh."
+- `Progress` describes the actual processing state. It can be requested after
+  about three seconds without output; it is not spoken automatically every
+  three seconds.
+- Generation and checking run alongside the main pipeline, with a default
+  six-second combined budget. Unsafe, stale, failed, or late drafts are rejected
+  or replaced with short state-based fallback phrases.
+
+Waiting responses cannot announce unconfirmed answers or invented discoveries.
+See [feedback.py](cascadesystem/feedback.py) and
+[controller.py](cascadesystem/controller.py).
+
+### Partial, final, and complete
+
+| Term | Meaning |
+|---|---|
+| `Partial Answer` | Speak newly supported facts while other information is pending. |
+| `Final Answer` | The last output action; it can supply only the remaining part or state unresolved gaps. |
+| `complete` | All necessary units in the system's own plan were supported and their output was accepted. |
+| `incomplete` | Some necessary units remained unsupported or failed verification when processing ended. |
+| `error` | An operational or provider failure prevented normal completion. |
+
+A final action is not necessarily a standalone summary. Read partial answers,
+corrections, and the final answer together to reconstruct the response.
+A `complete` status is not an independently checked correctness score.
+
+Natural sentences are produced during the run, using the existing generation
+stage and conservative fallback wording. There is no extra post-run polishing
+API call. The current draft must finish generation and verification before it
+is emitted; this is not token-by-token audio streaming.
+
+## Debug20: fixed evidence and direct audio
+
+There are two distinct execution modes:
+
+| Mode | Evidence source | Purpose |
+|---|---|---|
+| `python -m cascadesystem` | Live Wikipedia retrieval | Exercise the application, including external search. |
+| `eval debug20/run.py` | B's frozen debug trace | Check behavior on controlled evidence and score with B's evaluator. |
+
+Debug20 uses 20 unique questions with three existing evidence schedules:
+
+| Schedule | First batch | Second batch |
+|---|---:|---:|
+| `immediate` | All at 0 seconds | None |
+| `short` | 1 second | 3 seconds |
+| `long` | 2 seconds | 8 seconds |
+
+These are evidence availability times, not guaranteed speaking times.
+Future evidence stays with the scheduler until it is due. B's reference answers
+are used only for scoring.
+
+On a fresh checkout, prepare the debug inputs once. Skip this if the default
+input directory already exists:
+
+```powershell
+python ".\eval debug20\run.py" prepare --ref origin/b-data-eval
+```
+
+Run the first question in the long condition and hear each sentence as it is ready:
+
+```powershell
+python ".\eval debug20\run.py" run --schedule long --limit 1 --tts windows --play
+```
+
+Generate WAVs for all 20 questions in all three conditions, without automatic playback:
+
+```powershell
+python ".\eval debug20\run.py" run --schedule all --tts windows
+```
+
+Add `--play` to hear the batch. `--limit` counts unique questions:
+`--schedule all --limit 1` selects three runs of the first question.
+
+Each invocation creates a new directory under `eval debug20/artifacts/runs/`.
+Per-question audio is saved as:
+
+```text
+RUN/
+  samples/0001/audio/response.wav
+  samples/0001/audio/responses.txt
+  samples/0001/audio/audio_index.json
+  audio_summary.json
+  policy_log.jsonl
+  b_eval/summary.md
+```
+
+Speech synthesis runs alongside model processing. Each question's audio queue
+finishes before the next question starts. Without playback, the combined WAV is
+a preview arranged at synthesis-ready times. JSON remains as background scoring
+and provenance data; the console shows readable text and paths.
+
+### Scoring saved results
+
+The runner automatically applies B's unchanged scorer. Default scoring requires
+checked claim-to-gold mappings; unmatched claims enter a review queue.
+
+For a separate, approximate unique-value diagnostic without new API calls:
+
+```powershell
+python ".\eval debug20\run.py" score --run "RUN_DIRECTORY" --allow-value-match --output "NEW_SCORE_DIRECTORY"
+```
+
+The diagnostic checks expected values/aliases and B's support rules. It is not
+embedding similarity or independent semantic grading. Means over a scored subset
+are not overall accuracy. B currently cannot fully score retractions, and
+unresolved mappings keep affected scores unknown. TTS files do not automatically
+provide atomic claim alignment; formal speech-time metrics remain null.
+See the [evaluation guide](<eval debug20/README.md>) for checked mappings and limits.
+
+## Files and outputs
+
+| Location | Role |
+|---|---|
+| [cascadesystem/](cascadesystem/README.md) | Controller, model prompts/client, live search, grounding, waiting responses, natural wording, conversation, ASR/TTS, and tests. |
+| [eval debug20/](<eval debug20/README.md>) | Debug trace preparation, scheduling, audio generation, B log conversion, scoring, and tests. |
+| [a_work/](a_work/README.md) | Separate research-method implementation and historical development notes. |
+| [docs/](docs/plan.md) | Shared research specification, work plan, and preserved upstream guide. |
+| `moshi/`, `rust/`, `client/` | Original MoshiRAG implementations and client. |
+
+The two component guides include per-file responsibility tables.
+The standalone application's `cascadesystem/artifacts/` contains run/session
+logs and per-sentence WAVs. Debug20 additionally provides a combined
+`audio/response.wav` per trace. Existing runs are retained; source changes require
+a fresh run rather than resuming a different snapshot.
+
+Development uses debug data. Reserved evaluation questions and their derived
+answers/evidence are excluded from development. Runtime units and evidence
+judgments never receive B's gold answers.
+
+## Offline checks
+
+```powershell
+python -m unittest discover -s cascadesystem/tests
+python -m unittest discover -s ".\eval debug20\tests"
+```
+
+These tests use fictional inputs and model/audio fixtures; they do not call
+Tinker or access the reserved split. Passing them does not establish real-world
+answer accuracy, microphone quality, or end-to-end spoken latency.
+
+## Upstream licensing
+
+See the preserved [MoshiRAG licensing information](docs/upstream_moshirag_README.md#license)
+for the upstream code, model weights, and dependencies.

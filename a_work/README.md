@@ -11,6 +11,10 @@ python3 a_work/run_demo.py                      # two hand-made traces with plac
 
 ## Layout
 
+The standalone [GPT+LoRA final 900 entry](<../eval gpt900/README.md>) reuses
+`cascadesystem` on the revised B final traces with an explicit final-run gate.
+It runs one GPT policy and does not replace this A method or its baseline matrix.
+
 | File | Role |
 |---|---|
 | `turntaking/schema.py` | Action and label names from B's interface v1; observation and decision types |
