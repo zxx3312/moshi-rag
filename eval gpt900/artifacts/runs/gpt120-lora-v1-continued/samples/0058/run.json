@@ -1,0 +1,2226 @@
+{
+  "question": "Which film has the director died first, Queen Of The Chantecler or La Marca De Satanás?",
+  "resolved_question": "Which film has the director died first, Queen Of The Chantecler or La Marca De Satanás?",
+  "used_history_turn_ids": [],
+  "response_language": "en",
+  "status": "complete",
+  "clock": "wall_monotonic",
+  "time_origin": "question_text_ready_after_optional_asr",
+  "model": "openai/gpt-oss-120b",
+  "judge_model": "tinker://f9e9a6c1-e203-5c2c-acdd-68fe67378ca4:train:0/sampler_weights/epoch-0001",
+  "units": [
+    {
+      "unit_id": "u1",
+      "description": "Identify the director of the film \"Queen Of The Chantecler\"",
+      "necessary": true,
+      "depends_on": [],
+      "queries": [
+        "Queen Of The Chantecler film director",
+        "Queen Of The Chantecler movie director"
+      ],
+      "subject": "Queen Of The Chantecler"
+    },
+    {
+      "unit_id": "u2",
+      "description": "Find the death date of the director of \"Queen Of The Chantecler\"",
+      "necessary": true,
+      "depends_on": [
+        "u1"
+      ],
+      "queries": [
+        "{u1_director} death date",
+        "{u1_director} died"
+      ],
+      "subject": "{u1_director}"
+    },
+    {
+      "unit_id": "u3",
+      "description": "Identify the director of the film \"La Marca De Satanás\"",
+      "necessary": true,
+      "depends_on": [],
+      "queries": [
+        "La Marca De Satanás film director",
+        "La Marca De Satanás movie director"
+      ],
+      "subject": "La Marca De Satanás"
+    },
+    {
+      "unit_id": "u4",
+      "description": "Find the death date of the director of \"La Marca De Satanás\"",
+      "necessary": true,
+      "depends_on": [
+        "u3"
+      ],
+      "queries": [
+        "{u3_director} death date",
+        "{u3_director} died"
+      ],
+      "subject": "{u3_director}"
+    },
+    {
+      "unit_id": "u5",
+      "description": "Determine which director died first between the directors of \"Queen Of The Chantecler\" and \"La Marca De Satanás\"",
+      "necessary": true,
+      "depends_on": [
+        "u2",
+        "u4"
+      ],
+      "queries": [
+        "compare death dates of {u1_director} and {u3_director}"
+      ],
+      "subject": ""
+    }
+  ],
+  "judgments": {
+    "u1": {
+      "label": "SUPPORTED",
+      "value": "Rafael Gil",
+      "citations": [
+        "d1s0"
+      ],
+      "quotes": [
+        {
+          "evidence_id": "d1s0",
+          "text": "Queen of the Chantecler( Spanish: La reina del Chantecler) is a 1962 Spanish historical drama film directed by Rafael Gil and starring Sara Montiel, Alberto de Mendoza and Luigi Giuliani."
+        }
+      ],
+      "reason": "Supported by the cited visible sentences and dependencies."
+    },
+    "u2": {
+      "label": "SUPPORTED",
+      "value": "10 July 1986",
+      "citations": [
+        "d9s0"
+      ],
+      "quotes": [
+        {
+          "evidence_id": "d9s0",
+          "text": "Rafael Gil( 22 May 1913 – 10 July 1986) was a Spanish film director and screenwriter."
+        }
+      ],
+      "reason": "Supported by the cited visible sentences and dependencies."
+    },
+    "u3": {
+      "label": "SUPPORTED",
+      "value": "Chano Urueta",
+      "citations": [
+        "d5s1"
+      ],
+      "quotes": [
+        {
+          "evidence_id": "d5s1",
+          "text": "It was directed by Chano Urueta."
+        }
+      ],
+      "reason": "Supported by the cited visible sentences and dependencies."
+    },
+    "u4": {
+      "label": "SUPPORTED",
+      "value": "March 23, 1979",
+      "citations": [
+        "d8s0"
+      ],
+      "quotes": [
+        {
+          "evidence_id": "d8s0",
+          "text": "Santiago Eduardo Urueta Sierra( February 24, 1904 – March 23, 1979), more commonly known as Chano Urueta, was a Mexican film director, producer, screenwriter, and actor."
+        }
+      ],
+      "reason": "Supported by the cited visible sentences and dependencies."
+    },
+    "u5": {
+      "label": "SUPPORTED",
+      "value": "Chano Urueta",
+      "citations": [
+        "d9s0",
+        "d8s0"
+      ],
+      "quotes": [
+        {
+          "evidence_id": "d9s0",
+          "text": "Rafael Gil( 22 May 1913 – 10 July 1986) was a Spanish film director and screenwriter."
+        },
+        {
+          "evidence_id": "d8s0",
+          "text": "Santiago Eduardo Urueta Sierra( February 24, 1904 – March 23, 1979), more commonly known as Chano Urueta, was a Mexican film director, producer, screenwriter, and actor."
+        }
+      ],
+      "reason": "Supported by the cited visible sentences and dependencies."
+    }
+  },
+  "evidence": [
+    {
+      "evidence_id": "d1s0",
+      "title": "Queen of the Chantecler",
+      "url": "https://trace.invalid/2wikimultihopqa_275a7f8708a611ebbd7eac1f6bf848b6_immediate/d1s0",
+      "text": "Queen of the Chantecler( Spanish: La reina del Chantecler) is a 1962 Spanish historical drama film directed by Rafael Gil and starring Sara Montiel, Alberto de Mendoza and Luigi Giuliani.",
+      "visible_time_s": 11.218999999997322,
+      "requested_subject": "",
+      "resolved_title": "Queen of the Chantecler",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d1s1",
+      "title": "Queen of the Chantecler",
+      "url": "https://trace.invalid/2wikimultihopqa_275a7f8708a611ebbd7eac1f6bf848b6_immediate/d1s1",
+      "text": "A Spanish music hall performer gets caught up in espionage during the First World War.",
+      "visible_time_s": 11.218999999997322,
+      "requested_subject": "",
+      "resolved_title": "Queen of the Chantecler",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d2s0",
+      "title": "Ilancueitl",
+      "url": "https://trace.invalid/2wikimultihopqa_275a7f8708a611ebbd7eac1f6bf848b6_immediate/d2s0",
+      "text": "Ilancueitl( Nahuatl for\" old- woman skirt\") was the first queen of Tenochtitlan.",
+      "visible_time_s": 11.218999999997322,
+      "requested_subject": "",
+      "resolved_title": "Ilancueitl",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d3s0",
+      "title": "Nazli Sabri",
+      "url": "https://trace.invalid/2wikimultihopqa_275a7f8708a611ebbd7eac1f6bf848b6_immediate/d3s0",
+      "text": "Nazli Sabri( 25 June 1894 – 29 May 1978) was the first Queen of Egypt from 1919 to 1936 as the second wife of King Fuad.",
+      "visible_time_s": 11.218999999997322,
+      "requested_subject": "",
+      "resolved_title": "Nazli Sabri",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d4s0",
+      "title": "Maud of Wales",
+      "url": "https://trace.invalid/2wikimultihopqa_275a7f8708a611ebbd7eac1f6bf848b6_immediate/d4s0",
+      "text": "Maud of Wales, (Maud Charlotte Mary Victoria; 26 November 1869 – 20 November 1938) was Queen of Norway as spouse of King Haakon VII.",
+      "visible_time_s": 11.218999999997322,
+      "requested_subject": "",
+      "resolved_title": "Maud of Wales",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d4s1",
+      "title": "Maud of Wales",
+      "url": "https://trace.invalid/2wikimultihopqa_275a7f8708a611ebbd7eac1f6bf848b6_immediate/d4s1",
+      "text": "She was the youngest daughter of the British king Edward VII and Alexandra of Denmark.",
+      "visible_time_s": 11.218999999997322,
+      "requested_subject": "",
+      "resolved_title": "Maud of Wales",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d4s2",
+      "title": "Maud of Wales",
+      "url": "https://trace.invalid/2wikimultihopqa_275a7f8708a611ebbd7eac1f6bf848b6_immediate/d4s2",
+      "text": "Maud of Wales was the first queen of Norway in over five centuries who was not also queen of Denmark or Sweden.",
+      "visible_time_s": 11.218999999997322,
+      "requested_subject": "",
+      "resolved_title": "Maud of Wales",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d5s0",
+      "title": "La marca de Satanás",
+      "url": "https://trace.invalid/2wikimultihopqa_275a7f8708a611ebbd7eac1f6bf848b6_immediate/d5s0",
+      "text": "La Marca de Satanás(\" The Mark of Satan\") is a 1957 Mexican film.",
+      "visible_time_s": 11.218999999997322,
+      "requested_subject": "",
+      "resolved_title": "La marca de Satanás",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d5s1",
+      "title": "La marca de Satanás",
+      "url": "https://trace.invalid/2wikimultihopqa_275a7f8708a611ebbd7eac1f6bf848b6_immediate/d5s1",
+      "text": "It was directed by Chano Urueta.",
+      "visible_time_s": 11.218999999997322,
+      "requested_subject": "",
+      "resolved_title": "La marca de Satanás",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d6s0",
+      "title": "Queen Ingyeong",
+      "url": "https://trace.invalid/2wikimultihopqa_275a7f8708a611ebbd7eac1f6bf848b6_immediate/d6s0",
+      "text": "Queen Ingyeong was the first queen consort of King Sukjong of Joseon.",
+      "visible_time_s": 11.218999999997322,
+      "requested_subject": "",
+      "resolved_title": "Queen Ingyeong",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d7s0",
+      "title": "El Festín de Satanás",
+      "url": "https://trace.invalid/2wikimultihopqa_275a7f8708a611ebbd7eac1f6bf848b6_immediate/d7s0",
+      "text": "El Festín de Satanás is a 1958 Argentine film.",
+      "visible_time_s": 11.218999999997322,
+      "requested_subject": "",
+      "resolved_title": "El Festín de Satanás",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d8s0",
+      "title": "Chano Urueta",
+      "url": "https://trace.invalid/2wikimultihopqa_275a7f8708a611ebbd7eac1f6bf848b6_immediate/d8s0",
+      "text": "Santiago Eduardo Urueta Sierra( February 24, 1904 – March 23, 1979), more commonly known as Chano Urueta, was a Mexican film director, producer, screenwriter, and actor.",
+      "visible_time_s": 11.218999999997322,
+      "requested_subject": "",
+      "resolved_title": "Chano Urueta",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d9s0",
+      "title": "Rafael Gil",
+      "url": "https://trace.invalid/2wikimultihopqa_275a7f8708a611ebbd7eac1f6bf848b6_immediate/d9s0",
+      "text": "Rafael Gil( 22 May 1913 – 10 July 1986) was a Spanish film director and screenwriter.",
+      "visible_time_s": 11.218999999997322,
+      "requested_subject": "",
+      "resolved_title": "Rafael Gil",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d9s1",
+      "title": "Rafael Gil",
+      "url": "https://trace.invalid/2wikimultihopqa_275a7f8708a611ebbd7eac1f6bf848b6_immediate/d9s1",
+      "text": "His film\" La guerra de Dios\"( 1953) won the Bronze Lion at the Venice Film Festival in 1953 and also won best film and best director at the San Sebastián International Film Festival.",
+      "visible_time_s": 11.218999999997322,
+      "requested_subject": "",
+      "resolved_title": "Rafael Gil",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d9s2",
+      "title": "Rafael Gil",
+      "url": "https://trace.invalid/2wikimultihopqa_275a7f8708a611ebbd7eac1f6bf848b6_immediate/d9s2",
+      "text": "His film\" La noche del sábado\"( 1950) was nominated for the Gold Lion at the 1950 Venice Film Festival and his film\" El beso de Judas\"( 1954) was also nominated for the Gold Lion at the 1954 festival in Venice.",
+      "visible_time_s": 11.218999999997322,
+      "requested_subject": "",
+      "resolved_title": "Rafael Gil",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d9s3",
+      "title": "Rafael Gil",
+      "url": "https://trace.invalid/2wikimultihopqa_275a7f8708a611ebbd7eac1f6bf848b6_immediate/d9s3",
+      "text": "His film\" Let's Make the Impossible!\"( 1958) was nominated for the Golden Berlin Bear at the Berlin International Film Festival.",
+      "visible_time_s": 11.218999999997322,
+      "requested_subject": "",
+      "resolved_title": "Rafael Gil",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d9s4",
+      "title": "Rafael Gil",
+      "url": "https://trace.invalid/2wikimultihopqa_275a7f8708a611ebbd7eac1f6bf848b6_immediate/d9s4",
+      "text": "He has won nine prizes of the National Syndicate of Spectacle of Spain.",
+      "visible_time_s": 11.218999999997322,
+      "requested_subject": "",
+      "resolved_title": "Rafael Gil",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d9s5",
+      "title": "Rafael Gil",
+      "url": "https://trace.invalid/2wikimultihopqa_275a7f8708a611ebbd7eac1f6bf848b6_immediate/d9s5",
+      "text": "Gil was a prominent director of the Franco era.",
+      "visible_time_s": 11.218999999997322,
+      "requested_subject": "",
+      "resolved_title": "Rafael Gil",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d9s6",
+      "title": "Rafael Gil",
+      "url": "https://trace.invalid/2wikimultihopqa_275a7f8708a611ebbd7eac1f6bf848b6_immediate/d9s6",
+      "text": "His later works, often in collaboration with the Pro-Franco screenwriter and novelist Fernando Vizcaíno Casas, looked back nostalgically to the years of Franco's rule.",
+      "visible_time_s": 11.218999999997322,
+      "requested_subject": "",
+      "resolved_title": "Rafael Gil",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d10s0",
+      "title": "Proezas de Satanás na Vila de Leva e Tráz",
+      "url": "https://trace.invalid/2wikimultihopqa_275a7f8708a611ebbd7eac1f6bf848b6_immediate/d10s0",
+      "text": "Proezas de Satanás na Vila de Leva e Tráz is a 1967 Brazilian film directed by Paulo Gil Soares.",
+      "visible_time_s": 11.218999999997322,
+      "requested_subject": "",
+      "resolved_title": "Proezas de Satanás na Vila de Leva e Tráz",
+      "entity_resolution": "unspecified"
+    }
+  ],
+  "searches": [
+    {
+      "query": "[scheduled evidence]",
+      "subject": "",
+      "status": "ok",
+      "returned_pages": [],
+      "mode": "trace",
+      "unit_id": "__scheduled_evidence__"
+    },
+    {
+      "query": "[scheduled evidence]",
+      "subject": "",
+      "status": "ok",
+      "returned_pages": [],
+      "mode": "trace",
+      "unit_id": "__scheduled_evidence__"
+    }
+  ],
+  "search_failures": [],
+  "llm_calls": [
+    {
+      "purpose": "feedback_generate",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 414,
+        "completion_tokens": 68,
+        "total_tokens": 482,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        }
+      },
+      "latency_s": 1.5
+    },
+    {
+      "purpose": "feedback_verify",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 362,
+        "completion_tokens": 75,
+        "total_tokens": 437,
+        "prompt_tokens_details": {
+          "cached_tokens": 128
+        }
+      },
+      "latency_s": 1.312
+    },
+    {
+      "purpose": "decompose",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 804,
+        "completion_tokens": 500,
+        "total_tokens": 1304,
+        "prompt_tokens_details": {
+          "cached_tokens": 768
+        }
+      },
+      "latency_s": 4.422
+    },
+    {
+      "purpose": "feedback_generate",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 414,
+        "completion_tokens": 66,
+        "total_tokens": 480,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        }
+      },
+      "latency_s": 1.344
+    },
+    {
+      "purpose": "feedback_verify",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 357,
+        "completion_tokens": 96,
+        "total_tokens": 453,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        }
+      },
+      "latency_s": 1.375
+    },
+    {
+      "purpose": "plan_review",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 1245,
+        "completion_tokens": 696,
+        "total_tokens": 1941,
+        "prompt_tokens_details": {
+          "cached_tokens": 768
+        }
+      },
+      "latency_s": 6.797
+    },
+    {
+      "purpose": "judge",
+      "model": "tinker://f9e9a6c1-e203-5c2c-acdd-68fe67378ca4:train:0/sampler_weights/epoch-0001",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 4372,
+        "completion_tokens": 570,
+        "total_tokens": 4942,
+        "prompt_tokens_details": {
+          "cached_tokens": 896
+        }
+      },
+      "latency_s": 4.437
+    },
+    {
+      "purpose": "generate",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 1469,
+        "completion_tokens": 329,
+        "total_tokens": 1798,
+        "prompt_tokens_details": {
+          "cached_tokens": 384
+        }
+      },
+      "latency_s": 3.375
+    },
+    {
+      "purpose": "verify",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 2177,
+        "completion_tokens": 239,
+        "total_tokens": 2416,
+        "prompt_tokens_details": {
+          "cached_tokens": 640
+        }
+      },
+      "latency_s": 2.531
+    },
+    {
+      "purpose": "judge",
+      "model": "tinker://f9e9a6c1-e203-5c2c-acdd-68fe67378ca4:train:0/sampler_weights/epoch-0001",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 4592,
+        "completion_tokens": 569,
+        "total_tokens": 5161,
+        "prompt_tokens_details": {
+          "cached_tokens": 1024
+        }
+      },
+      "latency_s": 4.297
+    },
+    {
+      "purpose": "generate",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 1468,
+        "completion_tokens": 166,
+        "total_tokens": 1634,
+        "prompt_tokens_details": {
+          "cached_tokens": 1152
+        }
+      },
+      "latency_s": 2.172
+    },
+    {
+      "purpose": "verify",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 2178,
+        "completion_tokens": 162,
+        "total_tokens": 2340,
+        "prompt_tokens_details": {
+          "cached_tokens": 1280
+        }
+      },
+      "latency_s": 2.062
+    }
+  ],
+  "search_diagnostics": [],
+  "output_enqueued_units": {
+    "u1": "Rafael Gil",
+    "u2": "10 July 1986",
+    "u3": "Chano Urueta",
+    "u4": "March 23, 1979",
+    "u5": "Chano Urueta"
+  },
+  "events": [
+    {
+      "sequence": 0,
+      "time_s": 0.0,
+      "type": "feedback_requested",
+      "feedback_kind": "opening",
+      "execution_state": {
+        "stage": "planning",
+        "searches_started": 0,
+        "searches_completed": 0,
+        "active_searches": 0,
+        "evidence_count": 0,
+        "supported_units": 0,
+        "output_units": 0
+      }
+    },
+    {
+      "sequence": 1,
+      "time_s": 2.812,
+      "type": "utterance",
+      "action": "Backchannel",
+      "text": "I’ll look up which of the two films’ directors died first.",
+      "claims": [],
+      "feedback_source": "model",
+      "feedback_status_claim": "intent",
+      "feedback_fallback_reason": "",
+      "execution_state": {
+        "stage": "planning",
+        "searches_started": 0,
+        "searches_completed": 0,
+        "active_searches": 0,
+        "evidence_count": 0,
+        "supported_units": 0,
+        "output_units": 0
+      },
+      "language": "en"
+    },
+    {
+      "sequence": 2,
+      "time_s": 4.422,
+      "type": "decompose_reply",
+      "reply": {
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "Identify the director of the film \"Queen Of The Chantecler\"",
+            "subject": "",
+            "necessary": true,
+            "depends_on": [],
+            "queries": [
+              "Queen Of The Chantecler film director",
+              "Queen Of The Chantecler movie director"
+            ]
+          },
+          {
+            "unit_id": "u2",
+            "description": "Find the death date of the director of \"Queen Of The Chantecler\"",
+            "subject": "{u1}",
+            "necessary": true,
+            "depends_on": [
+              "u1"
+            ],
+            "queries": [
+              "{u1} death date",
+              "{u1} died"
+            ]
+          },
+          {
+            "unit_id": "u3",
+            "description": "Identify the director of the film \"La Marca De Satanás\"",
+            "subject": "",
+            "necessary": true,
+            "depends_on": [],
+            "queries": [
+              "La Marca De Satanás film director",
+              "La Marca De Satanás movie director"
+            ]
+          },
+          {
+            "unit_id": "u4",
+            "description": "Find the death date of the director of \"La Marca De Satanás\"",
+            "subject": "{u3}",
+            "necessary": true,
+            "depends_on": [
+              "u3"
+            ],
+            "queries": [
+              "{u3} death date",
+              "{u3} died"
+            ]
+          },
+          {
+            "unit_id": "u5",
+            "description": "Determine which director died first between the directors of \"Queen Of The Chantecler\" and \"La Marca De Satanás\"",
+            "subject": "",
+            "necessary": true,
+            "depends_on": [
+              "u2",
+              "u4"
+            ],
+            "queries": [
+              "compare death dates of {u1} and {u3}"
+            ]
+          }
+        ]
+      },
+      "attempt": 1,
+      "repair": false
+    },
+    {
+      "sequence": 3,
+      "time_s": 4.422,
+      "type": "protocol_validation_failed",
+      "stage": "decompose",
+      "attempt": 1,
+      "error": "Placeholders must name explicit dependencies"
+    },
+    {
+      "sequence": 4,
+      "time_s": 4.422,
+      "type": "protocol_normalized",
+      "stage": "decompose",
+      "changes": [
+        {
+          "unit_id": "u5",
+          "added_dependencies": [
+            "u1",
+            "u3"
+          ]
+        }
+      ],
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "Identify the director of the film \"Queen Of The Chantecler\"",
+          "necessary": true,
+          "depends_on": [],
+          "queries": [
+            "Queen Of The Chantecler film director",
+            "Queen Of The Chantecler movie director"
+          ],
+          "subject": ""
+        },
+        {
+          "unit_id": "u2",
+          "description": "Find the death date of the director of \"Queen Of The Chantecler\"",
+          "necessary": true,
+          "depends_on": [
+            "u1"
+          ],
+          "queries": [
+            "{u1} death date",
+            "{u1} died"
+          ],
+          "subject": "{u1}"
+        },
+        {
+          "unit_id": "u3",
+          "description": "Identify the director of the film \"La Marca De Satanás\"",
+          "necessary": true,
+          "depends_on": [],
+          "queries": [
+            "La Marca De Satanás film director",
+            "La Marca De Satanás movie director"
+          ],
+          "subject": ""
+        },
+        {
+          "unit_id": "u4",
+          "description": "Find the death date of the director of \"La Marca De Satanás\"",
+          "necessary": true,
+          "depends_on": [
+            "u3"
+          ],
+          "queries": [
+            "{u3} death date",
+            "{u3} died"
+          ],
+          "subject": "{u3}"
+        },
+        {
+          "unit_id": "u5",
+          "description": "Determine which director died first between the directors of \"Queen Of The Chantecler\" and \"La Marca De Satanás\"",
+          "necessary": true,
+          "depends_on": [
+            "u2",
+            "u4",
+            "u1",
+            "u3"
+          ],
+          "queries": [
+            "compare death dates of {u1} and {u3}"
+          ],
+          "subject": ""
+        }
+      ],
+      "no_facts_added": true
+    },
+    {
+      "sequence": 5,
+      "time_s": 4.422,
+      "type": "plan_review_requested",
+      "max_reviews": 1,
+      "question_only": true
+    },
+    {
+      "sequence": 6,
+      "time_s": 6.062,
+      "type": "feedback_requested",
+      "feedback_kind": "progress",
+      "execution_state": {
+        "stage": "planning",
+        "searches_started": 0,
+        "searches_completed": 0,
+        "active_searches": 0,
+        "evidence_count": 0,
+        "supported_units": 0,
+        "output_units": 0
+      }
+    },
+    {
+      "sequence": 7,
+      "time_s": 8.781,
+      "type": "utterance",
+      "action": "Progress",
+      "text": "I'm looking into the directors' dates now.",
+      "claims": [],
+      "feedback_source": "model",
+      "feedback_status_claim": "processing",
+      "feedback_fallback_reason": "",
+      "execution_state": {
+        "stage": "planning",
+        "searches_started": 0,
+        "searches_completed": 0,
+        "active_searches": 0,
+        "evidence_count": 0,
+        "supported_units": 0,
+        "output_units": 0
+      },
+      "language": "en"
+    },
+    {
+      "sequence": 8,
+      "time_s": 11.219,
+      "type": "plan_review_reply",
+      "reply": {
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "Identify the director of the film \"Queen Of The Chantecler\"",
+            "subject": "Queen Of The Chantecler",
+            "necessary": true,
+            "depends_on": [],
+            "queries": [
+              "Queen Of The Chantecler film director",
+              "Queen Of The Chantecler movie director"
+            ]
+          },
+          {
+            "unit_id": "u2",
+            "description": "Find the death date of the director of \"Queen Of The Chantecler\"",
+            "subject": "{u1_director}",
+            "necessary": true,
+            "depends_on": [
+              "u1"
+            ],
+            "queries": [
+              "{u1_director} death date",
+              "{u1_director} died"
+            ]
+          },
+          {
+            "unit_id": "u3",
+            "description": "Identify the director of the film \"La Marca De Satanás\"",
+            "subject": "La Marca De Satanás",
+            "necessary": true,
+            "depends_on": [],
+            "queries": [
+              "La Marca De Satanás film director",
+              "La Marca De Satanás movie director"
+            ]
+          },
+          {
+            "unit_id": "u4",
+            "description": "Find the death date of the director of \"La Marca De Satanás\"",
+            "subject": "{u3_director}",
+            "necessary": true,
+            "depends_on": [
+              "u3"
+            ],
+            "queries": [
+              "{u3_director} death date",
+              "{u3_director} died"
+            ]
+          },
+          {
+            "unit_id": "u5",
+            "description": "Determine which director died first between the directors of \"Queen Of The Chantecler\" and \"La Marca De Satanás\"",
+            "subject": "",
+            "necessary": true,
+            "depends_on": [
+              "u2",
+              "u4"
+            ],
+            "queries": [
+              "compare death dates of {u1_director} and {u3_director}"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "sequence": 9,
+      "time_s": 11.219,
+      "type": "plan_review_finished",
+      "changed": true,
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "Identify the director of the film \"Queen Of The Chantecler\"",
+          "necessary": true,
+          "depends_on": [],
+          "queries": [
+            "Queen Of The Chantecler film director",
+            "Queen Of The Chantecler movie director"
+          ],
+          "subject": "Queen Of The Chantecler"
+        },
+        {
+          "unit_id": "u2",
+          "description": "Find the death date of the director of \"Queen Of The Chantecler\"",
+          "necessary": true,
+          "depends_on": [
+            "u1"
+          ],
+          "queries": [
+            "{u1_director} death date",
+            "{u1_director} died"
+          ],
+          "subject": "{u1_director}"
+        },
+        {
+          "unit_id": "u3",
+          "description": "Identify the director of the film \"La Marca De Satanás\"",
+          "necessary": true,
+          "depends_on": [],
+          "queries": [
+            "La Marca De Satanás film director",
+            "La Marca De Satanás movie director"
+          ],
+          "subject": "La Marca De Satanás"
+        },
+        {
+          "unit_id": "u4",
+          "description": "Find the death date of the director of \"La Marca De Satanás\"",
+          "necessary": true,
+          "depends_on": [
+            "u3"
+          ],
+          "queries": [
+            "{u3_director} death date",
+            "{u3_director} died"
+          ],
+          "subject": "{u3_director}"
+        },
+        {
+          "unit_id": "u5",
+          "description": "Determine which director died first between the directors of \"Queen Of The Chantecler\" and \"La Marca De Satanás\"",
+          "necessary": true,
+          "depends_on": [
+            "u2",
+            "u4"
+          ],
+          "queries": [
+            "compare death dates of {u1_director} and {u3_director}"
+          ],
+          "subject": ""
+        }
+      ],
+      "question_only": true
+    },
+    {
+      "sequence": 10,
+      "time_s": 11.219,
+      "type": "plan",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "Identify the director of the film \"Queen Of The Chantecler\"",
+          "necessary": true,
+          "depends_on": [],
+          "queries": [
+            "Queen Of The Chantecler film director",
+            "Queen Of The Chantecler movie director"
+          ],
+          "subject": "Queen Of The Chantecler"
+        },
+        {
+          "unit_id": "u2",
+          "description": "Find the death date of the director of \"Queen Of The Chantecler\"",
+          "necessary": true,
+          "depends_on": [
+            "u1"
+          ],
+          "queries": [
+            "{u1_director} death date",
+            "{u1_director} died"
+          ],
+          "subject": "{u1_director}"
+        },
+        {
+          "unit_id": "u3",
+          "description": "Identify the director of the film \"La Marca De Satanás\"",
+          "necessary": true,
+          "depends_on": [],
+          "queries": [
+            "La Marca De Satanás film director",
+            "La Marca De Satanás movie director"
+          ],
+          "subject": "La Marca De Satanás"
+        },
+        {
+          "unit_id": "u4",
+          "description": "Find the death date of the director of \"La Marca De Satanás\"",
+          "necessary": true,
+          "depends_on": [
+            "u3"
+          ],
+          "queries": [
+            "{u3_director} death date",
+            "{u3_director} died"
+          ],
+          "subject": "{u3_director}"
+        },
+        {
+          "unit_id": "u5",
+          "description": "Determine which director died first between the directors of \"Queen Of The Chantecler\" and \"La Marca De Satanás\"",
+          "necessary": true,
+          "depends_on": [
+            "u2",
+            "u4"
+          ],
+          "queries": [
+            "compare death dates of {u1_director} and {u3_director}"
+          ],
+          "subject": ""
+        }
+      ]
+    },
+    {
+      "sequence": 11,
+      "time_s": 11.219,
+      "type": "trace_batch_requested"
+    },
+    {
+      "sequence": 12,
+      "time_s": 11.219,
+      "type": "search_finished",
+      "query": "[scheduled evidence]",
+      "subject": "",
+      "status": "ok",
+      "returned_pages": [],
+      "mode": "trace",
+      "unit_id": "__scheduled_evidence__"
+    },
+    {
+      "sequence": 13,
+      "time_s": 11.219,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d1s0",
+        "title": "Queen of the Chantecler",
+        "url": "https://trace.invalid/2wikimultihopqa_275a7f8708a611ebbd7eac1f6bf848b6_immediate/d1s0",
+        "text": "Queen of the Chantecler( Spanish: La reina del Chantecler) is a 1962 Spanish historical drama film directed by Rafael Gil and starring Sara Montiel, Alberto de Mendoza and Luigi Giuliani.",
+        "visible_time_s": 11.218999999997322,
+        "requested_subject": "",
+        "resolved_title": "Queen of the Chantecler",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 14,
+      "time_s": 11.219,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d1s1",
+        "title": "Queen of the Chantecler",
+        "url": "https://trace.invalid/2wikimultihopqa_275a7f8708a611ebbd7eac1f6bf848b6_immediate/d1s1",
+        "text": "A Spanish music hall performer gets caught up in espionage during the First World War.",
+        "visible_time_s": 11.218999999997322,
+        "requested_subject": "",
+        "resolved_title": "Queen of the Chantecler",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 15,
+      "time_s": 11.219,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d2s0",
+        "title": "Ilancueitl",
+        "url": "https://trace.invalid/2wikimultihopqa_275a7f8708a611ebbd7eac1f6bf848b6_immediate/d2s0",
+        "text": "Ilancueitl( Nahuatl for\" old- woman skirt\") was the first queen of Tenochtitlan.",
+        "visible_time_s": 11.218999999997322,
+        "requested_subject": "",
+        "resolved_title": "Ilancueitl",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 16,
+      "time_s": 11.219,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d3s0",
+        "title": "Nazli Sabri",
+        "url": "https://trace.invalid/2wikimultihopqa_275a7f8708a611ebbd7eac1f6bf848b6_immediate/d3s0",
+        "text": "Nazli Sabri( 25 June 1894 – 29 May 1978) was the first Queen of Egypt from 1919 to 1936 as the second wife of King Fuad.",
+        "visible_time_s": 11.218999999997322,
+        "requested_subject": "",
+        "resolved_title": "Nazli Sabri",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 17,
+      "time_s": 11.219,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d4s0",
+        "title": "Maud of Wales",
+        "url": "https://trace.invalid/2wikimultihopqa_275a7f8708a611ebbd7eac1f6bf848b6_immediate/d4s0",
+        "text": "Maud of Wales, (Maud Charlotte Mary Victoria; 26 November 1869 – 20 November 1938) was Queen of Norway as spouse of King Haakon VII.",
+        "visible_time_s": 11.218999999997322,
+        "requested_subject": "",
+        "resolved_title": "Maud of Wales",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 18,
+      "time_s": 11.219,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d4s1",
+        "title": "Maud of Wales",
+        "url": "https://trace.invalid/2wikimultihopqa_275a7f8708a611ebbd7eac1f6bf848b6_immediate/d4s1",
+        "text": "She was the youngest daughter of the British king Edward VII and Alexandra of Denmark.",
+        "visible_time_s": 11.218999999997322,
+        "requested_subject": "",
+        "resolved_title": "Maud of Wales",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 19,
+      "time_s": 11.219,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d4s2",
+        "title": "Maud of Wales",
+        "url": "https://trace.invalid/2wikimultihopqa_275a7f8708a611ebbd7eac1f6bf848b6_immediate/d4s2",
+        "text": "Maud of Wales was the first queen of Norway in over five centuries who was not also queen of Denmark or Sweden.",
+        "visible_time_s": 11.218999999997322,
+        "requested_subject": "",
+        "resolved_title": "Maud of Wales",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 20,
+      "time_s": 11.219,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d5s0",
+        "title": "La marca de Satanás",
+        "url": "https://trace.invalid/2wikimultihopqa_275a7f8708a611ebbd7eac1f6bf848b6_immediate/d5s0",
+        "text": "La Marca de Satanás(\" The Mark of Satan\") is a 1957 Mexican film.",
+        "visible_time_s": 11.218999999997322,
+        "requested_subject": "",
+        "resolved_title": "La marca de Satanás",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 21,
+      "time_s": 11.219,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d5s1",
+        "title": "La marca de Satanás",
+        "url": "https://trace.invalid/2wikimultihopqa_275a7f8708a611ebbd7eac1f6bf848b6_immediate/d5s1",
+        "text": "It was directed by Chano Urueta.",
+        "visible_time_s": 11.218999999997322,
+        "requested_subject": "",
+        "resolved_title": "La marca de Satanás",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 22,
+      "time_s": 11.219,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d6s0",
+        "title": "Queen Ingyeong",
+        "url": "https://trace.invalid/2wikimultihopqa_275a7f8708a611ebbd7eac1f6bf848b6_immediate/d6s0",
+        "text": "Queen Ingyeong was the first queen consort of King Sukjong of Joseon.",
+        "visible_time_s": 11.218999999997322,
+        "requested_subject": "",
+        "resolved_title": "Queen Ingyeong",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 23,
+      "time_s": 11.219,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d7s0",
+        "title": "El Festín de Satanás",
+        "url": "https://trace.invalid/2wikimultihopqa_275a7f8708a611ebbd7eac1f6bf848b6_immediate/d7s0",
+        "text": "El Festín de Satanás is a 1958 Argentine film.",
+        "visible_time_s": 11.218999999997322,
+        "requested_subject": "",
+        "resolved_title": "El Festín de Satanás",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 24,
+      "time_s": 11.219,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d8s0",
+        "title": "Chano Urueta",
+        "url": "https://trace.invalid/2wikimultihopqa_275a7f8708a611ebbd7eac1f6bf848b6_immediate/d8s0",
+        "text": "Santiago Eduardo Urueta Sierra( February 24, 1904 – March 23, 1979), more commonly known as Chano Urueta, was a Mexican film director, producer, screenwriter, and actor.",
+        "visible_time_s": 11.218999999997322,
+        "requested_subject": "",
+        "resolved_title": "Chano Urueta",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 25,
+      "time_s": 11.219,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d9s0",
+        "title": "Rafael Gil",
+        "url": "https://trace.invalid/2wikimultihopqa_275a7f8708a611ebbd7eac1f6bf848b6_immediate/d9s0",
+        "text": "Rafael Gil( 22 May 1913 – 10 July 1986) was a Spanish film director and screenwriter.",
+        "visible_time_s": 11.218999999997322,
+        "requested_subject": "",
+        "resolved_title": "Rafael Gil",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 26,
+      "time_s": 11.219,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d9s1",
+        "title": "Rafael Gil",
+        "url": "https://trace.invalid/2wikimultihopqa_275a7f8708a611ebbd7eac1f6bf848b6_immediate/d9s1",
+        "text": "His film\" La guerra de Dios\"( 1953) won the Bronze Lion at the Venice Film Festival in 1953 and also won best film and best director at the San Sebastián International Film Festival.",
+        "visible_time_s": 11.218999999997322,
+        "requested_subject": "",
+        "resolved_title": "Rafael Gil",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 27,
+      "time_s": 11.219,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d9s2",
+        "title": "Rafael Gil",
+        "url": "https://trace.invalid/2wikimultihopqa_275a7f8708a611ebbd7eac1f6bf848b6_immediate/d9s2",
+        "text": "His film\" La noche del sábado\"( 1950) was nominated for the Gold Lion at the 1950 Venice Film Festival and his film\" El beso de Judas\"( 1954) was also nominated for the Gold Lion at the 1954 festival in Venice.",
+        "visible_time_s": 11.218999999997322,
+        "requested_subject": "",
+        "resolved_title": "Rafael Gil",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 28,
+      "time_s": 11.219,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d9s3",
+        "title": "Rafael Gil",
+        "url": "https://trace.invalid/2wikimultihopqa_275a7f8708a611ebbd7eac1f6bf848b6_immediate/d9s3",
+        "text": "His film\" Let's Make the Impossible!\"( 1958) was nominated for the Golden Berlin Bear at the Berlin International Film Festival.",
+        "visible_time_s": 11.218999999997322,
+        "requested_subject": "",
+        "resolved_title": "Rafael Gil",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 29,
+      "time_s": 11.219,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d9s4",
+        "title": "Rafael Gil",
+        "url": "https://trace.invalid/2wikimultihopqa_275a7f8708a611ebbd7eac1f6bf848b6_immediate/d9s4",
+        "text": "He has won nine prizes of the National Syndicate of Spectacle of Spain.",
+        "visible_time_s": 11.218999999997322,
+        "requested_subject": "",
+        "resolved_title": "Rafael Gil",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 30,
+      "time_s": 11.219,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d9s5",
+        "title": "Rafael Gil",
+        "url": "https://trace.invalid/2wikimultihopqa_275a7f8708a611ebbd7eac1f6bf848b6_immediate/d9s5",
+        "text": "Gil was a prominent director of the Franco era.",
+        "visible_time_s": 11.218999999997322,
+        "requested_subject": "",
+        "resolved_title": "Rafael Gil",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 31,
+      "time_s": 11.219,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d9s6",
+        "title": "Rafael Gil",
+        "url": "https://trace.invalid/2wikimultihopqa_275a7f8708a611ebbd7eac1f6bf848b6_immediate/d9s6",
+        "text": "His later works, often in collaboration with the Pro-Franco screenwriter and novelist Fernando Vizcaíno Casas, looked back nostalgically to the years of Franco's rule.",
+        "visible_time_s": 11.218999999997322,
+        "requested_subject": "",
+        "resolved_title": "Rafael Gil",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 32,
+      "time_s": 11.219,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d10s0",
+        "title": "Proezas de Satanás na Vila de Leva e Tráz",
+        "url": "https://trace.invalid/2wikimultihopqa_275a7f8708a611ebbd7eac1f6bf848b6_immediate/d10s0",
+        "text": "Proezas de Satanás na Vila de Leva e Tráz is a 1967 Brazilian film directed by Paulo Gil Soares.",
+        "visible_time_s": 11.218999999997322,
+        "requested_subject": "",
+        "resolved_title": "Proezas de Satanás na Vila de Leva e Tráz",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 33,
+      "time_s": 15.656,
+      "type": "judge_reply",
+      "reply": {
+        "judgments": [
+          {
+            "unit_id": "u1",
+            "label": "SUPPORTED",
+            "value": "Rafael Gil",
+            "citations": [
+              "d1s0"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d1s0",
+                "text": "Queen of the Chantecler( Spanish: La reina del Chantecler) is a 1962 Spanish historical drama film directed by Rafael Gil and starring Sara Montiel, Alberto de Mendoza and Luigi Giuliani."
+              }
+            ],
+            "reason": "Supported by the cited visible sentences and dependencies."
+          },
+          {
+            "unit_id": "u2",
+            "label": "SUPPORTED",
+            "value": "10 July 1986",
+            "citations": [
+              "d9s0"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d9s0",
+                "text": "Rafael Gil( 22 May 1913 – 10 July 1986) was a Spanish film director and screenwriter."
+              }
+            ],
+            "reason": "Supported by the cited visible sentences and dependencies."
+          },
+          {
+            "unit_id": "u3",
+            "label": "SUPPORTED",
+            "value": "Chano Urueta",
+            "citations": [
+              "d5s1"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d5s1",
+                "text": "It was directed by Chano Urueta."
+              }
+            ],
+            "reason": "Supported by the cited visible sentences and dependencies."
+          },
+          {
+            "unit_id": "u4",
+            "label": "SUPPORTED",
+            "value": "March 23, 1979",
+            "citations": [
+              "d8s0"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d8s0",
+                "text": "Santiago Eduardo Urueta Sierra( February 24, 1904 – March 23, 1979), more commonly known as Chano Urueta, was a Mexican film director, producer, screenwriter, and actor."
+              }
+            ],
+            "reason": "Supported by the cited visible sentences and dependencies."
+          },
+          {
+            "unit_id": "u5",
+            "label": "SUPPORTED",
+            "value": "Queen of the Chantecler",
+            "citations": [
+              "d9s0",
+              "d8s0"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d9s0",
+                "text": "Rafael Gil( 22 May 1913 – 10 July 1986) was a Spanish film director and screenwriter."
+              },
+              {
+                "evidence_id": "d8s0",
+                "text": "Santiago Eduardo Urueta Sierra( February 24, 1904 – March 23, 1979), more commonly known as Chano Urueta, was a Mexican film director, producer, screenwriter, and actor."
+              }
+            ],
+            "reason": "Supported by the cited visible sentences and dependencies."
+          }
+        ]
+      },
+      "attempt": 1,
+      "repair": false,
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d1s1",
+        "d2s0",
+        "d3s0",
+        "d4s0",
+        "d4s1",
+        "d4s2",
+        "d5s0",
+        "d5s1",
+        "d6s0",
+        "d7s0",
+        "d8s0",
+        "d9s0",
+        "d9s1",
+        "d9s2",
+        "d9s3",
+        "d9s4",
+        "d9s5",
+        "d9s6",
+        "d10s0"
+      ]
+    },
+    {
+      "sequence": 34,
+      "time_s": 15.672,
+      "type": "judgments",
+      "judgments": {
+        "u1": {
+          "label": "SUPPORTED",
+          "value": "Rafael Gil",
+          "citations": [
+            "d1s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d1s0",
+              "text": "Queen of the Chantecler( Spanish: La reina del Chantecler) is a 1962 Spanish historical drama film directed by Rafael Gil and starring Sara Montiel, Alberto de Mendoza and Luigi Giuliani."
+            }
+          ],
+          "reason": "Supported by the cited visible sentences and dependencies."
+        },
+        "u2": {
+          "label": "SUPPORTED",
+          "value": "10 July 1986",
+          "citations": [
+            "d9s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d9s0",
+              "text": "Rafael Gil( 22 May 1913 – 10 July 1986) was a Spanish film director and screenwriter."
+            }
+          ],
+          "reason": "Supported by the cited visible sentences and dependencies."
+        },
+        "u3": {
+          "label": "SUPPORTED",
+          "value": "Chano Urueta",
+          "citations": [
+            "d5s1"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d5s1",
+              "text": "It was directed by Chano Urueta."
+            }
+          ],
+          "reason": "Supported by the cited visible sentences and dependencies."
+        },
+        "u4": {
+          "label": "SUPPORTED",
+          "value": "March 23, 1979",
+          "citations": [
+            "d8s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d8s0",
+              "text": "Santiago Eduardo Urueta Sierra( February 24, 1904 – March 23, 1979), more commonly known as Chano Urueta, was a Mexican film director, producer, screenwriter, and actor."
+            }
+          ],
+          "reason": "Supported by the cited visible sentences and dependencies."
+        },
+        "u5": {
+          "label": "SUPPORTED",
+          "value": "Queen of the Chantecler",
+          "citations": [
+            "d9s0",
+            "d8s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d9s0",
+              "text": "Rafael Gil( 22 May 1913 – 10 July 1986) was a Spanish film director and screenwriter."
+            },
+            {
+              "evidence_id": "d8s0",
+              "text": "Santiago Eduardo Urueta Sierra( February 24, 1904 – March 23, 1979), more commonly known as Chano Urueta, was a Mexican film director, producer, screenwriter, and actor."
+            }
+          ],
+          "reason": "Supported by the cited visible sentences and dependencies."
+        }
+      },
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d1s1",
+        "d2s0",
+        "d3s0",
+        "d4s0",
+        "d4s1",
+        "d4s2",
+        "d5s0",
+        "d5s1",
+        "d6s0",
+        "d7s0",
+        "d8s0",
+        "d9s0",
+        "d9s1",
+        "d9s2",
+        "d9s3",
+        "d9s4",
+        "d9s5",
+        "d9s6",
+        "d10s0"
+      ],
+      "semantic_review": false
+    },
+    {
+      "sequence": 35,
+      "time_s": 21.578,
+      "type": "verification_reply",
+      "reply": {
+        "approved": false,
+        "facts_valid": false,
+        "expressed_unit_ids": [
+          "u1",
+          "u2",
+          "u3",
+          "u4",
+          "u5"
+        ],
+        "reason": "The claim in unit u5 that the director of 'Queen of the Chantecler' died first is incorrect; evidence shows Chano Urueta died in 1979, earlier than Rafael Gil's death in 1986."
+      },
+      "output_unit_ids": [
+        "u1",
+        "u2",
+        "u3",
+        "u4",
+        "u5"
+      ],
+      "output_action": "Final Answer",
+      "dependency_unit_ids": [],
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d5s1",
+        "d8s0",
+        "d9s0"
+      ]
+    },
+    {
+      "sequence": 36,
+      "time_s": 21.578,
+      "type": "facts_rejected",
+      "unit_ids": [
+        "u1",
+        "u2",
+        "u3",
+        "u4",
+        "u5"
+      ],
+      "reason": "The claim in unit u5 that the director of 'Queen of the Chantecler' died first is incorrect; evidence shows Chano Urueta died in 1979, earlier than Rafael Gil's death in 1986."
+    },
+    {
+      "sequence": 37,
+      "time_s": 21.578,
+      "type": "trace_batch_requested"
+    },
+    {
+      "sequence": 38,
+      "time_s": 21.578,
+      "type": "search_finished",
+      "query": "[scheduled evidence]",
+      "subject": "",
+      "status": "ok",
+      "returned_pages": [],
+      "mode": "trace",
+      "unit_id": "__scheduled_evidence__"
+    },
+    {
+      "sequence": 39,
+      "time_s": 21.578,
+      "type": "semantic_review_requested",
+      "target_unit_ids": [
+        "u1",
+        "u2",
+        "u3",
+        "u4",
+        "u5"
+      ],
+      "review_unit_ids": [
+        "u1",
+        "u2",
+        "u3",
+        "u4",
+        "u5"
+      ],
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d1s1",
+        "d2s0",
+        "d3s0",
+        "d4s0",
+        "d4s1",
+        "d4s2",
+        "d5s0",
+        "d5s1",
+        "d6s0",
+        "d7s0",
+        "d8s0",
+        "d9s0",
+        "d9s1",
+        "d9s2",
+        "d9s3",
+        "d9s4",
+        "d9s5",
+        "d9s6",
+        "d10s0"
+      ],
+      "max_reviews": 1
+    },
+    {
+      "sequence": 40,
+      "time_s": 25.875,
+      "type": "semantic_review_reply",
+      "reply": {
+        "judgments": [
+          {
+            "unit_id": "u1",
+            "label": "SUPPORTED",
+            "value": "Rafael Gil",
+            "citations": [
+              "d1s0"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d1s0",
+                "text": "Queen of the Chantecler( Spanish: La reina del Chantecler) is a 1962 Spanish historical drama film directed by Rafael Gil and starring Sara Montiel, Alberto de Mendoza and Luigi Giuliani."
+              }
+            ],
+            "reason": "Supported by the cited visible sentences and dependencies."
+          },
+          {
+            "unit_id": "u2",
+            "label": "SUPPORTED",
+            "value": "10 July 1986",
+            "citations": [
+              "d9s0"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d9s0",
+                "text": "Rafael Gil( 22 May 1913 – 10 July 1986) was a Spanish film director and screenwriter."
+              }
+            ],
+            "reason": "Supported by the cited visible sentences and dependencies."
+          },
+          {
+            "unit_id": "u3",
+            "label": "SUPPORTED",
+            "value": "Chano Urueta",
+            "citations": [
+              "d5s1"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d5s1",
+                "text": "It was directed by Chano Urueta."
+              }
+            ],
+            "reason": "Supported by the cited visible sentences and dependencies."
+          },
+          {
+            "unit_id": "u4",
+            "label": "SUPPORTED",
+            "value": "March 23, 1979",
+            "citations": [
+              "d8s0"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d8s0",
+                "text": "Santiago Eduardo Urueta Sierra( February 24, 1904 – March 23, 1979), more commonly known as Chano Urueta, was a Mexican film director, producer, screenwriter, and actor."
+              }
+            ],
+            "reason": "Supported by the cited visible sentences and dependencies."
+          },
+          {
+            "unit_id": "u5",
+            "label": "SUPPORTED",
+            "value": "Chano Urueta",
+            "citations": [
+              "d9s0",
+              "d8s0"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d9s0",
+                "text": "Rafael Gil( 22 May 1913 – 10 July 1986) was a Spanish film director and screenwriter."
+              },
+              {
+                "evidence_id": "d8s0",
+                "text": "Santiago Eduardo Urueta Sierra( February 24, 1904 – March 23, 1979), more commonly known as Chano Urueta, was a Mexican film director, producer, screenwriter, and actor."
+              }
+            ],
+            "reason": "Supported by the cited visible sentences and dependencies."
+          }
+        ]
+      },
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d1s1",
+        "d2s0",
+        "d3s0",
+        "d4s0",
+        "d4s1",
+        "d4s2",
+        "d5s0",
+        "d5s1",
+        "d6s0",
+        "d7s0",
+        "d8s0",
+        "d9s0",
+        "d9s1",
+        "d9s2",
+        "d9s3",
+        "d9s4",
+        "d9s5",
+        "d9s6",
+        "d10s0"
+      ]
+    },
+    {
+      "sequence": 41,
+      "time_s": 25.875,
+      "type": "semantic_review_finished",
+      "review_unit_ids": [
+        "u1",
+        "u2",
+        "u3",
+        "u4",
+        "u5"
+      ],
+      "recovered_unit_ids": [
+        "u1",
+        "u2",
+        "u3",
+        "u4",
+        "u5"
+      ]
+    },
+    {
+      "sequence": 42,
+      "time_s": 25.875,
+      "type": "judgments",
+      "judgments": {
+        "u1": {
+          "label": "SUPPORTED",
+          "value": "Rafael Gil",
+          "citations": [
+            "d1s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d1s0",
+              "text": "Queen of the Chantecler( Spanish: La reina del Chantecler) is a 1962 Spanish historical drama film directed by Rafael Gil and starring Sara Montiel, Alberto de Mendoza and Luigi Giuliani."
+            }
+          ],
+          "reason": "Supported by the cited visible sentences and dependencies."
+        },
+        "u2": {
+          "label": "SUPPORTED",
+          "value": "10 July 1986",
+          "citations": [
+            "d9s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d9s0",
+              "text": "Rafael Gil( 22 May 1913 – 10 July 1986) was a Spanish film director and screenwriter."
+            }
+          ],
+          "reason": "Supported by the cited visible sentences and dependencies."
+        },
+        "u3": {
+          "label": "SUPPORTED",
+          "value": "Chano Urueta",
+          "citations": [
+            "d5s1"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d5s1",
+              "text": "It was directed by Chano Urueta."
+            }
+          ],
+          "reason": "Supported by the cited visible sentences and dependencies."
+        },
+        "u4": {
+          "label": "SUPPORTED",
+          "value": "March 23, 1979",
+          "citations": [
+            "d8s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d8s0",
+              "text": "Santiago Eduardo Urueta Sierra( February 24, 1904 – March 23, 1979), more commonly known as Chano Urueta, was a Mexican film director, producer, screenwriter, and actor."
+            }
+          ],
+          "reason": "Supported by the cited visible sentences and dependencies."
+        },
+        "u5": {
+          "label": "SUPPORTED",
+          "value": "Chano Urueta",
+          "citations": [
+            "d9s0",
+            "d8s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d9s0",
+              "text": "Rafael Gil( 22 May 1913 – 10 July 1986) was a Spanish film director and screenwriter."
+            },
+            {
+              "evidence_id": "d8s0",
+              "text": "Santiago Eduardo Urueta Sierra( February 24, 1904 – March 23, 1979), more commonly known as Chano Urueta, was a Mexican film director, producer, screenwriter, and actor."
+            }
+          ],
+          "reason": "Supported by the cited visible sentences and dependencies."
+        }
+      },
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d1s1",
+        "d2s0",
+        "d3s0",
+        "d4s0",
+        "d4s1",
+        "d4s2",
+        "d5s0",
+        "d5s1",
+        "d6s0",
+        "d7s0",
+        "d8s0",
+        "d9s0",
+        "d9s1",
+        "d9s2",
+        "d9s3",
+        "d9s4",
+        "d9s5",
+        "d9s6",
+        "d10s0"
+      ],
+      "semantic_review": true
+    },
+    {
+      "sequence": 43,
+      "time_s": 30.109,
+      "type": "verification_reply",
+      "reply": {
+        "approved": true,
+        "facts_valid": true,
+        "expressed_unit_ids": [
+          "u1",
+          "u2",
+          "u3",
+          "u4",
+          "u5"
+        ],
+        "reason": "All factual claims match approved facts and evidence, and the draft fully covers the required units without extra statements."
+      },
+      "output_unit_ids": [
+        "u1",
+        "u2",
+        "u3",
+        "u4",
+        "u5"
+      ],
+      "output_action": "Final Answer",
+      "dependency_unit_ids": [],
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d5s1",
+        "d8s0",
+        "d9s0"
+      ]
+    },
+    {
+      "sequence": 44,
+      "time_s": 30.109,
+      "type": "utterance",
+      "action": "Final Answer",
+      "text": "Rafael Gil is the director of Queen Of The Chantecler. Rafael Gil died on 10 July 1986. Chano Urueta is the director of La Marca De Satanás. Chano Urueta died on March 23, 1979. Chano Urueta died first.",
+      "claims": [
+        {
+          "unit_id": "u1",
+          "description": "Identify the director of the film \"Queen Of The Chantecler\"",
+          "value": "Rafael Gil",
+          "citations": [
+            "d1s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d1s0",
+              "text": "Queen of the Chantecler( Spanish: La reina del Chantecler) is a 1962 Spanish historical drama film directed by Rafael Gil and starring Sara Montiel, Alberto de Mendoza and Luigi Giuliani."
+            }
+          ]
+        },
+        {
+          "unit_id": "u2",
+          "description": "Find the death date of the director of \"Queen Of The Chantecler\"",
+          "value": "10 July 1986",
+          "citations": [
+            "d9s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d9s0",
+              "text": "Rafael Gil( 22 May 1913 – 10 July 1986) was a Spanish film director and screenwriter."
+            }
+          ]
+        },
+        {
+          "unit_id": "u3",
+          "description": "Identify the director of the film \"La Marca De Satanás\"",
+          "value": "Chano Urueta",
+          "citations": [
+            "d5s1"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d5s1",
+              "text": "It was directed by Chano Urueta."
+            }
+          ]
+        },
+        {
+          "unit_id": "u4",
+          "description": "Find the death date of the director of \"La Marca De Satanás\"",
+          "value": "March 23, 1979",
+          "citations": [
+            "d8s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d8s0",
+              "text": "Santiago Eduardo Urueta Sierra( February 24, 1904 – March 23, 1979), more commonly known as Chano Urueta, was a Mexican film director, producer, screenwriter, and actor."
+            }
+          ]
+        },
+        {
+          "unit_id": "u5",
+          "description": "Determine which director died first between the directors of \"Queen Of The Chantecler\" and \"La Marca De Satanás\"",
+          "value": "Chano Urueta",
+          "citations": [
+            "d9s0",
+            "d8s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d9s0",
+              "text": "Rafael Gil( 22 May 1913 – 10 July 1986) was a Spanish film director and screenwriter."
+            },
+            {
+              "evidence_id": "d8s0",
+              "text": "Santiago Eduardo Urueta Sierra( February 24, 1904 – March 23, 1979), more commonly known as Chano Urueta, was a Mexican film director, producer, screenwriter, and actor."
+            }
+          ]
+        }
+      ],
+      "unresolved": [],
+      "fallback": false,
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d1s1",
+        "d2s0",
+        "d3s0",
+        "d4s0",
+        "d4s1",
+        "d4s2",
+        "d5s0",
+        "d5s1",
+        "d6s0",
+        "d7s0",
+        "d8s0",
+        "d9s0",
+        "d9s1",
+        "d9s2",
+        "d9s3",
+        "d9s4",
+        "d9s5",
+        "d9s6",
+        "d10s0"
+      ],
+      "language": "en"
+    },
+    {
+      "sequence": 45,
+      "time_s": 30.109,
+      "type": "finished",
+      "status": "complete"
+    }
+  ],
+  "note": "Prototype model judgments are not independent gold scores. Output event times are not spoken claim times.",
+  "evidence_mode": "scheduled_trace",
+  "audio": {
+    "enabled": true,
+    "mode": "windows",
+    "play": false,
+    "status": "ok",
+    "errors": [],
+    "records": [
+      {
+        "event_sequence": 1,
+        "sentence_index": 1,
+        "sentence_count": 1,
+        "language": "en",
+        "text": "I’ll look up which of the two films’ directors died first.",
+        "action": "Backchannel",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 2.811999999990803,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1\\samples\\0058\\audio\\segments\\0001_01.wav",
+        "duration_s": 3.8938321995464853,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 3.625,
+        "synthesis_and_playback_s": 0.8130000000091968
+      },
+      {
+        "event_sequence": 7,
+        "sentence_index": 1,
+        "sentence_count": 1,
+        "language": "en",
+        "text": "I'm looking into the directors' dates now.",
+        "action": "Progress",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 8.781000000002678,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1\\samples\\0058\\audio\\segments\\0007_01.wav",
+        "duration_s": 2.813922902494331,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 9.577999999994063,
+        "synthesis_and_playback_s": 0.7969999999913853
+      },
+      {
+        "event_sequence": 44,
+        "sentence_index": 1,
+        "sentence_count": 4,
+        "language": "en",
+        "text": "Rafael Gil is the director of Queen Of The Chantecler.",
+        "action": "Final Answer",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 30.10899999999674,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1\\samples\\0058\\audio\\segments\\0044_01.wav",
+        "duration_s": 3.773832199546485,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 30.906000000002678,
+        "synthesis_and_playback_s": 0.7970000000059372
+      },
+      {
+        "event_sequence": 44,
+        "sentence_index": 2,
+        "sentence_count": 4,
+        "language": "en",
+        "text": "Rafael Gil died on 10 July 1986.",
+        "action": "Final Answer",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 30.906000000002678,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1\\samples\\0058\\audio\\segments\\0044_02.wav",
+        "duration_s": 4.238775510204082,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 31.702999999994063,
+        "synthesis_and_playback_s": 0.7969999999913853
+      },
+      {
+        "event_sequence": 44,
+        "sentence_index": 3,
+        "sentence_count": 4,
+        "language": "en",
+        "text": "Chano Urueta is the director of La Marca De Satanás. Chano Urueta died on March 23, 1979.",
+        "action": "Final Answer",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 31.702999999994063,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1\\samples\\0058\\audio\\segments\\0044_03.wav",
+        "duration_s": 8.903038548752834,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 32.51499999999942,
+        "synthesis_and_playback_s": 0.8120000000053551
+      },
+      {
+        "event_sequence": 44,
+        "sentence_index": 4,
+        "sentence_count": 4,
+        "language": "en",
+        "text": "Chano Urueta died first.",
+        "action": "Final Answer",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 32.51499999999942,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1\\samples\\0058\\audio\\segments\\0044_04.wav",
+        "duration_s": 2.589115646258503,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 33.28100000000268,
+        "synthesis_and_playback_s": 0.7660000000032596
+      }
+    ],
+    "wave": {
+      "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1\\samples\\0058\\audio\\response.wav",
+      "duration_s": 50.41074829931973,
+      "timeline": [
+        {
+          "event_sequence": 1,
+          "sentence_index": 1,
+          "action": "Backchannel",
+          "text": "I’ll look up which of the two films’ directors died first.",
+          "wave_start_s": 3.6249886621315195,
+          "wave_end_s": 7.518820861678004
+        },
+        {
+          "event_sequence": 7,
+          "sentence_index": 1,
+          "action": "Progress",
+          "text": "I'm looking into the directors' dates now.",
+          "wave_start_s": 9.578004535147393,
+          "wave_end_s": 12.391927437641723
+        },
+        {
+          "event_sequence": 44,
+          "sentence_index": 1,
+          "action": "Final Answer",
+          "text": "Rafael Gil is the director of Queen Of The Chantecler.",
+          "wave_start_s": 30.90598639455782,
+          "wave_end_s": 34.67981859410431
+        },
+        {
+          "event_sequence": 44,
+          "sentence_index": 2,
+          "action": "Final Answer",
+          "text": "Rafael Gil died on 10 July 1986.",
+          "wave_start_s": 34.67981859410431,
+          "wave_end_s": 38.91859410430839
+        },
+        {
+          "event_sequence": 44,
+          "sentence_index": 3,
+          "action": "Final Answer",
+          "text": "Chano Urueta is the director of La Marca De Satanás. Chano Urueta died on March 23, 1979.",
+          "wave_start_s": 38.91859410430839,
+          "wave_end_s": 47.82163265306122
+        },
+        {
+          "event_sequence": 44,
+          "sentence_index": 4,
+          "action": "Final Answer",
+          "text": "Chano Urueta died first.",
+          "wave_start_s": 47.82163265306122,
+          "wave_end_s": 50.41074829931973
+        }
+      ]
+    }
+  },
+  "evaluation": {
+    "mode": "b_final_revised_trace",
+    "trace_id": "2wikimultihopqa_275a7f8708a611ebbd7eac1f6bf848b6_immediate",
+    "sample_id": "2wikimultihopqa_275a7f8708a611ebbd7eac1f6bf848b6",
+    "total_wall_s": 33.28100000000268,
+    "question_timeout_s": 180,
+    "audio_enabled": true,
+    "history_enabled": false,
+    "text_pipeline_wall_s": 30.10899999999674,
+    "effective_settings": {
+      "base_url": "https://tinker.thinkingmachines.dev/services/tinker-prod/oai/api/v1",
+      "model": "openai/gpt-oss-120b",
+      "judge_model": "tinker://f9e9a6c1-e203-5c2c-acdd-68fe67378ca4:train:0/sampler_weights/epoch-0001",
+      "judge_reasoning_effort": "low",
+      "wiki_language": "en",
+      "user_agent": "CascadeSystem/0.1 (educational research prototype)",
+      "timeout_s": 45.0,
+      "max_tokens": 4096,
+      "reasoning_effort": "low",
+      "progress_s": 3.0,
+      "feedback_timeout_s": 6.0,
+      "search_limit": 3,
+      "max_units": 8,
+      "max_searches": 16,
+      "max_sources": 20,
+      "source_chars": 210,
+      "evidence_chars": 2169,
+      "concurrency": 3
+    },
+    "timing_kind": "unknown",
+    "scheduler": "wall-paced fixed B arrivals",
+    "split": "eval_reserved",
+    "empty_evidence_sentences_ignored": 0
+  }
+}

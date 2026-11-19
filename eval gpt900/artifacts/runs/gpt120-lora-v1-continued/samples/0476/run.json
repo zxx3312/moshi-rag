@@ -1,0 +1,2449 @@
+{
+  "question": "What flag features 13 stars and is popularly attributed to the woman after whom the memorial bridge connecting Pennsylvania and New Jersey is named?",
+  "resolved_question": "What flag features 13 stars and is popularly attributed to the woman after whom the memorial bridge connecting Pennsylvania and New Jersey is named?",
+  "used_history_turn_ids": [],
+  "response_language": "en",
+  "status": "complete",
+  "clock": "wall_monotonic",
+  "time_origin": "question_text_ready_after_optional_asr",
+  "model": "openai/gpt-oss-120b",
+  "judge_model": "tinker://f9e9a6c1-e203-5c2c-acdd-68fe67378ca4:train:0/sampler_weights/epoch-0001",
+  "units": [
+    {
+      "unit_id": "u1",
+      "description": "Identify the memorial bridge connecting Pennsylvania and New Jersey that is named after a woman",
+      "necessary": true,
+      "depends_on": [],
+      "queries": [
+        "Betsy Ross Bridge",
+        "bridge named after woman connecting Pennsylvania New Jersey"
+      ],
+      "subject": "Betsy Ross Bridge"
+    },
+    {
+      "unit_id": "u2",
+      "description": "Find the name of the woman after whom the bridge identified in u1 is named",
+      "necessary": true,
+      "depends_on": [
+        "u1"
+      ],
+      "queries": [
+        "Betsy Ross Bridge named after which woman",
+        "woman after whom the Betsy Ross Bridge is named"
+      ],
+      "subject": "Betsy Ross"
+    },
+    {
+      "unit_id": "u3",
+      "description": "Identify a flag that features 13 stars",
+      "necessary": true,
+      "depends_on": [],
+      "queries": [
+        "flag with 13 stars",
+        "Betsy Ross flag"
+      ],
+      "subject": "Betsy Ross flag"
+    },
+    {
+      "unit_id": "u4",
+      "description": "Confirm that the flag identified in u3 is popularly attributed to the woman identified in u2",
+      "necessary": true,
+      "depends_on": [
+        "u2",
+        "u3"
+      ],
+      "queries": [
+        "Betsy Ross flag attribution to Betsy Ross",
+        "popularly attributed to Betsy Ross flag"
+      ],
+      "subject": "Betsy Ross flag"
+    }
+  ],
+  "judgments": {
+    "u1": {
+      "label": "SUPPORTED",
+      "value": "Betsy Ross Bridge",
+      "citations": [
+        "d2s0"
+      ],
+      "quotes": [
+        {
+          "evidence_id": "d2s0",
+          "text": "The Betsy Ross Bridge, also known as the Ross Memorial Bridge is a continuous steel truss bridge spanning the Delaware River from the City of Philadelphia in Pennsylvania to Pennsauken, New Jersey."
+        }
+      ],
+      "reason": "Supported by the cited visible sentences and dependencies."
+    },
+    "u2": {
+      "label": "SUPPORTED",
+      "value": "Betsy Ross",
+      "citations": [
+        "d2s1"
+      ],
+      "quotes": [
+        {
+          "evidence_id": "d2s1",
+          "text": "Built from 1969 to 1974, and opened in April 1976, during the American Bicentennial Year, it was originally planned to be named as the \"Delair Bridge\", after a paralleling vertical lift bridge owned by Pennsylvania Railroad (which is now used by Conrail and New Jersey Transit's Atlantic City Line), but was instead later named for Betsy Ross, a Philadelphia seamstress and reputed creator of the first American flag in 1776, making it the first automotive bridge named for a woman in America and the second bridge overall (after Iowa's Boone High Bridge was renamed the Kate Shelley High Bridge in 1912)."
+        }
+      ],
+      "reason": "Supported by the cited visible sentences and dependencies."
+    },
+    "u3": {
+      "label": "SUPPORTED",
+      "value": "Betsy Ross flag",
+      "citations": [
+        "d9s2"
+      ],
+      "quotes": [
+        {
+          "evidence_id": "d9s2",
+          "text": "The flag features 13 stars to represent the original 13 colonies with the stars arranged in a circle."
+        }
+      ],
+      "reason": "Supported by the cited visible sentences and dependencies."
+    },
+    "u4": {
+      "label": "SUPPORTED",
+      "value": "yes",
+      "citations": [
+        "d9s0"
+      ],
+      "quotes": [
+        {
+          "evidence_id": "d9s0",
+          "text": "The Betsy Ross flag is an early design of the flag of the United States, popularly but very likely incorrectly attributed to Betsy Ross, using the common motifs of alternating red-and-white striped field with five-pointed stars in a blue canton."
+        }
+      ],
+      "reason": "Supported by the cited visible sentences and dependencies."
+    }
+  },
+  "evidence": [
+    {
+      "evidence_id": "d1s0",
+      "title": "New Jersey Route 60",
+      "url": "https://trace.invalid/hotpotqa_5a74c1c05542996c70cfadd8_short/d1s0",
+      "text": "Route 60 was a proposed limited access state highway in the U.S. state of New Jersey.",
+      "visible_time_s": 7.687000000005355,
+      "requested_subject": "",
+      "resolved_title": "New Jersey Route 60",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d1s1",
+      "title": "New Jersey Route 60",
+      "url": "https://trace.invalid/hotpotqa_5a74c1c05542996c70cfadd8_short/d1s1",
+      "text": "It would have run from the Delaware Memorial Bridge in the Deepwater neighborhood of Pennsville Township to Ocean City.",
+      "visible_time_s": 7.687000000005355,
+      "requested_subject": "",
+      "resolved_title": "New Jersey Route 60",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d1s2",
+      "title": "New Jersey Route 60",
+      "url": "https://trace.invalid/hotpotqa_5a74c1c05542996c70cfadd8_short/d1s2",
+      "text": "The freeway was to parallel U.S. Route 40 from its start, then run as a concurrency with Route 55 in Vineland.",
+      "visible_time_s": 7.687000000005355,
+      "requested_subject": "",
+      "resolved_title": "New Jersey Route 60",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d1s3",
+      "title": "New Jersey Route 60",
+      "url": "https://trace.invalid/hotpotqa_5a74c1c05542996c70cfadd8_short/d1s3",
+      "text": "From there it would have continued east and ended at Ocean City.",
+      "visible_time_s": 7.687000000005355,
+      "requested_subject": "",
+      "resolved_title": "New Jersey Route 60",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d1s4",
+      "title": "New Jersey Route 60",
+      "url": "https://trace.invalid/hotpotqa_5a74c1c05542996c70cfadd8_short/d1s4",
+      "text": "It was designed as a connection between South Jersey and points west via the Delaware Memorial Bridge.",
+      "visible_time_s": 7.687000000005355,
+      "requested_subject": "",
+      "resolved_title": "New Jersey Route 60",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d1s5",
+      "title": "New Jersey Route 60",
+      "url": "https://trace.invalid/hotpotqa_5a74c1c05542996c70cfadd8_short/d1s5",
+      "text": "However, the nearby Atlantic City Expressway, combined with a fiscal crisis in the mid-1970s, prevented the freeway from being built.",
+      "visible_time_s": 7.687000000005355,
+      "requested_subject": "",
+      "resolved_title": "New Jersey Route 60",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d2s0",
+      "title": "Betsy Ross Bridge",
+      "url": "https://trace.invalid/hotpotqa_5a74c1c05542996c70cfadd8_short/d2s0",
+      "text": "The Betsy Ross Bridge, also known as the Ross Memorial Bridge is a continuous steel truss bridge spanning the Delaware River from the City of Philadelphia in Pennsylvania to Pennsauken, New Jersey.",
+      "visible_time_s": 7.687000000005355,
+      "requested_subject": "",
+      "resolved_title": "Betsy Ross Bridge",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d2s1",
+      "title": "Betsy Ross Bridge",
+      "url": "https://trace.invalid/hotpotqa_5a74c1c05542996c70cfadd8_short/d2s1",
+      "text": "Built from 1969 to 1974, and opened in April 1976, during the American Bicentennial Year, it was originally planned to be named as the \"Delair Bridge\", after a paralleling vertical lift bridge owned by Pennsylvania Railroad (which is now used by Conrail and New Jersey Transit's Atlantic City Line), but was instead later named for Betsy Ross, a Philadelphia seamstress and reputed creator of the first American flag in 1776, making it the first automotive bridge named for a woman in America and the second bridge overall (after Iowa's Boone High Bridge was renamed the Kate Shelley High Bridge in 1912).",
+      "visible_time_s": 7.687000000005355,
+      "requested_subject": "",
+      "resolved_title": "Betsy Ross Bridge",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d4s0",
+      "title": "Interstate 295 (Delaware–New Jersey)",
+      "url": "https://trace.invalid/hotpotqa_5a74c1c05542996c70cfadd8_short/d4s0",
+      "text": "Interstate 295 (abbreviated I-295) in New Jersey and Delaware is an auxiliary Interstate Highway, designated as a bypass around Philadelphia, Pennsylvania.",
+      "visible_time_s": 7.687000000005355,
+      "requested_subject": "",
+      "resolved_title": "Interstate 295 (Delaware–New Jersey)",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d4s1",
+      "title": "Interstate 295 (Delaware–New Jersey)",
+      "url": "https://trace.invalid/hotpotqa_5a74c1c05542996c70cfadd8_short/d4s1",
+      "text": "The route begins at a junction with I-95 south of Wilmington, Delaware, and runs to another junction with I-95 north of Trenton, New Jersey.",
+      "visible_time_s": 7.687000000005355,
+      "requested_subject": "",
+      "resolved_title": "Interstate 295 (Delaware–New Jersey)",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d4s2",
+      "title": "Interstate 295 (Delaware–New Jersey)",
+      "url": "https://trace.invalid/hotpotqa_5a74c1c05542996c70cfadd8_short/d4s2",
+      "text": "The highway heads east from I-95 and crosses the Delaware River from Delaware to New Jersey on the Delaware Memorial Bridge concurrent with U.S. Route 40 (US 40).",
+      "visible_time_s": 7.687000000005355,
+      "requested_subject": "",
+      "resolved_title": "Interstate 295 (Delaware–New Jersey)",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d4s3",
+      "title": "Interstate 295 (Delaware–New Jersey)",
+      "url": "https://trace.invalid/hotpotqa_5a74c1c05542996c70cfadd8_short/d4s3",
+      "text": "Upon entering New Jersey, the two routes split and I-295 runs parallel to the New Jersey Turnpike for most of its course in the state.",
+      "visible_time_s": 7.687000000005355,
+      "requested_subject": "",
+      "resolved_title": "Interstate 295 (Delaware–New Jersey)",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d4s4",
+      "title": "Interstate 295 (Delaware–New Jersey)",
+      "url": "https://trace.invalid/hotpotqa_5a74c1c05542996c70cfadd8_short/d4s4",
+      "text": "After a concurrency with US 130 in Gloucester County, I-295 has an interchange with I-76 and Route 42 in Camden County.",
+      "visible_time_s": 7.687000000005355,
+      "requested_subject": "",
+      "resolved_title": "Interstate 295 (Delaware–New Jersey)",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d4s5",
+      "title": "Interstate 295 (Delaware–New Jersey)",
+      "url": "https://trace.invalid/hotpotqa_5a74c1c05542996c70cfadd8_short/d4s5",
+      "text": "The freeway continues northeast toward Trenton, where it intersects I-195 and Route 29 before bypassing the city to the east and ending at US 1 in Lawrence Township, where the road becomes I-95 southbound.",
+      "visible_time_s": 7.687000000005355,
+      "requested_subject": "",
+      "resolved_title": "Interstate 295 (Delaware–New Jersey)",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d6s0",
+      "title": "Nevius Street Bridge",
+      "url": "https://trace.invalid/hotpotqa_5a74c1c05542996c70cfadd8_short/d6s0",
+      "text": "The Nevius Street Bridge once carried car traffic across the Raritan River between Hillsborough Township and Raritan Borough in Somerset County, New Jersey, United States.",
+      "visible_time_s": 7.687000000005355,
+      "requested_subject": "",
+      "resolved_title": "Nevius Street Bridge",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d6s1",
+      "title": "Nevius Street Bridge",
+      "url": "https://trace.invalid/hotpotqa_5a74c1c05542996c70cfadd8_short/d6s1",
+      "text": "In the 1840s a wooden bridge crossed at this location.",
+      "visible_time_s": 7.687000000005355,
+      "requested_subject": "",
+      "resolved_title": "Nevius Street Bridge",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d6s2",
+      "title": "Nevius Street Bridge",
+      "url": "https://trace.invalid/hotpotqa_5a74c1c05542996c70cfadd8_short/d6s2",
+      "text": "The current 150 ft bridge was built in 1886 by the Wrought Iron Bridge Company of Canton, Ohio.",
+      "visible_time_s": 7.687000000005355,
+      "requested_subject": "",
+      "resolved_title": "Nevius Street Bridge",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d6s3",
+      "title": "Nevius Street Bridge",
+      "url": "https://trace.invalid/hotpotqa_5a74c1c05542996c70cfadd8_short/d6s3",
+      "text": "It is a double intersection Pratt truss bridge.",
+      "visible_time_s": 7.687000000005355,
+      "requested_subject": "",
+      "resolved_title": "Nevius Street Bridge",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d6s4",
+      "title": "Nevius Street Bridge",
+      "url": "https://trace.invalid/hotpotqa_5a74c1c05542996c70cfadd8_short/d6s4",
+      "text": "The construction of the nearby John Basilone Veterans Memorial Bridge replaced the Nevius Street Bridge in 2005; the bridge now serves as a pedestrian bridge, connecting River Road in Hillsborough with the Raritan River Greenway.",
+      "visible_time_s": 7.687000000005355,
+      "requested_subject": "",
+      "resolved_title": "Nevius Street Bridge",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d6s5",
+      "title": "Nevius Street Bridge",
+      "url": "https://trace.invalid/hotpotqa_5a74c1c05542996c70cfadd8_short/d6s5",
+      "text": "Joannes Nevius was born in Zoelen, Netherlands, in 1627 and emigrated to New Amsterdam in 1651.",
+      "visible_time_s": 7.687000000005355,
+      "requested_subject": "",
+      "resolved_title": "Nevius Street Bridge",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d6s6",
+      "title": "Nevius Street Bridge",
+      "url": "https://trace.invalid/hotpotqa_5a74c1c05542996c70cfadd8_short/d6s6",
+      "text": "His grandson, Petrus or Peter Nevius, was the first with the Nevius name to come to the Raritan Valley in Somerset County.",
+      "visible_time_s": 7.687000000005355,
+      "requested_subject": "",
+      "resolved_title": "Nevius Street Bridge",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d8s0",
+      "title": "Veteran's Memorial Bridge (Portland, Maine)",
+      "url": "https://trace.invalid/hotpotqa_5a74c1c05542996c70cfadd8_short/d8s0",
+      "text": "Veteran's Memorial Bridge is a bridge connecting the cities of Portland, Maine and South Portland, Maine.",
+      "visible_time_s": 7.687000000005355,
+      "requested_subject": "",
+      "resolved_title": "Veteran's Memorial Bridge (Portland, Maine)",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d8s1",
+      "title": "Veteran's Memorial Bridge (Portland, Maine)",
+      "url": "https://trace.invalid/hotpotqa_5a74c1c05542996c70cfadd8_short/d8s1",
+      "text": "The bridge spans the Fore River and is part of U.S. Route 1.",
+      "visible_time_s": 7.687000000005355,
+      "requested_subject": "",
+      "resolved_title": "Veteran's Memorial Bridge (Portland, Maine)",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d8s2",
+      "title": "Veteran's Memorial Bridge (Portland, Maine)",
+      "url": "https://trace.invalid/hotpotqa_5a74c1c05542996c70cfadd8_short/d8s2",
+      "text": "The original Veteran's Memorial Bridge was built in 1954 and was described as 'rapidly deteriorating' prior to its demolition.",
+      "visible_time_s": 7.687000000005355,
+      "requested_subject": "",
+      "resolved_title": "Veteran's Memorial Bridge (Portland, Maine)",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d8s3",
+      "title": "Veteran's Memorial Bridge (Portland, Maine)",
+      "url": "https://trace.invalid/hotpotqa_5a74c1c05542996c70cfadd8_short/d8s3",
+      "text": "Designated a top infrastructure priority by Maine state government, a new bridge was built beginning in 2010.",
+      "visible_time_s": 7.687000000005355,
+      "requested_subject": "",
+      "resolved_title": "Veteran's Memorial Bridge (Portland, Maine)",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d8s4",
+      "title": "Veteran's Memorial Bridge (Portland, Maine)",
+      "url": "https://trace.invalid/hotpotqa_5a74c1c05542996c70cfadd8_short/d8s4",
+      "text": "The new bridge was completed on November 30, 2012.",
+      "visible_time_s": 7.687000000005355,
+      "requested_subject": "",
+      "resolved_title": "Veteran's Memorial Bridge (Portland, Maine)",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d8s5",
+      "title": "Veteran's Memorial Bridge (Portland, Maine)",
+      "url": "https://trace.invalid/hotpotqa_5a74c1c05542996c70cfadd8_short/d8s5",
+      "text": "General contractor Reed & Reed of Woolwich, Maine was awarded the rebuilding contractor.",
+      "visible_time_s": 7.687000000005355,
+      "requested_subject": "",
+      "resolved_title": "Veteran's Memorial Bridge (Portland, Maine)",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d8s6",
+      "title": "Veteran's Memorial Bridge (Portland, Maine)",
+      "url": "https://trace.invalid/hotpotqa_5a74c1c05542996c70cfadd8_short/d8s6",
+      "text": "Reed & Reed estimated the new bridge would stand for 100 years.",
+      "visible_time_s": 7.687000000005355,
+      "requested_subject": "",
+      "resolved_title": "Veteran's Memorial Bridge (Portland, Maine)",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d3s0",
+      "title": "Delaware River–Turnpike Toll Bridge",
+      "url": "https://trace.invalid/hotpotqa_5a74c1c05542996c70cfadd8_short/d3s0",
+      "text": "The Delaware River–Turnpike Toll Bridge is a four-lane, steel, arch-shaped, continuous truss bridge that connects the Pennsylvania Turnpike's East-West Mainline with the main trunk of the New Jersey Turnpike, via the Pearl Harbor Memorial Turnpike Extension (formerly known as the Pennsylvania Extension).",
+      "visible_time_s": 7.687000000005355,
+      "requested_subject": "",
+      "resolved_title": "Delaware River–Turnpike Toll Bridge",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d3s1",
+      "title": "Delaware River–Turnpike Toll Bridge",
+      "url": "https://trace.invalid/hotpotqa_5a74c1c05542996c70cfadd8_short/d3s1",
+      "text": "The bridge crosses the Delaware River, connecting Bristol Township, Pennsylvania and Burlington Township, New Jersey.",
+      "visible_time_s": 7.687000000005355,
+      "requested_subject": "",
+      "resolved_title": "Delaware River–Turnpike Toll Bridge",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d3s2",
+      "title": "Delaware River–Turnpike Toll Bridge",
+      "url": "https://trace.invalid/hotpotqa_5a74c1c05542996c70cfadd8_short/d3s2",
+      "text": "The bridge was closed to traffic on January 20, 2017, after a crack was discovered in a steel truss; it reopened on March 9 of that year.",
+      "visible_time_s": 7.687000000005355,
+      "requested_subject": "",
+      "resolved_title": "Delaware River–Turnpike Toll Bridge",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d5s0",
+      "title": "Simeon Willis Memorial Bridge",
+      "url": "https://trace.invalid/hotpotqa_5a74c1c05542996c70cfadd8_short/d5s0",
+      "text": "Simeon Willis Memorial Bridge is a bridge constructed in 1985 over the Ohio River connecting Winchester Ave. (US 23) and 13th St. (US 60) at Ashland, Kentucky to US 52 at Coal Grove, Ohio.",
+      "visible_time_s": 7.687000000005355,
+      "requested_subject": "",
+      "resolved_title": "Simeon Willis Memorial Bridge",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d5s1",
+      "title": "Simeon Willis Memorial Bridge",
+      "url": "https://trace.invalid/hotpotqa_5a74c1c05542996c70cfadd8_short/d5s1",
+      "text": "It is named for Kentucky Governor Simeon S. Willis.",
+      "visible_time_s": 7.687000000005355,
+      "requested_subject": "",
+      "resolved_title": "Simeon Willis Memorial Bridge",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d5s2",
+      "title": "Simeon Willis Memorial Bridge",
+      "url": "https://trace.invalid/hotpotqa_5a74c1c05542996c70cfadd8_short/d5s2",
+      "text": "The bridge was planned, at one point, to cross at 45th St. and connect to a proposed Ashland bypass.",
+      "visible_time_s": 7.687000000005355,
+      "requested_subject": "",
+      "resolved_title": "Simeon Willis Memorial Bridge",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d5s3",
+      "title": "Simeon Willis Memorial Bridge",
+      "url": "https://trace.invalid/hotpotqa_5a74c1c05542996c70cfadd8_short/d5s3",
+      "text": "The Willis bridge, however, was built one block from the existing Ben Williamson Memorial Bridge and generally carries only Ohio-bound traffic.",
+      "visible_time_s": 7.687000000005355,
+      "requested_subject": "",
+      "resolved_title": "Simeon Willis Memorial Bridge",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d5s4",
+      "title": "Simeon Willis Memorial Bridge",
+      "url": "https://trace.invalid/hotpotqa_5a74c1c05542996c70cfadd8_short/d5s4",
+      "text": "Southbound traffic, which is normally carried on the Williamson Bridge, was diverted to the Willis Bridge in early 2007 so that the Williamson Bridge could be repaired and painted.",
+      "visible_time_s": 7.687000000005355,
+      "requested_subject": "",
+      "resolved_title": "Simeon Willis Memorial Bridge",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d5s5",
+      "title": "Simeon Willis Memorial Bridge",
+      "url": "https://trace.invalid/hotpotqa_5a74c1c05542996c70cfadd8_short/d5s5",
+      "text": "The Williamson Bridge was also closed briefly and traffic again diverted to the Willis Bridge in the summer of 2013 after a tractor-trailer ran into the tower on the Ohio side.",
+      "visible_time_s": 7.687000000005355,
+      "requested_subject": "",
+      "resolved_title": "Simeon Willis Memorial Bridge",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d7s0",
+      "title": "New Jersey Turnpike",
+      "url": "https://trace.invalid/hotpotqa_5a74c1c05542996c70cfadd8_short/d7s0",
+      "text": "The New Jersey Turnpike (NJTP), colloquially known to New Jerseyans as \"the Turnpike\", is a toll road in New Jersey, maintained by the New Jersey Turnpike Authority.",
+      "visible_time_s": 7.687000000005355,
+      "requested_subject": "",
+      "resolved_title": "New Jersey Turnpike",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d7s1",
+      "title": "New Jersey Turnpike",
+      "url": "https://trace.invalid/hotpotqa_5a74c1c05542996c70cfadd8_short/d7s1",
+      "text": "According to the International Bridge, Tunnel and Turnpike Association, the Turnpike is the nation's sixth-busiest toll road and is one of the most heavily traveled highways in the United States.",
+      "visible_time_s": 7.687000000005355,
+      "requested_subject": "",
+      "resolved_title": "New Jersey Turnpike",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d7s2",
+      "title": "New Jersey Turnpike",
+      "url": "https://trace.invalid/hotpotqa_5a74c1c05542996c70cfadd8_short/d7s2",
+      "text": "Having a total length of 122.40 mi , the Turnpike's southern terminus begins at Interstate 295 (I-295) near the border of Pennsville and Carneys Point Townships in Salem County, one mile east of the Delaware Memorial Bridge.",
+      "visible_time_s": 7.687000000005355,
+      "requested_subject": "",
+      "resolved_title": "New Jersey Turnpike",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d7s3",
+      "title": "New Jersey Turnpike",
+      "url": "https://trace.invalid/hotpotqa_5a74c1c05542996c70cfadd8_short/d7s3",
+      "text": "Its northern terminus is located at the George Washington Bridge in Fort Lee, Bergen County.",
+      "visible_time_s": 7.687000000005355,
+      "requested_subject": "",
+      "resolved_title": "New Jersey Turnpike",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d7s4",
+      "title": "New Jersey Turnpike",
+      "url": "https://trace.invalid/hotpotqa_5a74c1c05542996c70cfadd8_short/d7s4",
+      "text": "The Turnpike is a major thoroughfare providing access to various localities in New Jersey, as well as Delaware, Pennsylvania, and New York.",
+      "visible_time_s": 7.687000000005355,
+      "requested_subject": "",
+      "resolved_title": "New Jersey Turnpike",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d7s5",
+      "title": "New Jersey Turnpike",
+      "url": "https://trace.invalid/hotpotqa_5a74c1c05542996c70cfadd8_short/d7s5",
+      "text": "The route divides into four roadways between exit 6 and exit 14, with the inner lanes restricted to carrying only cars, and with the outer lanes for cars, trucks and buses.",
+      "visible_time_s": 7.687000000005355,
+      "requested_subject": "",
+      "resolved_title": "New Jersey Turnpike",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d9s0",
+      "title": "Betsy Ross flag",
+      "url": "https://trace.invalid/hotpotqa_5a74c1c05542996c70cfadd8_short/d9s0",
+      "text": "The Betsy Ross flag is an early design of the flag of the United States, popularly but very likely incorrectly attributed to Betsy Ross, using the common motifs of alternating red-and-white striped field with five-pointed stars in a blue canton.",
+      "visible_time_s": 7.687000000005355,
+      "requested_subject": "",
+      "resolved_title": "Betsy Ross flag",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d9s1",
+      "title": "Betsy Ross flag",
+      "url": "https://trace.invalid/hotpotqa_5a74c1c05542996c70cfadd8_short/d9s1",
+      "text": "The first documented usage of this flag was in 1792.",
+      "visible_time_s": 7.687000000005355,
+      "requested_subject": "",
+      "resolved_title": "Betsy Ross flag",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d9s2",
+      "title": "Betsy Ross flag",
+      "url": "https://trace.invalid/hotpotqa_5a74c1c05542996c70cfadd8_short/d9s2",
+      "text": "The flag features 13 stars to represent the original 13 colonies with the stars arranged in a circle.",
+      "visible_time_s": 7.687000000005355,
+      "requested_subject": "",
+      "resolved_title": "Betsy Ross flag",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d10s0",
+      "title": "Interstate 95 in New Jersey",
+      "url": "https://trace.invalid/hotpotqa_5a74c1c05542996c70cfadd8_short/d10s0",
+      "text": "Interstate 95 (I-95) is a major Interstate Highway that traverses nearly the full extent of the East Coast of the United States, from Florida to Maine, with the exception of a small gap in New Jersey.",
+      "visible_time_s": 7.687000000005355,
+      "requested_subject": "",
+      "resolved_title": "Interstate 95 in New Jersey",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d10s1",
+      "title": "Interstate 95 in New Jersey",
+      "url": "https://trace.invalid/hotpotqa_5a74c1c05542996c70cfadd8_short/d10s1",
+      "text": "In New Jersey, it runs along much of the main line of the New Jersey Turnpike (Exit 6 to Exit 14), as well as the Pearl Harbor Memorial Extension (formerly and still commonly known as the Pennsylvania Turnpike Connector; from Exit 6 to the Delaware River–Turnpike Toll Bridge) and the New Jersey Turnpike's northern continuation (from Exit 14) to the George Washington Bridge, also maintained by the New Jersey Turnpike Authority, for a total of 77.96 mi .",
+      "visible_time_s": 7.687000000005355,
+      "requested_subject": "",
+      "resolved_title": "Interstate 95 in New Jersey",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d10s2",
+      "title": "Interstate 95 in New Jersey",
+      "url": "https://trace.invalid/hotpotqa_5a74c1c05542996c70cfadd8_short/d10s2",
+      "text": "Located in the northeastern part of the state near New York City, the 11.03 mi Western Spur of the New Jersey Turnpike, considered to be Route 95W by the New Jersey Department of Transportation, is also part of I-95.",
+      "visible_time_s": 7.687000000005355,
+      "requested_subject": "",
+      "resolved_title": "Interstate 95 in New Jersey",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d10s3",
+      "title": "Interstate 95 in New Jersey",
+      "url": "https://trace.invalid/hotpotqa_5a74c1c05542996c70cfadd8_short/d10s3",
+      "text": "There is also a segment of I-95 to the north of Trenton that is 8.77 mi and connects the Scudder Falls Bridge to I-295 and U.S. Route 1 (US 1); this is officially Route 95M.",
+      "visible_time_s": 7.687000000005355,
+      "requested_subject": "",
+      "resolved_title": "Interstate 95 in New Jersey",
+      "entity_resolution": "unspecified"
+    }
+  ],
+  "searches": [
+    {
+      "query": "[scheduled evidence]",
+      "subject": "",
+      "status": "ok",
+      "returned_pages": [],
+      "mode": "trace",
+      "unit_id": "__scheduled_evidence__"
+    }
+  ],
+  "search_failures": [],
+  "llm_calls": [
+    {
+      "purpose": "feedback_generate",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 419,
+        "completion_tokens": 91,
+        "total_tokens": 510,
+        "prompt_tokens_details": {
+          "cached_tokens": 384
+        }
+      },
+      "latency_s": 1.39
+    },
+    {
+      "purpose": "feedback_verify",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 387,
+        "completion_tokens": 82,
+        "total_tokens": 469,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        }
+      },
+      "latency_s": 0.969
+    },
+    {
+      "purpose": "decompose",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 809,
+        "completion_tokens": 423,
+        "total_tokens": 1232,
+        "prompt_tokens_details": {
+          "cached_tokens": 768
+        }
+      },
+      "latency_s": 2.781
+    },
+    {
+      "purpose": "feedback_generate",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 419,
+        "completion_tokens": 66,
+        "total_tokens": 485,
+        "prompt_tokens_details": {
+          "cached_tokens": 384
+        }
+      },
+      "latency_s": 0.844
+    },
+    {
+      "purpose": "feedback_verify",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 364,
+        "completion_tokens": 75,
+        "total_tokens": 439,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        }
+      },
+      "latency_s": 0.875
+    },
+    {
+      "purpose": "plan_review",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 1193,
+        "completion_tokens": 881,
+        "total_tokens": 2074,
+        "prompt_tokens_details": {
+          "cached_tokens": 896
+        }
+      },
+      "latency_s": 4.906
+    },
+    {
+      "purpose": "judge",
+      "model": "tinker://f9e9a6c1-e203-5c2c-acdd-68fe67378ca4:train:0/sampler_weights/epoch-0001",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 8437,
+        "completion_tokens": 658,
+        "total_tokens": 9095,
+        "prompt_tokens_details": {
+          "cached_tokens": 1024
+        }
+      },
+      "latency_s": 3.266
+    },
+    {
+      "purpose": "generate",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 1322,
+        "completion_tokens": 125,
+        "total_tokens": 1447,
+        "prompt_tokens_details": {
+          "cached_tokens": 512
+        }
+      },
+      "latency_s": 1.531
+    },
+    {
+      "purpose": "verify",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 2087,
+        "completion_tokens": 230,
+        "total_tokens": 2317,
+        "prompt_tokens_details": {
+          "cached_tokens": 512
+        }
+      },
+      "latency_s": 1.547
+    }
+  ],
+  "search_diagnostics": [],
+  "output_enqueued_units": {
+    "u1": "Betsy Ross Bridge",
+    "u2": "Betsy Ross",
+    "u3": "Betsy Ross flag",
+    "u4": "yes"
+  },
+  "events": [
+    {
+      "sequence": 0,
+      "time_s": 0.0,
+      "type": "feedback_requested",
+      "feedback_kind": "opening",
+      "execution_state": {
+        "stage": "planning",
+        "searches_started": 0,
+        "searches_completed": 0,
+        "active_searches": 0,
+        "evidence_count": 0,
+        "supported_units": 0,
+        "output_units": 0
+      }
+    },
+    {
+      "sequence": 1,
+      "time_s": 2.359,
+      "type": "utterance",
+      "action": "Backchannel",
+      "text": "I see you're asking about the flag with 13 stars linked to the woman the Pennsylvania‑New Jersey memorial bridge is named after, and I'm preparing to look it up.",
+      "claims": [],
+      "feedback_source": "model",
+      "feedback_status_claim": "intent",
+      "feedback_fallback_reason": "",
+      "execution_state": {
+        "stage": "planning",
+        "searches_started": 0,
+        "searches_completed": 0,
+        "active_searches": 0,
+        "evidence_count": 0,
+        "supported_units": 0,
+        "output_units": 0
+      },
+      "language": "en"
+    },
+    {
+      "sequence": 2,
+      "time_s": 2.781,
+      "type": "decompose_reply",
+      "reply": {
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "Identify the memorial bridge connecting Pennsylvania and New Jersey that is named after a woman",
+            "subject": "",
+            "necessary": true,
+            "depends_on": [],
+            "queries": [
+              "memorial bridge Pennsylvania New Jersey named after woman",
+              "bridge named after woman connecting PA NJ"
+            ]
+          },
+          {
+            "unit_id": "u2",
+            "description": "Find the name of the woman after whom the bridge identified in {u1} is named",
+            "subject": "",
+            "necessary": true,
+            "depends_on": [
+              "u1"
+            ],
+            "queries": [
+              "who is the woman after whom the {u1} bridge is named",
+              "bridge {u1} named after which woman"
+            ]
+          },
+          {
+            "unit_id": "u3",
+            "description": "Identify a flag that features 13 stars",
+            "subject": "",
+            "necessary": true,
+            "depends_on": [],
+            "queries": [
+              "flag with 13 stars",
+              "flag featuring thirteen stars"
+            ]
+          },
+          {
+            "unit_id": "u4",
+            "description": "Determine whether the flag identified in {u3} is popularly attributed to the woman identified in {u2}",
+            "subject": "",
+            "necessary": true,
+            "depends_on": [
+              "u2",
+              "u3"
+            ],
+            "queries": [
+              "is the flag with 13 stars associated with {u2}",
+              "popular attribution of {u3} to {u2}"
+            ]
+          }
+        ]
+      },
+      "attempt": 1,
+      "repair": false
+    },
+    {
+      "sequence": 3,
+      "time_s": 2.781,
+      "type": "plan_review_requested",
+      "max_reviews": 1,
+      "question_only": true
+    },
+    {
+      "sequence": 4,
+      "time_s": 5.531,
+      "type": "feedback_requested",
+      "feedback_kind": "progress",
+      "execution_state": {
+        "stage": "planning",
+        "searches_started": 0,
+        "searches_completed": 0,
+        "active_searches": 0,
+        "evidence_count": 0,
+        "supported_units": 0,
+        "output_units": 0
+      }
+    },
+    {
+      "sequence": 5,
+      "time_s": 7.25,
+      "type": "utterance",
+      "action": "Progress",
+      "text": "I'm planning the next steps to find that flag information.",
+      "claims": [],
+      "feedback_source": "model",
+      "feedback_status_claim": "processing",
+      "feedback_fallback_reason": "",
+      "execution_state": {
+        "stage": "planning",
+        "searches_started": 0,
+        "searches_completed": 0,
+        "active_searches": 0,
+        "evidence_count": 0,
+        "supported_units": 0,
+        "output_units": 0
+      },
+      "language": "en"
+    },
+    {
+      "sequence": 6,
+      "time_s": 7.687,
+      "type": "plan_review_reply",
+      "reply": {
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "Identify the memorial bridge connecting Pennsylvania and New Jersey that is named after a woman",
+            "subject": "Betsy Ross Bridge",
+            "necessary": true,
+            "depends_on": [],
+            "queries": [
+              "Betsy Ross Bridge",
+              "bridge named after woman connecting Pennsylvania New Jersey"
+            ]
+          },
+          {
+            "unit_id": "u2",
+            "description": "Find the name of the woman after whom the bridge identified in u1 is named",
+            "subject": "Betsy Ross",
+            "necessary": true,
+            "depends_on": [
+              "u1"
+            ],
+            "queries": [
+              "Betsy Ross Bridge named after which woman",
+              "woman after whom the Betsy Ross Bridge is named"
+            ]
+          },
+          {
+            "unit_id": "u3",
+            "description": "Identify a flag that features 13 stars",
+            "subject": "Betsy Ross flag",
+            "necessary": true,
+            "depends_on": [],
+            "queries": [
+              "flag with 13 stars",
+              "Betsy Ross flag"
+            ]
+          },
+          {
+            "unit_id": "u4",
+            "description": "Confirm that the flag identified in u3 is popularly attributed to the woman identified in u2",
+            "subject": "Betsy Ross flag",
+            "necessary": true,
+            "depends_on": [
+              "u2",
+              "u3"
+            ],
+            "queries": [
+              "Betsy Ross flag attribution to Betsy Ross",
+              "popularly attributed to Betsy Ross flag"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "sequence": 7,
+      "time_s": 7.687,
+      "type": "plan_review_finished",
+      "changed": true,
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "Identify the memorial bridge connecting Pennsylvania and New Jersey that is named after a woman",
+          "necessary": true,
+          "depends_on": [],
+          "queries": [
+            "Betsy Ross Bridge",
+            "bridge named after woman connecting Pennsylvania New Jersey"
+          ],
+          "subject": "Betsy Ross Bridge"
+        },
+        {
+          "unit_id": "u2",
+          "description": "Find the name of the woman after whom the bridge identified in u1 is named",
+          "necessary": true,
+          "depends_on": [
+            "u1"
+          ],
+          "queries": [
+            "Betsy Ross Bridge named after which woman",
+            "woman after whom the Betsy Ross Bridge is named"
+          ],
+          "subject": "Betsy Ross"
+        },
+        {
+          "unit_id": "u3",
+          "description": "Identify a flag that features 13 stars",
+          "necessary": true,
+          "depends_on": [],
+          "queries": [
+            "flag with 13 stars",
+            "Betsy Ross flag"
+          ],
+          "subject": "Betsy Ross flag"
+        },
+        {
+          "unit_id": "u4",
+          "description": "Confirm that the flag identified in u3 is popularly attributed to the woman identified in u2",
+          "necessary": true,
+          "depends_on": [
+            "u2",
+            "u3"
+          ],
+          "queries": [
+            "Betsy Ross flag attribution to Betsy Ross",
+            "popularly attributed to Betsy Ross flag"
+          ],
+          "subject": "Betsy Ross flag"
+        }
+      ],
+      "question_only": true
+    },
+    {
+      "sequence": 8,
+      "time_s": 7.687,
+      "type": "plan",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "Identify the memorial bridge connecting Pennsylvania and New Jersey that is named after a woman",
+          "necessary": true,
+          "depends_on": [],
+          "queries": [
+            "Betsy Ross Bridge",
+            "bridge named after woman connecting Pennsylvania New Jersey"
+          ],
+          "subject": "Betsy Ross Bridge"
+        },
+        {
+          "unit_id": "u2",
+          "description": "Find the name of the woman after whom the bridge identified in u1 is named",
+          "necessary": true,
+          "depends_on": [
+            "u1"
+          ],
+          "queries": [
+            "Betsy Ross Bridge named after which woman",
+            "woman after whom the Betsy Ross Bridge is named"
+          ],
+          "subject": "Betsy Ross"
+        },
+        {
+          "unit_id": "u3",
+          "description": "Identify a flag that features 13 stars",
+          "necessary": true,
+          "depends_on": [],
+          "queries": [
+            "flag with 13 stars",
+            "Betsy Ross flag"
+          ],
+          "subject": "Betsy Ross flag"
+        },
+        {
+          "unit_id": "u4",
+          "description": "Confirm that the flag identified in u3 is popularly attributed to the woman identified in u2",
+          "necessary": true,
+          "depends_on": [
+            "u2",
+            "u3"
+          ],
+          "queries": [
+            "Betsy Ross flag attribution to Betsy Ross",
+            "popularly attributed to Betsy Ross flag"
+          ],
+          "subject": "Betsy Ross flag"
+        }
+      ]
+    },
+    {
+      "sequence": 9,
+      "time_s": 7.687,
+      "type": "trace_batch_requested"
+    },
+    {
+      "sequence": 10,
+      "time_s": 7.687,
+      "type": "search_finished",
+      "query": "[scheduled evidence]",
+      "subject": "",
+      "status": "ok",
+      "returned_pages": [],
+      "mode": "trace",
+      "unit_id": "__scheduled_evidence__"
+    },
+    {
+      "sequence": 11,
+      "time_s": 7.687,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d1s0",
+        "title": "New Jersey Route 60",
+        "url": "https://trace.invalid/hotpotqa_5a74c1c05542996c70cfadd8_short/d1s0",
+        "text": "Route 60 was a proposed limited access state highway in the U.S. state of New Jersey.",
+        "visible_time_s": 7.687000000005355,
+        "requested_subject": "",
+        "resolved_title": "New Jersey Route 60",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 12,
+      "time_s": 7.687,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d1s1",
+        "title": "New Jersey Route 60",
+        "url": "https://trace.invalid/hotpotqa_5a74c1c05542996c70cfadd8_short/d1s1",
+        "text": "It would have run from the Delaware Memorial Bridge in the Deepwater neighborhood of Pennsville Township to Ocean City.",
+        "visible_time_s": 7.687000000005355,
+        "requested_subject": "",
+        "resolved_title": "New Jersey Route 60",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 13,
+      "time_s": 7.687,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d1s2",
+        "title": "New Jersey Route 60",
+        "url": "https://trace.invalid/hotpotqa_5a74c1c05542996c70cfadd8_short/d1s2",
+        "text": "The freeway was to parallel U.S. Route 40 from its start, then run as a concurrency with Route 55 in Vineland.",
+        "visible_time_s": 7.687000000005355,
+        "requested_subject": "",
+        "resolved_title": "New Jersey Route 60",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 14,
+      "time_s": 7.687,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d1s3",
+        "title": "New Jersey Route 60",
+        "url": "https://trace.invalid/hotpotqa_5a74c1c05542996c70cfadd8_short/d1s3",
+        "text": "From there it would have continued east and ended at Ocean City.",
+        "visible_time_s": 7.687000000005355,
+        "requested_subject": "",
+        "resolved_title": "New Jersey Route 60",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 15,
+      "time_s": 7.687,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d1s4",
+        "title": "New Jersey Route 60",
+        "url": "https://trace.invalid/hotpotqa_5a74c1c05542996c70cfadd8_short/d1s4",
+        "text": "It was designed as a connection between South Jersey and points west via the Delaware Memorial Bridge.",
+        "visible_time_s": 7.687000000005355,
+        "requested_subject": "",
+        "resolved_title": "New Jersey Route 60",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 16,
+      "time_s": 7.687,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d1s5",
+        "title": "New Jersey Route 60",
+        "url": "https://trace.invalid/hotpotqa_5a74c1c05542996c70cfadd8_short/d1s5",
+        "text": "However, the nearby Atlantic City Expressway, combined with a fiscal crisis in the mid-1970s, prevented the freeway from being built.",
+        "visible_time_s": 7.687000000005355,
+        "requested_subject": "",
+        "resolved_title": "New Jersey Route 60",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 17,
+      "time_s": 7.687,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d2s0",
+        "title": "Betsy Ross Bridge",
+        "url": "https://trace.invalid/hotpotqa_5a74c1c05542996c70cfadd8_short/d2s0",
+        "text": "The Betsy Ross Bridge, also known as the Ross Memorial Bridge is a continuous steel truss bridge spanning the Delaware River from the City of Philadelphia in Pennsylvania to Pennsauken, New Jersey.",
+        "visible_time_s": 7.687000000005355,
+        "requested_subject": "",
+        "resolved_title": "Betsy Ross Bridge",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 18,
+      "time_s": 7.687,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d2s1",
+        "title": "Betsy Ross Bridge",
+        "url": "https://trace.invalid/hotpotqa_5a74c1c05542996c70cfadd8_short/d2s1",
+        "text": "Built from 1969 to 1974, and opened in April 1976, during the American Bicentennial Year, it was originally planned to be named as the \"Delair Bridge\", after a paralleling vertical lift bridge owned by Pennsylvania Railroad (which is now used by Conrail and New Jersey Transit's Atlantic City Line), but was instead later named for Betsy Ross, a Philadelphia seamstress and reputed creator of the first American flag in 1776, making it the first automotive bridge named for a woman in America and the second bridge overall (after Iowa's Boone High Bridge was renamed the Kate Shelley High Bridge in 1912).",
+        "visible_time_s": 7.687000000005355,
+        "requested_subject": "",
+        "resolved_title": "Betsy Ross Bridge",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 19,
+      "time_s": 7.687,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d4s0",
+        "title": "Interstate 295 (Delaware–New Jersey)",
+        "url": "https://trace.invalid/hotpotqa_5a74c1c05542996c70cfadd8_short/d4s0",
+        "text": "Interstate 295 (abbreviated I-295) in New Jersey and Delaware is an auxiliary Interstate Highway, designated as a bypass around Philadelphia, Pennsylvania.",
+        "visible_time_s": 7.687000000005355,
+        "requested_subject": "",
+        "resolved_title": "Interstate 295 (Delaware–New Jersey)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 20,
+      "time_s": 7.687,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d4s1",
+        "title": "Interstate 295 (Delaware–New Jersey)",
+        "url": "https://trace.invalid/hotpotqa_5a74c1c05542996c70cfadd8_short/d4s1",
+        "text": "The route begins at a junction with I-95 south of Wilmington, Delaware, and runs to another junction with I-95 north of Trenton, New Jersey.",
+        "visible_time_s": 7.687000000005355,
+        "requested_subject": "",
+        "resolved_title": "Interstate 295 (Delaware–New Jersey)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 21,
+      "time_s": 7.687,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d4s2",
+        "title": "Interstate 295 (Delaware–New Jersey)",
+        "url": "https://trace.invalid/hotpotqa_5a74c1c05542996c70cfadd8_short/d4s2",
+        "text": "The highway heads east from I-95 and crosses the Delaware River from Delaware to New Jersey on the Delaware Memorial Bridge concurrent with U.S. Route 40 (US 40).",
+        "visible_time_s": 7.687000000005355,
+        "requested_subject": "",
+        "resolved_title": "Interstate 295 (Delaware–New Jersey)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 22,
+      "time_s": 7.687,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d4s3",
+        "title": "Interstate 295 (Delaware–New Jersey)",
+        "url": "https://trace.invalid/hotpotqa_5a74c1c05542996c70cfadd8_short/d4s3",
+        "text": "Upon entering New Jersey, the two routes split and I-295 runs parallel to the New Jersey Turnpike for most of its course in the state.",
+        "visible_time_s": 7.687000000005355,
+        "requested_subject": "",
+        "resolved_title": "Interstate 295 (Delaware–New Jersey)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 23,
+      "time_s": 7.687,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d4s4",
+        "title": "Interstate 295 (Delaware–New Jersey)",
+        "url": "https://trace.invalid/hotpotqa_5a74c1c05542996c70cfadd8_short/d4s4",
+        "text": "After a concurrency with US 130 in Gloucester County, I-295 has an interchange with I-76 and Route 42 in Camden County.",
+        "visible_time_s": 7.687000000005355,
+        "requested_subject": "",
+        "resolved_title": "Interstate 295 (Delaware–New Jersey)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 24,
+      "time_s": 7.687,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d4s5",
+        "title": "Interstate 295 (Delaware–New Jersey)",
+        "url": "https://trace.invalid/hotpotqa_5a74c1c05542996c70cfadd8_short/d4s5",
+        "text": "The freeway continues northeast toward Trenton, where it intersects I-195 and Route 29 before bypassing the city to the east and ending at US 1 in Lawrence Township, where the road becomes I-95 southbound.",
+        "visible_time_s": 7.687000000005355,
+        "requested_subject": "",
+        "resolved_title": "Interstate 295 (Delaware–New Jersey)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 25,
+      "time_s": 7.687,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d6s0",
+        "title": "Nevius Street Bridge",
+        "url": "https://trace.invalid/hotpotqa_5a74c1c05542996c70cfadd8_short/d6s0",
+        "text": "The Nevius Street Bridge once carried car traffic across the Raritan River between Hillsborough Township and Raritan Borough in Somerset County, New Jersey, United States.",
+        "visible_time_s": 7.687000000005355,
+        "requested_subject": "",
+        "resolved_title": "Nevius Street Bridge",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 26,
+      "time_s": 7.687,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d6s1",
+        "title": "Nevius Street Bridge",
+        "url": "https://trace.invalid/hotpotqa_5a74c1c05542996c70cfadd8_short/d6s1",
+        "text": "In the 1840s a wooden bridge crossed at this location.",
+        "visible_time_s": 7.687000000005355,
+        "requested_subject": "",
+        "resolved_title": "Nevius Street Bridge",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 27,
+      "time_s": 7.687,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d6s2",
+        "title": "Nevius Street Bridge",
+        "url": "https://trace.invalid/hotpotqa_5a74c1c05542996c70cfadd8_short/d6s2",
+        "text": "The current 150 ft bridge was built in 1886 by the Wrought Iron Bridge Company of Canton, Ohio.",
+        "visible_time_s": 7.687000000005355,
+        "requested_subject": "",
+        "resolved_title": "Nevius Street Bridge",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 28,
+      "time_s": 7.687,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d6s3",
+        "title": "Nevius Street Bridge",
+        "url": "https://trace.invalid/hotpotqa_5a74c1c05542996c70cfadd8_short/d6s3",
+        "text": "It is a double intersection Pratt truss bridge.",
+        "visible_time_s": 7.687000000005355,
+        "requested_subject": "",
+        "resolved_title": "Nevius Street Bridge",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 29,
+      "time_s": 7.687,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d6s4",
+        "title": "Nevius Street Bridge",
+        "url": "https://trace.invalid/hotpotqa_5a74c1c05542996c70cfadd8_short/d6s4",
+        "text": "The construction of the nearby John Basilone Veterans Memorial Bridge replaced the Nevius Street Bridge in 2005; the bridge now serves as a pedestrian bridge, connecting River Road in Hillsborough with the Raritan River Greenway.",
+        "visible_time_s": 7.687000000005355,
+        "requested_subject": "",
+        "resolved_title": "Nevius Street Bridge",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 30,
+      "time_s": 7.687,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d6s5",
+        "title": "Nevius Street Bridge",
+        "url": "https://trace.invalid/hotpotqa_5a74c1c05542996c70cfadd8_short/d6s5",
+        "text": "Joannes Nevius was born in Zoelen, Netherlands, in 1627 and emigrated to New Amsterdam in 1651.",
+        "visible_time_s": 7.687000000005355,
+        "requested_subject": "",
+        "resolved_title": "Nevius Street Bridge",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 31,
+      "time_s": 7.687,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d6s6",
+        "title": "Nevius Street Bridge",
+        "url": "https://trace.invalid/hotpotqa_5a74c1c05542996c70cfadd8_short/d6s6",
+        "text": "His grandson, Petrus or Peter Nevius, was the first with the Nevius name to come to the Raritan Valley in Somerset County.",
+        "visible_time_s": 7.687000000005355,
+        "requested_subject": "",
+        "resolved_title": "Nevius Street Bridge",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 32,
+      "time_s": 7.687,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d8s0",
+        "title": "Veteran's Memorial Bridge (Portland, Maine)",
+        "url": "https://trace.invalid/hotpotqa_5a74c1c05542996c70cfadd8_short/d8s0",
+        "text": "Veteran's Memorial Bridge is a bridge connecting the cities of Portland, Maine and South Portland, Maine.",
+        "visible_time_s": 7.687000000005355,
+        "requested_subject": "",
+        "resolved_title": "Veteran's Memorial Bridge (Portland, Maine)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 33,
+      "time_s": 7.687,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d8s1",
+        "title": "Veteran's Memorial Bridge (Portland, Maine)",
+        "url": "https://trace.invalid/hotpotqa_5a74c1c05542996c70cfadd8_short/d8s1",
+        "text": "The bridge spans the Fore River and is part of U.S. Route 1.",
+        "visible_time_s": 7.687000000005355,
+        "requested_subject": "",
+        "resolved_title": "Veteran's Memorial Bridge (Portland, Maine)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 34,
+      "time_s": 7.687,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d8s2",
+        "title": "Veteran's Memorial Bridge (Portland, Maine)",
+        "url": "https://trace.invalid/hotpotqa_5a74c1c05542996c70cfadd8_short/d8s2",
+        "text": "The original Veteran's Memorial Bridge was built in 1954 and was described as 'rapidly deteriorating' prior to its demolition.",
+        "visible_time_s": 7.687000000005355,
+        "requested_subject": "",
+        "resolved_title": "Veteran's Memorial Bridge (Portland, Maine)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 35,
+      "time_s": 7.687,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d8s3",
+        "title": "Veteran's Memorial Bridge (Portland, Maine)",
+        "url": "https://trace.invalid/hotpotqa_5a74c1c05542996c70cfadd8_short/d8s3",
+        "text": "Designated a top infrastructure priority by Maine state government, a new bridge was built beginning in 2010.",
+        "visible_time_s": 7.687000000005355,
+        "requested_subject": "",
+        "resolved_title": "Veteran's Memorial Bridge (Portland, Maine)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 36,
+      "time_s": 7.687,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d8s4",
+        "title": "Veteran's Memorial Bridge (Portland, Maine)",
+        "url": "https://trace.invalid/hotpotqa_5a74c1c05542996c70cfadd8_short/d8s4",
+        "text": "The new bridge was completed on November 30, 2012.",
+        "visible_time_s": 7.687000000005355,
+        "requested_subject": "",
+        "resolved_title": "Veteran's Memorial Bridge (Portland, Maine)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 37,
+      "time_s": 7.687,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d8s5",
+        "title": "Veteran's Memorial Bridge (Portland, Maine)",
+        "url": "https://trace.invalid/hotpotqa_5a74c1c05542996c70cfadd8_short/d8s5",
+        "text": "General contractor Reed & Reed of Woolwich, Maine was awarded the rebuilding contractor.",
+        "visible_time_s": 7.687000000005355,
+        "requested_subject": "",
+        "resolved_title": "Veteran's Memorial Bridge (Portland, Maine)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 38,
+      "time_s": 7.687,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d8s6",
+        "title": "Veteran's Memorial Bridge (Portland, Maine)",
+        "url": "https://trace.invalid/hotpotqa_5a74c1c05542996c70cfadd8_short/d8s6",
+        "text": "Reed & Reed estimated the new bridge would stand for 100 years.",
+        "visible_time_s": 7.687000000005355,
+        "requested_subject": "",
+        "resolved_title": "Veteran's Memorial Bridge (Portland, Maine)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 39,
+      "time_s": 7.687,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d3s0",
+        "title": "Delaware River–Turnpike Toll Bridge",
+        "url": "https://trace.invalid/hotpotqa_5a74c1c05542996c70cfadd8_short/d3s0",
+        "text": "The Delaware River–Turnpike Toll Bridge is a four-lane, steel, arch-shaped, continuous truss bridge that connects the Pennsylvania Turnpike's East-West Mainline with the main trunk of the New Jersey Turnpike, via the Pearl Harbor Memorial Turnpike Extension (formerly known as the Pennsylvania Extension).",
+        "visible_time_s": 7.687000000005355,
+        "requested_subject": "",
+        "resolved_title": "Delaware River–Turnpike Toll Bridge",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 40,
+      "time_s": 7.687,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d3s1",
+        "title": "Delaware River–Turnpike Toll Bridge",
+        "url": "https://trace.invalid/hotpotqa_5a74c1c05542996c70cfadd8_short/d3s1",
+        "text": "The bridge crosses the Delaware River, connecting Bristol Township, Pennsylvania and Burlington Township, New Jersey.",
+        "visible_time_s": 7.687000000005355,
+        "requested_subject": "",
+        "resolved_title": "Delaware River–Turnpike Toll Bridge",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 41,
+      "time_s": 7.687,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d3s2",
+        "title": "Delaware River–Turnpike Toll Bridge",
+        "url": "https://trace.invalid/hotpotqa_5a74c1c05542996c70cfadd8_short/d3s2",
+        "text": "The bridge was closed to traffic on January 20, 2017, after a crack was discovered in a steel truss; it reopened on March 9 of that year.",
+        "visible_time_s": 7.687000000005355,
+        "requested_subject": "",
+        "resolved_title": "Delaware River–Turnpike Toll Bridge",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 42,
+      "time_s": 7.687,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d5s0",
+        "title": "Simeon Willis Memorial Bridge",
+        "url": "https://trace.invalid/hotpotqa_5a74c1c05542996c70cfadd8_short/d5s0",
+        "text": "Simeon Willis Memorial Bridge is a bridge constructed in 1985 over the Ohio River connecting Winchester Ave. (US 23) and 13th St. (US 60) at Ashland, Kentucky to US 52 at Coal Grove, Ohio.",
+        "visible_time_s": 7.687000000005355,
+        "requested_subject": "",
+        "resolved_title": "Simeon Willis Memorial Bridge",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 43,
+      "time_s": 7.687,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d5s1",
+        "title": "Simeon Willis Memorial Bridge",
+        "url": "https://trace.invalid/hotpotqa_5a74c1c05542996c70cfadd8_short/d5s1",
+        "text": "It is named for Kentucky Governor Simeon S. Willis.",
+        "visible_time_s": 7.687000000005355,
+        "requested_subject": "",
+        "resolved_title": "Simeon Willis Memorial Bridge",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 44,
+      "time_s": 7.687,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d5s2",
+        "title": "Simeon Willis Memorial Bridge",
+        "url": "https://trace.invalid/hotpotqa_5a74c1c05542996c70cfadd8_short/d5s2",
+        "text": "The bridge was planned, at one point, to cross at 45th St. and connect to a proposed Ashland bypass.",
+        "visible_time_s": 7.687000000005355,
+        "requested_subject": "",
+        "resolved_title": "Simeon Willis Memorial Bridge",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 45,
+      "time_s": 7.687,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d5s3",
+        "title": "Simeon Willis Memorial Bridge",
+        "url": "https://trace.invalid/hotpotqa_5a74c1c05542996c70cfadd8_short/d5s3",
+        "text": "The Willis bridge, however, was built one block from the existing Ben Williamson Memorial Bridge and generally carries only Ohio-bound traffic.",
+        "visible_time_s": 7.687000000005355,
+        "requested_subject": "",
+        "resolved_title": "Simeon Willis Memorial Bridge",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 46,
+      "time_s": 7.687,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d5s4",
+        "title": "Simeon Willis Memorial Bridge",
+        "url": "https://trace.invalid/hotpotqa_5a74c1c05542996c70cfadd8_short/d5s4",
+        "text": "Southbound traffic, which is normally carried on the Williamson Bridge, was diverted to the Willis Bridge in early 2007 so that the Williamson Bridge could be repaired and painted.",
+        "visible_time_s": 7.687000000005355,
+        "requested_subject": "",
+        "resolved_title": "Simeon Willis Memorial Bridge",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 47,
+      "time_s": 7.687,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d5s5",
+        "title": "Simeon Willis Memorial Bridge",
+        "url": "https://trace.invalid/hotpotqa_5a74c1c05542996c70cfadd8_short/d5s5",
+        "text": "The Williamson Bridge was also closed briefly and traffic again diverted to the Willis Bridge in the summer of 2013 after a tractor-trailer ran into the tower on the Ohio side.",
+        "visible_time_s": 7.687000000005355,
+        "requested_subject": "",
+        "resolved_title": "Simeon Willis Memorial Bridge",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 48,
+      "time_s": 7.687,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d7s0",
+        "title": "New Jersey Turnpike",
+        "url": "https://trace.invalid/hotpotqa_5a74c1c05542996c70cfadd8_short/d7s0",
+        "text": "The New Jersey Turnpike (NJTP), colloquially known to New Jerseyans as \"the Turnpike\", is a toll road in New Jersey, maintained by the New Jersey Turnpike Authority.",
+        "visible_time_s": 7.687000000005355,
+        "requested_subject": "",
+        "resolved_title": "New Jersey Turnpike",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 49,
+      "time_s": 7.687,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d7s1",
+        "title": "New Jersey Turnpike",
+        "url": "https://trace.invalid/hotpotqa_5a74c1c05542996c70cfadd8_short/d7s1",
+        "text": "According to the International Bridge, Tunnel and Turnpike Association, the Turnpike is the nation's sixth-busiest toll road and is one of the most heavily traveled highways in the United States.",
+        "visible_time_s": 7.687000000005355,
+        "requested_subject": "",
+        "resolved_title": "New Jersey Turnpike",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 50,
+      "time_s": 7.687,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d7s2",
+        "title": "New Jersey Turnpike",
+        "url": "https://trace.invalid/hotpotqa_5a74c1c05542996c70cfadd8_short/d7s2",
+        "text": "Having a total length of 122.40 mi , the Turnpike's southern terminus begins at Interstate 295 (I-295) near the border of Pennsville and Carneys Point Townships in Salem County, one mile east of the Delaware Memorial Bridge.",
+        "visible_time_s": 7.687000000005355,
+        "requested_subject": "",
+        "resolved_title": "New Jersey Turnpike",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 51,
+      "time_s": 7.687,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d7s3",
+        "title": "New Jersey Turnpike",
+        "url": "https://trace.invalid/hotpotqa_5a74c1c05542996c70cfadd8_short/d7s3",
+        "text": "Its northern terminus is located at the George Washington Bridge in Fort Lee, Bergen County.",
+        "visible_time_s": 7.687000000005355,
+        "requested_subject": "",
+        "resolved_title": "New Jersey Turnpike",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 52,
+      "time_s": 7.687,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d7s4",
+        "title": "New Jersey Turnpike",
+        "url": "https://trace.invalid/hotpotqa_5a74c1c05542996c70cfadd8_short/d7s4",
+        "text": "The Turnpike is a major thoroughfare providing access to various localities in New Jersey, as well as Delaware, Pennsylvania, and New York.",
+        "visible_time_s": 7.687000000005355,
+        "requested_subject": "",
+        "resolved_title": "New Jersey Turnpike",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 53,
+      "time_s": 7.687,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d7s5",
+        "title": "New Jersey Turnpike",
+        "url": "https://trace.invalid/hotpotqa_5a74c1c05542996c70cfadd8_short/d7s5",
+        "text": "The route divides into four roadways between exit 6 and exit 14, with the inner lanes restricted to carrying only cars, and with the outer lanes for cars, trucks and buses.",
+        "visible_time_s": 7.687000000005355,
+        "requested_subject": "",
+        "resolved_title": "New Jersey Turnpike",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 54,
+      "time_s": 7.687,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d9s0",
+        "title": "Betsy Ross flag",
+        "url": "https://trace.invalid/hotpotqa_5a74c1c05542996c70cfadd8_short/d9s0",
+        "text": "The Betsy Ross flag is an early design of the flag of the United States, popularly but very likely incorrectly attributed to Betsy Ross, using the common motifs of alternating red-and-white striped field with five-pointed stars in a blue canton.",
+        "visible_time_s": 7.687000000005355,
+        "requested_subject": "",
+        "resolved_title": "Betsy Ross flag",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 55,
+      "time_s": 7.687,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d9s1",
+        "title": "Betsy Ross flag",
+        "url": "https://trace.invalid/hotpotqa_5a74c1c05542996c70cfadd8_short/d9s1",
+        "text": "The first documented usage of this flag was in 1792.",
+        "visible_time_s": 7.687000000005355,
+        "requested_subject": "",
+        "resolved_title": "Betsy Ross flag",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 56,
+      "time_s": 7.687,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d9s2",
+        "title": "Betsy Ross flag",
+        "url": "https://trace.invalid/hotpotqa_5a74c1c05542996c70cfadd8_short/d9s2",
+        "text": "The flag features 13 stars to represent the original 13 colonies with the stars arranged in a circle.",
+        "visible_time_s": 7.687000000005355,
+        "requested_subject": "",
+        "resolved_title": "Betsy Ross flag",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 57,
+      "time_s": 7.687,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d10s0",
+        "title": "Interstate 95 in New Jersey",
+        "url": "https://trace.invalid/hotpotqa_5a74c1c05542996c70cfadd8_short/d10s0",
+        "text": "Interstate 95 (I-95) is a major Interstate Highway that traverses nearly the full extent of the East Coast of the United States, from Florida to Maine, with the exception of a small gap in New Jersey.",
+        "visible_time_s": 7.687000000005355,
+        "requested_subject": "",
+        "resolved_title": "Interstate 95 in New Jersey",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 58,
+      "time_s": 7.687,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d10s1",
+        "title": "Interstate 95 in New Jersey",
+        "url": "https://trace.invalid/hotpotqa_5a74c1c05542996c70cfadd8_short/d10s1",
+        "text": "In New Jersey, it runs along much of the main line of the New Jersey Turnpike (Exit 6 to Exit 14), as well as the Pearl Harbor Memorial Extension (formerly and still commonly known as the Pennsylvania Turnpike Connector; from Exit 6 to the Delaware River–Turnpike Toll Bridge) and the New Jersey Turnpike's northern continuation (from Exit 14) to the George Washington Bridge, also maintained by the New Jersey Turnpike Authority, for a total of 77.96 mi .",
+        "visible_time_s": 7.687000000005355,
+        "requested_subject": "",
+        "resolved_title": "Interstate 95 in New Jersey",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 59,
+      "time_s": 7.687,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d10s2",
+        "title": "Interstate 95 in New Jersey",
+        "url": "https://trace.invalid/hotpotqa_5a74c1c05542996c70cfadd8_short/d10s2",
+        "text": "Located in the northeastern part of the state near New York City, the 11.03 mi Western Spur of the New Jersey Turnpike, considered to be Route 95W by the New Jersey Department of Transportation, is also part of I-95.",
+        "visible_time_s": 7.687000000005355,
+        "requested_subject": "",
+        "resolved_title": "Interstate 95 in New Jersey",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 60,
+      "time_s": 7.687,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d10s3",
+        "title": "Interstate 95 in New Jersey",
+        "url": "https://trace.invalid/hotpotqa_5a74c1c05542996c70cfadd8_short/d10s3",
+        "text": "There is also a segment of I-95 to the north of Trenton that is 8.77 mi and connects the Scudder Falls Bridge to I-295 and U.S. Route 1 (US 1); this is officially Route 95M.",
+        "visible_time_s": 7.687000000005355,
+        "requested_subject": "",
+        "resolved_title": "Interstate 95 in New Jersey",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 61,
+      "time_s": 10.953,
+      "type": "judge_reply",
+      "reply": {
+        "judgments": [
+          {
+            "unit_id": "u1",
+            "label": "SUPPORTED",
+            "value": "Betsy Ross Bridge",
+            "citations": [
+              "d2s0"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d2s0",
+                "text": "The Betsy Ross Bridge, also known as the Ross Memorial Bridge is a continuous steel truss bridge spanning the Delaware River from the City of Philadelphia in Pennsylvania to Pennsauken, New Jersey."
+              }
+            ],
+            "reason": "Supported by the cited visible sentences and dependencies."
+          },
+          {
+            "unit_id": "u2",
+            "label": "SUPPORTED",
+            "value": "Betsy Ross",
+            "citations": [
+              "d2s1"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d2s1",
+                "text": "Built from 1969 to 1974, and opened in April 1976, during the American Bicentennial Year, it was originally planned to be named as the \"Delair Bridge\", after a paralleling vertical lift bridge owned by Pennsylvania Railroad (which is now used by Conrail and New Jersey Transit's Atlantic City Line), but was instead later named for Betsy Ross, a Philadelphia seamstress and reputed creator of the first American flag in 1776, making it the first automotive bridge named for a woman in America and the second bridge overall (after Iowa's Boone High Bridge was renamed the Kate Shelley High Bridge in 1912)."
+              }
+            ],
+            "reason": "Supported by the cited visible sentences and dependencies."
+          },
+          {
+            "unit_id": "u3",
+            "label": "SUPPORTED",
+            "value": "Betsy Ross flag",
+            "citations": [
+              "d9s2"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d9s2",
+                "text": "The flag features 13 stars to represent the original 13 colonies with the stars arranged in a circle."
+              }
+            ],
+            "reason": "Supported by the cited visible sentences and dependencies."
+          },
+          {
+            "unit_id": "u4",
+            "label": "SUPPORTED",
+            "value": "yes",
+            "citations": [
+              "d9s0"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d9s0",
+                "text": "The Betsy Ross flag is an early design of the flag of the United States, popularly but very likely incorrectly attributed to Betsy Ross, using the common motifs of alternating red-and-white striped field with five-pointed stars in a blue canton."
+              }
+            ],
+            "reason": "Supported by the cited visible sentences and dependencies."
+          }
+        ]
+      },
+      "attempt": 1,
+      "repair": false,
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d1s1",
+        "d1s2",
+        "d1s3",
+        "d1s4",
+        "d1s5",
+        "d2s0",
+        "d2s1",
+        "d4s0",
+        "d4s1",
+        "d4s2",
+        "d4s3",
+        "d4s4",
+        "d4s5",
+        "d6s0",
+        "d6s1",
+        "d6s2",
+        "d6s3",
+        "d6s4",
+        "d6s5",
+        "d6s6",
+        "d8s0",
+        "d8s1",
+        "d8s2",
+        "d8s3",
+        "d8s4",
+        "d8s5",
+        "d8s6",
+        "d3s0",
+        "d3s1",
+        "d3s2",
+        "d5s0",
+        "d5s1",
+        "d5s2",
+        "d5s3",
+        "d5s4",
+        "d5s5",
+        "d7s0",
+        "d7s1",
+        "d7s2",
+        "d7s3",
+        "d7s4",
+        "d7s5",
+        "d9s0",
+        "d9s1",
+        "d9s2",
+        "d10s0",
+        "d10s1",
+        "d10s2",
+        "d10s3"
+      ]
+    },
+    {
+      "sequence": 62,
+      "time_s": 10.953,
+      "type": "judgments",
+      "judgments": {
+        "u1": {
+          "label": "SUPPORTED",
+          "value": "Betsy Ross Bridge",
+          "citations": [
+            "d2s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d2s0",
+              "text": "The Betsy Ross Bridge, also known as the Ross Memorial Bridge is a continuous steel truss bridge spanning the Delaware River from the City of Philadelphia in Pennsylvania to Pennsauken, New Jersey."
+            }
+          ],
+          "reason": "Supported by the cited visible sentences and dependencies."
+        },
+        "u2": {
+          "label": "SUPPORTED",
+          "value": "Betsy Ross",
+          "citations": [
+            "d2s1"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d2s1",
+              "text": "Built from 1969 to 1974, and opened in April 1976, during the American Bicentennial Year, it was originally planned to be named as the \"Delair Bridge\", after a paralleling vertical lift bridge owned by Pennsylvania Railroad (which is now used by Conrail and New Jersey Transit's Atlantic City Line), but was instead later named for Betsy Ross, a Philadelphia seamstress and reputed creator of the first American flag in 1776, making it the first automotive bridge named for a woman in America and the second bridge overall (after Iowa's Boone High Bridge was renamed the Kate Shelley High Bridge in 1912)."
+            }
+          ],
+          "reason": "Supported by the cited visible sentences and dependencies."
+        },
+        "u3": {
+          "label": "SUPPORTED",
+          "value": "Betsy Ross flag",
+          "citations": [
+            "d9s2"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d9s2",
+              "text": "The flag features 13 stars to represent the original 13 colonies with the stars arranged in a circle."
+            }
+          ],
+          "reason": "Supported by the cited visible sentences and dependencies."
+        },
+        "u4": {
+          "label": "SUPPORTED",
+          "value": "yes",
+          "citations": [
+            "d9s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d9s0",
+              "text": "The Betsy Ross flag is an early design of the flag of the United States, popularly but very likely incorrectly attributed to Betsy Ross, using the common motifs of alternating red-and-white striped field with five-pointed stars in a blue canton."
+            }
+          ],
+          "reason": "Supported by the cited visible sentences and dependencies."
+        }
+      },
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d1s1",
+        "d1s2",
+        "d1s3",
+        "d1s4",
+        "d1s5",
+        "d2s0",
+        "d2s1",
+        "d4s0",
+        "d4s1",
+        "d4s2",
+        "d4s3",
+        "d4s4",
+        "d4s5",
+        "d6s0",
+        "d6s1",
+        "d6s2",
+        "d6s3",
+        "d6s4",
+        "d6s5",
+        "d6s6",
+        "d8s0",
+        "d8s1",
+        "d8s2",
+        "d8s3",
+        "d8s4",
+        "d8s5",
+        "d8s6",
+        "d3s0",
+        "d3s1",
+        "d3s2",
+        "d5s0",
+        "d5s1",
+        "d5s2",
+        "d5s3",
+        "d5s4",
+        "d5s5",
+        "d7s0",
+        "d7s1",
+        "d7s2",
+        "d7s3",
+        "d7s4",
+        "d7s5",
+        "d9s0",
+        "d9s1",
+        "d9s2",
+        "d10s0",
+        "d10s1",
+        "d10s2",
+        "d10s3"
+      ],
+      "semantic_review": false
+    },
+    {
+      "sequence": 63,
+      "time_s": 14.031,
+      "type": "verification_reply",
+      "reply": {
+        "approved": true,
+        "facts_valid": true,
+        "expressed_unit_ids": [
+          "u1",
+          "u2",
+          "u3",
+          "u4"
+        ],
+        "reason": "All stated facts match the approved evidence and no extra claims are made."
+      },
+      "output_unit_ids": [
+        "u1",
+        "u2",
+        "u3",
+        "u4"
+      ],
+      "output_action": "Final Answer",
+      "dependency_unit_ids": [],
+      "evidence_snapshot_ids": [
+        "d2s0",
+        "d2s1",
+        "d9s0",
+        "d9s2"
+      ]
+    },
+    {
+      "sequence": 64,
+      "time_s": 14.031,
+      "type": "utterance",
+      "action": "Final Answer",
+      "text": "The bridge connecting Pennsylvania and New Jersey is the Betsy Ross Bridge. It is named for Betsy Ross. The flag that features 13 stars is the Betsy Ross flag. Yes, the Betsy Ross flag is popularly but likely incorrectly attributed to Betsy Ross.",
+      "claims": [
+        {
+          "unit_id": "u1",
+          "description": "Identify the memorial bridge connecting Pennsylvania and New Jersey that is named after a woman",
+          "value": "Betsy Ross Bridge",
+          "citations": [
+            "d2s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d2s0",
+              "text": "The Betsy Ross Bridge, also known as the Ross Memorial Bridge is a continuous steel truss bridge spanning the Delaware River from the City of Philadelphia in Pennsylvania to Pennsauken, New Jersey."
+            }
+          ]
+        },
+        {
+          "unit_id": "u2",
+          "description": "Find the name of the woman after whom the bridge identified in u1 is named",
+          "value": "Betsy Ross",
+          "citations": [
+            "d2s1"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d2s1",
+              "text": "Built from 1969 to 1974, and opened in April 1976, during the American Bicentennial Year, it was originally planned to be named as the \"Delair Bridge\", after a paralleling vertical lift bridge owned by Pennsylvania Railroad (which is now used by Conrail and New Jersey Transit's Atlantic City Line), but was instead later named for Betsy Ross, a Philadelphia seamstress and reputed creator of the first American flag in 1776, making it the first automotive bridge named for a woman in America and the second bridge overall (after Iowa's Boone High Bridge was renamed the Kate Shelley High Bridge in 1912)."
+            }
+          ]
+        },
+        {
+          "unit_id": "u3",
+          "description": "Identify a flag that features 13 stars",
+          "value": "Betsy Ross flag",
+          "citations": [
+            "d9s2"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d9s2",
+              "text": "The flag features 13 stars to represent the original 13 colonies with the stars arranged in a circle."
+            }
+          ]
+        },
+        {
+          "unit_id": "u4",
+          "description": "Confirm that the flag identified in u3 is popularly attributed to the woman identified in u2",
+          "value": "yes",
+          "citations": [
+            "d9s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d9s0",
+              "text": "The Betsy Ross flag is an early design of the flag of the United States, popularly but very likely incorrectly attributed to Betsy Ross, using the common motifs of alternating red-and-white striped field with five-pointed stars in a blue canton."
+            }
+          ]
+        }
+      ],
+      "unresolved": [],
+      "fallback": false,
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d1s1",
+        "d1s2",
+        "d1s3",
+        "d1s4",
+        "d1s5",
+        "d2s0",
+        "d2s1",
+        "d4s0",
+        "d4s1",
+        "d4s2",
+        "d4s3",
+        "d4s4",
+        "d4s5",
+        "d6s0",
+        "d6s1",
+        "d6s2",
+        "d6s3",
+        "d6s4",
+        "d6s5",
+        "d6s6",
+        "d8s0",
+        "d8s1",
+        "d8s2",
+        "d8s3",
+        "d8s4",
+        "d8s5",
+        "d8s6",
+        "d3s0",
+        "d3s1",
+        "d3s2",
+        "d5s0",
+        "d5s1",
+        "d5s2",
+        "d5s3",
+        "d5s4",
+        "d5s5",
+        "d7s0",
+        "d7s1",
+        "d7s2",
+        "d7s3",
+        "d7s4",
+        "d7s5",
+        "d9s0",
+        "d9s1",
+        "d9s2",
+        "d10s0",
+        "d10s1",
+        "d10s2",
+        "d10s3"
+      ],
+      "language": "en"
+    },
+    {
+      "sequence": 65,
+      "time_s": 14.047,
+      "type": "finished",
+      "status": "complete"
+    }
+  ],
+  "note": "Prototype model judgments are not independent gold scores. Output event times are not spoken claim times.",
+  "evidence_mode": "scheduled_trace",
+  "audio": {
+    "enabled": true,
+    "mode": "windows",
+    "play": false,
+    "status": "ok",
+    "errors": [],
+    "records": [
+      {
+        "event_sequence": 1,
+        "sentence_index": 1,
+        "sentence_count": 1,
+        "language": "en",
+        "text": "I see you're asking about the flag with 13 stars linked to the woman the Pennsylvania‑New Jersey memorial bridge is named after, and I'm preparing to look it up.",
+        "action": "Backchannel",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 2.3590000000112923,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1-continued\\samples\\0476\\audio\\segments\\0001_01.wav",
+        "duration_s": 9.322403628117915,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 3.25,
+        "synthesis_and_playback_s": 0.8909999999887077
+      },
+      {
+        "event_sequence": 5,
+        "sentence_index": 1,
+        "sentence_count": 1,
+        "language": "en",
+        "text": "I'm planning the next steps to find that flag information.",
+        "action": "Progress",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 7.25,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1-continued\\samples\\0476\\audio\\segments\\0005_01.wav",
+        "duration_s": 3.9537868480725624,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 8.078000000008615,
+        "synthesis_and_playback_s": 0.8280000000086147
+      },
+      {
+        "event_sequence": 64,
+        "sentence_index": 1,
+        "sentence_count": 4,
+        "language": "en",
+        "text": "The bridge connecting Pennsylvania and New Jersey is the Betsy Ross Bridge.",
+        "action": "Final Answer",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 14.047000000005937,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1-continued\\samples\\0476\\audio\\segments\\0064_01.wav",
+        "duration_s": 4.758684807256236,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 14.859000000011292,
+        "synthesis_and_playback_s": 0.8120000000053551
+      },
+      {
+        "event_sequence": 64,
+        "sentence_index": 2,
+        "sentence_count": 4,
+        "language": "en",
+        "text": "It is named for Betsy Ross.",
+        "action": "Final Answer",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 14.859000000011292,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1-continued\\samples\\0476\\audio\\segments\\0064_02.wav",
+        "duration_s": 2.419047619047619,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 15.672000000005937,
+        "synthesis_and_playback_s": 0.8129999999946449
+      },
+      {
+        "event_sequence": 64,
+        "sentence_index": 3,
+        "sentence_count": 4,
+        "language": "en",
+        "text": "The flag that features 13 stars is the Betsy Ross flag.",
+        "action": "Final Answer",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 15.672000000005937,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1-continued\\samples\\0476\\audio\\segments\\0064_03.wav",
+        "duration_s": 4.208798185941043,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 16.468000000008033,
+        "synthesis_and_playback_s": 0.7960000000020955
+      },
+      {
+        "event_sequence": 64,
+        "sentence_index": 4,
+        "sentence_count": 4,
+        "language": "en",
+        "text": "Yes, the Betsy Ross flag is popularly but likely incorrectly attributed to Betsy Ross.",
+        "action": "Final Answer",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 16.468000000008033,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1-continued\\samples\\0476\\audio\\segments\\0064_04.wav",
+        "duration_s": 6.30312925170068,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 17.264999999999418,
+        "synthesis_and_playback_s": 0.7969999999913853
+      }
+    ],
+    "wave": {
+      "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1-continued\\samples\\0476\\audio\\response.wav",
+      "duration_s": 34.21582766439909,
+      "timeline": [
+        {
+          "event_sequence": 1,
+          "sentence_index": 1,
+          "action": "Backchannel",
+          "text": "I see you're asking about the flag with 13 stars linked to the woman the Pennsylvania‑New Jersey memorial bridge is named after, and I'm preparing to look it up.",
+          "wave_start_s": 3.2499773242630385,
+          "wave_end_s": 12.572380952380952
+        },
+        {
+          "event_sequence": 5,
+          "sentence_index": 1,
+          "action": "Progress",
+          "text": "I'm planning the next steps to find that flag information.",
+          "wave_start_s": 12.572380952380952,
+          "wave_end_s": 16.526167800453514
+        },
+        {
+          "event_sequence": 64,
+          "sentence_index": 1,
+          "action": "Final Answer",
+          "text": "The bridge connecting Pennsylvania and New Jersey is the Betsy Ross Bridge.",
+          "wave_start_s": 16.526167800453514,
+          "wave_end_s": 21.28485260770975
+        },
+        {
+          "event_sequence": 64,
+          "sentence_index": 2,
+          "action": "Final Answer",
+          "text": "It is named for Betsy Ross.",
+          "wave_start_s": 21.28485260770975,
+          "wave_end_s": 23.70390022675737
+        },
+        {
+          "event_sequence": 64,
+          "sentence_index": 3,
+          "action": "Final Answer",
+          "text": "The flag that features 13 stars is the Betsy Ross flag.",
+          "wave_start_s": 23.70390022675737,
+          "wave_end_s": 27.91269841269841
+        },
+        {
+          "event_sequence": 64,
+          "sentence_index": 4,
+          "action": "Final Answer",
+          "text": "Yes, the Betsy Ross flag is popularly but likely incorrectly attributed to Betsy Ross.",
+          "wave_start_s": 27.91269841269841,
+          "wave_end_s": 34.21582766439909
+        }
+      ]
+    }
+  },
+  "evaluation": {
+    "mode": "b_final_revised_trace",
+    "trace_id": "hotpotqa_5a74c1c05542996c70cfadd8_short",
+    "sample_id": "hotpotqa_5a74c1c05542996c70cfadd8",
+    "total_wall_s": 17.264999999999418,
+    "question_timeout_s": 180,
+    "audio_enabled": true,
+    "history_enabled": false,
+    "text_pipeline_wall_s": 14.047000000005937,
+    "effective_settings": {
+      "base_url": "https://tinker.thinkingmachines.dev/services/tinker-prod/oai/api/v1",
+      "model": "openai/gpt-oss-120b",
+      "judge_model": "tinker://f9e9a6c1-e203-5c2c-acdd-68fe67378ca4:train:0/sampler_weights/epoch-0001",
+      "judge_reasoning_effort": "low",
+      "wiki_language": "en",
+      "user_agent": "CascadeSystem/0.1 (educational research prototype)",
+      "timeout_s": 45.0,
+      "max_tokens": 4096,
+      "reasoning_effort": "low",
+      "progress_s": 3.0,
+      "feedback_timeout_s": 6.0,
+      "search_limit": 3,
+      "max_units": 8,
+      "max_searches": 16,
+      "max_sources": 50,
+      "source_chars": 605,
+      "evidence_chars": 7571,
+      "concurrency": 3
+    },
+    "timing_kind": "unknown",
+    "scheduler": "wall-paced fixed B arrivals",
+    "split": "eval_reserved",
+    "empty_evidence_sentences_ignored": 0
+  }
+}

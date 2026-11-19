@@ -1,0 +1,1610 @@
+{
+  "question": "Which film was released more recently, The Petty Girl or Pulijanmam?",
+  "resolved_question": "Which film was released more recently, The Petty Girl or Pulijanmam?",
+  "used_history_turn_ids": [],
+  "response_language": "en",
+  "status": "complete",
+  "clock": "wall_monotonic",
+  "time_origin": "question_text_ready_after_optional_asr",
+  "model": "openai/gpt-oss-120b",
+  "judge_model": "tinker://f9e9a6c1-e203-5c2c-acdd-68fe67378ca4:train:0/sampler_weights/epoch-0001",
+  "units": [
+    {
+      "unit_id": "u1",
+      "description": "release date of The Petty Girl",
+      "necessary": true,
+      "depends_on": [],
+      "queries": [
+        "The Petty Girl film release date",
+        "The Petty Girl (1940) release"
+      ],
+      "subject": "The Petty Girl"
+    },
+    {
+      "unit_id": "u2",
+      "description": "release date of Pulijanmam",
+      "necessary": true,
+      "depends_on": [],
+      "queries": [
+        "Pulijanmam film release date",
+        "Pulijanmam (2006) release"
+      ],
+      "subject": "Pulijanmam"
+    },
+    {
+      "unit_id": "u3",
+      "description": "which film was released more recently",
+      "necessary": true,
+      "depends_on": [
+        "u1",
+        "u2"
+      ],
+      "queries": [
+        "compare release dates of The Petty Girl and Pulijanmam"
+      ],
+      "subject": ""
+    }
+  ],
+  "judgments": {
+    "u1": {
+      "label": "SUPPORTED",
+      "value": "1950",
+      "citations": [
+        "d4s0"
+      ],
+      "quotes": [
+        {
+          "evidence_id": "d4s0",
+          "text": "The Petty Girl( 1950), known in the UK as Girl of the Year, is a musical romantic comedy Technicolor film starring Robert Cummings and Joan Caulfield."
+        }
+      ],
+      "reason": "Supported by the cited visible sentences and dependencies."
+    },
+    "u2": {
+      "label": "SUPPORTED",
+      "value": "19 May 2006",
+      "citations": [
+        "d8s2"
+      ],
+      "quotes": [
+        {
+          "evidence_id": "d8s2",
+          "text": "It was released on 19 May 2006 and won the Swarna Kamal Award for the Best Feature Film in the 54th National Film Awards, 2006."
+        }
+      ],
+      "reason": "Supported by the cited visible sentences and dependencies."
+    },
+    "u3": {
+      "label": "SUPPORTED",
+      "value": "Pulijanmam",
+      "citations": [
+        "d4s0",
+        "d8s2"
+      ],
+      "quotes": [
+        {
+          "evidence_id": "d4s0",
+          "text": "The Petty Girl( 1950), known in the UK as Girl of the Year, is a musical romantic comedy Technicolor film starring Robert Cummings and Joan Caulfield."
+        },
+        {
+          "evidence_id": "d8s2",
+          "text": "It was released on 19 May 2006 and won the Swarna Kamal Award for the Best Feature Film in the 54th National Film Awards, 2006."
+        }
+      ],
+      "reason": "Supported by the cited visible sentences and dependencies."
+    }
+  },
+  "evidence": [
+    {
+      "evidence_id": "d1s0",
+      "title": "The Wonderful World of Captain Kuhio",
+      "url": "https://trace.invalid/2wikimultihopqa_43dd26de086211ebbd5dac1f6bf848b6_long/d1s0",
+      "text": "The film was released in Japan on 10 October 2009.",
+      "visible_time_s": 4.546999999991385,
+      "requested_subject": "",
+      "resolved_title": "The Wonderful World of Captain Kuhio",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d3s0",
+      "title": "Pretty Girl",
+      "url": "https://trace.invalid/2wikimultihopqa_43dd26de086211ebbd5dac1f6bf848b6_long/d3s0",
+      "text": "Pretty Girl or Pretty Girls may refer to:",
+      "visible_time_s": 4.546999999991385,
+      "requested_subject": "",
+      "resolved_title": "Pretty Girl",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d4s0",
+      "title": "The Petty Girl",
+      "url": "https://trace.invalid/2wikimultihopqa_43dd26de086211ebbd5dac1f6bf848b6_long/d4s0",
+      "text": "The Petty Girl( 1950), known in the UK as Girl of the Year, is a musical romantic comedy Technicolor film starring Robert Cummings and Joan Caulfield.",
+      "visible_time_s": 4.546999999991385,
+      "requested_subject": "",
+      "resolved_title": "The Petty Girl",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d4s1",
+      "title": "The Petty Girl",
+      "url": "https://trace.invalid/2wikimultihopqa_43dd26de086211ebbd5dac1f6bf848b6_long/d4s1",
+      "text": "Cummings portrays painter George Petty who falls for Victoria Braymore( Caulfield), the youngest professor at Braymore College who eventually becomes\" The Petty Girl\".",
+      "visible_time_s": 4.546999999991385,
+      "requested_subject": "",
+      "resolved_title": "The Petty Girl",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d6s0",
+      "title": "English Girl",
+      "url": "https://trace.invalid/2wikimultihopqa_43dd26de086211ebbd5dac1f6bf848b6_long/d6s0",
+      "text": "English Girl or English Girls may refer to:",
+      "visible_time_s": 4.546999999991385,
+      "requested_subject": "",
+      "resolved_title": "English Girl",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d9s0",
+      "title": "Party Girl",
+      "url": "https://trace.invalid/2wikimultihopqa_43dd26de086211ebbd5dac1f6bf848b6_long/d9s0",
+      "text": "Party Girl or Party Girls may refer to:",
+      "visible_time_s": 4.546999999991385,
+      "requested_subject": "",
+      "resolved_title": "Party Girl",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d2s0",
+      "title": "Strange Girl",
+      "url": "https://trace.invalid/2wikimultihopqa_43dd26de086211ebbd5dac1f6bf848b6_long/d2s0",
+      "text": "Strange Girl or variants may refer to:",
+      "visible_time_s": 9.610000000000582,
+      "requested_subject": "",
+      "resolved_title": "Strange Girl",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d5s0",
+      "title": "Golden Girl",
+      "url": "https://trace.invalid/2wikimultihopqa_43dd26de086211ebbd5dac1f6bf848b6_long/d5s0",
+      "text": "Golden Girl or Golden Girls may refer to:",
+      "visible_time_s": 9.610000000000582,
+      "requested_subject": "",
+      "resolved_title": "Golden Girl",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d7s0",
+      "title": "Dream Girl",
+      "url": "https://trace.invalid/2wikimultihopqa_43dd26de086211ebbd5dac1f6bf848b6_long/d7s0",
+      "text": "Dream Girl or dreamgirl may refer to:",
+      "visible_time_s": 9.610000000000582,
+      "requested_subject": "",
+      "resolved_title": "Dream Girl",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d8s0",
+      "title": "Pulijanmam",
+      "url": "https://trace.invalid/2wikimultihopqa_43dd26de086211ebbd5dac1f6bf848b6_long/d8s0",
+      "text": "Pulijanmam (Malayalam: പുലിജന്മം, Devanagari: पुलिजन्मम्, English translation : Born to be a Tiger) is a Malayalam feature film directed by Priyanandanan.",
+      "visible_time_s": 9.610000000000582,
+      "requested_subject": "",
+      "resolved_title": "Pulijanmam",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d8s1",
+      "title": "Pulijanmam",
+      "url": "https://trace.invalid/2wikimultihopqa_43dd26de086211ebbd5dac1f6bf848b6_long/d8s1",
+      "text": "It stars Murali, Vineeth Kumar, Salim Kumar, Samvrutha Sunil and Sindhu Menon.",
+      "visible_time_s": 9.610000000000582,
+      "requested_subject": "",
+      "resolved_title": "Pulijanmam",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d8s2",
+      "title": "Pulijanmam",
+      "url": "https://trace.invalid/2wikimultihopqa_43dd26de086211ebbd5dac1f6bf848b6_long/d8s2",
+      "text": "It was released on 19 May 2006 and won the Swarna Kamal Award for the Best Feature Film in the 54th National Film Awards, 2006.",
+      "visible_time_s": 9.610000000000582,
+      "requested_subject": "",
+      "resolved_title": "Pulijanmam",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d8s3",
+      "title": "Pulijanmam",
+      "url": "https://trace.invalid/2wikimultihopqa_43dd26de086211ebbd5dac1f6bf848b6_long/d8s3",
+      "text": "The film was produced by M G Vijay and it was the second directorial venture by Priyanandanan, the first one being Neythukaran released in 2001.",
+      "visible_time_s": 9.610000000000582,
+      "requested_subject": "",
+      "resolved_title": "Pulijanmam",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d8s4",
+      "title": "Pulijanmam",
+      "url": "https://trace.invalid/2wikimultihopqa_43dd26de086211ebbd5dac1f6bf848b6_long/d8s4",
+      "text": "The citation for Pulijanmam said it was 'a layered film that uses metaphors to address global and local issues of contemporary society'.",
+      "visible_time_s": 9.610000000000582,
+      "requested_subject": "",
+      "resolved_title": "Pulijanmam",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d10s0",
+      "title": "Girl (comics)",
+      "url": "https://trace.invalid/2wikimultihopqa_43dd26de086211ebbd5dac1f6bf848b6_long/d10s0",
+      "text": "Girl or Girls, in comics, may refer to:",
+      "visible_time_s": 9.610000000000582,
+      "requested_subject": "",
+      "resolved_title": "Girl (comics)",
+      "entity_resolution": "unspecified"
+    }
+  ],
+  "searches": [
+    {
+      "query": "[scheduled evidence]",
+      "subject": "",
+      "status": "ok",
+      "returned_pages": [],
+      "mode": "trace",
+      "unit_id": "__scheduled_evidence__"
+    },
+    {
+      "query": "[scheduled evidence]",
+      "subject": "",
+      "status": "ok",
+      "returned_pages": [],
+      "mode": "trace",
+      "unit_id": "__scheduled_evidence__"
+    }
+  ],
+  "search_failures": [],
+  "llm_calls": [
+    {
+      "purpose": "feedback_generate",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 410,
+        "completion_tokens": 64,
+        "total_tokens": 474,
+        "prompt_tokens_details": {
+          "cached_tokens": 384
+        }
+      },
+      "latency_s": 1.375
+    },
+    {
+      "purpose": "feedback_verify",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 364,
+        "completion_tokens": 74,
+        "total_tokens": 438,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        }
+      },
+      "latency_s": 1.016
+    },
+    {
+      "purpose": "decompose",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 800,
+        "completion_tokens": 319,
+        "total_tokens": 1119,
+        "prompt_tokens_details": {
+          "cached_tokens": 768
+        }
+      },
+      "latency_s": 2.547
+    },
+    {
+      "purpose": "plan_review",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 1083,
+        "completion_tokens": 293,
+        "total_tokens": 1376,
+        "prompt_tokens_details": {
+          "cached_tokens": 1024
+        }
+      },
+      "latency_s": 2.0
+    },
+    {
+      "purpose": "feedback_generate",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 410,
+        "completion_tokens": 65,
+        "total_tokens": 475,
+        "prompt_tokens_details": {
+          "cached_tokens": 384
+        }
+      },
+      "latency_s": 1.0
+    },
+    {
+      "purpose": "judge",
+      "model": "tinker://f9e9a6c1-e203-5c2c-acdd-68fe67378ca4:train:0/sampler_weights/epoch-0001",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 2068,
+        "completion_tokens": 200,
+        "total_tokens": 2268,
+        "prompt_tokens_details": {
+          "cached_tokens": 1152
+        }
+      },
+      "latency_s": 2.625
+    },
+    {
+      "purpose": "generate",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 677,
+        "completion_tokens": 76,
+        "total_tokens": 753,
+        "prompt_tokens_details": {
+          "cached_tokens": 512
+        }
+      },
+      "latency_s": 1.141
+    },
+    {
+      "purpose": "feedback_verify",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 355,
+        "completion_tokens": 60,
+        "total_tokens": 415,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        }
+      },
+      "latency_s": 3.079
+    },
+    {
+      "purpose": "verify",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 919,
+        "completion_tokens": 181,
+        "total_tokens": 1100,
+        "prompt_tokens_details": {
+          "cached_tokens": 640
+        }
+      },
+      "latency_s": 1.297
+    },
+    {
+      "purpose": "feedback_generate",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 411,
+        "completion_tokens": 54,
+        "total_tokens": 465,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        }
+      },
+      "latency_s": 0.609
+    },
+    {
+      "purpose": "judge",
+      "model": "tinker://f9e9a6c1-e203-5c2c-acdd-68fe67378ca4:train:0/sampler_weights/epoch-0001",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 3314,
+        "completion_tokens": 374,
+        "total_tokens": 3688,
+        "prompt_tokens_details": {
+          "cached_tokens": 1280
+        }
+      },
+      "latency_s": 3.219
+    },
+    {
+      "purpose": "feedback_generate",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 410,
+        "completion_tokens": 52,
+        "total_tokens": 462,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        }
+      },
+      "latency_s": 1.094
+    },
+    {
+      "purpose": "generate",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 897,
+        "completion_tokens": 119,
+        "total_tokens": 1016,
+        "prompt_tokens_details": {
+          "cached_tokens": 512
+        }
+      },
+      "latency_s": 1.125
+    },
+    {
+      "purpose": "feedback_generate",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 411,
+        "completion_tokens": 54,
+        "total_tokens": 465,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        }
+      },
+      "latency_s": 1.438
+    },
+    {
+      "purpose": "feedback_verify",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 354,
+        "completion_tokens": 83,
+        "total_tokens": 437,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        }
+      },
+      "latency_s": 0.75
+    },
+    {
+      "purpose": "verify",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 1453,
+        "completion_tokens": 149,
+        "total_tokens": 1602,
+        "prompt_tokens_details": {
+          "cached_tokens": 640
+        }
+      },
+      "latency_s": 2.562
+    }
+  ],
+  "search_diagnostics": [],
+  "output_enqueued_units": {
+    "u1": "1950",
+    "u2": "19 May 2006",
+    "u3": "Pulijanmam"
+  },
+  "events": [
+    {
+      "sequence": 0,
+      "time_s": 0.0,
+      "type": "feedback_requested",
+      "feedback_kind": "opening",
+      "execution_state": {
+        "stage": "planning",
+        "searches_started": 0,
+        "searches_completed": 0,
+        "active_searches": 0,
+        "evidence_count": 0,
+        "supported_units": 0,
+        "output_units": 0
+      }
+    },
+    {
+      "sequence": 1,
+      "time_s": 2.391,
+      "type": "utterance",
+      "action": "Backchannel",
+      "text": "Got it, I'll check which of The Petty Girl or Pulijanmam was released later.",
+      "claims": [],
+      "feedback_source": "model",
+      "feedback_status_claim": "intent",
+      "feedback_fallback_reason": "",
+      "execution_state": {
+        "stage": "planning",
+        "searches_started": 0,
+        "searches_completed": 0,
+        "active_searches": 0,
+        "evidence_count": 0,
+        "supported_units": 0,
+        "output_units": 0
+      },
+      "language": "en"
+    },
+    {
+      "sequence": 2,
+      "time_s": 2.547,
+      "type": "decompose_reply",
+      "reply": {
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "release date of The Petty Girl",
+            "subject": "The Petty Girl",
+            "necessary": true,
+            "depends_on": [],
+            "queries": [
+              "The Petty Girl film release date",
+              "The Petty Girl (1940) release"
+            ]
+          },
+          {
+            "unit_id": "u2",
+            "description": "release date of Pulijanmam",
+            "subject": "Pulijanmam",
+            "necessary": true,
+            "depends_on": [],
+            "queries": [
+              "Pulijanmam film release date",
+              "Pulijanmam (2006) release"
+            ]
+          },
+          {
+            "unit_id": "u3",
+            "description": "which film was released more recently",
+            "subject": "",
+            "necessary": true,
+            "depends_on": [
+              "u1",
+              "u2"
+            ],
+            "queries": [
+              "compare release dates of The Petty Girl and Pulijanmam"
+            ]
+          }
+        ]
+      },
+      "attempt": 1,
+      "repair": false
+    },
+    {
+      "sequence": 3,
+      "time_s": 2.547,
+      "type": "plan_review_requested",
+      "max_reviews": 1,
+      "question_only": true
+    },
+    {
+      "sequence": 4,
+      "time_s": 4.547,
+      "type": "plan_review_reply",
+      "reply": {
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "release date of The Petty Girl",
+            "subject": "The Petty Girl",
+            "necessary": true,
+            "depends_on": [],
+            "queries": [
+              "The Petty Girl film release date",
+              "The Petty Girl (1940) release"
+            ]
+          },
+          {
+            "unit_id": "u2",
+            "description": "release date of Pulijanmam",
+            "subject": "Pulijanmam",
+            "necessary": true,
+            "depends_on": [],
+            "queries": [
+              "Pulijanmam film release date",
+              "Pulijanmam (2006) release"
+            ]
+          },
+          {
+            "unit_id": "u3",
+            "description": "which film was released more recently",
+            "subject": "",
+            "necessary": true,
+            "depends_on": [
+              "u1",
+              "u2"
+            ],
+            "queries": [
+              "compare release dates of The Petty Girl and Pulijanmam"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "sequence": 5,
+      "time_s": 4.547,
+      "type": "plan_review_finished",
+      "changed": false,
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "release date of The Petty Girl",
+          "necessary": true,
+          "depends_on": [],
+          "queries": [
+            "The Petty Girl film release date",
+            "The Petty Girl (1940) release"
+          ],
+          "subject": "The Petty Girl"
+        },
+        {
+          "unit_id": "u2",
+          "description": "release date of Pulijanmam",
+          "necessary": true,
+          "depends_on": [],
+          "queries": [
+            "Pulijanmam film release date",
+            "Pulijanmam (2006) release"
+          ],
+          "subject": "Pulijanmam"
+        },
+        {
+          "unit_id": "u3",
+          "description": "which film was released more recently",
+          "necessary": true,
+          "depends_on": [
+            "u1",
+            "u2"
+          ],
+          "queries": [
+            "compare release dates of The Petty Girl and Pulijanmam"
+          ],
+          "subject": ""
+        }
+      ],
+      "question_only": true
+    },
+    {
+      "sequence": 6,
+      "time_s": 4.547,
+      "type": "plan",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "release date of The Petty Girl",
+          "necessary": true,
+          "depends_on": [],
+          "queries": [
+            "The Petty Girl film release date",
+            "The Petty Girl (1940) release"
+          ],
+          "subject": "The Petty Girl"
+        },
+        {
+          "unit_id": "u2",
+          "description": "release date of Pulijanmam",
+          "necessary": true,
+          "depends_on": [],
+          "queries": [
+            "Pulijanmam film release date",
+            "Pulijanmam (2006) release"
+          ],
+          "subject": "Pulijanmam"
+        },
+        {
+          "unit_id": "u3",
+          "description": "which film was released more recently",
+          "necessary": true,
+          "depends_on": [
+            "u1",
+            "u2"
+          ],
+          "queries": [
+            "compare release dates of The Petty Girl and Pulijanmam"
+          ],
+          "subject": ""
+        }
+      ]
+    },
+    {
+      "sequence": 7,
+      "time_s": 4.547,
+      "type": "trace_batch_requested"
+    },
+    {
+      "sequence": 8,
+      "time_s": 4.547,
+      "type": "search_finished",
+      "query": "[scheduled evidence]",
+      "subject": "",
+      "status": "ok",
+      "returned_pages": [],
+      "mode": "trace",
+      "unit_id": "__scheduled_evidence__"
+    },
+    {
+      "sequence": 9,
+      "time_s": 4.547,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d1s0",
+        "title": "The Wonderful World of Captain Kuhio",
+        "url": "https://trace.invalid/2wikimultihopqa_43dd26de086211ebbd5dac1f6bf848b6_long/d1s0",
+        "text": "The film was released in Japan on 10 October 2009.",
+        "visible_time_s": 4.546999999991385,
+        "requested_subject": "",
+        "resolved_title": "The Wonderful World of Captain Kuhio",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 10,
+      "time_s": 4.547,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d3s0",
+        "title": "Pretty Girl",
+        "url": "https://trace.invalid/2wikimultihopqa_43dd26de086211ebbd5dac1f6bf848b6_long/d3s0",
+        "text": "Pretty Girl or Pretty Girls may refer to:",
+        "visible_time_s": 4.546999999991385,
+        "requested_subject": "",
+        "resolved_title": "Pretty Girl",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 11,
+      "time_s": 4.547,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d4s0",
+        "title": "The Petty Girl",
+        "url": "https://trace.invalid/2wikimultihopqa_43dd26de086211ebbd5dac1f6bf848b6_long/d4s0",
+        "text": "The Petty Girl( 1950), known in the UK as Girl of the Year, is a musical romantic comedy Technicolor film starring Robert Cummings and Joan Caulfield.",
+        "visible_time_s": 4.546999999991385,
+        "requested_subject": "",
+        "resolved_title": "The Petty Girl",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 12,
+      "time_s": 4.547,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d4s1",
+        "title": "The Petty Girl",
+        "url": "https://trace.invalid/2wikimultihopqa_43dd26de086211ebbd5dac1f6bf848b6_long/d4s1",
+        "text": "Cummings portrays painter George Petty who falls for Victoria Braymore( Caulfield), the youngest professor at Braymore College who eventually becomes\" The Petty Girl\".",
+        "visible_time_s": 4.546999999991385,
+        "requested_subject": "",
+        "resolved_title": "The Petty Girl",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 13,
+      "time_s": 4.547,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d6s0",
+        "title": "English Girl",
+        "url": "https://trace.invalid/2wikimultihopqa_43dd26de086211ebbd5dac1f6bf848b6_long/d6s0",
+        "text": "English Girl or English Girls may refer to:",
+        "visible_time_s": 4.546999999991385,
+        "requested_subject": "",
+        "resolved_title": "English Girl",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 14,
+      "time_s": 4.547,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d9s0",
+        "title": "Party Girl",
+        "url": "https://trace.invalid/2wikimultihopqa_43dd26de086211ebbd5dac1f6bf848b6_long/d9s0",
+        "text": "Party Girl or Party Girls may refer to:",
+        "visible_time_s": 4.546999999991385,
+        "requested_subject": "",
+        "resolved_title": "Party Girl",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 15,
+      "time_s": 5.5,
+      "type": "feedback_requested",
+      "feedback_kind": "progress",
+      "execution_state": {
+        "stage": "checking",
+        "searches_started": 1,
+        "searches_completed": 1,
+        "active_searches": 0,
+        "evidence_count": 6,
+        "supported_units": 0,
+        "output_units": 0
+      }
+    },
+    {
+      "sequence": 16,
+      "time_s": 7.172,
+      "type": "judge_reply",
+      "reply": {
+        "judgments": [
+          {
+            "unit_id": "u1",
+            "label": "SUPPORTED",
+            "value": "1950",
+            "citations": [
+              "d4s0"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d4s0",
+                "text": "The Petty Girl( 1950), known in the UK as Girl of the Year, is a musical romantic comedy Technicolor film starring Robert Cummings and Joan Caulfield."
+              }
+            ],
+            "reason": "Supported by the cited visible sentences and dependencies."
+          },
+          {
+            "unit_id": "u2",
+            "label": "UNRESOLVED",
+            "value": "",
+            "citations": [],
+            "quotes": [],
+            "reason": "The current visible evidence does not establish this unit."
+          },
+          {
+            "unit_id": "u3",
+            "label": "UNRESOLVED",
+            "value": "",
+            "citations": [],
+            "quotes": [],
+            "reason": "The current visible evidence does not establish this unit."
+          }
+        ]
+      },
+      "attempt": 1,
+      "repair": false,
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d3s0",
+        "d4s0",
+        "d4s1",
+        "d6s0",
+        "d9s0"
+      ]
+    },
+    {
+      "sequence": 17,
+      "time_s": 7.172,
+      "type": "judgments",
+      "judgments": {
+        "u1": {
+          "label": "SUPPORTED",
+          "value": "1950",
+          "citations": [
+            "d4s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d4s0",
+              "text": "The Petty Girl( 1950), known in the UK as Girl of the Year, is a musical romantic comedy Technicolor film starring Robert Cummings and Joan Caulfield."
+            }
+          ],
+          "reason": "Supported by the cited visible sentences and dependencies."
+        },
+        "u2": {
+          "label": "UNRESOLVED",
+          "value": "",
+          "citations": [],
+          "quotes": [],
+          "reason": "The current visible evidence does not establish this unit."
+        },
+        "u3": {
+          "label": "UNRESOLVED",
+          "value": "",
+          "citations": [],
+          "quotes": [],
+          "reason": "The current visible evidence does not establish this unit."
+        }
+      },
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d3s0",
+        "d4s0",
+        "d4s1",
+        "d6s0",
+        "d9s0"
+      ],
+      "semantic_review": false
+    },
+    {
+      "sequence": 18,
+      "time_s": 7.172,
+      "type": "trace_batch_requested"
+    },
+    {
+      "sequence": 19,
+      "time_s": 9.61,
+      "type": "verification_reply",
+      "reply": {
+        "approved": true,
+        "facts_valid": true,
+        "expressed_unit_ids": [
+          "u1"
+        ],
+        "reason": "The draft correctly states the approved fact about The Petty Girl's release year with no extra claims."
+      },
+      "output_unit_ids": [
+        "u1"
+      ],
+      "output_action": "Partial Answer",
+      "dependency_unit_ids": [],
+      "evidence_snapshot_ids": [
+        "d4s0"
+      ]
+    },
+    {
+      "sequence": 20,
+      "time_s": 9.61,
+      "type": "utterance",
+      "action": "Partial Answer",
+      "text": "The Petty Girl was released in 1950.",
+      "claims": [
+        {
+          "unit_id": "u1",
+          "description": "release date of The Petty Girl",
+          "value": "1950",
+          "citations": [
+            "d4s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d4s0",
+              "text": "The Petty Girl( 1950), known in the UK as Girl of the Year, is a musical romantic comedy Technicolor film starring Robert Cummings and Joan Caulfield."
+            }
+          ]
+        }
+      ],
+      "unresolved": [],
+      "fallback": false,
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d3s0",
+        "d4s0",
+        "d4s1",
+        "d6s0",
+        "d9s0"
+      ],
+      "language": "en"
+    },
+    {
+      "sequence": 21,
+      "time_s": 9.61,
+      "type": "search_finished",
+      "query": "[scheduled evidence]",
+      "subject": "",
+      "status": "ok",
+      "returned_pages": [],
+      "mode": "trace",
+      "unit_id": "__scheduled_evidence__"
+    },
+    {
+      "sequence": 22,
+      "time_s": 9.61,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d2s0",
+        "title": "Strange Girl",
+        "url": "https://trace.invalid/2wikimultihopqa_43dd26de086211ebbd5dac1f6bf848b6_long/d2s0",
+        "text": "Strange Girl or variants may refer to:",
+        "visible_time_s": 9.610000000000582,
+        "requested_subject": "",
+        "resolved_title": "Strange Girl",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 23,
+      "time_s": 9.61,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d5s0",
+        "title": "Golden Girl",
+        "url": "https://trace.invalid/2wikimultihopqa_43dd26de086211ebbd5dac1f6bf848b6_long/d5s0",
+        "text": "Golden Girl or Golden Girls may refer to:",
+        "visible_time_s": 9.610000000000582,
+        "requested_subject": "",
+        "resolved_title": "Golden Girl",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 24,
+      "time_s": 9.61,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d7s0",
+        "title": "Dream Girl",
+        "url": "https://trace.invalid/2wikimultihopqa_43dd26de086211ebbd5dac1f6bf848b6_long/d7s0",
+        "text": "Dream Girl or dreamgirl may refer to:",
+        "visible_time_s": 9.610000000000582,
+        "requested_subject": "",
+        "resolved_title": "Dream Girl",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 25,
+      "time_s": 9.61,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d8s0",
+        "title": "Pulijanmam",
+        "url": "https://trace.invalid/2wikimultihopqa_43dd26de086211ebbd5dac1f6bf848b6_long/d8s0",
+        "text": "Pulijanmam (Malayalam: പുലിജന്മം, Devanagari: पुलिजन्मम्, English translation : Born to be a Tiger) is a Malayalam feature film directed by Priyanandanan.",
+        "visible_time_s": 9.610000000000582,
+        "requested_subject": "",
+        "resolved_title": "Pulijanmam",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 26,
+      "time_s": 9.61,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d8s1",
+        "title": "Pulijanmam",
+        "url": "https://trace.invalid/2wikimultihopqa_43dd26de086211ebbd5dac1f6bf848b6_long/d8s1",
+        "text": "It stars Murali, Vineeth Kumar, Salim Kumar, Samvrutha Sunil and Sindhu Menon.",
+        "visible_time_s": 9.610000000000582,
+        "requested_subject": "",
+        "resolved_title": "Pulijanmam",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 27,
+      "time_s": 9.61,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d8s2",
+        "title": "Pulijanmam",
+        "url": "https://trace.invalid/2wikimultihopqa_43dd26de086211ebbd5dac1f6bf848b6_long/d8s2",
+        "text": "It was released on 19 May 2006 and won the Swarna Kamal Award for the Best Feature Film in the 54th National Film Awards, 2006.",
+        "visible_time_s": 9.610000000000582,
+        "requested_subject": "",
+        "resolved_title": "Pulijanmam",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 28,
+      "time_s": 9.61,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d8s3",
+        "title": "Pulijanmam",
+        "url": "https://trace.invalid/2wikimultihopqa_43dd26de086211ebbd5dac1f6bf848b6_long/d8s3",
+        "text": "The film was produced by M G Vijay and it was the second directorial venture by Priyanandanan, the first one being Neythukaran released in 2001.",
+        "visible_time_s": 9.610000000000582,
+        "requested_subject": "",
+        "resolved_title": "Pulijanmam",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 29,
+      "time_s": 9.61,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d8s4",
+        "title": "Pulijanmam",
+        "url": "https://trace.invalid/2wikimultihopqa_43dd26de086211ebbd5dac1f6bf848b6_long/d8s4",
+        "text": "The citation for Pulijanmam said it was 'a layered film that uses metaphors to address global and local issues of contemporary society'.",
+        "visible_time_s": 9.610000000000582,
+        "requested_subject": "",
+        "resolved_title": "Pulijanmam",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 30,
+      "time_s": 9.61,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d10s0",
+        "title": "Girl (comics)",
+        "url": "https://trace.invalid/2wikimultihopqa_43dd26de086211ebbd5dac1f6bf848b6_long/d10s0",
+        "text": "Girl or Girls, in comics, may refer to:",
+        "visible_time_s": 9.610000000000582,
+        "requested_subject": "",
+        "resolved_title": "Girl (comics)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 31,
+      "time_s": 10.188,
+      "type": "feedback_discarded",
+      "feedback_kind": "progress",
+      "reason": "answer_already_advanced"
+    },
+    {
+      "sequence": 32,
+      "time_s": 12.797,
+      "type": "feedback_requested",
+      "feedback_kind": "progress",
+      "execution_state": {
+        "stage": "checking",
+        "searches_started": 2,
+        "searches_completed": 2,
+        "active_searches": 0,
+        "evidence_count": 15,
+        "supported_units": 1,
+        "output_units": 1
+      }
+    },
+    {
+      "sequence": 33,
+      "time_s": 12.829,
+      "type": "judge_reply",
+      "reply": {
+        "judgments": [
+          {
+            "unit_id": "u1",
+            "label": "SUPPORTED",
+            "value": "1950",
+            "citations": [
+              "d4s0"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d4s0",
+                "text": "The Petty Girl( 1950), known in the UK as Girl of the Year, is a musical romantic comedy Technicolor film starring Robert Cummings and Joan Caulfield."
+              }
+            ],
+            "reason": "Supported by the cited visible sentences and dependencies."
+          },
+          {
+            "unit_id": "u2",
+            "label": "SUPPORTED",
+            "value": "19 May 2006",
+            "citations": [
+              "d8s2"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d8s2",
+                "text": "It was released on 19 May 2006 and won the Swarna Kamal Award for the Best Feature Film in the 54th National Film Awards, 2006."
+              }
+            ],
+            "reason": "Supported by the cited visible sentences and dependencies."
+          },
+          {
+            "unit_id": "u3",
+            "label": "SUPPORTED",
+            "value": "Pulijanmam",
+            "citations": [
+              "d4s0",
+              "d8s2"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d4s0",
+                "text": "The Petty Girl( 1950), known in the UK as Girl of the Year, is a musical romantic comedy Technicolor film starring Robert Cummings and Joan Caulfield."
+              },
+              {
+                "evidence_id": "d8s2",
+                "text": "It was released on 19 May 2006 and won the Swarna Kamal Award for the Best Feature Film in the 54th National Film Awards, 2006."
+              }
+            ],
+            "reason": "Supported by the cited visible sentences and dependencies."
+          }
+        ]
+      },
+      "attempt": 1,
+      "repair": false,
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d3s0",
+        "d4s0",
+        "d4s1",
+        "d6s0",
+        "d9s0",
+        "d2s0",
+        "d5s0",
+        "d7s0",
+        "d8s0",
+        "d8s1",
+        "d8s2",
+        "d8s3",
+        "d8s4",
+        "d10s0"
+      ]
+    },
+    {
+      "sequence": 34,
+      "time_s": 12.829,
+      "type": "judgments",
+      "judgments": {
+        "u1": {
+          "label": "SUPPORTED",
+          "value": "1950",
+          "citations": [
+            "d4s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d4s0",
+              "text": "The Petty Girl( 1950), known in the UK as Girl of the Year, is a musical romantic comedy Technicolor film starring Robert Cummings and Joan Caulfield."
+            }
+          ],
+          "reason": "Supported by the cited visible sentences and dependencies."
+        },
+        "u2": {
+          "label": "SUPPORTED",
+          "value": "19 May 2006",
+          "citations": [
+            "d8s2"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d8s2",
+              "text": "It was released on 19 May 2006 and won the Swarna Kamal Award for the Best Feature Film in the 54th National Film Awards, 2006."
+            }
+          ],
+          "reason": "Supported by the cited visible sentences and dependencies."
+        },
+        "u3": {
+          "label": "SUPPORTED",
+          "value": "Pulijanmam",
+          "citations": [
+            "d4s0",
+            "d8s2"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d4s0",
+              "text": "The Petty Girl( 1950), known in the UK as Girl of the Year, is a musical romantic comedy Technicolor film starring Robert Cummings and Joan Caulfield."
+            },
+            {
+              "evidence_id": "d8s2",
+              "text": "It was released on 19 May 2006 and won the Swarna Kamal Award for the Best Feature Film in the 54th National Film Awards, 2006."
+            }
+          ],
+          "reason": "Supported by the cited visible sentences and dependencies."
+        }
+      },
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d3s0",
+        "d4s0",
+        "d4s1",
+        "d6s0",
+        "d9s0",
+        "d2s0",
+        "d5s0",
+        "d7s0",
+        "d8s0",
+        "d8s1",
+        "d8s2",
+        "d8s3",
+        "d8s4",
+        "d10s0"
+      ],
+      "semantic_review": false
+    },
+    {
+      "sequence": 35,
+      "time_s": 16.079,
+      "type": "utterance",
+      "action": "Progress",
+      "text": "Formulating the answer with gathered evidence.",
+      "claims": [],
+      "feedback_source": "model",
+      "feedback_status_claim": "formulating",
+      "feedback_fallback_reason": "",
+      "execution_state": {
+        "stage": "formulating",
+        "searches_started": 2,
+        "searches_completed": 2,
+        "active_searches": 0,
+        "evidence_count": 15,
+        "supported_units": 3,
+        "output_units": 1
+      },
+      "language": "en"
+    },
+    {
+      "sequence": 36,
+      "time_s": 16.516,
+      "type": "verification_reply",
+      "reply": {
+        "approved": true,
+        "facts_valid": true,
+        "expressed_unit_ids": [
+          "u2",
+          "u3"
+        ],
+        "reason": "All stated facts match approved facts and units."
+      },
+      "output_unit_ids": [
+        "u2",
+        "u3"
+      ],
+      "output_action": "Final Answer",
+      "dependency_unit_ids": [
+        "u1"
+      ],
+      "evidence_snapshot_ids": [
+        "d4s0",
+        "d8s2"
+      ]
+    },
+    {
+      "sequence": 37,
+      "time_s": 16.516,
+      "type": "utterance",
+      "action": "Final Answer",
+      "text": "Pulijanmam was released on 19 May 2006. Pulijanmam was released more recently than The Petty Girl.",
+      "claims": [
+        {
+          "unit_id": "u2",
+          "description": "release date of Pulijanmam",
+          "value": "19 May 2006",
+          "citations": [
+            "d8s2"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d8s2",
+              "text": "It was released on 19 May 2006 and won the Swarna Kamal Award for the Best Feature Film in the 54th National Film Awards, 2006."
+            }
+          ]
+        },
+        {
+          "unit_id": "u3",
+          "description": "which film was released more recently",
+          "value": "Pulijanmam",
+          "citations": [
+            "d4s0",
+            "d8s2"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d4s0",
+              "text": "The Petty Girl( 1950), known in the UK as Girl of the Year, is a musical romantic comedy Technicolor film starring Robert Cummings and Joan Caulfield."
+            },
+            {
+              "evidence_id": "d8s2",
+              "text": "It was released on 19 May 2006 and won the Swarna Kamal Award for the Best Feature Film in the 54th National Film Awards, 2006."
+            }
+          ]
+        }
+      ],
+      "unresolved": [],
+      "fallback": false,
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d3s0",
+        "d4s0",
+        "d4s1",
+        "d6s0",
+        "d9s0",
+        "d2s0",
+        "d5s0",
+        "d7s0",
+        "d8s0",
+        "d8s1",
+        "d8s2",
+        "d8s3",
+        "d8s4",
+        "d10s0"
+      ],
+      "language": "en"
+    },
+    {
+      "sequence": 38,
+      "time_s": 16.516,
+      "type": "finished",
+      "status": "complete"
+    }
+  ],
+  "note": "Prototype model judgments are not independent gold scores. Output event times are not spoken claim times.",
+  "evidence_mode": "scheduled_trace",
+  "audio": {
+    "enabled": true,
+    "mode": "windows",
+    "play": false,
+    "status": "ok",
+    "errors": [],
+    "records": [
+      {
+        "event_sequence": 1,
+        "sentence_index": 1,
+        "sentence_count": 1,
+        "language": "en",
+        "text": "Got it, I'll check which of The Petty Girl or Pulijanmam was released later.",
+        "action": "Backchannel",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 2.3910000000032596,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1\\samples\\0108\\audio\\segments\\0001_01.wav",
+        "duration_s": 5.123446712018141,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 3.2039999999979045,
+        "synthesis_and_playback_s": 0.8129999999946449
+      },
+      {
+        "event_sequence": 20,
+        "sentence_index": 1,
+        "sentence_count": 1,
+        "language": "en",
+        "text": "The Petty Girl was released in 1950.",
+        "action": "Partial Answer",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 9.610000000000582,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1\\samples\\0108\\audio\\segments\\0020_01.wav",
+        "duration_s": 3.2389115646258504,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 10.406999999991967,
+        "synthesis_and_playback_s": 0.7969999999913853
+      },
+      {
+        "event_sequence": 35,
+        "sentence_index": 1,
+        "sentence_count": 1,
+        "language": "en",
+        "text": "Formulating the answer with gathered evidence.",
+        "action": "Progress",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 16.093999999997322,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1\\samples\\0108\\audio\\segments\\0035_01.wav",
+        "duration_s": 3.113968253968254,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 16.89100000000326,
+        "synthesis_and_playback_s": 0.7970000000059372
+      },
+      {
+        "event_sequence": 37,
+        "sentence_index": 1,
+        "sentence_count": 2,
+        "language": "en",
+        "text": "Pulijanmam was released on 19 May 2006.",
+        "action": "Final Answer",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 16.89100000000326,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1\\samples\\0108\\audio\\segments\\0037_01.wav",
+        "duration_s": 4.813650793650794,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 17.703999999997905,
+        "synthesis_and_playback_s": 0.8129999999946449
+      },
+      {
+        "event_sequence": 37,
+        "sentence_index": 2,
+        "sentence_count": 2,
+        "language": "en",
+        "text": "Pulijanmam was released more recently than The Petty Girl.",
+        "action": "Final Answer",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 17.703999999997905,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1\\samples\\0108\\audio\\segments\\0037_02.wav",
+        "duration_s": 3.9936054421768707,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 18.485000000000582,
+        "synthesis_and_playback_s": 0.7810000000026776
+      }
+    ],
+    "wave": {
+      "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1\\samples\\0108\\audio\\response.wav",
+      "duration_s": 28.812244897959182,
+      "timeline": [
+        {
+          "event_sequence": 1,
+          "sentence_index": 1,
+          "action": "Backchannel",
+          "text": "Got it, I'll check which of The Petty Girl or Pulijanmam was released later.",
+          "wave_start_s": 3.2039909297052156,
+          "wave_end_s": 8.327437641723357
+        },
+        {
+          "event_sequence": 20,
+          "sentence_index": 1,
+          "action": "Partial Answer",
+          "text": "The Petty Girl was released in 1950.",
+          "wave_start_s": 10.406984126984128,
+          "wave_end_s": 13.645895691609978
+        },
+        {
+          "event_sequence": 35,
+          "sentence_index": 1,
+          "action": "Progress",
+          "text": "Formulating the answer with gathered evidence.",
+          "wave_start_s": 16.891020408163264,
+          "wave_end_s": 20.00498866213152
+        },
+        {
+          "event_sequence": 37,
+          "sentence_index": 1,
+          "action": "Final Answer",
+          "text": "Pulijanmam was released on 19 May 2006.",
+          "wave_start_s": 20.00498866213152,
+          "wave_end_s": 24.818639455782314
+        },
+        {
+          "event_sequence": 37,
+          "sentence_index": 2,
+          "action": "Final Answer",
+          "text": "Pulijanmam was released more recently than The Petty Girl.",
+          "wave_start_s": 24.818639455782314,
+          "wave_end_s": 28.812244897959182
+        }
+      ]
+    }
+  },
+  "evaluation": {
+    "mode": "b_final_revised_trace",
+    "trace_id": "2wikimultihopqa_43dd26de086211ebbd5dac1f6bf848b6_long",
+    "sample_id": "2wikimultihopqa_43dd26de086211ebbd5dac1f6bf848b6",
+    "total_wall_s": 18.485000000000582,
+    "question_timeout_s": 180,
+    "audio_enabled": true,
+    "history_enabled": false,
+    "text_pipeline_wall_s": 16.51600000000326,
+    "effective_settings": {
+      "base_url": "https://tinker.thinkingmachines.dev/services/tinker-prod/oai/api/v1",
+      "model": "openai/gpt-oss-120b",
+      "judge_model": "tinker://f9e9a6c1-e203-5c2c-acdd-68fe67378ca4:train:0/sampler_weights/epoch-0001",
+      "judge_reasoning_effort": "low",
+      "wiki_language": "en",
+      "user_agent": "CascadeSystem/0.1 (educational research prototype)",
+      "timeout_s": 45.0,
+      "max_tokens": 4096,
+      "reasoning_effort": "low",
+      "progress_s": 3.0,
+      "feedback_timeout_s": 6.0,
+      "search_limit": 3,
+      "max_units": 8,
+      "max_searches": 16,
+      "max_sources": 15,
+      "source_chars": 167,
+      "evidence_chars": 1284,
+      "concurrency": 3
+    },
+    "timing_kind": "unknown",
+    "scheduler": "wall-paced fixed B arrivals",
+    "split": "eval_reserved",
+    "empty_evidence_sentences_ignored": 0
+  }
+}

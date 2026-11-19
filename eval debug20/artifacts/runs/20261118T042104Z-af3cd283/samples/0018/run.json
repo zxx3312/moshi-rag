@@ -1,0 +1,1988 @@
+{
+  "question": "Which film has the director who died later, Hotel Paradis or Devil'S Doorway?",
+  "resolved_question": "Which film has the director who died later, Hotel Paradis or Devil'S Doorway?",
+  "used_history_turn_ids": [],
+  "response_language": "en",
+  "status": "complete",
+  "clock": "wall_monotonic",
+  "time_origin": "question_text_ready_after_optional_asr",
+  "model": "openai/gpt-oss-120b",
+  "units": [
+    {
+      "unit_id": "u1",
+      "description": "director of Hotel Paradis",
+      "necessary": false,
+      "depends_on": [],
+      "queries": [
+        "Hotel Paradis director"
+      ],
+      "subject": "Hotel Paradis"
+    },
+    {
+      "unit_id": "u2",
+      "description": "death date of the director of Hotel Paradis",
+      "necessary": false,
+      "depends_on": [
+        "u1"
+      ],
+      "queries": [
+        "{u1} death date"
+      ],
+      "subject": "{u1}"
+    },
+    {
+      "unit_id": "u3",
+      "description": "director of Devil's Doorway",
+      "necessary": false,
+      "depends_on": [],
+      "queries": [
+        "Devil's Doorway director"
+      ],
+      "subject": "Devil's Doorway"
+    },
+    {
+      "unit_id": "u4",
+      "description": "death date of the director of Devil's Doorway",
+      "necessary": false,
+      "depends_on": [
+        "u3"
+      ],
+      "queries": [
+        "{u3} death date"
+      ],
+      "subject": "{u3}"
+    },
+    {
+      "unit_id": "u5",
+      "description": "which film has the director who died later",
+      "necessary": true,
+      "depends_on": [
+        "u2",
+        "u4",
+        "u1",
+        "u3"
+      ],
+      "queries": [
+        "compare death dates of {u1} and {u3}"
+      ],
+      "subject": ""
+    }
+  ],
+  "judgments": {
+    "u1": {
+      "label": "SUPPORTED",
+      "value": "George Schnéevoigt",
+      "citations": [
+        "d8s0"
+      ],
+      "quotes": [
+        {
+          "evidence_id": "d8s0",
+          "text": "Hotel Paradis is a 1931 Danish drama directed by George Schnéevoigt."
+        }
+      ],
+      "reason": "Source states the director of Hotel Paradis."
+    },
+    "u2": {
+      "label": "SUPPORTED",
+      "value": "6 February 1961",
+      "citations": [
+        "d2s0"
+      ],
+      "quotes": [
+        {
+          "evidence_id": "d2s0",
+          "text": "George Schnéevoigt( 23 December 1893 – 6 February 1961) was a Danish film director"
+        }
+      ],
+      "reason": "Provides death date of the director."
+    },
+    "u3": {
+      "label": "SUPPORTED",
+      "value": "Anthony Mann",
+      "citations": [
+        "d3s0"
+      ],
+      "quotes": [
+        {
+          "evidence_id": "d3s0",
+          "text": "Devil's Doorway is a 1950 western film directed by Anthony Mann"
+        }
+      ],
+      "reason": "Source states the director of Devil's Doorway."
+    },
+    "u4": {
+      "label": "SUPPORTED",
+      "value": "April 29, 1967",
+      "citations": [
+        "d10s0"
+      ],
+      "quotes": [
+        {
+          "evidence_id": "d10s0",
+          "text": "Anthony Mann( June 30, 1906 – April 29, 1967) was an American actor and film director"
+        }
+      ],
+      "reason": "Provides death date of the director."
+    },
+    "u5": {
+      "label": "SUPPORTED",
+      "value": "Devil's Doorway",
+      "citations": [
+        "d2s0",
+        "d10s0"
+      ],
+      "quotes": [
+        {
+          "evidence_id": "d2s0",
+          "text": "George Schnéevoigt( 23 December 1893 – 6 February 1961) was a Danish film director"
+        },
+        {
+          "evidence_id": "d10s0",
+          "text": "Anthony Mann( June 30, 1906 – April 29, 1967) was an American actor and film director"
+        }
+      ],
+      "reason": "Anthony Mann died later (1967) than George Schnéevoigt (1961)."
+    }
+  },
+  "evidence": [
+    {
+      "evidence_id": "d1s0",
+      "title": "Abhishek Saxena",
+      "url": "https://trace.invalid/2wikimultihopqa_4f8e349e08e111ebbda2ac1f6bf848b6_long/d1s0",
+      "text": "Abhishek Saxena is an Indian Bollywood and Punjabi film director who directed the movie Phullu.",
+      "visible_time_s": 2.039196699999593,
+      "requested_subject": "",
+      "resolved_title": "Abhishek Saxena",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d1s1",
+      "title": "Abhishek Saxena",
+      "url": "https://trace.invalid/2wikimultihopqa_4f8e349e08e111ebbda2ac1f6bf848b6_long/d1s1",
+      "text": "The Phullu movie was released in theaters on 16 June 2017, in which film Sharib Hashmi is the lead role.",
+      "visible_time_s": 2.0392369000001054,
+      "requested_subject": "",
+      "resolved_title": "Abhishek Saxena",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d1s2",
+      "title": "Abhishek Saxena",
+      "url": "https://trace.invalid/2wikimultihopqa_4f8e349e08e111ebbda2ac1f6bf848b6_long/d1s2",
+      "text": "Apart from these, he has also directed Patiala Dreamz, this is a Punjabi film.",
+      "visible_time_s": 2.03926280000087,
+      "requested_subject": "",
+      "resolved_title": "Abhishek Saxena",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d1s3",
+      "title": "Abhishek Saxena",
+      "url": "https://trace.invalid/2wikimultihopqa_4f8e349e08e111ebbda2ac1f6bf848b6_long/d1s3",
+      "text": "This film was screened in cinemas in 2014.",
+      "visible_time_s": 2.0392858000013803,
+      "requested_subject": "",
+      "resolved_title": "Abhishek Saxena",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d3s0",
+      "title": "Devil's Doorway",
+      "url": "https://trace.invalid/2wikimultihopqa_4f8e349e08e111ebbda2ac1f6bf848b6_long/d3s0",
+      "text": "Devil's Doorway is a 1950 western film directed by Anthony Mann and starring Robert Taylor as an Indian who returns home from the American Civil War a hero awarded the Medal of Honor.",
+      "visible_time_s": 2.0393086000003677,
+      "requested_subject": "",
+      "resolved_title": "Devil's Doorway",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d3s1",
+      "title": "Devil's Doorway",
+      "url": "https://trace.invalid/2wikimultihopqa_4f8e349e08e111ebbda2ac1f6bf848b6_long/d3s1",
+      "text": "However, his hopes for a peaceful life are shattered by bigotry and greed.",
+      "visible_time_s": 2.0393323999996937,
+      "requested_subject": "",
+      "resolved_title": "Devil's Doorway",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d5s0",
+      "title": "Witchboard 2: The Devil's Doorway",
+      "url": "https://trace.invalid/2wikimultihopqa_4f8e349e08e111ebbda2ac1f6bf848b6_long/d5s0",
+      "text": "Witchboard 2: The Devil's Doorway is a 1993 American supernatural horror film written and directed by Kevin S. Tenney.",
+      "visible_time_s": 2.0393543999998656,
+      "requested_subject": "",
+      "resolved_title": "Witchboard 2: The Devil's Doorway",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d5s1",
+      "title": "Witchboard 2: The Devil's Doorway",
+      "url": "https://trace.invalid/2wikimultihopqa_4f8e349e08e111ebbda2ac1f6bf848b6_long/d5s1",
+      "text": "It stars Ami Dolenz as an artist possessed by a ghost of a former occupant of her new apartment.",
+      "visible_time_s": 2.039377900000545,
+      "requested_subject": "",
+      "resolved_title": "Witchboard 2: The Devil's Doorway",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d5s2",
+      "title": "Witchboard 2: The Devil's Doorway",
+      "url": "https://trace.invalid/2wikimultihopqa_4f8e349e08e111ebbda2ac1f6bf848b6_long/d5s2",
+      "text": "The film is a sequel to the 1986 film\" Witchboard\".",
+      "visible_time_s": 2.039398400000209,
+      "requested_subject": "",
+      "resolved_title": "Witchboard 2: The Devil's Doorway",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d7s0",
+      "title": "Ben Palmer",
+      "url": "https://trace.invalid/2wikimultihopqa_4f8e349e08e111ebbda2ac1f6bf848b6_long/d7s0",
+      "text": "Ben Palmer is a British film and television director who is known for being the director of\" Bo' Selecta\" and\" The Inbetweeners\".",
+      "visible_time_s": 2.039435599999706,
+      "requested_subject": "",
+      "resolved_title": "Ben Palmer",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d8s0",
+      "title": "Hotel Paradis",
+      "url": "https://trace.invalid/2wikimultihopqa_4f8e349e08e111ebbda2ac1f6bf848b6_long/d8s0",
+      "text": "Hotel Paradis is a 1931 Danish drama directed by George Schnéevoigt.",
+      "visible_time_s": 2.0394591000003857,
+      "requested_subject": "",
+      "resolved_title": "Hotel Paradis",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d8s1",
+      "title": "Hotel Paradis",
+      "url": "https://trace.invalid/2wikimultihopqa_4f8e349e08e111ebbda2ac1f6bf848b6_long/d8s1",
+      "text": "The film, based on a novel by Einar Rousthøj, stars Eyvind Johan- Svendsen and Inger Stender.",
+      "visible_time_s": 2.03948279999895,
+      "requested_subject": "",
+      "resolved_title": "Hotel Paradis",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d8s2",
+      "title": "Hotel Paradis",
+      "url": "https://trace.invalid/2wikimultihopqa_4f8e349e08e111ebbda2ac1f6bf848b6_long/d8s2",
+      "text": "The film was also known as\" Hotel Paradisets hemlighed The Secret of the Paradise Hotel\").",
+      "visible_time_s": 2.0395048999998835,
+      "requested_subject": "",
+      "resolved_title": "Hotel Paradis",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d2s0",
+      "title": "George Schnéevoigt",
+      "url": "https://trace.invalid/2wikimultihopqa_4f8e349e08e111ebbda2ac1f6bf848b6_long/d2s0",
+      "text": "George Schnéevoigt( 23 December 1893 – 6 February 1961) was a Danish film director, cinematographer, and actor of the 1930s and early 1940s.",
+      "visible_time_s": 8.94498250000106,
+      "requested_subject": "",
+      "resolved_title": "George Schnéevoigt",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d2s1",
+      "title": "George Schnéevoigt",
+      "url": "https://trace.invalid/2wikimultihopqa_4f8e349e08e111ebbda2ac1f6bf848b6_long/d2s1",
+      "text": "Schnéevoigt was born in Copenhagen, Denmark to actress Siri Schnéevoigt, and he is the father of actor and director Alf Schnéevoigt.",
+      "visible_time_s": 8.945082700000057,
+      "requested_subject": "",
+      "resolved_title": "George Schnéevoigt",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d4s0",
+      "title": "G. Marthandan",
+      "url": "https://trace.invalid/2wikimultihopqa_4f8e349e08e111ebbda2ac1f6bf848b6_long/d4s0",
+      "text": "G. Marthandan is an Indian film director who works in Malayalam cinema.",
+      "visible_time_s": 8.945177100002184,
+      "requested_subject": "",
+      "resolved_title": "G. Marthandan",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d6s0",
+      "title": "James Strange French",
+      "url": "https://trace.invalid/2wikimultihopqa_4f8e349e08e111ebbda2ac1f6bf848b6_long/d6s0",
+      "text": "James Strange French( 1807- 1886) was a lawyer, novelist, and later hotel keeper.",
+      "visible_time_s": 8.945203800001764,
+      "requested_subject": "",
+      "resolved_title": "James Strange French",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d9s0",
+      "title": "Next Stop Paradise (1980 film)",
+      "url": "https://trace.invalid/2wikimultihopqa_4f8e349e08e111ebbda2ac1f6bf848b6_long/d9s0",
+      "text": "Næste Stop Paradis or Next Stop Paradise is a 1980 Danish romantic drama film directed and written by Jon Bang Carlsen.",
+      "visible_time_s": 8.945224900002358,
+      "requested_subject": "",
+      "resolved_title": "Next Stop Paradise (1980 film)",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d9s1",
+      "title": "Next Stop Paradise (1980 film)",
+      "url": "https://trace.invalid/2wikimultihopqa_4f8e349e08e111ebbda2ac1f6bf848b6_long/d9s1",
+      "text": "The film stars Karen Lykkehus.",
+      "visible_time_s": 8.945276599999488,
+      "requested_subject": "",
+      "resolved_title": "Next Stop Paradise (1980 film)",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d10s0",
+      "title": "Anthony Mann",
+      "url": "https://trace.invalid/2wikimultihopqa_4f8e349e08e111ebbda2ac1f6bf848b6_long/d10s0",
+      "text": "Anthony Mann( June 30, 1906 – April 29, 1967) was an American actor and film director, best remembered for his work in the film noir and Westerns genres.",
+      "visible_time_s": 8.945297000002029,
+      "requested_subject": "",
+      "resolved_title": "Anthony Mann",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d10s1",
+      "title": "Anthony Mann",
+      "url": "https://trace.invalid/2wikimultihopqa_4f8e349e08e111ebbda2ac1f6bf848b6_long/d10s1",
+      "text": "As a director, he often collaborated with the cinematographer John Alton.",
+      "visible_time_s": 8.945315500001016,
+      "requested_subject": "",
+      "resolved_title": "Anthony Mann",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d10s2",
+      "title": "Anthony Mann",
+      "url": "https://trace.invalid/2wikimultihopqa_4f8e349e08e111ebbda2ac1f6bf848b6_long/d10s2",
+      "text": "He directed films for a variety of production companies, from RKO to MGM, and worked with many major stars of the era.",
+      "visible_time_s": 8.945331300001271,
+      "requested_subject": "",
+      "resolved_title": "Anthony Mann",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d10s3",
+      "title": "Anthony Mann",
+      "url": "https://trace.invalid/2wikimultihopqa_4f8e349e08e111ebbda2ac1f6bf848b6_long/d10s3",
+      "text": "He made several Westerns with James Stewart, such as\" Winchester'73\"( 1950), and he was the director of the medieval epic\" El Cid\"( 1961), working with Charlton Heston and Sophia Loren.",
+      "visible_time_s": 8.945347900000343,
+      "requested_subject": "",
+      "resolved_title": "Anthony Mann",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d10s4",
+      "title": "Anthony Mann",
+      "url": "https://trace.invalid/2wikimultihopqa_4f8e349e08e111ebbda2ac1f6bf848b6_long/d10s4",
+      "text": "He also directed the big- budget film\" Cimarron\"( 1960), which starred Glenn Ford and Maria Schell.",
+      "visible_time_s": 8.945364800001698,
+      "requested_subject": "",
+      "resolved_title": "Anthony Mann",
+      "entity_resolution": "unspecified"
+    }
+  ],
+  "searches": [
+    {
+      "query": "[scheduled evidence]",
+      "subject": "",
+      "status": "ok",
+      "returned_pages": [],
+      "mode": "trace",
+      "unit_id": "__scheduled_evidence__"
+    },
+    {
+      "query": "[scheduled evidence]",
+      "subject": "",
+      "status": "ok",
+      "returned_pages": [],
+      "mode": "trace",
+      "unit_id": "__scheduled_evidence__"
+    }
+  ],
+  "search_failures": [],
+  "llm_calls": [
+    {
+      "purpose": "feedback_generate",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 411,
+        "completion_tokens": 80,
+        "total_tokens": 491,
+        "prompt_tokens_details": {
+          "cached_tokens": 384
+        }
+      },
+      "latency_s": 1.285441
+    },
+    {
+      "purpose": "feedback_verify",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 363,
+        "completion_tokens": 88,
+        "total_tokens": 451,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        }
+      },
+      "latency_s": 0.651093
+    },
+    {
+      "purpose": "decompose",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 626,
+        "completion_tokens": 435,
+        "total_tokens": 1061,
+        "prompt_tokens_details": {
+          "cached_tokens": 512
+        }
+      },
+      "latency_s": 2.038423
+    },
+    {
+      "purpose": "judge",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 2857,
+        "completion_tokens": 572,
+        "total_tokens": 3429,
+        "prompt_tokens_details": {
+          "cached_tokens": 1152
+        }
+      },
+      "latency_s": 3.015437
+    },
+    {
+      "purpose": "feedback_generate",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 411,
+        "completion_tokens": 62,
+        "total_tokens": 473,
+        "prompt_tokens_details": {
+          "cached_tokens": 384
+        }
+      },
+      "latency_s": 1.881168
+    },
+    {
+      "purpose": "generate",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 522,
+        "completion_tokens": 142,
+        "total_tokens": 664,
+        "prompt_tokens_details": {
+          "cached_tokens": 384
+        }
+      },
+      "latency_s": 1.975219
+    },
+    {
+      "purpose": "feedback_generate",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 412,
+        "completion_tokens": 54,
+        "total_tokens": 466,
+        "prompt_tokens_details": {
+          "cached_tokens": 384
+        }
+      },
+      "latency_s": 1.808786
+    },
+    {
+      "purpose": "verify",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 860,
+        "completion_tokens": 111,
+        "total_tokens": 971,
+        "prompt_tokens_details": {
+          "cached_tokens": 512
+        }
+      },
+      "latency_s": 1.913617
+    },
+    {
+      "purpose": "feedback_verify",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 355,
+        "completion_tokens": 72,
+        "total_tokens": 427,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        }
+      },
+      "latency_s": 0.622328
+    },
+    {
+      "purpose": "judge",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 4375,
+        "completion_tokens": 941,
+        "total_tokens": 5316,
+        "prompt_tokens_details": {
+          "cached_tokens": 1280
+        }
+      },
+      "latency_s": 2.387449
+    },
+    {
+      "purpose": "feedback_generate",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 412,
+        "completion_tokens": 56,
+        "total_tokens": 468,
+        "prompt_tokens_details": {
+          "cached_tokens": 384
+        }
+      },
+      "latency_s": 0.670074
+    },
+    {
+      "purpose": "generate",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 616,
+        "completion_tokens": 57,
+        "total_tokens": 673,
+        "prompt_tokens_details": {
+          "cached_tokens": 512
+        }
+      },
+      "latency_s": 1.784978
+    },
+    {
+      "purpose": "feedback_verify",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 355,
+        "completion_tokens": 82,
+        "total_tokens": 437,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        }
+      },
+      "latency_s": 0.611488
+    },
+    {
+      "purpose": "verify",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 1942,
+        "completion_tokens": 169,
+        "total_tokens": 2111,
+        "prompt_tokens_details": {
+          "cached_tokens": 640
+        }
+      },
+      "latency_s": 0.839302
+    }
+  ],
+  "search_diagnostics": [],
+  "output_enqueued_units": {
+    "u1": "George Schnéevoigt",
+    "u5": "Devil's Doorway"
+  },
+  "events": [
+    {
+      "sequence": 0,
+      "time_s": 0.000329,
+      "type": "feedback_requested",
+      "feedback_kind": "opening",
+      "execution_state": {
+        "stage": "planning",
+        "searches_started": 0,
+        "searches_completed": 0,
+        "active_searches": 0,
+        "evidence_count": 0,
+        "supported_units": 0,
+        "output_units": 0
+      }
+    },
+    {
+      "sequence": 1,
+      "time_s": 1.937107,
+      "type": "utterance",
+      "action": "Backchannel",
+      "text": "I’ll look up which director of Hotel Paradis or Devil’s Doorway died later.",
+      "claims": [],
+      "feedback_source": "model",
+      "feedback_status_claim": "intent",
+      "feedback_fallback_reason": "",
+      "execution_state": {
+        "stage": "planning",
+        "searches_started": 0,
+        "searches_completed": 0,
+        "active_searches": 0,
+        "evidence_count": 0,
+        "supported_units": 0,
+        "output_units": 0
+      },
+      "language": "en"
+    },
+    {
+      "sequence": 2,
+      "time_s": 2.038719,
+      "type": "decompose_reply",
+      "reply": {
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "director of Hotel Paradis",
+            "subject": "Hotel Paradis",
+            "necessary": false,
+            "depends_on": [],
+            "queries": [
+              "Hotel Paradis director"
+            ]
+          },
+          {
+            "unit_id": "u2",
+            "description": "death date of the director of Hotel Paradis",
+            "subject": "{u1}",
+            "necessary": false,
+            "depends_on": [
+              "u1"
+            ],
+            "queries": [
+              "{u1} death date"
+            ]
+          },
+          {
+            "unit_id": "u3",
+            "description": "director of Devil's Doorway",
+            "subject": "Devil's Doorway",
+            "necessary": false,
+            "depends_on": [],
+            "queries": [
+              "Devil's Doorway director"
+            ]
+          },
+          {
+            "unit_id": "u4",
+            "description": "death date of the director of Devil's Doorway",
+            "subject": "{u3}",
+            "necessary": false,
+            "depends_on": [
+              "u3"
+            ],
+            "queries": [
+              "{u3} death date"
+            ]
+          },
+          {
+            "unit_id": "u5",
+            "description": "which film has the director who died later",
+            "subject": "",
+            "necessary": true,
+            "depends_on": [
+              "u2",
+              "u4"
+            ],
+            "queries": [
+              "compare death dates of {u1} and {u3}"
+            ]
+          }
+        ]
+      },
+      "attempt": 1,
+      "repair": false
+    },
+    {
+      "sequence": 3,
+      "time_s": 2.038843,
+      "type": "protocol_validation_failed",
+      "stage": "decompose",
+      "attempt": 1,
+      "error": "Placeholders must name explicit dependencies"
+    },
+    {
+      "sequence": 4,
+      "time_s": 2.038973,
+      "type": "protocol_normalized",
+      "stage": "decompose",
+      "changes": [
+        {
+          "unit_id": "u5",
+          "added_dependencies": [
+            "u1",
+            "u3"
+          ]
+        }
+      ],
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "director of Hotel Paradis",
+          "necessary": false,
+          "depends_on": [],
+          "queries": [
+            "Hotel Paradis director"
+          ],
+          "subject": "Hotel Paradis"
+        },
+        {
+          "unit_id": "u2",
+          "description": "death date of the director of Hotel Paradis",
+          "necessary": false,
+          "depends_on": [
+            "u1"
+          ],
+          "queries": [
+            "{u1} death date"
+          ],
+          "subject": "{u1}"
+        },
+        {
+          "unit_id": "u3",
+          "description": "director of Devil's Doorway",
+          "necessary": false,
+          "depends_on": [],
+          "queries": [
+            "Devil's Doorway director"
+          ],
+          "subject": "Devil's Doorway"
+        },
+        {
+          "unit_id": "u4",
+          "description": "death date of the director of Devil's Doorway",
+          "necessary": false,
+          "depends_on": [
+            "u3"
+          ],
+          "queries": [
+            "{u3} death date"
+          ],
+          "subject": "{u3}"
+        },
+        {
+          "unit_id": "u5",
+          "description": "which film has the director who died later",
+          "necessary": true,
+          "depends_on": [
+            "u2",
+            "u4",
+            "u1",
+            "u3"
+          ],
+          "queries": [
+            "compare death dates of {u1} and {u3}"
+          ],
+          "subject": ""
+        }
+      ],
+      "no_facts_added": true
+    },
+    {
+      "sequence": 5,
+      "time_s": 2.039021,
+      "type": "plan",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "director of Hotel Paradis",
+          "necessary": false,
+          "depends_on": [],
+          "queries": [
+            "Hotel Paradis director"
+          ],
+          "subject": "Hotel Paradis"
+        },
+        {
+          "unit_id": "u2",
+          "description": "death date of the director of Hotel Paradis",
+          "necessary": false,
+          "depends_on": [
+            "u1"
+          ],
+          "queries": [
+            "{u1} death date"
+          ],
+          "subject": "{u1}"
+        },
+        {
+          "unit_id": "u3",
+          "description": "director of Devil's Doorway",
+          "necessary": false,
+          "depends_on": [],
+          "queries": [
+            "Devil's Doorway director"
+          ],
+          "subject": "Devil's Doorway"
+        },
+        {
+          "unit_id": "u4",
+          "description": "death date of the director of Devil's Doorway",
+          "necessary": false,
+          "depends_on": [
+            "u3"
+          ],
+          "queries": [
+            "{u3} death date"
+          ],
+          "subject": "{u3}"
+        },
+        {
+          "unit_id": "u5",
+          "description": "which film has the director who died later",
+          "necessary": true,
+          "depends_on": [
+            "u2",
+            "u4",
+            "u1",
+            "u3"
+          ],
+          "queries": [
+            "compare death dates of {u1} and {u3}"
+          ],
+          "subject": ""
+        }
+      ]
+    },
+    {
+      "sequence": 6,
+      "time_s": 2.03905,
+      "type": "trace_batch_requested"
+    },
+    {
+      "sequence": 7,
+      "time_s": 2.03911,
+      "type": "search_finished",
+      "query": "[scheduled evidence]",
+      "subject": "",
+      "status": "ok",
+      "returned_pages": [],
+      "mode": "trace",
+      "unit_id": "__scheduled_evidence__"
+    },
+    {
+      "sequence": 8,
+      "time_s": 2.039208,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d1s0",
+        "title": "Abhishek Saxena",
+        "url": "https://trace.invalid/2wikimultihopqa_4f8e349e08e111ebbda2ac1f6bf848b6_long/d1s0",
+        "text": "Abhishek Saxena is an Indian Bollywood and Punjabi film director who directed the movie Phullu.",
+        "visible_time_s": 2.039196699999593,
+        "requested_subject": "",
+        "resolved_title": "Abhishek Saxena",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 9,
+      "time_s": 2.039242,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d1s1",
+        "title": "Abhishek Saxena",
+        "url": "https://trace.invalid/2wikimultihopqa_4f8e349e08e111ebbda2ac1f6bf848b6_long/d1s1",
+        "text": "The Phullu movie was released in theaters on 16 June 2017, in which film Sharib Hashmi is the lead role.",
+        "visible_time_s": 2.0392369000001054,
+        "requested_subject": "",
+        "resolved_title": "Abhishek Saxena",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 10,
+      "time_s": 2.039267,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d1s2",
+        "title": "Abhishek Saxena",
+        "url": "https://trace.invalid/2wikimultihopqa_4f8e349e08e111ebbda2ac1f6bf848b6_long/d1s2",
+        "text": "Apart from these, he has also directed Patiala Dreamz, this is a Punjabi film.",
+        "visible_time_s": 2.03926280000087,
+        "requested_subject": "",
+        "resolved_title": "Abhishek Saxena",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 11,
+      "time_s": 2.03929,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d1s3",
+        "title": "Abhishek Saxena",
+        "url": "https://trace.invalid/2wikimultihopqa_4f8e349e08e111ebbda2ac1f6bf848b6_long/d1s3",
+        "text": "This film was screened in cinemas in 2014.",
+        "visible_time_s": 2.0392858000013803,
+        "requested_subject": "",
+        "resolved_title": "Abhishek Saxena",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 12,
+      "time_s": 2.039313,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d3s0",
+        "title": "Devil's Doorway",
+        "url": "https://trace.invalid/2wikimultihopqa_4f8e349e08e111ebbda2ac1f6bf848b6_long/d3s0",
+        "text": "Devil's Doorway is a 1950 western film directed by Anthony Mann and starring Robert Taylor as an Indian who returns home from the American Civil War a hero awarded the Medal of Honor.",
+        "visible_time_s": 2.0393086000003677,
+        "requested_subject": "",
+        "resolved_title": "Devil's Doorway",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 13,
+      "time_s": 2.039337,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d3s1",
+        "title": "Devil's Doorway",
+        "url": "https://trace.invalid/2wikimultihopqa_4f8e349e08e111ebbda2ac1f6bf848b6_long/d3s1",
+        "text": "However, his hopes for a peaceful life are shattered by bigotry and greed.",
+        "visible_time_s": 2.0393323999996937,
+        "requested_subject": "",
+        "resolved_title": "Devil's Doorway",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 14,
+      "time_s": 2.039358,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d5s0",
+        "title": "Witchboard 2: The Devil's Doorway",
+        "url": "https://trace.invalid/2wikimultihopqa_4f8e349e08e111ebbda2ac1f6bf848b6_long/d5s0",
+        "text": "Witchboard 2: The Devil's Doorway is a 1993 American supernatural horror film written and directed by Kevin S. Tenney.",
+        "visible_time_s": 2.0393543999998656,
+        "requested_subject": "",
+        "resolved_title": "Witchboard 2: The Devil's Doorway",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 15,
+      "time_s": 2.039382,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d5s1",
+        "title": "Witchboard 2: The Devil's Doorway",
+        "url": "https://trace.invalid/2wikimultihopqa_4f8e349e08e111ebbda2ac1f6bf848b6_long/d5s1",
+        "text": "It stars Ami Dolenz as an artist possessed by a ghost of a former occupant of her new apartment.",
+        "visible_time_s": 2.039377900000545,
+        "requested_subject": "",
+        "resolved_title": "Witchboard 2: The Devil's Doorway",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 16,
+      "time_s": 2.039403,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d5s2",
+        "title": "Witchboard 2: The Devil's Doorway",
+        "url": "https://trace.invalid/2wikimultihopqa_4f8e349e08e111ebbda2ac1f6bf848b6_long/d5s2",
+        "text": "The film is a sequel to the 1986 film\" Witchboard\".",
+        "visible_time_s": 2.039398400000209,
+        "requested_subject": "",
+        "resolved_title": "Witchboard 2: The Devil's Doorway",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 17,
+      "time_s": 2.03944,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d7s0",
+        "title": "Ben Palmer",
+        "url": "https://trace.invalid/2wikimultihopqa_4f8e349e08e111ebbda2ac1f6bf848b6_long/d7s0",
+        "text": "Ben Palmer is a British film and television director who is known for being the director of\" Bo' Selecta\" and\" The Inbetweeners\".",
+        "visible_time_s": 2.039435599999706,
+        "requested_subject": "",
+        "resolved_title": "Ben Palmer",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 18,
+      "time_s": 2.039463,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d8s0",
+        "title": "Hotel Paradis",
+        "url": "https://trace.invalid/2wikimultihopqa_4f8e349e08e111ebbda2ac1f6bf848b6_long/d8s0",
+        "text": "Hotel Paradis is a 1931 Danish drama directed by George Schnéevoigt.",
+        "visible_time_s": 2.0394591000003857,
+        "requested_subject": "",
+        "resolved_title": "Hotel Paradis",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 19,
+      "time_s": 2.039487,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d8s1",
+        "title": "Hotel Paradis",
+        "url": "https://trace.invalid/2wikimultihopqa_4f8e349e08e111ebbda2ac1f6bf848b6_long/d8s1",
+        "text": "The film, based on a novel by Einar Rousthøj, stars Eyvind Johan- Svendsen and Inger Stender.",
+        "visible_time_s": 2.03948279999895,
+        "requested_subject": "",
+        "resolved_title": "Hotel Paradis",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 20,
+      "time_s": 2.039509,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d8s2",
+        "title": "Hotel Paradis",
+        "url": "https://trace.invalid/2wikimultihopqa_4f8e349e08e111ebbda2ac1f6bf848b6_long/d8s2",
+        "text": "The film was also known as\" Hotel Paradisets hemlighed The Secret of the Paradise Hotel\").",
+        "visible_time_s": 2.0395048999998835,
+        "requested_subject": "",
+        "resolved_title": "Hotel Paradis",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 21,
+      "time_s": 5.011402,
+      "type": "feedback_requested",
+      "feedback_kind": "progress",
+      "execution_state": {
+        "stage": "checking",
+        "searches_started": 1,
+        "searches_completed": 1,
+        "active_searches": 0,
+        "evidence_count": 13,
+        "supported_units": 0,
+        "output_units": 0
+      }
+    },
+    {
+      "sequence": 22,
+      "time_s": 5.055068,
+      "type": "judge_reply",
+      "reply": {
+        "judgments": [
+          {
+            "unit_id": "u1",
+            "label": "SUPPORTED",
+            "value": "George Schnéevoigt",
+            "citations": [
+              "d8s0"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d8s0",
+                "text": "directed by George Schnéevoigt"
+              }
+            ],
+            "reason": "Evidence states the director of Hotel Paradis."
+          },
+          {
+            "unit_id": "u2",
+            "label": "UNRESOLVED",
+            "value": "",
+            "citations": [],
+            "quotes": [],
+            "reason": "No death date for George Schnéevoigt is provided."
+          },
+          {
+            "unit_id": "u3",
+            "label": "UNRESOLVED",
+            "value": "",
+            "citations": [],
+            "quotes": [],
+            "reason": "Two different directors are given for works titled \"Devil's Doorway\"; identity not resolved."
+          },
+          {
+            "unit_id": "u4",
+            "label": "UNRESOLVED",
+            "value": "",
+            "citations": [],
+            "quotes": [],
+            "reason": "No death date for the director of Devil's Doorway is available."
+          },
+          {
+            "unit_id": "u5",
+            "label": "UNRESOLVED",
+            "value": "",
+            "citations": [],
+            "quotes": [],
+            "reason": "Cannot compare death dates without death information for either director."
+          }
+        ]
+      },
+      "attempt": 1,
+      "repair": false,
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d1s1",
+        "d1s2",
+        "d1s3",
+        "d3s0",
+        "d3s1",
+        "d5s0",
+        "d5s1",
+        "d5s2",
+        "d7s0",
+        "d8s0",
+        "d8s1",
+        "d8s2"
+      ]
+    },
+    {
+      "sequence": 23,
+      "time_s": 5.055204,
+      "type": "judgments",
+      "judgments": {
+        "u1": {
+          "label": "SUPPORTED",
+          "value": "George Schnéevoigt",
+          "citations": [
+            "d8s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d8s0",
+              "text": "directed by George Schnéevoigt"
+            }
+          ],
+          "reason": "Evidence states the director of Hotel Paradis."
+        },
+        "u2": {
+          "label": "UNRESOLVED",
+          "value": "",
+          "citations": [],
+          "quotes": [],
+          "reason": "No death date for George Schnéevoigt is provided."
+        },
+        "u3": {
+          "label": "UNRESOLVED",
+          "value": "",
+          "citations": [],
+          "quotes": [],
+          "reason": "Two different directors are given for works titled \"Devil's Doorway\"; identity not resolved."
+        },
+        "u4": {
+          "label": "UNRESOLVED",
+          "value": "",
+          "citations": [],
+          "quotes": [],
+          "reason": "No death date for the director of Devil's Doorway is available."
+        },
+        "u5": {
+          "label": "UNRESOLVED",
+          "value": "",
+          "citations": [],
+          "quotes": [],
+          "reason": "Cannot compare death dates without death information for either director."
+        }
+      },
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d1s1",
+        "d1s2",
+        "d1s3",
+        "d3s0",
+        "d3s1",
+        "d5s0",
+        "d5s1",
+        "d5s2",
+        "d7s0",
+        "d8s0",
+        "d8s1",
+        "d8s2"
+      ],
+      "semantic_review": false
+    },
+    {
+      "sequence": 24,
+      "time_s": 5.055239,
+      "type": "trace_batch_requested"
+    },
+    {
+      "sequence": 25,
+      "time_s": 8.944376,
+      "type": "verification_reply",
+      "reply": {
+        "approved": true,
+        "facts_valid": true,
+        "expressed_unit_ids": [
+          "u1"
+        ],
+        "reason": "The draft correctly states the director of Hotel Paradis as George Schnéevoigt, matching the approved fact and evidence."
+      },
+      "output_unit_ids": [
+        "u1"
+      ],
+      "output_action": "Partial Answer",
+      "dependency_unit_ids": [],
+      "evidence_snapshot_ids": [
+        "d8s0"
+      ]
+    },
+    {
+      "sequence": 26,
+      "time_s": 8.944433,
+      "type": "utterance",
+      "action": "Partial Answer",
+      "text": "The director of Hotel Paradis is George Schnéevoigt.",
+      "claims": [
+        {
+          "unit_id": "u1",
+          "description": "director of Hotel Paradis",
+          "value": "George Schnéevoigt",
+          "citations": [
+            "d8s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d8s0",
+              "text": "directed by George Schnéevoigt"
+            }
+          ]
+        }
+      ],
+      "unresolved": [],
+      "fallback": false,
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d1s1",
+        "d1s2",
+        "d1s3",
+        "d3s0",
+        "d3s1",
+        "d5s0",
+        "d5s1",
+        "d5s2",
+        "d7s0",
+        "d8s0",
+        "d8s1",
+        "d8s2"
+      ],
+      "language": "en"
+    },
+    {
+      "sequence": 27,
+      "time_s": 8.944911,
+      "type": "search_finished",
+      "query": "[scheduled evidence]",
+      "subject": "",
+      "status": "ok",
+      "returned_pages": [],
+      "mode": "trace",
+      "unit_id": "__scheduled_evidence__"
+    },
+    {
+      "sequence": 28,
+      "time_s": 8.944998,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d2s0",
+        "title": "George Schnéevoigt",
+        "url": "https://trace.invalid/2wikimultihopqa_4f8e349e08e111ebbda2ac1f6bf848b6_long/d2s0",
+        "text": "George Schnéevoigt( 23 December 1893 – 6 February 1961) was a Danish film director, cinematographer, and actor of the 1930s and early 1940s.",
+        "visible_time_s": 8.94498250000106,
+        "requested_subject": "",
+        "resolved_title": "George Schnéevoigt",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 29,
+      "time_s": 8.945094,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d2s1",
+        "title": "George Schnéevoigt",
+        "url": "https://trace.invalid/2wikimultihopqa_4f8e349e08e111ebbda2ac1f6bf848b6_long/d2s1",
+        "text": "Schnéevoigt was born in Copenhagen, Denmark to actress Siri Schnéevoigt, and he is the father of actor and director Alf Schnéevoigt.",
+        "visible_time_s": 8.945082700000057,
+        "requested_subject": "",
+        "resolved_title": "George Schnéevoigt",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 30,
+      "time_s": 8.945182,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d4s0",
+        "title": "G. Marthandan",
+        "url": "https://trace.invalid/2wikimultihopqa_4f8e349e08e111ebbda2ac1f6bf848b6_long/d4s0",
+        "text": "G. Marthandan is an Indian film director who works in Malayalam cinema.",
+        "visible_time_s": 8.945177100002184,
+        "requested_subject": "",
+        "resolved_title": "G. Marthandan",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 31,
+      "time_s": 8.945208,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d6s0",
+        "title": "James Strange French",
+        "url": "https://trace.invalid/2wikimultihopqa_4f8e349e08e111ebbda2ac1f6bf848b6_long/d6s0",
+        "text": "James Strange French( 1807- 1886) was a lawyer, novelist, and later hotel keeper.",
+        "visible_time_s": 8.945203800001764,
+        "requested_subject": "",
+        "resolved_title": "James Strange French",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 32,
+      "time_s": 8.945228,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d9s0",
+        "title": "Next Stop Paradise (1980 film)",
+        "url": "https://trace.invalid/2wikimultihopqa_4f8e349e08e111ebbda2ac1f6bf848b6_long/d9s0",
+        "text": "Næste Stop Paradis or Next Stop Paradise is a 1980 Danish romantic drama film directed and written by Jon Bang Carlsen.",
+        "visible_time_s": 8.945224900002358,
+        "requested_subject": "",
+        "resolved_title": "Next Stop Paradise (1980 film)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 33,
+      "time_s": 8.945279,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d9s1",
+        "title": "Next Stop Paradise (1980 film)",
+        "url": "https://trace.invalid/2wikimultihopqa_4f8e349e08e111ebbda2ac1f6bf848b6_long/d9s1",
+        "text": "The film stars Karen Lykkehus.",
+        "visible_time_s": 8.945276599999488,
+        "requested_subject": "",
+        "resolved_title": "Next Stop Paradise (1980 film)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 34,
+      "time_s": 8.945299,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d10s0",
+        "title": "Anthony Mann",
+        "url": "https://trace.invalid/2wikimultihopqa_4f8e349e08e111ebbda2ac1f6bf848b6_long/d10s0",
+        "text": "Anthony Mann( June 30, 1906 – April 29, 1967) was an American actor and film director, best remembered for his work in the film noir and Westerns genres.",
+        "visible_time_s": 8.945297000002029,
+        "requested_subject": "",
+        "resolved_title": "Anthony Mann",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 35,
+      "time_s": 8.945318,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d10s1",
+        "title": "Anthony Mann",
+        "url": "https://trace.invalid/2wikimultihopqa_4f8e349e08e111ebbda2ac1f6bf848b6_long/d10s1",
+        "text": "As a director, he often collaborated with the cinematographer John Alton.",
+        "visible_time_s": 8.945315500001016,
+        "requested_subject": "",
+        "resolved_title": "Anthony Mann",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 36,
+      "time_s": 8.945334,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d10s2",
+        "title": "Anthony Mann",
+        "url": "https://trace.invalid/2wikimultihopqa_4f8e349e08e111ebbda2ac1f6bf848b6_long/d10s2",
+        "text": "He directed films for a variety of production companies, from RKO to MGM, and worked with many major stars of the era.",
+        "visible_time_s": 8.945331300001271,
+        "requested_subject": "",
+        "resolved_title": "Anthony Mann",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 37,
+      "time_s": 8.94535,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d10s3",
+        "title": "Anthony Mann",
+        "url": "https://trace.invalid/2wikimultihopqa_4f8e349e08e111ebbda2ac1f6bf848b6_long/d10s3",
+        "text": "He made several Westerns with James Stewart, such as\" Winchester'73\"( 1950), and he was the director of the medieval epic\" El Cid\"( 1961), working with Charlton Heston and Sophia Loren.",
+        "visible_time_s": 8.945347900000343,
+        "requested_subject": "",
+        "resolved_title": "Anthony Mann",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 38,
+      "time_s": 8.945368,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d10s4",
+        "title": "Anthony Mann",
+        "url": "https://trace.invalid/2wikimultihopqa_4f8e349e08e111ebbda2ac1f6bf848b6_long/d10s4",
+        "text": "He also directed the big- budget film\" Cimarron\"( 1960), which starred Glenn Ford and Maria Schell.",
+        "visible_time_s": 8.945364800001698,
+        "requested_subject": "",
+        "resolved_title": "Anthony Mann",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 39,
+      "time_s": 9.324004,
+      "type": "feedback_discarded",
+      "feedback_kind": "progress",
+      "reason": "answer_already_advanced"
+    },
+    {
+      "sequence": 40,
+      "time_s": 11.332954,
+      "type": "judge_reply",
+      "reply": {
+        "judgments": [
+          {
+            "unit_id": "u1",
+            "label": "SUPPORTED",
+            "value": "George Schnéevoigt",
+            "citations": [
+              "d8s0"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d8s0",
+                "text": "Hotel Paradis is a 1931 Danish drama directed by George Schnéevoigt."
+              }
+            ],
+            "reason": "Source states the director of Hotel Paradis."
+          },
+          {
+            "unit_id": "u2",
+            "label": "SUPPORTED",
+            "value": "6 February 1961",
+            "citations": [
+              "d2s0"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d2s0",
+                "text": "George Schnéevoigt( 23 December 1893 – 6 February 1961) was a Danish film director"
+              }
+            ],
+            "reason": "Provides death date of the director."
+          },
+          {
+            "unit_id": "u3",
+            "label": "SUPPORTED",
+            "value": "Anthony Mann",
+            "citations": [
+              "d3s0"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d3s0",
+                "text": "Devil's Doorway is a 1950 western film directed by Anthony Mann"
+              }
+            ],
+            "reason": "Source states the director of Devil's Doorway."
+          },
+          {
+            "unit_id": "u4",
+            "label": "SUPPORTED",
+            "value": "April 29, 1967",
+            "citations": [
+              "d10s0"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d10s0",
+                "text": "Anthony Mann( June 30, 1906 – April 29, 1967) was an American actor and film director"
+              }
+            ],
+            "reason": "Provides death date of the director."
+          },
+          {
+            "unit_id": "u5",
+            "label": "SUPPORTED",
+            "value": "Devil's Doorway",
+            "citations": [
+              "d2s0",
+              "d10s0"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d2s0",
+                "text": "George Schnéevoigt( 23 December 1893 – 6 February 1961) was a Danish film director"
+              },
+              {
+                "evidence_id": "d10s0",
+                "text": "Anthony Mann( June 30, 1906 – April 29, 1967) was an American actor and film director"
+              }
+            ],
+            "reason": "Anthony Mann died later (1967) than George Schnéevoigt (1961)."
+          }
+        ]
+      },
+      "attempt": 1,
+      "repair": false,
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d1s1",
+        "d1s2",
+        "d1s3",
+        "d3s0",
+        "d3s1",
+        "d5s0",
+        "d5s1",
+        "d5s2",
+        "d7s0",
+        "d8s0",
+        "d8s1",
+        "d8s2",
+        "d2s0",
+        "d2s1",
+        "d4s0",
+        "d6s0",
+        "d9s0",
+        "d9s1",
+        "d10s0",
+        "d10s1",
+        "d10s2",
+        "d10s3",
+        "d10s4"
+      ]
+    },
+    {
+      "sequence": 41,
+      "time_s": 11.333141,
+      "type": "judgments",
+      "judgments": {
+        "u1": {
+          "label": "SUPPORTED",
+          "value": "George Schnéevoigt",
+          "citations": [
+            "d8s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d8s0",
+              "text": "Hotel Paradis is a 1931 Danish drama directed by George Schnéevoigt."
+            }
+          ],
+          "reason": "Source states the director of Hotel Paradis."
+        },
+        "u2": {
+          "label": "SUPPORTED",
+          "value": "6 February 1961",
+          "citations": [
+            "d2s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d2s0",
+              "text": "George Schnéevoigt( 23 December 1893 – 6 February 1961) was a Danish film director"
+            }
+          ],
+          "reason": "Provides death date of the director."
+        },
+        "u3": {
+          "label": "SUPPORTED",
+          "value": "Anthony Mann",
+          "citations": [
+            "d3s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d3s0",
+              "text": "Devil's Doorway is a 1950 western film directed by Anthony Mann"
+            }
+          ],
+          "reason": "Source states the director of Devil's Doorway."
+        },
+        "u4": {
+          "label": "SUPPORTED",
+          "value": "April 29, 1967",
+          "citations": [
+            "d10s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d10s0",
+              "text": "Anthony Mann( June 30, 1906 – April 29, 1967) was an American actor and film director"
+            }
+          ],
+          "reason": "Provides death date of the director."
+        },
+        "u5": {
+          "label": "SUPPORTED",
+          "value": "Devil's Doorway",
+          "citations": [
+            "d2s0",
+            "d10s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d2s0",
+              "text": "George Schnéevoigt( 23 December 1893 – 6 February 1961) was a Danish film director"
+            },
+            {
+              "evidence_id": "d10s0",
+              "text": "Anthony Mann( June 30, 1906 – April 29, 1967) was an American actor and film director"
+            }
+          ],
+          "reason": "Anthony Mann died later (1967) than George Schnéevoigt (1961)."
+        }
+      },
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d1s1",
+        "d1s2",
+        "d1s3",
+        "d3s0",
+        "d3s1",
+        "d5s0",
+        "d5s1",
+        "d5s2",
+        "d7s0",
+        "d8s0",
+        "d8s1",
+        "d8s2",
+        "d2s0",
+        "d2s1",
+        "d4s0",
+        "d6s0",
+        "d9s0",
+        "d9s1",
+        "d10s0",
+        "d10s1",
+        "d10s2",
+        "d10s3",
+        "d10s4"
+      ],
+      "semantic_review": false
+    },
+    {
+      "sequence": 42,
+      "time_s": 11.96701,
+      "type": "feedback_requested",
+      "feedback_kind": "progress",
+      "execution_state": {
+        "stage": "formulating",
+        "searches_started": 2,
+        "searches_completed": 2,
+        "active_searches": 0,
+        "evidence_count": 24,
+        "supported_units": 5,
+        "output_units": 1
+      }
+    },
+    {
+      "sequence": 43,
+      "time_s": 13.248765,
+      "type": "utterance",
+      "action": "Progress",
+      "text": "Formulating the answer with gathered evidence.",
+      "claims": [],
+      "feedback_source": "model",
+      "feedback_status_claim": "formulating",
+      "feedback_fallback_reason": "",
+      "execution_state": {
+        "stage": "formulating",
+        "searches_started": 2,
+        "searches_completed": 2,
+        "active_searches": 0,
+        "evidence_count": 24,
+        "supported_units": 5,
+        "output_units": 1
+      },
+      "language": "en"
+    },
+    {
+      "sequence": 44,
+      "time_s": 13.957696,
+      "type": "verification_reply",
+      "reply": {
+        "approved": true,
+        "facts_valid": true,
+        "expressed_unit_ids": [
+          "u5"
+        ],
+        "reason": "The draft correctly states that Devil's Doorway is the film whose director died later, matching the approved fact and containing no extra claims."
+      },
+      "output_unit_ids": [
+        "u5"
+      ],
+      "output_action": "Final Answer",
+      "dependency_unit_ids": [
+        "u1",
+        "u2",
+        "u3",
+        "u4"
+      ],
+      "evidence_snapshot_ids": [
+        "d3s0",
+        "d8s0",
+        "d2s0",
+        "d10s0"
+      ]
+    },
+    {
+      "sequence": 45,
+      "time_s": 13.957779,
+      "type": "utterance",
+      "action": "Final Answer",
+      "text": "The film whose director died later is Devil's Doorway.",
+      "claims": [
+        {
+          "unit_id": "u5",
+          "description": "which film has the director who died later",
+          "value": "Devil's Doorway",
+          "citations": [
+            "d2s0",
+            "d10s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d2s0",
+              "text": "George Schnéevoigt( 23 December 1893 – 6 February 1961) was a Danish film director"
+            },
+            {
+              "evidence_id": "d10s0",
+              "text": "Anthony Mann( June 30, 1906 – April 29, 1967) was an American actor and film director"
+            }
+          ]
+        }
+      ],
+      "unresolved": [],
+      "fallback": false,
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d1s1",
+        "d1s2",
+        "d1s3",
+        "d3s0",
+        "d3s1",
+        "d5s0",
+        "d5s1",
+        "d5s2",
+        "d7s0",
+        "d8s0",
+        "d8s1",
+        "d8s2",
+        "d2s0",
+        "d2s1",
+        "d4s0",
+        "d6s0",
+        "d9s0",
+        "d9s1",
+        "d10s0",
+        "d10s1",
+        "d10s2",
+        "d10s3",
+        "d10s4"
+      ],
+      "language": "en"
+    },
+    {
+      "sequence": 46,
+      "time_s": 13.958206,
+      "type": "finished",
+      "status": "complete"
+    }
+  ],
+  "note": "Prototype model judgments are not independent gold scores. Output event times are not spoken claim times.",
+  "evidence_mode": "scheduled_trace",
+  "audio": {
+    "enabled": true,
+    "mode": "windows",
+    "play": false,
+    "status": "ok",
+    "errors": [],
+    "records": [
+      {
+        "event_sequence": 1,
+        "sentence_index": 1,
+        "sentence_count": 1,
+        "language": "en",
+        "text": "I’ll look up which director of Hotel Paradis or Devil’s Doorway died later.",
+        "action": "Backchannel",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 1.9395752000018547,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval debug20\\artifacts\\runs\\20261118T042104Z-af3cd283\\samples\\0018\\audio\\segments\\0001_01.wav",
+        "duration_s": 4.8434920634920635,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 2.7708822000022337,
+        "synthesis_and_playback_s": 0.8316238999977941
+      },
+      {
+        "event_sequence": 26,
+        "sentence_index": 1,
+        "sentence_count": 1,
+        "language": "en",
+        "text": "The director of Hotel Paradis is George Schnéevoigt.",
+        "action": "Partial Answer",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 8.944869700000709,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval debug20\\artifacts\\runs\\20261118T042104Z-af3cd283\\samples\\0018\\audio\\segments\\0026_01.wav",
+        "duration_s": 3.6387755102040815,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 9.754390900001454,
+        "synthesis_and_playback_s": 0.8097897000006924
+      },
+      {
+        "event_sequence": 43,
+        "sentence_index": 1,
+        "sentence_count": 1,
+        "language": "en",
+        "text": "Formulating the answer with gathered evidence.",
+        "action": "Progress",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 13.24916089999897,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval debug20\\artifacts\\runs\\20261118T042104Z-af3cd283\\samples\\0018\\audio\\segments\\0043_01.wav",
+        "duration_s": 3.113968253968254,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 14.032507600000827,
+        "synthesis_and_playback_s": 0.7838129000010667
+      },
+      {
+        "event_sequence": 45,
+        "sentence_index": 1,
+        "sentence_count": 1,
+        "language": "en",
+        "text": "The film whose director died later is Devil's Doorway.",
+        "action": "Final Answer",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 14.032980600000883,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval debug20\\artifacts\\runs\\20261118T042104Z-af3cd283\\samples\\0018\\audio\\segments\\0045_01.wav",
+        "duration_s": 3.693832199546485,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 14.866302800000994,
+        "synthesis_and_playback_s": 0.8337327999979607
+      }
+    ],
+    "wave": {
+      "path": "D:\\UIUC\\CS546\\moshi-rag\\eval debug20\\artifacts\\runs\\20261118T042104Z-af3cd283\\samples\\0018\\audio\\response.wav",
+      "duration_s": 20.84031746031746,
+      "timeline": [
+        {
+          "event_sequence": 1,
+          "sentence_index": 1,
+          "action": "Backchannel",
+          "text": "I’ll look up which director of Hotel Paradis or Devil’s Doorway died later.",
+          "wave_start_s": 2.7708843537414967,
+          "wave_end_s": 7.61437641723356
+        },
+        {
+          "event_sequence": 26,
+          "sentence_index": 1,
+          "action": "Partial Answer",
+          "text": "The director of Hotel Paradis is George Schnéevoigt.",
+          "wave_start_s": 9.75437641723356,
+          "wave_end_s": 13.393151927437641
+        },
+        {
+          "event_sequence": 43,
+          "sentence_index": 1,
+          "action": "Progress",
+          "text": "Formulating the answer with gathered evidence.",
+          "wave_start_s": 14.03251700680272,
+          "wave_end_s": 17.146485260770977
+        },
+        {
+          "event_sequence": 45,
+          "sentence_index": 1,
+          "action": "Final Answer",
+          "text": "The film whose director died later is Devil's Doorway.",
+          "wave_start_s": 17.146485260770977,
+          "wave_end_s": 20.84031746031746
+        }
+      ]
+    }
+  },
+  "evaluation": {
+    "mode": "b_debug_trace",
+    "trace_id": "2wikimultihopqa_4f8e349e08e111ebbda2ac1f6bf848b6_long",
+    "sample_id": "2wikimultihopqa_4f8e349e08e111ebbda2ac1f6bf848b6",
+    "total_wall_s": 14.870725400000083,
+    "question_timeout_s": 180,
+    "audio_enabled": true,
+    "history_enabled": false,
+    "text_pipeline_wall_s": 13.958365200000117,
+    "effective_settings": {
+      "base_url": "https://tinker.thinkingmachines.dev/services/tinker-prod/oai/api/v1",
+      "model": "openai/gpt-oss-120b",
+      "wiki_language": "en",
+      "user_agent": "CascadeSystem/0.1 (educational research prototype)",
+      "timeout_s": 45.0,
+      "max_tokens": 4096,
+      "reasoning_effort": "low",
+      "progress_s": 3.0,
+      "feedback_timeout_s": 6.0,
+      "search_limit": 3,
+      "max_units": 8,
+      "max_searches": 16,
+      "max_sources": 24,
+      "source_chars": 185,
+      "evidence_chars": 2422,
+      "concurrency": 3
+    },
+    "timing_kind": "unknown",
+    "scheduler": "wall-paced fixed B arrivals"
+  }
+}

@@ -1,0 +1,2217 @@
+{
+  "question": "The Sophia Amalia was named after the wife of a king that ruled which two countries in 1648?",
+  "resolved_question": "The Sophia Amalia was named after the wife of a king that ruled which two countries in 1648?",
+  "used_history_turn_ids": [],
+  "response_language": "en",
+  "status": "complete",
+  "clock": "wall_monotonic",
+  "time_origin": "question_text_ready_after_optional_asr",
+  "model": "openai/gpt-oss-120b",
+  "judge_model": "tinker://f9e9a6c1-e203-5c2c-acdd-68fe67378ca4:train:0/sampler_weights/epoch-0001",
+  "units": [
+    {
+      "unit_id": "u1",
+      "description": "Identify the wife after whom the ship Sophia Amalia was named",
+      "necessary": true,
+      "depends_on": [],
+      "queries": [
+        "Sophia Amalia ship named after wife",
+        "Sophia Amalia ship namesake"
+      ],
+      "subject": "Sophia Amalia (ship)"
+    },
+    {
+      "unit_id": "u2",
+      "description": "Identify the king who was married to the wife from u1",
+      "necessary": true,
+      "depends_on": [
+        "u1"
+      ],
+      "queries": [
+        "husband of {u1}",
+        "spouse of {u1} king"
+      ],
+      "subject": "King {u1}"
+    },
+    {
+      "unit_id": "u3",
+      "description": "Determine which two countries the king from u2 ruled in the year 1648",
+      "necessary": true,
+      "depends_on": [
+        "u2"
+      ],
+      "queries": [
+        "{u2} territories 1648",
+        "{u2} ruled countries 1648"
+      ],
+      "subject": "King {u2}"
+    }
+  ],
+  "judgments": {
+    "u1": {
+      "label": "SUPPORTED",
+      "value": "Sophia Amalia",
+      "citations": [
+        "d7s0"
+      ],
+      "quotes": [
+        {
+          "evidence_id": "d7s0",
+          "text": "The Sophia Amalia was a ship of the Royal Dano-Norwegian Navy named after Sophia Amalia, the wife of King Frederick III."
+        }
+      ],
+      "reason": "Supported by the cited visible sentences and dependencies."
+    },
+    "u2": {
+      "label": "SUPPORTED",
+      "value": "Frederick III",
+      "citations": [
+        "d6s0"
+      ],
+      "quotes": [
+        {
+          "evidence_id": "d6s0",
+          "text": "Frederick III (Danish: \"Frederik\" ; 18 March 1609 – 9 February 1670) was king of Denmark and Norway from 1648 until his death in 1670."
+        }
+      ],
+      "reason": "Supported by the cited visible sentences and dependencies."
+    },
+    "u3": {
+      "label": "SUPPORTED",
+      "value": "Denmark and Norway",
+      "citations": [
+        "d6s0"
+      ],
+      "quotes": [
+        {
+          "evidence_id": "d6s0",
+          "text": "Frederick III (Danish: \"Frederik\" ; 18 March 1609 – 9 February 1670) was king of Denmark and Norway from 1648 until his death in 1670."
+        }
+      ],
+      "reason": "Supported by the cited visible sentences and dependencies."
+    }
+  },
+  "evidence": [
+    {
+      "evidence_id": "d1s0",
+      "title": "Sophia Amalia Marschalk",
+      "url": "https://trace.invalid/hotpotqa_5a83b4d35542996488c2e495_short/d1s0",
+      "text": "Sophia Amalia Marschalk, also called Anna Marschalk, was a Danish noble and courtier.",
+      "visible_time_s": 5.562999999994645,
+      "requested_subject": "",
+      "resolved_title": "Sophia Amalia Marschalk",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d1s1",
+      "title": "Sophia Amalia Marschalk",
+      "url": "https://trace.invalid/hotpotqa_5a83b4d35542996488c2e495_short/d1s1",
+      "text": "She was the favorite of the queen of Sweden, Ulrika Eleonora of Denmark.",
+      "visible_time_s": 5.562999999994645,
+      "requested_subject": "",
+      "resolved_title": "Sophia Amalia Marschalk",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d3s0",
+      "title": "Malawi–Mozambique relations",
+      "url": "https://trace.invalid/hotpotqa_5a83b4d35542996488c2e495_short/d3s0",
+      "text": "Malawi–Mozambique relations refers to the current and historical relationship between the countries of Malawi and Mozambique.",
+      "visible_time_s": 5.562999999994645,
+      "requested_subject": "",
+      "resolved_title": "Malawi–Mozambique relations",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d3s1",
+      "title": "Malawi–Mozambique relations",
+      "url": "https://trace.invalid/hotpotqa_5a83b4d35542996488c2e495_short/d3s1",
+      "text": "As Malawi shares a large border with Mozambique, much of the substance of their foreign relations pertain to the border separating the two nations.",
+      "visible_time_s": 5.562999999994645,
+      "requested_subject": "",
+      "resolved_title": "Malawi–Mozambique relations",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d3s2",
+      "title": "Malawi–Mozambique relations",
+      "url": "https://trace.invalid/hotpotqa_5a83b4d35542996488c2e495_short/d3s2",
+      "text": "Both of the sovereign states have amicably agreed that lacustrine borders on Lake Malawi remain the largest priority between the two countries, as the exploitation of natural resources within the waters of Lake Malawi remain an issue the two countries continue to resolve.",
+      "visible_time_s": 5.562999999994645,
+      "requested_subject": "",
+      "resolved_title": "Malawi–Mozambique relations",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d3s3",
+      "title": "Malawi–Mozambique relations",
+      "url": "https://trace.invalid/hotpotqa_5a83b4d35542996488c2e495_short/d3s3",
+      "text": "The moment considered an act of generosity and sympathy within the two countries relations is when, during the Mozambique Civil War, Malawi housed over one million Mozambican refugees between 1985 and 1995.",
+      "visible_time_s": 5.562999999994645,
+      "requested_subject": "",
+      "resolved_title": "Malawi–Mozambique relations",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d3s4",
+      "title": "Malawi–Mozambique relations",
+      "url": "https://trace.invalid/hotpotqa_5a83b4d35542996488c2e495_short/d3s4",
+      "text": "After this gesture, Malawian relations with Mozambique crumbled under the tenure of Bingu wa Mutharika, notoriously reaching a nadir when Malawian police launched a raid into Mozambique's territory.",
+      "visible_time_s": 5.562999999994645,
+      "requested_subject": "",
+      "resolved_title": "Malawi–Mozambique relations",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d5s0",
+      "title": "Reconquest of Angola",
+      "url": "https://trace.invalid/hotpotqa_5a83b4d35542996488c2e495_short/d5s0",
+      "text": "The Reconquest of Angola (Portuguese: \"Reconquista de Angola\" ) (1641-1648) was Portugal's campaign to regain its colony in Angola from the Dutch.",
+      "visible_time_s": 5.562999999994645,
+      "requested_subject": "",
+      "resolved_title": "Reconquest of Angola",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d5s1",
+      "title": "Reconquest of Angola",
+      "url": "https://trace.invalid/hotpotqa_5a83b4d35542996488c2e495_short/d5s1",
+      "text": "In 1641 Johan Maurits sent an expedition under Admiral Cornelis Jol from Recife in Dutch Brazil to seize the Angolan capital of Luanda.",
+      "visible_time_s": 5.562999999994645,
+      "requested_subject": "",
+      "resolved_title": "Reconquest of Angola",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d5s2",
+      "title": "Reconquest of Angola",
+      "url": "https://trace.invalid/hotpotqa_5a83b4d35542996488c2e495_short/d5s2",
+      "text": "The Dutch were able to easily capture Luanda in August as the Portuguese forces were occupied inland in a campaign against the Kingdom of Kongo.",
+      "visible_time_s": 5.562999999994645,
+      "requested_subject": "",
+      "resolved_title": "Reconquest of Angola",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d5s3",
+      "title": "Reconquest of Angola",
+      "url": "https://trace.invalid/hotpotqa_5a83b4d35542996488c2e495_short/d5s3",
+      "text": "The two countries fought to a stalemate over Angola, until in 1648 the governor of Rio de Janeiro and Angola, Salvador de Sá, reached Luanda and finding the port defended by only 50 Dutch troops, regained it for Angola exactly seven years after its loss.",
+      "visible_time_s": 5.562999999994645,
+      "requested_subject": "",
+      "resolved_title": "Reconquest of Angola",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d7s0",
+      "title": "HDMS Sophia Amalia",
+      "url": "https://trace.invalid/hotpotqa_5a83b4d35542996488c2e495_short/d7s0",
+      "text": "The Sophia Amalia was a ship of the Royal Dano-Norwegian Navy named after Sophia Amalia, the wife of King Frederick III.",
+      "visible_time_s": 5.562999999994645,
+      "requested_subject": "",
+      "resolved_title": "HDMS Sophia Amalia",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d7s1",
+      "title": "HDMS Sophia Amalia",
+      "url": "https://trace.invalid/hotpotqa_5a83b4d35542996488c2e495_short/d7s1",
+      "text": "The ship was built at Hovedøen in Christiania under the direction of English shipbuilder James Robbins and was launched in 1650.",
+      "visible_time_s": 5.562999999994645,
+      "requested_subject": "",
+      "resolved_title": "HDMS Sophia Amalia",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d7s2",
+      "title": "HDMS Sophia Amalia",
+      "url": "https://trace.invalid/hotpotqa_5a83b4d35542996488c2e495_short/d7s2",
+      "text": "She was 51.8 meters long and at that time one of the largest naval vessels in the world.",
+      "visible_time_s": 5.562999999994645,
+      "requested_subject": "",
+      "resolved_title": "HDMS Sophia Amalia",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d7s3",
+      "title": "HDMS Sophia Amalia",
+      "url": "https://trace.invalid/hotpotqa_5a83b4d35542996488c2e495_short/d7s3",
+      "text": "She was commissioned by King Christian IV specifically to surpass the British ship  .",
+      "visible_time_s": 5.562999999994645,
+      "requested_subject": "",
+      "resolved_title": "HDMS Sophia Amalia",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d7s4",
+      "title": "HDMS Sophia Amalia",
+      "url": "https://trace.invalid/hotpotqa_5a83b4d35542996488c2e495_short/d7s4",
+      "text": "The ship was manned by a crew of 680 and had an armament of 108 guns, surpassing \"Sovereign of the Seas\" by eight guns.",
+      "visible_time_s": 5.562999999994645,
+      "requested_subject": "",
+      "resolved_title": "HDMS Sophia Amalia",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d9s0",
+      "title": "Covered interest arbitrage",
+      "url": "https://trace.invalid/hotpotqa_5a83b4d35542996488c2e495_short/d9s0",
+      "text": "Covered interest arbitrage is an arbitrage trading strategy whereby an investor capitalizes on the interest rate differential between two countries by using a forward contract to \"cover\" (eliminate exposure to) exchange rate risk.",
+      "visible_time_s": 5.562999999994645,
+      "requested_subject": "",
+      "resolved_title": "Covered interest arbitrage",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d9s1",
+      "title": "Covered interest arbitrage",
+      "url": "https://trace.invalid/hotpotqa_5a83b4d35542996488c2e495_short/d9s1",
+      "text": "Using forward contracts enables arbitrageurs such as individual investors or banks to make use of the forward premium (or discount) to earn a riskless profit from discrepancies between two countries' interest rates.",
+      "visible_time_s": 5.562999999994645,
+      "requested_subject": "",
+      "resolved_title": "Covered interest arbitrage",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d9s2",
+      "title": "Covered interest arbitrage",
+      "url": "https://trace.invalid/hotpotqa_5a83b4d35542996488c2e495_short/d9s2",
+      "text": "The opportunity to earn riskless profits arises from the reality that the interest rate parity condition does not constantly hold.",
+      "visible_time_s": 5.562999999994645,
+      "requested_subject": "",
+      "resolved_title": "Covered interest arbitrage",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d9s3",
+      "title": "Covered interest arbitrage",
+      "url": "https://trace.invalid/hotpotqa_5a83b4d35542996488c2e495_short/d9s3",
+      "text": "When spot and forward exchange rate markets are not in a state of equilibrium, investors will no longer be indifferent among the available interest rates in two countries and will invest in whichever currency offers a higher rate of return.",
+      "visible_time_s": 5.562999999994645,
+      "requested_subject": "",
+      "resolved_title": "Covered interest arbitrage",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d9s4",
+      "title": "Covered interest arbitrage",
+      "url": "https://trace.invalid/hotpotqa_5a83b4d35542996488c2e495_short/d9s4",
+      "text": "Economists have discovered various factors which affect the occurrence of deviations from covered interest rate parity and the fleeting nature of covered interest arbitrage opportunities, such as differing characteristics of assets, varying frequencies of time series data, and the transaction costs associated with arbitrage trading strategies.",
+      "visible_time_s": 5.562999999994645,
+      "requested_subject": "",
+      "resolved_title": "Covered interest arbitrage",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d2s0",
+      "title": "Saudi Arabia–United States relations",
+      "url": "https://trace.invalid/hotpotqa_5a83b4d35542996488c2e495_short/d2s0",
+      "text": "Bilateral relations between the Kingdom of Saudi Arabia and the United States began in 1933 when full diplomatic relations were established.",
+      "visible_time_s": 5.562999999994645,
+      "requested_subject": "",
+      "resolved_title": "Saudi Arabia–United States relations",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d2s1",
+      "title": "Saudi Arabia–United States relations",
+      "url": "https://trace.invalid/hotpotqa_5a83b4d35542996488c2e495_short/d2s1",
+      "text": "Despite the differences between the two countries—an ultraconservative Islamic absolute monarchy, and a secular, democratic republic—the two countries have been allies.",
+      "visible_time_s": 5.562999999994645,
+      "requested_subject": "",
+      "resolved_title": "Saudi Arabia–United States relations",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d2s2",
+      "title": "Saudi Arabia–United States relations",
+      "url": "https://trace.invalid/hotpotqa_5a83b4d35542996488c2e495_short/d2s2",
+      "text": "In recent years, the two countries have occasionally been described as having a \"Special Relationship\" with one another.",
+      "visible_time_s": 5.562999999994645,
+      "requested_subject": "",
+      "resolved_title": "Saudi Arabia–United States relations",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d2s3",
+      "title": "Saudi Arabia–United States relations",
+      "url": "https://trace.invalid/hotpotqa_5a83b4d35542996488c2e495_short/d2s3",
+      "text": "Former Presidents George W. Bush and Barack Obama have close and strong relations with senior members of the Saudi Royal Family.",
+      "visible_time_s": 5.562999999994645,
+      "requested_subject": "",
+      "resolved_title": "Saudi Arabia–United States relations",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d4s0",
+      "title": "Uruguay River pulp mill dispute",
+      "url": "https://trace.invalid/hotpotqa_5a83b4d35542996488c2e495_short/d4s0",
+      "text": "The pulp mill dispute was a dispute between Argentina and Uruguay concerning the construction of pulp mills on the Uruguay River.",
+      "visible_time_s": 5.562999999994645,
+      "requested_subject": "",
+      "resolved_title": "Uruguay River pulp mill dispute",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d4s1",
+      "title": "Uruguay River pulp mill dispute",
+      "url": "https://trace.invalid/hotpotqa_5a83b4d35542996488c2e495_short/d4s1",
+      "text": "The presidents at the time were Néstor Kirchner (Argentina) and Tabaré Vázquez (Uruguay).",
+      "visible_time_s": 5.577999999994063,
+      "requested_subject": "",
+      "resolved_title": "Uruguay River pulp mill dispute",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d4s2",
+      "title": "Uruguay River pulp mill dispute",
+      "url": "https://trace.invalid/hotpotqa_5a83b4d35542996488c2e495_short/d4s2",
+      "text": "As a diplomatic, economic, and public relations conflict between both parties, the dispute has also affected tourism and transportation as well as the otherwise amicable relations between the two countries.",
+      "visible_time_s": 5.577999999994063,
+      "requested_subject": "",
+      "resolved_title": "Uruguay River pulp mill dispute",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d4s3",
+      "title": "Uruguay River pulp mill dispute",
+      "url": "https://trace.invalid/hotpotqa_5a83b4d35542996488c2e495_short/d4s3",
+      "text": "The feud was unprecedented between the two countries, which have shared historical and cultural ties.",
+      "visible_time_s": 5.577999999994063,
+      "requested_subject": "",
+      "resolved_title": "Uruguay River pulp mill dispute",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d4s4",
+      "title": "Uruguay River pulp mill dispute",
+      "url": "https://trace.invalid/hotpotqa_5a83b4d35542996488c2e495_short/d4s4",
+      "text": "Proceedings were brought before the International Court of Justice as a case formally named Pulp Mills on the River Uruguay \"(Argentina v. Uruguay)\".",
+      "visible_time_s": 5.577999999994063,
+      "requested_subject": "",
+      "resolved_title": "Uruguay River pulp mill dispute",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d4s5",
+      "title": "Uruguay River pulp mill dispute",
+      "url": "https://trace.invalid/hotpotqa_5a83b4d35542996488c2e495_short/d4s5",
+      "text": "It ruled that, although Uruguay failed to inform Argentina of the operations, it did not pollute the river, so closing the pulp mill would be unjustified.",
+      "visible_time_s": 5.577999999994063,
+      "requested_subject": "",
+      "resolved_title": "Uruguay River pulp mill dispute",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d4s6",
+      "title": "Uruguay River pulp mill dispute",
+      "url": "https://trace.invalid/hotpotqa_5a83b4d35542996488c2e495_short/d4s6",
+      "text": "The conflict ended in 2010, during the presidencies of Cristina Fernández de Kirchner (Argentina) and José Mujica (Uruguay), with the establishment of a joint coordination of the activities in the river.",
+      "visible_time_s": 5.577999999994063,
+      "requested_subject": "",
+      "resolved_title": "Uruguay River pulp mill dispute",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d6s0",
+      "title": "Frederick III of Denmark",
+      "url": "https://trace.invalid/hotpotqa_5a83b4d35542996488c2e495_short/d6s0",
+      "text": "Frederick III (Danish: \"Frederik\" ; 18 March 1609 – 9 February 1670) was king of Denmark and Norway from 1648 until his death in 1670.",
+      "visible_time_s": 5.577999999994063,
+      "requested_subject": "",
+      "resolved_title": "Frederick III of Denmark",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d6s1",
+      "title": "Frederick III of Denmark",
+      "url": "https://trace.invalid/hotpotqa_5a83b4d35542996488c2e495_short/d6s1",
+      "text": "He also governed under the name Frederick II as diocesan administrator (colloquially referred to as prince-bishop) of the Prince-Bishopric of Verden (1623–29 and again 1634–44), and the Prince-Archbishopric of Bremen (1635–45).",
+      "visible_time_s": 5.577999999994063,
+      "requested_subject": "",
+      "resolved_title": "Frederick III of Denmark",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d8s0",
+      "title": "James Robbins (shipbuilder)",
+      "url": "https://trace.invalid/hotpotqa_5a83b4d35542996488c2e495_short/d8s0",
+      "text": "James Robbins, died 1680, was an English shipbuilder in Danish service who built Sophia Amalia and other ships for the Danish navy.",
+      "visible_time_s": 5.577999999994063,
+      "requested_subject": "",
+      "resolved_title": "James Robbins (shipbuilder)",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d10s0",
+      "title": "France–United Kingdom relations",
+      "url": "https://trace.invalid/hotpotqa_5a83b4d35542996488c2e495_short/d10s0",
+      "text": "France–United Kingdom relations are the relations between the governments of the French Republic and the United Kingdom of Great Britain and Northern Ireland (UK).",
+      "visible_time_s": 5.577999999994063,
+      "requested_subject": "",
+      "resolved_title": "France–United Kingdom relations",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d10s1",
+      "title": "France–United Kingdom relations",
+      "url": "https://trace.invalid/hotpotqa_5a83b4d35542996488c2e495_short/d10s1",
+      "text": "The historical ties between the two countries are long and complex, including conquest, wars, and alliances at various points in history.",
+      "visible_time_s": 5.577999999994063,
+      "requested_subject": "",
+      "resolved_title": "France–United Kingdom relations",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d10s2",
+      "title": "France–United Kingdom relations",
+      "url": "https://trace.invalid/hotpotqa_5a83b4d35542996488c2e495_short/d10s2",
+      "text": "The Roman era saw both areas, except Scotland and Northern Ireland, conquered by Rome, whose fortifications exist in both countries to this day, and whose writing system introduced a common alphabet to both areas; however, the language barrier remained.",
+      "visible_time_s": 5.577999999994063,
+      "requested_subject": "",
+      "resolved_title": "France–United Kingdom relations",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d10s3",
+      "title": "France–United Kingdom relations",
+      "url": "https://trace.invalid/hotpotqa_5a83b4d35542996488c2e495_short/d10s3",
+      "text": "The Norman conquest of England in 1066 decisively shaped English history, as well as the English language.",
+      "visible_time_s": 5.577999999994063,
+      "requested_subject": "",
+      "resolved_title": "France–United Kingdom relations",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d10s4",
+      "title": "France–United Kingdom relations",
+      "url": "https://trace.invalid/hotpotqa_5a83b4d35542996488c2e495_short/d10s4",
+      "text": "In the medieval period, the countries were often bitter enemies, with both nations' monarchs claiming control over France.",
+      "visible_time_s": 5.577999999994063,
+      "requested_subject": "",
+      "resolved_title": "France–United Kingdom relations",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d10s5",
+      "title": "France–United Kingdom relations",
+      "url": "https://trace.invalid/hotpotqa_5a83b4d35542996488c2e495_short/d10s5",
+      "text": "The Hundred Years' War stretched from 1337 to 1453 resulting in French victory.",
+      "visible_time_s": 5.577999999994063,
+      "requested_subject": "",
+      "resolved_title": "France–United Kingdom relations",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d10s6",
+      "title": "France–United Kingdom relations",
+      "url": "https://trace.invalid/hotpotqa_5a83b4d35542996488c2e495_short/d10s6",
+      "text": "Britain and France fought a series of five major wars , culminating in the Coalition victory over Napoleon in 1815.",
+      "visible_time_s": 5.577999999994063,
+      "requested_subject": "",
+      "resolved_title": "France–United Kingdom relations",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d10s7",
+      "title": "France–United Kingdom relations",
+      "url": "https://trace.invalid/hotpotqa_5a83b4d35542996488c2e495_short/d10s7",
+      "text": "After that there were some tensions, but peace generally prevailed and as the 19th century progressed, the relationship became better.",
+      "visible_time_s": 5.577999999994063,
+      "requested_subject": "",
+      "resolved_title": "France–United Kingdom relations",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d10s8",
+      "title": "France–United Kingdom relations",
+      "url": "https://trace.invalid/hotpotqa_5a83b4d35542996488c2e495_short/d10s8",
+      "text": "Closer ties between the two began with the 1904 Entente cordiale, particularly via the alliances in World War I and World War II, wherein both countries fought against Germany, and in the latter conflict British armies helped to liberate occupied France from the Nazis.",
+      "visible_time_s": 5.577999999994063,
+      "requested_subject": "",
+      "resolved_title": "France–United Kingdom relations",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d10s9",
+      "title": "France–United Kingdom relations",
+      "url": "https://trace.invalid/hotpotqa_5a83b4d35542996488c2e495_short/d10s9",
+      "text": "Both nations opposed the Soviet Union during the Cold War and were founding members of NATO.",
+      "visible_time_s": 5.577999999994063,
+      "requested_subject": "",
+      "resolved_title": "France–United Kingdom relations",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d10s10",
+      "title": "France–United Kingdom relations",
+      "url": "https://trace.invalid/hotpotqa_5a83b4d35542996488c2e495_short/d10s10",
+      "text": "In recent years the two countries have experienced a quite close relationship, especially on defence and foreign policy issues; the two countries tend, however, to disagree on a range of other matters, most notably the European Union.",
+      "visible_time_s": 5.577999999994063,
+      "requested_subject": "",
+      "resolved_title": "France–United Kingdom relations",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d10s11",
+      "title": "France–United Kingdom relations",
+      "url": "https://trace.invalid/hotpotqa_5a83b4d35542996488c2e495_short/d10s11",
+      "text": "The British press relishes the chance to refer to France and Britain as \"historic rivals\" or emphasize the perceived ever-lasting competition that still opposes the two countries.",
+      "visible_time_s": 5.577999999994063,
+      "requested_subject": "",
+      "resolved_title": "France–United Kingdom relations",
+      "entity_resolution": "unspecified"
+    }
+  ],
+  "searches": [
+    {
+      "query": "[scheduled evidence]",
+      "subject": "",
+      "status": "ok",
+      "returned_pages": [],
+      "mode": "trace",
+      "unit_id": "__scheduled_evidence__"
+    }
+  ],
+  "search_failures": [],
+  "llm_calls": [
+    {
+      "purpose": "feedback_generate",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 415,
+        "completion_tokens": 96,
+        "total_tokens": 511,
+        "prompt_tokens_details": {
+          "cached_tokens": 384
+        }
+      },
+      "latency_s": 1.5
+    },
+    {
+      "purpose": "feedback_verify",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 366,
+        "completion_tokens": 103,
+        "total_tokens": 469,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        }
+      },
+      "latency_s": 0.953
+    },
+    {
+      "purpose": "decompose",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 805,
+        "completion_tokens": 367,
+        "total_tokens": 1172,
+        "prompt_tokens_details": {
+          "cached_tokens": 768
+        }
+      },
+      "latency_s": 2.531
+    },
+    {
+      "purpose": "plan_review",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 1113,
+        "completion_tokens": 430,
+        "total_tokens": 1543,
+        "prompt_tokens_details": {
+          "cached_tokens": 896
+        }
+      },
+      "latency_s": 3.032
+    },
+    {
+      "purpose": "feedback_generate",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 415,
+        "completion_tokens": 71,
+        "total_tokens": 486,
+        "prompt_tokens_details": {
+          "cached_tokens": 384
+        }
+      },
+      "latency_s": 0.672
+    },
+    {
+      "purpose": "feedback_verify",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 365,
+        "completion_tokens": 87,
+        "total_tokens": 452,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        }
+      },
+      "latency_s": 0.86
+    },
+    {
+      "purpose": "judge",
+      "model": "tinker://f9e9a6c1-e203-5c2c-acdd-68fe67378ca4:train:0/sampler_weights/epoch-0001",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 7668,
+        "completion_tokens": 328,
+        "total_tokens": 7996,
+        "prompt_tokens_details": {
+          "cached_tokens": 1024
+        }
+      },
+      "latency_s": 1.891
+    },
+    {
+      "purpose": "generate",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 1064,
+        "completion_tokens": 102,
+        "total_tokens": 1166,
+        "prompt_tokens_details": {
+          "cached_tokens": 512
+        }
+      },
+      "latency_s": 0.969
+    },
+    {
+      "purpose": "verify",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 1457,
+        "completion_tokens": 144,
+        "total_tokens": 1601,
+        "prompt_tokens_details": {
+          "cached_tokens": 512
+        }
+      },
+      "latency_s": 2.328
+    }
+  ],
+  "search_diagnostics": [],
+  "output_enqueued_units": {
+    "u1": "Sophia Amalia",
+    "u2": "Frederick III",
+    "u3": "Denmark and Norway"
+  },
+  "events": [
+    {
+      "sequence": 0,
+      "time_s": 0.0,
+      "type": "feedback_requested",
+      "feedback_kind": "opening",
+      "execution_state": {
+        "stage": "planning",
+        "searches_started": 0,
+        "searches_completed": 0,
+        "active_searches": 0,
+        "evidence_count": 0,
+        "supported_units": 0,
+        "output_units": 0
+      }
+    },
+    {
+      "sequence": 1,
+      "time_s": 2.453,
+      "type": "utterance",
+      "action": "Backchannel",
+      "text": "I see you want to know which two countries the king ruled in 1648.",
+      "claims": [],
+      "feedback_source": "model",
+      "feedback_status_claim": "intent",
+      "feedback_fallback_reason": "",
+      "execution_state": {
+        "stage": "planning",
+        "searches_started": 0,
+        "searches_completed": 0,
+        "active_searches": 0,
+        "evidence_count": 0,
+        "supported_units": 0,
+        "output_units": 0
+      },
+      "language": "en"
+    },
+    {
+      "sequence": 2,
+      "time_s": 2.531,
+      "type": "decompose_reply",
+      "reply": {
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "Identify the wife after whom the ship Sophia Amalia was named",
+            "subject": "Sophia Amalia (ship)",
+            "necessary": true,
+            "depends_on": [],
+            "queries": [
+              "Sophia Amalia ship named after wife",
+              "Sophia Amalia ship namesake"
+            ]
+          },
+          {
+            "unit_id": "u2",
+            "description": "Identify the king who was married to the wife from u1",
+            "subject": "King {u1}",
+            "necessary": true,
+            "depends_on": [
+              "u1"
+            ],
+            "queries": [
+              "husband of {u1}",
+              "spouse of {u1} king"
+            ]
+          },
+          {
+            "unit_id": "u3",
+            "description": "Determine which two countries the king from u2 ruled in the year 1648",
+            "subject": "",
+            "necessary": true,
+            "depends_on": [
+              "u2"
+            ],
+            "queries": [
+              "{u2} territories 1648",
+              "{u2} ruled countries 1648"
+            ]
+          }
+        ]
+      },
+      "attempt": 1,
+      "repair": false
+    },
+    {
+      "sequence": 3,
+      "time_s": 2.531,
+      "type": "plan_review_requested",
+      "max_reviews": 1,
+      "question_only": true
+    },
+    {
+      "sequence": 4,
+      "time_s": 5.531,
+      "type": "feedback_requested",
+      "feedback_kind": "progress",
+      "execution_state": {
+        "stage": "planning",
+        "searches_started": 0,
+        "searches_completed": 0,
+        "active_searches": 0,
+        "evidence_count": 0,
+        "supported_units": 0,
+        "output_units": 0
+      }
+    },
+    {
+      "sequence": 5,
+      "time_s": 5.563,
+      "type": "plan_review_reply",
+      "reply": {
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "Identify the wife after whom the ship Sophia Amalia was named",
+            "subject": "Sophia Amalia (ship)",
+            "necessary": true,
+            "depends_on": [],
+            "queries": [
+              "Sophia Amalia ship named after wife",
+              "Sophia Amalia ship namesake"
+            ]
+          },
+          {
+            "unit_id": "u2",
+            "description": "Identify the king who was married to the wife from u1",
+            "subject": "King {u1}",
+            "necessary": true,
+            "depends_on": [
+              "u1"
+            ],
+            "queries": [
+              "husband of {u1}",
+              "spouse of {u1} king"
+            ]
+          },
+          {
+            "unit_id": "u3",
+            "description": "Determine which two countries the king from u2 ruled in the year 1648",
+            "subject": "King {u2}",
+            "necessary": true,
+            "depends_on": [
+              "u2"
+            ],
+            "queries": [
+              "{u2} territories 1648",
+              "{u2} ruled countries 1648"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "sequence": 6,
+      "time_s": 5.563,
+      "type": "plan_review_finished",
+      "changed": true,
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "Identify the wife after whom the ship Sophia Amalia was named",
+          "necessary": true,
+          "depends_on": [],
+          "queries": [
+            "Sophia Amalia ship named after wife",
+            "Sophia Amalia ship namesake"
+          ],
+          "subject": "Sophia Amalia (ship)"
+        },
+        {
+          "unit_id": "u2",
+          "description": "Identify the king who was married to the wife from u1",
+          "necessary": true,
+          "depends_on": [
+            "u1"
+          ],
+          "queries": [
+            "husband of {u1}",
+            "spouse of {u1} king"
+          ],
+          "subject": "King {u1}"
+        },
+        {
+          "unit_id": "u3",
+          "description": "Determine which two countries the king from u2 ruled in the year 1648",
+          "necessary": true,
+          "depends_on": [
+            "u2"
+          ],
+          "queries": [
+            "{u2} territories 1648",
+            "{u2} ruled countries 1648"
+          ],
+          "subject": "King {u2}"
+        }
+      ],
+      "question_only": true
+    },
+    {
+      "sequence": 7,
+      "time_s": 5.563,
+      "type": "plan",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "Identify the wife after whom the ship Sophia Amalia was named",
+          "necessary": true,
+          "depends_on": [],
+          "queries": [
+            "Sophia Amalia ship named after wife",
+            "Sophia Amalia ship namesake"
+          ],
+          "subject": "Sophia Amalia (ship)"
+        },
+        {
+          "unit_id": "u2",
+          "description": "Identify the king who was married to the wife from u1",
+          "necessary": true,
+          "depends_on": [
+            "u1"
+          ],
+          "queries": [
+            "husband of {u1}",
+            "spouse of {u1} king"
+          ],
+          "subject": "King {u1}"
+        },
+        {
+          "unit_id": "u3",
+          "description": "Determine which two countries the king from u2 ruled in the year 1648",
+          "necessary": true,
+          "depends_on": [
+            "u2"
+          ],
+          "queries": [
+            "{u2} territories 1648",
+            "{u2} ruled countries 1648"
+          ],
+          "subject": "King {u2}"
+        }
+      ]
+    },
+    {
+      "sequence": 8,
+      "time_s": 5.563,
+      "type": "trace_batch_requested"
+    },
+    {
+      "sequence": 9,
+      "time_s": 5.563,
+      "type": "search_finished",
+      "query": "[scheduled evidence]",
+      "subject": "",
+      "status": "ok",
+      "returned_pages": [],
+      "mode": "trace",
+      "unit_id": "__scheduled_evidence__"
+    },
+    {
+      "sequence": 10,
+      "time_s": 5.563,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d1s0",
+        "title": "Sophia Amalia Marschalk",
+        "url": "https://trace.invalid/hotpotqa_5a83b4d35542996488c2e495_short/d1s0",
+        "text": "Sophia Amalia Marschalk, also called Anna Marschalk, was a Danish noble and courtier.",
+        "visible_time_s": 5.562999999994645,
+        "requested_subject": "",
+        "resolved_title": "Sophia Amalia Marschalk",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 11,
+      "time_s": 5.563,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d1s1",
+        "title": "Sophia Amalia Marschalk",
+        "url": "https://trace.invalid/hotpotqa_5a83b4d35542996488c2e495_short/d1s1",
+        "text": "She was the favorite of the queen of Sweden, Ulrika Eleonora of Denmark.",
+        "visible_time_s": 5.562999999994645,
+        "requested_subject": "",
+        "resolved_title": "Sophia Amalia Marschalk",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 12,
+      "time_s": 5.563,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d3s0",
+        "title": "Malawi–Mozambique relations",
+        "url": "https://trace.invalid/hotpotqa_5a83b4d35542996488c2e495_short/d3s0",
+        "text": "Malawi–Mozambique relations refers to the current and historical relationship between the countries of Malawi and Mozambique.",
+        "visible_time_s": 5.562999999994645,
+        "requested_subject": "",
+        "resolved_title": "Malawi–Mozambique relations",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 13,
+      "time_s": 5.563,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d3s1",
+        "title": "Malawi–Mozambique relations",
+        "url": "https://trace.invalid/hotpotqa_5a83b4d35542996488c2e495_short/d3s1",
+        "text": "As Malawi shares a large border with Mozambique, much of the substance of their foreign relations pertain to the border separating the two nations.",
+        "visible_time_s": 5.562999999994645,
+        "requested_subject": "",
+        "resolved_title": "Malawi–Mozambique relations",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 14,
+      "time_s": 5.563,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d3s2",
+        "title": "Malawi–Mozambique relations",
+        "url": "https://trace.invalid/hotpotqa_5a83b4d35542996488c2e495_short/d3s2",
+        "text": "Both of the sovereign states have amicably agreed that lacustrine borders on Lake Malawi remain the largest priority between the two countries, as the exploitation of natural resources within the waters of Lake Malawi remain an issue the two countries continue to resolve.",
+        "visible_time_s": 5.562999999994645,
+        "requested_subject": "",
+        "resolved_title": "Malawi–Mozambique relations",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 15,
+      "time_s": 5.563,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d3s3",
+        "title": "Malawi–Mozambique relations",
+        "url": "https://trace.invalid/hotpotqa_5a83b4d35542996488c2e495_short/d3s3",
+        "text": "The moment considered an act of generosity and sympathy within the two countries relations is when, during the Mozambique Civil War, Malawi housed over one million Mozambican refugees between 1985 and 1995.",
+        "visible_time_s": 5.562999999994645,
+        "requested_subject": "",
+        "resolved_title": "Malawi–Mozambique relations",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 16,
+      "time_s": 5.563,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d3s4",
+        "title": "Malawi–Mozambique relations",
+        "url": "https://trace.invalid/hotpotqa_5a83b4d35542996488c2e495_short/d3s4",
+        "text": "After this gesture, Malawian relations with Mozambique crumbled under the tenure of Bingu wa Mutharika, notoriously reaching a nadir when Malawian police launched a raid into Mozambique's territory.",
+        "visible_time_s": 5.562999999994645,
+        "requested_subject": "",
+        "resolved_title": "Malawi–Mozambique relations",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 17,
+      "time_s": 5.563,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d5s0",
+        "title": "Reconquest of Angola",
+        "url": "https://trace.invalid/hotpotqa_5a83b4d35542996488c2e495_short/d5s0",
+        "text": "The Reconquest of Angola (Portuguese: \"Reconquista de Angola\" ) (1641-1648) was Portugal's campaign to regain its colony in Angola from the Dutch.",
+        "visible_time_s": 5.562999999994645,
+        "requested_subject": "",
+        "resolved_title": "Reconquest of Angola",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 18,
+      "time_s": 5.563,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d5s1",
+        "title": "Reconquest of Angola",
+        "url": "https://trace.invalid/hotpotqa_5a83b4d35542996488c2e495_short/d5s1",
+        "text": "In 1641 Johan Maurits sent an expedition under Admiral Cornelis Jol from Recife in Dutch Brazil to seize the Angolan capital of Luanda.",
+        "visible_time_s": 5.562999999994645,
+        "requested_subject": "",
+        "resolved_title": "Reconquest of Angola",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 19,
+      "time_s": 5.563,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d5s2",
+        "title": "Reconquest of Angola",
+        "url": "https://trace.invalid/hotpotqa_5a83b4d35542996488c2e495_short/d5s2",
+        "text": "The Dutch were able to easily capture Luanda in August as the Portuguese forces were occupied inland in a campaign against the Kingdom of Kongo.",
+        "visible_time_s": 5.562999999994645,
+        "requested_subject": "",
+        "resolved_title": "Reconquest of Angola",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 20,
+      "time_s": 5.563,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d5s3",
+        "title": "Reconquest of Angola",
+        "url": "https://trace.invalid/hotpotqa_5a83b4d35542996488c2e495_short/d5s3",
+        "text": "The two countries fought to a stalemate over Angola, until in 1648 the governor of Rio de Janeiro and Angola, Salvador de Sá, reached Luanda and finding the port defended by only 50 Dutch troops, regained it for Angola exactly seven years after its loss.",
+        "visible_time_s": 5.562999999994645,
+        "requested_subject": "",
+        "resolved_title": "Reconquest of Angola",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 21,
+      "time_s": 5.563,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d7s0",
+        "title": "HDMS Sophia Amalia",
+        "url": "https://trace.invalid/hotpotqa_5a83b4d35542996488c2e495_short/d7s0",
+        "text": "The Sophia Amalia was a ship of the Royal Dano-Norwegian Navy named after Sophia Amalia, the wife of King Frederick III.",
+        "visible_time_s": 5.562999999994645,
+        "requested_subject": "",
+        "resolved_title": "HDMS Sophia Amalia",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 22,
+      "time_s": 5.563,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d7s1",
+        "title": "HDMS Sophia Amalia",
+        "url": "https://trace.invalid/hotpotqa_5a83b4d35542996488c2e495_short/d7s1",
+        "text": "The ship was built at Hovedøen in Christiania under the direction of English shipbuilder James Robbins and was launched in 1650.",
+        "visible_time_s": 5.562999999994645,
+        "requested_subject": "",
+        "resolved_title": "HDMS Sophia Amalia",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 23,
+      "time_s": 5.563,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d7s2",
+        "title": "HDMS Sophia Amalia",
+        "url": "https://trace.invalid/hotpotqa_5a83b4d35542996488c2e495_short/d7s2",
+        "text": "She was 51.8 meters long and at that time one of the largest naval vessels in the world.",
+        "visible_time_s": 5.562999999994645,
+        "requested_subject": "",
+        "resolved_title": "HDMS Sophia Amalia",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 24,
+      "time_s": 5.563,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d7s3",
+        "title": "HDMS Sophia Amalia",
+        "url": "https://trace.invalid/hotpotqa_5a83b4d35542996488c2e495_short/d7s3",
+        "text": "She was commissioned by King Christian IV specifically to surpass the British ship  .",
+        "visible_time_s": 5.562999999994645,
+        "requested_subject": "",
+        "resolved_title": "HDMS Sophia Amalia",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 25,
+      "time_s": 5.563,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d7s4",
+        "title": "HDMS Sophia Amalia",
+        "url": "https://trace.invalid/hotpotqa_5a83b4d35542996488c2e495_short/d7s4",
+        "text": "The ship was manned by a crew of 680 and had an armament of 108 guns, surpassing \"Sovereign of the Seas\" by eight guns.",
+        "visible_time_s": 5.562999999994645,
+        "requested_subject": "",
+        "resolved_title": "HDMS Sophia Amalia",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 26,
+      "time_s": 5.563,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d9s0",
+        "title": "Covered interest arbitrage",
+        "url": "https://trace.invalid/hotpotqa_5a83b4d35542996488c2e495_short/d9s0",
+        "text": "Covered interest arbitrage is an arbitrage trading strategy whereby an investor capitalizes on the interest rate differential between two countries by using a forward contract to \"cover\" (eliminate exposure to) exchange rate risk.",
+        "visible_time_s": 5.562999999994645,
+        "requested_subject": "",
+        "resolved_title": "Covered interest arbitrage",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 27,
+      "time_s": 5.563,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d9s1",
+        "title": "Covered interest arbitrage",
+        "url": "https://trace.invalid/hotpotqa_5a83b4d35542996488c2e495_short/d9s1",
+        "text": "Using forward contracts enables arbitrageurs such as individual investors or banks to make use of the forward premium (or discount) to earn a riskless profit from discrepancies between two countries' interest rates.",
+        "visible_time_s": 5.562999999994645,
+        "requested_subject": "",
+        "resolved_title": "Covered interest arbitrage",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 28,
+      "time_s": 5.563,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d9s2",
+        "title": "Covered interest arbitrage",
+        "url": "https://trace.invalid/hotpotqa_5a83b4d35542996488c2e495_short/d9s2",
+        "text": "The opportunity to earn riskless profits arises from the reality that the interest rate parity condition does not constantly hold.",
+        "visible_time_s": 5.562999999994645,
+        "requested_subject": "",
+        "resolved_title": "Covered interest arbitrage",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 29,
+      "time_s": 5.563,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d9s3",
+        "title": "Covered interest arbitrage",
+        "url": "https://trace.invalid/hotpotqa_5a83b4d35542996488c2e495_short/d9s3",
+        "text": "When spot and forward exchange rate markets are not in a state of equilibrium, investors will no longer be indifferent among the available interest rates in two countries and will invest in whichever currency offers a higher rate of return.",
+        "visible_time_s": 5.562999999994645,
+        "requested_subject": "",
+        "resolved_title": "Covered interest arbitrage",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 30,
+      "time_s": 5.563,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d9s4",
+        "title": "Covered interest arbitrage",
+        "url": "https://trace.invalid/hotpotqa_5a83b4d35542996488c2e495_short/d9s4",
+        "text": "Economists have discovered various factors which affect the occurrence of deviations from covered interest rate parity and the fleeting nature of covered interest arbitrage opportunities, such as differing characteristics of assets, varying frequencies of time series data, and the transaction costs associated with arbitrage trading strategies.",
+        "visible_time_s": 5.562999999994645,
+        "requested_subject": "",
+        "resolved_title": "Covered interest arbitrage",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 31,
+      "time_s": 5.563,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d2s0",
+        "title": "Saudi Arabia–United States relations",
+        "url": "https://trace.invalid/hotpotqa_5a83b4d35542996488c2e495_short/d2s0",
+        "text": "Bilateral relations between the Kingdom of Saudi Arabia and the United States began in 1933 when full diplomatic relations were established.",
+        "visible_time_s": 5.562999999994645,
+        "requested_subject": "",
+        "resolved_title": "Saudi Arabia–United States relations",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 32,
+      "time_s": 5.563,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d2s1",
+        "title": "Saudi Arabia–United States relations",
+        "url": "https://trace.invalid/hotpotqa_5a83b4d35542996488c2e495_short/d2s1",
+        "text": "Despite the differences between the two countries—an ultraconservative Islamic absolute monarchy, and a secular, democratic republic—the two countries have been allies.",
+        "visible_time_s": 5.562999999994645,
+        "requested_subject": "",
+        "resolved_title": "Saudi Arabia–United States relations",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 33,
+      "time_s": 5.563,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d2s2",
+        "title": "Saudi Arabia–United States relations",
+        "url": "https://trace.invalid/hotpotqa_5a83b4d35542996488c2e495_short/d2s2",
+        "text": "In recent years, the two countries have occasionally been described as having a \"Special Relationship\" with one another.",
+        "visible_time_s": 5.562999999994645,
+        "requested_subject": "",
+        "resolved_title": "Saudi Arabia–United States relations",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 34,
+      "time_s": 5.563,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d2s3",
+        "title": "Saudi Arabia–United States relations",
+        "url": "https://trace.invalid/hotpotqa_5a83b4d35542996488c2e495_short/d2s3",
+        "text": "Former Presidents George W. Bush and Barack Obama have close and strong relations with senior members of the Saudi Royal Family.",
+        "visible_time_s": 5.562999999994645,
+        "requested_subject": "",
+        "resolved_title": "Saudi Arabia–United States relations",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 35,
+      "time_s": 5.563,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d4s0",
+        "title": "Uruguay River pulp mill dispute",
+        "url": "https://trace.invalid/hotpotqa_5a83b4d35542996488c2e495_short/d4s0",
+        "text": "The pulp mill dispute was a dispute between Argentina and Uruguay concerning the construction of pulp mills on the Uruguay River.",
+        "visible_time_s": 5.562999999994645,
+        "requested_subject": "",
+        "resolved_title": "Uruguay River pulp mill dispute",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 36,
+      "time_s": 5.578,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d4s1",
+        "title": "Uruguay River pulp mill dispute",
+        "url": "https://trace.invalid/hotpotqa_5a83b4d35542996488c2e495_short/d4s1",
+        "text": "The presidents at the time were Néstor Kirchner (Argentina) and Tabaré Vázquez (Uruguay).",
+        "visible_time_s": 5.577999999994063,
+        "requested_subject": "",
+        "resolved_title": "Uruguay River pulp mill dispute",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 37,
+      "time_s": 5.578,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d4s2",
+        "title": "Uruguay River pulp mill dispute",
+        "url": "https://trace.invalid/hotpotqa_5a83b4d35542996488c2e495_short/d4s2",
+        "text": "As a diplomatic, economic, and public relations conflict between both parties, the dispute has also affected tourism and transportation as well as the otherwise amicable relations between the two countries.",
+        "visible_time_s": 5.577999999994063,
+        "requested_subject": "",
+        "resolved_title": "Uruguay River pulp mill dispute",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 38,
+      "time_s": 5.578,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d4s3",
+        "title": "Uruguay River pulp mill dispute",
+        "url": "https://trace.invalid/hotpotqa_5a83b4d35542996488c2e495_short/d4s3",
+        "text": "The feud was unprecedented between the two countries, which have shared historical and cultural ties.",
+        "visible_time_s": 5.577999999994063,
+        "requested_subject": "",
+        "resolved_title": "Uruguay River pulp mill dispute",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 39,
+      "time_s": 5.578,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d4s4",
+        "title": "Uruguay River pulp mill dispute",
+        "url": "https://trace.invalid/hotpotqa_5a83b4d35542996488c2e495_short/d4s4",
+        "text": "Proceedings were brought before the International Court of Justice as a case formally named Pulp Mills on the River Uruguay \"(Argentina v. Uruguay)\".",
+        "visible_time_s": 5.577999999994063,
+        "requested_subject": "",
+        "resolved_title": "Uruguay River pulp mill dispute",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 40,
+      "time_s": 5.578,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d4s5",
+        "title": "Uruguay River pulp mill dispute",
+        "url": "https://trace.invalid/hotpotqa_5a83b4d35542996488c2e495_short/d4s5",
+        "text": "It ruled that, although Uruguay failed to inform Argentina of the operations, it did not pollute the river, so closing the pulp mill would be unjustified.",
+        "visible_time_s": 5.577999999994063,
+        "requested_subject": "",
+        "resolved_title": "Uruguay River pulp mill dispute",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 41,
+      "time_s": 5.578,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d4s6",
+        "title": "Uruguay River pulp mill dispute",
+        "url": "https://trace.invalid/hotpotqa_5a83b4d35542996488c2e495_short/d4s6",
+        "text": "The conflict ended in 2010, during the presidencies of Cristina Fernández de Kirchner (Argentina) and José Mujica (Uruguay), with the establishment of a joint coordination of the activities in the river.",
+        "visible_time_s": 5.577999999994063,
+        "requested_subject": "",
+        "resolved_title": "Uruguay River pulp mill dispute",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 42,
+      "time_s": 5.578,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d6s0",
+        "title": "Frederick III of Denmark",
+        "url": "https://trace.invalid/hotpotqa_5a83b4d35542996488c2e495_short/d6s0",
+        "text": "Frederick III (Danish: \"Frederik\" ; 18 March 1609 – 9 February 1670) was king of Denmark and Norway from 1648 until his death in 1670.",
+        "visible_time_s": 5.577999999994063,
+        "requested_subject": "",
+        "resolved_title": "Frederick III of Denmark",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 43,
+      "time_s": 5.578,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d6s1",
+        "title": "Frederick III of Denmark",
+        "url": "https://trace.invalid/hotpotqa_5a83b4d35542996488c2e495_short/d6s1",
+        "text": "He also governed under the name Frederick II as diocesan administrator (colloquially referred to as prince-bishop) of the Prince-Bishopric of Verden (1623–29 and again 1634–44), and the Prince-Archbishopric of Bremen (1635–45).",
+        "visible_time_s": 5.577999999994063,
+        "requested_subject": "",
+        "resolved_title": "Frederick III of Denmark",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 44,
+      "time_s": 5.578,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d8s0",
+        "title": "James Robbins (shipbuilder)",
+        "url": "https://trace.invalid/hotpotqa_5a83b4d35542996488c2e495_short/d8s0",
+        "text": "James Robbins, died 1680, was an English shipbuilder in Danish service who built Sophia Amalia and other ships for the Danish navy.",
+        "visible_time_s": 5.577999999994063,
+        "requested_subject": "",
+        "resolved_title": "James Robbins (shipbuilder)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 45,
+      "time_s": 5.578,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d10s0",
+        "title": "France–United Kingdom relations",
+        "url": "https://trace.invalid/hotpotqa_5a83b4d35542996488c2e495_short/d10s0",
+        "text": "France–United Kingdom relations are the relations between the governments of the French Republic and the United Kingdom of Great Britain and Northern Ireland (UK).",
+        "visible_time_s": 5.577999999994063,
+        "requested_subject": "",
+        "resolved_title": "France–United Kingdom relations",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 46,
+      "time_s": 5.578,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d10s1",
+        "title": "France–United Kingdom relations",
+        "url": "https://trace.invalid/hotpotqa_5a83b4d35542996488c2e495_short/d10s1",
+        "text": "The historical ties between the two countries are long and complex, including conquest, wars, and alliances at various points in history.",
+        "visible_time_s": 5.577999999994063,
+        "requested_subject": "",
+        "resolved_title": "France–United Kingdom relations",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 47,
+      "time_s": 5.578,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d10s2",
+        "title": "France–United Kingdom relations",
+        "url": "https://trace.invalid/hotpotqa_5a83b4d35542996488c2e495_short/d10s2",
+        "text": "The Roman era saw both areas, except Scotland and Northern Ireland, conquered by Rome, whose fortifications exist in both countries to this day, and whose writing system introduced a common alphabet to both areas; however, the language barrier remained.",
+        "visible_time_s": 5.577999999994063,
+        "requested_subject": "",
+        "resolved_title": "France–United Kingdom relations",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 48,
+      "time_s": 5.578,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d10s3",
+        "title": "France–United Kingdom relations",
+        "url": "https://trace.invalid/hotpotqa_5a83b4d35542996488c2e495_short/d10s3",
+        "text": "The Norman conquest of England in 1066 decisively shaped English history, as well as the English language.",
+        "visible_time_s": 5.577999999994063,
+        "requested_subject": "",
+        "resolved_title": "France–United Kingdom relations",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 49,
+      "time_s": 5.578,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d10s4",
+        "title": "France–United Kingdom relations",
+        "url": "https://trace.invalid/hotpotqa_5a83b4d35542996488c2e495_short/d10s4",
+        "text": "In the medieval period, the countries were often bitter enemies, with both nations' monarchs claiming control over France.",
+        "visible_time_s": 5.577999999994063,
+        "requested_subject": "",
+        "resolved_title": "France–United Kingdom relations",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 50,
+      "time_s": 5.578,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d10s5",
+        "title": "France–United Kingdom relations",
+        "url": "https://trace.invalid/hotpotqa_5a83b4d35542996488c2e495_short/d10s5",
+        "text": "The Hundred Years' War stretched from 1337 to 1453 resulting in French victory.",
+        "visible_time_s": 5.577999999994063,
+        "requested_subject": "",
+        "resolved_title": "France–United Kingdom relations",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 51,
+      "time_s": 5.578,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d10s6",
+        "title": "France–United Kingdom relations",
+        "url": "https://trace.invalid/hotpotqa_5a83b4d35542996488c2e495_short/d10s6",
+        "text": "Britain and France fought a series of five major wars , culminating in the Coalition victory over Napoleon in 1815.",
+        "visible_time_s": 5.577999999994063,
+        "requested_subject": "",
+        "resolved_title": "France–United Kingdom relations",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 52,
+      "time_s": 5.578,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d10s7",
+        "title": "France–United Kingdom relations",
+        "url": "https://trace.invalid/hotpotqa_5a83b4d35542996488c2e495_short/d10s7",
+        "text": "After that there were some tensions, but peace generally prevailed and as the 19th century progressed, the relationship became better.",
+        "visible_time_s": 5.577999999994063,
+        "requested_subject": "",
+        "resolved_title": "France–United Kingdom relations",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 53,
+      "time_s": 5.578,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d10s8",
+        "title": "France–United Kingdom relations",
+        "url": "https://trace.invalid/hotpotqa_5a83b4d35542996488c2e495_short/d10s8",
+        "text": "Closer ties between the two began with the 1904 Entente cordiale, particularly via the alliances in World War I and World War II, wherein both countries fought against Germany, and in the latter conflict British armies helped to liberate occupied France from the Nazis.",
+        "visible_time_s": 5.577999999994063,
+        "requested_subject": "",
+        "resolved_title": "France–United Kingdom relations",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 54,
+      "time_s": 5.578,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d10s9",
+        "title": "France–United Kingdom relations",
+        "url": "https://trace.invalid/hotpotqa_5a83b4d35542996488c2e495_short/d10s9",
+        "text": "Both nations opposed the Soviet Union during the Cold War and were founding members of NATO.",
+        "visible_time_s": 5.577999999994063,
+        "requested_subject": "",
+        "resolved_title": "France–United Kingdom relations",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 55,
+      "time_s": 5.578,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d10s10",
+        "title": "France–United Kingdom relations",
+        "url": "https://trace.invalid/hotpotqa_5a83b4d35542996488c2e495_short/d10s10",
+        "text": "In recent years the two countries have experienced a quite close relationship, especially on defence and foreign policy issues; the two countries tend, however, to disagree on a range of other matters, most notably the European Union.",
+        "visible_time_s": 5.577999999994063,
+        "requested_subject": "",
+        "resolved_title": "France–United Kingdom relations",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 56,
+      "time_s": 5.578,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d10s11",
+        "title": "France–United Kingdom relations",
+        "url": "https://trace.invalid/hotpotqa_5a83b4d35542996488c2e495_short/d10s11",
+        "text": "The British press relishes the chance to refer to France and Britain as \"historic rivals\" or emphasize the perceived ever-lasting competition that still opposes the two countries.",
+        "visible_time_s": 5.577999999994063,
+        "requested_subject": "",
+        "resolved_title": "France–United Kingdom relations",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 57,
+      "time_s": 7.063,
+      "type": "utterance",
+      "action": "Progress",
+      "text": "I'm planning the steps to find the king's two realms in 1648.",
+      "claims": [],
+      "feedback_source": "model",
+      "feedback_status_claim": "processing",
+      "feedback_fallback_reason": "",
+      "execution_state": {
+        "stage": "checking",
+        "searches_started": 1,
+        "searches_completed": 1,
+        "active_searches": 0,
+        "evidence_count": 47,
+        "supported_units": 0,
+        "output_units": 0
+      },
+      "language": "en"
+    },
+    {
+      "sequence": 58,
+      "time_s": 7.469,
+      "type": "judge_reply",
+      "reply": {
+        "judgments": [
+          {
+            "unit_id": "u1",
+            "label": "SUPPORTED",
+            "value": "Sophia Amalia",
+            "citations": [
+              "d7s0"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d7s0",
+                "text": "The Sophia Amalia was a ship of the Royal Dano-Norwegian Navy named after Sophia Amalia, the wife of King Frederick III."
+              }
+            ],
+            "reason": "Supported by the cited visible sentences and dependencies."
+          },
+          {
+            "unit_id": "u2",
+            "label": "SUPPORTED",
+            "value": "Frederick III",
+            "citations": [
+              "d6s0"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d6s0",
+                "text": "Frederick III (Danish: \"Frederik\" ; 18 March 1609 – 9 February 1670) was king of Denmark and Norway from 1648 until his death in 1670."
+              }
+            ],
+            "reason": "Supported by the cited visible sentences and dependencies."
+          },
+          {
+            "unit_id": "u3",
+            "label": "SUPPORTED",
+            "value": "Denmark and Norway",
+            "citations": [
+              "d6s0"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d6s0",
+                "text": "Frederick III (Danish: \"Frederik\" ; 18 March 1609 – 9 February 1670) was king of Denmark and Norway from 1648 until his death in 1670."
+              }
+            ],
+            "reason": "Supported by the cited visible sentences and dependencies."
+          }
+        ]
+      },
+      "attempt": 1,
+      "repair": false,
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d1s1",
+        "d3s0",
+        "d3s1",
+        "d3s2",
+        "d3s3",
+        "d3s4",
+        "d5s0",
+        "d5s1",
+        "d5s2",
+        "d5s3",
+        "d7s0",
+        "d7s1",
+        "d7s2",
+        "d7s3",
+        "d7s4",
+        "d9s0",
+        "d9s1",
+        "d9s2",
+        "d9s3",
+        "d9s4",
+        "d2s0",
+        "d2s1",
+        "d2s2",
+        "d2s3",
+        "d4s0",
+        "d4s1",
+        "d4s2",
+        "d4s3",
+        "d4s4",
+        "d4s5",
+        "d4s6",
+        "d6s0",
+        "d6s1",
+        "d8s0",
+        "d10s0",
+        "d10s1",
+        "d10s2",
+        "d10s3",
+        "d10s4",
+        "d10s5",
+        "d10s6",
+        "d10s7",
+        "d10s8",
+        "d10s9",
+        "d10s10",
+        "d10s11"
+      ]
+    },
+    {
+      "sequence": 59,
+      "time_s": 7.469,
+      "type": "judgments",
+      "judgments": {
+        "u1": {
+          "label": "SUPPORTED",
+          "value": "Sophia Amalia",
+          "citations": [
+            "d7s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d7s0",
+              "text": "The Sophia Amalia was a ship of the Royal Dano-Norwegian Navy named after Sophia Amalia, the wife of King Frederick III."
+            }
+          ],
+          "reason": "Supported by the cited visible sentences and dependencies."
+        },
+        "u2": {
+          "label": "SUPPORTED",
+          "value": "Frederick III",
+          "citations": [
+            "d6s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d6s0",
+              "text": "Frederick III (Danish: \"Frederik\" ; 18 March 1609 – 9 February 1670) was king of Denmark and Norway from 1648 until his death in 1670."
+            }
+          ],
+          "reason": "Supported by the cited visible sentences and dependencies."
+        },
+        "u3": {
+          "label": "SUPPORTED",
+          "value": "Denmark and Norway",
+          "citations": [
+            "d6s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d6s0",
+              "text": "Frederick III (Danish: \"Frederik\" ; 18 March 1609 – 9 February 1670) was king of Denmark and Norway from 1648 until his death in 1670."
+            }
+          ],
+          "reason": "Supported by the cited visible sentences and dependencies."
+        }
+      },
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d1s1",
+        "d3s0",
+        "d3s1",
+        "d3s2",
+        "d3s3",
+        "d3s4",
+        "d5s0",
+        "d5s1",
+        "d5s2",
+        "d5s3",
+        "d7s0",
+        "d7s1",
+        "d7s2",
+        "d7s3",
+        "d7s4",
+        "d9s0",
+        "d9s1",
+        "d9s2",
+        "d9s3",
+        "d9s4",
+        "d2s0",
+        "d2s1",
+        "d2s2",
+        "d2s3",
+        "d4s0",
+        "d4s1",
+        "d4s2",
+        "d4s3",
+        "d4s4",
+        "d4s5",
+        "d4s6",
+        "d6s0",
+        "d6s1",
+        "d8s0",
+        "d10s0",
+        "d10s1",
+        "d10s2",
+        "d10s3",
+        "d10s4",
+        "d10s5",
+        "d10s6",
+        "d10s7",
+        "d10s8",
+        "d10s9",
+        "d10s10",
+        "d10s11"
+      ],
+      "semantic_review": false
+    },
+    {
+      "sequence": 60,
+      "time_s": 10.766,
+      "type": "verification_reply",
+      "reply": {
+        "approved": true,
+        "facts_valid": true,
+        "expressed_unit_ids": [
+          "u1",
+          "u2",
+          "u3"
+        ],
+        "reason": "All stated facts match the approved evidence and no extra claims are made."
+      },
+      "output_unit_ids": [
+        "u1",
+        "u2",
+        "u3"
+      ],
+      "output_action": "Final Answer",
+      "dependency_unit_ids": [],
+      "evidence_snapshot_ids": [
+        "d7s0",
+        "d6s0"
+      ]
+    },
+    {
+      "sequence": 61,
+      "time_s": 10.766,
+      "type": "utterance",
+      "action": "Final Answer",
+      "text": "The ship Sophia Amalia was named after Sophia Amalia. Her husband was King Frederick III. In 1648, Frederick III ruled Denmark and Norway.",
+      "claims": [
+        {
+          "unit_id": "u1",
+          "description": "Identify the wife after whom the ship Sophia Amalia was named",
+          "value": "Sophia Amalia",
+          "citations": [
+            "d7s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d7s0",
+              "text": "The Sophia Amalia was a ship of the Royal Dano-Norwegian Navy named after Sophia Amalia, the wife of King Frederick III."
+            }
+          ]
+        },
+        {
+          "unit_id": "u2",
+          "description": "Identify the king who was married to the wife from u1",
+          "value": "Frederick III",
+          "citations": [
+            "d6s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d6s0",
+              "text": "Frederick III (Danish: \"Frederik\" ; 18 March 1609 – 9 February 1670) was king of Denmark and Norway from 1648 until his death in 1670."
+            }
+          ]
+        },
+        {
+          "unit_id": "u3",
+          "description": "Determine which two countries the king from u2 ruled in the year 1648",
+          "value": "Denmark and Norway",
+          "citations": [
+            "d6s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d6s0",
+              "text": "Frederick III (Danish: \"Frederik\" ; 18 March 1609 – 9 February 1670) was king of Denmark and Norway from 1648 until his death in 1670."
+            }
+          ]
+        }
+      ],
+      "unresolved": [],
+      "fallback": false,
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d1s1",
+        "d3s0",
+        "d3s1",
+        "d3s2",
+        "d3s3",
+        "d3s4",
+        "d5s0",
+        "d5s1",
+        "d5s2",
+        "d5s3",
+        "d7s0",
+        "d7s1",
+        "d7s2",
+        "d7s3",
+        "d7s4",
+        "d9s0",
+        "d9s1",
+        "d9s2",
+        "d9s3",
+        "d9s4",
+        "d2s0",
+        "d2s1",
+        "d2s2",
+        "d2s3",
+        "d4s0",
+        "d4s1",
+        "d4s2",
+        "d4s3",
+        "d4s4",
+        "d4s5",
+        "d4s6",
+        "d6s0",
+        "d6s1",
+        "d8s0",
+        "d10s0",
+        "d10s1",
+        "d10s2",
+        "d10s3",
+        "d10s4",
+        "d10s5",
+        "d10s6",
+        "d10s7",
+        "d10s8",
+        "d10s9",
+        "d10s10",
+        "d10s11"
+      ],
+      "language": "en"
+    },
+    {
+      "sequence": 62,
+      "time_s": 10.766,
+      "type": "finished",
+      "status": "complete"
+    }
+  ],
+  "note": "Prototype model judgments are not independent gold scores. Output event times are not spoken claim times.",
+  "evidence_mode": "scheduled_trace",
+  "audio": {
+    "enabled": true,
+    "mode": "windows",
+    "play": false,
+    "status": "ok",
+    "errors": [],
+    "records": [
+      {
+        "event_sequence": 1,
+        "sentence_index": 1,
+        "sentence_count": 1,
+        "language": "en",
+        "text": "I see you want to know which two countries the king ruled in 1648.",
+        "action": "Backchannel",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 2.4689999999973224,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1-continued\\samples\\0560\\audio\\segments\\0001_01.wav",
+        "duration_s": 5.818412698412699,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 3.2810000000026776,
+        "synthesis_and_playback_s": 0.8120000000053551
+      },
+      {
+        "event_sequence": 57,
+        "sentence_index": 1,
+        "sentence_count": 1,
+        "language": "en",
+        "text": "I'm planning the steps to find the king's two realms in 1648.",
+        "action": "Progress",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 7.062999999994645,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1-continued\\samples\\0560\\audio\\segments\\0057_01.wav",
+        "duration_s": 5.758367346938775,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 7.875,
+        "synthesis_and_playback_s": 0.8120000000053551
+      },
+      {
+        "event_sequence": 61,
+        "sentence_index": 1,
+        "sentence_count": 3,
+        "language": "en",
+        "text": "The ship Sophia Amalia was named after Sophia Amalia.",
+        "action": "Final Answer",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 10.76600000000326,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1-continued\\samples\\0560\\audio\\segments\\0061_01.wav",
+        "duration_s": 4.0836281179138325,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 11.562999999994645,
+        "synthesis_and_playback_s": 0.7969999999913853
+      },
+      {
+        "event_sequence": 61,
+        "sentence_index": 2,
+        "sentence_count": 3,
+        "language": "en",
+        "text": "Her husband was King Frederick III.",
+        "action": "Final Answer",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 11.562999999994645,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1-continued\\samples\\0560\\audio\\segments\\0061_02.wav",
+        "duration_s": 2.7141043083900227,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 12.360000000000582,
+        "synthesis_and_playback_s": 0.7970000000059372
+      },
+      {
+        "event_sequence": 61,
+        "sentence_index": 3,
+        "sentence_count": 3,
+        "language": "en",
+        "text": "In 1648, Frederick III ruled Denmark and Norway.",
+        "action": "Final Answer",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 12.360000000000582,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1-continued\\samples\\0560\\audio\\segments\\0061_03.wav",
+        "duration_s": 5.613560090702948,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 13.156000000002678,
+        "synthesis_and_playback_s": 0.7960000000020955
+      }
+    ],
+    "wave": {
+      "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1-continued\\samples\\0560\\audio\\response.wav",
+      "duration_s": 27.26907029478458,
+      "timeline": [
+        {
+          "event_sequence": 1,
+          "sentence_index": 1,
+          "action": "Backchannel",
+          "text": "I see you want to know which two countries the king ruled in 1648.",
+          "wave_start_s": 3.2809977324263038,
+          "wave_end_s": 9.099410430839002
+        },
+        {
+          "event_sequence": 57,
+          "sentence_index": 1,
+          "action": "Progress",
+          "text": "I'm planning the steps to find the king's two realms in 1648.",
+          "wave_start_s": 9.099410430839002,
+          "wave_end_s": 14.857777777777779
+        },
+        {
+          "event_sequence": 61,
+          "sentence_index": 1,
+          "action": "Final Answer",
+          "text": "The ship Sophia Amalia was named after Sophia Amalia.",
+          "wave_start_s": 14.857777777777779,
+          "wave_end_s": 18.94140589569161
+        },
+        {
+          "event_sequence": 61,
+          "sentence_index": 2,
+          "action": "Final Answer",
+          "text": "Her husband was King Frederick III.",
+          "wave_start_s": 18.94140589569161,
+          "wave_end_s": 21.655510204081633
+        },
+        {
+          "event_sequence": 61,
+          "sentence_index": 3,
+          "action": "Final Answer",
+          "text": "In 1648, Frederick III ruled Denmark and Norway.",
+          "wave_start_s": 21.655510204081633,
+          "wave_end_s": 27.26907029478458
+        }
+      ]
+    }
+  },
+  "evaluation": {
+    "mode": "b_final_revised_trace",
+    "trace_id": "hotpotqa_5a83b4d35542996488c2e495_short",
+    "sample_id": "hotpotqa_5a83b4d35542996488c2e495",
+    "total_wall_s": 13.156000000002678,
+    "question_timeout_s": 180,
+    "audio_enabled": true,
+    "history_enabled": false,
+    "text_pipeline_wall_s": 10.76600000000326,
+    "effective_settings": {
+      "base_url": "https://tinker.thinkingmachines.dev/services/tinker-prod/oai/api/v1",
+      "model": "openai/gpt-oss-120b",
+      "judge_model": "tinker://f9e9a6c1-e203-5c2c-acdd-68fe67378ca4:train:0/sampler_weights/epoch-0001",
+      "judge_reasoning_effort": "low",
+      "wiki_language": "en",
+      "user_agent": "CascadeSystem/0.1 (educational research prototype)",
+      "timeout_s": 45.0,
+      "max_tokens": 4096,
+      "reasoning_effort": "low",
+      "progress_s": 3.0,
+      "feedback_timeout_s": 6.0,
+      "search_limit": 3,
+      "max_units": 8,
+      "max_searches": 16,
+      "max_sources": 47,
+      "source_chars": 345,
+      "evidence_chars": 7446,
+      "concurrency": 3
+    },
+    "timing_kind": "unknown",
+    "scheduler": "wall-paced fixed B arrivals",
+    "split": "eval_reserved",
+    "empty_evidence_sentences_ignored": 0
+  }
+}

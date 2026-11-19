@@ -1,0 +1,424 @@
+{
+  "question": "Who is Margaret Fiennes, 11Th Baroness Dacre's paternal grandfather?",
+  "resolved_question": "Who is Margaret Fiennes, 11Th Baroness Dacre's paternal grandfather?",
+  "used_history_turn_ids": [],
+  "response_language": "en",
+  "status": "error",
+  "clock": "wall_monotonic",
+  "time_origin": "question_text_ready_after_optional_asr",
+  "model": "openai/gpt-oss-120b",
+  "units": [],
+  "judgments": {},
+  "evidence": [],
+  "searches": [],
+  "search_failures": [],
+  "llm_calls": [
+    {
+      "purpose": "feedback_generate",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 410,
+        "completion_tokens": 68,
+        "total_tokens": 478,
+        "prompt_tokens_details": {
+          "cached_tokens": 384
+        }
+      },
+      "latency_s": 1.276262
+    },
+    {
+      "purpose": "decompose",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 800,
+        "completion_tokens": 343,
+        "total_tokens": 1143,
+        "prompt_tokens_details": {
+          "cached_tokens": 768
+        }
+      },
+      "latency_s": 1.816604
+    },
+    {
+      "purpose": "feedback_verify",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 373,
+        "completion_tokens": 77,
+        "total_tokens": 450,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        }
+      },
+      "latency_s": 0.612154
+    },
+    {
+      "purpose": "plan_review",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 1116,
+        "completion_tokens": 612,
+        "total_tokens": 1728,
+        "prompt_tokens_details": {
+          "cached_tokens": 896
+        }
+      },
+      "latency_s": 3.287935
+    },
+    {
+      "purpose": "feedback_generate",
+      "model": "openai/gpt-oss-120b",
+      "status": "cancelled",
+      "latency_s": 0.081469
+    }
+  ],
+  "search_diagnostics": [],
+  "output_enqueued_units": {},
+  "events": [
+    {
+      "sequence": 0,
+      "time_s": 0.000473,
+      "type": "feedback_requested",
+      "feedback_kind": "opening",
+      "execution_state": {
+        "stage": "planning",
+        "searches_started": 0,
+        "searches_completed": 0,
+        "active_searches": 0,
+        "evidence_count": 0,
+        "supported_units": 0,
+        "output_units": 0
+      }
+    },
+    {
+      "sequence": 1,
+      "time_s": 1.817044,
+      "type": "decompose_reply",
+      "reply": {
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "Margaret Fiennes, 11th Baroness Dacre",
+            "subject": "Margaret Fiennes, 11th Baroness Dacre",
+            "necessary": false,
+            "depends_on": [],
+            "queries": [
+              "Margaret Fiennes, 11th Baroness Dacre",
+              "Margaret Fiennes"
+            ]
+          },
+          {
+            "unit_id": "u2",
+            "description": "father of {u1}",
+            "subject": "Margaret Fiennes, 11th Baroness Dacre",
+            "necessary": false,
+            "depends_on": [
+              "u1"
+            ],
+            "queries": [
+              "Margaret Fiennes father",
+              "Margaret Fiennes parent"
+            ]
+          },
+          {
+            "unit_id": "u3",
+            "description": "paternal grandfather of {u1}",
+            "subject": "Margaret Fiennes, 11th Baroness Dacre",
+            "necessary": true,
+            "depends_on": [
+              "u2"
+            ],
+            "queries": [
+              "father of Margaret Fiennes father",
+              "paternal grandfather of Margaret Fiennes"
+            ]
+          }
+        ]
+      },
+      "attempt": 1,
+      "repair": false
+    },
+    {
+      "sequence": 2,
+      "time_s": 1.819136,
+      "type": "protocol_validation_failed",
+      "stage": "decompose",
+      "attempt": 1,
+      "error": "Placeholders must name explicit dependencies"
+    },
+    {
+      "sequence": 3,
+      "time_s": 1.819258,
+      "type": "protocol_normalized",
+      "stage": "decompose",
+      "changes": [
+        {
+          "unit_id": "u3",
+          "added_dependencies": [
+            "u1"
+          ]
+        }
+      ],
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "Margaret Fiennes, 11th Baroness Dacre",
+          "necessary": false,
+          "depends_on": [],
+          "queries": [
+            "Margaret Fiennes, 11th Baroness Dacre",
+            "Margaret Fiennes"
+          ],
+          "subject": "Margaret Fiennes, 11th Baroness Dacre"
+        },
+        {
+          "unit_id": "u2",
+          "description": "father of {u1}",
+          "necessary": false,
+          "depends_on": [
+            "u1"
+          ],
+          "queries": [
+            "Margaret Fiennes father",
+            "Margaret Fiennes parent"
+          ],
+          "subject": "Margaret Fiennes, 11th Baroness Dacre"
+        },
+        {
+          "unit_id": "u3",
+          "description": "paternal grandfather of {u1}",
+          "necessary": true,
+          "depends_on": [
+            "u2",
+            "u1"
+          ],
+          "queries": [
+            "father of Margaret Fiennes father",
+            "paternal grandfather of Margaret Fiennes"
+          ],
+          "subject": "Margaret Fiennes, 11th Baroness Dacre"
+        }
+      ],
+      "no_facts_added": true
+    },
+    {
+      "sequence": 4,
+      "time_s": 1.819293,
+      "type": "plan_review_requested",
+      "max_reviews": 1,
+      "question_only": true
+    },
+    {
+      "sequence": 5,
+      "time_s": 1.889147,
+      "type": "utterance",
+      "action": "Backchannel",
+      "text": "I see you want to know Margaret Fiennes, 11th Baroness Dacre's paternal grandfather, and I’ll start looking it up.",
+      "claims": [],
+      "feedback_source": "model",
+      "feedback_status_claim": "intent",
+      "feedback_fallback_reason": "",
+      "execution_state": {
+        "stage": "planning",
+        "searches_started": 0,
+        "searches_completed": 0,
+        "active_searches": 0,
+        "evidence_count": 0,
+        "supported_units": 0,
+        "output_units": 0
+      },
+      "language": "en"
+    },
+    {
+      "sequence": 6,
+      "time_s": 5.026246,
+      "type": "feedback_requested",
+      "feedback_kind": "progress",
+      "execution_state": {
+        "stage": "planning",
+        "searches_started": 0,
+        "searches_completed": 0,
+        "active_searches": 0,
+        "evidence_count": 0,
+        "supported_units": 0,
+        "output_units": 0
+      }
+    },
+    {
+      "sequence": 7,
+      "time_s": 5.107266,
+      "type": "plan_review_reply",
+      "reply": {
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "Margaret Fiennes, 11th Baroness Dacre",
+            "subject": "Margaret Fiennes, 11th Baroness Dacre",
+            "necessary": false,
+            "depends_on": [],
+            "queries": [
+              "Margaret Fiennes, 11th Baroness Dacre",
+              "Margaret Fiennes"
+            ]
+          },
+          {
+            "unit_id": "u2",
+            "description": "father of Margaret Fiennes, 11th Baroness Dacre",
+            "subject": "{u2}",
+            "necessary": false,
+            "depends_on": [
+              "u1"
+            ],
+            "queries": [
+              "Margaret Fiennes father",
+              "Margaret Fiennes parent"
+            ]
+          },
+          {
+            "unit_id": "u3",
+            "description": "paternal grandfather of Margaret Fiennes, 11th Baroness Dacre",
+            "subject": "{u3}",
+            "necessary": true,
+            "depends_on": [
+              "u2"
+            ],
+            "queries": [
+              "father of Margaret Fiennes father",
+              "paternal grandfather of Margaret Fiennes"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "sequence": 8,
+      "time_s": 5.107353,
+      "type": "plan_review_rejected",
+      "error": "Placeholders must name explicit dependencies"
+    },
+    {
+      "sequence": 9,
+      "time_s": 5.107366,
+      "type": "failure",
+      "error": "Placeholders must name explicit dependencies"
+    },
+    {
+      "sequence": 10,
+      "time_s": 5.107374,
+      "type": "utterance",
+      "action": "Final Answer",
+      "claims": [],
+      "text": "The search or verification failed, so I cannot give a reliable answer yet.",
+      "language": "en"
+    },
+    {
+      "sequence": 11,
+      "time_s": 5.107862,
+      "type": "finished",
+      "status": "error"
+    }
+  ],
+  "note": "Prototype model judgments are not independent gold scores. Output event times are not spoken claim times.",
+  "evidence_mode": "scheduled_trace",
+  "audio": {
+    "enabled": true,
+    "mode": "windows",
+    "play": false,
+    "status": "ok",
+    "errors": [],
+    "records": [
+      {
+        "event_sequence": 5,
+        "sentence_index": 1,
+        "sentence_count": 1,
+        "language": "en",
+        "text": "I see you want to know Margaret Fiennes, 11th Baroness Dacre's paternal grandfather, and I’ll start looking it up.",
+        "action": "Backchannel",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 1.8895996999999625,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval debug20\\artifacts\\runs\\20261118T052754Z-eebc4a69\\samples\\0012\\audio\\segments\\0005_01.wav",
+        "duration_s": 7.653151927437642,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 2.7225385999990976,
+        "synthesis_and_playback_s": 0.8333044000028167
+      },
+      {
+        "event_sequence": 10,
+        "sentence_index": 1,
+        "sentence_count": 1,
+        "language": "en",
+        "text": "The search or verification failed, so I cannot give a reliable answer yet.",
+        "action": "Final Answer",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 5.107792700000573,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval debug20\\artifacts\\runs\\20261118T052754Z-eebc4a69\\samples\\0012\\audio\\segments\\0010_01.wav",
+        "duration_s": 5.348526077097506,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 5.957113399999798,
+        "synthesis_and_playback_s": 0.8496075000002747
+      }
+    ],
+    "wave": {
+      "path": "D:\\UIUC\\CS546\\moshi-rag\\eval debug20\\artifacts\\runs\\20261118T052754Z-eebc4a69\\samples\\0012\\audio\\response.wav",
+      "duration_s": 15.72421768707483,
+      "timeline": [
+        {
+          "event_sequence": 5,
+          "sentence_index": 1,
+          "action": "Backchannel",
+          "text": "I see you want to know Margaret Fiennes, 11th Baroness Dacre's paternal grandfather, and I’ll start looking it up.",
+          "wave_start_s": 2.7225396825396824,
+          "wave_end_s": 10.375691609977324
+        },
+        {
+          "event_sequence": 10,
+          "sentence_index": 1,
+          "action": "Final Answer",
+          "text": "The search or verification failed, so I cannot give a reliable answer yet.",
+          "wave_start_s": 10.375691609977324,
+          "wave_end_s": 15.72421768707483
+        }
+      ]
+    }
+  },
+  "evaluation": {
+    "mode": "b_debug_trace",
+    "trace_id": "2wikimultihopqa_37a7af5a0bb011ebab90acde48001122_long",
+    "sample_id": "2wikimultihopqa_37a7af5a0bb011ebab90acde48001122",
+    "total_wall_s": 5.960709600003611,
+    "question_timeout_s": 180,
+    "audio_enabled": true,
+    "history_enabled": false,
+    "text_pipeline_wall_s": 5.107931300000928,
+    "effective_settings": {
+      "base_url": "https://tinker.thinkingmachines.dev/services/tinker-prod/oai/api/v1",
+      "model": "openai/gpt-oss-120b",
+      "wiki_language": "en",
+      "user_agent": "CascadeSystem/0.1 (educational research prototype)",
+      "timeout_s": 45.0,
+      "max_tokens": 4096,
+      "reasoning_effort": "low",
+      "progress_s": 3.0,
+      "feedback_timeout_s": 6.0,
+      "search_limit": 3,
+      "max_units": 8,
+      "max_searches": 16,
+      "max_sources": 64,
+      "source_chars": 254,
+      "evidence_chars": 6658,
+      "concurrency": 3
+    },
+    "timing_kind": "unknown",
+    "scheduler": "wall-paced fixed B arrivals"
+  }
+}

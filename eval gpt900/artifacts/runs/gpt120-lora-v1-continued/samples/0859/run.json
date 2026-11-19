@@ -1,0 +1,2298 @@
+{
+  "question": "At the 2011 census, what was he population of the city where Kerry Saxby-Junna was born?",
+  "resolved_question": "At the 2011 census, what was he population of the city where Kerry Saxby-Junna was born?",
+  "used_history_turn_ids": [],
+  "response_language": "en",
+  "status": "complete",
+  "clock": "wall_monotonic",
+  "time_origin": "question_text_ready_after_optional_asr",
+  "model": "openai/gpt-oss-120b",
+  "judge_model": "tinker://f9e9a6c1-e203-5c2c-acdd-68fe67378ca4:train:0/sampler_weights/epoch-0001",
+  "units": [
+    {
+      "unit_id": "u1",
+      "description": "city where Kerry Saxby-Junna was born",
+      "necessary": true,
+      "depends_on": [],
+      "queries": [
+        "Kerry Saxby-Junna birthplace",
+        "Kerry Saxby-Junna born in"
+      ],
+      "subject": "Kerry Saxby-Junna"
+    },
+    {
+      "unit_id": "u2",
+      "description": "population of {u1} at the 2011 census",
+      "necessary": true,
+      "depends_on": [
+        "u1"
+      ],
+      "queries": [
+        "{u1} 2011 census population",
+        "{u1} population 2011"
+      ],
+      "subject": "{u1}"
+    }
+  ],
+  "judgments": {
+    "u1": {
+      "label": "SUPPORTED",
+      "value": "Young",
+      "citations": [
+        "d3s0",
+        "d3s1"
+      ],
+      "quotes": [
+        {
+          "evidence_id": "d3s0",
+          "text": "Kerry-Anne Saxby-Junna, born Kerry Saxby AM (born 2 June 1961) is a retired Australian race walker."
+        },
+        {
+          "evidence_id": "d3s1",
+          "text": "She was born in Young, New South Wales and grew up in Ballina, New South Wales."
+        }
+      ],
+      "reason": "Supported by the cited visible sentences and dependencies."
+    },
+    "u2": {
+      "label": "SUPPORTED",
+      "value": "6,960",
+      "citations": [
+        "d7s1"
+      ],
+      "quotes": [
+        {
+          "evidence_id": "d7s1",
+          "text": "At the 2011 census , Young had a population of 6,960."
+        }
+      ],
+      "reason": "Supported by the cited visible sentences and dependencies."
+    }
+  },
+  "evidence": [
+    {
+      "evidence_id": "d1s0",
+      "title": "Demography of the United Kingdom",
+      "url": "https://trace.invalid/hotpotqa_5ac3983a554299657fa290f5_immediate/d1s0",
+      "text": "According to the 2011 census, the total population of the United Kingdom was around 63,182,000.",
+      "visible_time_s": 2.437000000005355,
+      "requested_subject": "",
+      "resolved_title": "Demography of the United Kingdom",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d1s1",
+      "title": "Demography of the United Kingdom",
+      "url": "https://trace.invalid/hotpotqa_5ac3983a554299657fa290f5_immediate/d1s1",
+      "text": "<ref name=\"2http://www.ons.gov.uk/ons/dcp171778_292378.pdf |title=2011 Census: Population Estimates for the United Kingdom |publisher=Office for National Statistics |date=27 March 2011 |accessdate=18 December 2012 }}</ref> It is the 22nd-largest in the world.",
+      "visible_time_s": 2.437000000005355,
+      "requested_subject": "",
+      "resolved_title": "Demography of the United Kingdom",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d1s2",
+      "title": "Demography of the United Kingdom",
+      "url": "https://trace.invalid/hotpotqa_5ac3983a554299657fa290f5_immediate/d1s2",
+      "text": "Its overall population density is 259 people per square kilometre (671 people per sq mi), with England having a significantly higher population density than Wales, Scotland and Northern Ireland.",
+      "visible_time_s": 2.437000000005355,
+      "requested_subject": "",
+      "resolved_title": "Demography of the United Kingdom",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d1s3",
+      "title": "Demography of the United Kingdom",
+      "url": "https://trace.invalid/hotpotqa_5ac3983a554299657fa290f5_immediate/d1s3",
+      "text": "Almost one-third of the population lives in England's southeast, which is predominantly urban and suburban, with about 8 million in the capital city of London, the population density of which is just over 5,200 per square kilometre (13,468 per sq mi).",
+      "visible_time_s": 2.437000000005355,
+      "requested_subject": "",
+      "resolved_title": "Demography of the United Kingdom",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d2s0",
+      "title": "Orleans, Ontario",
+      "url": "https://trace.invalid/hotpotqa_5ac3983a554299657fa290f5_immediate/d2s0",
+      "text": "Orléans ( ; French: ] ) (officially Orléans), is a suburb of Ottawa, Ontario, Canada.",
+      "visible_time_s": 2.437000000005355,
+      "requested_subject": "",
+      "resolved_title": "Orleans, Ontario",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d2s1",
+      "title": "Orleans, Ontario",
+      "url": "https://trace.invalid/hotpotqa_5ac3983a554299657fa290f5_immediate/d2s1",
+      "text": "It is located in the eastern part of the city along the Ottawa River, about 16 km from downtown Ottawa.",
+      "visible_time_s": 2.437000000005355,
+      "requested_subject": "",
+      "resolved_title": "Orleans, Ontario",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d2s2",
+      "title": "Orleans, Ontario",
+      "url": "https://trace.invalid/hotpotqa_5ac3983a554299657fa290f5_immediate/d2s2",
+      "text": "The Canada 2011 Census determined that Orléans' population was 107,823.",
+      "visible_time_s": 2.437000000005355,
+      "requested_subject": "",
+      "resolved_title": "Orleans, Ontario",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d2s3",
+      "title": "Orleans, Ontario",
+      "url": "https://trace.invalid/hotpotqa_5ac3983a554299657fa290f5_immediate/d2s3",
+      "text": "Prior to being amalgamated into Ottawa in 2001, the community of Orléans was spread over two municipal jurisdictions, the eastern portion being in the pre-amalgamation City of Cumberland, the western portion in the City of Gloucester.",
+      "visible_time_s": 2.437000000005355,
+      "requested_subject": "",
+      "resolved_title": "Orleans, Ontario",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d2s4",
+      "title": "Orleans, Ontario",
+      "url": "https://trace.invalid/hotpotqa_5ac3983a554299657fa290f5_immediate/d2s4",
+      "text": "According to the 2011 census, 62,888 people lived in the Cumberland portion of Orléans, while 44,935 people lived in the Gloucester portion.",
+      "visible_time_s": 2.437000000005355,
+      "requested_subject": "",
+      "resolved_title": "Orleans, Ontario",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d2s5",
+      "title": "Orleans, Ontario",
+      "url": "https://trace.invalid/hotpotqa_5ac3983a554299657fa290f5_immediate/d2s5",
+      "text": "Today, Orléans spans the municipal wards of Orléans, Innes and Cumberland.",
+      "visible_time_s": 2.437000000005355,
+      "requested_subject": "",
+      "resolved_title": "Orleans, Ontario",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d2s6",
+      "title": "Orleans, Ontario",
+      "url": "https://trace.invalid/hotpotqa_5ac3983a554299657fa290f5_immediate/d2s6",
+      "text": "Orléans is one of 3 areas of the post-amalgamated City of Ottawa to contain a significant francophone population, hence the community's name.",
+      "visible_time_s": 2.437000000005355,
+      "requested_subject": "",
+      "resolved_title": "Orleans, Ontario",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d3s0",
+      "title": "Kerry Saxby-Junna",
+      "url": "https://trace.invalid/hotpotqa_5ac3983a554299657fa290f5_immediate/d3s0",
+      "text": "Kerry-Anne Saxby-Junna, born Kerry Saxby AM (born 2 June 1961) is a retired Australian race walker.",
+      "visible_time_s": 2.437000000005355,
+      "requested_subject": "",
+      "resolved_title": "Kerry Saxby-Junna",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d3s1",
+      "title": "Kerry Saxby-Junna",
+      "url": "https://trace.invalid/hotpotqa_5ac3983a554299657fa290f5_immediate/d3s1",
+      "text": "She was born in Young, New South Wales and grew up in Ballina, New South Wales.",
+      "visible_time_s": 2.437000000005355,
+      "requested_subject": "",
+      "resolved_title": "Kerry Saxby-Junna",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d4s0",
+      "title": "Blennerville",
+      "url": "https://trace.invalid/hotpotqa_5ac3983a554299657fa290f5_immediate/d4s0",
+      "text": "Blennerville (Irish: \"Cathair Uí Mhóráin\" , meaning \"the seat/home of the Morans\") is a small village and now a suburb of Tralee, County Kerry, Ireland.",
+      "visible_time_s": 2.437000000005355,
+      "requested_subject": "",
+      "resolved_title": "Blennerville",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d4s1",
+      "title": "Blennerville",
+      "url": "https://trace.invalid/hotpotqa_5ac3983a554299657fa290f5_immediate/d4s1",
+      "text": "It is approximately 1 mi west of the town centre on the N86 road to Dingle, where the River Lee enters Tralee Bay.",
+      "visible_time_s": 2.437000000005355,
+      "requested_subject": "",
+      "resolved_title": "Blennerville",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d4s2",
+      "title": "Blennerville",
+      "url": "https://trace.invalid/hotpotqa_5ac3983a554299657fa290f5_immediate/d4s2",
+      "text": "The village was formerly Tralee's port, and is connected to the town centre by the Tralee Ship Canal.",
+      "visible_time_s": 2.437000000005355,
+      "requested_subject": "",
+      "resolved_title": "Blennerville",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d4s3",
+      "title": "Blennerville",
+      "url": "https://trace.invalid/hotpotqa_5ac3983a554299657fa290f5_immediate/d4s3",
+      "text": "Part of Blennerville electoral division falls within the area of Tralee Town Council, and at the 2011 census had a population of 141.",
+      "visible_time_s": 2.437000000005355,
+      "requested_subject": "",
+      "resolved_title": "Blennerville",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d4s4",
+      "title": "Blennerville",
+      "url": "https://trace.invalid/hotpotqa_5ac3983a554299657fa290f5_immediate/d4s4",
+      "text": "The remaining portion, outside the urban boundaries, had a 2011 population of 556.",
+      "visible_time_s": 2.437000000005355,
+      "requested_subject": "",
+      "resolved_title": "Blennerville",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d5s0",
+      "title": "Islam in West Bengal",
+      "url": "https://trace.invalid/hotpotqa_5ac3983a554299657fa290f5_immediate/d5s0",
+      "text": "Since the partition of India in 1947, the majority of the Bengali Muslims have lived in Bangladesh.",
+      "visible_time_s": 2.437000000005355,
+      "requested_subject": "",
+      "resolved_title": "Islam in West Bengal",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d5s1",
+      "title": "Islam in West Bengal",
+      "url": "https://trace.invalid/hotpotqa_5ac3983a554299657fa290f5_immediate/d5s1",
+      "text": "Islam is the minority religion in West Bengal as of 2011.",
+      "visible_time_s": 2.437000000005355,
+      "requested_subject": "",
+      "resolved_title": "Islam in West Bengal",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d5s2",
+      "title": "Islam in West Bengal",
+      "url": "https://trace.invalid/hotpotqa_5ac3983a554299657fa290f5_immediate/d5s2",
+      "text": "However, Islam is also the second largest and the fastest growing religion in the Indian state of West Bengal.",
+      "visible_time_s": 2.437000000005355,
+      "requested_subject": "",
+      "resolved_title": "Islam in West Bengal",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d5s3",
+      "title": "Islam in West Bengal",
+      "url": "https://trace.invalid/hotpotqa_5ac3983a554299657fa290f5_immediate/d5s3",
+      "text": "According to 2011 Census of India, West Bengal has over 24.6 million Bengali Muslims, who form 27% of the state's population.",
+      "visible_time_s": 2.437000000005355,
+      "requested_subject": "",
+      "resolved_title": "Islam in West Bengal",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d5s4",
+      "title": "Islam in West Bengal",
+      "url": "https://trace.invalid/hotpotqa_5ac3983a554299657fa290f5_immediate/d5s4",
+      "text": "In West Bengal capital Kolkata Muslim's Population is 926,414 making up 20.6% of the city population as of 2011 census.",
+      "visible_time_s": 2.437000000005355,
+      "requested_subject": "",
+      "resolved_title": "Islam in West Bengal",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d5s5",
+      "title": "Islam in West Bengal",
+      "url": "https://trace.invalid/hotpotqa_5ac3983a554299657fa290f5_immediate/d5s5",
+      "text": "Bengali Muslims are minority in all districts of Bengal except Uttar Dinajpur (49.92%), Maldah (51.27%) and Murshidabad (66.28%) .",
+      "visible_time_s": 2.437000000005355,
+      "requested_subject": "",
+      "resolved_title": "Islam in West Bengal",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d5s6",
+      "title": "Islam in West Bengal",
+      "url": "https://trace.invalid/hotpotqa_5ac3983a554299657fa290f5_immediate/d5s6",
+      "text": "It is also said that this rise is due to proximity to Muslim-dominated districts of neighboring state of Bihar and illegal migration from Bangladesh cause demography change in the state.",
+      "visible_time_s": 2.437000000005355,
+      "requested_subject": "",
+      "resolved_title": "Islam in West Bengal",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d6s0",
+      "title": "Korçë",
+      "url": "https://trace.invalid/hotpotqa_5ac3983a554299657fa290f5_immediate/d6s0",
+      "text": "Korçë (] ; (definite Albanian form: \"Korça\" ), other names see below) is a city and municipality in southeastern Albania, and the seat of Korçë County.",
+      "visible_time_s": 2.437000000005355,
+      "requested_subject": "",
+      "resolved_title": "Korçë",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d6s1",
+      "title": "Korçë",
+      "url": "https://trace.invalid/hotpotqa_5ac3983a554299657fa290f5_immediate/d6s1",
+      "text": "It was formed at the 2015 local government reform by the merger of the former municipalities Drenovë, Korçë, Lekas, Mollaj, Qendër Bulgarec, Vithkuq, Voskop and Voskopojë, that became municipal units.",
+      "visible_time_s": 2.437000000005355,
+      "requested_subject": "",
+      "resolved_title": "Korçë",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d6s2",
+      "title": "Korçë",
+      "url": "https://trace.invalid/hotpotqa_5ac3983a554299657fa290f5_immediate/d6s2",
+      "text": "The seat of the municipality is the city Korçë.",
+      "visible_time_s": 2.437000000005355,
+      "requested_subject": "",
+      "resolved_title": "Korçë",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d6s3",
+      "title": "Korçë",
+      "url": "https://trace.invalid/hotpotqa_5ac3983a554299657fa290f5_immediate/d6s3",
+      "text": "The total population is 75,994 (2011 census), in a total area of 805.99 km2 .",
+      "visible_time_s": 2.437000000005355,
+      "requested_subject": "",
+      "resolved_title": "Korçë",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d6s4",
+      "title": "Korçë",
+      "url": "https://trace.invalid/hotpotqa_5ac3983a554299657fa290f5_immediate/d6s4",
+      "text": "The population of the former municipality at the 2011 census was 51,152.",
+      "visible_time_s": 2.437000000005355,
+      "requested_subject": "",
+      "resolved_title": "Korçë",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d6s5",
+      "title": "Korçë",
+      "url": "https://trace.invalid/hotpotqa_5ac3983a554299657fa290f5_immediate/d6s5",
+      "text": "It is the sixth largest city in Albania.",
+      "visible_time_s": 2.437000000005355,
+      "requested_subject": "",
+      "resolved_title": "Korçë",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d6s6",
+      "title": "Korçë",
+      "url": "https://trace.invalid/hotpotqa_5ac3983a554299657fa290f5_immediate/d6s6",
+      "text": "It stands on a plateau some 850 m above sea level, surrounded by the Morava Mountains.",
+      "visible_time_s": 2.437000000005355,
+      "requested_subject": "",
+      "resolved_title": "Korçë",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d7s0",
+      "title": "Young, New South Wales",
+      "url": "https://trace.invalid/hotpotqa_5ac3983a554299657fa290f5_immediate/d7s0",
+      "text": "Young is a town in the South West Slopes region of New South Wales, Australia and the largest town in Hilltops Council.",
+      "visible_time_s": 2.437000000005355,
+      "requested_subject": "",
+      "resolved_title": "Young, New South Wales",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d7s1",
+      "title": "Young, New South Wales",
+      "url": "https://trace.invalid/hotpotqa_5ac3983a554299657fa290f5_immediate/d7s1",
+      "text": "At the 2011 census , Young had a population of 6,960.",
+      "visible_time_s": 2.437000000005355,
+      "requested_subject": "",
+      "resolved_title": "Young, New South Wales",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d8s0",
+      "title": "Northern Region, Manitoba",
+      "url": "https://trace.invalid/hotpotqa_5ac3983a554299657fa290f5_immediate/d8s0",
+      "text": "The Northern Region is a region in the Canadian province of Manitoba.",
+      "visible_time_s": 2.437000000005355,
+      "requested_subject": "",
+      "resolved_title": "Northern Region, Manitoba",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d8s1",
+      "title": "Northern Region, Manitoba",
+      "url": "https://trace.invalid/hotpotqa_5ac3983a554299657fa290f5_immediate/d8s1",
+      "text": "It is situated on the Canadian Shield and includes Manitoba's Hudson Bay coastline.",
+      "visible_time_s": 2.437000000005355,
+      "requested_subject": "",
+      "resolved_title": "Northern Region, Manitoba",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d8s2",
+      "title": "Northern Region, Manitoba",
+      "url": "https://trace.invalid/hotpotqa_5ac3983a554299657fa290f5_immediate/d8s2",
+      "text": "The major economic activities are mining and tourism.",
+      "visible_time_s": 2.437000000005355,
+      "requested_subject": "",
+      "resolved_title": "Northern Region, Manitoba",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d8s3",
+      "title": "Northern Region, Manitoba",
+      "url": "https://trace.invalid/hotpotqa_5ac3983a554299657fa290f5_immediate/d8s3",
+      "text": "The region is composed of four census divisions: 19 and 21–23 .",
+      "visible_time_s": 2.437000000005355,
+      "requested_subject": "",
+      "resolved_title": "Northern Region, Manitoba",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d8s4",
+      "title": "Northern Region, Manitoba",
+      "url": "https://trace.invalid/hotpotqa_5ac3983a554299657fa290f5_immediate/d8s4",
+      "text": "The land area of the region is 438,491.51 km² (169,302.52 mi²), which encompasses 67% of Manitoba's total land area.",
+      "visible_time_s": 2.437000000005355,
+      "requested_subject": "",
+      "resolved_title": "Northern Region, Manitoba",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d8s5",
+      "title": "Northern Region, Manitoba",
+      "url": "https://trace.invalid/hotpotqa_5ac3983a554299657fa290f5_immediate/d8s5",
+      "text": "The vast majority of the region is undeveloped wilderness.",
+      "visible_time_s": 2.437000000005355,
+      "requested_subject": "",
+      "resolved_title": "Northern Region, Manitoba",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d8s6",
+      "title": "Northern Region, Manitoba",
+      "url": "https://trace.invalid/hotpotqa_5ac3983a554299657fa290f5_immediate/d8s6",
+      "text": "Its total population at the 2011 census was 88,146, which was only 7.3% of Manitoba's total population in the 2011 census.",
+      "visible_time_s": 2.437000000005355,
+      "requested_subject": "",
+      "resolved_title": "Northern Region, Manitoba",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d8s7",
+      "title": "Northern Region, Manitoba",
+      "url": "https://trace.invalid/hotpotqa_5ac3983a554299657fa290f5_immediate/d8s7",
+      "text": "The largest municipality is the city of Thompson.",
+      "visible_time_s": 2.437000000005355,
+      "requested_subject": "",
+      "resolved_title": "Northern Region, Manitoba",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d8s8",
+      "title": "Northern Region, Manitoba",
+      "url": "https://trace.invalid/hotpotqa_5ac3983a554299657fa290f5_immediate/d8s8",
+      "text": "Other major population centers include the city of Flin Flon and the town of The Pas.",
+      "visible_time_s": 2.437000000005355,
+      "requested_subject": "",
+      "resolved_title": "Northern Region, Manitoba",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d8s9",
+      "title": "Northern Region, Manitoba",
+      "url": "https://trace.invalid/hotpotqa_5ac3983a554299657fa290f5_immediate/d8s9",
+      "text": "Indian reserves comprise more than 49% of the region's population.",
+      "visible_time_s": 2.437000000005355,
+      "requested_subject": "",
+      "resolved_title": "Northern Region, Manitoba",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d8s10",
+      "title": "Northern Region, Manitoba",
+      "url": "https://trace.invalid/hotpotqa_5ac3983a554299657fa290f5_immediate/d8s10",
+      "text": "There are 54 reserves with a total population of 40,572.",
+      "visible_time_s": 2.437000000005355,
+      "requested_subject": "",
+      "resolved_title": "Northern Region, Manitoba",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d8s11",
+      "title": "Northern Region, Manitoba",
+      "url": "https://trace.invalid/hotpotqa_5ac3983a554299657fa290f5_immediate/d8s11",
+      "text": "The largest of these are Norway House 17 and Peguis 1B.",
+      "visible_time_s": 2.437000000005355,
+      "requested_subject": "",
+      "resolved_title": "Northern Region, Manitoba",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d9s0",
+      "title": "Warton, Lancaster",
+      "url": "https://trace.invalid/hotpotqa_5ac3983a554299657fa290f5_immediate/d9s0",
+      "text": "Warton is a village, civil parish and electoral ward in the City of Lancaster in north Lancashire in the north-west of England, close to the boundary with Cumbria, with a population of around 2,000, measured at the 2011 Census to be 2,360.",
+      "visible_time_s": 2.437000000005355,
+      "requested_subject": "",
+      "resolved_title": "Warton, Lancaster",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d9s1",
+      "title": "Warton, Lancaster",
+      "url": "https://trace.invalid/hotpotqa_5ac3983a554299657fa290f5_immediate/d9s1",
+      "text": "It is a village steeped in history; its earliest recording as a settlement is made in Domesday Book written in 1086.",
+      "visible_time_s": 2.437000000005355,
+      "requested_subject": "",
+      "resolved_title": "Warton, Lancaster",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d9s2",
+      "title": "Warton, Lancaster",
+      "url": "https://trace.invalid/hotpotqa_5ac3983a554299657fa290f5_immediate/d9s2",
+      "text": "The nearest town to Warton is Carnforth, which was originally part of Warton parish.",
+      "visible_time_s": 2.437000000005355,
+      "requested_subject": "",
+      "resolved_title": "Warton, Lancaster",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d9s3",
+      "title": "Warton, Lancaster",
+      "url": "https://trace.invalid/hotpotqa_5ac3983a554299657fa290f5_immediate/d9s3",
+      "text": "It has connections to the first President of the United States, George Washington: Washington's ancestor of seven generations, Lawrence Washington, is rumoured to have helped build the village church of St Oswald.",
+      "visible_time_s": 2.437000000005355,
+      "requested_subject": "",
+      "resolved_title": "Warton, Lancaster",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d9s4",
+      "title": "Warton, Lancaster",
+      "url": "https://trace.invalid/hotpotqa_5ac3983a554299657fa290f5_immediate/d9s4",
+      "text": "The parish covers an area in excess of 11000 acre and is predominantly rural.",
+      "visible_time_s": 2.437000000005355,
+      "requested_subject": "",
+      "resolved_title": "Warton, Lancaster",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d9s5",
+      "title": "Warton, Lancaster",
+      "url": "https://trace.invalid/hotpotqa_5ac3983a554299657fa290f5_immediate/d9s5",
+      "text": "The parish of Warton had a population of 2315 recorded in the 2001 census, and 2,360 in the 2011 census.",
+      "visible_time_s": 2.437000000005355,
+      "requested_subject": "",
+      "resolved_title": "Warton, Lancaster",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d10s0",
+      "title": "Ackworth, West Yorkshire",
+      "url": "https://trace.invalid/hotpotqa_5ac3983a554299657fa290f5_immediate/d10s0",
+      "text": "Ackworth is a village and civil parish in the metropolitan borough of Wakefield, West Yorkshire, England, situated between Pontefract, Barnsley and Doncaster on the small River Went.",
+      "visible_time_s": 2.437000000005355,
+      "requested_subject": "",
+      "resolved_title": "Ackworth, West Yorkshire",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d10s1",
+      "title": "Ackworth, West Yorkshire",
+      "url": "https://trace.invalid/hotpotqa_5ac3983a554299657fa290f5_immediate/d10s1",
+      "text": "The village consists of four parts, High Ackworth, Low Ackworth, Ackworth Moor Top, and Brackenhill.",
+      "visible_time_s": 2.437000000005355,
+      "requested_subject": "",
+      "resolved_title": "Ackworth, West Yorkshire",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d10s2",
+      "title": "Ackworth, West Yorkshire",
+      "url": "https://trace.invalid/hotpotqa_5ac3983a554299657fa290f5_immediate/d10s2",
+      "text": "According to the 2001 census it had a population of 6,493, increasing to 7,049 at the 2011 Census.",
+      "visible_time_s": 2.437000000005355,
+      "requested_subject": "",
+      "resolved_title": "Ackworth, West Yorkshire",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d10s3",
+      "title": "Ackworth, West Yorkshire",
+      "url": "https://trace.invalid/hotpotqa_5ac3983a554299657fa290f5_immediate/d10s3",
+      "text": "There is also a City of Wakefield Ward called Ackworth, North Elmsall and Upton.",
+      "visible_time_s": 2.437000000005355,
+      "requested_subject": "",
+      "resolved_title": "Ackworth, West Yorkshire",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d10s4",
+      "title": "Ackworth, West Yorkshire",
+      "url": "https://trace.invalid/hotpotqa_5ac3983a554299657fa290f5_immediate/d10s4",
+      "text": "At the 2011 Census this ward had a population of 16,099.",
+      "visible_time_s": 2.437000000005355,
+      "requested_subject": "",
+      "resolved_title": "Ackworth, West Yorkshire",
+      "entity_resolution": "unspecified"
+    }
+  ],
+  "searches": [
+    {
+      "query": "[scheduled evidence]",
+      "subject": "",
+      "status": "ok",
+      "returned_pages": [],
+      "mode": "trace",
+      "unit_id": "__scheduled_evidence__"
+    }
+  ],
+  "search_failures": [],
+  "llm_calls": [
+    {
+      "purpose": "feedback_generate",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 416,
+        "completion_tokens": 108,
+        "total_tokens": 524,
+        "prompt_tokens_details": {
+          "cached_tokens": 384
+        }
+      },
+      "latency_s": 1.047
+    },
+    {
+      "purpose": "decompose",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 806,
+        "completion_tokens": 241,
+        "total_tokens": 1047,
+        "prompt_tokens_details": {
+          "cached_tokens": 768
+        }
+      },
+      "latency_s": 1.437
+    },
+    {
+      "purpose": "feedback_verify",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 371,
+        "completion_tokens": 94,
+        "total_tokens": 465,
+        "prompt_tokens_details": {
+          "cached_tokens": 128
+        }
+      },
+      "latency_s": 0.75
+    },
+    {
+      "purpose": "plan_review",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 1037,
+        "completion_tokens": 247,
+        "total_tokens": 1284,
+        "prompt_tokens_details": {
+          "cached_tokens": 768
+        }
+      },
+      "latency_s": 1.0
+    },
+    {
+      "purpose": "judge",
+      "model": "tinker://f9e9a6c1-e203-5c2c-acdd-68fe67378ca4:train:0/sampler_weights/epoch-0001",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 8441,
+        "completion_tokens": 226,
+        "total_tokens": 8667,
+        "prompt_tokens_details": {
+          "cached_tokens": 1024
+        }
+      },
+      "latency_s": 1.235
+    },
+    {
+      "purpose": "generate",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 872,
+        "completion_tokens": 95,
+        "total_tokens": 967,
+        "prompt_tokens_details": {
+          "cached_tokens": 512
+        }
+      },
+      "latency_s": 0.859
+    },
+    {
+      "purpose": "verify",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 1348,
+        "completion_tokens": 123,
+        "total_tokens": 1471,
+        "prompt_tokens_details": {
+          "cached_tokens": 640
+        }
+      },
+      "latency_s": 0.719
+    },
+    {
+      "purpose": "feedback_generate",
+      "model": "openai/gpt-oss-120b",
+      "status": "cancelled",
+      "latency_s": 0.266
+    }
+  ],
+  "search_diagnostics": [],
+  "output_enqueued_units": {
+    "u1": "Young",
+    "u2": "6,960"
+  },
+  "events": [
+    {
+      "sequence": 0,
+      "time_s": 0.0,
+      "type": "feedback_requested",
+      "feedback_kind": "opening",
+      "execution_state": {
+        "stage": "planning",
+        "searches_started": 0,
+        "searches_completed": 0,
+        "active_searches": 0,
+        "evidence_count": 0,
+        "supported_units": 0,
+        "output_units": 0
+      }
+    },
+    {
+      "sequence": 1,
+      "time_s": 1.437,
+      "type": "decompose_reply",
+      "reply": {
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "city where Kerry Saxby-Junna was born",
+            "subject": "Kerry Saxby-Junna",
+            "necessary": false,
+            "depends_on": [],
+            "queries": [
+              "Kerry Saxby-Junna birthplace",
+              "Kerry Saxby-Junna born in"
+            ]
+          },
+          {
+            "unit_id": "u2",
+            "description": "population of {u1} at the 2011 census",
+            "subject": "",
+            "necessary": true,
+            "depends_on": [
+              "u1"
+            ],
+            "queries": [
+              "{u1} 2011 census population",
+              "{u1} population 2011"
+            ]
+          }
+        ]
+      },
+      "attempt": 1,
+      "repair": false
+    },
+    {
+      "sequence": 2,
+      "time_s": 1.437,
+      "type": "plan_review_requested",
+      "max_reviews": 1,
+      "question_only": true
+    },
+    {
+      "sequence": 3,
+      "time_s": 1.797,
+      "type": "utterance",
+      "action": "Backchannel",
+      "text": "I’ll look up the 2011 census population for Kerry Saxby‑Junna’s birth city.",
+      "claims": [],
+      "feedback_source": "model",
+      "feedback_status_claim": "intent",
+      "feedback_fallback_reason": "",
+      "execution_state": {
+        "stage": "planning",
+        "searches_started": 0,
+        "searches_completed": 0,
+        "active_searches": 0,
+        "evidence_count": 0,
+        "supported_units": 0,
+        "output_units": 0
+      },
+      "language": "en"
+    },
+    {
+      "sequence": 4,
+      "time_s": 2.437,
+      "type": "plan_review_reply",
+      "reply": {
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "city where Kerry Saxby-Junna was born",
+            "subject": "Kerry Saxby-Junna",
+            "necessary": true,
+            "depends_on": [],
+            "queries": [
+              "Kerry Saxby-Junna birthplace",
+              "Kerry Saxby-Junna born in"
+            ]
+          },
+          {
+            "unit_id": "u2",
+            "description": "population of {u1} at the 2011 census",
+            "subject": "{u1}",
+            "necessary": true,
+            "depends_on": [
+              "u1"
+            ],
+            "queries": [
+              "{u1} 2011 census population",
+              "{u1} population 2011"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "sequence": 5,
+      "time_s": 2.437,
+      "type": "plan_review_finished",
+      "changed": true,
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "city where Kerry Saxby-Junna was born",
+          "necessary": true,
+          "depends_on": [],
+          "queries": [
+            "Kerry Saxby-Junna birthplace",
+            "Kerry Saxby-Junna born in"
+          ],
+          "subject": "Kerry Saxby-Junna"
+        },
+        {
+          "unit_id": "u2",
+          "description": "population of {u1} at the 2011 census",
+          "necessary": true,
+          "depends_on": [
+            "u1"
+          ],
+          "queries": [
+            "{u1} 2011 census population",
+            "{u1} population 2011"
+          ],
+          "subject": "{u1}"
+        }
+      ],
+      "question_only": true
+    },
+    {
+      "sequence": 6,
+      "time_s": 2.437,
+      "type": "plan",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "city where Kerry Saxby-Junna was born",
+          "necessary": true,
+          "depends_on": [],
+          "queries": [
+            "Kerry Saxby-Junna birthplace",
+            "Kerry Saxby-Junna born in"
+          ],
+          "subject": "Kerry Saxby-Junna"
+        },
+        {
+          "unit_id": "u2",
+          "description": "population of {u1} at the 2011 census",
+          "necessary": true,
+          "depends_on": [
+            "u1"
+          ],
+          "queries": [
+            "{u1} 2011 census population",
+            "{u1} population 2011"
+          ],
+          "subject": "{u1}"
+        }
+      ]
+    },
+    {
+      "sequence": 7,
+      "time_s": 2.437,
+      "type": "trace_batch_requested"
+    },
+    {
+      "sequence": 8,
+      "time_s": 2.437,
+      "type": "search_finished",
+      "query": "[scheduled evidence]",
+      "subject": "",
+      "status": "ok",
+      "returned_pages": [],
+      "mode": "trace",
+      "unit_id": "__scheduled_evidence__"
+    },
+    {
+      "sequence": 9,
+      "time_s": 2.437,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d1s0",
+        "title": "Demography of the United Kingdom",
+        "url": "https://trace.invalid/hotpotqa_5ac3983a554299657fa290f5_immediate/d1s0",
+        "text": "According to the 2011 census, the total population of the United Kingdom was around 63,182,000.",
+        "visible_time_s": 2.437000000005355,
+        "requested_subject": "",
+        "resolved_title": "Demography of the United Kingdom",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 10,
+      "time_s": 2.437,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d1s1",
+        "title": "Demography of the United Kingdom",
+        "url": "https://trace.invalid/hotpotqa_5ac3983a554299657fa290f5_immediate/d1s1",
+        "text": "<ref name=\"2http://www.ons.gov.uk/ons/dcp171778_292378.pdf |title=2011 Census: Population Estimates for the United Kingdom |publisher=Office for National Statistics |date=27 March 2011 |accessdate=18 December 2012 }}</ref> It is the 22nd-largest in the world.",
+        "visible_time_s": 2.437000000005355,
+        "requested_subject": "",
+        "resolved_title": "Demography of the United Kingdom",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 11,
+      "time_s": 2.437,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d1s2",
+        "title": "Demography of the United Kingdom",
+        "url": "https://trace.invalid/hotpotqa_5ac3983a554299657fa290f5_immediate/d1s2",
+        "text": "Its overall population density is 259 people per square kilometre (671 people per sq mi), with England having a significantly higher population density than Wales, Scotland and Northern Ireland.",
+        "visible_time_s": 2.437000000005355,
+        "requested_subject": "",
+        "resolved_title": "Demography of the United Kingdom",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 12,
+      "time_s": 2.437,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d1s3",
+        "title": "Demography of the United Kingdom",
+        "url": "https://trace.invalid/hotpotqa_5ac3983a554299657fa290f5_immediate/d1s3",
+        "text": "Almost one-third of the population lives in England's southeast, which is predominantly urban and suburban, with about 8 million in the capital city of London, the population density of which is just over 5,200 per square kilometre (13,468 per sq mi).",
+        "visible_time_s": 2.437000000005355,
+        "requested_subject": "",
+        "resolved_title": "Demography of the United Kingdom",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 13,
+      "time_s": 2.437,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d2s0",
+        "title": "Orleans, Ontario",
+        "url": "https://trace.invalid/hotpotqa_5ac3983a554299657fa290f5_immediate/d2s0",
+        "text": "Orléans ( ; French: ] ) (officially Orléans), is a suburb of Ottawa, Ontario, Canada.",
+        "visible_time_s": 2.437000000005355,
+        "requested_subject": "",
+        "resolved_title": "Orleans, Ontario",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 14,
+      "time_s": 2.437,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d2s1",
+        "title": "Orleans, Ontario",
+        "url": "https://trace.invalid/hotpotqa_5ac3983a554299657fa290f5_immediate/d2s1",
+        "text": "It is located in the eastern part of the city along the Ottawa River, about 16 km from downtown Ottawa.",
+        "visible_time_s": 2.437000000005355,
+        "requested_subject": "",
+        "resolved_title": "Orleans, Ontario",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 15,
+      "time_s": 2.437,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d2s2",
+        "title": "Orleans, Ontario",
+        "url": "https://trace.invalid/hotpotqa_5ac3983a554299657fa290f5_immediate/d2s2",
+        "text": "The Canada 2011 Census determined that Orléans' population was 107,823.",
+        "visible_time_s": 2.437000000005355,
+        "requested_subject": "",
+        "resolved_title": "Orleans, Ontario",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 16,
+      "time_s": 2.437,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d2s3",
+        "title": "Orleans, Ontario",
+        "url": "https://trace.invalid/hotpotqa_5ac3983a554299657fa290f5_immediate/d2s3",
+        "text": "Prior to being amalgamated into Ottawa in 2001, the community of Orléans was spread over two municipal jurisdictions, the eastern portion being in the pre-amalgamation City of Cumberland, the western portion in the City of Gloucester.",
+        "visible_time_s": 2.437000000005355,
+        "requested_subject": "",
+        "resolved_title": "Orleans, Ontario",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 17,
+      "time_s": 2.437,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d2s4",
+        "title": "Orleans, Ontario",
+        "url": "https://trace.invalid/hotpotqa_5ac3983a554299657fa290f5_immediate/d2s4",
+        "text": "According to the 2011 census, 62,888 people lived in the Cumberland portion of Orléans, while 44,935 people lived in the Gloucester portion.",
+        "visible_time_s": 2.437000000005355,
+        "requested_subject": "",
+        "resolved_title": "Orleans, Ontario",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 18,
+      "time_s": 2.437,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d2s5",
+        "title": "Orleans, Ontario",
+        "url": "https://trace.invalid/hotpotqa_5ac3983a554299657fa290f5_immediate/d2s5",
+        "text": "Today, Orléans spans the municipal wards of Orléans, Innes and Cumberland.",
+        "visible_time_s": 2.437000000005355,
+        "requested_subject": "",
+        "resolved_title": "Orleans, Ontario",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 19,
+      "time_s": 2.437,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d2s6",
+        "title": "Orleans, Ontario",
+        "url": "https://trace.invalid/hotpotqa_5ac3983a554299657fa290f5_immediate/d2s6",
+        "text": "Orléans is one of 3 areas of the post-amalgamated City of Ottawa to contain a significant francophone population, hence the community's name.",
+        "visible_time_s": 2.437000000005355,
+        "requested_subject": "",
+        "resolved_title": "Orleans, Ontario",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 20,
+      "time_s": 2.437,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d3s0",
+        "title": "Kerry Saxby-Junna",
+        "url": "https://trace.invalid/hotpotqa_5ac3983a554299657fa290f5_immediate/d3s0",
+        "text": "Kerry-Anne Saxby-Junna, born Kerry Saxby AM (born 2 June 1961) is a retired Australian race walker.",
+        "visible_time_s": 2.437000000005355,
+        "requested_subject": "",
+        "resolved_title": "Kerry Saxby-Junna",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 21,
+      "time_s": 2.437,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d3s1",
+        "title": "Kerry Saxby-Junna",
+        "url": "https://trace.invalid/hotpotqa_5ac3983a554299657fa290f5_immediate/d3s1",
+        "text": "She was born in Young, New South Wales and grew up in Ballina, New South Wales.",
+        "visible_time_s": 2.437000000005355,
+        "requested_subject": "",
+        "resolved_title": "Kerry Saxby-Junna",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 22,
+      "time_s": 2.437,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d4s0",
+        "title": "Blennerville",
+        "url": "https://trace.invalid/hotpotqa_5ac3983a554299657fa290f5_immediate/d4s0",
+        "text": "Blennerville (Irish: \"Cathair Uí Mhóráin\" , meaning \"the seat/home of the Morans\") is a small village and now a suburb of Tralee, County Kerry, Ireland.",
+        "visible_time_s": 2.437000000005355,
+        "requested_subject": "",
+        "resolved_title": "Blennerville",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 23,
+      "time_s": 2.437,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d4s1",
+        "title": "Blennerville",
+        "url": "https://trace.invalid/hotpotqa_5ac3983a554299657fa290f5_immediate/d4s1",
+        "text": "It is approximately 1 mi west of the town centre on the N86 road to Dingle, where the River Lee enters Tralee Bay.",
+        "visible_time_s": 2.437000000005355,
+        "requested_subject": "",
+        "resolved_title": "Blennerville",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 24,
+      "time_s": 2.437,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d4s2",
+        "title": "Blennerville",
+        "url": "https://trace.invalid/hotpotqa_5ac3983a554299657fa290f5_immediate/d4s2",
+        "text": "The village was formerly Tralee's port, and is connected to the town centre by the Tralee Ship Canal.",
+        "visible_time_s": 2.437000000005355,
+        "requested_subject": "",
+        "resolved_title": "Blennerville",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 25,
+      "time_s": 2.437,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d4s3",
+        "title": "Blennerville",
+        "url": "https://trace.invalid/hotpotqa_5ac3983a554299657fa290f5_immediate/d4s3",
+        "text": "Part of Blennerville electoral division falls within the area of Tralee Town Council, and at the 2011 census had a population of 141.",
+        "visible_time_s": 2.437000000005355,
+        "requested_subject": "",
+        "resolved_title": "Blennerville",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 26,
+      "time_s": 2.437,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d4s4",
+        "title": "Blennerville",
+        "url": "https://trace.invalid/hotpotqa_5ac3983a554299657fa290f5_immediate/d4s4",
+        "text": "The remaining portion, outside the urban boundaries, had a 2011 population of 556.",
+        "visible_time_s": 2.437000000005355,
+        "requested_subject": "",
+        "resolved_title": "Blennerville",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 27,
+      "time_s": 2.437,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d5s0",
+        "title": "Islam in West Bengal",
+        "url": "https://trace.invalid/hotpotqa_5ac3983a554299657fa290f5_immediate/d5s0",
+        "text": "Since the partition of India in 1947, the majority of the Bengali Muslims have lived in Bangladesh.",
+        "visible_time_s": 2.437000000005355,
+        "requested_subject": "",
+        "resolved_title": "Islam in West Bengal",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 28,
+      "time_s": 2.437,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d5s1",
+        "title": "Islam in West Bengal",
+        "url": "https://trace.invalid/hotpotqa_5ac3983a554299657fa290f5_immediate/d5s1",
+        "text": "Islam is the minority religion in West Bengal as of 2011.",
+        "visible_time_s": 2.437000000005355,
+        "requested_subject": "",
+        "resolved_title": "Islam in West Bengal",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 29,
+      "time_s": 2.437,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d5s2",
+        "title": "Islam in West Bengal",
+        "url": "https://trace.invalid/hotpotqa_5ac3983a554299657fa290f5_immediate/d5s2",
+        "text": "However, Islam is also the second largest and the fastest growing religion in the Indian state of West Bengal.",
+        "visible_time_s": 2.437000000005355,
+        "requested_subject": "",
+        "resolved_title": "Islam in West Bengal",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 30,
+      "time_s": 2.437,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d5s3",
+        "title": "Islam in West Bengal",
+        "url": "https://trace.invalid/hotpotqa_5ac3983a554299657fa290f5_immediate/d5s3",
+        "text": "According to 2011 Census of India, West Bengal has over 24.6 million Bengali Muslims, who form 27% of the state's population.",
+        "visible_time_s": 2.437000000005355,
+        "requested_subject": "",
+        "resolved_title": "Islam in West Bengal",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 31,
+      "time_s": 2.437,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d5s4",
+        "title": "Islam in West Bengal",
+        "url": "https://trace.invalid/hotpotqa_5ac3983a554299657fa290f5_immediate/d5s4",
+        "text": "In West Bengal capital Kolkata Muslim's Population is 926,414 making up 20.6% of the city population as of 2011 census.",
+        "visible_time_s": 2.437000000005355,
+        "requested_subject": "",
+        "resolved_title": "Islam in West Bengal",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 32,
+      "time_s": 2.437,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d5s5",
+        "title": "Islam in West Bengal",
+        "url": "https://trace.invalid/hotpotqa_5ac3983a554299657fa290f5_immediate/d5s5",
+        "text": "Bengali Muslims are minority in all districts of Bengal except Uttar Dinajpur (49.92%), Maldah (51.27%) and Murshidabad (66.28%) .",
+        "visible_time_s": 2.437000000005355,
+        "requested_subject": "",
+        "resolved_title": "Islam in West Bengal",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 33,
+      "time_s": 2.437,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d5s6",
+        "title": "Islam in West Bengal",
+        "url": "https://trace.invalid/hotpotqa_5ac3983a554299657fa290f5_immediate/d5s6",
+        "text": "It is also said that this rise is due to proximity to Muslim-dominated districts of neighboring state of Bihar and illegal migration from Bangladesh cause demography change in the state.",
+        "visible_time_s": 2.437000000005355,
+        "requested_subject": "",
+        "resolved_title": "Islam in West Bengal",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 34,
+      "time_s": 2.437,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d6s0",
+        "title": "Korçë",
+        "url": "https://trace.invalid/hotpotqa_5ac3983a554299657fa290f5_immediate/d6s0",
+        "text": "Korçë (] ; (definite Albanian form: \"Korça\" ), other names see below) is a city and municipality in southeastern Albania, and the seat of Korçë County.",
+        "visible_time_s": 2.437000000005355,
+        "requested_subject": "",
+        "resolved_title": "Korçë",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 35,
+      "time_s": 2.437,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d6s1",
+        "title": "Korçë",
+        "url": "https://trace.invalid/hotpotqa_5ac3983a554299657fa290f5_immediate/d6s1",
+        "text": "It was formed at the 2015 local government reform by the merger of the former municipalities Drenovë, Korçë, Lekas, Mollaj, Qendër Bulgarec, Vithkuq, Voskop and Voskopojë, that became municipal units.",
+        "visible_time_s": 2.437000000005355,
+        "requested_subject": "",
+        "resolved_title": "Korçë",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 36,
+      "time_s": 2.437,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d6s2",
+        "title": "Korçë",
+        "url": "https://trace.invalid/hotpotqa_5ac3983a554299657fa290f5_immediate/d6s2",
+        "text": "The seat of the municipality is the city Korçë.",
+        "visible_time_s": 2.437000000005355,
+        "requested_subject": "",
+        "resolved_title": "Korçë",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 37,
+      "time_s": 2.437,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d6s3",
+        "title": "Korçë",
+        "url": "https://trace.invalid/hotpotqa_5ac3983a554299657fa290f5_immediate/d6s3",
+        "text": "The total population is 75,994 (2011 census), in a total area of 805.99 km2 .",
+        "visible_time_s": 2.437000000005355,
+        "requested_subject": "",
+        "resolved_title": "Korçë",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 38,
+      "time_s": 2.437,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d6s4",
+        "title": "Korçë",
+        "url": "https://trace.invalid/hotpotqa_5ac3983a554299657fa290f5_immediate/d6s4",
+        "text": "The population of the former municipality at the 2011 census was 51,152.",
+        "visible_time_s": 2.437000000005355,
+        "requested_subject": "",
+        "resolved_title": "Korçë",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 39,
+      "time_s": 2.437,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d6s5",
+        "title": "Korçë",
+        "url": "https://trace.invalid/hotpotqa_5ac3983a554299657fa290f5_immediate/d6s5",
+        "text": "It is the sixth largest city in Albania.",
+        "visible_time_s": 2.437000000005355,
+        "requested_subject": "",
+        "resolved_title": "Korçë",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 40,
+      "time_s": 2.437,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d6s6",
+        "title": "Korçë",
+        "url": "https://trace.invalid/hotpotqa_5ac3983a554299657fa290f5_immediate/d6s6",
+        "text": "It stands on a plateau some 850 m above sea level, surrounded by the Morava Mountains.",
+        "visible_time_s": 2.437000000005355,
+        "requested_subject": "",
+        "resolved_title": "Korçë",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 41,
+      "time_s": 2.437,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d7s0",
+        "title": "Young, New South Wales",
+        "url": "https://trace.invalid/hotpotqa_5ac3983a554299657fa290f5_immediate/d7s0",
+        "text": "Young is a town in the South West Slopes region of New South Wales, Australia and the largest town in Hilltops Council.",
+        "visible_time_s": 2.437000000005355,
+        "requested_subject": "",
+        "resolved_title": "Young, New South Wales",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 42,
+      "time_s": 2.437,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d7s1",
+        "title": "Young, New South Wales",
+        "url": "https://trace.invalid/hotpotqa_5ac3983a554299657fa290f5_immediate/d7s1",
+        "text": "At the 2011 census , Young had a population of 6,960.",
+        "visible_time_s": 2.437000000005355,
+        "requested_subject": "",
+        "resolved_title": "Young, New South Wales",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 43,
+      "time_s": 2.437,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d8s0",
+        "title": "Northern Region, Manitoba",
+        "url": "https://trace.invalid/hotpotqa_5ac3983a554299657fa290f5_immediate/d8s0",
+        "text": "The Northern Region is a region in the Canadian province of Manitoba.",
+        "visible_time_s": 2.437000000005355,
+        "requested_subject": "",
+        "resolved_title": "Northern Region, Manitoba",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 44,
+      "time_s": 2.437,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d8s1",
+        "title": "Northern Region, Manitoba",
+        "url": "https://trace.invalid/hotpotqa_5ac3983a554299657fa290f5_immediate/d8s1",
+        "text": "It is situated on the Canadian Shield and includes Manitoba's Hudson Bay coastline.",
+        "visible_time_s": 2.437000000005355,
+        "requested_subject": "",
+        "resolved_title": "Northern Region, Manitoba",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 45,
+      "time_s": 2.437,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d8s2",
+        "title": "Northern Region, Manitoba",
+        "url": "https://trace.invalid/hotpotqa_5ac3983a554299657fa290f5_immediate/d8s2",
+        "text": "The major economic activities are mining and tourism.",
+        "visible_time_s": 2.437000000005355,
+        "requested_subject": "",
+        "resolved_title": "Northern Region, Manitoba",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 46,
+      "time_s": 2.437,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d8s3",
+        "title": "Northern Region, Manitoba",
+        "url": "https://trace.invalid/hotpotqa_5ac3983a554299657fa290f5_immediate/d8s3",
+        "text": "The region is composed of four census divisions: 19 and 21–23 .",
+        "visible_time_s": 2.437000000005355,
+        "requested_subject": "",
+        "resolved_title": "Northern Region, Manitoba",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 47,
+      "time_s": 2.437,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d8s4",
+        "title": "Northern Region, Manitoba",
+        "url": "https://trace.invalid/hotpotqa_5ac3983a554299657fa290f5_immediate/d8s4",
+        "text": "The land area of the region is 438,491.51 km² (169,302.52 mi²), which encompasses 67% of Manitoba's total land area.",
+        "visible_time_s": 2.437000000005355,
+        "requested_subject": "",
+        "resolved_title": "Northern Region, Manitoba",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 48,
+      "time_s": 2.437,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d8s5",
+        "title": "Northern Region, Manitoba",
+        "url": "https://trace.invalid/hotpotqa_5ac3983a554299657fa290f5_immediate/d8s5",
+        "text": "The vast majority of the region is undeveloped wilderness.",
+        "visible_time_s": 2.437000000005355,
+        "requested_subject": "",
+        "resolved_title": "Northern Region, Manitoba",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 49,
+      "time_s": 2.437,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d8s6",
+        "title": "Northern Region, Manitoba",
+        "url": "https://trace.invalid/hotpotqa_5ac3983a554299657fa290f5_immediate/d8s6",
+        "text": "Its total population at the 2011 census was 88,146, which was only 7.3% of Manitoba's total population in the 2011 census.",
+        "visible_time_s": 2.437000000005355,
+        "requested_subject": "",
+        "resolved_title": "Northern Region, Manitoba",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 50,
+      "time_s": 2.437,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d8s7",
+        "title": "Northern Region, Manitoba",
+        "url": "https://trace.invalid/hotpotqa_5ac3983a554299657fa290f5_immediate/d8s7",
+        "text": "The largest municipality is the city of Thompson.",
+        "visible_time_s": 2.437000000005355,
+        "requested_subject": "",
+        "resolved_title": "Northern Region, Manitoba",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 51,
+      "time_s": 2.437,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d8s8",
+        "title": "Northern Region, Manitoba",
+        "url": "https://trace.invalid/hotpotqa_5ac3983a554299657fa290f5_immediate/d8s8",
+        "text": "Other major population centers include the city of Flin Flon and the town of The Pas.",
+        "visible_time_s": 2.437000000005355,
+        "requested_subject": "",
+        "resolved_title": "Northern Region, Manitoba",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 52,
+      "time_s": 2.437,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d8s9",
+        "title": "Northern Region, Manitoba",
+        "url": "https://trace.invalid/hotpotqa_5ac3983a554299657fa290f5_immediate/d8s9",
+        "text": "Indian reserves comprise more than 49% of the region's population.",
+        "visible_time_s": 2.437000000005355,
+        "requested_subject": "",
+        "resolved_title": "Northern Region, Manitoba",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 53,
+      "time_s": 2.437,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d8s10",
+        "title": "Northern Region, Manitoba",
+        "url": "https://trace.invalid/hotpotqa_5ac3983a554299657fa290f5_immediate/d8s10",
+        "text": "There are 54 reserves with a total population of 40,572.",
+        "visible_time_s": 2.437000000005355,
+        "requested_subject": "",
+        "resolved_title": "Northern Region, Manitoba",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 54,
+      "time_s": 2.437,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d8s11",
+        "title": "Northern Region, Manitoba",
+        "url": "https://trace.invalid/hotpotqa_5ac3983a554299657fa290f5_immediate/d8s11",
+        "text": "The largest of these are Norway House 17 and Peguis 1B.",
+        "visible_time_s": 2.437000000005355,
+        "requested_subject": "",
+        "resolved_title": "Northern Region, Manitoba",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 55,
+      "time_s": 2.437,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d9s0",
+        "title": "Warton, Lancaster",
+        "url": "https://trace.invalid/hotpotqa_5ac3983a554299657fa290f5_immediate/d9s0",
+        "text": "Warton is a village, civil parish and electoral ward in the City of Lancaster in north Lancashire in the north-west of England, close to the boundary with Cumbria, with a population of around 2,000, measured at the 2011 Census to be 2,360.",
+        "visible_time_s": 2.437000000005355,
+        "requested_subject": "",
+        "resolved_title": "Warton, Lancaster",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 56,
+      "time_s": 2.437,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d9s1",
+        "title": "Warton, Lancaster",
+        "url": "https://trace.invalid/hotpotqa_5ac3983a554299657fa290f5_immediate/d9s1",
+        "text": "It is a village steeped in history; its earliest recording as a settlement is made in Domesday Book written in 1086.",
+        "visible_time_s": 2.437000000005355,
+        "requested_subject": "",
+        "resolved_title": "Warton, Lancaster",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 57,
+      "time_s": 2.437,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d9s2",
+        "title": "Warton, Lancaster",
+        "url": "https://trace.invalid/hotpotqa_5ac3983a554299657fa290f5_immediate/d9s2",
+        "text": "The nearest town to Warton is Carnforth, which was originally part of Warton parish.",
+        "visible_time_s": 2.437000000005355,
+        "requested_subject": "",
+        "resolved_title": "Warton, Lancaster",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 58,
+      "time_s": 2.437,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d9s3",
+        "title": "Warton, Lancaster",
+        "url": "https://trace.invalid/hotpotqa_5ac3983a554299657fa290f5_immediate/d9s3",
+        "text": "It has connections to the first President of the United States, George Washington: Washington's ancestor of seven generations, Lawrence Washington, is rumoured to have helped build the village church of St Oswald.",
+        "visible_time_s": 2.437000000005355,
+        "requested_subject": "",
+        "resolved_title": "Warton, Lancaster",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 59,
+      "time_s": 2.437,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d9s4",
+        "title": "Warton, Lancaster",
+        "url": "https://trace.invalid/hotpotqa_5ac3983a554299657fa290f5_immediate/d9s4",
+        "text": "The parish covers an area in excess of 11000 acre and is predominantly rural.",
+        "visible_time_s": 2.437000000005355,
+        "requested_subject": "",
+        "resolved_title": "Warton, Lancaster",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 60,
+      "time_s": 2.437,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d9s5",
+        "title": "Warton, Lancaster",
+        "url": "https://trace.invalid/hotpotqa_5ac3983a554299657fa290f5_immediate/d9s5",
+        "text": "The parish of Warton had a population of 2315 recorded in the 2001 census, and 2,360 in the 2011 census.",
+        "visible_time_s": 2.437000000005355,
+        "requested_subject": "",
+        "resolved_title": "Warton, Lancaster",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 61,
+      "time_s": 2.437,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d10s0",
+        "title": "Ackworth, West Yorkshire",
+        "url": "https://trace.invalid/hotpotqa_5ac3983a554299657fa290f5_immediate/d10s0",
+        "text": "Ackworth is a village and civil parish in the metropolitan borough of Wakefield, West Yorkshire, England, situated between Pontefract, Barnsley and Doncaster on the small River Went.",
+        "visible_time_s": 2.437000000005355,
+        "requested_subject": "",
+        "resolved_title": "Ackworth, West Yorkshire",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 62,
+      "time_s": 2.437,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d10s1",
+        "title": "Ackworth, West Yorkshire",
+        "url": "https://trace.invalid/hotpotqa_5ac3983a554299657fa290f5_immediate/d10s1",
+        "text": "The village consists of four parts, High Ackworth, Low Ackworth, Ackworth Moor Top, and Brackenhill.",
+        "visible_time_s": 2.437000000005355,
+        "requested_subject": "",
+        "resolved_title": "Ackworth, West Yorkshire",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 63,
+      "time_s": 2.437,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d10s2",
+        "title": "Ackworth, West Yorkshire",
+        "url": "https://trace.invalid/hotpotqa_5ac3983a554299657fa290f5_immediate/d10s2",
+        "text": "According to the 2001 census it had a population of 6,493, increasing to 7,049 at the 2011 Census.",
+        "visible_time_s": 2.437000000005355,
+        "requested_subject": "",
+        "resolved_title": "Ackworth, West Yorkshire",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 64,
+      "time_s": 2.437,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d10s3",
+        "title": "Ackworth, West Yorkshire",
+        "url": "https://trace.invalid/hotpotqa_5ac3983a554299657fa290f5_immediate/d10s3",
+        "text": "There is also a City of Wakefield Ward called Ackworth, North Elmsall and Upton.",
+        "visible_time_s": 2.437000000005355,
+        "requested_subject": "",
+        "resolved_title": "Ackworth, West Yorkshire",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 65,
+      "time_s": 2.437,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d10s4",
+        "title": "Ackworth, West Yorkshire",
+        "url": "https://trace.invalid/hotpotqa_5ac3983a554299657fa290f5_immediate/d10s4",
+        "text": "At the 2011 Census this ward had a population of 16,099.",
+        "visible_time_s": 2.437000000005355,
+        "requested_subject": "",
+        "resolved_title": "Ackworth, West Yorkshire",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 66,
+      "time_s": 3.672,
+      "type": "judge_reply",
+      "reply": {
+        "judgments": [
+          {
+            "unit_id": "u1",
+            "label": "SUPPORTED",
+            "value": "Young",
+            "citations": [
+              "d3s0",
+              "d3s1"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d3s0",
+                "text": "Kerry-Anne Saxby-Junna, born Kerry Saxby AM (born 2 June 1961) is a retired Australian race walker."
+              },
+              {
+                "evidence_id": "d3s1",
+                "text": "She was born in Young, New South Wales and grew up in Ballina, New South Wales."
+              }
+            ],
+            "reason": "Supported by the cited visible sentences and dependencies."
+          },
+          {
+            "unit_id": "u2",
+            "label": "SUPPORTED",
+            "value": "6,960",
+            "citations": [
+              "d7s1"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d7s1",
+                "text": "At the 2011 census , Young had a population of 6,960."
+              }
+            ],
+            "reason": "Supported by the cited visible sentences and dependencies."
+          }
+        ]
+      },
+      "attempt": 1,
+      "repair": false,
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d1s1",
+        "d1s2",
+        "d1s3",
+        "d2s0",
+        "d2s1",
+        "d2s2",
+        "d2s3",
+        "d2s4",
+        "d2s5",
+        "d2s6",
+        "d3s0",
+        "d3s1",
+        "d4s0",
+        "d4s1",
+        "d4s2",
+        "d4s3",
+        "d4s4",
+        "d5s0",
+        "d5s1",
+        "d5s2",
+        "d5s3",
+        "d5s4",
+        "d5s5",
+        "d5s6",
+        "d6s0",
+        "d6s1",
+        "d6s2",
+        "d6s3",
+        "d6s4",
+        "d6s5",
+        "d6s6",
+        "d7s0",
+        "d7s1",
+        "d8s0",
+        "d8s1",
+        "d8s2",
+        "d8s3",
+        "d8s4",
+        "d8s5",
+        "d8s6",
+        "d8s7",
+        "d8s8",
+        "d8s9",
+        "d8s10",
+        "d8s11",
+        "d9s0",
+        "d9s1",
+        "d9s2",
+        "d9s3",
+        "d9s4",
+        "d9s5",
+        "d10s0",
+        "d10s1",
+        "d10s2",
+        "d10s3",
+        "d10s4"
+      ]
+    },
+    {
+      "sequence": 67,
+      "time_s": 3.672,
+      "type": "judgments",
+      "judgments": {
+        "u1": {
+          "label": "SUPPORTED",
+          "value": "Young",
+          "citations": [
+            "d3s0",
+            "d3s1"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d3s0",
+              "text": "Kerry-Anne Saxby-Junna, born Kerry Saxby AM (born 2 June 1961) is a retired Australian race walker."
+            },
+            {
+              "evidence_id": "d3s1",
+              "text": "She was born in Young, New South Wales and grew up in Ballina, New South Wales."
+            }
+          ],
+          "reason": "Supported by the cited visible sentences and dependencies."
+        },
+        "u2": {
+          "label": "SUPPORTED",
+          "value": "6,960",
+          "citations": [
+            "d7s1"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d7s1",
+              "text": "At the 2011 census , Young had a population of 6,960."
+            }
+          ],
+          "reason": "Supported by the cited visible sentences and dependencies."
+        }
+      },
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d1s1",
+        "d1s2",
+        "d1s3",
+        "d2s0",
+        "d2s1",
+        "d2s2",
+        "d2s3",
+        "d2s4",
+        "d2s5",
+        "d2s6",
+        "d3s0",
+        "d3s1",
+        "d4s0",
+        "d4s1",
+        "d4s2",
+        "d4s3",
+        "d4s4",
+        "d5s0",
+        "d5s1",
+        "d5s2",
+        "d5s3",
+        "d5s4",
+        "d5s5",
+        "d5s6",
+        "d6s0",
+        "d6s1",
+        "d6s2",
+        "d6s3",
+        "d6s4",
+        "d6s5",
+        "d6s6",
+        "d7s0",
+        "d7s1",
+        "d8s0",
+        "d8s1",
+        "d8s2",
+        "d8s3",
+        "d8s4",
+        "d8s5",
+        "d8s6",
+        "d8s7",
+        "d8s8",
+        "d8s9",
+        "d8s10",
+        "d8s11",
+        "d9s0",
+        "d9s1",
+        "d9s2",
+        "d9s3",
+        "d9s4",
+        "d9s5",
+        "d10s0",
+        "d10s1",
+        "d10s2",
+        "d10s3",
+        "d10s4"
+      ],
+      "semantic_review": false
+    },
+    {
+      "sequence": 68,
+      "time_s": 4.984,
+      "type": "feedback_requested",
+      "feedback_kind": "progress",
+      "execution_state": {
+        "stage": "formulating",
+        "searches_started": 1,
+        "searches_completed": 1,
+        "active_searches": 0,
+        "evidence_count": 57,
+        "supported_units": 2,
+        "output_units": 0
+      }
+    },
+    {
+      "sequence": 69,
+      "time_s": 5.25,
+      "type": "verification_reply",
+      "reply": {
+        "approved": true,
+        "facts_valid": true,
+        "expressed_unit_ids": [
+          "u1",
+          "u2"
+        ],
+        "reason": "All factual claims are supported by the provided evidence and match the requested units."
+      },
+      "output_unit_ids": [
+        "u1",
+        "u2"
+      ],
+      "output_action": "Final Answer",
+      "dependency_unit_ids": [],
+      "evidence_snapshot_ids": [
+        "d3s0",
+        "d3s1",
+        "d7s1"
+      ]
+    },
+    {
+      "sequence": 70,
+      "time_s": 5.25,
+      "type": "utterance",
+      "action": "Final Answer",
+      "text": "Kerry Saxby-Junna was born in Young. Young had a population of 6,960 at the 2011 census.",
+      "claims": [
+        {
+          "unit_id": "u1",
+          "description": "city where Kerry Saxby-Junna was born",
+          "value": "Young",
+          "citations": [
+            "d3s0",
+            "d3s1"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d3s0",
+              "text": "Kerry-Anne Saxby-Junna, born Kerry Saxby AM (born 2 June 1961) is a retired Australian race walker."
+            },
+            {
+              "evidence_id": "d3s1",
+              "text": "She was born in Young, New South Wales and grew up in Ballina, New South Wales."
+            }
+          ]
+        },
+        {
+          "unit_id": "u2",
+          "description": "population of Young at the 2011 census",
+          "value": "6,960",
+          "citations": [
+            "d7s1"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d7s1",
+              "text": "At the 2011 census , Young had a population of 6,960."
+            }
+          ]
+        }
+      ],
+      "unresolved": [],
+      "fallback": false,
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d1s1",
+        "d1s2",
+        "d1s3",
+        "d2s0",
+        "d2s1",
+        "d2s2",
+        "d2s3",
+        "d2s4",
+        "d2s5",
+        "d2s6",
+        "d3s0",
+        "d3s1",
+        "d4s0",
+        "d4s1",
+        "d4s2",
+        "d4s3",
+        "d4s4",
+        "d5s0",
+        "d5s1",
+        "d5s2",
+        "d5s3",
+        "d5s4",
+        "d5s5",
+        "d5s6",
+        "d6s0",
+        "d6s1",
+        "d6s2",
+        "d6s3",
+        "d6s4",
+        "d6s5",
+        "d6s6",
+        "d7s0",
+        "d7s1",
+        "d8s0",
+        "d8s1",
+        "d8s2",
+        "d8s3",
+        "d8s4",
+        "d8s5",
+        "d8s6",
+        "d8s7",
+        "d8s8",
+        "d8s9",
+        "d8s10",
+        "d8s11",
+        "d9s0",
+        "d9s1",
+        "d9s2",
+        "d9s3",
+        "d9s4",
+        "d9s5",
+        "d10s0",
+        "d10s1",
+        "d10s2",
+        "d10s3",
+        "d10s4"
+      ],
+      "language": "en"
+    },
+    {
+      "sequence": 71,
+      "time_s": 5.25,
+      "type": "finished",
+      "status": "complete"
+    }
+  ],
+  "note": "Prototype model judgments are not independent gold scores. Output event times are not spoken claim times.",
+  "evidence_mode": "scheduled_trace",
+  "audio": {
+    "enabled": true,
+    "mode": "windows",
+    "play": false,
+    "status": "ok",
+    "errors": [],
+    "records": [
+      {
+        "event_sequence": 3,
+        "sentence_index": 1,
+        "sentence_count": 1,
+        "language": "en",
+        "text": "I’ll look up the 2011 census population for Kerry Saxby‑Junna’s birth city.",
+        "action": "Backchannel",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 1.7970000000059372,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1-continued\\samples\\0859\\audio\\segments\\0003_01.wav",
+        "duration_s": 6.058231292517007,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 2.5930000000080327,
+        "synthesis_and_playback_s": 0.7960000000020955
+      },
+      {
+        "event_sequence": 70,
+        "sentence_index": 1,
+        "sentence_count": 2,
+        "language": "en",
+        "text": "Kerry Saxby-Junna was born in Young.",
+        "action": "Final Answer",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 5.25,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1-continued\\samples\\0859\\audio\\segments\\0070_01.wav",
+        "duration_s": 2.988888888888889,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 6.0310000000026776,
+        "synthesis_and_playback_s": 0.7810000000026776
+      },
+      {
+        "event_sequence": 70,
+        "sentence_index": 2,
+        "sentence_count": 2,
+        "language": "en",
+        "text": "Young had a population of 6,960 at the 2011 census.",
+        "action": "Final Answer",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 6.0310000000026776,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1-continued\\samples\\0859\\audio\\segments\\0070_02.wav",
+        "duration_s": 6.31827664399093,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 6.828000000008615,
+        "synthesis_and_playback_s": 0.7970000000059372
+      }
+    ],
+    "wave": {
+      "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1-continued\\samples\\0859\\audio\\response.wav",
+      "duration_s": 17.958412698412697,
+      "timeline": [
+        {
+          "event_sequence": 3,
+          "sentence_index": 1,
+          "action": "Backchannel",
+          "text": "I’ll look up the 2011 census population for Kerry Saxby‑Junna’s birth city.",
+          "wave_start_s": 2.593015873015873,
+          "wave_end_s": 8.65124716553288
+        },
+        {
+          "event_sequence": 70,
+          "sentence_index": 1,
+          "action": "Final Answer",
+          "text": "Kerry Saxby-Junna was born in Young.",
+          "wave_start_s": 8.65124716553288,
+          "wave_end_s": 11.640136054421768
+        },
+        {
+          "event_sequence": 70,
+          "sentence_index": 2,
+          "action": "Final Answer",
+          "text": "Young had a population of 6,960 at the 2011 census.",
+          "wave_start_s": 11.640136054421768,
+          "wave_end_s": 17.958412698412697
+        }
+      ]
+    }
+  },
+  "evaluation": {
+    "mode": "b_final_revised_trace",
+    "trace_id": "hotpotqa_5ac3983a554299657fa290f5_immediate",
+    "sample_id": "hotpotqa_5ac3983a554299657fa290f5",
+    "total_wall_s": 6.828000000008615,
+    "question_timeout_s": 180,
+    "audio_enabled": true,
+    "history_enabled": false,
+    "text_pipeline_wall_s": 5.25,
+    "effective_settings": {
+      "base_url": "https://tinker.thinkingmachines.dev/services/tinker-prod/oai/api/v1",
+      "model": "openai/gpt-oss-120b",
+      "judge_model": "tinker://f9e9a6c1-e203-5c2c-acdd-68fe67378ca4:train:0/sampler_weights/epoch-0001",
+      "judge_reasoning_effort": "low",
+      "wiki_language": "en",
+      "user_agent": "CascadeSystem/0.1 (educational research prototype)",
+      "timeout_s": 45.0,
+      "max_tokens": 4096,
+      "reasoning_effort": "low",
+      "progress_s": 3.0,
+      "feedback_timeout_s": 6.0,
+      "search_limit": 3,
+      "max_units": 8,
+      "max_searches": 16,
+      "max_sources": 57,
+      "source_chars": 259,
+      "evidence_chars": 6302,
+      "concurrency": 3
+    },
+    "timing_kind": "unknown",
+    "scheduler": "wall-paced fixed B arrivals",
+    "split": "eval_reserved",
+    "empty_evidence_sentences_ignored": 0
+  }
+}

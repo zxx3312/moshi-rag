@@ -1,0 +1,1915 @@
+{
+  "question": "Are the genera Gordonia and Osbeckia in the same family?",
+  "resolved_question": "Are the genera Gordonia and Osbeckia in the same family?",
+  "used_history_turn_ids": [],
+  "response_language": "en",
+  "status": "complete",
+  "clock": "wall_monotonic",
+  "time_origin": "question_text_ready_after_optional_asr",
+  "model": "openai/gpt-oss-120b",
+  "units": [
+    {
+      "unit_id": "u1",
+      "description": "family of the genus Gordonia",
+      "necessary": true,
+      "depends_on": [],
+      "queries": [
+        "Gordonia (plant) family",
+        "Gordonia genus family"
+      ],
+      "subject": "Gordonia (plant)"
+    },
+    {
+      "unit_id": "u2",
+      "description": "family of the genus Osbeckia",
+      "necessary": true,
+      "depends_on": [],
+      "queries": [
+        "Osbeckia family",
+        "Osbeckia genus family"
+      ],
+      "subject": "Osbeckia"
+    },
+    {
+      "unit_id": "u3",
+      "description": "whether the families of Gordonia and Osbeckia are the same",
+      "necessary": true,
+      "depends_on": [
+        "u1",
+        "u2"
+      ],
+      "queries": [
+        "Are Gordonia and Osbeckia in the same family?"
+      ],
+      "subject": ""
+    }
+  ],
+  "judgments": {
+    "u1": {
+      "label": "SUPPORTED",
+      "value": "Theaceae",
+      "citations": [
+        "d1s0"
+      ],
+      "quotes": [
+        {
+          "evidence_id": "d1s0",
+          "text": "family Theaceae"
+        }
+      ],
+      "reason": "Source states Gordonia belongs to the family Theaceae."
+    },
+    "u2": {
+      "label": "SUPPORTED",
+      "value": "Melastomataceae",
+      "citations": [
+        "d6s0"
+      ],
+      "quotes": [
+        {
+          "evidence_id": "d6s0",
+          "text": "family Melastomataceae"
+        }
+      ],
+      "reason": "Source states Osbeckia belongs to the family Melastomataceae."
+    },
+    "u3": {
+      "label": "SUPPORTED",
+      "value": "No",
+      "citations": [
+        "d1s0",
+        "d6s0"
+      ],
+      "quotes": [
+        {
+          "evidence_id": "d1s0",
+          "text": "family Theaceae"
+        },
+        {
+          "evidence_id": "d6s0",
+          "text": "family Melastomataceae"
+        }
+      ],
+      "reason": "Gordonia is in Theaceae while Osbeckia is in Melastomataceae, so they are not in the same family."
+    }
+  },
+  "evidence": [
+    {
+      "evidence_id": "d1s0",
+      "title": "Gordonia (plant)",
+      "url": "https://trace.invalid/hotpotqa_5ae3f4fe5542995ad6573ce8_immediate/d1s0",
+      "text": "Gordonia is a genus of flowering plants in the family Theaceae, related to \"Franklinia\", \"Camellia\" and \"Stewartia\".",
+      "visible_time_s": 3.782627799999318,
+      "requested_subject": "",
+      "resolved_title": "Gordonia (plant)",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d1s1",
+      "title": "Gordonia (plant)",
+      "url": "https://trace.invalid/hotpotqa_5ae3f4fe5542995ad6573ce8_immediate/d1s1",
+      "text": "Of the roughly 40 species, all but two are native to southeast Asia in southern China, Taiwan and Indochina.",
+      "visible_time_s": 3.7827150999946753,
+      "requested_subject": "",
+      "resolved_title": "Gordonia (plant)",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d1s2",
+      "title": "Gordonia (plant)",
+      "url": "https://trace.invalid/hotpotqa_5ae3f4fe5542995ad6573ce8_immediate/d1s2",
+      "text": "The remaining species, \"G. lasianthus\" (Loblolly-bay), is native to southeast North America, from Virginia south to Florida and west to Louisiana; \"G. fruticosa\" is native to the tropical rainforests of Central and South America, from Costa Rica to Brazil.",
+      "visible_time_s": 3.782743299998401,
+      "requested_subject": "",
+      "resolved_title": "Gordonia (plant)",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d2s0",
+      "title": "Osbeckia stellata",
+      "url": "https://trace.invalid/hotpotqa_5ae3f4fe5542995ad6573ce8_immediate/d2s0",
+      "text": "Osbeckia stellata (Thai: จุกนารี ) is a flowering plant in the family Melastomataceae.",
+      "visible_time_s": 3.7827662999989116,
+      "requested_subject": "",
+      "resolved_title": "Osbeckia stellata",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d3s0",
+      "title": "Gordonia singaporeana",
+      "url": "https://trace.invalid/hotpotqa_5ae3f4fe5542995ad6573ce8_immediate/d3s0",
+      "text": "Gordonia singaporeana is a species of plant in the Theaceae family.",
+      "visible_time_s": 3.7827933999942616,
+      "requested_subject": "",
+      "resolved_title": "Gordonia singaporeana",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d3s1",
+      "title": "Gordonia singaporeana",
+      "url": "https://trace.invalid/hotpotqa_5ae3f4fe5542995ad6573ce8_immediate/d3s1",
+      "text": "It is a tree found in Peninsular Malaysia and Singapore.",
+      "visible_time_s": 3.7828149999986636,
+      "requested_subject": "",
+      "resolved_title": "Gordonia singaporeana",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d3s2",
+      "title": "Gordonia singaporeana",
+      "url": "https://trace.invalid/hotpotqa_5ae3f4fe5542995ad6573ce8_immediate/d3s2",
+      "text": "It is threatened by habitat loss.",
+      "visible_time_s": 3.7828350999989198,
+      "requested_subject": "",
+      "resolved_title": "Gordonia singaporeana",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d4s0",
+      "title": "Gondysia similis",
+      "url": "https://trace.invalid/hotpotqa_5ae3f4fe5542995ad6573ce8_immediate/d4s0",
+      "text": "The Gordonia Darkwing (\"Gondysia similis\", formerly \"Dysgonia similis\") is a moth of the Noctuidae family.",
+      "visible_time_s": 3.782854099998076,
+      "requested_subject": "",
+      "resolved_title": "Gondysia similis",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d4s1",
+      "title": "Gondysia similis",
+      "url": "https://trace.invalid/hotpotqa_5ae3f4fe5542995ad6573ce8_immediate/d4s1",
+      "text": "It is found in North America, from North Carolina to Mississippi and Florida.",
+      "visible_time_s": 3.7828739999968093,
+      "requested_subject": "",
+      "resolved_title": "Gondysia similis",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d4s2",
+      "title": "Gondysia similis",
+      "url": "https://trace.invalid/hotpotqa_5ae3f4fe5542995ad6573ce8_immediate/d4s2",
+      "text": "The food plant occurs in Alabama and Mississippi and the moth could be expected from these areas as well.",
+      "visible_time_s": 3.7828931999974884,
+      "requested_subject": "",
+      "resolved_title": "Gondysia similis",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d5s0",
+      "title": "Gordonia taipingensis",
+      "url": "https://trace.invalid/hotpotqa_5ae3f4fe5542995ad6573ce8_immediate/d5s0",
+      "text": "Gordonia taipingensis is a species of plant in the Theaceae family.",
+      "visible_time_s": 3.782929199995124,
+      "requested_subject": "",
+      "resolved_title": "Gordonia taipingensis",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d5s1",
+      "title": "Gordonia taipingensis",
+      "url": "https://trace.invalid/hotpotqa_5ae3f4fe5542995ad6573ce8_immediate/d5s1",
+      "text": "It is a tree endemic to Peninsular Malaysia.",
+      "visible_time_s": 3.782949999993434,
+      "requested_subject": "",
+      "resolved_title": "Gordonia taipingensis",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d5s2",
+      "title": "Gordonia taipingensis",
+      "url": "https://trace.invalid/hotpotqa_5ae3f4fe5542995ad6573ce8_immediate/d5s2",
+      "text": "It is threatened by habitat loss.",
+      "visible_time_s": 3.782970000000205,
+      "requested_subject": "",
+      "resolved_title": "Gordonia taipingensis",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d6s0",
+      "title": "Osbeckia",
+      "url": "https://trace.invalid/hotpotqa_5ae3f4fe5542995ad6573ce8_immediate/d6s0",
+      "text": "Osbeckia is a genus of plants in the family Melastomataceae.",
+      "visible_time_s": 3.7829897999981767,
+      "requested_subject": "",
+      "resolved_title": "Osbeckia",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d6s1",
+      "title": "Osbeckia",
+      "url": "https://trace.invalid/hotpotqa_5ae3f4fe5542995ad6573ce8_immediate/d6s1",
+      "text": "It was named by Carl Linnaeus for the Swedish explorer and naturalist Pehr Osbeck (1723–1805).",
+      "visible_time_s": 3.7830092000003788,
+      "requested_subject": "",
+      "resolved_title": "Osbeckia",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d7s0",
+      "title": "Osbeckia octandra",
+      "url": "https://trace.invalid/hotpotqa_5ae3f4fe5542995ad6573ce8_immediate/d7s0",
+      "text": "Eight Stamen Osbeckia, (Osbeckia octandra), is a plant species in the genus \"Osbeckia\" of the family Melastomataceae.",
+      "visible_time_s": 3.783032399995136,
+      "requested_subject": "",
+      "resolved_title": "Osbeckia octandra",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d7s1",
+      "title": "Osbeckia octandra",
+      "url": "https://trace.invalid/hotpotqa_5ae3f4fe5542995ad6573ce8_immediate/d7s1",
+      "text": "It is considered to be endemic to Sri Lanka, where it is known as \"Heen Bovitiya - හීන් බෝවිටියා\" in Sinhala language.",
+      "visible_time_s": 3.7830524999953923,
+      "requested_subject": "",
+      "resolved_title": "Osbeckia octandra",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d7s2",
+      "title": "Osbeckia octandra",
+      "url": "https://trace.invalid/hotpotqa_5ae3f4fe5542995ad6573ce8_immediate/d7s2",
+      "text": "But some texts indicate that it is also found in Tamil Nadu of India.",
+      "visible_time_s": 3.7830761000004713,
+      "requested_subject": "",
+      "resolved_title": "Osbeckia octandra",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d7s3",
+      "title": "Osbeckia octandra",
+      "url": "https://trace.invalid/hotpotqa_5ae3f4fe5542995ad6573ce8_immediate/d7s3",
+      "text": "Fruits are dry capsules with numerous seeds.",
+      "visible_time_s": 3.7830979999998817,
+      "requested_subject": "",
+      "resolved_title": "Osbeckia octandra",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d7s4",
+      "title": "Osbeckia octandra",
+      "url": "https://trace.invalid/hotpotqa_5ae3f4fe5542995ad6573ce8_immediate/d7s4",
+      "text": "Leaves and young stems are edible, whereas leaves, stem and bark also widely used as a valuable medicine in Ayurveda for treating Diabetes mellitus, Hepatitis, Jaundice, and Hyperlipidaemia.",
+      "visible_time_s": 3.783120299995062,
+      "requested_subject": "",
+      "resolved_title": "Osbeckia octandra",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d7s5",
+      "title": "Osbeckia octandra",
+      "url": "https://trace.invalid/hotpotqa_5ae3f4fe5542995ad6573ce8_immediate/d7s5",
+      "text": "The juice extracted from \"Osbeckia octandra\" leaves is an effective treatment for liver damage caused by Paracetamol poisoning",
+      "visible_time_s": 3.783142799999041,
+      "requested_subject": "",
+      "resolved_title": "Osbeckia octandra",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d8s0",
+      "title": "Gordonia villosa",
+      "url": "https://trace.invalid/hotpotqa_5ae3f4fe5542995ad6573ce8_immediate/d8s0",
+      "text": "Gordonia villosa is a species of plant in the Theaceae family.",
+      "visible_time_s": 3.78316349999659,
+      "requested_subject": "",
+      "resolved_title": "Gordonia villosa",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d8s1",
+      "title": "Gordonia villosa",
+      "url": "https://trace.invalid/hotpotqa_5ae3f4fe5542995ad6573ce8_immediate/d8s1",
+      "text": "It is endemic to Jamaica.",
+      "visible_time_s": 3.7831831999938004,
+      "requested_subject": "",
+      "resolved_title": "Gordonia villosa",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d9s0",
+      "title": "Gordonia lasianthus",
+      "url": "https://trace.invalid/hotpotqa_5ae3f4fe5542995ad6573ce8_immediate/d9s0",
+      "text": "Gordonia lasianthus (loblolly-bay, holly-bay, gordonia, or bay) is a small to medium-sized evergreen tree or shrub found in acid, swampy soils of pinelands and bays on the Atlantic and Gulf Coastal Plains of the southeastern United States.",
+      "visible_time_s": 3.783203399994818,
+      "requested_subject": "",
+      "resolved_title": "Gordonia lasianthus",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d9s1",
+      "title": "Gordonia lasianthus",
+      "url": "https://trace.invalid/hotpotqa_5ae3f4fe5542995ad6573ce8_immediate/d9s1",
+      "text": "It is a member of the Tea or Theaceae family.",
+      "visible_time_s": 3.7832243999946513,
+      "requested_subject": "",
+      "resolved_title": "Gordonia lasianthus",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d9s2",
+      "title": "Gordonia lasianthus",
+      "url": "https://trace.invalid/hotpotqa_5ae3f4fe5542995ad6573ce8_immediate/d9s2",
+      "text": "It is slow growing with soft, light-colored(Varies in color from Cream to Carmine), fine-grained wood of little commercial value, although loblolly-bay could be managed as a source of pulpwood.",
+      "visible_time_s": 3.7832443000006606,
+      "requested_subject": "",
+      "resolved_title": "Gordonia lasianthus",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d9s3",
+      "title": "Gordonia lasianthus",
+      "url": "https://trace.invalid/hotpotqa_5ae3f4fe5542995ad6573ce8_immediate/d9s3",
+      "text": "When older specimens are cut, the wood exudes a strong scent.",
+      "visible_time_s": 3.7832644999944023,
+      "requested_subject": "",
+      "resolved_title": "Gordonia lasianthus",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d9s4",
+      "title": "Gordonia lasianthus",
+      "url": "https://trace.invalid/hotpotqa_5ae3f4fe5542995ad6573ce8_immediate/d9s4",
+      "text": "It is similar to a mixture of fresh oranges and pine sap.",
+      "visible_time_s": 3.78328469999542,
+      "requested_subject": "",
+      "resolved_title": "Gordonia lasianthus",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d9s5",
+      "title": "Gordonia lasianthus",
+      "url": "https://trace.invalid/hotpotqa_5ae3f4fe5542995ad6573ce8_immediate/d9s5",
+      "text": "The bark of the adult tree varies from medium grey to a red brown coloration.",
+      "visible_time_s": 3.783317800000077,
+      "requested_subject": "",
+      "resolved_title": "Gordonia lasianthus",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d9s6",
+      "title": "Gordonia lasianthus",
+      "url": "https://trace.invalid/hotpotqa_5ae3f4fe5542995ad6573ce8_immediate/d9s6",
+      "text": "Dead adult specimens of loblolly bay exhibit a lustorous shine when exposed to sunlight for several years.",
+      "visible_time_s": 3.783338499997626,
+      "requested_subject": "",
+      "resolved_title": "Gordonia lasianthus",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d9s7",
+      "title": "Gordonia lasianthus",
+      "url": "https://trace.invalid/hotpotqa_5ae3f4fe5542995ad6573ce8_immediate/d9s7",
+      "text": "The white showy flowers and shiny foliage make it a desirable ornamental, but it is not easy to cultivate.",
+      "visible_time_s": 3.7833592999959365,
+      "requested_subject": "",
+      "resolved_title": "Gordonia lasianthus",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d9s8",
+      "title": "Gordonia lasianthus",
+      "url": "https://trace.invalid/hotpotqa_5ae3f4fe5542995ad6573ce8_immediate/d9s8",
+      "text": "Deer browse stump sprouts heavily.",
+      "visible_time_s": 3.7833896999945864,
+      "requested_subject": "",
+      "resolved_title": "Gordonia lasianthus",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d10s0",
+      "title": "Osbeckia aspera",
+      "url": "https://trace.invalid/hotpotqa_5ae3f4fe5542995ad6573ce8_immediate/d10s0",
+      "text": "Rough Osbeckia, (Osbeckia aspera), also known as Rough small-leaved spider flower, is a plant species in the genus \"Osbeckia\" of the family Melastomataceae.",
+      "visible_time_s": 3.7834103999994113,
+      "requested_subject": "",
+      "resolved_title": "Osbeckia aspera",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d10s1",
+      "title": "Osbeckia aspera",
+      "url": "https://trace.invalid/hotpotqa_5ae3f4fe5542995ad6573ce8_immediate/d10s1",
+      "text": "It is native to India and Sri Lanka.",
+      "visible_time_s": 3.7834325000003446,
+      "requested_subject": "",
+      "resolved_title": "Osbeckia aspera",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d10s2",
+      "title": "Osbeckia aspera",
+      "url": "https://trace.invalid/hotpotqa_5ae3f4fe5542995ad6573ce8_immediate/d10s2",
+      "text": "Leaves are elliptic-lanceolate, base attenuate with more or less velvet-hairy on both sides.",
+      "visible_time_s": 3.783453099997132,
+      "requested_subject": "",
+      "resolved_title": "Osbeckia aspera",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d10s3",
+      "title": "Osbeckia aspera",
+      "url": "https://trace.invalid/hotpotqa_5ae3f4fe5542995ad6573ce8_immediate/d10s3",
+      "text": "Flowers are pink in color, show terminal cymes inflorescence.",
+      "visible_time_s": 3.7834738999954425,
+      "requested_subject": "",
+      "resolved_title": "Osbeckia aspera",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d10s4",
+      "title": "Osbeckia aspera",
+      "url": "https://trace.invalid/hotpotqa_5ae3f4fe5542995ad6573ce8_immediate/d10s4",
+      "text": "Fruits are single seeded capsule.",
+      "visible_time_s": 3.7834943999987445,
+      "requested_subject": "",
+      "resolved_title": "Osbeckia aspera",
+      "entity_resolution": "unspecified"
+    }
+  ],
+  "searches": [
+    {
+      "query": "[scheduled evidence]",
+      "subject": "",
+      "status": "ok",
+      "returned_pages": [],
+      "mode": "trace",
+      "unit_id": "__scheduled_evidence__"
+    }
+  ],
+  "search_failures": [],
+  "llm_calls": [
+    {
+      "purpose": "feedback_generate",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 407,
+        "completion_tokens": 94,
+        "total_tokens": 501,
+        "prompt_tokens_details": {
+          "cached_tokens": 384
+        }
+      },
+      "latency_s": 1.104344
+    },
+    {
+      "purpose": "feedback_verify",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 366,
+        "completion_tokens": 102,
+        "total_tokens": 468,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        }
+      },
+      "latency_s": 1.016923
+    },
+    {
+      "purpose": "decompose",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 797,
+        "completion_tokens": 313,
+        "total_tokens": 1110,
+        "prompt_tokens_details": {
+          "cached_tokens": 768
+        }
+      },
+      "latency_s": 2.149131
+    },
+    {
+      "purpose": "plan_review",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 1075,
+        "completion_tokens": 295,
+        "total_tokens": 1370,
+        "prompt_tokens_details": {
+          "cached_tokens": 768
+        }
+      },
+      "latency_s": 1.632503
+    },
+    {
+      "purpose": "feedback_generate",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 407,
+        "completion_tokens": 72,
+        "total_tokens": 479,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        }
+      },
+      "latency_s": 0.896796
+    },
+    {
+      "purpose": "judge",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 5982,
+        "completion_tokens": 514,
+        "total_tokens": 6496,
+        "prompt_tokens_details": {
+          "cached_tokens": 1024
+        }
+      },
+      "latency_s": 2.591821
+    },
+    {
+      "purpose": "feedback_verify",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 358,
+        "completion_tokens": 62,
+        "total_tokens": 420,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        }
+      },
+      "latency_s": 0.830241
+    },
+    {
+      "purpose": "generate",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 918,
+        "completion_tokens": 104,
+        "total_tokens": 1022,
+        "prompt_tokens_details": {
+          "cached_tokens": 384
+        }
+      },
+      "latency_s": 0.864888
+    },
+    {
+      "purpose": "feedback_generate",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 408,
+        "completion_tokens": 53,
+        "total_tokens": 461,
+        "prompt_tokens_details": {
+          "cached_tokens": 384
+        }
+      },
+      "latency_s": 0.728241
+    },
+    {
+      "purpose": "verify",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 1286,
+        "completion_tokens": 127,
+        "total_tokens": 1413,
+        "prompt_tokens_details": {
+          "cached_tokens": 640
+        }
+      },
+      "latency_s": 1.263061
+    },
+    {
+      "purpose": "feedback_verify",
+      "model": "openai/gpt-oss-120b",
+      "status": "cancelled",
+      "latency_s": 0.762822
+    }
+  ],
+  "search_diagnostics": [],
+  "output_enqueued_units": {
+    "u1": "Theaceae",
+    "u2": "Melastomataceae",
+    "u3": "No"
+  },
+  "events": [
+    {
+      "sequence": 0,
+      "time_s": 0.000475,
+      "type": "feedback_requested",
+      "feedback_kind": "opening",
+      "execution_state": {
+        "stage": "planning",
+        "searches_started": 0,
+        "searches_completed": 0,
+        "active_searches": 0,
+        "evidence_count": 0,
+        "supported_units": 0,
+        "output_units": 0
+      }
+    },
+    {
+      "sequence": 1,
+      "time_s": 2.121993,
+      "type": "utterance",
+      "action": "Backchannel",
+      "text": "I see you’re asking if Gordonia and Osbeckia are in the same family, and I’ll look that up.",
+      "claims": [],
+      "feedback_source": "model",
+      "feedback_status_claim": "intent",
+      "feedback_fallback_reason": "",
+      "execution_state": {
+        "stage": "planning",
+        "searches_started": 0,
+        "searches_completed": 0,
+        "active_searches": 0,
+        "evidence_count": 0,
+        "supported_units": 0,
+        "output_units": 0
+      },
+      "language": "en"
+    },
+    {
+      "sequence": 2,
+      "time_s": 2.149565,
+      "type": "decompose_reply",
+      "reply": {
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "family of the genus Gordonia",
+            "subject": "Gordonia (plant)",
+            "necessary": true,
+            "depends_on": [],
+            "queries": [
+              "Gordonia (plant) family",
+              "Gordonia genus family"
+            ]
+          },
+          {
+            "unit_id": "u2",
+            "description": "family of the genus Osbeckia",
+            "subject": "Osbeckia",
+            "necessary": true,
+            "depends_on": [],
+            "queries": [
+              "Osbeckia family",
+              "Osbeckia genus family"
+            ]
+          },
+          {
+            "unit_id": "u3",
+            "description": "whether the families of Gordonia and Osbeckia are the same",
+            "subject": "",
+            "necessary": true,
+            "depends_on": [
+              "u1",
+              "u2"
+            ],
+            "queries": [
+              "Are Gordonia and Osbeckia in the same family?"
+            ]
+          }
+        ]
+      },
+      "attempt": 1,
+      "repair": false
+    },
+    {
+      "sequence": 3,
+      "time_s": 2.149655,
+      "type": "plan_review_requested",
+      "max_reviews": 1,
+      "question_only": true
+    },
+    {
+      "sequence": 4,
+      "time_s": 3.782226,
+      "type": "plan_review_reply",
+      "reply": {
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "family of the genus Gordonia",
+            "subject": "Gordonia (plant)",
+            "necessary": true,
+            "depends_on": [],
+            "queries": [
+              "Gordonia (plant) family",
+              "Gordonia genus family"
+            ]
+          },
+          {
+            "unit_id": "u2",
+            "description": "family of the genus Osbeckia",
+            "subject": "Osbeckia",
+            "necessary": true,
+            "depends_on": [],
+            "queries": [
+              "Osbeckia family",
+              "Osbeckia genus family"
+            ]
+          },
+          {
+            "unit_id": "u3",
+            "description": "whether the families of Gordonia and Osbeckia are the same",
+            "subject": "",
+            "necessary": true,
+            "depends_on": [
+              "u1",
+              "u2"
+            ],
+            "queries": [
+              "Are Gordonia and Osbeckia in the same family?"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "sequence": 5,
+      "time_s": 3.782416,
+      "type": "plan_review_finished",
+      "changed": false,
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "family of the genus Gordonia",
+          "necessary": true,
+          "depends_on": [],
+          "queries": [
+            "Gordonia (plant) family",
+            "Gordonia genus family"
+          ],
+          "subject": "Gordonia (plant)"
+        },
+        {
+          "unit_id": "u2",
+          "description": "family of the genus Osbeckia",
+          "necessary": true,
+          "depends_on": [],
+          "queries": [
+            "Osbeckia family",
+            "Osbeckia genus family"
+          ],
+          "subject": "Osbeckia"
+        },
+        {
+          "unit_id": "u3",
+          "description": "whether the families of Gordonia and Osbeckia are the same",
+          "necessary": true,
+          "depends_on": [
+            "u1",
+            "u2"
+          ],
+          "queries": [
+            "Are Gordonia and Osbeckia in the same family?"
+          ],
+          "subject": ""
+        }
+      ],
+      "question_only": true
+    },
+    {
+      "sequence": 6,
+      "time_s": 3.782489,
+      "type": "plan",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "family of the genus Gordonia",
+          "necessary": true,
+          "depends_on": [],
+          "queries": [
+            "Gordonia (plant) family",
+            "Gordonia genus family"
+          ],
+          "subject": "Gordonia (plant)"
+        },
+        {
+          "unit_id": "u2",
+          "description": "family of the genus Osbeckia",
+          "necessary": true,
+          "depends_on": [],
+          "queries": [
+            "Osbeckia family",
+            "Osbeckia genus family"
+          ],
+          "subject": "Osbeckia"
+        },
+        {
+          "unit_id": "u3",
+          "description": "whether the families of Gordonia and Osbeckia are the same",
+          "necessary": true,
+          "depends_on": [
+            "u1",
+            "u2"
+          ],
+          "queries": [
+            "Are Gordonia and Osbeckia in the same family?"
+          ],
+          "subject": ""
+        }
+      ]
+    },
+    {
+      "sequence": 7,
+      "time_s": 3.782519,
+      "type": "trace_batch_requested"
+    },
+    {
+      "sequence": 8,
+      "time_s": 3.782589,
+      "type": "search_finished",
+      "query": "[scheduled evidence]",
+      "subject": "",
+      "status": "ok",
+      "returned_pages": [],
+      "mode": "trace",
+      "unit_id": "__scheduled_evidence__"
+    },
+    {
+      "sequence": 9,
+      "time_s": 3.782639,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d1s0",
+        "title": "Gordonia (plant)",
+        "url": "https://trace.invalid/hotpotqa_5ae3f4fe5542995ad6573ce8_immediate/d1s0",
+        "text": "Gordonia is a genus of flowering plants in the family Theaceae, related to \"Franklinia\", \"Camellia\" and \"Stewartia\".",
+        "visible_time_s": 3.782627799999318,
+        "requested_subject": "",
+        "resolved_title": "Gordonia (plant)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 10,
+      "time_s": 3.782721,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d1s1",
+        "title": "Gordonia (plant)",
+        "url": "https://trace.invalid/hotpotqa_5ae3f4fe5542995ad6573ce8_immediate/d1s1",
+        "text": "Of the roughly 40 species, all but two are native to southeast Asia in southern China, Taiwan and Indochina.",
+        "visible_time_s": 3.7827150999946753,
+        "requested_subject": "",
+        "resolved_title": "Gordonia (plant)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 11,
+      "time_s": 3.782748,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d1s2",
+        "title": "Gordonia (plant)",
+        "url": "https://trace.invalid/hotpotqa_5ae3f4fe5542995ad6573ce8_immediate/d1s2",
+        "text": "The remaining species, \"G. lasianthus\" (Loblolly-bay), is native to southeast North America, from Virginia south to Florida and west to Louisiana; \"G. fruticosa\" is native to the tropical rainforests of Central and South America, from Costa Rica to Brazil.",
+        "visible_time_s": 3.782743299998401,
+        "requested_subject": "",
+        "resolved_title": "Gordonia (plant)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 12,
+      "time_s": 3.782771,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d2s0",
+        "title": "Osbeckia stellata",
+        "url": "https://trace.invalid/hotpotqa_5ae3f4fe5542995ad6573ce8_immediate/d2s0",
+        "text": "Osbeckia stellata (Thai: จุกนารี ) is a flowering plant in the family Melastomataceae.",
+        "visible_time_s": 3.7827662999989116,
+        "requested_subject": "",
+        "resolved_title": "Osbeckia stellata",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 13,
+      "time_s": 3.782798,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d3s0",
+        "title": "Gordonia singaporeana",
+        "url": "https://trace.invalid/hotpotqa_5ae3f4fe5542995ad6573ce8_immediate/d3s0",
+        "text": "Gordonia singaporeana is a species of plant in the Theaceae family.",
+        "visible_time_s": 3.7827933999942616,
+        "requested_subject": "",
+        "resolved_title": "Gordonia singaporeana",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 14,
+      "time_s": 3.782819,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d3s1",
+        "title": "Gordonia singaporeana",
+        "url": "https://trace.invalid/hotpotqa_5ae3f4fe5542995ad6573ce8_immediate/d3s1",
+        "text": "It is a tree found in Peninsular Malaysia and Singapore.",
+        "visible_time_s": 3.7828149999986636,
+        "requested_subject": "",
+        "resolved_title": "Gordonia singaporeana",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 15,
+      "time_s": 3.782839,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d3s2",
+        "title": "Gordonia singaporeana",
+        "url": "https://trace.invalid/hotpotqa_5ae3f4fe5542995ad6573ce8_immediate/d3s2",
+        "text": "It is threatened by habitat loss.",
+        "visible_time_s": 3.7828350999989198,
+        "requested_subject": "",
+        "resolved_title": "Gordonia singaporeana",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 16,
+      "time_s": 3.782858,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d4s0",
+        "title": "Gondysia similis",
+        "url": "https://trace.invalid/hotpotqa_5ae3f4fe5542995ad6573ce8_immediate/d4s0",
+        "text": "The Gordonia Darkwing (\"Gondysia similis\", formerly \"Dysgonia similis\") is a moth of the Noctuidae family.",
+        "visible_time_s": 3.782854099998076,
+        "requested_subject": "",
+        "resolved_title": "Gondysia similis",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 17,
+      "time_s": 3.782878,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d4s1",
+        "title": "Gondysia similis",
+        "url": "https://trace.invalid/hotpotqa_5ae3f4fe5542995ad6573ce8_immediate/d4s1",
+        "text": "It is found in North America, from North Carolina to Mississippi and Florida.",
+        "visible_time_s": 3.7828739999968093,
+        "requested_subject": "",
+        "resolved_title": "Gondysia similis",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 18,
+      "time_s": 3.782897,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d4s2",
+        "title": "Gondysia similis",
+        "url": "https://trace.invalid/hotpotqa_5ae3f4fe5542995ad6573ce8_immediate/d4s2",
+        "text": "The food plant occurs in Alabama and Mississippi and the moth could be expected from these areas as well.",
+        "visible_time_s": 3.7828931999974884,
+        "requested_subject": "",
+        "resolved_title": "Gondysia similis",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 19,
+      "time_s": 3.782933,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d5s0",
+        "title": "Gordonia taipingensis",
+        "url": "https://trace.invalid/hotpotqa_5ae3f4fe5542995ad6573ce8_immediate/d5s0",
+        "text": "Gordonia taipingensis is a species of plant in the Theaceae family.",
+        "visible_time_s": 3.782929199995124,
+        "requested_subject": "",
+        "resolved_title": "Gordonia taipingensis",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 20,
+      "time_s": 3.782954,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d5s1",
+        "title": "Gordonia taipingensis",
+        "url": "https://trace.invalid/hotpotqa_5ae3f4fe5542995ad6573ce8_immediate/d5s1",
+        "text": "It is a tree endemic to Peninsular Malaysia.",
+        "visible_time_s": 3.782949999993434,
+        "requested_subject": "",
+        "resolved_title": "Gordonia taipingensis",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 21,
+      "time_s": 3.782974,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d5s2",
+        "title": "Gordonia taipingensis",
+        "url": "https://trace.invalid/hotpotqa_5ae3f4fe5542995ad6573ce8_immediate/d5s2",
+        "text": "It is threatened by habitat loss.",
+        "visible_time_s": 3.782970000000205,
+        "requested_subject": "",
+        "resolved_title": "Gordonia taipingensis",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 22,
+      "time_s": 3.782994,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d6s0",
+        "title": "Osbeckia",
+        "url": "https://trace.invalid/hotpotqa_5ae3f4fe5542995ad6573ce8_immediate/d6s0",
+        "text": "Osbeckia is a genus of plants in the family Melastomataceae.",
+        "visible_time_s": 3.7829897999981767,
+        "requested_subject": "",
+        "resolved_title": "Osbeckia",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 23,
+      "time_s": 3.783013,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d6s1",
+        "title": "Osbeckia",
+        "url": "https://trace.invalid/hotpotqa_5ae3f4fe5542995ad6573ce8_immediate/d6s1",
+        "text": "It was named by Carl Linnaeus for the Swedish explorer and naturalist Pehr Osbeck (1723–1805).",
+        "visible_time_s": 3.7830092000003788,
+        "requested_subject": "",
+        "resolved_title": "Osbeckia",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 24,
+      "time_s": 3.783036,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d7s0",
+        "title": "Osbeckia octandra",
+        "url": "https://trace.invalid/hotpotqa_5ae3f4fe5542995ad6573ce8_immediate/d7s0",
+        "text": "Eight Stamen Osbeckia, (Osbeckia octandra), is a plant species in the genus \"Osbeckia\" of the family Melastomataceae.",
+        "visible_time_s": 3.783032399995136,
+        "requested_subject": "",
+        "resolved_title": "Osbeckia octandra",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 25,
+      "time_s": 3.783057,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d7s1",
+        "title": "Osbeckia octandra",
+        "url": "https://trace.invalid/hotpotqa_5ae3f4fe5542995ad6573ce8_immediate/d7s1",
+        "text": "It is considered to be endemic to Sri Lanka, where it is known as \"Heen Bovitiya - හීන් බෝවිටියා\" in Sinhala language.",
+        "visible_time_s": 3.7830524999953923,
+        "requested_subject": "",
+        "resolved_title": "Osbeckia octandra",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 26,
+      "time_s": 3.78308,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d7s2",
+        "title": "Osbeckia octandra",
+        "url": "https://trace.invalid/hotpotqa_5ae3f4fe5542995ad6573ce8_immediate/d7s2",
+        "text": "But some texts indicate that it is also found in Tamil Nadu of India.",
+        "visible_time_s": 3.7830761000004713,
+        "requested_subject": "",
+        "resolved_title": "Osbeckia octandra",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 27,
+      "time_s": 3.783102,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d7s3",
+        "title": "Osbeckia octandra",
+        "url": "https://trace.invalid/hotpotqa_5ae3f4fe5542995ad6573ce8_immediate/d7s3",
+        "text": "Fruits are dry capsules with numerous seeds.",
+        "visible_time_s": 3.7830979999998817,
+        "requested_subject": "",
+        "resolved_title": "Osbeckia octandra",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 28,
+      "time_s": 3.783124,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d7s4",
+        "title": "Osbeckia octandra",
+        "url": "https://trace.invalid/hotpotqa_5ae3f4fe5542995ad6573ce8_immediate/d7s4",
+        "text": "Leaves and young stems are edible, whereas leaves, stem and bark also widely used as a valuable medicine in Ayurveda for treating Diabetes mellitus, Hepatitis, Jaundice, and Hyperlipidaemia.",
+        "visible_time_s": 3.783120299995062,
+        "requested_subject": "",
+        "resolved_title": "Osbeckia octandra",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 29,
+      "time_s": 3.783147,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d7s5",
+        "title": "Osbeckia octandra",
+        "url": "https://trace.invalid/hotpotqa_5ae3f4fe5542995ad6573ce8_immediate/d7s5",
+        "text": "The juice extracted from \"Osbeckia octandra\" leaves is an effective treatment for liver damage caused by Paracetamol poisoning",
+        "visible_time_s": 3.783142799999041,
+        "requested_subject": "",
+        "resolved_title": "Osbeckia octandra",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 30,
+      "time_s": 3.783168,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d8s0",
+        "title": "Gordonia villosa",
+        "url": "https://trace.invalid/hotpotqa_5ae3f4fe5542995ad6573ce8_immediate/d8s0",
+        "text": "Gordonia villosa is a species of plant in the Theaceae family.",
+        "visible_time_s": 3.78316349999659,
+        "requested_subject": "",
+        "resolved_title": "Gordonia villosa",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 31,
+      "time_s": 3.783187,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d8s1",
+        "title": "Gordonia villosa",
+        "url": "https://trace.invalid/hotpotqa_5ae3f4fe5542995ad6573ce8_immediate/d8s1",
+        "text": "It is endemic to Jamaica.",
+        "visible_time_s": 3.7831831999938004,
+        "requested_subject": "",
+        "resolved_title": "Gordonia villosa",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 32,
+      "time_s": 3.783207,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d9s0",
+        "title": "Gordonia lasianthus",
+        "url": "https://trace.invalid/hotpotqa_5ae3f4fe5542995ad6573ce8_immediate/d9s0",
+        "text": "Gordonia lasianthus (loblolly-bay, holly-bay, gordonia, or bay) is a small to medium-sized evergreen tree or shrub found in acid, swampy soils of pinelands and bays on the Atlantic and Gulf Coastal Plains of the southeastern United States.",
+        "visible_time_s": 3.783203399994818,
+        "requested_subject": "",
+        "resolved_title": "Gordonia lasianthus",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 33,
+      "time_s": 3.783228,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d9s1",
+        "title": "Gordonia lasianthus",
+        "url": "https://trace.invalid/hotpotqa_5ae3f4fe5542995ad6573ce8_immediate/d9s1",
+        "text": "It is a member of the Tea or Theaceae family.",
+        "visible_time_s": 3.7832243999946513,
+        "requested_subject": "",
+        "resolved_title": "Gordonia lasianthus",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 34,
+      "time_s": 3.783248,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d9s2",
+        "title": "Gordonia lasianthus",
+        "url": "https://trace.invalid/hotpotqa_5ae3f4fe5542995ad6573ce8_immediate/d9s2",
+        "text": "It is slow growing with soft, light-colored(Varies in color from Cream to Carmine), fine-grained wood of little commercial value, although loblolly-bay could be managed as a source of pulpwood.",
+        "visible_time_s": 3.7832443000006606,
+        "requested_subject": "",
+        "resolved_title": "Gordonia lasianthus",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 35,
+      "time_s": 3.783268,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d9s3",
+        "title": "Gordonia lasianthus",
+        "url": "https://trace.invalid/hotpotqa_5ae3f4fe5542995ad6573ce8_immediate/d9s3",
+        "text": "When older specimens are cut, the wood exudes a strong scent.",
+        "visible_time_s": 3.7832644999944023,
+        "requested_subject": "",
+        "resolved_title": "Gordonia lasianthus",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 36,
+      "time_s": 3.783288,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d9s4",
+        "title": "Gordonia lasianthus",
+        "url": "https://trace.invalid/hotpotqa_5ae3f4fe5542995ad6573ce8_immediate/d9s4",
+        "text": "It is similar to a mixture of fresh oranges and pine sap.",
+        "visible_time_s": 3.78328469999542,
+        "requested_subject": "",
+        "resolved_title": "Gordonia lasianthus",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 37,
+      "time_s": 3.783322,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d9s5",
+        "title": "Gordonia lasianthus",
+        "url": "https://trace.invalid/hotpotqa_5ae3f4fe5542995ad6573ce8_immediate/d9s5",
+        "text": "The bark of the adult tree varies from medium grey to a red brown coloration.",
+        "visible_time_s": 3.783317800000077,
+        "requested_subject": "",
+        "resolved_title": "Gordonia lasianthus",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 38,
+      "time_s": 3.783342,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d9s6",
+        "title": "Gordonia lasianthus",
+        "url": "https://trace.invalid/hotpotqa_5ae3f4fe5542995ad6573ce8_immediate/d9s6",
+        "text": "Dead adult specimens of loblolly bay exhibit a lustorous shine when exposed to sunlight for several years.",
+        "visible_time_s": 3.783338499997626,
+        "requested_subject": "",
+        "resolved_title": "Gordonia lasianthus",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 39,
+      "time_s": 3.783372,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d9s7",
+        "title": "Gordonia lasianthus",
+        "url": "https://trace.invalid/hotpotqa_5ae3f4fe5542995ad6573ce8_immediate/d9s7",
+        "text": "The white showy flowers and shiny foliage make it a desirable ornamental, but it is not easy to cultivate.",
+        "visible_time_s": 3.7833592999959365,
+        "requested_subject": "",
+        "resolved_title": "Gordonia lasianthus",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 40,
+      "time_s": 3.783394,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d9s8",
+        "title": "Gordonia lasianthus",
+        "url": "https://trace.invalid/hotpotqa_5ae3f4fe5542995ad6573ce8_immediate/d9s8",
+        "text": "Deer browse stump sprouts heavily.",
+        "visible_time_s": 3.7833896999945864,
+        "requested_subject": "",
+        "resolved_title": "Gordonia lasianthus",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 41,
+      "time_s": 3.783414,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d10s0",
+        "title": "Osbeckia aspera",
+        "url": "https://trace.invalid/hotpotqa_5ae3f4fe5542995ad6573ce8_immediate/d10s0",
+        "text": "Rough Osbeckia, (Osbeckia aspera), also known as Rough small-leaved spider flower, is a plant species in the genus \"Osbeckia\" of the family Melastomataceae.",
+        "visible_time_s": 3.7834103999994113,
+        "requested_subject": "",
+        "resolved_title": "Osbeckia aspera",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 42,
+      "time_s": 3.783436,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d10s1",
+        "title": "Osbeckia aspera",
+        "url": "https://trace.invalid/hotpotqa_5ae3f4fe5542995ad6573ce8_immediate/d10s1",
+        "text": "It is native to India and Sri Lanka.",
+        "visible_time_s": 3.7834325000003446,
+        "requested_subject": "",
+        "resolved_title": "Osbeckia aspera",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 43,
+      "time_s": 3.783457,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d10s2",
+        "title": "Osbeckia aspera",
+        "url": "https://trace.invalid/hotpotqa_5ae3f4fe5542995ad6573ce8_immediate/d10s2",
+        "text": "Leaves are elliptic-lanceolate, base attenuate with more or less velvet-hairy on both sides.",
+        "visible_time_s": 3.783453099997132,
+        "requested_subject": "",
+        "resolved_title": "Osbeckia aspera",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 44,
+      "time_s": 3.783478,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d10s3",
+        "title": "Osbeckia aspera",
+        "url": "https://trace.invalid/hotpotqa_5ae3f4fe5542995ad6573ce8_immediate/d10s3",
+        "text": "Flowers are pink in color, show terminal cymes inflorescence.",
+        "visible_time_s": 3.7834738999954425,
+        "requested_subject": "",
+        "resolved_title": "Osbeckia aspera",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 45,
+      "time_s": 3.783498,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d10s4",
+        "title": "Osbeckia aspera",
+        "url": "https://trace.invalid/hotpotqa_5ae3f4fe5542995ad6573ce8_immediate/d10s4",
+        "text": "Fruits are single seeded capsule.",
+        "visible_time_s": 3.7834943999987445,
+        "requested_subject": "",
+        "resolved_title": "Osbeckia aspera",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 46,
+      "time_s": 5.286404,
+      "type": "feedback_requested",
+      "feedback_kind": "progress",
+      "execution_state": {
+        "stage": "checking",
+        "searches_started": 1,
+        "searches_completed": 1,
+        "active_searches": 0,
+        "evidence_count": 37,
+        "supported_units": 0,
+        "output_units": 0
+      }
+    },
+    {
+      "sequence": 47,
+      "time_s": 6.37559,
+      "type": "judge_reply",
+      "reply": {
+        "judgments": [
+          {
+            "unit_id": "u1",
+            "label": "SUPPORTED",
+            "value": "Theaceae",
+            "citations": [
+              "d1s0"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d1s0",
+                "text": "family Theaceae"
+              }
+            ],
+            "reason": "Source states Gordonia belongs to the family Theaceae."
+          },
+          {
+            "unit_id": "u2",
+            "label": "SUPPORTED",
+            "value": "Melastomataceae",
+            "citations": [
+              "d6s0"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d6s0",
+                "text": "family Melastomataceae"
+              }
+            ],
+            "reason": "Source states Osbeckia belongs to the family Melastomataceae."
+          },
+          {
+            "unit_id": "u3",
+            "label": "SUPPORTED",
+            "value": "No",
+            "citations": [
+              "d1s0",
+              "d6s0"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d1s0",
+                "text": "family Theaceae"
+              },
+              {
+                "evidence_id": "d6s0",
+                "text": "family Melastomataceae"
+              }
+            ],
+            "reason": "Gordonia is in Theaceae while Osbeckia is in Melastomataceae, so they are not in the same family."
+          }
+        ]
+      },
+      "attempt": 1,
+      "repair": false,
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d1s1",
+        "d1s2",
+        "d2s0",
+        "d3s0",
+        "d3s1",
+        "d3s2",
+        "d4s0",
+        "d4s1",
+        "d4s2",
+        "d5s0",
+        "d5s1",
+        "d5s2",
+        "d6s0",
+        "d6s1",
+        "d7s0",
+        "d7s1",
+        "d7s2",
+        "d7s3",
+        "d7s4",
+        "d7s5",
+        "d8s0",
+        "d8s1",
+        "d9s0",
+        "d9s1",
+        "d9s2",
+        "d9s3",
+        "d9s4",
+        "d9s5",
+        "d9s6",
+        "d9s7",
+        "d9s8",
+        "d10s0",
+        "d10s1",
+        "d10s2",
+        "d10s3",
+        "d10s4"
+      ]
+    },
+    {
+      "sequence": 48,
+      "time_s": 6.375756,
+      "type": "judgments",
+      "judgments": {
+        "u1": {
+          "label": "SUPPORTED",
+          "value": "Theaceae",
+          "citations": [
+            "d1s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d1s0",
+              "text": "family Theaceae"
+            }
+          ],
+          "reason": "Source states Gordonia belongs to the family Theaceae."
+        },
+        "u2": {
+          "label": "SUPPORTED",
+          "value": "Melastomataceae",
+          "citations": [
+            "d6s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d6s0",
+              "text": "family Melastomataceae"
+            }
+          ],
+          "reason": "Source states Osbeckia belongs to the family Melastomataceae."
+        },
+        "u3": {
+          "label": "SUPPORTED",
+          "value": "No",
+          "citations": [
+            "d1s0",
+            "d6s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d1s0",
+              "text": "family Theaceae"
+            },
+            {
+              "evidence_id": "d6s0",
+              "text": "family Melastomataceae"
+            }
+          ],
+          "reason": "Gordonia is in Theaceae while Osbeckia is in Melastomataceae, so they are not in the same family."
+        }
+      },
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d1s1",
+        "d1s2",
+        "d2s0",
+        "d3s0",
+        "d3s1",
+        "d3s2",
+        "d4s0",
+        "d4s1",
+        "d4s2",
+        "d5s0",
+        "d5s1",
+        "d5s2",
+        "d6s0",
+        "d6s1",
+        "d7s0",
+        "d7s1",
+        "d7s2",
+        "d7s3",
+        "d7s4",
+        "d7s5",
+        "d8s0",
+        "d8s1",
+        "d9s0",
+        "d9s1",
+        "d9s2",
+        "d9s3",
+        "d9s4",
+        "d9s5",
+        "d9s6",
+        "d9s7",
+        "d9s8",
+        "d10s0",
+        "d10s1",
+        "d10s2",
+        "d10s3",
+        "d10s4"
+      ],
+      "semantic_review": false
+    },
+    {
+      "sequence": 49,
+      "time_s": 8.504127,
+      "type": "verification_reply",
+      "reply": {
+        "approved": true,
+        "facts_valid": true,
+        "expressed_unit_ids": [
+          "u1",
+          "u2",
+          "u3"
+        ],
+        "reason": "All factual claims match approved facts and evidence, and the draft covers exactly the requested units."
+      },
+      "output_unit_ids": [
+        "u1",
+        "u2",
+        "u3"
+      ],
+      "output_action": "Final Answer",
+      "dependency_unit_ids": [],
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d6s0"
+      ]
+    },
+    {
+      "sequence": 50,
+      "time_s": 8.504183,
+      "type": "utterance",
+      "action": "Final Answer",
+      "text": "Gordonia belongs to the family Theaceae. Osbeckia belongs to the family Melastomataceae. No, the two genera are not in the same family.",
+      "claims": [
+        {
+          "unit_id": "u1",
+          "description": "family of the genus Gordonia",
+          "value": "Theaceae",
+          "citations": [
+            "d1s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d1s0",
+              "text": "family Theaceae"
+            }
+          ]
+        },
+        {
+          "unit_id": "u2",
+          "description": "family of the genus Osbeckia",
+          "value": "Melastomataceae",
+          "citations": [
+            "d6s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d6s0",
+              "text": "family Melastomataceae"
+            }
+          ]
+        },
+        {
+          "unit_id": "u3",
+          "description": "whether the families of Gordonia and Osbeckia are the same",
+          "value": "No",
+          "citations": [
+            "d1s0",
+            "d6s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d1s0",
+              "text": "family Theaceae"
+            },
+            {
+              "evidence_id": "d6s0",
+              "text": "family Melastomataceae"
+            }
+          ]
+        }
+      ],
+      "unresolved": [],
+      "fallback": false,
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d1s1",
+        "d1s2",
+        "d2s0",
+        "d3s0",
+        "d3s1",
+        "d3s2",
+        "d4s0",
+        "d4s1",
+        "d4s2",
+        "d5s0",
+        "d5s1",
+        "d5s2",
+        "d6s0",
+        "d6s1",
+        "d7s0",
+        "d7s1",
+        "d7s2",
+        "d7s3",
+        "d7s4",
+        "d7s5",
+        "d8s0",
+        "d8s1",
+        "d9s0",
+        "d9s1",
+        "d9s2",
+        "d9s3",
+        "d9s4",
+        "d9s5",
+        "d9s6",
+        "d9s7",
+        "d9s8",
+        "d10s0",
+        "d10s1",
+        "d10s2",
+        "d10s3",
+        "d10s4"
+      ],
+      "language": "en"
+    },
+    {
+      "sequence": 51,
+      "time_s": 8.504834,
+      "type": "finished",
+      "status": "complete"
+    }
+  ],
+  "note": "Prototype model judgments are not independent gold scores. Output event times are not spoken claim times.",
+  "evidence_mode": "scheduled_trace",
+  "audio": {
+    "enabled": true,
+    "mode": "windows",
+    "play": false,
+    "status": "ok",
+    "errors": [],
+    "records": [
+      {
+        "event_sequence": 1,
+        "sentence_index": 1,
+        "sentence_count": 1,
+        "language": "en",
+        "text": "I see you’re asking if Gordonia and Osbeckia are in the same family, and I’ll look that up.",
+        "action": "Backchannel",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 2.124230699999316,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval debug20\\artifacts\\runs\\20261118T052754Z-eebc4a69\\samples\\0055\\audio\\segments\\0001_01.wav",
+        "duration_s": 5.898458049886622,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 2.9415714999995544,
+        "synthesis_and_playback_s": 0.8176569999995991
+      },
+      {
+        "event_sequence": 50,
+        "sentence_index": 1,
+        "sentence_count": 3,
+        "language": "en",
+        "text": "Gordonia belongs to the family Theaceae.",
+        "action": "Final Answer",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 8.504747599996335,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval debug20\\artifacts\\runs\\20261118T052754Z-eebc4a69\\samples\\0055\\audio\\segments\\0050_01.wav",
+        "duration_s": 3.2439455782312927,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 9.326118099997984,
+        "synthesis_and_playback_s": 0.8216460999974515
+      },
+      {
+        "event_sequence": 50,
+        "sentence_index": 2,
+        "sentence_count": 3,
+        "language": "en",
+        "text": "Osbeckia belongs to the family Melastomataceae.",
+        "action": "Final Answer",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 9.32640249999531,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval debug20\\artifacts\\runs\\20261118T052754Z-eebc4a69\\samples\\0055\\audio\\segments\\0050_02.wav",
+        "duration_s": 3.613832199546485,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 10.12410799999634,
+        "synthesis_and_playback_s": 0.798011899998528
+      },
+      {
+        "event_sequence": 50,
+        "sentence_index": 3,
+        "sentence_count": 3,
+        "language": "en",
+        "text": "No, the two genera are not in the same family.",
+        "action": "Final Answer",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 10.124434699995618,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval debug20\\artifacts\\runs\\20261118T052754Z-eebc4a69\\samples\\0055\\audio\\segments\\0050_03.wav",
+        "duration_s": 3.7089795918367345,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 10.916622899996582,
+        "synthesis_and_playback_s": 0.7924838000035379
+      }
+    ],
+    "wave": {
+      "path": "D:\\UIUC\\CS546\\moshi-rag\\eval debug20\\artifacts\\runs\\20261118T052754Z-eebc4a69\\samples\\0055\\audio\\response.wav",
+      "duration_s": 19.892879818594103,
+      "timeline": [
+        {
+          "event_sequence": 1,
+          "sentence_index": 1,
+          "action": "Backchannel",
+          "text": "I see you’re asking if Gordonia and Osbeckia are in the same family, and I’ll look that up.",
+          "wave_start_s": 2.9415873015873015,
+          "wave_end_s": 8.840045351473924
+        },
+        {
+          "event_sequence": 50,
+          "sentence_index": 1,
+          "action": "Final Answer",
+          "text": "Gordonia belongs to the family Theaceae.",
+          "wave_start_s": 9.326122448979591,
+          "wave_end_s": 12.570068027210885
+        },
+        {
+          "event_sequence": 50,
+          "sentence_index": 2,
+          "action": "Final Answer",
+          "text": "Osbeckia belongs to the family Melastomataceae.",
+          "wave_start_s": 12.570068027210885,
+          "wave_end_s": 16.18390022675737
+        },
+        {
+          "event_sequence": 50,
+          "sentence_index": 3,
+          "action": "Final Answer",
+          "text": "No, the two genera are not in the same family.",
+          "wave_start_s": 16.18390022675737,
+          "wave_end_s": 19.892879818594103
+        }
+      ]
+    }
+  },
+  "evaluation": {
+    "mode": "b_debug_trace",
+    "trace_id": "hotpotqa_5ae3f4fe5542995ad6573ce8_immediate",
+    "sample_id": "hotpotqa_5ae3f4fe5542995ad6573ce8",
+    "total_wall_s": 10.920526899994002,
+    "question_timeout_s": 180,
+    "audio_enabled": true,
+    "history_enabled": false,
+    "text_pipeline_wall_s": 8.505136399995536,
+    "effective_settings": {
+      "base_url": "https://tinker.thinkingmachines.dev/services/tinker-prod/oai/api/v1",
+      "model": "openai/gpt-oss-120b",
+      "wiki_language": "en",
+      "user_agent": "CascadeSystem/0.1 (educational research prototype)",
+      "timeout_s": 45.0,
+      "max_tokens": 4096,
+      "reasoning_effort": "low",
+      "progress_s": 3.0,
+      "feedback_timeout_s": 6.0,
+      "search_limit": 3,
+      "max_units": 8,
+      "max_searches": 16,
+      "max_sources": 37,
+      "source_chars": 256,
+      "evidence_chars": 3355,
+      "concurrency": 3
+    },
+    "timing_kind": "unknown",
+    "scheduler": "wall-paced fixed B arrivals"
+  }
+}

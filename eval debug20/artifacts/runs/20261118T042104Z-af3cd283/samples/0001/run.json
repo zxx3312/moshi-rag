@@ -1,0 +1,1337 @@
+{
+  "question": "Who is Caroline Emily Nevill's paternal grandfather?",
+  "resolved_question": "Who is Caroline Emily Nevill's paternal grandfather?",
+  "used_history_turn_ids": [],
+  "response_language": "en",
+  "status": "complete",
+  "clock": "wall_monotonic",
+  "time_origin": "question_text_ready_after_optional_asr",
+  "model": "openai/gpt-oss-120b",
+  "units": [
+    {
+      "unit_id": "u1",
+      "description": "Caroline Emily Nevill's article",
+      "necessary": false,
+      "depends_on": [],
+      "queries": [
+        "Caroline Emily Nevill Wikipedia",
+        "Caroline Emily Nevill biography"
+      ],
+      "subject": "Caroline Emily Nevill"
+    },
+    {
+      "unit_id": "u2",
+      "description": "Caroline Emily Nevill's father",
+      "necessary": false,
+      "depends_on": [
+        "u1"
+      ],
+      "queries": [
+        "Caroline Emily Nevill father",
+        "parent of Caroline Emily Nevill"
+      ],
+      "subject": "Caroline Emily Nevill"
+    },
+    {
+      "unit_id": "u3",
+      "description": "Paternal grandfather of Caroline Emily Nevill",
+      "necessary": true,
+      "depends_on": [
+        "u2"
+      ],
+      "queries": [
+        "father of {u2}",
+        "grandfather of Caroline Emily Nevill"
+      ],
+      "subject": "{u2}"
+    }
+  ],
+  "judgments": {
+    "u1": {
+      "label": "SUPPORTED",
+      "value": "Lady Caroline Emily Nevill (1829–1887) was an early English photographer.",
+      "citations": [
+        "d3s0"
+      ],
+      "quotes": [
+        {
+          "evidence_id": "d3s0",
+          "text": "Lady Caroline Emily Nevill (1829–1887) was an early English photographer."
+        }
+      ],
+      "reason": "Article provides basic biographical statement."
+    },
+    "u2": {
+      "label": "SUPPORTED",
+      "value": "William Nevill, 4th Earl of Abergavenny",
+      "citations": [
+        "d3s1",
+        "d7s0"
+      ],
+      "quotes": [
+        {
+          "evidence_id": "d3s1",
+          "text": "The daughter of William Nevill, 4th Earl of Abergavenny"
+        },
+        {
+          "evidence_id": "d7s0",
+          "text": "William Nevill, 4th Earl of Abergavenny (28 June 1792 – 17 August 1868)"
+        }
+      ],
+      "reason": "Both sources identify William Nevill as her father."
+    },
+    "u3": {
+      "label": "SUPPORTED",
+      "value": "Henry Nevill, 2nd Earl of Abergavenny",
+      "citations": [
+        "d7s2"
+      ],
+      "quotes": [
+        {
+          "evidence_id": "d7s2",
+          "text": "The fourth son of Henry Nevill, 2nd Earl of Abergavenny"
+        }
+      ],
+      "reason": "William Nevill is the son of Henry Nevill, making Henry the paternal grandfather."
+    }
+  },
+  "evidence": [
+    {
+      "evidence_id": "d1s0",
+      "title": "Peter Schermerhorn",
+      "url": "https://trace.invalid/2wikimultihopqa_062884f40bb011ebab90acde48001122_immediate/d1s0",
+      "text": "Peter Schermerhorn( October 1, 1749 – January 28, 1826) was a wealthy New York City merchant and land owner.",
+      "visible_time_s": 4.4374535999995715,
+      "requested_subject": "",
+      "resolved_title": "Peter Schermerhorn",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d1s1",
+      "title": "Peter Schermerhorn",
+      "url": "https://trace.invalid/2wikimultihopqa_062884f40bb011ebab90acde48001122_immediate/d1s1",
+      "text": "He was the father of Abraham Schermerhorn and the grandfather of Caroline Schermerhorn Astor.",
+      "visible_time_s": 4.43748979999873,
+      "requested_subject": "",
+      "resolved_title": "Peter Schermerhorn",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d2s0",
+      "title": "Mrs. Lovett Cameron",
+      "url": "https://trace.invalid/2wikimultihopqa_062884f40bb011ebab90acde48001122_immediate/d2s0",
+      "text": "Mrs. Lovett Cameron or Caroline\" Emily\" Sharp( 1844 – 1921) was a British romantic fiction author.",
+      "visible_time_s": 4.4375120000004245,
+      "requested_subject": "",
+      "resolved_title": "Mrs. Lovett Cameron",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d2s1",
+      "title": "Mrs. Lovett Cameron",
+      "url": "https://trace.invalid/2wikimultihopqa_062884f40bb011ebab90acde48001122_immediate/d2s1",
+      "text": "She wrote more than fourteen three- volume novels.",
+      "visible_time_s": 4.437530499999411,
+      "requested_subject": "",
+      "resolved_title": "Mrs. Lovett Cameron",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d3s0",
+      "title": "Caroline Emily Nevill",
+      "url": "https://trace.invalid/2wikimultihopqa_062884f40bb011ebab90acde48001122_immediate/d3s0",
+      "text": "Lady Caroline Emily Nevill (1829–1887) was an early English photographer.",
+      "visible_time_s": 4.437626999999338,
+      "requested_subject": "",
+      "resolved_title": "Caroline Emily Nevill",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d3s1",
+      "title": "Caroline Emily Nevill",
+      "url": "https://trace.invalid/2wikimultihopqa_062884f40bb011ebab90acde48001122_immediate/d3s1",
+      "text": "The daughter of William Nevill, 4th Earl of Abergavenny,\nshe and her sisters Henrietta (1830–1912) and Isabel (1831–1915) were together known as \"The Trio\" when they exhibited at the London Photographic Society in 1854.",
+      "visible_time_s": 4.437648399998579,
+      "requested_subject": "",
+      "resolved_title": "Caroline Emily Nevill",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d3s2",
+      "title": "Caroline Emily Nevill",
+      "url": "https://trace.invalid/2wikimultihopqa_062884f40bb011ebab90acde48001122_immediate/d3s2",
+      "text": "Lady Caroline was a pioneering member of the Photographic Exchange Club (founded 1855) contributing architectural views of Kent from 1855 to 1858.",
+      "visible_time_s": 4.437667300000612,
+      "requested_subject": "",
+      "resolved_title": "Caroline Emily Nevill",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d3s3",
+      "title": "Caroline Emily Nevill",
+      "url": "https://trace.invalid/2wikimultihopqa_062884f40bb011ebab90acde48001122_immediate/d3s3",
+      "text": "From 1859, she also contributed to the Amateur Photographic Association.",
+      "visible_time_s": 4.437683599997399,
+      "requested_subject": "",
+      "resolved_title": "Caroline Emily Nevill",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d4s0",
+      "title": "Lyon Cohen",
+      "url": "https://trace.invalid/2wikimultihopqa_062884f40bb011ebab90acde48001122_immediate/d4s0",
+      "text": "Lyon Cohen( 1868–1937) was a Polish- born Canadian businessman and a philanthropist.",
+      "visible_time_s": 4.4376979999979085,
+      "requested_subject": "",
+      "resolved_title": "Lyon Cohen",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d4s1",
+      "title": "Lyon Cohen",
+      "url": "https://trace.invalid/2wikimultihopqa_062884f40bb011ebab90acde48001122_immediate/d4s1",
+      "text": "He was the grandfather of singer/ poet Leonard Cohen.",
+      "visible_time_s": 4.437714499999856,
+      "requested_subject": "",
+      "resolved_title": "Lyon Cohen",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d5s0",
+      "title": "Guillaume Wittouck",
+      "url": "https://trace.invalid/2wikimultihopqa_062884f40bb011ebab90acde48001122_immediate/d5s0",
+      "text": "Guillaume Wittouck( 1749- 1829) was a Belgian lawyer and High Magistrate.",
+      "visible_time_s": 4.437728900000366,
+      "requested_subject": "",
+      "resolved_title": "Guillaume Wittouck",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d5s1",
+      "title": "Guillaume Wittouck",
+      "url": "https://trace.invalid/2wikimultihopqa_062884f40bb011ebab90acde48001122_immediate/d5s1",
+      "text": "He was the Grandfather of industrialist Paul Wittouck.",
+      "visible_time_s": 4.437742699999944,
+      "requested_subject": "",
+      "resolved_title": "Guillaume Wittouck",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d6s0",
+      "title": "Kaya Alp",
+      "url": "https://trace.invalid/2wikimultihopqa_062884f40bb011ebab90acde48001122_immediate/d6s0",
+      "text": "Kaya Alp was, according to Ottoman tradition, the son of Kızıl Buğa and the father of Suleyman Shah, who was, in turn, the grandfather of Ertuğrul, and the great grandfather of the Ottoman Empire founder, Osman I.",
+      "visible_time_s": 4.437755699997069,
+      "requested_subject": "",
+      "resolved_title": "Kaya Alp",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d7s0",
+      "title": "William Nevill, 4th Earl of Abergavenny",
+      "url": "https://trace.invalid/2wikimultihopqa_062884f40bb011ebab90acde48001122_immediate/d7s0",
+      "text": "William Nevill, 4th Earl of Abergavenny (28 June 1792 – 17 August 1868), styled Hon.",
+      "visible_time_s": 4.437780299998849,
+      "requested_subject": "",
+      "resolved_title": "William Nevill, 4th Earl of Abergavenny",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d7s1",
+      "title": "William Nevill, 4th Earl of Abergavenny",
+      "url": "https://trace.invalid/2wikimultihopqa_062884f40bb011ebab90acde48001122_immediate/d7s1",
+      "text": "William Nevill until 1845, was a British peer and clergyman.",
+      "visible_time_s": 4.4377964999985124,
+      "requested_subject": "",
+      "resolved_title": "William Nevill, 4th Earl of Abergavenny",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d7s2",
+      "title": "William Nevill, 4th Earl of Abergavenny",
+      "url": "https://trace.invalid/2wikimultihopqa_062884f40bb011ebab90acde48001122_immediate/d7s2",
+      "text": "The fourth son of Henry Nevill, 2nd Earl of Abergavenny, he was ordained in 1816 and occupied two of the family livings until 1844.",
+      "visible_time_s": 4.437810499999614,
+      "requested_subject": "",
+      "resolved_title": "William Nevill, 4th Earl of Abergavenny",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d7s3",
+      "title": "William Nevill, 4th Earl of Abergavenny",
+      "url": "https://trace.invalid/2wikimultihopqa_062884f40bb011ebab90acde48001122_immediate/d7s3",
+      "text": "He succeeded his brother as Earl of Abergavenny the following year.",
+      "visible_time_s": 4.437824299999193,
+      "requested_subject": "",
+      "resolved_title": "William Nevill, 4th Earl of Abergavenny",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d8s0",
+      "title": "Abd al-Muttalib",
+      "url": "https://trace.invalid/2wikimultihopqa_062884f40bb011ebab90acde48001122_immediate/d8s0",
+      "text": "Abd al- Muttalib Shaybah ibn Hashim( c. 497 – 578) was the grandfather of Islamic prophet Muhammad.",
+      "visible_time_s": 4.437837699999363,
+      "requested_subject": "",
+      "resolved_title": "Abd al-Muttalib",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d9s0",
+      "title": "John Westley",
+      "url": "https://trace.invalid/2wikimultihopqa_062884f40bb011ebab90acde48001122_immediate/d9s0",
+      "text": "Rev. John Westley( 1636 – 78) was an English nonconformist minister.",
+      "visible_time_s": 4.437853899999027,
+      "requested_subject": "",
+      "resolved_title": "John Westley",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d9s1",
+      "title": "John Westley",
+      "url": "https://trace.invalid/2wikimultihopqa_062884f40bb011ebab90acde48001122_immediate/d9s1",
+      "text": "He was the grandfather of John Wesley( founder of Methodism).",
+      "visible_time_s": 4.437868299999536,
+      "requested_subject": "",
+      "resolved_title": "John Westley",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d10s0",
+      "title": "Prithvipati Shah",
+      "url": "https://trace.invalid/2wikimultihopqa_062884f40bb011ebab90acde48001122_immediate/d10s0",
+      "text": "Prithvipati Shah( ?–1716) was the king of the Gorkha Kingdom in the Indian subcontinent, present- day Nepal.",
+      "visible_time_s": 4.437886600000638,
+      "requested_subject": "",
+      "resolved_title": "Prithvipati Shah",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d10s1",
+      "title": "Prithvipati Shah",
+      "url": "https://trace.invalid/2wikimultihopqa_062884f40bb011ebab90acde48001122_immediate/d10s1",
+      "text": "He was the grandfather of Nara Bhupal Shah.",
+      "visible_time_s": 4.4379044999986945,
+      "requested_subject": "",
+      "resolved_title": "Prithvipati Shah",
+      "entity_resolution": "unspecified"
+    }
+  ],
+  "searches": [
+    {
+      "query": "[scheduled evidence]",
+      "subject": "",
+      "status": "ok",
+      "returned_pages": [],
+      "mode": "trace",
+      "unit_id": "__scheduled_evidence__"
+    }
+  ],
+  "search_failures": [],
+  "llm_calls": [
+    {
+      "purpose": "feedback_generate",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 403,
+        "completion_tokens": 59,
+        "total_tokens": 462,
+        "prompt_tokens_details": {
+          "cached_tokens": 384
+        }
+      },
+      "latency_s": 2.049145
+    },
+    {
+      "purpose": "feedback_verify",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 349,
+        "completion_tokens": 77,
+        "total_tokens": 426,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        }
+      },
+      "latency_s": 1.267078
+    },
+    {
+      "purpose": "decompose",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 618,
+        "completion_tokens": 391,
+        "total_tokens": 1009,
+        "prompt_tokens_details": {
+          "cached_tokens": 512
+        }
+      },
+      "latency_s": 4.436331
+    },
+    {
+      "purpose": "feedback_generate",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 403,
+        "completion_tokens": 70,
+        "total_tokens": 473,
+        "prompt_tokens_details": {
+          "cached_tokens": 384
+        }
+      },
+      "latency_s": 2.315924
+    },
+    {
+      "purpose": "judge",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 3908,
+        "completion_tokens": 641,
+        "total_tokens": 4549,
+        "prompt_tokens_details": {
+          "cached_tokens": 768
+        }
+      },
+      "latency_s": 7.736464
+    },
+    {
+      "purpose": "feedback_verify",
+      "model": "openai/gpt-oss-120b",
+      "status": "cancelled",
+      "latency_s": 3.690589
+    },
+    {
+      "purpose": "generate",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 552,
+        "completion_tokens": 66,
+        "total_tokens": 618,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        }
+      },
+      "latency_s": 3.066581
+    },
+    {
+      "purpose": "verify",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 1708,
+        "completion_tokens": 198,
+        "total_tokens": 1906,
+        "prompt_tokens_details": {
+          "cached_tokens": 512
+        }
+      },
+      "latency_s": 2.726307
+    }
+  ],
+  "search_diagnostics": [],
+  "output_enqueued_units": {
+    "u3": "Henry Nevill, 2nd Earl of Abergavenny"
+  },
+  "events": [
+    {
+      "sequence": 0,
+      "time_s": 0.003152,
+      "type": "feedback_requested",
+      "feedback_kind": "opening",
+      "execution_state": {
+        "stage": "planning",
+        "searches_started": 0,
+        "searches_completed": 0,
+        "active_searches": 0,
+        "evidence_count": 0,
+        "supported_units": 0,
+        "output_units": 0
+      }
+    },
+    {
+      "sequence": 1,
+      "time_s": 3.320951,
+      "type": "utterance",
+      "action": "Backchannel",
+      "text": "Looking up who Caroline Emily Nevill's paternal grandfather is.",
+      "claims": [],
+      "feedback_source": "model",
+      "feedback_status_claim": "intent",
+      "feedback_fallback_reason": "",
+      "execution_state": {
+        "stage": "planning",
+        "searches_started": 0,
+        "searches_completed": 0,
+        "active_searches": 0,
+        "evidence_count": 0,
+        "supported_units": 0,
+        "output_units": 0
+      },
+      "language": "en"
+    },
+    {
+      "sequence": 2,
+      "time_s": 4.437053,
+      "type": "decompose_reply",
+      "reply": {
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "Caroline Emily Nevill's article",
+            "subject": "Caroline Emily Nevill",
+            "necessary": false,
+            "depends_on": [],
+            "queries": [
+              "Caroline Emily Nevill Wikipedia",
+              "Caroline Emily Nevill biography"
+            ]
+          },
+          {
+            "unit_id": "u2",
+            "description": "Caroline Emily Nevill's father",
+            "subject": "Caroline Emily Nevill",
+            "necessary": false,
+            "depends_on": [
+              "u1"
+            ],
+            "queries": [
+              "Caroline Emily Nevill father",
+              "parent of Caroline Emily Nevill"
+            ]
+          },
+          {
+            "unit_id": "u3",
+            "description": "Paternal grandfather of Caroline Emily Nevill",
+            "subject": "{u2}",
+            "necessary": true,
+            "depends_on": [
+              "u2"
+            ],
+            "queries": [
+              "father of {u2}",
+              "grandfather of Caroline Emily Nevill"
+            ]
+          }
+        ]
+      },
+      "attempt": 1,
+      "repair": false
+    },
+    {
+      "sequence": 3,
+      "time_s": 4.437283,
+      "type": "plan",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "Caroline Emily Nevill's article",
+          "necessary": false,
+          "depends_on": [],
+          "queries": [
+            "Caroline Emily Nevill Wikipedia",
+            "Caroline Emily Nevill biography"
+          ],
+          "subject": "Caroline Emily Nevill"
+        },
+        {
+          "unit_id": "u2",
+          "description": "Caroline Emily Nevill's father",
+          "necessary": false,
+          "depends_on": [
+            "u1"
+          ],
+          "queries": [
+            "Caroline Emily Nevill father",
+            "parent of Caroline Emily Nevill"
+          ],
+          "subject": "Caroline Emily Nevill"
+        },
+        {
+          "unit_id": "u3",
+          "description": "Paternal grandfather of Caroline Emily Nevill",
+          "necessary": true,
+          "depends_on": [
+            "u2"
+          ],
+          "queries": [
+            "father of {u2}",
+            "grandfather of Caroline Emily Nevill"
+          ],
+          "subject": "{u2}"
+        }
+      ]
+    },
+    {
+      "sequence": 4,
+      "time_s": 4.437309,
+      "type": "trace_batch_requested"
+    },
+    {
+      "sequence": 5,
+      "time_s": 4.437421,
+      "type": "search_finished",
+      "query": "[scheduled evidence]",
+      "subject": "",
+      "status": "ok",
+      "returned_pages": [],
+      "mode": "trace",
+      "unit_id": "__scheduled_evidence__"
+    },
+    {
+      "sequence": 6,
+      "time_s": 4.437463,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d1s0",
+        "title": "Peter Schermerhorn",
+        "url": "https://trace.invalid/2wikimultihopqa_062884f40bb011ebab90acde48001122_immediate/d1s0",
+        "text": "Peter Schermerhorn( October 1, 1749 – January 28, 1826) was a wealthy New York City merchant and land owner.",
+        "visible_time_s": 4.4374535999995715,
+        "requested_subject": "",
+        "resolved_title": "Peter Schermerhorn",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 7,
+      "time_s": 4.437495,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d1s1",
+        "title": "Peter Schermerhorn",
+        "url": "https://trace.invalid/2wikimultihopqa_062884f40bb011ebab90acde48001122_immediate/d1s1",
+        "text": "He was the father of Abraham Schermerhorn and the grandfather of Caroline Schermerhorn Astor.",
+        "visible_time_s": 4.43748979999873,
+        "requested_subject": "",
+        "resolved_title": "Peter Schermerhorn",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 8,
+      "time_s": 4.437515,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d2s0",
+        "title": "Mrs. Lovett Cameron",
+        "url": "https://trace.invalid/2wikimultihopqa_062884f40bb011ebab90acde48001122_immediate/d2s0",
+        "text": "Mrs. Lovett Cameron or Caroline\" Emily\" Sharp( 1844 – 1921) was a British romantic fiction author.",
+        "visible_time_s": 4.4375120000004245,
+        "requested_subject": "",
+        "resolved_title": "Mrs. Lovett Cameron",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 9,
+      "time_s": 4.437534,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d2s1",
+        "title": "Mrs. Lovett Cameron",
+        "url": "https://trace.invalid/2wikimultihopqa_062884f40bb011ebab90acde48001122_immediate/d2s1",
+        "text": "She wrote more than fourteen three- volume novels.",
+        "visible_time_s": 4.437530499999411,
+        "requested_subject": "",
+        "resolved_title": "Mrs. Lovett Cameron",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 10,
+      "time_s": 4.43763,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d3s0",
+        "title": "Caroline Emily Nevill",
+        "url": "https://trace.invalid/2wikimultihopqa_062884f40bb011ebab90acde48001122_immediate/d3s0",
+        "text": "Lady Caroline Emily Nevill (1829–1887) was an early English photographer.",
+        "visible_time_s": 4.437626999999338,
+        "requested_subject": "",
+        "resolved_title": "Caroline Emily Nevill",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 11,
+      "time_s": 4.437652,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d3s1",
+        "title": "Caroline Emily Nevill",
+        "url": "https://trace.invalid/2wikimultihopqa_062884f40bb011ebab90acde48001122_immediate/d3s1",
+        "text": "The daughter of William Nevill, 4th Earl of Abergavenny,\nshe and her sisters Henrietta (1830–1912) and Isabel (1831–1915) were together known as \"The Trio\" when they exhibited at the London Photographic Society in 1854.",
+        "visible_time_s": 4.437648399998579,
+        "requested_subject": "",
+        "resolved_title": "Caroline Emily Nevill",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 12,
+      "time_s": 4.43767,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d3s2",
+        "title": "Caroline Emily Nevill",
+        "url": "https://trace.invalid/2wikimultihopqa_062884f40bb011ebab90acde48001122_immediate/d3s2",
+        "text": "Lady Caroline was a pioneering member of the Photographic Exchange Club (founded 1855) contributing architectural views of Kent from 1855 to 1858.",
+        "visible_time_s": 4.437667300000612,
+        "requested_subject": "",
+        "resolved_title": "Caroline Emily Nevill",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 13,
+      "time_s": 4.437686,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d3s3",
+        "title": "Caroline Emily Nevill",
+        "url": "https://trace.invalid/2wikimultihopqa_062884f40bb011ebab90acde48001122_immediate/d3s3",
+        "text": "From 1859, she also contributed to the Amateur Photographic Association.",
+        "visible_time_s": 4.437683599997399,
+        "requested_subject": "",
+        "resolved_title": "Caroline Emily Nevill",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 14,
+      "time_s": 4.437701,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d4s0",
+        "title": "Lyon Cohen",
+        "url": "https://trace.invalid/2wikimultihopqa_062884f40bb011ebab90acde48001122_immediate/d4s0",
+        "text": "Lyon Cohen( 1868–1937) was a Polish- born Canadian businessman and a philanthropist.",
+        "visible_time_s": 4.4376979999979085,
+        "requested_subject": "",
+        "resolved_title": "Lyon Cohen",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 15,
+      "time_s": 4.437717,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d4s1",
+        "title": "Lyon Cohen",
+        "url": "https://trace.invalid/2wikimultihopqa_062884f40bb011ebab90acde48001122_immediate/d4s1",
+        "text": "He was the grandfather of singer/ poet Leonard Cohen.",
+        "visible_time_s": 4.437714499999856,
+        "requested_subject": "",
+        "resolved_title": "Lyon Cohen",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 16,
+      "time_s": 4.437731,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d5s0",
+        "title": "Guillaume Wittouck",
+        "url": "https://trace.invalid/2wikimultihopqa_062884f40bb011ebab90acde48001122_immediate/d5s0",
+        "text": "Guillaume Wittouck( 1749- 1829) was a Belgian lawyer and High Magistrate.",
+        "visible_time_s": 4.437728900000366,
+        "requested_subject": "",
+        "resolved_title": "Guillaume Wittouck",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 17,
+      "time_s": 4.437745,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d5s1",
+        "title": "Guillaume Wittouck",
+        "url": "https://trace.invalid/2wikimultihopqa_062884f40bb011ebab90acde48001122_immediate/d5s1",
+        "text": "He was the Grandfather of industrialist Paul Wittouck.",
+        "visible_time_s": 4.437742699999944,
+        "requested_subject": "",
+        "resolved_title": "Guillaume Wittouck",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 18,
+      "time_s": 4.437758,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d6s0",
+        "title": "Kaya Alp",
+        "url": "https://trace.invalid/2wikimultihopqa_062884f40bb011ebab90acde48001122_immediate/d6s0",
+        "text": "Kaya Alp was, according to Ottoman tradition, the son of Kızıl Buğa and the father of Suleyman Shah, who was, in turn, the grandfather of Ertuğrul, and the great grandfather of the Ottoman Empire founder, Osman I.",
+        "visible_time_s": 4.437755699997069,
+        "requested_subject": "",
+        "resolved_title": "Kaya Alp",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 19,
+      "time_s": 4.437783,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d7s0",
+        "title": "William Nevill, 4th Earl of Abergavenny",
+        "url": "https://trace.invalid/2wikimultihopqa_062884f40bb011ebab90acde48001122_immediate/d7s0",
+        "text": "William Nevill, 4th Earl of Abergavenny (28 June 1792 – 17 August 1868), styled Hon.",
+        "visible_time_s": 4.437780299998849,
+        "requested_subject": "",
+        "resolved_title": "William Nevill, 4th Earl of Abergavenny",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 20,
+      "time_s": 4.437799,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d7s1",
+        "title": "William Nevill, 4th Earl of Abergavenny",
+        "url": "https://trace.invalid/2wikimultihopqa_062884f40bb011ebab90acde48001122_immediate/d7s1",
+        "text": "William Nevill until 1845, was a British peer and clergyman.",
+        "visible_time_s": 4.4377964999985124,
+        "requested_subject": "",
+        "resolved_title": "William Nevill, 4th Earl of Abergavenny",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 21,
+      "time_s": 4.437813,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d7s2",
+        "title": "William Nevill, 4th Earl of Abergavenny",
+        "url": "https://trace.invalid/2wikimultihopqa_062884f40bb011ebab90acde48001122_immediate/d7s2",
+        "text": "The fourth son of Henry Nevill, 2nd Earl of Abergavenny, he was ordained in 1816 and occupied two of the family livings until 1844.",
+        "visible_time_s": 4.437810499999614,
+        "requested_subject": "",
+        "resolved_title": "William Nevill, 4th Earl of Abergavenny",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 22,
+      "time_s": 4.437827,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d7s3",
+        "title": "William Nevill, 4th Earl of Abergavenny",
+        "url": "https://trace.invalid/2wikimultihopqa_062884f40bb011ebab90acde48001122_immediate/d7s3",
+        "text": "He succeeded his brother as Earl of Abergavenny the following year.",
+        "visible_time_s": 4.437824299999193,
+        "requested_subject": "",
+        "resolved_title": "William Nevill, 4th Earl of Abergavenny",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 23,
+      "time_s": 4.43784,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d8s0",
+        "title": "Abd al-Muttalib",
+        "url": "https://trace.invalid/2wikimultihopqa_062884f40bb011ebab90acde48001122_immediate/d8s0",
+        "text": "Abd al- Muttalib Shaybah ibn Hashim( c. 497 – 578) was the grandfather of Islamic prophet Muhammad.",
+        "visible_time_s": 4.437837699999363,
+        "requested_subject": "",
+        "resolved_title": "Abd al-Muttalib",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 24,
+      "time_s": 4.437856,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d9s0",
+        "title": "John Westley",
+        "url": "https://trace.invalid/2wikimultihopqa_062884f40bb011ebab90acde48001122_immediate/d9s0",
+        "text": "Rev. John Westley( 1636 – 78) was an English nonconformist minister.",
+        "visible_time_s": 4.437853899999027,
+        "requested_subject": "",
+        "resolved_title": "John Westley",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 25,
+      "time_s": 4.437871,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d9s1",
+        "title": "John Westley",
+        "url": "https://trace.invalid/2wikimultihopqa_062884f40bb011ebab90acde48001122_immediate/d9s1",
+        "text": "He was the grandfather of John Wesley( founder of Methodism).",
+        "visible_time_s": 4.437868299999536,
+        "requested_subject": "",
+        "resolved_title": "John Westley",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 26,
+      "time_s": 4.43789,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d10s0",
+        "title": "Prithvipati Shah",
+        "url": "https://trace.invalid/2wikimultihopqa_062884f40bb011ebab90acde48001122_immediate/d10s0",
+        "text": "Prithvipati Shah( ?–1716) was the king of the Gorkha Kingdom in the Indian subcontinent, present- day Nepal.",
+        "visible_time_s": 4.437886600000638,
+        "requested_subject": "",
+        "resolved_title": "Prithvipati Shah",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 27,
+      "time_s": 4.437907,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d10s1",
+        "title": "Prithvipati Shah",
+        "url": "https://trace.invalid/2wikimultihopqa_062884f40bb011ebab90acde48001122_immediate/d10s1",
+        "text": "He was the grandfather of Nara Bhupal Shah.",
+        "visible_time_s": 4.4379044999986945,
+        "requested_subject": "",
+        "resolved_title": "Prithvipati Shah",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 28,
+      "time_s": 6.342689,
+      "type": "feedback_requested",
+      "feedback_kind": "progress",
+      "execution_state": {
+        "stage": "checking",
+        "searches_started": 1,
+        "searches_completed": 1,
+        "active_searches": 0,
+        "evidence_count": 22,
+        "supported_units": 0,
+        "output_units": 0
+      }
+    },
+    {
+      "sequence": 29,
+      "time_s": 12.174479,
+      "type": "judge_reply",
+      "reply": {
+        "judgments": [
+          {
+            "unit_id": "u1",
+            "label": "SUPPORTED",
+            "value": "Lady Caroline Emily Nevill (1829–1887) was an early English photographer.",
+            "citations": [
+              "d3s0"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d3s0",
+                "text": "Lady Caroline Emily Nevill (1829–1887) was an early English photographer."
+              }
+            ],
+            "reason": "Article provides basic biographical statement."
+          },
+          {
+            "unit_id": "u2",
+            "label": "SUPPORTED",
+            "value": "William Nevill, 4th Earl of Abergavenny",
+            "citations": [
+              "d3s1",
+              "d7s0"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d3s1",
+                "text": "The daughter of William Nevill, 4th Earl of Abergavenny"
+              },
+              {
+                "evidence_id": "d7s0",
+                "text": "William Nevill, 4th Earl of Abergavenny (28 June 1792 – 17 August 1868)"
+              }
+            ],
+            "reason": "Both sources identify William Nevill as her father."
+          },
+          {
+            "unit_id": "u3",
+            "label": "SUPPORTED",
+            "value": "Henry Nevill, 2nd Earl of Abergavenny",
+            "citations": [
+              "d7s2"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d7s2",
+                "text": "The fourth son of Henry Nevill, 2nd Earl of Abergavenny"
+              }
+            ],
+            "reason": "William Nevill is the son of Henry Nevill, making Henry the paternal grandfather."
+          }
+        ]
+      },
+      "attempt": 1,
+      "repair": false,
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d1s1",
+        "d2s0",
+        "d2s1",
+        "d3s0",
+        "d3s1",
+        "d3s2",
+        "d3s3",
+        "d4s0",
+        "d4s1",
+        "d5s0",
+        "d5s1",
+        "d6s0",
+        "d7s0",
+        "d7s1",
+        "d7s2",
+        "d7s3",
+        "d8s0",
+        "d9s0",
+        "d9s1",
+        "d10s0",
+        "d10s1"
+      ]
+    },
+    {
+      "sequence": 30,
+      "time_s": 12.174841,
+      "type": "judgments",
+      "judgments": {
+        "u1": {
+          "label": "SUPPORTED",
+          "value": "Lady Caroline Emily Nevill (1829–1887) was an early English photographer.",
+          "citations": [
+            "d3s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d3s0",
+              "text": "Lady Caroline Emily Nevill (1829–1887) was an early English photographer."
+            }
+          ],
+          "reason": "Article provides basic biographical statement."
+        },
+        "u2": {
+          "label": "SUPPORTED",
+          "value": "William Nevill, 4th Earl of Abergavenny",
+          "citations": [
+            "d3s1",
+            "d7s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d3s1",
+              "text": "The daughter of William Nevill, 4th Earl of Abergavenny"
+            },
+            {
+              "evidence_id": "d7s0",
+              "text": "William Nevill, 4th Earl of Abergavenny (28 June 1792 – 17 August 1868)"
+            }
+          ],
+          "reason": "Both sources identify William Nevill as her father."
+        },
+        "u3": {
+          "label": "SUPPORTED",
+          "value": "Henry Nevill, 2nd Earl of Abergavenny",
+          "citations": [
+            "d7s2"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d7s2",
+              "text": "The fourth son of Henry Nevill, 2nd Earl of Abergavenny"
+            }
+          ],
+          "reason": "William Nevill is the son of Henry Nevill, making Henry the paternal grandfather."
+        }
+      },
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d1s1",
+        "d2s0",
+        "d2s1",
+        "d3s0",
+        "d3s1",
+        "d3s2",
+        "d3s3",
+        "d4s0",
+        "d4s1",
+        "d5s0",
+        "d5s1",
+        "d6s0",
+        "d7s0",
+        "d7s1",
+        "d7s2",
+        "d7s3",
+        "d8s0",
+        "d9s0",
+        "d9s1",
+        "d10s0",
+        "d10s1"
+      ],
+      "semantic_review": false
+    },
+    {
+      "sequence": 31,
+      "time_s": 12.349442,
+      "type": "utterance",
+      "action": "Progress",
+      "text": "I'm putting the verified information into an answer.",
+      "claims": [],
+      "feedback_source": "fallback",
+      "feedback_status_claim": "formulating",
+      "feedback_fallback_reason": "TimeoutError",
+      "execution_state": {
+        "stage": "formulating",
+        "searches_started": 1,
+        "searches_completed": 1,
+        "active_searches": 0,
+        "evidence_count": 22,
+        "supported_units": 3,
+        "output_units": 0
+      },
+      "language": "en"
+    },
+    {
+      "sequence": 32,
+      "time_s": 17.968254,
+      "type": "verification_reply",
+      "reply": {
+        "approved": false,
+        "facts_valid": true,
+        "expressed_unit_ids": [
+          "u3"
+        ],
+        "reason": "The factual claim matches the approved fact, but the wording uses 'My' instead of referring to Caroline Emily Nevill, violating the required phrasing."
+      },
+      "output_unit_ids": [
+        "u3"
+      ],
+      "output_action": "Final Answer",
+      "dependency_unit_ids": [
+        "u1",
+        "u2"
+      ],
+      "evidence_snapshot_ids": [
+        "d3s0",
+        "d3s1",
+        "d7s0",
+        "d7s2"
+      ]
+    },
+    {
+      "sequence": 33,
+      "time_s": 17.968358,
+      "type": "draft_rejected",
+      "reason": "Draft wording or output-unit accounting rejected",
+      "output_unit_ids": [
+        "u3"
+      ],
+      "expressed_unit_ids": [
+        "u3"
+      ]
+    },
+    {
+      "sequence": 34,
+      "time_s": 17.968626,
+      "type": "utterance",
+      "action": "Final Answer",
+      "text": "Paternal grandfather of Caroline Emily Nevill is Henry Nevill, 2nd Earl of Abergavenny.",
+      "claims": [
+        {
+          "unit_id": "u3",
+          "description": "Paternal grandfather of Caroline Emily Nevill",
+          "value": "Henry Nevill, 2nd Earl of Abergavenny",
+          "citations": [
+            "d7s2"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d7s2",
+              "text": "The fourth son of Henry Nevill, 2nd Earl of Abergavenny"
+            }
+          ]
+        }
+      ],
+      "unresolved": [],
+      "fallback": true,
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d1s1",
+        "d2s0",
+        "d2s1",
+        "d3s0",
+        "d3s1",
+        "d3s2",
+        "d3s3",
+        "d4s0",
+        "d4s1",
+        "d5s0",
+        "d5s1",
+        "d6s0",
+        "d7s0",
+        "d7s1",
+        "d7s2",
+        "d7s3",
+        "d8s0",
+        "d9s0",
+        "d9s1",
+        "d10s0",
+        "d10s1"
+      ],
+      "language": "en"
+    },
+    {
+      "sequence": 35,
+      "time_s": 17.969122,
+      "type": "finished",
+      "status": "complete"
+    }
+  ],
+  "note": "Prototype model judgments are not independent gold scores. Output event times are not spoken claim times.",
+  "evidence_mode": "scheduled_trace",
+  "audio": {
+    "enabled": true,
+    "mode": "windows",
+    "play": false,
+    "status": "ok",
+    "errors": [],
+    "records": [
+      {
+        "event_sequence": 1,
+        "sentence_index": 1,
+        "sentence_count": 1,
+        "language": "en",
+        "text": "Looking up who Caroline Emily Nevill's paternal grandfather is.",
+        "action": "Backchannel",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 3.3215847999999824,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval debug20\\artifacts\\runs\\20261118T042104Z-af3cd283\\samples\\0001\\audio\\segments\\0001_01.wav",
+        "duration_s": 4.333741496598639,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 4.141745699998864,
+        "synthesis_and_playback_s": 0.8205070000003616
+      },
+      {
+        "event_sequence": 31,
+        "sentence_index": 1,
+        "sentence_count": 1,
+        "language": "en",
+        "text": "I'm putting the verified information into an answer.",
+        "action": "Progress",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 12.3498800999987,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval debug20\\artifacts\\runs\\20261118T042104Z-af3cd283\\samples\\0001\\audio\\segments\\0031_01.wav",
+        "duration_s": 3.44875283446712,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 13.231431299998803,
+        "synthesis_and_playback_s": 0.8818629999987024
+      },
+      {
+        "event_sequence": 34,
+        "sentence_index": 1,
+        "sentence_count": 1,
+        "language": "en",
+        "text": "Paternal grandfather of Caroline Emily Nevill is Henry Nevill, 2nd Earl of Abergavenny.",
+        "action": "Final Answer",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 17.96906200000012,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval debug20\\artifacts\\runs\\20261118T042104Z-af3cd283\\samples\\0001\\audio\\segments\\0034_01.wav",
+        "duration_s": 6.268390022675737,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 18.780090699998254,
+        "synthesis_and_playback_s": 0.8114180999982636
+      }
+    ],
+    "wave": {
+      "path": "D:\\UIUC\\CS546\\moshi-rag\\eval debug20\\artifacts\\runs\\20261118T042104Z-af3cd283\\samples\\0001\\audio\\response.wav",
+      "duration_s": 25.048480725623584,
+      "timeline": [
+        {
+          "event_sequence": 1,
+          "sentence_index": 1,
+          "action": "Backchannel",
+          "text": "Looking up who Caroline Emily Nevill's paternal grandfather is.",
+          "wave_start_s": 4.14172335600907,
+          "wave_end_s": 8.47546485260771
+        },
+        {
+          "event_sequence": 31,
+          "sentence_index": 1,
+          "action": "Progress",
+          "text": "I'm putting the verified information into an answer.",
+          "wave_start_s": 13.231428571428571,
+          "wave_end_s": 16.68018140589569
+        },
+        {
+          "event_sequence": 34,
+          "sentence_index": 1,
+          "action": "Final Answer",
+          "text": "Paternal grandfather of Caroline Emily Nevill is Henry Nevill, 2nd Earl of Abergavenny.",
+          "wave_start_s": 18.780090702947845,
+          "wave_end_s": 25.048480725623584
+        }
+      ]
+    }
+  },
+  "evaluation": {
+    "mode": "b_debug_trace",
+    "trace_id": "2wikimultihopqa_062884f40bb011ebab90acde48001122_immediate",
+    "sample_id": "2wikimultihopqa_062884f40bb011ebab90acde48001122",
+    "total_wall_s": 18.784316400000534,
+    "question_timeout_s": 180,
+    "audio_enabled": true,
+    "history_enabled": false,
+    "text_pipeline_wall_s": 17.96931119999863,
+    "effective_settings": {
+      "base_url": "https://tinker.thinkingmachines.dev/services/tinker-prod/oai/api/v1",
+      "model": "openai/gpt-oss-120b",
+      "wiki_language": "en",
+      "user_agent": "CascadeSystem/0.1 (educational research prototype)",
+      "timeout_s": 45.0,
+      "max_tokens": 4096,
+      "reasoning_effort": "low",
+      "progress_s": 3.0,
+      "feedback_timeout_s": 6.0,
+      "search_limit": 3,
+      "max_units": 8,
+      "max_searches": 16,
+      "max_sources": 22,
+      "source_chars": 219,
+      "evidence_chars": 2057,
+      "concurrency": 3
+    },
+    "timing_kind": "unknown",
+    "scheduler": "wall-paced fixed B arrivals"
+  }
+}

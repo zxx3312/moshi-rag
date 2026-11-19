@@ -1,0 +1,805 @@
+{
+  "question": "On what date did Voyager 1 launch, and on what date was its closest approach to Jupiter?",
+  "resolved_question": "On what date did Voyager 1 launch, and on what date was its closest approach to Jupiter?",
+  "used_history_turn_ids": [],
+  "response_language": "en",
+  "status": "complete",
+  "clock": "wall_monotonic",
+  "time_origin": "question_text_ready_after_optional_asr",
+  "model": "openai/gpt-oss-120b",
+  "units": [
+    {
+      "unit_id": "u1",
+      "description": "launch date of Voyager 1",
+      "necessary": true,
+      "depends_on": [],
+      "queries": [
+        "Voyager 1 launch date",
+        "Voyager 1 launch"
+      ],
+      "subject": "Voyager 1"
+    },
+    {
+      "unit_id": "u2",
+      "description": "date of Voyager 1's closest approach to Jupiter",
+      "necessary": true,
+      "depends_on": [],
+      "queries": [
+        "Voyager 1 closest approach to Jupiter date",
+        "Voyager 1 Jupiter flyby date"
+      ],
+      "subject": "Voyager 1"
+    }
+  ],
+  "judgments": {
+    "u1": {
+      "label": "SUPPORTED",
+      "value": "September 5, 1977",
+      "citations": [
+        "d1s0"
+      ],
+      "quotes": [
+        {
+          "evidence_id": "d1s0",
+          "text": "September 5, 1977"
+        }
+      ],
+      "reason": "Evidence states the launch date directly."
+    },
+    "u2": {
+      "label": "SUPPORTED",
+      "value": "March 5, 1979",
+      "citations": [
+        "d2s0"
+      ],
+      "quotes": [
+        {
+          "evidence_id": "d2s0",
+          "text": "March 5, 1979"
+        }
+      ],
+      "reason": "Evidence states the closest approach date directly."
+    }
+  },
+  "evidence": [
+    {
+      "evidence_id": "d1s0",
+      "title": "Voyager 1 — launch",
+      "url": "https://trace.invalid/custom_nasa_voyager1_short/d1s0",
+      "text": "The launch date of Voyager 1 was September 5, 1977.",
+      "visible_time_s": 4.389994099998148,
+      "requested_subject": "",
+      "resolved_title": "Voyager 1 — launch",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d2s0",
+      "title": "Voyager 1 — Jupiter flyby",
+      "url": "https://trace.invalid/custom_nasa_voyager1_short/d2s0",
+      "text": "Voyager 1 made its closest approach to Jupiter on March 5, 1979.",
+      "visible_time_s": 4.390023899999505,
+      "requested_subject": "",
+      "resolved_title": "Voyager 1 — Jupiter flyby",
+      "entity_resolution": "unspecified"
+    }
+  ],
+  "searches": [
+    {
+      "query": "[scheduled evidence]",
+      "subject": "",
+      "status": "ok",
+      "returned_pages": [],
+      "mode": "trace",
+      "unit_id": "__scheduled_evidence__"
+    }
+  ],
+  "search_failures": [],
+  "llm_calls": [
+    {
+      "purpose": "feedback_generate",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 413,
+        "completion_tokens": 63,
+        "total_tokens": 476,
+        "prompt_tokens_details": {
+          "cached_tokens": 384
+        }
+      },
+      "latency_s": 1.939816
+    },
+    {
+      "purpose": "decompose",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 803,
+        "completion_tokens": 194,
+        "total_tokens": 997,
+        "prompt_tokens_details": {
+          "cached_tokens": 768
+        }
+      },
+      "latency_s": 2.593993
+    },
+    {
+      "purpose": "feedback_verify",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 370,
+        "completion_tokens": 73,
+        "total_tokens": 443,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        }
+      },
+      "latency_s": 1.596575
+    },
+    {
+      "purpose": "plan_review",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 1025,
+        "completion_tokens": 193,
+        "total_tokens": 1218,
+        "prompt_tokens_details": {
+          "cached_tokens": 896
+        }
+      },
+      "latency_s": 1.793389
+    },
+    {
+      "purpose": "judge",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 1450,
+        "completion_tokens": 216,
+        "total_tokens": 1666,
+        "prompt_tokens_details": {
+          "cached_tokens": 896
+        }
+      },
+      "latency_s": 3.204895
+    },
+    {
+      "purpose": "feedback_generate",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 413,
+        "completion_tokens": 71,
+        "total_tokens": 484,
+        "prompt_tokens_details": {
+          "cached_tokens": 384
+        }
+      },
+      "latency_s": 1.137489
+    },
+    {
+      "purpose": "generate",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 790,
+        "completion_tokens": 93,
+        "total_tokens": 883,
+        "prompt_tokens_details": {
+          "cached_tokens": 384
+        }
+      },
+      "latency_s": 1.248386
+    },
+    {
+      "purpose": "feedback_generate",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 414,
+        "completion_tokens": 55,
+        "total_tokens": 469,
+        "prompt_tokens_details": {
+          "cached_tokens": 384
+        }
+      },
+      "latency_s": 1.245056
+    },
+    {
+      "purpose": "feedback_verify",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 357,
+        "completion_tokens": 96,
+        "total_tokens": 453,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        }
+      },
+      "latency_s": 1.690556
+    },
+    {
+      "purpose": "verify",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 1123,
+        "completion_tokens": 112,
+        "total_tokens": 1235,
+        "prompt_tokens_details": {
+          "cached_tokens": 512
+        }
+      },
+      "latency_s": 1.838381
+    }
+  ],
+  "search_diagnostics": [],
+  "output_enqueued_units": {
+    "u1": "September 5, 1977",
+    "u2": "March 5, 1979"
+  },
+  "events": [
+    {
+      "sequence": 0,
+      "time_s": 0.000326,
+      "type": "feedback_requested",
+      "feedback_kind": "opening",
+      "execution_state": {
+        "stage": "planning",
+        "searches_started": 0,
+        "searches_completed": 0,
+        "active_searches": 0,
+        "evidence_count": 0,
+        "supported_units": 0,
+        "output_units": 0
+      }
+    },
+    {
+      "sequence": 1,
+      "time_s": 2.594282,
+      "type": "decompose_reply",
+      "reply": {
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "launch date of Voyager 1",
+            "subject": "Voyager 1",
+            "necessary": true,
+            "depends_on": [],
+            "queries": [
+              "Voyager 1 launch date",
+              "Voyager 1 launch"
+            ]
+          },
+          {
+            "unit_id": "u2",
+            "description": "date of Voyager 1's closest approach to Jupiter",
+            "subject": "Voyager 1",
+            "necessary": true,
+            "depends_on": [],
+            "queries": [
+              "Voyager 1 closest approach to Jupiter date",
+              "Voyager 1 Jupiter flyby date"
+            ]
+          }
+        ]
+      },
+      "attempt": 1,
+      "repair": false
+    },
+    {
+      "sequence": 2,
+      "time_s": 2.596336,
+      "type": "plan_review_requested",
+      "max_reviews": 1,
+      "question_only": true
+    },
+    {
+      "sequence": 3,
+      "time_s": 3.536952,
+      "type": "utterance",
+      "action": "Backchannel",
+      "text": "Got it, I’ll look up Voyager 1’s launch date and its closest‑approach date to Jupiter.",
+      "claims": [],
+      "feedback_source": "model",
+      "feedback_status_claim": "intent",
+      "feedback_fallback_reason": "",
+      "execution_state": {
+        "stage": "planning",
+        "searches_started": 0,
+        "searches_completed": 0,
+        "active_searches": 0,
+        "evidence_count": 0,
+        "supported_units": 0,
+        "output_units": 0
+      },
+      "language": "en"
+    },
+    {
+      "sequence": 4,
+      "time_s": 4.389786,
+      "type": "plan_review_reply",
+      "reply": {
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "launch date of Voyager 1",
+            "subject": "Voyager 1",
+            "necessary": true,
+            "depends_on": [],
+            "queries": [
+              "Voyager 1 launch date",
+              "Voyager 1 launch"
+            ]
+          },
+          {
+            "unit_id": "u2",
+            "description": "date of Voyager 1's closest approach to Jupiter",
+            "subject": "Voyager 1",
+            "necessary": true,
+            "depends_on": [],
+            "queries": [
+              "Voyager 1 closest approach to Jupiter date",
+              "Voyager 1 Jupiter flyby date"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "sequence": 5,
+      "time_s": 4.389874,
+      "type": "plan_review_finished",
+      "changed": false,
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "launch date of Voyager 1",
+          "necessary": true,
+          "depends_on": [],
+          "queries": [
+            "Voyager 1 launch date",
+            "Voyager 1 launch"
+          ],
+          "subject": "Voyager 1"
+        },
+        {
+          "unit_id": "u2",
+          "description": "date of Voyager 1's closest approach to Jupiter",
+          "necessary": true,
+          "depends_on": [],
+          "queries": [
+            "Voyager 1 closest approach to Jupiter date",
+            "Voyager 1 Jupiter flyby date"
+          ],
+          "subject": "Voyager 1"
+        }
+      ],
+      "question_only": true
+    },
+    {
+      "sequence": 6,
+      "time_s": 4.389898,
+      "type": "plan",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "launch date of Voyager 1",
+          "necessary": true,
+          "depends_on": [],
+          "queries": [
+            "Voyager 1 launch date",
+            "Voyager 1 launch"
+          ],
+          "subject": "Voyager 1"
+        },
+        {
+          "unit_id": "u2",
+          "description": "date of Voyager 1's closest approach to Jupiter",
+          "necessary": true,
+          "depends_on": [],
+          "queries": [
+            "Voyager 1 closest approach to Jupiter date",
+            "Voyager 1 Jupiter flyby date"
+          ],
+          "subject": "Voyager 1"
+        }
+      ]
+    },
+    {
+      "sequence": 7,
+      "time_s": 4.389915,
+      "type": "trace_batch_requested"
+    },
+    {
+      "sequence": 8,
+      "time_s": 4.389964,
+      "type": "search_finished",
+      "query": "[scheduled evidence]",
+      "subject": "",
+      "status": "ok",
+      "returned_pages": [],
+      "mode": "trace",
+      "unit_id": "__scheduled_evidence__"
+    },
+    {
+      "sequence": 9,
+      "time_s": 4.390003,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d1s0",
+        "title": "Voyager 1 — launch",
+        "url": "https://trace.invalid/custom_nasa_voyager1_short/d1s0",
+        "text": "The launch date of Voyager 1 was September 5, 1977.",
+        "visible_time_s": 4.389994099998148,
+        "requested_subject": "",
+        "resolved_title": "Voyager 1 — launch",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 10,
+      "time_s": 4.390028,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d2s0",
+        "title": "Voyager 1 — Jupiter flyby",
+        "url": "https://trace.invalid/custom_nasa_voyager1_short/d2s0",
+        "text": "Voyager 1 made its closest approach to Jupiter on March 5, 1979.",
+        "visible_time_s": 4.390023899999505,
+        "requested_subject": "",
+        "resolved_title": "Voyager 1 — Jupiter flyby",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 11,
+      "time_s": 6.608282,
+      "type": "feedback_requested",
+      "feedback_kind": "progress",
+      "execution_state": {
+        "stage": "checking",
+        "searches_started": 1,
+        "searches_completed": 1,
+        "active_searches": 0,
+        "evidence_count": 2,
+        "supported_units": 0,
+        "output_units": 0
+      }
+    },
+    {
+      "sequence": 12,
+      "time_s": 7.594978,
+      "type": "judge_reply",
+      "reply": {
+        "judgments": [
+          {
+            "unit_id": "u1",
+            "label": "SUPPORTED",
+            "value": "September 5, 1977",
+            "citations": [
+              "d1s0"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d1s0",
+                "text": "September 5, 1977"
+              }
+            ],
+            "reason": "Evidence states the launch date directly."
+          },
+          {
+            "unit_id": "u2",
+            "label": "SUPPORTED",
+            "value": "March 5, 1979",
+            "citations": [
+              "d2s0"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d2s0",
+                "text": "March 5, 1979"
+              }
+            ],
+            "reason": "Evidence states the closest approach date directly."
+          }
+        ]
+      },
+      "attempt": 1,
+      "repair": false,
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d2s0"
+      ]
+    },
+    {
+      "sequence": 13,
+      "time_s": 7.59512,
+      "type": "judgments",
+      "judgments": {
+        "u1": {
+          "label": "SUPPORTED",
+          "value": "September 5, 1977",
+          "citations": [
+            "d1s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d1s0",
+              "text": "September 5, 1977"
+            }
+          ],
+          "reason": "Evidence states the launch date directly."
+        },
+        "u2": {
+          "label": "SUPPORTED",
+          "value": "March 5, 1979",
+          "citations": [
+            "d2s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d2s0",
+              "text": "March 5, 1979"
+            }
+          ],
+          "reason": "Evidence states the closest approach date directly."
+        }
+      },
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d2s0"
+      ],
+      "semantic_review": false
+    },
+    {
+      "sequence": 14,
+      "time_s": 10.681728,
+      "type": "utterance",
+      "action": "Progress",
+      "text": "Formulating the answer with gathered evidence.",
+      "claims": [],
+      "feedback_source": "model",
+      "feedback_status_claim": "formulating",
+      "feedback_fallback_reason": "",
+      "execution_state": {
+        "stage": "formulating",
+        "searches_started": 1,
+        "searches_completed": 1,
+        "active_searches": 0,
+        "evidence_count": 2,
+        "supported_units": 2,
+        "output_units": 0
+      },
+      "language": "en"
+    },
+    {
+      "sequence": 15,
+      "time_s": 10.682221,
+      "type": "verification_reply",
+      "reply": {
+        "approved": true,
+        "facts_valid": true,
+        "expressed_unit_ids": [
+          "u1",
+          "u2"
+        ],
+        "reason": "All stated facts match approved evidence and no extra claims."
+      },
+      "output_unit_ids": [
+        "u1",
+        "u2"
+      ],
+      "output_action": "Final Answer",
+      "dependency_unit_ids": [],
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d2s0"
+      ]
+    },
+    {
+      "sequence": 16,
+      "time_s": 10.68226,
+      "type": "utterance",
+      "action": "Final Answer",
+      "text": "Voyager 1 launched on September 5, 1977. Its closest approach to Jupiter occurred on March 5, 1979.",
+      "claims": [
+        {
+          "unit_id": "u1",
+          "description": "launch date of Voyager 1",
+          "value": "September 5, 1977",
+          "citations": [
+            "d1s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d1s0",
+              "text": "September 5, 1977"
+            }
+          ]
+        },
+        {
+          "unit_id": "u2",
+          "description": "date of Voyager 1's closest approach to Jupiter",
+          "value": "March 5, 1979",
+          "citations": [
+            "d2s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d2s0",
+              "text": "March 5, 1979"
+            }
+          ]
+        }
+      ],
+      "unresolved": [],
+      "fallback": false,
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d2s0"
+      ],
+      "language": "en"
+    },
+    {
+      "sequence": 17,
+      "time_s": 10.682651,
+      "type": "finished",
+      "status": "complete"
+    }
+  ],
+  "note": "Prototype model judgments are not independent gold scores. Output event times are not spoken claim times.",
+  "evidence_mode": "scheduled_trace",
+  "audio": {
+    "enabled": true,
+    "mode": "windows",
+    "play": false,
+    "status": "ok",
+    "errors": [],
+    "records": [
+      {
+        "event_sequence": 3,
+        "sentence_index": 1,
+        "sentence_count": 1,
+        "language": "en",
+        "text": "Got it, I’ll look up Voyager 1’s launch date and its closest‑approach date to Jupiter.",
+        "action": "Backchannel",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 3.5375137999944855,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval debug20\\artifacts\\runs\\20261118T052754Z-eebc4a69\\samples\\0032\\audio\\segments\\0003_01.wav",
+        "duration_s": 5.963310657596372,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 4.331124999996973,
+        "synthesis_and_playback_s": 0.7939093000022694
+      },
+      {
+        "event_sequence": 14,
+        "sentence_index": 1,
+        "sentence_count": 1,
+        "language": "en",
+        "text": "Formulating the answer with gathered evidence.",
+        "action": "Progress",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 10.682592699995439,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval debug20\\artifacts\\runs\\20261118T052754Z-eebc4a69\\samples\\0032\\audio\\segments\\0014_01.wav",
+        "duration_s": 3.113968253968254,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 11.488274899995304,
+        "synthesis_and_playback_s": 0.8060253000003286
+      },
+      {
+        "event_sequence": 16,
+        "sentence_index": 1,
+        "sentence_count": 2,
+        "language": "en",
+        "text": "Voyager 1 launched on September 5, 1977.",
+        "action": "Final Answer",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 11.488627399994584,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval debug20\\artifacts\\runs\\20261118T052754Z-eebc4a69\\samples\\0032\\audio\\segments\\0016_01.wav",
+        "duration_s": 4.898503401360545,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 12.318110099993646,
+        "synthesis_and_playback_s": 0.8297856999997748
+      },
+      {
+        "event_sequence": 16,
+        "sentence_index": 2,
+        "sentence_count": 2,
+        "language": "en",
+        "text": "Its closest approach to Jupiter occurred on March 5, 1979.",
+        "action": "Final Answer",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 12.318421599993599,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval debug20\\artifacts\\runs\\20261118T052754Z-eebc4a69\\samples\\0032\\audio\\segments\\0016_02.wav",
+        "duration_s": 5.538548752834467,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 13.17490999999427,
+        "synthesis_and_playback_s": 0.8567575000051875
+      }
+    ],
+    "wave": {
+      "path": "D:\\UIUC\\CS546\\moshi-rag\\eval debug20\\artifacts\\runs\\20261118T052754Z-eebc4a69\\samples\\0032\\audio\\response.wav",
+      "duration_s": 25.039274376417232,
+      "timeline": [
+        {
+          "event_sequence": 3,
+          "sentence_index": 1,
+          "action": "Backchannel",
+          "text": "Got it, I’ll look up Voyager 1’s launch date and its closest‑approach date to Jupiter.",
+          "wave_start_s": 4.331111111111111,
+          "wave_end_s": 10.294421768707483
+        },
+        {
+          "event_sequence": 14,
+          "sentence_index": 1,
+          "action": "Progress",
+          "text": "Formulating the answer with gathered evidence.",
+          "wave_start_s": 11.488253968253968,
+          "wave_end_s": 14.602222222222222
+        },
+        {
+          "event_sequence": 16,
+          "sentence_index": 1,
+          "action": "Final Answer",
+          "text": "Voyager 1 launched on September 5, 1977.",
+          "wave_start_s": 14.602222222222222,
+          "wave_end_s": 19.500725623582767
+        },
+        {
+          "event_sequence": 16,
+          "sentence_index": 2,
+          "action": "Final Answer",
+          "text": "Its closest approach to Jupiter occurred on March 5, 1979.",
+          "wave_start_s": 19.500725623582767,
+          "wave_end_s": 25.039274376417232
+        }
+      ]
+    }
+  },
+  "evaluation": {
+    "mode": "b_debug_trace",
+    "trace_id": "custom_nasa_voyager1_short",
+    "sample_id": "custom_nasa_voyager1",
+    "total_wall_s": 13.178197499997623,
+    "question_timeout_s": 180,
+    "audio_enabled": true,
+    "history_enabled": false,
+    "text_pipeline_wall_s": 10.682819399997243,
+    "effective_settings": {
+      "base_url": "https://tinker.thinkingmachines.dev/services/tinker-prod/oai/api/v1",
+      "model": "openai/gpt-oss-120b",
+      "wiki_language": "en",
+      "user_agent": "CascadeSystem/0.1 (educational research prototype)",
+      "timeout_s": 45.0,
+      "max_tokens": 4096,
+      "reasoning_effort": "low",
+      "progress_s": 3.0,
+      "feedback_timeout_s": 6.0,
+      "search_limit": 3,
+      "max_units": 8,
+      "max_searches": 16,
+      "max_sources": 2,
+      "source_chars": 64,
+      "evidence_chars": 115,
+      "concurrency": 3
+    },
+    "timing_kind": "unknown",
+    "scheduler": "wall-paced fixed B arrivals"
+  }
+}

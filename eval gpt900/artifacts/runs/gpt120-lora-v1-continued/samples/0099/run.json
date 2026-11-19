@@ -1,0 +1,1826 @@
+{
+  "question": "Which film has the director born first, The Raven'S Dance or Keïta! L'Héritage Du Griot?",
+  "resolved_question": "Which film has the director born first, The Raven'S Dance or Keïta! L'Héritage Du Griot?",
+  "used_history_turn_ids": [],
+  "response_language": "en",
+  "status": "complete",
+  "clock": "wall_monotonic",
+  "time_origin": "question_text_ready_after_optional_asr",
+  "model": "openai/gpt-oss-120b",
+  "judge_model": "tinker://f9e9a6c1-e203-5c2c-acdd-68fe67378ca4:train:0/sampler_weights/epoch-0001",
+  "units": [
+    {
+      "unit_id": "u1",
+      "description": "director of The Raven's Dance",
+      "necessary": false,
+      "depends_on": [],
+      "queries": [
+        "The Raven's Dance film director"
+      ],
+      "subject": "The Raven's Dance"
+    },
+    {
+      "unit_id": "u2",
+      "description": "birth year of {u1}",
+      "necessary": false,
+      "depends_on": [
+        "u1"
+      ],
+      "queries": [
+        "{u1} birth year"
+      ],
+      "subject": "{u1}"
+    },
+    {
+      "unit_id": "u3",
+      "description": "director of Keïta! L'Héritage Du Griot",
+      "necessary": false,
+      "depends_on": [],
+      "queries": [
+        "Keïta! L'Héritage Du Griot film director"
+      ],
+      "subject": "Keïta! L'Héritage Du Griot"
+    },
+    {
+      "unit_id": "u4",
+      "description": "birth year of {u3}",
+      "necessary": false,
+      "depends_on": [
+        "u3"
+      ],
+      "queries": [
+        "{u3} birth year"
+      ],
+      "subject": "{u3}"
+    },
+    {
+      "unit_id": "u5",
+      "description": "which film has the director born first",
+      "necessary": true,
+      "depends_on": [
+        "u2",
+        "u4",
+        "u1",
+        "u3"
+      ],
+      "queries": [
+        "compare birth years of {u1} and {u3}"
+      ],
+      "subject": ""
+    }
+  ],
+  "judgments": {
+    "u1": {
+      "label": "SUPPORTED",
+      "value": "Markku Lehmuskallio",
+      "citations": [
+        "d7s0"
+      ],
+      "quotes": [
+        {
+          "evidence_id": "d7s0",
+          "text": "The Raven's Dance is a 1980 Finnish film directed by Markku Lehmuskallio."
+        }
+      ],
+      "reason": "Supported by the cited visible sentences and dependencies."
+    },
+    "u2": {
+      "label": "SUPPORTED",
+      "value": "1938",
+      "citations": [
+        "d6s0"
+      ],
+      "quotes": [
+        {
+          "evidence_id": "d6s0",
+          "text": "Markku Lehmuskallio( born 31 December 1938) is a Finnish film director, cinematographer and screenwriter."
+        }
+      ],
+      "reason": "Supported by the cited visible sentences and dependencies."
+    },
+    "u3": {
+      "label": "SUPPORTED",
+      "value": "Dani Kouyaté",
+      "citations": [
+        "d9s2"
+      ],
+      "quotes": [
+        {
+          "evidence_id": "d9s2",
+          "text": "Voice of the Griot \") is a 1995 Burkinabé drama film directed by Dani Kouyaté and starring Sotigui Kouyaté."
+        }
+      ],
+      "reason": "Supported by the cited visible sentences and dependencies."
+    },
+    "u4": {
+      "label": "SUPPORTED",
+      "value": "1961",
+      "citations": [
+        "d2s0"
+      ],
+      "quotes": [
+        {
+          "evidence_id": "d2s0",
+          "text": "Dani Kouyaté( born June 4, 1961) is a film director and griot from Burkina Faso, which the BBC describes as\" Africa's most important film- making country\"."
+        }
+      ],
+      "reason": "Supported by the cited visible sentences and dependencies."
+    },
+    "u5": {
+      "label": "SUPPORTED",
+      "value": "The Raven's Dance",
+      "citations": [
+        "d6s0",
+        "d2s0"
+      ],
+      "quotes": [
+        {
+          "evidence_id": "d6s0",
+          "text": "Markku Lehmuskallio( born 31 December 1938) is a Finnish film director, cinematographer and screenwriter."
+        },
+        {
+          "evidence_id": "d2s0",
+          "text": "Dani Kouyaté( born June 4, 1961) is a film director and griot from Burkina Faso, which the BBC describes as\" Africa's most important film- making country\"."
+        }
+      ],
+      "reason": "Supported by the cited visible sentences and dependencies."
+    }
+  },
+  "evidence": [
+    {
+      "evidence_id": "d1s0",
+      "title": "Henry Moore (cricketer)",
+      "url": "https://trace.invalid/2wikimultihopqa_3f857208086c11ebbd61ac1f6bf848b6_long/d1s0",
+      "text": "Henry Walter Moore( 1849 – 20 August 1916) was an English- born first- class cricketer who spent most of his life in New Zealand.",
+      "visible_time_s": 11.812999999994645,
+      "requested_subject": "",
+      "resolved_title": "Henry Moore (cricketer)",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d4s0",
+      "title": "When the Raven Flies",
+      "url": "https://trace.invalid/2wikimultihopqa_3f857208086c11ebbd61ac1f6bf848b6_long/d4s0",
+      "text": "When the Raven Flies( original) is a 1984 Icelandic- Swedish adventure film written and directed by Hrafn Gunnlaugsson.",
+      "visible_time_s": 11.812999999994645,
+      "requested_subject": "",
+      "resolved_title": "When the Raven Flies",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d4s1",
+      "title": "When the Raven Flies",
+      "url": "https://trace.invalid/2wikimultihopqa_3f857208086c11ebbd61ac1f6bf848b6_long/d4s1",
+      "text": "The story is set in Viking Age Iceland.",
+      "visible_time_s": 11.812999999994645,
+      "requested_subject": "",
+      "resolved_title": "When the Raven Flies",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d4s2",
+      "title": "When the Raven Flies",
+      "url": "https://trace.invalid/2wikimultihopqa_3f857208086c11ebbd61ac1f6bf848b6_long/d4s2",
+      "text": "The film was selected as the Icelandic entry for the Best Foreign Language Film at the 57th Academy Awards, but was not accepted as a nominee.",
+      "visible_time_s": 11.812999999994645,
+      "requested_subject": "",
+      "resolved_title": "When the Raven Flies",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d4s3",
+      "title": "When the Raven Flies",
+      "url": "https://trace.invalid/2wikimultihopqa_3f857208086c11ebbd61ac1f6bf848b6_long/d4s3",
+      "text": "In 2016, online newspaper Kjarninn voted it as the best Icelandic film of all time.",
+      "visible_time_s": 11.812999999994645,
+      "requested_subject": "",
+      "resolved_title": "When the Raven Flies",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d4s4",
+      "title": "When the Raven Flies",
+      "url": "https://trace.invalid/2wikimultihopqa_3f857208086c11ebbd61ac1f6bf848b6_long/d4s4",
+      "text": "Although mainly a tale of personal revenge,\" When the Raven Flies\" bears a clear resemblance to the classic Akira Kurosawa film\" Yojimbo\", sharing common plot events, characters and action sequences.",
+      "visible_time_s": 11.812999999994645,
+      "requested_subject": "",
+      "resolved_title": "When the Raven Flies",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d4s5",
+      "title": "When the Raven Flies",
+      "url": "https://trace.invalid/2wikimultihopqa_3f857208086c11ebbd61ac1f6bf848b6_long/d4s5",
+      "text": "Gunnlaugsson also drew inspiration from the Sagas of Icelanders and aimed to deconstruct the Viking stereotypes, replacing them with more authentic portrayals of the Viking era.",
+      "visible_time_s": 11.812999999994645,
+      "requested_subject": "",
+      "resolved_title": "When the Raven Flies",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d4s6",
+      "title": "When the Raven Flies",
+      "url": "https://trace.invalid/2wikimultihopqa_3f857208086c11ebbd61ac1f6bf848b6_long/d4s6",
+      "text": "\" When the Raven Flies\" is the first film of the\" Raven Trilogy\"( also known as the\" Viking Trilogy\") that consists of three Viking films:\" When the Raven Flies\"( 1984, usually known as simply\" The Raven\" or\" Revenge of the Barbarians In the Shadow of the Raven\"( 1987, original Icelandic title:\" Í skugga hrafnsins\") and\" Embla\"( 1991, original Icelandic title:\" Hvíti víkingurinn\"), which is a director's cut of\" The White Viking\".",
+      "visible_time_s": 11.812999999994645,
+      "requested_subject": "",
+      "resolved_title": "When the Raven Flies",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d5s0",
+      "title": "Seydou Boro",
+      "url": "https://trace.invalid/2wikimultihopqa_3f857208086c11ebbd61ac1f6bf848b6_long/d5s0",
+      "text": "Seydou Boro is a Burkinabé actor, dancer, and choreographer.",
+      "visible_time_s": 11.812999999994645,
+      "requested_subject": "",
+      "resolved_title": "Seydou Boro",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d5s1",
+      "title": "Seydou Boro",
+      "url": "https://trace.invalid/2wikimultihopqa_3f857208086c11ebbd61ac1f6bf848b6_long/d5s1",
+      "text": "He played the lead in the 1995 Dani Kouyate- directed film\" Keïta! l' Héritage du griot\".",
+      "visible_time_s": 11.812999999994645,
+      "requested_subject": "",
+      "resolved_title": "Seydou Boro",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d7s0",
+      "title": "The Raven's Dance",
+      "url": "https://trace.invalid/2wikimultihopqa_3f857208086c11ebbd61ac1f6bf848b6_long/d7s0",
+      "text": "The Raven's Dance is a 1980 Finnish film directed by Markku Lehmuskallio.",
+      "visible_time_s": 11.812999999994645,
+      "requested_subject": "",
+      "resolved_title": "The Raven's Dance",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d7s1",
+      "title": "The Raven's Dance",
+      "url": "https://trace.invalid/2wikimultihopqa_3f857208086c11ebbd61ac1f6bf848b6_long/d7s1",
+      "text": "It was entered into the 30th Berlin International Film Festival, where it won an Honourable Mention.",
+      "visible_time_s": 11.812999999994645,
+      "requested_subject": "",
+      "resolved_title": "The Raven's Dance",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d9s0",
+      "title": "Keïta! l'Héritage du griot",
+      "url": "https://trace.invalid/2wikimultihopqa_3f857208086c11ebbd61ac1f6bf848b6_long/d9s0",
+      "text": "Keïta!",
+      "visible_time_s": 11.812999999994645,
+      "requested_subject": "",
+      "resolved_title": "Keïta! l'Héritage du griot",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d9s1",
+      "title": "Keïta! l'Héritage du griot",
+      "url": "https://trace.invalid/2wikimultihopqa_3f857208086c11ebbd61ac1f6bf848b6_long/d9s1",
+      "text": "l'Héritage du griot (English title: \"Keita!",
+      "visible_time_s": 11.812999999994645,
+      "requested_subject": "",
+      "resolved_title": "Keïta! l'Héritage du griot",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d9s2",
+      "title": "Keïta! l'Héritage du griot",
+      "url": "https://trace.invalid/2wikimultihopqa_3f857208086c11ebbd61ac1f6bf848b6_long/d9s2",
+      "text": "Voice of the Griot \") is a 1995 Burkinabé drama film directed by Dani Kouyaté and starring Sotigui Kouyaté.",
+      "visible_time_s": 11.812999999994645,
+      "requested_subject": "",
+      "resolved_title": "Keïta! l'Héritage du griot",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d10s0",
+      "title": "The Raven (2006 film)",
+      "url": "https://trace.invalid/2wikimultihopqa_3f857208086c11ebbd61ac1f6bf848b6_long/d10s0",
+      "text": "The Raven is a 2006 American direct- to- video production horror film directed by Ulli Lommel and references the poem\" The Raven\" by Edgar Allan Poe.",
+      "visible_time_s": 11.812999999994645,
+      "requested_subject": "",
+      "resolved_title": "The Raven (2006 film)",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d10s1",
+      "title": "The Raven (2006 film)",
+      "url": "https://trace.invalid/2wikimultihopqa_3f857208086c11ebbd61ac1f6bf848b6_long/d10s1",
+      "text": "The DVD case cover art carries the title,\" Edgar Allan Poe's The Raven\".",
+      "visible_time_s": 11.812999999994645,
+      "requested_subject": "",
+      "resolved_title": "The Raven (2006 film)",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d2s0",
+      "title": "Dani Kouyaté",
+      "url": "https://trace.invalid/2wikimultihopqa_3f857208086c11ebbd61ac1f6bf848b6_long/d2s0",
+      "text": "Dani Kouyaté( born June 4, 1961) is a film director and griot from Burkina Faso, which the BBC describes as\" Africa's most important film- making country\".",
+      "visible_time_s": 11.812999999994645,
+      "requested_subject": "",
+      "resolved_title": "Dani Kouyaté",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d3s0",
+      "title": "Wale Adebanwi",
+      "url": "https://trace.invalid/2wikimultihopqa_3f857208086c11ebbd61ac1f6bf848b6_long/d3s0",
+      "text": "Wale Adebanwi( born 1969) is a Nigerian- born first Black Rhodes Professor at St Antony's College, Oxford.",
+      "visible_time_s": 11.812999999994645,
+      "requested_subject": "",
+      "resolved_title": "Wale Adebanwi",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d6s0",
+      "title": "Markku Lehmuskallio",
+      "url": "https://trace.invalid/2wikimultihopqa_3f857208086c11ebbd61ac1f6bf848b6_long/d6s0",
+      "text": "Markku Lehmuskallio( born 31 December 1938) is a Finnish film director, cinematographer and screenwriter.",
+      "visible_time_s": 11.812999999994645,
+      "requested_subject": "",
+      "resolved_title": "Markku Lehmuskallio",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d6s1",
+      "title": "Markku Lehmuskallio",
+      "url": "https://trace.invalid/2wikimultihopqa_3f857208086c11ebbd61ac1f6bf848b6_long/d6s1",
+      "text": "He has directed 26 films since 1973.",
+      "visible_time_s": 11.812999999994645,
+      "requested_subject": "",
+      "resolved_title": "Markku Lehmuskallio",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d6s2",
+      "title": "Markku Lehmuskallio",
+      "url": "https://trace.invalid/2wikimultihopqa_3f857208086c11ebbd61ac1f6bf848b6_long/d6s2",
+      "text": "His 1980 film\" The Raven's Dance\" was entered into the 30th Berlin International Film Festival, where it won an Honourable Mention.",
+      "visible_time_s": 11.812999999994645,
+      "requested_subject": "",
+      "resolved_title": "Markku Lehmuskallio",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d8s0",
+      "title": "Claude Weisz",
+      "url": "https://trace.invalid/2wikimultihopqa_3f857208086c11ebbd61ac1f6bf848b6_long/d8s0",
+      "text": "Claude Weisz is a French film director born in Paris.",
+      "visible_time_s": 11.812999999994645,
+      "requested_subject": "",
+      "resolved_title": "Claude Weisz",
+      "entity_resolution": "unspecified"
+    }
+  ],
+  "searches": [
+    {
+      "query": "[scheduled evidence]",
+      "subject": "",
+      "status": "ok",
+      "returned_pages": [],
+      "mode": "trace",
+      "unit_id": "__scheduled_evidence__"
+    }
+  ],
+  "search_failures": [],
+  "llm_calls": [
+    {
+      "purpose": "feedback_generate",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 418,
+        "completion_tokens": 68,
+        "total_tokens": 486,
+        "prompt_tokens_details": {
+          "cached_tokens": 384
+        }
+      },
+      "latency_s": 2.344
+    },
+    {
+      "purpose": "feedback_generate",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 418,
+        "completion_tokens": 71,
+        "total_tokens": 489,
+        "prompt_tokens_details": {
+          "cached_tokens": 384
+        }
+      },
+      "latency_s": 1.625
+    },
+    {
+      "purpose": "decompose",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 808,
+        "completion_tokens": 437,
+        "total_tokens": 1245,
+        "prompt_tokens_details": {
+          "cached_tokens": 768
+        }
+      },
+      "latency_s": 7.641
+    },
+    {
+      "purpose": "feedback_verify",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 364,
+        "completion_tokens": 62,
+        "total_tokens": 426,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        }
+      },
+      "latency_s": 1.485
+    },
+    {
+      "purpose": "plan_review",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 1182,
+        "completion_tokens": 437,
+        "total_tokens": 1619,
+        "prompt_tokens_details": {
+          "cached_tokens": 1152
+        }
+      },
+      "latency_s": 4.172
+    },
+    {
+      "purpose": "judge",
+      "model": "tinker://f9e9a6c1-e203-5c2c-acdd-68fe67378ca4:train:0/sampler_weights/epoch-0001",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 4752,
+        "completion_tokens": 555,
+        "total_tokens": 5307,
+        "prompt_tokens_details": {
+          "cached_tokens": 1408
+        }
+      },
+      "latency_s": 6.031
+    },
+    {
+      "purpose": "generate",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 747,
+        "completion_tokens": 107,
+        "total_tokens": 854,
+        "prompt_tokens_details": {
+          "cached_tokens": 640
+        }
+      },
+      "latency_s": 1.766
+    },
+    {
+      "purpose": "verify",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 2015,
+        "completion_tokens": 141,
+        "total_tokens": 2156,
+        "prompt_tokens_details": {
+          "cached_tokens": 1408
+        }
+      },
+      "latency_s": 2.343
+    }
+  ],
+  "search_diagnostics": [],
+  "output_enqueued_units": {
+    "u5": "The Raven's Dance"
+  },
+  "events": [
+    {
+      "sequence": 0,
+      "time_s": 0.0,
+      "type": "feedback_requested",
+      "feedback_kind": "opening",
+      "execution_state": {
+        "stage": "planning",
+        "searches_started": 0,
+        "searches_completed": 0,
+        "active_searches": 0,
+        "evidence_count": 0,
+        "supported_units": 0,
+        "output_units": 0
+      }
+    },
+    {
+      "sequence": 1,
+      "time_s": 2.344,
+      "type": "utterance",
+      "action": "Backchannel",
+      "text": "Let me check.",
+      "claims": [],
+      "feedback_source": "fallback",
+      "feedback_status_claim": "intent",
+      "feedback_fallback_reason": "feedback_language_or_sentence_count",
+      "execution_state": {
+        "stage": "planning",
+        "searches_started": 0,
+        "searches_completed": 0,
+        "active_searches": 0,
+        "evidence_count": 0,
+        "supported_units": 0,
+        "output_units": 0
+      },
+      "language": "en"
+    },
+    {
+      "sequence": 2,
+      "time_s": 5.485,
+      "type": "feedback_requested",
+      "feedback_kind": "progress",
+      "execution_state": {
+        "stage": "planning",
+        "searches_started": 0,
+        "searches_completed": 0,
+        "active_searches": 0,
+        "evidence_count": 0,
+        "supported_units": 0,
+        "output_units": 0
+      }
+    },
+    {
+      "sequence": 3,
+      "time_s": 7.641,
+      "type": "decompose_reply",
+      "reply": {
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "director of The Raven's Dance",
+            "subject": "",
+            "necessary": false,
+            "depends_on": [],
+            "queries": [
+              "The Raven's Dance film director"
+            ]
+          },
+          {
+            "unit_id": "u2",
+            "description": "birth year of {u1}",
+            "subject": "{u1}",
+            "necessary": false,
+            "depends_on": [
+              "u1"
+            ],
+            "queries": [
+              "{u1} birth year"
+            ]
+          },
+          {
+            "unit_id": "u3",
+            "description": "director of Keïta! L'Héritage Du Griot",
+            "subject": "",
+            "necessary": false,
+            "depends_on": [],
+            "queries": [
+              "Keïta! L'Héritage Du Griot film director"
+            ]
+          },
+          {
+            "unit_id": "u4",
+            "description": "birth year of {u3}",
+            "subject": "{u3}",
+            "necessary": false,
+            "depends_on": [
+              "u3"
+            ],
+            "queries": [
+              "{u3} birth year"
+            ]
+          },
+          {
+            "unit_id": "u5",
+            "description": "which film has the director born first",
+            "subject": "",
+            "necessary": true,
+            "depends_on": [
+              "u2",
+              "u4"
+            ],
+            "queries": [
+              "compare birth years of {u1} and {u3}"
+            ]
+          }
+        ]
+      },
+      "attempt": 1,
+      "repair": false
+    },
+    {
+      "sequence": 4,
+      "time_s": 7.641,
+      "type": "protocol_validation_failed",
+      "stage": "decompose",
+      "attempt": 1,
+      "error": "Placeholders must name explicit dependencies"
+    },
+    {
+      "sequence": 5,
+      "time_s": 7.641,
+      "type": "protocol_normalized",
+      "stage": "decompose",
+      "changes": [
+        {
+          "unit_id": "u5",
+          "added_dependencies": [
+            "u1",
+            "u3"
+          ]
+        }
+      ],
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "director of The Raven's Dance",
+          "necessary": false,
+          "depends_on": [],
+          "queries": [
+            "The Raven's Dance film director"
+          ],
+          "subject": ""
+        },
+        {
+          "unit_id": "u2",
+          "description": "birth year of {u1}",
+          "necessary": false,
+          "depends_on": [
+            "u1"
+          ],
+          "queries": [
+            "{u1} birth year"
+          ],
+          "subject": "{u1}"
+        },
+        {
+          "unit_id": "u3",
+          "description": "director of Keïta! L'Héritage Du Griot",
+          "necessary": false,
+          "depends_on": [],
+          "queries": [
+            "Keïta! L'Héritage Du Griot film director"
+          ],
+          "subject": ""
+        },
+        {
+          "unit_id": "u4",
+          "description": "birth year of {u3}",
+          "necessary": false,
+          "depends_on": [
+            "u3"
+          ],
+          "queries": [
+            "{u3} birth year"
+          ],
+          "subject": "{u3}"
+        },
+        {
+          "unit_id": "u5",
+          "description": "which film has the director born first",
+          "necessary": true,
+          "depends_on": [
+            "u2",
+            "u4",
+            "u1",
+            "u3"
+          ],
+          "queries": [
+            "compare birth years of {u1} and {u3}"
+          ],
+          "subject": ""
+        }
+      ],
+      "no_facts_added": true
+    },
+    {
+      "sequence": 6,
+      "time_s": 7.641,
+      "type": "plan_review_requested",
+      "max_reviews": 1,
+      "question_only": true
+    },
+    {
+      "sequence": 7,
+      "time_s": 8.61,
+      "type": "utterance",
+      "action": "Progress",
+      "text": "I'm planning the steps to compare the directors' birth dates.",
+      "claims": [],
+      "feedback_source": "model",
+      "feedback_status_claim": "processing",
+      "feedback_fallback_reason": "",
+      "execution_state": {
+        "stage": "planning",
+        "searches_started": 0,
+        "searches_completed": 0,
+        "active_searches": 0,
+        "evidence_count": 0,
+        "supported_units": 0,
+        "output_units": 0
+      },
+      "language": "en"
+    },
+    {
+      "sequence": 8,
+      "time_s": 11.813,
+      "type": "plan_review_reply",
+      "reply": {
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "director of The Raven's Dance",
+            "necessary": false,
+            "depends_on": [],
+            "queries": [
+              "The Raven's Dance film director"
+            ],
+            "subject": "The Raven's Dance"
+          },
+          {
+            "unit_id": "u2",
+            "description": "birth year of {u1}",
+            "necessary": false,
+            "depends_on": [
+              "u1"
+            ],
+            "queries": [
+              "{u1} birth year"
+            ],
+            "subject": "{u1}"
+          },
+          {
+            "unit_id": "u3",
+            "description": "director of Keïta! L'Héritage Du Griot",
+            "necessary": false,
+            "depends_on": [],
+            "queries": [
+              "Keïta! L'Héritage Du Griot film director"
+            ],
+            "subject": "Keïta! L'Héritage Du Griot"
+          },
+          {
+            "unit_id": "u4",
+            "description": "birth year of {u3}",
+            "necessary": false,
+            "depends_on": [
+              "u3"
+            ],
+            "queries": [
+              "{u3} birth year"
+            ],
+            "subject": "{u3}"
+          },
+          {
+            "unit_id": "u5",
+            "description": "which film has the director born first",
+            "necessary": true,
+            "depends_on": [
+              "u2",
+              "u4"
+            ],
+            "queries": [
+              "compare birth years of {u1} and {u3}"
+            ],
+            "subject": ""
+          }
+        ]
+      }
+    },
+    {
+      "sequence": 9,
+      "time_s": 11.813,
+      "type": "protocol_normalized",
+      "stage": "plan_review",
+      "changes": [
+        {
+          "unit_id": "u5",
+          "added_dependencies": [
+            "u1",
+            "u3"
+          ]
+        }
+      ],
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "director of The Raven's Dance",
+          "necessary": false,
+          "depends_on": [],
+          "queries": [
+            "The Raven's Dance film director"
+          ],
+          "subject": "The Raven's Dance"
+        },
+        {
+          "unit_id": "u2",
+          "description": "birth year of {u1}",
+          "necessary": false,
+          "depends_on": [
+            "u1"
+          ],
+          "queries": [
+            "{u1} birth year"
+          ],
+          "subject": "{u1}"
+        },
+        {
+          "unit_id": "u3",
+          "description": "director of Keïta! L'Héritage Du Griot",
+          "necessary": false,
+          "depends_on": [],
+          "queries": [
+            "Keïta! L'Héritage Du Griot film director"
+          ],
+          "subject": "Keïta! L'Héritage Du Griot"
+        },
+        {
+          "unit_id": "u4",
+          "description": "birth year of {u3}",
+          "necessary": false,
+          "depends_on": [
+            "u3"
+          ],
+          "queries": [
+            "{u3} birth year"
+          ],
+          "subject": "{u3}"
+        },
+        {
+          "unit_id": "u5",
+          "description": "which film has the director born first",
+          "necessary": true,
+          "depends_on": [
+            "u2",
+            "u4",
+            "u1",
+            "u3"
+          ],
+          "queries": [
+            "compare birth years of {u1} and {u3}"
+          ],
+          "subject": ""
+        }
+      ],
+      "no_facts_added": true
+    },
+    {
+      "sequence": 10,
+      "time_s": 11.813,
+      "type": "plan_review_finished",
+      "changed": true,
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "director of The Raven's Dance",
+          "necessary": false,
+          "depends_on": [],
+          "queries": [
+            "The Raven's Dance film director"
+          ],
+          "subject": "The Raven's Dance"
+        },
+        {
+          "unit_id": "u2",
+          "description": "birth year of {u1}",
+          "necessary": false,
+          "depends_on": [
+            "u1"
+          ],
+          "queries": [
+            "{u1} birth year"
+          ],
+          "subject": "{u1}"
+        },
+        {
+          "unit_id": "u3",
+          "description": "director of Keïta! L'Héritage Du Griot",
+          "necessary": false,
+          "depends_on": [],
+          "queries": [
+            "Keïta! L'Héritage Du Griot film director"
+          ],
+          "subject": "Keïta! L'Héritage Du Griot"
+        },
+        {
+          "unit_id": "u4",
+          "description": "birth year of {u3}",
+          "necessary": false,
+          "depends_on": [
+            "u3"
+          ],
+          "queries": [
+            "{u3} birth year"
+          ],
+          "subject": "{u3}"
+        },
+        {
+          "unit_id": "u5",
+          "description": "which film has the director born first",
+          "necessary": true,
+          "depends_on": [
+            "u2",
+            "u4",
+            "u1",
+            "u3"
+          ],
+          "queries": [
+            "compare birth years of {u1} and {u3}"
+          ],
+          "subject": ""
+        }
+      ],
+      "question_only": true
+    },
+    {
+      "sequence": 11,
+      "time_s": 11.813,
+      "type": "plan",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "director of The Raven's Dance",
+          "necessary": false,
+          "depends_on": [],
+          "queries": [
+            "The Raven's Dance film director"
+          ],
+          "subject": "The Raven's Dance"
+        },
+        {
+          "unit_id": "u2",
+          "description": "birth year of {u1}",
+          "necessary": false,
+          "depends_on": [
+            "u1"
+          ],
+          "queries": [
+            "{u1} birth year"
+          ],
+          "subject": "{u1}"
+        },
+        {
+          "unit_id": "u3",
+          "description": "director of Keïta! L'Héritage Du Griot",
+          "necessary": false,
+          "depends_on": [],
+          "queries": [
+            "Keïta! L'Héritage Du Griot film director"
+          ],
+          "subject": "Keïta! L'Héritage Du Griot"
+        },
+        {
+          "unit_id": "u4",
+          "description": "birth year of {u3}",
+          "necessary": false,
+          "depends_on": [
+            "u3"
+          ],
+          "queries": [
+            "{u3} birth year"
+          ],
+          "subject": "{u3}"
+        },
+        {
+          "unit_id": "u5",
+          "description": "which film has the director born first",
+          "necessary": true,
+          "depends_on": [
+            "u2",
+            "u4",
+            "u1",
+            "u3"
+          ],
+          "queries": [
+            "compare birth years of {u1} and {u3}"
+          ],
+          "subject": ""
+        }
+      ]
+    },
+    {
+      "sequence": 12,
+      "time_s": 11.813,
+      "type": "trace_batch_requested"
+    },
+    {
+      "sequence": 13,
+      "time_s": 11.813,
+      "type": "search_finished",
+      "query": "[scheduled evidence]",
+      "subject": "",
+      "status": "ok",
+      "returned_pages": [],
+      "mode": "trace",
+      "unit_id": "__scheduled_evidence__"
+    },
+    {
+      "sequence": 14,
+      "time_s": 11.813,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d1s0",
+        "title": "Henry Moore (cricketer)",
+        "url": "https://trace.invalid/2wikimultihopqa_3f857208086c11ebbd61ac1f6bf848b6_long/d1s0",
+        "text": "Henry Walter Moore( 1849 – 20 August 1916) was an English- born first- class cricketer who spent most of his life in New Zealand.",
+        "visible_time_s": 11.812999999994645,
+        "requested_subject": "",
+        "resolved_title": "Henry Moore (cricketer)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 15,
+      "time_s": 11.813,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d4s0",
+        "title": "When the Raven Flies",
+        "url": "https://trace.invalid/2wikimultihopqa_3f857208086c11ebbd61ac1f6bf848b6_long/d4s0",
+        "text": "When the Raven Flies( original) is a 1984 Icelandic- Swedish adventure film written and directed by Hrafn Gunnlaugsson.",
+        "visible_time_s": 11.812999999994645,
+        "requested_subject": "",
+        "resolved_title": "When the Raven Flies",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 16,
+      "time_s": 11.813,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d4s1",
+        "title": "When the Raven Flies",
+        "url": "https://trace.invalid/2wikimultihopqa_3f857208086c11ebbd61ac1f6bf848b6_long/d4s1",
+        "text": "The story is set in Viking Age Iceland.",
+        "visible_time_s": 11.812999999994645,
+        "requested_subject": "",
+        "resolved_title": "When the Raven Flies",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 17,
+      "time_s": 11.813,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d4s2",
+        "title": "When the Raven Flies",
+        "url": "https://trace.invalid/2wikimultihopqa_3f857208086c11ebbd61ac1f6bf848b6_long/d4s2",
+        "text": "The film was selected as the Icelandic entry for the Best Foreign Language Film at the 57th Academy Awards, but was not accepted as a nominee.",
+        "visible_time_s": 11.812999999994645,
+        "requested_subject": "",
+        "resolved_title": "When the Raven Flies",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 18,
+      "time_s": 11.813,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d4s3",
+        "title": "When the Raven Flies",
+        "url": "https://trace.invalid/2wikimultihopqa_3f857208086c11ebbd61ac1f6bf848b6_long/d4s3",
+        "text": "In 2016, online newspaper Kjarninn voted it as the best Icelandic film of all time.",
+        "visible_time_s": 11.812999999994645,
+        "requested_subject": "",
+        "resolved_title": "When the Raven Flies",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 19,
+      "time_s": 11.813,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d4s4",
+        "title": "When the Raven Flies",
+        "url": "https://trace.invalid/2wikimultihopqa_3f857208086c11ebbd61ac1f6bf848b6_long/d4s4",
+        "text": "Although mainly a tale of personal revenge,\" When the Raven Flies\" bears a clear resemblance to the classic Akira Kurosawa film\" Yojimbo\", sharing common plot events, characters and action sequences.",
+        "visible_time_s": 11.812999999994645,
+        "requested_subject": "",
+        "resolved_title": "When the Raven Flies",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 20,
+      "time_s": 11.813,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d4s5",
+        "title": "When the Raven Flies",
+        "url": "https://trace.invalid/2wikimultihopqa_3f857208086c11ebbd61ac1f6bf848b6_long/d4s5",
+        "text": "Gunnlaugsson also drew inspiration from the Sagas of Icelanders and aimed to deconstruct the Viking stereotypes, replacing them with more authentic portrayals of the Viking era.",
+        "visible_time_s": 11.812999999994645,
+        "requested_subject": "",
+        "resolved_title": "When the Raven Flies",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 21,
+      "time_s": 11.813,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d4s6",
+        "title": "When the Raven Flies",
+        "url": "https://trace.invalid/2wikimultihopqa_3f857208086c11ebbd61ac1f6bf848b6_long/d4s6",
+        "text": "\" When the Raven Flies\" is the first film of the\" Raven Trilogy\"( also known as the\" Viking Trilogy\") that consists of three Viking films:\" When the Raven Flies\"( 1984, usually known as simply\" The Raven\" or\" Revenge of the Barbarians In the Shadow of the Raven\"( 1987, original Icelandic title:\" Í skugga hrafnsins\") and\" Embla\"( 1991, original Icelandic title:\" Hvíti víkingurinn\"), which is a director's cut of\" The White Viking\".",
+        "visible_time_s": 11.812999999994645,
+        "requested_subject": "",
+        "resolved_title": "When the Raven Flies",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 22,
+      "time_s": 11.813,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d5s0",
+        "title": "Seydou Boro",
+        "url": "https://trace.invalid/2wikimultihopqa_3f857208086c11ebbd61ac1f6bf848b6_long/d5s0",
+        "text": "Seydou Boro is a Burkinabé actor, dancer, and choreographer.",
+        "visible_time_s": 11.812999999994645,
+        "requested_subject": "",
+        "resolved_title": "Seydou Boro",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 23,
+      "time_s": 11.813,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d5s1",
+        "title": "Seydou Boro",
+        "url": "https://trace.invalid/2wikimultihopqa_3f857208086c11ebbd61ac1f6bf848b6_long/d5s1",
+        "text": "He played the lead in the 1995 Dani Kouyate- directed film\" Keïta! l' Héritage du griot\".",
+        "visible_time_s": 11.812999999994645,
+        "requested_subject": "",
+        "resolved_title": "Seydou Boro",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 24,
+      "time_s": 11.813,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d7s0",
+        "title": "The Raven's Dance",
+        "url": "https://trace.invalid/2wikimultihopqa_3f857208086c11ebbd61ac1f6bf848b6_long/d7s0",
+        "text": "The Raven's Dance is a 1980 Finnish film directed by Markku Lehmuskallio.",
+        "visible_time_s": 11.812999999994645,
+        "requested_subject": "",
+        "resolved_title": "The Raven's Dance",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 25,
+      "time_s": 11.813,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d7s1",
+        "title": "The Raven's Dance",
+        "url": "https://trace.invalid/2wikimultihopqa_3f857208086c11ebbd61ac1f6bf848b6_long/d7s1",
+        "text": "It was entered into the 30th Berlin International Film Festival, where it won an Honourable Mention.",
+        "visible_time_s": 11.812999999994645,
+        "requested_subject": "",
+        "resolved_title": "The Raven's Dance",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 26,
+      "time_s": 11.813,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d9s0",
+        "title": "Keïta! l'Héritage du griot",
+        "url": "https://trace.invalid/2wikimultihopqa_3f857208086c11ebbd61ac1f6bf848b6_long/d9s0",
+        "text": "Keïta!",
+        "visible_time_s": 11.812999999994645,
+        "requested_subject": "",
+        "resolved_title": "Keïta! l'Héritage du griot",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 27,
+      "time_s": 11.813,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d9s1",
+        "title": "Keïta! l'Héritage du griot",
+        "url": "https://trace.invalid/2wikimultihopqa_3f857208086c11ebbd61ac1f6bf848b6_long/d9s1",
+        "text": "l'Héritage du griot (English title: \"Keita!",
+        "visible_time_s": 11.812999999994645,
+        "requested_subject": "",
+        "resolved_title": "Keïta! l'Héritage du griot",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 28,
+      "time_s": 11.813,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d9s2",
+        "title": "Keïta! l'Héritage du griot",
+        "url": "https://trace.invalid/2wikimultihopqa_3f857208086c11ebbd61ac1f6bf848b6_long/d9s2",
+        "text": "Voice of the Griot \") is a 1995 Burkinabé drama film directed by Dani Kouyaté and starring Sotigui Kouyaté.",
+        "visible_time_s": 11.812999999994645,
+        "requested_subject": "",
+        "resolved_title": "Keïta! l'Héritage du griot",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 29,
+      "time_s": 11.813,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d10s0",
+        "title": "The Raven (2006 film)",
+        "url": "https://trace.invalid/2wikimultihopqa_3f857208086c11ebbd61ac1f6bf848b6_long/d10s0",
+        "text": "The Raven is a 2006 American direct- to- video production horror film directed by Ulli Lommel and references the poem\" The Raven\" by Edgar Allan Poe.",
+        "visible_time_s": 11.812999999994645,
+        "requested_subject": "",
+        "resolved_title": "The Raven (2006 film)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 30,
+      "time_s": 11.813,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d10s1",
+        "title": "The Raven (2006 film)",
+        "url": "https://trace.invalid/2wikimultihopqa_3f857208086c11ebbd61ac1f6bf848b6_long/d10s1",
+        "text": "The DVD case cover art carries the title,\" Edgar Allan Poe's The Raven\".",
+        "visible_time_s": 11.812999999994645,
+        "requested_subject": "",
+        "resolved_title": "The Raven (2006 film)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 31,
+      "time_s": 11.813,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d2s0",
+        "title": "Dani Kouyaté",
+        "url": "https://trace.invalid/2wikimultihopqa_3f857208086c11ebbd61ac1f6bf848b6_long/d2s0",
+        "text": "Dani Kouyaté( born June 4, 1961) is a film director and griot from Burkina Faso, which the BBC describes as\" Africa's most important film- making country\".",
+        "visible_time_s": 11.812999999994645,
+        "requested_subject": "",
+        "resolved_title": "Dani Kouyaté",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 32,
+      "time_s": 11.813,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d3s0",
+        "title": "Wale Adebanwi",
+        "url": "https://trace.invalid/2wikimultihopqa_3f857208086c11ebbd61ac1f6bf848b6_long/d3s0",
+        "text": "Wale Adebanwi( born 1969) is a Nigerian- born first Black Rhodes Professor at St Antony's College, Oxford.",
+        "visible_time_s": 11.812999999994645,
+        "requested_subject": "",
+        "resolved_title": "Wale Adebanwi",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 33,
+      "time_s": 11.813,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d6s0",
+        "title": "Markku Lehmuskallio",
+        "url": "https://trace.invalid/2wikimultihopqa_3f857208086c11ebbd61ac1f6bf848b6_long/d6s0",
+        "text": "Markku Lehmuskallio( born 31 December 1938) is a Finnish film director, cinematographer and screenwriter.",
+        "visible_time_s": 11.812999999994645,
+        "requested_subject": "",
+        "resolved_title": "Markku Lehmuskallio",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 34,
+      "time_s": 11.813,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d6s1",
+        "title": "Markku Lehmuskallio",
+        "url": "https://trace.invalid/2wikimultihopqa_3f857208086c11ebbd61ac1f6bf848b6_long/d6s1",
+        "text": "He has directed 26 films since 1973.",
+        "visible_time_s": 11.812999999994645,
+        "requested_subject": "",
+        "resolved_title": "Markku Lehmuskallio",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 35,
+      "time_s": 11.813,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d6s2",
+        "title": "Markku Lehmuskallio",
+        "url": "https://trace.invalid/2wikimultihopqa_3f857208086c11ebbd61ac1f6bf848b6_long/d6s2",
+        "text": "His 1980 film\" The Raven's Dance\" was entered into the 30th Berlin International Film Festival, where it won an Honourable Mention.",
+        "visible_time_s": 11.812999999994645,
+        "requested_subject": "",
+        "resolved_title": "Markku Lehmuskallio",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 36,
+      "time_s": 11.813,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d8s0",
+        "title": "Claude Weisz",
+        "url": "https://trace.invalid/2wikimultihopqa_3f857208086c11ebbd61ac1f6bf848b6_long/d8s0",
+        "text": "Claude Weisz is a French film director born in Paris.",
+        "visible_time_s": 11.812999999994645,
+        "requested_subject": "",
+        "resolved_title": "Claude Weisz",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 37,
+      "time_s": 17.844,
+      "type": "judge_reply",
+      "reply": {
+        "judgments": [
+          {
+            "unit_id": "u1",
+            "label": "SUPPORTED",
+            "value": "Markku Lehmuskallio",
+            "citations": [
+              "d7s0"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d7s0",
+                "text": "The Raven's Dance is a 1980 Finnish film directed by Markku Lehmuskallio."
+              }
+            ],
+            "reason": "Supported by the cited visible sentences and dependencies."
+          },
+          {
+            "unit_id": "u2",
+            "label": "SUPPORTED",
+            "value": "1938",
+            "citations": [
+              "d6s0"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d6s0",
+                "text": "Markku Lehmuskallio( born 31 December 1938) is a Finnish film director, cinematographer and screenwriter."
+              }
+            ],
+            "reason": "Supported by the cited visible sentences and dependencies."
+          },
+          {
+            "unit_id": "u3",
+            "label": "SUPPORTED",
+            "value": "Dani Kouyaté",
+            "citations": [
+              "d9s2"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d9s2",
+                "text": "Voice of the Griot \") is a 1995 Burkinabé drama film directed by Dani Kouyaté and starring Sotigui Kouyaté."
+              }
+            ],
+            "reason": "Supported by the cited visible sentences and dependencies."
+          },
+          {
+            "unit_id": "u4",
+            "label": "SUPPORTED",
+            "value": "1961",
+            "citations": [
+              "d2s0"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d2s0",
+                "text": "Dani Kouyaté( born June 4, 1961) is a film director and griot from Burkina Faso, which the BBC describes as\" Africa's most important film- making country\"."
+              }
+            ],
+            "reason": "Supported by the cited visible sentences and dependencies."
+          },
+          {
+            "unit_id": "u5",
+            "label": "SUPPORTED",
+            "value": "The Raven's Dance",
+            "citations": [
+              "d6s0",
+              "d2s0"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d6s0",
+                "text": "Markku Lehmuskallio( born 31 December 1938) is a Finnish film director, cinematographer and screenwriter."
+              },
+              {
+                "evidence_id": "d2s0",
+                "text": "Dani Kouyaté( born June 4, 1961) is a film director and griot from Burkina Faso, which the BBC describes as\" Africa's most important film- making country\"."
+              }
+            ],
+            "reason": "Supported by the cited visible sentences and dependencies."
+          }
+        ]
+      },
+      "attempt": 1,
+      "repair": false,
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d4s0",
+        "d4s1",
+        "d4s2",
+        "d4s3",
+        "d4s4",
+        "d4s5",
+        "d4s6",
+        "d5s0",
+        "d5s1",
+        "d7s0",
+        "d7s1",
+        "d9s0",
+        "d9s1",
+        "d9s2",
+        "d10s0",
+        "d10s1",
+        "d2s0",
+        "d3s0",
+        "d6s0",
+        "d6s1",
+        "d6s2",
+        "d8s0"
+      ]
+    },
+    {
+      "sequence": 38,
+      "time_s": 17.844,
+      "type": "judgments",
+      "judgments": {
+        "u1": {
+          "label": "SUPPORTED",
+          "value": "Markku Lehmuskallio",
+          "citations": [
+            "d7s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d7s0",
+              "text": "The Raven's Dance is a 1980 Finnish film directed by Markku Lehmuskallio."
+            }
+          ],
+          "reason": "Supported by the cited visible sentences and dependencies."
+        },
+        "u2": {
+          "label": "SUPPORTED",
+          "value": "1938",
+          "citations": [
+            "d6s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d6s0",
+              "text": "Markku Lehmuskallio( born 31 December 1938) is a Finnish film director, cinematographer and screenwriter."
+            }
+          ],
+          "reason": "Supported by the cited visible sentences and dependencies."
+        },
+        "u3": {
+          "label": "SUPPORTED",
+          "value": "Dani Kouyaté",
+          "citations": [
+            "d9s2"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d9s2",
+              "text": "Voice of the Griot \") is a 1995 Burkinabé drama film directed by Dani Kouyaté and starring Sotigui Kouyaté."
+            }
+          ],
+          "reason": "Supported by the cited visible sentences and dependencies."
+        },
+        "u4": {
+          "label": "SUPPORTED",
+          "value": "1961",
+          "citations": [
+            "d2s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d2s0",
+              "text": "Dani Kouyaté( born June 4, 1961) is a film director and griot from Burkina Faso, which the BBC describes as\" Africa's most important film- making country\"."
+            }
+          ],
+          "reason": "Supported by the cited visible sentences and dependencies."
+        },
+        "u5": {
+          "label": "SUPPORTED",
+          "value": "The Raven's Dance",
+          "citations": [
+            "d6s0",
+            "d2s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d6s0",
+              "text": "Markku Lehmuskallio( born 31 December 1938) is a Finnish film director, cinematographer and screenwriter."
+            },
+            {
+              "evidence_id": "d2s0",
+              "text": "Dani Kouyaté( born June 4, 1961) is a film director and griot from Burkina Faso, which the BBC describes as\" Africa's most important film- making country\"."
+            }
+          ],
+          "reason": "Supported by the cited visible sentences and dependencies."
+        }
+      },
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d4s0",
+        "d4s1",
+        "d4s2",
+        "d4s3",
+        "d4s4",
+        "d4s5",
+        "d4s6",
+        "d5s0",
+        "d5s1",
+        "d7s0",
+        "d7s1",
+        "d9s0",
+        "d9s1",
+        "d9s2",
+        "d10s0",
+        "d10s1",
+        "d2s0",
+        "d3s0",
+        "d6s0",
+        "d6s1",
+        "d6s2",
+        "d8s0"
+      ],
+      "semantic_review": false
+    },
+    {
+      "sequence": 39,
+      "time_s": 21.953,
+      "type": "verification_reply",
+      "reply": {
+        "approved": true,
+        "facts_valid": true,
+        "expressed_unit_ids": [
+          "u5"
+        ],
+        "reason": "All factual claims are supported by evidence and match the requested unit."
+      },
+      "output_unit_ids": [
+        "u5"
+      ],
+      "output_action": "Final Answer",
+      "dependency_unit_ids": [
+        "u1",
+        "u2",
+        "u3",
+        "u4"
+      ],
+      "evidence_snapshot_ids": [
+        "d7s0",
+        "d9s2",
+        "d2s0",
+        "d6s0"
+      ]
+    },
+    {
+      "sequence": 40,
+      "time_s": 21.953,
+      "type": "utterance",
+      "action": "Final Answer",
+      "text": "The film whose director was born first is The Raven's Dance.",
+      "claims": [
+        {
+          "unit_id": "u5",
+          "description": "which film has the director born first",
+          "value": "The Raven's Dance",
+          "citations": [
+            "d6s0",
+            "d2s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d6s0",
+              "text": "Markku Lehmuskallio( born 31 December 1938) is a Finnish film director, cinematographer and screenwriter."
+            },
+            {
+              "evidence_id": "d2s0",
+              "text": "Dani Kouyaté( born June 4, 1961) is a film director and griot from Burkina Faso, which the BBC describes as\" Africa's most important film- making country\"."
+            }
+          ]
+        }
+      ],
+      "unresolved": [],
+      "fallback": false,
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d4s0",
+        "d4s1",
+        "d4s2",
+        "d4s3",
+        "d4s4",
+        "d4s5",
+        "d4s6",
+        "d5s0",
+        "d5s1",
+        "d7s0",
+        "d7s1",
+        "d9s0",
+        "d9s1",
+        "d9s2",
+        "d10s0",
+        "d10s1",
+        "d2s0",
+        "d3s0",
+        "d6s0",
+        "d6s1",
+        "d6s2",
+        "d8s0"
+      ],
+      "language": "en"
+    },
+    {
+      "sequence": 41,
+      "time_s": 21.953,
+      "type": "finished",
+      "status": "complete"
+    }
+  ],
+  "note": "Prototype model judgments are not independent gold scores. Output event times are not spoken claim times.",
+  "evidence_mode": "scheduled_trace",
+  "audio": {
+    "enabled": true,
+    "mode": "windows",
+    "play": false,
+    "status": "ok",
+    "errors": [],
+    "records": [
+      {
+        "event_sequence": 1,
+        "sentence_index": 1,
+        "sentence_count": 1,
+        "language": "en",
+        "text": "Let me check.",
+        "action": "Backchannel",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 2.3439999999973224,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1\\samples\\0099\\audio\\segments\\0001_01.wav",
+        "duration_s": 1.649297052154195,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 3.1410000000032596,
+        "synthesis_and_playback_s": 0.7970000000059372
+      },
+      {
+        "event_sequence": 7,
+        "sentence_index": 1,
+        "sentence_count": 1,
+        "language": "en",
+        "text": "I'm planning the steps to compare the directors' birth dates.",
+        "action": "Progress",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 8.610000000000582,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1\\samples\\0099\\audio\\segments\\0007_01.wav",
+        "duration_s": 3.908662131519274,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 9.39100000000326,
+        "synthesis_and_playback_s": 0.7810000000026776
+      },
+      {
+        "event_sequence": 40,
+        "sentence_index": 1,
+        "sentence_count": 1,
+        "language": "en",
+        "text": "The film whose director was born first is The Raven's Dance.",
+        "action": "Final Answer",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 21.952999999994063,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1\\samples\\0099\\audio\\segments\\0040_01.wav",
+        "duration_s": 4.003764172335601,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 22.76600000000326,
+        "synthesis_and_playback_s": 0.8130000000091968
+      }
+    ],
+    "wave": {
+      "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1\\samples\\0099\\audio\\response.wav",
+      "duration_s": 26.769750566893425,
+      "timeline": [
+        {
+          "event_sequence": 1,
+          "sentence_index": 1,
+          "action": "Backchannel",
+          "text": "Let me check.",
+          "wave_start_s": 3.1409977324263036,
+          "wave_end_s": 4.790294784580499
+        },
+        {
+          "event_sequence": 7,
+          "sentence_index": 1,
+          "action": "Progress",
+          "text": "I'm planning the steps to compare the directors' birth dates.",
+          "wave_start_s": 9.391020408163266,
+          "wave_end_s": 13.29968253968254
+        },
+        {
+          "event_sequence": 40,
+          "sentence_index": 1,
+          "action": "Final Answer",
+          "text": "The film whose director was born first is The Raven's Dance.",
+          "wave_start_s": 22.765986394557824,
+          "wave_end_s": 26.769750566893425
+        }
+      ]
+    }
+  },
+  "evaluation": {
+    "mode": "b_final_revised_trace",
+    "trace_id": "2wikimultihopqa_3f857208086c11ebbd61ac1f6bf848b6_long",
+    "sample_id": "2wikimultihopqa_3f857208086c11ebbd61ac1f6bf848b6",
+    "total_wall_s": 22.76600000000326,
+    "question_timeout_s": 180,
+    "audio_enabled": true,
+    "history_enabled": false,
+    "text_pipeline_wall_s": 21.952999999994063,
+    "effective_settings": {
+      "base_url": "https://tinker.thinkingmachines.dev/services/tinker-prod/oai/api/v1",
+      "model": "openai/gpt-oss-120b",
+      "judge_model": "tinker://f9e9a6c1-e203-5c2c-acdd-68fe67378ca4:train:0/sampler_weights/epoch-0001",
+      "judge_reasoning_effort": "low",
+      "wiki_language": "en",
+      "user_agent": "CascadeSystem/0.1 (educational research prototype)",
+      "timeout_s": 45.0,
+      "max_tokens": 4096,
+      "reasoning_effort": "low",
+      "progress_s": 3.0,
+      "feedback_timeout_s": 6.0,
+      "search_limit": 3,
+      "max_units": 8,
+      "max_searches": 16,
+      "max_sources": 23,
+      "source_chars": 433,
+      "evidence_chars": 2606,
+      "concurrency": 3
+    },
+    "timing_kind": "unknown",
+    "scheduler": "wall-paced fixed B arrivals",
+    "split": "eval_reserved",
+    "empty_evidence_sentences_ignored": 0
+  }
+}

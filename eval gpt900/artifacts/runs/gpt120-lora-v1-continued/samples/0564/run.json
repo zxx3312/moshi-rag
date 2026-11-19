@@ -1,0 +1,2533 @@
+{
+  "question": "The 2014 Baylor Bears football games were played at the stadium whose name was changed during what month?",
+  "resolved_question": "The 2014 Baylor Bears football games were played at the stadium whose name was changed during what month?",
+  "used_history_turn_ids": [],
+  "response_language": "en",
+  "status": "complete",
+  "clock": "wall_monotonic",
+  "time_origin": "question_text_ready_after_optional_asr",
+  "model": "openai/gpt-oss-120b",
+  "judge_model": "tinker://f9e9a6c1-e203-5c2c-acdd-68fe67378ca4:train:0/sampler_weights/epoch-0001",
+  "units": [
+    {
+      "unit_id": "u1",
+      "description": "Stadium where the 2014 Baylor Bears football games were played",
+      "necessary": false,
+      "depends_on": [],
+      "queries": [
+        "2014 Baylor Bears football stadium",
+        "Baylor University football home stadium 2014"
+      ],
+      "subject": "Baylor Bears football"
+    },
+    {
+      "unit_id": "u2",
+      "description": "Month when the name of the stadium identified in {u1} was changed",
+      "necessary": true,
+      "depends_on": [
+        "u1"
+      ],
+      "queries": [
+        "stadium name change month {u1}",
+        "when was {u1} renamed month"
+      ],
+      "subject": "{u1}"
+    }
+  ],
+  "judgments": {
+    "u1": {
+      "label": "SUPPORTED",
+      "value": "McLane Stadium",
+      "citations": [
+        "d3s2"
+      ],
+      "quotes": [
+        {
+          "evidence_id": "d3s2",
+          "text": "Playing their 116th football season, this was the team's first in the new McLane Stadium in Waco, Texas."
+        }
+      ],
+      "reason": "Supported by the cited visible sentences and dependencies."
+    },
+    "u2": {
+      "label": "SUPPORTED",
+      "value": "December",
+      "citations": [
+        "d4s2"
+      ],
+      "quotes": [
+        {
+          "evidence_id": "d4s2",
+          "text": "Originally named \"Baylor Stadium\", the name was changed to McLane Stadium in December 2013 to honor alumnus and business magnate Drayton McLane, Jr., who provided the lead gift for the stadium construction."
+        }
+      ],
+      "reason": "Supported by the cited visible sentences and dependencies."
+    }
+  },
+  "evidence": [
+    {
+      "evidence_id": "d1s0",
+      "title": "Carroll Field",
+      "url": "https://trace.invalid/hotpotqa_5a83c2e25542996488c2e4bc_long/d1s0",
+      "text": "Carroll Field was owned by Baylor University; the Baylor Bears football program played games there from 1906 to 1925, and from 1930 to 1935.",
+      "visible_time_s": 3.0,
+      "requested_subject": "",
+      "resolved_title": "Carroll Field",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d1s1",
+      "title": "Carroll Field",
+      "url": "https://trace.invalid/hotpotqa_5a83c2e25542996488c2e4bc_long/d1s1",
+      "text": "Following the construction of the Carroll Science Building in 1902, the field was located between the building and Waco Creek; the field took over as the location of football games from an unnamed field adjacent to and northwest of Old Main.",
+      "visible_time_s": 3.0,
+      "requested_subject": "",
+      "resolved_title": "Carroll Field",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d1s2",
+      "title": "Carroll Field",
+      "url": "https://trace.invalid/hotpotqa_5a83c2e25542996488c2e4bc_long/d1s2",
+      "text": "From 1926 to 1929, Baylor football games were played at the Cotton Palace in Waco.",
+      "visible_time_s": 3.0,
+      "requested_subject": "",
+      "resolved_title": "Carroll Field",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d3s0",
+      "title": "2014 Baylor Bears football team",
+      "url": "https://trace.invalid/hotpotqa_5a83c2e25542996488c2e4bc_long/d3s0",
+      "text": "The 2014 Baylor Bears football team represented Baylor University in the 2014 NCAA Division I FBS football season.",
+      "visible_time_s": 3.0,
+      "requested_subject": "",
+      "resolved_title": "2014 Baylor Bears football team",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d3s1",
+      "title": "2014 Baylor Bears football team",
+      "url": "https://trace.invalid/hotpotqa_5a83c2e25542996488c2e4bc_long/d3s1",
+      "text": "The Bears were coached by Art Briles.",
+      "visible_time_s": 3.0,
+      "requested_subject": "",
+      "resolved_title": "2014 Baylor Bears football team",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d3s2",
+      "title": "2014 Baylor Bears football team",
+      "url": "https://trace.invalid/hotpotqa_5a83c2e25542996488c2e4bc_long/d3s2",
+      "text": "Playing their 116th football season, this was the team's first in the new McLane Stadium in Waco, Texas.",
+      "visible_time_s": 3.0,
+      "requested_subject": "",
+      "resolved_title": "2014 Baylor Bears football team",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d3s3",
+      "title": "2014 Baylor Bears football team",
+      "url": "https://trace.invalid/hotpotqa_5a83c2e25542996488c2e4bc_long/d3s3",
+      "text": "The Bears were members of the Big 12 Conference.",
+      "visible_time_s": 3.0,
+      "requested_subject": "",
+      "resolved_title": "2014 Baylor Bears football team",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d3s4",
+      "title": "2014 Baylor Bears football team",
+      "url": "https://trace.invalid/hotpotqa_5a83c2e25542996488c2e4bc_long/d3s4",
+      "text": "They finished the season 11–2, 8–1 in Big 12 play to win a share of the Big 12 title with TCU.",
+      "visible_time_s": 3.0,
+      "requested_subject": "",
+      "resolved_title": "2014 Baylor Bears football team",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d3s5",
+      "title": "2014 Baylor Bears football team",
+      "url": "https://trace.invalid/hotpotqa_5a83c2e25542996488c2e4bc_long/d3s5",
+      "text": "They were invited to the Cotton Bowl Classic where they lost to Michigan State.",
+      "visible_time_s": 3.0,
+      "requested_subject": "",
+      "resolved_title": "2014 Baylor Bears football team",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d5s0",
+      "title": "1972 Baylor Bears football team",
+      "url": "https://trace.invalid/hotpotqa_5a83c2e25542996488c2e4bc_long/d5s0",
+      "text": "The 1972 Baylor Bears football team represented the Baylor University in the 1972 college football season.",
+      "visible_time_s": 3.0,
+      "requested_subject": "",
+      "resolved_title": "1972 Baylor Bears football team",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d5s1",
+      "title": "1972 Baylor Bears football team",
+      "url": "https://trace.invalid/hotpotqa_5a83c2e25542996488c2e4bc_long/d5s1",
+      "text": "Grant Teaff was hired to resurrect the moribund football team at Baylor.",
+      "visible_time_s": 3.0,
+      "requested_subject": "",
+      "resolved_title": "1972 Baylor Bears football team",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d5s2",
+      "title": "1972 Baylor Bears football team",
+      "url": "https://trace.invalid/hotpotqa_5a83c2e25542996488c2e4bc_long/d5s2",
+      "text": "Baylor originally hired Rudy Feldman from New Mexico, but Feldman quit after one day, leaving the job to Teaff.",
+      "visible_time_s": 3.0,
+      "requested_subject": "",
+      "resolved_title": "1972 Baylor Bears football team",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d5s3",
+      "title": "1972 Baylor Bears football team",
+      "url": "https://trace.invalid/hotpotqa_5a83c2e25542996488c2e4bc_long/d5s3",
+      "text": "Baylor had been 7–43–1 in the five seasons preceding Teaff's arrival.",
+      "visible_time_s": 3.0,
+      "requested_subject": "",
+      "resolved_title": "1972 Baylor Bears football team",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d5s4",
+      "title": "1972 Baylor Bears football team",
+      "url": "https://trace.invalid/hotpotqa_5a83c2e25542996488c2e4bc_long/d5s4",
+      "text": "The Bears offense scored 180 points, while the Bears defense allowed 156 points.",
+      "visible_time_s": 3.0,
+      "requested_subject": "",
+      "resolved_title": "1972 Baylor Bears football team",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d5s5",
+      "title": "1972 Baylor Bears football team",
+      "url": "https://trace.invalid/hotpotqa_5a83c2e25542996488c2e4bc_long/d5s5",
+      "text": "In the Battle of the Brazos, the Bears beat Texas A&M by a score of 15–13.",
+      "visible_time_s": 3.0,
+      "requested_subject": "",
+      "resolved_title": "1972 Baylor Bears football team",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d7s0",
+      "title": "1961 Baylor Bears football team",
+      "url": "https://trace.invalid/hotpotqa_5a83c2e25542996488c2e4bc_long/d7s0",
+      "text": "The 1961 Baylor Bears football team represented Baylor University during the 1961 college football season.",
+      "visible_time_s": 3.0,
+      "requested_subject": "",
+      "resolved_title": "1961 Baylor Bears football team",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d7s1",
+      "title": "1961 Baylor Bears football team",
+      "url": "https://trace.invalid/hotpotqa_5a83c2e25542996488c2e4bc_long/d7s1",
+      "text": "The Bears were led by third-year head coach John Bridgers and played their home games at Baylor Stadium in Waco, Texas.",
+      "visible_time_s": 3.0,
+      "requested_subject": "",
+      "resolved_title": "1961 Baylor Bears football team",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d7s2",
+      "title": "1961 Baylor Bears football team",
+      "url": "https://trace.invalid/hotpotqa_5a83c2e25542996488c2e4bc_long/d7s2",
+      "text": "They competed as members of the Southwest Conference, finishing in sixth with a regular season record of 5–5 (2–5 SWC).",
+      "visible_time_s": 3.0,
+      "requested_subject": "",
+      "resolved_title": "1961 Baylor Bears football team",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d7s3",
+      "title": "1961 Baylor Bears football team",
+      "url": "https://trace.invalid/hotpotqa_5a83c2e25542996488c2e4bc_long/d7s3",
+      "text": "Baylor was invited to the first Gotham Bowl, where they beat the previously-undefeated Utah State Aggies, 24–9.",
+      "visible_time_s": 3.0,
+      "requested_subject": "",
+      "resolved_title": "1961 Baylor Bears football team",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d9s0",
+      "title": "1988 Baylor Bears football team",
+      "url": "https://trace.invalid/hotpotqa_5a83c2e25542996488c2e4bc_long/d9s0",
+      "text": "The 1988 Baylor Bears football team represented the Baylor University in the 1988 NCAA Division I-A football season.",
+      "visible_time_s": 3.0,
+      "requested_subject": "",
+      "resolved_title": "1988 Baylor Bears football team",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d9s1",
+      "title": "1988 Baylor Bears football team",
+      "url": "https://trace.invalid/hotpotqa_5a83c2e25542996488c2e4bc_long/d9s1",
+      "text": "The Bears finished the season fourth in the Southwest Conference.",
+      "visible_time_s": 3.0,
+      "requested_subject": "",
+      "resolved_title": "1988 Baylor Bears football team",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d9s2",
+      "title": "1988 Baylor Bears football team",
+      "url": "https://trace.invalid/hotpotqa_5a83c2e25542996488c2e4bc_long/d9s2",
+      "text": "Baylor Stadium's name was officially changed to Floyd Casey Stadium during halftime of the homecoming game against Arkansas on November 5.",
+      "visible_time_s": 3.0,
+      "requested_subject": "",
+      "resolved_title": "1988 Baylor Bears football team",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d2s0",
+      "title": "2014 Baylor Bears baseball team",
+      "url": "https://trace.invalid/hotpotqa_5a83c2e25542996488c2e4bc_long/d2s0",
+      "text": "The 2014 Baylor Bears baseball team represents Baylor University in the 2014 college baseball season.",
+      "visible_time_s": 8.0,
+      "requested_subject": "",
+      "resolved_title": "2014 Baylor Bears baseball team",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d2s1",
+      "title": "2014 Baylor Bears baseball team",
+      "url": "https://trace.invalid/hotpotqa_5a83c2e25542996488c2e4bc_long/d2s1",
+      "text": "Baylor competes in Division I of the National Collegiate Athletic Association (NCAA) as a charter member of the Big 12 Conference.",
+      "visible_time_s": 8.0,
+      "requested_subject": "",
+      "resolved_title": "2014 Baylor Bears baseball team",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d2s2",
+      "title": "2014 Baylor Bears baseball team",
+      "url": "https://trace.invalid/hotpotqa_5a83c2e25542996488c2e4bc_long/d2s2",
+      "text": "The Bears play home games at Baylor Ballpark on the university's campus in Waco, Texas.",
+      "visible_time_s": 8.0,
+      "requested_subject": "",
+      "resolved_title": "2014 Baylor Bears baseball team",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d2s3",
+      "title": "2014 Baylor Bears baseball team",
+      "url": "https://trace.invalid/hotpotqa_5a83c2e25542996488c2e4bc_long/d2s3",
+      "text": "Twenty year head coach Steve Smith leads the Bears, a former pitcher for the team during the 1982 and 1983 seasons.",
+      "visible_time_s": 8.0,
+      "requested_subject": "",
+      "resolved_title": "2014 Baylor Bears baseball team",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d4s0",
+      "title": "McLane Stadium",
+      "url": "https://trace.invalid/hotpotqa_5a83c2e25542996488c2e4bc_long/d4s0",
+      "text": "McLane Stadium is an American football stadium in Waco, Texas.",
+      "visible_time_s": 8.0,
+      "requested_subject": "",
+      "resolved_title": "McLane Stadium",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d4s1",
+      "title": "McLane Stadium",
+      "url": "https://trace.invalid/hotpotqa_5a83c2e25542996488c2e4bc_long/d4s1",
+      "text": "It is owned and operated by Baylor University.",
+      "visible_time_s": 8.0,
+      "requested_subject": "",
+      "resolved_title": "McLane Stadium",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d4s2",
+      "title": "McLane Stadium",
+      "url": "https://trace.invalid/hotpotqa_5a83c2e25542996488c2e4bc_long/d4s2",
+      "text": "Originally named \"Baylor Stadium\", the name was changed to McLane Stadium in December 2013 to honor alumnus and business magnate Drayton McLane, Jr., who provided the lead gift for the stadium construction.",
+      "visible_time_s": 8.0,
+      "requested_subject": "",
+      "resolved_title": "McLane Stadium",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d4s3",
+      "title": "McLane Stadium",
+      "url": "https://trace.invalid/hotpotqa_5a83c2e25542996488c2e4bc_long/d4s3",
+      "text": "Baylor's first game at McLane was played August 31, 2014, with the Bears defeating SMU 45–0.",
+      "visible_time_s": 8.0,
+      "requested_subject": "",
+      "resolved_title": "McLane Stadium",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d4s4",
+      "title": "McLane Stadium",
+      "url": "https://trace.invalid/hotpotqa_5a83c2e25542996488c2e4bc_long/d4s4",
+      "text": "The stadium has a capacity of 45,140 spectators and is expandable to 55,000.",
+      "visible_time_s": 8.0,
+      "requested_subject": "",
+      "resolved_title": "McLane Stadium",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d4s5",
+      "title": "McLane Stadium",
+      "url": "https://trace.invalid/hotpotqa_5a83c2e25542996488c2e4bc_long/d4s5",
+      "text": "McLane Stadium replaced Floyd Casey Stadium as the home field for the Baylor Bears football program.",
+      "visible_time_s": 8.0,
+      "requested_subject": "",
+      "resolved_title": "McLane Stadium",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d6s0",
+      "title": "Baylor Bears football statistical leaders",
+      "url": "https://trace.invalid/hotpotqa_5a83c2e25542996488c2e4bc_long/d6s0",
+      "text": "The Baylor Bears football statistical leaders are individual statistical leaders of the Baylor Bears football program in various categories, including passing, rushing, receiving, total offense, defensive stats, and kicking.",
+      "visible_time_s": 8.0,
+      "requested_subject": "",
+      "resolved_title": "Baylor Bears football statistical leaders",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d6s1",
+      "title": "Baylor Bears football statistical leaders",
+      "url": "https://trace.invalid/hotpotqa_5a83c2e25542996488c2e4bc_long/d6s1",
+      "text": "Within those areas, the lists identify single-game, single-season, and career leaders.",
+      "visible_time_s": 8.0,
+      "requested_subject": "",
+      "resolved_title": "Baylor Bears football statistical leaders",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d6s2",
+      "title": "Baylor Bears football statistical leaders",
+      "url": "https://trace.invalid/hotpotqa_5a83c2e25542996488c2e4bc_long/d6s2",
+      "text": "The Bears represent the Baylor University in the NCAA's Big 12 Conference.",
+      "visible_time_s": 8.0,
+      "requested_subject": "",
+      "resolved_title": "Baylor Bears football statistical leaders",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d8s0",
+      "title": "1899 Baylor football team",
+      "url": "https://trace.invalid/hotpotqa_5a83c2e25542996488c2e4bc_long/d8s0",
+      "text": "The 1899 Baylor Bears football team represented Baylor University in the 1899 college football season.",
+      "visible_time_s": 8.0,
+      "requested_subject": "",
+      "resolved_title": "1899 Baylor football team",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d8s1",
+      "title": "1899 Baylor football team",
+      "url": "https://trace.invalid/hotpotqa_5a83c2e25542996488c2e4bc_long/d8s1",
+      "text": "This was the first football season for Baylor.",
+      "visible_time_s": 8.0,
+      "requested_subject": "",
+      "resolved_title": "1899 Baylor football team",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d8s2",
+      "title": "1899 Baylor football team",
+      "url": "https://trace.invalid/hotpotqa_5a83c2e25542996488c2e4bc_long/d8s2",
+      "text": "They all four games at home games in Waco, Texas.",
+      "visible_time_s": 8.0,
+      "requested_subject": "",
+      "resolved_title": "1899 Baylor football team",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d8s3",
+      "title": "1899 Baylor football team",
+      "url": "https://trace.invalid/hotpotqa_5a83c2e25542996488c2e4bc_long/d8s3",
+      "text": "They were coached by head coach R. H. Hamilton.",
+      "visible_time_s": 8.0,
+      "requested_subject": "",
+      "resolved_title": "1899 Baylor football team",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d8s4",
+      "title": "1899 Baylor football team",
+      "url": "https://trace.invalid/hotpotqa_5a83c2e25542996488c2e4bc_long/d8s4",
+      "text": "Initially, Baylor played its home games on an undetermined field near the university.",
+      "visible_time_s": 8.0,
+      "requested_subject": "",
+      "resolved_title": "1899 Baylor football team",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d8s5",
+      "title": "1899 Baylor football team",
+      "url": "https://trace.invalid/hotpotqa_5a83c2e25542996488c2e4bc_long/d8s5",
+      "text": "Baylor played its first game against Texas A&M, which would become a rivalry, the Battle of the Brazos, with over 100 games played in the series by 2003.",
+      "visible_time_s": 8.0,
+      "requested_subject": "",
+      "resolved_title": "1899 Baylor football team",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d10s0",
+      "title": "List of Baylor Bears head football coaches",
+      "url": "https://trace.invalid/hotpotqa_5a83c2e25542996488c2e4bc_long/d10s0",
+      "text": "The Baylor Bears football program is a college football team that represents Baylor University in the Big 12 Conference in the National Collegiate Athletic Association.",
+      "visible_time_s": 8.0,
+      "requested_subject": "",
+      "resolved_title": "List of Baylor Bears head football coaches",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d10s1",
+      "title": "List of Baylor Bears head football coaches",
+      "url": "https://trace.invalid/hotpotqa_5a83c2e25542996488c2e4bc_long/d10s1",
+      "text": "The team has had 25 head coaches since it started playing organized football in 1899.",
+      "visible_time_s": 8.0,
+      "requested_subject": "",
+      "resolved_title": "List of Baylor Bears head football coaches",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d10s2",
+      "title": "List of Baylor Bears head football coaches",
+      "url": "https://trace.invalid/hotpotqa_5a83c2e25542996488c2e4bc_long/d10s2",
+      "text": "Baylor was a charter member of the Southwest Conference (SWC), joining in 1915.",
+      "visible_time_s": 8.0,
+      "requested_subject": "",
+      "resolved_title": "List of Baylor Bears head football coaches",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d10s3",
+      "title": "List of Baylor Bears head football coaches",
+      "url": "https://trace.invalid/hotpotqa_5a83c2e25542996488c2e4bc_long/d10s3",
+      "text": "They later became a charter member of the Big 12 in 1996 when the SWC disbanded.",
+      "visible_time_s": 8.0,
+      "requested_subject": "",
+      "resolved_title": "List of Baylor Bears head football coaches",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d10s4",
+      "title": "List of Baylor Bears head football coaches",
+      "url": "https://trace.invalid/hotpotqa_5a83c2e25542996488c2e4bc_long/d10s4",
+      "text": "After playing without a nickname for 15 years, the school chose \"Bears\" as the team nickname in 1914.",
+      "visible_time_s": 8.0,
+      "requested_subject": "",
+      "resolved_title": "List of Baylor Bears head football coaches",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d10s5",
+      "title": "List of Baylor Bears head football coaches",
+      "url": "https://trace.invalid/hotpotqa_5a83c2e25542996488c2e4bc_long/d10s5",
+      "text": "There were three seasons where Baylor did not field a team.",
+      "visible_time_s": 8.0,
+      "requested_subject": "",
+      "resolved_title": "List of Baylor Bears head football coaches",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d10s6",
+      "title": "List of Baylor Bears head football coaches",
+      "url": "https://trace.invalid/hotpotqa_5a83c2e25542996488c2e4bc_long/d10s6",
+      "text": "In 1906, the university banned football due to the violent nature of the sport.",
+      "visible_time_s": 8.0,
+      "requested_subject": "",
+      "resolved_title": "List of Baylor Bears head football coaches",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d10s7",
+      "title": "List of Baylor Bears head football coaches",
+      "url": "https://trace.invalid/hotpotqa_5a83c2e25542996488c2e4bc_long/d10s7",
+      "text": "However, student protests persuaded school officials to reinstate it the next year.",
+      "visible_time_s": 8.0,
+      "requested_subject": "",
+      "resolved_title": "List of Baylor Bears head football coaches",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d10s8",
+      "title": "List of Baylor Bears head football coaches",
+      "url": "https://trace.invalid/hotpotqa_5a83c2e25542996488c2e4bc_long/d10s8",
+      "text": "In 1943 and 1944, the school cancelled the football program due to World War II.",
+      "visible_time_s": 8.0,
+      "requested_subject": "",
+      "resolved_title": "List of Baylor Bears head football coaches",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d10s9",
+      "title": "List of Baylor Bears head football coaches",
+      "url": "https://trace.invalid/hotpotqa_5a83c2e25542996488c2e4bc_long/d10s9",
+      "text": "The Bears have played in 1,099 games during their 108 seasons.",
+      "visible_time_s": 8.0,
+      "requested_subject": "",
+      "resolved_title": "List of Baylor Bears head football coaches",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d10s10",
+      "title": "List of Baylor Bears head football coaches",
+      "url": "https://trace.invalid/hotpotqa_5a83c2e25542996488c2e4bc_long/d10s10",
+      "text": "In those seasons, seven coaches have led Baylor to postseason bowl games: Bob Woodruff, George Sauer, Sam Boyd, John D. Bridgers, Grant Teaff, Chuck Reedy, and Art Briles.",
+      "visible_time_s": 8.0,
+      "requested_subject": "",
+      "resolved_title": "List of Baylor Bears head football coaches",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d10s11",
+      "title": "List of Baylor Bears head football coaches",
+      "url": "https://trace.invalid/hotpotqa_5a83c2e25542996488c2e4bc_long/d10s11",
+      "text": "Five coaches have won conference championships with the Bears: Charles P. Mosley, Frank Bridges, Teaff, Reedy and Briles.",
+      "visible_time_s": 8.0,
+      "requested_subject": "",
+      "resolved_title": "List of Baylor Bears head football coaches",
+      "entity_resolution": "unspecified"
+    }
+  ],
+  "searches": [
+    {
+      "query": "[scheduled evidence]",
+      "subject": "",
+      "status": "ok",
+      "returned_pages": [],
+      "mode": "trace",
+      "unit_id": "__scheduled_evidence__"
+    },
+    {
+      "query": "[scheduled evidence]",
+      "subject": "",
+      "status": "ok",
+      "returned_pages": [],
+      "mode": "trace",
+      "unit_id": "__scheduled_evidence__"
+    }
+  ],
+  "search_failures": [],
+  "llm_calls": [
+    {
+      "purpose": "decompose",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 804,
+        "completion_tokens": 222,
+        "total_tokens": 1026,
+        "prompt_tokens_details": {
+          "cached_tokens": 768
+        }
+      },
+      "latency_s": 1.359
+    },
+    {
+      "purpose": "feedback_generate",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 414,
+        "completion_tokens": 327,
+        "total_tokens": 741,
+        "prompt_tokens_details": {
+          "cached_tokens": 384
+        }
+      },
+      "latency_s": 1.547
+    },
+    {
+      "purpose": "feedback_verify",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 372,
+        "completion_tokens": 48,
+        "total_tokens": 420,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        }
+      },
+      "latency_s": 0.531
+    },
+    {
+      "purpose": "plan_review",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 963,
+        "completion_tokens": 425,
+        "total_tokens": 1388,
+        "prompt_tokens_details": {
+          "cached_tokens": 896
+        }
+      },
+      "latency_s": 1.641
+    },
+    {
+      "purpose": "judge",
+      "model": "tinker://f9e9a6c1-e203-5c2c-acdd-68fe67378ca4:train:0/sampler_weights/epoch-0001",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 3958,
+        "completion_tokens": 144,
+        "total_tokens": 4102,
+        "prompt_tokens_details": {
+          "cached_tokens": 1024
+        }
+      },
+      "latency_s": 1.406
+    },
+    {
+      "purpose": "generate",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 681,
+        "completion_tokens": 68,
+        "total_tokens": 749,
+        "prompt_tokens_details": {
+          "cached_tokens": 512
+        }
+      },
+      "latency_s": 0.891
+    },
+    {
+      "purpose": "feedback_generate",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 415,
+        "completion_tokens": 98,
+        "total_tokens": 513,
+        "prompt_tokens_details": {
+          "cached_tokens": 384
+        }
+      },
+      "latency_s": 1.172
+    },
+    {
+      "purpose": "verify",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 909,
+        "completion_tokens": 153,
+        "total_tokens": 1062,
+        "prompt_tokens_details": {
+          "cached_tokens": 512
+        }
+      },
+      "latency_s": 1.39
+    },
+    {
+      "purpose": "feedback_verify",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 361,
+        "completion_tokens": 106,
+        "total_tokens": 467,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        }
+      },
+      "latency_s": 0.781
+    },
+    {
+      "purpose": "feedback_generate",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 415,
+        "completion_tokens": 78,
+        "total_tokens": 493,
+        "prompt_tokens_details": {
+          "cached_tokens": 384
+        }
+      },
+      "latency_s": 0.781
+    },
+    {
+      "purpose": "feedback_verify",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 360,
+        "completion_tokens": 66,
+        "total_tokens": 426,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        }
+      },
+      "latency_s": 0.813
+    },
+    {
+      "purpose": "judge",
+      "model": "tinker://f9e9a6c1-e203-5c2c-acdd-68fe67378ca4:train:0/sampler_weights/epoch-0001",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 7816,
+        "completion_tokens": 208,
+        "total_tokens": 8024,
+        "prompt_tokens_details": {
+          "cached_tokens": 1280
+        }
+      },
+      "latency_s": 1.578
+    },
+    {
+      "purpose": "generate",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 709,
+        "completion_tokens": 48,
+        "total_tokens": 757,
+        "prompt_tokens_details": {
+          "cached_tokens": 512
+        }
+      },
+      "latency_s": 0.859
+    },
+    {
+      "purpose": "feedback_generate",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 415,
+        "completion_tokens": 111,
+        "total_tokens": 526,
+        "prompt_tokens_details": {
+          "cached_tokens": 384
+        }
+      },
+      "latency_s": 0.704
+    },
+    {
+      "purpose": "feedback_verify",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 366,
+        "completion_tokens": 101,
+        "total_tokens": 467,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        }
+      },
+      "latency_s": 0.937
+    },
+    {
+      "purpose": "verify",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 1225,
+        "completion_tokens": 111,
+        "total_tokens": 1336,
+        "prompt_tokens_details": {
+          "cached_tokens": 640
+        }
+      },
+      "latency_s": 2.063
+    }
+  ],
+  "search_diagnostics": [],
+  "output_enqueued_units": {
+    "u1": "McLane Stadium",
+    "u2": "December"
+  },
+  "events": [
+    {
+      "sequence": 0,
+      "time_s": 0.0,
+      "type": "feedback_requested",
+      "feedback_kind": "opening",
+      "execution_state": {
+        "stage": "planning",
+        "searches_started": 0,
+        "searches_completed": 0,
+        "active_searches": 0,
+        "evidence_count": 0,
+        "supported_units": 0,
+        "output_units": 0
+      }
+    },
+    {
+      "sequence": 1,
+      "time_s": 1.359,
+      "type": "decompose_reply",
+      "reply": {
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "Month when the stadium name was changed",
+            "subject": "Floyd Casey Stadium",
+            "necessary": true,
+            "depends_on": [],
+            "queries": [
+              "Floyd Casey Stadium name change month",
+              "Floyd Casey Stadium renamed month"
+            ]
+          }
+        ]
+      },
+      "attempt": 1,
+      "repair": false
+    },
+    {
+      "sequence": 2,
+      "time_s": 1.359,
+      "type": "plan_review_requested",
+      "max_reviews": 1,
+      "question_only": true
+    },
+    {
+      "sequence": 3,
+      "time_s": 2.078,
+      "type": "utterance",
+      "action": "Backchannel",
+      "text": "I see you're asking about month the stadium name changed for 2014 Baylor Bears games, and I'll look it up.",
+      "claims": [],
+      "feedback_source": "model",
+      "feedback_status_claim": "intent",
+      "feedback_fallback_reason": "",
+      "execution_state": {
+        "stage": "planning",
+        "searches_started": 0,
+        "searches_completed": 0,
+        "active_searches": 0,
+        "evidence_count": 0,
+        "supported_units": 0,
+        "output_units": 0
+      },
+      "language": "en"
+    },
+    {
+      "sequence": 4,
+      "time_s": 3.0,
+      "type": "plan_review_reply",
+      "reply": {
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "Stadium where the 2014 Baylor Bears football games were played",
+            "subject": "Baylor Bears football",
+            "necessary": false,
+            "depends_on": [],
+            "queries": [
+              "2014 Baylor Bears football stadium",
+              "Baylor University football home stadium 2014"
+            ]
+          },
+          {
+            "unit_id": "u2",
+            "description": "Month when the name of the stadium identified in {u1} was changed",
+            "subject": "{u1}",
+            "necessary": true,
+            "depends_on": [
+              "u1"
+            ],
+            "queries": [
+              "stadium name change month {u1}",
+              "when was {u1} renamed month"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "sequence": 5,
+      "time_s": 3.0,
+      "type": "plan_review_finished",
+      "changed": true,
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "Stadium where the 2014 Baylor Bears football games were played",
+          "necessary": false,
+          "depends_on": [],
+          "queries": [
+            "2014 Baylor Bears football stadium",
+            "Baylor University football home stadium 2014"
+          ],
+          "subject": "Baylor Bears football"
+        },
+        {
+          "unit_id": "u2",
+          "description": "Month when the name of the stadium identified in {u1} was changed",
+          "necessary": true,
+          "depends_on": [
+            "u1"
+          ],
+          "queries": [
+            "stadium name change month {u1}",
+            "when was {u1} renamed month"
+          ],
+          "subject": "{u1}"
+        }
+      ],
+      "question_only": true
+    },
+    {
+      "sequence": 6,
+      "time_s": 3.0,
+      "type": "plan",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "Stadium where the 2014 Baylor Bears football games were played",
+          "necessary": false,
+          "depends_on": [],
+          "queries": [
+            "2014 Baylor Bears football stadium",
+            "Baylor University football home stadium 2014"
+          ],
+          "subject": "Baylor Bears football"
+        },
+        {
+          "unit_id": "u2",
+          "description": "Month when the name of the stadium identified in {u1} was changed",
+          "necessary": true,
+          "depends_on": [
+            "u1"
+          ],
+          "queries": [
+            "stadium name change month {u1}",
+            "when was {u1} renamed month"
+          ],
+          "subject": "{u1}"
+        }
+      ]
+    },
+    {
+      "sequence": 7,
+      "time_s": 3.0,
+      "type": "trace_batch_requested"
+    },
+    {
+      "sequence": 8,
+      "time_s": 3.0,
+      "type": "search_finished",
+      "query": "[scheduled evidence]",
+      "subject": "",
+      "status": "ok",
+      "returned_pages": [],
+      "mode": "trace",
+      "unit_id": "__scheduled_evidence__"
+    },
+    {
+      "sequence": 9,
+      "time_s": 3.0,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d1s0",
+        "title": "Carroll Field",
+        "url": "https://trace.invalid/hotpotqa_5a83c2e25542996488c2e4bc_long/d1s0",
+        "text": "Carroll Field was owned by Baylor University; the Baylor Bears football program played games there from 1906 to 1925, and from 1930 to 1935.",
+        "visible_time_s": 3.0,
+        "requested_subject": "",
+        "resolved_title": "Carroll Field",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 10,
+      "time_s": 3.0,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d1s1",
+        "title": "Carroll Field",
+        "url": "https://trace.invalid/hotpotqa_5a83c2e25542996488c2e4bc_long/d1s1",
+        "text": "Following the construction of the Carroll Science Building in 1902, the field was located between the building and Waco Creek; the field took over as the location of football games from an unnamed field adjacent to and northwest of Old Main.",
+        "visible_time_s": 3.0,
+        "requested_subject": "",
+        "resolved_title": "Carroll Field",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 11,
+      "time_s": 3.0,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d1s2",
+        "title": "Carroll Field",
+        "url": "https://trace.invalid/hotpotqa_5a83c2e25542996488c2e4bc_long/d1s2",
+        "text": "From 1926 to 1929, Baylor football games were played at the Cotton Palace in Waco.",
+        "visible_time_s": 3.0,
+        "requested_subject": "",
+        "resolved_title": "Carroll Field",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 12,
+      "time_s": 3.0,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d3s0",
+        "title": "2014 Baylor Bears football team",
+        "url": "https://trace.invalid/hotpotqa_5a83c2e25542996488c2e4bc_long/d3s0",
+        "text": "The 2014 Baylor Bears football team represented Baylor University in the 2014 NCAA Division I FBS football season.",
+        "visible_time_s": 3.0,
+        "requested_subject": "",
+        "resolved_title": "2014 Baylor Bears football team",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 13,
+      "time_s": 3.0,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d3s1",
+        "title": "2014 Baylor Bears football team",
+        "url": "https://trace.invalid/hotpotqa_5a83c2e25542996488c2e4bc_long/d3s1",
+        "text": "The Bears were coached by Art Briles.",
+        "visible_time_s": 3.0,
+        "requested_subject": "",
+        "resolved_title": "2014 Baylor Bears football team",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 14,
+      "time_s": 3.0,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d3s2",
+        "title": "2014 Baylor Bears football team",
+        "url": "https://trace.invalid/hotpotqa_5a83c2e25542996488c2e4bc_long/d3s2",
+        "text": "Playing their 116th football season, this was the team's first in the new McLane Stadium in Waco, Texas.",
+        "visible_time_s": 3.0,
+        "requested_subject": "",
+        "resolved_title": "2014 Baylor Bears football team",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 15,
+      "time_s": 3.0,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d3s3",
+        "title": "2014 Baylor Bears football team",
+        "url": "https://trace.invalid/hotpotqa_5a83c2e25542996488c2e4bc_long/d3s3",
+        "text": "The Bears were members of the Big 12 Conference.",
+        "visible_time_s": 3.0,
+        "requested_subject": "",
+        "resolved_title": "2014 Baylor Bears football team",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 16,
+      "time_s": 3.0,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d3s4",
+        "title": "2014 Baylor Bears football team",
+        "url": "https://trace.invalid/hotpotqa_5a83c2e25542996488c2e4bc_long/d3s4",
+        "text": "They finished the season 11–2, 8–1 in Big 12 play to win a share of the Big 12 title with TCU.",
+        "visible_time_s": 3.0,
+        "requested_subject": "",
+        "resolved_title": "2014 Baylor Bears football team",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 17,
+      "time_s": 3.0,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d3s5",
+        "title": "2014 Baylor Bears football team",
+        "url": "https://trace.invalid/hotpotqa_5a83c2e25542996488c2e4bc_long/d3s5",
+        "text": "They were invited to the Cotton Bowl Classic where they lost to Michigan State.",
+        "visible_time_s": 3.0,
+        "requested_subject": "",
+        "resolved_title": "2014 Baylor Bears football team",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 18,
+      "time_s": 3.0,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d5s0",
+        "title": "1972 Baylor Bears football team",
+        "url": "https://trace.invalid/hotpotqa_5a83c2e25542996488c2e4bc_long/d5s0",
+        "text": "The 1972 Baylor Bears football team represented the Baylor University in the 1972 college football season.",
+        "visible_time_s": 3.0,
+        "requested_subject": "",
+        "resolved_title": "1972 Baylor Bears football team",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 19,
+      "time_s": 3.0,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d5s1",
+        "title": "1972 Baylor Bears football team",
+        "url": "https://trace.invalid/hotpotqa_5a83c2e25542996488c2e4bc_long/d5s1",
+        "text": "Grant Teaff was hired to resurrect the moribund football team at Baylor.",
+        "visible_time_s": 3.0,
+        "requested_subject": "",
+        "resolved_title": "1972 Baylor Bears football team",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 20,
+      "time_s": 3.0,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d5s2",
+        "title": "1972 Baylor Bears football team",
+        "url": "https://trace.invalid/hotpotqa_5a83c2e25542996488c2e4bc_long/d5s2",
+        "text": "Baylor originally hired Rudy Feldman from New Mexico, but Feldman quit after one day, leaving the job to Teaff.",
+        "visible_time_s": 3.0,
+        "requested_subject": "",
+        "resolved_title": "1972 Baylor Bears football team",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 21,
+      "time_s": 3.0,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d5s3",
+        "title": "1972 Baylor Bears football team",
+        "url": "https://trace.invalid/hotpotqa_5a83c2e25542996488c2e4bc_long/d5s3",
+        "text": "Baylor had been 7–43–1 in the five seasons preceding Teaff's arrival.",
+        "visible_time_s": 3.0,
+        "requested_subject": "",
+        "resolved_title": "1972 Baylor Bears football team",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 22,
+      "time_s": 3.0,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d5s4",
+        "title": "1972 Baylor Bears football team",
+        "url": "https://trace.invalid/hotpotqa_5a83c2e25542996488c2e4bc_long/d5s4",
+        "text": "The Bears offense scored 180 points, while the Bears defense allowed 156 points.",
+        "visible_time_s": 3.0,
+        "requested_subject": "",
+        "resolved_title": "1972 Baylor Bears football team",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 23,
+      "time_s": 3.0,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d5s5",
+        "title": "1972 Baylor Bears football team",
+        "url": "https://trace.invalid/hotpotqa_5a83c2e25542996488c2e4bc_long/d5s5",
+        "text": "In the Battle of the Brazos, the Bears beat Texas A&M by a score of 15–13.",
+        "visible_time_s": 3.0,
+        "requested_subject": "",
+        "resolved_title": "1972 Baylor Bears football team",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 24,
+      "time_s": 3.0,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d7s0",
+        "title": "1961 Baylor Bears football team",
+        "url": "https://trace.invalid/hotpotqa_5a83c2e25542996488c2e4bc_long/d7s0",
+        "text": "The 1961 Baylor Bears football team represented Baylor University during the 1961 college football season.",
+        "visible_time_s": 3.0,
+        "requested_subject": "",
+        "resolved_title": "1961 Baylor Bears football team",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 25,
+      "time_s": 3.0,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d7s1",
+        "title": "1961 Baylor Bears football team",
+        "url": "https://trace.invalid/hotpotqa_5a83c2e25542996488c2e4bc_long/d7s1",
+        "text": "The Bears were led by third-year head coach John Bridgers and played their home games at Baylor Stadium in Waco, Texas.",
+        "visible_time_s": 3.0,
+        "requested_subject": "",
+        "resolved_title": "1961 Baylor Bears football team",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 26,
+      "time_s": 3.0,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d7s2",
+        "title": "1961 Baylor Bears football team",
+        "url": "https://trace.invalid/hotpotqa_5a83c2e25542996488c2e4bc_long/d7s2",
+        "text": "They competed as members of the Southwest Conference, finishing in sixth with a regular season record of 5–5 (2–5 SWC).",
+        "visible_time_s": 3.0,
+        "requested_subject": "",
+        "resolved_title": "1961 Baylor Bears football team",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 27,
+      "time_s": 3.0,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d7s3",
+        "title": "1961 Baylor Bears football team",
+        "url": "https://trace.invalid/hotpotqa_5a83c2e25542996488c2e4bc_long/d7s3",
+        "text": "Baylor was invited to the first Gotham Bowl, where they beat the previously-undefeated Utah State Aggies, 24–9.",
+        "visible_time_s": 3.0,
+        "requested_subject": "",
+        "resolved_title": "1961 Baylor Bears football team",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 28,
+      "time_s": 3.0,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d9s0",
+        "title": "1988 Baylor Bears football team",
+        "url": "https://trace.invalid/hotpotqa_5a83c2e25542996488c2e4bc_long/d9s0",
+        "text": "The 1988 Baylor Bears football team represented the Baylor University in the 1988 NCAA Division I-A football season.",
+        "visible_time_s": 3.0,
+        "requested_subject": "",
+        "resolved_title": "1988 Baylor Bears football team",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 29,
+      "time_s": 3.0,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d9s1",
+        "title": "1988 Baylor Bears football team",
+        "url": "https://trace.invalid/hotpotqa_5a83c2e25542996488c2e4bc_long/d9s1",
+        "text": "The Bears finished the season fourth in the Southwest Conference.",
+        "visible_time_s": 3.0,
+        "requested_subject": "",
+        "resolved_title": "1988 Baylor Bears football team",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 30,
+      "time_s": 3.0,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d9s2",
+        "title": "1988 Baylor Bears football team",
+        "url": "https://trace.invalid/hotpotqa_5a83c2e25542996488c2e4bc_long/d9s2",
+        "text": "Baylor Stadium's name was officially changed to Floyd Casey Stadium during halftime of the homecoming game against Arkansas on November 5.",
+        "visible_time_s": 3.0,
+        "requested_subject": "",
+        "resolved_title": "1988 Baylor Bears football team",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 31,
+      "time_s": 4.406,
+      "type": "judge_reply",
+      "reply": {
+        "judgments": [
+          {
+            "unit_id": "u1",
+            "label": "SUPPORTED",
+            "value": "McLane Stadium",
+            "citations": [
+              "d3s2"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d3s2",
+                "text": "Playing their 116th football season, this was the team's first in the new McLane Stadium in Waco, Texas."
+              }
+            ],
+            "reason": "Supported by the cited visible sentences and dependencies."
+          },
+          {
+            "unit_id": "u2",
+            "label": "UNRESOLVED",
+            "value": "",
+            "citations": [],
+            "quotes": [],
+            "reason": "The current visible evidence does not establish this unit."
+          }
+        ]
+      },
+      "attempt": 1,
+      "repair": false,
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d1s1",
+        "d1s2",
+        "d3s0",
+        "d3s1",
+        "d3s2",
+        "d3s3",
+        "d3s4",
+        "d3s5",
+        "d5s0",
+        "d5s1",
+        "d5s2",
+        "d5s3",
+        "d5s4",
+        "d5s5",
+        "d7s0",
+        "d7s1",
+        "d7s2",
+        "d7s3",
+        "d9s0",
+        "d9s1",
+        "d9s2"
+      ]
+    },
+    {
+      "sequence": 32,
+      "time_s": 4.406,
+      "type": "judgments",
+      "judgments": {
+        "u1": {
+          "label": "SUPPORTED",
+          "value": "McLane Stadium",
+          "citations": [
+            "d3s2"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d3s2",
+              "text": "Playing their 116th football season, this was the team's first in the new McLane Stadium in Waco, Texas."
+            }
+          ],
+          "reason": "Supported by the cited visible sentences and dependencies."
+        },
+        "u2": {
+          "label": "UNRESOLVED",
+          "value": "",
+          "citations": [],
+          "quotes": [],
+          "reason": "The current visible evidence does not establish this unit."
+        }
+      },
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d1s1",
+        "d1s2",
+        "d3s0",
+        "d3s1",
+        "d3s2",
+        "d3s3",
+        "d3s4",
+        "d3s5",
+        "d5s0",
+        "d5s1",
+        "d5s2",
+        "d5s3",
+        "d5s4",
+        "d5s5",
+        "d7s0",
+        "d7s1",
+        "d7s2",
+        "d7s3",
+        "d9s0",
+        "d9s1",
+        "d9s2"
+      ],
+      "semantic_review": false
+    },
+    {
+      "sequence": 33,
+      "time_s": 4.406,
+      "type": "trace_batch_requested"
+    },
+    {
+      "sequence": 34,
+      "time_s": 5.234,
+      "type": "feedback_requested",
+      "feedback_kind": "progress",
+      "execution_state": {
+        "stage": "formulating",
+        "searches_started": 2,
+        "searches_completed": 1,
+        "active_searches": 1,
+        "evidence_count": 22,
+        "supported_units": 1,
+        "output_units": 0
+      }
+    },
+    {
+      "sequence": 35,
+      "time_s": 6.687,
+      "type": "verification_reply",
+      "reply": {
+        "approved": true,
+        "facts_valid": true,
+        "expressed_unit_ids": [
+          "u1"
+        ],
+        "reason": "Draft correctly states the stadium (McLane Stadium) as approved fact; no extra or missing claims for the selected unit."
+      },
+      "output_unit_ids": [
+        "u1"
+      ],
+      "output_action": "Partial Answer",
+      "dependency_unit_ids": [],
+      "evidence_snapshot_ids": [
+        "d3s2"
+      ]
+    },
+    {
+      "sequence": 36,
+      "time_s": 6.687,
+      "type": "utterance",
+      "action": "Partial Answer",
+      "text": "The 2014 Baylor Bears football games were played at McLane Stadium.",
+      "claims": [
+        {
+          "unit_id": "u1",
+          "description": "Stadium where the 2014 Baylor Bears football games were played",
+          "value": "McLane Stadium",
+          "citations": [
+            "d3s2"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d3s2",
+              "text": "Playing their 116th football season, this was the team's first in the new McLane Stadium in Waco, Texas."
+            }
+          ]
+        }
+      ],
+      "unresolved": [],
+      "fallback": false,
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d1s1",
+        "d1s2",
+        "d3s0",
+        "d3s1",
+        "d3s2",
+        "d3s3",
+        "d3s4",
+        "d3s5",
+        "d5s0",
+        "d5s1",
+        "d5s2",
+        "d5s3",
+        "d5s4",
+        "d5s5",
+        "d7s0",
+        "d7s1",
+        "d7s2",
+        "d7s3",
+        "d9s0",
+        "d9s1",
+        "d9s2"
+      ],
+      "language": "en"
+    },
+    {
+      "sequence": 37,
+      "time_s": 8.0,
+      "type": "search_finished",
+      "query": "[scheduled evidence]",
+      "subject": "",
+      "status": "ok",
+      "returned_pages": [],
+      "mode": "trace",
+      "unit_id": "__scheduled_evidence__"
+    },
+    {
+      "sequence": 38,
+      "time_s": 8.0,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d2s0",
+        "title": "2014 Baylor Bears baseball team",
+        "url": "https://trace.invalid/hotpotqa_5a83c2e25542996488c2e4bc_long/d2s0",
+        "text": "The 2014 Baylor Bears baseball team represents Baylor University in the 2014 college baseball season.",
+        "visible_time_s": 8.0,
+        "requested_subject": "",
+        "resolved_title": "2014 Baylor Bears baseball team",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 39,
+      "time_s": 8.0,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d2s1",
+        "title": "2014 Baylor Bears baseball team",
+        "url": "https://trace.invalid/hotpotqa_5a83c2e25542996488c2e4bc_long/d2s1",
+        "text": "Baylor competes in Division I of the National Collegiate Athletic Association (NCAA) as a charter member of the Big 12 Conference.",
+        "visible_time_s": 8.0,
+        "requested_subject": "",
+        "resolved_title": "2014 Baylor Bears baseball team",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 40,
+      "time_s": 8.0,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d2s2",
+        "title": "2014 Baylor Bears baseball team",
+        "url": "https://trace.invalid/hotpotqa_5a83c2e25542996488c2e4bc_long/d2s2",
+        "text": "The Bears play home games at Baylor Ballpark on the university's campus in Waco, Texas.",
+        "visible_time_s": 8.0,
+        "requested_subject": "",
+        "resolved_title": "2014 Baylor Bears baseball team",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 41,
+      "time_s": 8.0,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d2s3",
+        "title": "2014 Baylor Bears baseball team",
+        "url": "https://trace.invalid/hotpotqa_5a83c2e25542996488c2e4bc_long/d2s3",
+        "text": "Twenty year head coach Steve Smith leads the Bears, a former pitcher for the team during the 1982 and 1983 seasons.",
+        "visible_time_s": 8.0,
+        "requested_subject": "",
+        "resolved_title": "2014 Baylor Bears baseball team",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 42,
+      "time_s": 8.0,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d4s0",
+        "title": "McLane Stadium",
+        "url": "https://trace.invalid/hotpotqa_5a83c2e25542996488c2e4bc_long/d4s0",
+        "text": "McLane Stadium is an American football stadium in Waco, Texas.",
+        "visible_time_s": 8.0,
+        "requested_subject": "",
+        "resolved_title": "McLane Stadium",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 43,
+      "time_s": 8.0,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d4s1",
+        "title": "McLane Stadium",
+        "url": "https://trace.invalid/hotpotqa_5a83c2e25542996488c2e4bc_long/d4s1",
+        "text": "It is owned and operated by Baylor University.",
+        "visible_time_s": 8.0,
+        "requested_subject": "",
+        "resolved_title": "McLane Stadium",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 44,
+      "time_s": 8.0,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d4s2",
+        "title": "McLane Stadium",
+        "url": "https://trace.invalid/hotpotqa_5a83c2e25542996488c2e4bc_long/d4s2",
+        "text": "Originally named \"Baylor Stadium\", the name was changed to McLane Stadium in December 2013 to honor alumnus and business magnate Drayton McLane, Jr., who provided the lead gift for the stadium construction.",
+        "visible_time_s": 8.0,
+        "requested_subject": "",
+        "resolved_title": "McLane Stadium",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 45,
+      "time_s": 8.0,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d4s3",
+        "title": "McLane Stadium",
+        "url": "https://trace.invalid/hotpotqa_5a83c2e25542996488c2e4bc_long/d4s3",
+        "text": "Baylor's first game at McLane was played August 31, 2014, with the Bears defeating SMU 45–0.",
+        "visible_time_s": 8.0,
+        "requested_subject": "",
+        "resolved_title": "McLane Stadium",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 46,
+      "time_s": 8.0,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d4s4",
+        "title": "McLane Stadium",
+        "url": "https://trace.invalid/hotpotqa_5a83c2e25542996488c2e4bc_long/d4s4",
+        "text": "The stadium has a capacity of 45,140 spectators and is expandable to 55,000.",
+        "visible_time_s": 8.0,
+        "requested_subject": "",
+        "resolved_title": "McLane Stadium",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 47,
+      "time_s": 8.0,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d4s5",
+        "title": "McLane Stadium",
+        "url": "https://trace.invalid/hotpotqa_5a83c2e25542996488c2e4bc_long/d4s5",
+        "text": "McLane Stadium replaced Floyd Casey Stadium as the home field for the Baylor Bears football program.",
+        "visible_time_s": 8.0,
+        "requested_subject": "",
+        "resolved_title": "McLane Stadium",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 48,
+      "time_s": 8.0,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d6s0",
+        "title": "Baylor Bears football statistical leaders",
+        "url": "https://trace.invalid/hotpotqa_5a83c2e25542996488c2e4bc_long/d6s0",
+        "text": "The Baylor Bears football statistical leaders are individual statistical leaders of the Baylor Bears football program in various categories, including passing, rushing, receiving, total offense, defensive stats, and kicking.",
+        "visible_time_s": 8.0,
+        "requested_subject": "",
+        "resolved_title": "Baylor Bears football statistical leaders",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 49,
+      "time_s": 8.0,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d6s1",
+        "title": "Baylor Bears football statistical leaders",
+        "url": "https://trace.invalid/hotpotqa_5a83c2e25542996488c2e4bc_long/d6s1",
+        "text": "Within those areas, the lists identify single-game, single-season, and career leaders.",
+        "visible_time_s": 8.0,
+        "requested_subject": "",
+        "resolved_title": "Baylor Bears football statistical leaders",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 50,
+      "time_s": 8.0,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d6s2",
+        "title": "Baylor Bears football statistical leaders",
+        "url": "https://trace.invalid/hotpotqa_5a83c2e25542996488c2e4bc_long/d6s2",
+        "text": "The Bears represent the Baylor University in the NCAA's Big 12 Conference.",
+        "visible_time_s": 8.0,
+        "requested_subject": "",
+        "resolved_title": "Baylor Bears football statistical leaders",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 51,
+      "time_s": 8.0,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d8s0",
+        "title": "1899 Baylor football team",
+        "url": "https://trace.invalid/hotpotqa_5a83c2e25542996488c2e4bc_long/d8s0",
+        "text": "The 1899 Baylor Bears football team represented Baylor University in the 1899 college football season.",
+        "visible_time_s": 8.0,
+        "requested_subject": "",
+        "resolved_title": "1899 Baylor football team",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 52,
+      "time_s": 8.0,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d8s1",
+        "title": "1899 Baylor football team",
+        "url": "https://trace.invalid/hotpotqa_5a83c2e25542996488c2e4bc_long/d8s1",
+        "text": "This was the first football season for Baylor.",
+        "visible_time_s": 8.0,
+        "requested_subject": "",
+        "resolved_title": "1899 Baylor football team",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 53,
+      "time_s": 8.0,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d8s2",
+        "title": "1899 Baylor football team",
+        "url": "https://trace.invalid/hotpotqa_5a83c2e25542996488c2e4bc_long/d8s2",
+        "text": "They all four games at home games in Waco, Texas.",
+        "visible_time_s": 8.0,
+        "requested_subject": "",
+        "resolved_title": "1899 Baylor football team",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 54,
+      "time_s": 8.0,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d8s3",
+        "title": "1899 Baylor football team",
+        "url": "https://trace.invalid/hotpotqa_5a83c2e25542996488c2e4bc_long/d8s3",
+        "text": "They were coached by head coach R. H. Hamilton.",
+        "visible_time_s": 8.0,
+        "requested_subject": "",
+        "resolved_title": "1899 Baylor football team",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 55,
+      "time_s": 8.0,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d8s4",
+        "title": "1899 Baylor football team",
+        "url": "https://trace.invalid/hotpotqa_5a83c2e25542996488c2e4bc_long/d8s4",
+        "text": "Initially, Baylor played its home games on an undetermined field near the university.",
+        "visible_time_s": 8.0,
+        "requested_subject": "",
+        "resolved_title": "1899 Baylor football team",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 56,
+      "time_s": 8.0,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d8s5",
+        "title": "1899 Baylor football team",
+        "url": "https://trace.invalid/hotpotqa_5a83c2e25542996488c2e4bc_long/d8s5",
+        "text": "Baylor played its first game against Texas A&M, which would become a rivalry, the Battle of the Brazos, with over 100 games played in the series by 2003.",
+        "visible_time_s": 8.0,
+        "requested_subject": "",
+        "resolved_title": "1899 Baylor football team",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 57,
+      "time_s": 8.0,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d10s0",
+        "title": "List of Baylor Bears head football coaches",
+        "url": "https://trace.invalid/hotpotqa_5a83c2e25542996488c2e4bc_long/d10s0",
+        "text": "The Baylor Bears football program is a college football team that represents Baylor University in the Big 12 Conference in the National Collegiate Athletic Association.",
+        "visible_time_s": 8.0,
+        "requested_subject": "",
+        "resolved_title": "List of Baylor Bears head football coaches",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 58,
+      "time_s": 8.0,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d10s1",
+        "title": "List of Baylor Bears head football coaches",
+        "url": "https://trace.invalid/hotpotqa_5a83c2e25542996488c2e4bc_long/d10s1",
+        "text": "The team has had 25 head coaches since it started playing organized football in 1899.",
+        "visible_time_s": 8.0,
+        "requested_subject": "",
+        "resolved_title": "List of Baylor Bears head football coaches",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 59,
+      "time_s": 8.0,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d10s2",
+        "title": "List of Baylor Bears head football coaches",
+        "url": "https://trace.invalid/hotpotqa_5a83c2e25542996488c2e4bc_long/d10s2",
+        "text": "Baylor was a charter member of the Southwest Conference (SWC), joining in 1915.",
+        "visible_time_s": 8.0,
+        "requested_subject": "",
+        "resolved_title": "List of Baylor Bears head football coaches",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 60,
+      "time_s": 8.0,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d10s3",
+        "title": "List of Baylor Bears head football coaches",
+        "url": "https://trace.invalid/hotpotqa_5a83c2e25542996488c2e4bc_long/d10s3",
+        "text": "They later became a charter member of the Big 12 in 1996 when the SWC disbanded.",
+        "visible_time_s": 8.0,
+        "requested_subject": "",
+        "resolved_title": "List of Baylor Bears head football coaches",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 61,
+      "time_s": 8.0,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d10s4",
+        "title": "List of Baylor Bears head football coaches",
+        "url": "https://trace.invalid/hotpotqa_5a83c2e25542996488c2e4bc_long/d10s4",
+        "text": "After playing without a nickname for 15 years, the school chose \"Bears\" as the team nickname in 1914.",
+        "visible_time_s": 8.0,
+        "requested_subject": "",
+        "resolved_title": "List of Baylor Bears head football coaches",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 62,
+      "time_s": 8.0,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d10s5",
+        "title": "List of Baylor Bears head football coaches",
+        "url": "https://trace.invalid/hotpotqa_5a83c2e25542996488c2e4bc_long/d10s5",
+        "text": "There were three seasons where Baylor did not field a team.",
+        "visible_time_s": 8.0,
+        "requested_subject": "",
+        "resolved_title": "List of Baylor Bears head football coaches",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 63,
+      "time_s": 8.0,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d10s6",
+        "title": "List of Baylor Bears head football coaches",
+        "url": "https://trace.invalid/hotpotqa_5a83c2e25542996488c2e4bc_long/d10s6",
+        "text": "In 1906, the university banned football due to the violent nature of the sport.",
+        "visible_time_s": 8.0,
+        "requested_subject": "",
+        "resolved_title": "List of Baylor Bears head football coaches",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 64,
+      "time_s": 8.0,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d10s7",
+        "title": "List of Baylor Bears head football coaches",
+        "url": "https://trace.invalid/hotpotqa_5a83c2e25542996488c2e4bc_long/d10s7",
+        "text": "However, student protests persuaded school officials to reinstate it the next year.",
+        "visible_time_s": 8.0,
+        "requested_subject": "",
+        "resolved_title": "List of Baylor Bears head football coaches",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 65,
+      "time_s": 8.0,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d10s8",
+        "title": "List of Baylor Bears head football coaches",
+        "url": "https://trace.invalid/hotpotqa_5a83c2e25542996488c2e4bc_long/d10s8",
+        "text": "In 1943 and 1944, the school cancelled the football program due to World War II.",
+        "visible_time_s": 8.0,
+        "requested_subject": "",
+        "resolved_title": "List of Baylor Bears head football coaches",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 66,
+      "time_s": 8.0,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d10s9",
+        "title": "List of Baylor Bears head football coaches",
+        "url": "https://trace.invalid/hotpotqa_5a83c2e25542996488c2e4bc_long/d10s9",
+        "text": "The Bears have played in 1,099 games during their 108 seasons.",
+        "visible_time_s": 8.0,
+        "requested_subject": "",
+        "resolved_title": "List of Baylor Bears head football coaches",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 67,
+      "time_s": 8.0,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d10s10",
+        "title": "List of Baylor Bears head football coaches",
+        "url": "https://trace.invalid/hotpotqa_5a83c2e25542996488c2e4bc_long/d10s10",
+        "text": "In those seasons, seven coaches have led Baylor to postseason bowl games: Bob Woodruff, George Sauer, Sam Boyd, John D. Bridgers, Grant Teaff, Chuck Reedy, and Art Briles.",
+        "visible_time_s": 8.0,
+        "requested_subject": "",
+        "resolved_title": "List of Baylor Bears head football coaches",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 68,
+      "time_s": 8.0,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d10s11",
+        "title": "List of Baylor Bears head football coaches",
+        "url": "https://trace.invalid/hotpotqa_5a83c2e25542996488c2e4bc_long/d10s11",
+        "text": "Five coaches have won conference championships with the Bears: Charles P. Mosley, Frank Bridges, Teaff, Reedy and Briles.",
+        "visible_time_s": 8.0,
+        "requested_subject": "",
+        "resolved_title": "List of Baylor Bears head football coaches",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 69,
+      "time_s": 8.781,
+      "type": "feedback_discarded",
+      "feedback_kind": "progress",
+      "reason": "answer_already_advanced"
+    },
+    {
+      "sequence": 70,
+      "time_s": 9.578,
+      "type": "judge_reply",
+      "reply": {
+        "judgments": [
+          {
+            "unit_id": "u1",
+            "label": "SUPPORTED",
+            "value": "McLane Stadium",
+            "citations": [
+              "d3s2"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d3s2",
+                "text": "Playing their 116th football season, this was the team's first in the new McLane Stadium in Waco, Texas."
+              }
+            ],
+            "reason": "Supported by the cited visible sentences and dependencies."
+          },
+          {
+            "unit_id": "u2",
+            "label": "SUPPORTED",
+            "value": "December",
+            "citations": [
+              "d4s2"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d4s2",
+                "text": "Originally named \"Baylor Stadium\", the name was changed to McLane Stadium in December 2013 to honor alumnus and business magnate Drayton McLane, Jr., who provided the lead gift for the stadium construction."
+              }
+            ],
+            "reason": "Supported by the cited visible sentences and dependencies."
+          }
+        ]
+      },
+      "attempt": 1,
+      "repair": false,
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d1s1",
+        "d1s2",
+        "d3s0",
+        "d3s1",
+        "d3s2",
+        "d3s3",
+        "d3s4",
+        "d3s5",
+        "d5s0",
+        "d5s1",
+        "d5s2",
+        "d5s3",
+        "d5s4",
+        "d5s5",
+        "d7s0",
+        "d7s1",
+        "d7s2",
+        "d7s3",
+        "d9s0",
+        "d9s1",
+        "d9s2",
+        "d2s0",
+        "d2s1",
+        "d2s2",
+        "d2s3",
+        "d4s0",
+        "d4s1",
+        "d4s2",
+        "d4s3",
+        "d4s4",
+        "d4s5",
+        "d6s0",
+        "d6s1",
+        "d6s2",
+        "d8s0",
+        "d8s1",
+        "d8s2",
+        "d8s3",
+        "d8s4",
+        "d8s5",
+        "d10s0",
+        "d10s1",
+        "d10s2",
+        "d10s3",
+        "d10s4",
+        "d10s5",
+        "d10s6",
+        "d10s7",
+        "d10s8",
+        "d10s9",
+        "d10s10",
+        "d10s11"
+      ]
+    },
+    {
+      "sequence": 71,
+      "time_s": 9.578,
+      "type": "judgments",
+      "judgments": {
+        "u1": {
+          "label": "SUPPORTED",
+          "value": "McLane Stadium",
+          "citations": [
+            "d3s2"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d3s2",
+              "text": "Playing their 116th football season, this was the team's first in the new McLane Stadium in Waco, Texas."
+            }
+          ],
+          "reason": "Supported by the cited visible sentences and dependencies."
+        },
+        "u2": {
+          "label": "SUPPORTED",
+          "value": "December",
+          "citations": [
+            "d4s2"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d4s2",
+              "text": "Originally named \"Baylor Stadium\", the name was changed to McLane Stadium in December 2013 to honor alumnus and business magnate Drayton McLane, Jr., who provided the lead gift for the stadium construction."
+            }
+          ],
+          "reason": "Supported by the cited visible sentences and dependencies."
+        }
+      },
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d1s1",
+        "d1s2",
+        "d3s0",
+        "d3s1",
+        "d3s2",
+        "d3s3",
+        "d3s4",
+        "d3s5",
+        "d5s0",
+        "d5s1",
+        "d5s2",
+        "d5s3",
+        "d5s4",
+        "d5s5",
+        "d7s0",
+        "d7s1",
+        "d7s2",
+        "d7s3",
+        "d9s0",
+        "d9s1",
+        "d9s2",
+        "d2s0",
+        "d2s1",
+        "d2s2",
+        "d2s3",
+        "d4s0",
+        "d4s1",
+        "d4s2",
+        "d4s3",
+        "d4s4",
+        "d4s5",
+        "d6s0",
+        "d6s1",
+        "d6s2",
+        "d8s0",
+        "d8s1",
+        "d8s2",
+        "d8s3",
+        "d8s4",
+        "d8s5",
+        "d10s0",
+        "d10s1",
+        "d10s2",
+        "d10s3",
+        "d10s4",
+        "d10s5",
+        "d10s6",
+        "d10s7",
+        "d10s8",
+        "d10s9",
+        "d10s10",
+        "d10s11"
+      ],
+      "semantic_review": false
+    },
+    {
+      "sequence": 72,
+      "time_s": 9.843,
+      "type": "feedback_requested",
+      "feedback_kind": "progress",
+      "execution_state": {
+        "stage": "formulating",
+        "searches_started": 2,
+        "searches_completed": 2,
+        "active_searches": 0,
+        "evidence_count": 53,
+        "supported_units": 2,
+        "output_units": 1
+      }
+    },
+    {
+      "sequence": 73,
+      "time_s": 11.484,
+      "type": "utterance",
+      "action": "Progress",
+      "text": "Formulating the answer with gathered evidence, working on the stadium name change month.",
+      "claims": [],
+      "feedback_source": "model",
+      "feedback_status_claim": "formulating",
+      "feedback_fallback_reason": "",
+      "execution_state": {
+        "stage": "formulating",
+        "searches_started": 2,
+        "searches_completed": 2,
+        "active_searches": 0,
+        "evidence_count": 53,
+        "supported_units": 2,
+        "output_units": 1
+      },
+      "language": "en"
+    },
+    {
+      "sequence": 74,
+      "time_s": 12.5,
+      "type": "verification_reply",
+      "reply": {
+        "approved": true,
+        "facts_valid": true,
+        "expressed_unit_ids": [
+          "u2"
+        ],
+        "reason": "All factual claims match approved facts and wording is correct."
+      },
+      "output_unit_ids": [
+        "u2"
+      ],
+      "output_action": "Final Answer",
+      "dependency_unit_ids": [
+        "u1"
+      ],
+      "evidence_snapshot_ids": [
+        "d3s2",
+        "d4s2"
+      ]
+    },
+    {
+      "sequence": 75,
+      "time_s": 12.5,
+      "type": "utterance",
+      "action": "Final Answer",
+      "text": "The stadium name was changed in December.",
+      "claims": [
+        {
+          "unit_id": "u2",
+          "description": "Month when the name of the stadium identified in McLane Stadium was changed",
+          "value": "December",
+          "citations": [
+            "d4s2"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d4s2",
+              "text": "Originally named \"Baylor Stadium\", the name was changed to McLane Stadium in December 2013 to honor alumnus and business magnate Drayton McLane, Jr., who provided the lead gift for the stadium construction."
+            }
+          ]
+        }
+      ],
+      "unresolved": [],
+      "fallback": false,
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d1s1",
+        "d1s2",
+        "d3s0",
+        "d3s1",
+        "d3s2",
+        "d3s3",
+        "d3s4",
+        "d3s5",
+        "d5s0",
+        "d5s1",
+        "d5s2",
+        "d5s3",
+        "d5s4",
+        "d5s5",
+        "d7s0",
+        "d7s1",
+        "d7s2",
+        "d7s3",
+        "d9s0",
+        "d9s1",
+        "d9s2",
+        "d2s0",
+        "d2s1",
+        "d2s2",
+        "d2s3",
+        "d4s0",
+        "d4s1",
+        "d4s2",
+        "d4s3",
+        "d4s4",
+        "d4s5",
+        "d6s0",
+        "d6s1",
+        "d6s2",
+        "d8s0",
+        "d8s1",
+        "d8s2",
+        "d8s3",
+        "d8s4",
+        "d8s5",
+        "d10s0",
+        "d10s1",
+        "d10s2",
+        "d10s3",
+        "d10s4",
+        "d10s5",
+        "d10s6",
+        "d10s7",
+        "d10s8",
+        "d10s9",
+        "d10s10",
+        "d10s11"
+      ],
+      "language": "en"
+    },
+    {
+      "sequence": 76,
+      "time_s": 12.5,
+      "type": "finished",
+      "status": "complete"
+    }
+  ],
+  "note": "Prototype model judgments are not independent gold scores. Output event times are not spoken claim times.",
+  "evidence_mode": "scheduled_trace",
+  "audio": {
+    "enabled": true,
+    "mode": "windows",
+    "play": false,
+    "status": "ok",
+    "errors": [],
+    "records": [
+      {
+        "event_sequence": 3,
+        "sentence_index": 1,
+        "sentence_count": 1,
+        "language": "en",
+        "text": "I see you're asking about month the stadium name changed for 2014 Baylor Bears games, and I'll look it up.",
+        "action": "Backchannel",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 2.0780000000086147,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1-continued\\samples\\0564\\audio\\segments\\0003_01.wav",
+        "duration_s": 7.728117913832199,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 2.9060000000026776,
+        "synthesis_and_playback_s": 0.8279999999940628
+      },
+      {
+        "event_sequence": 36,
+        "sentence_index": 1,
+        "sentence_count": 1,
+        "language": "en",
+        "text": "The 2014 Baylor Bears football games were played at McLane Stadium.",
+        "action": "Partial Answer",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 6.687000000005355,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1-continued\\samples\\0564\\audio\\segments\\0036_01.wav",
+        "duration_s": 5.503492063492064,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 7.514999999999418,
+        "synthesis_and_playback_s": 0.8279999999940628
+      },
+      {
+        "event_sequence": 73,
+        "sentence_index": 1,
+        "sentence_count": 1,
+        "language": "en",
+        "text": "Formulating the answer with gathered evidence, working on the stadium name change month.",
+        "action": "Progress",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 11.484000000011292,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1-continued\\samples\\0564\\audio\\segments\\0073_01.wav",
+        "duration_s": 5.558503401360544,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 12.343000000008033,
+        "synthesis_and_playback_s": 0.8589999999967404
+      },
+      {
+        "event_sequence": 75,
+        "sentence_index": 1,
+        "sentence_count": 1,
+        "language": "en",
+        "text": "The stadium name was changed in December.",
+        "action": "Final Answer",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 12.5,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1-continued\\samples\\0564\\audio\\segments\\0075_01.wav",
+        "duration_s": 2.9838548752834466,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 13.343000000008033,
+        "synthesis_and_playback_s": 0.8430000000080327
+      }
+    ],
+    "wave": {
+      "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1-continued\\samples\\0564\\audio\\response.wav",
+      "duration_s": 24.679954648526078,
+      "timeline": [
+        {
+          "event_sequence": 3,
+          "sentence_index": 1,
+          "action": "Backchannel",
+          "text": "I see you're asking about month the stadium name changed for 2014 Baylor Bears games, and I'll look it up.",
+          "wave_start_s": 2.9059863945578233,
+          "wave_end_s": 10.634104308390024
+        },
+        {
+          "event_sequence": 36,
+          "sentence_index": 1,
+          "action": "Partial Answer",
+          "text": "The 2014 Baylor Bears football games were played at McLane Stadium.",
+          "wave_start_s": 10.634104308390024,
+          "wave_end_s": 16.137596371882086
+        },
+        {
+          "event_sequence": 73,
+          "sentence_index": 1,
+          "action": "Progress",
+          "text": "Formulating the answer with gathered evidence, working on the stadium name change month.",
+          "wave_start_s": 16.137596371882086,
+          "wave_end_s": 21.69609977324263
+        },
+        {
+          "event_sequence": 75,
+          "sentence_index": 1,
+          "action": "Final Answer",
+          "text": "The stadium name was changed in December.",
+          "wave_start_s": 21.69609977324263,
+          "wave_end_s": 24.679954648526078
+        }
+      ]
+    }
+  },
+  "evaluation": {
+    "mode": "b_final_revised_trace",
+    "trace_id": "hotpotqa_5a83c2e25542996488c2e4bc_long",
+    "sample_id": "hotpotqa_5a83c2e25542996488c2e4bc",
+    "total_wall_s": 13.343000000008033,
+    "question_timeout_s": 180,
+    "audio_enabled": true,
+    "history_enabled": false,
+    "text_pipeline_wall_s": 12.5,
+    "effective_settings": {
+      "base_url": "https://tinker.thinkingmachines.dev/services/tinker-prod/oai/api/v1",
+      "model": "openai/gpt-oss-120b",
+      "judge_model": "tinker://f9e9a6c1-e203-5c2c-acdd-68fe67378ca4:train:0/sampler_weights/epoch-0001",
+      "judge_reasoning_effort": "low",
+      "wiki_language": "en",
+      "user_agent": "CascadeSystem/0.1 (educational research prototype)",
+      "timeout_s": 45.0,
+      "max_tokens": 4096,
+      "reasoning_effort": "low",
+      "progress_s": 3.0,
+      "feedback_timeout_s": 6.0,
+      "search_limit": 3,
+      "max_units": 8,
+      "max_searches": 16,
+      "max_sources": 53,
+      "source_chars": 241,
+      "evidence_chars": 5274,
+      "concurrency": 3
+    },
+    "timing_kind": "unknown",
+    "scheduler": "wall-paced fixed B arrivals",
+    "split": "eval_reserved",
+    "empty_evidence_sentences_ignored": 0
+  }
+}

@@ -1,0 +1,2340 @@
+{
+  "question": "Does the genus Cunninghamia or Chilopsis contain only one species?",
+  "resolved_question": "Does the genus Cunninghamia or Chilopsis contain only one species?",
+  "used_history_turn_ids": [],
+  "response_language": "en",
+  "status": "complete",
+  "clock": "wall_monotonic",
+  "time_origin": "question_text_ready_after_optional_asr",
+  "model": "openai/gpt-oss-120b",
+  "judge_model": "tinker://f9e9a6c1-e203-5c2c-acdd-68fe67378ca4:train:0/sampler_weights/epoch-0001",
+  "units": [
+    {
+      "unit_id": "u1",
+      "description": "Number of species in the genus Cunninghamia",
+      "necessary": false,
+      "depends_on": [],
+      "queries": [
+        "Cunninghamia species count",
+        "Cunninghamia genus number of species"
+      ],
+      "subject": "Cunninghamia"
+    },
+    {
+      "unit_id": "u2",
+      "description": "Number of species in the genus Chilopsis",
+      "necessary": false,
+      "depends_on": [],
+      "queries": [
+        "Chilopsis species count",
+        "Chilopsis genus number of species"
+      ],
+      "subject": "Chilopsis"
+    },
+    {
+      "unit_id": "u3",
+      "description": "Whether either Cunninghamia or Chilopsis contains only one species",
+      "necessary": true,
+      "depends_on": [
+        "u1",
+        "u2"
+      ],
+      "queries": [
+        "Does Cunninghamia have only one species or does Chilopsis have only one species?"
+      ],
+      "subject": ""
+    }
+  ],
+  "judgments": {
+    "u1": {
+      "label": "SUPPORTED",
+      "value": "1 or 2",
+      "citations": [
+        "d10s0"
+      ],
+      "quotes": [
+        {
+          "evidence_id": "d10s0",
+          "text": "Cunninghamia is a genus of one or two living species of evergreen coniferous trees in the cypress family Cupressaceae."
+        }
+      ],
+      "reason": "Supported by the cited visible sentences and dependencies."
+    },
+    "u2": {
+      "label": "SUPPORTED",
+      "value": "1",
+      "citations": [
+        "d5s0"
+      ],
+      "quotes": [
+        {
+          "evidence_id": "d5s0",
+          "text": "Chilopsis is a monotypic genus of flowering plants containing the single species Chilopsis linearis."
+        }
+      ],
+      "reason": "Supported by the cited visible sentences and dependencies."
+    },
+    "u3": {
+      "label": "SUPPORTED",
+      "value": "yes",
+      "citations": [
+        "d10s0",
+        "d5s0"
+      ],
+      "quotes": [
+        {
+          "evidence_id": "d10s0",
+          "text": "Cunninghamia is a genus of one or two living species of evergreen coniferous trees in the cypress family Cupressaceae."
+        },
+        {
+          "evidence_id": "d5s0",
+          "text": "Chilopsis is a monotypic genus of flowering plants containing the single species Chilopsis linearis."
+        }
+      ],
+      "reason": "Supported by the cited visible sentences and dependencies."
+    }
+  },
+  "evidence": [
+    {
+      "evidence_id": "d1s0",
+      "title": "Nomascus",
+      "url": "https://trace.invalid/hotpotqa_5ae532e955429908b632656f_immediate/d1s0",
+      "text": "Nomascus is the second-most speciose genus of gibbons (family Hylobatidae).",
+      "visible_time_s": 4.077999999994063,
+      "requested_subject": "",
+      "resolved_title": "Nomascus",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d1s1",
+      "title": "Nomascus",
+      "url": "https://trace.invalid/hotpotqa_5ae532e955429908b632656f_immediate/d1s1",
+      "text": "Originally, this genus was a subgenus of \"Hylobates\", and all individuals were considered one species, \"Hylobates concolor\".",
+      "visible_time_s": 4.077999999994063,
+      "requested_subject": "",
+      "resolved_title": "Nomascus",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d1s2",
+      "title": "Nomascus",
+      "url": "https://trace.invalid/hotpotqa_5ae532e955429908b632656f_immediate/d1s2",
+      "text": "Species within \"Nomascus\" are characterized by 52 chromosomes.",
+      "visible_time_s": 4.077999999994063,
+      "requested_subject": "",
+      "resolved_title": "Nomascus",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d1s3",
+      "title": "Nomascus",
+      "url": "https://trace.invalid/hotpotqa_5ae532e955429908b632656f_immediate/d1s3",
+      "text": "Some species are all black, some are light with a distinct black tuft of crown fur, and some have distinct, light-colored cheek patches.",
+      "visible_time_s": 4.077999999994063,
+      "requested_subject": "",
+      "resolved_title": "Nomascus",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d1s4",
+      "title": "Nomascus",
+      "url": "https://trace.invalid/hotpotqa_5ae532e955429908b632656f_immediate/d1s4",
+      "text": "\"Nomascus\" is found from southern China (Yunnan) to southern Vietnam, and also on Hainan Island.",
+      "visible_time_s": 4.077999999994063,
+      "requested_subject": "",
+      "resolved_title": "Nomascus",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d1s5",
+      "title": "Nomascus",
+      "url": "https://trace.invalid/hotpotqa_5ae532e955429908b632656f_immediate/d1s5",
+      "text": "One species, \"Nomascus nasutus,\" has been deemed \"the most critically endangered ape species in the world\".",
+      "visible_time_s": 4.077999999994063,
+      "requested_subject": "",
+      "resolved_title": "Nomascus",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d1s6",
+      "title": "Nomascus",
+      "url": "https://trace.invalid/hotpotqa_5ae532e955429908b632656f_immediate/d1s6",
+      "text": "All species in this genus are endangered or critically endangered.",
+      "visible_time_s": 4.077999999994063,
+      "requested_subject": "",
+      "resolved_title": "Nomascus",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d2s0",
+      "title": "Bupleurum",
+      "url": "https://trace.invalid/hotpotqa_5ae532e955429908b632656f_immediate/d2s0",
+      "text": "Bupleurum is a large genus of annual or perennial herbs or woody shrubs, with about one hundred and ninety species, belonging to the Apiaceae family.",
+      "visible_time_s": 4.077999999994063,
+      "requested_subject": "",
+      "resolved_title": "Bupleurum",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d2s1",
+      "title": "Bupleurum",
+      "url": "https://trace.invalid/hotpotqa_5ae532e955429908b632656f_immediate/d2s1",
+      "text": "The full size of its species may vary between a few cm to up to 3 m high.",
+      "visible_time_s": 4.077999999994063,
+      "requested_subject": "",
+      "resolved_title": "Bupleurum",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d2s2",
+      "title": "Bupleurum",
+      "url": "https://trace.invalid/hotpotqa_5ae532e955429908b632656f_immediate/d2s2",
+      "text": "Their compound umbels of small flowers are adorned with bracteoles that are sometimes large and may play a role in attracting pollinators.",
+      "visible_time_s": 4.077999999994063,
+      "requested_subject": "",
+      "resolved_title": "Bupleurum",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d2s3",
+      "title": "Bupleurum",
+      "url": "https://trace.invalid/hotpotqa_5ae532e955429908b632656f_immediate/d2s3",
+      "text": "Rare among Apiaceae are the simple leaves, bracts (if present) and bracteoles.",
+      "visible_time_s": 4.077999999994063,
+      "requested_subject": "",
+      "resolved_title": "Bupleurum",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d2s4",
+      "title": "Bupleurum",
+      "url": "https://trace.invalid/hotpotqa_5ae532e955429908b632656f_immediate/d2s4",
+      "text": "The genus is almost exclusively native in the Old World Northern Hemisphere, with one species native to North America and one species native to southern Africa.",
+      "visible_time_s": 4.077999999994063,
+      "requested_subject": "",
+      "resolved_title": "Bupleurum",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d3s0",
+      "title": "Pseudopontia",
+      "url": "https://trace.invalid/hotpotqa_5ae532e955429908b632656f_immediate/d3s0",
+      "text": "Pseudopontia is a genus of butterflies found only in wet forests of tropical Africa.",
+      "visible_time_s": 4.077999999994063,
+      "requested_subject": "",
+      "resolved_title": "Pseudopontia",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d3s1",
+      "title": "Pseudopontia",
+      "url": "https://trace.invalid/hotpotqa_5ae532e955429908b632656f_immediate/d3s1",
+      "text": "It is the only genus in the subfamily Pseudopontiinae.",
+      "visible_time_s": 4.077999999994063,
+      "requested_subject": "",
+      "resolved_title": "Pseudopontia",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d3s2",
+      "title": "Pseudopontia",
+      "url": "https://trace.invalid/hotpotqa_5ae532e955429908b632656f_immediate/d3s2",
+      "text": "It was traditionally thought to contain only one species (monotypic), \"Pseudopontia paradoxa\".",
+      "visible_time_s": 4.077999999994063,
+      "requested_subject": "",
+      "resolved_title": "Pseudopontia",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d3s3",
+      "title": "Pseudopontia",
+      "url": "https://trace.invalid/hotpotqa_5ae532e955429908b632656f_immediate/d3s3",
+      "text": "However, a recent study showed there are at least five species of \"Pseudopontia\" which can be distinguished genetically and by details of wing veins.",
+      "visible_time_s": 4.077999999994063,
+      "requested_subject": "",
+      "resolved_title": "Pseudopontia",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d3s4",
+      "title": "Pseudopontia",
+      "url": "https://trace.invalid/hotpotqa_5ae532e955429908b632656f_immediate/d3s4",
+      "text": "Each is found primarily in a different part of Africa, though several of the species have overlapping geographic distributions.",
+      "visible_time_s": 4.077999999994063,
+      "requested_subject": "",
+      "resolved_title": "Pseudopontia",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d4s0",
+      "title": "Anthocharis",
+      "url": "https://trace.invalid/hotpotqa_5ae532e955429908b632656f_immediate/d4s0",
+      "text": "Anthocharis is a Holarctic genus of the butterfly tribe Anthocharini, in the Pieridae family.",
+      "visible_time_s": 4.077999999994063,
+      "requested_subject": "",
+      "resolved_title": "Anthocharis",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d4s1",
+      "title": "Anthocharis",
+      "url": "https://trace.invalid/hotpotqa_5ae532e955429908b632656f_immediate/d4s1",
+      "text": "These are typically small, white-hued butterflies that have colorful marks just inside the tips of the forewings.",
+      "visible_time_s": 4.077999999994063,
+      "requested_subject": "",
+      "resolved_title": "Anthocharis",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d4s2",
+      "title": "Anthocharis",
+      "url": "https://trace.invalid/hotpotqa_5ae532e955429908b632656f_immediate/d4s2",
+      "text": "The tip colors are usually a red-orange hue, hence the name \"orange tip\".",
+      "visible_time_s": 4.077999999994063,
+      "requested_subject": "",
+      "resolved_title": "Anthocharis",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d4s3",
+      "title": "Anthocharis",
+      "url": "https://trace.invalid/hotpotqa_5ae532e955429908b632656f_immediate/d4s3",
+      "text": "The larvae of these butterfly often consume cruciferous plants containing chemicals called glucosinolates.",
+      "visible_time_s": 4.077999999994063,
+      "requested_subject": "",
+      "resolved_title": "Anthocharis",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d4s4",
+      "title": "Anthocharis",
+      "url": "https://trace.invalid/hotpotqa_5ae532e955429908b632656f_immediate/d4s4",
+      "text": "This genus is characterized by two of the five subcostal veins branching off before the apex of the cell, by the upper radial being only little united with the subcostal, and by the central discocellular being rather long.",
+      "visible_time_s": 4.077999999994063,
+      "requested_subject": "",
+      "resolved_title": "Anthocharis",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d4s5",
+      "title": "Anthocharis",
+      "url": "https://trace.invalid/hotpotqa_5ae532e955429908b632656f_immediate/d4s5",
+      "text": "In all the species the males have at least the apical portion of the forewing orange red or yellow.",
+      "visible_time_s": 4.077999999994063,
+      "requested_subject": "",
+      "resolved_title": "Anthocharis",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d4s6",
+      "title": "Anthocharis",
+      "url": "https://trace.invalid/hotpotqa_5ae532e955429908b632656f_immediate/d4s6",
+      "text": "Only one species inhabits also the northern districts of the Palearctic region, all the others are found in the south of the Palearctic region, also some species occur in North America, but not one species extends into the tropics.",
+      "visible_time_s": 4.077999999994063,
+      "requested_subject": "",
+      "resolved_title": "Anthocharis",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d4s7",
+      "title": "Anthocharis",
+      "url": "https://trace.invalid/hotpotqa_5ae532e955429908b632656f_immediate/d4s7",
+      "text": "The Anthocharis species have only one brood.",
+      "visible_time_s": 4.077999999994063,
+      "requested_subject": "",
+      "resolved_title": "Anthocharis",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d4s8",
+      "title": "Anthocharis",
+      "url": "https://trace.invalid/hotpotqa_5ae532e955429908b632656f_immediate/d4s8",
+      "text": "The butterflies occur in spring.",
+      "visible_time_s": 4.077999999994063,
+      "requested_subject": "",
+      "resolved_title": "Anthocharis",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d5s0",
+      "title": "Chilopsis",
+      "url": "https://trace.invalid/hotpotqa_5ae532e955429908b632656f_immediate/d5s0",
+      "text": "Chilopsis is a monotypic genus of flowering plants containing the single species Chilopsis linearis.",
+      "visible_time_s": 4.077999999994063,
+      "requested_subject": "",
+      "resolved_title": "Chilopsis",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d6s0",
+      "title": "Megacheira",
+      "url": "https://trace.invalid/hotpotqa_5ae532e955429908b632656f_immediate/d6s0",
+      "text": "Megacheira (\"Great Hands\") is an extinct class of predatory arthropods that possessed a pair of short enlarged appendages (the source of the class' name).",
+      "visible_time_s": 4.077999999994063,
+      "requested_subject": "",
+      "resolved_title": "Megacheira",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d6s1",
+      "title": "Megacheira",
+      "url": "https://trace.invalid/hotpotqa_5ae532e955429908b632656f_immediate/d6s1",
+      "text": "They strongly resemble early chelicerates.",
+      "visible_time_s": 4.077999999994063,
+      "requested_subject": "",
+      "resolved_title": "Megacheira",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d6s2",
+      "title": "Megacheira",
+      "url": "https://trace.invalid/hotpotqa_5ae532e955429908b632656f_immediate/d6s2",
+      "text": "Most of them were found in marine environments throughout the world from the lower to middle Cambrian.",
+      "visible_time_s": 4.077999999994063,
+      "requested_subject": "",
+      "resolved_title": "Megacheira",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d6s3",
+      "title": "Megacheira",
+      "url": "https://trace.invalid/hotpotqa_5ae532e955429908b632656f_immediate/d6s3",
+      "text": "The group might also contain one species (\"Enalikter aphson\") described from the Silurian Herefordshire Lagerstätte of the United Kingdom, and one species (\"Bundenbachiellus giganteus\") known from the Early Devonian of Germany; however, the interpretation of these taxa as megacheirans was challenged by Struck \"et al.\" (2015).",
+      "visible_time_s": 4.077999999994063,
+      "requested_subject": "",
+      "resolved_title": "Megacheira",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d6s4",
+      "title": "Megacheira",
+      "url": "https://trace.invalid/hotpotqa_5ae532e955429908b632656f_immediate/d6s4",
+      "text": "Megacheirans were important components of several faunas, including the Burgess, Wheeler and Maotianshan Shales Lagerstatten.",
+      "visible_time_s": 4.077999999994063,
+      "requested_subject": "",
+      "resolved_title": "Megacheira",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d6s5",
+      "title": "Megacheira",
+      "url": "https://trace.invalid/hotpotqa_5ae532e955429908b632656f_immediate/d6s5",
+      "text": "Genera referred to the class include \"Leanchoilia\", \"Alalcomenaeus\", \"Oestokerkus\", \"Yohoia\", \"Fortiforceps\" and \"Jianfengia\".",
+      "visible_time_s": 4.077999999994063,
+      "requested_subject": "",
+      "resolved_title": "Megacheira",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d7s0",
+      "title": "Giraffe",
+      "url": "https://trace.invalid/hotpotqa_5ae532e955429908b632656f_immediate/d7s0",
+      "text": "The giraffe (\"Giraffa\") is a genus of African even-toed ungulate mammals, the tallest living terrestrial animals and the largest ruminants.",
+      "visible_time_s": 4.077999999994063,
+      "requested_subject": "",
+      "resolved_title": "Giraffe",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d7s1",
+      "title": "Giraffe",
+      "url": "https://trace.invalid/hotpotqa_5ae532e955429908b632656f_immediate/d7s1",
+      "text": "The genus currently consists of one species, \"Giraffa camelopardalis\", the type species.",
+      "visible_time_s": 4.077999999994063,
+      "requested_subject": "",
+      "resolved_title": "Giraffe",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d7s2",
+      "title": "Giraffe",
+      "url": "https://trace.invalid/hotpotqa_5ae532e955429908b632656f_immediate/d7s2",
+      "text": "Seven other species are extinct, prehistoric species known from fossils.",
+      "visible_time_s": 4.077999999994063,
+      "requested_subject": "",
+      "resolved_title": "Giraffe",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d7s3",
+      "title": "Giraffe",
+      "url": "https://trace.invalid/hotpotqa_5ae532e955429908b632656f_immediate/d7s3",
+      "text": "Taxonomic classifications of one to eight extant giraffe species have been described, based upon research into the mitochondrial and nuclear DNA, as well as morphological measurements of \"Giraffa,\" but the IUCN currently recognizes only one species with nine subspecies.",
+      "visible_time_s": 4.077999999994063,
+      "requested_subject": "",
+      "resolved_title": "Giraffe",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d8s0",
+      "title": "Oligoryzomys fulvescens",
+      "url": "https://trace.invalid/hotpotqa_5ae532e955429908b632656f_immediate/d8s0",
+      "text": "Oligoryzomys fulvescens, also known as the fulvous colilargo, fulvous pygmy rice rat, or northern pygmy rice rat, is a species of rodent in the genus \"Oligoryzomys\" of family Cricetidae.",
+      "visible_time_s": 4.077999999994063,
+      "requested_subject": "",
+      "resolved_title": "Oligoryzomys fulvescens",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d8s1",
+      "title": "Oligoryzomys fulvescens",
+      "url": "https://trace.invalid/hotpotqa_5ae532e955429908b632656f_immediate/d8s1",
+      "text": "It is found from southern Mexico through Central America into South America, where it occurs south into Peru and Brazil, and includes numerous synonyms, including the type species of the genus, \"Oryzomys navus\" Bangs, 1899.",
+      "visible_time_s": 4.077999999994063,
+      "requested_subject": "",
+      "resolved_title": "Oligoryzomys fulvescens",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d8s2",
+      "title": "Oligoryzomys fulvescens",
+      "url": "https://trace.invalid/hotpotqa_5ae532e955429908b632656f_immediate/d8s2",
+      "text": "The taxonomy of this species is unresolved, and it may be found to contain more than one species.",
+      "visible_time_s": 4.077999999994063,
+      "requested_subject": "",
+      "resolved_title": "Oligoryzomys fulvescens",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d8s3",
+      "title": "Oligoryzomys fulvescens",
+      "url": "https://trace.invalid/hotpotqa_5ae532e955429908b632656f_immediate/d8s3",
+      "text": "Its karyotype has 2n = 54-60 and FNa = 68-74.",
+      "visible_time_s": 4.077999999994063,
+      "requested_subject": "",
+      "resolved_title": "Oligoryzomys fulvescens",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d9s0",
+      "title": "Argyrochosma",
+      "url": "https://trace.invalid/hotpotqa_5ae532e955429908b632656f_immediate/d9s0",
+      "text": "Argyrochosma is a genus of ferns known commonly as false cloak ferns.",
+      "visible_time_s": 4.077999999994063,
+      "requested_subject": "",
+      "resolved_title": "Argyrochosma",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d9s1",
+      "title": "Argyrochosma",
+      "url": "https://trace.invalid/hotpotqa_5ae532e955429908b632656f_immediate/d9s1",
+      "text": "The genus is included in the Cheilanthoideae subfamily of the Pteridaceae.",
+      "visible_time_s": 4.077999999994063,
+      "requested_subject": "",
+      "resolved_title": "Argyrochosma",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d9s2",
+      "title": "Argyrochosma",
+      "url": "https://trace.invalid/hotpotqa_5ae532e955429908b632656f_immediate/d9s2",
+      "text": "Species now in this genus were previously treated as members of related genera \"Notholaena\" or \"Pellaea\" but were segregated into their own genus in 1987.",
+      "visible_time_s": 4.077999999994063,
+      "requested_subject": "",
+      "resolved_title": "Argyrochosma",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d9s3",
+      "title": "Argyrochosma",
+      "url": "https://trace.invalid/hotpotqa_5ae532e955429908b632656f_immediate/d9s3",
+      "text": "These ferns, of which there are about 20 species, are mostly native to the Americas, from North to South and including the Caribbean, while one species, \"A. connectens\", is known from Sichuan, China.",
+      "visible_time_s": 4.077999999994063,
+      "requested_subject": "",
+      "resolved_title": "Argyrochosma",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d9s4",
+      "title": "Argyrochosma",
+      "url": "https://trace.invalid/hotpotqa_5ae532e955429908b632656f_immediate/d9s4",
+      "text": "They are commonly found growing in cracks between rocks.",
+      "visible_time_s": 4.077999999994063,
+      "requested_subject": "",
+      "resolved_title": "Argyrochosma",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d9s5",
+      "title": "Argyrochosma",
+      "url": "https://trace.invalid/hotpotqa_5ae532e955429908b632656f_immediate/d9s5",
+      "text": "Their leaves are generally shorter than 40 centimeters and have rounded bluish or grayish green segments.",
+      "visible_time_s": 4.077999999994063,
+      "requested_subject": "",
+      "resolved_title": "Argyrochosma",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d9s6",
+      "title": "Argyrochosma",
+      "url": "https://trace.invalid/hotpotqa_5ae532e955429908b632656f_immediate/d9s6",
+      "text": "Often the lower surface of the segments is coated in a white dust, and the sporangia contain brown spores.",
+      "visible_time_s": 4.077999999994063,
+      "requested_subject": "",
+      "resolved_title": "Argyrochosma",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d10s0",
+      "title": "Cunninghamia",
+      "url": "https://trace.invalid/hotpotqa_5ae532e955429908b632656f_immediate/d10s0",
+      "text": "Cunninghamia is a genus of one or two living species of evergreen coniferous trees in the cypress family Cupressaceae.",
+      "visible_time_s": 4.077999999994063,
+      "requested_subject": "",
+      "resolved_title": "Cunninghamia",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d10s1",
+      "title": "Cunninghamia",
+      "url": "https://trace.invalid/hotpotqa_5ae532e955429908b632656f_immediate/d10s1",
+      "text": "They are native to China, northern Vietnam and Laos, and perhaps also Cambodia.",
+      "visible_time_s": 4.077999999994063,
+      "requested_subject": "",
+      "resolved_title": "Cunninghamia",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d10s2",
+      "title": "Cunninghamia",
+      "url": "https://trace.invalid/hotpotqa_5ae532e955429908b632656f_immediate/d10s2",
+      "text": "They may reach 50 m in height.",
+      "visible_time_s": 4.077999999994063,
+      "requested_subject": "",
+      "resolved_title": "Cunninghamia",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d10s3",
+      "title": "Cunninghamia",
+      "url": "https://trace.invalid/hotpotqa_5ae532e955429908b632656f_immediate/d10s3",
+      "text": "In vernacular use, it is most often known as \"Cunninghamia\", but is also sometimes called \"China-fir\" (though it is not a fir).",
+      "visible_time_s": 4.077999999994063,
+      "requested_subject": "",
+      "resolved_title": "Cunninghamia",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d10s4",
+      "title": "Cunninghamia",
+      "url": "https://trace.invalid/hotpotqa_5ae532e955429908b632656f_immediate/d10s4",
+      "text": "The genus name \"Cunninghamia\" honours Dr. James Cunningham, a British doctor who introduced this species into cultivation in 1702 and botanist Allan Cunningham.",
+      "visible_time_s": 4.077999999994063,
+      "requested_subject": "",
+      "resolved_title": "Cunninghamia",
+      "entity_resolution": "unspecified"
+    }
+  ],
+  "searches": [
+    {
+      "query": "[scheduled evidence]",
+      "subject": "",
+      "status": "ok",
+      "returned_pages": [],
+      "mode": "trace",
+      "unit_id": "__scheduled_evidence__"
+    }
+  ],
+  "search_failures": [],
+  "llm_calls": [
+    {
+      "purpose": "feedback_generate",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 406,
+        "completion_tokens": 64,
+        "total_tokens": 470,
+        "prompt_tokens_details": {
+          "cached_tokens": 384
+        }
+      },
+      "latency_s": 1.047
+    },
+    {
+      "purpose": "decompose",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 796,
+        "completion_tokens": 305,
+        "total_tokens": 1101,
+        "prompt_tokens_details": {
+          "cached_tokens": 768
+        }
+      },
+      "latency_s": 1.547
+    },
+    {
+      "purpose": "feedback_verify",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 364,
+        "completion_tokens": 87,
+        "total_tokens": 451,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        }
+      },
+      "latency_s": 0.734
+    },
+    {
+      "purpose": "plan_review",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 1079,
+        "completion_tokens": 322,
+        "total_tokens": 1401,
+        "prompt_tokens_details": {
+          "cached_tokens": 896
+        }
+      },
+      "latency_s": 2.516
+    },
+    {
+      "purpose": "feedback_generate",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 406,
+        "completion_tokens": 75,
+        "total_tokens": 481,
+        "prompt_tokens_details": {
+          "cached_tokens": 384
+        }
+      },
+      "latency_s": 1.031
+    },
+    {
+      "purpose": "judge",
+      "model": "tinker://f9e9a6c1-e203-5c2c-acdd-68fe67378ca4:train:0/sampler_weights/epoch-0001",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 7930,
+        "completion_tokens": 319,
+        "total_tokens": 8249,
+        "prompt_tokens_details": {
+          "cached_tokens": 896
+        }
+      },
+      "latency_s": 2.515
+    },
+    {
+      "purpose": "feedback_verify",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 352,
+        "completion_tokens": 68,
+        "total_tokens": 420,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        }
+      },
+      "latency_s": 0.579
+    },
+    {
+      "purpose": "feedback_generate",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 407,
+        "completion_tokens": 82,
+        "total_tokens": 489,
+        "prompt_tokens_details": {
+          "cached_tokens": 384
+        }
+      },
+      "latency_s": 0.89
+    },
+    {
+      "purpose": "generate",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 713,
+        "completion_tokens": 159,
+        "total_tokens": 872,
+        "prompt_tokens_details": {
+          "cached_tokens": 384
+        }
+      },
+      "latency_s": 1.203
+    },
+    {
+      "purpose": "feedback_verify",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 350,
+        "completion_tokens": 101,
+        "total_tokens": 451,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        }
+      },
+      "latency_s": 0.922
+    },
+    {
+      "purpose": "verify",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 1361,
+        "completion_tokens": 545,
+        "total_tokens": 1906,
+        "prompt_tokens_details": {
+          "cached_tokens": 640
+        }
+      },
+      "latency_s": 2.579
+    }
+  ],
+  "search_diagnostics": [],
+  "output_enqueued_units": {
+    "u3": "yes"
+  },
+  "events": [
+    {
+      "sequence": 0,
+      "time_s": 0.015,
+      "type": "feedback_requested",
+      "feedback_kind": "opening",
+      "execution_state": {
+        "stage": "planning",
+        "searches_started": 0,
+        "searches_completed": 0,
+        "active_searches": 0,
+        "evidence_count": 0,
+        "supported_units": 0,
+        "output_units": 0
+      }
+    },
+    {
+      "sequence": 1,
+      "time_s": 1.562,
+      "type": "decompose_reply",
+      "reply": {
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "Number of species in the genus Cunninghamia",
+            "subject": "Cunninghamia",
+            "necessary": false,
+            "depends_on": [],
+            "queries": [
+              "Cunninghamia species count",
+              "Cunninghamia genus number of species"
+            ]
+          },
+          {
+            "unit_id": "u2",
+            "description": "Number of species in the genus Chilopsis",
+            "subject": "Chilopsis",
+            "necessary": false,
+            "depends_on": [],
+            "queries": [
+              "Chilopsis species count",
+              "Chilopsis genus number of species"
+            ]
+          },
+          {
+            "unit_id": "u3",
+            "description": "Whether either Cunninghamia or Chilopsis contains only one species",
+            "subject": "",
+            "necessary": true,
+            "depends_on": [
+              "u1",
+              "u2"
+            ],
+            "queries": [
+              "Does Cunninghamia have only one species or does Chilopsis have only one species?"
+            ]
+          }
+        ]
+      },
+      "attempt": 1,
+      "repair": false
+    },
+    {
+      "sequence": 2,
+      "time_s": 1.562,
+      "type": "plan_review_requested",
+      "max_reviews": 1,
+      "question_only": true
+    },
+    {
+      "sequence": 3,
+      "time_s": 1.796,
+      "type": "utterance",
+      "action": "Backchannel",
+      "text": "I see you’re asking whether Cunninghamia or Chilopsis each comprise a single species, and I’ll look that up.",
+      "claims": [],
+      "feedback_source": "model",
+      "feedback_status_claim": "intent",
+      "feedback_fallback_reason": "",
+      "execution_state": {
+        "stage": "planning",
+        "searches_started": 0,
+        "searches_completed": 0,
+        "active_searches": 0,
+        "evidence_count": 0,
+        "supported_units": 0,
+        "output_units": 0
+      },
+      "language": "en"
+    },
+    {
+      "sequence": 4,
+      "time_s": 4.078,
+      "type": "plan_review_reply",
+      "reply": {
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "Number of species in the genus Cunninghamia",
+            "subject": "Cunninghamia",
+            "necessary": false,
+            "depends_on": [],
+            "queries": [
+              "Cunninghamia species count",
+              "Cunninghamia genus number of species"
+            ]
+          },
+          {
+            "unit_id": "u2",
+            "description": "Number of species in the genus Chilopsis",
+            "subject": "Chilopsis",
+            "necessary": false,
+            "depends_on": [],
+            "queries": [
+              "Chilopsis species count",
+              "Chilopsis genus number of species"
+            ]
+          },
+          {
+            "unit_id": "u3",
+            "description": "Whether either Cunninghamia or Chilopsis contains only one species",
+            "subject": "",
+            "necessary": true,
+            "depends_on": [
+              "u1",
+              "u2"
+            ],
+            "queries": [
+              "Does Cunninghamia have only one species or does Chilopsis have only one species?"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "sequence": 5,
+      "time_s": 4.078,
+      "type": "plan_review_finished",
+      "changed": false,
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "Number of species in the genus Cunninghamia",
+          "necessary": false,
+          "depends_on": [],
+          "queries": [
+            "Cunninghamia species count",
+            "Cunninghamia genus number of species"
+          ],
+          "subject": "Cunninghamia"
+        },
+        {
+          "unit_id": "u2",
+          "description": "Number of species in the genus Chilopsis",
+          "necessary": false,
+          "depends_on": [],
+          "queries": [
+            "Chilopsis species count",
+            "Chilopsis genus number of species"
+          ],
+          "subject": "Chilopsis"
+        },
+        {
+          "unit_id": "u3",
+          "description": "Whether either Cunninghamia or Chilopsis contains only one species",
+          "necessary": true,
+          "depends_on": [
+            "u1",
+            "u2"
+          ],
+          "queries": [
+            "Does Cunninghamia have only one species or does Chilopsis have only one species?"
+          ],
+          "subject": ""
+        }
+      ],
+      "question_only": true
+    },
+    {
+      "sequence": 6,
+      "time_s": 4.078,
+      "type": "plan",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "Number of species in the genus Cunninghamia",
+          "necessary": false,
+          "depends_on": [],
+          "queries": [
+            "Cunninghamia species count",
+            "Cunninghamia genus number of species"
+          ],
+          "subject": "Cunninghamia"
+        },
+        {
+          "unit_id": "u2",
+          "description": "Number of species in the genus Chilopsis",
+          "necessary": false,
+          "depends_on": [],
+          "queries": [
+            "Chilopsis species count",
+            "Chilopsis genus number of species"
+          ],
+          "subject": "Chilopsis"
+        },
+        {
+          "unit_id": "u3",
+          "description": "Whether either Cunninghamia or Chilopsis contains only one species",
+          "necessary": true,
+          "depends_on": [
+            "u1",
+            "u2"
+          ],
+          "queries": [
+            "Does Cunninghamia have only one species or does Chilopsis have only one species?"
+          ],
+          "subject": ""
+        }
+      ]
+    },
+    {
+      "sequence": 7,
+      "time_s": 4.078,
+      "type": "trace_batch_requested"
+    },
+    {
+      "sequence": 8,
+      "time_s": 4.078,
+      "type": "search_finished",
+      "query": "[scheduled evidence]",
+      "subject": "",
+      "status": "ok",
+      "returned_pages": [],
+      "mode": "trace",
+      "unit_id": "__scheduled_evidence__"
+    },
+    {
+      "sequence": 9,
+      "time_s": 4.078,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d1s0",
+        "title": "Nomascus",
+        "url": "https://trace.invalid/hotpotqa_5ae532e955429908b632656f_immediate/d1s0",
+        "text": "Nomascus is the second-most speciose genus of gibbons (family Hylobatidae).",
+        "visible_time_s": 4.077999999994063,
+        "requested_subject": "",
+        "resolved_title": "Nomascus",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 10,
+      "time_s": 4.078,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d1s1",
+        "title": "Nomascus",
+        "url": "https://trace.invalid/hotpotqa_5ae532e955429908b632656f_immediate/d1s1",
+        "text": "Originally, this genus was a subgenus of \"Hylobates\", and all individuals were considered one species, \"Hylobates concolor\".",
+        "visible_time_s": 4.077999999994063,
+        "requested_subject": "",
+        "resolved_title": "Nomascus",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 11,
+      "time_s": 4.078,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d1s2",
+        "title": "Nomascus",
+        "url": "https://trace.invalid/hotpotqa_5ae532e955429908b632656f_immediate/d1s2",
+        "text": "Species within \"Nomascus\" are characterized by 52 chromosomes.",
+        "visible_time_s": 4.077999999994063,
+        "requested_subject": "",
+        "resolved_title": "Nomascus",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 12,
+      "time_s": 4.078,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d1s3",
+        "title": "Nomascus",
+        "url": "https://trace.invalid/hotpotqa_5ae532e955429908b632656f_immediate/d1s3",
+        "text": "Some species are all black, some are light with a distinct black tuft of crown fur, and some have distinct, light-colored cheek patches.",
+        "visible_time_s": 4.077999999994063,
+        "requested_subject": "",
+        "resolved_title": "Nomascus",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 13,
+      "time_s": 4.078,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d1s4",
+        "title": "Nomascus",
+        "url": "https://trace.invalid/hotpotqa_5ae532e955429908b632656f_immediate/d1s4",
+        "text": "\"Nomascus\" is found from southern China (Yunnan) to southern Vietnam, and also on Hainan Island.",
+        "visible_time_s": 4.077999999994063,
+        "requested_subject": "",
+        "resolved_title": "Nomascus",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 14,
+      "time_s": 4.078,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d1s5",
+        "title": "Nomascus",
+        "url": "https://trace.invalid/hotpotqa_5ae532e955429908b632656f_immediate/d1s5",
+        "text": "One species, \"Nomascus nasutus,\" has been deemed \"the most critically endangered ape species in the world\".",
+        "visible_time_s": 4.077999999994063,
+        "requested_subject": "",
+        "resolved_title": "Nomascus",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 15,
+      "time_s": 4.078,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d1s6",
+        "title": "Nomascus",
+        "url": "https://trace.invalid/hotpotqa_5ae532e955429908b632656f_immediate/d1s6",
+        "text": "All species in this genus are endangered or critically endangered.",
+        "visible_time_s": 4.077999999994063,
+        "requested_subject": "",
+        "resolved_title": "Nomascus",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 16,
+      "time_s": 4.078,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d2s0",
+        "title": "Bupleurum",
+        "url": "https://trace.invalid/hotpotqa_5ae532e955429908b632656f_immediate/d2s0",
+        "text": "Bupleurum is a large genus of annual or perennial herbs or woody shrubs, with about one hundred and ninety species, belonging to the Apiaceae family.",
+        "visible_time_s": 4.077999999994063,
+        "requested_subject": "",
+        "resolved_title": "Bupleurum",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 17,
+      "time_s": 4.078,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d2s1",
+        "title": "Bupleurum",
+        "url": "https://trace.invalid/hotpotqa_5ae532e955429908b632656f_immediate/d2s1",
+        "text": "The full size of its species may vary between a few cm to up to 3 m high.",
+        "visible_time_s": 4.077999999994063,
+        "requested_subject": "",
+        "resolved_title": "Bupleurum",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 18,
+      "time_s": 4.078,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d2s2",
+        "title": "Bupleurum",
+        "url": "https://trace.invalid/hotpotqa_5ae532e955429908b632656f_immediate/d2s2",
+        "text": "Their compound umbels of small flowers are adorned with bracteoles that are sometimes large and may play a role in attracting pollinators.",
+        "visible_time_s": 4.077999999994063,
+        "requested_subject": "",
+        "resolved_title": "Bupleurum",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 19,
+      "time_s": 4.078,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d2s3",
+        "title": "Bupleurum",
+        "url": "https://trace.invalid/hotpotqa_5ae532e955429908b632656f_immediate/d2s3",
+        "text": "Rare among Apiaceae are the simple leaves, bracts (if present) and bracteoles.",
+        "visible_time_s": 4.077999999994063,
+        "requested_subject": "",
+        "resolved_title": "Bupleurum",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 20,
+      "time_s": 4.078,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d2s4",
+        "title": "Bupleurum",
+        "url": "https://trace.invalid/hotpotqa_5ae532e955429908b632656f_immediate/d2s4",
+        "text": "The genus is almost exclusively native in the Old World Northern Hemisphere, with one species native to North America and one species native to southern Africa.",
+        "visible_time_s": 4.077999999994063,
+        "requested_subject": "",
+        "resolved_title": "Bupleurum",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 21,
+      "time_s": 4.078,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d3s0",
+        "title": "Pseudopontia",
+        "url": "https://trace.invalid/hotpotqa_5ae532e955429908b632656f_immediate/d3s0",
+        "text": "Pseudopontia is a genus of butterflies found only in wet forests of tropical Africa.",
+        "visible_time_s": 4.077999999994063,
+        "requested_subject": "",
+        "resolved_title": "Pseudopontia",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 22,
+      "time_s": 4.078,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d3s1",
+        "title": "Pseudopontia",
+        "url": "https://trace.invalid/hotpotqa_5ae532e955429908b632656f_immediate/d3s1",
+        "text": "It is the only genus in the subfamily Pseudopontiinae.",
+        "visible_time_s": 4.077999999994063,
+        "requested_subject": "",
+        "resolved_title": "Pseudopontia",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 23,
+      "time_s": 4.078,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d3s2",
+        "title": "Pseudopontia",
+        "url": "https://trace.invalid/hotpotqa_5ae532e955429908b632656f_immediate/d3s2",
+        "text": "It was traditionally thought to contain only one species (monotypic), \"Pseudopontia paradoxa\".",
+        "visible_time_s": 4.077999999994063,
+        "requested_subject": "",
+        "resolved_title": "Pseudopontia",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 24,
+      "time_s": 4.078,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d3s3",
+        "title": "Pseudopontia",
+        "url": "https://trace.invalid/hotpotqa_5ae532e955429908b632656f_immediate/d3s3",
+        "text": "However, a recent study showed there are at least five species of \"Pseudopontia\" which can be distinguished genetically and by details of wing veins.",
+        "visible_time_s": 4.077999999994063,
+        "requested_subject": "",
+        "resolved_title": "Pseudopontia",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 25,
+      "time_s": 4.078,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d3s4",
+        "title": "Pseudopontia",
+        "url": "https://trace.invalid/hotpotqa_5ae532e955429908b632656f_immediate/d3s4",
+        "text": "Each is found primarily in a different part of Africa, though several of the species have overlapping geographic distributions.",
+        "visible_time_s": 4.077999999994063,
+        "requested_subject": "",
+        "resolved_title": "Pseudopontia",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 26,
+      "time_s": 4.078,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d4s0",
+        "title": "Anthocharis",
+        "url": "https://trace.invalid/hotpotqa_5ae532e955429908b632656f_immediate/d4s0",
+        "text": "Anthocharis is a Holarctic genus of the butterfly tribe Anthocharini, in the Pieridae family.",
+        "visible_time_s": 4.077999999994063,
+        "requested_subject": "",
+        "resolved_title": "Anthocharis",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 27,
+      "time_s": 4.078,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d4s1",
+        "title": "Anthocharis",
+        "url": "https://trace.invalid/hotpotqa_5ae532e955429908b632656f_immediate/d4s1",
+        "text": "These are typically small, white-hued butterflies that have colorful marks just inside the tips of the forewings.",
+        "visible_time_s": 4.077999999994063,
+        "requested_subject": "",
+        "resolved_title": "Anthocharis",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 28,
+      "time_s": 4.078,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d4s2",
+        "title": "Anthocharis",
+        "url": "https://trace.invalid/hotpotqa_5ae532e955429908b632656f_immediate/d4s2",
+        "text": "The tip colors are usually a red-orange hue, hence the name \"orange tip\".",
+        "visible_time_s": 4.077999999994063,
+        "requested_subject": "",
+        "resolved_title": "Anthocharis",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 29,
+      "time_s": 4.078,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d4s3",
+        "title": "Anthocharis",
+        "url": "https://trace.invalid/hotpotqa_5ae532e955429908b632656f_immediate/d4s3",
+        "text": "The larvae of these butterfly often consume cruciferous plants containing chemicals called glucosinolates.",
+        "visible_time_s": 4.077999999994063,
+        "requested_subject": "",
+        "resolved_title": "Anthocharis",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 30,
+      "time_s": 4.078,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d4s4",
+        "title": "Anthocharis",
+        "url": "https://trace.invalid/hotpotqa_5ae532e955429908b632656f_immediate/d4s4",
+        "text": "This genus is characterized by two of the five subcostal veins branching off before the apex of the cell, by the upper radial being only little united with the subcostal, and by the central discocellular being rather long.",
+        "visible_time_s": 4.077999999994063,
+        "requested_subject": "",
+        "resolved_title": "Anthocharis",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 31,
+      "time_s": 4.078,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d4s5",
+        "title": "Anthocharis",
+        "url": "https://trace.invalid/hotpotqa_5ae532e955429908b632656f_immediate/d4s5",
+        "text": "In all the species the males have at least the apical portion of the forewing orange red or yellow.",
+        "visible_time_s": 4.077999999994063,
+        "requested_subject": "",
+        "resolved_title": "Anthocharis",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 32,
+      "time_s": 4.078,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d4s6",
+        "title": "Anthocharis",
+        "url": "https://trace.invalid/hotpotqa_5ae532e955429908b632656f_immediate/d4s6",
+        "text": "Only one species inhabits also the northern districts of the Palearctic region, all the others are found in the south of the Palearctic region, also some species occur in North America, but not one species extends into the tropics.",
+        "visible_time_s": 4.077999999994063,
+        "requested_subject": "",
+        "resolved_title": "Anthocharis",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 33,
+      "time_s": 4.078,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d4s7",
+        "title": "Anthocharis",
+        "url": "https://trace.invalid/hotpotqa_5ae532e955429908b632656f_immediate/d4s7",
+        "text": "The Anthocharis species have only one brood.",
+        "visible_time_s": 4.077999999994063,
+        "requested_subject": "",
+        "resolved_title": "Anthocharis",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 34,
+      "time_s": 4.078,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d4s8",
+        "title": "Anthocharis",
+        "url": "https://trace.invalid/hotpotqa_5ae532e955429908b632656f_immediate/d4s8",
+        "text": "The butterflies occur in spring.",
+        "visible_time_s": 4.077999999994063,
+        "requested_subject": "",
+        "resolved_title": "Anthocharis",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 35,
+      "time_s": 4.078,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d5s0",
+        "title": "Chilopsis",
+        "url": "https://trace.invalid/hotpotqa_5ae532e955429908b632656f_immediate/d5s0",
+        "text": "Chilopsis is a monotypic genus of flowering plants containing the single species Chilopsis linearis.",
+        "visible_time_s": 4.077999999994063,
+        "requested_subject": "",
+        "resolved_title": "Chilopsis",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 36,
+      "time_s": 4.078,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d6s0",
+        "title": "Megacheira",
+        "url": "https://trace.invalid/hotpotqa_5ae532e955429908b632656f_immediate/d6s0",
+        "text": "Megacheira (\"Great Hands\") is an extinct class of predatory arthropods that possessed a pair of short enlarged appendages (the source of the class' name).",
+        "visible_time_s": 4.077999999994063,
+        "requested_subject": "",
+        "resolved_title": "Megacheira",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 37,
+      "time_s": 4.078,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d6s1",
+        "title": "Megacheira",
+        "url": "https://trace.invalid/hotpotqa_5ae532e955429908b632656f_immediate/d6s1",
+        "text": "They strongly resemble early chelicerates.",
+        "visible_time_s": 4.077999999994063,
+        "requested_subject": "",
+        "resolved_title": "Megacheira",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 38,
+      "time_s": 4.078,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d6s2",
+        "title": "Megacheira",
+        "url": "https://trace.invalid/hotpotqa_5ae532e955429908b632656f_immediate/d6s2",
+        "text": "Most of them were found in marine environments throughout the world from the lower to middle Cambrian.",
+        "visible_time_s": 4.077999999994063,
+        "requested_subject": "",
+        "resolved_title": "Megacheira",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 39,
+      "time_s": 4.078,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d6s3",
+        "title": "Megacheira",
+        "url": "https://trace.invalid/hotpotqa_5ae532e955429908b632656f_immediate/d6s3",
+        "text": "The group might also contain one species (\"Enalikter aphson\") described from the Silurian Herefordshire Lagerstätte of the United Kingdom, and one species (\"Bundenbachiellus giganteus\") known from the Early Devonian of Germany; however, the interpretation of these taxa as megacheirans was challenged by Struck \"et al.\" (2015).",
+        "visible_time_s": 4.077999999994063,
+        "requested_subject": "",
+        "resolved_title": "Megacheira",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 40,
+      "time_s": 4.078,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d6s4",
+        "title": "Megacheira",
+        "url": "https://trace.invalid/hotpotqa_5ae532e955429908b632656f_immediate/d6s4",
+        "text": "Megacheirans were important components of several faunas, including the Burgess, Wheeler and Maotianshan Shales Lagerstatten.",
+        "visible_time_s": 4.077999999994063,
+        "requested_subject": "",
+        "resolved_title": "Megacheira",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 41,
+      "time_s": 4.078,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d6s5",
+        "title": "Megacheira",
+        "url": "https://trace.invalid/hotpotqa_5ae532e955429908b632656f_immediate/d6s5",
+        "text": "Genera referred to the class include \"Leanchoilia\", \"Alalcomenaeus\", \"Oestokerkus\", \"Yohoia\", \"Fortiforceps\" and \"Jianfengia\".",
+        "visible_time_s": 4.077999999994063,
+        "requested_subject": "",
+        "resolved_title": "Megacheira",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 42,
+      "time_s": 4.078,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d7s0",
+        "title": "Giraffe",
+        "url": "https://trace.invalid/hotpotqa_5ae532e955429908b632656f_immediate/d7s0",
+        "text": "The giraffe (\"Giraffa\") is a genus of African even-toed ungulate mammals, the tallest living terrestrial animals and the largest ruminants.",
+        "visible_time_s": 4.077999999994063,
+        "requested_subject": "",
+        "resolved_title": "Giraffe",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 43,
+      "time_s": 4.078,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d7s1",
+        "title": "Giraffe",
+        "url": "https://trace.invalid/hotpotqa_5ae532e955429908b632656f_immediate/d7s1",
+        "text": "The genus currently consists of one species, \"Giraffa camelopardalis\", the type species.",
+        "visible_time_s": 4.077999999994063,
+        "requested_subject": "",
+        "resolved_title": "Giraffe",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 44,
+      "time_s": 4.078,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d7s2",
+        "title": "Giraffe",
+        "url": "https://trace.invalid/hotpotqa_5ae532e955429908b632656f_immediate/d7s2",
+        "text": "Seven other species are extinct, prehistoric species known from fossils.",
+        "visible_time_s": 4.077999999994063,
+        "requested_subject": "",
+        "resolved_title": "Giraffe",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 45,
+      "time_s": 4.078,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d7s3",
+        "title": "Giraffe",
+        "url": "https://trace.invalid/hotpotqa_5ae532e955429908b632656f_immediate/d7s3",
+        "text": "Taxonomic classifications of one to eight extant giraffe species have been described, based upon research into the mitochondrial and nuclear DNA, as well as morphological measurements of \"Giraffa,\" but the IUCN currently recognizes only one species with nine subspecies.",
+        "visible_time_s": 4.077999999994063,
+        "requested_subject": "",
+        "resolved_title": "Giraffe",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 46,
+      "time_s": 4.078,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d8s0",
+        "title": "Oligoryzomys fulvescens",
+        "url": "https://trace.invalid/hotpotqa_5ae532e955429908b632656f_immediate/d8s0",
+        "text": "Oligoryzomys fulvescens, also known as the fulvous colilargo, fulvous pygmy rice rat, or northern pygmy rice rat, is a species of rodent in the genus \"Oligoryzomys\" of family Cricetidae.",
+        "visible_time_s": 4.077999999994063,
+        "requested_subject": "",
+        "resolved_title": "Oligoryzomys fulvescens",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 47,
+      "time_s": 4.078,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d8s1",
+        "title": "Oligoryzomys fulvescens",
+        "url": "https://trace.invalid/hotpotqa_5ae532e955429908b632656f_immediate/d8s1",
+        "text": "It is found from southern Mexico through Central America into South America, where it occurs south into Peru and Brazil, and includes numerous synonyms, including the type species of the genus, \"Oryzomys navus\" Bangs, 1899.",
+        "visible_time_s": 4.077999999994063,
+        "requested_subject": "",
+        "resolved_title": "Oligoryzomys fulvescens",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 48,
+      "time_s": 4.078,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d8s2",
+        "title": "Oligoryzomys fulvescens",
+        "url": "https://trace.invalid/hotpotqa_5ae532e955429908b632656f_immediate/d8s2",
+        "text": "The taxonomy of this species is unresolved, and it may be found to contain more than one species.",
+        "visible_time_s": 4.077999999994063,
+        "requested_subject": "",
+        "resolved_title": "Oligoryzomys fulvescens",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 49,
+      "time_s": 4.078,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d8s3",
+        "title": "Oligoryzomys fulvescens",
+        "url": "https://trace.invalid/hotpotqa_5ae532e955429908b632656f_immediate/d8s3",
+        "text": "Its karyotype has 2n = 54-60 and FNa = 68-74.",
+        "visible_time_s": 4.077999999994063,
+        "requested_subject": "",
+        "resolved_title": "Oligoryzomys fulvescens",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 50,
+      "time_s": 4.078,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d9s0",
+        "title": "Argyrochosma",
+        "url": "https://trace.invalid/hotpotqa_5ae532e955429908b632656f_immediate/d9s0",
+        "text": "Argyrochosma is a genus of ferns known commonly as false cloak ferns.",
+        "visible_time_s": 4.077999999994063,
+        "requested_subject": "",
+        "resolved_title": "Argyrochosma",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 51,
+      "time_s": 4.078,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d9s1",
+        "title": "Argyrochosma",
+        "url": "https://trace.invalid/hotpotqa_5ae532e955429908b632656f_immediate/d9s1",
+        "text": "The genus is included in the Cheilanthoideae subfamily of the Pteridaceae.",
+        "visible_time_s": 4.077999999994063,
+        "requested_subject": "",
+        "resolved_title": "Argyrochosma",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 52,
+      "time_s": 4.078,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d9s2",
+        "title": "Argyrochosma",
+        "url": "https://trace.invalid/hotpotqa_5ae532e955429908b632656f_immediate/d9s2",
+        "text": "Species now in this genus were previously treated as members of related genera \"Notholaena\" or \"Pellaea\" but were segregated into their own genus in 1987.",
+        "visible_time_s": 4.077999999994063,
+        "requested_subject": "",
+        "resolved_title": "Argyrochosma",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 53,
+      "time_s": 4.078,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d9s3",
+        "title": "Argyrochosma",
+        "url": "https://trace.invalid/hotpotqa_5ae532e955429908b632656f_immediate/d9s3",
+        "text": "These ferns, of which there are about 20 species, are mostly native to the Americas, from North to South and including the Caribbean, while one species, \"A. connectens\", is known from Sichuan, China.",
+        "visible_time_s": 4.077999999994063,
+        "requested_subject": "",
+        "resolved_title": "Argyrochosma",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 54,
+      "time_s": 4.078,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d9s4",
+        "title": "Argyrochosma",
+        "url": "https://trace.invalid/hotpotqa_5ae532e955429908b632656f_immediate/d9s4",
+        "text": "They are commonly found growing in cracks between rocks.",
+        "visible_time_s": 4.077999999994063,
+        "requested_subject": "",
+        "resolved_title": "Argyrochosma",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 55,
+      "time_s": 4.078,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d9s5",
+        "title": "Argyrochosma",
+        "url": "https://trace.invalid/hotpotqa_5ae532e955429908b632656f_immediate/d9s5",
+        "text": "Their leaves are generally shorter than 40 centimeters and have rounded bluish or grayish green segments.",
+        "visible_time_s": 4.077999999994063,
+        "requested_subject": "",
+        "resolved_title": "Argyrochosma",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 56,
+      "time_s": 4.078,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d9s6",
+        "title": "Argyrochosma",
+        "url": "https://trace.invalid/hotpotqa_5ae532e955429908b632656f_immediate/d9s6",
+        "text": "Often the lower surface of the segments is coated in a white dust, and the sporangia contain brown spores.",
+        "visible_time_s": 4.077999999994063,
+        "requested_subject": "",
+        "resolved_title": "Argyrochosma",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 57,
+      "time_s": 4.078,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d10s0",
+        "title": "Cunninghamia",
+        "url": "https://trace.invalid/hotpotqa_5ae532e955429908b632656f_immediate/d10s0",
+        "text": "Cunninghamia is a genus of one or two living species of evergreen coniferous trees in the cypress family Cupressaceae.",
+        "visible_time_s": 4.077999999994063,
+        "requested_subject": "",
+        "resolved_title": "Cunninghamia",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 58,
+      "time_s": 4.078,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d10s1",
+        "title": "Cunninghamia",
+        "url": "https://trace.invalid/hotpotqa_5ae532e955429908b632656f_immediate/d10s1",
+        "text": "They are native to China, northern Vietnam and Laos, and perhaps also Cambodia.",
+        "visible_time_s": 4.077999999994063,
+        "requested_subject": "",
+        "resolved_title": "Cunninghamia",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 59,
+      "time_s": 4.078,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d10s2",
+        "title": "Cunninghamia",
+        "url": "https://trace.invalid/hotpotqa_5ae532e955429908b632656f_immediate/d10s2",
+        "text": "They may reach 50 m in height.",
+        "visible_time_s": 4.077999999994063,
+        "requested_subject": "",
+        "resolved_title": "Cunninghamia",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 60,
+      "time_s": 4.078,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d10s3",
+        "title": "Cunninghamia",
+        "url": "https://trace.invalid/hotpotqa_5ae532e955429908b632656f_immediate/d10s3",
+        "text": "In vernacular use, it is most often known as \"Cunninghamia\", but is also sometimes called \"China-fir\" (though it is not a fir).",
+        "visible_time_s": 4.077999999994063,
+        "requested_subject": "",
+        "resolved_title": "Cunninghamia",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 61,
+      "time_s": 4.078,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d10s4",
+        "title": "Cunninghamia",
+        "url": "https://trace.invalid/hotpotqa_5ae532e955429908b632656f_immediate/d10s4",
+        "text": "The genus name \"Cunninghamia\" honours Dr. James Cunningham, a British doctor who introduced this species into cultivation in 1702 and botanist Allan Cunningham.",
+        "visible_time_s": 4.077999999994063,
+        "requested_subject": "",
+        "resolved_title": "Cunninghamia",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 62,
+      "time_s": 5.015,
+      "type": "feedback_requested",
+      "feedback_kind": "progress",
+      "execution_state": {
+        "stage": "checking",
+        "searches_started": 1,
+        "searches_completed": 1,
+        "active_searches": 0,
+        "evidence_count": 53,
+        "supported_units": 0,
+        "output_units": 0
+      }
+    },
+    {
+      "sequence": 63,
+      "time_s": 6.593,
+      "type": "judge_reply",
+      "reply": {
+        "judgments": [
+          {
+            "unit_id": "u1",
+            "label": "SUPPORTED",
+            "value": "1 or 2",
+            "citations": [
+              "d10s0"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d10s0",
+                "text": "Cunninghamia is a genus of one or two living species of evergreen coniferous trees in the cypress family Cupressaceae."
+              }
+            ],
+            "reason": "Supported by the cited visible sentences and dependencies."
+          },
+          {
+            "unit_id": "u2",
+            "label": "SUPPORTED",
+            "value": "1",
+            "citations": [
+              "d5s0"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d5s0",
+                "text": "Chilopsis is a monotypic genus of flowering plants containing the single species Chilopsis linearis."
+              }
+            ],
+            "reason": "Supported by the cited visible sentences and dependencies."
+          },
+          {
+            "unit_id": "u3",
+            "label": "SUPPORTED",
+            "value": "yes",
+            "citations": [
+              "d10s0",
+              "d5s0"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d10s0",
+                "text": "Cunninghamia is a genus of one or two living species of evergreen coniferous trees in the cypress family Cupressaceae."
+              },
+              {
+                "evidence_id": "d5s0",
+                "text": "Chilopsis is a monotypic genus of flowering plants containing the single species Chilopsis linearis."
+              }
+            ],
+            "reason": "Supported by the cited visible sentences and dependencies."
+          }
+        ]
+      },
+      "attempt": 1,
+      "repair": false,
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d1s1",
+        "d1s2",
+        "d1s3",
+        "d1s4",
+        "d1s5",
+        "d1s6",
+        "d2s0",
+        "d2s1",
+        "d2s2",
+        "d2s3",
+        "d2s4",
+        "d3s0",
+        "d3s1",
+        "d3s2",
+        "d3s3",
+        "d3s4",
+        "d4s0",
+        "d4s1",
+        "d4s2",
+        "d4s3",
+        "d4s4",
+        "d4s5",
+        "d4s6",
+        "d4s7",
+        "d4s8",
+        "d5s0",
+        "d6s0",
+        "d6s1",
+        "d6s2",
+        "d6s3",
+        "d6s4",
+        "d6s5",
+        "d7s0",
+        "d7s1",
+        "d7s2",
+        "d7s3",
+        "d8s0",
+        "d8s1",
+        "d8s2",
+        "d8s3",
+        "d9s0",
+        "d9s1",
+        "d9s2",
+        "d9s3",
+        "d9s4",
+        "d9s5",
+        "d9s6",
+        "d10s0",
+        "d10s1",
+        "d10s2",
+        "d10s3",
+        "d10s4"
+      ]
+    },
+    {
+      "sequence": 64,
+      "time_s": 6.593,
+      "type": "judgments",
+      "judgments": {
+        "u1": {
+          "label": "SUPPORTED",
+          "value": "1 or 2",
+          "citations": [
+            "d10s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d10s0",
+              "text": "Cunninghamia is a genus of one or two living species of evergreen coniferous trees in the cypress family Cupressaceae."
+            }
+          ],
+          "reason": "Supported by the cited visible sentences and dependencies."
+        },
+        "u2": {
+          "label": "SUPPORTED",
+          "value": "1",
+          "citations": [
+            "d5s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d5s0",
+              "text": "Chilopsis is a monotypic genus of flowering plants containing the single species Chilopsis linearis."
+            }
+          ],
+          "reason": "Supported by the cited visible sentences and dependencies."
+        },
+        "u3": {
+          "label": "SUPPORTED",
+          "value": "yes",
+          "citations": [
+            "d10s0",
+            "d5s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d10s0",
+              "text": "Cunninghamia is a genus of one or two living species of evergreen coniferous trees in the cypress family Cupressaceae."
+            },
+            {
+              "evidence_id": "d5s0",
+              "text": "Chilopsis is a monotypic genus of flowering plants containing the single species Chilopsis linearis."
+            }
+          ],
+          "reason": "Supported by the cited visible sentences and dependencies."
+        }
+      },
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d1s1",
+        "d1s2",
+        "d1s3",
+        "d1s4",
+        "d1s5",
+        "d1s6",
+        "d2s0",
+        "d2s1",
+        "d2s2",
+        "d2s3",
+        "d2s4",
+        "d3s0",
+        "d3s1",
+        "d3s2",
+        "d3s3",
+        "d3s4",
+        "d4s0",
+        "d4s1",
+        "d4s2",
+        "d4s3",
+        "d4s4",
+        "d4s5",
+        "d4s6",
+        "d4s7",
+        "d4s8",
+        "d5s0",
+        "d6s0",
+        "d6s1",
+        "d6s2",
+        "d6s3",
+        "d6s4",
+        "d6s5",
+        "d7s0",
+        "d7s1",
+        "d7s2",
+        "d7s3",
+        "d8s0",
+        "d8s1",
+        "d8s2",
+        "d8s3",
+        "d9s0",
+        "d9s1",
+        "d9s2",
+        "d9s3",
+        "d9s4",
+        "d9s5",
+        "d9s6",
+        "d10s0",
+        "d10s1",
+        "d10s2",
+        "d10s3",
+        "d10s4"
+      ],
+      "semantic_review": false
+    },
+    {
+      "sequence": 65,
+      "time_s": 8.437,
+      "type": "utterance",
+      "action": "Progress",
+      "text": "Formulating the answer with gathered evidence.",
+      "claims": [],
+      "feedback_source": "model",
+      "feedback_status_claim": "formulating",
+      "feedback_fallback_reason": "",
+      "execution_state": {
+        "stage": "formulating",
+        "searches_started": 1,
+        "searches_completed": 1,
+        "active_searches": 0,
+        "evidence_count": 53,
+        "supported_units": 3,
+        "output_units": 0
+      },
+      "language": "en"
+    },
+    {
+      "sequence": 66,
+      "time_s": 10.375,
+      "type": "verification_reply",
+      "reply": {
+        "approved": true,
+        "facts_valid": true,
+        "expressed_unit_ids": [
+          "u3"
+        ],
+        "reason": "The draft correctly answers the question with a supported 'yes' and accurately reflects the evidence for both genera without adding unsupported claims."
+      },
+      "output_unit_ids": [
+        "u3"
+      ],
+      "output_action": "Final Answer",
+      "dependency_unit_ids": [
+        "u1",
+        "u2"
+      ],
+      "evidence_snapshot_ids": [
+        "d5s0",
+        "d10s0"
+      ]
+    },
+    {
+      "sequence": 67,
+      "time_s": 10.375,
+      "type": "utterance",
+      "action": "Final Answer",
+      "text": "Yes, Chilopsis is a monotypic genus that contains only the single species Chilopsis linearis, and Cunninghamia includes one or two living species of evergreen coniferous trees.",
+      "claims": [
+        {
+          "unit_id": "u3",
+          "description": "Whether either Cunninghamia or Chilopsis contains only one species",
+          "value": "yes",
+          "citations": [
+            "d10s0",
+            "d5s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d10s0",
+              "text": "Cunninghamia is a genus of one or two living species of evergreen coniferous trees in the cypress family Cupressaceae."
+            },
+            {
+              "evidence_id": "d5s0",
+              "text": "Chilopsis is a monotypic genus of flowering plants containing the single species Chilopsis linearis."
+            }
+          ]
+        }
+      ],
+      "unresolved": [],
+      "fallback": false,
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d1s1",
+        "d1s2",
+        "d1s3",
+        "d1s4",
+        "d1s5",
+        "d1s6",
+        "d2s0",
+        "d2s1",
+        "d2s2",
+        "d2s3",
+        "d2s4",
+        "d3s0",
+        "d3s1",
+        "d3s2",
+        "d3s3",
+        "d3s4",
+        "d4s0",
+        "d4s1",
+        "d4s2",
+        "d4s3",
+        "d4s4",
+        "d4s5",
+        "d4s6",
+        "d4s7",
+        "d4s8",
+        "d5s0",
+        "d6s0",
+        "d6s1",
+        "d6s2",
+        "d6s3",
+        "d6s4",
+        "d6s5",
+        "d7s0",
+        "d7s1",
+        "d7s2",
+        "d7s3",
+        "d8s0",
+        "d8s1",
+        "d8s2",
+        "d8s3",
+        "d9s0",
+        "d9s1",
+        "d9s2",
+        "d9s3",
+        "d9s4",
+        "d9s5",
+        "d9s6",
+        "d10s0",
+        "d10s1",
+        "d10s2",
+        "d10s3",
+        "d10s4"
+      ],
+      "language": "en"
+    },
+    {
+      "sequence": 68,
+      "time_s": 10.375,
+      "type": "finished",
+      "status": "complete"
+    }
+  ],
+  "note": "Prototype model judgments are not independent gold scores. Output event times are not spoken claim times.",
+  "evidence_mode": "scheduled_trace",
+  "audio": {
+    "enabled": true,
+    "mode": "windows",
+    "play": false,
+    "status": "ok",
+    "errors": [],
+    "records": [
+      {
+        "event_sequence": 3,
+        "sentence_index": 1,
+        "sentence_count": 1,
+        "language": "en",
+        "text": "I see you’re asking whether Cunninghamia or Chilopsis each comprise a single species, and I’ll look that up.",
+        "action": "Backchannel",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 1.7960000000020955,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1-continued\\samples\\0892\\audio\\segments\\0003_01.wav",
+        "duration_s": 6.963219954648526,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 2.5929999999934807,
+        "synthesis_and_playback_s": 0.7969999999913853
+      },
+      {
+        "event_sequence": 65,
+        "sentence_index": 1,
+        "sentence_count": 1,
+        "language": "en",
+        "text": "Formulating the answer with gathered evidence.",
+        "action": "Progress",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 8.437000000005355,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1-continued\\samples\\0892\\audio\\segments\\0065_01.wav",
+        "duration_s": 3.113968253968254,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 9.21799999999348,
+        "synthesis_and_playback_s": 0.7809999999881256
+      },
+      {
+        "event_sequence": 67,
+        "sentence_index": 1,
+        "sentence_count": 1,
+        "language": "en",
+        "text": "Yes, Chilopsis is a monotypic genus that contains only the single species Chilopsis linearis, and Cunninghamia includes one or two living species of evergreen coniferous trees.",
+        "action": "Final Answer",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 10.375,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1-continued\\samples\\0892\\audio\\segments\\0067_01.wav",
+        "duration_s": 12.107256235827665,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 11.171000000002095,
+        "synthesis_and_playback_s": 0.7960000000020955
+      }
+    ],
+    "wave": {
+      "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1-continued\\samples\\0892\\audio\\response.wav",
+      "duration_s": 24.777460317460317,
+      "timeline": [
+        {
+          "event_sequence": 3,
+          "sentence_index": 1,
+          "action": "Backchannel",
+          "text": "I see you’re asking whether Cunninghamia or Chilopsis each comprise a single species, and I’ll look that up.",
+          "wave_start_s": 2.593015873015873,
+          "wave_end_s": 9.556235827664398
+        },
+        {
+          "event_sequence": 65,
+          "sentence_index": 1,
+          "action": "Progress",
+          "text": "Formulating the answer with gathered evidence.",
+          "wave_start_s": 9.556235827664398,
+          "wave_end_s": 12.670204081632653
+        },
+        {
+          "event_sequence": 67,
+          "sentence_index": 1,
+          "action": "Final Answer",
+          "text": "Yes, Chilopsis is a monotypic genus that contains only the single species Chilopsis linearis, and Cunninghamia includes one or two living species of evergreen coniferous trees.",
+          "wave_start_s": 12.670204081632653,
+          "wave_end_s": 24.777460317460317
+        }
+      ]
+    }
+  },
+  "evaluation": {
+    "mode": "b_final_revised_trace",
+    "trace_id": "hotpotqa_5ae532e955429908b632656f_immediate",
+    "sample_id": "hotpotqa_5ae532e955429908b632656f",
+    "total_wall_s": 11.171000000002095,
+    "question_timeout_s": 180,
+    "audio_enabled": true,
+    "history_enabled": false,
+    "text_pipeline_wall_s": 10.375,
+    "effective_settings": {
+      "base_url": "https://tinker.thinkingmachines.dev/services/tinker-prod/oai/api/v1",
+      "model": "openai/gpt-oss-120b",
+      "judge_model": "tinker://f9e9a6c1-e203-5c2c-acdd-68fe67378ca4:train:0/sampler_weights/epoch-0001",
+      "judge_reasoning_effort": "low",
+      "wiki_language": "en",
+      "user_agent": "CascadeSystem/0.1 (educational research prototype)",
+      "timeout_s": 45.0,
+      "max_tokens": 4096,
+      "reasoning_effort": "low",
+      "progress_s": 3.0,
+      "feedback_timeout_s": 6.0,
+      "search_limit": 3,
+      "max_units": 8,
+      "max_searches": 16,
+      "max_sources": 53,
+      "source_chars": 327,
+      "evidence_chars": 6158,
+      "concurrency": 3
+    },
+    "timing_kind": "unknown",
+    "scheduler": "wall-paced fixed B arrivals",
+    "split": "eval_reserved",
+    "empty_evidence_sentences_ignored": 0
+  }
+}

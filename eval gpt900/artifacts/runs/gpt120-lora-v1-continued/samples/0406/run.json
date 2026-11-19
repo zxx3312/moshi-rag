@@ -1,0 +1,1344 @@
+{
+  "question": "Which film was released more recently, Toto In Hell or Girl On The Loose?",
+  "resolved_question": "Which film was released more recently, Toto In Hell or Girl On The Loose?",
+  "used_history_turn_ids": [],
+  "response_language": "en",
+  "status": "complete",
+  "clock": "wall_monotonic",
+  "time_origin": "question_text_ready_after_optional_asr",
+  "model": "openai/gpt-oss-120b",
+  "judge_model": "tinker://f9e9a6c1-e203-5c2c-acdd-68fe67378ca4:train:0/sampler_weights/epoch-0001",
+  "units": [
+    {
+      "unit_id": "u1",
+      "description": "release date of Toto In Hell",
+      "necessary": true,
+      "depends_on": [],
+      "queries": [
+        "Toto In Hell film release date",
+        "Toto In Hell movie release date"
+      ],
+      "subject": "Toto In Hell"
+    },
+    {
+      "unit_id": "u2",
+      "description": "release date of Girl On The Loose",
+      "necessary": true,
+      "depends_on": [],
+      "queries": [
+        "Girl On The Loose film release date",
+        "Girl On The Loose movie release date"
+      ],
+      "subject": "Girl On The Loose"
+    },
+    {
+      "unit_id": "u3",
+      "description": "which film was released more recently",
+      "necessary": true,
+      "depends_on": [
+        "u1",
+        "u2"
+      ],
+      "queries": [
+        "compare release dates of Toto In Hell and Girl On The Loose"
+      ],
+      "subject": ""
+    }
+  ],
+  "judgments": {
+    "u1": {
+      "label": "SUPPORTED",
+      "value": "1955",
+      "citations": [
+        "d9s0"
+      ],
+      "quotes": [
+        {
+          "evidence_id": "d9s0",
+          "text": "Toto in Hell is a 1955 Italian fantasy- comedy film directed by Camillo Mastrocinque."
+        }
+      ],
+      "reason": "Supported by the cited visible sentences and dependencies."
+    },
+    "u2": {
+      "label": "SUPPORTED",
+      "value": "1954",
+      "citations": [
+        "d4s0"
+      ],
+      "quotes": [
+        {
+          "evidence_id": "d4s0",
+          "text": "Girl on the loose is a 1954 Hong Kong film, directed by Wang Yin."
+        }
+      ],
+      "reason": "Supported by the cited visible sentences and dependencies."
+    },
+    "u3": {
+      "label": "SUPPORTED",
+      "value": "Toto In Hell",
+      "citations": [
+        "d9s0",
+        "d4s0"
+      ],
+      "quotes": [
+        {
+          "evidence_id": "d9s0",
+          "text": "Toto in Hell is a 1955 Italian fantasy- comedy film directed by Camillo Mastrocinque."
+        },
+        {
+          "evidence_id": "d4s0",
+          "text": "Girl on the loose is a 1954 Hong Kong film, directed by Wang Yin."
+        }
+      ],
+      "reason": "Supported by the cited visible sentences and dependencies."
+    }
+  },
+  "evidence": [
+    {
+      "evidence_id": "d1s0",
+      "title": "News in Hell",
+      "url": "https://trace.invalid/2wikimultihopqa_e1be6152086611ebbd5eac1f6bf848b6_immediate/d1s0",
+      "text": "News in Hell is a 1959 Argentine film directed by Román Viñoly Barreto.",
+      "visible_time_s": 3.422000000005937,
+      "requested_subject": "",
+      "resolved_title": "News in Hell",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d2s0",
+      "title": "Tremors: A Cold Day in Hell",
+      "url": "https://trace.invalid/2wikimultihopqa_e1be6152086611ebbd5eac1f6bf848b6_immediate/d2s0",
+      "text": "Tremors: A Cold Day in Hell( also known as Tremors 6 or Tremors 6: A Cold Day in Hell) is a 2018 direct- to- video monster film directed by Don Michael Paul.",
+      "visible_time_s": 3.422000000005937,
+      "requested_subject": "",
+      "resolved_title": "Tremors: A Cold Day in Hell",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d2s1",
+      "title": "Tremors: A Cold Day in Hell",
+      "url": "https://trace.invalid/2wikimultihopqa_e1be6152086611ebbd5eac1f6bf848b6_immediate/d2s1",
+      "text": "It is the sixth film in the\" Tremors\" series of monster films.",
+      "visible_time_s": 3.422000000005937,
+      "requested_subject": "",
+      "resolved_title": "Tremors: A Cold Day in Hell",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d2s2",
+      "title": "Tremors: A Cold Day in Hell",
+      "url": "https://trace.invalid/2wikimultihopqa_e1be6152086611ebbd5eac1f6bf848b6_immediate/d2s2",
+      "text": "The film was released on DVD and Blu-ray, as well as on Netflix on May 1, 2018.",
+      "visible_time_s": 3.422000000005937,
+      "requested_subject": "",
+      "resolved_title": "Tremors: A Cold Day in Hell",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d3s0",
+      "title": "Toto in Madrid",
+      "url": "https://trace.invalid/2wikimultihopqa_e1be6152086611ebbd5eac1f6bf848b6_immediate/d3s0",
+      "text": "Toto in Madrid is an Italian comedy film from 1959, directed by Steno, written by Vittorio Metz, starring Totò and Louis de Funès.",
+      "visible_time_s": 3.422000000005937,
+      "requested_subject": "",
+      "resolved_title": "Toto in Madrid",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d3s1",
+      "title": "Toto in Madrid",
+      "url": "https://trace.invalid/2wikimultihopqa_e1be6152086611ebbd5eac1f6bf848b6_immediate/d3s1",
+      "text": "The film is known under the titles:\" Toto in Madrid\"( English title),\" Totò a MadridUn coup fumant\"( France),\" La culpa fue de Eva\"( Spain).",
+      "visible_time_s": 3.422000000005937,
+      "requested_subject": "",
+      "resolved_title": "Toto in Madrid",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d4s0",
+      "title": "Girl on the Loose",
+      "url": "https://trace.invalid/2wikimultihopqa_e1be6152086611ebbd5eac1f6bf848b6_immediate/d4s0",
+      "text": "Girl on the loose is a 1954 Hong Kong film, directed by Wang Yin.",
+      "visible_time_s": 3.422000000005937,
+      "requested_subject": "",
+      "resolved_title": "Girl on the Loose",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d5s0",
+      "title": "Ghosts on the Loose",
+      "url": "https://trace.invalid/2wikimultihopqa_e1be6152086611ebbd5eac1f6bf848b6_immediate/d5s0",
+      "text": "Ghosts on the Loose is a 1943 American film and the fourteenth film in the East Side Kids series, directed by William Beaudine.",
+      "visible_time_s": 3.422000000005937,
+      "requested_subject": "",
+      "resolved_title": "Ghosts on the Loose",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d5s1",
+      "title": "Ghosts on the Loose",
+      "url": "https://trace.invalid/2wikimultihopqa_e1be6152086611ebbd5eac1f6bf848b6_immediate/d5s1",
+      "text": "The film was released in the United Kingdom as Ghosts in the Night.",
+      "visible_time_s": 3.422000000005937,
+      "requested_subject": "",
+      "resolved_title": "Ghosts on the Loose",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d6s0",
+      "title": "Das Mädchen auf dem Brett",
+      "url": "https://trace.invalid/2wikimultihopqa_e1be6152086611ebbd5eac1f6bf848b6_immediate/d6s0",
+      "text": "Das Mädchen auf dem Brett is an East German film( translates as\" The Girl on the Board\").",
+      "visible_time_s": 3.422000000005937,
+      "requested_subject": "",
+      "resolved_title": "Das Mädchen auf dem Brett",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d6s1",
+      "title": "Das Mädchen auf dem Brett",
+      "url": "https://trace.invalid/2wikimultihopqa_e1be6152086611ebbd5eac1f6bf848b6_immediate/d6s1",
+      "text": "It was released in 1967.",
+      "visible_time_s": 3.422000000005937,
+      "requested_subject": "",
+      "resolved_title": "Das Mädchen auf dem Brett",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d7s0",
+      "title": "Boy or Girl?",
+      "url": "https://trace.invalid/2wikimultihopqa_e1be6152086611ebbd5eac1f6bf848b6_immediate/d7s0",
+      "text": "Boy or Girl?",
+      "visible_time_s": 3.422000000005937,
+      "requested_subject": "",
+      "resolved_title": "Boy or Girl?",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d7s1",
+      "title": "Boy or Girl?",
+      "url": "https://trace.invalid/2wikimultihopqa_e1be6152086611ebbd5eac1f6bf848b6_immediate/d7s1",
+      "text": "( Spanish: ¿ Chico o chica?) is a 1962 Mexican- Spanish musical comedy film directed by Antonio del Amo.",
+      "visible_time_s": 3.422000000005937,
+      "requested_subject": "",
+      "resolved_title": "Boy or Girl?",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d8s0",
+      "title": "Toto in Paris",
+      "url": "https://trace.invalid/2wikimultihopqa_e1be6152086611ebbd5eac1f6bf848b6_immediate/d8s0",
+      "text": "Toto in Paris( also known as\" Totò innamorato\") is a 1958 Italian- French comedy film directed by Camillo Mastrocinque.",
+      "visible_time_s": 3.422000000005937,
+      "requested_subject": "",
+      "resolved_title": "Toto in Paris",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d9s0",
+      "title": "Toto in Hell",
+      "url": "https://trace.invalid/2wikimultihopqa_e1be6152086611ebbd5eac1f6bf848b6_immediate/d9s0",
+      "text": "Toto in Hell is a 1955 Italian fantasy- comedy film directed by Camillo Mastrocinque.",
+      "visible_time_s": 3.422000000005937,
+      "requested_subject": "",
+      "resolved_title": "Toto in Hell",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d9s1",
+      "title": "Toto in Hell",
+      "url": "https://trace.invalid/2wikimultihopqa_e1be6152086611ebbd5eac1f6bf848b6_immediate/d9s1",
+      "text": "Italian cult horror film director Lucio Fulci co- wrote the screenplay.",
+      "visible_time_s": 3.422000000005937,
+      "requested_subject": "",
+      "resolved_title": "Toto in Hell",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d10s0",
+      "title": "Gehenna (1938 film)",
+      "url": "https://trace.invalid/2wikimultihopqa_e1be6152086611ebbd5eac1f6bf848b6_immediate/d10s0",
+      "text": "Gehenna, also known as Through Hell or Anguish is a 1938 Polish melodrama film directed by Michał Waszyński.",
+      "visible_time_s": 3.422000000005937,
+      "requested_subject": "",
+      "resolved_title": "Gehenna (1938 film)",
+      "entity_resolution": "unspecified"
+    }
+  ],
+  "searches": [
+    {
+      "query": "[scheduled evidence]",
+      "subject": "",
+      "status": "ok",
+      "returned_pages": [],
+      "mode": "trace",
+      "unit_id": "__scheduled_evidence__"
+    }
+  ],
+  "search_failures": [],
+  "llm_calls": [
+    {
+      "purpose": "feedback_generate",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 409,
+        "completion_tokens": 85,
+        "total_tokens": 494,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        }
+      },
+      "latency_s": 1.047
+    },
+    {
+      "purpose": "decompose",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 799,
+        "completion_tokens": 266,
+        "total_tokens": 1065,
+        "prompt_tokens_details": {
+          "cached_tokens": 768
+        }
+      },
+      "latency_s": 1.766
+    },
+    {
+      "purpose": "feedback_verify",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 364,
+        "completion_tokens": 62,
+        "total_tokens": 426,
+        "prompt_tokens_details": {
+          "cached_tokens": 128
+        }
+      },
+      "latency_s": 0.781
+    },
+    {
+      "purpose": "plan_review",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 1058,
+        "completion_tokens": 311,
+        "total_tokens": 1369,
+        "prompt_tokens_details": {
+          "cached_tokens": 768
+        }
+      },
+      "latency_s": 1.656
+    },
+    {
+      "purpose": "judge",
+      "model": "tinker://f9e9a6c1-e203-5c2c-acdd-68fe67378ca4:train:0/sampler_weights/epoch-0001",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 3608,
+        "completion_tokens": 307,
+        "total_tokens": 3915,
+        "prompt_tokens_details": {
+          "cached_tokens": 1024
+        }
+      },
+      "latency_s": 2.047
+    },
+    {
+      "purpose": "feedback_generate",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 409,
+        "completion_tokens": 73,
+        "total_tokens": 482,
+        "prompt_tokens_details": {
+          "cached_tokens": 384
+        }
+      },
+      "latency_s": 1.203
+    },
+    {
+      "purpose": "generate",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 979,
+        "completion_tokens": 98,
+        "total_tokens": 1077,
+        "prompt_tokens_details": {
+          "cached_tokens": 384
+        }
+      },
+      "latency_s": 0.891
+    },
+    {
+      "purpose": "feedback_generate",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 410,
+        "completion_tokens": 55,
+        "total_tokens": 465,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        }
+      },
+      "latency_s": 0.703
+    },
+    {
+      "purpose": "verify",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 1351,
+        "completion_tokens": 165,
+        "total_tokens": 1516,
+        "prompt_tokens_details": {
+          "cached_tokens": 640
+        }
+      },
+      "latency_s": 1.265
+    },
+    {
+      "purpose": "feedback_verify",
+      "model": "openai/gpt-oss-120b",
+      "status": "cancelled",
+      "latency_s": 0.734
+    }
+  ],
+  "search_diagnostics": [],
+  "output_enqueued_units": {
+    "u1": "1955",
+    "u2": "1954",
+    "u3": "Toto In Hell"
+  },
+  "events": [
+    {
+      "sequence": 0,
+      "time_s": 0.0,
+      "type": "feedback_requested",
+      "feedback_kind": "opening",
+      "execution_state": {
+        "stage": "planning",
+        "searches_started": 0,
+        "searches_completed": 0,
+        "active_searches": 0,
+        "evidence_count": 0,
+        "supported_units": 0,
+        "output_units": 0
+      }
+    },
+    {
+      "sequence": 1,
+      "time_s": 1.766,
+      "type": "decompose_reply",
+      "reply": {
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "release date of Toto In Hell",
+            "subject": "Toto In Hell",
+            "necessary": true,
+            "depends_on": [],
+            "queries": [
+              "Toto In Hell film release date"
+            ]
+          },
+          {
+            "unit_id": "u2",
+            "description": "release date of Girl On The Loose",
+            "subject": "Girl On The Loose",
+            "necessary": true,
+            "depends_on": [],
+            "queries": [
+              "Girl On The Loose film release date"
+            ]
+          },
+          {
+            "unit_id": "u3",
+            "description": "which film was released more recently",
+            "subject": "",
+            "necessary": true,
+            "depends_on": [
+              "u1",
+              "u2"
+            ],
+            "queries": [
+              "compare release dates of Toto In Hell and Girl On The Loose"
+            ]
+          }
+        ]
+      },
+      "attempt": 1,
+      "repair": false
+    },
+    {
+      "sequence": 2,
+      "time_s": 1.766,
+      "type": "plan_review_requested",
+      "max_reviews": 1,
+      "question_only": true
+    },
+    {
+      "sequence": 3,
+      "time_s": 1.828,
+      "type": "utterance",
+      "action": "Backchannel",
+      "text": "I see you're asking which film, Toto In Hell or Girl On The Loose, was released more recently.",
+      "claims": [],
+      "feedback_source": "model",
+      "feedback_status_claim": "intent",
+      "feedback_fallback_reason": "",
+      "execution_state": {
+        "stage": "planning",
+        "searches_started": 0,
+        "searches_completed": 0,
+        "active_searches": 0,
+        "evidence_count": 0,
+        "supported_units": 0,
+        "output_units": 0
+      },
+      "language": "en"
+    },
+    {
+      "sequence": 4,
+      "time_s": 3.422,
+      "type": "plan_review_reply",
+      "reply": {
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "release date of Toto In Hell",
+            "subject": "Toto In Hell",
+            "necessary": true,
+            "depends_on": [],
+            "queries": [
+              "Toto In Hell film release date",
+              "Toto In Hell movie release date"
+            ]
+          },
+          {
+            "unit_id": "u2",
+            "description": "release date of Girl On The Loose",
+            "subject": "Girl On The Loose",
+            "necessary": true,
+            "depends_on": [],
+            "queries": [
+              "Girl On The Loose film release date",
+              "Girl On The Loose movie release date"
+            ]
+          },
+          {
+            "unit_id": "u3",
+            "description": "which film was released more recently",
+            "subject": "",
+            "necessary": true,
+            "depends_on": [
+              "u1",
+              "u2"
+            ],
+            "queries": [
+              "compare release dates of Toto In Hell and Girl On The Loose"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "sequence": 5,
+      "time_s": 3.422,
+      "type": "plan_review_finished",
+      "changed": true,
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "release date of Toto In Hell",
+          "necessary": true,
+          "depends_on": [],
+          "queries": [
+            "Toto In Hell film release date",
+            "Toto In Hell movie release date"
+          ],
+          "subject": "Toto In Hell"
+        },
+        {
+          "unit_id": "u2",
+          "description": "release date of Girl On The Loose",
+          "necessary": true,
+          "depends_on": [],
+          "queries": [
+            "Girl On The Loose film release date",
+            "Girl On The Loose movie release date"
+          ],
+          "subject": "Girl On The Loose"
+        },
+        {
+          "unit_id": "u3",
+          "description": "which film was released more recently",
+          "necessary": true,
+          "depends_on": [
+            "u1",
+            "u2"
+          ],
+          "queries": [
+            "compare release dates of Toto In Hell and Girl On The Loose"
+          ],
+          "subject": ""
+        }
+      ],
+      "question_only": true
+    },
+    {
+      "sequence": 6,
+      "time_s": 3.422,
+      "type": "plan",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "release date of Toto In Hell",
+          "necessary": true,
+          "depends_on": [],
+          "queries": [
+            "Toto In Hell film release date",
+            "Toto In Hell movie release date"
+          ],
+          "subject": "Toto In Hell"
+        },
+        {
+          "unit_id": "u2",
+          "description": "release date of Girl On The Loose",
+          "necessary": true,
+          "depends_on": [],
+          "queries": [
+            "Girl On The Loose film release date",
+            "Girl On The Loose movie release date"
+          ],
+          "subject": "Girl On The Loose"
+        },
+        {
+          "unit_id": "u3",
+          "description": "which film was released more recently",
+          "necessary": true,
+          "depends_on": [
+            "u1",
+            "u2"
+          ],
+          "queries": [
+            "compare release dates of Toto In Hell and Girl On The Loose"
+          ],
+          "subject": ""
+        }
+      ]
+    },
+    {
+      "sequence": 7,
+      "time_s": 3.422,
+      "type": "trace_batch_requested"
+    },
+    {
+      "sequence": 8,
+      "time_s": 3.422,
+      "type": "search_finished",
+      "query": "[scheduled evidence]",
+      "subject": "",
+      "status": "ok",
+      "returned_pages": [],
+      "mode": "trace",
+      "unit_id": "__scheduled_evidence__"
+    },
+    {
+      "sequence": 9,
+      "time_s": 3.422,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d1s0",
+        "title": "News in Hell",
+        "url": "https://trace.invalid/2wikimultihopqa_e1be6152086611ebbd5eac1f6bf848b6_immediate/d1s0",
+        "text": "News in Hell is a 1959 Argentine film directed by Román Viñoly Barreto.",
+        "visible_time_s": 3.422000000005937,
+        "requested_subject": "",
+        "resolved_title": "News in Hell",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 10,
+      "time_s": 3.422,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d2s0",
+        "title": "Tremors: A Cold Day in Hell",
+        "url": "https://trace.invalid/2wikimultihopqa_e1be6152086611ebbd5eac1f6bf848b6_immediate/d2s0",
+        "text": "Tremors: A Cold Day in Hell( also known as Tremors 6 or Tremors 6: A Cold Day in Hell) is a 2018 direct- to- video monster film directed by Don Michael Paul.",
+        "visible_time_s": 3.422000000005937,
+        "requested_subject": "",
+        "resolved_title": "Tremors: A Cold Day in Hell",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 11,
+      "time_s": 3.422,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d2s1",
+        "title": "Tremors: A Cold Day in Hell",
+        "url": "https://trace.invalid/2wikimultihopqa_e1be6152086611ebbd5eac1f6bf848b6_immediate/d2s1",
+        "text": "It is the sixth film in the\" Tremors\" series of monster films.",
+        "visible_time_s": 3.422000000005937,
+        "requested_subject": "",
+        "resolved_title": "Tremors: A Cold Day in Hell",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 12,
+      "time_s": 3.422,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d2s2",
+        "title": "Tremors: A Cold Day in Hell",
+        "url": "https://trace.invalid/2wikimultihopqa_e1be6152086611ebbd5eac1f6bf848b6_immediate/d2s2",
+        "text": "The film was released on DVD and Blu-ray, as well as on Netflix on May 1, 2018.",
+        "visible_time_s": 3.422000000005937,
+        "requested_subject": "",
+        "resolved_title": "Tremors: A Cold Day in Hell",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 13,
+      "time_s": 3.422,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d3s0",
+        "title": "Toto in Madrid",
+        "url": "https://trace.invalid/2wikimultihopqa_e1be6152086611ebbd5eac1f6bf848b6_immediate/d3s0",
+        "text": "Toto in Madrid is an Italian comedy film from 1959, directed by Steno, written by Vittorio Metz, starring Totò and Louis de Funès.",
+        "visible_time_s": 3.422000000005937,
+        "requested_subject": "",
+        "resolved_title": "Toto in Madrid",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 14,
+      "time_s": 3.422,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d3s1",
+        "title": "Toto in Madrid",
+        "url": "https://trace.invalid/2wikimultihopqa_e1be6152086611ebbd5eac1f6bf848b6_immediate/d3s1",
+        "text": "The film is known under the titles:\" Toto in Madrid\"( English title),\" Totò a MadridUn coup fumant\"( France),\" La culpa fue de Eva\"( Spain).",
+        "visible_time_s": 3.422000000005937,
+        "requested_subject": "",
+        "resolved_title": "Toto in Madrid",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 15,
+      "time_s": 3.422,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d4s0",
+        "title": "Girl on the Loose",
+        "url": "https://trace.invalid/2wikimultihopqa_e1be6152086611ebbd5eac1f6bf848b6_immediate/d4s0",
+        "text": "Girl on the loose is a 1954 Hong Kong film, directed by Wang Yin.",
+        "visible_time_s": 3.422000000005937,
+        "requested_subject": "",
+        "resolved_title": "Girl on the Loose",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 16,
+      "time_s": 3.422,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d5s0",
+        "title": "Ghosts on the Loose",
+        "url": "https://trace.invalid/2wikimultihopqa_e1be6152086611ebbd5eac1f6bf848b6_immediate/d5s0",
+        "text": "Ghosts on the Loose is a 1943 American film and the fourteenth film in the East Side Kids series, directed by William Beaudine.",
+        "visible_time_s": 3.422000000005937,
+        "requested_subject": "",
+        "resolved_title": "Ghosts on the Loose",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 17,
+      "time_s": 3.422,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d5s1",
+        "title": "Ghosts on the Loose",
+        "url": "https://trace.invalid/2wikimultihopqa_e1be6152086611ebbd5eac1f6bf848b6_immediate/d5s1",
+        "text": "The film was released in the United Kingdom as Ghosts in the Night.",
+        "visible_time_s": 3.422000000005937,
+        "requested_subject": "",
+        "resolved_title": "Ghosts on the Loose",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 18,
+      "time_s": 3.422,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d6s0",
+        "title": "Das Mädchen auf dem Brett",
+        "url": "https://trace.invalid/2wikimultihopqa_e1be6152086611ebbd5eac1f6bf848b6_immediate/d6s0",
+        "text": "Das Mädchen auf dem Brett is an East German film( translates as\" The Girl on the Board\").",
+        "visible_time_s": 3.422000000005937,
+        "requested_subject": "",
+        "resolved_title": "Das Mädchen auf dem Brett",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 19,
+      "time_s": 3.422,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d6s1",
+        "title": "Das Mädchen auf dem Brett",
+        "url": "https://trace.invalid/2wikimultihopqa_e1be6152086611ebbd5eac1f6bf848b6_immediate/d6s1",
+        "text": "It was released in 1967.",
+        "visible_time_s": 3.422000000005937,
+        "requested_subject": "",
+        "resolved_title": "Das Mädchen auf dem Brett",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 20,
+      "time_s": 3.422,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d7s0",
+        "title": "Boy or Girl?",
+        "url": "https://trace.invalid/2wikimultihopqa_e1be6152086611ebbd5eac1f6bf848b6_immediate/d7s0",
+        "text": "Boy or Girl?",
+        "visible_time_s": 3.422000000005937,
+        "requested_subject": "",
+        "resolved_title": "Boy or Girl?",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 21,
+      "time_s": 3.422,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d7s1",
+        "title": "Boy or Girl?",
+        "url": "https://trace.invalid/2wikimultihopqa_e1be6152086611ebbd5eac1f6bf848b6_immediate/d7s1",
+        "text": "( Spanish: ¿ Chico o chica?) is a 1962 Mexican- Spanish musical comedy film directed by Antonio del Amo.",
+        "visible_time_s": 3.422000000005937,
+        "requested_subject": "",
+        "resolved_title": "Boy or Girl?",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 22,
+      "time_s": 3.422,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d8s0",
+        "title": "Toto in Paris",
+        "url": "https://trace.invalid/2wikimultihopqa_e1be6152086611ebbd5eac1f6bf848b6_immediate/d8s0",
+        "text": "Toto in Paris( also known as\" Totò innamorato\") is a 1958 Italian- French comedy film directed by Camillo Mastrocinque.",
+        "visible_time_s": 3.422000000005937,
+        "requested_subject": "",
+        "resolved_title": "Toto in Paris",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 23,
+      "time_s": 3.422,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d9s0",
+        "title": "Toto in Hell",
+        "url": "https://trace.invalid/2wikimultihopqa_e1be6152086611ebbd5eac1f6bf848b6_immediate/d9s0",
+        "text": "Toto in Hell is a 1955 Italian fantasy- comedy film directed by Camillo Mastrocinque.",
+        "visible_time_s": 3.422000000005937,
+        "requested_subject": "",
+        "resolved_title": "Toto in Hell",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 24,
+      "time_s": 3.422,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d9s1",
+        "title": "Toto in Hell",
+        "url": "https://trace.invalid/2wikimultihopqa_e1be6152086611ebbd5eac1f6bf848b6_immediate/d9s1",
+        "text": "Italian cult horror film director Lucio Fulci co- wrote the screenplay.",
+        "visible_time_s": 3.422000000005937,
+        "requested_subject": "",
+        "resolved_title": "Toto in Hell",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 25,
+      "time_s": 3.422,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d10s0",
+        "title": "Gehenna (1938 film)",
+        "url": "https://trace.invalid/2wikimultihopqa_e1be6152086611ebbd5eac1f6bf848b6_immediate/d10s0",
+        "text": "Gehenna, also known as Through Hell or Anguish is a 1938 Polish melodrama film directed by Michał Waszyński.",
+        "visible_time_s": 3.422000000005937,
+        "requested_subject": "",
+        "resolved_title": "Gehenna (1938 film)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 26,
+      "time_s": 4.985,
+      "type": "feedback_requested",
+      "feedback_kind": "progress",
+      "execution_state": {
+        "stage": "checking",
+        "searches_started": 1,
+        "searches_completed": 1,
+        "active_searches": 0,
+        "evidence_count": 17,
+        "supported_units": 0,
+        "output_units": 0
+      }
+    },
+    {
+      "sequence": 27,
+      "time_s": 5.469,
+      "type": "judge_reply",
+      "reply": {
+        "judgments": [
+          {
+            "unit_id": "u1",
+            "label": "SUPPORTED",
+            "value": "1955",
+            "citations": [
+              "d9s0"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d9s0",
+                "text": "Toto in Hell is a 1955 Italian fantasy- comedy film directed by Camillo Mastrocinque."
+              }
+            ],
+            "reason": "Supported by the cited visible sentences and dependencies."
+          },
+          {
+            "unit_id": "u2",
+            "label": "SUPPORTED",
+            "value": "1954",
+            "citations": [
+              "d4s0"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d4s0",
+                "text": "Girl on the loose is a 1954 Hong Kong film, directed by Wang Yin."
+              }
+            ],
+            "reason": "Supported by the cited visible sentences and dependencies."
+          },
+          {
+            "unit_id": "u3",
+            "label": "SUPPORTED",
+            "value": "Toto In Hell",
+            "citations": [
+              "d9s0",
+              "d4s0"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d9s0",
+                "text": "Toto in Hell is a 1955 Italian fantasy- comedy film directed by Camillo Mastrocinque."
+              },
+              {
+                "evidence_id": "d4s0",
+                "text": "Girl on the loose is a 1954 Hong Kong film, directed by Wang Yin."
+              }
+            ],
+            "reason": "Supported by the cited visible sentences and dependencies."
+          }
+        ]
+      },
+      "attempt": 1,
+      "repair": false,
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d2s0",
+        "d2s1",
+        "d2s2",
+        "d3s0",
+        "d3s1",
+        "d4s0",
+        "d5s0",
+        "d5s1",
+        "d6s0",
+        "d6s1",
+        "d7s0",
+        "d7s1",
+        "d8s0",
+        "d9s0",
+        "d9s1",
+        "d10s0"
+      ]
+    },
+    {
+      "sequence": 28,
+      "time_s": 5.469,
+      "type": "judgments",
+      "judgments": {
+        "u1": {
+          "label": "SUPPORTED",
+          "value": "1955",
+          "citations": [
+            "d9s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d9s0",
+              "text": "Toto in Hell is a 1955 Italian fantasy- comedy film directed by Camillo Mastrocinque."
+            }
+          ],
+          "reason": "Supported by the cited visible sentences and dependencies."
+        },
+        "u2": {
+          "label": "SUPPORTED",
+          "value": "1954",
+          "citations": [
+            "d4s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d4s0",
+              "text": "Girl on the loose is a 1954 Hong Kong film, directed by Wang Yin."
+            }
+          ],
+          "reason": "Supported by the cited visible sentences and dependencies."
+        },
+        "u3": {
+          "label": "SUPPORTED",
+          "value": "Toto In Hell",
+          "citations": [
+            "d9s0",
+            "d4s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d9s0",
+              "text": "Toto in Hell is a 1955 Italian fantasy- comedy film directed by Camillo Mastrocinque."
+            },
+            {
+              "evidence_id": "d4s0",
+              "text": "Girl on the loose is a 1954 Hong Kong film, directed by Wang Yin."
+            }
+          ],
+          "reason": "Supported by the cited visible sentences and dependencies."
+        }
+      },
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d2s0",
+        "d2s1",
+        "d2s2",
+        "d3s0",
+        "d3s1",
+        "d4s0",
+        "d5s0",
+        "d5s1",
+        "d6s0",
+        "d6s1",
+        "d7s0",
+        "d7s1",
+        "d8s0",
+        "d9s0",
+        "d9s1",
+        "d10s0"
+      ],
+      "semantic_review": false
+    },
+    {
+      "sequence": 29,
+      "time_s": 7.625,
+      "type": "verification_reply",
+      "reply": {
+        "approved": true,
+        "facts_valid": true,
+        "expressed_unit_ids": [
+          "u1",
+          "u2",
+          "u3"
+        ],
+        "reason": "All statements are supported by the provided citations and match the requested units."
+      },
+      "output_unit_ids": [
+        "u1",
+        "u2",
+        "u3"
+      ],
+      "output_action": "Final Answer",
+      "dependency_unit_ids": [],
+      "evidence_snapshot_ids": [
+        "d4s0",
+        "d9s0"
+      ]
+    },
+    {
+      "sequence": 30,
+      "time_s": 7.625,
+      "type": "utterance",
+      "action": "Final Answer",
+      "text": "Toto In Hell was released in 1955. Girl On The Loose was released in 1954. Therefore, Toto In Hell was released more recently.",
+      "claims": [
+        {
+          "unit_id": "u1",
+          "description": "release date of Toto In Hell",
+          "value": "1955",
+          "citations": [
+            "d9s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d9s0",
+              "text": "Toto in Hell is a 1955 Italian fantasy- comedy film directed by Camillo Mastrocinque."
+            }
+          ]
+        },
+        {
+          "unit_id": "u2",
+          "description": "release date of Girl On The Loose",
+          "value": "1954",
+          "citations": [
+            "d4s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d4s0",
+              "text": "Girl on the loose is a 1954 Hong Kong film, directed by Wang Yin."
+            }
+          ]
+        },
+        {
+          "unit_id": "u3",
+          "description": "which film was released more recently",
+          "value": "Toto In Hell",
+          "citations": [
+            "d9s0",
+            "d4s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d9s0",
+              "text": "Toto in Hell is a 1955 Italian fantasy- comedy film directed by Camillo Mastrocinque."
+            },
+            {
+              "evidence_id": "d4s0",
+              "text": "Girl on the loose is a 1954 Hong Kong film, directed by Wang Yin."
+            }
+          ]
+        }
+      ],
+      "unresolved": [],
+      "fallback": false,
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d2s0",
+        "d2s1",
+        "d2s2",
+        "d3s0",
+        "d3s1",
+        "d4s0",
+        "d5s0",
+        "d5s1",
+        "d6s0",
+        "d6s1",
+        "d7s0",
+        "d7s1",
+        "d8s0",
+        "d9s0",
+        "d9s1",
+        "d10s0"
+      ],
+      "language": "en"
+    },
+    {
+      "sequence": 31,
+      "time_s": 7.625,
+      "type": "finished",
+      "status": "complete"
+    }
+  ],
+  "note": "Prototype model judgments are not independent gold scores. Output event times are not spoken claim times.",
+  "evidence_mode": "scheduled_trace",
+  "audio": {
+    "enabled": true,
+    "mode": "windows",
+    "play": false,
+    "status": "ok",
+    "errors": [],
+    "records": [
+      {
+        "event_sequence": 3,
+        "sentence_index": 1,
+        "sentence_count": 1,
+        "language": "en",
+        "text": "I see you're asking which film, Toto In Hell or Girl On The Loose, was released more recently.",
+        "action": "Backchannel",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 1.8279999999940628,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1-continued\\samples\\0406\\audio\\segments\\0003_01.wav",
+        "duration_s": 6.578185941043084,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 2.6410000000032596,
+        "synthesis_and_playback_s": 0.8130000000091968
+      },
+      {
+        "event_sequence": 30,
+        "sentence_index": 1,
+        "sentence_count": 3,
+        "language": "en",
+        "text": "Toto In Hell was released in 1955.",
+        "action": "Final Answer",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 7.625,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1-continued\\samples\\0406\\audio\\segments\\0030_01.wav",
+        "duration_s": 3.6638548752834468,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 8.437999999994645,
+        "synthesis_and_playback_s": 0.8129999999946449
+      },
+      {
+        "event_sequence": 30,
+        "sentence_index": 2,
+        "sentence_count": 3,
+        "language": "en",
+        "text": "Girl On The Loose was released in 1954.",
+        "action": "Final Answer",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 8.437999999994645,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1-continued\\samples\\0406\\audio\\segments\\0030_02.wav",
+        "duration_s": 3.643764172335601,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 9.218999999997322,
+        "synthesis_and_playback_s": 0.7810000000026776
+      },
+      {
+        "event_sequence": 30,
+        "sentence_index": 3,
+        "sentence_count": 3,
+        "language": "en",
+        "text": "Therefore, Toto In Hell was released more recently.",
+        "action": "Final Answer",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 9.218999999997322,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1-continued\\samples\\0406\\audio\\segments\\0030_03.wav",
+        "duration_s": 3.9838548752834466,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 10.01600000000326,
+        "synthesis_and_playback_s": 0.7970000000059372
+      }
+    ],
+    "wave": {
+      "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1-continued\\samples\\0406\\audio\\response.wav",
+      "duration_s": 20.510657596371882,
+      "timeline": [
+        {
+          "event_sequence": 3,
+          "sentence_index": 1,
+          "action": "Backchannel",
+          "text": "I see you're asking which film, Toto In Hell or Girl On The Loose, was released more recently.",
+          "wave_start_s": 2.6409977324263036,
+          "wave_end_s": 9.219183673469388
+        },
+        {
+          "event_sequence": 30,
+          "sentence_index": 1,
+          "action": "Final Answer",
+          "text": "Toto In Hell was released in 1955.",
+          "wave_start_s": 9.219183673469388,
+          "wave_end_s": 12.883038548752834
+        },
+        {
+          "event_sequence": 30,
+          "sentence_index": 2,
+          "action": "Final Answer",
+          "text": "Girl On The Loose was released in 1954.",
+          "wave_start_s": 12.883038548752834,
+          "wave_end_s": 16.526802721088437
+        },
+        {
+          "event_sequence": 30,
+          "sentence_index": 3,
+          "action": "Final Answer",
+          "text": "Therefore, Toto In Hell was released more recently.",
+          "wave_start_s": 16.526802721088437,
+          "wave_end_s": 20.510657596371882
+        }
+      ]
+    }
+  },
+  "evaluation": {
+    "mode": "b_final_revised_trace",
+    "trace_id": "2wikimultihopqa_e1be6152086611ebbd5eac1f6bf848b6_immediate",
+    "sample_id": "2wikimultihopqa_e1be6152086611ebbd5eac1f6bf848b6",
+    "total_wall_s": 10.01600000000326,
+    "question_timeout_s": 180,
+    "audio_enabled": true,
+    "history_enabled": false,
+    "text_pipeline_wall_s": 7.625,
+    "effective_settings": {
+      "base_url": "https://tinker.thinkingmachines.dev/services/tinker-prod/oai/api/v1",
+      "model": "openai/gpt-oss-120b",
+      "judge_model": "tinker://f9e9a6c1-e203-5c2c-acdd-68fe67378ca4:train:0/sampler_weights/epoch-0001",
+      "judge_reasoning_effort": "low",
+      "wiki_language": "en",
+      "user_agent": "CascadeSystem/0.1 (educational research prototype)",
+      "timeout_s": 45.0,
+      "max_tokens": 4096,
+      "reasoning_effort": "low",
+      "progress_s": 3.0,
+      "feedback_timeout_s": 6.0,
+      "search_limit": 3,
+      "max_units": 8,
+      "max_searches": 16,
+      "max_sources": 17,
+      "source_chars": 157,
+      "evidence_chars": 1510,
+      "concurrency": 3
+    },
+    "timing_kind": "unknown",
+    "scheduler": "wall-paced fixed B arrivals",
+    "split": "eval_reserved",
+    "empty_evidence_sentences_ignored": 0
+  }
+}

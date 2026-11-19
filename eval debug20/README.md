@@ -225,7 +225,9 @@ not changes to B's reference answers or scoring rules.
 - `b_eval/run_scores.jsonl`, `claim_scores.jsonl`, `review_queue.jsonl`, and
   `validation_issues.jsonl`: score details and pending mappings.
 
-All generated data, results, and cached evaluator files are ignored by Git.
+Run records, reports, transcripts, and audio under `artifacts/runs/` are tracked
+in Git, preserving their original bytes. Generated inputs, cached evaluators,
+other artifact directories, and Python bytecode remain ignored.
 
 An optional offline review, created separately when requested, can live under
 `artifacts/runs/<run>/answer_audit_<date>/`: `report.md` explains the findings,
@@ -252,7 +254,7 @@ not establish correct answers.
 | `tests/test_debug20.py` | Fictional offline tests for isolation, arrival times, mappings, support, errors, and source integrity. |
 | `tests/test_audio.py` | Offline synthetic-WAV tests for incremental speech, playback draining, cancellation, failures and question limits. |
 | `tests/test_claim_context.py` | Fictional checks for shared values, comparison conclusions, conservative utterance context and unknown speech times. |
-| `.gitignore` | Excludes generated inputs, results, cached code, and bytecode. |
+| `.gitignore` | Tracks run artifacts; excludes generated inputs, cached code, and bytecode. |
 
 Offline tests, without Tinker calls or benchmark-question access:
 

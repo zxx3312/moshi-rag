@@ -1,0 +1,2116 @@
+{
+  "question": "Are director of film Priest (2011 Film) and director of film Black Sun (2005 Film) from the same country?",
+  "resolved_question": "Are director of film Priest (2011 Film) and director of film Black Sun (2005 Film) from the same country?",
+  "used_history_turn_ids": [],
+  "response_language": "en",
+  "status": "incomplete",
+  "clock": "wall_monotonic",
+  "time_origin": "question_text_ready_after_optional_asr",
+  "model": "openai/gpt-oss-120b",
+  "judge_model": "tinker://f9e9a6c1-e203-5c2c-acdd-68fe67378ca4:train:0/sampler_weights/epoch-0001",
+  "units": [
+    {
+      "unit_id": "u1",
+      "description": "director of film Priest (2011 Film)",
+      "necessary": false,
+      "depends_on": [],
+      "queries": [
+        "Priest 2011 film director",
+        "Priest (2011) film director"
+      ],
+      "subject": "Priest (2011 film)"
+    },
+    {
+      "unit_id": "u2",
+      "description": "director of film Black Sun (2005 Film)",
+      "necessary": false,
+      "depends_on": [],
+      "queries": [
+        "Black Sun 2005 film director",
+        "Black Sun (2005) film director"
+      ],
+      "subject": "Black Sun (2005 film)"
+    },
+    {
+      "unit_id": "u3",
+      "description": "nationality of {u1}",
+      "necessary": false,
+      "depends_on": [
+        "u1"
+      ],
+      "queries": [
+        "{u1} nationality",
+        "{u1} citizenship"
+      ],
+      "subject": "{u1}"
+    },
+    {
+      "unit_id": "u4",
+      "description": "nationality of {u2}",
+      "necessary": false,
+      "depends_on": [
+        "u2"
+      ],
+      "queries": [
+        "{u2} nationality",
+        "{u2} citizenship"
+      ],
+      "subject": "{u2}"
+    },
+    {
+      "unit_id": "u5",
+      "description": "whether the directors of Priest (2011 Film) and Black Sun (2005 Film) are from the same country",
+      "necessary": true,
+      "depends_on": [
+        "u3",
+        "u4"
+      ],
+      "queries": [
+        "Are the nationalities of the directors of Priest (2011 film) and Black Sun (2005 film) the same?"
+      ],
+      "subject": ""
+    }
+  ],
+  "judgments": {
+    "u1": {
+      "label": "SUPPORTED",
+      "value": "Scott Stewart",
+      "citations": [
+        "d1s0"
+      ],
+      "quotes": [
+        {
+          "evidence_id": "d1s0",
+          "text": "Priest is a 2011 American action horror film directed by Scott Stewart and stars Paul Bettany as the title character."
+        }
+      ],
+      "reason": "Supported by the cited visible sentences and dependencies."
+    },
+    "u2": {
+      "label": "SUPPORTED",
+      "value": "Gary Tarn",
+      "citations": [
+        "d4s0"
+      ],
+      "quotes": [
+        {
+          "evidence_id": "d4s0",
+          "text": "Black Sun is a documentary film directed by Gary Tarn."
+        }
+      ],
+      "reason": "Supported by the cited visible sentences and dependencies."
+    },
+    "u3": {
+      "label": "UNRESOLVED",
+      "value": "",
+      "citations": [],
+      "quotes": [],
+      "reason": "Rejected entity identity: citation concerns an ambiguous or differently qualified namesake"
+    },
+    "u4": {
+      "label": "SUPPORTED",
+      "value": "British",
+      "citations": [
+        "d5s0"
+      ],
+      "quotes": [
+        {
+          "evidence_id": "d5s0",
+          "text": "Gary Tarn( born 1962) is a British filmmaker and composer."
+        }
+      ],
+      "reason": "Supported by the cited visible sentences and dependencies."
+    },
+    "u5": {
+      "label": "UNRESOLVED",
+      "value": "",
+      "citations": [],
+      "quotes": [],
+      "reason": "Dependency is not supported"
+    }
+  },
+  "evidence": [
+    {
+      "evidence_id": "d1s0",
+      "title": "Priest (2011 film)",
+      "url": "https://trace.invalid/2wikimultihopqa_80b2c79408b711ebbd88ac1f6bf848b6_short/d1s0",
+      "text": "Priest is a 2011 American action horror film directed by Scott Stewart and stars Paul Bettany as the title character.",
+      "visible_time_s": 6.077999999994063,
+      "requested_subject": "",
+      "resolved_title": "Priest (2011 film)",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d1s1",
+      "title": "Priest (2011 film)",
+      "url": "https://trace.invalid/2wikimultihopqa_80b2c79408b711ebbd88ac1f6bf848b6_short/d1s1",
+      "text": "It is loosely based on the Korean comic of the same name by Hyung Min-woo.",
+      "visible_time_s": 6.077999999994063,
+      "requested_subject": "",
+      "resolved_title": "Priest (2011 film)",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d1s2",
+      "title": "Priest (2011 film)",
+      "url": "https://trace.invalid/2wikimultihopqa_80b2c79408b711ebbd88ac1f6bf848b6_short/d1s2",
+      "text": "In an alternate universe, humanity and vampires have warred for centuries.",
+      "visible_time_s": 6.077999999994063,
+      "requested_subject": "",
+      "resolved_title": "Priest (2011 film)",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d1s3",
+      "title": "Priest (2011 film)",
+      "url": "https://trace.invalid/2wikimultihopqa_80b2c79408b711ebbd88ac1f6bf848b6_short/d1s3",
+      "text": "After the last Vampire War, a veteran Warrior Priest lives in obscurity until his niece( Lily Collins) is kidnapped by vampires.",
+      "visible_time_s": 6.077999999994063,
+      "requested_subject": "",
+      "resolved_title": "Priest (2011 film)",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d1s4",
+      "title": "Priest (2011 film)",
+      "url": "https://trace.invalid/2wikimultihopqa_80b2c79408b711ebbd88ac1f6bf848b6_short/d1s4",
+      "text": "The film was released on, 2011.",
+      "visible_time_s": 6.077999999994063,
+      "requested_subject": "",
+      "resolved_title": "Priest (2011 film)",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d1s5",
+      "title": "Priest (2011 film)",
+      "url": "https://trace.invalid/2wikimultihopqa_80b2c79408b711ebbd88ac1f6bf848b6_short/d1s5",
+      "text": "The film earned over$ 78 million at the box office against a$ 60 million production budget, but it was panned by critics, who praised the film's visual style and art direction while criticising the movie's use of genre clichés, writing, acting, editing and action scenes — although, some of its action scenes were praised.",
+      "visible_time_s": 6.077999999994063,
+      "requested_subject": "",
+      "resolved_title": "Priest (2011 film)",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d2s0",
+      "title": "Brian Johnson (special effects artist)",
+      "url": "https://trace.invalid/2wikimultihopqa_80b2c79408b711ebbd88ac1f6bf848b6_short/d2s0",
+      "text": "Brian Johnson( born 1939 or 1940) is a British designer and director of film and television special effects.",
+      "visible_time_s": 6.077999999994063,
+      "requested_subject": "",
+      "resolved_title": "Brian Johnson (special effects artist)",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d4s0",
+      "title": "Black Sun (2005 film)",
+      "url": "https://trace.invalid/2wikimultihopqa_80b2c79408b711ebbd88ac1f6bf848b6_short/d4s0",
+      "text": "Black Sun is a documentary film directed by Gary Tarn.",
+      "visible_time_s": 6.077999999994063,
+      "requested_subject": "",
+      "resolved_title": "Black Sun (2005 film)",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d4s1",
+      "title": "Black Sun (2005 film)",
+      "url": "https://trace.invalid/2wikimultihopqa_80b2c79408b711ebbd88ac1f6bf848b6_short/d4s1",
+      "text": "The film premiered at the Toronto International Film Festival in 2005.",
+      "visible_time_s": 6.077999999994063,
+      "requested_subject": "",
+      "resolved_title": "Black Sun (2005 film)",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d4s2",
+      "title": "Black Sun (2005 film)",
+      "url": "https://trace.invalid/2wikimultihopqa_80b2c79408b711ebbd88ac1f6bf848b6_short/d4s2",
+      "text": "Gary Tarn explores the story of Hugues de Montalembert, a New York-based artist and filmmaker who was blinded by a vicious, unprovoked attack by two young assailants in 1978.",
+      "visible_time_s": 6.077999999994063,
+      "requested_subject": "",
+      "resolved_title": "Black Sun (2005 film)",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d4s3",
+      "title": "Black Sun (2005 film)",
+      "url": "https://trace.invalid/2wikimultihopqa_80b2c79408b711ebbd88ac1f6bf848b6_short/d4s3",
+      "text": "After the attack, Montalembert learned to cope with his despair and to go through life a new way, seeking to make ordinary things extraordinary.",
+      "visible_time_s": 6.077999999994063,
+      "requested_subject": "",
+      "resolved_title": "Black Sun (2005 film)",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d4s4",
+      "title": "Black Sun (2005 film)",
+      "url": "https://trace.invalid/2wikimultihopqa_80b2c79408b711ebbd88ac1f6bf848b6_short/d4s4",
+      "text": "Defying expectation, this remarkable artist continued to travel the world alone, learning to navigate life in a new and beautiful way.",
+      "visible_time_s": 6.077999999994063,
+      "requested_subject": "",
+      "resolved_title": "Black Sun (2005 film)",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d4s5",
+      "title": "Black Sun (2005 film)",
+      "url": "https://trace.invalid/2wikimultihopqa_80b2c79408b711ebbd88ac1f6bf848b6_short/d4s5",
+      "text": "Through creative imagery and philosophical narration, director and composer Gary Tarn creates an expressionist, poetic meditation both on an extraordinary life without vision, and on the idea of perception in general.",
+      "visible_time_s": 6.077999999994063,
+      "requested_subject": "",
+      "resolved_title": "Black Sun (2005 film)",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d6s0",
+      "title": "Howard W. Koch",
+      "url": "https://trace.invalid/2wikimultihopqa_80b2c79408b711ebbd88ac1f6bf848b6_short/d6s0",
+      "text": "Howard Winchel Koch( April 11, 1916 – February 16, 2001) was an American producer and director of film and television.",
+      "visible_time_s": 6.077999999994063,
+      "requested_subject": "",
+      "resolved_title": "Howard W. Koch",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d9s0",
+      "title": "Peter Levin",
+      "url": "https://trace.invalid/2wikimultihopqa_80b2c79408b711ebbd88ac1f6bf848b6_short/d9s0",
+      "text": "Peter Levin is an American director of film, television and theatre.",
+      "visible_time_s": 6.077999999994063,
+      "requested_subject": "",
+      "resolved_title": "Peter Levin",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d3s0",
+      "title": "Ian Barry (director)",
+      "url": "https://trace.invalid/2wikimultihopqa_80b2c79408b711ebbd88ac1f6bf848b6_short/d3s0",
+      "text": "Ian Barry is an Australian director of film and TV.",
+      "visible_time_s": 6.077999999994063,
+      "requested_subject": "",
+      "resolved_title": "Ian Barry (director)",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d5s0",
+      "title": "Gary Tarn",
+      "url": "https://trace.invalid/2wikimultihopqa_80b2c79408b711ebbd88ac1f6bf848b6_short/d5s0",
+      "text": "Gary Tarn( born 1962) is a British filmmaker and composer.",
+      "visible_time_s": 6.077999999994063,
+      "requested_subject": "",
+      "resolved_title": "Gary Tarn",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d7s0",
+      "title": "Rachel Feldman",
+      "url": "https://trace.invalid/2wikimultihopqa_80b2c79408b711ebbd88ac1f6bf848b6_short/d7s0",
+      "text": "Rachel Feldman( born August 22, 1954) is an American director of film and television and screenwriter of television films.",
+      "visible_time_s": 6.077999999994063,
+      "requested_subject": "",
+      "resolved_title": "Rachel Feldman",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d8s0",
+      "title": "Scott Stewart (director)",
+      "url": "https://trace.invalid/2wikimultihopqa_80b2c79408b711ebbd88ac1f6bf848b6_short/d8s0",
+      "text": "Scott Charles Stewart is an American filmmaker and visual effects artist.",
+      "visible_time_s": 6.077999999994063,
+      "requested_subject": "",
+      "resolved_title": "Scott Stewart (director)",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d8s1",
+      "title": "Scott Stewart (director)",
+      "url": "https://trace.invalid/2wikimultihopqa_80b2c79408b711ebbd88ac1f6bf848b6_short/d8s1",
+      "text": "He was one of the principal co-founders of The Orphanage, a prolific Los Angeles effects house that worked on dozens of high- profile projects.",
+      "visible_time_s": 6.077999999994063,
+      "requested_subject": "",
+      "resolved_title": "Scott Stewart (director)",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d8s2",
+      "title": "Scott Stewart (director)",
+      "url": "https://trace.invalid/2wikimultihopqa_80b2c79408b711ebbd88ac1f6bf848b6_short/d8s2",
+      "text": "As a director, he helmed the dark fantasy action- horror films\" Legion\" and\" Priest\", and the alien abduction thriller\" Dark Skies\".",
+      "visible_time_s": 6.077999999994063,
+      "requested_subject": "",
+      "resolved_title": "Scott Stewart (director)",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d8s3",
+      "title": "Scott Stewart (director)",
+      "url": "https://trace.invalid/2wikimultihopqa_80b2c79408b711ebbd88ac1f6bf848b6_short/d8s3",
+      "text": "He also executive produced the television series\" Dominion\", a sequel to the former film.",
+      "visible_time_s": 6.077999999994063,
+      "requested_subject": "",
+      "resolved_title": "Scott Stewart (director)",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d8s4",
+      "title": "Scott Stewart (director)",
+      "url": "https://trace.invalid/2wikimultihopqa_80b2c79408b711ebbd88ac1f6bf848b6_short/d8s4",
+      "text": "Stewart has also directed, produced, and realized dozens of short films and television commercials.",
+      "visible_time_s": 6.077999999994063,
+      "requested_subject": "",
+      "resolved_title": "Scott Stewart (director)",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d10s0",
+      "title": "Hanro Smitsman",
+      "url": "https://trace.invalid/2wikimultihopqa_80b2c79408b711ebbd88ac1f6bf848b6_short/d10s0",
+      "text": "Hanro Smitsman, born in 1967 in Breda( Netherlands), is a writer and director of film and television.",
+      "visible_time_s": 6.077999999994063,
+      "requested_subject": "",
+      "resolved_title": "Hanro Smitsman",
+      "entity_resolution": "unspecified"
+    }
+  ],
+  "searches": [
+    {
+      "query": "[scheduled evidence]",
+      "subject": "",
+      "status": "ok",
+      "returned_pages": [],
+      "mode": "trace",
+      "unit_id": "__scheduled_evidence__"
+    },
+    {
+      "query": "[scheduled evidence]",
+      "subject": "",
+      "status": "ok",
+      "returned_pages": [],
+      "mode": "trace",
+      "unit_id": "__scheduled_evidence__"
+    }
+  ],
+  "search_failures": [],
+  "llm_calls": [
+    {
+      "purpose": "feedback_generate",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 419,
+        "completion_tokens": 65,
+        "total_tokens": 484,
+        "prompt_tokens_details": {
+          "cached_tokens": 384
+        }
+      },
+      "latency_s": 1.375
+    },
+    {
+      "purpose": "feedback_verify",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 378,
+        "completion_tokens": 68,
+        "total_tokens": 446,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        }
+      },
+      "latency_s": 0.734
+    },
+    {
+      "purpose": "decompose",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 809,
+        "completion_tokens": 452,
+        "total_tokens": 1261,
+        "prompt_tokens_details": {
+          "cached_tokens": 768
+        }
+      },
+      "latency_s": 2.609
+    },
+    {
+      "purpose": "feedback_generate",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 419,
+        "completion_tokens": 62,
+        "total_tokens": 481,
+        "prompt_tokens_details": {
+          "cached_tokens": 384
+        }
+      },
+      "latency_s": 0.687
+    },
+    {
+      "purpose": "plan_review",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 1208,
+        "completion_tokens": 621,
+        "total_tokens": 1829,
+        "prompt_tokens_details": {
+          "cached_tokens": 896
+        }
+      },
+      "latency_s": 3.469
+    },
+    {
+      "purpose": "feedback_verify",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 361,
+        "completion_tokens": 68,
+        "total_tokens": 429,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        }
+      },
+      "latency_s": 1.969
+    },
+    {
+      "purpose": "judge",
+      "model": "tinker://f9e9a6c1-e203-5c2c-acdd-68fe67378ca4:train:0/sampler_weights/epoch-0001",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 4789,
+        "completion_tokens": 438,
+        "total_tokens": 5227,
+        "prompt_tokens_details": {
+          "cached_tokens": 1024
+        }
+      },
+      "latency_s": 2.375
+    },
+    {
+      "purpose": "generate",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 947,
+        "completion_tokens": 145,
+        "total_tokens": 1092,
+        "prompt_tokens_details": {
+          "cached_tokens": 384
+        }
+      },
+      "latency_s": 1.328
+    },
+    {
+      "purpose": "verify",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 1453,
+        "completion_tokens": 144,
+        "total_tokens": 1597,
+        "prompt_tokens_details": {
+          "cached_tokens": 640
+        }
+      },
+      "latency_s": 2.235
+    },
+    {
+      "purpose": "judge",
+      "model": "tinker://f9e9a6c1-e203-5c2c-acdd-68fe67378ca4:train:0/sampler_weights/epoch-0001",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 5107,
+        "completion_tokens": 438,
+        "total_tokens": 5545,
+        "prompt_tokens_details": {
+          "cached_tokens": 1152
+        }
+      },
+      "latency_s": 2.39
+    }
+  ],
+  "search_diagnostics": [],
+  "output_enqueued_units": {
+    "u1": "Scott Stewart",
+    "u2": "Gary Tarn",
+    "u4": "British"
+  },
+  "events": [
+    {
+      "sequence": 0,
+      "time_s": 0.0,
+      "type": "feedback_requested",
+      "feedback_kind": "opening",
+      "execution_state": {
+        "stage": "planning",
+        "searches_started": 0,
+        "searches_completed": 0,
+        "active_searches": 0,
+        "evidence_count": 0,
+        "supported_units": 0,
+        "output_units": 0
+      }
+    },
+    {
+      "sequence": 1,
+      "time_s": 2.109,
+      "type": "utterance",
+      "action": "Backchannel",
+      "text": "Got it—checking whether the directors of Priest (2011) and Black Sun (2005) share the same nationality.",
+      "claims": [],
+      "feedback_source": "model",
+      "feedback_status_claim": "intent",
+      "feedback_fallback_reason": "",
+      "execution_state": {
+        "stage": "planning",
+        "searches_started": 0,
+        "searches_completed": 0,
+        "active_searches": 0,
+        "evidence_count": 0,
+        "supported_units": 0,
+        "output_units": 0
+      },
+      "language": "en"
+    },
+    {
+      "sequence": 2,
+      "time_s": 2.609,
+      "type": "decompose_reply",
+      "reply": {
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "director of film Priest (2011 Film)",
+            "subject": "Priest (2011 film)",
+            "necessary": false,
+            "depends_on": [],
+            "queries": [
+              "Priest 2011 film director"
+            ]
+          },
+          {
+            "unit_id": "u2",
+            "description": "director of film Black Sun (2005 Film)",
+            "subject": "Black Sun (2005 film)",
+            "necessary": false,
+            "depends_on": [],
+            "queries": [
+              "Black Sun 2005 film director"
+            ]
+          },
+          {
+            "unit_id": "u3",
+            "description": "nationality of {u1}",
+            "subject": "{u1}",
+            "necessary": false,
+            "depends_on": [
+              "u1"
+            ],
+            "queries": [
+              "{u1} nationality"
+            ]
+          },
+          {
+            "unit_id": "u4",
+            "description": "nationality of {u2}",
+            "subject": "{u2}",
+            "necessary": false,
+            "depends_on": [
+              "u2"
+            ],
+            "queries": [
+              "{u2} nationality"
+            ]
+          },
+          {
+            "unit_id": "u5",
+            "description": "whether the directors of Priest (2011 Film) and Black Sun (2005 Film) are from the same country",
+            "subject": "",
+            "necessary": true,
+            "depends_on": [
+              "u3",
+              "u4"
+            ],
+            "queries": [
+              "Are the nationalities of the directors of Priest (2011 film) and Black Sun (2005 film) the same?"
+            ]
+          }
+        ]
+      },
+      "attempt": 1,
+      "repair": false
+    },
+    {
+      "sequence": 3,
+      "time_s": 2.609,
+      "type": "plan_review_requested",
+      "max_reviews": 1,
+      "question_only": true
+    },
+    {
+      "sequence": 4,
+      "time_s": 5.266,
+      "type": "feedback_requested",
+      "feedback_kind": "progress",
+      "execution_state": {
+        "stage": "planning",
+        "searches_started": 0,
+        "searches_completed": 0,
+        "active_searches": 0,
+        "evidence_count": 0,
+        "supported_units": 0,
+        "output_units": 0
+      }
+    },
+    {
+      "sequence": 5,
+      "time_s": 6.078,
+      "type": "plan_review_reply",
+      "reply": {
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "director of film Priest (2011 Film)",
+            "subject": "Priest (2011 film)",
+            "necessary": false,
+            "depends_on": [],
+            "queries": [
+              "Priest 2011 film director",
+              "Priest (2011) film director"
+            ]
+          },
+          {
+            "unit_id": "u2",
+            "description": "director of film Black Sun (2005 Film)",
+            "subject": "Black Sun (2005 film)",
+            "necessary": false,
+            "depends_on": [],
+            "queries": [
+              "Black Sun 2005 film director",
+              "Black Sun (2005) film director"
+            ]
+          },
+          {
+            "unit_id": "u3",
+            "description": "nationality of {u1}",
+            "subject": "{u1}",
+            "necessary": false,
+            "depends_on": [
+              "u1"
+            ],
+            "queries": [
+              "{u1} nationality",
+              "{u1} citizenship"
+            ]
+          },
+          {
+            "unit_id": "u4",
+            "description": "nationality of {u2}",
+            "subject": "{u2}",
+            "necessary": false,
+            "depends_on": [
+              "u2"
+            ],
+            "queries": [
+              "{u2} nationality",
+              "{u2} citizenship"
+            ]
+          },
+          {
+            "unit_id": "u5",
+            "description": "whether the directors of Priest (2011 Film) and Black Sun (2005 Film) are from the same country",
+            "subject": "",
+            "necessary": true,
+            "depends_on": [
+              "u3",
+              "u4"
+            ],
+            "queries": [
+              "Are the nationalities of the directors of Priest (2011 film) and Black Sun (2005 film) the same?"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "sequence": 6,
+      "time_s": 6.078,
+      "type": "plan_review_finished",
+      "changed": true,
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "director of film Priest (2011 Film)",
+          "necessary": false,
+          "depends_on": [],
+          "queries": [
+            "Priest 2011 film director",
+            "Priest (2011) film director"
+          ],
+          "subject": "Priest (2011 film)"
+        },
+        {
+          "unit_id": "u2",
+          "description": "director of film Black Sun (2005 Film)",
+          "necessary": false,
+          "depends_on": [],
+          "queries": [
+            "Black Sun 2005 film director",
+            "Black Sun (2005) film director"
+          ],
+          "subject": "Black Sun (2005 film)"
+        },
+        {
+          "unit_id": "u3",
+          "description": "nationality of {u1}",
+          "necessary": false,
+          "depends_on": [
+            "u1"
+          ],
+          "queries": [
+            "{u1} nationality",
+            "{u1} citizenship"
+          ],
+          "subject": "{u1}"
+        },
+        {
+          "unit_id": "u4",
+          "description": "nationality of {u2}",
+          "necessary": false,
+          "depends_on": [
+            "u2"
+          ],
+          "queries": [
+            "{u2} nationality",
+            "{u2} citizenship"
+          ],
+          "subject": "{u2}"
+        },
+        {
+          "unit_id": "u5",
+          "description": "whether the directors of Priest (2011 Film) and Black Sun (2005 Film) are from the same country",
+          "necessary": true,
+          "depends_on": [
+            "u3",
+            "u4"
+          ],
+          "queries": [
+            "Are the nationalities of the directors of Priest (2011 film) and Black Sun (2005 film) the same?"
+          ],
+          "subject": ""
+        }
+      ],
+      "question_only": true
+    },
+    {
+      "sequence": 7,
+      "time_s": 6.078,
+      "type": "plan",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "director of film Priest (2011 Film)",
+          "necessary": false,
+          "depends_on": [],
+          "queries": [
+            "Priest 2011 film director",
+            "Priest (2011) film director"
+          ],
+          "subject": "Priest (2011 film)"
+        },
+        {
+          "unit_id": "u2",
+          "description": "director of film Black Sun (2005 Film)",
+          "necessary": false,
+          "depends_on": [],
+          "queries": [
+            "Black Sun 2005 film director",
+            "Black Sun (2005) film director"
+          ],
+          "subject": "Black Sun (2005 film)"
+        },
+        {
+          "unit_id": "u3",
+          "description": "nationality of {u1}",
+          "necessary": false,
+          "depends_on": [
+            "u1"
+          ],
+          "queries": [
+            "{u1} nationality",
+            "{u1} citizenship"
+          ],
+          "subject": "{u1}"
+        },
+        {
+          "unit_id": "u4",
+          "description": "nationality of {u2}",
+          "necessary": false,
+          "depends_on": [
+            "u2"
+          ],
+          "queries": [
+            "{u2} nationality",
+            "{u2} citizenship"
+          ],
+          "subject": "{u2}"
+        },
+        {
+          "unit_id": "u5",
+          "description": "whether the directors of Priest (2011 Film) and Black Sun (2005 Film) are from the same country",
+          "necessary": true,
+          "depends_on": [
+            "u3",
+            "u4"
+          ],
+          "queries": [
+            "Are the nationalities of the directors of Priest (2011 film) and Black Sun (2005 film) the same?"
+          ],
+          "subject": ""
+        }
+      ]
+    },
+    {
+      "sequence": 8,
+      "time_s": 6.078,
+      "type": "trace_batch_requested"
+    },
+    {
+      "sequence": 9,
+      "time_s": 6.078,
+      "type": "search_finished",
+      "query": "[scheduled evidence]",
+      "subject": "",
+      "status": "ok",
+      "returned_pages": [],
+      "mode": "trace",
+      "unit_id": "__scheduled_evidence__"
+    },
+    {
+      "sequence": 10,
+      "time_s": 6.078,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d1s0",
+        "title": "Priest (2011 film)",
+        "url": "https://trace.invalid/2wikimultihopqa_80b2c79408b711ebbd88ac1f6bf848b6_short/d1s0",
+        "text": "Priest is a 2011 American action horror film directed by Scott Stewart and stars Paul Bettany as the title character.",
+        "visible_time_s": 6.077999999994063,
+        "requested_subject": "",
+        "resolved_title": "Priest (2011 film)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 11,
+      "time_s": 6.078,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d1s1",
+        "title": "Priest (2011 film)",
+        "url": "https://trace.invalid/2wikimultihopqa_80b2c79408b711ebbd88ac1f6bf848b6_short/d1s1",
+        "text": "It is loosely based on the Korean comic of the same name by Hyung Min-woo.",
+        "visible_time_s": 6.077999999994063,
+        "requested_subject": "",
+        "resolved_title": "Priest (2011 film)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 12,
+      "time_s": 6.078,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d1s2",
+        "title": "Priest (2011 film)",
+        "url": "https://trace.invalid/2wikimultihopqa_80b2c79408b711ebbd88ac1f6bf848b6_short/d1s2",
+        "text": "In an alternate universe, humanity and vampires have warred for centuries.",
+        "visible_time_s": 6.077999999994063,
+        "requested_subject": "",
+        "resolved_title": "Priest (2011 film)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 13,
+      "time_s": 6.078,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d1s3",
+        "title": "Priest (2011 film)",
+        "url": "https://trace.invalid/2wikimultihopqa_80b2c79408b711ebbd88ac1f6bf848b6_short/d1s3",
+        "text": "After the last Vampire War, a veteran Warrior Priest lives in obscurity until his niece( Lily Collins) is kidnapped by vampires.",
+        "visible_time_s": 6.077999999994063,
+        "requested_subject": "",
+        "resolved_title": "Priest (2011 film)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 14,
+      "time_s": 6.078,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d1s4",
+        "title": "Priest (2011 film)",
+        "url": "https://trace.invalid/2wikimultihopqa_80b2c79408b711ebbd88ac1f6bf848b6_short/d1s4",
+        "text": "The film was released on, 2011.",
+        "visible_time_s": 6.077999999994063,
+        "requested_subject": "",
+        "resolved_title": "Priest (2011 film)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 15,
+      "time_s": 6.078,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d1s5",
+        "title": "Priest (2011 film)",
+        "url": "https://trace.invalid/2wikimultihopqa_80b2c79408b711ebbd88ac1f6bf848b6_short/d1s5",
+        "text": "The film earned over$ 78 million at the box office against a$ 60 million production budget, but it was panned by critics, who praised the film's visual style and art direction while criticising the movie's use of genre clichés, writing, acting, editing and action scenes — although, some of its action scenes were praised.",
+        "visible_time_s": 6.077999999994063,
+        "requested_subject": "",
+        "resolved_title": "Priest (2011 film)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 16,
+      "time_s": 6.078,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d2s0",
+        "title": "Brian Johnson (special effects artist)",
+        "url": "https://trace.invalid/2wikimultihopqa_80b2c79408b711ebbd88ac1f6bf848b6_short/d2s0",
+        "text": "Brian Johnson( born 1939 or 1940) is a British designer and director of film and television special effects.",
+        "visible_time_s": 6.077999999994063,
+        "requested_subject": "",
+        "resolved_title": "Brian Johnson (special effects artist)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 17,
+      "time_s": 6.078,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d4s0",
+        "title": "Black Sun (2005 film)",
+        "url": "https://trace.invalid/2wikimultihopqa_80b2c79408b711ebbd88ac1f6bf848b6_short/d4s0",
+        "text": "Black Sun is a documentary film directed by Gary Tarn.",
+        "visible_time_s": 6.077999999994063,
+        "requested_subject": "",
+        "resolved_title": "Black Sun (2005 film)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 18,
+      "time_s": 6.078,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d4s1",
+        "title": "Black Sun (2005 film)",
+        "url": "https://trace.invalid/2wikimultihopqa_80b2c79408b711ebbd88ac1f6bf848b6_short/d4s1",
+        "text": "The film premiered at the Toronto International Film Festival in 2005.",
+        "visible_time_s": 6.077999999994063,
+        "requested_subject": "",
+        "resolved_title": "Black Sun (2005 film)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 19,
+      "time_s": 6.078,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d4s2",
+        "title": "Black Sun (2005 film)",
+        "url": "https://trace.invalid/2wikimultihopqa_80b2c79408b711ebbd88ac1f6bf848b6_short/d4s2",
+        "text": "Gary Tarn explores the story of Hugues de Montalembert, a New York-based artist and filmmaker who was blinded by a vicious, unprovoked attack by two young assailants in 1978.",
+        "visible_time_s": 6.077999999994063,
+        "requested_subject": "",
+        "resolved_title": "Black Sun (2005 film)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 20,
+      "time_s": 6.078,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d4s3",
+        "title": "Black Sun (2005 film)",
+        "url": "https://trace.invalid/2wikimultihopqa_80b2c79408b711ebbd88ac1f6bf848b6_short/d4s3",
+        "text": "After the attack, Montalembert learned to cope with his despair and to go through life a new way, seeking to make ordinary things extraordinary.",
+        "visible_time_s": 6.077999999994063,
+        "requested_subject": "",
+        "resolved_title": "Black Sun (2005 film)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 21,
+      "time_s": 6.078,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d4s4",
+        "title": "Black Sun (2005 film)",
+        "url": "https://trace.invalid/2wikimultihopqa_80b2c79408b711ebbd88ac1f6bf848b6_short/d4s4",
+        "text": "Defying expectation, this remarkable artist continued to travel the world alone, learning to navigate life in a new and beautiful way.",
+        "visible_time_s": 6.077999999994063,
+        "requested_subject": "",
+        "resolved_title": "Black Sun (2005 film)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 22,
+      "time_s": 6.078,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d4s5",
+        "title": "Black Sun (2005 film)",
+        "url": "https://trace.invalid/2wikimultihopqa_80b2c79408b711ebbd88ac1f6bf848b6_short/d4s5",
+        "text": "Through creative imagery and philosophical narration, director and composer Gary Tarn creates an expressionist, poetic meditation both on an extraordinary life without vision, and on the idea of perception in general.",
+        "visible_time_s": 6.077999999994063,
+        "requested_subject": "",
+        "resolved_title": "Black Sun (2005 film)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 23,
+      "time_s": 6.078,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d6s0",
+        "title": "Howard W. Koch",
+        "url": "https://trace.invalid/2wikimultihopqa_80b2c79408b711ebbd88ac1f6bf848b6_short/d6s0",
+        "text": "Howard Winchel Koch( April 11, 1916 – February 16, 2001) was an American producer and director of film and television.",
+        "visible_time_s": 6.077999999994063,
+        "requested_subject": "",
+        "resolved_title": "Howard W. Koch",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 24,
+      "time_s": 6.078,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d9s0",
+        "title": "Peter Levin",
+        "url": "https://trace.invalid/2wikimultihopqa_80b2c79408b711ebbd88ac1f6bf848b6_short/d9s0",
+        "text": "Peter Levin is an American director of film, television and theatre.",
+        "visible_time_s": 6.077999999994063,
+        "requested_subject": "",
+        "resolved_title": "Peter Levin",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 25,
+      "time_s": 6.078,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d3s0",
+        "title": "Ian Barry (director)",
+        "url": "https://trace.invalid/2wikimultihopqa_80b2c79408b711ebbd88ac1f6bf848b6_short/d3s0",
+        "text": "Ian Barry is an Australian director of film and TV.",
+        "visible_time_s": 6.077999999994063,
+        "requested_subject": "",
+        "resolved_title": "Ian Barry (director)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 26,
+      "time_s": 6.078,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d5s0",
+        "title": "Gary Tarn",
+        "url": "https://trace.invalid/2wikimultihopqa_80b2c79408b711ebbd88ac1f6bf848b6_short/d5s0",
+        "text": "Gary Tarn( born 1962) is a British filmmaker and composer.",
+        "visible_time_s": 6.077999999994063,
+        "requested_subject": "",
+        "resolved_title": "Gary Tarn",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 27,
+      "time_s": 6.078,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d7s0",
+        "title": "Rachel Feldman",
+        "url": "https://trace.invalid/2wikimultihopqa_80b2c79408b711ebbd88ac1f6bf848b6_short/d7s0",
+        "text": "Rachel Feldman( born August 22, 1954) is an American director of film and television and screenwriter of television films.",
+        "visible_time_s": 6.077999999994063,
+        "requested_subject": "",
+        "resolved_title": "Rachel Feldman",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 28,
+      "time_s": 6.078,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d8s0",
+        "title": "Scott Stewart (director)",
+        "url": "https://trace.invalid/2wikimultihopqa_80b2c79408b711ebbd88ac1f6bf848b6_short/d8s0",
+        "text": "Scott Charles Stewart is an American filmmaker and visual effects artist.",
+        "visible_time_s": 6.077999999994063,
+        "requested_subject": "",
+        "resolved_title": "Scott Stewart (director)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 29,
+      "time_s": 6.078,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d8s1",
+        "title": "Scott Stewart (director)",
+        "url": "https://trace.invalid/2wikimultihopqa_80b2c79408b711ebbd88ac1f6bf848b6_short/d8s1",
+        "text": "He was one of the principal co-founders of The Orphanage, a prolific Los Angeles effects house that worked on dozens of high- profile projects.",
+        "visible_time_s": 6.077999999994063,
+        "requested_subject": "",
+        "resolved_title": "Scott Stewart (director)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 30,
+      "time_s": 6.078,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d8s2",
+        "title": "Scott Stewart (director)",
+        "url": "https://trace.invalid/2wikimultihopqa_80b2c79408b711ebbd88ac1f6bf848b6_short/d8s2",
+        "text": "As a director, he helmed the dark fantasy action- horror films\" Legion\" and\" Priest\", and the alien abduction thriller\" Dark Skies\".",
+        "visible_time_s": 6.077999999994063,
+        "requested_subject": "",
+        "resolved_title": "Scott Stewart (director)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 31,
+      "time_s": 6.078,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d8s3",
+        "title": "Scott Stewart (director)",
+        "url": "https://trace.invalid/2wikimultihopqa_80b2c79408b711ebbd88ac1f6bf848b6_short/d8s3",
+        "text": "He also executive produced the television series\" Dominion\", a sequel to the former film.",
+        "visible_time_s": 6.077999999994063,
+        "requested_subject": "",
+        "resolved_title": "Scott Stewart (director)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 32,
+      "time_s": 6.078,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d8s4",
+        "title": "Scott Stewart (director)",
+        "url": "https://trace.invalid/2wikimultihopqa_80b2c79408b711ebbd88ac1f6bf848b6_short/d8s4",
+        "text": "Stewart has also directed, produced, and realized dozens of short films and television commercials.",
+        "visible_time_s": 6.077999999994063,
+        "requested_subject": "",
+        "resolved_title": "Scott Stewart (director)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 33,
+      "time_s": 6.078,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d10s0",
+        "title": "Hanro Smitsman",
+        "url": "https://trace.invalid/2wikimultihopqa_80b2c79408b711ebbd88ac1f6bf848b6_short/d10s0",
+        "text": "Hanro Smitsman, born in 1967 in Breda( Netherlands), is a writer and director of film and television.",
+        "visible_time_s": 6.077999999994063,
+        "requested_subject": "",
+        "resolved_title": "Hanro Smitsman",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 34,
+      "time_s": 7.922,
+      "type": "utterance",
+      "action": "Progress",
+      "text": "I'm checking the sources that arrived.",
+      "claims": [],
+      "feedback_source": "fallback",
+      "feedback_status_claim": "checking",
+      "feedback_fallback_reason": "feedback_not_approved",
+      "execution_state": {
+        "stage": "checking",
+        "searches_started": 1,
+        "searches_completed": 1,
+        "active_searches": 0,
+        "evidence_count": 24,
+        "supported_units": 0,
+        "output_units": 0
+      },
+      "language": "en"
+    },
+    {
+      "sequence": 35,
+      "time_s": 8.453,
+      "type": "judge_reply",
+      "reply": {
+        "judgments": [
+          {
+            "unit_id": "u1",
+            "label": "SUPPORTED",
+            "value": "Scott Stewart",
+            "citations": [
+              "d1s0"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d1s0",
+                "text": "Priest is a 2011 American action horror film directed by Scott Stewart and stars Paul Bettany as the title character."
+              }
+            ],
+            "reason": "Supported by the cited visible sentences and dependencies."
+          },
+          {
+            "unit_id": "u2",
+            "label": "SUPPORTED",
+            "value": "Gary Tarn",
+            "citations": [
+              "d4s0"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d4s0",
+                "text": "Black Sun is a documentary film directed by Gary Tarn."
+              }
+            ],
+            "reason": "Supported by the cited visible sentences and dependencies."
+          },
+          {
+            "unit_id": "u3",
+            "label": "SUPPORTED",
+            "value": "American",
+            "citations": [
+              "d8s0"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d8s0",
+                "text": "Scott Charles Stewart is an American filmmaker and visual effects artist."
+              }
+            ],
+            "reason": "Supported by the cited visible sentences and dependencies."
+          },
+          {
+            "unit_id": "u4",
+            "label": "SUPPORTED",
+            "value": "British",
+            "citations": [
+              "d5s0"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d5s0",
+                "text": "Gary Tarn( born 1962) is a British filmmaker and composer."
+              }
+            ],
+            "reason": "Supported by the cited visible sentences and dependencies."
+          },
+          {
+            "unit_id": "u5",
+            "label": "SUPPORTED",
+            "value": "no",
+            "citations": [
+              "d8s0",
+              "d5s0"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d8s0",
+                "text": "Scott Charles Stewart is an American filmmaker and visual effects artist."
+              },
+              {
+                "evidence_id": "d5s0",
+                "text": "Gary Tarn( born 1962) is a British filmmaker and composer."
+              }
+            ],
+            "reason": "Supported by the cited visible sentences and dependencies."
+          }
+        ]
+      },
+      "attempt": 1,
+      "repair": false,
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d1s1",
+        "d1s2",
+        "d1s3",
+        "d1s4",
+        "d1s5",
+        "d2s0",
+        "d4s0",
+        "d4s1",
+        "d4s2",
+        "d4s3",
+        "d4s4",
+        "d4s5",
+        "d6s0",
+        "d9s0",
+        "d3s0",
+        "d5s0",
+        "d7s0",
+        "d8s0",
+        "d8s1",
+        "d8s2",
+        "d8s3",
+        "d8s4",
+        "d10s0"
+      ]
+    },
+    {
+      "sequence": 36,
+      "time_s": 8.453,
+      "type": "judgments",
+      "judgments": {
+        "u1": {
+          "label": "SUPPORTED",
+          "value": "Scott Stewart",
+          "citations": [
+            "d1s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d1s0",
+              "text": "Priest is a 2011 American action horror film directed by Scott Stewart and stars Paul Bettany as the title character."
+            }
+          ],
+          "reason": "Supported by the cited visible sentences and dependencies."
+        },
+        "u2": {
+          "label": "SUPPORTED",
+          "value": "Gary Tarn",
+          "citations": [
+            "d4s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d4s0",
+              "text": "Black Sun is a documentary film directed by Gary Tarn."
+            }
+          ],
+          "reason": "Supported by the cited visible sentences and dependencies."
+        },
+        "u3": {
+          "label": "UNRESOLVED",
+          "value": "",
+          "citations": [],
+          "quotes": [],
+          "reason": "Rejected entity identity: citation concerns an ambiguous or differently qualified namesake"
+        },
+        "u4": {
+          "label": "SUPPORTED",
+          "value": "British",
+          "citations": [
+            "d5s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d5s0",
+              "text": "Gary Tarn( born 1962) is a British filmmaker and composer."
+            }
+          ],
+          "reason": "Supported by the cited visible sentences and dependencies."
+        },
+        "u5": {
+          "label": "UNRESOLVED",
+          "value": "",
+          "citations": [],
+          "quotes": [],
+          "reason": "Dependency is not supported"
+        }
+      },
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d1s1",
+        "d1s2",
+        "d1s3",
+        "d1s4",
+        "d1s5",
+        "d2s0",
+        "d4s0",
+        "d4s1",
+        "d4s2",
+        "d4s3",
+        "d4s4",
+        "d4s5",
+        "d6s0",
+        "d9s0",
+        "d3s0",
+        "d5s0",
+        "d7s0",
+        "d8s0",
+        "d8s1",
+        "d8s2",
+        "d8s3",
+        "d8s4",
+        "d10s0"
+      ],
+      "semantic_review": false
+    },
+    {
+      "sequence": 37,
+      "time_s": 8.453,
+      "type": "trace_batch_requested"
+    },
+    {
+      "sequence": 38,
+      "time_s": 12.016,
+      "type": "verification_reply",
+      "reply": {
+        "approved": true,
+        "facts_valid": true,
+        "expressed_unit_ids": [
+          "u1",
+          "u2",
+          "u4"
+        ],
+        "reason": "All stated facts match approved facts and citations; no unsupported claims."
+      },
+      "output_unit_ids": [
+        "u1",
+        "u2",
+        "u4"
+      ],
+      "output_action": "Partial Answer",
+      "dependency_unit_ids": [],
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d4s0",
+        "d5s0"
+      ]
+    },
+    {
+      "sequence": 39,
+      "time_s": 12.016,
+      "type": "utterance",
+      "action": "Partial Answer",
+      "text": "Scott Stewart directed the 2011 film Priest. Gary Tarn directed the 2005 documentary Black Sun and is British. I do not have information about Scott Stewart’s nationality, so I cannot determine whether the two directors are from the same country.",
+      "claims": [
+        {
+          "unit_id": "u1",
+          "description": "director of film Priest (2011 Film)",
+          "value": "Scott Stewart",
+          "citations": [
+            "d1s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d1s0",
+              "text": "Priest is a 2011 American action horror film directed by Scott Stewart and stars Paul Bettany as the title character."
+            }
+          ]
+        },
+        {
+          "unit_id": "u2",
+          "description": "director of film Black Sun (2005 Film)",
+          "value": "Gary Tarn",
+          "citations": [
+            "d4s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d4s0",
+              "text": "Black Sun is a documentary film directed by Gary Tarn."
+            }
+          ]
+        },
+        {
+          "unit_id": "u4",
+          "description": "nationality of Gary Tarn",
+          "value": "British",
+          "citations": [
+            "d5s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d5s0",
+              "text": "Gary Tarn( born 1962) is a British filmmaker and composer."
+            }
+          ]
+        }
+      ],
+      "unresolved": [],
+      "fallback": false,
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d1s1",
+        "d1s2",
+        "d1s3",
+        "d1s4",
+        "d1s5",
+        "d2s0",
+        "d4s0",
+        "d4s1",
+        "d4s2",
+        "d4s3",
+        "d4s4",
+        "d4s5",
+        "d6s0",
+        "d9s0",
+        "d3s0",
+        "d5s0",
+        "d7s0",
+        "d8s0",
+        "d8s1",
+        "d8s2",
+        "d8s3",
+        "d8s4",
+        "d10s0"
+      ],
+      "language": "en"
+    },
+    {
+      "sequence": 40,
+      "time_s": 12.016,
+      "type": "search_finished",
+      "query": "[scheduled evidence]",
+      "subject": "",
+      "status": "ok",
+      "returned_pages": [],
+      "mode": "trace",
+      "unit_id": "__scheduled_evidence__"
+    },
+    {
+      "sequence": 41,
+      "time_s": 12.016,
+      "type": "semantic_review_requested",
+      "target_unit_ids": [
+        "u5"
+      ],
+      "review_unit_ids": [
+        "u1",
+        "u2",
+        "u3",
+        "u4",
+        "u5"
+      ],
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d1s1",
+        "d1s2",
+        "d1s3",
+        "d1s4",
+        "d1s5",
+        "d2s0",
+        "d4s0",
+        "d4s1",
+        "d4s2",
+        "d4s3",
+        "d4s4",
+        "d4s5",
+        "d6s0",
+        "d9s0",
+        "d3s0",
+        "d5s0",
+        "d7s0",
+        "d8s0",
+        "d8s1",
+        "d8s2",
+        "d8s3",
+        "d8s4",
+        "d10s0"
+      ],
+      "max_reviews": 1
+    },
+    {
+      "sequence": 42,
+      "time_s": 14.406,
+      "type": "semantic_review_reply",
+      "reply": {
+        "judgments": [
+          {
+            "unit_id": "u1",
+            "label": "SUPPORTED",
+            "value": "Scott Stewart",
+            "citations": [
+              "d1s0"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d1s0",
+                "text": "Priest is a 2011 American action horror film directed by Scott Stewart and stars Paul Bettany as the title character."
+              }
+            ],
+            "reason": "Supported by the cited visible sentences and dependencies."
+          },
+          {
+            "unit_id": "u2",
+            "label": "SUPPORTED",
+            "value": "Gary Tarn",
+            "citations": [
+              "d4s0"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d4s0",
+                "text": "Black Sun is a documentary film directed by Gary Tarn."
+              }
+            ],
+            "reason": "Supported by the cited visible sentences and dependencies."
+          },
+          {
+            "unit_id": "u3",
+            "label": "SUPPORTED",
+            "value": "American",
+            "citations": [
+              "d8s0"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d8s0",
+                "text": "Scott Charles Stewart is an American filmmaker and visual effects artist."
+              }
+            ],
+            "reason": "Supported by the cited visible sentences and dependencies."
+          },
+          {
+            "unit_id": "u4",
+            "label": "SUPPORTED",
+            "value": "British",
+            "citations": [
+              "d5s0"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d5s0",
+                "text": "Gary Tarn( born 1962) is a British filmmaker and composer."
+              }
+            ],
+            "reason": "Supported by the cited visible sentences and dependencies."
+          },
+          {
+            "unit_id": "u5",
+            "label": "SUPPORTED",
+            "value": "no",
+            "citations": [
+              "d8s0",
+              "d5s0"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d8s0",
+                "text": "Scott Charles Stewart is an American filmmaker and visual effects artist."
+              },
+              {
+                "evidence_id": "d5s0",
+                "text": "Gary Tarn( born 1962) is a British filmmaker and composer."
+              }
+            ],
+            "reason": "Supported by the cited visible sentences and dependencies."
+          }
+        ]
+      },
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d1s1",
+        "d1s2",
+        "d1s3",
+        "d1s4",
+        "d1s5",
+        "d2s0",
+        "d4s0",
+        "d4s1",
+        "d4s2",
+        "d4s3",
+        "d4s4",
+        "d4s5",
+        "d6s0",
+        "d9s0",
+        "d3s0",
+        "d5s0",
+        "d7s0",
+        "d8s0",
+        "d8s1",
+        "d8s2",
+        "d8s3",
+        "d8s4",
+        "d10s0"
+      ]
+    },
+    {
+      "sequence": 43,
+      "time_s": 14.406,
+      "type": "semantic_review_finished",
+      "review_unit_ids": [
+        "u1",
+        "u2",
+        "u3",
+        "u4",
+        "u5"
+      ],
+      "recovered_unit_ids": []
+    },
+    {
+      "sequence": 44,
+      "time_s": 14.406,
+      "type": "judgments",
+      "judgments": {
+        "u1": {
+          "label": "SUPPORTED",
+          "value": "Scott Stewart",
+          "citations": [
+            "d1s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d1s0",
+              "text": "Priest is a 2011 American action horror film directed by Scott Stewart and stars Paul Bettany as the title character."
+            }
+          ],
+          "reason": "Supported by the cited visible sentences and dependencies."
+        },
+        "u2": {
+          "label": "SUPPORTED",
+          "value": "Gary Tarn",
+          "citations": [
+            "d4s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d4s0",
+              "text": "Black Sun is a documentary film directed by Gary Tarn."
+            }
+          ],
+          "reason": "Supported by the cited visible sentences and dependencies."
+        },
+        "u3": {
+          "label": "UNRESOLVED",
+          "value": "",
+          "citations": [],
+          "quotes": [],
+          "reason": "Rejected entity identity: citation concerns an ambiguous or differently qualified namesake"
+        },
+        "u4": {
+          "label": "SUPPORTED",
+          "value": "British",
+          "citations": [
+            "d5s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d5s0",
+              "text": "Gary Tarn( born 1962) is a British filmmaker and composer."
+            }
+          ],
+          "reason": "Supported by the cited visible sentences and dependencies."
+        },
+        "u5": {
+          "label": "UNRESOLVED",
+          "value": "",
+          "citations": [],
+          "quotes": [],
+          "reason": "Dependency is not supported"
+        }
+      },
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d1s1",
+        "d1s2",
+        "d1s3",
+        "d1s4",
+        "d1s5",
+        "d2s0",
+        "d4s0",
+        "d4s1",
+        "d4s2",
+        "d4s3",
+        "d4s4",
+        "d4s5",
+        "d6s0",
+        "d9s0",
+        "d3s0",
+        "d5s0",
+        "d7s0",
+        "d8s0",
+        "d8s1",
+        "d8s2",
+        "d8s3",
+        "d8s4",
+        "d10s0"
+      ],
+      "semantic_review": true
+    },
+    {
+      "sequence": 45,
+      "time_s": 14.406,
+      "type": "utterance",
+      "action": "Final Answer",
+      "text": "I could not confirm whether the directors of Priest (2011 Film) and Black Sun (2005 Film) are from the same country.",
+      "claims": [],
+      "unresolved": [
+        "u5"
+      ],
+      "fallback": false,
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d1s1",
+        "d1s2",
+        "d1s3",
+        "d1s4",
+        "d1s5",
+        "d2s0",
+        "d4s0",
+        "d4s1",
+        "d4s2",
+        "d4s3",
+        "d4s4",
+        "d4s5",
+        "d6s0",
+        "d9s0",
+        "d3s0",
+        "d5s0",
+        "d7s0",
+        "d8s0",
+        "d8s1",
+        "d8s2",
+        "d8s3",
+        "d8s4",
+        "d10s0"
+      ],
+      "language": "en"
+    },
+    {
+      "sequence": 46,
+      "time_s": 14.406,
+      "type": "finished",
+      "status": "incomplete"
+    }
+  ],
+  "note": "Prototype model judgments are not independent gold scores. Output event times are not spoken claim times.",
+  "evidence_mode": "scheduled_trace",
+  "audio": {
+    "enabled": true,
+    "mode": "windows",
+    "play": false,
+    "status": "ok",
+    "errors": [],
+    "records": [
+      {
+        "event_sequence": 1,
+        "sentence_index": 1,
+        "sentence_count": 1,
+        "language": "en",
+        "text": "Got it—checking whether the directors of Priest (2011) and Black Sun (2005) share the same nationality.",
+        "action": "Backchannel",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 2.1089999999967404,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1\\samples\\0248\\audio\\segments\\0001_01.wav",
+        "duration_s": 9.473015873015873,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 2.9219999999913853,
+        "synthesis_and_playback_s": 0.8129999999946449
+      },
+      {
+        "event_sequence": 34,
+        "sentence_index": 1,
+        "sentence_count": 1,
+        "language": "en",
+        "text": "I'm checking the sources that arrived.",
+        "action": "Progress",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 7.921999999991385,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1\\samples\\0248\\audio\\segments\\0034_01.wav",
+        "duration_s": 2.6690702947845804,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 8.702999999994063,
+        "synthesis_and_playback_s": 0.7810000000026776
+      },
+      {
+        "event_sequence": 39,
+        "sentence_index": 1,
+        "sentence_count": 3,
+        "language": "en",
+        "text": "Scott Stewart directed the 2011 film Priest.",
+        "action": "Partial Answer",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 12.015999999988708,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1\\samples\\0248\\audio\\segments\\0039_01.wav",
+        "duration_s": 4.278775510204081,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 12.812999999994645,
+        "synthesis_and_playback_s": 0.7970000000059372
+      },
+      {
+        "event_sequence": 39,
+        "sentence_index": 2,
+        "sentence_count": 3,
+        "language": "en",
+        "text": "Gary Tarn directed the 2005 documentary Black Sun and is British.",
+        "action": "Partial Answer",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 12.812999999994645,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1\\samples\\0248\\audio\\segments\\0039_02.wav",
+        "duration_s": 5.348526077097506,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 13.60899999999674,
+        "synthesis_and_playback_s": 0.7960000000020955
+      },
+      {
+        "event_sequence": 39,
+        "sentence_index": 3,
+        "sentence_count": 3,
+        "language": "en",
+        "text": "I do not have information about Scott Stewart’s nationality, so I cannot determine whether the two directors are from the same country.",
+        "action": "Partial Answer",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 13.60899999999674,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1\\samples\\0248\\audio\\segments\\0039_03.wav",
+        "duration_s": 8.177732426303855,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 14.390999999988708,
+        "synthesis_and_playback_s": 0.7819999999919673
+      },
+      {
+        "event_sequence": 45,
+        "sentence_index": 1,
+        "sentence_count": 1,
+        "language": "en",
+        "text": "I could not confirm whether the directors of Priest (2011 Film) and Black Sun (2005 Film) are from the same country.",
+        "action": "Final Answer",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 14.405999999988126,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1\\samples\\0248\\audio\\segments\\0045_01.wav",
+        "duration_s": 10.167800453514738,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 15.202999999994063,
+        "synthesis_and_playback_s": 0.7970000000059372
+      }
+    ],
+    "wave": {
+      "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1\\samples\\0248\\audio\\response.wav",
+      "duration_s": 43.036916099773244,
+      "timeline": [
+        {
+          "event_sequence": 1,
+          "sentence_index": 1,
+          "action": "Backchannel",
+          "text": "Got it—checking whether the directors of Priest (2011) and Black Sun (2005) share the same nationality.",
+          "wave_start_s": 2.921995464852608,
+          "wave_end_s": 12.39501133786848
+        },
+        {
+          "event_sequence": 34,
+          "sentence_index": 1,
+          "action": "Progress",
+          "text": "I'm checking the sources that arrived.",
+          "wave_start_s": 12.39501133786848,
+          "wave_end_s": 15.06408163265306
+        },
+        {
+          "event_sequence": 39,
+          "sentence_index": 1,
+          "action": "Partial Answer",
+          "text": "Scott Stewart directed the 2011 film Priest.",
+          "wave_start_s": 15.06408163265306,
+          "wave_end_s": 19.34285714285714
+        },
+        {
+          "event_sequence": 39,
+          "sentence_index": 2,
+          "action": "Partial Answer",
+          "text": "Gary Tarn directed the 2005 documentary Black Sun and is British.",
+          "wave_start_s": 19.34285714285714,
+          "wave_end_s": 24.69138321995465
+        },
+        {
+          "event_sequence": 39,
+          "sentence_index": 3,
+          "action": "Partial Answer",
+          "text": "I do not have information about Scott Stewart’s nationality, so I cannot determine whether the two directors are from the same country.",
+          "wave_start_s": 24.69138321995465,
+          "wave_end_s": 32.8691156462585
+        },
+        {
+          "event_sequence": 45,
+          "sentence_index": 1,
+          "action": "Final Answer",
+          "text": "I could not confirm whether the directors of Priest (2011 Film) and Black Sun (2005 Film) are from the same country.",
+          "wave_start_s": 32.8691156462585,
+          "wave_end_s": 43.036916099773244
+        }
+      ]
+    }
+  },
+  "evaluation": {
+    "mode": "b_final_revised_trace",
+    "trace_id": "2wikimultihopqa_80b2c79408b711ebbd88ac1f6bf848b6_short",
+    "sample_id": "2wikimultihopqa_80b2c79408b711ebbd88ac1f6bf848b6",
+    "total_wall_s": 15.218999999997322,
+    "question_timeout_s": 180,
+    "audio_enabled": true,
+    "history_enabled": false,
+    "text_pipeline_wall_s": 14.405999999988126,
+    "effective_settings": {
+      "base_url": "https://tinker.thinkingmachines.dev/services/tinker-prod/oai/api/v1",
+      "model": "openai/gpt-oss-120b",
+      "judge_model": "tinker://f9e9a6c1-e203-5c2c-acdd-68fe67378ca4:train:0/sampler_weights/epoch-0001",
+      "judge_reasoning_effort": "low",
+      "wiki_language": "en",
+      "user_agent": "CascadeSystem/0.1 (educational research prototype)",
+      "timeout_s": 45.0,
+      "max_tokens": 4096,
+      "reasoning_effort": "low",
+      "progress_s": 3.0,
+      "feedback_timeout_s": 6.0,
+      "search_limit": 3,
+      "max_units": 8,
+      "max_searches": 16,
+      "max_sources": 24,
+      "source_chars": 322,
+      "evidence_chars": 2701,
+      "concurrency": 3
+    },
+    "timing_kind": "unknown",
+    "scheduler": "wall-paced fixed B arrivals",
+    "split": "eval_reserved",
+    "empty_evidence_sentences_ignored": 0
+  }
+}

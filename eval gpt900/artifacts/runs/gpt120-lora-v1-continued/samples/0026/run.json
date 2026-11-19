@@ -1,0 +1,2311 @@
+{
+  "question": "Are both churches, Sainte-Jeanne-De-Chantal (Île Perrot) and St. Andrew'S Episcopal Church (Albany, New York), located in the same country?",
+  "resolved_question": "Are both churches, Sainte-Jeanne-De-Chantal (Île Perrot) and St. Andrew'S Episcopal Church (Albany, New York), located in the same country?",
+  "used_history_turn_ids": [],
+  "response_language": "en",
+  "status": "complete",
+  "clock": "wall_monotonic",
+  "time_origin": "question_text_ready_after_optional_asr",
+  "model": "openai/gpt-oss-120b",
+  "judge_model": "tinker://f9e9a6c1-e203-5c2c-acdd-68fe67378ca4:train:0/sampler_weights/epoch-0001",
+  "units": [
+    {
+      "unit_id": "u1",
+      "description": "Country where Sainte-Jeanne-De-Chantal (Île Perrot) is located",
+      "necessary": true,
+      "depends_on": [],
+      "queries": [
+        "Sainte-Jeanne-De-Chantal Île Perrot location",
+        "Sainte-Jeanne-De-Chantal church Île Perrot country"
+      ],
+      "subject": "Sainte-Jeanne-De-Chantal (Île Perrot)"
+    },
+    {
+      "unit_id": "u2",
+      "description": "Country where St. Andrew's Episcopal Church (Albany, New York) is located",
+      "necessary": true,
+      "depends_on": [],
+      "queries": [
+        "St. Andrew's Episcopal Church Albany New York location",
+        "St. Andrew's Episcopal Church Albany country"
+      ],
+      "subject": "St. Andrew's Episcopal Church (Albany, New York)"
+    },
+    {
+      "unit_id": "u3",
+      "description": "Whether both churches are located in the same country",
+      "necessary": true,
+      "depends_on": [
+        "u1",
+        "u2"
+      ],
+      "queries": [
+        "Are Sainte-Jeanne-De-Chantal Île Perrot and St. Andrew's Episcopal Church Albany in the same country?"
+      ],
+      "subject": ""
+    }
+  ],
+  "judgments": {
+    "u1": {
+      "label": "SUPPORTED",
+      "value": "Canada",
+      "citations": [
+        "d1s0"
+      ],
+      "quotes": [
+        {
+          "evidence_id": "d1s0",
+          "text": "Sainte- Jeanne- de- Chantal is a Catholic church on the Île Perrot to the west of the island of Montreal in the Canadian province of Quebec."
+        }
+      ],
+      "reason": "Supported by the cited visible sentences and dependencies."
+    },
+    "u2": {
+      "label": "SUPPORTED",
+      "value": "United States",
+      "citations": [
+        "d10s0"
+      ],
+      "quotes": [
+        {
+          "evidence_id": "d10s0",
+          "text": "St. Andrew's Episcopal Church is located at North Main and Madison( U.S. Route 20) avenues in Albany, New York, United States."
+        }
+      ],
+      "reason": "Supported by the cited visible sentences and dependencies."
+    },
+    "u3": {
+      "label": "SUPPORTED",
+      "value": "no",
+      "citations": [
+        "d1s0",
+        "d10s0"
+      ],
+      "quotes": [
+        {
+          "evidence_id": "d1s0",
+          "text": "Sainte- Jeanne- de- Chantal is a Catholic church on the Île Perrot to the west of the island of Montreal in the Canadian province of Quebec."
+        },
+        {
+          "evidence_id": "d10s0",
+          "text": "St. Andrew's Episcopal Church is located at North Main and Madison( U.S. Route 20) avenues in Albany, New York, United States."
+        }
+      ],
+      "reason": "Supported by the cited visible sentences and dependencies."
+    }
+  },
+  "evidence": [
+    {
+      "evidence_id": "d1s0",
+      "title": "Sainte-Jeanne-de-Chantal (Île Perrot)",
+      "url": "https://trace.invalid/2wikimultihopqa_14f3774f085611ebbd59ac1f6bf848b6_short/d1s0",
+      "text": "Sainte- Jeanne- de- Chantal is a Catholic church on the Île Perrot to the west of the island of Montreal in the Canadian province of Quebec.",
+      "visible_time_s": 6.64100000000326,
+      "requested_subject": "",
+      "resolved_title": "Sainte-Jeanne-de-Chantal (Île Perrot)",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d1s1",
+      "title": "Sainte-Jeanne-de-Chantal (Île Perrot)",
+      "url": "https://trace.invalid/2wikimultihopqa_14f3774f085611ebbd59ac1f6bf848b6_short/d1s1",
+      "text": "Built in 1773 – 74, it is one of the oldest surviving rural churches in North America.",
+      "visible_time_s": 6.64100000000326,
+      "requested_subject": "",
+      "resolved_title": "Sainte-Jeanne-de-Chantal (Île Perrot)",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d2s0",
+      "title": "St. Andrew's Episcopal Church (Elyria, Ohio)",
+      "url": "https://trace.invalid/2wikimultihopqa_14f3774f085611ebbd59ac1f6bf848b6_short/d2s0",
+      "text": "St. Andrew's Episcopal Church is a historic church at 300 3rd Street in Elyria, Ohio.",
+      "visible_time_s": 6.64100000000326,
+      "requested_subject": "",
+      "resolved_title": "St. Andrew's Episcopal Church (Elyria, Ohio)",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d2s1",
+      "title": "St. Andrew's Episcopal Church (Elyria, Ohio)",
+      "url": "https://trace.invalid/2wikimultihopqa_14f3774f085611ebbd59ac1f6bf848b6_short/d2s1",
+      "text": "It was built in 1872 and added to the National Register of Historic Places in 1979.",
+      "visible_time_s": 6.64100000000326,
+      "requested_subject": "",
+      "resolved_title": "St. Andrew's Episcopal Church (Elyria, Ohio)",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d4s0",
+      "title": "St. Andrew's Episcopal Church (Clinton, Louisiana)",
+      "url": "https://trace.invalid/2wikimultihopqa_14f3774f085611ebbd59ac1f6bf848b6_short/d4s0",
+      "text": "St. Andrew's Episcopal Church is a historic Carpenter Gothic Episcopal Church built in 1871 and located at the corner of Church Street and St. Andrew's in Clinton, Louisiana.",
+      "visible_time_s": 6.64100000000326,
+      "requested_subject": "",
+      "resolved_title": "St. Andrew's Episcopal Church (Clinton, Louisiana)",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d4s1",
+      "title": "St. Andrew's Episcopal Church (Clinton, Louisiana)",
+      "url": "https://trace.invalid/2wikimultihopqa_14f3774f085611ebbd59ac1f6bf848b6_short/d4s1",
+      "text": "Parts of the 1958 movie,\" The Long, Hot Summer\", which starred Paul Newman, Lee Remick and Joanne Woodward, were filmed at the church.",
+      "visible_time_s": 6.64100000000326,
+      "requested_subject": "",
+      "resolved_title": "St. Andrew's Episcopal Church (Clinton, Louisiana)",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d4s2",
+      "title": "St. Andrew's Episcopal Church (Clinton, Louisiana)",
+      "url": "https://trace.invalid/2wikimultihopqa_14f3774f085611ebbd59ac1f6bf848b6_short/d4s2",
+      "text": "St. Andrew's Episcopal Church is still an active parish in the Episcopal Diocese of Louisiana.",
+      "visible_time_s": 6.64100000000326,
+      "requested_subject": "",
+      "resolved_title": "St. Andrew's Episcopal Church (Clinton, Louisiana)",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d4s3",
+      "title": "St. Andrew's Episcopal Church (Clinton, Louisiana)",
+      "url": "https://trace.invalid/2wikimultihopqa_14f3774f085611ebbd59ac1f6bf848b6_short/d4s3",
+      "text": "The church was listed on the National Register of Historic Places on June 21, 1984.",
+      "visible_time_s": 6.64100000000326,
+      "requested_subject": "",
+      "resolved_title": "St. Andrew's Episcopal Church (Clinton, Louisiana)",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d4s4",
+      "title": "St. Andrew's Episcopal Church (Clinton, Louisiana)",
+      "url": "https://trace.invalid/2wikimultihopqa_14f3774f085611ebbd59ac1f6bf848b6_short/d4s4",
+      "text": "The congregation meets at 9 A.M. each Sunday for Holy Eucharist three Sundays a month and Morning Prayer on the other Sunday( s).",
+      "visible_time_s": 6.64100000000326,
+      "requested_subject": "",
+      "resolved_title": "St. Andrew's Episcopal Church (Clinton, Louisiana)",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d4s5",
+      "title": "St. Andrew's Episcopal Church (Clinton, Louisiana)",
+      "url": "https://trace.invalid/2wikimultihopqa_14f3774f085611ebbd59ac1f6bf848b6_short/d4s5",
+      "text": "Coffee and fellowship follow immediately in the parish hall.",
+      "visible_time_s": 6.64100000000326,
+      "requested_subject": "",
+      "resolved_title": "St. Andrew's Episcopal Church (Clinton, Louisiana)",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d4s6",
+      "title": "St. Andrew's Episcopal Church (Clinton, Louisiana)",
+      "url": "https://trace.invalid/2wikimultihopqa_14f3774f085611ebbd59ac1f6bf848b6_short/d4s6",
+      "text": "All are welcome.",
+      "visible_time_s": 6.64100000000326,
+      "requested_subject": "",
+      "resolved_title": "St. Andrew's Episcopal Church (Clinton, Louisiana)",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d4s7",
+      "title": "St. Andrew's Episcopal Church (Clinton, Louisiana)",
+      "url": "https://trace.invalid/2wikimultihopqa_14f3774f085611ebbd59ac1f6bf848b6_short/d4s7",
+      "text": "The church is located at 11015 Church St., Clinton, LA 70722.",
+      "visible_time_s": 6.64100000000326,
+      "requested_subject": "",
+      "resolved_title": "St. Andrew's Episcopal Church (Clinton, Louisiana)",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d4s8",
+      "title": "St. Andrew's Episcopal Church (Clinton, Louisiana)",
+      "url": "https://trace.invalid/2wikimultihopqa_14f3774f085611ebbd59ac1f6bf848b6_short/d4s8",
+      "text": "The phone number is( 225) 683-5498.",
+      "visible_time_s": 6.64100000000326,
+      "requested_subject": "",
+      "resolved_title": "St. Andrew's Episcopal Church (Clinton, Louisiana)",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d6s0",
+      "title": "St. Andrew's Episcopal Church (Tampa, Florida)",
+      "url": "https://trace.invalid/2wikimultihopqa_14f3774f085611ebbd59ac1f6bf848b6_short/d6s0",
+      "text": "St. Andrew's Episcopal Church is an active Episcopal parish and historic church building in Tampa, Florida, United States.",
+      "visible_time_s": 6.64100000000326,
+      "requested_subject": "",
+      "resolved_title": "St. Andrew's Episcopal Church (Tampa, Florida)",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d6s1",
+      "title": "St. Andrew's Episcopal Church (Tampa, Florida)",
+      "url": "https://trace.invalid/2wikimultihopqa_14f3774f085611ebbd59ac1f6bf848b6_short/d6s1",
+      "text": "The structure is located downtown at 505 North Marion Street( corner of Marion and Madison Streets), however, the parish offices are located at 509 East Twiggs Street.",
+      "visible_time_s": 6.64100000000326,
+      "requested_subject": "",
+      "resolved_title": "St. Andrew's Episcopal Church (Tampa, Florida)",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d6s2",
+      "title": "St. Andrew's Episcopal Church (Tampa, Florida)",
+      "url": "https://trace.invalid/2wikimultihopqa_14f3774f085611ebbd59ac1f6bf848b6_short/d6s2",
+      "text": "On April 15, 2009, the church building was added to the U.S. National Register of Historic Places( NRHP).",
+      "visible_time_s": 6.64100000000326,
+      "requested_subject": "",
+      "resolved_title": "St. Andrew's Episcopal Church (Tampa, Florida)",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d6s3",
+      "title": "St. Andrew's Episcopal Church (Tampa, Florida)",
+      "url": "https://trace.invalid/2wikimultihopqa_14f3774f085611ebbd59ac1f6bf848b6_short/d6s3",
+      "text": "Francis J. Kennard and Michael J. Miller are credited as the building's architects.",
+      "visible_time_s": 6.64100000000326,
+      "requested_subject": "",
+      "resolved_title": "St. Andrew's Episcopal Church (Tampa, Florida)",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d6s4",
+      "title": "St. Andrew's Episcopal Church (Tampa, Florida)",
+      "url": "https://trace.invalid/2wikimultihopqa_14f3774f085611ebbd59ac1f6bf848b6_short/d6s4",
+      "text": "The congregation was officially established on July 24, 1871, and was the first Episcopal church in the city of Tampa.",
+      "visible_time_s": 6.64100000000326,
+      "requested_subject": "",
+      "resolved_title": "St. Andrew's Episcopal Church (Tampa, Florida)",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d6s5",
+      "title": "St. Andrew's Episcopal Church (Tampa, Florida)",
+      "url": "https://trace.invalid/2wikimultihopqa_14f3774f085611ebbd59ac1f6bf848b6_short/d6s5",
+      "text": "Initially, a hospital building at Fort Brooke was used for worship services.",
+      "visible_time_s": 6.64100000000326,
+      "requested_subject": "",
+      "resolved_title": "St. Andrew's Episcopal Church (Tampa, Florida)",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d6s6",
+      "title": "St. Andrew's Episcopal Church (Tampa, Florida)",
+      "url": "https://trace.invalid/2wikimultihopqa_14f3774f085611ebbd59ac1f6bf848b6_short/d6s6",
+      "text": "In 1877, the congregation purchased the block of land bounded by Marion, Twiggs, Morgan, and Madison Streets, where they are presently located.",
+      "visible_time_s": 6.64100000000326,
+      "requested_subject": "",
+      "resolved_title": "St. Andrew's Episcopal Church (Tampa, Florida)",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d6s7",
+      "title": "St. Andrew's Episcopal Church (Tampa, Florida)",
+      "url": "https://trace.invalid/2wikimultihopqa_14f3774f085611ebbd59ac1f6bf848b6_short/d6s7",
+      "text": "A wood frame church was erected on the site in 1883.",
+      "visible_time_s": 6.64100000000326,
+      "requested_subject": "",
+      "resolved_title": "St. Andrew's Episcopal Church (Tampa, Florida)",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d6s8",
+      "title": "St. Andrew's Episcopal Church (Tampa, Florida)",
+      "url": "https://trace.invalid/2wikimultihopqa_14f3774f085611ebbd59ac1f6bf848b6_short/d6s8",
+      "text": "Construction on their current church building began in 1904 and three years later, the structure was completed.",
+      "visible_time_s": 6.64100000000326,
+      "requested_subject": "",
+      "resolved_title": "St. Andrew's Episcopal Church (Tampa, Florida)",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d6s9",
+      "title": "St. Andrew's Episcopal Church (Tampa, Florida)",
+      "url": "https://trace.invalid/2wikimultihopqa_14f3774f085611ebbd59ac1f6bf848b6_short/d6s9",
+      "text": "The historic Mediterranean Revival style building was designed by the prominent local architectural firm of Michael J. Miller& Francis J. Kennard, who had designed the Belleview- Biltmore Hotel and other significant structures which today are also NRHP- listed.",
+      "visible_time_s": 6.64100000000326,
+      "requested_subject": "",
+      "resolved_title": "St. Andrew's Episcopal Church (Tampa, Florida)",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d6s10",
+      "title": "St. Andrew's Episcopal Church (Tampa, Florida)",
+      "url": "https://trace.invalid/2wikimultihopqa_14f3774f085611ebbd59ac1f6bf848b6_short/d6s10",
+      "text": "Their design for St. Andrew's incorporated several components from the original wooden church, including the stained glass windows, communion rail, and lectern.",
+      "visible_time_s": 6.64100000000326,
+      "requested_subject": "",
+      "resolved_title": "St. Andrew's Episcopal Church (Tampa, Florida)",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d6s11",
+      "title": "St. Andrew's Episcopal Church (Tampa, Florida)",
+      "url": "https://trace.invalid/2wikimultihopqa_14f3774f085611ebbd59ac1f6bf848b6_short/d6s11",
+      "text": "As Tampa's population grew and the city expanded, St. Andrew's parish helped to establish the local Episcopal congregations of St. John's and St. Mary's.",
+      "visible_time_s": 6.64100000000326,
+      "requested_subject": "",
+      "resolved_title": "St. Andrew's Episcopal Church (Tampa, Florida)",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d6s12",
+      "title": "St. Andrew's Episcopal Church (Tampa, Florida)",
+      "url": "https://trace.invalid/2wikimultihopqa_14f3774f085611ebbd59ac1f6bf848b6_short/d6s12",
+      "text": "The church is under the Tampa Deanery of the Episcopal Diocese of Southwest Florida, which is within Province 4 of the Episcopal Church in the United States of America.",
+      "visible_time_s": 6.64100000000326,
+      "requested_subject": "",
+      "resolved_title": "St. Andrew's Episcopal Church (Tampa, Florida)",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d6s13",
+      "title": "St. Andrew's Episcopal Church (Tampa, Florida)",
+      "url": "https://trace.invalid/2wikimultihopqa_14f3774f085611ebbd59ac1f6bf848b6_short/d6s13",
+      "text": "Next door to the historic church, on the same block at the corner of Twiggs and Marion Streets, is the six- story Western Union Building.",
+      "visible_time_s": 6.64100000000326,
+      "requested_subject": "",
+      "resolved_title": "St. Andrew's Episcopal Church (Tampa, Florida)",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d6s14",
+      "title": "St. Andrew's Episcopal Church (Tampa, Florida)",
+      "url": "https://trace.invalid/2wikimultihopqa_14f3774f085611ebbd59ac1f6bf848b6_short/d6s14",
+      "text": "The Art Deco styled, commercial office building built in 1929 was purchased by St. Andrew's Episcopal Church in 1996.",
+      "visible_time_s": 6.64100000000326,
+      "requested_subject": "",
+      "resolved_title": "St. Andrew's Episcopal Church (Tampa, Florida)",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d8s0",
+      "title": "Sainte-Jeanne-de-Chantal (Paris)",
+      "url": "https://trace.invalid/2wikimultihopqa_14f3774f085611ebbd59ac1f6bf848b6_short/d8s0",
+      "text": "Sainte- Jeanne- de- Chantal is a Catholic church in Paris built of concrete in Byzantine style with a large dome.",
+      "visible_time_s": 6.64100000000326,
+      "requested_subject": "",
+      "resolved_title": "Sainte-Jeanne-de-Chantal (Paris)",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d8s1",
+      "title": "Sainte-Jeanne-de-Chantal (Paris)",
+      "url": "https://trace.invalid/2wikimultihopqa_14f3774f085611ebbd59ac1f6bf848b6_short/d8s1",
+      "text": "It was constructed between 1932 and 1956.",
+      "visible_time_s": 6.64100000000326,
+      "requested_subject": "",
+      "resolved_title": "Sainte-Jeanne-de-Chantal (Paris)",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d3s0",
+      "title": "Saint Andrew's Episcopal Church (Bryan, Texas)",
+      "url": "https://trace.invalid/2wikimultihopqa_14f3774f085611ebbd59ac1f6bf848b6_short/d3s0",
+      "text": "Saint Andrew's Episcopal Church is a historic Episcopal church at 217 West Twenty- sixth in Bryan, Texas.",
+      "visible_time_s": 6.64100000000326,
+      "requested_subject": "",
+      "resolved_title": "Saint Andrew's Episcopal Church (Bryan, Texas)",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d3s1",
+      "title": "Saint Andrew's Episcopal Church (Bryan, Texas)",
+      "url": "https://trace.invalid/2wikimultihopqa_14f3774f085611ebbd59ac1f6bf848b6_short/d3s1",
+      "text": "The Late Gothic Revival- style church building was constructed in 1914 and added to the National Register of Historic Places in 1987.",
+      "visible_time_s": 6.64100000000326,
+      "requested_subject": "",
+      "resolved_title": "Saint Andrew's Episcopal Church (Bryan, Texas)",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d5s0",
+      "title": "St. Andrew's Episcopal Church (Emporia, Kansas)",
+      "url": "https://trace.invalid/2wikimultihopqa_14f3774f085611ebbd59ac1f6bf848b6_short/d5s0",
+      "text": "St. Andrew's Episcopal Church is a parish established in Emporia, Kansas on February 14, 1870 as part of the Episcopal Diocese of Kansas.",
+      "visible_time_s": 6.64100000000326,
+      "requested_subject": "",
+      "resolved_title": "St. Andrew's Episcopal Church (Emporia, Kansas)",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d5s1",
+      "title": "St. Andrew's Episcopal Church (Emporia, Kansas)",
+      "url": "https://trace.invalid/2wikimultihopqa_14f3774f085611ebbd59ac1f6bf848b6_short/d5s1",
+      "text": "St. Andrew's first building was constructed in the Fall of 1870 and was of a Gothic Revival style.",
+      "visible_time_s": 6.64100000000326,
+      "requested_subject": "",
+      "resolved_title": "St. Andrew's Episcopal Church (Emporia, Kansas)",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d5s2",
+      "title": "St. Andrew's Episcopal Church (Emporia, Kansas)",
+      "url": "https://trace.invalid/2wikimultihopqa_14f3774f085611ebbd59ac1f6bf848b6_short/d5s2",
+      "text": "In 1928, the original building was replaced by a larger Gothic Revival architecture building.",
+      "visible_time_s": 6.64100000000326,
+      "requested_subject": "",
+      "resolved_title": "St. Andrew's Episcopal Church (Emporia, Kansas)",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d5s3",
+      "title": "St. Andrew's Episcopal Church (Emporia, Kansas)",
+      "url": "https://trace.invalid/2wikimultihopqa_14f3774f085611ebbd59ac1f6bf848b6_short/d5s3",
+      "text": "St. Andrew's will celebrate 150 years of ministry and mission to the Emporia community in 2020.",
+      "visible_time_s": 6.64100000000326,
+      "requested_subject": "",
+      "resolved_title": "St. Andrew's Episcopal Church (Emporia, Kansas)",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d7s0",
+      "title": "St. Andrew's Episcopal Church (Hanover, Massachusetts)",
+      "url": "https://trace.invalid/2wikimultihopqa_14f3774f085611ebbd59ac1f6bf848b6_short/d7s0",
+      "text": "St. Andrew's Episcopal Church is an historic church located in Hanover, Massachusetts.",
+      "visible_time_s": 6.64100000000326,
+      "requested_subject": "",
+      "resolved_title": "St. Andrew's Episcopal Church (Hanover, Massachusetts)",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d7s1",
+      "title": "St. Andrew's Episcopal Church (Hanover, Massachusetts)",
+      "url": "https://trace.invalid/2wikimultihopqa_14f3774f085611ebbd59ac1f6bf848b6_short/d7s1",
+      "text": "It was founded in 1725 in what is now known as Norwell, an area that was then part of Scituate).",
+      "visible_time_s": 6.64100000000326,
+      "requested_subject": "",
+      "resolved_title": "St. Andrew's Episcopal Church (Hanover, Massachusetts)",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d7s2",
+      "title": "St. Andrew's Episcopal Church (Hanover, Massachusetts)",
+      "url": "https://trace.invalid/2wikimultihopqa_14f3774f085611ebbd59ac1f6bf848b6_short/d7s2",
+      "text": "It is one of the oldest parishes in the Episcopal Diocese of Massachusetts.",
+      "visible_time_s": 6.64100000000326,
+      "requested_subject": "",
+      "resolved_title": "St. Andrew's Episcopal Church (Hanover, Massachusetts)",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d9s0",
+      "title": "Trinity Episcopal Church (Columbus, Georgia)",
+      "url": "https://trace.invalid/2wikimultihopqa_14f3774f085611ebbd59ac1f6bf848b6_short/d9s0",
+      "text": "Trinity Episcopal Church is an Episcopal church located in Columbus, Georgia.",
+      "visible_time_s": 6.64100000000326,
+      "requested_subject": "",
+      "resolved_title": "Trinity Episcopal Church (Columbus, Georgia)",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d10s0",
+      "title": "St. Andrew's Episcopal Church (Albany, New York)",
+      "url": "https://trace.invalid/2wikimultihopqa_14f3774f085611ebbd59ac1f6bf848b6_short/d10s0",
+      "text": "St. Andrew's Episcopal Church is located at North Main and Madison( U.S. Route 20) avenues in Albany, New York, United States.",
+      "visible_time_s": 6.64100000000326,
+      "requested_subject": "",
+      "resolved_title": "St. Andrew's Episcopal Church (Albany, New York)",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d10s1",
+      "title": "St. Andrew's Episcopal Church (Albany, New York)",
+      "url": "https://trace.invalid/2wikimultihopqa_14f3774f085611ebbd59ac1f6bf848b6_short/d10s1",
+      "text": "It is a complex of three buildings, centered on the church itself, a stone structure designed by architect Norman Sturgis in the Late Gothic Revival architectural style and built in 1930.",
+      "visible_time_s": 6.64100000000326,
+      "requested_subject": "",
+      "resolved_title": "St. Andrew's Episcopal Church (Albany, New York)",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d10s2",
+      "title": "St. Andrew's Episcopal Church (Albany, New York)",
+      "url": "https://trace.invalid/2wikimultihopqa_14f3774f085611ebbd59ac1f6bf848b6_short/d10s2",
+      "text": "In 2005 it was listed on the National Register of Historic Places.",
+      "visible_time_s": 6.64100000000326,
+      "requested_subject": "",
+      "resolved_title": "St. Andrew's Episcopal Church (Albany, New York)",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d10s3",
+      "title": "St. Andrew's Episcopal Church (Albany, New York)",
+      "url": "https://trace.invalid/2wikimultihopqa_14f3774f085611ebbd59ac1f6bf848b6_short/d10s3",
+      "text": "The congregation was established by a downtown church, St. Paul's, from a neighborhood mission near the end of the 19th century.",
+      "visible_time_s": 6.64100000000326,
+      "requested_subject": "",
+      "resolved_title": "St. Andrew's Episcopal Church (Albany, New York)",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d10s4",
+      "title": "St. Andrew's Episcopal Church (Albany, New York)",
+      "url": "https://trace.invalid/2wikimultihopqa_14f3774f085611ebbd59ac1f6bf848b6_short/d10s4",
+      "text": "It was one of the first churches started in the suburban areas of the city, as it expanded away from its historic core.",
+      "visible_time_s": 6.64100000000326,
+      "requested_subject": "",
+      "resolved_title": "St. Andrew's Episcopal Church (Albany, New York)",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d10s5",
+      "title": "St. Andrew's Episcopal Church (Albany, New York)",
+      "url": "https://trace.invalid/2wikimultihopqa_14f3774f085611ebbd59ac1f6bf848b6_short/d10s5",
+      "text": "St. Andrew's soon built its own church( since demolished to make room for the current attached parish house) and established itself as a separate parish.",
+      "visible_time_s": 6.64100000000326,
+      "requested_subject": "",
+      "resolved_title": "St. Andrew's Episcopal Church (Albany, New York)",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d10s6",
+      "title": "St. Andrew's Episcopal Church (Albany, New York)",
+      "url": "https://trace.invalid/2wikimultihopqa_14f3774f085611ebbd59ac1f6bf848b6_short/d10s6",
+      "text": "Sturgis' structure was meant to embody the ideals of his mentor, Ralph Adams Cram, which valued the English Gothic styles as ideal for Episcopal and Anglican worship since such buildings were where it had originally been practiced.",
+      "visible_time_s": 6.64100000000326,
+      "requested_subject": "",
+      "resolved_title": "St. Andrew's Episcopal Church (Albany, New York)",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d10s7",
+      "title": "St. Andrew's Episcopal Church (Albany, New York)",
+      "url": "https://trace.invalid/2wikimultihopqa_14f3774f085611ebbd59ac1f6bf848b6_short/d10s7",
+      "text": "Accordingly, it is modeled in part on St. Albans Abbey in Hertfordshire, England, and a Roman brick from that location was placed in the hyphen between the church and the parish hall.",
+      "visible_time_s": 6.64100000000326,
+      "requested_subject": "",
+      "resolved_title": "St. Andrew's Episcopal Church (Albany, New York)",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d10s8",
+      "title": "St. Andrew's Episcopal Church (Albany, New York)",
+      "url": "https://trace.invalid/2wikimultihopqa_14f3774f085611ebbd59ac1f6bf848b6_short/d10s8",
+      "text": "But it is not an exact copy, and Sturgis himself described it as\" an attempt to express fundamental truths in a new way to tell an old, old story in new words\".",
+      "visible_time_s": 6.64100000000326,
+      "requested_subject": "",
+      "resolved_title": "St. Andrew's Episcopal Church (Albany, New York)",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d10s9",
+      "title": "St. Andrew's Episcopal Church (Albany, New York)",
+      "url": "https://trace.invalid/2wikimultihopqa_14f3774f085611ebbd59ac1f6bf848b6_short/d10s9",
+      "text": "It is considered one of the best examples of the 20th- century Late Gothic Revival style in Albany.",
+      "visible_time_s": 6.64100000000326,
+      "requested_subject": "",
+      "resolved_title": "St. Andrew's Episcopal Church (Albany, New York)",
+      "entity_resolution": "unspecified"
+    }
+  ],
+  "searches": [
+    {
+      "query": "[scheduled evidence]",
+      "subject": "",
+      "status": "ok",
+      "returned_pages": [],
+      "mode": "trace",
+      "unit_id": "__scheduled_evidence__"
+    }
+  ],
+  "search_failures": [],
+  "llm_calls": [
+    {
+      "purpose": "feedback_generate",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 430,
+        "completion_tokens": 78,
+        "total_tokens": 508,
+        "prompt_tokens_details": {
+          "cached_tokens": 384
+        }
+      },
+      "latency_s": 1.297
+    },
+    {
+      "purpose": "feedback_verify",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 401,
+        "completion_tokens": 52,
+        "total_tokens": 453,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        }
+      },
+      "latency_s": 0.953
+    },
+    {
+      "purpose": "decompose",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 820,
+        "completion_tokens": 415,
+        "total_tokens": 1235,
+        "prompt_tokens_details": {
+          "cached_tokens": 768
+        }
+      },
+      "latency_s": 3.203
+    },
+    {
+      "purpose": "feedback_generate",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 430,
+        "completion_tokens": 62,
+        "total_tokens": 492,
+        "prompt_tokens_details": {
+          "cached_tokens": 384
+        }
+      },
+      "latency_s": 1.0
+    },
+    {
+      "purpose": "plan_review",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 1170,
+        "completion_tokens": 381,
+        "total_tokens": 1551,
+        "prompt_tokens_details": {
+          "cached_tokens": 896
+        }
+      },
+      "latency_s": 3.438
+    },
+    {
+      "purpose": "feedback_verify",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 372,
+        "completion_tokens": 100,
+        "total_tokens": 472,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        }
+      },
+      "latency_s": 1.531
+    },
+    {
+      "purpose": "judge",
+      "model": "tinker://f9e9a6c1-e203-5c2c-acdd-68fe67378ca4:train:0/sampler_weights/epoch-0001",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 8790,
+        "completion_tokens": 351,
+        "total_tokens": 9141,
+        "prompt_tokens_details": {
+          "cached_tokens": 1024
+        }
+      },
+      "latency_s": 2.719
+    },
+    {
+      "purpose": "generate",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 1141,
+        "completion_tokens": 123,
+        "total_tokens": 1264,
+        "prompt_tokens_details": {
+          "cached_tokens": 512
+        }
+      },
+      "latency_s": 1.734
+    },
+    {
+      "purpose": "verify",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 1589,
+        "completion_tokens": 149,
+        "total_tokens": 1738,
+        "prompt_tokens_details": {
+          "cached_tokens": 512
+        }
+      },
+      "latency_s": 3.078
+    }
+  ],
+  "search_diagnostics": [],
+  "output_enqueued_units": {
+    "u1": "Canada",
+    "u2": "United States",
+    "u3": "no"
+  },
+  "events": [
+    {
+      "sequence": 0,
+      "time_s": 0.0,
+      "type": "feedback_requested",
+      "feedback_kind": "opening",
+      "execution_state": {
+        "stage": "planning",
+        "searches_started": 0,
+        "searches_completed": 0,
+        "active_searches": 0,
+        "evidence_count": 0,
+        "supported_units": 0,
+        "output_units": 0
+      }
+    },
+    {
+      "sequence": 1,
+      "time_s": 2.25,
+      "type": "utterance",
+      "action": "Backchannel",
+      "text": "Got it, I’ll check whether Sainte‑Jeanne‑De‑Chantal in Île Perrot and St. Andrew’s Episcopal in Albany are in the same country.",
+      "claims": [],
+      "feedback_source": "model",
+      "feedback_status_claim": "intent",
+      "feedback_fallback_reason": "",
+      "execution_state": {
+        "stage": "planning",
+        "searches_started": 0,
+        "searches_completed": 0,
+        "active_searches": 0,
+        "evidence_count": 0,
+        "supported_units": 0,
+        "output_units": 0
+      },
+      "language": "en"
+    },
+    {
+      "sequence": 2,
+      "time_s": 3.203,
+      "type": "decompose_reply",
+      "reply": {
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "Country where Sainte-Jeanne-De-Chantal (Île Perrot) is located",
+            "subject": "Sainte-Jeanne-De-Chantal (Île Perrot)",
+            "necessary": true,
+            "depends_on": [],
+            "queries": [
+              "Sainte-Jeanne-De-Chantal Île Perrot location",
+              "Sainte-Jeanne-De-Chantal church Île Perrot country"
+            ]
+          },
+          {
+            "unit_id": "u2",
+            "description": "Country where St. Andrew's Episcopal Church (Albany, New York) is located",
+            "subject": "St. Andrew's Episcopal Church (Albany, New York)",
+            "necessary": true,
+            "depends_on": [],
+            "queries": [
+              "St. Andrew's Episcopal Church Albany New York location",
+              "St. Andrew's Episcopal Church Albany country"
+            ]
+          },
+          {
+            "unit_id": "u3",
+            "description": "Whether both churches are located in the same country",
+            "subject": "",
+            "necessary": true,
+            "depends_on": [
+              "u1",
+              "u2"
+            ],
+            "queries": [
+              "Are Sainte-Jeanne-De-Chantal Île Perrot and St. Andrew's Episcopal Church Albany in the same country?"
+            ]
+          }
+        ]
+      },
+      "attempt": 1,
+      "repair": false
+    },
+    {
+      "sequence": 3,
+      "time_s": 3.203,
+      "type": "plan_review_requested",
+      "max_reviews": 1,
+      "question_only": true
+    },
+    {
+      "sequence": 4,
+      "time_s": 5.266,
+      "type": "feedback_requested",
+      "feedback_kind": "progress",
+      "execution_state": {
+        "stage": "planning",
+        "searches_started": 0,
+        "searches_completed": 0,
+        "active_searches": 0,
+        "evidence_count": 0,
+        "supported_units": 0,
+        "output_units": 0
+      }
+    },
+    {
+      "sequence": 5,
+      "time_s": 6.641,
+      "type": "plan_review_reply",
+      "reply": {
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "Country where Sainte-Jeanne-De-Chantal (Île Perrot) is located",
+            "subject": "Sainte-Jeanne-De-Chantal (Île Perrot)",
+            "necessary": true,
+            "depends_on": [],
+            "queries": [
+              "Sainte-Jeanne-De-Chantal Île Perrot location",
+              "Sainte-Jeanne-De-Chantal church Île Perrot country"
+            ]
+          },
+          {
+            "unit_id": "u2",
+            "description": "Country where St. Andrew's Episcopal Church (Albany, New York) is located",
+            "subject": "St. Andrew's Episcopal Church (Albany, New York)",
+            "necessary": true,
+            "depends_on": [],
+            "queries": [
+              "St. Andrew's Episcopal Church Albany New York location",
+              "St. Andrew's Episcopal Church Albany country"
+            ]
+          },
+          {
+            "unit_id": "u3",
+            "description": "Whether both churches are located in the same country",
+            "subject": "",
+            "necessary": true,
+            "depends_on": [
+              "u1",
+              "u2"
+            ],
+            "queries": [
+              "Are Sainte-Jeanne-De-Chantal Île Perrot and St. Andrew's Episcopal Church Albany in the same country?"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "sequence": 6,
+      "time_s": 6.641,
+      "type": "plan_review_finished",
+      "changed": false,
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "Country where Sainte-Jeanne-De-Chantal (Île Perrot) is located",
+          "necessary": true,
+          "depends_on": [],
+          "queries": [
+            "Sainte-Jeanne-De-Chantal Île Perrot location",
+            "Sainte-Jeanne-De-Chantal church Île Perrot country"
+          ],
+          "subject": "Sainte-Jeanne-De-Chantal (Île Perrot)"
+        },
+        {
+          "unit_id": "u2",
+          "description": "Country where St. Andrew's Episcopal Church (Albany, New York) is located",
+          "necessary": true,
+          "depends_on": [],
+          "queries": [
+            "St. Andrew's Episcopal Church Albany New York location",
+            "St. Andrew's Episcopal Church Albany country"
+          ],
+          "subject": "St. Andrew's Episcopal Church (Albany, New York)"
+        },
+        {
+          "unit_id": "u3",
+          "description": "Whether both churches are located in the same country",
+          "necessary": true,
+          "depends_on": [
+            "u1",
+            "u2"
+          ],
+          "queries": [
+            "Are Sainte-Jeanne-De-Chantal Île Perrot and St. Andrew's Episcopal Church Albany in the same country?"
+          ],
+          "subject": ""
+        }
+      ],
+      "question_only": true
+    },
+    {
+      "sequence": 7,
+      "time_s": 6.641,
+      "type": "plan",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "Country where Sainte-Jeanne-De-Chantal (Île Perrot) is located",
+          "necessary": true,
+          "depends_on": [],
+          "queries": [
+            "Sainte-Jeanne-De-Chantal Île Perrot location",
+            "Sainte-Jeanne-De-Chantal church Île Perrot country"
+          ],
+          "subject": "Sainte-Jeanne-De-Chantal (Île Perrot)"
+        },
+        {
+          "unit_id": "u2",
+          "description": "Country where St. Andrew's Episcopal Church (Albany, New York) is located",
+          "necessary": true,
+          "depends_on": [],
+          "queries": [
+            "St. Andrew's Episcopal Church Albany New York location",
+            "St. Andrew's Episcopal Church Albany country"
+          ],
+          "subject": "St. Andrew's Episcopal Church (Albany, New York)"
+        },
+        {
+          "unit_id": "u3",
+          "description": "Whether both churches are located in the same country",
+          "necessary": true,
+          "depends_on": [
+            "u1",
+            "u2"
+          ],
+          "queries": [
+            "Are Sainte-Jeanne-De-Chantal Île Perrot and St. Andrew's Episcopal Church Albany in the same country?"
+          ],
+          "subject": ""
+        }
+      ]
+    },
+    {
+      "sequence": 8,
+      "time_s": 6.641,
+      "type": "trace_batch_requested"
+    },
+    {
+      "sequence": 9,
+      "time_s": 6.641,
+      "type": "search_finished",
+      "query": "[scheduled evidence]",
+      "subject": "",
+      "status": "ok",
+      "returned_pages": [],
+      "mode": "trace",
+      "unit_id": "__scheduled_evidence__"
+    },
+    {
+      "sequence": 10,
+      "time_s": 6.641,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d1s0",
+        "title": "Sainte-Jeanne-de-Chantal (Île Perrot)",
+        "url": "https://trace.invalid/2wikimultihopqa_14f3774f085611ebbd59ac1f6bf848b6_short/d1s0",
+        "text": "Sainte- Jeanne- de- Chantal is a Catholic church on the Île Perrot to the west of the island of Montreal in the Canadian province of Quebec.",
+        "visible_time_s": 6.64100000000326,
+        "requested_subject": "",
+        "resolved_title": "Sainte-Jeanne-de-Chantal (Île Perrot)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 11,
+      "time_s": 6.641,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d1s1",
+        "title": "Sainte-Jeanne-de-Chantal (Île Perrot)",
+        "url": "https://trace.invalid/2wikimultihopqa_14f3774f085611ebbd59ac1f6bf848b6_short/d1s1",
+        "text": "Built in 1773 – 74, it is one of the oldest surviving rural churches in North America.",
+        "visible_time_s": 6.64100000000326,
+        "requested_subject": "",
+        "resolved_title": "Sainte-Jeanne-de-Chantal (Île Perrot)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 12,
+      "time_s": 6.641,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d2s0",
+        "title": "St. Andrew's Episcopal Church (Elyria, Ohio)",
+        "url": "https://trace.invalid/2wikimultihopqa_14f3774f085611ebbd59ac1f6bf848b6_short/d2s0",
+        "text": "St. Andrew's Episcopal Church is a historic church at 300 3rd Street in Elyria, Ohio.",
+        "visible_time_s": 6.64100000000326,
+        "requested_subject": "",
+        "resolved_title": "St. Andrew's Episcopal Church (Elyria, Ohio)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 13,
+      "time_s": 6.641,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d2s1",
+        "title": "St. Andrew's Episcopal Church (Elyria, Ohio)",
+        "url": "https://trace.invalid/2wikimultihopqa_14f3774f085611ebbd59ac1f6bf848b6_short/d2s1",
+        "text": "It was built in 1872 and added to the National Register of Historic Places in 1979.",
+        "visible_time_s": 6.64100000000326,
+        "requested_subject": "",
+        "resolved_title": "St. Andrew's Episcopal Church (Elyria, Ohio)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 14,
+      "time_s": 6.641,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d4s0",
+        "title": "St. Andrew's Episcopal Church (Clinton, Louisiana)",
+        "url": "https://trace.invalid/2wikimultihopqa_14f3774f085611ebbd59ac1f6bf848b6_short/d4s0",
+        "text": "St. Andrew's Episcopal Church is a historic Carpenter Gothic Episcopal Church built in 1871 and located at the corner of Church Street and St. Andrew's in Clinton, Louisiana.",
+        "visible_time_s": 6.64100000000326,
+        "requested_subject": "",
+        "resolved_title": "St. Andrew's Episcopal Church (Clinton, Louisiana)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 15,
+      "time_s": 6.641,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d4s1",
+        "title": "St. Andrew's Episcopal Church (Clinton, Louisiana)",
+        "url": "https://trace.invalid/2wikimultihopqa_14f3774f085611ebbd59ac1f6bf848b6_short/d4s1",
+        "text": "Parts of the 1958 movie,\" The Long, Hot Summer\", which starred Paul Newman, Lee Remick and Joanne Woodward, were filmed at the church.",
+        "visible_time_s": 6.64100000000326,
+        "requested_subject": "",
+        "resolved_title": "St. Andrew's Episcopal Church (Clinton, Louisiana)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 16,
+      "time_s": 6.641,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d4s2",
+        "title": "St. Andrew's Episcopal Church (Clinton, Louisiana)",
+        "url": "https://trace.invalid/2wikimultihopqa_14f3774f085611ebbd59ac1f6bf848b6_short/d4s2",
+        "text": "St. Andrew's Episcopal Church is still an active parish in the Episcopal Diocese of Louisiana.",
+        "visible_time_s": 6.64100000000326,
+        "requested_subject": "",
+        "resolved_title": "St. Andrew's Episcopal Church (Clinton, Louisiana)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 17,
+      "time_s": 6.641,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d4s3",
+        "title": "St. Andrew's Episcopal Church (Clinton, Louisiana)",
+        "url": "https://trace.invalid/2wikimultihopqa_14f3774f085611ebbd59ac1f6bf848b6_short/d4s3",
+        "text": "The church was listed on the National Register of Historic Places on June 21, 1984.",
+        "visible_time_s": 6.64100000000326,
+        "requested_subject": "",
+        "resolved_title": "St. Andrew's Episcopal Church (Clinton, Louisiana)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 18,
+      "time_s": 6.641,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d4s4",
+        "title": "St. Andrew's Episcopal Church (Clinton, Louisiana)",
+        "url": "https://trace.invalid/2wikimultihopqa_14f3774f085611ebbd59ac1f6bf848b6_short/d4s4",
+        "text": "The congregation meets at 9 A.M. each Sunday for Holy Eucharist three Sundays a month and Morning Prayer on the other Sunday( s).",
+        "visible_time_s": 6.64100000000326,
+        "requested_subject": "",
+        "resolved_title": "St. Andrew's Episcopal Church (Clinton, Louisiana)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 19,
+      "time_s": 6.641,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d4s5",
+        "title": "St. Andrew's Episcopal Church (Clinton, Louisiana)",
+        "url": "https://trace.invalid/2wikimultihopqa_14f3774f085611ebbd59ac1f6bf848b6_short/d4s5",
+        "text": "Coffee and fellowship follow immediately in the parish hall.",
+        "visible_time_s": 6.64100000000326,
+        "requested_subject": "",
+        "resolved_title": "St. Andrew's Episcopal Church (Clinton, Louisiana)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 20,
+      "time_s": 6.641,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d4s6",
+        "title": "St. Andrew's Episcopal Church (Clinton, Louisiana)",
+        "url": "https://trace.invalid/2wikimultihopqa_14f3774f085611ebbd59ac1f6bf848b6_short/d4s6",
+        "text": "All are welcome.",
+        "visible_time_s": 6.64100000000326,
+        "requested_subject": "",
+        "resolved_title": "St. Andrew's Episcopal Church (Clinton, Louisiana)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 21,
+      "time_s": 6.641,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d4s7",
+        "title": "St. Andrew's Episcopal Church (Clinton, Louisiana)",
+        "url": "https://trace.invalid/2wikimultihopqa_14f3774f085611ebbd59ac1f6bf848b6_short/d4s7",
+        "text": "The church is located at 11015 Church St., Clinton, LA 70722.",
+        "visible_time_s": 6.64100000000326,
+        "requested_subject": "",
+        "resolved_title": "St. Andrew's Episcopal Church (Clinton, Louisiana)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 22,
+      "time_s": 6.641,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d4s8",
+        "title": "St. Andrew's Episcopal Church (Clinton, Louisiana)",
+        "url": "https://trace.invalid/2wikimultihopqa_14f3774f085611ebbd59ac1f6bf848b6_short/d4s8",
+        "text": "The phone number is( 225) 683-5498.",
+        "visible_time_s": 6.64100000000326,
+        "requested_subject": "",
+        "resolved_title": "St. Andrew's Episcopal Church (Clinton, Louisiana)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 23,
+      "time_s": 6.641,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d6s0",
+        "title": "St. Andrew's Episcopal Church (Tampa, Florida)",
+        "url": "https://trace.invalid/2wikimultihopqa_14f3774f085611ebbd59ac1f6bf848b6_short/d6s0",
+        "text": "St. Andrew's Episcopal Church is an active Episcopal parish and historic church building in Tampa, Florida, United States.",
+        "visible_time_s": 6.64100000000326,
+        "requested_subject": "",
+        "resolved_title": "St. Andrew's Episcopal Church (Tampa, Florida)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 24,
+      "time_s": 6.641,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d6s1",
+        "title": "St. Andrew's Episcopal Church (Tampa, Florida)",
+        "url": "https://trace.invalid/2wikimultihopqa_14f3774f085611ebbd59ac1f6bf848b6_short/d6s1",
+        "text": "The structure is located downtown at 505 North Marion Street( corner of Marion and Madison Streets), however, the parish offices are located at 509 East Twiggs Street.",
+        "visible_time_s": 6.64100000000326,
+        "requested_subject": "",
+        "resolved_title": "St. Andrew's Episcopal Church (Tampa, Florida)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 25,
+      "time_s": 6.641,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d6s2",
+        "title": "St. Andrew's Episcopal Church (Tampa, Florida)",
+        "url": "https://trace.invalid/2wikimultihopqa_14f3774f085611ebbd59ac1f6bf848b6_short/d6s2",
+        "text": "On April 15, 2009, the church building was added to the U.S. National Register of Historic Places( NRHP).",
+        "visible_time_s": 6.64100000000326,
+        "requested_subject": "",
+        "resolved_title": "St. Andrew's Episcopal Church (Tampa, Florida)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 26,
+      "time_s": 6.641,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d6s3",
+        "title": "St. Andrew's Episcopal Church (Tampa, Florida)",
+        "url": "https://trace.invalid/2wikimultihopqa_14f3774f085611ebbd59ac1f6bf848b6_short/d6s3",
+        "text": "Francis J. Kennard and Michael J. Miller are credited as the building's architects.",
+        "visible_time_s": 6.64100000000326,
+        "requested_subject": "",
+        "resolved_title": "St. Andrew's Episcopal Church (Tampa, Florida)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 27,
+      "time_s": 6.641,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d6s4",
+        "title": "St. Andrew's Episcopal Church (Tampa, Florida)",
+        "url": "https://trace.invalid/2wikimultihopqa_14f3774f085611ebbd59ac1f6bf848b6_short/d6s4",
+        "text": "The congregation was officially established on July 24, 1871, and was the first Episcopal church in the city of Tampa.",
+        "visible_time_s": 6.64100000000326,
+        "requested_subject": "",
+        "resolved_title": "St. Andrew's Episcopal Church (Tampa, Florida)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 28,
+      "time_s": 6.641,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d6s5",
+        "title": "St. Andrew's Episcopal Church (Tampa, Florida)",
+        "url": "https://trace.invalid/2wikimultihopqa_14f3774f085611ebbd59ac1f6bf848b6_short/d6s5",
+        "text": "Initially, a hospital building at Fort Brooke was used for worship services.",
+        "visible_time_s": 6.64100000000326,
+        "requested_subject": "",
+        "resolved_title": "St. Andrew's Episcopal Church (Tampa, Florida)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 29,
+      "time_s": 6.641,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d6s6",
+        "title": "St. Andrew's Episcopal Church (Tampa, Florida)",
+        "url": "https://trace.invalid/2wikimultihopqa_14f3774f085611ebbd59ac1f6bf848b6_short/d6s6",
+        "text": "In 1877, the congregation purchased the block of land bounded by Marion, Twiggs, Morgan, and Madison Streets, where they are presently located.",
+        "visible_time_s": 6.64100000000326,
+        "requested_subject": "",
+        "resolved_title": "St. Andrew's Episcopal Church (Tampa, Florida)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 30,
+      "time_s": 6.641,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d6s7",
+        "title": "St. Andrew's Episcopal Church (Tampa, Florida)",
+        "url": "https://trace.invalid/2wikimultihopqa_14f3774f085611ebbd59ac1f6bf848b6_short/d6s7",
+        "text": "A wood frame church was erected on the site in 1883.",
+        "visible_time_s": 6.64100000000326,
+        "requested_subject": "",
+        "resolved_title": "St. Andrew's Episcopal Church (Tampa, Florida)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 31,
+      "time_s": 6.641,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d6s8",
+        "title": "St. Andrew's Episcopal Church (Tampa, Florida)",
+        "url": "https://trace.invalid/2wikimultihopqa_14f3774f085611ebbd59ac1f6bf848b6_short/d6s8",
+        "text": "Construction on their current church building began in 1904 and three years later, the structure was completed.",
+        "visible_time_s": 6.64100000000326,
+        "requested_subject": "",
+        "resolved_title": "St. Andrew's Episcopal Church (Tampa, Florida)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 32,
+      "time_s": 6.641,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d6s9",
+        "title": "St. Andrew's Episcopal Church (Tampa, Florida)",
+        "url": "https://trace.invalid/2wikimultihopqa_14f3774f085611ebbd59ac1f6bf848b6_short/d6s9",
+        "text": "The historic Mediterranean Revival style building was designed by the prominent local architectural firm of Michael J. Miller& Francis J. Kennard, who had designed the Belleview- Biltmore Hotel and other significant structures which today are also NRHP- listed.",
+        "visible_time_s": 6.64100000000326,
+        "requested_subject": "",
+        "resolved_title": "St. Andrew's Episcopal Church (Tampa, Florida)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 33,
+      "time_s": 6.641,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d6s10",
+        "title": "St. Andrew's Episcopal Church (Tampa, Florida)",
+        "url": "https://trace.invalid/2wikimultihopqa_14f3774f085611ebbd59ac1f6bf848b6_short/d6s10",
+        "text": "Their design for St. Andrew's incorporated several components from the original wooden church, including the stained glass windows, communion rail, and lectern.",
+        "visible_time_s": 6.64100000000326,
+        "requested_subject": "",
+        "resolved_title": "St. Andrew's Episcopal Church (Tampa, Florida)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 34,
+      "time_s": 6.641,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d6s11",
+        "title": "St. Andrew's Episcopal Church (Tampa, Florida)",
+        "url": "https://trace.invalid/2wikimultihopqa_14f3774f085611ebbd59ac1f6bf848b6_short/d6s11",
+        "text": "As Tampa's population grew and the city expanded, St. Andrew's parish helped to establish the local Episcopal congregations of St. John's and St. Mary's.",
+        "visible_time_s": 6.64100000000326,
+        "requested_subject": "",
+        "resolved_title": "St. Andrew's Episcopal Church (Tampa, Florida)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 35,
+      "time_s": 6.641,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d6s12",
+        "title": "St. Andrew's Episcopal Church (Tampa, Florida)",
+        "url": "https://trace.invalid/2wikimultihopqa_14f3774f085611ebbd59ac1f6bf848b6_short/d6s12",
+        "text": "The church is under the Tampa Deanery of the Episcopal Diocese of Southwest Florida, which is within Province 4 of the Episcopal Church in the United States of America.",
+        "visible_time_s": 6.64100000000326,
+        "requested_subject": "",
+        "resolved_title": "St. Andrew's Episcopal Church (Tampa, Florida)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 36,
+      "time_s": 6.641,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d6s13",
+        "title": "St. Andrew's Episcopal Church (Tampa, Florida)",
+        "url": "https://trace.invalid/2wikimultihopqa_14f3774f085611ebbd59ac1f6bf848b6_short/d6s13",
+        "text": "Next door to the historic church, on the same block at the corner of Twiggs and Marion Streets, is the six- story Western Union Building.",
+        "visible_time_s": 6.64100000000326,
+        "requested_subject": "",
+        "resolved_title": "St. Andrew's Episcopal Church (Tampa, Florida)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 37,
+      "time_s": 6.641,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d6s14",
+        "title": "St. Andrew's Episcopal Church (Tampa, Florida)",
+        "url": "https://trace.invalid/2wikimultihopqa_14f3774f085611ebbd59ac1f6bf848b6_short/d6s14",
+        "text": "The Art Deco styled, commercial office building built in 1929 was purchased by St. Andrew's Episcopal Church in 1996.",
+        "visible_time_s": 6.64100000000326,
+        "requested_subject": "",
+        "resolved_title": "St. Andrew's Episcopal Church (Tampa, Florida)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 38,
+      "time_s": 6.641,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d8s0",
+        "title": "Sainte-Jeanne-de-Chantal (Paris)",
+        "url": "https://trace.invalid/2wikimultihopqa_14f3774f085611ebbd59ac1f6bf848b6_short/d8s0",
+        "text": "Sainte- Jeanne- de- Chantal is a Catholic church in Paris built of concrete in Byzantine style with a large dome.",
+        "visible_time_s": 6.64100000000326,
+        "requested_subject": "",
+        "resolved_title": "Sainte-Jeanne-de-Chantal (Paris)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 39,
+      "time_s": 6.641,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d8s1",
+        "title": "Sainte-Jeanne-de-Chantal (Paris)",
+        "url": "https://trace.invalid/2wikimultihopqa_14f3774f085611ebbd59ac1f6bf848b6_short/d8s1",
+        "text": "It was constructed between 1932 and 1956.",
+        "visible_time_s": 6.64100000000326,
+        "requested_subject": "",
+        "resolved_title": "Sainte-Jeanne-de-Chantal (Paris)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 40,
+      "time_s": 6.641,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d3s0",
+        "title": "Saint Andrew's Episcopal Church (Bryan, Texas)",
+        "url": "https://trace.invalid/2wikimultihopqa_14f3774f085611ebbd59ac1f6bf848b6_short/d3s0",
+        "text": "Saint Andrew's Episcopal Church is a historic Episcopal church at 217 West Twenty- sixth in Bryan, Texas.",
+        "visible_time_s": 6.64100000000326,
+        "requested_subject": "",
+        "resolved_title": "Saint Andrew's Episcopal Church (Bryan, Texas)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 41,
+      "time_s": 6.641,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d3s1",
+        "title": "Saint Andrew's Episcopal Church (Bryan, Texas)",
+        "url": "https://trace.invalid/2wikimultihopqa_14f3774f085611ebbd59ac1f6bf848b6_short/d3s1",
+        "text": "The Late Gothic Revival- style church building was constructed in 1914 and added to the National Register of Historic Places in 1987.",
+        "visible_time_s": 6.64100000000326,
+        "requested_subject": "",
+        "resolved_title": "Saint Andrew's Episcopal Church (Bryan, Texas)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 42,
+      "time_s": 6.641,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d5s0",
+        "title": "St. Andrew's Episcopal Church (Emporia, Kansas)",
+        "url": "https://trace.invalid/2wikimultihopqa_14f3774f085611ebbd59ac1f6bf848b6_short/d5s0",
+        "text": "St. Andrew's Episcopal Church is a parish established in Emporia, Kansas on February 14, 1870 as part of the Episcopal Diocese of Kansas.",
+        "visible_time_s": 6.64100000000326,
+        "requested_subject": "",
+        "resolved_title": "St. Andrew's Episcopal Church (Emporia, Kansas)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 43,
+      "time_s": 6.641,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d5s1",
+        "title": "St. Andrew's Episcopal Church (Emporia, Kansas)",
+        "url": "https://trace.invalid/2wikimultihopqa_14f3774f085611ebbd59ac1f6bf848b6_short/d5s1",
+        "text": "St. Andrew's first building was constructed in the Fall of 1870 and was of a Gothic Revival style.",
+        "visible_time_s": 6.64100000000326,
+        "requested_subject": "",
+        "resolved_title": "St. Andrew's Episcopal Church (Emporia, Kansas)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 44,
+      "time_s": 6.641,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d5s2",
+        "title": "St. Andrew's Episcopal Church (Emporia, Kansas)",
+        "url": "https://trace.invalid/2wikimultihopqa_14f3774f085611ebbd59ac1f6bf848b6_short/d5s2",
+        "text": "In 1928, the original building was replaced by a larger Gothic Revival architecture building.",
+        "visible_time_s": 6.64100000000326,
+        "requested_subject": "",
+        "resolved_title": "St. Andrew's Episcopal Church (Emporia, Kansas)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 45,
+      "time_s": 6.641,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d5s3",
+        "title": "St. Andrew's Episcopal Church (Emporia, Kansas)",
+        "url": "https://trace.invalid/2wikimultihopqa_14f3774f085611ebbd59ac1f6bf848b6_short/d5s3",
+        "text": "St. Andrew's will celebrate 150 years of ministry and mission to the Emporia community in 2020.",
+        "visible_time_s": 6.64100000000326,
+        "requested_subject": "",
+        "resolved_title": "St. Andrew's Episcopal Church (Emporia, Kansas)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 46,
+      "time_s": 6.641,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d7s0",
+        "title": "St. Andrew's Episcopal Church (Hanover, Massachusetts)",
+        "url": "https://trace.invalid/2wikimultihopqa_14f3774f085611ebbd59ac1f6bf848b6_short/d7s0",
+        "text": "St. Andrew's Episcopal Church is an historic church located in Hanover, Massachusetts.",
+        "visible_time_s": 6.64100000000326,
+        "requested_subject": "",
+        "resolved_title": "St. Andrew's Episcopal Church (Hanover, Massachusetts)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 47,
+      "time_s": 6.641,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d7s1",
+        "title": "St. Andrew's Episcopal Church (Hanover, Massachusetts)",
+        "url": "https://trace.invalid/2wikimultihopqa_14f3774f085611ebbd59ac1f6bf848b6_short/d7s1",
+        "text": "It was founded in 1725 in what is now known as Norwell, an area that was then part of Scituate).",
+        "visible_time_s": 6.64100000000326,
+        "requested_subject": "",
+        "resolved_title": "St. Andrew's Episcopal Church (Hanover, Massachusetts)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 48,
+      "time_s": 6.641,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d7s2",
+        "title": "St. Andrew's Episcopal Church (Hanover, Massachusetts)",
+        "url": "https://trace.invalid/2wikimultihopqa_14f3774f085611ebbd59ac1f6bf848b6_short/d7s2",
+        "text": "It is one of the oldest parishes in the Episcopal Diocese of Massachusetts.",
+        "visible_time_s": 6.64100000000326,
+        "requested_subject": "",
+        "resolved_title": "St. Andrew's Episcopal Church (Hanover, Massachusetts)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 49,
+      "time_s": 6.641,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d9s0",
+        "title": "Trinity Episcopal Church (Columbus, Georgia)",
+        "url": "https://trace.invalid/2wikimultihopqa_14f3774f085611ebbd59ac1f6bf848b6_short/d9s0",
+        "text": "Trinity Episcopal Church is an Episcopal church located in Columbus, Georgia.",
+        "visible_time_s": 6.64100000000326,
+        "requested_subject": "",
+        "resolved_title": "Trinity Episcopal Church (Columbus, Georgia)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 50,
+      "time_s": 6.641,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d10s0",
+        "title": "St. Andrew's Episcopal Church (Albany, New York)",
+        "url": "https://trace.invalid/2wikimultihopqa_14f3774f085611ebbd59ac1f6bf848b6_short/d10s0",
+        "text": "St. Andrew's Episcopal Church is located at North Main and Madison( U.S. Route 20) avenues in Albany, New York, United States.",
+        "visible_time_s": 6.64100000000326,
+        "requested_subject": "",
+        "resolved_title": "St. Andrew's Episcopal Church (Albany, New York)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 51,
+      "time_s": 6.641,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d10s1",
+        "title": "St. Andrew's Episcopal Church (Albany, New York)",
+        "url": "https://trace.invalid/2wikimultihopqa_14f3774f085611ebbd59ac1f6bf848b6_short/d10s1",
+        "text": "It is a complex of three buildings, centered on the church itself, a stone structure designed by architect Norman Sturgis in the Late Gothic Revival architectural style and built in 1930.",
+        "visible_time_s": 6.64100000000326,
+        "requested_subject": "",
+        "resolved_title": "St. Andrew's Episcopal Church (Albany, New York)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 52,
+      "time_s": 6.641,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d10s2",
+        "title": "St. Andrew's Episcopal Church (Albany, New York)",
+        "url": "https://trace.invalid/2wikimultihopqa_14f3774f085611ebbd59ac1f6bf848b6_short/d10s2",
+        "text": "In 2005 it was listed on the National Register of Historic Places.",
+        "visible_time_s": 6.64100000000326,
+        "requested_subject": "",
+        "resolved_title": "St. Andrew's Episcopal Church (Albany, New York)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 53,
+      "time_s": 6.641,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d10s3",
+        "title": "St. Andrew's Episcopal Church (Albany, New York)",
+        "url": "https://trace.invalid/2wikimultihopqa_14f3774f085611ebbd59ac1f6bf848b6_short/d10s3",
+        "text": "The congregation was established by a downtown church, St. Paul's, from a neighborhood mission near the end of the 19th century.",
+        "visible_time_s": 6.64100000000326,
+        "requested_subject": "",
+        "resolved_title": "St. Andrew's Episcopal Church (Albany, New York)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 54,
+      "time_s": 6.641,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d10s4",
+        "title": "St. Andrew's Episcopal Church (Albany, New York)",
+        "url": "https://trace.invalid/2wikimultihopqa_14f3774f085611ebbd59ac1f6bf848b6_short/d10s4",
+        "text": "It was one of the first churches started in the suburban areas of the city, as it expanded away from its historic core.",
+        "visible_time_s": 6.64100000000326,
+        "requested_subject": "",
+        "resolved_title": "St. Andrew's Episcopal Church (Albany, New York)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 55,
+      "time_s": 6.641,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d10s5",
+        "title": "St. Andrew's Episcopal Church (Albany, New York)",
+        "url": "https://trace.invalid/2wikimultihopqa_14f3774f085611ebbd59ac1f6bf848b6_short/d10s5",
+        "text": "St. Andrew's soon built its own church( since demolished to make room for the current attached parish house) and established itself as a separate parish.",
+        "visible_time_s": 6.64100000000326,
+        "requested_subject": "",
+        "resolved_title": "St. Andrew's Episcopal Church (Albany, New York)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 56,
+      "time_s": 6.641,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d10s6",
+        "title": "St. Andrew's Episcopal Church (Albany, New York)",
+        "url": "https://trace.invalid/2wikimultihopqa_14f3774f085611ebbd59ac1f6bf848b6_short/d10s6",
+        "text": "Sturgis' structure was meant to embody the ideals of his mentor, Ralph Adams Cram, which valued the English Gothic styles as ideal for Episcopal and Anglican worship since such buildings were where it had originally been practiced.",
+        "visible_time_s": 6.64100000000326,
+        "requested_subject": "",
+        "resolved_title": "St. Andrew's Episcopal Church (Albany, New York)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 57,
+      "time_s": 6.641,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d10s7",
+        "title": "St. Andrew's Episcopal Church (Albany, New York)",
+        "url": "https://trace.invalid/2wikimultihopqa_14f3774f085611ebbd59ac1f6bf848b6_short/d10s7",
+        "text": "Accordingly, it is modeled in part on St. Albans Abbey in Hertfordshire, England, and a Roman brick from that location was placed in the hyphen between the church and the parish hall.",
+        "visible_time_s": 6.64100000000326,
+        "requested_subject": "",
+        "resolved_title": "St. Andrew's Episcopal Church (Albany, New York)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 58,
+      "time_s": 6.641,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d10s8",
+        "title": "St. Andrew's Episcopal Church (Albany, New York)",
+        "url": "https://trace.invalid/2wikimultihopqa_14f3774f085611ebbd59ac1f6bf848b6_short/d10s8",
+        "text": "But it is not an exact copy, and Sturgis himself described it as\" an attempt to express fundamental truths in a new way to tell an old, old story in new words\".",
+        "visible_time_s": 6.64100000000326,
+        "requested_subject": "",
+        "resolved_title": "St. Andrew's Episcopal Church (Albany, New York)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 59,
+      "time_s": 6.641,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d10s9",
+        "title": "St. Andrew's Episcopal Church (Albany, New York)",
+        "url": "https://trace.invalid/2wikimultihopqa_14f3774f085611ebbd59ac1f6bf848b6_short/d10s9",
+        "text": "It is considered one of the best examples of the 20th- century Late Gothic Revival style in Albany.",
+        "visible_time_s": 6.64100000000326,
+        "requested_subject": "",
+        "resolved_title": "St. Andrew's Episcopal Church (Albany, New York)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 60,
+      "time_s": 7.797,
+      "type": "utterance",
+      "action": "Progress",
+      "text": "I'm checking the sources that arrived.",
+      "claims": [],
+      "feedback_source": "fallback",
+      "feedback_status_claim": "checking",
+      "feedback_fallback_reason": "feedback_not_approved",
+      "execution_state": {
+        "stage": "checking",
+        "searches_started": 1,
+        "searches_completed": 1,
+        "active_searches": 0,
+        "evidence_count": 50,
+        "supported_units": 0,
+        "output_units": 0
+      },
+      "language": "en"
+    },
+    {
+      "sequence": 61,
+      "time_s": 9.36,
+      "type": "judge_reply",
+      "reply": {
+        "judgments": [
+          {
+            "unit_id": "u1",
+            "label": "SUPPORTED",
+            "value": "Canada",
+            "citations": [
+              "d1s0"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d1s0",
+                "text": "Sainte- Jeanne- de- Chantal is a Catholic church on the Île Perrot to the west of the island of Montreal in the Canadian province of Quebec."
+              }
+            ],
+            "reason": "Supported by the cited visible sentences and dependencies."
+          },
+          {
+            "unit_id": "u2",
+            "label": "SUPPORTED",
+            "value": "United States",
+            "citations": [
+              "d10s0"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d10s0",
+                "text": "St. Andrew's Episcopal Church is located at North Main and Madison( U.S. Route 20) avenues in Albany, New York, United States."
+              }
+            ],
+            "reason": "Supported by the cited visible sentences and dependencies."
+          },
+          {
+            "unit_id": "u3",
+            "label": "SUPPORTED",
+            "value": "no",
+            "citations": [
+              "d1s0",
+              "d10s0"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d1s0",
+                "text": "Sainte- Jeanne- de- Chantal is a Catholic church on the Île Perrot to the west of the island of Montreal in the Canadian province of Quebec."
+              },
+              {
+                "evidence_id": "d10s0",
+                "text": "St. Andrew's Episcopal Church is located at North Main and Madison( U.S. Route 20) avenues in Albany, New York, United States."
+              }
+            ],
+            "reason": "Supported by the cited visible sentences and dependencies."
+          }
+        ]
+      },
+      "attempt": 1,
+      "repair": false,
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d1s1",
+        "d2s0",
+        "d2s1",
+        "d4s0",
+        "d4s1",
+        "d4s2",
+        "d4s3",
+        "d4s4",
+        "d4s5",
+        "d4s6",
+        "d4s7",
+        "d4s8",
+        "d6s0",
+        "d6s1",
+        "d6s2",
+        "d6s3",
+        "d6s4",
+        "d6s5",
+        "d6s6",
+        "d6s7",
+        "d6s8",
+        "d6s9",
+        "d6s10",
+        "d6s11",
+        "d6s12",
+        "d6s13",
+        "d6s14",
+        "d8s0",
+        "d8s1",
+        "d3s0",
+        "d3s1",
+        "d5s0",
+        "d5s1",
+        "d5s2",
+        "d5s3",
+        "d7s0",
+        "d7s1",
+        "d7s2",
+        "d9s0",
+        "d10s0",
+        "d10s1",
+        "d10s2",
+        "d10s3",
+        "d10s4",
+        "d10s5",
+        "d10s6",
+        "d10s7",
+        "d10s8",
+        "d10s9"
+      ]
+    },
+    {
+      "sequence": 62,
+      "time_s": 9.36,
+      "type": "judgments",
+      "judgments": {
+        "u1": {
+          "label": "SUPPORTED",
+          "value": "Canada",
+          "citations": [
+            "d1s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d1s0",
+              "text": "Sainte- Jeanne- de- Chantal is a Catholic church on the Île Perrot to the west of the island of Montreal in the Canadian province of Quebec."
+            }
+          ],
+          "reason": "Supported by the cited visible sentences and dependencies."
+        },
+        "u2": {
+          "label": "SUPPORTED",
+          "value": "United States",
+          "citations": [
+            "d10s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d10s0",
+              "text": "St. Andrew's Episcopal Church is located at North Main and Madison( U.S. Route 20) avenues in Albany, New York, United States."
+            }
+          ],
+          "reason": "Supported by the cited visible sentences and dependencies."
+        },
+        "u3": {
+          "label": "SUPPORTED",
+          "value": "no",
+          "citations": [
+            "d1s0",
+            "d10s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d1s0",
+              "text": "Sainte- Jeanne- de- Chantal is a Catholic church on the Île Perrot to the west of the island of Montreal in the Canadian province of Quebec."
+            },
+            {
+              "evidence_id": "d10s0",
+              "text": "St. Andrew's Episcopal Church is located at North Main and Madison( U.S. Route 20) avenues in Albany, New York, United States."
+            }
+          ],
+          "reason": "Supported by the cited visible sentences and dependencies."
+        }
+      },
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d1s1",
+        "d2s0",
+        "d2s1",
+        "d4s0",
+        "d4s1",
+        "d4s2",
+        "d4s3",
+        "d4s4",
+        "d4s5",
+        "d4s6",
+        "d4s7",
+        "d4s8",
+        "d6s0",
+        "d6s1",
+        "d6s2",
+        "d6s3",
+        "d6s4",
+        "d6s5",
+        "d6s6",
+        "d6s7",
+        "d6s8",
+        "d6s9",
+        "d6s10",
+        "d6s11",
+        "d6s12",
+        "d6s13",
+        "d6s14",
+        "d8s0",
+        "d8s1",
+        "d3s0",
+        "d3s1",
+        "d5s0",
+        "d5s1",
+        "d5s2",
+        "d5s3",
+        "d7s0",
+        "d7s1",
+        "d7s2",
+        "d9s0",
+        "d10s0",
+        "d10s1",
+        "d10s2",
+        "d10s3",
+        "d10s4",
+        "d10s5",
+        "d10s6",
+        "d10s7",
+        "d10s8",
+        "d10s9"
+      ],
+      "semantic_review": false
+    },
+    {
+      "sequence": 63,
+      "time_s": 14.172,
+      "type": "verification_reply",
+      "reply": {
+        "approved": true,
+        "facts_valid": true,
+        "expressed_unit_ids": [
+          "u1",
+          "u2",
+          "u3"
+        ],
+        "reason": "All factual claims match approved facts and evidence, and all required units are expressed."
+      },
+      "output_unit_ids": [
+        "u1",
+        "u2",
+        "u3"
+      ],
+      "output_action": "Final Answer",
+      "dependency_unit_ids": [],
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d10s0"
+      ]
+    },
+    {
+      "sequence": 64,
+      "time_s": 14.172,
+      "type": "utterance",
+      "action": "Final Answer",
+      "text": "Sainte-Jeanne-De-Chantal (Île Perrot) is located in Canada. St. Andrew's Episcopal Church (Albany, New York) is located in the United States. No, the two churches are not located in the same country.",
+      "claims": [
+        {
+          "unit_id": "u1",
+          "description": "Country where Sainte-Jeanne-De-Chantal (Île Perrot) is located",
+          "value": "Canada",
+          "citations": [
+            "d1s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d1s0",
+              "text": "Sainte- Jeanne- de- Chantal is a Catholic church on the Île Perrot to the west of the island of Montreal in the Canadian province of Quebec."
+            }
+          ]
+        },
+        {
+          "unit_id": "u2",
+          "description": "Country where St. Andrew's Episcopal Church (Albany, New York) is located",
+          "value": "United States",
+          "citations": [
+            "d10s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d10s0",
+              "text": "St. Andrew's Episcopal Church is located at North Main and Madison( U.S. Route 20) avenues in Albany, New York, United States."
+            }
+          ]
+        },
+        {
+          "unit_id": "u3",
+          "description": "Whether both churches are located in the same country",
+          "value": "no",
+          "citations": [
+            "d1s0",
+            "d10s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d1s0",
+              "text": "Sainte- Jeanne- de- Chantal is a Catholic church on the Île Perrot to the west of the island of Montreal in the Canadian province of Quebec."
+            },
+            {
+              "evidence_id": "d10s0",
+              "text": "St. Andrew's Episcopal Church is located at North Main and Madison( U.S. Route 20) avenues in Albany, New York, United States."
+            }
+          ]
+        }
+      ],
+      "unresolved": [],
+      "fallback": false,
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d1s1",
+        "d2s0",
+        "d2s1",
+        "d4s0",
+        "d4s1",
+        "d4s2",
+        "d4s3",
+        "d4s4",
+        "d4s5",
+        "d4s6",
+        "d4s7",
+        "d4s8",
+        "d6s0",
+        "d6s1",
+        "d6s2",
+        "d6s3",
+        "d6s4",
+        "d6s5",
+        "d6s6",
+        "d6s7",
+        "d6s8",
+        "d6s9",
+        "d6s10",
+        "d6s11",
+        "d6s12",
+        "d6s13",
+        "d6s14",
+        "d8s0",
+        "d8s1",
+        "d3s0",
+        "d3s1",
+        "d5s0",
+        "d5s1",
+        "d5s2",
+        "d5s3",
+        "d7s0",
+        "d7s1",
+        "d7s2",
+        "d9s0",
+        "d10s0",
+        "d10s1",
+        "d10s2",
+        "d10s3",
+        "d10s4",
+        "d10s5",
+        "d10s6",
+        "d10s7",
+        "d10s8",
+        "d10s9"
+      ],
+      "language": "en"
+    },
+    {
+      "sequence": 65,
+      "time_s": 14.172,
+      "type": "finished",
+      "status": "complete"
+    }
+  ],
+  "note": "Prototype model judgments are not independent gold scores. Output event times are not spoken claim times.",
+  "evidence_mode": "scheduled_trace",
+  "audio": {
+    "enabled": true,
+    "mode": "windows",
+    "play": false,
+    "status": "ok",
+    "errors": [],
+    "records": [
+      {
+        "event_sequence": 1,
+        "sentence_index": 1,
+        "sentence_count": 1,
+        "language": "en",
+        "text": "Got it, I’ll check whether Sainte‑Jeanne‑De‑Chantal in Île Perrot and St. Andrew’s Episcopal in Albany are in the same country.",
+        "action": "Backchannel",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 2.25,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1\\samples\\0026\\audio\\segments\\0001_01.wav",
+        "duration_s": 7.7030839002267575,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 3.077999999994063,
+        "synthesis_and_playback_s": 0.8279999999940628
+      },
+      {
+        "event_sequence": 60,
+        "sentence_index": 1,
+        "sentence_count": 1,
+        "language": "en",
+        "text": "I'm checking the sources that arrived.",
+        "action": "Progress",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 7.797000000005937,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1\\samples\\0026\\audio\\segments\\0060_01.wav",
+        "duration_s": 2.6690702947845804,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 8.593999999997322,
+        "synthesis_and_playback_s": 0.7969999999913853
+      },
+      {
+        "event_sequence": 64,
+        "sentence_index": 1,
+        "sentence_count": 3,
+        "language": "en",
+        "text": "Sainte-Jeanne-De-Chantal (Île Perrot) is located in Canada.",
+        "action": "Final Answer",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 14.172000000005937,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1\\samples\\0026\\audio\\segments\\0064_01.wav",
+        "duration_s": 4.998820861678005,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 14.952999999994063,
+        "synthesis_and_playback_s": 0.7809999999881256
+      },
+      {
+        "event_sequence": 64,
+        "sentence_index": 2,
+        "sentence_count": 3,
+        "language": "en",
+        "text": "St. Andrew's Episcopal Church (Albany, New York) is located in the United States.",
+        "action": "Final Answer",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 14.952999999994063,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1\\samples\\0026\\audio\\segments\\0064_02.wav",
+        "duration_s": 6.948390022675737,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 15.76600000000326,
+        "synthesis_and_playback_s": 0.8280000000086147
+      },
+      {
+        "event_sequence": 64,
+        "sentence_index": 3,
+        "sentence_count": 3,
+        "language": "en",
+        "text": "No, the two churches are not located in the same country.",
+        "action": "Final Answer",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 15.781000000002678,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1\\samples\\0026\\audio\\segments\\0064_03.wav",
+        "duration_s": 4.188934240362812,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 16.577999999994063,
+        "synthesis_and_playback_s": 0.7969999999913853
+      }
+    ],
+    "wave": {
+      "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1\\samples\\0026\\audio\\response.wav",
+      "duration_s": 31.089160997732428,
+      "timeline": [
+        {
+          "event_sequence": 1,
+          "sentence_index": 1,
+          "action": "Backchannel",
+          "text": "Got it, I’ll check whether Sainte‑Jeanne‑De‑Chantal in Île Perrot and St. Andrew’s Episcopal in Albany are in the same country.",
+          "wave_start_s": 3.078004535147392,
+          "wave_end_s": 10.78108843537415
+        },
+        {
+          "event_sequence": 60,
+          "sentence_index": 1,
+          "action": "Progress",
+          "text": "I'm checking the sources that arrived.",
+          "wave_start_s": 10.78108843537415,
+          "wave_end_s": 13.45015873015873
+        },
+        {
+          "event_sequence": 64,
+          "sentence_index": 1,
+          "action": "Final Answer",
+          "text": "Sainte-Jeanne-De-Chantal (Île Perrot) is located in Canada.",
+          "wave_start_s": 14.953015873015874,
+          "wave_end_s": 19.951836734693877
+        },
+        {
+          "event_sequence": 64,
+          "sentence_index": 2,
+          "action": "Final Answer",
+          "text": "St. Andrew's Episcopal Church (Albany, New York) is located in the United States.",
+          "wave_start_s": 19.951836734693877,
+          "wave_end_s": 26.900226757369616
+        },
+        {
+          "event_sequence": 64,
+          "sentence_index": 3,
+          "action": "Final Answer",
+          "text": "No, the two churches are not located in the same country.",
+          "wave_start_s": 26.900226757369616,
+          "wave_end_s": 31.089160997732428
+        }
+      ]
+    }
+  },
+  "evaluation": {
+    "mode": "b_final_revised_trace",
+    "trace_id": "2wikimultihopqa_14f3774f085611ebbd59ac1f6bf848b6_short",
+    "sample_id": "2wikimultihopqa_14f3774f085611ebbd59ac1f6bf848b6",
+    "total_wall_s": 16.577999999994063,
+    "question_timeout_s": 180,
+    "audio_enabled": true,
+    "history_enabled": false,
+    "text_pipeline_wall_s": 14.172000000005937,
+    "effective_settings": {
+      "base_url": "https://tinker.thinkingmachines.dev/services/tinker-prod/oai/api/v1",
+      "model": "openai/gpt-oss-120b",
+      "judge_model": "tinker://f9e9a6c1-e203-5c2c-acdd-68fe67378ca4:train:0/sampler_weights/epoch-0001",
+      "judge_reasoning_effort": "low",
+      "wiki_language": "en",
+      "user_agent": "CascadeSystem/0.1 (educational research prototype)",
+      "timeout_s": 45.0,
+      "max_tokens": 4096,
+      "reasoning_effort": "low",
+      "progress_s": 3.0,
+      "feedback_timeout_s": 6.0,
+      "search_limit": 3,
+      "max_units": 8,
+      "max_searches": 16,
+      "max_sources": 50,
+      "source_chars": 261,
+      "evidence_chars": 5754,
+      "concurrency": 3
+    },
+    "timing_kind": "unknown",
+    "scheduler": "wall-paced fixed B arrivals",
+    "split": "eval_reserved",
+    "empty_evidence_sentences_ignored": 0
+  }
+}

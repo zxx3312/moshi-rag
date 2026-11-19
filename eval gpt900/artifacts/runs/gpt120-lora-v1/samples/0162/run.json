@@ -1,0 +1,2141 @@
+{
+  "question": "Who is the sibling-in-law of Bella Sidney Woolf?",
+  "resolved_question": "Who is the sibling-in-law of Bella Sidney Woolf?",
+  "used_history_turn_ids": [],
+  "response_language": "en",
+  "status": "incomplete",
+  "clock": "wall_monotonic",
+  "time_origin": "question_text_ready_after_optional_asr",
+  "model": "openai/gpt-oss-120b",
+  "judge_model": "tinker://f9e9a6c1-e203-5c2c-acdd-68fe67378ca4:train:0/sampler_weights/epoch-0001",
+  "units": [
+    {
+      "unit_id": "u1",
+      "description": "Identify the Wikipedia article for Bella Sidney Woolf",
+      "necessary": true,
+      "depends_on": [],
+      "queries": [
+        "Bella Sidney Woolf Wikipedia",
+        "Bella Sidney Woolf biography"
+      ],
+      "subject": "Bella Sidney Woolf"
+    },
+    {
+      "unit_id": "u2",
+      "description": "Find the spouse of Bella Sidney Woolf",
+      "necessary": true,
+      "depends_on": [
+        "u1"
+      ],
+      "queries": [
+        "Bella Sidney Woolf spouse",
+        "Bella Sidney Woolf married to"
+      ],
+      "subject": "Bella Sidney Woolf"
+    },
+    {
+      "unit_id": "u3",
+      "description": "List the siblings of Bella Sidney Woolf's spouse",
+      "necessary": true,
+      "depends_on": [
+        "u2"
+      ],
+      "queries": [
+        "siblings of {u2}",
+        "{u2} family siblings"
+      ],
+      "subject": "{u2}"
+    },
+    {
+      "unit_id": "u4",
+      "description": "Find the siblings of Bella Sidney Woolf",
+      "necessary": true,
+      "depends_on": [
+        "u1"
+      ],
+      "queries": [
+        "Bella Sidney Woolf siblings",
+        "family of Bella Sidney Woolf"
+      ],
+      "subject": "Bella Sidney Woolf"
+    },
+    {
+      "unit_id": "u5",
+      "description": "Identify the spouses of Bella Sidney Woolf's siblings",
+      "necessary": true,
+      "depends_on": [
+        "u4"
+      ],
+      "queries": [
+        "spouse of {u4}",
+        "marriage of {u4}"
+      ],
+      "subject": "{u4}"
+    },
+    {
+      "unit_id": "u6",
+      "description": "Determine the sibling-in-law(s) of Bella Sidney Woolf (spouse's siblings and siblings' spouses)",
+      "necessary": true,
+      "depends_on": [
+        "u3",
+        "u5"
+      ],
+      "queries": [
+        "who are the sibling-in-laws of Bella Sidney Woolf",
+        "Bella Sidney Woolf sibling-in-law"
+      ],
+      "subject": ""
+    }
+  ],
+  "judgments": {
+    "u1": {
+      "label": "SUPPORTED",
+      "value": "Bella Sidney Woolf",
+      "citations": [
+        "d4s0"
+      ],
+      "quotes": [
+        {
+          "evidence_id": "d4s0",
+          "text": "Bella Sidney Woolf OBE (1877–1960) was an English author, sister of author Leonard Woolf and first married to Robert Heath Lock, and in her second marriage to Hong Kong colonial secretary and colonial Ceylonese administrator Tom Southorn."
+        }
+      ],
+      "reason": "Supported by the cited visible sentences and dependencies."
+    },
+    "u2": {
+      "label": "SUPPORTED",
+      "value": "Tom Southorn",
+      "citations": [
+        "d5s3"
+      ],
+      "quotes": [
+        {
+          "evidence_id": "d5s3",
+          "text": "In 1921 he married author Bella Sidney Woolf( 1877 – 1960), whom he met through her( later) more famous brother Leonard Woolf, when the two men were colleagues in Ceylon."
+        }
+      ],
+      "reason": "Supported by the cited visible sentences and dependencies."
+    },
+    "u3": {
+      "label": "UNRESOLVED",
+      "value": "",
+      "citations": [],
+      "quotes": [],
+      "reason": "The current visible evidence does not establish this unit."
+    },
+    "u4": {
+      "label": "SUPPORTED",
+      "value": "Leonard Woolf",
+      "citations": [
+        "d8s0"
+      ],
+      "quotes": [
+        {
+          "evidence_id": "d8s0",
+          "text": "Leonard Sidney Woolf (25 November 1880 – 14 August 1969) was a British political theorist, author, publisher and civil servant, and husband of author Virginia Woolf."
+        }
+      ],
+      "reason": "Supported by the cited visible sentences and dependencies."
+    },
+    "u5": {
+      "label": "UNRESOLVED",
+      "value": "",
+      "citations": [],
+      "quotes": [],
+      "reason": "The current visible evidence does not establish this unit."
+    },
+    "u6": {
+      "label": "UNRESOLVED",
+      "value": "",
+      "citations": [],
+      "quotes": [],
+      "reason": "The current visible evidence does not establish this unit."
+    }
+  },
+  "evidence": [
+    {
+      "evidence_id": "d1s0",
+      "title": "Greg Penner",
+      "url": "https://trace.invalid/2wikimultihopqa_5d6e0f860bb011ebab90acde48001122_long/d1s0",
+      "text": "Gregory B. Penner( born December 18, 1969) is an American businessman and venture capitalist.",
+      "visible_time_s": 13.437000000005355,
+      "requested_subject": "",
+      "resolved_title": "Greg Penner",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d1s1",
+      "title": "Greg Penner",
+      "url": "https://trace.invalid/2wikimultihopqa_5d6e0f860bb011ebab90acde48001122_long/d1s1",
+      "text": "Penner was named the chairman of Walmart on June 5, 2015.",
+      "visible_time_s": 13.437000000005355,
+      "requested_subject": "",
+      "resolved_title": "Greg Penner",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d1s2",
+      "title": "Greg Penner",
+      "url": "https://trace.invalid/2wikimultihopqa_5d6e0f860bb011ebab90acde48001122_long/d1s2",
+      "text": "He is the son-in- law of S. Robson Walton and the grandson- in- law of Sam Walton, the founder of Walmart.",
+      "visible_time_s": 13.437000000005355,
+      "requested_subject": "",
+      "resolved_title": "Greg Penner",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d3s0",
+      "title": "Charles Francis Norton",
+      "url": "https://trace.invalid/2wikimultihopqa_5d6e0f860bb011ebab90acde48001122_long/d3s0",
+      "text": "Charles Francis Norton( 1807 – 1835) was a 19th- century Member of Parliament for Guildford.",
+      "visible_time_s": 13.437000000005355,
+      "requested_subject": "",
+      "resolved_title": "Charles Francis Norton",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d3s1",
+      "title": "Charles Francis Norton",
+      "url": "https://trace.invalid/2wikimultihopqa_5d6e0f860bb011ebab90acde48001122_long/d3s1",
+      "text": "Norton was also a Captain of 52nd Light Infantry; son-in- law of Sir Colin Campbell; brother- in- law of writer Caroline Norton",
+      "visible_time_s": 13.437000000005355,
+      "requested_subject": "",
+      "resolved_title": "Charles Francis Norton",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d4s0",
+      "title": "Bella Sidney Woolf",
+      "url": "https://trace.invalid/2wikimultihopqa_5d6e0f860bb011ebab90acde48001122_long/d4s0",
+      "text": "Bella Sidney Woolf OBE (1877–1960) was an English author, sister of author Leonard Woolf and first married to Robert Heath Lock, and in her second marriage to Hong Kong colonial secretary and colonial Ceylonese administrator Tom Southorn.",
+      "visible_time_s": 13.437000000005355,
+      "requested_subject": "",
+      "resolved_title": "Bella Sidney Woolf",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d5s0",
+      "title": "Thomas Southorn",
+      "url": "https://trace.invalid/2wikimultihopqa_5d6e0f860bb011ebab90acde48001122_long/d5s0",
+      "text": "Sir Wilfrid Thomas Southorn( 4 August 1879 – 15 March 1957)( Chinese Translated Name: 修頓, Old Translated Name: 蕭敦), known as Tom, was a British colonial administrator, spending the large part of career in Ceylon( now Sri Lanka).",
+      "visible_time_s": 13.437000000005355,
+      "requested_subject": "",
+      "resolved_title": "Thomas Southorn",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d5s1",
+      "title": "Thomas Southorn",
+      "url": "https://trace.invalid/2wikimultihopqa_5d6e0f860bb011ebab90acde48001122_long/d5s1",
+      "text": "He was the Colonial Secretary of Hong Kong from 1925 – 1936 and served as Acting Administrator of the colony from February to March 1930 and from May to September 1935, and then in November the same year, basically at either end of the tenure of Sir William Peel as Governor.",
+      "visible_time_s": 13.437000000005355,
+      "requested_subject": "",
+      "resolved_title": "Thomas Southorn",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d5s2",
+      "title": "Thomas Southorn",
+      "url": "https://trace.invalid/2wikimultihopqa_5d6e0f860bb011ebab90acde48001122_long/d5s2",
+      "text": "His official( summer) residence was Mountain Lodge.",
+      "visible_time_s": 13.437000000005355,
+      "requested_subject": "",
+      "resolved_title": "Thomas Southorn",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d5s3",
+      "title": "Thomas Southorn",
+      "url": "https://trace.invalid/2wikimultihopqa_5d6e0f860bb011ebab90acde48001122_long/d5s3",
+      "text": "In 1921 he married author Bella Sidney Woolf( 1877 – 1960), whom he met through her( later) more famous brother Leonard Woolf, when the two men were colleagues in Ceylon.",
+      "visible_time_s": 13.437000000005355,
+      "requested_subject": "",
+      "resolved_title": "Thomas Southorn",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d5s4",
+      "title": "Thomas Southorn",
+      "url": "https://trace.invalid/2wikimultihopqa_5d6e0f860bb011ebab90acde48001122_long/d5s4",
+      "text": "In 1904, then a humble' Office Assistant', Southorn had met Leonard Woolf on his arrival in Ceylon from England.",
+      "visible_time_s": 13.437000000005355,
+      "requested_subject": "",
+      "resolved_title": "Thomas Southorn",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d5s5",
+      "title": "Thomas Southorn",
+      "url": "https://trace.invalid/2wikimultihopqa_5d6e0f860bb011ebab90acde48001122_long/d5s5",
+      "text": "In 1936, he was made Governor of The Gambia, notably describing the colony as\" a geographical and economic absurdity\".",
+      "visible_time_s": 13.437000000005355,
+      "requested_subject": "",
+      "resolved_title": "Thomas Southorn",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d7s0",
+      "title": "Sidney Woolf",
+      "url": "https://trace.invalid/2wikimultihopqa_5d6e0f860bb011ebab90acde48001122_long/d7s0",
+      "text": "Sidney Woolf (16 June 1837 – September, 1918) was an English pottery manufacturer and a Liberal Party politician who sat in the House of Commons from 1880 to 1885.",
+      "visible_time_s": 13.437000000005355,
+      "requested_subject": "",
+      "resolved_title": "Sidney Woolf",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d10s0",
+      "title": "Wyndham Goold",
+      "url": "https://trace.invalid/2wikimultihopqa_5d6e0f860bb011ebab90acde48001122_long/d10s0",
+      "text": "Wyndham Goold( 1812-1854) was a Member of Parliament( MP) for County Limerick from 1850 to 1854.",
+      "visible_time_s": 13.437000000005355,
+      "requested_subject": "",
+      "resolved_title": "Wyndham Goold",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d10s1",
+      "title": "Wyndham Goold",
+      "url": "https://trace.invalid/2wikimultihopqa_5d6e0f860bb011ebab90acde48001122_long/d10s1",
+      "text": "Goold was educated at Westminster School and Trinity College, Dublin.",
+      "visible_time_s": 13.437000000005355,
+      "requested_subject": "",
+      "resolved_title": "Wyndham Goold",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d10s2",
+      "title": "Wyndham Goold",
+      "url": "https://trace.invalid/2wikimultihopqa_5d6e0f860bb011ebab90acde48001122_long/d10s2",
+      "text": "He was the son in law of Frederick Falkiner Goold, Archdeacon of Raphoe and brother in law of Bishop Hamilton Verschoyle",
+      "visible_time_s": 13.437000000005355,
+      "requested_subject": "",
+      "resolved_title": "Wyndham Goold",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d2s0",
+      "title": "Robert Vadra",
+      "url": "https://trace.invalid/2wikimultihopqa_5d6e0f860bb011ebab90acde48001122_long/d2s0",
+      "text": "Robert Vadra is an Indian businessman, entrepreneur and the husband of Priyanka Gandhi.",
+      "visible_time_s": 13.437000000005355,
+      "requested_subject": "",
+      "resolved_title": "Robert Vadra",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d2s1",
+      "title": "Robert Vadra",
+      "url": "https://trace.invalid/2wikimultihopqa_5d6e0f860bb011ebab90acde48001122_long/d2s1",
+      "text": "He is the son -in- law of Sonia Gandhi and Rajiv Gandhi, and the brother- in- law of Rahul Gandhi.",
+      "visible_time_s": 13.437000000005355,
+      "requested_subject": "",
+      "resolved_title": "Robert Vadra",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d6s0",
+      "title": "Robert W. Levering",
+      "url": "https://trace.invalid/2wikimultihopqa_5d6e0f860bb011ebab90acde48001122_long/d6s0",
+      "text": "Robert Woodrow Levering( October 3, 1914 – August 11, 1989) was a U.S. Representative from Ohio, son-in- law of Usher L. Burdick and brother- in- law of Quentin N. Burdick.",
+      "visible_time_s": 13.437000000005355,
+      "requested_subject": "",
+      "resolved_title": "Robert W. Levering",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d8s0",
+      "title": "Leonard Woolf",
+      "url": "https://trace.invalid/2wikimultihopqa_5d6e0f860bb011ebab90acde48001122_long/d8s0",
+      "text": "Leonard Sidney Woolf (25 November 1880 – 14 August 1969) was a British political theorist, author, publisher and civil servant, and husband of author Virginia Woolf.",
+      "visible_time_s": 13.437000000005355,
+      "requested_subject": "",
+      "resolved_title": "Leonard Woolf",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d9s0",
+      "title": "Eusebius (consul 359)",
+      "url": "https://trace.invalid/2wikimultihopqa_5d6e0f860bb011ebab90acde48001122_long/d9s0",
+      "text": "Flavius Eusebius( died after AD 371) was a Roman Senator, who was the brother- in- law of the emperor Constantius II.",
+      "visible_time_s": 13.437000000005355,
+      "requested_subject": "",
+      "resolved_title": "Eusebius (consul 359)",
+      "entity_resolution": "unspecified"
+    }
+  ],
+  "searches": [
+    {
+      "query": "[scheduled evidence]",
+      "subject": "",
+      "status": "ok",
+      "returned_pages": [],
+      "mode": "trace",
+      "unit_id": "__scheduled_evidence__"
+    },
+    {
+      "query": "[scheduled evidence]",
+      "subject": "",
+      "status": "ok",
+      "returned_pages": [],
+      "mode": "trace",
+      "unit_id": "__scheduled_evidence__"
+    }
+  ],
+  "search_failures": [],
+  "llm_calls": [
+    {
+      "purpose": "feedback_generate",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 405,
+        "completion_tokens": 54,
+        "total_tokens": 459,
+        "prompt_tokens_details": {
+          "cached_tokens": 384
+        }
+      },
+      "latency_s": 1.062
+    },
+    {
+      "purpose": "feedback_verify",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 353,
+        "completion_tokens": 87,
+        "total_tokens": 440,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        }
+      },
+      "latency_s": 1.516
+    },
+    {
+      "purpose": "feedback_generate",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 405,
+        "completion_tokens": 74,
+        "total_tokens": 479,
+        "prompt_tokens_details": {
+          "cached_tokens": 384
+        }
+      },
+      "latency_s": 1.406
+    },
+    {
+      "purpose": "decompose",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 795,
+        "completion_tokens": 744,
+        "total_tokens": 1539,
+        "prompt_tokens_details": {
+          "cached_tokens": 768
+        }
+      },
+      "latency_s": 7.281
+    },
+    {
+      "purpose": "feedback_verify",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 355,
+        "completion_tokens": 107,
+        "total_tokens": 462,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        }
+      },
+      "latency_s": 3.125
+    },
+    {
+      "purpose": "plan_review",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 1281,
+        "completion_tokens": 645,
+        "total_tokens": 1926,
+        "prompt_tokens_details": {
+          "cached_tokens": 896
+        }
+      },
+      "latency_s": 6.156
+    },
+    {
+      "purpose": "judge",
+      "model": "tinker://f9e9a6c1-e203-5c2c-acdd-68fe67378ca4:train:0/sampler_weights/epoch-0001",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 4563,
+        "completion_tokens": 481,
+        "total_tokens": 5044,
+        "prompt_tokens_details": {
+          "cached_tokens": 896
+        }
+      },
+      "latency_s": 4.078
+    },
+    {
+      "purpose": "generate",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 1024,
+        "completion_tokens": 112,
+        "total_tokens": 1136,
+        "prompt_tokens_details": {
+          "cached_tokens": 384
+        }
+      },
+      "latency_s": 2.063
+    },
+    {
+      "purpose": "verify",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 1593,
+        "completion_tokens": 242,
+        "total_tokens": 1835,
+        "prompt_tokens_details": {
+          "cached_tokens": 640
+        }
+      },
+      "latency_s": 3.953
+    },
+    {
+      "purpose": "judge",
+      "model": "tinker://f9e9a6c1-e203-5c2c-acdd-68fe67378ca4:train:0/sampler_weights/epoch-0001",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 5001,
+        "completion_tokens": 481,
+        "total_tokens": 5482,
+        "prompt_tokens_details": {
+          "cached_tokens": 1024
+        }
+      },
+      "latency_s": 3.687
+    },
+    {
+      "purpose": "feedback_generate",
+      "model": "openai/gpt-oss-120b",
+      "status": "cancelled",
+      "latency_s": 0.593
+    }
+  ],
+  "search_diagnostics": [],
+  "output_enqueued_units": {
+    "u1": "Bella Sidney Woolf",
+    "u2": "Tom Southorn",
+    "u4": "Leonard Woolf"
+  },
+  "events": [
+    {
+      "sequence": 0,
+      "time_s": 0.0,
+      "type": "feedback_requested",
+      "feedback_kind": "opening",
+      "execution_state": {
+        "stage": "planning",
+        "searches_started": 0,
+        "searches_completed": 0,
+        "active_searches": 0,
+        "evidence_count": 0,
+        "supported_units": 0,
+        "output_units": 0
+      }
+    },
+    {
+      "sequence": 1,
+      "time_s": 2.578,
+      "type": "utterance",
+      "action": "Backchannel",
+      "text": "Looking up the sibling-in-law of Bella Sidney Woolf for you.",
+      "claims": [],
+      "feedback_source": "model",
+      "feedback_status_claim": "intent",
+      "feedback_fallback_reason": "",
+      "execution_state": {
+        "stage": "planning",
+        "searches_started": 0,
+        "searches_completed": 0,
+        "active_searches": 0,
+        "evidence_count": 0,
+        "supported_units": 0,
+        "output_units": 0
+      },
+      "language": "en"
+    },
+    {
+      "sequence": 2,
+      "time_s": 5.75,
+      "type": "feedback_requested",
+      "feedback_kind": "progress",
+      "execution_state": {
+        "stage": "planning",
+        "searches_started": 0,
+        "searches_completed": 0,
+        "active_searches": 0,
+        "evidence_count": 0,
+        "supported_units": 0,
+        "output_units": 0
+      }
+    },
+    {
+      "sequence": 3,
+      "time_s": 7.281,
+      "type": "decompose_reply",
+      "reply": {
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "Identify the Wikipedia article for Bella Sidney Woolf",
+            "subject": "Bella Sidney Woolf",
+            "necessary": true,
+            "depends_on": [],
+            "queries": [
+              "Bella Sidney Woolf Wikipedia",
+              "Bella Sidney Woolf biography"
+            ]
+          },
+          {
+            "unit_id": "u2",
+            "description": "Find the spouse of Bella Sidney Woolf",
+            "subject": "Bella Sidney Woolf",
+            "necessary": true,
+            "depends_on": [
+              "u1"
+            ],
+            "queries": [
+              "Bella Sidney Woolf spouse",
+              "Bella Sidney Woolf married to"
+            ]
+          },
+          {
+            "unit_id": "u3",
+            "description": "List the siblings of Bella Sidney Woolf's spouse",
+            "subject": "{u2}",
+            "necessary": true,
+            "depends_on": [
+              "u2"
+            ],
+            "queries": [
+              "siblings of {u2}",
+              "{u2} family siblings"
+            ]
+          },
+          {
+            "unit_id": "u4",
+            "description": "Find the siblings of Bella Sidney Woolf",
+            "subject": "Bella Sidney Woolf",
+            "necessary": false,
+            "depends_on": [
+              "u1"
+            ],
+            "queries": [
+              "Bella Sidney Woolf siblings",
+              "family of Bella Sidney Woolf"
+            ]
+          },
+          {
+            "unit_id": "u5",
+            "description": "Identify the spouses of Bella Sidney Woolf's siblings",
+            "subject": "{u4}",
+            "necessary": false,
+            "depends_on": [
+              "u4"
+            ],
+            "queries": [
+              "spouse of {u4}",
+              "marriage of {u4}"
+            ]
+          },
+          {
+            "unit_id": "u6",
+            "description": "Determine the sibling-in-law(s) of Bella Sidney Woolf (spouse's siblings and siblings' spouses)",
+            "subject": "",
+            "necessary": true,
+            "depends_on": [
+              "u3",
+              "u5"
+            ],
+            "queries": [
+              "who are the sibling-in-laws of Bella Sidney Woolf",
+              "Bella Sidney Woolf sibling-in-law"
+            ]
+          }
+        ]
+      },
+      "attempt": 1,
+      "repair": false
+    },
+    {
+      "sequence": 4,
+      "time_s": 7.281,
+      "type": "plan_review_requested",
+      "max_reviews": 1,
+      "question_only": true
+    },
+    {
+      "sequence": 5,
+      "time_s": 10.281,
+      "type": "utterance",
+      "action": "Progress",
+      "text": "I'm working on gathering the info about Bella Sidney Woolf's sibling-in-law.",
+      "claims": [],
+      "feedback_source": "model",
+      "feedback_status_claim": "processing",
+      "feedback_fallback_reason": "",
+      "execution_state": {
+        "stage": "planning",
+        "searches_started": 0,
+        "searches_completed": 0,
+        "active_searches": 0,
+        "evidence_count": 0,
+        "supported_units": 0,
+        "output_units": 0
+      },
+      "language": "en"
+    },
+    {
+      "sequence": 6,
+      "time_s": 13.437,
+      "type": "plan_review_reply",
+      "reply": {
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "Identify the Wikipedia article for Bella Sidney Woolf",
+            "subject": "Bella Sidney Woolf",
+            "necessary": true,
+            "depends_on": [],
+            "queries": [
+              "Bella Sidney Woolf Wikipedia",
+              "Bella Sidney Woolf biography"
+            ]
+          },
+          {
+            "unit_id": "u2",
+            "description": "Find the spouse of Bella Sidney Woolf",
+            "subject": "Bella Sidney Woolf",
+            "necessary": true,
+            "depends_on": [
+              "u1"
+            ],
+            "queries": [
+              "Bella Sidney Woolf spouse",
+              "Bella Sidney Woolf married to"
+            ]
+          },
+          {
+            "unit_id": "u3",
+            "description": "List the siblings of Bella Sidney Woolf's spouse",
+            "subject": "{u2}",
+            "necessary": true,
+            "depends_on": [
+              "u2"
+            ],
+            "queries": [
+              "siblings of {u2}",
+              "{u2} family siblings"
+            ]
+          },
+          {
+            "unit_id": "u4",
+            "description": "Find the siblings of Bella Sidney Woolf",
+            "subject": "Bella Sidney Woolf",
+            "necessary": true,
+            "depends_on": [
+              "u1"
+            ],
+            "queries": [
+              "Bella Sidney Woolf siblings",
+              "family of Bella Sidney Woolf"
+            ]
+          },
+          {
+            "unit_id": "u5",
+            "description": "Identify the spouses of Bella Sidney Woolf's siblings",
+            "subject": "{u4}",
+            "necessary": true,
+            "depends_on": [
+              "u4"
+            ],
+            "queries": [
+              "spouse of {u4}",
+              "marriage of {u4}"
+            ]
+          },
+          {
+            "unit_id": "u6",
+            "description": "Determine the sibling-in-law(s) of Bella Sidney Woolf (spouse's siblings and siblings' spouses)",
+            "subject": "",
+            "necessary": true,
+            "depends_on": [
+              "u3",
+              "u5"
+            ],
+            "queries": [
+              "who are the sibling-in-laws of Bella Sidney Woolf",
+              "Bella Sidney Woolf sibling-in-law"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "sequence": 7,
+      "time_s": 13.437,
+      "type": "plan_review_finished",
+      "changed": true,
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "Identify the Wikipedia article for Bella Sidney Woolf",
+          "necessary": true,
+          "depends_on": [],
+          "queries": [
+            "Bella Sidney Woolf Wikipedia",
+            "Bella Sidney Woolf biography"
+          ],
+          "subject": "Bella Sidney Woolf"
+        },
+        {
+          "unit_id": "u2",
+          "description": "Find the spouse of Bella Sidney Woolf",
+          "necessary": true,
+          "depends_on": [
+            "u1"
+          ],
+          "queries": [
+            "Bella Sidney Woolf spouse",
+            "Bella Sidney Woolf married to"
+          ],
+          "subject": "Bella Sidney Woolf"
+        },
+        {
+          "unit_id": "u3",
+          "description": "List the siblings of Bella Sidney Woolf's spouse",
+          "necessary": true,
+          "depends_on": [
+            "u2"
+          ],
+          "queries": [
+            "siblings of {u2}",
+            "{u2} family siblings"
+          ],
+          "subject": "{u2}"
+        },
+        {
+          "unit_id": "u4",
+          "description": "Find the siblings of Bella Sidney Woolf",
+          "necessary": true,
+          "depends_on": [
+            "u1"
+          ],
+          "queries": [
+            "Bella Sidney Woolf siblings",
+            "family of Bella Sidney Woolf"
+          ],
+          "subject": "Bella Sidney Woolf"
+        },
+        {
+          "unit_id": "u5",
+          "description": "Identify the spouses of Bella Sidney Woolf's siblings",
+          "necessary": true,
+          "depends_on": [
+            "u4"
+          ],
+          "queries": [
+            "spouse of {u4}",
+            "marriage of {u4}"
+          ],
+          "subject": "{u4}"
+        },
+        {
+          "unit_id": "u6",
+          "description": "Determine the sibling-in-law(s) of Bella Sidney Woolf (spouse's siblings and siblings' spouses)",
+          "necessary": true,
+          "depends_on": [
+            "u3",
+            "u5"
+          ],
+          "queries": [
+            "who are the sibling-in-laws of Bella Sidney Woolf",
+            "Bella Sidney Woolf sibling-in-law"
+          ],
+          "subject": ""
+        }
+      ],
+      "question_only": true
+    },
+    {
+      "sequence": 8,
+      "time_s": 13.437,
+      "type": "plan",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "Identify the Wikipedia article for Bella Sidney Woolf",
+          "necessary": true,
+          "depends_on": [],
+          "queries": [
+            "Bella Sidney Woolf Wikipedia",
+            "Bella Sidney Woolf biography"
+          ],
+          "subject": "Bella Sidney Woolf"
+        },
+        {
+          "unit_id": "u2",
+          "description": "Find the spouse of Bella Sidney Woolf",
+          "necessary": true,
+          "depends_on": [
+            "u1"
+          ],
+          "queries": [
+            "Bella Sidney Woolf spouse",
+            "Bella Sidney Woolf married to"
+          ],
+          "subject": "Bella Sidney Woolf"
+        },
+        {
+          "unit_id": "u3",
+          "description": "List the siblings of Bella Sidney Woolf's spouse",
+          "necessary": true,
+          "depends_on": [
+            "u2"
+          ],
+          "queries": [
+            "siblings of {u2}",
+            "{u2} family siblings"
+          ],
+          "subject": "{u2}"
+        },
+        {
+          "unit_id": "u4",
+          "description": "Find the siblings of Bella Sidney Woolf",
+          "necessary": true,
+          "depends_on": [
+            "u1"
+          ],
+          "queries": [
+            "Bella Sidney Woolf siblings",
+            "family of Bella Sidney Woolf"
+          ],
+          "subject": "Bella Sidney Woolf"
+        },
+        {
+          "unit_id": "u5",
+          "description": "Identify the spouses of Bella Sidney Woolf's siblings",
+          "necessary": true,
+          "depends_on": [
+            "u4"
+          ],
+          "queries": [
+            "spouse of {u4}",
+            "marriage of {u4}"
+          ],
+          "subject": "{u4}"
+        },
+        {
+          "unit_id": "u6",
+          "description": "Determine the sibling-in-law(s) of Bella Sidney Woolf (spouse's siblings and siblings' spouses)",
+          "necessary": true,
+          "depends_on": [
+            "u3",
+            "u5"
+          ],
+          "queries": [
+            "who are the sibling-in-laws of Bella Sidney Woolf",
+            "Bella Sidney Woolf sibling-in-law"
+          ],
+          "subject": ""
+        }
+      ]
+    },
+    {
+      "sequence": 9,
+      "time_s": 13.437,
+      "type": "trace_batch_requested"
+    },
+    {
+      "sequence": 10,
+      "time_s": 13.437,
+      "type": "search_finished",
+      "query": "[scheduled evidence]",
+      "subject": "",
+      "status": "ok",
+      "returned_pages": [],
+      "mode": "trace",
+      "unit_id": "__scheduled_evidence__"
+    },
+    {
+      "sequence": 11,
+      "time_s": 13.437,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d1s0",
+        "title": "Greg Penner",
+        "url": "https://trace.invalid/2wikimultihopqa_5d6e0f860bb011ebab90acde48001122_long/d1s0",
+        "text": "Gregory B. Penner( born December 18, 1969) is an American businessman and venture capitalist.",
+        "visible_time_s": 13.437000000005355,
+        "requested_subject": "",
+        "resolved_title": "Greg Penner",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 12,
+      "time_s": 13.437,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d1s1",
+        "title": "Greg Penner",
+        "url": "https://trace.invalid/2wikimultihopqa_5d6e0f860bb011ebab90acde48001122_long/d1s1",
+        "text": "Penner was named the chairman of Walmart on June 5, 2015.",
+        "visible_time_s": 13.437000000005355,
+        "requested_subject": "",
+        "resolved_title": "Greg Penner",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 13,
+      "time_s": 13.437,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d1s2",
+        "title": "Greg Penner",
+        "url": "https://trace.invalid/2wikimultihopqa_5d6e0f860bb011ebab90acde48001122_long/d1s2",
+        "text": "He is the son-in- law of S. Robson Walton and the grandson- in- law of Sam Walton, the founder of Walmart.",
+        "visible_time_s": 13.437000000005355,
+        "requested_subject": "",
+        "resolved_title": "Greg Penner",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 14,
+      "time_s": 13.437,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d3s0",
+        "title": "Charles Francis Norton",
+        "url": "https://trace.invalid/2wikimultihopqa_5d6e0f860bb011ebab90acde48001122_long/d3s0",
+        "text": "Charles Francis Norton( 1807 – 1835) was a 19th- century Member of Parliament for Guildford.",
+        "visible_time_s": 13.437000000005355,
+        "requested_subject": "",
+        "resolved_title": "Charles Francis Norton",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 15,
+      "time_s": 13.437,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d3s1",
+        "title": "Charles Francis Norton",
+        "url": "https://trace.invalid/2wikimultihopqa_5d6e0f860bb011ebab90acde48001122_long/d3s1",
+        "text": "Norton was also a Captain of 52nd Light Infantry; son-in- law of Sir Colin Campbell; brother- in- law of writer Caroline Norton",
+        "visible_time_s": 13.437000000005355,
+        "requested_subject": "",
+        "resolved_title": "Charles Francis Norton",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 16,
+      "time_s": 13.437,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d4s0",
+        "title": "Bella Sidney Woolf",
+        "url": "https://trace.invalid/2wikimultihopqa_5d6e0f860bb011ebab90acde48001122_long/d4s0",
+        "text": "Bella Sidney Woolf OBE (1877–1960) was an English author, sister of author Leonard Woolf and first married to Robert Heath Lock, and in her second marriage to Hong Kong colonial secretary and colonial Ceylonese administrator Tom Southorn.",
+        "visible_time_s": 13.437000000005355,
+        "requested_subject": "",
+        "resolved_title": "Bella Sidney Woolf",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 17,
+      "time_s": 13.437,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d5s0",
+        "title": "Thomas Southorn",
+        "url": "https://trace.invalid/2wikimultihopqa_5d6e0f860bb011ebab90acde48001122_long/d5s0",
+        "text": "Sir Wilfrid Thomas Southorn( 4 August 1879 – 15 March 1957)( Chinese Translated Name: 修頓, Old Translated Name: 蕭敦), known as Tom, was a British colonial administrator, spending the large part of career in Ceylon( now Sri Lanka).",
+        "visible_time_s": 13.437000000005355,
+        "requested_subject": "",
+        "resolved_title": "Thomas Southorn",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 18,
+      "time_s": 13.437,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d5s1",
+        "title": "Thomas Southorn",
+        "url": "https://trace.invalid/2wikimultihopqa_5d6e0f860bb011ebab90acde48001122_long/d5s1",
+        "text": "He was the Colonial Secretary of Hong Kong from 1925 – 1936 and served as Acting Administrator of the colony from February to March 1930 and from May to September 1935, and then in November the same year, basically at either end of the tenure of Sir William Peel as Governor.",
+        "visible_time_s": 13.437000000005355,
+        "requested_subject": "",
+        "resolved_title": "Thomas Southorn",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 19,
+      "time_s": 13.437,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d5s2",
+        "title": "Thomas Southorn",
+        "url": "https://trace.invalid/2wikimultihopqa_5d6e0f860bb011ebab90acde48001122_long/d5s2",
+        "text": "His official( summer) residence was Mountain Lodge.",
+        "visible_time_s": 13.437000000005355,
+        "requested_subject": "",
+        "resolved_title": "Thomas Southorn",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 20,
+      "time_s": 13.437,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d5s3",
+        "title": "Thomas Southorn",
+        "url": "https://trace.invalid/2wikimultihopqa_5d6e0f860bb011ebab90acde48001122_long/d5s3",
+        "text": "In 1921 he married author Bella Sidney Woolf( 1877 – 1960), whom he met through her( later) more famous brother Leonard Woolf, when the two men were colleagues in Ceylon.",
+        "visible_time_s": 13.437000000005355,
+        "requested_subject": "",
+        "resolved_title": "Thomas Southorn",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 21,
+      "time_s": 13.437,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d5s4",
+        "title": "Thomas Southorn",
+        "url": "https://trace.invalid/2wikimultihopqa_5d6e0f860bb011ebab90acde48001122_long/d5s4",
+        "text": "In 1904, then a humble' Office Assistant', Southorn had met Leonard Woolf on his arrival in Ceylon from England.",
+        "visible_time_s": 13.437000000005355,
+        "requested_subject": "",
+        "resolved_title": "Thomas Southorn",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 22,
+      "time_s": 13.437,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d5s5",
+        "title": "Thomas Southorn",
+        "url": "https://trace.invalid/2wikimultihopqa_5d6e0f860bb011ebab90acde48001122_long/d5s5",
+        "text": "In 1936, he was made Governor of The Gambia, notably describing the colony as\" a geographical and economic absurdity\".",
+        "visible_time_s": 13.437000000005355,
+        "requested_subject": "",
+        "resolved_title": "Thomas Southorn",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 23,
+      "time_s": 13.437,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d7s0",
+        "title": "Sidney Woolf",
+        "url": "https://trace.invalid/2wikimultihopqa_5d6e0f860bb011ebab90acde48001122_long/d7s0",
+        "text": "Sidney Woolf (16 June 1837 – September, 1918) was an English pottery manufacturer and a Liberal Party politician who sat in the House of Commons from 1880 to 1885.",
+        "visible_time_s": 13.437000000005355,
+        "requested_subject": "",
+        "resolved_title": "Sidney Woolf",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 24,
+      "time_s": 13.437,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d10s0",
+        "title": "Wyndham Goold",
+        "url": "https://trace.invalid/2wikimultihopqa_5d6e0f860bb011ebab90acde48001122_long/d10s0",
+        "text": "Wyndham Goold( 1812-1854) was a Member of Parliament( MP) for County Limerick from 1850 to 1854.",
+        "visible_time_s": 13.437000000005355,
+        "requested_subject": "",
+        "resolved_title": "Wyndham Goold",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 25,
+      "time_s": 13.437,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d10s1",
+        "title": "Wyndham Goold",
+        "url": "https://trace.invalid/2wikimultihopqa_5d6e0f860bb011ebab90acde48001122_long/d10s1",
+        "text": "Goold was educated at Westminster School and Trinity College, Dublin.",
+        "visible_time_s": 13.437000000005355,
+        "requested_subject": "",
+        "resolved_title": "Wyndham Goold",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 26,
+      "time_s": 13.437,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d10s2",
+        "title": "Wyndham Goold",
+        "url": "https://trace.invalid/2wikimultihopqa_5d6e0f860bb011ebab90acde48001122_long/d10s2",
+        "text": "He was the son in law of Frederick Falkiner Goold, Archdeacon of Raphoe and brother in law of Bishop Hamilton Verschoyle",
+        "visible_time_s": 13.437000000005355,
+        "requested_subject": "",
+        "resolved_title": "Wyndham Goold",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 27,
+      "time_s": 13.437,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d2s0",
+        "title": "Robert Vadra",
+        "url": "https://trace.invalid/2wikimultihopqa_5d6e0f860bb011ebab90acde48001122_long/d2s0",
+        "text": "Robert Vadra is an Indian businessman, entrepreneur and the husband of Priyanka Gandhi.",
+        "visible_time_s": 13.437000000005355,
+        "requested_subject": "",
+        "resolved_title": "Robert Vadra",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 28,
+      "time_s": 13.437,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d2s1",
+        "title": "Robert Vadra",
+        "url": "https://trace.invalid/2wikimultihopqa_5d6e0f860bb011ebab90acde48001122_long/d2s1",
+        "text": "He is the son -in- law of Sonia Gandhi and Rajiv Gandhi, and the brother- in- law of Rahul Gandhi.",
+        "visible_time_s": 13.437000000005355,
+        "requested_subject": "",
+        "resolved_title": "Robert Vadra",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 29,
+      "time_s": 13.437,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d6s0",
+        "title": "Robert W. Levering",
+        "url": "https://trace.invalid/2wikimultihopqa_5d6e0f860bb011ebab90acde48001122_long/d6s0",
+        "text": "Robert Woodrow Levering( October 3, 1914 – August 11, 1989) was a U.S. Representative from Ohio, son-in- law of Usher L. Burdick and brother- in- law of Quentin N. Burdick.",
+        "visible_time_s": 13.437000000005355,
+        "requested_subject": "",
+        "resolved_title": "Robert W. Levering",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 30,
+      "time_s": 13.437,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d8s0",
+        "title": "Leonard Woolf",
+        "url": "https://trace.invalid/2wikimultihopqa_5d6e0f860bb011ebab90acde48001122_long/d8s0",
+        "text": "Leonard Sidney Woolf (25 November 1880 – 14 August 1969) was a British political theorist, author, publisher and civil servant, and husband of author Virginia Woolf.",
+        "visible_time_s": 13.437000000005355,
+        "requested_subject": "",
+        "resolved_title": "Leonard Woolf",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 31,
+      "time_s": 13.437,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d9s0",
+        "title": "Eusebius (consul 359)",
+        "url": "https://trace.invalid/2wikimultihopqa_5d6e0f860bb011ebab90acde48001122_long/d9s0",
+        "text": "Flavius Eusebius( died after AD 371) was a Roman Senator, who was the brother- in- law of the emperor Constantius II.",
+        "visible_time_s": 13.437000000005355,
+        "requested_subject": "",
+        "resolved_title": "Eusebius (consul 359)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 32,
+      "time_s": 17.515,
+      "type": "judge_reply",
+      "reply": {
+        "judgments": [
+          {
+            "unit_id": "u1",
+            "label": "SUPPORTED",
+            "value": "Bella Sidney Woolf",
+            "citations": [
+              "d4s0"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d4s0",
+                "text": "Bella Sidney Woolf OBE (1877–1960) was an English author, sister of author Leonard Woolf and first married to Robert Heath Lock, and in her second marriage to Hong Kong colonial secretary and colonial Ceylonese administrator Tom Southorn."
+              }
+            ],
+            "reason": "Supported by the cited visible sentences and dependencies."
+          },
+          {
+            "unit_id": "u2",
+            "label": "SUPPORTED",
+            "value": "Tom Southorn",
+            "citations": [
+              "d5s3"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d5s3",
+                "text": "In 1921 he married author Bella Sidney Woolf( 1877 – 1960), whom he met through her( later) more famous brother Leonard Woolf, when the two men were colleagues in Ceylon."
+              }
+            ],
+            "reason": "Supported by the cited visible sentences and dependencies."
+          },
+          {
+            "unit_id": "u3",
+            "label": "UNRESOLVED",
+            "value": "",
+            "citations": [],
+            "quotes": [],
+            "reason": "The current visible evidence does not establish this unit."
+          },
+          {
+            "unit_id": "u4",
+            "label": "SUPPORTED",
+            "value": "Leonard Woolf",
+            "citations": [
+              "d8s0"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d8s0",
+                "text": "Leonard Sidney Woolf (25 November 1880 – 14 August 1969) was a British political theorist, author, publisher and civil servant, and husband of author Virginia Woolf."
+              }
+            ],
+            "reason": "Supported by the cited visible sentences and dependencies."
+          },
+          {
+            "unit_id": "u5",
+            "label": "UNRESOLVED",
+            "value": "",
+            "citations": [],
+            "quotes": [],
+            "reason": "The current visible evidence does not establish this unit."
+          },
+          {
+            "unit_id": "u6",
+            "label": "UNRESOLVED",
+            "value": "",
+            "citations": [],
+            "quotes": [],
+            "reason": "The current visible evidence does not establish this unit."
+          }
+        ]
+      },
+      "attempt": 1,
+      "repair": false,
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d1s1",
+        "d1s2",
+        "d3s0",
+        "d3s1",
+        "d4s0",
+        "d5s0",
+        "d5s1",
+        "d5s2",
+        "d5s3",
+        "d5s4",
+        "d5s5",
+        "d7s0",
+        "d10s0",
+        "d10s1",
+        "d10s2",
+        "d2s0",
+        "d2s1",
+        "d6s0",
+        "d8s0",
+        "d9s0"
+      ]
+    },
+    {
+      "sequence": 33,
+      "time_s": 17.515,
+      "type": "judgments",
+      "judgments": {
+        "u1": {
+          "label": "SUPPORTED",
+          "value": "Bella Sidney Woolf",
+          "citations": [
+            "d4s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d4s0",
+              "text": "Bella Sidney Woolf OBE (1877–1960) was an English author, sister of author Leonard Woolf and first married to Robert Heath Lock, and in her second marriage to Hong Kong colonial secretary and colonial Ceylonese administrator Tom Southorn."
+            }
+          ],
+          "reason": "Supported by the cited visible sentences and dependencies."
+        },
+        "u2": {
+          "label": "SUPPORTED",
+          "value": "Tom Southorn",
+          "citations": [
+            "d5s3"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d5s3",
+              "text": "In 1921 he married author Bella Sidney Woolf( 1877 – 1960), whom he met through her( later) more famous brother Leonard Woolf, when the two men were colleagues in Ceylon."
+            }
+          ],
+          "reason": "Supported by the cited visible sentences and dependencies."
+        },
+        "u3": {
+          "label": "UNRESOLVED",
+          "value": "",
+          "citations": [],
+          "quotes": [],
+          "reason": "The current visible evidence does not establish this unit."
+        },
+        "u4": {
+          "label": "SUPPORTED",
+          "value": "Leonard Woolf",
+          "citations": [
+            "d8s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d8s0",
+              "text": "Leonard Sidney Woolf (25 November 1880 – 14 August 1969) was a British political theorist, author, publisher and civil servant, and husband of author Virginia Woolf."
+            }
+          ],
+          "reason": "Supported by the cited visible sentences and dependencies."
+        },
+        "u5": {
+          "label": "UNRESOLVED",
+          "value": "",
+          "citations": [],
+          "quotes": [],
+          "reason": "The current visible evidence does not establish this unit."
+        },
+        "u6": {
+          "label": "UNRESOLVED",
+          "value": "",
+          "citations": [],
+          "quotes": [],
+          "reason": "The current visible evidence does not establish this unit."
+        }
+      },
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d1s1",
+        "d1s2",
+        "d3s0",
+        "d3s1",
+        "d4s0",
+        "d5s0",
+        "d5s1",
+        "d5s2",
+        "d5s3",
+        "d5s4",
+        "d5s5",
+        "d7s0",
+        "d10s0",
+        "d10s1",
+        "d10s2",
+        "d2s0",
+        "d2s1",
+        "d6s0",
+        "d8s0",
+        "d9s0"
+      ],
+      "semantic_review": false
+    },
+    {
+      "sequence": 34,
+      "time_s": 17.515,
+      "type": "trace_batch_requested"
+    },
+    {
+      "sequence": 35,
+      "time_s": 19.578,
+      "type": "generation_fallback",
+      "reason": "Draft omitted a value or had invalid length",
+      "output_unit_ids": [
+        "u1",
+        "u2",
+        "u4"
+      ]
+    },
+    {
+      "sequence": 36,
+      "time_s": 23.531,
+      "type": "verification_reply",
+      "reply": {
+        "approved": true,
+        "facts_valid": true,
+        "expressed_unit_ids": [
+          "u1",
+          "u2",
+          "u4"
+        ],
+        "reason": "All stated facts match the approved evidence and correspond exactly to the requested output units."
+      },
+      "output_unit_ids": [
+        "u1",
+        "u2",
+        "u4"
+      ],
+      "output_action": "Partial Answer",
+      "dependency_unit_ids": [],
+      "evidence_snapshot_ids": [
+        "d4s0",
+        "d5s3",
+        "d8s0"
+      ]
+    },
+    {
+      "sequence": 37,
+      "time_s": 23.531,
+      "type": "utterance",
+      "action": "Partial Answer",
+      "text": "The Wikipedia article for Bella Sidney Woolf is Bella Sidney Woolf. The spouse of Bella Sidney Woolf is Tom Southorn. The siblings of Bella Sidney Woolf is Leonard Woolf.",
+      "claims": [
+        {
+          "unit_id": "u1",
+          "description": "Identify the Wikipedia article for Bella Sidney Woolf",
+          "value": "Bella Sidney Woolf",
+          "citations": [
+            "d4s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d4s0",
+              "text": "Bella Sidney Woolf OBE (1877–1960) was an English author, sister of author Leonard Woolf and first married to Robert Heath Lock, and in her second marriage to Hong Kong colonial secretary and colonial Ceylonese administrator Tom Southorn."
+            }
+          ]
+        },
+        {
+          "unit_id": "u2",
+          "description": "Find the spouse of Bella Sidney Woolf",
+          "value": "Tom Southorn",
+          "citations": [
+            "d5s3"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d5s3",
+              "text": "In 1921 he married author Bella Sidney Woolf( 1877 – 1960), whom he met through her( later) more famous brother Leonard Woolf, when the two men were colleagues in Ceylon."
+            }
+          ]
+        },
+        {
+          "unit_id": "u4",
+          "description": "Find the siblings of Bella Sidney Woolf",
+          "value": "Leonard Woolf",
+          "citations": [
+            "d8s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d8s0",
+              "text": "Leonard Sidney Woolf (25 November 1880 – 14 August 1969) was a British political theorist, author, publisher and civil servant, and husband of author Virginia Woolf."
+            }
+          ]
+        }
+      ],
+      "unresolved": [],
+      "fallback": true,
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d1s1",
+        "d1s2",
+        "d3s0",
+        "d3s1",
+        "d4s0",
+        "d5s0",
+        "d5s1",
+        "d5s2",
+        "d5s3",
+        "d5s4",
+        "d5s5",
+        "d7s0",
+        "d10s0",
+        "d10s1",
+        "d10s2",
+        "d2s0",
+        "d2s1",
+        "d6s0",
+        "d8s0",
+        "d9s0"
+      ],
+      "language": "en"
+    },
+    {
+      "sequence": 38,
+      "time_s": 23.531,
+      "type": "search_finished",
+      "query": "[scheduled evidence]",
+      "subject": "",
+      "status": "ok",
+      "returned_pages": [],
+      "mode": "trace",
+      "unit_id": "__scheduled_evidence__"
+    },
+    {
+      "sequence": 39,
+      "time_s": 23.531,
+      "type": "semantic_review_requested",
+      "target_unit_ids": [
+        "u3",
+        "u5",
+        "u6"
+      ],
+      "review_unit_ids": [
+        "u1",
+        "u2",
+        "u3",
+        "u4",
+        "u5",
+        "u6"
+      ],
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d1s1",
+        "d1s2",
+        "d3s0",
+        "d3s1",
+        "d4s0",
+        "d5s0",
+        "d5s1",
+        "d5s2",
+        "d5s3",
+        "d5s4",
+        "d5s5",
+        "d7s0",
+        "d10s0",
+        "d10s1",
+        "d10s2",
+        "d2s0",
+        "d2s1",
+        "d6s0",
+        "d8s0",
+        "d9s0"
+      ],
+      "max_reviews": 1
+    },
+    {
+      "sequence": 40,
+      "time_s": 26.625,
+      "type": "feedback_requested",
+      "feedback_kind": "progress",
+      "execution_state": {
+        "stage": "checking",
+        "searches_started": 2,
+        "searches_completed": 2,
+        "active_searches": 0,
+        "evidence_count": 21,
+        "supported_units": 3,
+        "output_units": 3
+      }
+    },
+    {
+      "sequence": 41,
+      "time_s": 27.218,
+      "type": "semantic_review_reply",
+      "reply": {
+        "judgments": [
+          {
+            "unit_id": "u1",
+            "label": "SUPPORTED",
+            "value": "Bella Sidney Woolf",
+            "citations": [
+              "d4s0"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d4s0",
+                "text": "Bella Sidney Woolf OBE (1877–1960) was an English author, sister of author Leonard Woolf and first married to Robert Heath Lock, and in her second marriage to Hong Kong colonial secretary and colonial Ceylonese administrator Tom Southorn."
+              }
+            ],
+            "reason": "Supported by the cited visible sentences and dependencies."
+          },
+          {
+            "unit_id": "u2",
+            "label": "SUPPORTED",
+            "value": "Tom Southorn",
+            "citations": [
+              "d5s3"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d5s3",
+                "text": "In 1921 he married author Bella Sidney Woolf( 1877 – 1960), whom he met through her( later) more famous brother Leonard Woolf, when the two men were colleagues in Ceylon."
+              }
+            ],
+            "reason": "Supported by the cited visible sentences and dependencies."
+          },
+          {
+            "unit_id": "u3",
+            "label": "UNRESOLVED",
+            "value": "",
+            "citations": [],
+            "quotes": [],
+            "reason": "The current visible evidence does not establish this unit."
+          },
+          {
+            "unit_id": "u4",
+            "label": "SUPPORTED",
+            "value": "Leonard Woolf",
+            "citations": [
+              "d8s0"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d8s0",
+                "text": "Leonard Sidney Woolf (25 November 1880 – 14 August 1969) was a British political theorist, author, publisher and civil servant, and husband of author Virginia Woolf."
+              }
+            ],
+            "reason": "Supported by the cited visible sentences and dependencies."
+          },
+          {
+            "unit_id": "u5",
+            "label": "UNRESOLVED",
+            "value": "",
+            "citations": [],
+            "quotes": [],
+            "reason": "The current visible evidence does not establish this unit."
+          },
+          {
+            "unit_id": "u6",
+            "label": "UNRESOLVED",
+            "value": "",
+            "citations": [],
+            "quotes": [],
+            "reason": "The current visible evidence does not establish this unit."
+          }
+        ]
+      },
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d1s1",
+        "d1s2",
+        "d3s0",
+        "d3s1",
+        "d4s0",
+        "d5s0",
+        "d5s1",
+        "d5s2",
+        "d5s3",
+        "d5s4",
+        "d5s5",
+        "d7s0",
+        "d10s0",
+        "d10s1",
+        "d10s2",
+        "d2s0",
+        "d2s1",
+        "d6s0",
+        "d8s0",
+        "d9s0"
+      ]
+    },
+    {
+      "sequence": 42,
+      "time_s": 27.218,
+      "type": "semantic_review_finished",
+      "review_unit_ids": [
+        "u1",
+        "u2",
+        "u3",
+        "u4",
+        "u5",
+        "u6"
+      ],
+      "recovered_unit_ids": []
+    },
+    {
+      "sequence": 43,
+      "time_s": 27.218,
+      "type": "judgments",
+      "judgments": {
+        "u1": {
+          "label": "SUPPORTED",
+          "value": "Bella Sidney Woolf",
+          "citations": [
+            "d4s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d4s0",
+              "text": "Bella Sidney Woolf OBE (1877–1960) was an English author, sister of author Leonard Woolf and first married to Robert Heath Lock, and in her second marriage to Hong Kong colonial secretary and colonial Ceylonese administrator Tom Southorn."
+            }
+          ],
+          "reason": "Supported by the cited visible sentences and dependencies."
+        },
+        "u2": {
+          "label": "SUPPORTED",
+          "value": "Tom Southorn",
+          "citations": [
+            "d5s3"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d5s3",
+              "text": "In 1921 he married author Bella Sidney Woolf( 1877 – 1960), whom he met through her( later) more famous brother Leonard Woolf, when the two men were colleagues in Ceylon."
+            }
+          ],
+          "reason": "Supported by the cited visible sentences and dependencies."
+        },
+        "u3": {
+          "label": "UNRESOLVED",
+          "value": "",
+          "citations": [],
+          "quotes": [],
+          "reason": "The current visible evidence does not establish this unit."
+        },
+        "u4": {
+          "label": "SUPPORTED",
+          "value": "Leonard Woolf",
+          "citations": [
+            "d8s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d8s0",
+              "text": "Leonard Sidney Woolf (25 November 1880 – 14 August 1969) was a British political theorist, author, publisher and civil servant, and husband of author Virginia Woolf."
+            }
+          ],
+          "reason": "Supported by the cited visible sentences and dependencies."
+        },
+        "u5": {
+          "label": "UNRESOLVED",
+          "value": "",
+          "citations": [],
+          "quotes": [],
+          "reason": "The current visible evidence does not establish this unit."
+        },
+        "u6": {
+          "label": "UNRESOLVED",
+          "value": "",
+          "citations": [],
+          "quotes": [],
+          "reason": "The current visible evidence does not establish this unit."
+        }
+      },
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d1s1",
+        "d1s2",
+        "d3s0",
+        "d3s1",
+        "d4s0",
+        "d5s0",
+        "d5s1",
+        "d5s2",
+        "d5s3",
+        "d5s4",
+        "d5s5",
+        "d7s0",
+        "d10s0",
+        "d10s1",
+        "d10s2",
+        "d2s0",
+        "d2s1",
+        "d6s0",
+        "d8s0",
+        "d9s0"
+      ],
+      "semantic_review": true
+    },
+    {
+      "sequence": 44,
+      "time_s": 27.218,
+      "type": "utterance",
+      "action": "Final Answer",
+      "text": "I could not confirm List the siblings of Bella Sidney Woolf's spouse, the spouses of Bella Sidney Woolf's siblings and the sibling-in-law(s) of Bella Sidney Woolf (spouse's siblings and siblings' spouses).",
+      "claims": [],
+      "unresolved": [
+        "u3",
+        "u5",
+        "u6"
+      ],
+      "fallback": false,
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d1s1",
+        "d1s2",
+        "d3s0",
+        "d3s1",
+        "d4s0",
+        "d5s0",
+        "d5s1",
+        "d5s2",
+        "d5s3",
+        "d5s4",
+        "d5s5",
+        "d7s0",
+        "d10s0",
+        "d10s1",
+        "d10s2",
+        "d2s0",
+        "d2s1",
+        "d6s0",
+        "d8s0",
+        "d9s0"
+      ],
+      "language": "en"
+    },
+    {
+      "sequence": 45,
+      "time_s": 27.218,
+      "type": "finished",
+      "status": "incomplete"
+    }
+  ],
+  "note": "Prototype model judgments are not independent gold scores. Output event times are not spoken claim times.",
+  "evidence_mode": "scheduled_trace",
+  "audio": {
+    "enabled": true,
+    "mode": "windows",
+    "play": false,
+    "status": "ok",
+    "errors": [],
+    "records": [
+      {
+        "event_sequence": 1,
+        "sentence_index": 1,
+        "sentence_count": 1,
+        "language": "en",
+        "text": "Looking up the sibling-in-law of Bella Sidney Woolf for you.",
+        "action": "Backchannel",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 2.5780000000086147,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1\\samples\\0162\\audio\\segments\\0001_01.wav",
+        "duration_s": 3.7035827664399092,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 3.375,
+        "synthesis_and_playback_s": 0.7969999999913853
+      },
+      {
+        "event_sequence": 5,
+        "sentence_index": 1,
+        "sentence_count": 1,
+        "language": "en",
+        "text": "I'm working on gathering the info about Bella Sidney Woolf's sibling-in-law.",
+        "action": "Progress",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 10.281000000002678,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1\\samples\\0162\\audio\\segments\\0005_01.wav",
+        "duration_s": 4.613469387755102,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 11.078000000008615,
+        "synthesis_and_playback_s": 0.7970000000059372
+      },
+      {
+        "event_sequence": 37,
+        "sentence_index": 1,
+        "sentence_count": 3,
+        "language": "en",
+        "text": "The Wikipedia article for Bella Sidney Woolf is Bella Sidney Woolf.",
+        "action": "Partial Answer",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 23.531000000002678,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1\\samples\\0162\\audio\\segments\\0037_01.wav",
+        "duration_s": 4.348480725623583,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 24.328000000008615,
+        "synthesis_and_playback_s": 0.7970000000059372
+      },
+      {
+        "event_sequence": 37,
+        "sentence_index": 2,
+        "sentence_count": 3,
+        "language": "en",
+        "text": "The spouse of Bella Sidney Woolf is Tom Southorn.",
+        "action": "Partial Answer",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 24.328000000008615,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1\\samples\\0162\\audio\\segments\\0037_02.wav",
+        "duration_s": 3.408888888888889,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 25.109000000011292,
+        "synthesis_and_playback_s": 0.7810000000026776
+      },
+      {
+        "event_sequence": 37,
+        "sentence_index": 3,
+        "sentence_count": 3,
+        "language": "en",
+        "text": "The siblings of Bella Sidney Woolf is Leonard Woolf.",
+        "action": "Partial Answer",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 25.109000000011292,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1\\samples\\0162\\audio\\segments\\0037_03.wav",
+        "duration_s": 3.44875283446712,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 25.889999999999418,
+        "synthesis_and_playback_s": 0.7809999999881256
+      },
+      {
+        "event_sequence": 44,
+        "sentence_index": 1,
+        "sentence_count": 1,
+        "language": "en",
+        "text": "I could not confirm List the siblings of Bella Sidney Woolf's spouse, the spouses of Bella Sidney Woolf's siblings and the sibling-in-law(s) of Bella Sidney Woolf (spouse's siblings and siblings' spouses).",
+        "action": "Final Answer",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 27.218000000008033,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1\\samples\\0162\\audio\\segments\\0044_01.wav",
+        "duration_s": 13.001814058956915,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 28.031000000002678,
+        "synthesis_and_playback_s": 0.8129999999946449
+      }
+    ],
+    "wave": {
+      "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1\\samples\\0162\\audio\\response.wav",
+      "duration_s": 48.53591836734694,
+      "timeline": [
+        {
+          "event_sequence": 1,
+          "sentence_index": 1,
+          "action": "Backchannel",
+          "text": "Looking up the sibling-in-law of Bella Sidney Woolf for you.",
+          "wave_start_s": 3.3750113378684805,
+          "wave_end_s": 7.07859410430839
+        },
+        {
+          "event_sequence": 5,
+          "sentence_index": 1,
+          "action": "Progress",
+          "text": "I'm working on gathering the info about Bella Sidney Woolf's sibling-in-law.",
+          "wave_start_s": 11.078004535147393,
+          "wave_end_s": 15.691473922902494
+        },
+        {
+          "event_sequence": 37,
+          "sentence_index": 1,
+          "action": "Partial Answer",
+          "text": "The Wikipedia article for Bella Sidney Woolf is Bella Sidney Woolf.",
+          "wave_start_s": 24.327981859410432,
+          "wave_end_s": 28.676462585034013
+        },
+        {
+          "event_sequence": 37,
+          "sentence_index": 2,
+          "action": "Partial Answer",
+          "text": "The spouse of Bella Sidney Woolf is Tom Southorn.",
+          "wave_start_s": 28.676462585034013,
+          "wave_end_s": 32.085351473922906
+        },
+        {
+          "event_sequence": 37,
+          "sentence_index": 3,
+          "action": "Partial Answer",
+          "text": "The siblings of Bella Sidney Woolf is Leonard Woolf.",
+          "wave_start_s": 32.085351473922906,
+          "wave_end_s": 35.53410430839002
+        },
+        {
+          "event_sequence": 44,
+          "sentence_index": 1,
+          "action": "Final Answer",
+          "text": "I could not confirm List the siblings of Bella Sidney Woolf's spouse, the spouses of Bella Sidney Woolf's siblings and the sibling-in-law(s) of Bella Sidney Woolf (spouse's siblings and siblings' spouses).",
+          "wave_start_s": 35.53410430839002,
+          "wave_end_s": 48.53591836734694
+        }
+      ]
+    }
+  },
+  "evaluation": {
+    "mode": "b_final_revised_trace",
+    "trace_id": "2wikimultihopqa_5d6e0f860bb011ebab90acde48001122_long",
+    "sample_id": "2wikimultihopqa_5d6e0f860bb011ebab90acde48001122",
+    "total_wall_s": 28.031000000002678,
+    "question_timeout_s": 180,
+    "audio_enabled": true,
+    "history_enabled": false,
+    "text_pipeline_wall_s": 27.218000000008033,
+    "effective_settings": {
+      "base_url": "https://tinker.thinkingmachines.dev/services/tinker-prod/oai/api/v1",
+      "model": "openai/gpt-oss-120b",
+      "judge_model": "tinker://f9e9a6c1-e203-5c2c-acdd-68fe67378ca4:train:0/sampler_weights/epoch-0001",
+      "judge_reasoning_effort": "low",
+      "wiki_language": "en",
+      "user_agent": "CascadeSystem/0.1 (educational research prototype)",
+      "timeout_s": 45.0,
+      "max_tokens": 4096,
+      "reasoning_effort": "low",
+      "progress_s": 3.0,
+      "feedback_timeout_s": 6.0,
+      "search_limit": 3,
+      "max_units": 8,
+      "max_searches": 16,
+      "max_sources": 21,
+      "source_chars": 275,
+      "evidence_chars": 2754,
+      "concurrency": 3
+    },
+    "timing_kind": "unknown",
+    "scheduler": "wall-paced fixed B arrivals",
+    "split": "eval_reserved",
+    "empty_evidence_sentences_ignored": 0
+  }
+}

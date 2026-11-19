@@ -1,0 +1,850 @@
+{
+  "question": "On what date did Apollo 11 launch, and on what date did it splash down on Earth?",
+  "resolved_question": "On what date did Apollo 11 launch, and on what date did it splash down on Earth?",
+  "used_history_turn_ids": [],
+  "response_language": "en",
+  "status": "complete",
+  "clock": "wall_monotonic",
+  "time_origin": "question_text_ready_after_optional_asr",
+  "model": "openai/gpt-oss-120b",
+  "units": [
+    {
+      "unit_id": "u1",
+      "description": "Apollo 11 launch date",
+      "necessary": true,
+      "depends_on": [],
+      "queries": [
+        "Apollo 11 launch date",
+        "Apollo 11 launch"
+      ],
+      "subject": "Apollo 11"
+    },
+    {
+      "unit_id": "u2",
+      "description": "Apollo 11 splashdown date on Earth",
+      "necessary": true,
+      "depends_on": [],
+      "queries": [
+        "Apollo 11 splashdown date",
+        "Apollo 11 Earth splashdown"
+      ],
+      "subject": "Apollo 11"
+    }
+  ],
+  "judgments": {
+    "u1": {
+      "label": "SUPPORTED",
+      "value": "July 16, 1969",
+      "citations": [
+        "d1s0"
+      ],
+      "quotes": [
+        {
+          "evidence_id": "d1s0",
+          "text": "Apollo 11 launched on July 16, 1969."
+        }
+      ],
+      "reason": "Evidence explicitly states the launch date."
+    },
+    "u2": {
+      "label": "SUPPORTED",
+      "value": "July 24, 1969",
+      "citations": [
+        "d2s0"
+      ],
+      "quotes": [
+        {
+          "evidence_id": "d2s0",
+          "text": "Apollo 11 returned to Earth with splashdown on July 24, 1969."
+        }
+      ],
+      "reason": "Evidence explicitly states the splashdown date."
+    }
+  },
+  "evidence": [
+    {
+      "evidence_id": "d1s0",
+      "title": "Apollo 11 — launch",
+      "url": "https://trace.invalid/custom_nasa_apollo11_short/d1s0",
+      "text": "Apollo 11 launched on July 16, 1969.",
+      "visible_time_s": 1.3404062000008707,
+      "requested_subject": "",
+      "resolved_title": "Apollo 11 — launch",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d2s0",
+      "title": "Apollo 11 — splashdown",
+      "url": "https://trace.invalid/custom_nasa_apollo11_short/d2s0",
+      "text": "Apollo 11 returned to Earth with splashdown on July 24, 1969.",
+      "visible_time_s": 6.943109200001345,
+      "requested_subject": "",
+      "resolved_title": "Apollo 11 — splashdown",
+      "entity_resolution": "unspecified"
+    }
+  ],
+  "searches": [
+    {
+      "query": "[scheduled evidence]",
+      "subject": "",
+      "status": "ok",
+      "returned_pages": [],
+      "mode": "trace",
+      "unit_id": "__scheduled_evidence__"
+    },
+    {
+      "query": "[scheduled evidence]",
+      "subject": "",
+      "status": "ok",
+      "returned_pages": [],
+      "mode": "trace",
+      "unit_id": "__scheduled_evidence__"
+    }
+  ],
+  "search_failures": [],
+  "llm_calls": [
+    {
+      "purpose": "feedback_generate",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 413,
+        "completion_tokens": 61,
+        "total_tokens": 474,
+        "prompt_tokens_details": {
+          "cached_tokens": 384
+        }
+      },
+      "latency_s": 1.217246
+    },
+    {
+      "purpose": "decompose",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 628,
+        "completion_tokens": 183,
+        "total_tokens": 811,
+        "prompt_tokens_details": {
+          "cached_tokens": 512
+        }
+      },
+      "latency_s": 1.338245
+    },
+    {
+      "purpose": "feedback_verify",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 369,
+        "completion_tokens": 98,
+        "total_tokens": 467,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        }
+      },
+      "latency_s": 1.781509
+    },
+    {
+      "purpose": "judge",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 1007,
+        "completion_tokens": 192,
+        "total_tokens": 1199,
+        "prompt_tokens_details": {
+          "cached_tokens": 768
+        }
+      },
+      "latency_s": 2.114174
+    },
+    {
+      "purpose": "generate",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 538,
+        "completion_tokens": 65,
+        "total_tokens": 603,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        }
+      },
+      "latency_s": 1.682591
+    },
+    {
+      "purpose": "feedback_generate",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 414,
+        "completion_tokens": 53,
+        "total_tokens": 467,
+        "prompt_tokens_details": {
+          "cached_tokens": 384
+        }
+      },
+      "latency_s": 0.544023
+    },
+    {
+      "purpose": "verify",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 852,
+        "completion_tokens": 112,
+        "total_tokens": 964,
+        "prompt_tokens_details": {
+          "cached_tokens": 512
+        }
+      },
+      "latency_s": 1.804832
+    },
+    {
+      "purpose": "feedback_verify",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 357,
+        "completion_tokens": 100,
+        "total_tokens": 457,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        }
+      },
+      "latency_s": 0.665972
+    },
+    {
+      "purpose": "judge",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 1116,
+        "completion_tokens": 252,
+        "total_tokens": 1368,
+        "prompt_tokens_details": {
+          "cached_tokens": 896
+        }
+      },
+      "latency_s": 0.876011
+    },
+    {
+      "purpose": "feedback_generate",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 413,
+        "completion_tokens": 54,
+        "total_tokens": 467,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        }
+      },
+      "latency_s": 0.55235
+    },
+    {
+      "purpose": "generate",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 555,
+        "completion_tokens": 78,
+        "total_tokens": 633,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        }
+      },
+      "latency_s": 0.560219
+    },
+    {
+      "purpose": "verify",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 879,
+        "completion_tokens": 116,
+        "total_tokens": 995,
+        "prompt_tokens_details": {
+          "cached_tokens": 512
+        }
+      },
+      "latency_s": 0.887685
+    }
+  ],
+  "search_diagnostics": [],
+  "output_enqueued_units": {
+    "u1": "July 16, 1969",
+    "u2": "July 24, 1969"
+  },
+  "events": [
+    {
+      "sequence": 0,
+      "time_s": 0.000359,
+      "type": "feedback_requested",
+      "feedback_kind": "opening",
+      "execution_state": {
+        "stage": "planning",
+        "searches_started": 0,
+        "searches_completed": 0,
+        "active_searches": 0,
+        "evidence_count": 0,
+        "supported_units": 0,
+        "output_units": 0
+      }
+    },
+    {
+      "sequence": 1,
+      "time_s": 1.338572,
+      "type": "decompose_reply",
+      "reply": {
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "Apollo 11 launch date",
+            "subject": "Apollo 11",
+            "necessary": true,
+            "depends_on": [],
+            "queries": [
+              "Apollo 11 launch date",
+              "Apollo 11 launch"
+            ]
+          },
+          {
+            "unit_id": "u2",
+            "description": "Apollo 11 splashdown date on Earth",
+            "subject": "Apollo 11",
+            "necessary": true,
+            "depends_on": [],
+            "queries": [
+              "Apollo 11 splashdown date",
+              "Apollo 11 Earth splashdown"
+            ]
+          }
+        ]
+      },
+      "attempt": 1,
+      "repair": false
+    },
+    {
+      "sequence": 2,
+      "time_s": 1.340277,
+      "type": "plan",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "Apollo 11 launch date",
+          "necessary": true,
+          "depends_on": [],
+          "queries": [
+            "Apollo 11 launch date",
+            "Apollo 11 launch"
+          ],
+          "subject": "Apollo 11"
+        },
+        {
+          "unit_id": "u2",
+          "description": "Apollo 11 splashdown date on Earth",
+          "necessary": true,
+          "depends_on": [],
+          "queries": [
+            "Apollo 11 splashdown date",
+            "Apollo 11 Earth splashdown"
+          ],
+          "subject": "Apollo 11"
+        }
+      ]
+    },
+    {
+      "sequence": 3,
+      "time_s": 1.340316,
+      "type": "trace_batch_requested"
+    },
+    {
+      "sequence": 4,
+      "time_s": 1.340374,
+      "type": "search_finished",
+      "query": "[scheduled evidence]",
+      "subject": "",
+      "status": "ok",
+      "returned_pages": [],
+      "mode": "trace",
+      "unit_id": "__scheduled_evidence__"
+    },
+    {
+      "sequence": 5,
+      "time_s": 1.340415,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d1s0",
+        "title": "Apollo 11 — launch",
+        "url": "https://trace.invalid/custom_nasa_apollo11_short/d1s0",
+        "text": "Apollo 11 launched on July 16, 1969.",
+        "visible_time_s": 1.3404062000008707,
+        "requested_subject": "",
+        "resolved_title": "Apollo 11 — launch",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 6,
+      "time_s": 2.999359,
+      "type": "utterance",
+      "action": "Backchannel",
+      "text": "I see you want the launch and splashdown dates for Apollo 11; I’ll start looking that up.",
+      "claims": [],
+      "feedback_source": "model",
+      "feedback_status_claim": "intent",
+      "feedback_fallback_reason": "",
+      "execution_state": {
+        "stage": "checking",
+        "searches_started": 1,
+        "searches_completed": 1,
+        "active_searches": 0,
+        "evidence_count": 1,
+        "supported_units": 0,
+        "output_units": 0
+      },
+      "language": "en"
+    },
+    {
+      "sequence": 7,
+      "time_s": 3.454638,
+      "type": "judge_reply",
+      "reply": {
+        "judgments": [
+          {
+            "unit_id": "u1",
+            "label": "SUPPORTED",
+            "value": "July 16, 1969",
+            "citations": [
+              "d1s0"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d1s0",
+                "text": "Apollo 11 launched on July 16, 1969."
+              }
+            ],
+            "reason": "Source explicitly gives launch date."
+          },
+          {
+            "unit_id": "u2",
+            "label": "UNRESOLVED",
+            "value": "",
+            "citations": [],
+            "quotes": [],
+            "reason": "No evidence provided for splashdown date."
+          }
+        ]
+      },
+      "attempt": 1,
+      "repair": false,
+      "evidence_snapshot_ids": [
+        "d1s0"
+      ]
+    },
+    {
+      "sequence": 8,
+      "time_s": 3.45474,
+      "type": "judgments",
+      "judgments": {
+        "u1": {
+          "label": "SUPPORTED",
+          "value": "July 16, 1969",
+          "citations": [
+            "d1s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d1s0",
+              "text": "Apollo 11 launched on July 16, 1969."
+            }
+          ],
+          "reason": "Source explicitly gives launch date."
+        },
+        "u2": {
+          "label": "UNRESOLVED",
+          "value": "",
+          "citations": [],
+          "quotes": [],
+          "reason": "No evidence provided for splashdown date."
+        }
+      },
+      "evidence_snapshot_ids": [
+        "d1s0"
+      ],
+      "semantic_review": false
+    },
+    {
+      "sequence": 9,
+      "time_s": 3.454774,
+      "type": "trace_batch_requested"
+    },
+    {
+      "sequence": 10,
+      "time_s": 6.075267,
+      "type": "feedback_requested",
+      "feedback_kind": "progress",
+      "execution_state": {
+        "stage": "formulating",
+        "searches_started": 2,
+        "searches_completed": 1,
+        "active_searches": 0,
+        "evidence_count": 1,
+        "supported_units": 1,
+        "output_units": 0
+      }
+    },
+    {
+      "sequence": 11,
+      "time_s": 6.942445,
+      "type": "verification_reply",
+      "reply": {
+        "approved": true,
+        "facts_valid": true,
+        "expressed_unit_ids": [
+          "u1"
+        ],
+        "reason": "The draft correctly states the approved launch date with supporting evidence and matches the requested unit."
+      },
+      "output_unit_ids": [
+        "u1"
+      ],
+      "output_action": "Partial Answer",
+      "dependency_unit_ids": [],
+      "evidence_snapshot_ids": [
+        "d1s0"
+      ]
+    },
+    {
+      "sequence": 12,
+      "time_s": 6.942498,
+      "type": "utterance",
+      "action": "Partial Answer",
+      "text": "Apollo 11 launched on July 16, 1969.",
+      "claims": [
+        {
+          "unit_id": "u1",
+          "description": "Apollo 11 launch date",
+          "value": "July 16, 1969",
+          "citations": [
+            "d1s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d1s0",
+              "text": "Apollo 11 launched on July 16, 1969."
+            }
+          ]
+        }
+      ],
+      "unresolved": [],
+      "fallback": false,
+      "evidence_snapshot_ids": [
+        "d1s0"
+      ],
+      "language": "en"
+    },
+    {
+      "sequence": 13,
+      "time_s": 6.943024,
+      "type": "search_finished",
+      "query": "[scheduled evidence]",
+      "subject": "",
+      "status": "ok",
+      "returned_pages": [],
+      "mode": "trace",
+      "unit_id": "__scheduled_evidence__"
+    },
+    {
+      "sequence": 14,
+      "time_s": 6.943128,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d2s0",
+        "title": "Apollo 11 — splashdown",
+        "url": "https://trace.invalid/custom_nasa_apollo11_short/d2s0",
+        "text": "Apollo 11 returned to Earth with splashdown on July 24, 1969.",
+        "visible_time_s": 6.943109200001345,
+        "requested_subject": "",
+        "resolved_title": "Apollo 11 — splashdown",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 15,
+      "time_s": 7.819258,
+      "type": "judge_reply",
+      "reply": {
+        "judgments": [
+          {
+            "unit_id": "u1",
+            "label": "SUPPORTED",
+            "value": "July 16, 1969",
+            "citations": [
+              "d1s0"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d1s0",
+                "text": "Apollo 11 launched on July 16, 1969."
+              }
+            ],
+            "reason": "Evidence explicitly states the launch date."
+          },
+          {
+            "unit_id": "u2",
+            "label": "SUPPORTED",
+            "value": "July 24, 1969",
+            "citations": [
+              "d2s0"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d2s0",
+                "text": "Apollo 11 returned to Earth with splashdown on July 24, 1969."
+              }
+            ],
+            "reason": "Evidence explicitly states the splashdown date."
+          }
+        ]
+      },
+      "attempt": 1,
+      "repair": false,
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d2s0"
+      ]
+    },
+    {
+      "sequence": 16,
+      "time_s": 7.819382,
+      "type": "judgments",
+      "judgments": {
+        "u1": {
+          "label": "SUPPORTED",
+          "value": "July 16, 1969",
+          "citations": [
+            "d1s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d1s0",
+              "text": "Apollo 11 launched on July 16, 1969."
+            }
+          ],
+          "reason": "Evidence explicitly states the launch date."
+        },
+        "u2": {
+          "label": "SUPPORTED",
+          "value": "July 24, 1969",
+          "citations": [
+            "d2s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d2s0",
+              "text": "Apollo 11 returned to Earth with splashdown on July 24, 1969."
+            }
+          ],
+          "reason": "Evidence explicitly states the splashdown date."
+        }
+      },
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d2s0"
+      ],
+      "semantic_review": false
+    },
+    {
+      "sequence": 17,
+      "time_s": 7.83793,
+      "type": "feedback_discarded",
+      "feedback_kind": "progress",
+      "reason": "answer_already_advanced"
+    },
+    {
+      "sequence": 18,
+      "time_s": 9.267562,
+      "type": "verification_reply",
+      "reply": {
+        "approved": true,
+        "facts_valid": true,
+        "expressed_unit_ids": [
+          "u2"
+        ],
+        "reason": "The draft correctly states the splashdown date supported by the approved fact."
+      },
+      "output_unit_ids": [
+        "u2"
+      ],
+      "output_action": "Final Answer",
+      "dependency_unit_ids": [],
+      "evidence_snapshot_ids": [
+        "d2s0"
+      ]
+    },
+    {
+      "sequence": 19,
+      "time_s": 9.267618,
+      "type": "utterance",
+      "action": "Final Answer",
+      "text": "Apollo 11 splashed down on Earth on July 24, 1969.",
+      "claims": [
+        {
+          "unit_id": "u2",
+          "description": "Apollo 11 splashdown date on Earth",
+          "value": "July 24, 1969",
+          "citations": [
+            "d2s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d2s0",
+              "text": "Apollo 11 returned to Earth with splashdown on July 24, 1969."
+            }
+          ]
+        }
+      ],
+      "unresolved": [],
+      "fallback": false,
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d2s0"
+      ],
+      "language": "en"
+    },
+    {
+      "sequence": 20,
+      "time_s": 9.268204,
+      "type": "finished",
+      "status": "complete"
+    }
+  ],
+  "note": "Prototype model judgments are not independent gold scores. Output event times are not spoken claim times.",
+  "evidence_mode": "scheduled_trace",
+  "audio": {
+    "enabled": true,
+    "mode": "windows",
+    "play": false,
+    "status": "ok",
+    "errors": [],
+    "records": [
+      {
+        "event_sequence": 6,
+        "sentence_index": 1,
+        "sentence_count": 1,
+        "language": "en",
+        "text": "I see you want the launch and splashdown dates for Apollo 11; I’ll start looking that up.",
+        "action": "Backchannel",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 2.999859600000491,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval debug20\\artifacts\\runs\\20261118T042104Z-af3cd283\\samples\\0026\\audio\\segments\\0006_01.wav",
+        "duration_s": 5.9433106575963714,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 3.8273466999999073,
+        "synthesis_and_playback_s": 0.8277737999997044
+      },
+      {
+        "event_sequence": 12,
+        "sentence_index": 1,
+        "sentence_count": 1,
+        "language": "en",
+        "text": "Apollo 11 launched on July 16, 1969.",
+        "action": "Partial Answer",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 6.94297430000006,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval debug20\\artifacts\\runs\\20261118T042104Z-af3cd283\\samples\\0026\\audio\\segments\\0012_01.wav",
+        "duration_s": 4.908571428571428,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 7.771045800000138,
+        "synthesis_and_playback_s": 0.8283798000011302
+      },
+      {
+        "event_sequence": 19,
+        "sentence_index": 1,
+        "sentence_count": 1,
+        "language": "en",
+        "text": "Apollo 11 splashed down on Earth on July 24, 1969.",
+        "action": "Final Answer",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 9.268108100000973,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval debug20\\artifacts\\runs\\20261118T042104Z-af3cd283\\samples\\0026\\audio\\segments\\0019_01.wav",
+        "duration_s": 5.763537414965986,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 10.044786600003135,
+        "synthesis_and_playback_s": 0.7769478000009258
+      }
+    ],
+    "wave": {
+      "path": "D:\\UIUC\\CS546\\moshi-rag\\eval debug20\\artifacts\\runs\\20261118T042104Z-af3cd283\\samples\\0026\\audio\\response.wav",
+      "duration_s": 20.442766439909295,
+      "timeline": [
+        {
+          "event_sequence": 6,
+          "sentence_index": 1,
+          "action": "Backchannel",
+          "text": "I see you want the launch and splashdown dates for Apollo 11; I’ll start looking that up.",
+          "wave_start_s": 3.82734693877551,
+          "wave_end_s": 9.770657596371882
+        },
+        {
+          "event_sequence": 12,
+          "sentence_index": 1,
+          "action": "Partial Answer",
+          "text": "Apollo 11 launched on July 16, 1969.",
+          "wave_start_s": 9.770657596371882,
+          "wave_end_s": 14.67922902494331
+        },
+        {
+          "event_sequence": 19,
+          "sentence_index": 1,
+          "action": "Final Answer",
+          "text": "Apollo 11 splashed down on Earth on July 24, 1969.",
+          "wave_start_s": 14.67922902494331,
+          "wave_end_s": 20.442766439909295
+        }
+      ]
+    }
+  },
+  "evaluation": {
+    "mode": "b_debug_trace",
+    "trace_id": "custom_nasa_apollo11_short",
+    "sample_id": "custom_nasa_apollo11",
+    "total_wall_s": 10.048465600000782,
+    "question_timeout_s": 180,
+    "audio_enabled": true,
+    "history_enabled": false,
+    "text_pipeline_wall_s": 9.268361100002949,
+    "effective_settings": {
+      "base_url": "https://tinker.thinkingmachines.dev/services/tinker-prod/oai/api/v1",
+      "model": "openai/gpt-oss-120b",
+      "wiki_language": "en",
+      "user_agent": "CascadeSystem/0.1 (educational research prototype)",
+      "timeout_s": 45.0,
+      "max_tokens": 4096,
+      "reasoning_effort": "low",
+      "progress_s": 3.0,
+      "feedback_timeout_s": 6.0,
+      "search_limit": 3,
+      "max_units": 8,
+      "max_searches": 16,
+      "max_sources": 2,
+      "source_chars": 61,
+      "evidence_chars": 97,
+      "concurrency": 3
+    },
+    "timing_kind": "unknown",
+    "scheduler": "wall-paced fixed B arrivals"
+  }
+}

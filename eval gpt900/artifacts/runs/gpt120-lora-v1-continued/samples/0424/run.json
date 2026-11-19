@@ -1,0 +1,2121 @@
+{
+  "question": "Who is Theudebert Of Soissons's paternal grandmother?",
+  "resolved_question": "Who is Theudebert Of Soissons's paternal grandmother?",
+  "used_history_turn_ids": [],
+  "response_language": "en",
+  "status": "complete",
+  "clock": "wall_monotonic",
+  "time_origin": "question_text_ready_after_optional_asr",
+  "model": "openai/gpt-oss-120b",
+  "judge_model": "tinker://f9e9a6c1-e203-5c2c-acdd-68fe67378ca4:train:0/sampler_weights/epoch-0001",
+  "units": [
+    {
+      "unit_id": "u1",
+      "description": "Identify the Wikipedia article for Theudebert of Soissons",
+      "necessary": true,
+      "depends_on": [],
+      "queries": [
+        "Theudebert of Soissons"
+      ],
+      "subject": "Theudebert of Soissons"
+    },
+    {
+      "unit_id": "u2",
+      "description": "Find the father of Theudebert of Soissons",
+      "necessary": true,
+      "depends_on": [
+        "u1"
+      ],
+      "queries": [
+        "Theudebert of Soissons father"
+      ],
+      "subject": "{u1}_father"
+    },
+    {
+      "unit_id": "u3",
+      "description": "Find the paternal grandmother (father's mother) of Theudebert of Soissons",
+      "necessary": true,
+      "depends_on": [
+        "u2"
+      ],
+      "queries": [
+        "{u2} mother"
+      ],
+      "subject": "{u2}_mother"
+    }
+  ],
+  "judgments": {
+    "u1": {
+      "label": "SUPPORTED",
+      "value": "Theudebert of Soissons",
+      "citations": [
+        "d2s0"
+      ],
+      "quotes": [
+        {
+          "evidence_id": "d2s0",
+          "text": "Theudebert was the eldest son of King Chilperic I of Soissons, through his first wife Audovera."
+        }
+      ],
+      "reason": "Supported by the cited visible sentences and dependencies."
+    },
+    "u2": {
+      "label": "SUPPORTED",
+      "value": "Chilperic I",
+      "citations": [
+        "d3s0"
+      ],
+      "quotes": [
+        {
+          "evidence_id": "d3s0",
+          "text": "Chilperic I (c. 539 – September 584) was the king of Neustria (or Soissons) from 561 to his death."
+        }
+      ],
+      "reason": "Supported by the cited visible sentences and dependencies."
+    },
+    "u3": {
+      "label": "SUPPORTED",
+      "value": "Aregund",
+      "citations": [
+        "d3s1"
+      ],
+      "quotes": [
+        {
+          "evidence_id": "d3s1",
+          "text": "He was one of the sons of the Frankish king Clotaire I and Queen Aregund."
+        }
+      ],
+      "reason": "Supported by the cited visible sentences and dependencies."
+    }
+  },
+  "evidence": [
+    {
+      "evidence_id": "d1s0",
+      "title": "Adelaide, Countess of Soissons",
+      "url": "https://trace.invalid/2wikimultihopqa_e9946c220baf11ebab90acde48001122_immediate/d1s0",
+      "text": "Adelaide( died 1105), was sovereign Countess of Soissons from 1057 until 1105.",
+      "visible_time_s": 8.671999999991385,
+      "requested_subject": "",
+      "resolved_title": "Adelaide, Countess of Soissons",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d1s1",
+      "title": "Adelaide, Countess of Soissons",
+      "url": "https://trace.invalid/2wikimultihopqa_e9946c220baf11ebab90acde48001122_immediate/d1s1",
+      "text": "She was the daughter of Renaud I, Count of Soissons, and his wife, whose name is unknown, widow of Hilduin III, Count of Montdidier..",
+      "visible_time_s": 8.671999999991385,
+      "requested_subject": "",
+      "resolved_title": "Adelaide, Countess of Soissons",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d1s2",
+      "title": "Adelaide, Countess of Soissons",
+      "url": "https://trace.invalid/2wikimultihopqa_e9946c220baf11ebab90acde48001122_immediate/d1s2",
+      "text": "Adelaide became ruler of the County of Soissons upon the death of her father and brother, Guy II, Count of Soissons, in 1057.",
+      "visible_time_s": 8.671999999991385,
+      "requested_subject": "",
+      "resolved_title": "Adelaide, Countess of Soissons",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d1s3",
+      "title": "Adelaide, Countess of Soissons",
+      "url": "https://trace.invalid/2wikimultihopqa_e9946c220baf11ebab90acde48001122_immediate/d1s3",
+      "text": "Adelaide married William Busac, Count of Eu, grandson of Richard I, Duke of Normandy.",
+      "visible_time_s": 8.671999999991385,
+      "requested_subject": "",
+      "resolved_title": "Adelaide, Countess of Soissons",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d1s4",
+      "title": "Adelaide, Countess of Soissons",
+      "url": "https://trace.invalid/2wikimultihopqa_e9946c220baf11ebab90acde48001122_immediate/d1s4",
+      "text": "Adelaide and William had five children: William Busac became Count of Soissons,\" de jure uxoris\", upon their marriage.",
+      "visible_time_s": 8.671999999991385,
+      "requested_subject": "",
+      "resolved_title": "Adelaide, Countess of Soissons",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d2s0",
+      "title": "Theudebert of Soissons",
+      "url": "https://trace.invalid/2wikimultihopqa_e9946c220baf11ebab90acde48001122_immediate/d2s0",
+      "text": "Theudebert was the eldest son of King Chilperic I of Soissons, through his first wife Audovera.",
+      "visible_time_s": 8.671999999991385,
+      "requested_subject": "",
+      "resolved_title": "Theudebert of Soissons",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d2s1",
+      "title": "Theudebert of Soissons",
+      "url": "https://trace.invalid/2wikimultihopqa_e9946c220baf11ebab90acde48001122_immediate/d2s1",
+      "text": "Theudebert was given command of Soissons in the early years of his father's reign.",
+      "visible_time_s": 8.671999999991385,
+      "requested_subject": "",
+      "resolved_title": "Theudebert of Soissons",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d2s2",
+      "title": "Theudebert of Soissons",
+      "url": "https://trace.invalid/2wikimultihopqa_e9946c220baf11ebab90acde48001122_immediate/d2s2",
+      "text": "When his father precipitated a war with his brother Sigebert I of Austrasia, Sigebert marched on his capital and took the city, capturing and imprisoning Theudebert.",
+      "visible_time_s": 8.671999999991385,
+      "requested_subject": "",
+      "resolved_title": "Theudebert of Soissons",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d2s3",
+      "title": "Theudebert of Soissons",
+      "url": "https://trace.invalid/2wikimultihopqa_e9946c220baf11ebab90acde48001122_immediate/d2s3",
+      "text": "He was out of prison a year later.",
+      "visible_time_s": 8.671999999991385,
+      "requested_subject": "",
+      "resolved_title": "Theudebert of Soissons",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d2s4",
+      "title": "Theudebert of Soissons",
+      "url": "https://trace.invalid/2wikimultihopqa_e9946c220baf11ebab90acde48001122_immediate/d2s4",
+      "text": "On the death of King Charibert I of Paris in 567, Theudebert invaded Austrasia and razed many cities.",
+      "visible_time_s": 8.671999999991385,
+      "requested_subject": "",
+      "resolved_title": "Theudebert of Soissons",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d2s5",
+      "title": "Theudebert of Soissons",
+      "url": "https://trace.invalid/2wikimultihopqa_e9946c220baf11ebab90acde48001122_immediate/d2s5",
+      "text": "In 575, Theudebert was killed in battle by Guntram Boso in the civil war between Chilperic, Sigbert, and Guntram, king of Burgundy.",
+      "visible_time_s": 8.671999999991385,
+      "requested_subject": "",
+      "resolved_title": "Theudebert of Soissons",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d3s0",
+      "title": "Chilperic I",
+      "url": "https://trace.invalid/2wikimultihopqa_e9946c220baf11ebab90acde48001122_immediate/d3s0",
+      "text": "Chilperic I (c. 539 – September 584) was the king of Neustria (or Soissons) from 561 to his death.",
+      "visible_time_s": 8.671999999991385,
+      "requested_subject": "",
+      "resolved_title": "Chilperic I",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d3s1",
+      "title": "Chilperic I",
+      "url": "https://trace.invalid/2wikimultihopqa_e9946c220baf11ebab90acde48001122_immediate/d3s1",
+      "text": "He was one of the sons of the Frankish king Clotaire I and Queen Aregund.",
+      "visible_time_s": 8.671999999991385,
+      "requested_subject": "",
+      "resolved_title": "Chilperic I",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d4s0",
+      "title": "Margaret, Countess of Soissons",
+      "url": "https://trace.invalid/2wikimultihopqa_e9946c220baf11ebab90acde48001122_immediate/d4s0",
+      "text": "Margaret (or Margaretha) of Soissons (died ca. 1350) was ruling Countess of Soissons in 1305-1344.",
+      "visible_time_s": 8.671999999991385,
+      "requested_subject": "",
+      "resolved_title": "Margaret, Countess of Soissons",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d4s1",
+      "title": "Margaret, Countess of Soissons",
+      "url": "https://trace.invalid/2wikimultihopqa_e9946c220baf11ebab90acde48001122_immediate/d4s1",
+      "text": "She was the only daughter of Hugh, Count of Soissons, and Johanna of Argies.",
+      "visible_time_s": 8.671999999991385,
+      "requested_subject": "",
+      "resolved_title": "Margaret, Countess of Soissons",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d4s2",
+      "title": "Margaret, Countess of Soissons",
+      "url": "https://trace.invalid/2wikimultihopqa_e9946c220baf11ebab90acde48001122_immediate/d4s2",
+      "text": "In 1306 she succeeded her father as Countess of Soissons.",
+      "visible_time_s": 8.671999999991385,
+      "requested_subject": "",
+      "resolved_title": "Margaret, Countess of Soissons",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d4s3",
+      "title": "Margaret, Countess of Soissons",
+      "url": "https://trace.invalid/2wikimultihopqa_e9946c220baf11ebab90acde48001122_immediate/d4s3",
+      "text": "Margaret was married to John of Beaumont, son of John II, Count of Holland.",
+      "visible_time_s": 8.671999999991385,
+      "requested_subject": "",
+      "resolved_title": "Margaret, Countess of Soissons",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d4s4",
+      "title": "Margaret, Countess of Soissons",
+      "url": "https://trace.invalid/2wikimultihopqa_e9946c220baf11ebab90acde48001122_immediate/d4s4",
+      "text": "Margaret and John had five children:\nUpon their marriage, John became Count of Soissons, \"jure uxoris\".",
+      "visible_time_s": 8.671999999991385,
+      "requested_subject": "",
+      "resolved_title": "Margaret, Countess of Soissons",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d5s0",
+      "title": "Guy II, Count of Soissons",
+      "url": "https://trace.invalid/2wikimultihopqa_e9946c220baf11ebab90acde48001122_immediate/d5s0",
+      "text": "Guy II( d. 1057), son of Renaud I, Count of Soissons, and his wife( name unknown), widow of Hilduin III, Count of Montdidier.",
+      "visible_time_s": 8.671999999991385,
+      "requested_subject": "",
+      "resolved_title": "Guy II, Count of Soissons",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d5s1",
+      "title": "Guy II, Count of Soissons",
+      "url": "https://trace.invalid/2wikimultihopqa_e9946c220baf11ebab90acde48001122_immediate/d5s1",
+      "text": "Count of Soissons.",
+      "visible_time_s": 8.671999999991385,
+      "requested_subject": "",
+      "resolved_title": "Guy II, Count of Soissons",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d5s2",
+      "title": "Guy II, Count of Soissons",
+      "url": "https://trace.invalid/2wikimultihopqa_e9946c220baf11ebab90acde48001122_immediate/d5s2",
+      "text": "Guy was identified as Count of Soissons in 1042 in a charter in which Gaunilo of Marmoutiers, the treasurer of St. Martin, denoted property.",
+      "visible_time_s": 8.671999999991385,
+      "requested_subject": "",
+      "resolved_title": "Guy II, Count of Soissons",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d5s3",
+      "title": "Guy II, Count of Soissons",
+      "url": "https://trace.invalid/2wikimultihopqa_e9946c220baf11ebab90acde48001122_immediate/d5s3",
+      "text": "Guy died with his father in 1057 at the siege of Soissons.",
+      "visible_time_s": 8.671999999991385,
+      "requested_subject": "",
+      "resolved_title": "Guy II, Count of Soissons",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d5s4",
+      "title": "Guy II, Count of Soissons",
+      "url": "https://trace.invalid/2wikimultihopqa_e9946c220baf11ebab90acde48001122_immediate/d5s4",
+      "text": "It is not known whether or not Guy was married and no children are recorded.",
+      "visible_time_s": 8.671999999991385,
+      "requested_subject": "",
+      "resolved_title": "Guy II, Count of Soissons",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d5s5",
+      "title": "Guy II, Count of Soissons",
+      "url": "https://trace.invalid/2wikimultihopqa_e9946c220baf11ebab90acde48001122_immediate/d5s5",
+      "text": "Upon his death, his sister Adelaide assumed the countship of Soissons.",
+      "visible_time_s": 8.671999999991385,
+      "requested_subject": "",
+      "resolved_title": "Guy II, Count of Soissons",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d6s0",
+      "title": "Hannah Arnold",
+      "url": "https://trace.invalid/2wikimultihopqa_e9946c220baf11ebab90acde48001122_immediate/d6s0",
+      "text": "Hannah Arnold, also known as Hannah Waterman King, was the grandmother of Benedict Arnolds children.",
+      "visible_time_s": 8.671999999991385,
+      "requested_subject": "",
+      "resolved_title": "Hannah Arnold",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d7s0",
+      "title": "Hubba bint Hulail",
+      "url": "https://trace.invalid/2wikimultihopqa_e9946c220baf11ebab90acde48001122_immediate/d7s0",
+      "text": "Hubba bint Hulail was the grandmother of Hashim ibn' Abd Manaf, thus the great- great- great- grandmother of the Islamic\" Nabī\"( Prophet) Muhammad ibn Abdullah.",
+      "visible_time_s": 8.671999999991385,
+      "requested_subject": "",
+      "resolved_title": "Hubba bint Hulail",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d8s0",
+      "title": "Nocher II, Count of Soissons",
+      "url": "https://trace.invalid/2wikimultihopqa_e9946c220baf11ebab90acde48001122_immediate/d8s0",
+      "text": "Nocher II( d. 1019), Count of Bar- sur- Aube, Count of Soissons.",
+      "visible_time_s": 8.671999999991385,
+      "requested_subject": "",
+      "resolved_title": "Nocher II, Count of Soissons",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d8s1",
+      "title": "Nocher II, Count of Soissons",
+      "url": "https://trace.invalid/2wikimultihopqa_e9946c220baf11ebab90acde48001122_immediate/d8s1",
+      "text": "He was the son of Nocher I, Count of Bar-sur- Aube.",
+      "visible_time_s": 8.671999999991385,
+      "requested_subject": "",
+      "resolved_title": "Nocher II, Count of Soissons",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d8s2",
+      "title": "Nocher II, Count of Soissons",
+      "url": "https://trace.invalid/2wikimultihopqa_e9946c220baf11ebab90acde48001122_immediate/d8s2",
+      "text": "Nocher ’s brother Beraud( d. 1052) was Bishop of Soissons.",
+      "visible_time_s": 8.671999999991385,
+      "requested_subject": "",
+      "resolved_title": "Nocher II, Count of Soissons",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d8s3",
+      "title": "Nocher II, Count of Soissons",
+      "url": "https://trace.invalid/2wikimultihopqa_e9946c220baf11ebab90acde48001122_immediate/d8s3",
+      "text": "Nocher became Count of Soissons, jure uxoris, upon his marriage to Adelise, Countess of Soissons.",
+      "visible_time_s": 8.671999999991385,
+      "requested_subject": "",
+      "resolved_title": "Nocher II, Count of Soissons",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d8s4",
+      "title": "Nocher II, Count of Soissons",
+      "url": "https://trace.invalid/2wikimultihopqa_e9946c220baf11ebab90acde48001122_immediate/d8s4",
+      "text": "Nocher and Adelisa had three children: Nocher ’s son and namesake became Count of Bar-sur- Aube upon his death, and the countship of Soissons reverted to his wife.",
+      "visible_time_s": 8.671999999991385,
+      "requested_subject": "",
+      "resolved_title": "Nocher II, Count of Soissons",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d8s5",
+      "title": "Nocher II, Count of Soissons",
+      "url": "https://trace.invalid/2wikimultihopqa_e9946c220baf11ebab90acde48001122_immediate/d8s5",
+      "text": "His son Renaud would eventually become the Count of Soissons.",
+      "visible_time_s": 8.671999999991385,
+      "requested_subject": "",
+      "resolved_title": "Nocher II, Count of Soissons",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d9s0",
+      "title": "John V, Count of Soissons",
+      "url": "https://trace.invalid/2wikimultihopqa_e9946c220baf11ebab90acde48001122_immediate/d9s0",
+      "text": "John V( 21 March 1281 – 1304), son of John IV, Count of Soissons, and his wife Marguerite of Rumigny.",
+      "visible_time_s": 8.671999999991385,
+      "requested_subject": "",
+      "resolved_title": "John V, Count of Soissons",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d9s1",
+      "title": "John V, Count of Soissons",
+      "url": "https://trace.invalid/2wikimultihopqa_e9946c220baf11ebab90acde48001122_immediate/d9s1",
+      "text": "Count of Soissons.",
+      "visible_time_s": 8.671999999991385,
+      "requested_subject": "",
+      "resolved_title": "John V, Count of Soissons",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d9s2",
+      "title": "John V, Count of Soissons",
+      "url": "https://trace.invalid/2wikimultihopqa_e9946c220baf11ebab90acde48001122_immediate/d9s2",
+      "text": "John inherited the countship of Soissons from his father in 1302.",
+      "visible_time_s": 8.671999999991385,
+      "requested_subject": "",
+      "resolved_title": "John V, Count of Soissons",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d9s3",
+      "title": "John V, Count of Soissons",
+      "url": "https://trace.invalid/2wikimultihopqa_e9946c220baf11ebab90acde48001122_immediate/d9s3",
+      "text": "Nothing is known about his brief rule of the county.",
+      "visible_time_s": 8.671999999991385,
+      "requested_subject": "",
+      "resolved_title": "John V, Count of Soissons",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d9s4",
+      "title": "John V, Count of Soissons",
+      "url": "https://trace.invalid/2wikimultihopqa_e9946c220baf11ebab90acde48001122_immediate/d9s4",
+      "text": "He never married and died with no heirs.",
+      "visible_time_s": 8.671999999991385,
+      "requested_subject": "",
+      "resolved_title": "John V, Count of Soissons",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d9s5",
+      "title": "John V, Count of Soissons",
+      "url": "https://trace.invalid/2wikimultihopqa_e9946c220baf11ebab90acde48001122_immediate/d9s5",
+      "text": "Upon his death, his brother Hugh became Count of Soissons.",
+      "visible_time_s": 8.671999999991385,
+      "requested_subject": "",
+      "resolved_title": "John V, Count of Soissons",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d10s0",
+      "title": "Renaud II, Count of Soissons",
+      "url": "https://trace.invalid/2wikimultihopqa_e9946c220baf11ebab90acde48001122_immediate/d10s0",
+      "text": "Renaud II( died 1099), son of William Busac, Count of Eu and Soissons, and Adelaide, Countess of Soissons.",
+      "visible_time_s": 8.671999999991385,
+      "requested_subject": "",
+      "resolved_title": "Renaud II, Count of Soissons",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d10s1",
+      "title": "Renaud II, Count of Soissons",
+      "url": "https://trace.invalid/2wikimultihopqa_e9946c220baf11ebab90acde48001122_immediate/d10s1",
+      "text": "Count of Soissons.",
+      "visible_time_s": 8.671999999991385,
+      "requested_subject": "",
+      "resolved_title": "Renaud II, Count of Soissons",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d10s2",
+      "title": "Renaud II, Count of Soissons",
+      "url": "https://trace.invalid/2wikimultihopqa_e9946c220baf11ebab90acde48001122_immediate/d10s2",
+      "text": "It is unclear when Renaud assumed the countship of Soissons from his disgraced father.",
+      "visible_time_s": 8.671999999991385,
+      "requested_subject": "",
+      "resolved_title": "Renaud II, Count of Soissons",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d10s3",
+      "title": "Renaud II, Count of Soissons",
+      "url": "https://trace.invalid/2wikimultihopqa_e9946c220baf11ebab90acde48001122_immediate/d10s3",
+      "text": "The latter was stripped of the County of Eu in 1050 but it is unclear when he relinquished the countship of Soissons.",
+      "visible_time_s": 8.671999999991385,
+      "requested_subject": "",
+      "resolved_title": "Renaud II, Count of Soissons",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d10s4",
+      "title": "Renaud II, Count of Soissons",
+      "url": "https://trace.invalid/2wikimultihopqa_e9946c220baf11ebab90acde48001122_immediate/d10s4",
+      "text": "Alberic of Trois- Fontaines identifies Renaud in his\" Chronicles\" but little is known about his rule.",
+      "visible_time_s": 8.671999999991385,
+      "requested_subject": "",
+      "resolved_title": "Renaud II, Count of Soissons",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d10s5",
+      "title": "Renaud II, Count of Soissons",
+      "url": "https://trace.invalid/2wikimultihopqa_e9946c220baf11ebab90acde48001122_immediate/d10s5",
+      "text": "It is not known whether Renaud married or had any children.",
+      "visible_time_s": 8.671999999991385,
+      "requested_subject": "",
+      "resolved_title": "Renaud II, Count of Soissons",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d10s6",
+      "title": "Renaud II, Count of Soissons",
+      "url": "https://trace.invalid/2wikimultihopqa_e9946c220baf11ebab90acde48001122_immediate/d10s6",
+      "text": "Upon the death of Renaud, his brother John became the Count of Soissons.",
+      "visible_time_s": 8.671999999991385,
+      "requested_subject": "",
+      "resolved_title": "Renaud II, Count of Soissons",
+      "entity_resolution": "unspecified"
+    }
+  ],
+  "searches": [
+    {
+      "query": "[scheduled evidence]",
+      "subject": "",
+      "status": "ok",
+      "returned_pages": [],
+      "mode": "trace",
+      "unit_id": "__scheduled_evidence__"
+    }
+  ],
+  "search_failures": [],
+  "llm_calls": [
+    {
+      "purpose": "feedback_generate",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 405,
+        "completion_tokens": 57,
+        "total_tokens": 462,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        }
+      },
+      "latency_s": 1.329
+    },
+    {
+      "purpose": "decompose",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 795,
+        "completion_tokens": 244,
+        "total_tokens": 1039,
+        "prompt_tokens_details": {
+          "cached_tokens": 768
+        }
+      },
+      "latency_s": 2.594
+    },
+    {
+      "purpose": "feedback_verify",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 353,
+        "completion_tokens": 92,
+        "total_tokens": 445,
+        "prompt_tokens_details": {
+          "cached_tokens": 128
+        }
+      },
+      "latency_s": 1.375
+    },
+    {
+      "purpose": "feedback_generate",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 405,
+        "completion_tokens": 71,
+        "total_tokens": 476,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        }
+      },
+      "latency_s": 2.297
+    },
+    {
+      "purpose": "plan_review",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 1070,
+        "completion_tokens": 355,
+        "total_tokens": 1425,
+        "prompt_tokens_details": {
+          "cached_tokens": 896
+        }
+      },
+      "latency_s": 6.078
+    },
+    {
+      "purpose": "feedback_verify",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 356,
+        "completion_tokens": 66,
+        "total_tokens": 422,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        }
+      },
+      "latency_s": 1.282
+    },
+    {
+      "purpose": "judge",
+      "model": "tinker://f9e9a6c1-e203-5c2c-acdd-68fe67378ca4:train:0/sampler_weights/epoch-0001",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 7360,
+        "completion_tokens": 289,
+        "total_tokens": 7649,
+        "prompt_tokens_details": {
+          "cached_tokens": 896
+        }
+      },
+      "latency_s": 3.516
+    },
+    {
+      "purpose": "generate",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 973,
+        "completion_tokens": 211,
+        "total_tokens": 1184,
+        "prompt_tokens_details": {
+          "cached_tokens": 384
+        }
+      },
+      "latency_s": 2.219
+    },
+    {
+      "purpose": "verify",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 1495,
+        "completion_tokens": 218,
+        "total_tokens": 1713,
+        "prompt_tokens_details": {
+          "cached_tokens": 640
+        }
+      },
+      "latency_s": 3.343
+    }
+  ],
+  "search_diagnostics": [],
+  "output_enqueued_units": {
+    "u1": "Theudebert of Soissons",
+    "u2": "Chilperic I",
+    "u3": "Aregund"
+  },
+  "events": [
+    {
+      "sequence": 0,
+      "time_s": 0.0,
+      "type": "feedback_requested",
+      "feedback_kind": "opening",
+      "execution_state": {
+        "stage": "planning",
+        "searches_started": 0,
+        "searches_completed": 0,
+        "active_searches": 0,
+        "evidence_count": 0,
+        "supported_units": 0,
+        "output_units": 0
+      }
+    },
+    {
+      "sequence": 1,
+      "time_s": 2.594,
+      "type": "decompose_reply",
+      "reply": {
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "Identify the Wikipedia article for Theudebert of Soissons",
+            "subject": "Theudebert of Soissons",
+            "necessary": false,
+            "depends_on": [],
+            "queries": [
+              "Theudebert of Soissons"
+            ]
+          },
+          {
+            "unit_id": "u2",
+            "description": "Find the father of Theudebert of Soissons",
+            "subject": "Theudebert of Soissons",
+            "necessary": false,
+            "depends_on": [
+              "u1"
+            ],
+            "queries": [
+              "Theudebert of Soissons father"
+            ]
+          },
+          {
+            "unit_id": "u3",
+            "description": "Find the paternal grandmother (father's mother) of Theudebert of Soissons",
+            "subject": "{u2}",
+            "necessary": true,
+            "depends_on": [
+              "u2"
+            ],
+            "queries": [
+              "{u2} mother"
+            ]
+          }
+        ]
+      },
+      "attempt": 1,
+      "repair": false
+    },
+    {
+      "sequence": 2,
+      "time_s": 2.594,
+      "type": "plan_review_requested",
+      "max_reviews": 1,
+      "question_only": true
+    },
+    {
+      "sequence": 3,
+      "time_s": 2.704,
+      "type": "utterance",
+      "action": "Backchannel",
+      "text": "Looking up Theudebert of Soissons' paternal grandmother for you.",
+      "claims": [],
+      "feedback_source": "model",
+      "feedback_status_claim": "intent",
+      "feedback_fallback_reason": "",
+      "execution_state": {
+        "stage": "planning",
+        "searches_started": 0,
+        "searches_completed": 0,
+        "active_searches": 0,
+        "evidence_count": 0,
+        "supported_units": 0,
+        "output_units": 0
+      },
+      "language": "en"
+    },
+    {
+      "sequence": 4,
+      "time_s": 5.75,
+      "type": "feedback_requested",
+      "feedback_kind": "progress",
+      "execution_state": {
+        "stage": "planning",
+        "searches_started": 0,
+        "searches_completed": 0,
+        "active_searches": 0,
+        "evidence_count": 0,
+        "supported_units": 0,
+        "output_units": 0
+      }
+    },
+    {
+      "sequence": 5,
+      "time_s": 8.672,
+      "type": "plan_review_reply",
+      "reply": {
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "Identify the Wikipedia article for Theudebert of Soissons",
+            "subject": "Theudebert of Soissons",
+            "necessary": true,
+            "depends_on": [],
+            "queries": [
+              "Theudebert of Soissons"
+            ]
+          },
+          {
+            "unit_id": "u2",
+            "description": "Find the father of Theudebert of Soissons",
+            "subject": "{u1}_father",
+            "necessary": true,
+            "depends_on": [
+              "u1"
+            ],
+            "queries": [
+              "Theudebert of Soissons father"
+            ]
+          },
+          {
+            "unit_id": "u3",
+            "description": "Find the paternal grandmother (father's mother) of Theudebert of Soissons",
+            "subject": "{u2}_mother",
+            "necessary": true,
+            "depends_on": [
+              "u2"
+            ],
+            "queries": [
+              "{u2} mother"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "sequence": 6,
+      "time_s": 8.672,
+      "type": "plan_review_finished",
+      "changed": true,
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "Identify the Wikipedia article for Theudebert of Soissons",
+          "necessary": true,
+          "depends_on": [],
+          "queries": [
+            "Theudebert of Soissons"
+          ],
+          "subject": "Theudebert of Soissons"
+        },
+        {
+          "unit_id": "u2",
+          "description": "Find the father of Theudebert of Soissons",
+          "necessary": true,
+          "depends_on": [
+            "u1"
+          ],
+          "queries": [
+            "Theudebert of Soissons father"
+          ],
+          "subject": "{u1}_father"
+        },
+        {
+          "unit_id": "u3",
+          "description": "Find the paternal grandmother (father's mother) of Theudebert of Soissons",
+          "necessary": true,
+          "depends_on": [
+            "u2"
+          ],
+          "queries": [
+            "{u2} mother"
+          ],
+          "subject": "{u2}_mother"
+        }
+      ],
+      "question_only": true
+    },
+    {
+      "sequence": 7,
+      "time_s": 8.672,
+      "type": "plan",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "Identify the Wikipedia article for Theudebert of Soissons",
+          "necessary": true,
+          "depends_on": [],
+          "queries": [
+            "Theudebert of Soissons"
+          ],
+          "subject": "Theudebert of Soissons"
+        },
+        {
+          "unit_id": "u2",
+          "description": "Find the father of Theudebert of Soissons",
+          "necessary": true,
+          "depends_on": [
+            "u1"
+          ],
+          "queries": [
+            "Theudebert of Soissons father"
+          ],
+          "subject": "{u1}_father"
+        },
+        {
+          "unit_id": "u3",
+          "description": "Find the paternal grandmother (father's mother) of Theudebert of Soissons",
+          "necessary": true,
+          "depends_on": [
+            "u2"
+          ],
+          "queries": [
+            "{u2} mother"
+          ],
+          "subject": "{u2}_mother"
+        }
+      ]
+    },
+    {
+      "sequence": 8,
+      "time_s": 8.672,
+      "type": "trace_batch_requested"
+    },
+    {
+      "sequence": 9,
+      "time_s": 8.672,
+      "type": "search_finished",
+      "query": "[scheduled evidence]",
+      "subject": "",
+      "status": "ok",
+      "returned_pages": [],
+      "mode": "trace",
+      "unit_id": "__scheduled_evidence__"
+    },
+    {
+      "sequence": 10,
+      "time_s": 8.672,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d1s0",
+        "title": "Adelaide, Countess of Soissons",
+        "url": "https://trace.invalid/2wikimultihopqa_e9946c220baf11ebab90acde48001122_immediate/d1s0",
+        "text": "Adelaide( died 1105), was sovereign Countess of Soissons from 1057 until 1105.",
+        "visible_time_s": 8.671999999991385,
+        "requested_subject": "",
+        "resolved_title": "Adelaide, Countess of Soissons",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 11,
+      "time_s": 8.672,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d1s1",
+        "title": "Adelaide, Countess of Soissons",
+        "url": "https://trace.invalid/2wikimultihopqa_e9946c220baf11ebab90acde48001122_immediate/d1s1",
+        "text": "She was the daughter of Renaud I, Count of Soissons, and his wife, whose name is unknown, widow of Hilduin III, Count of Montdidier..",
+        "visible_time_s": 8.671999999991385,
+        "requested_subject": "",
+        "resolved_title": "Adelaide, Countess of Soissons",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 12,
+      "time_s": 8.672,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d1s2",
+        "title": "Adelaide, Countess of Soissons",
+        "url": "https://trace.invalid/2wikimultihopqa_e9946c220baf11ebab90acde48001122_immediate/d1s2",
+        "text": "Adelaide became ruler of the County of Soissons upon the death of her father and brother, Guy II, Count of Soissons, in 1057.",
+        "visible_time_s": 8.671999999991385,
+        "requested_subject": "",
+        "resolved_title": "Adelaide, Countess of Soissons",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 13,
+      "time_s": 8.672,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d1s3",
+        "title": "Adelaide, Countess of Soissons",
+        "url": "https://trace.invalid/2wikimultihopqa_e9946c220baf11ebab90acde48001122_immediate/d1s3",
+        "text": "Adelaide married William Busac, Count of Eu, grandson of Richard I, Duke of Normandy.",
+        "visible_time_s": 8.671999999991385,
+        "requested_subject": "",
+        "resolved_title": "Adelaide, Countess of Soissons",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 14,
+      "time_s": 8.672,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d1s4",
+        "title": "Adelaide, Countess of Soissons",
+        "url": "https://trace.invalid/2wikimultihopqa_e9946c220baf11ebab90acde48001122_immediate/d1s4",
+        "text": "Adelaide and William had five children: William Busac became Count of Soissons,\" de jure uxoris\", upon their marriage.",
+        "visible_time_s": 8.671999999991385,
+        "requested_subject": "",
+        "resolved_title": "Adelaide, Countess of Soissons",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 15,
+      "time_s": 8.672,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d2s0",
+        "title": "Theudebert of Soissons",
+        "url": "https://trace.invalid/2wikimultihopqa_e9946c220baf11ebab90acde48001122_immediate/d2s0",
+        "text": "Theudebert was the eldest son of King Chilperic I of Soissons, through his first wife Audovera.",
+        "visible_time_s": 8.671999999991385,
+        "requested_subject": "",
+        "resolved_title": "Theudebert of Soissons",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 16,
+      "time_s": 8.672,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d2s1",
+        "title": "Theudebert of Soissons",
+        "url": "https://trace.invalid/2wikimultihopqa_e9946c220baf11ebab90acde48001122_immediate/d2s1",
+        "text": "Theudebert was given command of Soissons in the early years of his father's reign.",
+        "visible_time_s": 8.671999999991385,
+        "requested_subject": "",
+        "resolved_title": "Theudebert of Soissons",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 17,
+      "time_s": 8.672,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d2s2",
+        "title": "Theudebert of Soissons",
+        "url": "https://trace.invalid/2wikimultihopqa_e9946c220baf11ebab90acde48001122_immediate/d2s2",
+        "text": "When his father precipitated a war with his brother Sigebert I of Austrasia, Sigebert marched on his capital and took the city, capturing and imprisoning Theudebert.",
+        "visible_time_s": 8.671999999991385,
+        "requested_subject": "",
+        "resolved_title": "Theudebert of Soissons",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 18,
+      "time_s": 8.672,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d2s3",
+        "title": "Theudebert of Soissons",
+        "url": "https://trace.invalid/2wikimultihopqa_e9946c220baf11ebab90acde48001122_immediate/d2s3",
+        "text": "He was out of prison a year later.",
+        "visible_time_s": 8.671999999991385,
+        "requested_subject": "",
+        "resolved_title": "Theudebert of Soissons",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 19,
+      "time_s": 8.672,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d2s4",
+        "title": "Theudebert of Soissons",
+        "url": "https://trace.invalid/2wikimultihopqa_e9946c220baf11ebab90acde48001122_immediate/d2s4",
+        "text": "On the death of King Charibert I of Paris in 567, Theudebert invaded Austrasia and razed many cities.",
+        "visible_time_s": 8.671999999991385,
+        "requested_subject": "",
+        "resolved_title": "Theudebert of Soissons",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 20,
+      "time_s": 8.672,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d2s5",
+        "title": "Theudebert of Soissons",
+        "url": "https://trace.invalid/2wikimultihopqa_e9946c220baf11ebab90acde48001122_immediate/d2s5",
+        "text": "In 575, Theudebert was killed in battle by Guntram Boso in the civil war between Chilperic, Sigbert, and Guntram, king of Burgundy.",
+        "visible_time_s": 8.671999999991385,
+        "requested_subject": "",
+        "resolved_title": "Theudebert of Soissons",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 21,
+      "time_s": 8.672,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d3s0",
+        "title": "Chilperic I",
+        "url": "https://trace.invalid/2wikimultihopqa_e9946c220baf11ebab90acde48001122_immediate/d3s0",
+        "text": "Chilperic I (c. 539 – September 584) was the king of Neustria (or Soissons) from 561 to his death.",
+        "visible_time_s": 8.671999999991385,
+        "requested_subject": "",
+        "resolved_title": "Chilperic I",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 22,
+      "time_s": 8.672,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d3s1",
+        "title": "Chilperic I",
+        "url": "https://trace.invalid/2wikimultihopqa_e9946c220baf11ebab90acde48001122_immediate/d3s1",
+        "text": "He was one of the sons of the Frankish king Clotaire I and Queen Aregund.",
+        "visible_time_s": 8.671999999991385,
+        "requested_subject": "",
+        "resolved_title": "Chilperic I",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 23,
+      "time_s": 8.672,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d4s0",
+        "title": "Margaret, Countess of Soissons",
+        "url": "https://trace.invalid/2wikimultihopqa_e9946c220baf11ebab90acde48001122_immediate/d4s0",
+        "text": "Margaret (or Margaretha) of Soissons (died ca. 1350) was ruling Countess of Soissons in 1305-1344.",
+        "visible_time_s": 8.671999999991385,
+        "requested_subject": "",
+        "resolved_title": "Margaret, Countess of Soissons",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 24,
+      "time_s": 8.672,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d4s1",
+        "title": "Margaret, Countess of Soissons",
+        "url": "https://trace.invalid/2wikimultihopqa_e9946c220baf11ebab90acde48001122_immediate/d4s1",
+        "text": "She was the only daughter of Hugh, Count of Soissons, and Johanna of Argies.",
+        "visible_time_s": 8.671999999991385,
+        "requested_subject": "",
+        "resolved_title": "Margaret, Countess of Soissons",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 25,
+      "time_s": 8.672,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d4s2",
+        "title": "Margaret, Countess of Soissons",
+        "url": "https://trace.invalid/2wikimultihopqa_e9946c220baf11ebab90acde48001122_immediate/d4s2",
+        "text": "In 1306 she succeeded her father as Countess of Soissons.",
+        "visible_time_s": 8.671999999991385,
+        "requested_subject": "",
+        "resolved_title": "Margaret, Countess of Soissons",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 26,
+      "time_s": 8.672,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d4s3",
+        "title": "Margaret, Countess of Soissons",
+        "url": "https://trace.invalid/2wikimultihopqa_e9946c220baf11ebab90acde48001122_immediate/d4s3",
+        "text": "Margaret was married to John of Beaumont, son of John II, Count of Holland.",
+        "visible_time_s": 8.671999999991385,
+        "requested_subject": "",
+        "resolved_title": "Margaret, Countess of Soissons",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 27,
+      "time_s": 8.672,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d4s4",
+        "title": "Margaret, Countess of Soissons",
+        "url": "https://trace.invalid/2wikimultihopqa_e9946c220baf11ebab90acde48001122_immediate/d4s4",
+        "text": "Margaret and John had five children:\nUpon their marriage, John became Count of Soissons, \"jure uxoris\".",
+        "visible_time_s": 8.671999999991385,
+        "requested_subject": "",
+        "resolved_title": "Margaret, Countess of Soissons",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 28,
+      "time_s": 8.672,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d5s0",
+        "title": "Guy II, Count of Soissons",
+        "url": "https://trace.invalid/2wikimultihopqa_e9946c220baf11ebab90acde48001122_immediate/d5s0",
+        "text": "Guy II( d. 1057), son of Renaud I, Count of Soissons, and his wife( name unknown), widow of Hilduin III, Count of Montdidier.",
+        "visible_time_s": 8.671999999991385,
+        "requested_subject": "",
+        "resolved_title": "Guy II, Count of Soissons",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 29,
+      "time_s": 8.672,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d5s1",
+        "title": "Guy II, Count of Soissons",
+        "url": "https://trace.invalid/2wikimultihopqa_e9946c220baf11ebab90acde48001122_immediate/d5s1",
+        "text": "Count of Soissons.",
+        "visible_time_s": 8.671999999991385,
+        "requested_subject": "",
+        "resolved_title": "Guy II, Count of Soissons",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 30,
+      "time_s": 8.672,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d5s2",
+        "title": "Guy II, Count of Soissons",
+        "url": "https://trace.invalid/2wikimultihopqa_e9946c220baf11ebab90acde48001122_immediate/d5s2",
+        "text": "Guy was identified as Count of Soissons in 1042 in a charter in which Gaunilo of Marmoutiers, the treasurer of St. Martin, denoted property.",
+        "visible_time_s": 8.671999999991385,
+        "requested_subject": "",
+        "resolved_title": "Guy II, Count of Soissons",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 31,
+      "time_s": 8.672,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d5s3",
+        "title": "Guy II, Count of Soissons",
+        "url": "https://trace.invalid/2wikimultihopqa_e9946c220baf11ebab90acde48001122_immediate/d5s3",
+        "text": "Guy died with his father in 1057 at the siege of Soissons.",
+        "visible_time_s": 8.671999999991385,
+        "requested_subject": "",
+        "resolved_title": "Guy II, Count of Soissons",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 32,
+      "time_s": 8.672,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d5s4",
+        "title": "Guy II, Count of Soissons",
+        "url": "https://trace.invalid/2wikimultihopqa_e9946c220baf11ebab90acde48001122_immediate/d5s4",
+        "text": "It is not known whether or not Guy was married and no children are recorded.",
+        "visible_time_s": 8.671999999991385,
+        "requested_subject": "",
+        "resolved_title": "Guy II, Count of Soissons",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 33,
+      "time_s": 8.672,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d5s5",
+        "title": "Guy II, Count of Soissons",
+        "url": "https://trace.invalid/2wikimultihopqa_e9946c220baf11ebab90acde48001122_immediate/d5s5",
+        "text": "Upon his death, his sister Adelaide assumed the countship of Soissons.",
+        "visible_time_s": 8.671999999991385,
+        "requested_subject": "",
+        "resolved_title": "Guy II, Count of Soissons",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 34,
+      "time_s": 8.672,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d6s0",
+        "title": "Hannah Arnold",
+        "url": "https://trace.invalid/2wikimultihopqa_e9946c220baf11ebab90acde48001122_immediate/d6s0",
+        "text": "Hannah Arnold, also known as Hannah Waterman King, was the grandmother of Benedict Arnolds children.",
+        "visible_time_s": 8.671999999991385,
+        "requested_subject": "",
+        "resolved_title": "Hannah Arnold",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 35,
+      "time_s": 8.672,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d7s0",
+        "title": "Hubba bint Hulail",
+        "url": "https://trace.invalid/2wikimultihopqa_e9946c220baf11ebab90acde48001122_immediate/d7s0",
+        "text": "Hubba bint Hulail was the grandmother of Hashim ibn' Abd Manaf, thus the great- great- great- grandmother of the Islamic\" Nabī\"( Prophet) Muhammad ibn Abdullah.",
+        "visible_time_s": 8.671999999991385,
+        "requested_subject": "",
+        "resolved_title": "Hubba bint Hulail",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 36,
+      "time_s": 8.672,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d8s0",
+        "title": "Nocher II, Count of Soissons",
+        "url": "https://trace.invalid/2wikimultihopqa_e9946c220baf11ebab90acde48001122_immediate/d8s0",
+        "text": "Nocher II( d. 1019), Count of Bar- sur- Aube, Count of Soissons.",
+        "visible_time_s": 8.671999999991385,
+        "requested_subject": "",
+        "resolved_title": "Nocher II, Count of Soissons",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 37,
+      "time_s": 8.672,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d8s1",
+        "title": "Nocher II, Count of Soissons",
+        "url": "https://trace.invalid/2wikimultihopqa_e9946c220baf11ebab90acde48001122_immediate/d8s1",
+        "text": "He was the son of Nocher I, Count of Bar-sur- Aube.",
+        "visible_time_s": 8.671999999991385,
+        "requested_subject": "",
+        "resolved_title": "Nocher II, Count of Soissons",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 38,
+      "time_s": 8.672,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d8s2",
+        "title": "Nocher II, Count of Soissons",
+        "url": "https://trace.invalid/2wikimultihopqa_e9946c220baf11ebab90acde48001122_immediate/d8s2",
+        "text": "Nocher ’s brother Beraud( d. 1052) was Bishop of Soissons.",
+        "visible_time_s": 8.671999999991385,
+        "requested_subject": "",
+        "resolved_title": "Nocher II, Count of Soissons",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 39,
+      "time_s": 8.672,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d8s3",
+        "title": "Nocher II, Count of Soissons",
+        "url": "https://trace.invalid/2wikimultihopqa_e9946c220baf11ebab90acde48001122_immediate/d8s3",
+        "text": "Nocher became Count of Soissons, jure uxoris, upon his marriage to Adelise, Countess of Soissons.",
+        "visible_time_s": 8.671999999991385,
+        "requested_subject": "",
+        "resolved_title": "Nocher II, Count of Soissons",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 40,
+      "time_s": 8.672,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d8s4",
+        "title": "Nocher II, Count of Soissons",
+        "url": "https://trace.invalid/2wikimultihopqa_e9946c220baf11ebab90acde48001122_immediate/d8s4",
+        "text": "Nocher and Adelisa had three children: Nocher ’s son and namesake became Count of Bar-sur- Aube upon his death, and the countship of Soissons reverted to his wife.",
+        "visible_time_s": 8.671999999991385,
+        "requested_subject": "",
+        "resolved_title": "Nocher II, Count of Soissons",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 41,
+      "time_s": 8.672,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d8s5",
+        "title": "Nocher II, Count of Soissons",
+        "url": "https://trace.invalid/2wikimultihopqa_e9946c220baf11ebab90acde48001122_immediate/d8s5",
+        "text": "His son Renaud would eventually become the Count of Soissons.",
+        "visible_time_s": 8.671999999991385,
+        "requested_subject": "",
+        "resolved_title": "Nocher II, Count of Soissons",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 42,
+      "time_s": 8.672,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d9s0",
+        "title": "John V, Count of Soissons",
+        "url": "https://trace.invalid/2wikimultihopqa_e9946c220baf11ebab90acde48001122_immediate/d9s0",
+        "text": "John V( 21 March 1281 – 1304), son of John IV, Count of Soissons, and his wife Marguerite of Rumigny.",
+        "visible_time_s": 8.671999999991385,
+        "requested_subject": "",
+        "resolved_title": "John V, Count of Soissons",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 43,
+      "time_s": 8.672,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d9s1",
+        "title": "John V, Count of Soissons",
+        "url": "https://trace.invalid/2wikimultihopqa_e9946c220baf11ebab90acde48001122_immediate/d9s1",
+        "text": "Count of Soissons.",
+        "visible_time_s": 8.671999999991385,
+        "requested_subject": "",
+        "resolved_title": "John V, Count of Soissons",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 44,
+      "time_s": 8.672,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d9s2",
+        "title": "John V, Count of Soissons",
+        "url": "https://trace.invalid/2wikimultihopqa_e9946c220baf11ebab90acde48001122_immediate/d9s2",
+        "text": "John inherited the countship of Soissons from his father in 1302.",
+        "visible_time_s": 8.671999999991385,
+        "requested_subject": "",
+        "resolved_title": "John V, Count of Soissons",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 45,
+      "time_s": 8.672,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d9s3",
+        "title": "John V, Count of Soissons",
+        "url": "https://trace.invalid/2wikimultihopqa_e9946c220baf11ebab90acde48001122_immediate/d9s3",
+        "text": "Nothing is known about his brief rule of the county.",
+        "visible_time_s": 8.671999999991385,
+        "requested_subject": "",
+        "resolved_title": "John V, Count of Soissons",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 46,
+      "time_s": 8.672,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d9s4",
+        "title": "John V, Count of Soissons",
+        "url": "https://trace.invalid/2wikimultihopqa_e9946c220baf11ebab90acde48001122_immediate/d9s4",
+        "text": "He never married and died with no heirs.",
+        "visible_time_s": 8.671999999991385,
+        "requested_subject": "",
+        "resolved_title": "John V, Count of Soissons",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 47,
+      "time_s": 8.672,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d9s5",
+        "title": "John V, Count of Soissons",
+        "url": "https://trace.invalid/2wikimultihopqa_e9946c220baf11ebab90acde48001122_immediate/d9s5",
+        "text": "Upon his death, his brother Hugh became Count of Soissons.",
+        "visible_time_s": 8.671999999991385,
+        "requested_subject": "",
+        "resolved_title": "John V, Count of Soissons",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 48,
+      "time_s": 8.672,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d10s0",
+        "title": "Renaud II, Count of Soissons",
+        "url": "https://trace.invalid/2wikimultihopqa_e9946c220baf11ebab90acde48001122_immediate/d10s0",
+        "text": "Renaud II( died 1099), son of William Busac, Count of Eu and Soissons, and Adelaide, Countess of Soissons.",
+        "visible_time_s": 8.671999999991385,
+        "requested_subject": "",
+        "resolved_title": "Renaud II, Count of Soissons",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 49,
+      "time_s": 8.672,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d10s1",
+        "title": "Renaud II, Count of Soissons",
+        "url": "https://trace.invalid/2wikimultihopqa_e9946c220baf11ebab90acde48001122_immediate/d10s1",
+        "text": "Count of Soissons.",
+        "visible_time_s": 8.671999999991385,
+        "requested_subject": "",
+        "resolved_title": "Renaud II, Count of Soissons",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 50,
+      "time_s": 8.672,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d10s2",
+        "title": "Renaud II, Count of Soissons",
+        "url": "https://trace.invalid/2wikimultihopqa_e9946c220baf11ebab90acde48001122_immediate/d10s2",
+        "text": "It is unclear when Renaud assumed the countship of Soissons from his disgraced father.",
+        "visible_time_s": 8.671999999991385,
+        "requested_subject": "",
+        "resolved_title": "Renaud II, Count of Soissons",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 51,
+      "time_s": 8.672,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d10s3",
+        "title": "Renaud II, Count of Soissons",
+        "url": "https://trace.invalid/2wikimultihopqa_e9946c220baf11ebab90acde48001122_immediate/d10s3",
+        "text": "The latter was stripped of the County of Eu in 1050 but it is unclear when he relinquished the countship of Soissons.",
+        "visible_time_s": 8.671999999991385,
+        "requested_subject": "",
+        "resolved_title": "Renaud II, Count of Soissons",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 52,
+      "time_s": 8.672,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d10s4",
+        "title": "Renaud II, Count of Soissons",
+        "url": "https://trace.invalid/2wikimultihopqa_e9946c220baf11ebab90acde48001122_immediate/d10s4",
+        "text": "Alberic of Trois- Fontaines identifies Renaud in his\" Chronicles\" but little is known about his rule.",
+        "visible_time_s": 8.671999999991385,
+        "requested_subject": "",
+        "resolved_title": "Renaud II, Count of Soissons",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 53,
+      "time_s": 8.672,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d10s5",
+        "title": "Renaud II, Count of Soissons",
+        "url": "https://trace.invalid/2wikimultihopqa_e9946c220baf11ebab90acde48001122_immediate/d10s5",
+        "text": "It is not known whether Renaud married or had any children.",
+        "visible_time_s": 8.671999999991385,
+        "requested_subject": "",
+        "resolved_title": "Renaud II, Count of Soissons",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 54,
+      "time_s": 8.672,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d10s6",
+        "title": "Renaud II, Count of Soissons",
+        "url": "https://trace.invalid/2wikimultihopqa_e9946c220baf11ebab90acde48001122_immediate/d10s6",
+        "text": "Upon the death of Renaud, his brother John became the Count of Soissons.",
+        "visible_time_s": 8.671999999991385,
+        "requested_subject": "",
+        "resolved_title": "Renaud II, Count of Soissons",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 55,
+      "time_s": 9.329,
+      "type": "utterance",
+      "action": "Progress",
+      "text": "I'm still planning the steps to find Theudebert of Soissons' paternal grandmother.",
+      "claims": [],
+      "feedback_source": "model",
+      "feedback_status_claim": "processing",
+      "feedback_fallback_reason": "",
+      "execution_state": {
+        "stage": "checking",
+        "searches_started": 1,
+        "searches_completed": 1,
+        "active_searches": 0,
+        "evidence_count": 45,
+        "supported_units": 0,
+        "output_units": 0
+      },
+      "language": "en"
+    },
+    {
+      "sequence": 56,
+      "time_s": 12.188,
+      "type": "judge_reply",
+      "reply": {
+        "judgments": [
+          {
+            "unit_id": "u1",
+            "label": "SUPPORTED",
+            "value": "Theudebert of Soissons",
+            "citations": [
+              "d2s0"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d2s0",
+                "text": "Theudebert was the eldest son of King Chilperic I of Soissons, through his first wife Audovera."
+              }
+            ],
+            "reason": "Supported by the cited visible sentences and dependencies."
+          },
+          {
+            "unit_id": "u2",
+            "label": "SUPPORTED",
+            "value": "Chilperic I",
+            "citations": [
+              "d3s0"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d3s0",
+                "text": "Chilperic I (c. 539 – September 584) was the king of Neustria (or Soissons) from 561 to his death."
+              }
+            ],
+            "reason": "Supported by the cited visible sentences and dependencies."
+          },
+          {
+            "unit_id": "u3",
+            "label": "SUPPORTED",
+            "value": "Aregund",
+            "citations": [
+              "d3s1"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d3s1",
+                "text": "He was one of the sons of the Frankish king Clotaire I and Queen Aregund."
+              }
+            ],
+            "reason": "Supported by the cited visible sentences and dependencies."
+          }
+        ]
+      },
+      "attempt": 1,
+      "repair": false,
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d1s1",
+        "d1s2",
+        "d1s3",
+        "d1s4",
+        "d2s0",
+        "d2s1",
+        "d2s2",
+        "d2s3",
+        "d2s4",
+        "d2s5",
+        "d3s0",
+        "d3s1",
+        "d4s0",
+        "d4s1",
+        "d4s2",
+        "d4s3",
+        "d4s4",
+        "d5s0",
+        "d5s1",
+        "d5s2",
+        "d5s3",
+        "d5s4",
+        "d5s5",
+        "d6s0",
+        "d7s0",
+        "d8s0",
+        "d8s1",
+        "d8s2",
+        "d8s3",
+        "d8s4",
+        "d8s5",
+        "d9s0",
+        "d9s1",
+        "d9s2",
+        "d9s3",
+        "d9s4",
+        "d9s5",
+        "d10s0",
+        "d10s1",
+        "d10s2",
+        "d10s3",
+        "d10s4",
+        "d10s5",
+        "d10s6"
+      ]
+    },
+    {
+      "sequence": 57,
+      "time_s": 12.188,
+      "type": "judgments",
+      "judgments": {
+        "u1": {
+          "label": "SUPPORTED",
+          "value": "Theudebert of Soissons",
+          "citations": [
+            "d2s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d2s0",
+              "text": "Theudebert was the eldest son of King Chilperic I of Soissons, through his first wife Audovera."
+            }
+          ],
+          "reason": "Supported by the cited visible sentences and dependencies."
+        },
+        "u2": {
+          "label": "SUPPORTED",
+          "value": "Chilperic I",
+          "citations": [
+            "d3s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d3s0",
+              "text": "Chilperic I (c. 539 – September 584) was the king of Neustria (or Soissons) from 561 to his death."
+            }
+          ],
+          "reason": "Supported by the cited visible sentences and dependencies."
+        },
+        "u3": {
+          "label": "SUPPORTED",
+          "value": "Aregund",
+          "citations": [
+            "d3s1"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d3s1",
+              "text": "He was one of the sons of the Frankish king Clotaire I and Queen Aregund."
+            }
+          ],
+          "reason": "Supported by the cited visible sentences and dependencies."
+        }
+      },
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d1s1",
+        "d1s2",
+        "d1s3",
+        "d1s4",
+        "d2s0",
+        "d2s1",
+        "d2s2",
+        "d2s3",
+        "d2s4",
+        "d2s5",
+        "d3s0",
+        "d3s1",
+        "d4s0",
+        "d4s1",
+        "d4s2",
+        "d4s3",
+        "d4s4",
+        "d5s0",
+        "d5s1",
+        "d5s2",
+        "d5s3",
+        "d5s4",
+        "d5s5",
+        "d6s0",
+        "d7s0",
+        "d8s0",
+        "d8s1",
+        "d8s2",
+        "d8s3",
+        "d8s4",
+        "d8s5",
+        "d9s0",
+        "d9s1",
+        "d9s2",
+        "d9s3",
+        "d9s4",
+        "d9s5",
+        "d10s0",
+        "d10s1",
+        "d10s2",
+        "d10s3",
+        "d10s4",
+        "d10s5",
+        "d10s6"
+      ],
+      "semantic_review": false
+    },
+    {
+      "sequence": 58,
+      "time_s": 17.75,
+      "type": "verification_reply",
+      "reply": {
+        "approved": true,
+        "facts_valid": true,
+        "expressed_unit_ids": [
+          "u1",
+          "u2",
+          "u3"
+        ],
+        "reason": "All factual claims match the approved facts and evidence, and no extra claims are made."
+      },
+      "output_unit_ids": [
+        "u1",
+        "u2",
+        "u3"
+      ],
+      "output_action": "Final Answer",
+      "dependency_unit_ids": [],
+      "evidence_snapshot_ids": [
+        "d2s0",
+        "d3s0",
+        "d3s1"
+      ]
+    },
+    {
+      "sequence": 59,
+      "time_s": 17.75,
+      "type": "utterance",
+      "action": "Final Answer",
+      "text": "Theudebert of Soissons was the eldest son of King Chilperic I of Soissons, through his first wife Audovera. His father was Chilperic I. His paternal grandmother was Aregund.",
+      "claims": [
+        {
+          "unit_id": "u1",
+          "description": "Identify the Wikipedia article for Theudebert of Soissons",
+          "value": "Theudebert of Soissons",
+          "citations": [
+            "d2s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d2s0",
+              "text": "Theudebert was the eldest son of King Chilperic I of Soissons, through his first wife Audovera."
+            }
+          ]
+        },
+        {
+          "unit_id": "u2",
+          "description": "Find the father of Theudebert of Soissons",
+          "value": "Chilperic I",
+          "citations": [
+            "d3s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d3s0",
+              "text": "Chilperic I (c. 539 – September 584) was the king of Neustria (or Soissons) from 561 to his death."
+            }
+          ]
+        },
+        {
+          "unit_id": "u3",
+          "description": "Find the paternal grandmother (father's mother) of Theudebert of Soissons",
+          "value": "Aregund",
+          "citations": [
+            "d3s1"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d3s1",
+              "text": "He was one of the sons of the Frankish king Clotaire I and Queen Aregund."
+            }
+          ]
+        }
+      ],
+      "unresolved": [],
+      "fallback": false,
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d1s1",
+        "d1s2",
+        "d1s3",
+        "d1s4",
+        "d2s0",
+        "d2s1",
+        "d2s2",
+        "d2s3",
+        "d2s4",
+        "d2s5",
+        "d3s0",
+        "d3s1",
+        "d4s0",
+        "d4s1",
+        "d4s2",
+        "d4s3",
+        "d4s4",
+        "d5s0",
+        "d5s1",
+        "d5s2",
+        "d5s3",
+        "d5s4",
+        "d5s5",
+        "d6s0",
+        "d7s0",
+        "d8s0",
+        "d8s1",
+        "d8s2",
+        "d8s3",
+        "d8s4",
+        "d8s5",
+        "d9s0",
+        "d9s1",
+        "d9s2",
+        "d9s3",
+        "d9s4",
+        "d9s5",
+        "d10s0",
+        "d10s1",
+        "d10s2",
+        "d10s3",
+        "d10s4",
+        "d10s5",
+        "d10s6"
+      ],
+      "language": "en"
+    },
+    {
+      "sequence": 60,
+      "time_s": 17.75,
+      "type": "finished",
+      "status": "complete"
+    }
+  ],
+  "note": "Prototype model judgments are not independent gold scores. Output event times are not spoken claim times.",
+  "evidence_mode": "scheduled_trace",
+  "audio": {
+    "enabled": true,
+    "mode": "windows",
+    "play": false,
+    "status": "ok",
+    "errors": [],
+    "records": [
+      {
+        "event_sequence": 3,
+        "sentence_index": 1,
+        "sentence_count": 1,
+        "language": "en",
+        "text": "Looking up Theudebert of Soissons' paternal grandmother for you.",
+        "action": "Backchannel",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 2.7039999999979045,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1-continued\\samples\\0424\\audio\\segments\\0003_01.wav",
+        "duration_s": 4.183718820861678,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 3.485000000000582,
+        "synthesis_and_playback_s": 0.7960000000020955
+      },
+      {
+        "event_sequence": 55,
+        "sentence_index": 1,
+        "sentence_count": 1,
+        "language": "en",
+        "text": "I'm still planning the steps to find Theudebert of Soissons' paternal grandmother.",
+        "action": "Progress",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 9.328999999997905,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1-continued\\samples\\0424\\audio\\segments\\0055_01.wav",
+        "duration_s": 5.183628117913832,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 10.125,
+        "synthesis_and_playback_s": 0.7960000000020955
+      },
+      {
+        "event_sequence": 59,
+        "sentence_index": 1,
+        "sentence_count": 2,
+        "language": "en",
+        "text": "Theudebert of Soissons was the eldest son of King Chilperic I of Soissons, through his first wife Audovera.",
+        "action": "Final Answer",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 17.75,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1-continued\\samples\\0424\\audio\\segments\\0059_01.wav",
+        "duration_s": 7.188208616780045,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 18.546999999991385,
+        "synthesis_and_playback_s": 0.7969999999913853
+      },
+      {
+        "event_sequence": 59,
+        "sentence_index": 2,
+        "sentence_count": 2,
+        "language": "en",
+        "text": "His father was Chilperic I. His paternal grandmother was Aregund.",
+        "action": "Final Answer",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 18.546999999991385,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1-continued\\samples\\0424\\audio\\segments\\0059_02.wav",
+        "duration_s": 5.348616780045352,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 19.328999999997905,
+        "synthesis_and_playback_s": 0.7820000000065193
+      }
+    ],
+    "wave": {
+      "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1-continued\\samples\\0424\\audio\\response.wav",
+      "duration_s": 31.083809523809524,
+      "timeline": [
+        {
+          "event_sequence": 3,
+          "sentence_index": 1,
+          "action": "Backchannel",
+          "text": "Looking up Theudebert of Soissons' paternal grandmother for you.",
+          "wave_start_s": 3.4849886621315194,
+          "wave_end_s": 7.668707482993197
+        },
+        {
+          "event_sequence": 55,
+          "sentence_index": 1,
+          "action": "Progress",
+          "text": "I'm still planning the steps to find Theudebert of Soissons' paternal grandmother.",
+          "wave_start_s": 10.12498866213152,
+          "wave_end_s": 15.308616780045352
+        },
+        {
+          "event_sequence": 59,
+          "sentence_index": 1,
+          "action": "Final Answer",
+          "text": "Theudebert of Soissons was the eldest son of King Chilperic I of Soissons, through his first wife Audovera.",
+          "wave_start_s": 18.54698412698413,
+          "wave_end_s": 25.735192743764173
+        },
+        {
+          "event_sequence": 59,
+          "sentence_index": 2,
+          "action": "Final Answer",
+          "text": "His father was Chilperic I. His paternal grandmother was Aregund.",
+          "wave_start_s": 25.735192743764173,
+          "wave_end_s": 31.083809523809524
+        }
+      ]
+    }
+  },
+  "evaluation": {
+    "mode": "b_final_revised_trace",
+    "trace_id": "2wikimultihopqa_e9946c220baf11ebab90acde48001122_immediate",
+    "sample_id": "2wikimultihopqa_e9946c220baf11ebab90acde48001122",
+    "total_wall_s": 19.343999999997322,
+    "question_timeout_s": 180,
+    "audio_enabled": true,
+    "history_enabled": false,
+    "text_pipeline_wall_s": 17.75,
+    "effective_settings": {
+      "base_url": "https://tinker.thinkingmachines.dev/services/tinker-prod/oai/api/v1",
+      "model": "openai/gpt-oss-120b",
+      "judge_model": "tinker://f9e9a6c1-e203-5c2c-acdd-68fe67378ca4:train:0/sampler_weights/epoch-0001",
+      "judge_reasoning_effort": "low",
+      "wiki_language": "en",
+      "user_agent": "CascadeSystem/0.1 (educational research prototype)",
+      "timeout_s": 45.0,
+      "max_tokens": 4096,
+      "reasoning_effort": "low",
+      "progress_s": 3.0,
+      "feedback_timeout_s": 6.0,
+      "search_limit": 3,
+      "max_units": 8,
+      "max_searches": 16,
+      "max_sources": 45,
+      "source_chars": 165,
+      "evidence_chars": 3861,
+      "concurrency": 3
+    },
+    "timing_kind": "unknown",
+    "scheduler": "wall-paced fixed B arrivals",
+    "split": "eval_reserved",
+    "empty_evidence_sentences_ignored": 0
+  }
+}

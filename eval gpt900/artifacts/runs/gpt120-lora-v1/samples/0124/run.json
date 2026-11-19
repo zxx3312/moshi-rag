@@ -1,0 +1,2073 @@
+{
+  "question": "Which film whose director is younger, Daar Doer In Die Bosveld or Return Of Halleluja?",
+  "resolved_question": "Which film whose director is younger, Daar Doer In Die Bosveld or Return Of Halleluja?",
+  "used_history_turn_ids": [],
+  "response_language": "en",
+  "status": "incomplete",
+  "clock": "wall_monotonic",
+  "time_origin": "question_text_ready_after_optional_asr",
+  "model": "openai/gpt-oss-120b",
+  "judge_model": "tinker://f9e9a6c1-e203-5c2c-acdd-68fe67378ca4:train:0/sampler_weights/epoch-0001",
+  "units": [
+    {
+      "unit_id": "u1",
+      "description": "director of Daar Doer In Die Bosveld",
+      "necessary": true,
+      "depends_on": [],
+      "queries": [
+        "Daar Doer In Die Bosveld director",
+        "Daar Doer In Die Bosveld film director"
+      ],
+      "subject": "Daar Doer In Die Bosveld"
+    },
+    {
+      "unit_id": "u2",
+      "description": "director of Return Of Halleluja",
+      "necessary": true,
+      "depends_on": [],
+      "queries": [
+        "Return Of Halleluja director",
+        "Return Of Halleluja film director"
+      ],
+      "subject": "Return Of Halleluja"
+    },
+    {
+      "unit_id": "u3",
+      "description": "birth year of the director of Daar Doer In Die Bosveld",
+      "necessary": true,
+      "depends_on": [
+        "u1"
+      ],
+      "queries": [
+        "{u1} birth year",
+        "{u1} date of birth"
+      ],
+      "subject": "{u1}"
+    },
+    {
+      "unit_id": "u4",
+      "description": "birth year of the director of Return Of Halleluja",
+      "necessary": true,
+      "depends_on": [
+        "u2"
+      ],
+      "queries": [
+        "{u2} birth year",
+        "{u2} date of birth"
+      ],
+      "subject": "{u2}"
+    },
+    {
+      "unit_id": "u5",
+      "description": "which film has the younger director",
+      "necessary": true,
+      "depends_on": [
+        "u3",
+        "u4",
+        "u1",
+        "u2"
+      ],
+      "queries": [
+        "compare ages of {u1} and {u2}"
+      ],
+      "subject": ""
+    }
+  ],
+  "judgments": {
+    "u1": {
+      "label": "UNRESOLVED",
+      "value": "",
+      "citations": [],
+      "quotes": [],
+      "reason": "Final verifier rejected fact support or entity identity"
+    },
+    "u2": {
+      "label": "UNRESOLVED",
+      "value": "",
+      "citations": [],
+      "quotes": [],
+      "reason": "Final verifier rejected fact support or entity identity"
+    },
+    "u3": {
+      "label": "UNRESOLVED",
+      "value": "",
+      "citations": [],
+      "quotes": [],
+      "reason": "Final verifier rejected fact support or entity identity"
+    },
+    "u4": {
+      "label": "UNRESOLVED",
+      "value": "",
+      "citations": [],
+      "quotes": [],
+      "reason": "Final verifier rejected fact support or entity identity"
+    },
+    "u5": {
+      "label": "UNRESOLVED",
+      "value": "",
+      "citations": [],
+      "quotes": [],
+      "reason": "Final verifier rejected fact support or entity identity"
+    }
+  },
+  "evidence": [
+    {
+      "evidence_id": "d1s0",
+      "title": "Jamie Uys",
+      "url": "https://trace.invalid/2wikimultihopqa_4d2f930608c711ebbd91ac1f6bf848b6_immediate/d1s0",
+      "text": "Jacobus Johannes Uys( 30 May 1921 – 29 January 1996), better known as Jamie Uys, was a South African film director, best known for directing\" The Gods Must Be Crazy\".",
+      "visible_time_s": 3.6089999999967404,
+      "requested_subject": "",
+      "resolved_title": "Jamie Uys",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d2s0",
+      "title": "Dmitri Varfolomeyev (footballer, born 1978)",
+      "url": "https://trace.invalid/2wikimultihopqa_4d2f930608c711ebbd91ac1f6bf848b6_immediate/d2s0",
+      "text": "Dmitri Nikolayevich Varfolomeyev( born 15 March 1978 in Leningrad) is a former Russian football player.",
+      "visible_time_s": 3.6089999999967404,
+      "requested_subject": "",
+      "resolved_title": "Dmitri Varfolomeyev (footballer, born 1978)",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d2s1",
+      "title": "Dmitri Varfolomeyev (footballer, born 1978)",
+      "url": "https://trace.invalid/2wikimultihopqa_4d2f930608c711ebbd91ac1f6bf848b6_immediate/d2s1",
+      "text": "He is a younger brother of Sergei Varfolomeyev.",
+      "visible_time_s": 3.6089999999967404,
+      "requested_subject": "",
+      "resolved_title": "Dmitri Varfolomeyev (footballer, born 1978)",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d3s0",
+      "title": "Spur in die Nacht",
+      "url": "https://trace.invalid/2wikimultihopqa_4d2f930608c711ebbd91ac1f6bf848b6_immediate/d3s0",
+      "text": "Spur in die Nacht is an East German film, directed by Günter Reisch.",
+      "visible_time_s": 3.6089999999967404,
+      "requested_subject": "",
+      "resolved_title": "Spur in die Nacht",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d3s1",
+      "title": "Spur in die Nacht",
+      "url": "https://trace.invalid/2wikimultihopqa_4d2f930608c711ebbd91ac1f6bf848b6_immediate/d3s1",
+      "text": "It was released in 1957.",
+      "visible_time_s": 3.6089999999967404,
+      "requested_subject": "",
+      "resolved_title": "Spur in die Nacht",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d4s0",
+      "title": "Miloš Zličić",
+      "url": "https://trace.invalid/2wikimultihopqa_4d2f930608c711ebbd91ac1f6bf848b6_immediate/d4s0",
+      "text": "Miloš Zličić( born 29 December 1999) is a Serbian football forward.",
+      "visible_time_s": 3.6089999999967404,
+      "requested_subject": "",
+      "resolved_title": "Miloš Zličić",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d4s1",
+      "title": "Miloš Zličić",
+      "url": "https://trace.invalid/2wikimultihopqa_4d2f930608c711ebbd91ac1f6bf848b6_immediate/d4s1",
+      "text": "He is a younger brother of Lazar Zličić.",
+      "visible_time_s": 3.6089999999967404,
+      "requested_subject": "",
+      "resolved_title": "Miloš Zličić",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d5s0",
+      "title": "Return of Halleluja",
+      "url": "https://trace.invalid/2wikimultihopqa_4d2f930608c711ebbd91ac1f6bf848b6_immediate/d5s0",
+      "text": "Return of Halleluja( also known as\" The West Is Very Close, Amigo\") is a 1972 Italian Spaghetti Western film directed by Giuliano Carnimeo and starring George Hilton.",
+      "visible_time_s": 3.6089999999967404,
+      "requested_subject": "",
+      "resolved_title": "Return of Halleluja",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d5s1",
+      "title": "Return of Halleluja",
+      "url": "https://trace.invalid/2wikimultihopqa_4d2f930608c711ebbd91ac1f6bf848b6_immediate/d5s1",
+      "text": "It is the sequel of\" They Call Me Hallelujah\".",
+      "visible_time_s": 3.6089999999967404,
+      "requested_subject": "",
+      "resolved_title": "Return of Halleluja",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d6s0",
+      "title": "Daar doer in die bosveld",
+      "url": "https://trace.invalid/2wikimultihopqa_4d2f930608c711ebbd91ac1f6bf848b6_immediate/d6s0",
+      "text": "Daar Doer in Die Bosveld",
+      "visible_time_s": 3.6089999999967404,
+      "requested_subject": "",
+      "resolved_title": "Daar doer in die bosveld",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d6s1",
+      "title": "Daar doer in die bosveld",
+      "url": "https://trace.invalid/2wikimultihopqa_4d2f930608c711ebbd91ac1f6bf848b6_immediate/d6s1",
+      "text": "( English:\" Far Away in the Bushveld\") is the first film by the South African director Jamie Uys.",
+      "visible_time_s": 3.6089999999967404,
+      "requested_subject": "",
+      "resolved_title": "Daar doer in die bosveld",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d6s2",
+      "title": "Daar doer in die bosveld",
+      "url": "https://trace.invalid/2wikimultihopqa_4d2f930608c711ebbd91ac1f6bf848b6_immediate/d6s2",
+      "text": "It was originally released in 1951.",
+      "visible_time_s": 3.6089999999967404,
+      "requested_subject": "",
+      "resolved_title": "Daar doer in die bosveld",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d6s3",
+      "title": "Daar doer in die bosveld",
+      "url": "https://trace.invalid/2wikimultihopqa_4d2f930608c711ebbd91ac1f6bf848b6_immediate/d6s3",
+      "text": "The film is in the Afrikaans language, a language specific to Southern Africa.",
+      "visible_time_s": 3.6089999999967404,
+      "requested_subject": "",
+      "resolved_title": "Daar doer in die bosveld",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d7s0",
+      "title": "Kaspar Bausewein",
+      "url": "https://trace.invalid/2wikimultihopqa_4d2f930608c711ebbd91ac1f6bf848b6_immediate/d7s0",
+      "text": "Kaspar Bausewein( 15 November 1838, Aub – 18 November 1903, Munich) was a German operatic bass who was active at the Bavarian State Opera from 1858 through 1900.",
+      "visible_time_s": 3.6089999999967404,
+      "requested_subject": "",
+      "resolved_title": "Kaspar Bausewein",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d7s1",
+      "title": "Kaspar Bausewein",
+      "url": "https://trace.invalid/2wikimultihopqa_4d2f930608c711ebbd91ac1f6bf848b6_immediate/d7s1",
+      "text": "While there, he notably portrayed several characters in the world premieres of operas composed by Richard Wagner.",
+      "visible_time_s": 3.6089999999967404,
+      "requested_subject": "",
+      "resolved_title": "Kaspar Bausewein",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d7s2",
+      "title": "Kaspar Bausewein",
+      "url": "https://trace.invalid/2wikimultihopqa_4d2f930608c711ebbd91ac1f6bf848b6_immediate/d7s2",
+      "text": "He created Pogner in\" Die Meistersinger von Nürnberg\"( June 21, 1868), Fafner in\" Das Rheingold\"( September 22, 1869), Hunding in\" Die Walküre\"( June 26, 1870), and Harald in\" Die Feen\"( June 29, 1888).",
+      "visible_time_s": 3.6089999999967404,
+      "requested_subject": "",
+      "resolved_title": "Kaspar Bausewein",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d8s0",
+      "title": "Vadim Vlasov",
+      "url": "https://trace.invalid/2wikimultihopqa_4d2f930608c711ebbd91ac1f6bf848b6_immediate/d8s0",
+      "text": "Vadim Nikolayevich Vlasov( born 19 December 1980) is a former Russian football player.",
+      "visible_time_s": 3.6089999999967404,
+      "requested_subject": "",
+      "resolved_title": "Vadim Vlasov",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d8s1",
+      "title": "Vadim Vlasov",
+      "url": "https://trace.invalid/2wikimultihopqa_4d2f930608c711ebbd91ac1f6bf848b6_immediate/d8s1",
+      "text": "He is a younger brother of Dmitri Vlasov.",
+      "visible_time_s": 3.6089999999967404,
+      "requested_subject": "",
+      "resolved_title": "Vadim Vlasov",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d9s0",
+      "title": "Giuliano Carnimeo",
+      "url": "https://trace.invalid/2wikimultihopqa_4d2f930608c711ebbd91ac1f6bf848b6_immediate/d9s0",
+      "text": "Giuliano Carnimeo (4 July 1932 – 10 September 2016) was an Italian director and screenwriter, sometimes credited as Anthony Ascott.",
+      "visible_time_s": 3.6089999999967404,
+      "requested_subject": "",
+      "resolved_title": "Giuliano Carnimeo",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d10s0",
+      "title": "La Bestia humana",
+      "url": "https://trace.invalid/2wikimultihopqa_4d2f930608c711ebbd91ac1f6bf848b6_immediate/d10s0",
+      "text": "La Bestia humana is a 1957 Argentine film whose story is based on the novel\" La Bête Humaine\" by the French writer Émile Zola.",
+      "visible_time_s": 3.6089999999967404,
+      "requested_subject": "",
+      "resolved_title": "La Bestia humana",
+      "entity_resolution": "unspecified"
+    }
+  ],
+  "searches": [
+    {
+      "query": "[scheduled evidence]",
+      "subject": "",
+      "status": "ok",
+      "returned_pages": [],
+      "mode": "trace",
+      "unit_id": "__scheduled_evidence__"
+    },
+    {
+      "query": "[scheduled evidence]",
+      "subject": "",
+      "status": "ok",
+      "returned_pages": [],
+      "mode": "trace",
+      "unit_id": "__scheduled_evidence__"
+    }
+  ],
+  "search_failures": [],
+  "llm_calls": [
+    {
+      "purpose": "feedback_generate",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 414,
+        "completion_tokens": 66,
+        "total_tokens": 480,
+        "prompt_tokens_details": {
+          "cached_tokens": 384
+        }
+      },
+      "latency_s": 1.203
+    },
+    {
+      "purpose": "feedback_verify",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 371,
+        "completion_tokens": 80,
+        "total_tokens": 451,
+        "prompt_tokens_details": {
+          "cached_tokens": 128
+        }
+      },
+      "latency_s": 0.719
+    },
+    {
+      "purpose": "decompose",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 804,
+        "completion_tokens": 394,
+        "total_tokens": 1198,
+        "prompt_tokens_details": {
+          "cached_tokens": 768
+        }
+      },
+      "latency_s": 2.0
+    },
+    {
+      "purpose": "plan_review",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 1192,
+        "completion_tokens": 481,
+        "total_tokens": 1673,
+        "prompt_tokens_details": {
+          "cached_tokens": 768
+        }
+      },
+      "latency_s": 1.594
+    },
+    {
+      "purpose": "feedback_generate",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 414,
+        "completion_tokens": 72,
+        "total_tokens": 486,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        }
+      },
+      "latency_s": 0.656
+    },
+    {
+      "purpose": "judge",
+      "model": "tinker://f9e9a6c1-e203-5c2c-acdd-68fe67378ca4:train:0/sampler_weights/epoch-0001",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 4361,
+        "completion_tokens": 582,
+        "total_tokens": 4943,
+        "prompt_tokens_details": {
+          "cached_tokens": 1024
+        }
+      },
+      "latency_s": 2.469
+    },
+    {
+      "purpose": "feedback_verify",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 357,
+        "completion_tokens": 79,
+        "total_tokens": 436,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        }
+      },
+      "latency_s": 0.906
+    },
+    {
+      "purpose": "generate",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 1413,
+        "completion_tokens": 172,
+        "total_tokens": 1585,
+        "prompt_tokens_details": {
+          "cached_tokens": 384
+        }
+      },
+      "latency_s": 0.765
+    },
+    {
+      "purpose": "feedback_generate",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 415,
+        "completion_tokens": 54,
+        "total_tokens": 469,
+        "prompt_tokens_details": {
+          "cached_tokens": 384
+        }
+      },
+      "latency_s": 0.594
+    },
+    {
+      "purpose": "verify",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 2138,
+        "completion_tokens": 213,
+        "total_tokens": 2351,
+        "prompt_tokens_details": {
+          "cached_tokens": 512
+        }
+      },
+      "latency_s": 0.953
+    },
+    {
+      "purpose": "feedback_verify",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 358,
+        "completion_tokens": 74,
+        "total_tokens": 432,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        }
+      },
+      "latency_s": 0.703
+    },
+    {
+      "purpose": "judge",
+      "model": "tinker://f9e9a6c1-e203-5c2c-acdd-68fe67378ca4:train:0/sampler_weights/epoch-0001",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 4581,
+        "completion_tokens": 582,
+        "total_tokens": 5163,
+        "prompt_tokens_details": {
+          "cached_tokens": 1024
+        }
+      },
+      "latency_s": 2.797
+    },
+    {
+      "purpose": "generate",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 1413,
+        "completion_tokens": 172,
+        "total_tokens": 1585,
+        "prompt_tokens_details": {
+          "cached_tokens": 1408
+        }
+      },
+      "latency_s": 1.25
+    },
+    {
+      "purpose": "verify",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 2138,
+        "completion_tokens": 210,
+        "total_tokens": 2348,
+        "prompt_tokens_details": {
+          "cached_tokens": 2048
+        }
+      },
+      "latency_s": 0.953
+    }
+  ],
+  "search_diagnostics": [],
+  "output_enqueued_units": {},
+  "events": [
+    {
+      "sequence": 0,
+      "time_s": 0.015,
+      "type": "feedback_requested",
+      "feedback_kind": "opening",
+      "execution_state": {
+        "stage": "planning",
+        "searches_started": 0,
+        "searches_completed": 0,
+        "active_searches": 0,
+        "evidence_count": 0,
+        "supported_units": 0,
+        "output_units": 0
+      }
+    },
+    {
+      "sequence": 1,
+      "time_s": 1.937,
+      "type": "utterance",
+      "action": "Backchannel",
+      "text": "I’ll look up the directors’ ages for Daar Doer In Die Bosveld and Return Of Halleluja.",
+      "claims": [],
+      "feedback_source": "model",
+      "feedback_status_claim": "intent",
+      "feedback_fallback_reason": "",
+      "execution_state": {
+        "stage": "planning",
+        "searches_started": 0,
+        "searches_completed": 0,
+        "active_searches": 0,
+        "evidence_count": 0,
+        "supported_units": 0,
+        "output_units": 0
+      },
+      "language": "en"
+    },
+    {
+      "sequence": 2,
+      "time_s": 2.015,
+      "type": "decompose_reply",
+      "reply": {
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "director of Daar Doer In Die Bosveld",
+            "subject": "Daar Doer In Die Bosveld",
+            "necessary": true,
+            "depends_on": [],
+            "queries": [
+              "Daar Doer In Die Bosveld director"
+            ]
+          },
+          {
+            "unit_id": "u2",
+            "description": "director of Return Of Halleluja",
+            "subject": "Return Of Halleluja",
+            "necessary": true,
+            "depends_on": [],
+            "queries": [
+              "Return Of Halleluja director"
+            ]
+          },
+          {
+            "unit_id": "u3",
+            "description": "birth year of the director of Daar Doer In Die Bosveld",
+            "subject": "{u1}",
+            "necessary": true,
+            "depends_on": [
+              "u1"
+            ],
+            "queries": [
+              "{u1} birth year"
+            ]
+          },
+          {
+            "unit_id": "u4",
+            "description": "birth year of the director of Return Of Halleluja",
+            "subject": "{u2}",
+            "necessary": true,
+            "depends_on": [
+              "u2"
+            ],
+            "queries": [
+              "{u2} birth year"
+            ]
+          },
+          {
+            "unit_id": "u5",
+            "description": "which film has the younger director",
+            "subject": "",
+            "necessary": true,
+            "depends_on": [
+              "u3",
+              "u4"
+            ],
+            "queries": [
+              "compare ages of {u1} and {u2}"
+            ]
+          }
+        ]
+      },
+      "attempt": 1,
+      "repair": false
+    },
+    {
+      "sequence": 3,
+      "time_s": 2.015,
+      "type": "protocol_validation_failed",
+      "stage": "decompose",
+      "attempt": 1,
+      "error": "Placeholders must name explicit dependencies"
+    },
+    {
+      "sequence": 4,
+      "time_s": 2.015,
+      "type": "protocol_normalized",
+      "stage": "decompose",
+      "changes": [
+        {
+          "unit_id": "u5",
+          "added_dependencies": [
+            "u1",
+            "u2"
+          ]
+        }
+      ],
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "director of Daar Doer In Die Bosveld",
+          "necessary": true,
+          "depends_on": [],
+          "queries": [
+            "Daar Doer In Die Bosveld director"
+          ],
+          "subject": "Daar Doer In Die Bosveld"
+        },
+        {
+          "unit_id": "u2",
+          "description": "director of Return Of Halleluja",
+          "necessary": true,
+          "depends_on": [],
+          "queries": [
+            "Return Of Halleluja director"
+          ],
+          "subject": "Return Of Halleluja"
+        },
+        {
+          "unit_id": "u3",
+          "description": "birth year of the director of Daar Doer In Die Bosveld",
+          "necessary": true,
+          "depends_on": [
+            "u1"
+          ],
+          "queries": [
+            "{u1} birth year"
+          ],
+          "subject": "{u1}"
+        },
+        {
+          "unit_id": "u4",
+          "description": "birth year of the director of Return Of Halleluja",
+          "necessary": true,
+          "depends_on": [
+            "u2"
+          ],
+          "queries": [
+            "{u2} birth year"
+          ],
+          "subject": "{u2}"
+        },
+        {
+          "unit_id": "u5",
+          "description": "which film has the younger director",
+          "necessary": true,
+          "depends_on": [
+            "u3",
+            "u4",
+            "u1",
+            "u2"
+          ],
+          "queries": [
+            "compare ages of {u1} and {u2}"
+          ],
+          "subject": ""
+        }
+      ],
+      "no_facts_added": true
+    },
+    {
+      "sequence": 5,
+      "time_s": 2.015,
+      "type": "plan_review_requested",
+      "max_reviews": 1,
+      "question_only": true
+    },
+    {
+      "sequence": 6,
+      "time_s": 3.609,
+      "type": "plan_review_reply",
+      "reply": {
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "director of Daar Doer In Die Bosveld",
+            "subject": "Daar Doer In Die Bosveld",
+            "necessary": true,
+            "depends_on": [],
+            "queries": [
+              "Daar Doer In Die Bosveld director",
+              "Daar Doer In Die Bosveld film director"
+            ]
+          },
+          {
+            "unit_id": "u2",
+            "description": "director of Return Of Halleluja",
+            "subject": "Return Of Halleluja",
+            "necessary": true,
+            "depends_on": [],
+            "queries": [
+              "Return Of Halleluja director",
+              "Return Of Halleluja film director"
+            ]
+          },
+          {
+            "unit_id": "u3",
+            "description": "birth year of the director of Daar Doer In Die Bosveld",
+            "subject": "{u1}",
+            "necessary": true,
+            "depends_on": [
+              "u1"
+            ],
+            "queries": [
+              "{u1} birth year",
+              "{u1} date of birth"
+            ]
+          },
+          {
+            "unit_id": "u4",
+            "description": "birth year of the director of Return Of Halleluja",
+            "subject": "{u2}",
+            "necessary": true,
+            "depends_on": [
+              "u2"
+            ],
+            "queries": [
+              "{u2} birth year",
+              "{u2} date of birth"
+            ]
+          },
+          {
+            "unit_id": "u5",
+            "description": "which film has the younger director",
+            "subject": "",
+            "necessary": true,
+            "depends_on": [
+              "u3",
+              "u4",
+              "u1",
+              "u2"
+            ],
+            "queries": [
+              "compare ages of {u1} and {u2}"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "sequence": 7,
+      "time_s": 3.609,
+      "type": "plan_review_finished",
+      "changed": true,
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "director of Daar Doer In Die Bosveld",
+          "necessary": true,
+          "depends_on": [],
+          "queries": [
+            "Daar Doer In Die Bosveld director",
+            "Daar Doer In Die Bosveld film director"
+          ],
+          "subject": "Daar Doer In Die Bosveld"
+        },
+        {
+          "unit_id": "u2",
+          "description": "director of Return Of Halleluja",
+          "necessary": true,
+          "depends_on": [],
+          "queries": [
+            "Return Of Halleluja director",
+            "Return Of Halleluja film director"
+          ],
+          "subject": "Return Of Halleluja"
+        },
+        {
+          "unit_id": "u3",
+          "description": "birth year of the director of Daar Doer In Die Bosveld",
+          "necessary": true,
+          "depends_on": [
+            "u1"
+          ],
+          "queries": [
+            "{u1} birth year",
+            "{u1} date of birth"
+          ],
+          "subject": "{u1}"
+        },
+        {
+          "unit_id": "u4",
+          "description": "birth year of the director of Return Of Halleluja",
+          "necessary": true,
+          "depends_on": [
+            "u2"
+          ],
+          "queries": [
+            "{u2} birth year",
+            "{u2} date of birth"
+          ],
+          "subject": "{u2}"
+        },
+        {
+          "unit_id": "u5",
+          "description": "which film has the younger director",
+          "necessary": true,
+          "depends_on": [
+            "u3",
+            "u4",
+            "u1",
+            "u2"
+          ],
+          "queries": [
+            "compare ages of {u1} and {u2}"
+          ],
+          "subject": ""
+        }
+      ],
+      "question_only": true
+    },
+    {
+      "sequence": 8,
+      "time_s": 3.609,
+      "type": "plan",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "director of Daar Doer In Die Bosveld",
+          "necessary": true,
+          "depends_on": [],
+          "queries": [
+            "Daar Doer In Die Bosveld director",
+            "Daar Doer In Die Bosveld film director"
+          ],
+          "subject": "Daar Doer In Die Bosveld"
+        },
+        {
+          "unit_id": "u2",
+          "description": "director of Return Of Halleluja",
+          "necessary": true,
+          "depends_on": [],
+          "queries": [
+            "Return Of Halleluja director",
+            "Return Of Halleluja film director"
+          ],
+          "subject": "Return Of Halleluja"
+        },
+        {
+          "unit_id": "u3",
+          "description": "birth year of the director of Daar Doer In Die Bosveld",
+          "necessary": true,
+          "depends_on": [
+            "u1"
+          ],
+          "queries": [
+            "{u1} birth year",
+            "{u1} date of birth"
+          ],
+          "subject": "{u1}"
+        },
+        {
+          "unit_id": "u4",
+          "description": "birth year of the director of Return Of Halleluja",
+          "necessary": true,
+          "depends_on": [
+            "u2"
+          ],
+          "queries": [
+            "{u2} birth year",
+            "{u2} date of birth"
+          ],
+          "subject": "{u2}"
+        },
+        {
+          "unit_id": "u5",
+          "description": "which film has the younger director",
+          "necessary": true,
+          "depends_on": [
+            "u3",
+            "u4",
+            "u1",
+            "u2"
+          ],
+          "queries": [
+            "compare ages of {u1} and {u2}"
+          ],
+          "subject": ""
+        }
+      ]
+    },
+    {
+      "sequence": 9,
+      "time_s": 3.609,
+      "type": "trace_batch_requested"
+    },
+    {
+      "sequence": 10,
+      "time_s": 3.609,
+      "type": "search_finished",
+      "query": "[scheduled evidence]",
+      "subject": "",
+      "status": "ok",
+      "returned_pages": [],
+      "mode": "trace",
+      "unit_id": "__scheduled_evidence__"
+    },
+    {
+      "sequence": 11,
+      "time_s": 3.609,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d1s0",
+        "title": "Jamie Uys",
+        "url": "https://trace.invalid/2wikimultihopqa_4d2f930608c711ebbd91ac1f6bf848b6_immediate/d1s0",
+        "text": "Jacobus Johannes Uys( 30 May 1921 – 29 January 1996), better known as Jamie Uys, was a South African film director, best known for directing\" The Gods Must Be Crazy\".",
+        "visible_time_s": 3.6089999999967404,
+        "requested_subject": "",
+        "resolved_title": "Jamie Uys",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 12,
+      "time_s": 3.609,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d2s0",
+        "title": "Dmitri Varfolomeyev (footballer, born 1978)",
+        "url": "https://trace.invalid/2wikimultihopqa_4d2f930608c711ebbd91ac1f6bf848b6_immediate/d2s0",
+        "text": "Dmitri Nikolayevich Varfolomeyev( born 15 March 1978 in Leningrad) is a former Russian football player.",
+        "visible_time_s": 3.6089999999967404,
+        "requested_subject": "",
+        "resolved_title": "Dmitri Varfolomeyev (footballer, born 1978)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 13,
+      "time_s": 3.609,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d2s1",
+        "title": "Dmitri Varfolomeyev (footballer, born 1978)",
+        "url": "https://trace.invalid/2wikimultihopqa_4d2f930608c711ebbd91ac1f6bf848b6_immediate/d2s1",
+        "text": "He is a younger brother of Sergei Varfolomeyev.",
+        "visible_time_s": 3.6089999999967404,
+        "requested_subject": "",
+        "resolved_title": "Dmitri Varfolomeyev (footballer, born 1978)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 14,
+      "time_s": 3.609,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d3s0",
+        "title": "Spur in die Nacht",
+        "url": "https://trace.invalid/2wikimultihopqa_4d2f930608c711ebbd91ac1f6bf848b6_immediate/d3s0",
+        "text": "Spur in die Nacht is an East German film, directed by Günter Reisch.",
+        "visible_time_s": 3.6089999999967404,
+        "requested_subject": "",
+        "resolved_title": "Spur in die Nacht",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 15,
+      "time_s": 3.609,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d3s1",
+        "title": "Spur in die Nacht",
+        "url": "https://trace.invalid/2wikimultihopqa_4d2f930608c711ebbd91ac1f6bf848b6_immediate/d3s1",
+        "text": "It was released in 1957.",
+        "visible_time_s": 3.6089999999967404,
+        "requested_subject": "",
+        "resolved_title": "Spur in die Nacht",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 16,
+      "time_s": 3.609,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d4s0",
+        "title": "Miloš Zličić",
+        "url": "https://trace.invalid/2wikimultihopqa_4d2f930608c711ebbd91ac1f6bf848b6_immediate/d4s0",
+        "text": "Miloš Zličić( born 29 December 1999) is a Serbian football forward.",
+        "visible_time_s": 3.6089999999967404,
+        "requested_subject": "",
+        "resolved_title": "Miloš Zličić",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 17,
+      "time_s": 3.609,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d4s1",
+        "title": "Miloš Zličić",
+        "url": "https://trace.invalid/2wikimultihopqa_4d2f930608c711ebbd91ac1f6bf848b6_immediate/d4s1",
+        "text": "He is a younger brother of Lazar Zličić.",
+        "visible_time_s": 3.6089999999967404,
+        "requested_subject": "",
+        "resolved_title": "Miloš Zličić",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 18,
+      "time_s": 3.609,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d5s0",
+        "title": "Return of Halleluja",
+        "url": "https://trace.invalid/2wikimultihopqa_4d2f930608c711ebbd91ac1f6bf848b6_immediate/d5s0",
+        "text": "Return of Halleluja( also known as\" The West Is Very Close, Amigo\") is a 1972 Italian Spaghetti Western film directed by Giuliano Carnimeo and starring George Hilton.",
+        "visible_time_s": 3.6089999999967404,
+        "requested_subject": "",
+        "resolved_title": "Return of Halleluja",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 19,
+      "time_s": 3.609,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d5s1",
+        "title": "Return of Halleluja",
+        "url": "https://trace.invalid/2wikimultihopqa_4d2f930608c711ebbd91ac1f6bf848b6_immediate/d5s1",
+        "text": "It is the sequel of\" They Call Me Hallelujah\".",
+        "visible_time_s": 3.6089999999967404,
+        "requested_subject": "",
+        "resolved_title": "Return of Halleluja",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 20,
+      "time_s": 3.609,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d6s0",
+        "title": "Daar doer in die bosveld",
+        "url": "https://trace.invalid/2wikimultihopqa_4d2f930608c711ebbd91ac1f6bf848b6_immediate/d6s0",
+        "text": "Daar Doer in Die Bosveld",
+        "visible_time_s": 3.6089999999967404,
+        "requested_subject": "",
+        "resolved_title": "Daar doer in die bosveld",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 21,
+      "time_s": 3.609,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d6s1",
+        "title": "Daar doer in die bosveld",
+        "url": "https://trace.invalid/2wikimultihopqa_4d2f930608c711ebbd91ac1f6bf848b6_immediate/d6s1",
+        "text": "( English:\" Far Away in the Bushveld\") is the first film by the South African director Jamie Uys.",
+        "visible_time_s": 3.6089999999967404,
+        "requested_subject": "",
+        "resolved_title": "Daar doer in die bosveld",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 22,
+      "time_s": 3.609,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d6s2",
+        "title": "Daar doer in die bosveld",
+        "url": "https://trace.invalid/2wikimultihopqa_4d2f930608c711ebbd91ac1f6bf848b6_immediate/d6s2",
+        "text": "It was originally released in 1951.",
+        "visible_time_s": 3.6089999999967404,
+        "requested_subject": "",
+        "resolved_title": "Daar doer in die bosveld",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 23,
+      "time_s": 3.609,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d6s3",
+        "title": "Daar doer in die bosveld",
+        "url": "https://trace.invalid/2wikimultihopqa_4d2f930608c711ebbd91ac1f6bf848b6_immediate/d6s3",
+        "text": "The film is in the Afrikaans language, a language specific to Southern Africa.",
+        "visible_time_s": 3.6089999999967404,
+        "requested_subject": "",
+        "resolved_title": "Daar doer in die bosveld",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 24,
+      "time_s": 3.609,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d7s0",
+        "title": "Kaspar Bausewein",
+        "url": "https://trace.invalid/2wikimultihopqa_4d2f930608c711ebbd91ac1f6bf848b6_immediate/d7s0",
+        "text": "Kaspar Bausewein( 15 November 1838, Aub – 18 November 1903, Munich) was a German operatic bass who was active at the Bavarian State Opera from 1858 through 1900.",
+        "visible_time_s": 3.6089999999967404,
+        "requested_subject": "",
+        "resolved_title": "Kaspar Bausewein",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 25,
+      "time_s": 3.609,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d7s1",
+        "title": "Kaspar Bausewein",
+        "url": "https://trace.invalid/2wikimultihopqa_4d2f930608c711ebbd91ac1f6bf848b6_immediate/d7s1",
+        "text": "While there, he notably portrayed several characters in the world premieres of operas composed by Richard Wagner.",
+        "visible_time_s": 3.6089999999967404,
+        "requested_subject": "",
+        "resolved_title": "Kaspar Bausewein",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 26,
+      "time_s": 3.609,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d7s2",
+        "title": "Kaspar Bausewein",
+        "url": "https://trace.invalid/2wikimultihopqa_4d2f930608c711ebbd91ac1f6bf848b6_immediate/d7s2",
+        "text": "He created Pogner in\" Die Meistersinger von Nürnberg\"( June 21, 1868), Fafner in\" Das Rheingold\"( September 22, 1869), Hunding in\" Die Walküre\"( June 26, 1870), and Harald in\" Die Feen\"( June 29, 1888).",
+        "visible_time_s": 3.6089999999967404,
+        "requested_subject": "",
+        "resolved_title": "Kaspar Bausewein",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 27,
+      "time_s": 3.609,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d8s0",
+        "title": "Vadim Vlasov",
+        "url": "https://trace.invalid/2wikimultihopqa_4d2f930608c711ebbd91ac1f6bf848b6_immediate/d8s0",
+        "text": "Vadim Nikolayevich Vlasov( born 19 December 1980) is a former Russian football player.",
+        "visible_time_s": 3.6089999999967404,
+        "requested_subject": "",
+        "resolved_title": "Vadim Vlasov",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 28,
+      "time_s": 3.609,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d8s1",
+        "title": "Vadim Vlasov",
+        "url": "https://trace.invalid/2wikimultihopqa_4d2f930608c711ebbd91ac1f6bf848b6_immediate/d8s1",
+        "text": "He is a younger brother of Dmitri Vlasov.",
+        "visible_time_s": 3.6089999999967404,
+        "requested_subject": "",
+        "resolved_title": "Vadim Vlasov",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 29,
+      "time_s": 3.609,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d9s0",
+        "title": "Giuliano Carnimeo",
+        "url": "https://trace.invalid/2wikimultihopqa_4d2f930608c711ebbd91ac1f6bf848b6_immediate/d9s0",
+        "text": "Giuliano Carnimeo (4 July 1932 – 10 September 2016) was an Italian director and screenwriter, sometimes credited as Anthony Ascott.",
+        "visible_time_s": 3.6089999999967404,
+        "requested_subject": "",
+        "resolved_title": "Giuliano Carnimeo",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 30,
+      "time_s": 3.609,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d10s0",
+        "title": "La Bestia humana",
+        "url": "https://trace.invalid/2wikimultihopqa_4d2f930608c711ebbd91ac1f6bf848b6_immediate/d10s0",
+        "text": "La Bestia humana is a 1957 Argentine film whose story is based on the novel\" La Bête Humaine\" by the French writer Émile Zola.",
+        "visible_time_s": 3.6089999999967404,
+        "requested_subject": "",
+        "resolved_title": "La Bestia humana",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 31,
+      "time_s": 4.984,
+      "type": "feedback_requested",
+      "feedback_kind": "progress",
+      "execution_state": {
+        "stage": "checking",
+        "searches_started": 1,
+        "searches_completed": 1,
+        "active_searches": 0,
+        "evidence_count": 20,
+        "supported_units": 0,
+        "output_units": 0
+      }
+    },
+    {
+      "sequence": 32,
+      "time_s": 6.078,
+      "type": "judge_reply",
+      "reply": {
+        "judgments": [
+          {
+            "unit_id": "u1",
+            "label": "SUPPORTED",
+            "value": "Jamie Uys",
+            "citations": [
+              "d6s1"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d6s1",
+                "text": "( English:\" Far Away in the Bushveld\") is the first film by the South African director Jamie Uys."
+              }
+            ],
+            "reason": "Supported by the cited visible sentences and dependencies."
+          },
+          {
+            "unit_id": "u2",
+            "label": "SUPPORTED",
+            "value": "Giuliano Carnimeo",
+            "citations": [
+              "d5s0"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d5s0",
+                "text": "Return of Halleluja( also known as\" The West Is Very Close, Amigo\") is a 1972 Italian Spaghetti Western film directed by Giuliano Carnimeo and starring George Hilton."
+              }
+            ],
+            "reason": "Supported by the cited visible sentences and dependencies."
+          },
+          {
+            "unit_id": "u3",
+            "label": "SUPPORTED",
+            "value": "1921",
+            "citations": [
+              "d1s0"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d1s0",
+                "text": "Jacobus Johannes Uys( 30 May 1921 – 29 January 1996), better known as Jamie Uys, was a South African film director, best known for directing\" The Gods Must Be Crazy\"."
+              }
+            ],
+            "reason": "Supported by the cited visible sentences and dependencies."
+          },
+          {
+            "unit_id": "u4",
+            "label": "SUPPORTED",
+            "value": "1932",
+            "citations": [
+              "d9s0"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d9s0",
+                "text": "Giuliano Carnimeo (4 July 1932 – 10 September 2016) was an Italian director and screenwriter, sometimes credited as Anthony Ascott."
+              }
+            ],
+            "reason": "Supported by the cited visible sentences and dependencies."
+          },
+          {
+            "unit_id": "u5",
+            "label": "SUPPORTED",
+            "value": "Daar Doer In Die Bosveld",
+            "citations": [
+              "d1s0",
+              "d9s0"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d1s0",
+                "text": "Jacobus Johannes Uys( 30 May 1921 – 29 January 1996), better known as Jamie Uys, was a South African film director, best known for directing\" The Gods Must Be Crazy\"."
+              },
+              {
+                "evidence_id": "d9s0",
+                "text": "Giuliano Carnimeo (4 July 1932 – 10 September 2016) was an Italian director and screenwriter, sometimes credited as Anthony Ascott."
+              }
+            ],
+            "reason": "Supported by the cited visible sentences and dependencies."
+          }
+        ]
+      },
+      "attempt": 1,
+      "repair": false,
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d2s0",
+        "d2s1",
+        "d3s0",
+        "d3s1",
+        "d4s0",
+        "d4s1",
+        "d5s0",
+        "d5s1",
+        "d6s0",
+        "d6s1",
+        "d6s2",
+        "d6s3",
+        "d7s0",
+        "d7s1",
+        "d7s2",
+        "d8s0",
+        "d8s1",
+        "d9s0",
+        "d10s0"
+      ]
+    },
+    {
+      "sequence": 33,
+      "time_s": 6.078,
+      "type": "judgments",
+      "judgments": {
+        "u1": {
+          "label": "SUPPORTED",
+          "value": "Jamie Uys",
+          "citations": [
+            "d6s1"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d6s1",
+              "text": "( English:\" Far Away in the Bushveld\") is the first film by the South African director Jamie Uys."
+            }
+          ],
+          "reason": "Supported by the cited visible sentences and dependencies."
+        },
+        "u2": {
+          "label": "SUPPORTED",
+          "value": "Giuliano Carnimeo",
+          "citations": [
+            "d5s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d5s0",
+              "text": "Return of Halleluja( also known as\" The West Is Very Close, Amigo\") is a 1972 Italian Spaghetti Western film directed by Giuliano Carnimeo and starring George Hilton."
+            }
+          ],
+          "reason": "Supported by the cited visible sentences and dependencies."
+        },
+        "u3": {
+          "label": "SUPPORTED",
+          "value": "1921",
+          "citations": [
+            "d1s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d1s0",
+              "text": "Jacobus Johannes Uys( 30 May 1921 – 29 January 1996), better known as Jamie Uys, was a South African film director, best known for directing\" The Gods Must Be Crazy\"."
+            }
+          ],
+          "reason": "Supported by the cited visible sentences and dependencies."
+        },
+        "u4": {
+          "label": "SUPPORTED",
+          "value": "1932",
+          "citations": [
+            "d9s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d9s0",
+              "text": "Giuliano Carnimeo (4 July 1932 – 10 September 2016) was an Italian director and screenwriter, sometimes credited as Anthony Ascott."
+            }
+          ],
+          "reason": "Supported by the cited visible sentences and dependencies."
+        },
+        "u5": {
+          "label": "SUPPORTED",
+          "value": "Daar Doer In Die Bosveld",
+          "citations": [
+            "d1s0",
+            "d9s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d1s0",
+              "text": "Jacobus Johannes Uys( 30 May 1921 – 29 January 1996), better known as Jamie Uys, was a South African film director, best known for directing\" The Gods Must Be Crazy\"."
+            },
+            {
+              "evidence_id": "d9s0",
+              "text": "Giuliano Carnimeo (4 July 1932 – 10 September 2016) was an Italian director and screenwriter, sometimes credited as Anthony Ascott."
+            }
+          ],
+          "reason": "Supported by the cited visible sentences and dependencies."
+        }
+      },
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d2s0",
+        "d2s1",
+        "d3s0",
+        "d3s1",
+        "d4s0",
+        "d4s1",
+        "d5s0",
+        "d5s1",
+        "d6s0",
+        "d6s1",
+        "d6s2",
+        "d6s3",
+        "d7s0",
+        "d7s1",
+        "d7s2",
+        "d8s0",
+        "d8s1",
+        "d9s0",
+        "d10s0"
+      ],
+      "semantic_review": false
+    },
+    {
+      "sequence": 34,
+      "time_s": 7.796,
+      "type": "verification_reply",
+      "reply": {
+        "approved": false,
+        "facts_valid": false,
+        "expressed_unit_ids": [
+          "u1",
+          "u2",
+          "u3",
+          "u4",
+          "u5"
+        ],
+        "reason": "Unit u5 incorrectly states that Daar Doer In Die Bosveld has the younger director; the director of Return Of Halleluja (born 1932) is younger than Jamie Uys (born 1921)."
+      },
+      "output_unit_ids": [
+        "u1",
+        "u2",
+        "u3",
+        "u4",
+        "u5"
+      ],
+      "output_action": "Final Answer",
+      "dependency_unit_ids": [],
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d5s0",
+        "d6s1",
+        "d9s0"
+      ]
+    },
+    {
+      "sequence": 35,
+      "time_s": 7.796,
+      "type": "facts_rejected",
+      "unit_ids": [
+        "u1",
+        "u2",
+        "u3",
+        "u4",
+        "u5"
+      ],
+      "reason": "Unit u5 incorrectly states that Daar Doer In Die Bosveld has the younger director; the director of Return Of Halleluja (born 1932) is younger than Jamie Uys (born 1921)."
+    },
+    {
+      "sequence": 36,
+      "time_s": 7.796,
+      "type": "trace_batch_requested"
+    },
+    {
+      "sequence": 37,
+      "time_s": 7.796,
+      "type": "search_finished",
+      "query": "[scheduled evidence]",
+      "subject": "",
+      "status": "ok",
+      "returned_pages": [],
+      "mode": "trace",
+      "unit_id": "__scheduled_evidence__"
+    },
+    {
+      "sequence": 38,
+      "time_s": 7.796,
+      "type": "semantic_review_requested",
+      "target_unit_ids": [
+        "u1",
+        "u2",
+        "u3",
+        "u4",
+        "u5"
+      ],
+      "review_unit_ids": [
+        "u1",
+        "u2",
+        "u3",
+        "u4",
+        "u5"
+      ],
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d2s0",
+        "d2s1",
+        "d3s0",
+        "d3s1",
+        "d4s0",
+        "d4s1",
+        "d5s0",
+        "d5s1",
+        "d6s0",
+        "d6s1",
+        "d6s2",
+        "d6s3",
+        "d7s0",
+        "d7s1",
+        "d7s2",
+        "d8s0",
+        "d8s1",
+        "d9s0",
+        "d10s0"
+      ],
+      "max_reviews": 1
+    },
+    {
+      "sequence": 39,
+      "time_s": 7.843,
+      "type": "utterance",
+      "action": "Progress",
+      "text": "I'm checking the sources that arrived.",
+      "claims": [],
+      "feedback_source": "fallback",
+      "feedback_status_claim": "checking",
+      "feedback_fallback_reason": "feedback_state_changed",
+      "execution_state": {
+        "stage": "checking",
+        "searches_started": 2,
+        "searches_completed": 2,
+        "active_searches": 0,
+        "evidence_count": 20,
+        "supported_units": 0,
+        "output_units": 0
+      },
+      "language": "en"
+    },
+    {
+      "sequence": 40,
+      "time_s": 10.593,
+      "type": "semantic_review_reply",
+      "reply": {
+        "judgments": [
+          {
+            "unit_id": "u1",
+            "label": "SUPPORTED",
+            "value": "Jamie Uys",
+            "citations": [
+              "d6s1"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d6s1",
+                "text": "( English:\" Far Away in the Bushveld\") is the first film by the South African director Jamie Uys."
+              }
+            ],
+            "reason": "Supported by the cited visible sentences and dependencies."
+          },
+          {
+            "unit_id": "u2",
+            "label": "SUPPORTED",
+            "value": "Giuliano Carnimeo",
+            "citations": [
+              "d5s0"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d5s0",
+                "text": "Return of Halleluja( also known as\" The West Is Very Close, Amigo\") is a 1972 Italian Spaghetti Western film directed by Giuliano Carnimeo and starring George Hilton."
+              }
+            ],
+            "reason": "Supported by the cited visible sentences and dependencies."
+          },
+          {
+            "unit_id": "u3",
+            "label": "SUPPORTED",
+            "value": "1921",
+            "citations": [
+              "d1s0"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d1s0",
+                "text": "Jacobus Johannes Uys( 30 May 1921 – 29 January 1996), better known as Jamie Uys, was a South African film director, best known for directing\" The Gods Must Be Crazy\"."
+              }
+            ],
+            "reason": "Supported by the cited visible sentences and dependencies."
+          },
+          {
+            "unit_id": "u4",
+            "label": "SUPPORTED",
+            "value": "1932",
+            "citations": [
+              "d9s0"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d9s0",
+                "text": "Giuliano Carnimeo (4 July 1932 – 10 September 2016) was an Italian director and screenwriter, sometimes credited as Anthony Ascott."
+              }
+            ],
+            "reason": "Supported by the cited visible sentences and dependencies."
+          },
+          {
+            "unit_id": "u5",
+            "label": "SUPPORTED",
+            "value": "Daar Doer In Die Bosveld",
+            "citations": [
+              "d1s0",
+              "d9s0"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d1s0",
+                "text": "Jacobus Johannes Uys( 30 May 1921 – 29 January 1996), better known as Jamie Uys, was a South African film director, best known for directing\" The Gods Must Be Crazy\"."
+              },
+              {
+                "evidence_id": "d9s0",
+                "text": "Giuliano Carnimeo (4 July 1932 – 10 September 2016) was an Italian director and screenwriter, sometimes credited as Anthony Ascott."
+              }
+            ],
+            "reason": "Supported by the cited visible sentences and dependencies."
+          }
+        ]
+      },
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d2s0",
+        "d2s1",
+        "d3s0",
+        "d3s1",
+        "d4s0",
+        "d4s1",
+        "d5s0",
+        "d5s1",
+        "d6s0",
+        "d6s1",
+        "d6s2",
+        "d6s3",
+        "d7s0",
+        "d7s1",
+        "d7s2",
+        "d8s0",
+        "d8s1",
+        "d9s0",
+        "d10s0"
+      ]
+    },
+    {
+      "sequence": 41,
+      "time_s": 10.593,
+      "type": "semantic_review_finished",
+      "review_unit_ids": [
+        "u1",
+        "u2",
+        "u3",
+        "u4",
+        "u5"
+      ],
+      "recovered_unit_ids": [
+        "u1",
+        "u2",
+        "u3",
+        "u4",
+        "u5"
+      ]
+    },
+    {
+      "sequence": 42,
+      "time_s": 10.593,
+      "type": "judgments",
+      "judgments": {
+        "u1": {
+          "label": "SUPPORTED",
+          "value": "Jamie Uys",
+          "citations": [
+            "d6s1"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d6s1",
+              "text": "( English:\" Far Away in the Bushveld\") is the first film by the South African director Jamie Uys."
+            }
+          ],
+          "reason": "Supported by the cited visible sentences and dependencies."
+        },
+        "u2": {
+          "label": "SUPPORTED",
+          "value": "Giuliano Carnimeo",
+          "citations": [
+            "d5s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d5s0",
+              "text": "Return of Halleluja( also known as\" The West Is Very Close, Amigo\") is a 1972 Italian Spaghetti Western film directed by Giuliano Carnimeo and starring George Hilton."
+            }
+          ],
+          "reason": "Supported by the cited visible sentences and dependencies."
+        },
+        "u3": {
+          "label": "SUPPORTED",
+          "value": "1921",
+          "citations": [
+            "d1s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d1s0",
+              "text": "Jacobus Johannes Uys( 30 May 1921 – 29 January 1996), better known as Jamie Uys, was a South African film director, best known for directing\" The Gods Must Be Crazy\"."
+            }
+          ],
+          "reason": "Supported by the cited visible sentences and dependencies."
+        },
+        "u4": {
+          "label": "SUPPORTED",
+          "value": "1932",
+          "citations": [
+            "d9s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d9s0",
+              "text": "Giuliano Carnimeo (4 July 1932 – 10 September 2016) was an Italian director and screenwriter, sometimes credited as Anthony Ascott."
+            }
+          ],
+          "reason": "Supported by the cited visible sentences and dependencies."
+        },
+        "u5": {
+          "label": "SUPPORTED",
+          "value": "Daar Doer In Die Bosveld",
+          "citations": [
+            "d1s0",
+            "d9s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d1s0",
+              "text": "Jacobus Johannes Uys( 30 May 1921 – 29 January 1996), better known as Jamie Uys, was a South African film director, best known for directing\" The Gods Must Be Crazy\"."
+            },
+            {
+              "evidence_id": "d9s0",
+              "text": "Giuliano Carnimeo (4 July 1932 – 10 September 2016) was an Italian director and screenwriter, sometimes credited as Anthony Ascott."
+            }
+          ],
+          "reason": "Supported by the cited visible sentences and dependencies."
+        }
+      },
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d2s0",
+        "d2s1",
+        "d3s0",
+        "d3s1",
+        "d4s0",
+        "d4s1",
+        "d5s0",
+        "d5s1",
+        "d6s0",
+        "d6s1",
+        "d6s2",
+        "d6s3",
+        "d7s0",
+        "d7s1",
+        "d7s2",
+        "d8s0",
+        "d8s1",
+        "d9s0",
+        "d10s0"
+      ],
+      "semantic_review": true
+    },
+    {
+      "sequence": 43,
+      "time_s": 12.796,
+      "type": "verification_reply",
+      "reply": {
+        "approved": false,
+        "facts_valid": false,
+        "expressed_unit_ids": [
+          "u1",
+          "u2",
+          "u3",
+          "u4",
+          "u5"
+        ],
+        "reason": "The claim that Daar Doer In Die Bosveld has the younger director is incorrect; its director Jamie Uys (born 1921) is older than Giuliano Carnimeo (born 1932), so the younger director belongs to Return Of Halleluja."
+      },
+      "output_unit_ids": [
+        "u1",
+        "u2",
+        "u3",
+        "u4",
+        "u5"
+      ],
+      "output_action": "Final Answer",
+      "dependency_unit_ids": [],
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d5s0",
+        "d6s1",
+        "d9s0"
+      ]
+    },
+    {
+      "sequence": 44,
+      "time_s": 12.796,
+      "type": "facts_rejected",
+      "unit_ids": [
+        "u1",
+        "u2",
+        "u3",
+        "u4",
+        "u5"
+      ],
+      "reason": "The claim that Daar Doer In Die Bosveld has the younger director is incorrect; its director Jamie Uys (born 1921) is older than Giuliano Carnimeo (born 1932), so the younger director belongs to Return Of Halleluja."
+    },
+    {
+      "sequence": 45,
+      "time_s": 12.796,
+      "type": "utterance",
+      "action": "Final Answer",
+      "text": "I could not confirm director of Daar Doer In Die Bosveld, director of Return Of Halleluja, birth year of the director of Daar Doer In Die Bosveld, birth year of the director of Return Of Halleluja and which film has the younger director.",
+      "claims": [],
+      "unresolved": [
+        "u1",
+        "u2",
+        "u3",
+        "u4",
+        "u5"
+      ],
+      "fallback": false,
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d2s0",
+        "d2s1",
+        "d3s0",
+        "d3s1",
+        "d4s0",
+        "d4s1",
+        "d5s0",
+        "d5s1",
+        "d6s0",
+        "d6s1",
+        "d6s2",
+        "d6s3",
+        "d7s0",
+        "d7s1",
+        "d7s2",
+        "d8s0",
+        "d8s1",
+        "d9s0",
+        "d10s0"
+      ],
+      "language": "en"
+    },
+    {
+      "sequence": 46,
+      "time_s": 12.796,
+      "type": "finished",
+      "status": "incomplete"
+    }
+  ],
+  "note": "Prototype model judgments are not independent gold scores. Output event times are not spoken claim times.",
+  "evidence_mode": "scheduled_trace",
+  "audio": {
+    "enabled": true,
+    "mode": "windows",
+    "play": false,
+    "status": "ok",
+    "errors": [],
+    "records": [
+      {
+        "event_sequence": 1,
+        "sentence_index": 1,
+        "sentence_count": 1,
+        "language": "en",
+        "text": "I’ll look up the directors’ ages for Daar Doer In Die Bosveld and Return Of Halleluja.",
+        "action": "Backchannel",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 1.937000000005355,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1\\samples\\0124\\audio\\segments\\0001_01.wav",
+        "duration_s": 5.488344671201814,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 2.7339999999967404,
+        "synthesis_and_playback_s": 0.7969999999913853
+      },
+      {
+        "event_sequence": 39,
+        "sentence_index": 1,
+        "sentence_count": 1,
+        "language": "en",
+        "text": "I'm checking the sources that arrived.",
+        "action": "Progress",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 7.842999999993481,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1\\samples\\0124\\audio\\segments\\0039_01.wav",
+        "duration_s": 2.6690702947845804,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 8.639999999999418,
+        "synthesis_and_playback_s": 0.7970000000059372
+      },
+      {
+        "event_sequence": 45,
+        "sentence_index": 1,
+        "sentence_count": 1,
+        "language": "en",
+        "text": "I could not confirm director of Daar Doer In Die Bosveld, director of Return Of Halleluja, birth year of the director of Daar Doer In Die Bosveld, birth year of the director of Return Of Halleluja and which film has the younger director.",
+        "action": "Final Answer",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 12.796000000002095,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1\\samples\\0124\\audio\\segments\\0045_01.wav",
+        "duration_s": 14.286575963718821,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 13.625,
+        "synthesis_and_playback_s": 0.8289999999979045
+      }
+    ],
+    "wave": {
+      "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1\\samples\\0124\\audio\\response.wav",
+      "duration_s": 27.91156462585034,
+      "timeline": [
+        {
+          "event_sequence": 1,
+          "sentence_index": 1,
+          "action": "Backchannel",
+          "text": "I’ll look up the directors’ ages for Daar Doer In Die Bosveld and Return Of Halleluja.",
+          "wave_start_s": 2.734013605442177,
+          "wave_end_s": 8.222358276643991
+        },
+        {
+          "event_sequence": 39,
+          "sentence_index": 1,
+          "action": "Progress",
+          "text": "I'm checking the sources that arrived.",
+          "wave_start_s": 8.64,
+          "wave_end_s": 11.309070294784581
+        },
+        {
+          "event_sequence": 45,
+          "sentence_index": 1,
+          "action": "Final Answer",
+          "text": "I could not confirm director of Daar Doer In Die Bosveld, director of Return Of Halleluja, birth year of the director of Daar Doer In Die Bosveld, birth year of the director of Return Of Halleluja and which film has the younger director.",
+          "wave_start_s": 13.62498866213152,
+          "wave_end_s": 27.91156462585034
+        }
+      ]
+    }
+  },
+  "evaluation": {
+    "mode": "b_final_revised_trace",
+    "trace_id": "2wikimultihopqa_4d2f930608c711ebbd91ac1f6bf848b6_immediate",
+    "sample_id": "2wikimultihopqa_4d2f930608c711ebbd91ac1f6bf848b6",
+    "total_wall_s": 13.625,
+    "question_timeout_s": 180,
+    "audio_enabled": true,
+    "history_enabled": false,
+    "text_pipeline_wall_s": 12.796000000002095,
+    "effective_settings": {
+      "base_url": "https://tinker.thinkingmachines.dev/services/tinker-prod/oai/api/v1",
+      "model": "openai/gpt-oss-120b",
+      "judge_model": "tinker://f9e9a6c1-e203-5c2c-acdd-68fe67378ca4:train:0/sampler_weights/epoch-0001",
+      "judge_reasoning_effort": "low",
+      "wiki_language": "en",
+      "user_agent": "CascadeSystem/0.1 (educational research prototype)",
+      "timeout_s": 45.0,
+      "max_tokens": 4096,
+      "reasoning_effort": "low",
+      "progress_s": 3.0,
+      "feedback_timeout_s": 6.0,
+      "search_limit": 3,
+      "max_units": 8,
+      "max_searches": 16,
+      "max_sources": 20,
+      "source_chars": 202,
+      "evidence_chars": 1821,
+      "concurrency": 3
+    },
+    "timing_kind": "unknown",
+    "scheduler": "wall-paced fixed B arrivals",
+    "split": "eval_reserved",
+    "empty_evidence_sentences_ignored": 0
+  }
+}

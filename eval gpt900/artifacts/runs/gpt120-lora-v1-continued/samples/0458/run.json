@@ -1,0 +1,1842 @@
+{
+  "question": "The Oberoi family is part of a hotel company that has a head office in what city?",
+  "resolved_question": "The Oberoi family is part of a hotel company that has a head office in what city?",
+  "used_history_turn_ids": [],
+  "response_language": "en",
+  "status": "complete",
+  "clock": "wall_monotonic",
+  "time_origin": "question_text_ready_after_optional_asr",
+  "model": "openai/gpt-oss-120b",
+  "judge_model": "tinker://f9e9a6c1-e203-5c2c-acdd-68fe67378ca4:train:0/sampler_weights/epoch-0001",
+  "units": [
+    {
+      "unit_id": "u1",
+      "description": "Identify the hotel company that the Oberoi family is part of",
+      "necessary": true,
+      "depends_on": [],
+      "queries": [
+        "Oberoi family hotel company",
+        "EIH Limited"
+      ],
+      "subject": "Oberoi family"
+    },
+    {
+      "unit_id": "u2",
+      "description": "Find the city where the head office of the hotel company identified in {u1} is located",
+      "necessary": true,
+      "depends_on": [
+        "u1"
+      ],
+      "queries": [
+        "head office city of EIH Limited",
+        "head office location Oberoi Hotels & Resorts"
+      ],
+      "subject": "{u1}"
+    }
+  ],
+  "judgments": {
+    "u1": {
+      "label": "SUPPORTED",
+      "value": "The Oberoi Group",
+      "citations": [
+        "d2s0"
+      ],
+      "quotes": [
+        {
+          "evidence_id": "d2s0",
+          "text": "The Oberoi family is an Indian family that is famous for its involvement in hotels, namely through The Oberoi Group."
+        }
+      ],
+      "reason": "Supported by the cited visible sentences and dependencies."
+    },
+    "u2": {
+      "label": "SUPPORTED",
+      "value": "Delhi",
+      "citations": [
+        "d7s0"
+      ],
+      "quotes": [
+        {
+          "evidence_id": "d7s0",
+          "text": "The Oberoi Group is a hotel company with its head office in Delhi."
+        }
+      ],
+      "reason": "Supported by the cited visible sentences and dependencies."
+    }
+  },
+  "evidence": [
+    {
+      "evidence_id": "d1s0",
+      "title": "Ritz-Carlton Jakarta",
+      "url": "https://trace.invalid/hotpotqa_5a879ab05542996e4f30887e_short/d1s0",
+      "text": "The Ritz-Carlton Jakarta is a hotel and skyscraper in Jakarta, Indonesia and 14th Tallest building in Jakarta.",
+      "visible_time_s": 5.0,
+      "requested_subject": "",
+      "resolved_title": "Ritz-Carlton Jakarta",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d1s1",
+      "title": "Ritz-Carlton Jakarta",
+      "url": "https://trace.invalid/hotpotqa_5a879ab05542996e4f30887e_short/d1s1",
+      "text": "It is located in city center of Jakarta, near Mega Kuningan, adjacent to the sister JW Marriott Hotel.",
+      "visible_time_s": 5.0,
+      "requested_subject": "",
+      "resolved_title": "Ritz-Carlton Jakarta",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d1s2",
+      "title": "Ritz-Carlton Jakarta",
+      "url": "https://trace.invalid/hotpotqa_5a879ab05542996e4f30887e_short/d1s2",
+      "text": "It is operated by The Ritz-Carlton Hotel Company.",
+      "visible_time_s": 5.0,
+      "requested_subject": "",
+      "resolved_title": "Ritz-Carlton Jakarta",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d1s3",
+      "title": "Ritz-Carlton Jakarta",
+      "url": "https://trace.invalid/hotpotqa_5a879ab05542996e4f30887e_short/d1s3",
+      "text": "The complex has two towers that comprises a hotel and the Airlangga Apartment respectively.",
+      "visible_time_s": 5.0,
+      "requested_subject": "",
+      "resolved_title": "Ritz-Carlton Jakarta",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d1s4",
+      "title": "Ritz-Carlton Jakarta",
+      "url": "https://trace.invalid/hotpotqa_5a879ab05542996e4f30887e_short/d1s4",
+      "text": "The hotel was opened in 2005.",
+      "visible_time_s": 5.0,
+      "requested_subject": "",
+      "resolved_title": "Ritz-Carlton Jakarta",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d2s0",
+      "title": "Oberoi family",
+      "url": "https://trace.invalid/hotpotqa_5a879ab05542996e4f30887e_short/d2s0",
+      "text": "The Oberoi family is an Indian family that is famous for its involvement in hotels, namely through The Oberoi Group.",
+      "visible_time_s": 5.0,
+      "requested_subject": "",
+      "resolved_title": "Oberoi family",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d4s0",
+      "title": "Hotel Tallcorn",
+      "url": "https://trace.invalid/hotpotqa_5a879ab05542996e4f30887e_short/d4s0",
+      "text": "The Hotel Tallcorn is located in Marshalltown, Iowa.",
+      "visible_time_s": 5.0,
+      "requested_subject": "",
+      "resolved_title": "Hotel Tallcorn",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d4s1",
+      "title": "Hotel Tallcorn",
+      "url": "https://trace.invalid/hotpotqa_5a879ab05542996e4f30887e_short/d4s1",
+      "text": "Today it is called the Tallcorn Towers Apartments.",
+      "visible_time_s": 5.0,
+      "requested_subject": "",
+      "resolved_title": "Hotel Tallcorn",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d4s2",
+      "title": "Hotel Tallcorn",
+      "url": "https://trace.invalid/hotpotqa_5a879ab05542996e4f30887e_short/d4s2",
+      "text": "Built in 1928 by the Eppley Hotel Company, local citizens contributed $120,000 to ensure the successful completion of this seven-story hotel.",
+      "visible_time_s": 5.0,
+      "requested_subject": "",
+      "resolved_title": "Hotel Tallcorn",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d4s3",
+      "title": "Hotel Tallcorn",
+      "url": "https://trace.invalid/hotpotqa_5a879ab05542996e4f30887e_short/d4s3",
+      "text": "It was completed in connection to the seventy-fifth anniversary of Marshalltown.",
+      "visible_time_s": 5.0,
+      "requested_subject": "",
+      "resolved_title": "Hotel Tallcorn",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d4s4",
+      "title": "Hotel Tallcorn",
+      "url": "https://trace.invalid/hotpotqa_5a879ab05542996e4f30887e_short/d4s4",
+      "text": "The hotel's sale in 1956 from the Eppley chain to the Sheraton Corporation was part of the second largest hotel sale in United States history.",
+      "visible_time_s": 5.0,
+      "requested_subject": "",
+      "resolved_title": "Hotel Tallcorn",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d4s5",
+      "title": "Hotel Tallcorn",
+      "url": "https://trace.invalid/hotpotqa_5a879ab05542996e4f30887e_short/d4s5",
+      "text": "The Tallcorn was listed as a contributing property in the Marshalltown Downtown Historic District on the National Register of Historic Places in 2002.",
+      "visible_time_s": 5.0,
+      "requested_subject": "",
+      "resolved_title": "Hotel Tallcorn",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d6s0",
+      "title": "Hotel Bond",
+      "url": "https://trace.invalid/hotpotqa_5a879ab05542996e4f30887e_short/d6s0",
+      "text": "Hotel Bond is a historic hotel, built in two stages in 1913 and 1921, in downtown Hartford, Connecticut by hotelier Harry S. Bond.",
+      "visible_time_s": 5.0,
+      "requested_subject": "",
+      "resolved_title": "Hotel Bond",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d6s1",
+      "title": "Hotel Bond",
+      "url": "https://trace.invalid/hotpotqa_5a879ab05542996e4f30887e_short/d6s1",
+      "text": "It is located near Bushnell Park, and was considered the grandest hotel in Hartford during its heyday.",
+      "visible_time_s": 5.0,
+      "requested_subject": "",
+      "resolved_title": "Hotel Bond",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d6s2",
+      "title": "Hotel Bond",
+      "url": "https://trace.invalid/hotpotqa_5a879ab05542996e4f30887e_short/d6s2",
+      "text": "The second section is a 12 story building attached to the 6 story first section.",
+      "visible_time_s": 5.0,
+      "requested_subject": "",
+      "resolved_title": "Hotel Bond",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d6s3",
+      "title": "Hotel Bond",
+      "url": "https://trace.invalid/hotpotqa_5a879ab05542996e4f30887e_short/d6s3",
+      "text": "A Statler Hotel opened in the area in 1954, creating competition, and the Bond Hotel company declared bankruptcy shortly after that.",
+      "visible_time_s": 5.0,
+      "requested_subject": "",
+      "resolved_title": "Hotel Bond",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d6s4",
+      "title": "Hotel Bond",
+      "url": "https://trace.invalid/hotpotqa_5a879ab05542996e4f30887e_short/d6s4",
+      "text": "It was bought by the California-based Masaglia Hotel chain, which began an incremental renovation program.",
+      "visible_time_s": 5.0,
+      "requested_subject": "",
+      "resolved_title": "Hotel Bond",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d6s5",
+      "title": "Hotel Bond",
+      "url": "https://trace.invalid/hotpotqa_5a879ab05542996e4f30887e_short/d6s5",
+      "text": "In 1964 it was sold to a Cincinnati, Ohio investment group which announced extensive renovation plans.",
+      "visible_time_s": 5.0,
+      "requested_subject": "",
+      "resolved_title": "Hotel Bond",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d6s6",
+      "title": "Hotel Bond",
+      "url": "https://trace.invalid/hotpotqa_5a879ab05542996e4f30887e_short/d6s6",
+      "text": "However, the financing plans fell through and the hotel was again in bankruptcy.",
+      "visible_time_s": 5.0,
+      "requested_subject": "",
+      "resolved_title": "Hotel Bond",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d6s7",
+      "title": "Hotel Bond",
+      "url": "https://trace.invalid/hotpotqa_5a879ab05542996e4f30887e_short/d6s7",
+      "text": "The building was sold at auction to the Roman Catholic Archdiocese of Hartford in 1965, and it became the home of the Saint Francis Hospital School of Nursing.",
+      "visible_time_s": 5.0,
+      "requested_subject": "",
+      "resolved_title": "Hotel Bond",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d6s8",
+      "title": "Hotel Bond",
+      "url": "https://trace.invalid/hotpotqa_5a879ab05542996e4f30887e_short/d6s8",
+      "text": "The Bond Ballroom reopened in 2001, with the rest of the building becoming a Homewood Suites by Hilton in 2006.",
+      "visible_time_s": 5.0,
+      "requested_subject": "",
+      "resolved_title": "Hotel Bond",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d9s0",
+      "title": "289th Military Police Company",
+      "url": "https://trace.invalid/hotpotqa_5a879ab05542996e4f30887e_short/d9s0",
+      "text": "The 289th Military Police Company was activated on 1 November 1994 and attached to Hotel Company, 3rd Infantry (The Old Guard), Fort Myer, Virginia.",
+      "visible_time_s": 5.0,
+      "requested_subject": "",
+      "resolved_title": "289th Military Police Company",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d9s1",
+      "title": "289th Military Police Company",
+      "url": "https://trace.invalid/hotpotqa_5a879ab05542996e4f30887e_short/d9s1",
+      "text": "Hotel Company is the regiment's specialty company.",
+      "visible_time_s": 5.0,
+      "requested_subject": "",
+      "resolved_title": "289th Military Police Company",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d3s0",
+      "title": "Ishqbaaaz",
+      "url": "https://trace.invalid/hotpotqa_5a879ab05542996e4f30887e_short/d3s0",
+      "text": "Ishqbaaaz (English: \"Lovers\") is an Indian drama television series which is broadcast on Star Plus.",
+      "visible_time_s": 5.0,
+      "requested_subject": "",
+      "resolved_title": "Ishqbaaaz",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d3s1",
+      "title": "Ishqbaaaz",
+      "url": "https://trace.invalid/hotpotqa_5a879ab05542996e4f30887e_short/d3s1",
+      "text": "It premiered on 27 June 2016 and airs Mon-Fri 10-11pm IST.",
+      "visible_time_s": 5.0,
+      "requested_subject": "",
+      "resolved_title": "Ishqbaaaz",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d3s2",
+      "title": "Ishqbaaaz",
+      "url": "https://trace.invalid/hotpotqa_5a879ab05542996e4f30887e_short/d3s2",
+      "text": "Nakuul Mehta, Kunal Jaisingh and Leenesh Mattoo respectively portray Shivaay, Omkara and Rudra, the three heirs of the Oberoi family.",
+      "visible_time_s": 5.0,
+      "requested_subject": "",
+      "resolved_title": "Ishqbaaaz",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d3s3",
+      "title": "Ishqbaaaz",
+      "url": "https://trace.invalid/hotpotqa_5a879ab05542996e4f30887e_short/d3s3",
+      "text": "The show initially focused on the tale of three brothers, later become centered on the love story of Shivaay and Annika (Surbhi Chandna); with the story of Omkara and Rudra being shifted to the spinoff series \"Dil Boley Oberoi\".",
+      "visible_time_s": 5.0,
+      "requested_subject": "",
+      "resolved_title": "Ishqbaaaz",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d3s4",
+      "title": "Ishqbaaaz",
+      "url": "https://trace.invalid/hotpotqa_5a879ab05542996e4f30887e_short/d3s4",
+      "text": "In July 2017 \"Dil Boley Oberoi\" ended and the storylines were merged back into \"Ishqbaaaz\" which doubled its runtime.",
+      "visible_time_s": 5.0,
+      "requested_subject": "",
+      "resolved_title": "Ishqbaaaz",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d5s0",
+      "title": "Mohan Singh Oberoi",
+      "url": "https://trace.invalid/hotpotqa_5a879ab05542996e4f30887e_short/d5s0",
+      "text": "Rai Bahadur Mohan Singh Oberoi (15 August 1898 – 3 May 2002) was an Indian hotelier, the founder and chairman of Oberoi Hotels & Resorts, India's second-largest hotel company, with 35 hotels in India, Sri Lanka, Nepal, Egypt, Australia and Hungary.",
+      "visible_time_s": 5.0,
+      "requested_subject": "",
+      "resolved_title": "Mohan Singh Oberoi",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d7s0",
+      "title": "The Oberoi Group",
+      "url": "https://trace.invalid/hotpotqa_5a879ab05542996e4f30887e_short/d7s0",
+      "text": "The Oberoi Group is a hotel company with its head office in Delhi.",
+      "visible_time_s": 5.0,
+      "requested_subject": "",
+      "resolved_title": "The Oberoi Group",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d7s1",
+      "title": "The Oberoi Group",
+      "url": "https://trace.invalid/hotpotqa_5a879ab05542996e4f30887e_short/d7s1",
+      "text": "Founded in 1934, the company owns and/or operates 30+ luxury hotels and two river cruise ships in six countries, primarily under its Oberoi Hotels & Resorts and Trident Hotels brands.",
+      "visible_time_s": 5.0,
+      "requested_subject": "",
+      "resolved_title": "The Oberoi Group",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d8s0",
+      "title": "Future Fibre Technologies",
+      "url": "https://trace.invalid/hotpotqa_5a879ab05542996e4f30887e_short/d8s0",
+      "text": "Future Fibre Technologies (FFT) is a fiber optic sensing technologies company based in Melbourne, Australia, with its US head office in Mountain View, California, Middle East head office in Dubai, Indian head office in New Delhi and European head office in London.",
+      "visible_time_s": 5.0,
+      "requested_subject": "",
+      "resolved_title": "Future Fibre Technologies",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d8s1",
+      "title": "Future Fibre Technologies",
+      "url": "https://trace.invalid/hotpotqa_5a879ab05542996e4f30887e_short/d8s1",
+      "text": "Founded in 1994, Future Fibre Technologies product line provides optical fiber intrusion detection systems for perimeters, buried oil and gas pipelines and data communication networks.",
+      "visible_time_s": 5.0,
+      "requested_subject": "",
+      "resolved_title": "Future Fibre Technologies",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d10s0",
+      "title": "Glennwanis Hotel",
+      "url": "https://trace.invalid/hotpotqa_5a879ab05542996e4f30887e_short/d10s0",
+      "text": "The Glennwanis Hotel is a historic hotel in Glennville, Georgia, Tattnall County, Georgia, built on the site of the Hughes Hotel.",
+      "visible_time_s": 5.0,
+      "requested_subject": "",
+      "resolved_title": "Glennwanis Hotel",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d10s1",
+      "title": "Glennwanis Hotel",
+      "url": "https://trace.invalid/hotpotqa_5a879ab05542996e4f30887e_short/d10s1",
+      "text": "The hotel is located at 209-215 East Barnard Street.",
+      "visible_time_s": 5.0,
+      "requested_subject": "",
+      "resolved_title": "Glennwanis Hotel",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d10s2",
+      "title": "Glennwanis Hotel",
+      "url": "https://trace.invalid/hotpotqa_5a879ab05542996e4f30887e_short/d10s2",
+      "text": "The old Hughes Hotel was built out of Georgia pine circa 1905 and burned in 1920.",
+      "visible_time_s": 5.0,
+      "requested_subject": "",
+      "resolved_title": "Glennwanis Hotel",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d10s3",
+      "title": "Glennwanis Hotel",
+      "url": "https://trace.invalid/hotpotqa_5a879ab05542996e4f30887e_short/d10s3",
+      "text": "The Glennwanis was built in brick in 1926.",
+      "visible_time_s": 5.0,
+      "requested_subject": "",
+      "resolved_title": "Glennwanis Hotel",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d10s4",
+      "title": "Glennwanis Hotel",
+      "url": "https://trace.invalid/hotpotqa_5a879ab05542996e4f30887e_short/d10s4",
+      "text": "The local Kiwanis club led the effort to get the replacement hotel built, and organized a Glennville Hotel Company with directors being local business leaders.",
+      "visible_time_s": 5.0,
+      "requested_subject": "",
+      "resolved_title": "Glennwanis Hotel",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d10s5",
+      "title": "Glennwanis Hotel",
+      "url": "https://trace.invalid/hotpotqa_5a879ab05542996e4f30887e_short/d10s5",
+      "text": "The wife of a local doctor won a naming contest with the name \"Glennwanis Hotel\", a suggestion combining \"Glennville\" and \"Kiwanis\".",
+      "visible_time_s": 5.0,
+      "requested_subject": "",
+      "resolved_title": "Glennwanis Hotel",
+      "entity_resolution": "unspecified"
+    }
+  ],
+  "searches": [
+    {
+      "query": "[scheduled evidence]",
+      "subject": "",
+      "status": "ok",
+      "returned_pages": [],
+      "mode": "trace",
+      "unit_id": "__scheduled_evidence__"
+    }
+  ],
+  "search_failures": [],
+  "llm_calls": [
+    {
+      "purpose": "feedback_generate",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 412,
+        "completion_tokens": 92,
+        "total_tokens": 504,
+        "prompt_tokens_details": {
+          "cached_tokens": 384
+        }
+      },
+      "latency_s": 1.203
+    },
+    {
+      "purpose": "feedback_verify",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 364,
+        "completion_tokens": 53,
+        "total_tokens": 417,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        }
+      },
+      "latency_s": 0.625
+    },
+    {
+      "purpose": "decompose",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 802,
+        "completion_tokens": 262,
+        "total_tokens": 1064,
+        "prompt_tokens_details": {
+          "cached_tokens": 768
+        }
+      },
+      "latency_s": 1.953
+    },
+    {
+      "purpose": "plan_review",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 1037,
+        "completion_tokens": 319,
+        "total_tokens": 1356,
+        "prompt_tokens_details": {
+          "cached_tokens": 896
+        }
+      },
+      "latency_s": 3.047
+    },
+    {
+      "purpose": "judge",
+      "model": "tinker://f9e9a6c1-e203-5c2c-acdd-68fe67378ca4:train:0/sampler_weights/epoch-0001",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 5957,
+        "completion_tokens": 177,
+        "total_tokens": 6134,
+        "prompt_tokens_details": {
+          "cached_tokens": 896
+        }
+      },
+      "latency_s": 1.593
+    },
+    {
+      "purpose": "feedback_generate",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 412,
+        "completion_tokens": 68,
+        "total_tokens": 480,
+        "prompt_tokens_details": {
+          "cached_tokens": 384
+        }
+      },
+      "latency_s": 1.969
+    },
+    {
+      "purpose": "generate",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 833,
+        "completion_tokens": 90,
+        "total_tokens": 923,
+        "prompt_tokens_details": {
+          "cached_tokens": 512
+        }
+      },
+      "latency_s": 0.75
+    },
+    {
+      "purpose": "feedback_verify",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 361,
+        "completion_tokens": 75,
+        "total_tokens": 436,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        }
+      },
+      "latency_s": 0.953
+    },
+    {
+      "purpose": "verify",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 1166,
+        "completion_tokens": 154,
+        "total_tokens": 1320,
+        "prompt_tokens_details": {
+          "cached_tokens": 640
+        }
+      },
+      "latency_s": 1.078
+    }
+  ],
+  "search_diagnostics": [],
+  "output_enqueued_units": {
+    "u1": "The Oberoi Group",
+    "u2": "Delhi"
+  },
+  "events": [
+    {
+      "sequence": 0,
+      "time_s": 0.0,
+      "type": "feedback_requested",
+      "feedback_kind": "opening",
+      "execution_state": {
+        "stage": "planning",
+        "searches_started": 0,
+        "searches_completed": 0,
+        "active_searches": 0,
+        "evidence_count": 0,
+        "supported_units": 0,
+        "output_units": 0
+      }
+    },
+    {
+      "sequence": 1,
+      "time_s": 1.828,
+      "type": "utterance",
+      "action": "Backchannel",
+      "text": "I see you're asking which city houses the head office of the Oberoi family's hotel company.",
+      "claims": [],
+      "feedback_source": "model",
+      "feedback_status_claim": "intent",
+      "feedback_fallback_reason": "",
+      "execution_state": {
+        "stage": "planning",
+        "searches_started": 0,
+        "searches_completed": 0,
+        "active_searches": 0,
+        "evidence_count": 0,
+        "supported_units": 0,
+        "output_units": 0
+      },
+      "language": "en"
+    },
+    {
+      "sequence": 2,
+      "time_s": 1.953,
+      "type": "decompose_reply",
+      "reply": {
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "Identify the hotel company that the Oberoi family is part of",
+            "subject": "Oberoi family",
+            "necessary": true,
+            "depends_on": [],
+            "queries": [
+              "Oberoi family hotel company",
+              "EIH Limited"
+            ]
+          },
+          {
+            "unit_id": "u2",
+            "description": "Find the city where the head office of the hotel company identified in {u1} is located",
+            "subject": "{u1}",
+            "necessary": true,
+            "depends_on": [
+              "u1"
+            ],
+            "queries": [
+              "head office city of EIH Limited",
+              "head office location Oberoi Hotels & Resorts"
+            ]
+          }
+        ]
+      },
+      "attempt": 1,
+      "repair": false
+    },
+    {
+      "sequence": 3,
+      "time_s": 1.953,
+      "type": "plan_review_requested",
+      "max_reviews": 1,
+      "question_only": true
+    },
+    {
+      "sequence": 4,
+      "time_s": 4.984,
+      "type": "feedback_requested",
+      "feedback_kind": "progress",
+      "execution_state": {
+        "stage": "planning",
+        "searches_started": 0,
+        "searches_completed": 0,
+        "active_searches": 0,
+        "evidence_count": 0,
+        "supported_units": 0,
+        "output_units": 0
+      }
+    },
+    {
+      "sequence": 5,
+      "time_s": 5.0,
+      "type": "plan_review_reply",
+      "reply": {
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "Identify the hotel company that the Oberoi family is part of",
+            "subject": "Oberoi family",
+            "necessary": true,
+            "depends_on": [],
+            "queries": [
+              "Oberoi family hotel company",
+              "EIH Limited"
+            ]
+          },
+          {
+            "unit_id": "u2",
+            "description": "Find the city where the head office of the hotel company identified in {u1} is located",
+            "subject": "{u1}",
+            "necessary": true,
+            "depends_on": [
+              "u1"
+            ],
+            "queries": [
+              "head office city of EIH Limited",
+              "head office location Oberoi Hotels & Resorts"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "sequence": 6,
+      "time_s": 5.0,
+      "type": "plan_review_finished",
+      "changed": false,
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "Identify the hotel company that the Oberoi family is part of",
+          "necessary": true,
+          "depends_on": [],
+          "queries": [
+            "Oberoi family hotel company",
+            "EIH Limited"
+          ],
+          "subject": "Oberoi family"
+        },
+        {
+          "unit_id": "u2",
+          "description": "Find the city where the head office of the hotel company identified in {u1} is located",
+          "necessary": true,
+          "depends_on": [
+            "u1"
+          ],
+          "queries": [
+            "head office city of EIH Limited",
+            "head office location Oberoi Hotels & Resorts"
+          ],
+          "subject": "{u1}"
+        }
+      ],
+      "question_only": true
+    },
+    {
+      "sequence": 7,
+      "time_s": 5.0,
+      "type": "plan",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "Identify the hotel company that the Oberoi family is part of",
+          "necessary": true,
+          "depends_on": [],
+          "queries": [
+            "Oberoi family hotel company",
+            "EIH Limited"
+          ],
+          "subject": "Oberoi family"
+        },
+        {
+          "unit_id": "u2",
+          "description": "Find the city where the head office of the hotel company identified in {u1} is located",
+          "necessary": true,
+          "depends_on": [
+            "u1"
+          ],
+          "queries": [
+            "head office city of EIH Limited",
+            "head office location Oberoi Hotels & Resorts"
+          ],
+          "subject": "{u1}"
+        }
+      ]
+    },
+    {
+      "sequence": 8,
+      "time_s": 5.0,
+      "type": "trace_batch_requested"
+    },
+    {
+      "sequence": 9,
+      "time_s": 5.0,
+      "type": "search_finished",
+      "query": "[scheduled evidence]",
+      "subject": "",
+      "status": "ok",
+      "returned_pages": [],
+      "mode": "trace",
+      "unit_id": "__scheduled_evidence__"
+    },
+    {
+      "sequence": 10,
+      "time_s": 5.0,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d1s0",
+        "title": "Ritz-Carlton Jakarta",
+        "url": "https://trace.invalid/hotpotqa_5a879ab05542996e4f30887e_short/d1s0",
+        "text": "The Ritz-Carlton Jakarta is a hotel and skyscraper in Jakarta, Indonesia and 14th Tallest building in Jakarta.",
+        "visible_time_s": 5.0,
+        "requested_subject": "",
+        "resolved_title": "Ritz-Carlton Jakarta",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 11,
+      "time_s": 5.0,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d1s1",
+        "title": "Ritz-Carlton Jakarta",
+        "url": "https://trace.invalid/hotpotqa_5a879ab05542996e4f30887e_short/d1s1",
+        "text": "It is located in city center of Jakarta, near Mega Kuningan, adjacent to the sister JW Marriott Hotel.",
+        "visible_time_s": 5.0,
+        "requested_subject": "",
+        "resolved_title": "Ritz-Carlton Jakarta",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 12,
+      "time_s": 5.0,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d1s2",
+        "title": "Ritz-Carlton Jakarta",
+        "url": "https://trace.invalid/hotpotqa_5a879ab05542996e4f30887e_short/d1s2",
+        "text": "It is operated by The Ritz-Carlton Hotel Company.",
+        "visible_time_s": 5.0,
+        "requested_subject": "",
+        "resolved_title": "Ritz-Carlton Jakarta",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 13,
+      "time_s": 5.0,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d1s3",
+        "title": "Ritz-Carlton Jakarta",
+        "url": "https://trace.invalid/hotpotqa_5a879ab05542996e4f30887e_short/d1s3",
+        "text": "The complex has two towers that comprises a hotel and the Airlangga Apartment respectively.",
+        "visible_time_s": 5.0,
+        "requested_subject": "",
+        "resolved_title": "Ritz-Carlton Jakarta",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 14,
+      "time_s": 5.0,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d1s4",
+        "title": "Ritz-Carlton Jakarta",
+        "url": "https://trace.invalid/hotpotqa_5a879ab05542996e4f30887e_short/d1s4",
+        "text": "The hotel was opened in 2005.",
+        "visible_time_s": 5.0,
+        "requested_subject": "",
+        "resolved_title": "Ritz-Carlton Jakarta",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 15,
+      "time_s": 5.0,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d2s0",
+        "title": "Oberoi family",
+        "url": "https://trace.invalid/hotpotqa_5a879ab05542996e4f30887e_short/d2s0",
+        "text": "The Oberoi family is an Indian family that is famous for its involvement in hotels, namely through The Oberoi Group.",
+        "visible_time_s": 5.0,
+        "requested_subject": "",
+        "resolved_title": "Oberoi family",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 16,
+      "time_s": 5.0,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d4s0",
+        "title": "Hotel Tallcorn",
+        "url": "https://trace.invalid/hotpotqa_5a879ab05542996e4f30887e_short/d4s0",
+        "text": "The Hotel Tallcorn is located in Marshalltown, Iowa.",
+        "visible_time_s": 5.0,
+        "requested_subject": "",
+        "resolved_title": "Hotel Tallcorn",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 17,
+      "time_s": 5.0,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d4s1",
+        "title": "Hotel Tallcorn",
+        "url": "https://trace.invalid/hotpotqa_5a879ab05542996e4f30887e_short/d4s1",
+        "text": "Today it is called the Tallcorn Towers Apartments.",
+        "visible_time_s": 5.0,
+        "requested_subject": "",
+        "resolved_title": "Hotel Tallcorn",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 18,
+      "time_s": 5.0,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d4s2",
+        "title": "Hotel Tallcorn",
+        "url": "https://trace.invalid/hotpotqa_5a879ab05542996e4f30887e_short/d4s2",
+        "text": "Built in 1928 by the Eppley Hotel Company, local citizens contributed $120,000 to ensure the successful completion of this seven-story hotel.",
+        "visible_time_s": 5.0,
+        "requested_subject": "",
+        "resolved_title": "Hotel Tallcorn",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 19,
+      "time_s": 5.0,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d4s3",
+        "title": "Hotel Tallcorn",
+        "url": "https://trace.invalid/hotpotqa_5a879ab05542996e4f30887e_short/d4s3",
+        "text": "It was completed in connection to the seventy-fifth anniversary of Marshalltown.",
+        "visible_time_s": 5.0,
+        "requested_subject": "",
+        "resolved_title": "Hotel Tallcorn",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 20,
+      "time_s": 5.0,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d4s4",
+        "title": "Hotel Tallcorn",
+        "url": "https://trace.invalid/hotpotqa_5a879ab05542996e4f30887e_short/d4s4",
+        "text": "The hotel's sale in 1956 from the Eppley chain to the Sheraton Corporation was part of the second largest hotel sale in United States history.",
+        "visible_time_s": 5.0,
+        "requested_subject": "",
+        "resolved_title": "Hotel Tallcorn",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 21,
+      "time_s": 5.0,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d4s5",
+        "title": "Hotel Tallcorn",
+        "url": "https://trace.invalid/hotpotqa_5a879ab05542996e4f30887e_short/d4s5",
+        "text": "The Tallcorn was listed as a contributing property in the Marshalltown Downtown Historic District on the National Register of Historic Places in 2002.",
+        "visible_time_s": 5.0,
+        "requested_subject": "",
+        "resolved_title": "Hotel Tallcorn",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 22,
+      "time_s": 5.0,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d6s0",
+        "title": "Hotel Bond",
+        "url": "https://trace.invalid/hotpotqa_5a879ab05542996e4f30887e_short/d6s0",
+        "text": "Hotel Bond is a historic hotel, built in two stages in 1913 and 1921, in downtown Hartford, Connecticut by hotelier Harry S. Bond.",
+        "visible_time_s": 5.0,
+        "requested_subject": "",
+        "resolved_title": "Hotel Bond",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 23,
+      "time_s": 5.0,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d6s1",
+        "title": "Hotel Bond",
+        "url": "https://trace.invalid/hotpotqa_5a879ab05542996e4f30887e_short/d6s1",
+        "text": "It is located near Bushnell Park, and was considered the grandest hotel in Hartford during its heyday.",
+        "visible_time_s": 5.0,
+        "requested_subject": "",
+        "resolved_title": "Hotel Bond",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 24,
+      "time_s": 5.0,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d6s2",
+        "title": "Hotel Bond",
+        "url": "https://trace.invalid/hotpotqa_5a879ab05542996e4f30887e_short/d6s2",
+        "text": "The second section is a 12 story building attached to the 6 story first section.",
+        "visible_time_s": 5.0,
+        "requested_subject": "",
+        "resolved_title": "Hotel Bond",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 25,
+      "time_s": 5.0,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d6s3",
+        "title": "Hotel Bond",
+        "url": "https://trace.invalid/hotpotqa_5a879ab05542996e4f30887e_short/d6s3",
+        "text": "A Statler Hotel opened in the area in 1954, creating competition, and the Bond Hotel company declared bankruptcy shortly after that.",
+        "visible_time_s": 5.0,
+        "requested_subject": "",
+        "resolved_title": "Hotel Bond",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 26,
+      "time_s": 5.0,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d6s4",
+        "title": "Hotel Bond",
+        "url": "https://trace.invalid/hotpotqa_5a879ab05542996e4f30887e_short/d6s4",
+        "text": "It was bought by the California-based Masaglia Hotel chain, which began an incremental renovation program.",
+        "visible_time_s": 5.0,
+        "requested_subject": "",
+        "resolved_title": "Hotel Bond",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 27,
+      "time_s": 5.0,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d6s5",
+        "title": "Hotel Bond",
+        "url": "https://trace.invalid/hotpotqa_5a879ab05542996e4f30887e_short/d6s5",
+        "text": "In 1964 it was sold to a Cincinnati, Ohio investment group which announced extensive renovation plans.",
+        "visible_time_s": 5.0,
+        "requested_subject": "",
+        "resolved_title": "Hotel Bond",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 28,
+      "time_s": 5.0,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d6s6",
+        "title": "Hotel Bond",
+        "url": "https://trace.invalid/hotpotqa_5a879ab05542996e4f30887e_short/d6s6",
+        "text": "However, the financing plans fell through and the hotel was again in bankruptcy.",
+        "visible_time_s": 5.0,
+        "requested_subject": "",
+        "resolved_title": "Hotel Bond",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 29,
+      "time_s": 5.0,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d6s7",
+        "title": "Hotel Bond",
+        "url": "https://trace.invalid/hotpotqa_5a879ab05542996e4f30887e_short/d6s7",
+        "text": "The building was sold at auction to the Roman Catholic Archdiocese of Hartford in 1965, and it became the home of the Saint Francis Hospital School of Nursing.",
+        "visible_time_s": 5.0,
+        "requested_subject": "",
+        "resolved_title": "Hotel Bond",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 30,
+      "time_s": 5.0,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d6s8",
+        "title": "Hotel Bond",
+        "url": "https://trace.invalid/hotpotqa_5a879ab05542996e4f30887e_short/d6s8",
+        "text": "The Bond Ballroom reopened in 2001, with the rest of the building becoming a Homewood Suites by Hilton in 2006.",
+        "visible_time_s": 5.0,
+        "requested_subject": "",
+        "resolved_title": "Hotel Bond",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 31,
+      "time_s": 5.0,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d9s0",
+        "title": "289th Military Police Company",
+        "url": "https://trace.invalid/hotpotqa_5a879ab05542996e4f30887e_short/d9s0",
+        "text": "The 289th Military Police Company was activated on 1 November 1994 and attached to Hotel Company, 3rd Infantry (The Old Guard), Fort Myer, Virginia.",
+        "visible_time_s": 5.0,
+        "requested_subject": "",
+        "resolved_title": "289th Military Police Company",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 32,
+      "time_s": 5.0,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d9s1",
+        "title": "289th Military Police Company",
+        "url": "https://trace.invalid/hotpotqa_5a879ab05542996e4f30887e_short/d9s1",
+        "text": "Hotel Company is the regiment's specialty company.",
+        "visible_time_s": 5.0,
+        "requested_subject": "",
+        "resolved_title": "289th Military Police Company",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 33,
+      "time_s": 5.0,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d3s0",
+        "title": "Ishqbaaaz",
+        "url": "https://trace.invalid/hotpotqa_5a879ab05542996e4f30887e_short/d3s0",
+        "text": "Ishqbaaaz (English: \"Lovers\") is an Indian drama television series which is broadcast on Star Plus.",
+        "visible_time_s": 5.0,
+        "requested_subject": "",
+        "resolved_title": "Ishqbaaaz",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 34,
+      "time_s": 5.0,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d3s1",
+        "title": "Ishqbaaaz",
+        "url": "https://trace.invalid/hotpotqa_5a879ab05542996e4f30887e_short/d3s1",
+        "text": "It premiered on 27 June 2016 and airs Mon-Fri 10-11pm IST.",
+        "visible_time_s": 5.0,
+        "requested_subject": "",
+        "resolved_title": "Ishqbaaaz",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 35,
+      "time_s": 5.0,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d3s2",
+        "title": "Ishqbaaaz",
+        "url": "https://trace.invalid/hotpotqa_5a879ab05542996e4f30887e_short/d3s2",
+        "text": "Nakuul Mehta, Kunal Jaisingh and Leenesh Mattoo respectively portray Shivaay, Omkara and Rudra, the three heirs of the Oberoi family.",
+        "visible_time_s": 5.0,
+        "requested_subject": "",
+        "resolved_title": "Ishqbaaaz",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 36,
+      "time_s": 5.0,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d3s3",
+        "title": "Ishqbaaaz",
+        "url": "https://trace.invalid/hotpotqa_5a879ab05542996e4f30887e_short/d3s3",
+        "text": "The show initially focused on the tale of three brothers, later become centered on the love story of Shivaay and Annika (Surbhi Chandna); with the story of Omkara and Rudra being shifted to the spinoff series \"Dil Boley Oberoi\".",
+        "visible_time_s": 5.0,
+        "requested_subject": "",
+        "resolved_title": "Ishqbaaaz",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 37,
+      "time_s": 5.0,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d3s4",
+        "title": "Ishqbaaaz",
+        "url": "https://trace.invalid/hotpotqa_5a879ab05542996e4f30887e_short/d3s4",
+        "text": "In July 2017 \"Dil Boley Oberoi\" ended and the storylines were merged back into \"Ishqbaaaz\" which doubled its runtime.",
+        "visible_time_s": 5.0,
+        "requested_subject": "",
+        "resolved_title": "Ishqbaaaz",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 38,
+      "time_s": 5.0,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d5s0",
+        "title": "Mohan Singh Oberoi",
+        "url": "https://trace.invalid/hotpotqa_5a879ab05542996e4f30887e_short/d5s0",
+        "text": "Rai Bahadur Mohan Singh Oberoi (15 August 1898 – 3 May 2002) was an Indian hotelier, the founder and chairman of Oberoi Hotels & Resorts, India's second-largest hotel company, with 35 hotels in India, Sri Lanka, Nepal, Egypt, Australia and Hungary.",
+        "visible_time_s": 5.0,
+        "requested_subject": "",
+        "resolved_title": "Mohan Singh Oberoi",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 39,
+      "time_s": 5.0,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d7s0",
+        "title": "The Oberoi Group",
+        "url": "https://trace.invalid/hotpotqa_5a879ab05542996e4f30887e_short/d7s0",
+        "text": "The Oberoi Group is a hotel company with its head office in Delhi.",
+        "visible_time_s": 5.0,
+        "requested_subject": "",
+        "resolved_title": "The Oberoi Group",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 40,
+      "time_s": 5.0,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d7s1",
+        "title": "The Oberoi Group",
+        "url": "https://trace.invalid/hotpotqa_5a879ab05542996e4f30887e_short/d7s1",
+        "text": "Founded in 1934, the company owns and/or operates 30+ luxury hotels and two river cruise ships in six countries, primarily under its Oberoi Hotels & Resorts and Trident Hotels brands.",
+        "visible_time_s": 5.0,
+        "requested_subject": "",
+        "resolved_title": "The Oberoi Group",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 41,
+      "time_s": 5.0,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d8s0",
+        "title": "Future Fibre Technologies",
+        "url": "https://trace.invalid/hotpotqa_5a879ab05542996e4f30887e_short/d8s0",
+        "text": "Future Fibre Technologies (FFT) is a fiber optic sensing technologies company based in Melbourne, Australia, with its US head office in Mountain View, California, Middle East head office in Dubai, Indian head office in New Delhi and European head office in London.",
+        "visible_time_s": 5.0,
+        "requested_subject": "",
+        "resolved_title": "Future Fibre Technologies",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 42,
+      "time_s": 5.0,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d8s1",
+        "title": "Future Fibre Technologies",
+        "url": "https://trace.invalid/hotpotqa_5a879ab05542996e4f30887e_short/d8s1",
+        "text": "Founded in 1994, Future Fibre Technologies product line provides optical fiber intrusion detection systems for perimeters, buried oil and gas pipelines and data communication networks.",
+        "visible_time_s": 5.0,
+        "requested_subject": "",
+        "resolved_title": "Future Fibre Technologies",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 43,
+      "time_s": 5.0,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d10s0",
+        "title": "Glennwanis Hotel",
+        "url": "https://trace.invalid/hotpotqa_5a879ab05542996e4f30887e_short/d10s0",
+        "text": "The Glennwanis Hotel is a historic hotel in Glennville, Georgia, Tattnall County, Georgia, built on the site of the Hughes Hotel.",
+        "visible_time_s": 5.0,
+        "requested_subject": "",
+        "resolved_title": "Glennwanis Hotel",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 44,
+      "time_s": 5.0,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d10s1",
+        "title": "Glennwanis Hotel",
+        "url": "https://trace.invalid/hotpotqa_5a879ab05542996e4f30887e_short/d10s1",
+        "text": "The hotel is located at 209-215 East Barnard Street.",
+        "visible_time_s": 5.0,
+        "requested_subject": "",
+        "resolved_title": "Glennwanis Hotel",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 45,
+      "time_s": 5.0,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d10s2",
+        "title": "Glennwanis Hotel",
+        "url": "https://trace.invalid/hotpotqa_5a879ab05542996e4f30887e_short/d10s2",
+        "text": "The old Hughes Hotel was built out of Georgia pine circa 1905 and burned in 1920.",
+        "visible_time_s": 5.0,
+        "requested_subject": "",
+        "resolved_title": "Glennwanis Hotel",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 46,
+      "time_s": 5.0,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d10s3",
+        "title": "Glennwanis Hotel",
+        "url": "https://trace.invalid/hotpotqa_5a879ab05542996e4f30887e_short/d10s3",
+        "text": "The Glennwanis was built in brick in 1926.",
+        "visible_time_s": 5.0,
+        "requested_subject": "",
+        "resolved_title": "Glennwanis Hotel",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 47,
+      "time_s": 5.0,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d10s4",
+        "title": "Glennwanis Hotel",
+        "url": "https://trace.invalid/hotpotqa_5a879ab05542996e4f30887e_short/d10s4",
+        "text": "The local Kiwanis club led the effort to get the replacement hotel built, and organized a Glennville Hotel Company with directors being local business leaders.",
+        "visible_time_s": 5.0,
+        "requested_subject": "",
+        "resolved_title": "Glennwanis Hotel",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 48,
+      "time_s": 5.0,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d10s5",
+        "title": "Glennwanis Hotel",
+        "url": "https://trace.invalid/hotpotqa_5a879ab05542996e4f30887e_short/d10s5",
+        "text": "The wife of a local doctor won a naming contest with the name \"Glennwanis Hotel\", a suggestion combining \"Glennville\" and \"Kiwanis\".",
+        "visible_time_s": 5.0,
+        "requested_subject": "",
+        "resolved_title": "Glennwanis Hotel",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 49,
+      "time_s": 6.593,
+      "type": "judge_reply",
+      "reply": {
+        "judgments": [
+          {
+            "unit_id": "u1",
+            "label": "SUPPORTED",
+            "value": "The Oberoi Group",
+            "citations": [
+              "d2s0"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d2s0",
+                "text": "The Oberoi family is an Indian family that is famous for its involvement in hotels, namely through The Oberoi Group."
+              }
+            ],
+            "reason": "Supported by the cited visible sentences and dependencies."
+          },
+          {
+            "unit_id": "u2",
+            "label": "SUPPORTED",
+            "value": "Delhi",
+            "citations": [
+              "d7s0"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d7s0",
+                "text": "The Oberoi Group is a hotel company with its head office in Delhi."
+              }
+            ],
+            "reason": "Supported by the cited visible sentences and dependencies."
+          }
+        ]
+      },
+      "attempt": 1,
+      "repair": false,
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d1s1",
+        "d1s2",
+        "d1s3",
+        "d1s4",
+        "d2s0",
+        "d4s0",
+        "d4s1",
+        "d4s2",
+        "d4s3",
+        "d4s4",
+        "d4s5",
+        "d6s0",
+        "d6s1",
+        "d6s2",
+        "d6s3",
+        "d6s4",
+        "d6s5",
+        "d6s6",
+        "d6s7",
+        "d6s8",
+        "d9s0",
+        "d9s1",
+        "d3s0",
+        "d3s1",
+        "d3s2",
+        "d3s3",
+        "d3s4",
+        "d5s0",
+        "d7s0",
+        "d7s1",
+        "d8s0",
+        "d8s1",
+        "d10s0",
+        "d10s1",
+        "d10s2",
+        "d10s3",
+        "d10s4",
+        "d10s5"
+      ]
+    },
+    {
+      "sequence": 50,
+      "time_s": 6.593,
+      "type": "judgments",
+      "judgments": {
+        "u1": {
+          "label": "SUPPORTED",
+          "value": "The Oberoi Group",
+          "citations": [
+            "d2s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d2s0",
+              "text": "The Oberoi family is an Indian family that is famous for its involvement in hotels, namely through The Oberoi Group."
+            }
+          ],
+          "reason": "Supported by the cited visible sentences and dependencies."
+        },
+        "u2": {
+          "label": "SUPPORTED",
+          "value": "Delhi",
+          "citations": [
+            "d7s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d7s0",
+              "text": "The Oberoi Group is a hotel company with its head office in Delhi."
+            }
+          ],
+          "reason": "Supported by the cited visible sentences and dependencies."
+        }
+      },
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d1s1",
+        "d1s2",
+        "d1s3",
+        "d1s4",
+        "d2s0",
+        "d4s0",
+        "d4s1",
+        "d4s2",
+        "d4s3",
+        "d4s4",
+        "d4s5",
+        "d6s0",
+        "d6s1",
+        "d6s2",
+        "d6s3",
+        "d6s4",
+        "d6s5",
+        "d6s6",
+        "d6s7",
+        "d6s8",
+        "d9s0",
+        "d9s1",
+        "d3s0",
+        "d3s1",
+        "d3s2",
+        "d3s3",
+        "d3s4",
+        "d5s0",
+        "d7s0",
+        "d7s1",
+        "d8s0",
+        "d8s1",
+        "d10s0",
+        "d10s1",
+        "d10s2",
+        "d10s3",
+        "d10s4",
+        "d10s5"
+      ],
+      "semantic_review": false
+    },
+    {
+      "sequence": 51,
+      "time_s": 7.906,
+      "type": "utterance",
+      "action": "Progress",
+      "text": "I'm working on locating the Oberoi family's hotel company's head office city.",
+      "claims": [],
+      "feedback_source": "model",
+      "feedback_status_claim": "processing",
+      "feedback_fallback_reason": "",
+      "execution_state": {
+        "stage": "formulating",
+        "searches_started": 1,
+        "searches_completed": 1,
+        "active_searches": 0,
+        "evidence_count": 39,
+        "supported_units": 2,
+        "output_units": 0
+      },
+      "language": "en"
+    },
+    {
+      "sequence": 52,
+      "time_s": 8.421,
+      "type": "verification_reply",
+      "reply": {
+        "approved": true,
+        "facts_valid": true,
+        "expressed_unit_ids": [
+          "u1",
+          "u2"
+        ],
+        "reason": "All factual claims are supported by the provided evidence and match the requested units."
+      },
+      "output_unit_ids": [
+        "u1",
+        "u2"
+      ],
+      "output_action": "Final Answer",
+      "dependency_unit_ids": [],
+      "evidence_snapshot_ids": [
+        "d2s0",
+        "d7s0"
+      ]
+    },
+    {
+      "sequence": 53,
+      "time_s": 8.421,
+      "type": "utterance",
+      "action": "Final Answer",
+      "text": "The Oberoi family is part of The Oberoi Group. The Oberoi Group has its head office in Delhi.",
+      "claims": [
+        {
+          "unit_id": "u1",
+          "description": "Identify the hotel company that the Oberoi family is part of",
+          "value": "The Oberoi Group",
+          "citations": [
+            "d2s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d2s0",
+              "text": "The Oberoi family is an Indian family that is famous for its involvement in hotels, namely through The Oberoi Group."
+            }
+          ]
+        },
+        {
+          "unit_id": "u2",
+          "description": "Find the city where the head office of the hotel company identified in The Oberoi Group is located",
+          "value": "Delhi",
+          "citations": [
+            "d7s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d7s0",
+              "text": "The Oberoi Group is a hotel company with its head office in Delhi."
+            }
+          ]
+        }
+      ],
+      "unresolved": [],
+      "fallback": false,
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d1s1",
+        "d1s2",
+        "d1s3",
+        "d1s4",
+        "d2s0",
+        "d4s0",
+        "d4s1",
+        "d4s2",
+        "d4s3",
+        "d4s4",
+        "d4s5",
+        "d6s0",
+        "d6s1",
+        "d6s2",
+        "d6s3",
+        "d6s4",
+        "d6s5",
+        "d6s6",
+        "d6s7",
+        "d6s8",
+        "d9s0",
+        "d9s1",
+        "d3s0",
+        "d3s1",
+        "d3s2",
+        "d3s3",
+        "d3s4",
+        "d5s0",
+        "d7s0",
+        "d7s1",
+        "d8s0",
+        "d8s1",
+        "d10s0",
+        "d10s1",
+        "d10s2",
+        "d10s3",
+        "d10s4",
+        "d10s5"
+      ],
+      "language": "en"
+    },
+    {
+      "sequence": 54,
+      "time_s": 8.421,
+      "type": "finished",
+      "status": "complete"
+    }
+  ],
+  "note": "Prototype model judgments are not independent gold scores. Output event times are not spoken claim times.",
+  "evidence_mode": "scheduled_trace",
+  "audio": {
+    "enabled": true,
+    "mode": "windows",
+    "play": false,
+    "status": "ok",
+    "errors": [],
+    "records": [
+      {
+        "event_sequence": 1,
+        "sentence_index": 1,
+        "sentence_count": 1,
+        "language": "en",
+        "text": "I see you're asking which city houses the head office of the Oberoi family's hotel company.",
+        "action": "Backchannel",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 1.8279999999940628,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1-continued\\samples\\0458\\audio\\segments\\0001_01.wav",
+        "duration_s": 5.723356009070295,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 2.625,
+        "synthesis_and_playback_s": 0.7970000000059372
+      },
+      {
+        "event_sequence": 51,
+        "sentence_index": 1,
+        "sentence_count": 1,
+        "language": "en",
+        "text": "I'm working on locating the Oberoi family's hotel company's head office city.",
+        "action": "Progress",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 7.9060000000026776,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1-continued\\samples\\0458\\audio\\segments\\0051_01.wav",
+        "duration_s": 5.033514739229025,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 8.687000000005355,
+        "synthesis_and_playback_s": 0.7810000000026776
+      },
+      {
+        "event_sequence": 53,
+        "sentence_index": 1,
+        "sentence_count": 2,
+        "language": "en",
+        "text": "The Oberoi family is part of The Oberoi Group.",
+        "action": "Final Answer",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 8.687000000005355,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1-continued\\samples\\0458\\audio\\segments\\0053_01.wav",
+        "duration_s": 3.4338775510204083,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 9.48399999999674,
+        "synthesis_and_playback_s": 0.7969999999913853
+      },
+      {
+        "event_sequence": 53,
+        "sentence_index": 2,
+        "sentence_count": 2,
+        "language": "en",
+        "text": "The Oberoi Group has its head office in Delhi.",
+        "action": "Final Answer",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 9.48399999999674,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1-continued\\samples\\0458\\audio\\segments\\0053_02.wav",
+        "duration_s": 3.233922902494331,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 10.25,
+        "synthesis_and_playback_s": 0.7660000000032596
+      }
+    ],
+    "wave": {
+      "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1-continued\\samples\\0458\\audio\\response.wav",
+      "duration_s": 20.388299319727892,
+      "timeline": [
+        {
+          "event_sequence": 1,
+          "sentence_index": 1,
+          "action": "Backchannel",
+          "text": "I see you're asking which city houses the head office of the Oberoi family's hotel company.",
+          "wave_start_s": 2.6249886621315195,
+          "wave_end_s": 8.348344671201813
+        },
+        {
+          "event_sequence": 51,
+          "sentence_index": 1,
+          "action": "Progress",
+          "text": "I'm working on locating the Oberoi family's hotel company's head office city.",
+          "wave_start_s": 8.686984126984127,
+          "wave_end_s": 13.720498866213152
+        },
+        {
+          "event_sequence": 53,
+          "sentence_index": 1,
+          "action": "Final Answer",
+          "text": "The Oberoi family is part of The Oberoi Group.",
+          "wave_start_s": 13.720498866213152,
+          "wave_end_s": 17.15437641723356
+        },
+        {
+          "event_sequence": 53,
+          "sentence_index": 2,
+          "action": "Final Answer",
+          "text": "The Oberoi Group has its head office in Delhi.",
+          "wave_start_s": 17.15437641723356,
+          "wave_end_s": 20.388299319727892
+        }
+      ]
+    }
+  },
+  "evaluation": {
+    "mode": "b_final_revised_trace",
+    "trace_id": "hotpotqa_5a879ab05542996e4f30887e_short",
+    "sample_id": "hotpotqa_5a879ab05542996e4f30887e",
+    "total_wall_s": 10.25,
+    "question_timeout_s": 180,
+    "audio_enabled": true,
+    "history_enabled": false,
+    "text_pipeline_wall_s": 8.421000000002095,
+    "effective_settings": {
+      "base_url": "https://tinker.thinkingmachines.dev/services/tinker-prod/oai/api/v1",
+      "model": "openai/gpt-oss-120b",
+      "judge_model": "tinker://f9e9a6c1-e203-5c2c-acdd-68fe67378ca4:train:0/sampler_weights/epoch-0001",
+      "judge_reasoning_effort": "low",
+      "wiki_language": "en",
+      "user_agent": "CascadeSystem/0.1 (educational research prototype)",
+      "timeout_s": 45.0,
+      "max_tokens": 4096,
+      "reasoning_effort": "low",
+      "progress_s": 3.0,
+      "feedback_timeout_s": 6.0,
+      "search_limit": 3,
+      "max_units": 8,
+      "max_searches": 16,
+      "max_sources": 39,
+      "source_chars": 264,
+      "evidence_chars": 4487,
+      "concurrency": 3
+    },
+    "timing_kind": "unknown",
+    "scheduler": "wall-paced fixed B arrivals",
+    "split": "eval_reserved",
+    "empty_evidence_sentences_ignored": 0
+  }
+}

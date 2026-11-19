@@ -1,0 +1,2219 @@
+{
+  "question": "Who is the paternal grandmother of John Tzelepes Komnenos?",
+  "resolved_question": "Who is the paternal grandmother of John Tzelepes Komnenos?",
+  "used_history_turn_ids": [],
+  "response_language": "en",
+  "status": "incomplete",
+  "clock": "wall_monotonic",
+  "time_origin": "question_text_ready_after_optional_asr",
+  "model": "openai/gpt-oss-120b",
+  "judge_model": "tinker://f9e9a6c1-e203-5c2c-acdd-68fe67378ca4:train:0/sampler_weights/epoch-0001",
+  "units": [
+    {
+      "unit_id": "u1",
+      "description": "Identify the Wikipedia article for John Tzelepes Komnenos",
+      "necessary": true,
+      "depends_on": [],
+      "queries": [
+        "John Tzelepes Komnenos Wikipedia",
+        "John Tzelepes Komnenos"
+      ],
+      "subject": "John Tzelepes Komnenos"
+    },
+    {
+      "unit_id": "u2",
+      "description": "Find the father of John Tzelepes Komnenos",
+      "necessary": true,
+      "depends_on": [
+        "u1"
+      ],
+      "queries": [
+        "John Tzelepes Komnenos father",
+        "John Tzelepes Komnenos parent"
+      ],
+      "subject": "John Tzelepes Komnenos"
+    },
+    {
+      "unit_id": "u3",
+      "description": "Find the mother of the father of John Tzelepes Komnenos (paternal grandmother)",
+      "necessary": true,
+      "depends_on": [
+        "u2"
+      ],
+      "queries": [
+        "father of John Tzelepes Komnenos mother",
+        "paternal grandmother of John Tzelepes Komnenos"
+      ],
+      "subject": "{u2}"
+    }
+  ],
+  "judgments": {
+    "u1": {
+      "label": "SUPPORTED",
+      "value": "John Tzelepes Komnenos",
+      "citations": [
+        "d4s0"
+      ],
+      "quotes": [
+        {
+          "evidence_id": "d4s0",
+          "text": "John Komnenos , later surnamed Tzelepes (Τζελέπης, \"Tzelepēs\"), was the son of the \"sebastokrator\" Isaac Komnenos and grandson of the Byzantine emperor Alexios"
+        }
+      ],
+      "reason": "Supported by the cited visible sentences and dependencies."
+    },
+    "u2": {
+      "label": "SUPPORTED",
+      "value": "Isaac Komnenos",
+      "citations": [
+        "d4s0"
+      ],
+      "quotes": [
+        {
+          "evidence_id": "d4s0",
+          "text": "John Komnenos , later surnamed Tzelepes (Τζελέπης, \"Tzelepēs\"), was the son of the \"sebastokrator\" Isaac Komnenos and grandson of the Byzantine emperor Alexios"
+        }
+      ],
+      "reason": "Supported by the cited visible sentences and dependencies."
+    },
+    "u3": {
+      "label": "UNRESOLVED",
+      "value": "",
+      "citations": [],
+      "quotes": [],
+      "reason": "Rejected entity identity: citation concerns an ambiguous or differently qualified namesake"
+    }
+  },
+  "evidence": [
+    {
+      "evidence_id": "d1s0",
+      "title": "Mona Hopton Bell",
+      "url": "https://trace.invalid/2wikimultihopqa_d171a0600baf11ebab90acde48001122_long/d1s0",
+      "text": "Mona Hopton Bell( 1867- 1940) was a British artist, best known for her portraits of civic figures.",
+      "visible_time_s": 4.625,
+      "requested_subject": "",
+      "resolved_title": "Mona Hopton Bell",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d1s1",
+      "title": "Mona Hopton Bell",
+      "url": "https://trace.invalid/2wikimultihopqa_d171a0600baf11ebab90acde48001122_long/d1s1",
+      "text": "She was the grandmother of the painter Jean H. Bell.",
+      "visible_time_s": 4.625,
+      "requested_subject": "",
+      "resolved_title": "Mona Hopton Bell",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d3s0",
+      "title": "Hubba bint Hulail",
+      "url": "https://trace.invalid/2wikimultihopqa_d171a0600baf11ebab90acde48001122_long/d3s0",
+      "text": "Hubba bint Hulail was the grandmother of Hashim ibn' Abd Manaf, thus the great- great- great- grandmother of the Islamic\" Nabī\"( Prophet) Muhammad ibn Abdullah.",
+      "visible_time_s": 4.625,
+      "requested_subject": "",
+      "resolved_title": "Hubba bint Hulail",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d4s0",
+      "title": "John Tzelepes Komnenos",
+      "url": "https://trace.invalid/2wikimultihopqa_d171a0600baf11ebab90acde48001122_long/d4s0",
+      "text": "John Komnenos , later surnamed Tzelepes (Τζελέπης, \"Tzelepēs\"), was the son of the \"sebastokrator\" Isaac Komnenos and grandson of the Byzantine emperor Alexios",
+      "visible_time_s": 4.625,
+      "requested_subject": "",
+      "resolved_title": "John Tzelepes Komnenos",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d4s1",
+      "title": "John Tzelepes Komnenos",
+      "url": "https://trace.invalid/2wikimultihopqa_d171a0600baf11ebab90acde48001122_long/d4s1",
+      "text": "I Komnenos.",
+      "visible_time_s": 4.625,
+      "requested_subject": "",
+      "resolved_title": "John Tzelepes Komnenos",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d4s2",
+      "title": "John Tzelepes Komnenos",
+      "url": "https://trace.invalid/2wikimultihopqa_d171a0600baf11ebab90acde48001122_long/d4s2",
+      "text": "As a young man he followed his father during his exile and wanderings across Asia Minor and the Levant, when for a short time he was married to a daughter of Leo I, ruler of Armenian Cilicia.",
+      "visible_time_s": 4.625,
+      "requested_subject": "",
+      "resolved_title": "John Tzelepes Komnenos",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d4s3",
+      "title": "John Tzelepes Komnenos",
+      "url": "https://trace.invalid/2wikimultihopqa_d171a0600baf11ebab90acde48001122_long/d4s3",
+      "text": "After the reconciliation between his father and his uncle, Emperor John II Komnenos, in 1138, he returned to the Byzantine court, but defected in the next year to the Danishmendid Turks during a siege of Neocaesarea.",
+      "visible_time_s": 4.625,
+      "requested_subject": "",
+      "resolved_title": "John Tzelepes Komnenos",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d4s4",
+      "title": "John Tzelepes Komnenos",
+      "url": "https://trace.invalid/2wikimultihopqa_d171a0600baf11ebab90acde48001122_long/d4s4",
+      "text": "From there he moved to the court of the Sultan of Rum, one of whose daughters he married.",
+      "visible_time_s": 4.625,
+      "requested_subject": "",
+      "resolved_title": "John Tzelepes Komnenos",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d4s5",
+      "title": "John Tzelepes Komnenos",
+      "url": "https://trace.invalid/2wikimultihopqa_d171a0600baf11ebab90acde48001122_long/d4s5",
+      "text": "According to later, and likely invented, tradition, the Ottoman dynasty hailed from one of his offspring.",
+      "visible_time_s": 4.625,
+      "requested_subject": "",
+      "resolved_title": "John Tzelepes Komnenos",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d6s0",
+      "title": "Anne Denman",
+      "url": "https://trace.invalid/2wikimultihopqa_d171a0600baf11ebab90acde48001122_long/d6s0",
+      "text": "Anne Denman( 1587–1661) was born in Olde Hall, Retford, Nottinghamshire.",
+      "visible_time_s": 4.625,
+      "requested_subject": "",
+      "resolved_title": "Anne Denman",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d6s1",
+      "title": "Anne Denman",
+      "url": "https://trace.invalid/2wikimultihopqa_d171a0600baf11ebab90acde48001122_long/d6s1",
+      "text": "Through a fortunate second marriage with Thomas Aylesbury, she became the grandmother of Lady Anne Hyde, Duchess of York and great- grandmother of Queen Mary II and Queen Anne.",
+      "visible_time_s": 4.625,
+      "requested_subject": "",
+      "resolved_title": "Anne Denman",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d9s0",
+      "title": "Purnima (Hindi actress)",
+      "url": "https://trace.invalid/2wikimultihopqa_d171a0600baf11ebab90acde48001122_long/d9s0",
+      "text": "Purnima Das Verma( born Meherbhano Mohammad Ali) was an Indian film actress who worked predominantly in Hindi language films.",
+      "visible_time_s": 4.625,
+      "requested_subject": "",
+      "resolved_title": "Purnima (Hindi actress)",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d9s1",
+      "title": "Purnima (Hindi actress)",
+      "url": "https://trace.invalid/2wikimultihopqa_d171a0600baf11ebab90acde48001122_long/d9s1",
+      "text": "She is the grandmother of actor Emraan Hashmi.",
+      "visible_time_s": 4.625,
+      "requested_subject": "",
+      "resolved_title": "Purnima (Hindi actress)",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d2s0",
+      "title": "Kaoru Hatoyama",
+      "url": "https://trace.invalid/2wikimultihopqa_d171a0600baf11ebab90acde48001122_long/d2s0",
+      "text": "After the elections of 2009, she became more widely known as the grandmother of Prime Minister Yukio Hatoyama and his politician brother Kunio Hatoyama.",
+      "visible_time_s": 9.468000000008033,
+      "requested_subject": "",
+      "resolved_title": "Kaoru Hatoyama",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d5s0",
+      "title": "Diana Guardato",
+      "url": "https://trace.invalid/2wikimultihopqa_d171a0600baf11ebab90acde48001122_long/d5s0",
+      "text": "Diana Guardato was a member of the aristocratic Patrician Guardato family, and had three children with King Ferdinand I: Diana Guardato is the 16th- Great Grandmother of His Royal Highness Albert II of Belgium, 15th- Great Grandmother of His Majesty Juan Carlos",
+      "visible_time_s": 9.468000000008033,
+      "requested_subject": "",
+      "resolved_title": "Diana Guardato",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d5s1",
+      "title": "Diana Guardato",
+      "url": "https://trace.invalid/2wikimultihopqa_d171a0600baf11ebab90acde48001122_long/d5s1",
+      "text": "I of Spain, 17th- Great Grandmother of Philippe of Belgium, 14th- Great Grandmother of His Majesty Manuel II of Portugal, 16th- Great Grandmother of Grand Duke Henri, as well as many others.",
+      "visible_time_s": 9.468000000008033,
+      "requested_subject": "",
+      "resolved_title": "Diana Guardato",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d7s0",
+      "title": "Hannah Arnold",
+      "url": "https://trace.invalid/2wikimultihopqa_d171a0600baf11ebab90acde48001122_long/d7s0",
+      "text": "Hannah Arnold, also known as Hannah Waterman King, was the grandmother of Benedict Arnolds children.",
+      "visible_time_s": 9.468000000008033,
+      "requested_subject": "",
+      "resolved_title": "Hannah Arnold",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d8s0",
+      "title": "Isaac Komnenos (son of Alexios I)",
+      "url": "https://trace.invalid/2wikimultihopqa_d171a0600baf11ebab90acde48001122_long/d8s0",
+      "text": "Isaac Komnenos or Comnenus (16 January 1093 – after 1152) was the third son of Byzantine Emperor Alexios I Komnenos and Empress Irene Doukaina.",
+      "visible_time_s": 9.468000000008033,
+      "requested_subject": "",
+      "resolved_title": "Isaac Komnenos (son of Alexios I)",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d8s1",
+      "title": "Isaac Komnenos (son of Alexios I)",
+      "url": "https://trace.invalid/2wikimultihopqa_d171a0600baf11ebab90acde48001122_long/d8s1",
+      "text": "He was raised to the high rank of \"sebastokrator\" by his older brother John II Komnenos in reward for his support, but they later fell out, as Isaac began to covet the throne.",
+      "visible_time_s": 9.468000000008033,
+      "requested_subject": "",
+      "resolved_title": "Isaac Komnenos (son of Alexios I)",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d8s2",
+      "title": "Isaac Komnenos (son of Alexios I)",
+      "url": "https://trace.invalid/2wikimultihopqa_d171a0600baf11ebab90acde48001122_long/d8s2",
+      "text": "In 1130, Isaac and his sons fled to exile after becoming involved in a conspiracy against John.",
+      "visible_time_s": 9.468000000008033,
+      "requested_subject": "",
+      "resolved_title": "Isaac Komnenos (son of Alexios I)",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d8s3",
+      "title": "Isaac Komnenos (son of Alexios I)",
+      "url": "https://trace.invalid/2wikimultihopqa_d171a0600baf11ebab90acde48001122_long/d8s3",
+      "text": "For several years, they wandered in Asia Minor and the Levant, trying to gain support from the local rulers, but ultimately in vain.",
+      "visible_time_s": 9.468000000008033,
+      "requested_subject": "",
+      "resolved_title": "Isaac Komnenos (son of Alexios I)",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d8s4",
+      "title": "Isaac Komnenos (son of Alexios I)",
+      "url": "https://trace.invalid/2wikimultihopqa_d171a0600baf11ebab90acde48001122_long/d8s4",
+      "text": "John's military successes forced Isaac to seek a reconciliation with his brother in 1138, although he did not give up his designs on the throne.",
+      "visible_time_s": 9.468000000008033,
+      "requested_subject": "",
+      "resolved_title": "Isaac Komnenos (son of Alexios I)",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d8s5",
+      "title": "Isaac Komnenos (son of Alexios I)",
+      "url": "https://trace.invalid/2wikimultihopqa_d171a0600baf11ebab90acde48001122_long/d8s5",
+      "text": "In 1139, after his oldest son defected to the Seljuk Turks, Isaac was exiled to Heraclea Pontica.",
+      "visible_time_s": 9.468000000008033,
+      "requested_subject": "",
+      "resolved_title": "Isaac Komnenos (son of Alexios I)",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d8s6",
+      "title": "Isaac Komnenos (son of Alexios I)",
+      "url": "https://trace.invalid/2wikimultihopqa_d171a0600baf11ebab90acde48001122_long/d8s6",
+      "text": "During the struggle for John's succession in 1143, he supported the unsuccessful candidacy of his elder nephew, likewise named Isaac, over his younger nephew Manuel I Komnenos.",
+      "visible_time_s": 9.468000000008033,
+      "requested_subject": "",
+      "resolved_title": "Isaac Komnenos (son of Alexios I)",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d8s7",
+      "title": "Isaac Komnenos (son of Alexios I)",
+      "url": "https://trace.invalid/2wikimultihopqa_d171a0600baf11ebab90acde48001122_long/d8s7",
+      "text": "In 1150, weakened by the onset of an illness, he was forced to retire from public life by Manuel.",
+      "visible_time_s": 9.468000000008033,
+      "requested_subject": "",
+      "resolved_title": "Isaac Komnenos (son of Alexios I)",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d8s8",
+      "title": "Isaac Komnenos (son of Alexios I)",
+      "url": "https://trace.invalid/2wikimultihopqa_d171a0600baf11ebab90acde48001122_long/d8s8",
+      "text": "Isaac then devoted himself to the construction of the monastery of Theotokos Kosmosoteira at Bera (modern Feres) in western Thrace, where he was to be buried.",
+      "visible_time_s": 9.468000000008033,
+      "requested_subject": "",
+      "resolved_title": "Isaac Komnenos (son of Alexios I)",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d8s9",
+      "title": "Isaac Komnenos (son of Alexios I)",
+      "url": "https://trace.invalid/2wikimultihopqa_d171a0600baf11ebab90acde48001122_long/d8s9",
+      "text": "Isaac was noted for his erudition and his patronage of learning, and is considered the author of a number of scholarly and poetic works.",
+      "visible_time_s": 9.468000000008033,
+      "requested_subject": "",
+      "resolved_title": "Isaac Komnenos (son of Alexios I)",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d8s10",
+      "title": "Isaac Komnenos (son of Alexios I)",
+      "url": "https://trace.invalid/2wikimultihopqa_d171a0600baf11ebab90acde48001122_long/d8s10",
+      "text": "He is also notable for rebuilding the Chora Church in Constantinople, where his mosaic donor portrait survives to this day.",
+      "visible_time_s": 9.468000000008033,
+      "requested_subject": "",
+      "resolved_title": "Isaac Komnenos (son of Alexios I)",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d8s11",
+      "title": "Isaac Komnenos (son of Alexios I)",
+      "url": "https://trace.invalid/2wikimultihopqa_d171a0600baf11ebab90acde48001122_long/d8s11",
+      "text": "His younger son Andronikos I Komnenos eventually managed to realize Isaac's ambitions, becoming emperor in 1183–1185, the last of the Komnenian dynasty.",
+      "visible_time_s": 9.468000000008033,
+      "requested_subject": "",
+      "resolved_title": "Isaac Komnenos (son of Alexios I)",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d10s0",
+      "title": "Tjuyu",
+      "url": "https://trace.invalid/2wikimultihopqa_d171a0600baf11ebab90acde48001122_long/d10s0",
+      "text": "Tjuyu( sometimes transliterated as Thuya or Thuyu) was an Egyptian noblewoman and the mother of queen Tiye, and the wife of Yuya.",
+      "visible_time_s": 9.468000000008033,
+      "requested_subject": "",
+      "resolved_title": "Tjuyu",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d10s1",
+      "title": "Tjuyu",
+      "url": "https://trace.invalid/2wikimultihopqa_d171a0600baf11ebab90acde48001122_long/d10s1",
+      "text": "She is the grandmother of Akhenaten, and great grandmother of Tutankhamun.",
+      "visible_time_s": 9.468000000008033,
+      "requested_subject": "",
+      "resolved_title": "Tjuyu",
+      "entity_resolution": "unspecified"
+    }
+  ],
+  "searches": [
+    {
+      "query": "[scheduled evidence]",
+      "subject": "",
+      "status": "ok",
+      "returned_pages": [],
+      "mode": "trace",
+      "unit_id": "__scheduled_evidence__"
+    },
+    {
+      "query": "[scheduled evidence]",
+      "subject": "",
+      "status": "ok",
+      "returned_pages": [],
+      "mode": "trace",
+      "unit_id": "__scheduled_evidence__"
+    },
+    {
+      "query": "[scheduled evidence]",
+      "subject": "",
+      "status": "ok",
+      "returned_pages": [],
+      "mode": "trace",
+      "unit_id": "__scheduled_evidence__"
+    }
+  ],
+  "search_failures": [],
+  "llm_calls": [
+    {
+      "purpose": "feedback_generate",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 407,
+        "completion_tokens": 64,
+        "total_tokens": 471,
+        "prompt_tokens_details": {
+          "cached_tokens": 384
+        }
+      },
+      "latency_s": 1.0
+    },
+    {
+      "purpose": "feedback_verify",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 365,
+        "completion_tokens": 82,
+        "total_tokens": 447,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        }
+      },
+      "latency_s": 0.812
+    },
+    {
+      "purpose": "decompose",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 797,
+        "completion_tokens": 369,
+        "total_tokens": 1166,
+        "prompt_tokens_details": {
+          "cached_tokens": 768
+        }
+      },
+      "latency_s": 2.218
+    },
+    {
+      "purpose": "plan_review",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 1120,
+        "completion_tokens": 403,
+        "total_tokens": 1523,
+        "prompt_tokens_details": {
+          "cached_tokens": 1024
+        }
+      },
+      "latency_s": 2.407
+    },
+    {
+      "purpose": "feedback_generate",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 407,
+        "completion_tokens": 67,
+        "total_tokens": 474,
+        "prompt_tokens_details": {
+          "cached_tokens": 384
+        }
+      },
+      "latency_s": 1.422
+    },
+    {
+      "purpose": "judge",
+      "model": "tinker://f9e9a6c1-e203-5c2c-acdd-68fe67378ca4:train:0/sampler_weights/epoch-0001",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 3073,
+        "completion_tokens": 290,
+        "total_tokens": 3363,
+        "prompt_tokens_details": {
+          "cached_tokens": 1152
+        }
+      },
+      "latency_s": 2.031
+    },
+    {
+      "purpose": "feedback_verify",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 357,
+        "completion_tokens": 94,
+        "total_tokens": 451,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        }
+      },
+      "latency_s": 1.5
+    },
+    {
+      "purpose": "generate",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 892,
+        "completion_tokens": 122,
+        "total_tokens": 1014,
+        "prompt_tokens_details": {
+          "cached_tokens": 768
+        }
+      },
+      "latency_s": 1.281
+    },
+    {
+      "purpose": "feedback_generate",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 408,
+        "completion_tokens": 49,
+        "total_tokens": 457,
+        "prompt_tokens_details": {
+          "cached_tokens": 384
+        }
+      },
+      "latency_s": 0.75
+    },
+    {
+      "purpose": "verify",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 1151,
+        "completion_tokens": 199,
+        "total_tokens": 1350,
+        "prompt_tokens_details": {
+          "cached_tokens": 1024
+        }
+      },
+      "latency_s": 1.531
+    },
+    {
+      "purpose": "feedback_verify",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 351,
+        "completion_tokens": 95,
+        "total_tokens": 446,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        }
+      },
+      "latency_s": 0.922
+    },
+    {
+      "purpose": "judge",
+      "model": "tinker://f9e9a6c1-e203-5c2c-acdd-68fe67378ca4:train:0/sampler_weights/epoch-0001",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 5887,
+        "completion_tokens": 354,
+        "total_tokens": 6241,
+        "prompt_tokens_details": {
+          "cached_tokens": 1280
+        }
+      },
+      "latency_s": 2.188
+    },
+    {
+      "purpose": "feedback_generate",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 407,
+        "completion_tokens": 73,
+        "total_tokens": 480,
+        "prompt_tokens_details": {
+          "cached_tokens": 384
+        }
+      },
+      "latency_s": 1.11
+    },
+    {
+      "purpose": "judge",
+      "model": "tinker://f9e9a6c1-e203-5c2c-acdd-68fe67378ca4:train:0/sampler_weights/epoch-0001",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 6046,
+        "completion_tokens": 354,
+        "total_tokens": 6400,
+        "prompt_tokens_details": {
+          "cached_tokens": 1280
+        }
+      },
+      "latency_s": 2.187
+    },
+    {
+      "purpose": "feedback_verify",
+      "model": "openai/gpt-oss-120b",
+      "status": "cancelled",
+      "latency_s": 0.015
+    }
+  ],
+  "search_diagnostics": [],
+  "output_enqueued_units": {
+    "u1": "John Tzelepes Komnenos",
+    "u2": "Isaac Komnenos"
+  },
+  "events": [
+    {
+      "sequence": 0,
+      "time_s": 0.0,
+      "type": "feedback_requested",
+      "feedback_kind": "opening",
+      "execution_state": {
+        "stage": "planning",
+        "searches_started": 0,
+        "searches_completed": 0,
+        "active_searches": 0,
+        "evidence_count": 0,
+        "supported_units": 0,
+        "output_units": 0
+      }
+    },
+    {
+      "sequence": 1,
+      "time_s": 1.812,
+      "type": "utterance",
+      "action": "Backchannel",
+      "text": "I see you want to know John Tzelepes Komnenos's paternal grandmother; I’ll start looking that up.",
+      "claims": [],
+      "feedback_source": "model",
+      "feedback_status_claim": "intent",
+      "feedback_fallback_reason": "",
+      "execution_state": {
+        "stage": "planning",
+        "searches_started": 0,
+        "searches_completed": 0,
+        "active_searches": 0,
+        "evidence_count": 0,
+        "supported_units": 0,
+        "output_units": 0
+      },
+      "language": "en"
+    },
+    {
+      "sequence": 2,
+      "time_s": 2.218,
+      "type": "decompose_reply",
+      "reply": {
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "Identify the Wikipedia article for John Tzelepes Komnenos",
+            "subject": "John Tzelepes Komnenos",
+            "necessary": true,
+            "depends_on": [],
+            "queries": [
+              "John Tzelepes Komnenos Wikipedia",
+              "John Tzelepes Komnenos"
+            ]
+          },
+          {
+            "unit_id": "u2",
+            "description": "Find the father of John Tzelepes Komnenos",
+            "subject": "John Tzelepes Komnenos",
+            "necessary": true,
+            "depends_on": [
+              "u1"
+            ],
+            "queries": [
+              "John Tzelepes Komnenos father",
+              "John Tzelepes Komnenos parent"
+            ]
+          },
+          {
+            "unit_id": "u3",
+            "description": "Find the mother of the father of John Tzelepes Komnenos (paternal grandmother)",
+            "subject": "{u2}",
+            "necessary": true,
+            "depends_on": [
+              "u2"
+            ],
+            "queries": [
+              "father of John Tzelepes Komnenos mother",
+              "paternal grandmother of John Tzelepes Komnenos"
+            ]
+          }
+        ]
+      },
+      "attempt": 1,
+      "repair": false
+    },
+    {
+      "sequence": 3,
+      "time_s": 2.218,
+      "type": "plan_review_requested",
+      "max_reviews": 1,
+      "question_only": true
+    },
+    {
+      "sequence": 4,
+      "time_s": 4.625,
+      "type": "plan_review_reply",
+      "reply": {
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "Identify the Wikipedia article for John Tzelepes Komnenos",
+            "subject": "John Tzelepes Komnenos",
+            "necessary": true,
+            "depends_on": [],
+            "queries": [
+              "John Tzelepes Komnenos Wikipedia",
+              "John Tzelepes Komnenos"
+            ]
+          },
+          {
+            "unit_id": "u2",
+            "description": "Find the father of John Tzelepes Komnenos",
+            "subject": "John Tzelepes Komnenos",
+            "necessary": true,
+            "depends_on": [
+              "u1"
+            ],
+            "queries": [
+              "John Tzelepes Komnenos father",
+              "John Tzelepes Komnenos parent"
+            ]
+          },
+          {
+            "unit_id": "u3",
+            "description": "Find the mother of the father of John Tzelepes Komnenos (paternal grandmother)",
+            "subject": "{u2}",
+            "necessary": true,
+            "depends_on": [
+              "u2"
+            ],
+            "queries": [
+              "father of John Tzelepes Komnenos mother",
+              "paternal grandmother of John Tzelepes Komnenos"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "sequence": 5,
+      "time_s": 4.625,
+      "type": "plan_review_finished",
+      "changed": false,
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "Identify the Wikipedia article for John Tzelepes Komnenos",
+          "necessary": true,
+          "depends_on": [],
+          "queries": [
+            "John Tzelepes Komnenos Wikipedia",
+            "John Tzelepes Komnenos"
+          ],
+          "subject": "John Tzelepes Komnenos"
+        },
+        {
+          "unit_id": "u2",
+          "description": "Find the father of John Tzelepes Komnenos",
+          "necessary": true,
+          "depends_on": [
+            "u1"
+          ],
+          "queries": [
+            "John Tzelepes Komnenos father",
+            "John Tzelepes Komnenos parent"
+          ],
+          "subject": "John Tzelepes Komnenos"
+        },
+        {
+          "unit_id": "u3",
+          "description": "Find the mother of the father of John Tzelepes Komnenos (paternal grandmother)",
+          "necessary": true,
+          "depends_on": [
+            "u2"
+          ],
+          "queries": [
+            "father of John Tzelepes Komnenos mother",
+            "paternal grandmother of John Tzelepes Komnenos"
+          ],
+          "subject": "{u2}"
+        }
+      ],
+      "question_only": true
+    },
+    {
+      "sequence": 6,
+      "time_s": 4.625,
+      "type": "plan",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "Identify the Wikipedia article for John Tzelepes Komnenos",
+          "necessary": true,
+          "depends_on": [],
+          "queries": [
+            "John Tzelepes Komnenos Wikipedia",
+            "John Tzelepes Komnenos"
+          ],
+          "subject": "John Tzelepes Komnenos"
+        },
+        {
+          "unit_id": "u2",
+          "description": "Find the father of John Tzelepes Komnenos",
+          "necessary": true,
+          "depends_on": [
+            "u1"
+          ],
+          "queries": [
+            "John Tzelepes Komnenos father",
+            "John Tzelepes Komnenos parent"
+          ],
+          "subject": "John Tzelepes Komnenos"
+        },
+        {
+          "unit_id": "u3",
+          "description": "Find the mother of the father of John Tzelepes Komnenos (paternal grandmother)",
+          "necessary": true,
+          "depends_on": [
+            "u2"
+          ],
+          "queries": [
+            "father of John Tzelepes Komnenos mother",
+            "paternal grandmother of John Tzelepes Komnenos"
+          ],
+          "subject": "{u2}"
+        }
+      ]
+    },
+    {
+      "sequence": 7,
+      "time_s": 4.625,
+      "type": "trace_batch_requested"
+    },
+    {
+      "sequence": 8,
+      "time_s": 4.625,
+      "type": "search_finished",
+      "query": "[scheduled evidence]",
+      "subject": "",
+      "status": "ok",
+      "returned_pages": [],
+      "mode": "trace",
+      "unit_id": "__scheduled_evidence__"
+    },
+    {
+      "sequence": 9,
+      "time_s": 4.625,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d1s0",
+        "title": "Mona Hopton Bell",
+        "url": "https://trace.invalid/2wikimultihopqa_d171a0600baf11ebab90acde48001122_long/d1s0",
+        "text": "Mona Hopton Bell( 1867- 1940) was a British artist, best known for her portraits of civic figures.",
+        "visible_time_s": 4.625,
+        "requested_subject": "",
+        "resolved_title": "Mona Hopton Bell",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 10,
+      "time_s": 4.625,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d1s1",
+        "title": "Mona Hopton Bell",
+        "url": "https://trace.invalid/2wikimultihopqa_d171a0600baf11ebab90acde48001122_long/d1s1",
+        "text": "She was the grandmother of the painter Jean H. Bell.",
+        "visible_time_s": 4.625,
+        "requested_subject": "",
+        "resolved_title": "Mona Hopton Bell",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 11,
+      "time_s": 4.625,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d3s0",
+        "title": "Hubba bint Hulail",
+        "url": "https://trace.invalid/2wikimultihopqa_d171a0600baf11ebab90acde48001122_long/d3s0",
+        "text": "Hubba bint Hulail was the grandmother of Hashim ibn' Abd Manaf, thus the great- great- great- grandmother of the Islamic\" Nabī\"( Prophet) Muhammad ibn Abdullah.",
+        "visible_time_s": 4.625,
+        "requested_subject": "",
+        "resolved_title": "Hubba bint Hulail",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 12,
+      "time_s": 4.625,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d4s0",
+        "title": "John Tzelepes Komnenos",
+        "url": "https://trace.invalid/2wikimultihopqa_d171a0600baf11ebab90acde48001122_long/d4s0",
+        "text": "John Komnenos , later surnamed Tzelepes (Τζελέπης, \"Tzelepēs\"), was the son of the \"sebastokrator\" Isaac Komnenos and grandson of the Byzantine emperor Alexios",
+        "visible_time_s": 4.625,
+        "requested_subject": "",
+        "resolved_title": "John Tzelepes Komnenos",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 13,
+      "time_s": 4.625,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d4s1",
+        "title": "John Tzelepes Komnenos",
+        "url": "https://trace.invalid/2wikimultihopqa_d171a0600baf11ebab90acde48001122_long/d4s1",
+        "text": "I Komnenos.",
+        "visible_time_s": 4.625,
+        "requested_subject": "",
+        "resolved_title": "John Tzelepes Komnenos",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 14,
+      "time_s": 4.625,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d4s2",
+        "title": "John Tzelepes Komnenos",
+        "url": "https://trace.invalid/2wikimultihopqa_d171a0600baf11ebab90acde48001122_long/d4s2",
+        "text": "As a young man he followed his father during his exile and wanderings across Asia Minor and the Levant, when for a short time he was married to a daughter of Leo I, ruler of Armenian Cilicia.",
+        "visible_time_s": 4.625,
+        "requested_subject": "",
+        "resolved_title": "John Tzelepes Komnenos",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 15,
+      "time_s": 4.625,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d4s3",
+        "title": "John Tzelepes Komnenos",
+        "url": "https://trace.invalid/2wikimultihopqa_d171a0600baf11ebab90acde48001122_long/d4s3",
+        "text": "After the reconciliation between his father and his uncle, Emperor John II Komnenos, in 1138, he returned to the Byzantine court, but defected in the next year to the Danishmendid Turks during a siege of Neocaesarea.",
+        "visible_time_s": 4.625,
+        "requested_subject": "",
+        "resolved_title": "John Tzelepes Komnenos",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 16,
+      "time_s": 4.625,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d4s4",
+        "title": "John Tzelepes Komnenos",
+        "url": "https://trace.invalid/2wikimultihopqa_d171a0600baf11ebab90acde48001122_long/d4s4",
+        "text": "From there he moved to the court of the Sultan of Rum, one of whose daughters he married.",
+        "visible_time_s": 4.625,
+        "requested_subject": "",
+        "resolved_title": "John Tzelepes Komnenos",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 17,
+      "time_s": 4.625,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d4s5",
+        "title": "John Tzelepes Komnenos",
+        "url": "https://trace.invalid/2wikimultihopqa_d171a0600baf11ebab90acde48001122_long/d4s5",
+        "text": "According to later, and likely invented, tradition, the Ottoman dynasty hailed from one of his offspring.",
+        "visible_time_s": 4.625,
+        "requested_subject": "",
+        "resolved_title": "John Tzelepes Komnenos",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 18,
+      "time_s": 4.625,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d6s0",
+        "title": "Anne Denman",
+        "url": "https://trace.invalid/2wikimultihopqa_d171a0600baf11ebab90acde48001122_long/d6s0",
+        "text": "Anne Denman( 1587–1661) was born in Olde Hall, Retford, Nottinghamshire.",
+        "visible_time_s": 4.625,
+        "requested_subject": "",
+        "resolved_title": "Anne Denman",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 19,
+      "time_s": 4.625,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d6s1",
+        "title": "Anne Denman",
+        "url": "https://trace.invalid/2wikimultihopqa_d171a0600baf11ebab90acde48001122_long/d6s1",
+        "text": "Through a fortunate second marriage with Thomas Aylesbury, she became the grandmother of Lady Anne Hyde, Duchess of York and great- grandmother of Queen Mary II and Queen Anne.",
+        "visible_time_s": 4.625,
+        "requested_subject": "",
+        "resolved_title": "Anne Denman",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 20,
+      "time_s": 4.625,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d9s0",
+        "title": "Purnima (Hindi actress)",
+        "url": "https://trace.invalid/2wikimultihopqa_d171a0600baf11ebab90acde48001122_long/d9s0",
+        "text": "Purnima Das Verma( born Meherbhano Mohammad Ali) was an Indian film actress who worked predominantly in Hindi language films.",
+        "visible_time_s": 4.625,
+        "requested_subject": "",
+        "resolved_title": "Purnima (Hindi actress)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 21,
+      "time_s": 4.625,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d9s1",
+        "title": "Purnima (Hindi actress)",
+        "url": "https://trace.invalid/2wikimultihopqa_d171a0600baf11ebab90acde48001122_long/d9s1",
+        "text": "She is the grandmother of actor Emraan Hashmi.",
+        "visible_time_s": 4.625,
+        "requested_subject": "",
+        "resolved_title": "Purnima (Hindi actress)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 22,
+      "time_s": 4.984,
+      "type": "feedback_requested",
+      "feedback_kind": "progress",
+      "execution_state": {
+        "stage": "checking",
+        "searches_started": 1,
+        "searches_completed": 1,
+        "active_searches": 0,
+        "evidence_count": 13,
+        "supported_units": 0,
+        "output_units": 0
+      }
+    },
+    {
+      "sequence": 23,
+      "time_s": 6.656,
+      "type": "judge_reply",
+      "reply": {
+        "judgments": [
+          {
+            "unit_id": "u1",
+            "label": "SUPPORTED",
+            "value": "John Tzelepes Komnenos",
+            "citations": [
+              "d4s0"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d4s0",
+                "text": "John Komnenos , later surnamed Tzelepes (Τζελέπης, \"Tzelepēs\"), was the son of the \"sebastokrator\" Isaac Komnenos and grandson of the Byzantine emperor Alexios"
+              }
+            ],
+            "reason": "Supported by the cited visible sentences and dependencies."
+          },
+          {
+            "unit_id": "u2",
+            "label": "SUPPORTED",
+            "value": "Isaac Komnenos",
+            "citations": [
+              "d4s0"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d4s0",
+                "text": "John Komnenos , later surnamed Tzelepes (Τζελέπης, \"Tzelepēs\"), was the son of the \"sebastokrator\" Isaac Komnenos and grandson of the Byzantine emperor Alexios"
+              }
+            ],
+            "reason": "Supported by the cited visible sentences and dependencies."
+          },
+          {
+            "unit_id": "u3",
+            "label": "UNRESOLVED",
+            "value": "",
+            "citations": [],
+            "quotes": [],
+            "reason": "The current visible evidence does not establish this unit."
+          }
+        ]
+      },
+      "attempt": 1,
+      "repair": false,
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d1s1",
+        "d3s0",
+        "d4s0",
+        "d4s1",
+        "d4s2",
+        "d4s3",
+        "d4s4",
+        "d4s5",
+        "d6s0",
+        "d6s1",
+        "d9s0",
+        "d9s1"
+      ]
+    },
+    {
+      "sequence": 24,
+      "time_s": 6.656,
+      "type": "judgments",
+      "judgments": {
+        "u1": {
+          "label": "SUPPORTED",
+          "value": "John Tzelepes Komnenos",
+          "citations": [
+            "d4s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d4s0",
+              "text": "John Komnenos , later surnamed Tzelepes (Τζελέπης, \"Tzelepēs\"), was the son of the \"sebastokrator\" Isaac Komnenos and grandson of the Byzantine emperor Alexios"
+            }
+          ],
+          "reason": "Supported by the cited visible sentences and dependencies."
+        },
+        "u2": {
+          "label": "SUPPORTED",
+          "value": "Isaac Komnenos",
+          "citations": [
+            "d4s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d4s0",
+              "text": "John Komnenos , later surnamed Tzelepes (Τζελέπης, \"Tzelepēs\"), was the son of the \"sebastokrator\" Isaac Komnenos and grandson of the Byzantine emperor Alexios"
+            }
+          ],
+          "reason": "Supported by the cited visible sentences and dependencies."
+        },
+        "u3": {
+          "label": "UNRESOLVED",
+          "value": "",
+          "citations": [],
+          "quotes": [],
+          "reason": "The current visible evidence does not establish this unit."
+        }
+      },
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d1s1",
+        "d3s0",
+        "d4s0",
+        "d4s1",
+        "d4s2",
+        "d4s3",
+        "d4s4",
+        "d4s5",
+        "d6s0",
+        "d6s1",
+        "d9s0",
+        "d9s1"
+      ],
+      "semantic_review": false
+    },
+    {
+      "sequence": 25,
+      "time_s": 6.656,
+      "type": "trace_batch_requested"
+    },
+    {
+      "sequence": 26,
+      "time_s": 9.468,
+      "type": "verification_reply",
+      "reply": {
+        "approved": false,
+        "facts_valid": true,
+        "expressed_unit_ids": [
+          "u2"
+        ],
+        "reason": "The draft only states the father relationship (u2); it does not express the identification of the Wikipedia article (u1), so the expressed units do not match the requested output_unit_ids."
+      },
+      "output_unit_ids": [
+        "u1",
+        "u2"
+      ],
+      "output_action": "Partial Answer",
+      "dependency_unit_ids": [],
+      "evidence_snapshot_ids": [
+        "d4s0"
+      ]
+    },
+    {
+      "sequence": 27,
+      "time_s": 9.468,
+      "type": "draft_rejected",
+      "reason": "Draft wording or output-unit accounting rejected",
+      "output_unit_ids": [
+        "u1",
+        "u2"
+      ],
+      "expressed_unit_ids": [
+        "u2"
+      ]
+    },
+    {
+      "sequence": 28,
+      "time_s": 9.468,
+      "type": "utterance",
+      "action": "Partial Answer",
+      "text": "The Wikipedia article for John Tzelepes Komnenos is John Tzelepes Komnenos. The father of John Tzelepes Komnenos is Isaac Komnenos.",
+      "claims": [
+        {
+          "unit_id": "u1",
+          "description": "Identify the Wikipedia article for John Tzelepes Komnenos",
+          "value": "John Tzelepes Komnenos",
+          "citations": [
+            "d4s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d4s0",
+              "text": "John Komnenos , later surnamed Tzelepes (Τζελέπης, \"Tzelepēs\"), was the son of the \"sebastokrator\" Isaac Komnenos and grandson of the Byzantine emperor Alexios"
+            }
+          ]
+        },
+        {
+          "unit_id": "u2",
+          "description": "Find the father of John Tzelepes Komnenos",
+          "value": "Isaac Komnenos",
+          "citations": [
+            "d4s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d4s0",
+              "text": "John Komnenos , later surnamed Tzelepes (Τζελέπης, \"Tzelepēs\"), was the son of the \"sebastokrator\" Isaac Komnenos and grandson of the Byzantine emperor Alexios"
+            }
+          ]
+        }
+      ],
+      "unresolved": [],
+      "fallback": true,
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d1s1",
+        "d3s0",
+        "d4s0",
+        "d4s1",
+        "d4s2",
+        "d4s3",
+        "d4s4",
+        "d4s5",
+        "d6s0",
+        "d6s1",
+        "d9s0",
+        "d9s1"
+      ],
+      "language": "en"
+    },
+    {
+      "sequence": 29,
+      "time_s": 9.468,
+      "type": "search_finished",
+      "query": "[scheduled evidence]",
+      "subject": "",
+      "status": "ok",
+      "returned_pages": [],
+      "mode": "trace",
+      "unit_id": "__scheduled_evidence__"
+    },
+    {
+      "sequence": 30,
+      "time_s": 9.468,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d2s0",
+        "title": "Kaoru Hatoyama",
+        "url": "https://trace.invalid/2wikimultihopqa_d171a0600baf11ebab90acde48001122_long/d2s0",
+        "text": "After the elections of 2009, she became more widely known as the grandmother of Prime Minister Yukio Hatoyama and his politician brother Kunio Hatoyama.",
+        "visible_time_s": 9.468000000008033,
+        "requested_subject": "",
+        "resolved_title": "Kaoru Hatoyama",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 31,
+      "time_s": 9.468,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d5s0",
+        "title": "Diana Guardato",
+        "url": "https://trace.invalid/2wikimultihopqa_d171a0600baf11ebab90acde48001122_long/d5s0",
+        "text": "Diana Guardato was a member of the aristocratic Patrician Guardato family, and had three children with King Ferdinand I: Diana Guardato is the 16th- Great Grandmother of His Royal Highness Albert II of Belgium, 15th- Great Grandmother of His Majesty Juan Carlos",
+        "visible_time_s": 9.468000000008033,
+        "requested_subject": "",
+        "resolved_title": "Diana Guardato",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 32,
+      "time_s": 9.468,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d5s1",
+        "title": "Diana Guardato",
+        "url": "https://trace.invalid/2wikimultihopqa_d171a0600baf11ebab90acde48001122_long/d5s1",
+        "text": "I of Spain, 17th- Great Grandmother of Philippe of Belgium, 14th- Great Grandmother of His Majesty Manuel II of Portugal, 16th- Great Grandmother of Grand Duke Henri, as well as many others.",
+        "visible_time_s": 9.468000000008033,
+        "requested_subject": "",
+        "resolved_title": "Diana Guardato",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 33,
+      "time_s": 9.468,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d7s0",
+        "title": "Hannah Arnold",
+        "url": "https://trace.invalid/2wikimultihopqa_d171a0600baf11ebab90acde48001122_long/d7s0",
+        "text": "Hannah Arnold, also known as Hannah Waterman King, was the grandmother of Benedict Arnolds children.",
+        "visible_time_s": 9.468000000008033,
+        "requested_subject": "",
+        "resolved_title": "Hannah Arnold",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 34,
+      "time_s": 9.468,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d8s0",
+        "title": "Isaac Komnenos (son of Alexios I)",
+        "url": "https://trace.invalid/2wikimultihopqa_d171a0600baf11ebab90acde48001122_long/d8s0",
+        "text": "Isaac Komnenos or Comnenus (16 January 1093 – after 1152) was the third son of Byzantine Emperor Alexios I Komnenos and Empress Irene Doukaina.",
+        "visible_time_s": 9.468000000008033,
+        "requested_subject": "",
+        "resolved_title": "Isaac Komnenos (son of Alexios I)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 35,
+      "time_s": 9.468,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d8s1",
+        "title": "Isaac Komnenos (son of Alexios I)",
+        "url": "https://trace.invalid/2wikimultihopqa_d171a0600baf11ebab90acde48001122_long/d8s1",
+        "text": "He was raised to the high rank of \"sebastokrator\" by his older brother John II Komnenos in reward for his support, but they later fell out, as Isaac began to covet the throne.",
+        "visible_time_s": 9.468000000008033,
+        "requested_subject": "",
+        "resolved_title": "Isaac Komnenos (son of Alexios I)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 36,
+      "time_s": 9.468,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d8s2",
+        "title": "Isaac Komnenos (son of Alexios I)",
+        "url": "https://trace.invalid/2wikimultihopqa_d171a0600baf11ebab90acde48001122_long/d8s2",
+        "text": "In 1130, Isaac and his sons fled to exile after becoming involved in a conspiracy against John.",
+        "visible_time_s": 9.468000000008033,
+        "requested_subject": "",
+        "resolved_title": "Isaac Komnenos (son of Alexios I)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 37,
+      "time_s": 9.468,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d8s3",
+        "title": "Isaac Komnenos (son of Alexios I)",
+        "url": "https://trace.invalid/2wikimultihopqa_d171a0600baf11ebab90acde48001122_long/d8s3",
+        "text": "For several years, they wandered in Asia Minor and the Levant, trying to gain support from the local rulers, but ultimately in vain.",
+        "visible_time_s": 9.468000000008033,
+        "requested_subject": "",
+        "resolved_title": "Isaac Komnenos (son of Alexios I)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 38,
+      "time_s": 9.468,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d8s4",
+        "title": "Isaac Komnenos (son of Alexios I)",
+        "url": "https://trace.invalid/2wikimultihopqa_d171a0600baf11ebab90acde48001122_long/d8s4",
+        "text": "John's military successes forced Isaac to seek a reconciliation with his brother in 1138, although he did not give up his designs on the throne.",
+        "visible_time_s": 9.468000000008033,
+        "requested_subject": "",
+        "resolved_title": "Isaac Komnenos (son of Alexios I)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 39,
+      "time_s": 9.468,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d8s5",
+        "title": "Isaac Komnenos (son of Alexios I)",
+        "url": "https://trace.invalid/2wikimultihopqa_d171a0600baf11ebab90acde48001122_long/d8s5",
+        "text": "In 1139, after his oldest son defected to the Seljuk Turks, Isaac was exiled to Heraclea Pontica.",
+        "visible_time_s": 9.468000000008033,
+        "requested_subject": "",
+        "resolved_title": "Isaac Komnenos (son of Alexios I)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 40,
+      "time_s": 9.468,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d8s6",
+        "title": "Isaac Komnenos (son of Alexios I)",
+        "url": "https://trace.invalid/2wikimultihopqa_d171a0600baf11ebab90acde48001122_long/d8s6",
+        "text": "During the struggle for John's succession in 1143, he supported the unsuccessful candidacy of his elder nephew, likewise named Isaac, over his younger nephew Manuel I Komnenos.",
+        "visible_time_s": 9.468000000008033,
+        "requested_subject": "",
+        "resolved_title": "Isaac Komnenos (son of Alexios I)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 41,
+      "time_s": 9.468,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d8s7",
+        "title": "Isaac Komnenos (son of Alexios I)",
+        "url": "https://trace.invalid/2wikimultihopqa_d171a0600baf11ebab90acde48001122_long/d8s7",
+        "text": "In 1150, weakened by the onset of an illness, he was forced to retire from public life by Manuel.",
+        "visible_time_s": 9.468000000008033,
+        "requested_subject": "",
+        "resolved_title": "Isaac Komnenos (son of Alexios I)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 42,
+      "time_s": 9.468,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d8s8",
+        "title": "Isaac Komnenos (son of Alexios I)",
+        "url": "https://trace.invalid/2wikimultihopqa_d171a0600baf11ebab90acde48001122_long/d8s8",
+        "text": "Isaac then devoted himself to the construction of the monastery of Theotokos Kosmosoteira at Bera (modern Feres) in western Thrace, where he was to be buried.",
+        "visible_time_s": 9.468000000008033,
+        "requested_subject": "",
+        "resolved_title": "Isaac Komnenos (son of Alexios I)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 43,
+      "time_s": 9.468,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d8s9",
+        "title": "Isaac Komnenos (son of Alexios I)",
+        "url": "https://trace.invalid/2wikimultihopqa_d171a0600baf11ebab90acde48001122_long/d8s9",
+        "text": "Isaac was noted for his erudition and his patronage of learning, and is considered the author of a number of scholarly and poetic works.",
+        "visible_time_s": 9.468000000008033,
+        "requested_subject": "",
+        "resolved_title": "Isaac Komnenos (son of Alexios I)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 44,
+      "time_s": 9.468,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d8s10",
+        "title": "Isaac Komnenos (son of Alexios I)",
+        "url": "https://trace.invalid/2wikimultihopqa_d171a0600baf11ebab90acde48001122_long/d8s10",
+        "text": "He is also notable for rebuilding the Chora Church in Constantinople, where his mosaic donor portrait survives to this day.",
+        "visible_time_s": 9.468000000008033,
+        "requested_subject": "",
+        "resolved_title": "Isaac Komnenos (son of Alexios I)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 45,
+      "time_s": 9.468,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d8s11",
+        "title": "Isaac Komnenos (son of Alexios I)",
+        "url": "https://trace.invalid/2wikimultihopqa_d171a0600baf11ebab90acde48001122_long/d8s11",
+        "text": "His younger son Andronikos I Komnenos eventually managed to realize Isaac's ambitions, becoming emperor in 1183–1185, the last of the Komnenian dynasty.",
+        "visible_time_s": 9.468000000008033,
+        "requested_subject": "",
+        "resolved_title": "Isaac Komnenos (son of Alexios I)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 46,
+      "time_s": 9.468,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d10s0",
+        "title": "Tjuyu",
+        "url": "https://trace.invalid/2wikimultihopqa_d171a0600baf11ebab90acde48001122_long/d10s0",
+        "text": "Tjuyu( sometimes transliterated as Thuya or Thuyu) was an Egyptian noblewoman and the mother of queen Tiye, and the wife of Yuya.",
+        "visible_time_s": 9.468000000008033,
+        "requested_subject": "",
+        "resolved_title": "Tjuyu",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 47,
+      "time_s": 9.468,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d10s1",
+        "title": "Tjuyu",
+        "url": "https://trace.invalid/2wikimultihopqa_d171a0600baf11ebab90acde48001122_long/d10s1",
+        "text": "She is the grandmother of Akhenaten, and great grandmother of Tutankhamun.",
+        "visible_time_s": 9.468000000008033,
+        "requested_subject": "",
+        "resolved_title": "Tjuyu",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 48,
+      "time_s": 9.578,
+      "type": "feedback_discarded",
+      "feedback_kind": "progress",
+      "reason": "answer_already_advanced"
+    },
+    {
+      "sequence": 49,
+      "time_s": 11.656,
+      "type": "judge_reply",
+      "reply": {
+        "judgments": [
+          {
+            "unit_id": "u1",
+            "label": "SUPPORTED",
+            "value": "John Tzelepes Komnenos",
+            "citations": [
+              "d4s0"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d4s0",
+                "text": "John Komnenos , later surnamed Tzelepes (Τζελέπης, \"Tzelepēs\"), was the son of the \"sebastokrator\" Isaac Komnenos and grandson of the Byzantine emperor Alexios"
+              }
+            ],
+            "reason": "Supported by the cited visible sentences and dependencies."
+          },
+          {
+            "unit_id": "u2",
+            "label": "SUPPORTED",
+            "value": "Isaac Komnenos",
+            "citations": [
+              "d4s0"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d4s0",
+                "text": "John Komnenos , later surnamed Tzelepes (Τζελέπης, \"Tzelepēs\"), was the son of the \"sebastokrator\" Isaac Komnenos and grandson of the Byzantine emperor Alexios"
+              }
+            ],
+            "reason": "Supported by the cited visible sentences and dependencies."
+          },
+          {
+            "unit_id": "u3",
+            "label": "SUPPORTED",
+            "value": "Irene Doukaina",
+            "citations": [
+              "d8s0"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d8s0",
+                "text": "Isaac Komnenos or Comnenus (16 January 1093 – after 1152) was the third son of Byzantine Emperor Alexios I Komnenos and Empress Irene Doukaina."
+              }
+            ],
+            "reason": "Supported by the cited visible sentences and dependencies."
+          }
+        ]
+      },
+      "attempt": 1,
+      "repair": false,
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d1s1",
+        "d3s0",
+        "d4s0",
+        "d4s1",
+        "d4s2",
+        "d4s3",
+        "d4s4",
+        "d4s5",
+        "d6s0",
+        "d6s1",
+        "d9s0",
+        "d9s1",
+        "d2s0",
+        "d5s0",
+        "d5s1",
+        "d7s0",
+        "d8s0",
+        "d8s1",
+        "d8s2",
+        "d8s3",
+        "d8s4",
+        "d8s5",
+        "d8s6",
+        "d8s7",
+        "d8s8",
+        "d8s9",
+        "d8s10",
+        "d8s11",
+        "d10s0",
+        "d10s1"
+      ]
+    },
+    {
+      "sequence": 50,
+      "time_s": 11.656,
+      "type": "judgments",
+      "judgments": {
+        "u1": {
+          "label": "SUPPORTED",
+          "value": "John Tzelepes Komnenos",
+          "citations": [
+            "d4s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d4s0",
+              "text": "John Komnenos , later surnamed Tzelepes (Τζελέπης, \"Tzelepēs\"), was the son of the \"sebastokrator\" Isaac Komnenos and grandson of the Byzantine emperor Alexios"
+            }
+          ],
+          "reason": "Supported by the cited visible sentences and dependencies."
+        },
+        "u2": {
+          "label": "SUPPORTED",
+          "value": "Isaac Komnenos",
+          "citations": [
+            "d4s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d4s0",
+              "text": "John Komnenos , later surnamed Tzelepes (Τζελέπης, \"Tzelepēs\"), was the son of the \"sebastokrator\" Isaac Komnenos and grandson of the Byzantine emperor Alexios"
+            }
+          ],
+          "reason": "Supported by the cited visible sentences and dependencies."
+        },
+        "u3": {
+          "label": "UNRESOLVED",
+          "value": "",
+          "citations": [],
+          "quotes": [],
+          "reason": "Rejected entity identity: citation concerns an ambiguous or differently qualified namesake"
+        }
+      },
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d1s1",
+        "d3s0",
+        "d4s0",
+        "d4s1",
+        "d4s2",
+        "d4s3",
+        "d4s4",
+        "d4s5",
+        "d6s0",
+        "d6s1",
+        "d9s0",
+        "d9s1",
+        "d2s0",
+        "d5s0",
+        "d5s1",
+        "d7s0",
+        "d8s0",
+        "d8s1",
+        "d8s2",
+        "d8s3",
+        "d8s4",
+        "d8s5",
+        "d8s6",
+        "d8s7",
+        "d8s8",
+        "d8s9",
+        "d8s10",
+        "d8s11",
+        "d10s0",
+        "d10s1"
+      ],
+      "semantic_review": false
+    },
+    {
+      "sequence": 51,
+      "time_s": 11.656,
+      "type": "trace_batch_requested"
+    },
+    {
+      "sequence": 52,
+      "time_s": 11.656,
+      "type": "search_finished",
+      "query": "[scheduled evidence]",
+      "subject": "",
+      "status": "ok",
+      "returned_pages": [],
+      "mode": "trace",
+      "unit_id": "__scheduled_evidence__"
+    },
+    {
+      "sequence": 53,
+      "time_s": 11.656,
+      "type": "semantic_review_requested",
+      "target_unit_ids": [
+        "u3"
+      ],
+      "review_unit_ids": [
+        "u1",
+        "u2",
+        "u3"
+      ],
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d1s1",
+        "d3s0",
+        "d4s0",
+        "d4s1",
+        "d4s2",
+        "d4s3",
+        "d4s4",
+        "d4s5",
+        "d6s0",
+        "d6s1",
+        "d9s0",
+        "d9s1",
+        "d2s0",
+        "d5s0",
+        "d5s1",
+        "d7s0",
+        "d8s0",
+        "d8s1",
+        "d8s2",
+        "d8s3",
+        "d8s4",
+        "d8s5",
+        "d8s6",
+        "d8s7",
+        "d8s8",
+        "d8s9",
+        "d8s10",
+        "d8s11",
+        "d10s0",
+        "d10s1"
+      ],
+      "max_reviews": 1
+    },
+    {
+      "sequence": 54,
+      "time_s": 12.718,
+      "type": "feedback_requested",
+      "feedback_kind": "progress",
+      "execution_state": {
+        "stage": "checking",
+        "searches_started": 3,
+        "searches_completed": 3,
+        "active_searches": 0,
+        "evidence_count": 31,
+        "supported_units": 2,
+        "output_units": 2
+      }
+    },
+    {
+      "sequence": 55,
+      "time_s": 13.843,
+      "type": "semantic_review_reply",
+      "reply": {
+        "judgments": [
+          {
+            "unit_id": "u1",
+            "label": "SUPPORTED",
+            "value": "John Tzelepes Komnenos",
+            "citations": [
+              "d4s0"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d4s0",
+                "text": "John Komnenos , later surnamed Tzelepes (Τζελέπης, \"Tzelepēs\"), was the son of the \"sebastokrator\" Isaac Komnenos and grandson of the Byzantine emperor Alexios"
+              }
+            ],
+            "reason": "Supported by the cited visible sentences and dependencies."
+          },
+          {
+            "unit_id": "u2",
+            "label": "SUPPORTED",
+            "value": "Isaac Komnenos",
+            "citations": [
+              "d4s0"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d4s0",
+                "text": "John Komnenos , later surnamed Tzelepes (Τζελέπης, \"Tzelepēs\"), was the son of the \"sebastokrator\" Isaac Komnenos and grandson of the Byzantine emperor Alexios"
+              }
+            ],
+            "reason": "Supported by the cited visible sentences and dependencies."
+          },
+          {
+            "unit_id": "u3",
+            "label": "SUPPORTED",
+            "value": "Irene Doukaina",
+            "citations": [
+              "d8s0"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d8s0",
+                "text": "Isaac Komnenos or Comnenus (16 January 1093 – after 1152) was the third son of Byzantine Emperor Alexios I Komnenos and Empress Irene Doukaina."
+              }
+            ],
+            "reason": "Supported by the cited visible sentences and dependencies."
+          }
+        ]
+      },
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d1s1",
+        "d3s0",
+        "d4s0",
+        "d4s1",
+        "d4s2",
+        "d4s3",
+        "d4s4",
+        "d4s5",
+        "d6s0",
+        "d6s1",
+        "d9s0",
+        "d9s1",
+        "d2s0",
+        "d5s0",
+        "d5s1",
+        "d7s0",
+        "d8s0",
+        "d8s1",
+        "d8s2",
+        "d8s3",
+        "d8s4",
+        "d8s5",
+        "d8s6",
+        "d8s7",
+        "d8s8",
+        "d8s9",
+        "d8s10",
+        "d8s11",
+        "d10s0",
+        "d10s1"
+      ]
+    },
+    {
+      "sequence": 56,
+      "time_s": 13.843,
+      "type": "semantic_review_finished",
+      "review_unit_ids": [
+        "u1",
+        "u2",
+        "u3"
+      ],
+      "recovered_unit_ids": []
+    },
+    {
+      "sequence": 57,
+      "time_s": 13.843,
+      "type": "judgments",
+      "judgments": {
+        "u1": {
+          "label": "SUPPORTED",
+          "value": "John Tzelepes Komnenos",
+          "citations": [
+            "d4s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d4s0",
+              "text": "John Komnenos , later surnamed Tzelepes (Τζελέπης, \"Tzelepēs\"), was the son of the \"sebastokrator\" Isaac Komnenos and grandson of the Byzantine emperor Alexios"
+            }
+          ],
+          "reason": "Supported by the cited visible sentences and dependencies."
+        },
+        "u2": {
+          "label": "SUPPORTED",
+          "value": "Isaac Komnenos",
+          "citations": [
+            "d4s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d4s0",
+              "text": "John Komnenos , later surnamed Tzelepes (Τζελέπης, \"Tzelepēs\"), was the son of the \"sebastokrator\" Isaac Komnenos and grandson of the Byzantine emperor Alexios"
+            }
+          ],
+          "reason": "Supported by the cited visible sentences and dependencies."
+        },
+        "u3": {
+          "label": "UNRESOLVED",
+          "value": "",
+          "citations": [],
+          "quotes": [],
+          "reason": "Rejected entity identity: citation concerns an ambiguous or differently qualified namesake"
+        }
+      },
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d1s1",
+        "d3s0",
+        "d4s0",
+        "d4s1",
+        "d4s2",
+        "d4s3",
+        "d4s4",
+        "d4s5",
+        "d6s0",
+        "d6s1",
+        "d9s0",
+        "d9s1",
+        "d2s0",
+        "d5s0",
+        "d5s1",
+        "d7s0",
+        "d8s0",
+        "d8s1",
+        "d8s2",
+        "d8s3",
+        "d8s4",
+        "d8s5",
+        "d8s6",
+        "d8s7",
+        "d8s8",
+        "d8s9",
+        "d8s10",
+        "d8s11",
+        "d10s0",
+        "d10s1"
+      ],
+      "semantic_review": true
+    },
+    {
+      "sequence": 58,
+      "time_s": 13.843,
+      "type": "utterance",
+      "action": "Final Answer",
+      "text": "I could not confirm the mother of the father of John Tzelepes Komnenos (paternal grandmother).",
+      "claims": [],
+      "unresolved": [
+        "u3"
+      ],
+      "fallback": false,
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d1s1",
+        "d3s0",
+        "d4s0",
+        "d4s1",
+        "d4s2",
+        "d4s3",
+        "d4s4",
+        "d4s5",
+        "d6s0",
+        "d6s1",
+        "d9s0",
+        "d9s1",
+        "d2s0",
+        "d5s0",
+        "d5s1",
+        "d7s0",
+        "d8s0",
+        "d8s1",
+        "d8s2",
+        "d8s3",
+        "d8s4",
+        "d8s5",
+        "d8s6",
+        "d8s7",
+        "d8s8",
+        "d8s9",
+        "d8s10",
+        "d8s11",
+        "d10s0",
+        "d10s1"
+      ],
+      "language": "en"
+    },
+    {
+      "sequence": 59,
+      "time_s": 13.843,
+      "type": "finished",
+      "status": "incomplete"
+    }
+  ],
+  "note": "Prototype model judgments are not independent gold scores. Output event times are not spoken claim times.",
+  "evidence_mode": "scheduled_trace",
+  "audio": {
+    "enabled": true,
+    "mode": "windows",
+    "play": false,
+    "status": "ok",
+    "errors": [],
+    "records": [
+      {
+        "event_sequence": 1,
+        "sentence_index": 1,
+        "sentence_count": 1,
+        "language": "en",
+        "text": "I see you want to know John Tzelepes Komnenos's paternal grandmother; I’ll start looking that up.",
+        "action": "Backchannel",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 1.812000000005355,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1-continued\\samples\\0372\\audio\\segments\\0001_01.wav",
+        "duration_s": 6.073424036281179,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 2.5930000000080327,
+        "synthesis_and_playback_s": 0.7810000000026776
+      },
+      {
+        "event_sequence": 28,
+        "sentence_index": 1,
+        "sentence_count": 2,
+        "language": "en",
+        "text": "The Wikipedia article for John Tzelepes Komnenos is John Tzelepes Komnenos.",
+        "action": "Partial Answer",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 9.468000000008033,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1-continued\\samples\\0372\\audio\\segments\\0028_01.wav",
+        "duration_s": 5.048480725623583,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 10.264999999999418,
+        "synthesis_and_playback_s": 0.7969999999913853
+      },
+      {
+        "event_sequence": 28,
+        "sentence_index": 2,
+        "sentence_count": 2,
+        "language": "en",
+        "text": "The father of John Tzelepes Komnenos is Isaac Komnenos.",
+        "action": "Partial Answer",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 10.264999999999418,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1-continued\\samples\\0372\\audio\\segments\\0028_02.wav",
+        "duration_s": 3.9238095238095236,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 11.047000000005937,
+        "synthesis_and_playback_s": 0.7820000000065193
+      },
+      {
+        "event_sequence": 58,
+        "sentence_index": 1,
+        "sentence_count": 1,
+        "language": "en",
+        "text": "I could not confirm the mother of the father of John Tzelepes Komnenos (paternal grandmother).",
+        "action": "Final Answer",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 13.843000000008033,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1-continued\\samples\\0372\\audio\\segments\\0058_01.wav",
+        "duration_s": 5.853514739229025,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 14.672000000005937,
+        "synthesis_and_playback_s": 0.8289999999979045
+      }
+    ],
+    "wave": {
+      "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1-continued\\samples\\0372\\audio\\response.wav",
+      "duration_s": 25.09079365079365,
+      "timeline": [
+        {
+          "event_sequence": 1,
+          "sentence_index": 1,
+          "action": "Backchannel",
+          "text": "I see you want to know John Tzelepes Komnenos's paternal grandmother; I’ll start looking that up.",
+          "wave_start_s": 2.593015873015873,
+          "wave_end_s": 8.666439909297052
+        },
+        {
+          "event_sequence": 28,
+          "sentence_index": 1,
+          "action": "Partial Answer",
+          "text": "The Wikipedia article for John Tzelepes Komnenos is John Tzelepes Komnenos.",
+          "wave_start_s": 10.26498866213152,
+          "wave_end_s": 15.313469387755102
+        },
+        {
+          "event_sequence": 28,
+          "sentence_index": 2,
+          "action": "Partial Answer",
+          "text": "The father of John Tzelepes Komnenos is Isaac Komnenos.",
+          "wave_start_s": 15.313469387755102,
+          "wave_end_s": 19.237278911564626
+        },
+        {
+          "event_sequence": 58,
+          "sentence_index": 1,
+          "action": "Final Answer",
+          "text": "I could not confirm the mother of the father of John Tzelepes Komnenos (paternal grandmother).",
+          "wave_start_s": 19.237278911564626,
+          "wave_end_s": 25.09079365079365
+        }
+      ]
+    }
+  },
+  "evaluation": {
+    "mode": "b_final_revised_trace",
+    "trace_id": "2wikimultihopqa_d171a0600baf11ebab90acde48001122_long",
+    "sample_id": "2wikimultihopqa_d171a0600baf11ebab90acde48001122",
+    "total_wall_s": 14.672000000005937,
+    "question_timeout_s": 180,
+    "audio_enabled": true,
+    "history_enabled": false,
+    "text_pipeline_wall_s": 13.843000000008033,
+    "effective_settings": {
+      "base_url": "https://tinker.thinkingmachines.dev/services/tinker-prod/oai/api/v1",
+      "model": "openai/gpt-oss-120b",
+      "judge_model": "tinker://f9e9a6c1-e203-5c2c-acdd-68fe67378ca4:train:0/sampler_weights/epoch-0001",
+      "judge_reasoning_effort": "low",
+      "wiki_language": "en",
+      "user_agent": "CascadeSystem/0.1 (educational research prototype)",
+      "timeout_s": 45.0,
+      "max_tokens": 4096,
+      "reasoning_effort": "low",
+      "progress_s": 3.0,
+      "feedback_timeout_s": 6.0,
+      "search_limit": 3,
+      "max_units": 8,
+      "max_searches": 16,
+      "max_sources": 31,
+      "source_chars": 261,
+      "evidence_chars": 4034,
+      "concurrency": 3
+    },
+    "timing_kind": "unknown",
+    "scheduler": "wall-paced fixed B arrivals",
+    "split": "eval_reserved",
+    "empty_evidence_sentences_ignored": 0
+  }
+}

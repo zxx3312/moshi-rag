@@ -1,0 +1,1613 @@
+{
+  "question": "Which film has the director born later, Hospital Massacre or Searching For Monica?",
+  "resolved_question": "Which film has the director born later, Hospital Massacre or Searching For Monica?",
+  "used_history_turn_ids": [],
+  "response_language": "en",
+  "status": "complete",
+  "clock": "wall_monotonic",
+  "time_origin": "question_text_ready_after_optional_asr",
+  "model": "openai/gpt-oss-120b",
+  "judge_model": "tinker://f9e9a6c1-e203-5c2c-acdd-68fe67378ca4:train:0/sampler_weights/epoch-0001",
+  "units": [
+    {
+      "unit_id": "u1",
+      "description": "Identify the director of the film Hospital Massacre",
+      "necessary": false,
+      "depends_on": [],
+      "queries": [
+        "Hospital Massacre director",
+        "Hospital Massacre film director"
+      ],
+      "subject": "Hospital Massacre"
+    },
+    {
+      "unit_id": "u2",
+      "description": "Identify the director of the film Searching For Monica",
+      "necessary": false,
+      "depends_on": [],
+      "queries": [
+        "Searching For Monica director",
+        "Searching For Monica film director"
+      ],
+      "subject": "Searching For Monica"
+    },
+    {
+      "unit_id": "u3",
+      "description": "Birth year of the director of Hospital Massacre",
+      "necessary": false,
+      "depends_on": [
+        "u1"
+      ],
+      "queries": [
+        "{u1} birth year",
+        "{u1} date of birth"
+      ],
+      "subject": "{u1}"
+    },
+    {
+      "unit_id": "u4",
+      "description": "Birth year of the director of Searching For Monica",
+      "necessary": false,
+      "depends_on": [
+        "u2"
+      ],
+      "queries": [
+        "{u2} birth year",
+        "{u2} date of birth"
+      ],
+      "subject": "{u2}"
+    },
+    {
+      "unit_id": "u5",
+      "description": "Which film has the director born later",
+      "necessary": true,
+      "depends_on": [
+        "u3",
+        "u4",
+        "u1",
+        "u2"
+      ],
+      "queries": [
+        "compare birth years of {u1} and {u2}",
+        "who is younger {u1} {u2}"
+      ],
+      "subject": ""
+    }
+  ],
+  "judgments": {
+    "u1": {
+      "label": "SUPPORTED",
+      "value": "Boaz Davidson",
+      "citations": [
+        "d1s0"
+      ],
+      "quotes": [
+        {
+          "evidence_id": "d1s0",
+          "text": "Hospital Massacre( also known as X- Ray, Ward 13 and Be My Valentine, or Else ...) is a 1981 American slasher film directed by Boaz Davidson, written by Davidson and Marc Behm, and starring Barbi Benton."
+        }
+      ],
+      "reason": "Supported by the cited visible sentences and dependencies."
+    },
+    "u2": {
+      "label": "SUPPORTED",
+      "value": "José María Forqué",
+      "citations": [
+        "d10s0"
+      ],
+      "quotes": [
+        {
+          "evidence_id": "d10s0",
+          "text": "Buscando a Mónica( Searching for Monica) is a 1962 Argentine- Spanish black- and- white film musical film drama directed by José María Forqué."
+        }
+      ],
+      "reason": "Supported by the cited visible sentences and dependencies."
+    },
+    "u3": {
+      "label": "SUPPORTED",
+      "value": "1943",
+      "citations": [
+        "d7s0"
+      ],
+      "quotes": [
+        {
+          "evidence_id": "d7s0",
+          "text": "Boaz Davidson( born 8 November 1943) is an Israeli film director, producer and screenwriter."
+        }
+      ],
+      "reason": "Supported by the cited visible sentences and dependencies."
+    },
+    "u4": {
+      "label": "SUPPORTED",
+      "value": "1923",
+      "citations": [
+        "d6s0"
+      ],
+      "quotes": [
+        {
+          "evidence_id": "d6s0",
+          "text": "José María Forqué Galindo (8 March 1923 – 17 March 1995) was a Spanish screenwriter and film director."
+        }
+      ],
+      "reason": "Supported by the cited visible sentences and dependencies."
+    },
+    "u5": {
+      "label": "SUPPORTED",
+      "value": "Hospital Massacre",
+      "citations": [
+        "d7s0",
+        "d6s0"
+      ],
+      "quotes": [
+        {
+          "evidence_id": "d7s0",
+          "text": "Boaz Davidson( born 8 November 1943) is an Israeli film director, producer and screenwriter."
+        },
+        {
+          "evidence_id": "d6s0",
+          "text": "José María Forqué Galindo (8 March 1923 – 17 March 1995) was a Spanish screenwriter and film director."
+        }
+      ],
+      "reason": "Supported by the cited visible sentences and dependencies."
+    }
+  },
+  "evidence": [
+    {
+      "evidence_id": "d1s0",
+      "title": "Hospital Massacre",
+      "url": "https://trace.invalid/2wikimultihopqa_140ef7b108b811ebbd88ac1f6bf848b6_immediate/d1s0",
+      "text": "Hospital Massacre( also known as X- Ray, Ward 13 and Be My Valentine, or Else ...) is a 1981 American slasher film directed by Boaz Davidson, written by Davidson and Marc Behm, and starring Barbi Benton.",
+      "visible_time_s": 9.875,
+      "requested_subject": "",
+      "resolved_title": "Hospital Massacre",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d2s0",
+      "title": "Yolonda Ross",
+      "url": "https://trace.invalid/2wikimultihopqa_140ef7b108b811ebbd88ac1f6bf848b6_immediate/d2s0",
+      "text": "Yolonda Ross is an American character actress, writer and director born (31 July 1974).",
+      "visible_time_s": 9.875,
+      "requested_subject": "",
+      "resolved_title": "Yolonda Ross",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d3s0",
+      "title": "Claude Weisz",
+      "url": "https://trace.invalid/2wikimultihopqa_140ef7b108b811ebbd88ac1f6bf848b6_immediate/d3s0",
+      "text": "Claude Weisz is a French film director born in Paris.",
+      "visible_time_s": 9.875,
+      "requested_subject": "",
+      "resolved_title": "Claude Weisz",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d4s0",
+      "title": "Jacques Décombe",
+      "url": "https://trace.invalid/2wikimultihopqa_140ef7b108b811ebbd88ac1f6bf848b6_immediate/d4s0",
+      "text": "Jacques Décombe is a French author, actor and director born in 1953.",
+      "visible_time_s": 9.875,
+      "requested_subject": "",
+      "resolved_title": "Jacques Décombe",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d5s0",
+      "title": "W. Augustus Barratt",
+      "url": "https://trace.invalid/2wikimultihopqa_140ef7b108b811ebbd88ac1f6bf848b6_immediate/d5s0",
+      "text": "W. Augustus Barratt( 1873- 1947) was a Scottish- born, later American, songwriter and musician.",
+      "visible_time_s": 9.875,
+      "requested_subject": "",
+      "resolved_title": "W. Augustus Barratt",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d6s0",
+      "title": "José María Forqué",
+      "url": "https://trace.invalid/2wikimultihopqa_140ef7b108b811ebbd88ac1f6bf848b6_immediate/d6s0",
+      "text": "José María Forqué Galindo (8 March 1923 – 17 March 1995) was a Spanish screenwriter and film director.",
+      "visible_time_s": 9.875,
+      "requested_subject": "",
+      "resolved_title": "José María Forqué",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d7s0",
+      "title": "Boaz Davidson",
+      "url": "https://trace.invalid/2wikimultihopqa_140ef7b108b811ebbd88ac1f6bf848b6_immediate/d7s0",
+      "text": "Boaz Davidson( born 8 November 1943) is an Israeli film director, producer and screenwriter.",
+      "visible_time_s": 9.875,
+      "requested_subject": "",
+      "resolved_title": "Boaz Davidson",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d7s1",
+      "title": "Boaz Davidson",
+      "url": "https://trace.invalid/2wikimultihopqa_140ef7b108b811ebbd88ac1f6bf848b6_immediate/d7s1",
+      "text": "He was born in Tel Aviv, Israel and studied film in London at London Film School.",
+      "visible_time_s": 9.875,
+      "requested_subject": "",
+      "resolved_title": "Boaz Davidson",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d8s0",
+      "title": "Sepideh Farsi",
+      "url": "https://trace.invalid/2wikimultihopqa_140ef7b108b811ebbd88ac1f6bf848b6_immediate/d8s0",
+      "text": "Sepideh Farsi is an Iranian film director, born in Tehran in 1965.",
+      "visible_time_s": 9.875,
+      "requested_subject": "",
+      "resolved_title": "Sepideh Farsi",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d9s0",
+      "title": "Fred Roy Krug",
+      "url": "https://trace.invalid/2wikimultihopqa_140ef7b108b811ebbd88ac1f6bf848b6_immediate/d9s0",
+      "text": "Fred R. Krug is an American film and television producer- director born in Bern, Switzerland.",
+      "visible_time_s": 9.875,
+      "requested_subject": "",
+      "resolved_title": "Fred Roy Krug",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d10s0",
+      "title": "Searching for Monica",
+      "url": "https://trace.invalid/2wikimultihopqa_140ef7b108b811ebbd88ac1f6bf848b6_immediate/d10s0",
+      "text": "Buscando a Mónica( Searching for Monica) is a 1962 Argentine- Spanish black- and- white film musical film drama directed by José María Forqué.",
+      "visible_time_s": 9.875,
+      "requested_subject": "",
+      "resolved_title": "Searching for Monica",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d10s1",
+      "title": "Searching for Monica",
+      "url": "https://trace.invalid/2wikimultihopqa_140ef7b108b811ebbd88ac1f6bf848b6_immediate/d10s1",
+      "text": "The film premiered on 29 January 1962 in Madrid and was named\" El Secreto de Mónica\".",
+      "visible_time_s": 9.875,
+      "requested_subject": "",
+      "resolved_title": "Searching for Monica",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d10s2",
+      "title": "Searching for Monica",
+      "url": "https://trace.invalid/2wikimultihopqa_140ef7b108b811ebbd88ac1f6bf848b6_immediate/d10s2",
+      "text": "It was first shown in Argentina on 29 March in Buenos Aires.",
+      "visible_time_s": 9.875,
+      "requested_subject": "",
+      "resolved_title": "Searching for Monica",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d10s3",
+      "title": "Searching for Monica",
+      "url": "https://trace.invalid/2wikimultihopqa_140ef7b108b811ebbd88ac1f6bf848b6_immediate/d10s3",
+      "text": "It starred Alberto de Mendoza and Carmen Sevilla.",
+      "visible_time_s": 9.875,
+      "requested_subject": "",
+      "resolved_title": "Searching for Monica",
+      "entity_resolution": "unspecified"
+    }
+  ],
+  "searches": [
+    {
+      "query": "[scheduled evidence]",
+      "subject": "",
+      "status": "ok",
+      "returned_pages": [],
+      "mode": "trace",
+      "unit_id": "__scheduled_evidence__"
+    }
+  ],
+  "search_failures": [],
+  "llm_calls": [
+    {
+      "purpose": "feedback_generate",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 409,
+        "completion_tokens": 94,
+        "total_tokens": 503,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        }
+      },
+      "latency_s": 1.859
+    },
+    {
+      "purpose": "feedback_verify",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 363,
+        "completion_tokens": 104,
+        "total_tokens": 467,
+        "prompt_tokens_details": {
+          "cached_tokens": 128
+        }
+      },
+      "latency_s": 1.735
+    },
+    {
+      "purpose": "decompose",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 799,
+        "completion_tokens": 392,
+        "total_tokens": 1191,
+        "prompt_tokens_details": {
+          "cached_tokens": 768
+        }
+      },
+      "latency_s": 3.859
+    },
+    {
+      "purpose": "feedback_generate",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 409,
+        "completion_tokens": 72,
+        "total_tokens": 481,
+        "prompt_tokens_details": {
+          "cached_tokens": 384
+        }
+      },
+      "latency_s": 1.546
+    },
+    {
+      "purpose": "feedback_verify",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 356,
+        "completion_tokens": 96,
+        "total_tokens": 452,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        }
+      },
+      "latency_s": 1.375
+    },
+    {
+      "purpose": "plan_review",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 1173,
+        "completion_tokens": 548,
+        "total_tokens": 1721,
+        "prompt_tokens_details": {
+          "cached_tokens": 768
+        }
+      },
+      "latency_s": 6.016
+    },
+    {
+      "purpose": "judge",
+      "model": "tinker://f9e9a6c1-e203-5c2c-acdd-68fe67378ca4:train:0/sampler_weights/epoch-0001",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 3299,
+        "completion_tokens": 544,
+        "total_tokens": 3843,
+        "prompt_tokens_details": {
+          "cached_tokens": 896
+        }
+      },
+      "latency_s": 4.563
+    },
+    {
+      "purpose": "generate",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 731,
+        "completion_tokens": 51,
+        "total_tokens": 782,
+        "prompt_tokens_details": {
+          "cached_tokens": 384
+        }
+      },
+      "latency_s": 1.468
+    },
+    {
+      "purpose": "verify",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 1991,
+        "completion_tokens": 153,
+        "total_tokens": 2144,
+        "prompt_tokens_details": {
+          "cached_tokens": 512
+        }
+      },
+      "latency_s": 2.0
+    }
+  ],
+  "search_diagnostics": [],
+  "output_enqueued_units": {
+    "u5": "Hospital Massacre"
+  },
+  "events": [
+    {
+      "sequence": 0,
+      "time_s": 0.0,
+      "type": "feedback_requested",
+      "feedback_kind": "opening",
+      "execution_state": {
+        "stage": "planning",
+        "searches_started": 0,
+        "searches_completed": 0,
+        "active_searches": 0,
+        "evidence_count": 0,
+        "supported_units": 0,
+        "output_units": 0
+      }
+    },
+    {
+      "sequence": 1,
+      "time_s": 3.594,
+      "type": "utterance",
+      "action": "Backchannel",
+      "text": "I see you want to compare the directors' birth dates of Hospital Massacre and Searching For Monica.",
+      "claims": [],
+      "feedback_source": "model",
+      "feedback_status_claim": "intent",
+      "feedback_fallback_reason": "",
+      "execution_state": {
+        "stage": "planning",
+        "searches_started": 0,
+        "searches_completed": 0,
+        "active_searches": 0,
+        "evidence_count": 0,
+        "supported_units": 0,
+        "output_units": 0
+      },
+      "language": "en"
+    },
+    {
+      "sequence": 2,
+      "time_s": 3.859,
+      "type": "decompose_reply",
+      "reply": {
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "Identify the director of the film Hospital Massacre",
+            "subject": "Hospital Massacre",
+            "necessary": false,
+            "depends_on": [],
+            "queries": [
+              "Hospital Massacre director"
+            ]
+          },
+          {
+            "unit_id": "u2",
+            "description": "Identify the director of the film Searching For Monica",
+            "subject": "Searching For Monica",
+            "necessary": false,
+            "depends_on": [],
+            "queries": [
+              "Searching For Monica director"
+            ]
+          },
+          {
+            "unit_id": "u3",
+            "description": "Birth year of the director of Hospital Massacre",
+            "subject": "{u1}",
+            "necessary": false,
+            "depends_on": [
+              "u1"
+            ],
+            "queries": [
+              "{u1} birth year"
+            ]
+          },
+          {
+            "unit_id": "u4",
+            "description": "Birth year of the director of Searching For Monica",
+            "subject": "{u2}",
+            "necessary": false,
+            "depends_on": [
+              "u2"
+            ],
+            "queries": [
+              "{u2} birth year"
+            ]
+          },
+          {
+            "unit_id": "u5",
+            "description": "Which film has the director born later",
+            "subject": "",
+            "necessary": true,
+            "depends_on": [
+              "u3",
+              "u4"
+            ],
+            "queries": [
+              "compare birth years of {u1} and {u2}"
+            ]
+          }
+        ]
+      },
+      "attempt": 1,
+      "repair": false
+    },
+    {
+      "sequence": 3,
+      "time_s": 3.859,
+      "type": "protocol_validation_failed",
+      "stage": "decompose",
+      "attempt": 1,
+      "error": "Placeholders must name explicit dependencies"
+    },
+    {
+      "sequence": 4,
+      "time_s": 3.859,
+      "type": "protocol_normalized",
+      "stage": "decompose",
+      "changes": [
+        {
+          "unit_id": "u5",
+          "added_dependencies": [
+            "u1",
+            "u2"
+          ]
+        }
+      ],
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "Identify the director of the film Hospital Massacre",
+          "necessary": false,
+          "depends_on": [],
+          "queries": [
+            "Hospital Massacre director"
+          ],
+          "subject": "Hospital Massacre"
+        },
+        {
+          "unit_id": "u2",
+          "description": "Identify the director of the film Searching For Monica",
+          "necessary": false,
+          "depends_on": [],
+          "queries": [
+            "Searching For Monica director"
+          ],
+          "subject": "Searching For Monica"
+        },
+        {
+          "unit_id": "u3",
+          "description": "Birth year of the director of Hospital Massacre",
+          "necessary": false,
+          "depends_on": [
+            "u1"
+          ],
+          "queries": [
+            "{u1} birth year"
+          ],
+          "subject": "{u1}"
+        },
+        {
+          "unit_id": "u4",
+          "description": "Birth year of the director of Searching For Monica",
+          "necessary": false,
+          "depends_on": [
+            "u2"
+          ],
+          "queries": [
+            "{u2} birth year"
+          ],
+          "subject": "{u2}"
+        },
+        {
+          "unit_id": "u5",
+          "description": "Which film has the director born later",
+          "necessary": true,
+          "depends_on": [
+            "u3",
+            "u4",
+            "u1",
+            "u2"
+          ],
+          "queries": [
+            "compare birth years of {u1} and {u2}"
+          ],
+          "subject": ""
+        }
+      ],
+      "no_facts_added": true
+    },
+    {
+      "sequence": 5,
+      "time_s": 3.859,
+      "type": "plan_review_requested",
+      "max_reviews": 1,
+      "question_only": true
+    },
+    {
+      "sequence": 6,
+      "time_s": 6.813,
+      "type": "feedback_requested",
+      "feedback_kind": "progress",
+      "execution_state": {
+        "stage": "planning",
+        "searches_started": 0,
+        "searches_completed": 0,
+        "active_searches": 0,
+        "evidence_count": 0,
+        "supported_units": 0,
+        "output_units": 0
+      }
+    },
+    {
+      "sequence": 7,
+      "time_s": 9.734,
+      "type": "utterance",
+      "action": "Progress",
+      "text": "I'm still working on your question.",
+      "claims": [],
+      "feedback_source": "fallback",
+      "feedback_status_claim": "processing",
+      "feedback_fallback_reason": "feedback_not_approved",
+      "execution_state": {
+        "stage": "planning",
+        "searches_started": 0,
+        "searches_completed": 0,
+        "active_searches": 0,
+        "evidence_count": 0,
+        "supported_units": 0,
+        "output_units": 0
+      },
+      "language": "en"
+    },
+    {
+      "sequence": 8,
+      "time_s": 9.875,
+      "type": "plan_review_reply",
+      "reply": {
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "Identify the director of the film Hospital Massacre",
+            "subject": "Hospital Massacre",
+            "necessary": false,
+            "depends_on": [],
+            "queries": [
+              "Hospital Massacre director",
+              "Hospital Massacre film director"
+            ]
+          },
+          {
+            "unit_id": "u2",
+            "description": "Identify the director of the film Searching For Monica",
+            "subject": "Searching For Monica",
+            "necessary": false,
+            "depends_on": [],
+            "queries": [
+              "Searching For Monica director",
+              "Searching For Monica film director"
+            ]
+          },
+          {
+            "unit_id": "u3",
+            "description": "Birth year of the director of Hospital Massacre",
+            "subject": "{u1}",
+            "necessary": false,
+            "depends_on": [
+              "u1"
+            ],
+            "queries": [
+              "{u1} birth year",
+              "{u1} date of birth"
+            ]
+          },
+          {
+            "unit_id": "u4",
+            "description": "Birth year of the director of Searching For Monica",
+            "subject": "{u2}",
+            "necessary": false,
+            "depends_on": [
+              "u2"
+            ],
+            "queries": [
+              "{u2} birth year",
+              "{u2} date of birth"
+            ]
+          },
+          {
+            "unit_id": "u5",
+            "description": "Which film has the director born later",
+            "subject": "",
+            "necessary": true,
+            "depends_on": [
+              "u3",
+              "u4"
+            ],
+            "queries": [
+              "compare birth years of {u1} and {u2}",
+              "who is younger {u1} {u2}"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "sequence": 9,
+      "time_s": 9.875,
+      "type": "protocol_normalized",
+      "stage": "plan_review",
+      "changes": [
+        {
+          "unit_id": "u5",
+          "added_dependencies": [
+            "u1",
+            "u2"
+          ]
+        }
+      ],
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "Identify the director of the film Hospital Massacre",
+          "necessary": false,
+          "depends_on": [],
+          "queries": [
+            "Hospital Massacre director",
+            "Hospital Massacre film director"
+          ],
+          "subject": "Hospital Massacre"
+        },
+        {
+          "unit_id": "u2",
+          "description": "Identify the director of the film Searching For Monica",
+          "necessary": false,
+          "depends_on": [],
+          "queries": [
+            "Searching For Monica director",
+            "Searching For Monica film director"
+          ],
+          "subject": "Searching For Monica"
+        },
+        {
+          "unit_id": "u3",
+          "description": "Birth year of the director of Hospital Massacre",
+          "necessary": false,
+          "depends_on": [
+            "u1"
+          ],
+          "queries": [
+            "{u1} birth year",
+            "{u1} date of birth"
+          ],
+          "subject": "{u1}"
+        },
+        {
+          "unit_id": "u4",
+          "description": "Birth year of the director of Searching For Monica",
+          "necessary": false,
+          "depends_on": [
+            "u2"
+          ],
+          "queries": [
+            "{u2} birth year",
+            "{u2} date of birth"
+          ],
+          "subject": "{u2}"
+        },
+        {
+          "unit_id": "u5",
+          "description": "Which film has the director born later",
+          "necessary": true,
+          "depends_on": [
+            "u3",
+            "u4",
+            "u1",
+            "u2"
+          ],
+          "queries": [
+            "compare birth years of {u1} and {u2}",
+            "who is younger {u1} {u2}"
+          ],
+          "subject": ""
+        }
+      ],
+      "no_facts_added": true
+    },
+    {
+      "sequence": 10,
+      "time_s": 9.875,
+      "type": "plan_review_finished",
+      "changed": true,
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "Identify the director of the film Hospital Massacre",
+          "necessary": false,
+          "depends_on": [],
+          "queries": [
+            "Hospital Massacre director",
+            "Hospital Massacre film director"
+          ],
+          "subject": "Hospital Massacre"
+        },
+        {
+          "unit_id": "u2",
+          "description": "Identify the director of the film Searching For Monica",
+          "necessary": false,
+          "depends_on": [],
+          "queries": [
+            "Searching For Monica director",
+            "Searching For Monica film director"
+          ],
+          "subject": "Searching For Monica"
+        },
+        {
+          "unit_id": "u3",
+          "description": "Birth year of the director of Hospital Massacre",
+          "necessary": false,
+          "depends_on": [
+            "u1"
+          ],
+          "queries": [
+            "{u1} birth year",
+            "{u1} date of birth"
+          ],
+          "subject": "{u1}"
+        },
+        {
+          "unit_id": "u4",
+          "description": "Birth year of the director of Searching For Monica",
+          "necessary": false,
+          "depends_on": [
+            "u2"
+          ],
+          "queries": [
+            "{u2} birth year",
+            "{u2} date of birth"
+          ],
+          "subject": "{u2}"
+        },
+        {
+          "unit_id": "u5",
+          "description": "Which film has the director born later",
+          "necessary": true,
+          "depends_on": [
+            "u3",
+            "u4",
+            "u1",
+            "u2"
+          ],
+          "queries": [
+            "compare birth years of {u1} and {u2}",
+            "who is younger {u1} {u2}"
+          ],
+          "subject": ""
+        }
+      ],
+      "question_only": true
+    },
+    {
+      "sequence": 11,
+      "time_s": 9.875,
+      "type": "plan",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "Identify the director of the film Hospital Massacre",
+          "necessary": false,
+          "depends_on": [],
+          "queries": [
+            "Hospital Massacre director",
+            "Hospital Massacre film director"
+          ],
+          "subject": "Hospital Massacre"
+        },
+        {
+          "unit_id": "u2",
+          "description": "Identify the director of the film Searching For Monica",
+          "necessary": false,
+          "depends_on": [],
+          "queries": [
+            "Searching For Monica director",
+            "Searching For Monica film director"
+          ],
+          "subject": "Searching For Monica"
+        },
+        {
+          "unit_id": "u3",
+          "description": "Birth year of the director of Hospital Massacre",
+          "necessary": false,
+          "depends_on": [
+            "u1"
+          ],
+          "queries": [
+            "{u1} birth year",
+            "{u1} date of birth"
+          ],
+          "subject": "{u1}"
+        },
+        {
+          "unit_id": "u4",
+          "description": "Birth year of the director of Searching For Monica",
+          "necessary": false,
+          "depends_on": [
+            "u2"
+          ],
+          "queries": [
+            "{u2} birth year",
+            "{u2} date of birth"
+          ],
+          "subject": "{u2}"
+        },
+        {
+          "unit_id": "u5",
+          "description": "Which film has the director born later",
+          "necessary": true,
+          "depends_on": [
+            "u3",
+            "u4",
+            "u1",
+            "u2"
+          ],
+          "queries": [
+            "compare birth years of {u1} and {u2}",
+            "who is younger {u1} {u2}"
+          ],
+          "subject": ""
+        }
+      ]
+    },
+    {
+      "sequence": 12,
+      "time_s": 9.875,
+      "type": "trace_batch_requested"
+    },
+    {
+      "sequence": 13,
+      "time_s": 9.875,
+      "type": "search_finished",
+      "query": "[scheduled evidence]",
+      "subject": "",
+      "status": "ok",
+      "returned_pages": [],
+      "mode": "trace",
+      "unit_id": "__scheduled_evidence__"
+    },
+    {
+      "sequence": 14,
+      "time_s": 9.875,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d1s0",
+        "title": "Hospital Massacre",
+        "url": "https://trace.invalid/2wikimultihopqa_140ef7b108b811ebbd88ac1f6bf848b6_immediate/d1s0",
+        "text": "Hospital Massacre( also known as X- Ray, Ward 13 and Be My Valentine, or Else ...) is a 1981 American slasher film directed by Boaz Davidson, written by Davidson and Marc Behm, and starring Barbi Benton.",
+        "visible_time_s": 9.875,
+        "requested_subject": "",
+        "resolved_title": "Hospital Massacre",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 15,
+      "time_s": 9.875,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d2s0",
+        "title": "Yolonda Ross",
+        "url": "https://trace.invalid/2wikimultihopqa_140ef7b108b811ebbd88ac1f6bf848b6_immediate/d2s0",
+        "text": "Yolonda Ross is an American character actress, writer and director born (31 July 1974).",
+        "visible_time_s": 9.875,
+        "requested_subject": "",
+        "resolved_title": "Yolonda Ross",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 16,
+      "time_s": 9.875,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d3s0",
+        "title": "Claude Weisz",
+        "url": "https://trace.invalid/2wikimultihopqa_140ef7b108b811ebbd88ac1f6bf848b6_immediate/d3s0",
+        "text": "Claude Weisz is a French film director born in Paris.",
+        "visible_time_s": 9.875,
+        "requested_subject": "",
+        "resolved_title": "Claude Weisz",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 17,
+      "time_s": 9.875,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d4s0",
+        "title": "Jacques Décombe",
+        "url": "https://trace.invalid/2wikimultihopqa_140ef7b108b811ebbd88ac1f6bf848b6_immediate/d4s0",
+        "text": "Jacques Décombe is a French author, actor and director born in 1953.",
+        "visible_time_s": 9.875,
+        "requested_subject": "",
+        "resolved_title": "Jacques Décombe",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 18,
+      "time_s": 9.875,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d5s0",
+        "title": "W. Augustus Barratt",
+        "url": "https://trace.invalid/2wikimultihopqa_140ef7b108b811ebbd88ac1f6bf848b6_immediate/d5s0",
+        "text": "W. Augustus Barratt( 1873- 1947) was a Scottish- born, later American, songwriter and musician.",
+        "visible_time_s": 9.875,
+        "requested_subject": "",
+        "resolved_title": "W. Augustus Barratt",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 19,
+      "time_s": 9.875,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d6s0",
+        "title": "José María Forqué",
+        "url": "https://trace.invalid/2wikimultihopqa_140ef7b108b811ebbd88ac1f6bf848b6_immediate/d6s0",
+        "text": "José María Forqué Galindo (8 March 1923 – 17 March 1995) was a Spanish screenwriter and film director.",
+        "visible_time_s": 9.875,
+        "requested_subject": "",
+        "resolved_title": "José María Forqué",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 20,
+      "time_s": 9.875,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d7s0",
+        "title": "Boaz Davidson",
+        "url": "https://trace.invalid/2wikimultihopqa_140ef7b108b811ebbd88ac1f6bf848b6_immediate/d7s0",
+        "text": "Boaz Davidson( born 8 November 1943) is an Israeli film director, producer and screenwriter.",
+        "visible_time_s": 9.875,
+        "requested_subject": "",
+        "resolved_title": "Boaz Davidson",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 21,
+      "time_s": 9.875,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d7s1",
+        "title": "Boaz Davidson",
+        "url": "https://trace.invalid/2wikimultihopqa_140ef7b108b811ebbd88ac1f6bf848b6_immediate/d7s1",
+        "text": "He was born in Tel Aviv, Israel and studied film in London at London Film School.",
+        "visible_time_s": 9.875,
+        "requested_subject": "",
+        "resolved_title": "Boaz Davidson",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 22,
+      "time_s": 9.875,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d8s0",
+        "title": "Sepideh Farsi",
+        "url": "https://trace.invalid/2wikimultihopqa_140ef7b108b811ebbd88ac1f6bf848b6_immediate/d8s0",
+        "text": "Sepideh Farsi is an Iranian film director, born in Tehran in 1965.",
+        "visible_time_s": 9.875,
+        "requested_subject": "",
+        "resolved_title": "Sepideh Farsi",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 23,
+      "time_s": 9.875,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d9s0",
+        "title": "Fred Roy Krug",
+        "url": "https://trace.invalid/2wikimultihopqa_140ef7b108b811ebbd88ac1f6bf848b6_immediate/d9s0",
+        "text": "Fred R. Krug is an American film and television producer- director born in Bern, Switzerland.",
+        "visible_time_s": 9.875,
+        "requested_subject": "",
+        "resolved_title": "Fred Roy Krug",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 24,
+      "time_s": 9.875,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d10s0",
+        "title": "Searching for Monica",
+        "url": "https://trace.invalid/2wikimultihopqa_140ef7b108b811ebbd88ac1f6bf848b6_immediate/d10s0",
+        "text": "Buscando a Mónica( Searching for Monica) is a 1962 Argentine- Spanish black- and- white film musical film drama directed by José María Forqué.",
+        "visible_time_s": 9.875,
+        "requested_subject": "",
+        "resolved_title": "Searching for Monica",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 25,
+      "time_s": 9.875,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d10s1",
+        "title": "Searching for Monica",
+        "url": "https://trace.invalid/2wikimultihopqa_140ef7b108b811ebbd88ac1f6bf848b6_immediate/d10s1",
+        "text": "The film premiered on 29 January 1962 in Madrid and was named\" El Secreto de Mónica\".",
+        "visible_time_s": 9.875,
+        "requested_subject": "",
+        "resolved_title": "Searching for Monica",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 26,
+      "time_s": 9.875,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d10s2",
+        "title": "Searching for Monica",
+        "url": "https://trace.invalid/2wikimultihopqa_140ef7b108b811ebbd88ac1f6bf848b6_immediate/d10s2",
+        "text": "It was first shown in Argentina on 29 March in Buenos Aires.",
+        "visible_time_s": 9.875,
+        "requested_subject": "",
+        "resolved_title": "Searching for Monica",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 27,
+      "time_s": 9.875,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d10s3",
+        "title": "Searching for Monica",
+        "url": "https://trace.invalid/2wikimultihopqa_140ef7b108b811ebbd88ac1f6bf848b6_immediate/d10s3",
+        "text": "It starred Alberto de Mendoza and Carmen Sevilla.",
+        "visible_time_s": 9.875,
+        "requested_subject": "",
+        "resolved_title": "Searching for Monica",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 28,
+      "time_s": 14.438,
+      "type": "judge_reply",
+      "reply": {
+        "judgments": [
+          {
+            "unit_id": "u1",
+            "label": "SUPPORTED",
+            "value": "Boaz Davidson",
+            "citations": [
+              "d1s0"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d1s0",
+                "text": "Hospital Massacre( also known as X- Ray, Ward 13 and Be My Valentine, or Else ...) is a 1981 American slasher film directed by Boaz Davidson, written by Davidson and Marc Behm, and starring Barbi Benton."
+              }
+            ],
+            "reason": "Supported by the cited visible sentences and dependencies."
+          },
+          {
+            "unit_id": "u2",
+            "label": "SUPPORTED",
+            "value": "José María Forqué",
+            "citations": [
+              "d10s0"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d10s0",
+                "text": "Buscando a Mónica( Searching for Monica) is a 1962 Argentine- Spanish black- and- white film musical film drama directed by José María Forqué."
+              }
+            ],
+            "reason": "Supported by the cited visible sentences and dependencies."
+          },
+          {
+            "unit_id": "u3",
+            "label": "SUPPORTED",
+            "value": "1943",
+            "citations": [
+              "d7s0"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d7s0",
+                "text": "Boaz Davidson( born 8 November 1943) is an Israeli film director, producer and screenwriter."
+              }
+            ],
+            "reason": "Supported by the cited visible sentences and dependencies."
+          },
+          {
+            "unit_id": "u4",
+            "label": "SUPPORTED",
+            "value": "1923",
+            "citations": [
+              "d6s0"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d6s0",
+                "text": "José María Forqué Galindo (8 March 1923 – 17 March 1995) was a Spanish screenwriter and film director."
+              }
+            ],
+            "reason": "Supported by the cited visible sentences and dependencies."
+          },
+          {
+            "unit_id": "u5",
+            "label": "SUPPORTED",
+            "value": "Hospital Massacre",
+            "citations": [
+              "d7s0",
+              "d6s0"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d7s0",
+                "text": "Boaz Davidson( born 8 November 1943) is an Israeli film director, producer and screenwriter."
+              },
+              {
+                "evidence_id": "d6s0",
+                "text": "José María Forqué Galindo (8 March 1923 – 17 March 1995) was a Spanish screenwriter and film director."
+              }
+            ],
+            "reason": "Supported by the cited visible sentences and dependencies."
+          }
+        ]
+      },
+      "attempt": 1,
+      "repair": false,
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d2s0",
+        "d3s0",
+        "d4s0",
+        "d5s0",
+        "d6s0",
+        "d7s0",
+        "d7s1",
+        "d8s0",
+        "d9s0",
+        "d10s0",
+        "d10s1",
+        "d10s2",
+        "d10s3"
+      ]
+    },
+    {
+      "sequence": 29,
+      "time_s": 14.438,
+      "type": "judgments",
+      "judgments": {
+        "u1": {
+          "label": "SUPPORTED",
+          "value": "Boaz Davidson",
+          "citations": [
+            "d1s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d1s0",
+              "text": "Hospital Massacre( also known as X- Ray, Ward 13 and Be My Valentine, or Else ...) is a 1981 American slasher film directed by Boaz Davidson, written by Davidson and Marc Behm, and starring Barbi Benton."
+            }
+          ],
+          "reason": "Supported by the cited visible sentences and dependencies."
+        },
+        "u2": {
+          "label": "SUPPORTED",
+          "value": "José María Forqué",
+          "citations": [
+            "d10s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d10s0",
+              "text": "Buscando a Mónica( Searching for Monica) is a 1962 Argentine- Spanish black- and- white film musical film drama directed by José María Forqué."
+            }
+          ],
+          "reason": "Supported by the cited visible sentences and dependencies."
+        },
+        "u3": {
+          "label": "SUPPORTED",
+          "value": "1943",
+          "citations": [
+            "d7s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d7s0",
+              "text": "Boaz Davidson( born 8 November 1943) is an Israeli film director, producer and screenwriter."
+            }
+          ],
+          "reason": "Supported by the cited visible sentences and dependencies."
+        },
+        "u4": {
+          "label": "SUPPORTED",
+          "value": "1923",
+          "citations": [
+            "d6s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d6s0",
+              "text": "José María Forqué Galindo (8 March 1923 – 17 March 1995) was a Spanish screenwriter and film director."
+            }
+          ],
+          "reason": "Supported by the cited visible sentences and dependencies."
+        },
+        "u5": {
+          "label": "SUPPORTED",
+          "value": "Hospital Massacre",
+          "citations": [
+            "d7s0",
+            "d6s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d7s0",
+              "text": "Boaz Davidson( born 8 November 1943) is an Israeli film director, producer and screenwriter."
+            },
+            {
+              "evidence_id": "d6s0",
+              "text": "José María Forqué Galindo (8 March 1923 – 17 March 1995) was a Spanish screenwriter and film director."
+            }
+          ],
+          "reason": "Supported by the cited visible sentences and dependencies."
+        }
+      },
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d2s0",
+        "d3s0",
+        "d4s0",
+        "d5s0",
+        "d6s0",
+        "d7s0",
+        "d7s1",
+        "d8s0",
+        "d9s0",
+        "d10s0",
+        "d10s1",
+        "d10s2",
+        "d10s3"
+      ],
+      "semantic_review": false
+    },
+    {
+      "sequence": 30,
+      "time_s": 17.906,
+      "type": "verification_reply",
+      "reply": {
+        "approved": true,
+        "facts_valid": true,
+        "expressed_unit_ids": [
+          "u5"
+        ],
+        "reason": "The draft correctly states that Hospital Massacre's director was born later, matching the approved facts and no extra claims."
+      },
+      "output_unit_ids": [
+        "u5"
+      ],
+      "output_action": "Final Answer",
+      "dependency_unit_ids": [
+        "u1",
+        "u2",
+        "u3",
+        "u4"
+      ],
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d6s0",
+        "d7s0",
+        "d10s0"
+      ]
+    },
+    {
+      "sequence": 31,
+      "time_s": 17.906,
+      "type": "utterance",
+      "action": "Final Answer",
+      "text": "Hospital Massacre has the director born later.",
+      "claims": [
+        {
+          "unit_id": "u5",
+          "description": "Which film has the director born later",
+          "value": "Hospital Massacre",
+          "citations": [
+            "d7s0",
+            "d6s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d7s0",
+              "text": "Boaz Davidson( born 8 November 1943) is an Israeli film director, producer and screenwriter."
+            },
+            {
+              "evidence_id": "d6s0",
+              "text": "José María Forqué Galindo (8 March 1923 – 17 March 1995) was a Spanish screenwriter and film director."
+            }
+          ]
+        }
+      ],
+      "unresolved": [],
+      "fallback": false,
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d2s0",
+        "d3s0",
+        "d4s0",
+        "d5s0",
+        "d6s0",
+        "d7s0",
+        "d7s1",
+        "d8s0",
+        "d9s0",
+        "d10s0",
+        "d10s1",
+        "d10s2",
+        "d10s3"
+      ],
+      "language": "en"
+    },
+    {
+      "sequence": 32,
+      "time_s": 17.906,
+      "type": "finished",
+      "status": "complete"
+    }
+  ],
+  "note": "Prototype model judgments are not independent gold scores. Output event times are not spoken claim times.",
+  "evidence_mode": "scheduled_trace",
+  "audio": {
+    "enabled": true,
+    "mode": "windows",
+    "play": false,
+    "status": "ok",
+    "errors": [],
+    "records": [
+      {
+        "event_sequence": 1,
+        "sentence_index": 1,
+        "sentence_count": 1,
+        "language": "en",
+        "text": "I see you want to compare the directors' birth dates of Hospital Massacre and Searching For Monica.",
+        "action": "Backchannel",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 3.5939999999973224,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1\\samples\\0022\\audio\\segments\\0001_01.wav",
+        "duration_s": 5.808208616780045,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 4.390999999988708,
+        "synthesis_and_playback_s": 0.7969999999913853
+      },
+      {
+        "event_sequence": 7,
+        "sentence_index": 1,
+        "sentence_count": 1,
+        "language": "en",
+        "text": "I'm still working on your question.",
+        "action": "Progress",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 9.73399999999674,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1\\samples\\0022\\audio\\segments\\0007_01.wav",
+        "duration_s": 2.629160997732426,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 10.530999999988126,
+        "synthesis_and_playback_s": 0.7969999999913853
+      },
+      {
+        "event_sequence": 31,
+        "sentence_index": 1,
+        "sentence_count": 1,
+        "language": "en",
+        "text": "Hospital Massacre has the director born later.",
+        "action": "Final Answer",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 17.905999999988126,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1\\samples\\0022\\audio\\segments\\0031_01.wav",
+        "duration_s": 3.43891156462585,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 18.718999999997322,
+        "synthesis_and_playback_s": 0.8130000000091968
+      }
+    ],
+    "wave": {
+      "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1\\samples\\0022\\audio\\response.wav",
+      "duration_s": 22.157913832199547,
+      "timeline": [
+        {
+          "event_sequence": 1,
+          "sentence_index": 1,
+          "action": "Backchannel",
+          "text": "I see you want to compare the directors' birth dates of Hospital Massacre and Searching For Monica.",
+          "wave_start_s": 4.391020408163265,
+          "wave_end_s": 10.19922902494331
+        },
+        {
+          "event_sequence": 7,
+          "sentence_index": 1,
+          "action": "Progress",
+          "text": "I'm still working on your question.",
+          "wave_start_s": 10.531020408163265,
+          "wave_end_s": 13.160181405895692
+        },
+        {
+          "event_sequence": 31,
+          "sentence_index": 1,
+          "action": "Final Answer",
+          "text": "Hospital Massacre has the director born later.",
+          "wave_start_s": 18.719002267573696,
+          "wave_end_s": 22.157913832199547
+        }
+      ]
+    }
+  },
+  "evaluation": {
+    "mode": "b_final_revised_trace",
+    "trace_id": "2wikimultihopqa_140ef7b108b811ebbd88ac1f6bf848b6_immediate",
+    "sample_id": "2wikimultihopqa_140ef7b108b811ebbd88ac1f6bf848b6",
+    "total_wall_s": 18.718999999997322,
+    "question_timeout_s": 180,
+    "audio_enabled": true,
+    "history_enabled": false,
+    "text_pipeline_wall_s": 17.905999999988126,
+    "effective_settings": {
+      "base_url": "https://tinker.thinkingmachines.dev/services/tinker-prod/oai/api/v1",
+      "model": "openai/gpt-oss-120b",
+      "judge_model": "tinker://f9e9a6c1-e203-5c2c-acdd-68fe67378ca4:train:0/sampler_weights/epoch-0001",
+      "judge_reasoning_effort": "low",
+      "wiki_language": "en",
+      "user_agent": "CascadeSystem/0.1 (educational research prototype)",
+      "timeout_s": 45.0,
+      "max_tokens": 4096,
+      "reasoning_effort": "low",
+      "progress_s": 3.0,
+      "feedback_timeout_s": 6.0,
+      "search_limit": 3,
+      "max_units": 8,
+      "max_searches": 16,
+      "max_sources": 14,
+      "source_chars": 203,
+      "evidence_chars": 1276,
+      "concurrency": 3
+    },
+    "timing_kind": "unknown",
+    "scheduler": "wall-paced fixed B arrivals",
+    "split": "eval_reserved",
+    "empty_evidence_sentences_ignored": 0
+  }
+}

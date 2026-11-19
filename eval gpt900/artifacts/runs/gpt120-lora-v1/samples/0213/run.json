@@ -1,0 +1,2379 @@
+{
+  "question": "Do the directors of Holiday for Lovers and Mr. Stitch share at least one nationality stated in their biographies?",
+  "resolved_question": "Do the directors of Holiday for Lovers and Mr. Stitch share at least one nationality stated in their biographies?",
+  "used_history_turn_ids": [],
+  "response_language": "en",
+  "status": "incomplete",
+  "clock": "wall_monotonic",
+  "time_origin": "question_text_ready_after_optional_asr",
+  "model": "openai/gpt-oss-120b",
+  "judge_model": "tinker://f9e9a6c1-e203-5c2c-acdd-68fe67378ca4:train:0/sampler_weights/epoch-0001",
+  "units": [
+    {
+      "unit_id": "u1",
+      "description": "director of Holiday for Lovers",
+      "necessary": true,
+      "depends_on": [],
+      "queries": [
+        "Holiday for Lovers director",
+        "Holiday for Lovers film director"
+      ],
+      "subject": "Holiday for Lovers"
+    },
+    {
+      "unit_id": "u2",
+      "description": "director of Mr. Stitch",
+      "necessary": true,
+      "depends_on": [],
+      "queries": [
+        "Mr. Stitch director",
+        "Mr. Stitch film director"
+      ],
+      "subject": "Mr. Stitch"
+    },
+    {
+      "unit_id": "u3",
+      "description": "nationality of the director of Holiday for Lovers",
+      "necessary": true,
+      "depends_on": [
+        "u1"
+      ],
+      "queries": [
+        "{u1} nationality",
+        "{u1} citizenship"
+      ],
+      "subject": "{u1}"
+    },
+    {
+      "unit_id": "u4",
+      "description": "nationality of the director of Mr. Stitch",
+      "necessary": true,
+      "depends_on": [
+        "u2"
+      ],
+      "queries": [
+        "{u2} nationality",
+        "{u2} citizenship"
+      ],
+      "subject": "{u2}"
+    },
+    {
+      "unit_id": "u5",
+      "description": "whether the directors of Holiday for Lovers and Mr. Stitch share at least one nationality",
+      "necessary": true,
+      "depends_on": [
+        "u3",
+        "u4"
+      ],
+      "queries": [
+        "Do {u3} and {u4} share a nationality?",
+        "Common nationality of {u3} and {u4}"
+      ],
+      "subject": ""
+    }
+  ],
+  "judgments": {
+    "u1": {
+      "label": "SUPPORTED",
+      "value": "Henry Levin",
+      "citations": [
+        "d9s0"
+      ],
+      "quotes": [
+        {
+          "evidence_id": "d9s0",
+          "text": "Holiday for Lovers is a 1959 DeLuxe in CinemaScope comedy film directed by Henry Levin."
+        }
+      ],
+      "reason": "Supported by the cited visible sentences and dependencies."
+    },
+    "u2": {
+      "label": "SUPPORTED",
+      "value": "Roger Avary",
+      "citations": [
+        "d2s0"
+      ],
+      "quotes": [
+        {
+          "evidence_id": "d2s0",
+          "text": "Mr. Stitch is a 1995 science fiction film directed by Roger Avary and starring Rutger Hauer, Wil Wheaton, Nia Peeples, and Ron Perlman."
+        }
+      ],
+      "reason": "Supported by the cited visible sentences and dependencies."
+    },
+    "u3": {
+      "label": "UNRESOLVED",
+      "value": "",
+      "citations": [],
+      "quotes": [],
+      "reason": "Rejected entity identity: citation concerns an ambiguous or differently qualified namesake"
+    },
+    "u4": {
+      "label": "SUPPORTED",
+      "value": "Canadian",
+      "citations": [
+        "d10s0"
+      ],
+      "quotes": [
+        {
+          "evidence_id": "d10s0",
+          "text": "Roger Roberts Avary( born August 23, 1965) is a Canadian- American film and television director, screenwriter, and producer."
+        }
+      ],
+      "reason": "Supported by the cited visible sentences and dependencies."
+    },
+    "u5": {
+      "label": "UNRESOLVED",
+      "value": "",
+      "citations": [],
+      "quotes": [],
+      "reason": "Dependency is not supported"
+    }
+  },
+  "evidence": [
+    {
+      "evidence_id": "d1s0",
+      "title": "Holiday for a Dog",
+      "url": "https://trace.invalid/2wikimultihopqa_7227051908b311ebbd86ac1f6bf848b6_long/d1s0",
+      "text": "Holiday for a Dog( Czech:\" Prázdniny pro psa\") is a Czech comedy film.",
+      "visible_time_s": 6.51600000000326,
+      "requested_subject": "",
+      "resolved_title": "Holiday for a Dog",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d1s1",
+      "title": "Holiday for a Dog",
+      "url": "https://trace.invalid/2wikimultihopqa_7227051908b311ebbd86ac1f6bf848b6_long/d1s1",
+      "text": "It was released in 1980.",
+      "visible_time_s": 6.51600000000326,
+      "requested_subject": "",
+      "resolved_title": "Holiday for a Dog",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d2s0",
+      "title": "Mr. Stitch",
+      "url": "https://trace.invalid/2wikimultihopqa_7227051908b311ebbd86ac1f6bf848b6_long/d2s0",
+      "text": "Mr. Stitch is a 1995 science fiction film directed by Roger Avary and starring Rutger Hauer, Wil Wheaton, Nia Peeples, and Ron Perlman.",
+      "visible_time_s": 6.51600000000326,
+      "requested_subject": "",
+      "resolved_title": "Mr. Stitch",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d4s0",
+      "title": "Matt Corboy",
+      "url": "https://trace.invalid/2wikimultihopqa_7227051908b311ebbd86ac1f6bf848b6_long/d4s0",
+      "text": "Matt Corboy( born June 4, 1973) is an American actor.",
+      "visible_time_s": 6.51600000000326,
+      "requested_subject": "",
+      "resolved_title": "Matt Corboy",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d4s1",
+      "title": "Matt Corboy",
+      "url": "https://trace.invalid/2wikimultihopqa_7227051908b311ebbd86ac1f6bf848b6_long/d4s1",
+      "text": "He has appeared in both films and television series.",
+      "visible_time_s": 6.51600000000326,
+      "requested_subject": "",
+      "resolved_title": "Matt Corboy",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d7s0",
+      "title": "Holiday for Henrietta",
+      "url": "https://trace.invalid/2wikimultihopqa_7227051908b311ebbd86ac1f6bf848b6_long/d7s0",
+      "text": "Holiday for Henrietta is a 1952 French comedy film directed by Julien Duvivier, and starring Dany Robin, Michel Auclair, and Hildegard Knef.",
+      "visible_time_s": 6.51600000000326,
+      "requested_subject": "",
+      "resolved_title": "Holiday for Henrietta",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d7s1",
+      "title": "Holiday for Henrietta",
+      "url": "https://trace.invalid/2wikimultihopqa_7227051908b311ebbd86ac1f6bf848b6_long/d7s1",
+      "text": "While urgently trying to develop a screenplay for a new film, two screenwriters make it up as they bicker.",
+      "visible_time_s": 6.51600000000326,
+      "requested_subject": "",
+      "resolved_title": "Holiday for Henrietta",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d7s2",
+      "title": "Holiday for Henrietta",
+      "url": "https://trace.invalid/2wikimultihopqa_7227051908b311ebbd86ac1f6bf848b6_long/d7s2",
+      "text": "\" Holiday for Henrietta\" was remade in English as the 1964 film\" Paris When It Sizzles\", starring William Holden and Audrey Hepburn.",
+      "visible_time_s": 6.51600000000326,
+      "requested_subject": "",
+      "resolved_title": "Holiday for Henrietta",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d9s0",
+      "title": "Holiday for Lovers",
+      "url": "https://trace.invalid/2wikimultihopqa_7227051908b311ebbd86ac1f6bf848b6_long/d9s0",
+      "text": "Holiday for Lovers is a 1959 DeLuxe in CinemaScope comedy film directed by Henry Levin.",
+      "visible_time_s": 6.51600000000326,
+      "requested_subject": "",
+      "resolved_title": "Holiday for Lovers",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d9s1",
+      "title": "Holiday for Lovers",
+      "url": "https://trace.invalid/2wikimultihopqa_7227051908b311ebbd86ac1f6bf848b6_long/d9s1",
+      "text": "Based on a 1957 play by Ronald Alexander, the film stars Clifton Webb, Jane Wyman, Jill St. John and Carol Lynley.",
+      "visible_time_s": 6.51600000000326,
+      "requested_subject": "",
+      "resolved_title": "Holiday for Lovers",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d3s0",
+      "title": "Two Lovers and a Bear",
+      "url": "https://trace.invalid/2wikimultihopqa_7227051908b311ebbd86ac1f6bf848b6_long/d3s0",
+      "text": "Two Lovers and a Bear is a 2016 Canadian independent drama film directed by Kim Nguyen and starring Tatiana Maslany and Dane DeHaan.",
+      "visible_time_s": 12.593999999997322,
+      "requested_subject": "",
+      "resolved_title": "Two Lovers and a Bear",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d3s1",
+      "title": "Two Lovers and a Bear",
+      "url": "https://trace.invalid/2wikimultihopqa_7227051908b311ebbd86ac1f6bf848b6_long/d3s1",
+      "text": "It was screened in the Directors' Fortnight section at the 2016 Cannes Film Festival.",
+      "visible_time_s": 12.593999999997322,
+      "requested_subject": "",
+      "resolved_title": "Two Lovers and a Bear",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d3s2",
+      "title": "Two Lovers and a Bear",
+      "url": "https://trace.invalid/2wikimultihopqa_7227051908b311ebbd86ac1f6bf848b6_long/d3s2",
+      "text": "The film was released on 7 October 2016, by Entertainment One.",
+      "visible_time_s": 12.593999999997322,
+      "requested_subject": "",
+      "resolved_title": "Two Lovers and a Bear",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d5s0",
+      "title": "Dr. Pyckle and Mr. Pryde",
+      "url": "https://trace.invalid/2wikimultihopqa_7227051908b311ebbd86ac1f6bf848b6_long/d5s0",
+      "text": "Dr. Pyckle and Mr. Pryde is a 1925 silent, black- and- white comedy film, directed by Scott Pembroke and Joe Rock( also the producer).",
+      "visible_time_s": 12.593999999997322,
+      "requested_subject": "",
+      "resolved_title": "Dr. Pyckle and Mr. Pryde",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d5s1",
+      "title": "Dr. Pyckle and Mr. Pryde",
+      "url": "https://trace.invalid/2wikimultihopqa_7227051908b311ebbd86ac1f6bf848b6_long/d5s1",
+      "text": "The film itself is both a spoof of the previous Dr. Jekyll and Mr. Hyde films( e.g.\" Dr. Jekyll and Mr. Hyde\"( 1912) and\" Dr. Jekyll and Mr. Hyde\"( 1920)) and the well- famed novel by Robert Louis Stevenson\" Strange Case of Dr Jekyll and Mr Hyde.\"",
+      "visible_time_s": 12.593999999997322,
+      "requested_subject": "",
+      "resolved_title": "Dr. Pyckle and Mr. Pryde",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d5s2",
+      "title": "Dr. Pyckle and Mr. Pryde",
+      "url": "https://trace.invalid/2wikimultihopqa_7227051908b311ebbd86ac1f6bf848b6_long/d5s2",
+      "text": "The film stars Stan Laurel as the title characters.",
+      "visible_time_s": 12.593999999997322,
+      "requested_subject": "",
+      "resolved_title": "Dr. Pyckle and Mr. Pryde",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d6s0",
+      "title": "Henry Levin (film director)",
+      "url": "https://trace.invalid/2wikimultihopqa_7227051908b311ebbd86ac1f6bf848b6_long/d6s0",
+      "text": "Henry Levin( 5 June 1909 – 1 May 1980) began as a stage actor and director but was most notable as an American film director of over fifty feature films.",
+      "visible_time_s": 12.593999999997322,
+      "requested_subject": "",
+      "resolved_title": "Henry Levin (film director)",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d6s1",
+      "title": "Henry Levin (film director)",
+      "url": "https://trace.invalid/2wikimultihopqa_7227051908b311ebbd86ac1f6bf848b6_long/d6s1",
+      "text": "His best known credits were\" Jolson Sings Again\"( 1949),\" Journey to the Centre of the Earth\"( 1959) and\" Where the Boys Are\"( 1960).",
+      "visible_time_s": 12.593999999997322,
+      "requested_subject": "",
+      "resolved_title": "Henry Levin (film director)",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d8s0",
+      "title": "A Lover's Romance",
+      "url": "https://trace.invalid/2wikimultihopqa_7227051908b311ebbd86ac1f6bf848b6_long/d8s0",
+      "text": "A Lover's Romance or\" Romance for Lovers\" is a 1974 Soviet musical romantic drama directed by Andrei Konchalovsky.",
+      "visible_time_s": 12.593999999997322,
+      "requested_subject": "",
+      "resolved_title": "A Lover's Romance",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d10s0",
+      "title": "Roger Avary",
+      "url": "https://trace.invalid/2wikimultihopqa_7227051908b311ebbd86ac1f6bf848b6_long/d10s0",
+      "text": "Roger Roberts Avary( born August 23, 1965) is a Canadian- American film and television director, screenwriter, and producer.",
+      "visible_time_s": 12.593999999997322,
+      "requested_subject": "",
+      "resolved_title": "Roger Avary",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d10s1",
+      "title": "Roger Avary",
+      "url": "https://trace.invalid/2wikimultihopqa_7227051908b311ebbd86ac1f6bf848b6_long/d10s1",
+      "text": "He collaborated with Quentin Tarantino on\" Pulp Fiction\", for which they won Best Original Screenplay at the 67th Academy Awards.",
+      "visible_time_s": 12.593999999997322,
+      "requested_subject": "",
+      "resolved_title": "Roger Avary",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d10s2",
+      "title": "Roger Avary",
+      "url": "https://trace.invalid/2wikimultihopqa_7227051908b311ebbd86ac1f6bf848b6_long/d10s2",
+      "text": "Avary directed\" Killing Zoe\" and\" The Rules of Attraction\", and wrote the screenplays for\" Silent Hill\" and\" Beowulf\".",
+      "visible_time_s": 12.593999999997322,
+      "requested_subject": "",
+      "resolved_title": "Roger Avary",
+      "entity_resolution": "unspecified"
+    }
+  ],
+  "searches": [
+    {
+      "query": "[scheduled evidence]",
+      "subject": "",
+      "status": "ok",
+      "returned_pages": [],
+      "mode": "trace",
+      "unit_id": "__scheduled_evidence__"
+    },
+    {
+      "query": "[scheduled evidence]",
+      "subject": "",
+      "status": "ok",
+      "returned_pages": [],
+      "mode": "trace",
+      "unit_id": "__scheduled_evidence__"
+    },
+    {
+      "query": "[scheduled evidence]",
+      "subject": "",
+      "status": "ok",
+      "returned_pages": [],
+      "mode": "trace",
+      "unit_id": "__scheduled_evidence__"
+    }
+  ],
+  "search_failures": [],
+  "llm_calls": [
+    {
+      "purpose": "feedback_generate",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 414,
+        "completion_tokens": 72,
+        "total_tokens": 486,
+        "prompt_tokens_details": {
+          "cached_tokens": 384
+        }
+      },
+      "latency_s": 1.281
+    },
+    {
+      "purpose": "feedback_verify",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 368,
+        "completion_tokens": 88,
+        "total_tokens": 456,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        }
+      },
+      "latency_s": 1.063
+    },
+    {
+      "purpose": "decompose",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 804,
+        "completion_tokens": 432,
+        "total_tokens": 1236,
+        "prompt_tokens_details": {
+          "cached_tokens": 768
+        }
+      },
+      "latency_s": 2.735
+    },
+    {
+      "purpose": "feedback_generate",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 414,
+        "completion_tokens": 65,
+        "total_tokens": 479,
+        "prompt_tokens_details": {
+          "cached_tokens": 384
+        }
+      },
+      "latency_s": 0.875
+    },
+    {
+      "purpose": "plan_review",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 1170,
+        "completion_tokens": 472,
+        "total_tokens": 1642,
+        "prompt_tokens_details": {
+          "cached_tokens": 1152
+        }
+      },
+      "latency_s": 3.781
+    },
+    {
+      "purpose": "feedback_verify",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 359,
+        "completion_tokens": 71,
+        "total_tokens": 430,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        }
+      },
+      "latency_s": 0.984
+    },
+    {
+      "purpose": "judge",
+      "model": "tinker://f9e9a6c1-e203-5c2c-acdd-68fe67378ca4:train:0/sampler_weights/epoch-0001",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 2810,
+        "completion_tokens": 331,
+        "total_tokens": 3141,
+        "prompt_tokens_details": {
+          "cached_tokens": 1024
+        }
+      },
+      "latency_s": 2.375
+    },
+    {
+      "purpose": "generate",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 802,
+        "completion_tokens": 63,
+        "total_tokens": 865,
+        "prompt_tokens_details": {
+          "cached_tokens": 384
+        }
+      },
+      "latency_s": 1.0
+    },
+    {
+      "purpose": "verify",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 1172,
+        "completion_tokens": 178,
+        "total_tokens": 1350,
+        "prompt_tokens_details": {
+          "cached_tokens": 640
+        }
+      },
+      "latency_s": 2.703
+    },
+    {
+      "purpose": "judge",
+      "model": "tinker://f9e9a6c1-e203-5c2c-acdd-68fe67378ca4:train:0/sampler_weights/epoch-0001",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 4673,
+        "completion_tokens": 545,
+        "total_tokens": 5218,
+        "prompt_tokens_details": {
+          "cached_tokens": 1280
+        }
+      },
+      "latency_s": 3.187
+    },
+    {
+      "purpose": "feedback_generate",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 414,
+        "completion_tokens": 56,
+        "total_tokens": 470,
+        "prompt_tokens_details": {
+          "cached_tokens": 384
+        }
+      },
+      "latency_s": 1.188
+    },
+    {
+      "purpose": "generate",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 679,
+        "completion_tokens": 110,
+        "total_tokens": 789,
+        "prompt_tokens_details": {
+          "cached_tokens": 384
+        }
+      },
+      "latency_s": 1.297
+    },
+    {
+      "purpose": "feedback_generate",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 415,
+        "completion_tokens": 53,
+        "total_tokens": 468,
+        "prompt_tokens_details": {
+          "cached_tokens": 384
+        }
+      },
+      "latency_s": 0.765
+    },
+    {
+      "purpose": "verify",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 1195,
+        "completion_tokens": 127,
+        "total_tokens": 1322,
+        "prompt_tokens_details": {
+          "cached_tokens": 640
+        }
+      },
+      "latency_s": 1.203
+    },
+    {
+      "purpose": "feedback_verify",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 358,
+        "completion_tokens": 88,
+        "total_tokens": 446,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        }
+      },
+      "latency_s": 1.094
+    },
+    {
+      "purpose": "judge",
+      "model": "tinker://f9e9a6c1-e203-5c2c-acdd-68fe67378ca4:train:0/sampler_weights/epoch-0001",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 4886,
+        "completion_tokens": 545,
+        "total_tokens": 5431,
+        "prompt_tokens_details": {
+          "cached_tokens": 1024
+        }
+      },
+      "latency_s": 2.704
+    }
+  ],
+  "search_diagnostics": [],
+  "output_enqueued_units": {
+    "u1": "Henry Levin",
+    "u2": "Roger Avary",
+    "u4": "Canadian"
+  },
+  "events": [
+    {
+      "sequence": 0,
+      "time_s": 0.0,
+      "type": "feedback_requested",
+      "feedback_kind": "opening",
+      "execution_state": {
+        "stage": "planning",
+        "searches_started": 0,
+        "searches_completed": 0,
+        "active_searches": 0,
+        "evidence_count": 0,
+        "supported_units": 0,
+        "output_units": 0
+      }
+    },
+    {
+      "sequence": 1,
+      "time_s": 2.344,
+      "type": "utterance",
+      "action": "Backchannel",
+      "text": "Got it—I'll check whether the directors of Holiday for Lovers and Mr. Stitch share a nationality.",
+      "claims": [],
+      "feedback_source": "model",
+      "feedback_status_claim": "intent",
+      "feedback_fallback_reason": "",
+      "execution_state": {
+        "stage": "planning",
+        "searches_started": 0,
+        "searches_completed": 0,
+        "active_searches": 0,
+        "evidence_count": 0,
+        "supported_units": 0,
+        "output_units": 0
+      },
+      "language": "en"
+    },
+    {
+      "sequence": 2,
+      "time_s": 2.735,
+      "type": "decompose_reply",
+      "reply": {
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "director of Holiday for Lovers",
+            "subject": "Holiday for Lovers",
+            "necessary": false,
+            "depends_on": [],
+            "queries": [
+              "Holiday for Lovers director"
+            ]
+          },
+          {
+            "unit_id": "u2",
+            "description": "director of Mr. Stitch",
+            "subject": "Mr. Stitch",
+            "necessary": false,
+            "depends_on": [],
+            "queries": [
+              "Mr. Stitch director"
+            ]
+          },
+          {
+            "unit_id": "u3",
+            "description": "nationality of the director of Holiday for Lovers",
+            "subject": "{u1}",
+            "necessary": false,
+            "depends_on": [
+              "u1"
+            ],
+            "queries": [
+              "{u1} nationality"
+            ]
+          },
+          {
+            "unit_id": "u4",
+            "description": "nationality of the director of Mr. Stitch",
+            "subject": "{u2}",
+            "necessary": false,
+            "depends_on": [
+              "u2"
+            ],
+            "queries": [
+              "{u2} nationality"
+            ]
+          },
+          {
+            "unit_id": "u5",
+            "description": "whether the directors of Holiday for Lovers and Mr. Stitch share at least one nationality",
+            "subject": "",
+            "necessary": true,
+            "depends_on": [
+              "u3",
+              "u4"
+            ],
+            "queries": [
+              "Do {u3} and {u4} share a nationality?"
+            ]
+          }
+        ]
+      },
+      "attempt": 1,
+      "repair": false
+    },
+    {
+      "sequence": 3,
+      "time_s": 2.735,
+      "type": "plan_review_requested",
+      "max_reviews": 1,
+      "question_only": true
+    },
+    {
+      "sequence": 4,
+      "time_s": 5.516,
+      "type": "feedback_requested",
+      "feedback_kind": "progress",
+      "execution_state": {
+        "stage": "planning",
+        "searches_started": 0,
+        "searches_completed": 0,
+        "active_searches": 0,
+        "evidence_count": 0,
+        "supported_units": 0,
+        "output_units": 0
+      }
+    },
+    {
+      "sequence": 5,
+      "time_s": 6.516,
+      "type": "plan_review_reply",
+      "reply": {
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "director of Holiday for Lovers",
+            "subject": "Holiday for Lovers",
+            "necessary": true,
+            "depends_on": [],
+            "queries": [
+              "Holiday for Lovers director",
+              "Holiday for Lovers film director"
+            ]
+          },
+          {
+            "unit_id": "u2",
+            "description": "director of Mr. Stitch",
+            "subject": "Mr. Stitch",
+            "necessary": true,
+            "depends_on": [],
+            "queries": [
+              "Mr. Stitch director",
+              "Mr. Stitch film director"
+            ]
+          },
+          {
+            "unit_id": "u3",
+            "description": "nationality of the director of Holiday for Lovers",
+            "subject": "{u1}",
+            "necessary": true,
+            "depends_on": [
+              "u1"
+            ],
+            "queries": [
+              "{u1} nationality",
+              "{u1} citizenship"
+            ]
+          },
+          {
+            "unit_id": "u4",
+            "description": "nationality of the director of Mr. Stitch",
+            "subject": "{u2}",
+            "necessary": true,
+            "depends_on": [
+              "u2"
+            ],
+            "queries": [
+              "{u2} nationality",
+              "{u2} citizenship"
+            ]
+          },
+          {
+            "unit_id": "u5",
+            "description": "whether the directors of Holiday for Lovers and Mr. Stitch share at least one nationality",
+            "subject": "",
+            "necessary": true,
+            "depends_on": [
+              "u3",
+              "u4"
+            ],
+            "queries": [
+              "Do {u3} and {u4} share a nationality?",
+              "Common nationality of {u3} and {u4}"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "sequence": 6,
+      "time_s": 6.516,
+      "type": "plan_review_finished",
+      "changed": true,
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "director of Holiday for Lovers",
+          "necessary": true,
+          "depends_on": [],
+          "queries": [
+            "Holiday for Lovers director",
+            "Holiday for Lovers film director"
+          ],
+          "subject": "Holiday for Lovers"
+        },
+        {
+          "unit_id": "u2",
+          "description": "director of Mr. Stitch",
+          "necessary": true,
+          "depends_on": [],
+          "queries": [
+            "Mr. Stitch director",
+            "Mr. Stitch film director"
+          ],
+          "subject": "Mr. Stitch"
+        },
+        {
+          "unit_id": "u3",
+          "description": "nationality of the director of Holiday for Lovers",
+          "necessary": true,
+          "depends_on": [
+            "u1"
+          ],
+          "queries": [
+            "{u1} nationality",
+            "{u1} citizenship"
+          ],
+          "subject": "{u1}"
+        },
+        {
+          "unit_id": "u4",
+          "description": "nationality of the director of Mr. Stitch",
+          "necessary": true,
+          "depends_on": [
+            "u2"
+          ],
+          "queries": [
+            "{u2} nationality",
+            "{u2} citizenship"
+          ],
+          "subject": "{u2}"
+        },
+        {
+          "unit_id": "u5",
+          "description": "whether the directors of Holiday for Lovers and Mr. Stitch share at least one nationality",
+          "necessary": true,
+          "depends_on": [
+            "u3",
+            "u4"
+          ],
+          "queries": [
+            "Do {u3} and {u4} share a nationality?",
+            "Common nationality of {u3} and {u4}"
+          ],
+          "subject": ""
+        }
+      ],
+      "question_only": true
+    },
+    {
+      "sequence": 7,
+      "time_s": 6.516,
+      "type": "plan",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "director of Holiday for Lovers",
+          "necessary": true,
+          "depends_on": [],
+          "queries": [
+            "Holiday for Lovers director",
+            "Holiday for Lovers film director"
+          ],
+          "subject": "Holiday for Lovers"
+        },
+        {
+          "unit_id": "u2",
+          "description": "director of Mr. Stitch",
+          "necessary": true,
+          "depends_on": [],
+          "queries": [
+            "Mr. Stitch director",
+            "Mr. Stitch film director"
+          ],
+          "subject": "Mr. Stitch"
+        },
+        {
+          "unit_id": "u3",
+          "description": "nationality of the director of Holiday for Lovers",
+          "necessary": true,
+          "depends_on": [
+            "u1"
+          ],
+          "queries": [
+            "{u1} nationality",
+            "{u1} citizenship"
+          ],
+          "subject": "{u1}"
+        },
+        {
+          "unit_id": "u4",
+          "description": "nationality of the director of Mr. Stitch",
+          "necessary": true,
+          "depends_on": [
+            "u2"
+          ],
+          "queries": [
+            "{u2} nationality",
+            "{u2} citizenship"
+          ],
+          "subject": "{u2}"
+        },
+        {
+          "unit_id": "u5",
+          "description": "whether the directors of Holiday for Lovers and Mr. Stitch share at least one nationality",
+          "necessary": true,
+          "depends_on": [
+            "u3",
+            "u4"
+          ],
+          "queries": [
+            "Do {u3} and {u4} share a nationality?",
+            "Common nationality of {u3} and {u4}"
+          ],
+          "subject": ""
+        }
+      ]
+    },
+    {
+      "sequence": 8,
+      "time_s": 6.516,
+      "type": "trace_batch_requested"
+    },
+    {
+      "sequence": 9,
+      "time_s": 6.516,
+      "type": "search_finished",
+      "query": "[scheduled evidence]",
+      "subject": "",
+      "status": "ok",
+      "returned_pages": [],
+      "mode": "trace",
+      "unit_id": "__scheduled_evidence__"
+    },
+    {
+      "sequence": 10,
+      "time_s": 6.516,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d1s0",
+        "title": "Holiday for a Dog",
+        "url": "https://trace.invalid/2wikimultihopqa_7227051908b311ebbd86ac1f6bf848b6_long/d1s0",
+        "text": "Holiday for a Dog( Czech:\" Prázdniny pro psa\") is a Czech comedy film.",
+        "visible_time_s": 6.51600000000326,
+        "requested_subject": "",
+        "resolved_title": "Holiday for a Dog",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 11,
+      "time_s": 6.516,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d1s1",
+        "title": "Holiday for a Dog",
+        "url": "https://trace.invalid/2wikimultihopqa_7227051908b311ebbd86ac1f6bf848b6_long/d1s1",
+        "text": "It was released in 1980.",
+        "visible_time_s": 6.51600000000326,
+        "requested_subject": "",
+        "resolved_title": "Holiday for a Dog",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 12,
+      "time_s": 6.516,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d2s0",
+        "title": "Mr. Stitch",
+        "url": "https://trace.invalid/2wikimultihopqa_7227051908b311ebbd86ac1f6bf848b6_long/d2s0",
+        "text": "Mr. Stitch is a 1995 science fiction film directed by Roger Avary and starring Rutger Hauer, Wil Wheaton, Nia Peeples, and Ron Perlman.",
+        "visible_time_s": 6.51600000000326,
+        "requested_subject": "",
+        "resolved_title": "Mr. Stitch",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 13,
+      "time_s": 6.516,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d4s0",
+        "title": "Matt Corboy",
+        "url": "https://trace.invalid/2wikimultihopqa_7227051908b311ebbd86ac1f6bf848b6_long/d4s0",
+        "text": "Matt Corboy( born June 4, 1973) is an American actor.",
+        "visible_time_s": 6.51600000000326,
+        "requested_subject": "",
+        "resolved_title": "Matt Corboy",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 14,
+      "time_s": 6.516,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d4s1",
+        "title": "Matt Corboy",
+        "url": "https://trace.invalid/2wikimultihopqa_7227051908b311ebbd86ac1f6bf848b6_long/d4s1",
+        "text": "He has appeared in both films and television series.",
+        "visible_time_s": 6.51600000000326,
+        "requested_subject": "",
+        "resolved_title": "Matt Corboy",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 15,
+      "time_s": 6.516,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d7s0",
+        "title": "Holiday for Henrietta",
+        "url": "https://trace.invalid/2wikimultihopqa_7227051908b311ebbd86ac1f6bf848b6_long/d7s0",
+        "text": "Holiday for Henrietta is a 1952 French comedy film directed by Julien Duvivier, and starring Dany Robin, Michel Auclair, and Hildegard Knef.",
+        "visible_time_s": 6.51600000000326,
+        "requested_subject": "",
+        "resolved_title": "Holiday for Henrietta",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 16,
+      "time_s": 6.516,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d7s1",
+        "title": "Holiday for Henrietta",
+        "url": "https://trace.invalid/2wikimultihopqa_7227051908b311ebbd86ac1f6bf848b6_long/d7s1",
+        "text": "While urgently trying to develop a screenplay for a new film, two screenwriters make it up as they bicker.",
+        "visible_time_s": 6.51600000000326,
+        "requested_subject": "",
+        "resolved_title": "Holiday for Henrietta",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 17,
+      "time_s": 6.516,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d7s2",
+        "title": "Holiday for Henrietta",
+        "url": "https://trace.invalid/2wikimultihopqa_7227051908b311ebbd86ac1f6bf848b6_long/d7s2",
+        "text": "\" Holiday for Henrietta\" was remade in English as the 1964 film\" Paris When It Sizzles\", starring William Holden and Audrey Hepburn.",
+        "visible_time_s": 6.51600000000326,
+        "requested_subject": "",
+        "resolved_title": "Holiday for Henrietta",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 18,
+      "time_s": 6.516,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d9s0",
+        "title": "Holiday for Lovers",
+        "url": "https://trace.invalid/2wikimultihopqa_7227051908b311ebbd86ac1f6bf848b6_long/d9s0",
+        "text": "Holiday for Lovers is a 1959 DeLuxe in CinemaScope comedy film directed by Henry Levin.",
+        "visible_time_s": 6.51600000000326,
+        "requested_subject": "",
+        "resolved_title": "Holiday for Lovers",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 19,
+      "time_s": 6.516,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d9s1",
+        "title": "Holiday for Lovers",
+        "url": "https://trace.invalid/2wikimultihopqa_7227051908b311ebbd86ac1f6bf848b6_long/d9s1",
+        "text": "Based on a 1957 play by Ronald Alexander, the film stars Clifton Webb, Jane Wyman, Jill St. John and Carol Lynley.",
+        "visible_time_s": 6.51600000000326,
+        "requested_subject": "",
+        "resolved_title": "Holiday for Lovers",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 20,
+      "time_s": 7.375,
+      "type": "utterance",
+      "action": "Progress",
+      "text": "I'm planning how to compare the directors' nationalities.",
+      "claims": [],
+      "feedback_source": "model",
+      "feedback_status_claim": "processing",
+      "feedback_fallback_reason": "",
+      "execution_state": {
+        "stage": "checking",
+        "searches_started": 1,
+        "searches_completed": 1,
+        "active_searches": 0,
+        "evidence_count": 10,
+        "supported_units": 0,
+        "output_units": 0
+      },
+      "language": "en"
+    },
+    {
+      "sequence": 21,
+      "time_s": 8.891,
+      "type": "judge_reply",
+      "reply": {
+        "judgments": [
+          {
+            "unit_id": "u1",
+            "label": "SUPPORTED",
+            "value": "Henry Levin",
+            "citations": [
+              "d9s0"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d9s0",
+                "text": "Holiday for Lovers is a 1959 DeLuxe in CinemaScope comedy film directed by Henry Levin."
+              }
+            ],
+            "reason": "Supported by the cited visible sentences and dependencies."
+          },
+          {
+            "unit_id": "u2",
+            "label": "SUPPORTED",
+            "value": "Roger Avary",
+            "citations": [
+              "d2s0"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d2s0",
+                "text": "Mr. Stitch is a 1995 science fiction film directed by Roger Avary and starring Rutger Hauer, Wil Wheaton, Nia Peeples, and Ron Perlman."
+              }
+            ],
+            "reason": "Supported by the cited visible sentences and dependencies."
+          },
+          {
+            "unit_id": "u3",
+            "label": "UNRESOLVED",
+            "value": "",
+            "citations": [],
+            "quotes": [],
+            "reason": "The current visible evidence does not establish this unit."
+          },
+          {
+            "unit_id": "u4",
+            "label": "UNRESOLVED",
+            "value": "",
+            "citations": [],
+            "quotes": [],
+            "reason": "The current visible evidence does not establish this unit."
+          },
+          {
+            "unit_id": "u5",
+            "label": "UNRESOLVED",
+            "value": "",
+            "citations": [],
+            "quotes": [],
+            "reason": "The current visible evidence does not establish this unit."
+          }
+        ]
+      },
+      "attempt": 1,
+      "repair": false,
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d1s1",
+        "d2s0",
+        "d4s0",
+        "d4s1",
+        "d7s0",
+        "d7s1",
+        "d7s2",
+        "d9s0",
+        "d9s1"
+      ]
+    },
+    {
+      "sequence": 22,
+      "time_s": 8.891,
+      "type": "judgments",
+      "judgments": {
+        "u1": {
+          "label": "SUPPORTED",
+          "value": "Henry Levin",
+          "citations": [
+            "d9s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d9s0",
+              "text": "Holiday for Lovers is a 1959 DeLuxe in CinemaScope comedy film directed by Henry Levin."
+            }
+          ],
+          "reason": "Supported by the cited visible sentences and dependencies."
+        },
+        "u2": {
+          "label": "SUPPORTED",
+          "value": "Roger Avary",
+          "citations": [
+            "d2s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d2s0",
+              "text": "Mr. Stitch is a 1995 science fiction film directed by Roger Avary and starring Rutger Hauer, Wil Wheaton, Nia Peeples, and Ron Perlman."
+            }
+          ],
+          "reason": "Supported by the cited visible sentences and dependencies."
+        },
+        "u3": {
+          "label": "UNRESOLVED",
+          "value": "",
+          "citations": [],
+          "quotes": [],
+          "reason": "The current visible evidence does not establish this unit."
+        },
+        "u4": {
+          "label": "UNRESOLVED",
+          "value": "",
+          "citations": [],
+          "quotes": [],
+          "reason": "The current visible evidence does not establish this unit."
+        },
+        "u5": {
+          "label": "UNRESOLVED",
+          "value": "",
+          "citations": [],
+          "quotes": [],
+          "reason": "The current visible evidence does not establish this unit."
+        }
+      },
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d1s1",
+        "d2s0",
+        "d4s0",
+        "d4s1",
+        "d7s0",
+        "d7s1",
+        "d7s2",
+        "d9s0",
+        "d9s1"
+      ],
+      "semantic_review": false
+    },
+    {
+      "sequence": 23,
+      "time_s": 8.891,
+      "type": "trace_batch_requested"
+    },
+    {
+      "sequence": 24,
+      "time_s": 12.594,
+      "type": "verification_reply",
+      "reply": {
+        "approved": true,
+        "facts_valid": true,
+        "expressed_unit_ids": [
+          "u1",
+          "u2"
+        ],
+        "reason": "Both factual statements match the approved facts and no unsupported claims are added."
+      },
+      "output_unit_ids": [
+        "u1",
+        "u2"
+      ],
+      "output_action": "Partial Answer",
+      "dependency_unit_ids": [],
+      "evidence_snapshot_ids": [
+        "d2s0",
+        "d9s0"
+      ]
+    },
+    {
+      "sequence": 25,
+      "time_s": 12.594,
+      "type": "utterance",
+      "action": "Partial Answer",
+      "text": "The director of Holiday for Lovers is Henry Levin. The director of Mr. Stitch is Roger Avary.",
+      "claims": [
+        {
+          "unit_id": "u1",
+          "description": "director of Holiday for Lovers",
+          "value": "Henry Levin",
+          "citations": [
+            "d9s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d9s0",
+              "text": "Holiday for Lovers is a 1959 DeLuxe in CinemaScope comedy film directed by Henry Levin."
+            }
+          ]
+        },
+        {
+          "unit_id": "u2",
+          "description": "director of Mr. Stitch",
+          "value": "Roger Avary",
+          "citations": [
+            "d2s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d2s0",
+              "text": "Mr. Stitch is a 1995 science fiction film directed by Roger Avary and starring Rutger Hauer, Wil Wheaton, Nia Peeples, and Ron Perlman."
+            }
+          ]
+        }
+      ],
+      "unresolved": [],
+      "fallback": false,
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d1s1",
+        "d2s0",
+        "d4s0",
+        "d4s1",
+        "d7s0",
+        "d7s1",
+        "d7s2",
+        "d9s0",
+        "d9s1"
+      ],
+      "language": "en"
+    },
+    {
+      "sequence": 26,
+      "time_s": 12.594,
+      "type": "search_finished",
+      "query": "[scheduled evidence]",
+      "subject": "",
+      "status": "ok",
+      "returned_pages": [],
+      "mode": "trace",
+      "unit_id": "__scheduled_evidence__"
+    },
+    {
+      "sequence": 27,
+      "time_s": 12.594,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d3s0",
+        "title": "Two Lovers and a Bear",
+        "url": "https://trace.invalid/2wikimultihopqa_7227051908b311ebbd86ac1f6bf848b6_long/d3s0",
+        "text": "Two Lovers and a Bear is a 2016 Canadian independent drama film directed by Kim Nguyen and starring Tatiana Maslany and Dane DeHaan.",
+        "visible_time_s": 12.593999999997322,
+        "requested_subject": "",
+        "resolved_title": "Two Lovers and a Bear",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 28,
+      "time_s": 12.594,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d3s1",
+        "title": "Two Lovers and a Bear",
+        "url": "https://trace.invalid/2wikimultihopqa_7227051908b311ebbd86ac1f6bf848b6_long/d3s1",
+        "text": "It was screened in the Directors' Fortnight section at the 2016 Cannes Film Festival.",
+        "visible_time_s": 12.593999999997322,
+        "requested_subject": "",
+        "resolved_title": "Two Lovers and a Bear",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 29,
+      "time_s": 12.594,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d3s2",
+        "title": "Two Lovers and a Bear",
+        "url": "https://trace.invalid/2wikimultihopqa_7227051908b311ebbd86ac1f6bf848b6_long/d3s2",
+        "text": "The film was released on 7 October 2016, by Entertainment One.",
+        "visible_time_s": 12.593999999997322,
+        "requested_subject": "",
+        "resolved_title": "Two Lovers and a Bear",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 30,
+      "time_s": 12.594,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d5s0",
+        "title": "Dr. Pyckle and Mr. Pryde",
+        "url": "https://trace.invalid/2wikimultihopqa_7227051908b311ebbd86ac1f6bf848b6_long/d5s0",
+        "text": "Dr. Pyckle and Mr. Pryde is a 1925 silent, black- and- white comedy film, directed by Scott Pembroke and Joe Rock( also the producer).",
+        "visible_time_s": 12.593999999997322,
+        "requested_subject": "",
+        "resolved_title": "Dr. Pyckle and Mr. Pryde",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 31,
+      "time_s": 12.594,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d5s1",
+        "title": "Dr. Pyckle and Mr. Pryde",
+        "url": "https://trace.invalid/2wikimultihopqa_7227051908b311ebbd86ac1f6bf848b6_long/d5s1",
+        "text": "The film itself is both a spoof of the previous Dr. Jekyll and Mr. Hyde films( e.g.\" Dr. Jekyll and Mr. Hyde\"( 1912) and\" Dr. Jekyll and Mr. Hyde\"( 1920)) and the well- famed novel by Robert Louis Stevenson\" Strange Case of Dr Jekyll and Mr Hyde.\"",
+        "visible_time_s": 12.593999999997322,
+        "requested_subject": "",
+        "resolved_title": "Dr. Pyckle and Mr. Pryde",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 32,
+      "time_s": 12.594,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d5s2",
+        "title": "Dr. Pyckle and Mr. Pryde",
+        "url": "https://trace.invalid/2wikimultihopqa_7227051908b311ebbd86ac1f6bf848b6_long/d5s2",
+        "text": "The film stars Stan Laurel as the title characters.",
+        "visible_time_s": 12.593999999997322,
+        "requested_subject": "",
+        "resolved_title": "Dr. Pyckle and Mr. Pryde",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 33,
+      "time_s": 12.594,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d6s0",
+        "title": "Henry Levin (film director)",
+        "url": "https://trace.invalid/2wikimultihopqa_7227051908b311ebbd86ac1f6bf848b6_long/d6s0",
+        "text": "Henry Levin( 5 June 1909 – 1 May 1980) began as a stage actor and director but was most notable as an American film director of over fifty feature films.",
+        "visible_time_s": 12.593999999997322,
+        "requested_subject": "",
+        "resolved_title": "Henry Levin (film director)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 34,
+      "time_s": 12.594,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d6s1",
+        "title": "Henry Levin (film director)",
+        "url": "https://trace.invalid/2wikimultihopqa_7227051908b311ebbd86ac1f6bf848b6_long/d6s1",
+        "text": "His best known credits were\" Jolson Sings Again\"( 1949),\" Journey to the Centre of the Earth\"( 1959) and\" Where the Boys Are\"( 1960).",
+        "visible_time_s": 12.593999999997322,
+        "requested_subject": "",
+        "resolved_title": "Henry Levin (film director)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 35,
+      "time_s": 12.594,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d8s0",
+        "title": "A Lover's Romance",
+        "url": "https://trace.invalid/2wikimultihopqa_7227051908b311ebbd86ac1f6bf848b6_long/d8s0",
+        "text": "A Lover's Romance or\" Romance for Lovers\" is a 1974 Soviet musical romantic drama directed by Andrei Konchalovsky.",
+        "visible_time_s": 12.593999999997322,
+        "requested_subject": "",
+        "resolved_title": "A Lover's Romance",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 36,
+      "time_s": 12.594,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d10s0",
+        "title": "Roger Avary",
+        "url": "https://trace.invalid/2wikimultihopqa_7227051908b311ebbd86ac1f6bf848b6_long/d10s0",
+        "text": "Roger Roberts Avary( born August 23, 1965) is a Canadian- American film and television director, screenwriter, and producer.",
+        "visible_time_s": 12.593999999997322,
+        "requested_subject": "",
+        "resolved_title": "Roger Avary",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 37,
+      "time_s": 12.594,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d10s1",
+        "title": "Roger Avary",
+        "url": "https://trace.invalid/2wikimultihopqa_7227051908b311ebbd86ac1f6bf848b6_long/d10s1",
+        "text": "He collaborated with Quentin Tarantino on\" Pulp Fiction\", for which they won Best Original Screenplay at the 67th Academy Awards.",
+        "visible_time_s": 12.593999999997322,
+        "requested_subject": "",
+        "resolved_title": "Roger Avary",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 38,
+      "time_s": 12.594,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d10s2",
+        "title": "Roger Avary",
+        "url": "https://trace.invalid/2wikimultihopqa_7227051908b311ebbd86ac1f6bf848b6_long/d10s2",
+        "text": "Avary directed\" Killing Zoe\" and\" The Rules of Attraction\", and wrote the screenplays for\" Silent Hill\" and\" Beowulf\".",
+        "visible_time_s": 12.593999999997322,
+        "requested_subject": "",
+        "resolved_title": "Roger Avary",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 39,
+      "time_s": 15.75,
+      "type": "feedback_requested",
+      "feedback_kind": "progress",
+      "execution_state": {
+        "stage": "checking",
+        "searches_started": 2,
+        "searches_completed": 2,
+        "active_searches": 0,
+        "evidence_count": 22,
+        "supported_units": 2,
+        "output_units": 2
+      }
+    },
+    {
+      "sequence": 40,
+      "time_s": 15.781,
+      "type": "judge_reply",
+      "reply": {
+        "judgments": [
+          {
+            "unit_id": "u1",
+            "label": "SUPPORTED",
+            "value": "Henry Levin",
+            "citations": [
+              "d9s0"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d9s0",
+                "text": "Holiday for Lovers is a 1959 DeLuxe in CinemaScope comedy film directed by Henry Levin."
+              }
+            ],
+            "reason": "Supported by the cited visible sentences and dependencies."
+          },
+          {
+            "unit_id": "u2",
+            "label": "SUPPORTED",
+            "value": "Roger Avary",
+            "citations": [
+              "d2s0"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d2s0",
+                "text": "Mr. Stitch is a 1995 science fiction film directed by Roger Avary and starring Rutger Hauer, Wil Wheaton, Nia Peeples, and Ron Perlman."
+              }
+            ],
+            "reason": "Supported by the cited visible sentences and dependencies."
+          },
+          {
+            "unit_id": "u3",
+            "label": "SUPPORTED",
+            "value": "American",
+            "citations": [
+              "d6s0"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d6s0",
+                "text": "Henry Levin( 5 June 1909 – 1 May 1980) began as a stage actor and director but was most notable as an American film director of over fifty feature films."
+              }
+            ],
+            "reason": "Supported by the cited visible sentences and dependencies."
+          },
+          {
+            "unit_id": "u4",
+            "label": "SUPPORTED",
+            "value": "Canadian",
+            "citations": [
+              "d10s0"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d10s0",
+                "text": "Roger Roberts Avary( born August 23, 1965) is a Canadian- American film and television director, screenwriter, and producer."
+              }
+            ],
+            "reason": "Supported by the cited visible sentences and dependencies."
+          },
+          {
+            "unit_id": "u5",
+            "label": "SUPPORTED",
+            "value": "yes",
+            "citations": [
+              "d6s0",
+              "d10s0"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d6s0",
+                "text": "Henry Levin( 5 June 1909 – 1 May 1980) began as a stage actor and director but was most notable as an American film director of over fifty feature films."
+              },
+              {
+                "evidence_id": "d10s0",
+                "text": "Roger Roberts Avary( born August 23, 1965) is a Canadian- American film and television director, screenwriter, and producer."
+              }
+            ],
+            "reason": "Supported by the cited visible sentences and dependencies."
+          }
+        ]
+      },
+      "attempt": 1,
+      "repair": false,
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d1s1",
+        "d2s0",
+        "d4s0",
+        "d4s1",
+        "d7s0",
+        "d7s1",
+        "d7s2",
+        "d9s0",
+        "d9s1",
+        "d3s0",
+        "d3s1",
+        "d3s2",
+        "d5s0",
+        "d5s1",
+        "d5s2",
+        "d6s0",
+        "d6s1",
+        "d8s0",
+        "d10s0",
+        "d10s1",
+        "d10s2"
+      ]
+    },
+    {
+      "sequence": 41,
+      "time_s": 15.781,
+      "type": "judgments",
+      "judgments": {
+        "u1": {
+          "label": "SUPPORTED",
+          "value": "Henry Levin",
+          "citations": [
+            "d9s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d9s0",
+              "text": "Holiday for Lovers is a 1959 DeLuxe in CinemaScope comedy film directed by Henry Levin."
+            }
+          ],
+          "reason": "Supported by the cited visible sentences and dependencies."
+        },
+        "u2": {
+          "label": "SUPPORTED",
+          "value": "Roger Avary",
+          "citations": [
+            "d2s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d2s0",
+              "text": "Mr. Stitch is a 1995 science fiction film directed by Roger Avary and starring Rutger Hauer, Wil Wheaton, Nia Peeples, and Ron Perlman."
+            }
+          ],
+          "reason": "Supported by the cited visible sentences and dependencies."
+        },
+        "u3": {
+          "label": "UNRESOLVED",
+          "value": "",
+          "citations": [],
+          "quotes": [],
+          "reason": "Rejected entity identity: citation concerns an ambiguous or differently qualified namesake"
+        },
+        "u4": {
+          "label": "SUPPORTED",
+          "value": "Canadian",
+          "citations": [
+            "d10s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d10s0",
+              "text": "Roger Roberts Avary( born August 23, 1965) is a Canadian- American film and television director, screenwriter, and producer."
+            }
+          ],
+          "reason": "Supported by the cited visible sentences and dependencies."
+        },
+        "u5": {
+          "label": "UNRESOLVED",
+          "value": "",
+          "citations": [],
+          "quotes": [],
+          "reason": "Dependency is not supported"
+        }
+      },
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d1s1",
+        "d2s0",
+        "d4s0",
+        "d4s1",
+        "d7s0",
+        "d7s1",
+        "d7s2",
+        "d9s0",
+        "d9s1",
+        "d3s0",
+        "d3s1",
+        "d3s2",
+        "d5s0",
+        "d5s1",
+        "d5s2",
+        "d6s0",
+        "d6s1",
+        "d8s0",
+        "d10s0",
+        "d10s1",
+        "d10s2"
+      ],
+      "semantic_review": false
+    },
+    {
+      "sequence": 42,
+      "time_s": 15.781,
+      "type": "trace_batch_requested"
+    },
+    {
+      "sequence": 43,
+      "time_s": 18.281,
+      "type": "verification_reply",
+      "reply": {
+        "approved": true,
+        "facts_valid": true,
+        "expressed_unit_ids": [
+          "u4"
+        ],
+        "reason": "The draft correctly states the director's Canadian nationality as per the approved fact."
+      },
+      "output_unit_ids": [
+        "u4"
+      ],
+      "output_action": "Partial Answer",
+      "dependency_unit_ids": [
+        "u2"
+      ],
+      "evidence_snapshot_ids": [
+        "d2s0",
+        "d10s0"
+      ]
+    },
+    {
+      "sequence": 44,
+      "time_s": 18.281,
+      "type": "utterance",
+      "action": "Partial Answer",
+      "text": "The director of Mr. Stitch is Canadian.",
+      "claims": [
+        {
+          "unit_id": "u4",
+          "description": "nationality of the director of Mr. Stitch",
+          "value": "Canadian",
+          "citations": [
+            "d10s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d10s0",
+              "text": "Roger Roberts Avary( born August 23, 1965) is a Canadian- American film and television director, screenwriter, and producer."
+            }
+          ]
+        }
+      ],
+      "unresolved": [],
+      "fallback": false,
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d1s1",
+        "d2s0",
+        "d4s0",
+        "d4s1",
+        "d7s0",
+        "d7s1",
+        "d7s2",
+        "d9s0",
+        "d9s1",
+        "d3s0",
+        "d3s1",
+        "d3s2",
+        "d5s0",
+        "d5s1",
+        "d5s2",
+        "d6s0",
+        "d6s1",
+        "d8s0",
+        "d10s0",
+        "d10s1",
+        "d10s2"
+      ],
+      "language": "en"
+    },
+    {
+      "sequence": 45,
+      "time_s": 18.281,
+      "type": "search_finished",
+      "query": "[scheduled evidence]",
+      "subject": "",
+      "status": "ok",
+      "returned_pages": [],
+      "mode": "trace",
+      "unit_id": "__scheduled_evidence__"
+    },
+    {
+      "sequence": 46,
+      "time_s": 18.281,
+      "type": "semantic_review_requested",
+      "target_unit_ids": [
+        "u3",
+        "u5"
+      ],
+      "review_unit_ids": [
+        "u1",
+        "u2",
+        "u3",
+        "u4",
+        "u5"
+      ],
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d1s1",
+        "d2s0",
+        "d4s0",
+        "d4s1",
+        "d7s0",
+        "d7s1",
+        "d7s2",
+        "d9s0",
+        "d9s1",
+        "d3s0",
+        "d3s1",
+        "d3s2",
+        "d5s0",
+        "d5s1",
+        "d5s2",
+        "d6s0",
+        "d6s1",
+        "d8s0",
+        "d10s0",
+        "d10s1",
+        "d10s2"
+      ],
+      "max_reviews": 1
+    },
+    {
+      "sequence": 47,
+      "time_s": 18.797,
+      "type": "feedback_discarded",
+      "feedback_kind": "progress",
+      "reason": "answer_already_advanced"
+    },
+    {
+      "sequence": 48,
+      "time_s": 20.985,
+      "type": "semantic_review_reply",
+      "reply": {
+        "judgments": [
+          {
+            "unit_id": "u1",
+            "label": "SUPPORTED",
+            "value": "Henry Levin",
+            "citations": [
+              "d9s0"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d9s0",
+                "text": "Holiday for Lovers is a 1959 DeLuxe in CinemaScope comedy film directed by Henry Levin."
+              }
+            ],
+            "reason": "Supported by the cited visible sentences and dependencies."
+          },
+          {
+            "unit_id": "u2",
+            "label": "SUPPORTED",
+            "value": "Roger Avary",
+            "citations": [
+              "d2s0"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d2s0",
+                "text": "Mr. Stitch is a 1995 science fiction film directed by Roger Avary and starring Rutger Hauer, Wil Wheaton, Nia Peeples, and Ron Perlman."
+              }
+            ],
+            "reason": "Supported by the cited visible sentences and dependencies."
+          },
+          {
+            "unit_id": "u3",
+            "label": "SUPPORTED",
+            "value": "American",
+            "citations": [
+              "d6s0"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d6s0",
+                "text": "Henry Levin( 5 June 1909 – 1 May 1980) began as a stage actor and director but was most notable as an American film director of over fifty feature films."
+              }
+            ],
+            "reason": "Supported by the cited visible sentences and dependencies."
+          },
+          {
+            "unit_id": "u4",
+            "label": "SUPPORTED",
+            "value": "Canadian",
+            "citations": [
+              "d10s0"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d10s0",
+                "text": "Roger Roberts Avary( born August 23, 1965) is a Canadian- American film and television director, screenwriter, and producer."
+              }
+            ],
+            "reason": "Supported by the cited visible sentences and dependencies."
+          },
+          {
+            "unit_id": "u5",
+            "label": "SUPPORTED",
+            "value": "no",
+            "citations": [
+              "d6s0",
+              "d10s0"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d6s0",
+                "text": "Henry Levin( 5 June 1909 – 1 May 1980) began as a stage actor and director but was most notable as an American film director of over fifty feature films."
+              },
+              {
+                "evidence_id": "d10s0",
+                "text": "Roger Roberts Avary( born August 23, 1965) is a Canadian- American film and television director, screenwriter, and producer."
+              }
+            ],
+            "reason": "Supported by the cited visible sentences and dependencies."
+          }
+        ]
+      },
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d1s1",
+        "d2s0",
+        "d4s0",
+        "d4s1",
+        "d7s0",
+        "d7s1",
+        "d7s2",
+        "d9s0",
+        "d9s1",
+        "d3s0",
+        "d3s1",
+        "d3s2",
+        "d5s0",
+        "d5s1",
+        "d5s2",
+        "d6s0",
+        "d6s1",
+        "d8s0",
+        "d10s0",
+        "d10s1",
+        "d10s2"
+      ]
+    },
+    {
+      "sequence": 49,
+      "time_s": 20.985,
+      "type": "semantic_review_finished",
+      "review_unit_ids": [
+        "u1",
+        "u2",
+        "u3",
+        "u4",
+        "u5"
+      ],
+      "recovered_unit_ids": []
+    },
+    {
+      "sequence": 50,
+      "time_s": 20.985,
+      "type": "judgments",
+      "judgments": {
+        "u1": {
+          "label": "SUPPORTED",
+          "value": "Henry Levin",
+          "citations": [
+            "d9s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d9s0",
+              "text": "Holiday for Lovers is a 1959 DeLuxe in CinemaScope comedy film directed by Henry Levin."
+            }
+          ],
+          "reason": "Supported by the cited visible sentences and dependencies."
+        },
+        "u2": {
+          "label": "SUPPORTED",
+          "value": "Roger Avary",
+          "citations": [
+            "d2s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d2s0",
+              "text": "Mr. Stitch is a 1995 science fiction film directed by Roger Avary and starring Rutger Hauer, Wil Wheaton, Nia Peeples, and Ron Perlman."
+            }
+          ],
+          "reason": "Supported by the cited visible sentences and dependencies."
+        },
+        "u3": {
+          "label": "UNRESOLVED",
+          "value": "",
+          "citations": [],
+          "quotes": [],
+          "reason": "Rejected entity identity: citation concerns an ambiguous or differently qualified namesake"
+        },
+        "u4": {
+          "label": "SUPPORTED",
+          "value": "Canadian",
+          "citations": [
+            "d10s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d10s0",
+              "text": "Roger Roberts Avary( born August 23, 1965) is a Canadian- American film and television director, screenwriter, and producer."
+            }
+          ],
+          "reason": "Supported by the cited visible sentences and dependencies."
+        },
+        "u5": {
+          "label": "UNRESOLVED",
+          "value": "",
+          "citations": [],
+          "quotes": [],
+          "reason": "Dependency is not supported"
+        }
+      },
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d1s1",
+        "d2s0",
+        "d4s0",
+        "d4s1",
+        "d7s0",
+        "d7s1",
+        "d7s2",
+        "d9s0",
+        "d9s1",
+        "d3s0",
+        "d3s1",
+        "d3s2",
+        "d5s0",
+        "d5s1",
+        "d5s2",
+        "d6s0",
+        "d6s1",
+        "d8s0",
+        "d10s0",
+        "d10s1",
+        "d10s2"
+      ],
+      "semantic_review": true
+    },
+    {
+      "sequence": 51,
+      "time_s": 20.985,
+      "type": "utterance",
+      "action": "Final Answer",
+      "text": "I could not confirm nationality of the director of Holiday for Lovers and whether the directors of Holiday for Lovers and Mr. Stitch share at least one nationality.",
+      "claims": [],
+      "unresolved": [
+        "u3",
+        "u5"
+      ],
+      "fallback": false,
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d1s1",
+        "d2s0",
+        "d4s0",
+        "d4s1",
+        "d7s0",
+        "d7s1",
+        "d7s2",
+        "d9s0",
+        "d9s1",
+        "d3s0",
+        "d3s1",
+        "d3s2",
+        "d5s0",
+        "d5s1",
+        "d5s2",
+        "d6s0",
+        "d6s1",
+        "d8s0",
+        "d10s0",
+        "d10s1",
+        "d10s2"
+      ],
+      "language": "en"
+    },
+    {
+      "sequence": 52,
+      "time_s": 20.985,
+      "type": "finished",
+      "status": "incomplete"
+    }
+  ],
+  "note": "Prototype model judgments are not independent gold scores. Output event times are not spoken claim times.",
+  "evidence_mode": "scheduled_trace",
+  "audio": {
+    "enabled": true,
+    "mode": "windows",
+    "play": false,
+    "status": "ok",
+    "errors": [],
+    "records": [
+      {
+        "event_sequence": 1,
+        "sentence_index": 1,
+        "sentence_count": 1,
+        "language": "en",
+        "text": "Got it—I'll check whether the directors of Holiday for Lovers and Mr. Stitch share a nationality.",
+        "action": "Backchannel",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 2.3439999999973224,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1\\samples\\0213\\audio\\segments\\0001_01.wav",
+        "duration_s": 5.723219954648526,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 3.1560000000026776,
+        "synthesis_and_playback_s": 0.8120000000053551
+      },
+      {
+        "event_sequence": 20,
+        "sentence_index": 1,
+        "sentence_count": 1,
+        "language": "en",
+        "text": "I'm planning how to compare the directors' nationalities.",
+        "action": "Progress",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 7.375,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1\\samples\\0213\\audio\\segments\\0020_01.wav",
+        "duration_s": 3.7936961451247164,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 8.172000000005937,
+        "synthesis_and_playback_s": 0.7970000000059372
+      },
+      {
+        "event_sequence": 25,
+        "sentence_index": 1,
+        "sentence_count": 2,
+        "language": "en",
+        "text": "The director of Holiday for Lovers is Henry Levin.",
+        "action": "Partial Answer",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 12.593999999997322,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1\\samples\\0213\\audio\\segments\\0025_01.wav",
+        "duration_s": 3.498730158730159,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 13.39100000000326,
+        "synthesis_and_playback_s": 0.7970000000059372
+      },
+      {
+        "event_sequence": 25,
+        "sentence_index": 2,
+        "sentence_count": 2,
+        "language": "en",
+        "text": "The director of Mr. Stitch is Roger Avary.",
+        "action": "Partial Answer",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 13.39100000000326,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1\\samples\\0213\\audio\\segments\\0025_02.wav",
+        "duration_s": 3.253877551020408,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 14.172000000005937,
+        "synthesis_and_playback_s": 0.7810000000026776
+      },
+      {
+        "event_sequence": 44,
+        "sentence_index": 1,
+        "sentence_count": 1,
+        "language": "en",
+        "text": "The director of Mr. Stitch is Canadian.",
+        "action": "Partial Answer",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 18.281000000002678,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1\\samples\\0213\\audio\\segments\\0044_01.wav",
+        "duration_s": 2.9890249433106577,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 19.077999999994063,
+        "synthesis_and_playback_s": 0.7969999999913853
+      },
+      {
+        "event_sequence": 51,
+        "sentence_index": 1,
+        "sentence_count": 1,
+        "language": "en",
+        "text": "I could not confirm nationality of the director of Holiday for Lovers and whether the directors of Holiday for Lovers and Mr. Stitch share at least one nationality.",
+        "action": "Final Answer",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 20.985000000000582,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1\\samples\\0213\\audio\\segments\\0051_01.wav",
+        "duration_s": 9.287165532879818,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 21.781000000002678,
+        "synthesis_and_playback_s": 0.7960000000020955
+      }
+    ],
+    "wave": {
+      "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1\\samples\\0213\\audio\\response.wav",
+      "duration_s": 32.419818594104306,
+      "timeline": [
+        {
+          "event_sequence": 1,
+          "sentence_index": 1,
+          "action": "Backchannel",
+          "text": "Got it—I'll check whether the directors of Holiday for Lovers and Mr. Stitch share a nationality.",
+          "wave_start_s": 3.1560090702947847,
+          "wave_end_s": 8.87922902494331
+        },
+        {
+          "event_sequence": 20,
+          "sentence_index": 1,
+          "action": "Progress",
+          "text": "I'm planning how to compare the directors' nationalities.",
+          "wave_start_s": 8.87922902494331,
+          "wave_end_s": 12.672925170068027
+        },
+        {
+          "event_sequence": 25,
+          "sentence_index": 1,
+          "action": "Partial Answer",
+          "text": "The director of Holiday for Lovers is Henry Levin.",
+          "wave_start_s": 13.391020408163266,
+          "wave_end_s": 16.889750566893426
+        },
+        {
+          "event_sequence": 25,
+          "sentence_index": 2,
+          "action": "Partial Answer",
+          "text": "The director of Mr. Stitch is Roger Avary.",
+          "wave_start_s": 16.889750566893426,
+          "wave_end_s": 20.14362811791383
+        },
+        {
+          "event_sequence": 44,
+          "sentence_index": 1,
+          "action": "Partial Answer",
+          "text": "The director of Mr. Stitch is Canadian.",
+          "wave_start_s": 20.14362811791383,
+          "wave_end_s": 23.132653061224488
+        },
+        {
+          "event_sequence": 51,
+          "sentence_index": 1,
+          "action": "Final Answer",
+          "text": "I could not confirm nationality of the director of Holiday for Lovers and whether the directors of Holiday for Lovers and Mr. Stitch share at least one nationality.",
+          "wave_start_s": 23.132653061224488,
+          "wave_end_s": 32.419818594104306
+        }
+      ]
+    }
+  },
+  "evaluation": {
+    "mode": "b_final_revised_trace",
+    "trace_id": "2wikimultihopqa_7227051908b311ebbd86ac1f6bf848b6_long",
+    "sample_id": "2wikimultihopqa_7227051908b311ebbd86ac1f6bf848b6",
+    "total_wall_s": 21.781000000002678,
+    "question_timeout_s": 180,
+    "audio_enabled": true,
+    "history_enabled": false,
+    "text_pipeline_wall_s": 20.985000000000582,
+    "effective_settings": {
+      "base_url": "https://tinker.thinkingmachines.dev/services/tinker-prod/oai/api/v1",
+      "model": "openai/gpt-oss-120b",
+      "judge_model": "tinker://f9e9a6c1-e203-5c2c-acdd-68fe67378ca4:train:0/sampler_weights/epoch-0001",
+      "judge_reasoning_effort": "low",
+      "wiki_language": "en",
+      "user_agent": "CascadeSystem/0.1 (educational research prototype)",
+      "timeout_s": 45.0,
+      "max_tokens": 4096,
+      "reasoning_effort": "low",
+      "progress_s": 3.0,
+      "feedback_timeout_s": 6.0,
+      "search_limit": 3,
+      "max_units": 8,
+      "max_searches": 16,
+      "max_sources": 22,
+      "source_chars": 247,
+      "evidence_chars": 2395,
+      "concurrency": 3
+    },
+    "timing_kind": "unknown",
+    "scheduler": "wall-paced fixed B arrivals",
+    "split": "eval_reserved",
+    "empty_evidence_sentences_ignored": 0
+  }
+}

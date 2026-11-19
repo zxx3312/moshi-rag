@@ -1,0 +1,381 @@
+{
+  "question": "Who is the paternal grandmother of John Ii, Marquis Of Namur?",
+  "resolved_question": "Who is the paternal grandmother of John Ii, Marquis Of Namur?",
+  "used_history_turn_ids": [],
+  "response_language": "en",
+  "status": "error",
+  "clock": "wall_monotonic",
+  "time_origin": "question_text_ready_after_optional_asr",
+  "model": "openai/gpt-oss-120b",
+  "judge_model": "tinker://f9e9a6c1-e203-5c2c-acdd-68fe67378ca4:train:0/sampler_weights/epoch-0001",
+  "units": [],
+  "judgments": {},
+  "evidence": [],
+  "searches": [],
+  "search_failures": [],
+  "llm_calls": [
+    {
+      "purpose": "feedback_generate",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 407,
+        "completion_tokens": 58,
+        "total_tokens": 465,
+        "prompt_tokens_details": {
+          "cached_tokens": 384
+        }
+      },
+      "latency_s": 1.297
+    },
+    {
+      "purpose": "feedback_verify",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 355,
+        "completion_tokens": 69,
+        "total_tokens": 424,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        }
+      },
+      "latency_s": 0.797
+    },
+    {
+      "purpose": "decompose",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 797,
+        "completion_tokens": 351,
+        "total_tokens": 1148,
+        "prompt_tokens_details": {
+          "cached_tokens": 768
+        }
+      },
+      "latency_s": 2.375
+    },
+    {
+      "purpose": "feedback_generate",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 407,
+        "completion_tokens": 71,
+        "total_tokens": 478,
+        "prompt_tokens_details": {
+          "cached_tokens": 384
+        }
+      },
+      "latency_s": 0.907
+    },
+    {
+      "purpose": "plan_review",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 1101,
+        "completion_tokens": 629,
+        "total_tokens": 1730,
+        "prompt_tokens_details": {
+          "cached_tokens": 896
+        }
+      },
+      "latency_s": 4.313
+    },
+    {
+      "purpose": "feedback_verify",
+      "model": "openai/gpt-oss-120b",
+      "status": "cancelled",
+      "latency_s": 0.547
+    }
+  ],
+  "search_diagnostics": [],
+  "output_enqueued_units": {},
+  "events": [
+    {
+      "sequence": 0,
+      "time_s": 0.0,
+      "type": "feedback_requested",
+      "feedback_kind": "opening",
+      "execution_state": {
+        "stage": "planning",
+        "searches_started": 0,
+        "searches_completed": 0,
+        "active_searches": 0,
+        "evidence_count": 0,
+        "supported_units": 0,
+        "output_units": 0
+      }
+    },
+    {
+      "sequence": 1,
+      "time_s": 2.094,
+      "type": "utterance",
+      "action": "Backchannel",
+      "text": "Looking up the paternal grandmother of John II, Marquis of Namur.",
+      "claims": [],
+      "feedback_source": "model",
+      "feedback_status_claim": "intent",
+      "feedback_fallback_reason": "",
+      "execution_state": {
+        "stage": "planning",
+        "searches_started": 0,
+        "searches_completed": 0,
+        "active_searches": 0,
+        "evidence_count": 0,
+        "supported_units": 0,
+        "output_units": 0
+      },
+      "language": "en"
+    },
+    {
+      "sequence": 2,
+      "time_s": 2.375,
+      "type": "decompose_reply",
+      "reply": {
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "Identify John II, Marquis of Namur",
+            "subject": "John II, Marquis of Namur",
+            "necessary": false,
+            "depends_on": [],
+            "queries": [
+              "John II, Marquis of Namur",
+              "John II of Namur"
+            ]
+          },
+          {
+            "unit_id": "u2",
+            "description": "Find the father of {u1}",
+            "subject": "John II, Marquis of Namur",
+            "necessary": false,
+            "depends_on": [
+              "u1"
+            ],
+            "queries": [
+              "John II, Marquis of Namur father",
+              "John II of Namur parent"
+            ]
+          },
+          {
+            "unit_id": "u3",
+            "description": "Find the mother of the father of {u1}",
+            "subject": "John II, Marquis of Namur",
+            "necessary": true,
+            "depends_on": [
+              "u1",
+              "u2"
+            ],
+            "queries": [
+              "father of John II, Marquis of Namur mother",
+              "John II of Namur paternal grandmother"
+            ]
+          }
+        ]
+      },
+      "attempt": 1,
+      "repair": false
+    },
+    {
+      "sequence": 3,
+      "time_s": 2.375,
+      "type": "plan_review_requested",
+      "max_reviews": 1,
+      "question_only": true
+    },
+    {
+      "sequence": 4,
+      "time_s": 5.234,
+      "type": "feedback_requested",
+      "feedback_kind": "progress",
+      "execution_state": {
+        "stage": "planning",
+        "searches_started": 0,
+        "searches_completed": 0,
+        "active_searches": 0,
+        "evidence_count": 0,
+        "supported_units": 0,
+        "output_units": 0
+      }
+    },
+    {
+      "sequence": 5,
+      "time_s": 6.688,
+      "type": "plan_review_reply",
+      "reply": {
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "Identify John II, Marquis of Namur",
+            "subject": "John II, Marquis of Namur",
+            "necessary": true,
+            "depends_on": [],
+            "queries": [
+              "John II, Marquis of Namur",
+              "John II of Namur"
+            ]
+          },
+          {
+            "unit_id": "u2",
+            "description": "Identify the father of John II, Marquis of Namur",
+            "subject": "{u2}",
+            "necessary": true,
+            "depends_on": [
+              "u1"
+            ],
+            "queries": [
+              "John II, Marquis of Namur father",
+              "John II of Namur parent"
+            ]
+          },
+          {
+            "unit_id": "u3",
+            "description": "Identify the paternal grandmother (mother of the father) of John II, Marquis of Namur",
+            "subject": "{u3}",
+            "necessary": true,
+            "depends_on": [
+              "u2"
+            ],
+            "queries": [
+              "father of John II, Marquis of Namur mother",
+              "John II of Namur paternal grandmother"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "sequence": 6,
+      "time_s": 6.688,
+      "type": "plan_review_rejected",
+      "error": "Placeholders must name explicit dependencies"
+    },
+    {
+      "sequence": 7,
+      "time_s": 6.688,
+      "type": "failure",
+      "error": "Placeholders must name explicit dependencies"
+    },
+    {
+      "sequence": 8,
+      "time_s": 6.688,
+      "type": "utterance",
+      "action": "Final Answer",
+      "claims": [],
+      "text": "The search or verification failed, so I cannot give a reliable answer yet.",
+      "language": "en"
+    },
+    {
+      "sequence": 9,
+      "time_s": 6.688,
+      "type": "finished",
+      "status": "error"
+    }
+  ],
+  "note": "Prototype model judgments are not independent gold scores. Output event times are not spoken claim times.",
+  "evidence_mode": "scheduled_trace",
+  "audio": {
+    "enabled": true,
+    "mode": "windows",
+    "play": false,
+    "status": "ok",
+    "errors": [],
+    "records": [
+      {
+        "event_sequence": 1,
+        "sentence_index": 1,
+        "sentence_count": 1,
+        "language": "en",
+        "text": "Looking up the paternal grandmother of John II, Marquis of Namur.",
+        "action": "Backchannel",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 2.0939999999973224,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1\\samples\\0183\\audio\\segments\\0001_01.wav",
+        "duration_s": 4.80875283446712,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 2.875,
+        "synthesis_and_playback_s": 0.7969999999913853
+      },
+      {
+        "event_sequence": 8,
+        "sentence_index": 1,
+        "sentence_count": 1,
+        "language": "en",
+        "text": "The search or verification failed, so I cannot give a reliable answer yet.",
+        "action": "Final Answer",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 6.687999999994645,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1\\samples\\0183\\audio\\segments\\0008_01.wav",
+        "duration_s": 5.348526077097506,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 7.48399999999674,
+        "synthesis_and_playback_s": 0.7960000000020955
+      }
+    ],
+    "wave": {
+      "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1\\samples\\0183\\audio\\response.wav",
+      "duration_s": 13.032290249433107,
+      "timeline": [
+        {
+          "event_sequence": 1,
+          "sentence_index": 1,
+          "action": "Backchannel",
+          "text": "Looking up the paternal grandmother of John II, Marquis of Namur.",
+          "wave_start_s": 2.8750113378684805,
+          "wave_end_s": 7.683764172335601
+        },
+        {
+          "event_sequence": 8,
+          "sentence_index": 1,
+          "action": "Final Answer",
+          "text": "The search or verification failed, so I cannot give a reliable answer yet.",
+          "wave_start_s": 7.683764172335601,
+          "wave_end_s": 13.032290249433107
+        }
+      ]
+    }
+  },
+  "evaluation": {
+    "mode": "b_final_revised_trace",
+    "trace_id": "2wikimultihopqa_67d898240bb011ebab90acde48001122_long",
+    "sample_id": "2wikimultihopqa_67d898240bb011ebab90acde48001122",
+    "total_wall_s": 7.48399999999674,
+    "question_timeout_s": 180,
+    "audio_enabled": true,
+    "history_enabled": false,
+    "text_pipeline_wall_s": 6.687999999994645,
+    "effective_settings": {
+      "base_url": "https://tinker.thinkingmachines.dev/services/tinker-prod/oai/api/v1",
+      "model": "openai/gpt-oss-120b",
+      "judge_model": "tinker://f9e9a6c1-e203-5c2c-acdd-68fe67378ca4:train:0/sampler_weights/epoch-0001",
+      "judge_reasoning_effort": "low",
+      "wiki_language": "en",
+      "user_agent": "CascadeSystem/0.1 (educational research prototype)",
+      "timeout_s": 45.0,
+      "max_tokens": 4096,
+      "reasoning_effort": "low",
+      "progress_s": 3.0,
+      "feedback_timeout_s": 6.0,
+      "search_limit": 3,
+      "max_units": 8,
+      "max_searches": 16,
+      "max_sources": 45,
+      "source_chars": 244,
+      "evidence_chars": 4964,
+      "concurrency": 3
+    },
+    "timing_kind": "unknown",
+    "scheduler": "wall-paced fixed B arrivals",
+    "split": "eval_reserved",
+    "empty_evidence_sentences_ignored": 0
+  }
+}

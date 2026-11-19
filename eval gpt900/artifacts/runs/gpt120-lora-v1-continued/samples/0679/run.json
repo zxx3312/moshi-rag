@@ -1,0 +1,2008 @@
+{
+  "question": "Nelson Chai is the former president of what financial holding company that was founded in 1908, and is headquartered in New York City?",
+  "resolved_question": "Nelson Chai is the former president of what financial holding company that was founded in 1908, and is headquartered in New York City?",
+  "used_history_turn_ids": [],
+  "response_language": "en",
+  "status": "complete",
+  "clock": "wall_monotonic",
+  "time_origin": "question_text_ready_after_optional_asr",
+  "model": "openai/gpt-oss-120b",
+  "judge_model": "tinker://f9e9a6c1-e203-5c2c-acdd-68fe67378ca4:train:0/sampler_weights/epoch-0001",
+  "units": [
+    {
+      "unit_id": "u1",
+      "description": "Nelson Chai former president of which financial holding company",
+      "necessary": true,
+      "depends_on": [],
+      "queries": [
+        "Nelson Chai former president",
+        "Nelson Chai president of"
+      ],
+      "subject": "Nelson Chai"
+    },
+    {
+      "unit_id": "u2",
+      "description": "The company was founded in 1908",
+      "necessary": true,
+      "depends_on": [
+        "u1"
+      ],
+      "queries": [
+        "{u1_company} founding year",
+        "{u1_company} established 1908"
+      ],
+      "subject": "{u1_company}"
+    },
+    {
+      "unit_id": "u3",
+      "description": "The company is headquartered in New York City",
+      "necessary": true,
+      "depends_on": [
+        "u1"
+      ],
+      "queries": [
+        "{u1_company} headquarters",
+        "{u1_company} based in New York City"
+      ],
+      "subject": "{u1_company}"
+    }
+  ],
+  "judgments": {
+    "u1": {
+      "label": "SUPPORTED",
+      "value": "CIT Group",
+      "citations": [
+        "d9s2"
+      ],
+      "quotes": [
+        {
+          "evidence_id": "d9s2",
+          "text": "He is the former president of CIT Group and reported directly to then CEO John Thain."
+        }
+      ],
+      "reason": "Supported by the cited visible sentences and dependencies."
+    },
+    "u2": {
+      "label": "SUPPORTED",
+      "value": "yes",
+      "citations": [
+        "d3s0"
+      ],
+      "quotes": [
+        {
+          "evidence_id": "d3s0",
+          "text": "CIT Group Inc. is a financial holding company founded in 1908 headquartered in New York City."
+        }
+      ],
+      "reason": "Supported by the cited visible sentences and dependencies."
+    },
+    "u3": {
+      "label": "SUPPORTED",
+      "value": "yes",
+      "citations": [
+        "d3s0"
+      ],
+      "quotes": [
+        {
+          "evidence_id": "d3s0",
+          "text": "CIT Group Inc. is a financial holding company founded in 1908 headquartered in New York City."
+        }
+      ],
+      "reason": "Supported by the cited visible sentences and dependencies."
+    }
+  },
+  "evidence": [
+    {
+      "evidence_id": "d1s0",
+      "title": "BBVA Compass",
+      "url": "https://trace.invalid/hotpotqa_5ab4ec2755429942dd415fa6_immediate/d1s0",
+      "text": "BBVA Compass Bancshares, Inc. (formerly Compass Bancshares) is a United States-based financial holding company headquartered in Birmingham, Alabama.",
+      "visible_time_s": 8.078000000008615,
+      "requested_subject": "",
+      "resolved_title": "BBVA Compass",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d1s1",
+      "title": "BBVA Compass",
+      "url": "https://trace.invalid/hotpotqa_5ab4ec2755429942dd415fa6_immediate/d1s1",
+      "text": "It has been a subsidiary of the Spanish multinational Banco Bilbao Vizcaya Argentaria since 2007 and operates chiefly in Alabama, Arizona, California, Colorado, Florida, New Mexico, and Texas.",
+      "visible_time_s": 8.078000000008615,
+      "requested_subject": "",
+      "resolved_title": "BBVA Compass",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d2s0",
+      "title": "New York Private Bank &amp; Trust",
+      "url": "https://trace.invalid/hotpotqa_5ab4ec2755429942dd415fa6_immediate/d2s0",
+      "text": "New York Private Bank & Trust Corporation is a bank holding company headquartered in New York City, United States.",
+      "visible_time_s": 8.078000000008615,
+      "requested_subject": "",
+      "resolved_title": "New York Private Bank &amp; Trust",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d2s1",
+      "title": "New York Private Bank &amp; Trust",
+      "url": "https://trace.invalid/hotpotqa_5ab4ec2755429942dd415fa6_immediate/d2s1",
+      "text": "Howard Milstein is the Chairman, President & Chief Executive Officer.",
+      "visible_time_s": 8.078000000008615,
+      "requested_subject": "",
+      "resolved_title": "New York Private Bank &amp; Trust",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d2s2",
+      "title": "New York Private Bank &amp; Trust",
+      "url": "https://trace.invalid/hotpotqa_5ab4ec2755429942dd415fa6_immediate/d2s2",
+      "text": "As of early 2007, it had $17.3 billion in assets and was the 50th largest bank holding company in the United States.",
+      "visible_time_s": 8.078000000008615,
+      "requested_subject": "",
+      "resolved_title": "New York Private Bank &amp; Trust",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d2s3",
+      "title": "New York Private Bank &amp; Trust",
+      "url": "https://trace.invalid/hotpotqa_5ab4ec2755429942dd415fa6_immediate/d2s3",
+      "text": "The company has over 1211 employees.",
+      "visible_time_s": 8.078000000008615,
+      "requested_subject": "",
+      "resolved_title": "New York Private Bank &amp; Trust",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d3s0",
+      "title": "CIT Group",
+      "url": "https://trace.invalid/hotpotqa_5ab4ec2755429942dd415fa6_immediate/d3s0",
+      "text": "CIT Group Inc. is a financial holding company founded in 1908 headquartered in New York City.",
+      "visible_time_s": 8.078000000008615,
+      "requested_subject": "",
+      "resolved_title": "CIT Group",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d3s1",
+      "title": "CIT Group",
+      "url": "https://trace.invalid/hotpotqa_5ab4ec2755429942dd415fa6_immediate/d3s1",
+      "text": "The company's name is an abbreviation of an early corporate name, Commercial Investment Trust.",
+      "visible_time_s": 8.078000000008615,
+      "requested_subject": "",
+      "resolved_title": "CIT Group",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d3s2",
+      "title": "CIT Group",
+      "url": "https://trace.invalid/hotpotqa_5ab4ec2755429942dd415fa6_immediate/d3s2",
+      "text": "It provides financing and leasing capital to customers in over 30 industries.",
+      "visible_time_s": 8.078000000008615,
+      "requested_subject": "",
+      "resolved_title": "CIT Group",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d3s3",
+      "title": "CIT Group",
+      "url": "https://trace.invalid/hotpotqa_5ab4ec2755429942dd415fa6_immediate/d3s3",
+      "text": "CIT also operates CIT Bank, an FDIC insured bank, its primary bank subsidiary.",
+      "visible_time_s": 8.078000000008615,
+      "requested_subject": "",
+      "resolved_title": "CIT Group",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d4s0",
+      "title": "Katherine Oliver",
+      "url": "https://trace.invalid/hotpotqa_5ab4ec2755429942dd415fa6_immediate/d4s0",
+      "text": "Katherine Oliver is an American media and entertainment executive based in New York City.",
+      "visible_time_s": 8.078000000008615,
+      "requested_subject": "",
+      "resolved_title": "Katherine Oliver",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d4s1",
+      "title": "Katherine Oliver",
+      "url": "https://trace.invalid/hotpotqa_5ab4ec2755429942dd415fa6_immediate/d4s1",
+      "text": "Oliver is currently a Principal at Bloomberg Associates, a philanthropic consultancy firm founded by Michael Bloomberg to provide advice and long-term solutions to cities worldwide.",
+      "visible_time_s": 8.078000000008615,
+      "requested_subject": "",
+      "resolved_title": "Katherine Oliver",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d4s2",
+      "title": "Katherine Oliver",
+      "url": "https://trace.invalid/hotpotqa_5ab4ec2755429942dd415fa6_immediate/d4s2",
+      "text": "On August 1, 2002, she was appointed by New York City Mayor Michael Bloomberg as the Commissioner of The New York City Mayor's Office of Film, Theatre and Broadcasting, which facilitates all aspects of film, television and commercial production in New York City, coordinating on-location filming, liaising with the community and promoting the City as an entertainment capital.",
+      "visible_time_s": 8.078000000008615,
+      "requested_subject": "",
+      "resolved_title": "Katherine Oliver",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d4s3",
+      "title": "Katherine Oliver",
+      "url": "https://trace.invalid/hotpotqa_5ab4ec2755429942dd415fa6_immediate/d4s3",
+      "text": "Oliver was the main liaison between the Mayor's Office and Hollywood and aimed \"to make filmmakers and production companies happy to return to New York.\"",
+      "visible_time_s": 8.078000000008615,
+      "requested_subject": "",
+      "resolved_title": "Katherine Oliver",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d4s4",
+      "title": "Katherine Oliver",
+      "url": "https://trace.invalid/hotpotqa_5ab4ec2755429942dd415fa6_immediate/d4s4",
+      "text": "In 2013, Oliver and Mayor Bloomberg were featured on the cover of Variety and were credited for their role in \"revitalizing the city's entertainment sector.\"",
+      "visible_time_s": 8.078000000008615,
+      "requested_subject": "",
+      "resolved_title": "Katherine Oliver",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d4s5",
+      "title": "Katherine Oliver",
+      "url": "https://trace.invalid/hotpotqa_5ab4ec2755429942dd415fa6_immediate/d4s5",
+      "text": "An economic impact study released by the Boston Consulting Group in 2012 found that New York City's entertainment industry during Oliver's tenure as film commissioner had grown to account for a $7.1 billion annual direct spend in New York City, an increase of $2 billion since 2002, and that the local industry created 30,000 jobs in New York City since 2004, growing to employ 130,000 people.",
+      "visible_time_s": 8.078000000008615,
+      "requested_subject": "",
+      "resolved_title": "Katherine Oliver",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d4s6",
+      "title": "Katherine Oliver",
+      "url": "https://trace.invalid/hotpotqa_5ab4ec2755429942dd415fa6_immediate/d4s6",
+      "text": "AM New York noted that: \"New York's film and TV industry is stronger than it has ever been, pumping $7.1 billion into the local economy in 2011 and bringing in some $60 billion over the last decade.\"",
+      "visible_time_s": 8.078000000008615,
+      "requested_subject": "",
+      "resolved_title": "Katherine Oliver",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d4s7",
+      "title": "Katherine Oliver",
+      "url": "https://trace.invalid/hotpotqa_5ab4ec2755429942dd415fa6_immediate/d4s7",
+      "text": "After Bloomberg announced that former president and co-founder of NYC Media Group Arick Wierson was returning to the private sector, Bloomberg named Oliver as the incoming president of NYC Media and general manager of NYCTV.",
+      "visible_time_s": 8.078000000008615,
+      "requested_subject": "",
+      "resolved_title": "Katherine Oliver",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d4s8",
+      "title": "Katherine Oliver",
+      "url": "https://trace.invalid/hotpotqa_5ab4ec2755429942dd415fa6_immediate/d4s8",
+      "text": "In July 2010, Oliver became the commissioner of the Mayor's Office of Media and Entertainment, the city agency that includes the Mayor's Office of Film, Theatre and Broadcasting, NYC Media, and NYC Digital.",
+      "visible_time_s": 8.078000000008615,
+      "requested_subject": "",
+      "resolved_title": "Katherine Oliver",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d5s0",
+      "title": "Astoria Bank",
+      "url": "https://trace.invalid/hotpotqa_5ab4ec2755429942dd415fa6_immediate/d5s0",
+      "text": "Astoria Bank (formerly Astoria Federal Savings & Loan Association) is a bank based in Long Island City, New York.",
+      "visible_time_s": 8.078000000008615,
+      "requested_subject": "",
+      "resolved_title": "Astoria Bank",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d5s1",
+      "title": "Astoria Bank",
+      "url": "https://trace.invalid/hotpotqa_5ab4ec2755429942dd415fa6_immediate/d5s1",
+      "text": "Astoria Financial Corporation is the holding company formed in 1993 to facilitate the conversion of Astoria Federal Savings and Loan Association from a mutual form of ownership to stock ownership.",
+      "visible_time_s": 8.078000000008615,
+      "requested_subject": "",
+      "resolved_title": "Astoria Bank",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d5s2",
+      "title": "Astoria Bank",
+      "url": "https://trace.invalid/hotpotqa_5ab4ec2755429942dd415fa6_immediate/d5s2",
+      "text": "Astoria Financial Corporation, with assets of $16.5 billion, is the holding company for Astoria Federal Savings and Loan Association.",
+      "visible_time_s": 8.078000000008615,
+      "requested_subject": "",
+      "resolved_title": "Astoria Bank",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d5s3",
+      "title": "Astoria Bank",
+      "url": "https://trace.invalid/hotpotqa_5ab4ec2755429942dd415fa6_immediate/d5s3",
+      "text": "Established in 1888, Astoria Federal, with deposits in New York totaling $10.4 billion, is the largest thrift depository in New York.",
+      "visible_time_s": 8.078000000008615,
+      "requested_subject": "",
+      "resolved_title": "Astoria Bank",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d6s0",
+      "title": "Roman Sledziejowski",
+      "url": "https://trace.invalid/hotpotqa_5ab4ec2755429942dd415fa6_immediate/d6s0",
+      "text": "Roman J. Sledziejowski (pronounced sleh-jay-YOV-ski) is a Polish-born investment manager widely recognized on Wall Street as an alleged criminal, liar, and thief, allegedly.",
+      "visible_time_s": 8.078000000008615,
+      "requested_subject": "",
+      "resolved_title": "Roman Sledziejowski",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d6s1",
+      "title": "Roman Sledziejowski",
+      "url": "https://trace.invalid/hotpotqa_5ab4ec2755429942dd415fa6_immediate/d6s1",
+      "text": "After graduating from high school as class valedictorian, he attended Columbia University in New York City.",
+      "visible_time_s": 8.078000000008615,
+      "requested_subject": "",
+      "resolved_title": "Roman Sledziejowski",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d6s2",
+      "title": "Roman Sledziejowski",
+      "url": "https://trace.invalid/hotpotqa_5ab4ec2755429942dd415fa6_immediate/d6s2",
+      "text": "In late 1990s Sledziejowski became one of the youngest licensed stockbrokers on Wall Street.",
+      "visible_time_s": 8.094000000011874,
+      "requested_subject": "",
+      "resolved_title": "Roman Sledziejowski",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d6s3",
+      "title": "Roman Sledziejowski",
+      "url": "https://trace.invalid/hotpotqa_5ab4ec2755429942dd415fa6_immediate/d6s3",
+      "text": "He began his professional career at Salomon Smith Barney as an investment consultant in 1998, where he remained until 2002.",
+      "visible_time_s": 8.094000000011874,
+      "requested_subject": "",
+      "resolved_title": "Roman Sledziejowski",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d6s4",
+      "title": "Roman Sledziejowski",
+      "url": "https://trace.invalid/hotpotqa_5ab4ec2755429942dd415fa6_immediate/d6s4",
+      "text": "From 2002 until 2004 he held the positions of Vice President and First Vice President for Prudential Financial, Inc. From 2004 until 2006, Sledziejowski served as a Senior Vice President of Investments and Firm's Investment Officer at Wachovia Securities.",
+      "visible_time_s": 8.094000000011874,
+      "requested_subject": "",
+      "resolved_title": "Roman Sledziejowski",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d6s5",
+      "title": "Roman Sledziejowski",
+      "url": "https://trace.invalid/hotpotqa_5ab4ec2755429942dd415fa6_immediate/d6s5",
+      "text": "In 2006 he became the Chief Executive Officer of Innovest Holdings, a New York City–based financial services holding company with several subsidiary entities.",
+      "visible_time_s": 8.094000000011874,
+      "requested_subject": "",
+      "resolved_title": "Roman Sledziejowski",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d6s6",
+      "title": "Roman Sledziejowski",
+      "url": "https://trace.invalid/hotpotqa_5ab4ec2755429942dd415fa6_immediate/d6s6",
+      "text": "Among them was an SEC registered Broker/Dealer catering mostly to Latin American Financial Market, TWS Financial, LLC.",
+      "visible_time_s": 8.094000000011874,
+      "requested_subject": "",
+      "resolved_title": "Roman Sledziejowski",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d7s0",
+      "title": "IberiaBank",
+      "url": "https://trace.invalid/hotpotqa_5ab4ec2755429942dd415fa6_immediate/d7s0",
+      "text": "IberiaBank Corporation, stylized as IBERIABANK, is an American financial holding company headquartered in Lafayette, LA and the largest bank based in Louisiana.",
+      "visible_time_s": 8.094000000011874,
+      "requested_subject": "",
+      "resolved_title": "IberiaBank",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d7s1",
+      "title": "IberiaBank",
+      "url": "https://trace.invalid/hotpotqa_5ab4ec2755429942dd415fa6_immediate/d7s1",
+      "text": "Founded in 1887, it now has over 250 combined offices in 10 states primarily throughout the South.",
+      "visible_time_s": 8.094000000011874,
+      "requested_subject": "",
+      "resolved_title": "IberiaBank",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d7s2",
+      "title": "IberiaBank",
+      "url": "https://trace.invalid/hotpotqa_5ab4ec2755429942dd415fa6_immediate/d7s2",
+      "text": "The company has eight locations with representatives of IBERIA Wealth Advisors in four states, and one IBERIA Capital Partners, L.L.C. office in New Orleans.",
+      "visible_time_s": 8.094000000011874,
+      "requested_subject": "",
+      "resolved_title": "IberiaBank",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d8s0",
+      "title": "General Mediterranean Holding",
+      "url": "https://trace.invalid/hotpotqa_5ab4ec2755429942dd415fa6_immediate/d8s0",
+      "text": "The General Mediterranean Holding (GMH) is a financial holding company established in 1979 in Luxembourg City, in southern Luxembourg, founded by Anglo-Iraqi businessman Nadhmi Auchi.",
+      "visible_time_s": 8.094000000011874,
+      "requested_subject": "",
+      "resolved_title": "General Mediterranean Holding",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d9s0",
+      "title": "Nelson Chai",
+      "url": "https://trace.invalid/hotpotqa_5ab4ec2755429942dd415fa6_immediate/d9s0",
+      "text": "Nelson Joosuk Chai (born 1965) is an American investment banker and financial executive.",
+      "visible_time_s": 8.094000000011874,
+      "requested_subject": "",
+      "resolved_title": "Nelson Chai",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d9s1",
+      "title": "Nelson Chai",
+      "url": "https://trace.invalid/hotpotqa_5ab4ec2755429942dd415fa6_immediate/d9s1",
+      "text": "He formerly served as the chief financial officer of American financial services company Merrill Lynch and briefly as Bank of America's president for the Asia-Pacific region.",
+      "visible_time_s": 8.094000000011874,
+      "requested_subject": "",
+      "resolved_title": "Nelson Chai",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d9s2",
+      "title": "Nelson Chai",
+      "url": "https://trace.invalid/hotpotqa_5ab4ec2755429942dd415fa6_immediate/d9s2",
+      "text": "He is the former president of CIT Group and reported directly to then CEO John Thain.",
+      "visible_time_s": 8.094000000011874,
+      "requested_subject": "",
+      "resolved_title": "Nelson Chai",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d10s0",
+      "title": "The Bank of New York Mellon",
+      "url": "https://trace.invalid/hotpotqa_5ab4ec2755429942dd415fa6_immediate/d10s0",
+      "text": "The Bank of New York Mellon Corporation, which does business as BNY Mellon, is an American worldwide banking and financial services holding company headquartered in New York City.",
+      "visible_time_s": 8.094000000011874,
+      "requested_subject": "",
+      "resolved_title": "The Bank of New York Mellon",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d10s1",
+      "title": "The Bank of New York Mellon",
+      "url": "https://trace.invalid/hotpotqa_5ab4ec2755429942dd415fa6_immediate/d10s1",
+      "text": "It was formed on July 1, 2007, as a result of the merger of The Bank of New York and Mellon Financial Corporation.",
+      "visible_time_s": 8.094000000011874,
+      "requested_subject": "",
+      "resolved_title": "The Bank of New York Mellon",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d10s2",
+      "title": "The Bank of New York Mellon",
+      "url": "https://trace.invalid/hotpotqa_5ab4ec2755429942dd415fa6_immediate/d10s2",
+      "text": "The merger made the company one of the world's largest custodian banks and asset servicing companies.",
+      "visible_time_s": 8.094000000011874,
+      "requested_subject": "",
+      "resolved_title": "The Bank of New York Mellon",
+      "entity_resolution": "unspecified"
+    }
+  ],
+  "searches": [
+    {
+      "query": "[scheduled evidence]",
+      "subject": "",
+      "status": "ok",
+      "returned_pages": [],
+      "mode": "trace",
+      "unit_id": "__scheduled_evidence__"
+    }
+  ],
+  "search_failures": [],
+  "llm_calls": [
+    {
+      "purpose": "feedback_generate",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 422,
+        "completion_tokens": 76,
+        "total_tokens": 498,
+        "prompt_tokens_details": {
+          "cached_tokens": 384
+        }
+      },
+      "latency_s": 1.36
+    },
+    {
+      "purpose": "feedback_verify",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 391,
+        "completion_tokens": 121,
+        "total_tokens": 512,
+        "prompt_tokens_details": {
+          "cached_tokens": 128
+        }
+      },
+      "latency_s": 0.89
+    },
+    {
+      "purpose": "decompose",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 812,
+        "completion_tokens": 671,
+        "total_tokens": 1483,
+        "prompt_tokens_details": {
+          "cached_tokens": 768
+        }
+      },
+      "latency_s": 4.157
+    },
+    {
+      "purpose": "feedback_generate",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 422,
+        "completion_tokens": 69,
+        "total_tokens": 491,
+        "prompt_tokens_details": {
+          "cached_tokens": 384
+        }
+      },
+      "latency_s": 0.766
+    },
+    {
+      "purpose": "feedback_verify",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 370,
+        "completion_tokens": 87,
+        "total_tokens": 457,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        }
+      },
+      "latency_s": 0.828
+    },
+    {
+      "purpose": "plan_review",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 1033,
+        "completion_tokens": 599,
+        "total_tokens": 1632,
+        "prompt_tokens_details": {
+          "cached_tokens": 896
+        }
+      },
+      "latency_s": 3.921
+    },
+    {
+      "purpose": "judge",
+      "model": "tinker://f9e9a6c1-e203-5c2c-acdd-68fe67378ca4:train:0/sampler_weights/epoch-0001",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 6546,
+        "completion_tokens": 260,
+        "total_tokens": 6806,
+        "prompt_tokens_details": {
+          "cached_tokens": 1024
+        }
+      },
+      "latency_s": 1.5
+    },
+    {
+      "purpose": "generate",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 969,
+        "completion_tokens": 132,
+        "total_tokens": 1101,
+        "prompt_tokens_details": {
+          "cached_tokens": 512
+        }
+      },
+      "latency_s": 1.469
+    },
+    {
+      "purpose": "verify",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 1319,
+        "completion_tokens": 187,
+        "total_tokens": 1506,
+        "prompt_tokens_details": {
+          "cached_tokens": 640
+        }
+      },
+      "latency_s": 1.203
+    }
+  ],
+  "search_diagnostics": [],
+  "output_enqueued_units": {
+    "u1": "CIT Group",
+    "u2": "yes",
+    "u3": "yes"
+  },
+  "events": [
+    {
+      "sequence": 0,
+      "time_s": 0.0,
+      "type": "feedback_requested",
+      "feedback_kind": "opening",
+      "execution_state": {
+        "stage": "planning",
+        "searches_started": 0,
+        "searches_completed": 0,
+        "active_searches": 0,
+        "evidence_count": 0,
+        "supported_units": 0,
+        "output_units": 0
+      }
+    },
+    {
+      "sequence": 1,
+      "time_s": 2.25,
+      "type": "utterance",
+      "action": "Backchannel",
+      "text": "I see you’re asking about Nelson Chai’s former presidency at the 1908‑founded New York‑based financial holding company, and I’ll look that up.",
+      "claims": [],
+      "feedback_source": "model",
+      "feedback_status_claim": "intent",
+      "feedback_fallback_reason": "",
+      "execution_state": {
+        "stage": "planning",
+        "searches_started": 0,
+        "searches_completed": 0,
+        "active_searches": 0,
+        "evidence_count": 0,
+        "supported_units": 0,
+        "output_units": 0
+      },
+      "language": "en"
+    },
+    {
+      "sequence": 2,
+      "time_s": 4.157,
+      "type": "decompose_reply",
+      "reply": {
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "Nelson Chai former president of",
+            "subject": "Nelson Chai",
+            "necessary": true,
+            "depends_on": [],
+            "queries": [
+              "Nelson Chai",
+              "Nelson Chai former president"
+            ]
+          },
+          {
+            "unit_id": "u2",
+            "description": "Founded in 1908 and headquartered in New York City",
+            "subject": "{u1_company}",
+            "necessary": true,
+            "depends_on": [
+              "u1"
+            ],
+            "queries": [
+              "{u1_company} founding year",
+              "{u1_company} headquarters"
+            ]
+          }
+        ]
+      },
+      "attempt": 1,
+      "repair": false
+    },
+    {
+      "sequence": 3,
+      "time_s": 4.157,
+      "type": "plan_review_requested",
+      "max_reviews": 1,
+      "question_only": true
+    },
+    {
+      "sequence": 4,
+      "time_s": 5.469,
+      "type": "feedback_requested",
+      "feedback_kind": "progress",
+      "execution_state": {
+        "stage": "planning",
+        "searches_started": 0,
+        "searches_completed": 0,
+        "active_searches": 0,
+        "evidence_count": 0,
+        "supported_units": 0,
+        "output_units": 0
+      }
+    },
+    {
+      "sequence": 5,
+      "time_s": 7.063,
+      "type": "utterance",
+      "action": "Progress",
+      "text": "I'm planning how to locate the former president role for Nelson Chai.",
+      "claims": [],
+      "feedback_source": "model",
+      "feedback_status_claim": "processing",
+      "feedback_fallback_reason": "",
+      "execution_state": {
+        "stage": "planning",
+        "searches_started": 0,
+        "searches_completed": 0,
+        "active_searches": 0,
+        "evidence_count": 0,
+        "supported_units": 0,
+        "output_units": 0
+      },
+      "language": "en"
+    },
+    {
+      "sequence": 6,
+      "time_s": 8.078,
+      "type": "plan_review_reply",
+      "reply": {
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "Nelson Chai former president of which financial holding company",
+            "subject": "Nelson Chai",
+            "necessary": true,
+            "depends_on": [],
+            "queries": [
+              "Nelson Chai former president",
+              "Nelson Chai president of"
+            ]
+          },
+          {
+            "unit_id": "u2",
+            "description": "The company was founded in 1908",
+            "subject": "{u1_company}",
+            "necessary": true,
+            "depends_on": [
+              "u1"
+            ],
+            "queries": [
+              "{u1_company} founding year",
+              "{u1_company} established 1908"
+            ]
+          },
+          {
+            "unit_id": "u3",
+            "description": "The company is headquartered in New York City",
+            "subject": "{u1_company}",
+            "necessary": true,
+            "depends_on": [
+              "u1"
+            ],
+            "queries": [
+              "{u1_company} headquarters",
+              "{u1_company} based in New York City"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "sequence": 7,
+      "time_s": 8.078,
+      "type": "plan_review_finished",
+      "changed": true,
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "Nelson Chai former president of which financial holding company",
+          "necessary": true,
+          "depends_on": [],
+          "queries": [
+            "Nelson Chai former president",
+            "Nelson Chai president of"
+          ],
+          "subject": "Nelson Chai"
+        },
+        {
+          "unit_id": "u2",
+          "description": "The company was founded in 1908",
+          "necessary": true,
+          "depends_on": [
+            "u1"
+          ],
+          "queries": [
+            "{u1_company} founding year",
+            "{u1_company} established 1908"
+          ],
+          "subject": "{u1_company}"
+        },
+        {
+          "unit_id": "u3",
+          "description": "The company is headquartered in New York City",
+          "necessary": true,
+          "depends_on": [
+            "u1"
+          ],
+          "queries": [
+            "{u1_company} headquarters",
+            "{u1_company} based in New York City"
+          ],
+          "subject": "{u1_company}"
+        }
+      ],
+      "question_only": true
+    },
+    {
+      "sequence": 8,
+      "time_s": 8.078,
+      "type": "plan",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "Nelson Chai former president of which financial holding company",
+          "necessary": true,
+          "depends_on": [],
+          "queries": [
+            "Nelson Chai former president",
+            "Nelson Chai president of"
+          ],
+          "subject": "Nelson Chai"
+        },
+        {
+          "unit_id": "u2",
+          "description": "The company was founded in 1908",
+          "necessary": true,
+          "depends_on": [
+            "u1"
+          ],
+          "queries": [
+            "{u1_company} founding year",
+            "{u1_company} established 1908"
+          ],
+          "subject": "{u1_company}"
+        },
+        {
+          "unit_id": "u3",
+          "description": "The company is headquartered in New York City",
+          "necessary": true,
+          "depends_on": [
+            "u1"
+          ],
+          "queries": [
+            "{u1_company} headquarters",
+            "{u1_company} based in New York City"
+          ],
+          "subject": "{u1_company}"
+        }
+      ]
+    },
+    {
+      "sequence": 9,
+      "time_s": 8.078,
+      "type": "trace_batch_requested"
+    },
+    {
+      "sequence": 10,
+      "time_s": 8.078,
+      "type": "search_finished",
+      "query": "[scheduled evidence]",
+      "subject": "",
+      "status": "ok",
+      "returned_pages": [],
+      "mode": "trace",
+      "unit_id": "__scheduled_evidence__"
+    },
+    {
+      "sequence": 11,
+      "time_s": 8.078,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d1s0",
+        "title": "BBVA Compass",
+        "url": "https://trace.invalid/hotpotqa_5ab4ec2755429942dd415fa6_immediate/d1s0",
+        "text": "BBVA Compass Bancshares, Inc. (formerly Compass Bancshares) is a United States-based financial holding company headquartered in Birmingham, Alabama.",
+        "visible_time_s": 8.078000000008615,
+        "requested_subject": "",
+        "resolved_title": "BBVA Compass",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 12,
+      "time_s": 8.078,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d1s1",
+        "title": "BBVA Compass",
+        "url": "https://trace.invalid/hotpotqa_5ab4ec2755429942dd415fa6_immediate/d1s1",
+        "text": "It has been a subsidiary of the Spanish multinational Banco Bilbao Vizcaya Argentaria since 2007 and operates chiefly in Alabama, Arizona, California, Colorado, Florida, New Mexico, and Texas.",
+        "visible_time_s": 8.078000000008615,
+        "requested_subject": "",
+        "resolved_title": "BBVA Compass",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 13,
+      "time_s": 8.078,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d2s0",
+        "title": "New York Private Bank &amp; Trust",
+        "url": "https://trace.invalid/hotpotqa_5ab4ec2755429942dd415fa6_immediate/d2s0",
+        "text": "New York Private Bank & Trust Corporation is a bank holding company headquartered in New York City, United States.",
+        "visible_time_s": 8.078000000008615,
+        "requested_subject": "",
+        "resolved_title": "New York Private Bank &amp; Trust",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 14,
+      "time_s": 8.078,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d2s1",
+        "title": "New York Private Bank &amp; Trust",
+        "url": "https://trace.invalid/hotpotqa_5ab4ec2755429942dd415fa6_immediate/d2s1",
+        "text": "Howard Milstein is the Chairman, President & Chief Executive Officer.",
+        "visible_time_s": 8.078000000008615,
+        "requested_subject": "",
+        "resolved_title": "New York Private Bank &amp; Trust",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 15,
+      "time_s": 8.078,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d2s2",
+        "title": "New York Private Bank &amp; Trust",
+        "url": "https://trace.invalid/hotpotqa_5ab4ec2755429942dd415fa6_immediate/d2s2",
+        "text": "As of early 2007, it had $17.3 billion in assets and was the 50th largest bank holding company in the United States.",
+        "visible_time_s": 8.078000000008615,
+        "requested_subject": "",
+        "resolved_title": "New York Private Bank &amp; Trust",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 16,
+      "time_s": 8.078,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d2s3",
+        "title": "New York Private Bank &amp; Trust",
+        "url": "https://trace.invalid/hotpotqa_5ab4ec2755429942dd415fa6_immediate/d2s3",
+        "text": "The company has over 1211 employees.",
+        "visible_time_s": 8.078000000008615,
+        "requested_subject": "",
+        "resolved_title": "New York Private Bank &amp; Trust",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 17,
+      "time_s": 8.078,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d3s0",
+        "title": "CIT Group",
+        "url": "https://trace.invalid/hotpotqa_5ab4ec2755429942dd415fa6_immediate/d3s0",
+        "text": "CIT Group Inc. is a financial holding company founded in 1908 headquartered in New York City.",
+        "visible_time_s": 8.078000000008615,
+        "requested_subject": "",
+        "resolved_title": "CIT Group",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 18,
+      "time_s": 8.078,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d3s1",
+        "title": "CIT Group",
+        "url": "https://trace.invalid/hotpotqa_5ab4ec2755429942dd415fa6_immediate/d3s1",
+        "text": "The company's name is an abbreviation of an early corporate name, Commercial Investment Trust.",
+        "visible_time_s": 8.078000000008615,
+        "requested_subject": "",
+        "resolved_title": "CIT Group",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 19,
+      "time_s": 8.078,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d3s2",
+        "title": "CIT Group",
+        "url": "https://trace.invalid/hotpotqa_5ab4ec2755429942dd415fa6_immediate/d3s2",
+        "text": "It provides financing and leasing capital to customers in over 30 industries.",
+        "visible_time_s": 8.078000000008615,
+        "requested_subject": "",
+        "resolved_title": "CIT Group",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 20,
+      "time_s": 8.078,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d3s3",
+        "title": "CIT Group",
+        "url": "https://trace.invalid/hotpotqa_5ab4ec2755429942dd415fa6_immediate/d3s3",
+        "text": "CIT also operates CIT Bank, an FDIC insured bank, its primary bank subsidiary.",
+        "visible_time_s": 8.078000000008615,
+        "requested_subject": "",
+        "resolved_title": "CIT Group",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 21,
+      "time_s": 8.078,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d4s0",
+        "title": "Katherine Oliver",
+        "url": "https://trace.invalid/hotpotqa_5ab4ec2755429942dd415fa6_immediate/d4s0",
+        "text": "Katherine Oliver is an American media and entertainment executive based in New York City.",
+        "visible_time_s": 8.078000000008615,
+        "requested_subject": "",
+        "resolved_title": "Katherine Oliver",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 22,
+      "time_s": 8.078,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d4s1",
+        "title": "Katherine Oliver",
+        "url": "https://trace.invalid/hotpotqa_5ab4ec2755429942dd415fa6_immediate/d4s1",
+        "text": "Oliver is currently a Principal at Bloomberg Associates, a philanthropic consultancy firm founded by Michael Bloomberg to provide advice and long-term solutions to cities worldwide.",
+        "visible_time_s": 8.078000000008615,
+        "requested_subject": "",
+        "resolved_title": "Katherine Oliver",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 23,
+      "time_s": 8.078,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d4s2",
+        "title": "Katherine Oliver",
+        "url": "https://trace.invalid/hotpotqa_5ab4ec2755429942dd415fa6_immediate/d4s2",
+        "text": "On August 1, 2002, she was appointed by New York City Mayor Michael Bloomberg as the Commissioner of The New York City Mayor's Office of Film, Theatre and Broadcasting, which facilitates all aspects of film, television and commercial production in New York City, coordinating on-location filming, liaising with the community and promoting the City as an entertainment capital.",
+        "visible_time_s": 8.078000000008615,
+        "requested_subject": "",
+        "resolved_title": "Katherine Oliver",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 24,
+      "time_s": 8.078,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d4s3",
+        "title": "Katherine Oliver",
+        "url": "https://trace.invalid/hotpotqa_5ab4ec2755429942dd415fa6_immediate/d4s3",
+        "text": "Oliver was the main liaison between the Mayor's Office and Hollywood and aimed \"to make filmmakers and production companies happy to return to New York.\"",
+        "visible_time_s": 8.078000000008615,
+        "requested_subject": "",
+        "resolved_title": "Katherine Oliver",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 25,
+      "time_s": 8.078,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d4s4",
+        "title": "Katherine Oliver",
+        "url": "https://trace.invalid/hotpotqa_5ab4ec2755429942dd415fa6_immediate/d4s4",
+        "text": "In 2013, Oliver and Mayor Bloomberg were featured on the cover of Variety and were credited for their role in \"revitalizing the city's entertainment sector.\"",
+        "visible_time_s": 8.078000000008615,
+        "requested_subject": "",
+        "resolved_title": "Katherine Oliver",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 26,
+      "time_s": 8.078,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d4s5",
+        "title": "Katherine Oliver",
+        "url": "https://trace.invalid/hotpotqa_5ab4ec2755429942dd415fa6_immediate/d4s5",
+        "text": "An economic impact study released by the Boston Consulting Group in 2012 found that New York City's entertainment industry during Oliver's tenure as film commissioner had grown to account for a $7.1 billion annual direct spend in New York City, an increase of $2 billion since 2002, and that the local industry created 30,000 jobs in New York City since 2004, growing to employ 130,000 people.",
+        "visible_time_s": 8.078000000008615,
+        "requested_subject": "",
+        "resolved_title": "Katherine Oliver",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 27,
+      "time_s": 8.078,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d4s6",
+        "title": "Katherine Oliver",
+        "url": "https://trace.invalid/hotpotqa_5ab4ec2755429942dd415fa6_immediate/d4s6",
+        "text": "AM New York noted that: \"New York's film and TV industry is stronger than it has ever been, pumping $7.1 billion into the local economy in 2011 and bringing in some $60 billion over the last decade.\"",
+        "visible_time_s": 8.078000000008615,
+        "requested_subject": "",
+        "resolved_title": "Katherine Oliver",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 28,
+      "time_s": 8.078,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d4s7",
+        "title": "Katherine Oliver",
+        "url": "https://trace.invalid/hotpotqa_5ab4ec2755429942dd415fa6_immediate/d4s7",
+        "text": "After Bloomberg announced that former president and co-founder of NYC Media Group Arick Wierson was returning to the private sector, Bloomberg named Oliver as the incoming president of NYC Media and general manager of NYCTV.",
+        "visible_time_s": 8.078000000008615,
+        "requested_subject": "",
+        "resolved_title": "Katherine Oliver",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 29,
+      "time_s": 8.078,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d4s8",
+        "title": "Katherine Oliver",
+        "url": "https://trace.invalid/hotpotqa_5ab4ec2755429942dd415fa6_immediate/d4s8",
+        "text": "In July 2010, Oliver became the commissioner of the Mayor's Office of Media and Entertainment, the city agency that includes the Mayor's Office of Film, Theatre and Broadcasting, NYC Media, and NYC Digital.",
+        "visible_time_s": 8.078000000008615,
+        "requested_subject": "",
+        "resolved_title": "Katherine Oliver",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 30,
+      "time_s": 8.078,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d5s0",
+        "title": "Astoria Bank",
+        "url": "https://trace.invalid/hotpotqa_5ab4ec2755429942dd415fa6_immediate/d5s0",
+        "text": "Astoria Bank (formerly Astoria Federal Savings & Loan Association) is a bank based in Long Island City, New York.",
+        "visible_time_s": 8.078000000008615,
+        "requested_subject": "",
+        "resolved_title": "Astoria Bank",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 31,
+      "time_s": 8.078,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d5s1",
+        "title": "Astoria Bank",
+        "url": "https://trace.invalid/hotpotqa_5ab4ec2755429942dd415fa6_immediate/d5s1",
+        "text": "Astoria Financial Corporation is the holding company formed in 1993 to facilitate the conversion of Astoria Federal Savings and Loan Association from a mutual form of ownership to stock ownership.",
+        "visible_time_s": 8.078000000008615,
+        "requested_subject": "",
+        "resolved_title": "Astoria Bank",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 32,
+      "time_s": 8.078,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d5s2",
+        "title": "Astoria Bank",
+        "url": "https://trace.invalid/hotpotqa_5ab4ec2755429942dd415fa6_immediate/d5s2",
+        "text": "Astoria Financial Corporation, with assets of $16.5 billion, is the holding company for Astoria Federal Savings and Loan Association.",
+        "visible_time_s": 8.078000000008615,
+        "requested_subject": "",
+        "resolved_title": "Astoria Bank",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 33,
+      "time_s": 8.078,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d5s3",
+        "title": "Astoria Bank",
+        "url": "https://trace.invalid/hotpotqa_5ab4ec2755429942dd415fa6_immediate/d5s3",
+        "text": "Established in 1888, Astoria Federal, with deposits in New York totaling $10.4 billion, is the largest thrift depository in New York.",
+        "visible_time_s": 8.078000000008615,
+        "requested_subject": "",
+        "resolved_title": "Astoria Bank",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 34,
+      "time_s": 8.078,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d6s0",
+        "title": "Roman Sledziejowski",
+        "url": "https://trace.invalid/hotpotqa_5ab4ec2755429942dd415fa6_immediate/d6s0",
+        "text": "Roman J. Sledziejowski (pronounced sleh-jay-YOV-ski) is a Polish-born investment manager widely recognized on Wall Street as an alleged criminal, liar, and thief, allegedly.",
+        "visible_time_s": 8.078000000008615,
+        "requested_subject": "",
+        "resolved_title": "Roman Sledziejowski",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 35,
+      "time_s": 8.078,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d6s1",
+        "title": "Roman Sledziejowski",
+        "url": "https://trace.invalid/hotpotqa_5ab4ec2755429942dd415fa6_immediate/d6s1",
+        "text": "After graduating from high school as class valedictorian, he attended Columbia University in New York City.",
+        "visible_time_s": 8.078000000008615,
+        "requested_subject": "",
+        "resolved_title": "Roman Sledziejowski",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 36,
+      "time_s": 8.094,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d6s2",
+        "title": "Roman Sledziejowski",
+        "url": "https://trace.invalid/hotpotqa_5ab4ec2755429942dd415fa6_immediate/d6s2",
+        "text": "In late 1990s Sledziejowski became one of the youngest licensed stockbrokers on Wall Street.",
+        "visible_time_s": 8.094000000011874,
+        "requested_subject": "",
+        "resolved_title": "Roman Sledziejowski",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 37,
+      "time_s": 8.094,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d6s3",
+        "title": "Roman Sledziejowski",
+        "url": "https://trace.invalid/hotpotqa_5ab4ec2755429942dd415fa6_immediate/d6s3",
+        "text": "He began his professional career at Salomon Smith Barney as an investment consultant in 1998, where he remained until 2002.",
+        "visible_time_s": 8.094000000011874,
+        "requested_subject": "",
+        "resolved_title": "Roman Sledziejowski",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 38,
+      "time_s": 8.094,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d6s4",
+        "title": "Roman Sledziejowski",
+        "url": "https://trace.invalid/hotpotqa_5ab4ec2755429942dd415fa6_immediate/d6s4",
+        "text": "From 2002 until 2004 he held the positions of Vice President and First Vice President for Prudential Financial, Inc. From 2004 until 2006, Sledziejowski served as a Senior Vice President of Investments and Firm's Investment Officer at Wachovia Securities.",
+        "visible_time_s": 8.094000000011874,
+        "requested_subject": "",
+        "resolved_title": "Roman Sledziejowski",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 39,
+      "time_s": 8.094,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d6s5",
+        "title": "Roman Sledziejowski",
+        "url": "https://trace.invalid/hotpotqa_5ab4ec2755429942dd415fa6_immediate/d6s5",
+        "text": "In 2006 he became the Chief Executive Officer of Innovest Holdings, a New York City–based financial services holding company with several subsidiary entities.",
+        "visible_time_s": 8.094000000011874,
+        "requested_subject": "",
+        "resolved_title": "Roman Sledziejowski",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 40,
+      "time_s": 8.094,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d6s6",
+        "title": "Roman Sledziejowski",
+        "url": "https://trace.invalid/hotpotqa_5ab4ec2755429942dd415fa6_immediate/d6s6",
+        "text": "Among them was an SEC registered Broker/Dealer catering mostly to Latin American Financial Market, TWS Financial, LLC.",
+        "visible_time_s": 8.094000000011874,
+        "requested_subject": "",
+        "resolved_title": "Roman Sledziejowski",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 41,
+      "time_s": 8.094,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d7s0",
+        "title": "IberiaBank",
+        "url": "https://trace.invalid/hotpotqa_5ab4ec2755429942dd415fa6_immediate/d7s0",
+        "text": "IberiaBank Corporation, stylized as IBERIABANK, is an American financial holding company headquartered in Lafayette, LA and the largest bank based in Louisiana.",
+        "visible_time_s": 8.094000000011874,
+        "requested_subject": "",
+        "resolved_title": "IberiaBank",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 42,
+      "time_s": 8.094,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d7s1",
+        "title": "IberiaBank",
+        "url": "https://trace.invalid/hotpotqa_5ab4ec2755429942dd415fa6_immediate/d7s1",
+        "text": "Founded in 1887, it now has over 250 combined offices in 10 states primarily throughout the South.",
+        "visible_time_s": 8.094000000011874,
+        "requested_subject": "",
+        "resolved_title": "IberiaBank",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 43,
+      "time_s": 8.094,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d7s2",
+        "title": "IberiaBank",
+        "url": "https://trace.invalid/hotpotqa_5ab4ec2755429942dd415fa6_immediate/d7s2",
+        "text": "The company has eight locations with representatives of IBERIA Wealth Advisors in four states, and one IBERIA Capital Partners, L.L.C. office in New Orleans.",
+        "visible_time_s": 8.094000000011874,
+        "requested_subject": "",
+        "resolved_title": "IberiaBank",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 44,
+      "time_s": 8.094,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d8s0",
+        "title": "General Mediterranean Holding",
+        "url": "https://trace.invalid/hotpotqa_5ab4ec2755429942dd415fa6_immediate/d8s0",
+        "text": "The General Mediterranean Holding (GMH) is a financial holding company established in 1979 in Luxembourg City, in southern Luxembourg, founded by Anglo-Iraqi businessman Nadhmi Auchi.",
+        "visible_time_s": 8.094000000011874,
+        "requested_subject": "",
+        "resolved_title": "General Mediterranean Holding",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 45,
+      "time_s": 8.094,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d9s0",
+        "title": "Nelson Chai",
+        "url": "https://trace.invalid/hotpotqa_5ab4ec2755429942dd415fa6_immediate/d9s0",
+        "text": "Nelson Joosuk Chai (born 1965) is an American investment banker and financial executive.",
+        "visible_time_s": 8.094000000011874,
+        "requested_subject": "",
+        "resolved_title": "Nelson Chai",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 46,
+      "time_s": 8.094,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d9s1",
+        "title": "Nelson Chai",
+        "url": "https://trace.invalid/hotpotqa_5ab4ec2755429942dd415fa6_immediate/d9s1",
+        "text": "He formerly served as the chief financial officer of American financial services company Merrill Lynch and briefly as Bank of America's president for the Asia-Pacific region.",
+        "visible_time_s": 8.094000000011874,
+        "requested_subject": "",
+        "resolved_title": "Nelson Chai",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 47,
+      "time_s": 8.094,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d9s2",
+        "title": "Nelson Chai",
+        "url": "https://trace.invalid/hotpotqa_5ab4ec2755429942dd415fa6_immediate/d9s2",
+        "text": "He is the former president of CIT Group and reported directly to then CEO John Thain.",
+        "visible_time_s": 8.094000000011874,
+        "requested_subject": "",
+        "resolved_title": "Nelson Chai",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 48,
+      "time_s": 8.094,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d10s0",
+        "title": "The Bank of New York Mellon",
+        "url": "https://trace.invalid/hotpotqa_5ab4ec2755429942dd415fa6_immediate/d10s0",
+        "text": "The Bank of New York Mellon Corporation, which does business as BNY Mellon, is an American worldwide banking and financial services holding company headquartered in New York City.",
+        "visible_time_s": 8.094000000011874,
+        "requested_subject": "",
+        "resolved_title": "The Bank of New York Mellon",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 49,
+      "time_s": 8.094,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d10s1",
+        "title": "The Bank of New York Mellon",
+        "url": "https://trace.invalid/hotpotqa_5ab4ec2755429942dd415fa6_immediate/d10s1",
+        "text": "It was formed on July 1, 2007, as a result of the merger of The Bank of New York and Mellon Financial Corporation.",
+        "visible_time_s": 8.094000000011874,
+        "requested_subject": "",
+        "resolved_title": "The Bank of New York Mellon",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 50,
+      "time_s": 8.094,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d10s2",
+        "title": "The Bank of New York Mellon",
+        "url": "https://trace.invalid/hotpotqa_5ab4ec2755429942dd415fa6_immediate/d10s2",
+        "text": "The merger made the company one of the world's largest custodian banks and asset servicing companies.",
+        "visible_time_s": 8.094000000011874,
+        "requested_subject": "",
+        "resolved_title": "The Bank of New York Mellon",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 51,
+      "time_s": 9.594,
+      "type": "judge_reply",
+      "reply": {
+        "judgments": [
+          {
+            "unit_id": "u1",
+            "label": "SUPPORTED",
+            "value": "CIT Group",
+            "citations": [
+              "d9s2"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d9s2",
+                "text": "He is the former president of CIT Group and reported directly to then CEO John Thain."
+              }
+            ],
+            "reason": "Supported by the cited visible sentences and dependencies."
+          },
+          {
+            "unit_id": "u2",
+            "label": "SUPPORTED",
+            "value": "yes",
+            "citations": [
+              "d3s0"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d3s0",
+                "text": "CIT Group Inc. is a financial holding company founded in 1908 headquartered in New York City."
+              }
+            ],
+            "reason": "Supported by the cited visible sentences and dependencies."
+          },
+          {
+            "unit_id": "u3",
+            "label": "SUPPORTED",
+            "value": "yes",
+            "citations": [
+              "d3s0"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d3s0",
+                "text": "CIT Group Inc. is a financial holding company founded in 1908 headquartered in New York City."
+              }
+            ],
+            "reason": "Supported by the cited visible sentences and dependencies."
+          }
+        ]
+      },
+      "attempt": 1,
+      "repair": false,
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d1s1",
+        "d2s0",
+        "d2s1",
+        "d2s2",
+        "d2s3",
+        "d3s0",
+        "d3s1",
+        "d3s2",
+        "d3s3",
+        "d4s0",
+        "d4s1",
+        "d4s2",
+        "d4s3",
+        "d4s4",
+        "d4s5",
+        "d4s6",
+        "d4s7",
+        "d4s8",
+        "d5s0",
+        "d5s1",
+        "d5s2",
+        "d5s3",
+        "d6s0",
+        "d6s1",
+        "d6s2",
+        "d6s3",
+        "d6s4",
+        "d6s5",
+        "d6s6",
+        "d7s0",
+        "d7s1",
+        "d7s2",
+        "d8s0",
+        "d9s0",
+        "d9s1",
+        "d9s2",
+        "d10s0",
+        "d10s1",
+        "d10s2"
+      ]
+    },
+    {
+      "sequence": 52,
+      "time_s": 9.594,
+      "type": "judgments",
+      "judgments": {
+        "u1": {
+          "label": "SUPPORTED",
+          "value": "CIT Group",
+          "citations": [
+            "d9s2"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d9s2",
+              "text": "He is the former president of CIT Group and reported directly to then CEO John Thain."
+            }
+          ],
+          "reason": "Supported by the cited visible sentences and dependencies."
+        },
+        "u2": {
+          "label": "SUPPORTED",
+          "value": "yes",
+          "citations": [
+            "d3s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d3s0",
+              "text": "CIT Group Inc. is a financial holding company founded in 1908 headquartered in New York City."
+            }
+          ],
+          "reason": "Supported by the cited visible sentences and dependencies."
+        },
+        "u3": {
+          "label": "SUPPORTED",
+          "value": "yes",
+          "citations": [
+            "d3s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d3s0",
+              "text": "CIT Group Inc. is a financial holding company founded in 1908 headquartered in New York City."
+            }
+          ],
+          "reason": "Supported by the cited visible sentences and dependencies."
+        }
+      },
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d1s1",
+        "d2s0",
+        "d2s1",
+        "d2s2",
+        "d2s3",
+        "d3s0",
+        "d3s1",
+        "d3s2",
+        "d3s3",
+        "d4s0",
+        "d4s1",
+        "d4s2",
+        "d4s3",
+        "d4s4",
+        "d4s5",
+        "d4s6",
+        "d4s7",
+        "d4s8",
+        "d5s0",
+        "d5s1",
+        "d5s2",
+        "d5s3",
+        "d6s0",
+        "d6s1",
+        "d6s2",
+        "d6s3",
+        "d6s4",
+        "d6s5",
+        "d6s6",
+        "d7s0",
+        "d7s1",
+        "d7s2",
+        "d8s0",
+        "d9s0",
+        "d9s1",
+        "d9s2",
+        "d10s0",
+        "d10s1",
+        "d10s2"
+      ],
+      "semantic_review": false
+    },
+    {
+      "sequence": 53,
+      "time_s": 12.266,
+      "type": "verification_reply",
+      "reply": {
+        "approved": true,
+        "facts_valid": true,
+        "expressed_unit_ids": [
+          "u1",
+          "u2",
+          "u3"
+        ],
+        "reason": "All factual claims are supported by the provided evidence and correspond to the requested units."
+      },
+      "output_unit_ids": [
+        "u1",
+        "u2",
+        "u3"
+      ],
+      "output_action": "Final Answer",
+      "dependency_unit_ids": [],
+      "evidence_snapshot_ids": [
+        "d3s0",
+        "d9s2"
+      ]
+    },
+    {
+      "sequence": 54,
+      "time_s": 12.266,
+      "type": "utterance",
+      "action": "Final Answer",
+      "text": "Nelson Chai is the former president of CIT Group. Yes, the company was founded in 1908. Yes, the company is headquartered in New York City.",
+      "claims": [
+        {
+          "unit_id": "u1",
+          "description": "Nelson Chai former president of which financial holding company",
+          "value": "CIT Group",
+          "citations": [
+            "d9s2"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d9s2",
+              "text": "He is the former president of CIT Group and reported directly to then CEO John Thain."
+            }
+          ]
+        },
+        {
+          "unit_id": "u2",
+          "description": "The company was founded in 1908",
+          "value": "yes",
+          "citations": [
+            "d3s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d3s0",
+              "text": "CIT Group Inc. is a financial holding company founded in 1908 headquartered in New York City."
+            }
+          ]
+        },
+        {
+          "unit_id": "u3",
+          "description": "The company is headquartered in New York City",
+          "value": "yes",
+          "citations": [
+            "d3s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d3s0",
+              "text": "CIT Group Inc. is a financial holding company founded in 1908 headquartered in New York City."
+            }
+          ]
+        }
+      ],
+      "unresolved": [],
+      "fallback": false,
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d1s1",
+        "d2s0",
+        "d2s1",
+        "d2s2",
+        "d2s3",
+        "d3s0",
+        "d3s1",
+        "d3s2",
+        "d3s3",
+        "d4s0",
+        "d4s1",
+        "d4s2",
+        "d4s3",
+        "d4s4",
+        "d4s5",
+        "d4s6",
+        "d4s7",
+        "d4s8",
+        "d5s0",
+        "d5s1",
+        "d5s2",
+        "d5s3",
+        "d6s0",
+        "d6s1",
+        "d6s2",
+        "d6s3",
+        "d6s4",
+        "d6s5",
+        "d6s6",
+        "d7s0",
+        "d7s1",
+        "d7s2",
+        "d8s0",
+        "d9s0",
+        "d9s1",
+        "d9s2",
+        "d10s0",
+        "d10s1",
+        "d10s2"
+      ],
+      "language": "en"
+    },
+    {
+      "sequence": 55,
+      "time_s": 12.266,
+      "type": "finished",
+      "status": "complete"
+    }
+  ],
+  "note": "Prototype model judgments are not independent gold scores. Output event times are not spoken claim times.",
+  "evidence_mode": "scheduled_trace",
+  "audio": {
+    "enabled": true,
+    "mode": "windows",
+    "play": false,
+    "status": "ok",
+    "errors": [],
+    "records": [
+      {
+        "event_sequence": 1,
+        "sentence_index": 1,
+        "sentence_count": 1,
+        "language": "en",
+        "text": "I see you’re asking about Nelson Chai’s former presidency at the 1908‑founded New York‑based financial holding company, and I’ll look that up.",
+        "action": "Backchannel",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 2.25,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1-continued\\samples\\0679\\audio\\segments\\0001_01.wav",
+        "duration_s": 9.127573696145125,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 3.063000000009197,
+        "synthesis_and_playback_s": 0.8280000000086147
+      },
+      {
+        "event_sequence": 5,
+        "sentence_index": 1,
+        "sentence_count": 1,
+        "language": "en",
+        "text": "I'm planning how to locate the former president role for Nelson Chai.",
+        "action": "Progress",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 7.063000000009197,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1-continued\\samples\\0679\\audio\\segments\\0005_01.wav",
+        "duration_s": 4.328662131519274,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 7.860000000000582,
+        "synthesis_and_playback_s": 0.7969999999913853
+      },
+      {
+        "event_sequence": 54,
+        "sentence_index": 1,
+        "sentence_count": 3,
+        "language": "en",
+        "text": "Nelson Chai is the former president of CIT Group.",
+        "action": "Final Answer",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 12.26600000000326,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1-continued\\samples\\0679\\audio\\segments\\0054_01.wav",
+        "duration_s": 3.8588208616780046,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 13.078000000008615,
+        "synthesis_and_playback_s": 0.8120000000053551
+      },
+      {
+        "event_sequence": 54,
+        "sentence_index": 2,
+        "sentence_count": 3,
+        "language": "en",
+        "text": "Yes, the company was founded in 1908.",
+        "action": "Final Answer",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 13.078000000008615,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1-continued\\samples\\0679\\audio\\segments\\0054_02.wav",
+        "duration_s": 3.9639909297052154,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 13.89100000000326,
+        "synthesis_and_playback_s": 0.8129999999946449
+      },
+      {
+        "event_sequence": 54,
+        "sentence_index": 3,
+        "sentence_count": 3,
+        "language": "en",
+        "text": "Yes, the company is headquartered in New York City.",
+        "action": "Final Answer",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 13.89100000000326,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1-continued\\samples\\0679\\audio\\segments\\0054_03.wav",
+        "duration_s": 3.988979591836735,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 14.828000000008615,
+        "synthesis_and_playback_s": 0.9370000000053551
+      }
+    ],
+    "wave": {
+      "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1-continued\\samples\\0679\\audio\\response.wav",
+      "duration_s": 28.331020408163266,
+      "timeline": [
+        {
+          "event_sequence": 1,
+          "sentence_index": 1,
+          "action": "Backchannel",
+          "text": "I see you’re asking about Nelson Chai’s former presidency at the 1908‑founded New York‑based financial holding company, and I’ll look that up.",
+          "wave_start_s": 3.0629931972789115,
+          "wave_end_s": 12.190566893424036
+        },
+        {
+          "event_sequence": 5,
+          "sentence_index": 1,
+          "action": "Progress",
+          "text": "I'm planning how to locate the former president role for Nelson Chai.",
+          "wave_start_s": 12.190566893424036,
+          "wave_end_s": 16.51922902494331
+        },
+        {
+          "event_sequence": 54,
+          "sentence_index": 1,
+          "action": "Final Answer",
+          "text": "Nelson Chai is the former president of CIT Group.",
+          "wave_start_s": 16.51922902494331,
+          "wave_end_s": 20.378049886621316
+        },
+        {
+          "event_sequence": 54,
+          "sentence_index": 2,
+          "action": "Final Answer",
+          "text": "Yes, the company was founded in 1908.",
+          "wave_start_s": 20.378049886621316,
+          "wave_end_s": 24.34204081632653
+        },
+        {
+          "event_sequence": 54,
+          "sentence_index": 3,
+          "action": "Final Answer",
+          "text": "Yes, the company is headquartered in New York City.",
+          "wave_start_s": 24.34204081632653,
+          "wave_end_s": 28.331020408163266
+        }
+      ]
+    }
+  },
+  "evaluation": {
+    "mode": "b_final_revised_trace",
+    "trace_id": "hotpotqa_5ab4ec2755429942dd415fa6_immediate",
+    "sample_id": "hotpotqa_5ab4ec2755429942dd415fa6",
+    "total_wall_s": 14.828000000008615,
+    "question_timeout_s": 180,
+    "audio_enabled": true,
+    "history_enabled": false,
+    "text_pipeline_wall_s": 12.26600000000326,
+    "effective_settings": {
+      "base_url": "https://tinker.thinkingmachines.dev/services/tinker-prod/oai/api/v1",
+      "model": "openai/gpt-oss-120b",
+      "judge_model": "tinker://f9e9a6c1-e203-5c2c-acdd-68fe67378ca4:train:0/sampler_weights/epoch-0001",
+      "judge_reasoning_effort": "low",
+      "wiki_language": "en",
+      "user_agent": "CascadeSystem/0.1 (educational research prototype)",
+      "timeout_s": 45.0,
+      "max_tokens": 4096,
+      "reasoning_effort": "low",
+      "progress_s": 3.0,
+      "feedback_timeout_s": 6.0,
+      "search_limit": 3,
+      "max_units": 8,
+      "max_searches": 16,
+      "max_sources": 40,
+      "source_chars": 393,
+      "evidence_chars": 5935,
+      "concurrency": 3
+    },
+    "timing_kind": "unknown",
+    "scheduler": "wall-paced fixed B arrivals",
+    "split": "eval_reserved",
+    "empty_evidence_sentences_ignored": 0
+  }
+}

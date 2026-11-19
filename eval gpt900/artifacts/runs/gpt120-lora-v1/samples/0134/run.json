@@ -1,0 +1,1810 @@
+{
+  "question": "What is the date of death of Robert Boyle, 11Th Earl Of Cork's father?",
+  "resolved_question": "What is the date of death of Robert Boyle, 11Th Earl Of Cork's father?",
+  "used_history_turn_ids": [],
+  "response_language": "en",
+  "status": "complete",
+  "clock": "wall_monotonic",
+  "time_origin": "question_text_ready_after_optional_asr",
+  "model": "openai/gpt-oss-120b",
+  "judge_model": "tinker://f9e9a6c1-e203-5c2c-acdd-68fe67378ca4:train:0/sampler_weights/epoch-0001",
+  "units": [
+    {
+      "unit_id": "u1",
+      "description": "Identify Robert Boyle, 11th Earl of Cork",
+      "necessary": false,
+      "depends_on": [],
+      "queries": [
+        "Robert Boyle, 11th Earl of Cork",
+        "Robert Boyle 11th Earl of Cork"
+      ],
+      "subject": "Robert Boyle, 11th Earl of Cork"
+    },
+    {
+      "unit_id": "u2",
+      "description": "Identify the father of {u1}",
+      "necessary": false,
+      "depends_on": [
+        "u1"
+      ],
+      "queries": [
+        "father of Robert Boyle, 11th Earl of Cork",
+        "Robert Boyle 11th Earl of Cork father"
+      ],
+      "subject": "{u1_father}"
+    },
+    {
+      "unit_id": "u3",
+      "description": "Date of death of {u2}",
+      "necessary": true,
+      "depends_on": [
+        "u2"
+      ],
+      "queries": [
+        "date of death of the father of Robert Boyle, 11th Earl of Cork",
+        "Robert Boyle 11th Earl of Cork father date of death"
+      ],
+      "subject": "{u1_father}"
+    }
+  ],
+  "judgments": {
+    "u1": {
+      "label": "SUPPORTED",
+      "value": "Robert Boyle, 11th Earl of Cork",
+      "citations": [
+        "d6s0"
+      ],
+      "quotes": [
+        {
+          "evidence_id": "d6s0",
+          "text": "Robert John Lascelles Boyle, 11th Earl of Cork and Orrery (8 November 1864 – 13 October 1934), known as Hon."
+        }
+      ],
+      "reason": "Supported by the cited visible sentences and dependencies."
+    },
+    "u2": {
+      "label": "SUPPORTED",
+      "value": "Richard Boyle, 9th Earl of Cork",
+      "citations": [
+        "d6s2"
+      ],
+      "quotes": [
+        {
+          "evidence_id": "d6s2",
+          "text": "The second son of Richard Boyle, 9th Earl of Cork and Lady Emily de Burgh, he was educated at Charterhouse School."
+        }
+      ],
+      "reason": "Supported by the cited visible sentences and dependencies."
+    },
+    "u3": {
+      "label": "SUPPORTED",
+      "value": "22 June 1904",
+      "citations": [
+        "d1s0"
+      ],
+      "quotes": [
+        {
+          "evidence_id": "d1s0",
+          "text": "Richard Edmund St Lawrence Boyle, 9th Earl of Cork and Orrery KP, PC (19 April 1829 – 22 June 1904), styled Viscount Dungarvan between 1834 and 1856, was a British courtier and Liberal politician."
+        }
+      ],
+      "reason": "Supported by the cited visible sentences and dependencies."
+    }
+  },
+  "evidence": [
+    {
+      "evidence_id": "d2s0",
+      "title": "David Lindsay, 11th Earl of Crawford",
+      "url": "https://trace.invalid/2wikimultihopqa_527ee6120bd911eba7f7acde48001122_short/d2s0",
+      "text": "David Lindsay, 11th Earl of Crawford( 1547? – 1607) was a Scottish nobleman and privy councilor.",
+      "visible_time_s": 3.4689999999973224,
+      "requested_subject": "",
+      "resolved_title": "David Lindsay, 11th Earl of Crawford",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d4s0",
+      "title": "George Herbert, 11th Earl of Pembroke",
+      "url": "https://trace.invalid/2wikimultihopqa_527ee6120bd911eba7f7acde48001122_short/d4s0",
+      "text": "General George Augustus Herbert, 11th Earl of Pembroke and 8th Earl of Montgomery( 10 September 1759 – 26 October 1827) was an English peer, army officer, and politician.",
+      "visible_time_s": 3.4689999999973224,
+      "requested_subject": "",
+      "resolved_title": "George Herbert, 11th Earl of Pembroke",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d6s0",
+      "title": "Robert Boyle, 11th Earl of Cork",
+      "url": "https://trace.invalid/2wikimultihopqa_527ee6120bd911eba7f7acde48001122_short/d6s0",
+      "text": "Robert John Lascelles Boyle, 11th Earl of Cork and Orrery (8 November 1864 – 13 October 1934), known as Hon.",
+      "visible_time_s": 3.4689999999973224,
+      "requested_subject": "",
+      "resolved_title": "Robert Boyle, 11th Earl of Cork",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d6s1",
+      "title": "Robert Boyle, 11th Earl of Cork",
+      "url": "https://trace.invalid/2wikimultihopqa_527ee6120bd911eba7f7acde48001122_short/d6s1",
+      "text": "Robert Boyle until 1925, was a British peer.",
+      "visible_time_s": 3.4689999999973224,
+      "requested_subject": "",
+      "resolved_title": "Robert Boyle, 11th Earl of Cork",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d6s2",
+      "title": "Robert Boyle, 11th Earl of Cork",
+      "url": "https://trace.invalid/2wikimultihopqa_527ee6120bd911eba7f7acde48001122_short/d6s2",
+      "text": "The second son of Richard Boyle, 9th Earl of Cork and Lady Emily de Burgh, he was educated at Charterhouse School.",
+      "visible_time_s": 3.4689999999973224,
+      "requested_subject": "",
+      "resolved_title": "Robert Boyle, 11th Earl of Cork",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d6s3",
+      "title": "Robert Boyle, 11th Earl of Cork",
+      "url": "https://trace.invalid/2wikimultihopqa_527ee6120bd911eba7f7acde48001122_short/d6s3",
+      "text": "Boyle was commissioned a lieutenant in the 4th (militia) battalion of the Somersetshire Light Infantry on 15 April 1882, and resigned his commission on 12 February 1887.",
+      "visible_time_s": 3.4689999999973224,
+      "requested_subject": "",
+      "resolved_title": "Robert Boyle, 11th Earl of Cork",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d6s4",
+      "title": "Robert Boyle, 11th Earl of Cork",
+      "url": "https://trace.invalid/2wikimultihopqa_527ee6120bd911eba7f7acde48001122_short/d6s4",
+      "text": "From 1888, he was honorary attaché at Madrid.",
+      "visible_time_s": 3.4689999999973224,
+      "requested_subject": "",
+      "resolved_title": "Robert Boyle, 11th Earl of Cork",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d6s5",
+      "title": "Robert Boyle, 11th Earl of Cork",
+      "url": "https://trace.invalid/2wikimultihopqa_527ee6120bd911eba7f7acde48001122_short/d6s5",
+      "text": "He married Josephine Catherine Hale (d. 2 April 1953), daughter of a California merchant, on 30 April 1890; they had no children.",
+      "visible_time_s": 3.4689999999973224,
+      "requested_subject": "",
+      "resolved_title": "Robert Boyle, 11th Earl of Cork",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d6s6",
+      "title": "Robert Boyle, 11th Earl of Cork",
+      "url": "https://trace.invalid/2wikimultihopqa_527ee6120bd911eba7f7acde48001122_short/d6s6",
+      "text": "During the First World War, he was the honorary secretary of the British Club for Belgian Soldiers, an organization to provide recreation and refreshment for Belgian soldiers on furlough from the front lines.",
+      "visible_time_s": 3.4689999999973224,
+      "requested_subject": "",
+      "resolved_title": "Robert Boyle, 11th Earl of Cork",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d6s7",
+      "title": "Robert Boyle, 11th Earl of Cork",
+      "url": "https://trace.invalid/2wikimultihopqa_527ee6120bd911eba7f7acde48001122_short/d6s7",
+      "text": "As a result, he was made an officer in the Belgian Order of the Crown.",
+      "visible_time_s": 3.4689999999973224,
+      "requested_subject": "",
+      "resolved_title": "Robert Boyle, 11th Earl of Cork",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d6s8",
+      "title": "Robert Boyle, 11th Earl of Cork",
+      "url": "https://trace.invalid/2wikimultihopqa_527ee6120bd911eba7f7acde48001122_short/d6s8",
+      "text": "He was also made a knight of the Order of Saints Maurice and Lazarus for war services.",
+      "visible_time_s": 3.4689999999973224,
+      "requested_subject": "",
+      "resolved_title": "Robert Boyle, 11th Earl of Cork",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d6s9",
+      "title": "Robert Boyle, 11th Earl of Cork",
+      "url": "https://trace.invalid/2wikimultihopqa_527ee6120bd911eba7f7acde48001122_short/d6s9",
+      "text": "In 1925, he succeeded his brother Charles as Earl of Cork and Orrery.",
+      "visible_time_s": 3.4689999999973224,
+      "requested_subject": "",
+      "resolved_title": "Robert Boyle, 11th Earl of Cork",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d6s10",
+      "title": "Robert Boyle, 11th Earl of Cork",
+      "url": "https://trace.invalid/2wikimultihopqa_527ee6120bd911eba7f7acde48001122_short/d6s10",
+      "text": "He died in 1934 and was succeeded by his second cousin William.",
+      "visible_time_s": 3.4689999999973224,
+      "requested_subject": "",
+      "resolved_title": "Robert Boyle, 11th Earl of Cork",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d7s0",
+      "title": "Francis Talbot, 11th Earl of Shrewsbury",
+      "url": "https://trace.invalid/2wikimultihopqa_527ee6120bd911eba7f7acde48001122_short/d7s0",
+      "text": "Francis Talbot, 11th Earl of Shrewsbury, 11th Earl of Waterford( 1623 – 16 March 1668), was an English peer who was a Royalist officer in the English Civil War.",
+      "visible_time_s": 3.4689999999973224,
+      "requested_subject": "",
+      "resolved_title": "Francis Talbot, 11th Earl of Shrewsbury",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d7s1",
+      "title": "Francis Talbot, 11th Earl of Shrewsbury",
+      "url": "https://trace.invalid/2wikimultihopqa_527ee6120bd911eba7f7acde48001122_short/d7s1",
+      "text": "He survived the war only to be mortally wounded in a duel with the Duke of Buckingham who was having an affair with his wife.",
+      "visible_time_s": 3.4689999999973224,
+      "requested_subject": "",
+      "resolved_title": "Francis Talbot, 11th Earl of Shrewsbury",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d9s0",
+      "title": "William Feilding, 11th Earl of Denbigh",
+      "url": "https://trace.invalid/2wikimultihopqa_527ee6120bd911eba7f7acde48001122_short/d9s0",
+      "text": "William Rudolph Michael Feilding, 11th Earl of Denbigh( 1943 – 1995)( Peerage of England, cr 1622), and 10th Earl of Desmond( Peerage of Ireland, also cr 1622) died on 23 March 1995.",
+      "visible_time_s": 3.4689999999973224,
+      "requested_subject": "",
+      "resolved_title": "William Feilding, 11th Earl of Denbigh",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d9s1",
+      "title": "William Feilding, 11th Earl of Denbigh",
+      "url": "https://trace.invalid/2wikimultihopqa_527ee6120bd911eba7f7acde48001122_short/d9s1",
+      "text": "He married Caroline Judith Vivienne Cooke on 2 September 1965.",
+      "visible_time_s": 3.4689999999973224,
+      "requested_subject": "",
+      "resolved_title": "William Feilding, 11th Earl of Denbigh",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d9s2",
+      "title": "William Feilding, 11th Earl of Denbigh",
+      "url": "https://trace.invalid/2wikimultihopqa_527ee6120bd911eba7f7acde48001122_short/d9s2",
+      "text": "They had three children: Lady Samantha, Lady Louisa, and Alexander, the current 12th Earl of Denbigh and 11th Earl of Desmond.",
+      "visible_time_s": 3.4689999999973224,
+      "requested_subject": "",
+      "resolved_title": "William Feilding, 11th Earl of Denbigh",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d1s0",
+      "title": "Richard Boyle, 9th Earl of Cork",
+      "url": "https://trace.invalid/2wikimultihopqa_527ee6120bd911eba7f7acde48001122_short/d1s0",
+      "text": "Richard Edmund St Lawrence Boyle, 9th Earl of Cork and Orrery KP, PC (19 April 1829 – 22 June 1904), styled Viscount Dungarvan between 1834 and 1856, was a British courtier and Liberal politician.",
+      "visible_time_s": 3.4689999999973224,
+      "requested_subject": "",
+      "resolved_title": "Richard Boyle, 9th Earl of Cork",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d1s1",
+      "title": "Richard Boyle, 9th Earl of Cork",
+      "url": "https://trace.invalid/2wikimultihopqa_527ee6120bd911eba7f7acde48001122_short/d1s1",
+      "text": "In a ministerial career spanning between 1866 and 1895, he served three times as Master of the Buckhounds and twice as Master of the Horse.",
+      "visible_time_s": 3.4689999999973224,
+      "requested_subject": "",
+      "resolved_title": "Richard Boyle, 9th Earl of Cork",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d3s0",
+      "title": "Hamilton Boyle, 6th Earl of Cork",
+      "url": "https://trace.invalid/2wikimultihopqa_527ee6120bd911eba7f7acde48001122_short/d3s0",
+      "text": "Hamilton Boyle, 6th Earl of Cork and 6th Earl of Orrery( 3 February 1729 – 17 January 1764) was the son of John Boyle, 5th Earl of Cork and Lady Henrietta Hamilton.",
+      "visible_time_s": 3.4689999999973224,
+      "requested_subject": "",
+      "resolved_title": "Hamilton Boyle, 6th Earl of Cork",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d3s1",
+      "title": "Hamilton Boyle, 6th Earl of Cork",
+      "url": "https://trace.invalid/2wikimultihopqa_527ee6120bd911eba7f7acde48001122_short/d3s1",
+      "text": "He inherited the titles of 6th Earl of Cork and Orrery and 3rd Baron Boyle of Marston from his father in 1762.",
+      "visible_time_s": 3.4689999999973224,
+      "requested_subject": "",
+      "resolved_title": "Hamilton Boyle, 6th Earl of Cork",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d3s2",
+      "title": "Hamilton Boyle, 6th Earl of Cork",
+      "url": "https://trace.invalid/2wikimultihopqa_527ee6120bd911eba7f7acde48001122_short/d3s2",
+      "text": "He served in the Parliament of Great Britain as Member of Parliament( MP) for Warwick between 1751 and 1762, and represented Charleville in the Irish House of Commons between 1759 and 1760.",
+      "visible_time_s": 3.4689999999973224,
+      "requested_subject": "",
+      "resolved_title": "Hamilton Boyle, 6th Earl of Cork",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d3s3",
+      "title": "Hamilton Boyle, 6th Earl of Cork",
+      "url": "https://trace.invalid/2wikimultihopqa_527ee6120bd911eba7f7acde48001122_short/d3s3",
+      "text": "He was unmarried and was succeeded by his brother.",
+      "visible_time_s": 3.4689999999973224,
+      "requested_subject": "",
+      "resolved_title": "Hamilton Boyle, 6th Earl of Cork",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d5s0",
+      "title": "Thomas Cochrane, 11th Earl of Dundonald",
+      "url": "https://trace.invalid/2wikimultihopqa_527ee6120bd911eba7f7acde48001122_short/d5s0",
+      "text": "Thomas Barnes Cochrane, 11th Earl of Dundonald( 14 April 1814 – 15 January 1885) was a Scottish nobleman.",
+      "visible_time_s": 3.4689999999973224,
+      "requested_subject": "",
+      "resolved_title": "Thomas Cochrane, 11th Earl of Dundonald",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d5s1",
+      "title": "Thomas Cochrane, 11th Earl of Dundonald",
+      "url": "https://trace.invalid/2wikimultihopqa_527ee6120bd911eba7f7acde48001122_short/d5s1",
+      "text": "He was son of the radical politician and sailor Thomas Cochrane, 10th Earl of Dundonald.",
+      "visible_time_s": 3.4689999999973224,
+      "requested_subject": "",
+      "resolved_title": "Thomas Cochrane, 11th Earl of Dundonald",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d5s2",
+      "title": "Thomas Cochrane, 11th Earl of Dundonald",
+      "url": "https://trace.invalid/2wikimultihopqa_527ee6120bd911eba7f7acde48001122_short/d5s2",
+      "text": "As a child he accompanied his father to Chile.",
+      "visible_time_s": 3.4689999999973224,
+      "requested_subject": "",
+      "resolved_title": "Thomas Cochrane, 11th Earl of Dundonald",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d5s3",
+      "title": "Thomas Cochrane, 11th Earl of Dundonald",
+      "url": "https://trace.invalid/2wikimultihopqa_527ee6120bd911eba7f7acde48001122_short/d5s3",
+      "text": "Cochrane joined the British Army and eventually gained the rank of Captain.",
+      "visible_time_s": 3.4689999999973224,
+      "requested_subject": "",
+      "resolved_title": "Thomas Cochrane, 11th Earl of Dundonald",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d5s4",
+      "title": "Thomas Cochrane, 11th Earl of Dundonald",
+      "url": "https://trace.invalid/2wikimultihopqa_527ee6120bd911eba7f7acde48001122_short/d5s4",
+      "text": "On 31 October 1860, he succeeded his father as the 11th Earl of Dundonald.",
+      "visible_time_s": 3.4689999999973224,
+      "requested_subject": "",
+      "resolved_title": "Thomas Cochrane, 11th Earl of Dundonald",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d5s5",
+      "title": "Thomas Cochrane, 11th Earl of Dundonald",
+      "url": "https://trace.invalid/2wikimultihopqa_527ee6120bd911eba7f7acde48001122_short/d5s5",
+      "text": "Between 1879 and 1885, he was a Representative Peer of Scotland.",
+      "visible_time_s": 3.4689999999973224,
+      "requested_subject": "",
+      "resolved_title": "Thomas Cochrane, 11th Earl of Dundonald",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d8s0",
+      "title": "Rob Boyle",
+      "url": "https://trace.invalid/2wikimultihopqa_527ee6120bd911eba7f7acde48001122_short/d8s0",
+      "text": "Robert Boyle is a game designer who has worked primarily on role- playing games.",
+      "visible_time_s": 3.4689999999973224,
+      "requested_subject": "",
+      "resolved_title": "Rob Boyle",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d10s0",
+      "title": "Richard Boyle, 1st Earl of Cork",
+      "url": "https://trace.invalid/2wikimultihopqa_527ee6120bd911eba7f7acde48001122_short/d10s0",
+      "text": "Richard Boyle, 1st Earl of Cork( 13 October 1566 – 15 September 1643), also known as the Great Earl of Cork, was an English- born politician who served as Lord Treasurer of the Kingdom of Ireland.",
+      "visible_time_s": 3.4689999999973224,
+      "requested_subject": "",
+      "resolved_title": "Richard Boyle, 1st Earl of Cork",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d10s1",
+      "title": "Richard Boyle, 1st Earl of Cork",
+      "url": "https://trace.invalid/2wikimultihopqa_527ee6120bd911eba7f7acde48001122_short/d10s1",
+      "text": "Lord Cork was an important figure in the continuing English colonisation of Ireland( commenced by the Normans) in the 16th and 17th centuries, as he acquired large tracts of land in plantations in Munster in southern Ireland.",
+      "visible_time_s": 3.4689999999973224,
+      "requested_subject": "",
+      "resolved_title": "Richard Boyle, 1st Earl of Cork",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d10s2",
+      "title": "Richard Boyle, 1st Earl of Cork",
+      "url": "https://trace.invalid/2wikimultihopqa_527ee6120bd911eba7f7acde48001122_short/d10s2",
+      "text": "Moreover, his sons played an important role in fighting against the Irish Catholic rebellion in the 1640s and 1650s, assisting in the victory of the British and Protestant interest in Ireland.",
+      "visible_time_s": 3.4689999999973224,
+      "requested_subject": "",
+      "resolved_title": "Richard Boyle, 1st Earl of Cork",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d10s3",
+      "title": "Richard Boyle, 1st Earl of Cork",
+      "url": "https://trace.invalid/2wikimultihopqa_527ee6120bd911eba7f7acde48001122_short/d10s3",
+      "text": "In addition to being the first Earl of Cork, he was the patriarch of the Boyle family through his many prominent descendants, whose titles included Earl of Orrery( 1660), Earl of Burlington( 1664) and Earl of Shannon( 1756).",
+      "visible_time_s": 3.4689999999973224,
+      "requested_subject": "",
+      "resolved_title": "Richard Boyle, 1st Earl of Cork",
+      "entity_resolution": "unspecified"
+    }
+  ],
+  "searches": [
+    {
+      "query": "[scheduled evidence]",
+      "subject": "",
+      "status": "ok",
+      "returned_pages": [],
+      "mode": "trace",
+      "unit_id": "__scheduled_evidence__"
+    }
+  ],
+  "search_failures": [],
+  "llm_calls": [
+    {
+      "purpose": "feedback_generate",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 412,
+        "completion_tokens": 59,
+        "total_tokens": 471,
+        "prompt_tokens_details": {
+          "cached_tokens": 384
+        }
+      },
+      "latency_s": 1.219
+    },
+    {
+      "purpose": "decompose",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 802,
+        "completion_tokens": 255,
+        "total_tokens": 1057,
+        "prompt_tokens_details": {
+          "cached_tokens": 768
+        }
+      },
+      "latency_s": 1.766
+    },
+    {
+      "purpose": "feedback_verify",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 366,
+        "completion_tokens": 55,
+        "total_tokens": 421,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        }
+      },
+      "latency_s": 0.61
+    },
+    {
+      "purpose": "plan_review",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 1076,
+        "completion_tokens": 479,
+        "total_tokens": 1555,
+        "prompt_tokens_details": {
+          "cached_tokens": 896
+        }
+      },
+      "latency_s": 1.703
+    },
+    {
+      "purpose": "judge",
+      "model": "tinker://f9e9a6c1-e203-5c2c-acdd-68fe67378ca4:train:0/sampler_weights/epoch-0001",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 6592,
+        "completion_tokens": 337,
+        "total_tokens": 6929,
+        "prompt_tokens_details": {
+          "cached_tokens": 896
+        }
+      },
+      "latency_s": 2.235
+    },
+    {
+      "purpose": "feedback_generate",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 412,
+        "completion_tokens": 53,
+        "total_tokens": 465,
+        "prompt_tokens_details": {
+          "cached_tokens": 384
+        }
+      },
+      "latency_s": 0.813
+    },
+    {
+      "purpose": "generate",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 724,
+        "completion_tokens": 108,
+        "total_tokens": 832,
+        "prompt_tokens_details": {
+          "cached_tokens": 384
+        }
+      },
+      "latency_s": 0.687
+    },
+    {
+      "purpose": "feedback_generate",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 413,
+        "completion_tokens": 79,
+        "total_tokens": 492,
+        "prompt_tokens_details": {
+          "cached_tokens": 384
+        }
+      },
+      "latency_s": 0.625
+    },
+    {
+      "purpose": "feedback_verify",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 362,
+        "completion_tokens": 72,
+        "total_tokens": 434,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        }
+      },
+      "latency_s": 1.062
+    },
+    {
+      "purpose": "verify",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 1637,
+        "completion_tokens": 156,
+        "total_tokens": 1793,
+        "prompt_tokens_details": {
+          "cached_tokens": 640
+        }
+      },
+      "latency_s": 1.406
+    }
+  ],
+  "search_diagnostics": [],
+  "output_enqueued_units": {
+    "u3": "22 June 1904"
+  },
+  "events": [
+    {
+      "sequence": 0,
+      "time_s": 0.0,
+      "type": "feedback_requested",
+      "feedback_kind": "opening",
+      "execution_state": {
+        "stage": "planning",
+        "searches_started": 0,
+        "searches_completed": 0,
+        "active_searches": 0,
+        "evidence_count": 0,
+        "supported_units": 0,
+        "output_units": 0
+      }
+    },
+    {
+      "sequence": 1,
+      "time_s": 1.766,
+      "type": "decompose_reply",
+      "reply": {
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "Identify Robert Boyle, 11th Earl of Cork",
+            "subject": "Robert Boyle, 11th Earl of Cork",
+            "necessary": false,
+            "depends_on": [],
+            "queries": [
+              "Robert Boyle, 11th Earl of Cork"
+            ]
+          },
+          {
+            "unit_id": "u2",
+            "description": "Identify the father of {u1}",
+            "subject": "",
+            "necessary": false,
+            "depends_on": [
+              "u1"
+            ],
+            "queries": [
+              "father of Robert Boyle, 11th Earl of Cork"
+            ]
+          },
+          {
+            "unit_id": "u3",
+            "description": "Date of death of {u2}",
+            "subject": "",
+            "necessary": true,
+            "depends_on": [
+              "u2"
+            ],
+            "queries": [
+              "date of death of the father of Robert Boyle, 11th Earl of Cork"
+            ]
+          }
+        ]
+      },
+      "attempt": 1,
+      "repair": false
+    },
+    {
+      "sequence": 2,
+      "time_s": 1.766,
+      "type": "plan_review_requested",
+      "max_reviews": 1,
+      "question_only": true
+    },
+    {
+      "sequence": 3,
+      "time_s": 1.829,
+      "type": "utterance",
+      "action": "Backchannel",
+      "text": "I’ll look up the death date of Robert Boyle, 11th Earl of Cork’s father.",
+      "claims": [],
+      "feedback_source": "model",
+      "feedback_status_claim": "intent",
+      "feedback_fallback_reason": "",
+      "execution_state": {
+        "stage": "planning",
+        "searches_started": 0,
+        "searches_completed": 0,
+        "active_searches": 0,
+        "evidence_count": 0,
+        "supported_units": 0,
+        "output_units": 0
+      },
+      "language": "en"
+    },
+    {
+      "sequence": 4,
+      "time_s": 3.469,
+      "type": "plan_review_reply",
+      "reply": {
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "Identify Robert Boyle, 11th Earl of Cork",
+            "subject": "Robert Boyle, 11th Earl of Cork",
+            "necessary": false,
+            "depends_on": [],
+            "queries": [
+              "Robert Boyle, 11th Earl of Cork",
+              "Robert Boyle 11th Earl of Cork"
+            ]
+          },
+          {
+            "unit_id": "u2",
+            "description": "Identify the father of {u1}",
+            "subject": "{u1_father}",
+            "necessary": false,
+            "depends_on": [
+              "u1"
+            ],
+            "queries": [
+              "father of Robert Boyle, 11th Earl of Cork",
+              "Robert Boyle 11th Earl of Cork father"
+            ]
+          },
+          {
+            "unit_id": "u3",
+            "description": "Date of death of {u2}",
+            "subject": "{u1_father}",
+            "necessary": true,
+            "depends_on": [
+              "u2"
+            ],
+            "queries": [
+              "date of death of the father of Robert Boyle, 11th Earl of Cork",
+              "Robert Boyle 11th Earl of Cork father date of death"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "sequence": 5,
+      "time_s": 3.469,
+      "type": "plan_review_finished",
+      "changed": true,
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "Identify Robert Boyle, 11th Earl of Cork",
+          "necessary": false,
+          "depends_on": [],
+          "queries": [
+            "Robert Boyle, 11th Earl of Cork",
+            "Robert Boyle 11th Earl of Cork"
+          ],
+          "subject": "Robert Boyle, 11th Earl of Cork"
+        },
+        {
+          "unit_id": "u2",
+          "description": "Identify the father of {u1}",
+          "necessary": false,
+          "depends_on": [
+            "u1"
+          ],
+          "queries": [
+            "father of Robert Boyle, 11th Earl of Cork",
+            "Robert Boyle 11th Earl of Cork father"
+          ],
+          "subject": "{u1_father}"
+        },
+        {
+          "unit_id": "u3",
+          "description": "Date of death of {u2}",
+          "necessary": true,
+          "depends_on": [
+            "u2"
+          ],
+          "queries": [
+            "date of death of the father of Robert Boyle, 11th Earl of Cork",
+            "Robert Boyle 11th Earl of Cork father date of death"
+          ],
+          "subject": "{u1_father}"
+        }
+      ],
+      "question_only": true
+    },
+    {
+      "sequence": 6,
+      "time_s": 3.469,
+      "type": "plan",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "Identify Robert Boyle, 11th Earl of Cork",
+          "necessary": false,
+          "depends_on": [],
+          "queries": [
+            "Robert Boyle, 11th Earl of Cork",
+            "Robert Boyle 11th Earl of Cork"
+          ],
+          "subject": "Robert Boyle, 11th Earl of Cork"
+        },
+        {
+          "unit_id": "u2",
+          "description": "Identify the father of {u1}",
+          "necessary": false,
+          "depends_on": [
+            "u1"
+          ],
+          "queries": [
+            "father of Robert Boyle, 11th Earl of Cork",
+            "Robert Boyle 11th Earl of Cork father"
+          ],
+          "subject": "{u1_father}"
+        },
+        {
+          "unit_id": "u3",
+          "description": "Date of death of {u2}",
+          "necessary": true,
+          "depends_on": [
+            "u2"
+          ],
+          "queries": [
+            "date of death of the father of Robert Boyle, 11th Earl of Cork",
+            "Robert Boyle 11th Earl of Cork father date of death"
+          ],
+          "subject": "{u1_father}"
+        }
+      ]
+    },
+    {
+      "sequence": 7,
+      "time_s": 3.469,
+      "type": "trace_batch_requested"
+    },
+    {
+      "sequence": 8,
+      "time_s": 3.469,
+      "type": "search_finished",
+      "query": "[scheduled evidence]",
+      "subject": "",
+      "status": "ok",
+      "returned_pages": [],
+      "mode": "trace",
+      "unit_id": "__scheduled_evidence__"
+    },
+    {
+      "sequence": 9,
+      "time_s": 3.469,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d2s0",
+        "title": "David Lindsay, 11th Earl of Crawford",
+        "url": "https://trace.invalid/2wikimultihopqa_527ee6120bd911eba7f7acde48001122_short/d2s0",
+        "text": "David Lindsay, 11th Earl of Crawford( 1547? – 1607) was a Scottish nobleman and privy councilor.",
+        "visible_time_s": 3.4689999999973224,
+        "requested_subject": "",
+        "resolved_title": "David Lindsay, 11th Earl of Crawford",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 10,
+      "time_s": 3.469,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d4s0",
+        "title": "George Herbert, 11th Earl of Pembroke",
+        "url": "https://trace.invalid/2wikimultihopqa_527ee6120bd911eba7f7acde48001122_short/d4s0",
+        "text": "General George Augustus Herbert, 11th Earl of Pembroke and 8th Earl of Montgomery( 10 September 1759 – 26 October 1827) was an English peer, army officer, and politician.",
+        "visible_time_s": 3.4689999999973224,
+        "requested_subject": "",
+        "resolved_title": "George Herbert, 11th Earl of Pembroke",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 11,
+      "time_s": 3.469,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d6s0",
+        "title": "Robert Boyle, 11th Earl of Cork",
+        "url": "https://trace.invalid/2wikimultihopqa_527ee6120bd911eba7f7acde48001122_short/d6s0",
+        "text": "Robert John Lascelles Boyle, 11th Earl of Cork and Orrery (8 November 1864 – 13 October 1934), known as Hon.",
+        "visible_time_s": 3.4689999999973224,
+        "requested_subject": "",
+        "resolved_title": "Robert Boyle, 11th Earl of Cork",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 12,
+      "time_s": 3.469,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d6s1",
+        "title": "Robert Boyle, 11th Earl of Cork",
+        "url": "https://trace.invalid/2wikimultihopqa_527ee6120bd911eba7f7acde48001122_short/d6s1",
+        "text": "Robert Boyle until 1925, was a British peer.",
+        "visible_time_s": 3.4689999999973224,
+        "requested_subject": "",
+        "resolved_title": "Robert Boyle, 11th Earl of Cork",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 13,
+      "time_s": 3.469,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d6s2",
+        "title": "Robert Boyle, 11th Earl of Cork",
+        "url": "https://trace.invalid/2wikimultihopqa_527ee6120bd911eba7f7acde48001122_short/d6s2",
+        "text": "The second son of Richard Boyle, 9th Earl of Cork and Lady Emily de Burgh, he was educated at Charterhouse School.",
+        "visible_time_s": 3.4689999999973224,
+        "requested_subject": "",
+        "resolved_title": "Robert Boyle, 11th Earl of Cork",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 14,
+      "time_s": 3.469,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d6s3",
+        "title": "Robert Boyle, 11th Earl of Cork",
+        "url": "https://trace.invalid/2wikimultihopqa_527ee6120bd911eba7f7acde48001122_short/d6s3",
+        "text": "Boyle was commissioned a lieutenant in the 4th (militia) battalion of the Somersetshire Light Infantry on 15 April 1882, and resigned his commission on 12 February 1887.",
+        "visible_time_s": 3.4689999999973224,
+        "requested_subject": "",
+        "resolved_title": "Robert Boyle, 11th Earl of Cork",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 15,
+      "time_s": 3.469,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d6s4",
+        "title": "Robert Boyle, 11th Earl of Cork",
+        "url": "https://trace.invalid/2wikimultihopqa_527ee6120bd911eba7f7acde48001122_short/d6s4",
+        "text": "From 1888, he was honorary attaché at Madrid.",
+        "visible_time_s": 3.4689999999973224,
+        "requested_subject": "",
+        "resolved_title": "Robert Boyle, 11th Earl of Cork",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 16,
+      "time_s": 3.469,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d6s5",
+        "title": "Robert Boyle, 11th Earl of Cork",
+        "url": "https://trace.invalid/2wikimultihopqa_527ee6120bd911eba7f7acde48001122_short/d6s5",
+        "text": "He married Josephine Catherine Hale (d. 2 April 1953), daughter of a California merchant, on 30 April 1890; they had no children.",
+        "visible_time_s": 3.4689999999973224,
+        "requested_subject": "",
+        "resolved_title": "Robert Boyle, 11th Earl of Cork",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 17,
+      "time_s": 3.469,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d6s6",
+        "title": "Robert Boyle, 11th Earl of Cork",
+        "url": "https://trace.invalid/2wikimultihopqa_527ee6120bd911eba7f7acde48001122_short/d6s6",
+        "text": "During the First World War, he was the honorary secretary of the British Club for Belgian Soldiers, an organization to provide recreation and refreshment for Belgian soldiers on furlough from the front lines.",
+        "visible_time_s": 3.4689999999973224,
+        "requested_subject": "",
+        "resolved_title": "Robert Boyle, 11th Earl of Cork",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 18,
+      "time_s": 3.469,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d6s7",
+        "title": "Robert Boyle, 11th Earl of Cork",
+        "url": "https://trace.invalid/2wikimultihopqa_527ee6120bd911eba7f7acde48001122_short/d6s7",
+        "text": "As a result, he was made an officer in the Belgian Order of the Crown.",
+        "visible_time_s": 3.4689999999973224,
+        "requested_subject": "",
+        "resolved_title": "Robert Boyle, 11th Earl of Cork",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 19,
+      "time_s": 3.469,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d6s8",
+        "title": "Robert Boyle, 11th Earl of Cork",
+        "url": "https://trace.invalid/2wikimultihopqa_527ee6120bd911eba7f7acde48001122_short/d6s8",
+        "text": "He was also made a knight of the Order of Saints Maurice and Lazarus for war services.",
+        "visible_time_s": 3.4689999999973224,
+        "requested_subject": "",
+        "resolved_title": "Robert Boyle, 11th Earl of Cork",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 20,
+      "time_s": 3.469,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d6s9",
+        "title": "Robert Boyle, 11th Earl of Cork",
+        "url": "https://trace.invalid/2wikimultihopqa_527ee6120bd911eba7f7acde48001122_short/d6s9",
+        "text": "In 1925, he succeeded his brother Charles as Earl of Cork and Orrery.",
+        "visible_time_s": 3.4689999999973224,
+        "requested_subject": "",
+        "resolved_title": "Robert Boyle, 11th Earl of Cork",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 21,
+      "time_s": 3.469,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d6s10",
+        "title": "Robert Boyle, 11th Earl of Cork",
+        "url": "https://trace.invalid/2wikimultihopqa_527ee6120bd911eba7f7acde48001122_short/d6s10",
+        "text": "He died in 1934 and was succeeded by his second cousin William.",
+        "visible_time_s": 3.4689999999973224,
+        "requested_subject": "",
+        "resolved_title": "Robert Boyle, 11th Earl of Cork",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 22,
+      "time_s": 3.469,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d7s0",
+        "title": "Francis Talbot, 11th Earl of Shrewsbury",
+        "url": "https://trace.invalid/2wikimultihopqa_527ee6120bd911eba7f7acde48001122_short/d7s0",
+        "text": "Francis Talbot, 11th Earl of Shrewsbury, 11th Earl of Waterford( 1623 – 16 March 1668), was an English peer who was a Royalist officer in the English Civil War.",
+        "visible_time_s": 3.4689999999973224,
+        "requested_subject": "",
+        "resolved_title": "Francis Talbot, 11th Earl of Shrewsbury",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 23,
+      "time_s": 3.469,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d7s1",
+        "title": "Francis Talbot, 11th Earl of Shrewsbury",
+        "url": "https://trace.invalid/2wikimultihopqa_527ee6120bd911eba7f7acde48001122_short/d7s1",
+        "text": "He survived the war only to be mortally wounded in a duel with the Duke of Buckingham who was having an affair with his wife.",
+        "visible_time_s": 3.4689999999973224,
+        "requested_subject": "",
+        "resolved_title": "Francis Talbot, 11th Earl of Shrewsbury",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 24,
+      "time_s": 3.469,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d9s0",
+        "title": "William Feilding, 11th Earl of Denbigh",
+        "url": "https://trace.invalid/2wikimultihopqa_527ee6120bd911eba7f7acde48001122_short/d9s0",
+        "text": "William Rudolph Michael Feilding, 11th Earl of Denbigh( 1943 – 1995)( Peerage of England, cr 1622), and 10th Earl of Desmond( Peerage of Ireland, also cr 1622) died on 23 March 1995.",
+        "visible_time_s": 3.4689999999973224,
+        "requested_subject": "",
+        "resolved_title": "William Feilding, 11th Earl of Denbigh",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 25,
+      "time_s": 3.469,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d9s1",
+        "title": "William Feilding, 11th Earl of Denbigh",
+        "url": "https://trace.invalid/2wikimultihopqa_527ee6120bd911eba7f7acde48001122_short/d9s1",
+        "text": "He married Caroline Judith Vivienne Cooke on 2 September 1965.",
+        "visible_time_s": 3.4689999999973224,
+        "requested_subject": "",
+        "resolved_title": "William Feilding, 11th Earl of Denbigh",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 26,
+      "time_s": 3.469,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d9s2",
+        "title": "William Feilding, 11th Earl of Denbigh",
+        "url": "https://trace.invalid/2wikimultihopqa_527ee6120bd911eba7f7acde48001122_short/d9s2",
+        "text": "They had three children: Lady Samantha, Lady Louisa, and Alexander, the current 12th Earl of Denbigh and 11th Earl of Desmond.",
+        "visible_time_s": 3.4689999999973224,
+        "requested_subject": "",
+        "resolved_title": "William Feilding, 11th Earl of Denbigh",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 27,
+      "time_s": 3.469,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d1s0",
+        "title": "Richard Boyle, 9th Earl of Cork",
+        "url": "https://trace.invalid/2wikimultihopqa_527ee6120bd911eba7f7acde48001122_short/d1s0",
+        "text": "Richard Edmund St Lawrence Boyle, 9th Earl of Cork and Orrery KP, PC (19 April 1829 – 22 June 1904), styled Viscount Dungarvan between 1834 and 1856, was a British courtier and Liberal politician.",
+        "visible_time_s": 3.4689999999973224,
+        "requested_subject": "",
+        "resolved_title": "Richard Boyle, 9th Earl of Cork",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 28,
+      "time_s": 3.469,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d1s1",
+        "title": "Richard Boyle, 9th Earl of Cork",
+        "url": "https://trace.invalid/2wikimultihopqa_527ee6120bd911eba7f7acde48001122_short/d1s1",
+        "text": "In a ministerial career spanning between 1866 and 1895, he served three times as Master of the Buckhounds and twice as Master of the Horse.",
+        "visible_time_s": 3.4689999999973224,
+        "requested_subject": "",
+        "resolved_title": "Richard Boyle, 9th Earl of Cork",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 29,
+      "time_s": 3.469,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d3s0",
+        "title": "Hamilton Boyle, 6th Earl of Cork",
+        "url": "https://trace.invalid/2wikimultihopqa_527ee6120bd911eba7f7acde48001122_short/d3s0",
+        "text": "Hamilton Boyle, 6th Earl of Cork and 6th Earl of Orrery( 3 February 1729 – 17 January 1764) was the son of John Boyle, 5th Earl of Cork and Lady Henrietta Hamilton.",
+        "visible_time_s": 3.4689999999973224,
+        "requested_subject": "",
+        "resolved_title": "Hamilton Boyle, 6th Earl of Cork",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 30,
+      "time_s": 3.469,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d3s1",
+        "title": "Hamilton Boyle, 6th Earl of Cork",
+        "url": "https://trace.invalid/2wikimultihopqa_527ee6120bd911eba7f7acde48001122_short/d3s1",
+        "text": "He inherited the titles of 6th Earl of Cork and Orrery and 3rd Baron Boyle of Marston from his father in 1762.",
+        "visible_time_s": 3.4689999999973224,
+        "requested_subject": "",
+        "resolved_title": "Hamilton Boyle, 6th Earl of Cork",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 31,
+      "time_s": 3.469,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d3s2",
+        "title": "Hamilton Boyle, 6th Earl of Cork",
+        "url": "https://trace.invalid/2wikimultihopqa_527ee6120bd911eba7f7acde48001122_short/d3s2",
+        "text": "He served in the Parliament of Great Britain as Member of Parliament( MP) for Warwick between 1751 and 1762, and represented Charleville in the Irish House of Commons between 1759 and 1760.",
+        "visible_time_s": 3.4689999999973224,
+        "requested_subject": "",
+        "resolved_title": "Hamilton Boyle, 6th Earl of Cork",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 32,
+      "time_s": 3.469,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d3s3",
+        "title": "Hamilton Boyle, 6th Earl of Cork",
+        "url": "https://trace.invalid/2wikimultihopqa_527ee6120bd911eba7f7acde48001122_short/d3s3",
+        "text": "He was unmarried and was succeeded by his brother.",
+        "visible_time_s": 3.4689999999973224,
+        "requested_subject": "",
+        "resolved_title": "Hamilton Boyle, 6th Earl of Cork",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 33,
+      "time_s": 3.469,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d5s0",
+        "title": "Thomas Cochrane, 11th Earl of Dundonald",
+        "url": "https://trace.invalid/2wikimultihopqa_527ee6120bd911eba7f7acde48001122_short/d5s0",
+        "text": "Thomas Barnes Cochrane, 11th Earl of Dundonald( 14 April 1814 – 15 January 1885) was a Scottish nobleman.",
+        "visible_time_s": 3.4689999999973224,
+        "requested_subject": "",
+        "resolved_title": "Thomas Cochrane, 11th Earl of Dundonald",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 34,
+      "time_s": 3.469,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d5s1",
+        "title": "Thomas Cochrane, 11th Earl of Dundonald",
+        "url": "https://trace.invalid/2wikimultihopqa_527ee6120bd911eba7f7acde48001122_short/d5s1",
+        "text": "He was son of the radical politician and sailor Thomas Cochrane, 10th Earl of Dundonald.",
+        "visible_time_s": 3.4689999999973224,
+        "requested_subject": "",
+        "resolved_title": "Thomas Cochrane, 11th Earl of Dundonald",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 35,
+      "time_s": 3.469,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d5s2",
+        "title": "Thomas Cochrane, 11th Earl of Dundonald",
+        "url": "https://trace.invalid/2wikimultihopqa_527ee6120bd911eba7f7acde48001122_short/d5s2",
+        "text": "As a child he accompanied his father to Chile.",
+        "visible_time_s": 3.4689999999973224,
+        "requested_subject": "",
+        "resolved_title": "Thomas Cochrane, 11th Earl of Dundonald",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 36,
+      "time_s": 3.469,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d5s3",
+        "title": "Thomas Cochrane, 11th Earl of Dundonald",
+        "url": "https://trace.invalid/2wikimultihopqa_527ee6120bd911eba7f7acde48001122_short/d5s3",
+        "text": "Cochrane joined the British Army and eventually gained the rank of Captain.",
+        "visible_time_s": 3.4689999999973224,
+        "requested_subject": "",
+        "resolved_title": "Thomas Cochrane, 11th Earl of Dundonald",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 37,
+      "time_s": 3.469,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d5s4",
+        "title": "Thomas Cochrane, 11th Earl of Dundonald",
+        "url": "https://trace.invalid/2wikimultihopqa_527ee6120bd911eba7f7acde48001122_short/d5s4",
+        "text": "On 31 October 1860, he succeeded his father as the 11th Earl of Dundonald.",
+        "visible_time_s": 3.4689999999973224,
+        "requested_subject": "",
+        "resolved_title": "Thomas Cochrane, 11th Earl of Dundonald",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 38,
+      "time_s": 3.469,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d5s5",
+        "title": "Thomas Cochrane, 11th Earl of Dundonald",
+        "url": "https://trace.invalid/2wikimultihopqa_527ee6120bd911eba7f7acde48001122_short/d5s5",
+        "text": "Between 1879 and 1885, he was a Representative Peer of Scotland.",
+        "visible_time_s": 3.4689999999973224,
+        "requested_subject": "",
+        "resolved_title": "Thomas Cochrane, 11th Earl of Dundonald",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 39,
+      "time_s": 3.469,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d8s0",
+        "title": "Rob Boyle",
+        "url": "https://trace.invalid/2wikimultihopqa_527ee6120bd911eba7f7acde48001122_short/d8s0",
+        "text": "Robert Boyle is a game designer who has worked primarily on role- playing games.",
+        "visible_time_s": 3.4689999999973224,
+        "requested_subject": "",
+        "resolved_title": "Rob Boyle",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 40,
+      "time_s": 3.469,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d10s0",
+        "title": "Richard Boyle, 1st Earl of Cork",
+        "url": "https://trace.invalid/2wikimultihopqa_527ee6120bd911eba7f7acde48001122_short/d10s0",
+        "text": "Richard Boyle, 1st Earl of Cork( 13 October 1566 – 15 September 1643), also known as the Great Earl of Cork, was an English- born politician who served as Lord Treasurer of the Kingdom of Ireland.",
+        "visible_time_s": 3.4689999999973224,
+        "requested_subject": "",
+        "resolved_title": "Richard Boyle, 1st Earl of Cork",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 41,
+      "time_s": 3.469,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d10s1",
+        "title": "Richard Boyle, 1st Earl of Cork",
+        "url": "https://trace.invalid/2wikimultihopqa_527ee6120bd911eba7f7acde48001122_short/d10s1",
+        "text": "Lord Cork was an important figure in the continuing English colonisation of Ireland( commenced by the Normans) in the 16th and 17th centuries, as he acquired large tracts of land in plantations in Munster in southern Ireland.",
+        "visible_time_s": 3.4689999999973224,
+        "requested_subject": "",
+        "resolved_title": "Richard Boyle, 1st Earl of Cork",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 42,
+      "time_s": 3.469,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d10s2",
+        "title": "Richard Boyle, 1st Earl of Cork",
+        "url": "https://trace.invalid/2wikimultihopqa_527ee6120bd911eba7f7acde48001122_short/d10s2",
+        "text": "Moreover, his sons played an important role in fighting against the Irish Catholic rebellion in the 1640s and 1650s, assisting in the victory of the British and Protestant interest in Ireland.",
+        "visible_time_s": 3.4689999999973224,
+        "requested_subject": "",
+        "resolved_title": "Richard Boyle, 1st Earl of Cork",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 43,
+      "time_s": 3.469,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d10s3",
+        "title": "Richard Boyle, 1st Earl of Cork",
+        "url": "https://trace.invalid/2wikimultihopqa_527ee6120bd911eba7f7acde48001122_short/d10s3",
+        "text": "In addition to being the first Earl of Cork, he was the patriarch of the Boyle family through his many prominent descendants, whose titles included Earl of Orrery( 1660), Earl of Burlington( 1664) and Earl of Shannon( 1756).",
+        "visible_time_s": 3.4689999999973224,
+        "requested_subject": "",
+        "resolved_title": "Richard Boyle, 1st Earl of Cork",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 44,
+      "time_s": 4.969,
+      "type": "feedback_requested",
+      "feedback_kind": "progress",
+      "execution_state": {
+        "stage": "checking",
+        "searches_started": 1,
+        "searches_completed": 1,
+        "active_searches": 0,
+        "evidence_count": 35,
+        "supported_units": 0,
+        "output_units": 0
+      }
+    },
+    {
+      "sequence": 45,
+      "time_s": 5.704,
+      "type": "judge_reply",
+      "reply": {
+        "judgments": [
+          {
+            "unit_id": "u1",
+            "label": "SUPPORTED",
+            "value": "Robert Boyle, 11th Earl of Cork",
+            "citations": [
+              "d6s0"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d6s0",
+                "text": "Robert John Lascelles Boyle, 11th Earl of Cork and Orrery (8 November 1864 – 13 October 1934), known as Hon."
+              }
+            ],
+            "reason": "Supported by the cited visible sentences and dependencies."
+          },
+          {
+            "unit_id": "u2",
+            "label": "SUPPORTED",
+            "value": "Richard Boyle, 9th Earl of Cork",
+            "citations": [
+              "d6s2"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d6s2",
+                "text": "The second son of Richard Boyle, 9th Earl of Cork and Lady Emily de Burgh, he was educated at Charterhouse School."
+              }
+            ],
+            "reason": "Supported by the cited visible sentences and dependencies."
+          },
+          {
+            "unit_id": "u3",
+            "label": "SUPPORTED",
+            "value": "22 June 1904",
+            "citations": [
+              "d1s0"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d1s0",
+                "text": "Richard Edmund St Lawrence Boyle, 9th Earl of Cork and Orrery KP, PC (19 April 1829 – 22 June 1904), styled Viscount Dungarvan between 1834 and 1856, was a British courtier and Liberal politician."
+              }
+            ],
+            "reason": "Supported by the cited visible sentences and dependencies."
+          }
+        ]
+      },
+      "attempt": 1,
+      "repair": false,
+      "evidence_snapshot_ids": [
+        "d2s0",
+        "d4s0",
+        "d6s0",
+        "d6s1",
+        "d6s2",
+        "d6s3",
+        "d6s4",
+        "d6s5",
+        "d6s6",
+        "d6s7",
+        "d6s8",
+        "d6s9",
+        "d6s10",
+        "d7s0",
+        "d7s1",
+        "d9s0",
+        "d9s1",
+        "d9s2",
+        "d1s0",
+        "d1s1",
+        "d3s0",
+        "d3s1",
+        "d3s2",
+        "d3s3",
+        "d5s0",
+        "d5s1",
+        "d5s2",
+        "d5s3",
+        "d5s4",
+        "d5s5",
+        "d8s0",
+        "d10s0",
+        "d10s1",
+        "d10s2",
+        "d10s3"
+      ]
+    },
+    {
+      "sequence": 46,
+      "time_s": 5.704,
+      "type": "judgments",
+      "judgments": {
+        "u1": {
+          "label": "SUPPORTED",
+          "value": "Robert Boyle, 11th Earl of Cork",
+          "citations": [
+            "d6s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d6s0",
+              "text": "Robert John Lascelles Boyle, 11th Earl of Cork and Orrery (8 November 1864 – 13 October 1934), known as Hon."
+            }
+          ],
+          "reason": "Supported by the cited visible sentences and dependencies."
+        },
+        "u2": {
+          "label": "SUPPORTED",
+          "value": "Richard Boyle, 9th Earl of Cork",
+          "citations": [
+            "d6s2"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d6s2",
+              "text": "The second son of Richard Boyle, 9th Earl of Cork and Lady Emily de Burgh, he was educated at Charterhouse School."
+            }
+          ],
+          "reason": "Supported by the cited visible sentences and dependencies."
+        },
+        "u3": {
+          "label": "SUPPORTED",
+          "value": "22 June 1904",
+          "citations": [
+            "d1s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d1s0",
+              "text": "Richard Edmund St Lawrence Boyle, 9th Earl of Cork and Orrery KP, PC (19 April 1829 – 22 June 1904), styled Viscount Dungarvan between 1834 and 1856, was a British courtier and Liberal politician."
+            }
+          ],
+          "reason": "Supported by the cited visible sentences and dependencies."
+        }
+      },
+      "evidence_snapshot_ids": [
+        "d2s0",
+        "d4s0",
+        "d6s0",
+        "d6s1",
+        "d6s2",
+        "d6s3",
+        "d6s4",
+        "d6s5",
+        "d6s6",
+        "d6s7",
+        "d6s8",
+        "d6s9",
+        "d6s10",
+        "d7s0",
+        "d7s1",
+        "d9s0",
+        "d9s1",
+        "d9s2",
+        "d1s0",
+        "d1s1",
+        "d3s0",
+        "d3s1",
+        "d3s2",
+        "d3s3",
+        "d5s0",
+        "d5s1",
+        "d5s2",
+        "d5s3",
+        "d5s4",
+        "d5s5",
+        "d8s0",
+        "d10s0",
+        "d10s1",
+        "d10s2",
+        "d10s3"
+      ],
+      "semantic_review": false
+    },
+    {
+      "sequence": 47,
+      "time_s": 7.469,
+      "type": "utterance",
+      "action": "Progress",
+      "text": "Formulating answer with gathered evidence on Robert Boyle's father's death date.",
+      "claims": [],
+      "feedback_source": "model",
+      "feedback_status_claim": "formulating",
+      "feedback_fallback_reason": "",
+      "execution_state": {
+        "stage": "formulating",
+        "searches_started": 1,
+        "searches_completed": 1,
+        "active_searches": 0,
+        "evidence_count": 35,
+        "supported_units": 3,
+        "output_units": 0
+      },
+      "language": "en"
+    },
+    {
+      "sequence": 48,
+      "time_s": 7.797,
+      "type": "verification_reply",
+      "reply": {
+        "approved": true,
+        "facts_valid": true,
+        "expressed_unit_ids": [
+          "u3"
+        ],
+        "reason": "The draft correctly states the father’s death date as 22 June 1904, matching the approved fact for unit u3."
+      },
+      "output_unit_ids": [
+        "u3"
+      ],
+      "output_action": "Final Answer",
+      "dependency_unit_ids": [
+        "u1",
+        "u2"
+      ],
+      "evidence_snapshot_ids": [
+        "d6s0",
+        "d6s2",
+        "d1s0"
+      ]
+    },
+    {
+      "sequence": 49,
+      "time_s": 7.797,
+      "type": "utterance",
+      "action": "Final Answer",
+      "text": "His father, Richard Boyle, 9th Earl of Cork, died on 22 June 1904.",
+      "claims": [
+        {
+          "unit_id": "u3",
+          "description": "Date of death of Richard Boyle, 9th Earl of Cork",
+          "value": "22 June 1904",
+          "citations": [
+            "d1s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d1s0",
+              "text": "Richard Edmund St Lawrence Boyle, 9th Earl of Cork and Orrery KP, PC (19 April 1829 – 22 June 1904), styled Viscount Dungarvan between 1834 and 1856, was a British courtier and Liberal politician."
+            }
+          ]
+        }
+      ],
+      "unresolved": [],
+      "fallback": false,
+      "evidence_snapshot_ids": [
+        "d2s0",
+        "d4s0",
+        "d6s0",
+        "d6s1",
+        "d6s2",
+        "d6s3",
+        "d6s4",
+        "d6s5",
+        "d6s6",
+        "d6s7",
+        "d6s8",
+        "d6s9",
+        "d6s10",
+        "d7s0",
+        "d7s1",
+        "d9s0",
+        "d9s1",
+        "d9s2",
+        "d1s0",
+        "d1s1",
+        "d3s0",
+        "d3s1",
+        "d3s2",
+        "d3s3",
+        "d5s0",
+        "d5s1",
+        "d5s2",
+        "d5s3",
+        "d5s4",
+        "d5s5",
+        "d8s0",
+        "d10s0",
+        "d10s1",
+        "d10s2",
+        "d10s3"
+      ],
+      "language": "en"
+    },
+    {
+      "sequence": 50,
+      "time_s": 7.797,
+      "type": "finished",
+      "status": "complete"
+    }
+  ],
+  "note": "Prototype model judgments are not independent gold scores. Output event times are not spoken claim times.",
+  "evidence_mode": "scheduled_trace",
+  "audio": {
+    "enabled": true,
+    "mode": "windows",
+    "play": false,
+    "status": "ok",
+    "errors": [],
+    "records": [
+      {
+        "event_sequence": 3,
+        "sentence_index": 1,
+        "sentence_count": 1,
+        "language": "en",
+        "text": "I’ll look up the death date of Robert Boyle, 11th Earl of Cork’s father.",
+        "action": "Backchannel",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 1.8289999999979045,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1\\samples\\0134\\audio\\segments\\0003_01.wav",
+        "duration_s": 5.0685714285714285,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 2.6410000000032596,
+        "synthesis_and_playback_s": 0.8120000000053551
+      },
+      {
+        "event_sequence": 47,
+        "sentence_index": 1,
+        "sentence_count": 1,
+        "language": "en",
+        "text": "Formulating answer with gathered evidence on Robert Boyle's father's death date.",
+        "action": "Progress",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 7.4689999999973224,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1\\samples\\0134\\audio\\segments\\0047_01.wav",
+        "duration_s": 4.8684807256235825,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 8.26600000000326,
+        "synthesis_and_playback_s": 0.7970000000059372
+      },
+      {
+        "event_sequence": 49,
+        "sentence_index": 1,
+        "sentence_count": 1,
+        "language": "en",
+        "text": "His father, Richard Boyle, 9th Earl of Cork, died on 22 June 1904.",
+        "action": "Final Answer",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 8.26600000000326,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1\\samples\\0134\\audio\\segments\\0049_01.wav",
+        "duration_s": 7.413424036281179,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 9.093999999997322,
+        "synthesis_and_playback_s": 0.8279999999940628
+      }
+    ],
+    "wave": {
+      "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1\\samples\\0134\\audio\\response.wav",
+      "duration_s": 20.547891156462587,
+      "timeline": [
+        {
+          "event_sequence": 3,
+          "sentence_index": 1,
+          "action": "Backchannel",
+          "text": "I’ll look up the death date of Robert Boyle, 11th Earl of Cork’s father.",
+          "wave_start_s": 2.6409977324263036,
+          "wave_end_s": 7.709569160997733
+        },
+        {
+          "event_sequence": 47,
+          "sentence_index": 1,
+          "action": "Progress",
+          "text": "Formulating answer with gathered evidence on Robert Boyle's father's death date.",
+          "wave_start_s": 8.265986394557823,
+          "wave_end_s": 13.134467120181405
+        },
+        {
+          "event_sequence": 49,
+          "sentence_index": 1,
+          "action": "Final Answer",
+          "text": "His father, Richard Boyle, 9th Earl of Cork, died on 22 June 1904.",
+          "wave_start_s": 13.134467120181405,
+          "wave_end_s": 20.547891156462587
+        }
+      ]
+    }
+  },
+  "evaluation": {
+    "mode": "b_final_revised_trace",
+    "trace_id": "2wikimultihopqa_527ee6120bd911eba7f7acde48001122_short",
+    "sample_id": "2wikimultihopqa_527ee6120bd911eba7f7acde48001122",
+    "total_wall_s": 9.110000000000582,
+    "question_timeout_s": 180,
+    "audio_enabled": true,
+    "history_enabled": false,
+    "text_pipeline_wall_s": 7.796999999991385,
+    "effective_settings": {
+      "base_url": "https://tinker.thinkingmachines.dev/services/tinker-prod/oai/api/v1",
+      "model": "openai/gpt-oss-120b",
+      "judge_model": "tinker://f9e9a6c1-e203-5c2c-acdd-68fe67378ca4:train:0/sampler_weights/epoch-0001",
+      "judge_reasoning_effort": "low",
+      "wiki_language": "en",
+      "user_agent": "CascadeSystem/0.1 (educational research prototype)",
+      "timeout_s": 45.0,
+      "max_tokens": 4096,
+      "reasoning_effort": "low",
+      "progress_s": 3.0,
+      "feedback_timeout_s": 6.0,
+      "search_limit": 3,
+      "max_units": 8,
+      "max_searches": 16,
+      "max_sources": 35,
+      "source_chars": 225,
+      "evidence_chars": 4243,
+      "concurrency": 3
+    },
+    "timing_kind": "unknown",
+    "scheduler": "wall-paced fixed B arrivals",
+    "split": "eval_reserved",
+    "empty_evidence_sentences_ignored": 0
+  }
+}

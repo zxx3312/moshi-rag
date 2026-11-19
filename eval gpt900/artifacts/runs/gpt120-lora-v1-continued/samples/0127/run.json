@@ -1,0 +1,384 @@
+{
+  "question": "Which film has the director died earlier, Condemned Women or Faces In The Dark?",
+  "resolved_question": "Which film has the director died earlier, Condemned Women or Faces In The Dark?",
+  "used_history_turn_ids": [],
+  "response_language": "en",
+  "status": "error",
+  "clock": "wall_monotonic",
+  "time_origin": "question_text_ready_after_optional_asr",
+  "model": "openai/gpt-oss-120b",
+  "judge_model": "tinker://f9e9a6c1-e203-5c2c-acdd-68fe67378ca4:train:0/sampler_weights/epoch-0001",
+  "units": [],
+  "judgments": {},
+  "evidence": [],
+  "searches": [],
+  "search_failures": [],
+  "llm_calls": [
+    {
+      "purpose": "feedback_generate",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 411,
+        "completion_tokens": 82,
+        "total_tokens": 493,
+        "prompt_tokens_details": {
+          "cached_tokens": 384
+        }
+      },
+      "latency_s": 1.125
+    },
+    {
+      "purpose": "feedback_verify",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 367,
+        "completion_tokens": 75,
+        "total_tokens": 442,
+        "prompt_tokens_details": {
+          "cached_tokens": 128
+        }
+      },
+      "latency_s": 0.625
+    },
+    {
+      "purpose": "decompose",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 801,
+        "completion_tokens": 325,
+        "total_tokens": 1126,
+        "prompt_tokens_details": {
+          "cached_tokens": 768
+        }
+      },
+      "latency_s": 1.766
+    },
+    {
+      "purpose": "plan_review",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 1171,
+        "completion_tokens": 359,
+        "total_tokens": 1530,
+        "prompt_tokens_details": {
+          "cached_tokens": 768
+        }
+      },
+      "latency_s": 1.187
+    }
+  ],
+  "search_diagnostics": [],
+  "output_enqueued_units": {},
+  "events": [
+    {
+      "sequence": 0,
+      "time_s": 0.0,
+      "type": "feedback_requested",
+      "feedback_kind": "opening",
+      "execution_state": {
+        "stage": "planning",
+        "searches_started": 0,
+        "searches_completed": 0,
+        "active_searches": 0,
+        "evidence_count": 0,
+        "supported_units": 0,
+        "output_units": 0
+      }
+    },
+    {
+      "sequence": 1,
+      "time_s": 1.75,
+      "type": "utterance",
+      "action": "Backchannel",
+      "text": "I’ll look up which of Condemned Women or Faces In The Dark had a director who died earlier.",
+      "claims": [],
+      "feedback_source": "model",
+      "feedback_status_claim": "intent",
+      "feedback_fallback_reason": "",
+      "execution_state": {
+        "stage": "planning",
+        "searches_started": 0,
+        "searches_completed": 0,
+        "active_searches": 0,
+        "evidence_count": 0,
+        "supported_units": 0,
+        "output_units": 0
+      },
+      "language": "en"
+    },
+    {
+      "sequence": 2,
+      "time_s": 1.766,
+      "type": "decompose_reply",
+      "reply": {
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "director of Condemned Women",
+            "subject": "Condemned Women",
+            "necessary": true,
+            "depends_on": [],
+            "queries": [
+              "Condemned Women director"
+            ]
+          },
+          {
+            "unit_id": "u2",
+            "description": "death date of the director of Condemned Women",
+            "subject": "{u1}",
+            "necessary": true,
+            "depends_on": [
+              "u1"
+            ],
+            "queries": [
+              "{u1} death date"
+            ]
+          },
+          {
+            "unit_id": "u3",
+            "description": "director of Faces In The Dark",
+            "subject": "Faces In The Dark",
+            "necessary": true,
+            "depends_on": [],
+            "queries": [
+              "Faces In The Dark director"
+            ]
+          },
+          {
+            "unit_id": "u4",
+            "description": "death date of the director of Faces In The Dark",
+            "subject": "{u3}",
+            "necessary": true,
+            "depends_on": [
+              "u3"
+            ],
+            "queries": [
+              "{u3} death date"
+            ]
+          },
+          {
+            "unit_id": "u5",
+            "description": "which film has the director who died earlier",
+            "subject": "",
+            "necessary": true,
+            "depends_on": [
+              "u2",
+              "u4"
+            ],
+            "queries": [
+              "Condemned Women director death date",
+              "Faces In The Dark director death date"
+            ]
+          }
+        ]
+      },
+      "attempt": 1,
+      "repair": false
+    },
+    {
+      "sequence": 3,
+      "time_s": 1.766,
+      "type": "plan_review_requested",
+      "max_reviews": 1,
+      "question_only": true
+    },
+    {
+      "sequence": 4,
+      "time_s": 2.953,
+      "type": "plan_review_reply",
+      "reply": {
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "director of Condemned Women",
+            "subject": "Condemned Women",
+            "necessary": true,
+            "depends_on": [],
+            "queries": [
+              "Condemned Women director"
+            ]
+          },
+          {
+            "unit_id": "u2",
+            "description": "death date of the director of Condemned Women",
+            "subject": "{u1}",
+            "necessary": true,
+            "depends_on": [
+              "u1"
+            ],
+            "queries": [
+              "{u1} death date"
+            ]
+          },
+          {
+            "unit_id": "u3",
+            "description": "director of Faces In The Dark",
+            "subject": "Faces In The Dark",
+            "necessary": true,
+            "depends_on": [],
+            "queries": [
+              "Faces In The Dark director"
+            ]
+          },
+          {
+            "unit_id": "u4",
+            "description": "death date of the director of Faces In The Dark",
+            "subject": "{u3}",
+            "necessary": true,
+            "depends_on": [
+              "u3"
+            ],
+            "queries": [
+              "{u3} death date"
+            ]
+          },
+          {
+            "unit_id": "u5",
+            "description": "which film has the director who died earlier",
+            "subject": "",
+            "necessary": true,
+            "depends_on": [
+              "u2",
+              "u4"
+            ],
+            "queries": []
+          }
+        ]
+      }
+    },
+    {
+      "sequence": 5,
+      "time_s": 2.953,
+      "type": "plan_review_rejected",
+      "error": "Each unit needs 1 or 2 short search queries"
+    },
+    {
+      "sequence": 6,
+      "time_s": 2.953,
+      "type": "failure",
+      "error": "Each unit needs 1 or 2 short search queries"
+    },
+    {
+      "sequence": 7,
+      "time_s": 2.953,
+      "type": "utterance",
+      "action": "Final Answer",
+      "claims": [],
+      "text": "The search or verification failed, so I cannot give a reliable answer yet.",
+      "language": "en"
+    },
+    {
+      "sequence": 8,
+      "time_s": 2.953,
+      "type": "finished",
+      "status": "error"
+    }
+  ],
+  "note": "Prototype model judgments are not independent gold scores. Output event times are not spoken claim times.",
+  "evidence_mode": "scheduled_trace",
+  "audio": {
+    "enabled": true,
+    "mode": "windows",
+    "play": false,
+    "status": "ok",
+    "errors": [],
+    "records": [
+      {
+        "event_sequence": 1,
+        "sentence_index": 1,
+        "sentence_count": 1,
+        "language": "en",
+        "text": "I’ll look up which of Condemned Women or Faces In The Dark had a director who died earlier.",
+        "action": "Backchannel",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 1.75,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1\\samples\\0127\\audio\\segments\\0001_01.wav",
+        "duration_s": 5.278367346938776,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 2.547000000005937,
+        "synthesis_and_playback_s": 0.7970000000059372
+      },
+      {
+        "event_sequence": 7,
+        "sentence_index": 1,
+        "sentence_count": 1,
+        "language": "en",
+        "text": "The search or verification failed, so I cannot give a reliable answer yet.",
+        "action": "Final Answer",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 2.9530000000086147,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1\\samples\\0127\\audio\\segments\\0007_01.wav",
+        "duration_s": 5.348526077097506,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 3.735000000000582,
+        "synthesis_and_playback_s": 0.7819999999919673
+      }
+    ],
+    "wave": {
+      "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1\\samples\\0127\\audio\\response.wav",
+      "duration_s": 13.173877551020409,
+      "timeline": [
+        {
+          "event_sequence": 1,
+          "sentence_index": 1,
+          "action": "Backchannel",
+          "text": "I’ll look up which of Condemned Women or Faces In The Dark had a director who died earlier.",
+          "wave_start_s": 2.546984126984127,
+          "wave_end_s": 7.825351473922902
+        },
+        {
+          "event_sequence": 7,
+          "sentence_index": 1,
+          "action": "Final Answer",
+          "text": "The search or verification failed, so I cannot give a reliable answer yet.",
+          "wave_start_s": 7.825351473922902,
+          "wave_end_s": 13.173877551020409
+        }
+      ]
+    }
+  },
+  "evaluation": {
+    "mode": "b_final_revised_trace",
+    "trace_id": "2wikimultihopqa_4d982dc308c111ebbd8bac1f6bf848b6_immediate",
+    "sample_id": "2wikimultihopqa_4d982dc308c111ebbd8bac1f6bf848b6",
+    "total_wall_s": 3.75,
+    "question_timeout_s": 180,
+    "audio_enabled": true,
+    "history_enabled": false,
+    "text_pipeline_wall_s": 2.9530000000086147,
+    "effective_settings": {
+      "base_url": "https://tinker.thinkingmachines.dev/services/tinker-prod/oai/api/v1",
+      "model": "openai/gpt-oss-120b",
+      "judge_model": "tinker://f9e9a6c1-e203-5c2c-acdd-68fe67378ca4:train:0/sampler_weights/epoch-0001",
+      "judge_reasoning_effort": "low",
+      "wiki_language": "en",
+      "user_agent": "CascadeSystem/0.1 (educational research prototype)",
+      "timeout_s": 45.0,
+      "max_tokens": 4096,
+      "reasoning_effort": "low",
+      "progress_s": 3.0,
+      "feedback_timeout_s": 6.0,
+      "search_limit": 3,
+      "max_units": 8,
+      "max_searches": 16,
+      "max_sources": 27,
+      "source_chars": 242,
+      "evidence_chars": 2706,
+      "concurrency": 3
+    },
+    "timing_kind": "unknown",
+    "scheduler": "wall-paced fixed B arrivals",
+    "split": "eval_reserved",
+    "empty_evidence_sentences_ignored": 0
+  }
+}

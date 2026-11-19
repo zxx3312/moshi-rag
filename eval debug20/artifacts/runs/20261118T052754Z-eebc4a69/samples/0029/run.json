@@ -1,0 +1,764 @@
+{
+  "question": "On what date did Perseverance launch, and on what date did it land on Mars?",
+  "resolved_question": "On what date did Perseverance launch, and on what date did it land on Mars?",
+  "used_history_turn_ids": [],
+  "response_language": "en",
+  "status": "complete",
+  "clock": "wall_monotonic",
+  "time_origin": "question_text_ready_after_optional_asr",
+  "model": "openai/gpt-oss-120b",
+  "units": [
+    {
+      "unit_id": "u1",
+      "description": "launch date of Perseverance",
+      "necessary": true,
+      "depends_on": [],
+      "queries": [
+        "Perseverance launch date",
+        "Perseverance (rover) launch"
+      ],
+      "subject": "Perseverance (rover)"
+    },
+    {
+      "unit_id": "u2",
+      "description": "landing date of Perseverance on Mars",
+      "necessary": true,
+      "depends_on": [],
+      "queries": [
+        "Perseverance landing date",
+        "Perseverance (rover) Mars landing"
+      ],
+      "subject": "Perseverance (rover)"
+    }
+  ],
+  "judgments": {
+    "u1": {
+      "label": "SUPPORTED",
+      "value": "July 30, 2020",
+      "citations": [
+        "d1s0"
+      ],
+      "quotes": [
+        {
+          "evidence_id": "d1s0",
+          "text": "launched on July 30, 2020"
+        }
+      ],
+      "reason": "Evidence explicitly states the launch date."
+    },
+    "u2": {
+      "label": "SUPPORTED",
+      "value": "February 18, 2021",
+      "citations": [
+        "d2s0"
+      ],
+      "quotes": [
+        {
+          "evidence_id": "d2s0",
+          "text": "landed on Mars on February 18, 2021"
+        }
+      ],
+      "reason": "Evidence explicitly states the landing date."
+    }
+  },
+  "evidence": [
+    {
+      "evidence_id": "d1s0",
+      "title": "Perseverance — launch",
+      "url": "https://trace.invalid/custom_nasa_perseverance_short/d1s0",
+      "text": "The Perseverance mission launched on July 30, 2020.",
+      "visible_time_s": 4.302082199996221,
+      "requested_subject": "",
+      "resolved_title": "Perseverance — launch",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d2s0",
+      "title": "Perseverance — Mars landing",
+      "url": "https://trace.invalid/custom_nasa_perseverance_short/d2s0",
+      "text": "Perseverance landed on Mars on February 18, 2021.",
+      "visible_time_s": 4.302113400000962,
+      "requested_subject": "",
+      "resolved_title": "Perseverance — Mars landing",
+      "entity_resolution": "unspecified"
+    }
+  ],
+  "searches": [
+    {
+      "query": "[scheduled evidence]",
+      "subject": "",
+      "status": "ok",
+      "returned_pages": [],
+      "mode": "trace",
+      "unit_id": "__scheduled_evidence__"
+    }
+  ],
+  "search_failures": [],
+  "llm_calls": [
+    {
+      "purpose": "feedback_generate",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 412,
+        "completion_tokens": 56,
+        "total_tokens": 468,
+        "prompt_tokens_details": {
+          "cached_tokens": 384
+        }
+      },
+      "latency_s": 1.58871
+    },
+    {
+      "purpose": "decompose",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 802,
+        "completion_tokens": 208,
+        "total_tokens": 1010,
+        "prompt_tokens_details": {
+          "cached_tokens": 768
+        }
+      },
+      "latency_s": 2.56757
+    },
+    {
+      "purpose": "feedback_verify",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 362,
+        "completion_tokens": 70,
+        "total_tokens": 432,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        }
+      },
+      "latency_s": 1.17739
+    },
+    {
+      "purpose": "plan_review",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 1033,
+        "completion_tokens": 199,
+        "total_tokens": 1232,
+        "prompt_tokens_details": {
+          "cached_tokens": 1024
+        }
+      },
+      "latency_s": 1.732176
+    },
+    {
+      "purpose": "feedback_generate",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 412,
+        "completion_tokens": 68,
+        "total_tokens": 480,
+        "prompt_tokens_details": {
+          "cached_tokens": 384
+        }
+      },
+      "latency_s": 1.030057
+    },
+    {
+      "purpose": "judge",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 1452,
+        "completion_tokens": 273,
+        "total_tokens": 1725,
+        "prompt_tokens_details": {
+          "cached_tokens": 1152
+        }
+      },
+      "latency_s": 2.807445
+    },
+    {
+      "purpose": "feedback_verify",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 359,
+        "completion_tokens": 62,
+        "total_tokens": 421,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        }
+      },
+      "latency_s": 1.422105
+    },
+    {
+      "purpose": "generate",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 804,
+        "completion_tokens": 85,
+        "total_tokens": 889,
+        "prompt_tokens_details": {
+          "cached_tokens": 768
+        }
+      },
+      "latency_s": 1.242024
+    },
+    {
+      "purpose": "feedback_generate",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 413,
+        "completion_tokens": 53,
+        "total_tokens": 466,
+        "prompt_tokens_details": {
+          "cached_tokens": 384
+        }
+      },
+      "latency_s": 2.427014
+    },
+    {
+      "purpose": "verify",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 1129,
+        "completion_tokens": 114,
+        "total_tokens": 1243,
+        "prompt_tokens_details": {
+          "cached_tokens": 896
+        }
+      },
+      "latency_s": 3.005798
+    },
+    {
+      "purpose": "feedback_verify",
+      "model": "openai/gpt-oss-120b",
+      "status": "cancelled",
+      "latency_s": 0.671477
+    }
+  ],
+  "search_diagnostics": [],
+  "output_enqueued_units": {
+    "u1": "July 30, 2020",
+    "u2": "February 18, 2021"
+  },
+  "events": [
+    {
+      "sequence": 0,
+      "time_s": 0.000325,
+      "type": "feedback_requested",
+      "feedback_kind": "opening",
+      "execution_state": {
+        "stage": "planning",
+        "searches_started": 0,
+        "searches_completed": 0,
+        "active_searches": 0,
+        "evidence_count": 0,
+        "supported_units": 0,
+        "output_units": 0
+      }
+    },
+    {
+      "sequence": 1,
+      "time_s": 2.56786,
+      "type": "decompose_reply",
+      "reply": {
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "launch date of Perseverance",
+            "subject": "Perseverance (rover)",
+            "necessary": true,
+            "depends_on": [],
+            "queries": [
+              "Perseverance launch date",
+              "Perseverance (rover) launch"
+            ]
+          },
+          {
+            "unit_id": "u2",
+            "description": "landing date of Perseverance on Mars",
+            "subject": "Perseverance (rover)",
+            "necessary": true,
+            "depends_on": [],
+            "queries": [
+              "Perseverance landing date",
+              "Perseverance (rover) Mars landing"
+            ]
+          }
+        ]
+      },
+      "attempt": 1,
+      "repair": false
+    },
+    {
+      "sequence": 2,
+      "time_s": 2.569606,
+      "type": "plan_review_requested",
+      "max_reviews": 1,
+      "question_only": true
+    },
+    {
+      "sequence": 3,
+      "time_s": 2.766671,
+      "type": "utterance",
+      "action": "Backchannel",
+      "text": "Got it—I'll look up the launch and landing dates for Perseverance.",
+      "claims": [],
+      "feedback_source": "model",
+      "feedback_status_claim": "intent",
+      "feedback_fallback_reason": "",
+      "execution_state": {
+        "stage": "planning",
+        "searches_started": 0,
+        "searches_completed": 0,
+        "active_searches": 0,
+        "evidence_count": 0,
+        "supported_units": 0,
+        "output_units": 0
+      },
+      "language": "en"
+    },
+    {
+      "sequence": 4,
+      "time_s": 4.301855,
+      "type": "plan_review_reply",
+      "reply": {
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "launch date of Perseverance",
+            "subject": "Perseverance (rover)",
+            "necessary": true,
+            "depends_on": [],
+            "queries": [
+              "Perseverance launch date",
+              "Perseverance (rover) launch"
+            ]
+          },
+          {
+            "unit_id": "u2",
+            "description": "landing date of Perseverance on Mars",
+            "subject": "Perseverance (rover)",
+            "necessary": true,
+            "depends_on": [],
+            "queries": [
+              "Perseverance landing date",
+              "Perseverance (rover) Mars landing"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "sequence": 5,
+      "time_s": 4.301955,
+      "type": "plan_review_finished",
+      "changed": false,
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "launch date of Perseverance",
+          "necessary": true,
+          "depends_on": [],
+          "queries": [
+            "Perseverance launch date",
+            "Perseverance (rover) launch"
+          ],
+          "subject": "Perseverance (rover)"
+        },
+        {
+          "unit_id": "u2",
+          "description": "landing date of Perseverance on Mars",
+          "necessary": true,
+          "depends_on": [],
+          "queries": [
+            "Perseverance landing date",
+            "Perseverance (rover) Mars landing"
+          ],
+          "subject": "Perseverance (rover)"
+        }
+      ],
+      "question_only": true
+    },
+    {
+      "sequence": 6,
+      "time_s": 4.30198,
+      "type": "plan",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "launch date of Perseverance",
+          "necessary": true,
+          "depends_on": [],
+          "queries": [
+            "Perseverance launch date",
+            "Perseverance (rover) launch"
+          ],
+          "subject": "Perseverance (rover)"
+        },
+        {
+          "unit_id": "u2",
+          "description": "landing date of Perseverance on Mars",
+          "necessary": true,
+          "depends_on": [],
+          "queries": [
+            "Perseverance landing date",
+            "Perseverance (rover) Mars landing"
+          ],
+          "subject": "Perseverance (rover)"
+        }
+      ]
+    },
+    {
+      "sequence": 7,
+      "time_s": 4.302,
+      "type": "trace_batch_requested"
+    },
+    {
+      "sequence": 8,
+      "time_s": 4.302051,
+      "type": "search_finished",
+      "query": "[scheduled evidence]",
+      "subject": "",
+      "status": "ok",
+      "returned_pages": [],
+      "mode": "trace",
+      "unit_id": "__scheduled_evidence__"
+    },
+    {
+      "sequence": 9,
+      "time_s": 4.302092,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d1s0",
+        "title": "Perseverance — launch",
+        "url": "https://trace.invalid/custom_nasa_perseverance_short/d1s0",
+        "text": "The Perseverance mission launched on July 30, 2020.",
+        "visible_time_s": 4.302082199996221,
+        "requested_subject": "",
+        "resolved_title": "Perseverance — launch",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 10,
+      "time_s": 4.302117,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d2s0",
+        "title": "Perseverance — Mars landing",
+        "url": "https://trace.invalid/custom_nasa_perseverance_short/d2s0",
+        "text": "Perseverance landed on Mars on February 18, 2021.",
+        "visible_time_s": 4.302113400000962,
+        "requested_subject": "",
+        "resolved_title": "Perseverance — Mars landing",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 11,
+      "time_s": 5.80733,
+      "type": "feedback_requested",
+      "feedback_kind": "progress",
+      "execution_state": {
+        "stage": "checking",
+        "searches_started": 1,
+        "searches_completed": 1,
+        "active_searches": 0,
+        "evidence_count": 2,
+        "supported_units": 0,
+        "output_units": 0
+      }
+    },
+    {
+      "sequence": 12,
+      "time_s": 7.109621,
+      "type": "judge_reply",
+      "reply": {
+        "judgments": [
+          {
+            "unit_id": "u1",
+            "label": "SUPPORTED",
+            "value": "July 30, 2020",
+            "citations": [
+              "d1s0"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d1s0",
+                "text": "launched on July 30, 2020"
+              }
+            ],
+            "reason": "Evidence explicitly states the launch date."
+          },
+          {
+            "unit_id": "u2",
+            "label": "SUPPORTED",
+            "value": "February 18, 2021",
+            "citations": [
+              "d2s0"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d2s0",
+                "text": "landed on Mars on February 18, 2021"
+              }
+            ],
+            "reason": "Evidence explicitly states the landing date."
+          }
+        ]
+      },
+      "attempt": 1,
+      "repair": false,
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d2s0"
+      ]
+    },
+    {
+      "sequence": 13,
+      "time_s": 7.109795,
+      "type": "judgments",
+      "judgments": {
+        "u1": {
+          "label": "SUPPORTED",
+          "value": "July 30, 2020",
+          "citations": [
+            "d1s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d1s0",
+              "text": "launched on July 30, 2020"
+            }
+          ],
+          "reason": "Evidence explicitly states the launch date."
+        },
+        "u2": {
+          "label": "SUPPORTED",
+          "value": "February 18, 2021",
+          "citations": [
+            "d2s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d2s0",
+              "text": "landed on Mars on February 18, 2021"
+            }
+          ],
+          "reason": "Evidence explicitly states the landing date."
+        }
+      },
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d2s0"
+      ],
+      "semantic_review": false
+    },
+    {
+      "sequence": 14,
+      "time_s": 11.357773,
+      "type": "verification_reply",
+      "reply": {
+        "approved": true,
+        "facts_valid": true,
+        "expressed_unit_ids": [
+          "u1",
+          "u2"
+        ],
+        "reason": "All stated facts match the approved evidence and required units."
+      },
+      "output_unit_ids": [
+        "u1",
+        "u2"
+      ],
+      "output_action": "Final Answer",
+      "dependency_unit_ids": [],
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d2s0"
+      ]
+    },
+    {
+      "sequence": 15,
+      "time_s": 11.357826,
+      "type": "utterance",
+      "action": "Final Answer",
+      "text": "Perseverance launched on July 30, 2020. It landed on Mars on February 18, 2021.",
+      "claims": [
+        {
+          "unit_id": "u1",
+          "description": "launch date of Perseverance",
+          "value": "July 30, 2020",
+          "citations": [
+            "d1s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d1s0",
+              "text": "launched on July 30, 2020"
+            }
+          ]
+        },
+        {
+          "unit_id": "u2",
+          "description": "landing date of Perseverance on Mars",
+          "value": "February 18, 2021",
+          "citations": [
+            "d2s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d2s0",
+              "text": "landed on Mars on February 18, 2021"
+            }
+          ]
+        }
+      ],
+      "unresolved": [],
+      "fallback": false,
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d2s0"
+      ],
+      "language": "en"
+    },
+    {
+      "sequence": 16,
+      "time_s": 11.358376,
+      "type": "finished",
+      "status": "complete"
+    }
+  ],
+  "note": "Prototype model judgments are not independent gold scores. Output event times are not spoken claim times.",
+  "evidence_mode": "scheduled_trace",
+  "audio": {
+    "enabled": true,
+    "mode": "windows",
+    "play": false,
+    "status": "ok",
+    "errors": [],
+    "records": [
+      {
+        "event_sequence": 3,
+        "sentence_index": 1,
+        "sentence_count": 1,
+        "language": "en",
+        "text": "Got it—I'll look up the launch and landing dates for Perseverance.",
+        "action": "Backchannel",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 2.7671895999956178,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval debug20\\artifacts\\runs\\20261118T052754Z-eebc4a69\\samples\\0029\\audio\\segments\\0003_01.wav",
+        "duration_s": 4.113650793650794,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 3.5753177000005962,
+        "synthesis_and_playback_s": 0.8084245999998529
+      },
+      {
+        "event_sequence": 15,
+        "sentence_index": 1,
+        "sentence_count": 2,
+        "language": "en",
+        "text": "Perseverance launched on July 30, 2020.",
+        "action": "Final Answer",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 11.358295599995472,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval debug20\\artifacts\\runs\\20261118T052754Z-eebc4a69\\samples\\0029\\audio\\segments\\0015_01.wav",
+        "duration_s": 4.038684807256236,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 12.171497499999532,
+        "synthesis_and_playback_s": 0.8135288000048604
+      },
+      {
+        "event_sequence": 15,
+        "sentence_index": 2,
+        "sentence_count": 2,
+        "language": "en",
+        "text": "It landed on Mars on February 18, 2021.",
+        "action": "Final Answer",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 12.171834100001433,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval debug20\\artifacts\\runs\\20261118T052754Z-eebc4a69\\samples\\0029\\audio\\segments\\0015_02.wav",
+        "duration_s": 4.368707482993197,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 12.994577699995716,
+        "synthesis_and_playback_s": 0.8229967000006582
+      }
+    ],
+    "wave": {
+      "path": "D:\\UIUC\\CS546\\moshi-rag\\eval debug20\\artifacts\\runs\\20261118T052754Z-eebc4a69\\samples\\0029\\audio\\response.wav",
+      "duration_s": 20.57891156462585,
+      "timeline": [
+        {
+          "event_sequence": 3,
+          "sentence_index": 1,
+          "action": "Backchannel",
+          "text": "Got it—I'll look up the launch and landing dates for Perseverance.",
+          "wave_start_s": 3.575328798185941,
+          "wave_end_s": 7.688979591836735
+        },
+        {
+          "event_sequence": 15,
+          "sentence_index": 1,
+          "action": "Final Answer",
+          "text": "Perseverance launched on July 30, 2020.",
+          "wave_start_s": 12.171519274376417,
+          "wave_end_s": 16.210204081632654
+        },
+        {
+          "event_sequence": 15,
+          "sentence_index": 2,
+          "action": "Final Answer",
+          "text": "It landed on Mars on February 18, 2021.",
+          "wave_start_s": 16.210204081632654,
+          "wave_end_s": 20.57891156462585
+        }
+      ]
+    }
+  },
+  "evaluation": {
+    "mode": "b_debug_trace",
+    "trace_id": "custom_nasa_perseverance_short",
+    "sample_id": "custom_nasa_perseverance",
+    "total_wall_s": 12.999247799998557,
+    "question_timeout_s": 180,
+    "audio_enabled": true,
+    "history_enabled": false,
+    "text_pipeline_wall_s": 11.358515300002182,
+    "effective_settings": {
+      "base_url": "https://tinker.thinkingmachines.dev/services/tinker-prod/oai/api/v1",
+      "model": "openai/gpt-oss-120b",
+      "wiki_language": "en",
+      "user_agent": "CascadeSystem/0.1 (educational research prototype)",
+      "timeout_s": 45.0,
+      "max_tokens": 4096,
+      "reasoning_effort": "low",
+      "progress_s": 3.0,
+      "feedback_timeout_s": 6.0,
+      "search_limit": 3,
+      "max_units": 8,
+      "max_searches": 16,
+      "max_sources": 2,
+      "source_chars": 51,
+      "evidence_chars": 100,
+      "concurrency": 3
+    },
+    "timing_kind": "unknown",
+    "scheduler": "wall-paced fixed B arrivals"
+  }
+}

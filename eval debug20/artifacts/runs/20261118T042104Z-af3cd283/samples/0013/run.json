@@ -1,0 +1,1161 @@
+{
+  "question": "Who was born later, Mark Gurr or William Eythe?",
+  "resolved_question": "Who was born later, Mark Gurr or William Eythe?",
+  "used_history_turn_ids": [],
+  "response_language": "en",
+  "status": "complete",
+  "clock": "wall_monotonic",
+  "time_origin": "question_text_ready_after_optional_asr",
+  "model": "openai/gpt-oss-120b",
+  "units": [
+    {
+      "unit_id": "u1",
+      "description": "birth date of Mark Gurr",
+      "necessary": true,
+      "depends_on": [],
+      "queries": [
+        "Mark Gurr birth date",
+        "Mark Gurr date of birth"
+      ],
+      "subject": "Mark Gurr"
+    },
+    {
+      "unit_id": "u2",
+      "description": "birth date of William Eythe",
+      "necessary": true,
+      "depends_on": [],
+      "queries": [
+        "William Eythe birth date",
+        "William Eythe date of birth"
+      ],
+      "subject": "William Eythe"
+    },
+    {
+      "unit_id": "u3",
+      "description": "who was born later between Mark Gurr and William Eythe",
+      "necessary": true,
+      "depends_on": [
+        "u1",
+        "u2"
+      ],
+      "queries": [
+        "Mark Gurr birth date",
+        "William Eythe birth date"
+      ],
+      "subject": ""
+    }
+  ],
+  "judgments": {
+    "u1": {
+      "label": "SUPPORTED",
+      "value": "1966-02-18",
+      "citations": [
+        "d7s0"
+      ],
+      "quotes": [
+        {
+          "evidence_id": "d7s0",
+          "text": "born February 18, 1966"
+        }
+      ],
+      "reason": "Birth date given directly"
+    },
+    "u2": {
+      "label": "SUPPORTED",
+      "value": "1918-04-07",
+      "citations": [
+        "d3s0"
+      ],
+      "quotes": [
+        {
+          "evidence_id": "d3s0",
+          "text": "April 7, 1918"
+        }
+      ],
+      "reason": "Birth date given directly"
+    },
+    "u3": {
+      "label": "SUPPORTED",
+      "value": "Mark Gurr",
+      "citations": [
+        "d7s0",
+        "d3s0"
+      ],
+      "quotes": [
+        {
+          "evidence_id": "d7s0",
+          "text": "born February 18, 1966"
+        },
+        {
+          "evidence_id": "d3s0",
+          "text": "April 7, 1918"
+        }
+      ],
+      "reason": "1966 is later than 1918"
+    }
+  },
+  "evidence": [
+    {
+      "evidence_id": "d1s0",
+      "title": "William of St. Barbara",
+      "url": "https://trace.invalid/2wikimultihopqa_39751c8a08d811ebbd9aac1f6bf848b6_immediate/d1s0",
+      "text": "William of St. Barbara or William of Ste Barbe( died 1152) was a medieval Bishop of Durham.",
+      "visible_time_s": 1.7134885999985272,
+      "requested_subject": "",
+      "resolved_title": "William of St. Barbara",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d2s0",
+      "title": "William Middleton (bishop)",
+      "url": "https://trace.invalid/2wikimultihopqa_39751c8a08d811ebbd9aac1f6bf848b6_immediate/d2s0",
+      "text": "William Middleton( or William de Middleton; died 31 August or 1 September 1288) was a medieval Bishop of Norwich.",
+      "visible_time_s": 1.7135142000006454,
+      "requested_subject": "",
+      "resolved_title": "William Middleton (bishop)",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d3s0",
+      "title": "William Eythe",
+      "url": "https://trace.invalid/2wikimultihopqa_39751c8a08d811ebbd9aac1f6bf848b6_immediate/d3s0",
+      "text": "William Eythe( April 7, 1918 – January 26, 1957) was an American actor of film, radio, television and stage.",
+      "visible_time_s": 1.7135329999982787,
+      "requested_subject": "",
+      "resolved_title": "William Eythe",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d4s0",
+      "title": "William de Turbeville",
+      "url": "https://trace.invalid/2wikimultihopqa_39751c8a08d811ebbd9aac1f6bf848b6_immediate/d4s0",
+      "text": "William de Turbeville( or William Turbe; c. 1095 – January 1174) was a medieval Bishop of Norwich.",
+      "visible_time_s": 1.7135521999989578,
+      "requested_subject": "",
+      "resolved_title": "William de Turbeville",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d5s0",
+      "title": "William Lamb alias Paniter",
+      "url": "https://trace.invalid/2wikimultihopqa_39751c8a08d811ebbd9aac1f6bf848b6_immediate/d5s0",
+      "text": "William Lamb, or William Paniter alias Lamb,( c. 1493- 1550) was a Scottish cleric, lawyer, and author.",
+      "visible_time_s": 1.7136107000005723,
+      "requested_subject": "",
+      "resolved_title": "William Lamb alias Paniter",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d6s0",
+      "title": "W. Augustus Barratt",
+      "url": "https://trace.invalid/2wikimultihopqa_39751c8a08d811ebbd9aac1f6bf848b6_immediate/d6s0",
+      "text": "W. Augustus Barratt( 1873- 1947) was a Scottish- born, later American, songwriter and musician.",
+      "visible_time_s": 1.7136284000007436,
+      "requested_subject": "",
+      "resolved_title": "W. Augustus Barratt",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d7s0",
+      "title": "Mark Gurr",
+      "url": "https://trace.invalid/2wikimultihopqa_39751c8a08d811ebbd9aac1f6bf848b6_immediate/d7s0",
+      "text": "Mark Gurr( born February 18, 1966) is a retired tennis player from Zimbabwe, who represented his native country as a qualifier at the 1988 Summer Olympics in Seoul, South Korea.",
+      "visible_time_s": 1.713643499999307,
+      "requested_subject": "",
+      "resolved_title": "Mark Gurr",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d7s1",
+      "title": "Mark Gurr",
+      "url": "https://trace.invalid/2wikimultihopqa_39751c8a08d811ebbd9aac1f6bf848b6_immediate/d7s1",
+      "text": "There he lost in the first round of the men's singles competition to Spain's Sergio Casal.",
+      "visible_time_s": 1.7136587999993935,
+      "requested_subject": "",
+      "resolved_title": "Mark Gurr",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d7s2",
+      "title": "Mark Gurr",
+      "url": "https://trace.invalid/2wikimultihopqa_39751c8a08d811ebbd9aac1f6bf848b6_immediate/d7s2",
+      "text": "He lost in the second round of the men's doubles competition to Sweden's eventual bronze medalists Anders Järryd and Stefan Edberg, while partnering Philip Tuckniss.",
+      "visible_time_s": 1.7136733999977878,
+      "requested_subject": "",
+      "resolved_title": "Mark Gurr",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d7s3",
+      "title": "Mark Gurr",
+      "url": "https://trace.invalid/2wikimultihopqa_39751c8a08d811ebbd9aac1f6bf848b6_immediate/d7s3",
+      "text": "Mark went to Oriel Boys High School in Harare together with Byron Black and Graig Rodgers, and played in the Davis Cup.",
+      "visible_time_s": 1.7136887999986357,
+      "requested_subject": "",
+      "resolved_title": "Mark Gurr",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d8s0",
+      "title": "William Scott, Lord Balwearie",
+      "url": "https://trace.invalid/2wikimultihopqa_39751c8a08d811ebbd9aac1f6bf848b6_immediate/d8s0",
+      "text": "Sir William Scott, Lord Balwearie( died 1532), or William Scot, was a Scottish judge.",
+      "visible_time_s": 1.7137025000010908,
+      "requested_subject": "",
+      "resolved_title": "William Scott, Lord Balwearie",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d9s0",
+      "title": "William of March",
+      "url": "https://trace.invalid/2wikimultihopqa_39751c8a08d811ebbd9aac1f6bf848b6_immediate/d9s0",
+      "text": "William of March( or William March; died 1302) was a medieval Treasurer of England and a Bishop of Bath and Wells.",
+      "visible_time_s": 1.713716399997793,
+      "requested_subject": "",
+      "resolved_title": "William of March",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d10s0",
+      "title": "Catherine I of Russia",
+      "url": "https://trace.invalid/2wikimultihopqa_39751c8a08d811ebbd9aac1f6bf848b6_immediate/d10s0",
+      "text": "Catherine I( born, later known as Marta Samuilovna Skavronskaya; –) was the second wife of Peter the Great and Empress of Russia from 1725 until her death.",
+      "visible_time_s": 1.7137398999984725,
+      "requested_subject": "",
+      "resolved_title": "Catherine I of Russia",
+      "entity_resolution": "unspecified"
+    }
+  ],
+  "searches": [
+    {
+      "query": "[scheduled evidence]",
+      "subject": "",
+      "status": "ok",
+      "returned_pages": [],
+      "mode": "trace",
+      "unit_id": "__scheduled_evidence__"
+    }
+  ],
+  "search_failures": [],
+  "llm_calls": [
+    {
+      "purpose": "feedback_generate",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 406,
+        "completion_tokens": 101,
+        "total_tokens": 507,
+        "prompt_tokens_details": {
+          "cached_tokens": 384
+        }
+      },
+      "latency_s": 1.359987
+    },
+    {
+      "purpose": "decompose",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 621,
+        "completion_tokens": 273,
+        "total_tokens": 894,
+        "prompt_tokens_details": {
+          "cached_tokens": 512
+        }
+      },
+      "latency_s": 1.712984
+    },
+    {
+      "purpose": "judge",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 2796,
+        "completion_tokens": 427,
+        "total_tokens": 3223,
+        "prompt_tokens_details": {
+          "cached_tokens": 768
+        }
+      },
+      "latency_s": 2.449774
+    },
+    {
+      "purpose": "feedback_generate",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 407,
+        "completion_tokens": 53,
+        "total_tokens": 460,
+        "prompt_tokens_details": {
+          "cached_tokens": 384
+        }
+      },
+      "latency_s": 0.663417
+    },
+    {
+      "purpose": "feedback_verify",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 350,
+        "completion_tokens": 93,
+        "total_tokens": 443,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        }
+      },
+      "latency_s": 0.66039
+    },
+    {
+      "purpose": "generate",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 822,
+        "completion_tokens": 117,
+        "total_tokens": 939,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        }
+      },
+      "latency_s": 1.865209
+    },
+    {
+      "purpose": "verify",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 1361,
+        "completion_tokens": 132,
+        "total_tokens": 1493,
+        "prompt_tokens_details": {
+          "cached_tokens": 640
+        }
+      },
+      "latency_s": 2.135384
+    }
+  ],
+  "search_diagnostics": [],
+  "output_enqueued_units": {
+    "u1": "1966-02-18",
+    "u2": "1918-04-07",
+    "u3": "Mark Gurr"
+  },
+  "events": [
+    {
+      "sequence": 0,
+      "time_s": 0.000329,
+      "type": "feedback_requested",
+      "feedback_kind": "opening",
+      "execution_state": {
+        "stage": "planning",
+        "searches_started": 0,
+        "searches_completed": 0,
+        "active_searches": 0,
+        "evidence_count": 0,
+        "supported_units": 0,
+        "output_units": 0
+      }
+    },
+    {
+      "sequence": 1,
+      "time_s": 1.360551,
+      "type": "utterance",
+      "action": "Backchannel",
+      "text": "Let me check.",
+      "claims": [],
+      "feedback_source": "fallback",
+      "feedback_status_claim": "intent",
+      "feedback_fallback_reason": "feedback_may_contain_answer_or_unearned_result",
+      "execution_state": {
+        "stage": "planning",
+        "searches_started": 0,
+        "searches_completed": 0,
+        "active_searches": 0,
+        "evidence_count": 0,
+        "supported_units": 0,
+        "output_units": 0
+      },
+      "language": "en"
+    },
+    {
+      "sequence": 2,
+      "time_s": 1.713278,
+      "type": "decompose_reply",
+      "reply": {
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "birth date of Mark Gurr",
+            "subject": "Mark Gurr",
+            "necessary": true,
+            "depends_on": [],
+            "queries": [
+              "Mark Gurr birth date",
+              "Mark Gurr date of birth"
+            ]
+          },
+          {
+            "unit_id": "u2",
+            "description": "birth date of William Eythe",
+            "subject": "William Eythe",
+            "necessary": true,
+            "depends_on": [],
+            "queries": [
+              "William Eythe birth date",
+              "William Eythe date of birth"
+            ]
+          },
+          {
+            "unit_id": "u3",
+            "description": "who was born later between Mark Gurr and William Eythe",
+            "subject": "",
+            "necessary": true,
+            "depends_on": [
+              "u1",
+              "u2"
+            ],
+            "queries": [
+              "Mark Gurr birth date",
+              "William Eythe birth date"
+            ]
+          }
+        ]
+      },
+      "attempt": 1,
+      "repair": false
+    },
+    {
+      "sequence": 3,
+      "time_s": 1.713382,
+      "type": "plan",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "birth date of Mark Gurr",
+          "necessary": true,
+          "depends_on": [],
+          "queries": [
+            "Mark Gurr birth date",
+            "Mark Gurr date of birth"
+          ],
+          "subject": "Mark Gurr"
+        },
+        {
+          "unit_id": "u2",
+          "description": "birth date of William Eythe",
+          "necessary": true,
+          "depends_on": [],
+          "queries": [
+            "William Eythe birth date",
+            "William Eythe date of birth"
+          ],
+          "subject": "William Eythe"
+        },
+        {
+          "unit_id": "u3",
+          "description": "who was born later between Mark Gurr and William Eythe",
+          "necessary": true,
+          "depends_on": [
+            "u1",
+            "u2"
+          ],
+          "queries": [
+            "Mark Gurr birth date",
+            "William Eythe birth date"
+          ],
+          "subject": ""
+        }
+      ]
+    },
+    {
+      "sequence": 4,
+      "time_s": 1.713405,
+      "type": "trace_batch_requested"
+    },
+    {
+      "sequence": 5,
+      "time_s": 1.713458,
+      "type": "search_finished",
+      "query": "[scheduled evidence]",
+      "subject": "",
+      "status": "ok",
+      "returned_pages": [],
+      "mode": "trace",
+      "unit_id": "__scheduled_evidence__"
+    },
+    {
+      "sequence": 6,
+      "time_s": 1.713497,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d1s0",
+        "title": "William of St. Barbara",
+        "url": "https://trace.invalid/2wikimultihopqa_39751c8a08d811ebbd9aac1f6bf848b6_immediate/d1s0",
+        "text": "William of St. Barbara or William of Ste Barbe( died 1152) was a medieval Bishop of Durham.",
+        "visible_time_s": 1.7134885999985272,
+        "requested_subject": "",
+        "resolved_title": "William of St. Barbara",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 7,
+      "time_s": 1.713518,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d2s0",
+        "title": "William Middleton (bishop)",
+        "url": "https://trace.invalid/2wikimultihopqa_39751c8a08d811ebbd9aac1f6bf848b6_immediate/d2s0",
+        "text": "William Middleton( or William de Middleton; died 31 August or 1 September 1288) was a medieval Bishop of Norwich.",
+        "visible_time_s": 1.7135142000006454,
+        "requested_subject": "",
+        "resolved_title": "William Middleton (bishop)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 8,
+      "time_s": 1.713536,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d3s0",
+        "title": "William Eythe",
+        "url": "https://trace.invalid/2wikimultihopqa_39751c8a08d811ebbd9aac1f6bf848b6_immediate/d3s0",
+        "text": "William Eythe( April 7, 1918 – January 26, 1957) was an American actor of film, radio, television and stage.",
+        "visible_time_s": 1.7135329999982787,
+        "requested_subject": "",
+        "resolved_title": "William Eythe",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 9,
+      "time_s": 1.713555,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d4s0",
+        "title": "William de Turbeville",
+        "url": "https://trace.invalid/2wikimultihopqa_39751c8a08d811ebbd9aac1f6bf848b6_immediate/d4s0",
+        "text": "William de Turbeville( or William Turbe; c. 1095 – January 1174) was a medieval Bishop of Norwich.",
+        "visible_time_s": 1.7135521999989578,
+        "requested_subject": "",
+        "resolved_title": "William de Turbeville",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 10,
+      "time_s": 1.713614,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d5s0",
+        "title": "William Lamb alias Paniter",
+        "url": "https://trace.invalid/2wikimultihopqa_39751c8a08d811ebbd9aac1f6bf848b6_immediate/d5s0",
+        "text": "William Lamb, or William Paniter alias Lamb,( c. 1493- 1550) was a Scottish cleric, lawyer, and author.",
+        "visible_time_s": 1.7136107000005723,
+        "requested_subject": "",
+        "resolved_title": "William Lamb alias Paniter",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 11,
+      "time_s": 1.713631,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d6s0",
+        "title": "W. Augustus Barratt",
+        "url": "https://trace.invalid/2wikimultihopqa_39751c8a08d811ebbd9aac1f6bf848b6_immediate/d6s0",
+        "text": "W. Augustus Barratt( 1873- 1947) was a Scottish- born, later American, songwriter and musician.",
+        "visible_time_s": 1.7136284000007436,
+        "requested_subject": "",
+        "resolved_title": "W. Augustus Barratt",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 12,
+      "time_s": 1.713646,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d7s0",
+        "title": "Mark Gurr",
+        "url": "https://trace.invalid/2wikimultihopqa_39751c8a08d811ebbd9aac1f6bf848b6_immediate/d7s0",
+        "text": "Mark Gurr( born February 18, 1966) is a retired tennis player from Zimbabwe, who represented his native country as a qualifier at the 1988 Summer Olympics in Seoul, South Korea.",
+        "visible_time_s": 1.713643499999307,
+        "requested_subject": "",
+        "resolved_title": "Mark Gurr",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 13,
+      "time_s": 1.713661,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d7s1",
+        "title": "Mark Gurr",
+        "url": "https://trace.invalid/2wikimultihopqa_39751c8a08d811ebbd9aac1f6bf848b6_immediate/d7s1",
+        "text": "There he lost in the first round of the men's singles competition to Spain's Sergio Casal.",
+        "visible_time_s": 1.7136587999993935,
+        "requested_subject": "",
+        "resolved_title": "Mark Gurr",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 14,
+      "time_s": 1.713676,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d7s2",
+        "title": "Mark Gurr",
+        "url": "https://trace.invalid/2wikimultihopqa_39751c8a08d811ebbd9aac1f6bf848b6_immediate/d7s2",
+        "text": "He lost in the second round of the men's doubles competition to Sweden's eventual bronze medalists Anders Järryd and Stefan Edberg, while partnering Philip Tuckniss.",
+        "visible_time_s": 1.7136733999977878,
+        "requested_subject": "",
+        "resolved_title": "Mark Gurr",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 15,
+      "time_s": 1.713691,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d7s3",
+        "title": "Mark Gurr",
+        "url": "https://trace.invalid/2wikimultihopqa_39751c8a08d811ebbd9aac1f6bf848b6_immediate/d7s3",
+        "text": "Mark went to Oriel Boys High School in Harare together with Byron Black and Graig Rodgers, and played in the Davis Cup.",
+        "visible_time_s": 1.7136887999986357,
+        "requested_subject": "",
+        "resolved_title": "Mark Gurr",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 16,
+      "time_s": 1.713705,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d8s0",
+        "title": "William Scott, Lord Balwearie",
+        "url": "https://trace.invalid/2wikimultihopqa_39751c8a08d811ebbd9aac1f6bf848b6_immediate/d8s0",
+        "text": "Sir William Scott, Lord Balwearie( died 1532), or William Scot, was a Scottish judge.",
+        "visible_time_s": 1.7137025000010908,
+        "requested_subject": "",
+        "resolved_title": "William Scott, Lord Balwearie",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 17,
+      "time_s": 1.713719,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d9s0",
+        "title": "William of March",
+        "url": "https://trace.invalid/2wikimultihopqa_39751c8a08d811ebbd9aac1f6bf848b6_immediate/d9s0",
+        "text": "William of March( or William March; died 1302) was a medieval Treasurer of England and a Bishop of Bath and Wells.",
+        "visible_time_s": 1.713716399997793,
+        "requested_subject": "",
+        "resolved_title": "William of March",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 18,
+      "time_s": 1.713742,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d10s0",
+        "title": "Catherine I of Russia",
+        "url": "https://trace.invalid/2wikimultihopqa_39751c8a08d811ebbd9aac1f6bf848b6_immediate/d10s0",
+        "text": "Catherine I( born, later known as Marta Samuilovna Skavronskaya; –) was the second wife of Peter the Great and Empress of Russia from 1725 until her death.",
+        "visible_time_s": 1.7137398999984725,
+        "requested_subject": "",
+        "resolved_title": "Catherine I of Russia",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 19,
+      "time_s": 4.163608,
+      "type": "judge_reply",
+      "reply": {
+        "judgments": [
+          {
+            "unit_id": "u1",
+            "label": "SUPPORTED",
+            "value": "1966-02-18",
+            "citations": [
+              "d7s0"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d7s0",
+                "text": "born February 18, 1966"
+              }
+            ],
+            "reason": "Birth date given directly"
+          },
+          {
+            "unit_id": "u2",
+            "label": "SUPPORTED",
+            "value": "1918-04-07",
+            "citations": [
+              "d3s0"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d3s0",
+                "text": "April 7, 1918"
+              }
+            ],
+            "reason": "Birth date given directly"
+          },
+          {
+            "unit_id": "u3",
+            "label": "SUPPORTED",
+            "value": "Mark Gurr",
+            "citations": [
+              "d7s0",
+              "d3s0"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d7s0",
+                "text": "born February 18, 1966"
+              },
+              {
+                "evidence_id": "d3s0",
+                "text": "April 7, 1918"
+              }
+            ],
+            "reason": "1966 is later than 1918"
+          }
+        ]
+      },
+      "attempt": 1,
+      "repair": false,
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d2s0",
+        "d3s0",
+        "d4s0",
+        "d5s0",
+        "d6s0",
+        "d7s0",
+        "d7s1",
+        "d7s2",
+        "d7s3",
+        "d8s0",
+        "d9s0",
+        "d10s0"
+      ]
+    },
+    {
+      "sequence": 20,
+      "time_s": 4.163732,
+      "type": "judgments",
+      "judgments": {
+        "u1": {
+          "label": "SUPPORTED",
+          "value": "1966-02-18",
+          "citations": [
+            "d7s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d7s0",
+              "text": "born February 18, 1966"
+            }
+          ],
+          "reason": "Birth date given directly"
+        },
+        "u2": {
+          "label": "SUPPORTED",
+          "value": "1918-04-07",
+          "citations": [
+            "d3s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d3s0",
+              "text": "April 7, 1918"
+            }
+          ],
+          "reason": "Birth date given directly"
+        },
+        "u3": {
+          "label": "SUPPORTED",
+          "value": "Mark Gurr",
+          "citations": [
+            "d7s0",
+            "d3s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d7s0",
+              "text": "born February 18, 1966"
+            },
+            {
+              "evidence_id": "d3s0",
+              "text": "April 7, 1918"
+            }
+          ],
+          "reason": "1966 is later than 1918"
+        }
+      },
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d2s0",
+        "d3s0",
+        "d4s0",
+        "d5s0",
+        "d6s0",
+        "d7s0",
+        "d7s1",
+        "d7s2",
+        "d7s3",
+        "d8s0",
+        "d9s0",
+        "d10s0"
+      ],
+      "semantic_review": false
+    },
+    {
+      "sequence": 21,
+      "time_s": 4.485579,
+      "type": "feedback_requested",
+      "feedback_kind": "progress",
+      "execution_state": {
+        "stage": "formulating",
+        "searches_started": 1,
+        "searches_completed": 1,
+        "active_searches": 0,
+        "evidence_count": 13,
+        "supported_units": 3,
+        "output_units": 0
+      }
+    },
+    {
+      "sequence": 22,
+      "time_s": 5.80977,
+      "type": "utterance",
+      "action": "Progress",
+      "text": "Formulating the answer with gathered evidence.",
+      "claims": [],
+      "feedback_source": "model",
+      "feedback_status_claim": "formulating",
+      "feedback_fallback_reason": "",
+      "execution_state": {
+        "stage": "formulating",
+        "searches_started": 1,
+        "searches_completed": 1,
+        "active_searches": 0,
+        "evidence_count": 13,
+        "supported_units": 3,
+        "output_units": 0
+      },
+      "language": "en"
+    },
+    {
+      "sequence": 23,
+      "time_s": 6.02903,
+      "type": "generation_fallback",
+      "reason": "Draft omitted a value or had invalid length",
+      "output_unit_ids": [
+        "u1",
+        "u2",
+        "u3"
+      ]
+    },
+    {
+      "sequence": 24,
+      "time_s": 8.164522,
+      "type": "verification_reply",
+      "reply": {
+        "approved": true,
+        "facts_valid": true,
+        "expressed_unit_ids": [
+          "u1",
+          "u2",
+          "u3"
+        ],
+        "reason": "All factual claims match approved facts and evidence, and the draft covers all required units without extra statements."
+      },
+      "output_unit_ids": [
+        "u1",
+        "u2",
+        "u3"
+      ],
+      "output_action": "Final Answer",
+      "dependency_unit_ids": [],
+      "evidence_snapshot_ids": [
+        "d3s0",
+        "d7s0"
+      ]
+    },
+    {
+      "sequence": 25,
+      "time_s": 8.164574,
+      "type": "utterance",
+      "action": "Final Answer",
+      "text": "Birth date of Mark Gurr is 1966-02-18. Birth date of William Eythe is 1918-04-07. For the question \"who was born later between Mark Gurr and William Eythe\", the confirmed answer is Mark Gurr.",
+      "claims": [
+        {
+          "unit_id": "u1",
+          "description": "birth date of Mark Gurr",
+          "value": "1966-02-18",
+          "citations": [
+            "d7s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d7s0",
+              "text": "born February 18, 1966"
+            }
+          ]
+        },
+        {
+          "unit_id": "u2",
+          "description": "birth date of William Eythe",
+          "value": "1918-04-07",
+          "citations": [
+            "d3s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d3s0",
+              "text": "April 7, 1918"
+            }
+          ]
+        },
+        {
+          "unit_id": "u3",
+          "description": "who was born later between Mark Gurr and William Eythe",
+          "value": "Mark Gurr",
+          "citations": [
+            "d7s0",
+            "d3s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d7s0",
+              "text": "born February 18, 1966"
+            },
+            {
+              "evidence_id": "d3s0",
+              "text": "April 7, 1918"
+            }
+          ]
+        }
+      ],
+      "unresolved": [],
+      "fallback": true,
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d2s0",
+        "d3s0",
+        "d4s0",
+        "d5s0",
+        "d6s0",
+        "d7s0",
+        "d7s1",
+        "d7s2",
+        "d7s3",
+        "d8s0",
+        "d9s0",
+        "d10s0"
+      ],
+      "language": "en"
+    },
+    {
+      "sequence": 26,
+      "time_s": 8.165081,
+      "type": "finished",
+      "status": "complete"
+    }
+  ],
+  "note": "Prototype model judgments are not independent gold scores. Output event times are not spoken claim times.",
+  "evidence_mode": "scheduled_trace",
+  "audio": {
+    "enabled": true,
+    "mode": "windows",
+    "play": false,
+    "status": "ok",
+    "errors": [],
+    "records": [
+      {
+        "event_sequence": 1,
+        "sentence_index": 1,
+        "sentence_count": 1,
+        "language": "en",
+        "text": "Let me check.",
+        "action": "Backchannel",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 1.3633728999993764,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval debug20\\artifacts\\runs\\20261118T042104Z-af3cd283\\samples\\0013\\audio\\segments\\0001_01.wav",
+        "duration_s": 1.649297052154195,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 2.1988740999986476,
+        "synthesis_and_playback_s": 0.835771999998542
+      },
+      {
+        "event_sequence": 22,
+        "sentence_index": 1,
+        "sentence_count": 1,
+        "language": "en",
+        "text": "Formulating the answer with gathered evidence.",
+        "action": "Progress",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 5.810216400001082,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval debug20\\artifacts\\runs\\20261118T042104Z-af3cd283\\samples\\0013\\audio\\segments\\0022_01.wav",
+        "duration_s": 3.113968253968254,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 6.617368600000191,
+        "synthesis_and_playback_s": 0.8074962999999116
+      },
+      {
+        "event_sequence": 25,
+        "sentence_index": 1,
+        "sentence_count": 3,
+        "language": "en",
+        "text": "Birth date of Mark Gurr is 1966-02-18.",
+        "action": "Final Answer",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 8.165019899999606,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval debug20\\artifacts\\runs\\20261118T042104Z-af3cd283\\samples\\0013\\audio\\segments\\0025_01.wav",
+        "duration_s": 4.828843537414966,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 8.982830900000408,
+        "synthesis_and_playback_s": 0.8180749999992258
+      },
+      {
+        "event_sequence": 25,
+        "sentence_index": 2,
+        "sentence_count": 3,
+        "language": "en",
+        "text": "Birth date of William Eythe is 1918-04-07.",
+        "action": "Final Answer",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 8.98310180000044,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval debug20\\artifacts\\runs\\20261118T042104Z-af3cd283\\samples\\0013\\audio\\segments\\0025_02.wav",
+        "duration_s": 4.273832199546486,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 9.781087899998965,
+        "synthesis_and_playback_s": 0.7982608999991498
+      },
+      {
+        "event_sequence": 25,
+        "sentence_index": 3,
+        "sentence_count": 3,
+        "language": "en",
+        "text": "For the question \"who was born later between Mark Gurr and William Eythe\", the confirmed answer is Mark Gurr.",
+        "action": "Final Answer",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 9.781369299998914,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval debug20\\artifacts\\runs\\20261118T042104Z-af3cd283\\samples\\0013\\audio\\segments\\0025_03.wav",
+        "duration_s": 6.523265306122449,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 10.567810500000633,
+        "synthesis_and_playback_s": 0.7867069000021729
+      }
+    ],
+    "wave": {
+      "path": "D:\\UIUC\\CS546\\moshi-rag\\eval debug20\\artifacts\\runs\\20261118T042104Z-af3cd283\\samples\\0013\\audio\\response.wav",
+      "duration_s": 25.357278911564627,
+      "timeline": [
+        {
+          "event_sequence": 1,
+          "sentence_index": 1,
+          "action": "Backchannel",
+          "text": "Let me check.",
+          "wave_start_s": 2.1988662131519274,
+          "wave_end_s": 3.8481632653061224
+        },
+        {
+          "event_sequence": 22,
+          "sentence_index": 1,
+          "action": "Progress",
+          "text": "Formulating the answer with gathered evidence.",
+          "wave_start_s": 6.617369614512472,
+          "wave_end_s": 9.731337868480725
+        },
+        {
+          "event_sequence": 25,
+          "sentence_index": 1,
+          "action": "Final Answer",
+          "text": "Birth date of Mark Gurr is 1966-02-18.",
+          "wave_start_s": 9.731337868480725,
+          "wave_end_s": 14.560181405895692
+        },
+        {
+          "event_sequence": 25,
+          "sentence_index": 2,
+          "action": "Final Answer",
+          "text": "Birth date of William Eythe is 1918-04-07.",
+          "wave_start_s": 14.560181405895692,
+          "wave_end_s": 18.834013605442177
+        },
+        {
+          "event_sequence": 25,
+          "sentence_index": 3,
+          "action": "Final Answer",
+          "text": "For the question \"who was born later between Mark Gurr and William Eythe\", the confirmed answer is Mark Gurr.",
+          "wave_start_s": 18.834013605442177,
+          "wave_end_s": 25.357278911564627
+        }
+      ]
+    }
+  },
+  "evaluation": {
+    "mode": "b_debug_trace",
+    "trace_id": "2wikimultihopqa_39751c8a08d811ebbd9aac1f6bf848b6_immediate",
+    "sample_id": "2wikimultihopqa_39751c8a08d811ebbd9aac1f6bf848b6",
+    "total_wall_s": 10.570457099998748,
+    "question_timeout_s": 180,
+    "audio_enabled": true,
+    "history_enabled": false,
+    "text_pipeline_wall_s": 8.165258699998958,
+    "effective_settings": {
+      "base_url": "https://tinker.thinkingmachines.dev/services/tinker-prod/oai/api/v1",
+      "model": "openai/gpt-oss-120b",
+      "wiki_language": "en",
+      "user_agent": "CascadeSystem/0.1 (educational research prototype)",
+      "timeout_s": 45.0,
+      "max_tokens": 4096,
+      "reasoning_effort": "low",
+      "progress_s": 3.0,
+      "feedback_timeout_s": 6.0,
+      "search_limit": 3,
+      "max_units": 8,
+      "max_searches": 16,
+      "max_sources": 13,
+      "source_chars": 177,
+      "evidence_chars": 1513,
+      "concurrency": 3
+    },
+    "timing_kind": "unknown",
+    "scheduler": "wall-paced fixed B arrivals"
+  }
+}

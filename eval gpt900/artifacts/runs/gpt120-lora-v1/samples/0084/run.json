@@ -1,0 +1,2296 @@
+{
+  "question": "Which film has the director who was born later, Achena Prem or The Death Kiss?",
+  "resolved_question": "Which film has the director who was born later, Achena Prem or The Death Kiss?",
+  "used_history_turn_ids": [],
+  "response_language": "en",
+  "status": "complete",
+  "clock": "wall_monotonic",
+  "time_origin": "question_text_ready_after_optional_asr",
+  "model": "openai/gpt-oss-120b",
+  "judge_model": "tinker://f9e9a6c1-e203-5c2c-acdd-68fe67378ca4:train:0/sampler_weights/epoch-0001",
+  "units": [
+    {
+      "unit_id": "u1",
+      "description": "Director of the film Achena Prem",
+      "necessary": true,
+      "depends_on": [],
+      "queries": [
+        "Achena Prem film director"
+      ],
+      "subject": "Achena Prem"
+    },
+    {
+      "unit_id": "u2",
+      "description": "Birth year of the director of Achena Prem",
+      "necessary": true,
+      "depends_on": [
+        "u1"
+      ],
+      "queries": [
+        "{u1} birth year",
+        "{u1} date of birth"
+      ],
+      "subject": "{u1}"
+    },
+    {
+      "unit_id": "u3",
+      "description": "Director of the film The Death Kiss",
+      "necessary": true,
+      "depends_on": [],
+      "queries": [
+        "The Death Kiss film director"
+      ],
+      "subject": "The Death Kiss"
+    },
+    {
+      "unit_id": "u4",
+      "description": "Birth year of the director of The Death Kiss",
+      "necessary": true,
+      "depends_on": [
+        "u3"
+      ],
+      "queries": [
+        "{u3} birth year",
+        "{u3} date of birth"
+      ],
+      "subject": "{u3}"
+    },
+    {
+      "unit_id": "u5",
+      "description": "Which film has the director who was born later",
+      "necessary": true,
+      "depends_on": [
+        "u2",
+        "u4",
+        "u1",
+        "u3"
+      ],
+      "queries": [
+        "compare birth years of {u1} and {u3}"
+      ],
+      "subject": ""
+    }
+  ],
+  "judgments": {
+    "u1": {
+      "label": "SUPPORTED",
+      "value": "Swapan Saha",
+      "citations": [
+        "d9s0"
+      ],
+      "quotes": [
+        {
+          "evidence_id": "d9s0",
+          "text": "Achena Prem is a 2011 Bengali film directed by Swapan Saha and produced under the banner of Maa Kali Films."
+        }
+      ],
+      "reason": "Supported by the cited visible sentences and dependencies."
+    },
+    "u2": {
+      "label": "SUPPORTED",
+      "value": "1930",
+      "citations": [
+        "d8s0"
+      ],
+      "quotes": [
+        {
+          "evidence_id": "d8s0",
+          "text": "Swapan Saha( born 10 January 1930 in Ajmer, Rajasthan, India) is an Indian Bengali film director, producer, story writer and score composer."
+        }
+      ],
+      "reason": "Supported by the cited visible sentences and dependencies."
+    },
+    "u3": {
+      "label": "SUPPORTED",
+      "value": "Edwin L. Marin",
+      "citations": [
+        "d1s1"
+      ],
+      "quotes": [
+        {
+          "evidence_id": "d1s1",
+          "text": "The thriller features three leading players from the previous year's\" Dracula\"( Lugosi, Manners, and Edward Van Sloan), and was the first film directed by Edwin L. Marin."
+        }
+      ],
+      "reason": "Supported by the cited visible sentences and dependencies."
+    },
+    "u4": {
+      "label": "SUPPORTED",
+      "value": "1899",
+      "citations": [
+        "d3s0"
+      ],
+      "quotes": [
+        {
+          "evidence_id": "d3s0",
+          "text": "Edwin L. Marin (February 21, 1899 – May 2, 1951) was an American film director who directed 58 films between 1932 and 1951, working with Randolph Scott, Anna May Wong, John Wayne, Peter Lorre, George Raft, Bela Lugosi, Judy Garland, Eddie Cantor, and Hoagy Carmichael, among many others."
+        }
+      ],
+      "reason": "Supported by the cited visible sentences and dependencies."
+    },
+    "u5": {
+      "label": "SUPPORTED",
+      "value": "Achena Prem",
+      "citations": [
+        "d8s0",
+        "d3s0"
+      ],
+      "quotes": [
+        {
+          "evidence_id": "d8s0",
+          "text": "Swapan Saha( born 10 January 1930 in Ajmer, Rajasthan, India) is an Indian Bengali film director, producer, story writer and score composer."
+        },
+        {
+          "evidence_id": "d3s0",
+          "text": "Edwin L. Marin (February 21, 1899 – May 2, 1951) was an American film director who directed 58 films between 1932 and 1951, working with Randolph Scott, Anna May Wong, John Wayne, Peter Lorre, George Raft, Bela Lugosi, Judy Garland, Eddie Cantor, and Hoagy Carmichael, among many others."
+        }
+      ],
+      "reason": "Supported by the cited visible sentences and dependencies."
+    }
+  },
+  "evidence": [
+    {
+      "evidence_id": "d1s0",
+      "title": "The Death Kiss",
+      "url": "https://trace.invalid/2wikimultihopqa_384093b208b011ebbd84ac1f6bf848b6_long/d1s0",
+      "text": "The Death Kiss is a 1932 American pre-Code mystery film starring David Manners as a crusading studio writer, Adrienne Ames as an actress, and Bela Lugosi as a studio manager.",
+      "visible_time_s": 3.7810000000026776,
+      "requested_subject": "",
+      "resolved_title": "The Death Kiss",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d1s1",
+      "title": "The Death Kiss",
+      "url": "https://trace.invalid/2wikimultihopqa_384093b208b011ebbd84ac1f6bf848b6_long/d1s1",
+      "text": "The thriller features three leading players from the previous year's\" Dracula\"( Lugosi, Manners, and Edward Van Sloan), and was the first film directed by Edwin L. Marin.",
+      "visible_time_s": 3.7810000000026776,
+      "requested_subject": "",
+      "resolved_title": "The Death Kiss",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d1s2",
+      "title": "The Death Kiss",
+      "url": "https://trace.invalid/2wikimultihopqa_384093b208b011ebbd84ac1f6bf848b6_long/d1s2",
+      "text": "The film was produced by KBS Productions at Tiffany Pictures and released by Sono Art- World Wide Pictures.",
+      "visible_time_s": 3.7810000000026776,
+      "requested_subject": "",
+      "resolved_title": "The Death Kiss",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d1s3",
+      "title": "The Death Kiss",
+      "url": "https://trace.invalid/2wikimultihopqa_384093b208b011ebbd84ac1f6bf848b6_long/d1s3",
+      "text": "The film is currently in the public domain.",
+      "visible_time_s": 3.7810000000026776,
+      "requested_subject": "",
+      "resolved_title": "The Death Kiss",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d2s0",
+      "title": "Rumbi Katedza",
+      "url": "https://trace.invalid/2wikimultihopqa_384093b208b011ebbd84ac1f6bf848b6_long/d2s0",
+      "text": "Rumbi Katedza is a Zimbabwean Film Producer and Director who was born on 17 January 1974.",
+      "visible_time_s": 3.7810000000026776,
+      "requested_subject": "",
+      "resolved_title": "Rumbi Katedza",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d5s0",
+      "title": "Hassan Zee",
+      "url": "https://trace.invalid/2wikimultihopqa_384093b208b011ebbd84ac1f6bf848b6_long/d5s0",
+      "text": "Hassan Zee is a Pakistani- American film director who was born in Chakwal, Pakistan.",
+      "visible_time_s": 3.7810000000026776,
+      "requested_subject": "",
+      "resolved_title": "Hassan Zee",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d7s0",
+      "title": "W. Augustus Barratt",
+      "url": "https://trace.invalid/2wikimultihopqa_384093b208b011ebbd84ac1f6bf848b6_long/d7s0",
+      "text": "W. Augustus Barratt( 1873- 1947) was a Scottish- born, later American, songwriter and musician.",
+      "visible_time_s": 3.7810000000026776,
+      "requested_subject": "",
+      "resolved_title": "W. Augustus Barratt",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d9s0",
+      "title": "Achena Prem",
+      "url": "https://trace.invalid/2wikimultihopqa_384093b208b011ebbd84ac1f6bf848b6_long/d9s0",
+      "text": "Achena Prem is a 2011 Bengali film directed by Swapan Saha and produced under the banner of Maa Kali Films.",
+      "visible_time_s": 3.7810000000026776,
+      "requested_subject": "",
+      "resolved_title": "Achena Prem",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d9s1",
+      "title": "Achena Prem",
+      "url": "https://trace.invalid/2wikimultihopqa_384093b208b011ebbd84ac1f6bf848b6_long/d9s1",
+      "text": "The movie is an unofficial remake of hit Kannada movie\" Mussanjemaatu\".",
+      "visible_time_s": 3.7810000000026776,
+      "requested_subject": "",
+      "resolved_title": "Achena Prem",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d9s2",
+      "title": "Achena Prem",
+      "url": "https://trace.invalid/2wikimultihopqa_384093b208b011ebbd84ac1f6bf848b6_long/d9s2",
+      "text": "Surprisingly the fact that it is a remake of the Kannada movie has not been mentioned either on the Achena Prem's official website or in other reviews/ articles on the internet All Kannada songs from the original have been also retained in the movie.",
+      "visible_time_s": 3.7810000000026776,
+      "requested_subject": "",
+      "resolved_title": "Achena Prem",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d9s3",
+      "title": "Achena Prem",
+      "url": "https://trace.invalid/2wikimultihopqa_384093b208b011ebbd84ac1f6bf848b6_long/d9s3",
+      "text": "The song\" Kar Mone te ki Swopno Thake\" is the Bengali version of Kannada song\" Enagali Munde Saagu Nee\" and\" Tomake Bhebe Mon\" is the Bengali version of Kannada song\" Ninna Nodalento\".",
+      "visible_time_s": 3.7810000000026776,
+      "requested_subject": "",
+      "resolved_title": "Achena Prem",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d3s0",
+      "title": "Edwin L. Marin",
+      "url": "https://trace.invalid/2wikimultihopqa_384093b208b011ebbd84ac1f6bf848b6_long/d3s0",
+      "text": "Edwin L. Marin (February 21, 1899 – May 2, 1951) was an American film director who directed 58 films between 1932 and 1951, working with Randolph Scott, Anna May Wong, John Wayne, Peter Lorre, George Raft, Bela Lugosi, Judy Garland, Eddie Cantor, and Hoagy Carmichael, among many others.",
+      "visible_time_s": 11.25,
+      "requested_subject": "",
+      "resolved_title": "Edwin L. Marin",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d3s1",
+      "title": "Edwin L. Marin",
+      "url": "https://trace.invalid/2wikimultihopqa_384093b208b011ebbd84ac1f6bf848b6_long/d3s1",
+      "text": "Marin was born in Jersey City, New Jersey, and died in Los Angeles, California.",
+      "visible_time_s": 11.25,
+      "requested_subject": "",
+      "resolved_title": "Edwin L. Marin",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d3s2",
+      "title": "Edwin L. Marin",
+      "url": "https://trace.invalid/2wikimultihopqa_384093b208b011ebbd84ac1f6bf848b6_long/d3s2",
+      "text": "He was married to actress Ann Morriss.",
+      "visible_time_s": 11.25,
+      "requested_subject": "",
+      "resolved_title": "Edwin L. Marin",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d3s3",
+      "title": "Edwin L. Marin",
+      "url": "https://trace.invalid/2wikimultihopqa_384093b208b011ebbd84ac1f6bf848b6_long/d3s3",
+      "text": "They had three children: Denis Anthony, Reese Andrew and Randi Alexandra.",
+      "visible_time_s": 11.25,
+      "requested_subject": "",
+      "resolved_title": "Edwin L. Marin",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d3s4",
+      "title": "Edwin L. Marin",
+      "url": "https://trace.invalid/2wikimultihopqa_384093b208b011ebbd84ac1f6bf848b6_long/d3s4",
+      "text": "He studied at the University of Pennsylvania and broke into the industry as an assistant director at MGM.",
+      "visible_time_s": 11.25,
+      "requested_subject": "",
+      "resolved_title": "Edwin L. Marin",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d3s5",
+      "title": "Edwin L. Marin",
+      "url": "https://trace.invalid/2wikimultihopqa_384093b208b011ebbd84ac1f6bf848b6_long/d3s5",
+      "text": "He was under contract to MGM for 15 years and RKO for five.",
+      "visible_time_s": 11.25,
+      "requested_subject": "",
+      "resolved_title": "Edwin L. Marin",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d3s6",
+      "title": "Edwin L. Marin",
+      "url": "https://trace.invalid/2wikimultihopqa_384093b208b011ebbd84ac1f6bf848b6_long/d3s6",
+      "text": "When he died he was under contract to Warner Bros.",
+      "visible_time_s": 11.25,
+      "requested_subject": "",
+      "resolved_title": "Edwin L. Marin",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d4s0",
+      "title": "Ben Palmer",
+      "url": "https://trace.invalid/2wikimultihopqa_384093b208b011ebbd84ac1f6bf848b6_long/d4s0",
+      "text": "Ben Palmer is a British film and television director who is known for being the director of\" Bo' Selecta\" and\" The Inbetweeners\".",
+      "visible_time_s": 11.25,
+      "requested_subject": "",
+      "resolved_title": "Ben Palmer",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d6s0",
+      "title": "Catherine I of Russia",
+      "url": "https://trace.invalid/2wikimultihopqa_384093b208b011ebbd84ac1f6bf848b6_long/d6s0",
+      "text": "Catherine I( born, later known as Marta Samuilovna Skavronskaya; –) was the second wife of Peter the Great and Empress of Russia from 1725 until her death.",
+      "visible_time_s": 11.25,
+      "requested_subject": "",
+      "resolved_title": "Catherine I of Russia",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d8s0",
+      "title": "Swapan Saha",
+      "url": "https://trace.invalid/2wikimultihopqa_384093b208b011ebbd84ac1f6bf848b6_long/d8s0",
+      "text": "Swapan Saha( born 10 January 1930 in Ajmer, Rajasthan, India) is an Indian Bengali film director, producer, story writer and score composer.",
+      "visible_time_s": 11.25,
+      "requested_subject": "",
+      "resolved_title": "Swapan Saha",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d10s0",
+      "title": "Edward Yates",
+      "url": "https://trace.invalid/2wikimultihopqa_384093b208b011ebbd84ac1f6bf848b6_long/d10s0",
+      "text": "Edward J. Yates( September 16, 1918 – June 2, 2006) was an American television director who was the director of the ABC television program\" American Bandstand\" from 1952 until 1969.",
+      "visible_time_s": 11.25,
+      "requested_subject": "",
+      "resolved_title": "Edward Yates",
+      "entity_resolution": "unspecified"
+    }
+  ],
+  "searches": [
+    {
+      "query": "[scheduled evidence]",
+      "subject": "",
+      "status": "ok",
+      "returned_pages": [],
+      "mode": "trace",
+      "unit_id": "__scheduled_evidence__"
+    },
+    {
+      "query": "[scheduled evidence]",
+      "subject": "",
+      "status": "ok",
+      "returned_pages": [],
+      "mode": "trace",
+      "unit_id": "__scheduled_evidence__"
+    }
+  ],
+  "search_failures": [],
+  "llm_calls": [
+    {
+      "purpose": "decompose",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 801,
+        "completion_tokens": 479,
+        "total_tokens": 1280,
+        "prompt_tokens_details": {
+          "cached_tokens": 768
+        }
+      },
+      "latency_s": 2.031
+    },
+    {
+      "purpose": "feedback_generate",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 411,
+        "completion_tokens": 80,
+        "total_tokens": 491,
+        "prompt_tokens_details": {
+          "cached_tokens": 384
+        }
+      },
+      "latency_s": 3.125
+    },
+    {
+      "purpose": "plan_review",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 1191,
+        "completion_tokens": 494,
+        "total_tokens": 1685,
+        "prompt_tokens_details": {
+          "cached_tokens": 896
+        }
+      },
+      "latency_s": 1.75
+    },
+    {
+      "purpose": "judge",
+      "model": "tinker://f9e9a6c1-e203-5c2c-acdd-68fe67378ca4:train:0/sampler_weights/epoch-0001",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 2995,
+        "completion_tokens": 340,
+        "total_tokens": 3335,
+        "prompt_tokens_details": {
+          "cached_tokens": 1024
+        }
+      },
+      "latency_s": 2.516
+    },
+    {
+      "purpose": "feedback_generate",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 412,
+        "completion_tokens": 55,
+        "total_tokens": 467,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        }
+      },
+      "latency_s": 1.5
+    },
+    {
+      "purpose": "generate",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 804,
+        "completion_tokens": 107,
+        "total_tokens": 911,
+        "prompt_tokens_details": {
+          "cached_tokens": 384
+        }
+      },
+      "latency_s": 1.719
+    },
+    {
+      "purpose": "feedback_verify",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 356,
+        "completion_tokens": 67,
+        "total_tokens": 423,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        }
+      },
+      "latency_s": 0.75
+    },
+    {
+      "purpose": "verify",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 1182,
+        "completion_tokens": 186,
+        "total_tokens": 1368,
+        "prompt_tokens_details": {
+          "cached_tokens": 640
+        }
+      },
+      "latency_s": 3.234
+    },
+    {
+      "purpose": "feedback_generate",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 411,
+        "completion_tokens": 64,
+        "total_tokens": 475,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        }
+      },
+      "latency_s": 0.859
+    },
+    {
+      "purpose": "judge",
+      "model": "tinker://f9e9a6c1-e203-5c2c-acdd-68fe67378ca4:train:0/sampler_weights/epoch-0001",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 4623,
+        "completion_tokens": 654,
+        "total_tokens": 5277,
+        "prompt_tokens_details": {
+          "cached_tokens": 1280
+        }
+      },
+      "latency_s": 6.203
+    },
+    {
+      "purpose": "feedback_verify",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 356,
+        "completion_tokens": 65,
+        "total_tokens": 421,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        }
+      },
+      "latency_s": 3.562
+    },
+    {
+      "purpose": "generate",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 1164,
+        "completion_tokens": 146,
+        "total_tokens": 1310,
+        "prompt_tokens_details": {
+          "cached_tokens": 384
+        }
+      },
+      "latency_s": 1.485
+    },
+    {
+      "purpose": "feedback_generate",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 412,
+        "completion_tokens": 54,
+        "total_tokens": 466,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        }
+      },
+      "latency_s": 0.75
+    },
+    {
+      "purpose": "feedback_verify",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 355,
+        "completion_tokens": 66,
+        "total_tokens": 421,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        }
+      },
+      "latency_s": 0.688
+    },
+    {
+      "purpose": "verify",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 2171,
+        "completion_tokens": 174,
+        "total_tokens": 2345,
+        "prompt_tokens_details": {
+          "cached_tokens": 512
+        }
+      },
+      "latency_s": 1.422
+    }
+  ],
+  "search_diagnostics": [],
+  "output_enqueued_units": {
+    "u1": "Swapan Saha",
+    "u3": "Edwin L. Marin",
+    "u2": "1930",
+    "u4": "1899",
+    "u5": "Achena Prem"
+  },
+  "events": [
+    {
+      "sequence": 0,
+      "time_s": 0.0,
+      "type": "feedback_requested",
+      "feedback_kind": "opening",
+      "execution_state": {
+        "stage": "planning",
+        "searches_started": 0,
+        "searches_completed": 0,
+        "active_searches": 0,
+        "evidence_count": 0,
+        "supported_units": 0,
+        "output_units": 0
+      }
+    },
+    {
+      "sequence": 1,
+      "time_s": 2.031,
+      "type": "decompose_reply",
+      "reply": {
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "Director of the film Achena Prem",
+            "subject": "Achena Prem",
+            "necessary": false,
+            "depends_on": [],
+            "queries": [
+              "Achena Prem film director"
+            ]
+          },
+          {
+            "unit_id": "u2",
+            "description": "Birth year of the director of Achena Prem",
+            "subject": "{u1}",
+            "necessary": false,
+            "depends_on": [
+              "u1"
+            ],
+            "queries": [
+              "{u1} birth year",
+              "{u1} date of birth"
+            ]
+          },
+          {
+            "unit_id": "u3",
+            "description": "Director of the film The Death Kiss",
+            "subject": "The Death Kiss",
+            "necessary": false,
+            "depends_on": [],
+            "queries": [
+              "The Death Kiss film director"
+            ]
+          },
+          {
+            "unit_id": "u4",
+            "description": "Birth year of the director of The Death Kiss",
+            "subject": "{u3}",
+            "necessary": false,
+            "depends_on": [
+              "u3"
+            ],
+            "queries": [
+              "{u3} birth year",
+              "{u3} date of birth"
+            ]
+          },
+          {
+            "unit_id": "u5",
+            "description": "Which film has the director who was born later",
+            "subject": "",
+            "necessary": true,
+            "depends_on": [
+              "u2",
+              "u4"
+            ],
+            "queries": [
+              "compare birth years of {u1} and {u3}"
+            ]
+          }
+        ]
+      },
+      "attempt": 1,
+      "repair": false
+    },
+    {
+      "sequence": 2,
+      "time_s": 2.031,
+      "type": "protocol_validation_failed",
+      "stage": "decompose",
+      "attempt": 1,
+      "error": "Placeholders must name explicit dependencies"
+    },
+    {
+      "sequence": 3,
+      "time_s": 2.031,
+      "type": "protocol_normalized",
+      "stage": "decompose",
+      "changes": [
+        {
+          "unit_id": "u5",
+          "added_dependencies": [
+            "u1",
+            "u3"
+          ]
+        }
+      ],
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "Director of the film Achena Prem",
+          "necessary": false,
+          "depends_on": [],
+          "queries": [
+            "Achena Prem film director"
+          ],
+          "subject": "Achena Prem"
+        },
+        {
+          "unit_id": "u2",
+          "description": "Birth year of the director of Achena Prem",
+          "necessary": false,
+          "depends_on": [
+            "u1"
+          ],
+          "queries": [
+            "{u1} birth year",
+            "{u1} date of birth"
+          ],
+          "subject": "{u1}"
+        },
+        {
+          "unit_id": "u3",
+          "description": "Director of the film The Death Kiss",
+          "necessary": false,
+          "depends_on": [],
+          "queries": [
+            "The Death Kiss film director"
+          ],
+          "subject": "The Death Kiss"
+        },
+        {
+          "unit_id": "u4",
+          "description": "Birth year of the director of The Death Kiss",
+          "necessary": false,
+          "depends_on": [
+            "u3"
+          ],
+          "queries": [
+            "{u3} birth year",
+            "{u3} date of birth"
+          ],
+          "subject": "{u3}"
+        },
+        {
+          "unit_id": "u5",
+          "description": "Which film has the director who was born later",
+          "necessary": true,
+          "depends_on": [
+            "u2",
+            "u4",
+            "u1",
+            "u3"
+          ],
+          "queries": [
+            "compare birth years of {u1} and {u3}"
+          ],
+          "subject": ""
+        }
+      ],
+      "no_facts_added": true
+    },
+    {
+      "sequence": 4,
+      "time_s": 2.031,
+      "type": "plan_review_requested",
+      "max_reviews": 1,
+      "question_only": true
+    },
+    {
+      "sequence": 5,
+      "time_s": 3.125,
+      "type": "utterance",
+      "action": "Backchannel",
+      "text": "Let me check.",
+      "claims": [],
+      "feedback_source": "fallback",
+      "feedback_status_claim": "intent",
+      "feedback_fallback_reason": "feedback_may_contain_answer_or_unearned_result",
+      "execution_state": {
+        "stage": "planning",
+        "searches_started": 0,
+        "searches_completed": 0,
+        "active_searches": 0,
+        "evidence_count": 0,
+        "supported_units": 0,
+        "output_units": 0
+      },
+      "language": "en"
+    },
+    {
+      "sequence": 6,
+      "time_s": 3.781,
+      "type": "plan_review_reply",
+      "reply": {
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "Director of the film Achena Prem",
+            "subject": "Achena Prem",
+            "necessary": true,
+            "depends_on": [],
+            "queries": [
+              "Achena Prem film director"
+            ]
+          },
+          {
+            "unit_id": "u2",
+            "description": "Birth year of the director of Achena Prem",
+            "subject": "{u1}",
+            "necessary": true,
+            "depends_on": [
+              "u1"
+            ],
+            "queries": [
+              "{u1} birth year",
+              "{u1} date of birth"
+            ]
+          },
+          {
+            "unit_id": "u3",
+            "description": "Director of the film The Death Kiss",
+            "subject": "The Death Kiss",
+            "necessary": true,
+            "depends_on": [],
+            "queries": [
+              "The Death Kiss film director"
+            ]
+          },
+          {
+            "unit_id": "u4",
+            "description": "Birth year of the director of The Death Kiss",
+            "subject": "{u3}",
+            "necessary": true,
+            "depends_on": [
+              "u3"
+            ],
+            "queries": [
+              "{u3} birth year",
+              "{u3} date of birth"
+            ]
+          },
+          {
+            "unit_id": "u5",
+            "description": "Which film has the director who was born later",
+            "subject": "",
+            "necessary": true,
+            "depends_on": [
+              "u2",
+              "u4",
+              "u1",
+              "u3"
+            ],
+            "queries": [
+              "compare birth years of {u1} and {u3}"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "sequence": 7,
+      "time_s": 3.781,
+      "type": "plan_review_finished",
+      "changed": true,
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "Director of the film Achena Prem",
+          "necessary": true,
+          "depends_on": [],
+          "queries": [
+            "Achena Prem film director"
+          ],
+          "subject": "Achena Prem"
+        },
+        {
+          "unit_id": "u2",
+          "description": "Birth year of the director of Achena Prem",
+          "necessary": true,
+          "depends_on": [
+            "u1"
+          ],
+          "queries": [
+            "{u1} birth year",
+            "{u1} date of birth"
+          ],
+          "subject": "{u1}"
+        },
+        {
+          "unit_id": "u3",
+          "description": "Director of the film The Death Kiss",
+          "necessary": true,
+          "depends_on": [],
+          "queries": [
+            "The Death Kiss film director"
+          ],
+          "subject": "The Death Kiss"
+        },
+        {
+          "unit_id": "u4",
+          "description": "Birth year of the director of The Death Kiss",
+          "necessary": true,
+          "depends_on": [
+            "u3"
+          ],
+          "queries": [
+            "{u3} birth year",
+            "{u3} date of birth"
+          ],
+          "subject": "{u3}"
+        },
+        {
+          "unit_id": "u5",
+          "description": "Which film has the director who was born later",
+          "necessary": true,
+          "depends_on": [
+            "u2",
+            "u4",
+            "u1",
+            "u3"
+          ],
+          "queries": [
+            "compare birth years of {u1} and {u3}"
+          ],
+          "subject": ""
+        }
+      ],
+      "question_only": true
+    },
+    {
+      "sequence": 8,
+      "time_s": 3.781,
+      "type": "plan",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "Director of the film Achena Prem",
+          "necessary": true,
+          "depends_on": [],
+          "queries": [
+            "Achena Prem film director"
+          ],
+          "subject": "Achena Prem"
+        },
+        {
+          "unit_id": "u2",
+          "description": "Birth year of the director of Achena Prem",
+          "necessary": true,
+          "depends_on": [
+            "u1"
+          ],
+          "queries": [
+            "{u1} birth year",
+            "{u1} date of birth"
+          ],
+          "subject": "{u1}"
+        },
+        {
+          "unit_id": "u3",
+          "description": "Director of the film The Death Kiss",
+          "necessary": true,
+          "depends_on": [],
+          "queries": [
+            "The Death Kiss film director"
+          ],
+          "subject": "The Death Kiss"
+        },
+        {
+          "unit_id": "u4",
+          "description": "Birth year of the director of The Death Kiss",
+          "necessary": true,
+          "depends_on": [
+            "u3"
+          ],
+          "queries": [
+            "{u3} birth year",
+            "{u3} date of birth"
+          ],
+          "subject": "{u3}"
+        },
+        {
+          "unit_id": "u5",
+          "description": "Which film has the director who was born later",
+          "necessary": true,
+          "depends_on": [
+            "u2",
+            "u4",
+            "u1",
+            "u3"
+          ],
+          "queries": [
+            "compare birth years of {u1} and {u3}"
+          ],
+          "subject": ""
+        }
+      ]
+    },
+    {
+      "sequence": 9,
+      "time_s": 3.781,
+      "type": "trace_batch_requested"
+    },
+    {
+      "sequence": 10,
+      "time_s": 3.781,
+      "type": "search_finished",
+      "query": "[scheduled evidence]",
+      "subject": "",
+      "status": "ok",
+      "returned_pages": [],
+      "mode": "trace",
+      "unit_id": "__scheduled_evidence__"
+    },
+    {
+      "sequence": 11,
+      "time_s": 3.781,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d1s0",
+        "title": "The Death Kiss",
+        "url": "https://trace.invalid/2wikimultihopqa_384093b208b011ebbd84ac1f6bf848b6_long/d1s0",
+        "text": "The Death Kiss is a 1932 American pre-Code mystery film starring David Manners as a crusading studio writer, Adrienne Ames as an actress, and Bela Lugosi as a studio manager.",
+        "visible_time_s": 3.7810000000026776,
+        "requested_subject": "",
+        "resolved_title": "The Death Kiss",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 12,
+      "time_s": 3.781,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d1s1",
+        "title": "The Death Kiss",
+        "url": "https://trace.invalid/2wikimultihopqa_384093b208b011ebbd84ac1f6bf848b6_long/d1s1",
+        "text": "The thriller features three leading players from the previous year's\" Dracula\"( Lugosi, Manners, and Edward Van Sloan), and was the first film directed by Edwin L. Marin.",
+        "visible_time_s": 3.7810000000026776,
+        "requested_subject": "",
+        "resolved_title": "The Death Kiss",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 13,
+      "time_s": 3.781,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d1s2",
+        "title": "The Death Kiss",
+        "url": "https://trace.invalid/2wikimultihopqa_384093b208b011ebbd84ac1f6bf848b6_long/d1s2",
+        "text": "The film was produced by KBS Productions at Tiffany Pictures and released by Sono Art- World Wide Pictures.",
+        "visible_time_s": 3.7810000000026776,
+        "requested_subject": "",
+        "resolved_title": "The Death Kiss",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 14,
+      "time_s": 3.781,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d1s3",
+        "title": "The Death Kiss",
+        "url": "https://trace.invalid/2wikimultihopqa_384093b208b011ebbd84ac1f6bf848b6_long/d1s3",
+        "text": "The film is currently in the public domain.",
+        "visible_time_s": 3.7810000000026776,
+        "requested_subject": "",
+        "resolved_title": "The Death Kiss",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 15,
+      "time_s": 3.781,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d2s0",
+        "title": "Rumbi Katedza",
+        "url": "https://trace.invalid/2wikimultihopqa_384093b208b011ebbd84ac1f6bf848b6_long/d2s0",
+        "text": "Rumbi Katedza is a Zimbabwean Film Producer and Director who was born on 17 January 1974.",
+        "visible_time_s": 3.7810000000026776,
+        "requested_subject": "",
+        "resolved_title": "Rumbi Katedza",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 16,
+      "time_s": 3.781,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d5s0",
+        "title": "Hassan Zee",
+        "url": "https://trace.invalid/2wikimultihopqa_384093b208b011ebbd84ac1f6bf848b6_long/d5s0",
+        "text": "Hassan Zee is a Pakistani- American film director who was born in Chakwal, Pakistan.",
+        "visible_time_s": 3.7810000000026776,
+        "requested_subject": "",
+        "resolved_title": "Hassan Zee",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 17,
+      "time_s": 3.781,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d7s0",
+        "title": "W. Augustus Barratt",
+        "url": "https://trace.invalid/2wikimultihopqa_384093b208b011ebbd84ac1f6bf848b6_long/d7s0",
+        "text": "W. Augustus Barratt( 1873- 1947) was a Scottish- born, later American, songwriter and musician.",
+        "visible_time_s": 3.7810000000026776,
+        "requested_subject": "",
+        "resolved_title": "W. Augustus Barratt",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 18,
+      "time_s": 3.781,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d9s0",
+        "title": "Achena Prem",
+        "url": "https://trace.invalid/2wikimultihopqa_384093b208b011ebbd84ac1f6bf848b6_long/d9s0",
+        "text": "Achena Prem is a 2011 Bengali film directed by Swapan Saha and produced under the banner of Maa Kali Films.",
+        "visible_time_s": 3.7810000000026776,
+        "requested_subject": "",
+        "resolved_title": "Achena Prem",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 19,
+      "time_s": 3.781,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d9s1",
+        "title": "Achena Prem",
+        "url": "https://trace.invalid/2wikimultihopqa_384093b208b011ebbd84ac1f6bf848b6_long/d9s1",
+        "text": "The movie is an unofficial remake of hit Kannada movie\" Mussanjemaatu\".",
+        "visible_time_s": 3.7810000000026776,
+        "requested_subject": "",
+        "resolved_title": "Achena Prem",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 20,
+      "time_s": 3.781,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d9s2",
+        "title": "Achena Prem",
+        "url": "https://trace.invalid/2wikimultihopqa_384093b208b011ebbd84ac1f6bf848b6_long/d9s2",
+        "text": "Surprisingly the fact that it is a remake of the Kannada movie has not been mentioned either on the Achena Prem's official website or in other reviews/ articles on the internet All Kannada songs from the original have been also retained in the movie.",
+        "visible_time_s": 3.7810000000026776,
+        "requested_subject": "",
+        "resolved_title": "Achena Prem",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 21,
+      "time_s": 3.781,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d9s3",
+        "title": "Achena Prem",
+        "url": "https://trace.invalid/2wikimultihopqa_384093b208b011ebbd84ac1f6bf848b6_long/d9s3",
+        "text": "The song\" Kar Mone te ki Swopno Thake\" is the Bengali version of Kannada song\" Enagali Munde Saagu Nee\" and\" Tomake Bhebe Mon\" is the Bengali version of Kannada song\" Ninna Nodalento\".",
+        "visible_time_s": 3.7810000000026776,
+        "requested_subject": "",
+        "resolved_title": "Achena Prem",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 22,
+      "time_s": 6.297,
+      "type": "judge_reply",
+      "reply": {
+        "judgments": [
+          {
+            "unit_id": "u1",
+            "label": "SUPPORTED",
+            "value": "Swapan Saha",
+            "citations": [
+              "d9s0"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d9s0",
+                "text": "Achena Prem is a 2011 Bengali film directed by Swapan Saha and produced under the banner of Maa Kali Films."
+              }
+            ],
+            "reason": "Supported by the cited visible sentences and dependencies."
+          },
+          {
+            "unit_id": "u2",
+            "label": "UNRESOLVED",
+            "value": "",
+            "citations": [],
+            "quotes": [],
+            "reason": "The current visible evidence does not establish this unit."
+          },
+          {
+            "unit_id": "u3",
+            "label": "SUPPORTED",
+            "value": "Edwin L. Marin",
+            "citations": [
+              "d1s1"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d1s1",
+                "text": "The thriller features three leading players from the previous year's\" Dracula\"( Lugosi, Manners, and Edward Van Sloan), and was the first film directed by Edwin L. Marin."
+              }
+            ],
+            "reason": "Supported by the cited visible sentences and dependencies."
+          },
+          {
+            "unit_id": "u4",
+            "label": "UNRESOLVED",
+            "value": "",
+            "citations": [],
+            "quotes": [],
+            "reason": "The current visible evidence does not establish this unit."
+          },
+          {
+            "unit_id": "u5",
+            "label": "UNRESOLVED",
+            "value": "",
+            "citations": [],
+            "quotes": [],
+            "reason": "The current visible evidence does not establish this unit."
+          }
+        ]
+      },
+      "attempt": 1,
+      "repair": false,
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d1s1",
+        "d1s2",
+        "d1s3",
+        "d2s0",
+        "d5s0",
+        "d7s0",
+        "d9s0",
+        "d9s1",
+        "d9s2",
+        "d9s3"
+      ]
+    },
+    {
+      "sequence": 23,
+      "time_s": 6.297,
+      "type": "judgments",
+      "judgments": {
+        "u1": {
+          "label": "SUPPORTED",
+          "value": "Swapan Saha",
+          "citations": [
+            "d9s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d9s0",
+              "text": "Achena Prem is a 2011 Bengali film directed by Swapan Saha and produced under the banner of Maa Kali Films."
+            }
+          ],
+          "reason": "Supported by the cited visible sentences and dependencies."
+        },
+        "u2": {
+          "label": "UNRESOLVED",
+          "value": "",
+          "citations": [],
+          "quotes": [],
+          "reason": "The current visible evidence does not establish this unit."
+        },
+        "u3": {
+          "label": "SUPPORTED",
+          "value": "Edwin L. Marin",
+          "citations": [
+            "d1s1"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d1s1",
+              "text": "The thriller features three leading players from the previous year's\" Dracula\"( Lugosi, Manners, and Edward Van Sloan), and was the first film directed by Edwin L. Marin."
+            }
+          ],
+          "reason": "Supported by the cited visible sentences and dependencies."
+        },
+        "u4": {
+          "label": "UNRESOLVED",
+          "value": "",
+          "citations": [],
+          "quotes": [],
+          "reason": "The current visible evidence does not establish this unit."
+        },
+        "u5": {
+          "label": "UNRESOLVED",
+          "value": "",
+          "citations": [],
+          "quotes": [],
+          "reason": "The current visible evidence does not establish this unit."
+        }
+      },
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d1s1",
+        "d1s2",
+        "d1s3",
+        "d2s0",
+        "d5s0",
+        "d7s0",
+        "d9s0",
+        "d9s1",
+        "d9s2",
+        "d9s3"
+      ],
+      "semantic_review": false
+    },
+    {
+      "sequence": 24,
+      "time_s": 6.297,
+      "type": "trace_batch_requested"
+    },
+    {
+      "sequence": 25,
+      "time_s": 6.328,
+      "type": "feedback_requested",
+      "feedback_kind": "progress",
+      "execution_state": {
+        "stage": "formulating",
+        "searches_started": 2,
+        "searches_completed": 1,
+        "active_searches": 1,
+        "evidence_count": 11,
+        "supported_units": 2,
+        "output_units": 0
+      }
+    },
+    {
+      "sequence": 26,
+      "time_s": 8.578,
+      "type": "utterance",
+      "action": "Progress",
+      "text": "Formulating the answer with two supported units.",
+      "claims": [],
+      "feedback_source": "model",
+      "feedback_status_claim": "formulating",
+      "feedback_fallback_reason": "",
+      "execution_state": {
+        "stage": "formulating",
+        "searches_started": 2,
+        "searches_completed": 1,
+        "active_searches": 0,
+        "evidence_count": 11,
+        "supported_units": 2,
+        "output_units": 0
+      },
+      "language": "en"
+    },
+    {
+      "sequence": 27,
+      "time_s": 11.25,
+      "type": "verification_reply",
+      "reply": {
+        "approved": false,
+        "facts_valid": true,
+        "expressed_unit_ids": [
+          "u1",
+          "u3"
+        ],
+        "reason": "The draft correctly states the directors (facts valid) but does not answer the question about which director was born later, so it is not approved."
+      },
+      "output_unit_ids": [
+        "u1",
+        "u3"
+      ],
+      "output_action": "Partial Answer",
+      "dependency_unit_ids": [],
+      "evidence_snapshot_ids": [
+        "d1s1",
+        "d9s0"
+      ]
+    },
+    {
+      "sequence": 28,
+      "time_s": 11.25,
+      "type": "draft_rejected",
+      "reason": "Draft wording or output-unit accounting rejected",
+      "output_unit_ids": [
+        "u1",
+        "u3"
+      ],
+      "expressed_unit_ids": [
+        "u1",
+        "u3"
+      ]
+    },
+    {
+      "sequence": 29,
+      "time_s": 11.25,
+      "type": "utterance",
+      "action": "Partial Answer",
+      "text": "Director of the film Achena Prem is Swapan Saha. Director of the film The Death Kiss is Edwin L. Marin.",
+      "claims": [
+        {
+          "unit_id": "u1",
+          "description": "Director of the film Achena Prem",
+          "value": "Swapan Saha",
+          "citations": [
+            "d9s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d9s0",
+              "text": "Achena Prem is a 2011 Bengali film directed by Swapan Saha and produced under the banner of Maa Kali Films."
+            }
+          ]
+        },
+        {
+          "unit_id": "u3",
+          "description": "Director of the film The Death Kiss",
+          "value": "Edwin L. Marin",
+          "citations": [
+            "d1s1"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d1s1",
+              "text": "The thriller features three leading players from the previous year's\" Dracula\"( Lugosi, Manners, and Edward Van Sloan), and was the first film directed by Edwin L. Marin."
+            }
+          ]
+        }
+      ],
+      "unresolved": [],
+      "fallback": true,
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d1s1",
+        "d1s2",
+        "d1s3",
+        "d2s0",
+        "d5s0",
+        "d7s0",
+        "d9s0",
+        "d9s1",
+        "d9s2",
+        "d9s3"
+      ],
+      "language": "en"
+    },
+    {
+      "sequence": 30,
+      "time_s": 11.25,
+      "type": "search_finished",
+      "query": "[scheduled evidence]",
+      "subject": "",
+      "status": "ok",
+      "returned_pages": [],
+      "mode": "trace",
+      "unit_id": "__scheduled_evidence__"
+    },
+    {
+      "sequence": 31,
+      "time_s": 11.25,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d3s0",
+        "title": "Edwin L. Marin",
+        "url": "https://trace.invalid/2wikimultihopqa_384093b208b011ebbd84ac1f6bf848b6_long/d3s0",
+        "text": "Edwin L. Marin (February 21, 1899 – May 2, 1951) was an American film director who directed 58 films between 1932 and 1951, working with Randolph Scott, Anna May Wong, John Wayne, Peter Lorre, George Raft, Bela Lugosi, Judy Garland, Eddie Cantor, and Hoagy Carmichael, among many others.",
+        "visible_time_s": 11.25,
+        "requested_subject": "",
+        "resolved_title": "Edwin L. Marin",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 32,
+      "time_s": 11.25,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d3s1",
+        "title": "Edwin L. Marin",
+        "url": "https://trace.invalid/2wikimultihopqa_384093b208b011ebbd84ac1f6bf848b6_long/d3s1",
+        "text": "Marin was born in Jersey City, New Jersey, and died in Los Angeles, California.",
+        "visible_time_s": 11.25,
+        "requested_subject": "",
+        "resolved_title": "Edwin L. Marin",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 33,
+      "time_s": 11.25,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d3s2",
+        "title": "Edwin L. Marin",
+        "url": "https://trace.invalid/2wikimultihopqa_384093b208b011ebbd84ac1f6bf848b6_long/d3s2",
+        "text": "He was married to actress Ann Morriss.",
+        "visible_time_s": 11.25,
+        "requested_subject": "",
+        "resolved_title": "Edwin L. Marin",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 34,
+      "time_s": 11.25,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d3s3",
+        "title": "Edwin L. Marin",
+        "url": "https://trace.invalid/2wikimultihopqa_384093b208b011ebbd84ac1f6bf848b6_long/d3s3",
+        "text": "They had three children: Denis Anthony, Reese Andrew and Randi Alexandra.",
+        "visible_time_s": 11.25,
+        "requested_subject": "",
+        "resolved_title": "Edwin L. Marin",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 35,
+      "time_s": 11.25,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d3s4",
+        "title": "Edwin L. Marin",
+        "url": "https://trace.invalid/2wikimultihopqa_384093b208b011ebbd84ac1f6bf848b6_long/d3s4",
+        "text": "He studied at the University of Pennsylvania and broke into the industry as an assistant director at MGM.",
+        "visible_time_s": 11.25,
+        "requested_subject": "",
+        "resolved_title": "Edwin L. Marin",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 36,
+      "time_s": 11.25,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d3s5",
+        "title": "Edwin L. Marin",
+        "url": "https://trace.invalid/2wikimultihopqa_384093b208b011ebbd84ac1f6bf848b6_long/d3s5",
+        "text": "He was under contract to MGM for 15 years and RKO for five.",
+        "visible_time_s": 11.25,
+        "requested_subject": "",
+        "resolved_title": "Edwin L. Marin",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 37,
+      "time_s": 11.25,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d3s6",
+        "title": "Edwin L. Marin",
+        "url": "https://trace.invalid/2wikimultihopqa_384093b208b011ebbd84ac1f6bf848b6_long/d3s6",
+        "text": "When he died he was under contract to Warner Bros.",
+        "visible_time_s": 11.25,
+        "requested_subject": "",
+        "resolved_title": "Edwin L. Marin",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 38,
+      "time_s": 11.25,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d4s0",
+        "title": "Ben Palmer",
+        "url": "https://trace.invalid/2wikimultihopqa_384093b208b011ebbd84ac1f6bf848b6_long/d4s0",
+        "text": "Ben Palmer is a British film and television director who is known for being the director of\" Bo' Selecta\" and\" The Inbetweeners\".",
+        "visible_time_s": 11.25,
+        "requested_subject": "",
+        "resolved_title": "Ben Palmer",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 39,
+      "time_s": 11.25,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d6s0",
+        "title": "Catherine I of Russia",
+        "url": "https://trace.invalid/2wikimultihopqa_384093b208b011ebbd84ac1f6bf848b6_long/d6s0",
+        "text": "Catherine I( born, later known as Marta Samuilovna Skavronskaya; –) was the second wife of Peter the Great and Empress of Russia from 1725 until her death.",
+        "visible_time_s": 11.25,
+        "requested_subject": "",
+        "resolved_title": "Catherine I of Russia",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 40,
+      "time_s": 11.25,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d8s0",
+        "title": "Swapan Saha",
+        "url": "https://trace.invalid/2wikimultihopqa_384093b208b011ebbd84ac1f6bf848b6_long/d8s0",
+        "text": "Swapan Saha( born 10 January 1930 in Ajmer, Rajasthan, India) is an Indian Bengali film director, producer, story writer and score composer.",
+        "visible_time_s": 11.25,
+        "requested_subject": "",
+        "resolved_title": "Swapan Saha",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 41,
+      "time_s": 11.25,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d10s0",
+        "title": "Edward Yates",
+        "url": "https://trace.invalid/2wikimultihopqa_384093b208b011ebbd84ac1f6bf848b6_long/d10s0",
+        "text": "Edward J. Yates( September 16, 1918 – June 2, 2006) was an American television director who was the director of the ABC television program\" American Bandstand\" from 1952 until 1969.",
+        "visible_time_s": 11.25,
+        "requested_subject": "",
+        "resolved_title": "Edward Yates",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 42,
+      "time_s": 14.36,
+      "type": "feedback_requested",
+      "feedback_kind": "progress",
+      "execution_state": {
+        "stage": "checking",
+        "searches_started": 2,
+        "searches_completed": 2,
+        "active_searches": 0,
+        "evidence_count": 22,
+        "supported_units": 2,
+        "output_units": 2
+      }
+    },
+    {
+      "sequence": 43,
+      "time_s": 17.453,
+      "type": "judge_reply",
+      "reply": {
+        "judgments": [
+          {
+            "unit_id": "u1",
+            "label": "SUPPORTED",
+            "value": "Swapan Saha",
+            "citations": [
+              "d9s0"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d9s0",
+                "text": "Achena Prem is a 2011 Bengali film directed by Swapan Saha and produced under the banner of Maa Kali Films."
+              }
+            ],
+            "reason": "Supported by the cited visible sentences and dependencies."
+          },
+          {
+            "unit_id": "u2",
+            "label": "SUPPORTED",
+            "value": "1930",
+            "citations": [
+              "d8s0"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d8s0",
+                "text": "Swapan Saha( born 10 January 1930 in Ajmer, Rajasthan, India) is an Indian Bengali film director, producer, story writer and score composer."
+              }
+            ],
+            "reason": "Supported by the cited visible sentences and dependencies."
+          },
+          {
+            "unit_id": "u3",
+            "label": "SUPPORTED",
+            "value": "Edwin L. Marin",
+            "citations": [
+              "d1s1"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d1s1",
+                "text": "The thriller features three leading players from the previous year's\" Dracula\"( Lugosi, Manners, and Edward Van Sloan), and was the first film directed by Edwin L. Marin."
+              }
+            ],
+            "reason": "Supported by the cited visible sentences and dependencies."
+          },
+          {
+            "unit_id": "u4",
+            "label": "SUPPORTED",
+            "value": "1899",
+            "citations": [
+              "d3s0"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d3s0",
+                "text": "Edwin L. Marin (February 21, 1899 – May 2, 1951) was an American film director who directed 58 films between 1932 and 1951, working with Randolph Scott, Anna May Wong, John Wayne, Peter Lorre, George Raft, Bela Lugosi, Judy Garland, Eddie Cantor, and Hoagy Carmichael, among many others."
+              }
+            ],
+            "reason": "Supported by the cited visible sentences and dependencies."
+          },
+          {
+            "unit_id": "u5",
+            "label": "SUPPORTED",
+            "value": "Achena Prem",
+            "citations": [
+              "d8s0",
+              "d3s0"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d8s0",
+                "text": "Swapan Saha( born 10 January 1930 in Ajmer, Rajasthan, India) is an Indian Bengali film director, producer, story writer and score composer."
+              },
+              {
+                "evidence_id": "d3s0",
+                "text": "Edwin L. Marin (February 21, 1899 – May 2, 1951) was an American film director who directed 58 films between 1932 and 1951, working with Randolph Scott, Anna May Wong, John Wayne, Peter Lorre, George Raft, Bela Lugosi, Judy Garland, Eddie Cantor, and Hoagy Carmichael, among many others."
+              }
+            ],
+            "reason": "Supported by the cited visible sentences and dependencies."
+          }
+        ]
+      },
+      "attempt": 1,
+      "repair": false,
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d1s1",
+        "d1s2",
+        "d1s3",
+        "d2s0",
+        "d5s0",
+        "d7s0",
+        "d9s0",
+        "d9s1",
+        "d9s2",
+        "d9s3",
+        "d3s0",
+        "d3s1",
+        "d3s2",
+        "d3s3",
+        "d3s4",
+        "d3s5",
+        "d3s6",
+        "d4s0",
+        "d6s0",
+        "d8s0",
+        "d10s0"
+      ]
+    },
+    {
+      "sequence": 44,
+      "time_s": 17.453,
+      "type": "judgments",
+      "judgments": {
+        "u1": {
+          "label": "SUPPORTED",
+          "value": "Swapan Saha",
+          "citations": [
+            "d9s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d9s0",
+              "text": "Achena Prem is a 2011 Bengali film directed by Swapan Saha and produced under the banner of Maa Kali Films."
+            }
+          ],
+          "reason": "Supported by the cited visible sentences and dependencies."
+        },
+        "u2": {
+          "label": "SUPPORTED",
+          "value": "1930",
+          "citations": [
+            "d8s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d8s0",
+              "text": "Swapan Saha( born 10 January 1930 in Ajmer, Rajasthan, India) is an Indian Bengali film director, producer, story writer and score composer."
+            }
+          ],
+          "reason": "Supported by the cited visible sentences and dependencies."
+        },
+        "u3": {
+          "label": "SUPPORTED",
+          "value": "Edwin L. Marin",
+          "citations": [
+            "d1s1"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d1s1",
+              "text": "The thriller features three leading players from the previous year's\" Dracula\"( Lugosi, Manners, and Edward Van Sloan), and was the first film directed by Edwin L. Marin."
+            }
+          ],
+          "reason": "Supported by the cited visible sentences and dependencies."
+        },
+        "u4": {
+          "label": "SUPPORTED",
+          "value": "1899",
+          "citations": [
+            "d3s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d3s0",
+              "text": "Edwin L. Marin (February 21, 1899 – May 2, 1951) was an American film director who directed 58 films between 1932 and 1951, working with Randolph Scott, Anna May Wong, John Wayne, Peter Lorre, George Raft, Bela Lugosi, Judy Garland, Eddie Cantor, and Hoagy Carmichael, among many others."
+            }
+          ],
+          "reason": "Supported by the cited visible sentences and dependencies."
+        },
+        "u5": {
+          "label": "SUPPORTED",
+          "value": "Achena Prem",
+          "citations": [
+            "d8s0",
+            "d3s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d8s0",
+              "text": "Swapan Saha( born 10 January 1930 in Ajmer, Rajasthan, India) is an Indian Bengali film director, producer, story writer and score composer."
+            },
+            {
+              "evidence_id": "d3s0",
+              "text": "Edwin L. Marin (February 21, 1899 – May 2, 1951) was an American film director who directed 58 films between 1932 and 1951, working with Randolph Scott, Anna May Wong, John Wayne, Peter Lorre, George Raft, Bela Lugosi, Judy Garland, Eddie Cantor, and Hoagy Carmichael, among many others."
+            }
+          ],
+          "reason": "Supported by the cited visible sentences and dependencies."
+        }
+      },
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d1s1",
+        "d1s2",
+        "d1s3",
+        "d2s0",
+        "d5s0",
+        "d7s0",
+        "d9s0",
+        "d9s1",
+        "d9s2",
+        "d9s3",
+        "d3s0",
+        "d3s1",
+        "d3s2",
+        "d3s3",
+        "d3s4",
+        "d3s5",
+        "d3s6",
+        "d4s0",
+        "d6s0",
+        "d8s0",
+        "d10s0"
+      ],
+      "semantic_review": false
+    },
+    {
+      "sequence": 45,
+      "time_s": 20.219,
+      "type": "utterance",
+      "action": "Progress",
+      "text": "Formulating the answer with gathered evidence.",
+      "claims": [],
+      "feedback_source": "model",
+      "feedback_status_claim": "formulating",
+      "feedback_fallback_reason": "",
+      "execution_state": {
+        "stage": "formulating",
+        "searches_started": 2,
+        "searches_completed": 2,
+        "active_searches": 0,
+        "evidence_count": 22,
+        "supported_units": 5,
+        "output_units": 2
+      },
+      "language": "en"
+    },
+    {
+      "sequence": 46,
+      "time_s": 20.36,
+      "type": "verification_reply",
+      "reply": {
+        "approved": true,
+        "facts_valid": true,
+        "expressed_unit_ids": [
+          "u2",
+          "u4",
+          "u5"
+        ],
+        "reason": "All stated facts match approved facts and citations; conclusion aligns with unit u5; no extra claims."
+      },
+      "output_unit_ids": [
+        "u2",
+        "u4",
+        "u5"
+      ],
+      "output_action": "Final Answer",
+      "dependency_unit_ids": [
+        "u1",
+        "u3"
+      ],
+      "evidence_snapshot_ids": [
+        "d1s1",
+        "d9s0",
+        "d3s0",
+        "d8s0"
+      ]
+    },
+    {
+      "sequence": 47,
+      "time_s": 20.36,
+      "type": "utterance",
+      "action": "Final Answer",
+      "text": "Swapan Saha, the director of Achena Prem, was born in 1930. Edwin L. Marin, the director of The Death Kiss, was born in 1899. Therefore, Achena Prem has the director who was born later.",
+      "claims": [
+        {
+          "unit_id": "u2",
+          "description": "Birth year of the director of Achena Prem",
+          "value": "1930",
+          "citations": [
+            "d8s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d8s0",
+              "text": "Swapan Saha( born 10 January 1930 in Ajmer, Rajasthan, India) is an Indian Bengali film director, producer, story writer and score composer."
+            }
+          ]
+        },
+        {
+          "unit_id": "u4",
+          "description": "Birth year of the director of The Death Kiss",
+          "value": "1899",
+          "citations": [
+            "d3s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d3s0",
+              "text": "Edwin L. Marin (February 21, 1899 – May 2, 1951) was an American film director who directed 58 films between 1932 and 1951, working with Randolph Scott, Anna May Wong, John Wayne, Peter Lorre, George Raft, Bela Lugosi, Judy Garland, Eddie Cantor, and Hoagy Carmichael, among many others."
+            }
+          ]
+        },
+        {
+          "unit_id": "u5",
+          "description": "Which film has the director who was born later",
+          "value": "Achena Prem",
+          "citations": [
+            "d8s0",
+            "d3s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d8s0",
+              "text": "Swapan Saha( born 10 January 1930 in Ajmer, Rajasthan, India) is an Indian Bengali film director, producer, story writer and score composer."
+            },
+            {
+              "evidence_id": "d3s0",
+              "text": "Edwin L. Marin (February 21, 1899 – May 2, 1951) was an American film director who directed 58 films between 1932 and 1951, working with Randolph Scott, Anna May Wong, John Wayne, Peter Lorre, George Raft, Bela Lugosi, Judy Garland, Eddie Cantor, and Hoagy Carmichael, among many others."
+            }
+          ]
+        }
+      ],
+      "unresolved": [],
+      "fallback": false,
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d1s1",
+        "d1s2",
+        "d1s3",
+        "d2s0",
+        "d5s0",
+        "d7s0",
+        "d9s0",
+        "d9s1",
+        "d9s2",
+        "d9s3",
+        "d3s0",
+        "d3s1",
+        "d3s2",
+        "d3s3",
+        "d3s4",
+        "d3s5",
+        "d3s6",
+        "d4s0",
+        "d6s0",
+        "d8s0",
+        "d10s0"
+      ],
+      "language": "en"
+    },
+    {
+      "sequence": 48,
+      "time_s": 20.36,
+      "type": "finished",
+      "status": "complete"
+    }
+  ],
+  "note": "Prototype model judgments are not independent gold scores. Output event times are not spoken claim times.",
+  "evidence_mode": "scheduled_trace",
+  "audio": {
+    "enabled": true,
+    "mode": "windows",
+    "play": false,
+    "status": "ok",
+    "errors": [],
+    "records": [
+      {
+        "event_sequence": 5,
+        "sentence_index": 1,
+        "sentence_count": 1,
+        "language": "en",
+        "text": "Let me check.",
+        "action": "Backchannel",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 3.125,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1\\samples\\0084\\audio\\segments\\0005_01.wav",
+        "duration_s": 1.649297052154195,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 3.922000000005937,
+        "synthesis_and_playback_s": 0.7970000000059372
+      },
+      {
+        "event_sequence": 26,
+        "sentence_index": 1,
+        "sentence_count": 1,
+        "language": "en",
+        "text": "Formulating the answer with two supported units.",
+        "action": "Progress",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 8.577999999994063,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1\\samples\\0084\\audio\\segments\\0026_01.wav",
+        "duration_s": 3.4188662131519276,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 9.406000000002678,
+        "synthesis_and_playback_s": 0.8280000000086147
+      },
+      {
+        "event_sequence": 29,
+        "sentence_index": 1,
+        "sentence_count": 2,
+        "language": "en",
+        "text": "Director of the film Achena Prem is Swapan Saha.",
+        "action": "Partial Answer",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 11.25,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1\\samples\\0084\\audio\\segments\\0029_01.wav",
+        "duration_s": 3.688888888888889,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 12.093999999997322,
+        "synthesis_and_playback_s": 0.8439999999973224
+      },
+      {
+        "event_sequence": 29,
+        "sentence_index": 2,
+        "sentence_count": 2,
+        "language": "en",
+        "text": "Director of the film The Death Kiss is Edwin L. Marin.",
+        "action": "Partial Answer",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 12.093999999997322,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1\\samples\\0084\\audio\\segments\\0029_02.wav",
+        "duration_s": 3.468934240362812,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 12.89100000000326,
+        "synthesis_and_playback_s": 0.7970000000059372
+      },
+      {
+        "event_sequence": 45,
+        "sentence_index": 1,
+        "sentence_count": 1,
+        "language": "en",
+        "text": "Formulating the answer with gathered evidence.",
+        "action": "Progress",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 20.218999999997322,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1\\samples\\0084\\audio\\segments\\0045_01.wav",
+        "duration_s": 3.113968253968254,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 21.01600000000326,
+        "synthesis_and_playback_s": 0.7970000000059372
+      },
+      {
+        "event_sequence": 47,
+        "sentence_index": 1,
+        "sentence_count": 3,
+        "language": "en",
+        "text": "Swapan Saha, the director of Achena Prem, was born in 1930.",
+        "action": "Final Answer",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 21.01600000000326,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1\\samples\\0084\\audio\\segments\\0047_01.wav",
+        "duration_s": 5.7536507936507935,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 21.812999999994645,
+        "synthesis_and_playback_s": 0.7969999999913853
+      },
+      {
+        "event_sequence": 47,
+        "sentence_index": 2,
+        "sentence_count": 3,
+        "language": "en",
+        "text": "Edwin L. Marin, the director of The Death Kiss, was born in 1899.",
+        "action": "Final Answer",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 21.812999999994645,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1\\samples\\0084\\audio\\segments\\0047_02.wav",
+        "duration_s": 6.728390022675737,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 22.610000000000582,
+        "synthesis_and_playback_s": 0.7970000000059372
+      },
+      {
+        "event_sequence": 47,
+        "sentence_index": 3,
+        "sentence_count": 3,
+        "language": "en",
+        "text": "Therefore, Achena Prem has the director who was born later.",
+        "action": "Final Answer",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 22.610000000000582,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1\\samples\\0084\\audio\\segments\\0047_03.wav",
+        "duration_s": 4.343718820861678,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 23.39100000000326,
+        "synthesis_and_playback_s": 0.7810000000026776
+      }
+    ],
+    "wave": {
+      "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1\\samples\\0084\\audio\\response.wav",
+      "duration_s": 40.955736961451244,
+      "timeline": [
+        {
+          "event_sequence": 5,
+          "sentence_index": 1,
+          "action": "Backchannel",
+          "text": "Let me check.",
+          "wave_start_s": 3.921995464852608,
+          "wave_end_s": 5.571292517006802
+        },
+        {
+          "event_sequence": 26,
+          "sentence_index": 1,
+          "action": "Progress",
+          "text": "Formulating the answer with two supported units.",
+          "wave_start_s": 9.405986394557823,
+          "wave_end_s": 12.82485260770975
+        },
+        {
+          "event_sequence": 29,
+          "sentence_index": 1,
+          "action": "Partial Answer",
+          "text": "Director of the film Achena Prem is Swapan Saha.",
+          "wave_start_s": 12.82485260770975,
+          "wave_end_s": 16.51374149659864
+        },
+        {
+          "event_sequence": 29,
+          "sentence_index": 2,
+          "action": "Partial Answer",
+          "text": "Director of the film The Death Kiss is Edwin L. Marin.",
+          "wave_start_s": 16.51374149659864,
+          "wave_end_s": 19.98267573696145
+        },
+        {
+          "event_sequence": 45,
+          "sentence_index": 1,
+          "action": "Progress",
+          "text": "Formulating the answer with gathered evidence.",
+          "wave_start_s": 21.016009070294785,
+          "wave_end_s": 24.129977324263038
+        },
+        {
+          "event_sequence": 47,
+          "sentence_index": 1,
+          "action": "Final Answer",
+          "text": "Swapan Saha, the director of Achena Prem, was born in 1930.",
+          "wave_start_s": 24.129977324263038,
+          "wave_end_s": 29.883628117913833
+        },
+        {
+          "event_sequence": 47,
+          "sentence_index": 2,
+          "action": "Final Answer",
+          "text": "Edwin L. Marin, the director of The Death Kiss, was born in 1899.",
+          "wave_start_s": 29.883628117913833,
+          "wave_end_s": 36.61201814058957
+        },
+        {
+          "event_sequence": 47,
+          "sentence_index": 3,
+          "action": "Final Answer",
+          "text": "Therefore, Achena Prem has the director who was born later.",
+          "wave_start_s": 36.61201814058957,
+          "wave_end_s": 40.955736961451244
+        }
+      ]
+    }
+  },
+  "evaluation": {
+    "mode": "b_final_revised_trace",
+    "trace_id": "2wikimultihopqa_384093b208b011ebbd84ac1f6bf848b6_long",
+    "sample_id": "2wikimultihopqa_384093b208b011ebbd84ac1f6bf848b6",
+    "total_wall_s": 23.39100000000326,
+    "question_timeout_s": 180,
+    "audio_enabled": true,
+    "history_enabled": false,
+    "text_pipeline_wall_s": 20.360000000000582,
+    "effective_settings": {
+      "base_url": "https://tinker.thinkingmachines.dev/services/tinker-prod/oai/api/v1",
+      "model": "openai/gpt-oss-120b",
+      "judge_model": "tinker://f9e9a6c1-e203-5c2c-acdd-68fe67378ca4:train:0/sampler_weights/epoch-0001",
+      "judge_reasoning_effort": "low",
+      "wiki_language": "en",
+      "user_agent": "CascadeSystem/0.1 (educational research prototype)",
+      "timeout_s": 45.0,
+      "max_tokens": 4096,
+      "reasoning_effort": "low",
+      "progress_s": 3.0,
+      "feedback_timeout_s": 6.0,
+      "search_limit": 3,
+      "max_units": 8,
+      "max_searches": 16,
+      "max_sources": 22,
+      "source_chars": 287,
+      "evidence_chars": 2670,
+      "concurrency": 3
+    },
+    "timing_kind": "unknown",
+    "scheduler": "wall-paced fixed B arrivals",
+    "split": "eval_reserved",
+    "empty_evidence_sentences_ignored": 0
+  }
+}

@@ -1,0 +1,430 @@
+{
+  "question": "Which film has the director who was born later, Budak Nafsu or The Bilingual Lover?",
+  "resolved_question": "Which film has the director who was born later, Budak Nafsu or The Bilingual Lover?",
+  "used_history_turn_ids": [],
+  "response_language": "en",
+  "status": "error",
+  "clock": "wall_monotonic",
+  "time_origin": "question_text_ready_after_optional_asr",
+  "model": "openai/gpt-oss-120b",
+  "judge_model": "tinker://f9e9a6c1-e203-5c2c-acdd-68fe67378ca4:train:0/sampler_weights/epoch-0001",
+  "units": [],
+  "judgments": {},
+  "evidence": [],
+  "searches": [],
+  "search_failures": [],
+  "llm_calls": [
+    {
+      "purpose": "feedback_generate",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 413,
+        "completion_tokens": 79,
+        "total_tokens": 492,
+        "prompt_tokens_details": {
+          "cached_tokens": 384
+        }
+      },
+      "latency_s": 0.954
+    },
+    {
+      "purpose": "decompose",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 803,
+        "completion_tokens": 335,
+        "total_tokens": 1138,
+        "prompt_tokens_details": {
+          "cached_tokens": 768
+        }
+      },
+      "latency_s": 1.813
+    },
+    {
+      "purpose": "feedback_generate",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 413,
+        "completion_tokens": 66,
+        "total_tokens": 479,
+        "prompt_tokens_details": {
+          "cached_tokens": 384
+        }
+      },
+      "latency_s": 0.797
+    },
+    {
+      "purpose": "feedback_verify",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 359,
+        "completion_tokens": 94,
+        "total_tokens": 453,
+        "prompt_tokens_details": {
+          "cached_tokens": 128
+        }
+      },
+      "latency_s": 1.031
+    },
+    {
+      "purpose": "plan_review",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 1088,
+        "completion_tokens": 580,
+        "total_tokens": 1668,
+        "prompt_tokens_details": {
+          "cached_tokens": 768
+        }
+      },
+      "latency_s": 4.203
+    }
+  ],
+  "search_diagnostics": [],
+  "output_enqueued_units": {},
+  "events": [
+    {
+      "sequence": 0,
+      "time_s": 0.0,
+      "type": "feedback_requested",
+      "feedback_kind": "opening",
+      "execution_state": {
+        "stage": "planning",
+        "searches_started": 0,
+        "searches_completed": 0,
+        "active_searches": 0,
+        "evidence_count": 0,
+        "supported_units": 0,
+        "output_units": 0
+      }
+    },
+    {
+      "sequence": 1,
+      "time_s": 0.954,
+      "type": "utterance",
+      "action": "Backchannel",
+      "text": "Let me check.",
+      "claims": [],
+      "feedback_source": "fallback",
+      "feedback_status_claim": "intent",
+      "feedback_fallback_reason": "feedback_may_contain_answer_or_unearned_result",
+      "execution_state": {
+        "stage": "planning",
+        "searches_started": 0,
+        "searches_completed": 0,
+        "active_searches": 0,
+        "evidence_count": 0,
+        "supported_units": 0,
+        "output_units": 0
+      },
+      "language": "en"
+    },
+    {
+      "sequence": 2,
+      "time_s": 1.813,
+      "type": "decompose_reply",
+      "reply": {
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "Birth year of the director of Budak Nafsu",
+            "subject": "",
+            "necessary": true,
+            "depends_on": [],
+            "queries": [
+              "Budak Nafsu film director birth year",
+              "Budak Nafsu movie director"
+            ]
+          },
+          {
+            "unit_id": "u2",
+            "description": "Birth year of the director of The Bilingual Lover",
+            "subject": "Vicente Aranda",
+            "necessary": true,
+            "depends_on": [],
+            "queries": [
+              "Vicente Aranda birth year",
+              "Vicente Aranda date of birth"
+            ]
+          },
+          {
+            "unit_id": "u3",
+            "description": "Which film has the director who was born later",
+            "subject": "",
+            "necessary": true,
+            "depends_on": [
+              "u1",
+              "u2"
+            ],
+            "queries": [
+              "compare birth years of directors of Budak Nafsu and The Bilingual Lover"
+            ]
+          }
+        ]
+      },
+      "attempt": 1,
+      "repair": false
+    },
+    {
+      "sequence": 3,
+      "time_s": 1.813,
+      "type": "plan_review_requested",
+      "max_reviews": 1,
+      "question_only": true
+    },
+    {
+      "sequence": 4,
+      "time_s": 3.985,
+      "type": "feedback_requested",
+      "feedback_kind": "progress",
+      "execution_state": {
+        "stage": "planning",
+        "searches_started": 0,
+        "searches_completed": 0,
+        "active_searches": 0,
+        "evidence_count": 0,
+        "supported_units": 0,
+        "output_units": 0
+      }
+    },
+    {
+      "sequence": 5,
+      "time_s": 5.813,
+      "type": "utterance",
+      "action": "Progress",
+      "text": "I'm planning the steps to compare the directors' birth dates.",
+      "claims": [],
+      "feedback_source": "model",
+      "feedback_status_claim": "processing",
+      "feedback_fallback_reason": "",
+      "execution_state": {
+        "stage": "planning",
+        "searches_started": 0,
+        "searches_completed": 0,
+        "active_searches": 0,
+        "evidence_count": 0,
+        "supported_units": 0,
+        "output_units": 0
+      },
+      "language": "en"
+    },
+    {
+      "sequence": 6,
+      "time_s": 6.016,
+      "type": "plan_review_reply",
+      "reply": {
+        "units": [
+          {
+            "unit_id": "u0",
+            "description": "Director of the film Budak Nafsu",
+            "subject": "",
+            "necessary": false,
+            "depends_on": [],
+            "queries": [
+              "Budak Nafsu film director",
+              "Budak Nafsu movie director"
+            ]
+          },
+          {
+            "unit_id": "u1",
+            "description": "Birth year of the director of Budak Nafsu",
+            "subject": "{u0}",
+            "necessary": true,
+            "depends_on": [
+              "u0"
+            ],
+            "queries": [
+              "{u0} birth year",
+              "{u0} date of birth"
+            ]
+          },
+          {
+            "unit_id": "u2",
+            "description": "Birth year of the director of The Bilingual Lover",
+            "subject": "Vicente Aranda",
+            "necessary": true,
+            "depends_on": [],
+            "queries": [
+              "Vicente Aranda birth year",
+              "Vicente Aranda date of birth"
+            ]
+          },
+          {
+            "unit_id": "u3",
+            "description": "Which film has the director who was born later",
+            "subject": "",
+            "necessary": true,
+            "depends_on": [
+              "u1",
+              "u2"
+            ],
+            "queries": [
+              "compare birth years of directors of Budak Nafsu and The Bilingual Lover"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "sequence": 7,
+      "time_s": 6.016,
+      "type": "plan_review_rejected",
+      "error": "Unit IDs must be u1, u2, ..."
+    },
+    {
+      "sequence": 8,
+      "time_s": 6.016,
+      "type": "failure",
+      "error": "Unit IDs must be u1, u2, ..."
+    },
+    {
+      "sequence": 9,
+      "time_s": 6.016,
+      "type": "utterance",
+      "action": "Final Answer",
+      "claims": [],
+      "text": "The search or verification failed, so I cannot give a reliable answer yet.",
+      "language": "en"
+    },
+    {
+      "sequence": 10,
+      "time_s": 6.016,
+      "type": "finished",
+      "status": "error"
+    }
+  ],
+  "note": "Prototype model judgments are not independent gold scores. Output event times are not spoken claim times.",
+  "evidence_mode": "scheduled_trace",
+  "audio": {
+    "enabled": true,
+    "mode": "windows",
+    "play": false,
+    "status": "ok",
+    "errors": [],
+    "records": [
+      {
+        "event_sequence": 1,
+        "sentence_index": 1,
+        "sentence_count": 1,
+        "language": "en",
+        "text": "Let me check.",
+        "action": "Backchannel",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 0.9539999999979045,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1-continued\\samples\\0352\\audio\\segments\\0001_01.wav",
+        "duration_s": 1.649297052154195,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 1.75,
+        "synthesis_and_playback_s": 0.7960000000020955
+      },
+      {
+        "event_sequence": 5,
+        "sentence_index": 1,
+        "sentence_count": 1,
+        "language": "en",
+        "text": "I'm planning the steps to compare the directors' birth dates.",
+        "action": "Progress",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 5.812999999994645,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1-continued\\samples\\0352\\audio\\segments\\0005_01.wav",
+        "duration_s": 3.908662131519274,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 6.610000000000582,
+        "synthesis_and_playback_s": 0.7970000000059372
+      },
+      {
+        "event_sequence": 9,
+        "sentence_index": 1,
+        "sentence_count": 1,
+        "language": "en",
+        "text": "The search or verification failed, so I cannot give a reliable answer yet.",
+        "action": "Final Answer",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 6.610000000000582,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1-continued\\samples\\0352\\audio\\segments\\0009_01.wav",
+        "duration_s": 5.348526077097506,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 7.406999999991967,
+        "synthesis_and_playback_s": 0.7969999999913853
+      }
+    ],
+    "wave": {
+      "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1-continued\\samples\\0352\\audio\\response.wav",
+      "duration_s": 15.867210884353742,
+      "timeline": [
+        {
+          "event_sequence": 1,
+          "sentence_index": 1,
+          "action": "Backchannel",
+          "text": "Let me check.",
+          "wave_start_s": 1.7500226757369615,
+          "wave_end_s": 3.3993197278911564
+        },
+        {
+          "event_sequence": 5,
+          "sentence_index": 1,
+          "action": "Progress",
+          "text": "I'm planning the steps to compare the directors' birth dates.",
+          "wave_start_s": 6.610022675736961,
+          "wave_end_s": 10.518684807256236
+        },
+        {
+          "event_sequence": 9,
+          "sentence_index": 1,
+          "action": "Final Answer",
+          "text": "The search or verification failed, so I cannot give a reliable answer yet.",
+          "wave_start_s": 10.518684807256236,
+          "wave_end_s": 15.867210884353742
+        }
+      ]
+    }
+  },
+  "evaluation": {
+    "mode": "b_final_revised_trace",
+    "trace_id": "2wikimultihopqa_c2c7992e08bd11ebbd8aac1f6bf848b6_immediate",
+    "sample_id": "2wikimultihopqa_c2c7992e08bd11ebbd8aac1f6bf848b6",
+    "total_wall_s": 7.406999999991967,
+    "question_timeout_s": 180,
+    "audio_enabled": true,
+    "history_enabled": false,
+    "text_pipeline_wall_s": 6.01600000000326,
+    "effective_settings": {
+      "base_url": "https://tinker.thinkingmachines.dev/services/tinker-prod/oai/api/v1",
+      "model": "openai/gpt-oss-120b",
+      "judge_model": "tinker://f9e9a6c1-e203-5c2c-acdd-68fe67378ca4:train:0/sampler_weights/epoch-0001",
+      "judge_reasoning_effort": "low",
+      "wiki_language": "en",
+      "user_agent": "CascadeSystem/0.1 (educational research prototype)",
+      "timeout_s": 45.0,
+      "max_tokens": 4096,
+      "reasoning_effort": "low",
+      "progress_s": 3.0,
+      "feedback_timeout_s": 6.0,
+      "search_limit": 3,
+      "max_units": 8,
+      "max_searches": 16,
+      "max_sources": 32,
+      "source_chars": 219,
+      "evidence_chars": 3819,
+      "concurrency": 3
+    },
+    "timing_kind": "unknown",
+    "scheduler": "wall-paced fixed B arrivals",
+    "split": "eval_reserved",
+    "empty_evidence_sentences_ignored": 0
+  }
+}

@@ -167,7 +167,11 @@ speech-claim alignment is absent. Sharing inputs alone does not make timings com
 | `run.py` | Final gate, fixed input export/validation, GPT+LoRA replay/resume and B scoring |
 | `tests/test_final.py` | Fictional gating, schema, blank sources, gold isolation, 900-attempt inventory, resume and scoring tests |
 | `tests/test_continuation.py` | Operational parent/child lineage, unchanged-method checks, saved-error recovery and audio/authentication separation |
-| `.gitignore` | Keeps inputs, outputs and cache out of Git |
+| `.gitignore` | Tracks run artifacts, including audio; keeps inputs, other outputs and cache out of Git |
+
+Run records, reports, transcripts, and audio under `artifacts/runs/` are tracked
+in Git with their original bytes. Frozen inputs and other artifact directories
+remain ignored. Python bytecode is excluded.
 
 ```powershell
 python -m unittest discover -s "eval gpt900/tests"

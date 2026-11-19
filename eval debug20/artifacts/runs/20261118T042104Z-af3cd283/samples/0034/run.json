@@ -1,0 +1,692 @@
+{
+  "question": "On what date did Voyager 2 launch, and on what date did it fly by Neptune?",
+  "resolved_question": "On what date did Voyager 2 launch, and on what date did it fly by Neptune?",
+  "used_history_turn_ids": [],
+  "response_language": "en",
+  "status": "complete",
+  "clock": "wall_monotonic",
+  "time_origin": "question_text_ready_after_optional_asr",
+  "model": "openai/gpt-oss-120b",
+  "units": [
+    {
+      "unit_id": "u1",
+      "description": "date of launch of Voyager 2",
+      "necessary": true,
+      "depends_on": [],
+      "queries": [
+        "Voyager 2 launch date",
+        "Voyager 2 launch"
+      ],
+      "subject": "Voyager 2"
+    },
+    {
+      "unit_id": "u2",
+      "description": "date Voyager 2 flew by Neptune",
+      "necessary": true,
+      "depends_on": [],
+      "queries": [
+        "Voyager 2 Neptune flyby date",
+        "Voyager 2 Neptune encounter"
+      ],
+      "subject": "Voyager 2"
+    }
+  ],
+  "judgments": {
+    "u1": {
+      "label": "SUPPORTED",
+      "value": "August 20, 1977",
+      "citations": [
+        "d1s0"
+      ],
+      "quotes": [
+        {
+          "evidence_id": "d1s0",
+          "text": "launched on August 20, 1977"
+        }
+      ],
+      "reason": "Evidence directly states the launch date."
+    },
+    "u2": {
+      "label": "SUPPORTED",
+      "value": "August 25, 1989",
+      "citations": [
+        "d2s0"
+      ],
+      "quotes": [
+        {
+          "evidence_id": "d2s0",
+          "text": "took place on August 25, 1989"
+        }
+      ],
+      "reason": "Evidence directly states the Neptune flyby date."
+    }
+  },
+  "evidence": [
+    {
+      "evidence_id": "d1s0",
+      "title": "Voyager 2 — launch",
+      "url": "https://trace.invalid/custom_nasa_voyager2_immediate/d1s0",
+      "text": "Voyager 2 launched on August 20, 1977.",
+      "visible_time_s": 6.4103915999985475,
+      "requested_subject": "",
+      "resolved_title": "Voyager 2 — launch",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d2s0",
+      "title": "Voyager 2 — Neptune flyby",
+      "url": "https://trace.invalid/custom_nasa_voyager2_immediate/d2s0",
+      "text": "The Neptune flyby of Voyager 2 took place on August 25, 1989.",
+      "visible_time_s": 6.410422599998128,
+      "requested_subject": "",
+      "resolved_title": "Voyager 2 — Neptune flyby",
+      "entity_resolution": "unspecified"
+    }
+  ],
+  "searches": [
+    {
+      "query": "[scheduled evidence]",
+      "subject": "",
+      "status": "ok",
+      "returned_pages": [],
+      "mode": "trace",
+      "unit_id": "__scheduled_evidence__"
+    }
+  ],
+  "search_failures": [],
+  "llm_calls": [
+    {
+      "purpose": "feedback_generate",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 412,
+        "completion_tokens": 59,
+        "total_tokens": 471,
+        "prompt_tokens_details": {
+          "cached_tokens": 384
+        }
+      },
+      "latency_s": 3.417674
+    },
+    {
+      "purpose": "feedback_verify",
+      "model": "openai/gpt-oss-120b",
+      "status": "cancelled",
+      "latency_s": 2.584946
+    },
+    {
+      "purpose": "decompose",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 627,
+        "completion_tokens": 198,
+        "total_tokens": 825,
+        "prompt_tokens_details": {
+          "cached_tokens": 512
+        }
+      },
+      "latency_s": 6.408151
+    },
+    {
+      "purpose": "feedback_generate",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 412,
+        "completion_tokens": 57,
+        "total_tokens": 469,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        }
+      },
+      "latency_s": 1.959174
+    },
+    {
+      "purpose": "judge",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 1134,
+        "completion_tokens": 322,
+        "total_tokens": 1456,
+        "prompt_tokens_details": {
+          "cached_tokens": 768
+        }
+      },
+      "latency_s": 7.275935
+    },
+    {
+      "purpose": "generate",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 678,
+        "completion_tokens": 81,
+        "total_tokens": 759,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        }
+      },
+      "latency_s": 0.958177
+    },
+    {
+      "purpose": "feedback_verify",
+      "model": "openai/gpt-oss-120b",
+      "status": "cancelled",
+      "latency_s": 4.042863
+    },
+    {
+      "purpose": "verify",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 1123,
+        "completion_tokens": 131,
+        "total_tokens": 1254,
+        "prompt_tokens_details": {
+          "cached_tokens": 512
+        }
+      },
+      "latency_s": 1.268424
+    }
+  ],
+  "search_diagnostics": [],
+  "output_enqueued_units": {
+    "u1": "August 20, 1977",
+    "u2": "August 25, 1989"
+  },
+  "events": [
+    {
+      "sequence": 0,
+      "time_s": 0.000337,
+      "type": "feedback_requested",
+      "feedback_kind": "opening",
+      "execution_state": {
+        "stage": "planning",
+        "searches_started": 0,
+        "searches_completed": 0,
+        "active_searches": 0,
+        "evidence_count": 0,
+        "supported_units": 0,
+        "output_units": 0
+      }
+    },
+    {
+      "sequence": 1,
+      "time_s": 6.003232,
+      "type": "utterance",
+      "action": "Backchannel",
+      "text": "Let me check.",
+      "claims": [],
+      "feedback_source": "fallback",
+      "feedback_status_claim": "intent",
+      "feedback_fallback_reason": "TimeoutError",
+      "execution_state": {
+        "stage": "planning",
+        "searches_started": 0,
+        "searches_completed": 0,
+        "active_searches": 0,
+        "evidence_count": 0,
+        "supported_units": 0,
+        "output_units": 0
+      },
+      "language": "en"
+    },
+    {
+      "sequence": 2,
+      "time_s": 6.408456,
+      "type": "decompose_reply",
+      "reply": {
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "date of launch of Voyager 2",
+            "subject": "Voyager 2",
+            "necessary": true,
+            "depends_on": [],
+            "queries": [
+              "Voyager 2 launch date",
+              "Voyager 2 launch"
+            ]
+          },
+          {
+            "unit_id": "u2",
+            "description": "date Voyager 2 flew by Neptune",
+            "subject": "Voyager 2",
+            "necessary": true,
+            "depends_on": [],
+            "queries": [
+              "Voyager 2 Neptune flyby date",
+              "Voyager 2 Neptune encounter"
+            ]
+          }
+        ]
+      },
+      "attempt": 1,
+      "repair": false
+    },
+    {
+      "sequence": 3,
+      "time_s": 6.41026,
+      "type": "plan",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "date of launch of Voyager 2",
+          "necessary": true,
+          "depends_on": [],
+          "queries": [
+            "Voyager 2 launch date",
+            "Voyager 2 launch"
+          ],
+          "subject": "Voyager 2"
+        },
+        {
+          "unit_id": "u2",
+          "description": "date Voyager 2 flew by Neptune",
+          "necessary": true,
+          "depends_on": [],
+          "queries": [
+            "Voyager 2 Neptune flyby date",
+            "Voyager 2 Neptune encounter"
+          ],
+          "subject": "Voyager 2"
+        }
+      ]
+    },
+    {
+      "sequence": 4,
+      "time_s": 6.410303,
+      "type": "trace_batch_requested"
+    },
+    {
+      "sequence": 5,
+      "time_s": 6.41036,
+      "type": "search_finished",
+      "query": "[scheduled evidence]",
+      "subject": "",
+      "status": "ok",
+      "returned_pages": [],
+      "mode": "trace",
+      "unit_id": "__scheduled_evidence__"
+    },
+    {
+      "sequence": 6,
+      "time_s": 6.4104,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d1s0",
+        "title": "Voyager 2 — launch",
+        "url": "https://trace.invalid/custom_nasa_voyager2_immediate/d1s0",
+        "text": "Voyager 2 launched on August 20, 1977.",
+        "visible_time_s": 6.4103915999985475,
+        "requested_subject": "",
+        "resolved_title": "Voyager 2 — launch",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 7,
+      "time_s": 6.410426,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d2s0",
+        "title": "Voyager 2 — Neptune flyby",
+        "url": "https://trace.invalid/custom_nasa_voyager2_immediate/d2s0",
+        "text": "The Neptune flyby of Voyager 2 took place on August 25, 1989.",
+        "visible_time_s": 6.410422599998128,
+        "requested_subject": "",
+        "resolved_title": "Voyager 2 — Neptune flyby",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 8,
+      "time_s": 9.253025,
+      "type": "feedback_requested",
+      "feedback_kind": "progress",
+      "execution_state": {
+        "stage": "checking",
+        "searches_started": 1,
+        "searches_completed": 1,
+        "active_searches": 0,
+        "evidence_count": 2,
+        "supported_units": 0,
+        "output_units": 0
+      }
+    },
+    {
+      "sequence": 9,
+      "time_s": 13.686408,
+      "type": "judge_reply",
+      "reply": {
+        "judgments": [
+          {
+            "unit_id": "u1",
+            "label": "SUPPORTED",
+            "value": "August 20, 1977",
+            "citations": [
+              "d1s0"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d1s0",
+                "text": "launched on August 20, 1977"
+              }
+            ],
+            "reason": "Evidence directly states the launch date."
+          },
+          {
+            "unit_id": "u2",
+            "label": "SUPPORTED",
+            "value": "August 25, 1989",
+            "citations": [
+              "d2s0"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d2s0",
+                "text": "took place on August 25, 1989"
+              }
+            ],
+            "reason": "Evidence directly states the Neptune flyby date."
+          }
+        ]
+      },
+      "attempt": 1,
+      "repair": false,
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d2s0"
+      ]
+    },
+    {
+      "sequence": 10,
+      "time_s": 13.686523,
+      "type": "judgments",
+      "judgments": {
+        "u1": {
+          "label": "SUPPORTED",
+          "value": "August 20, 1977",
+          "citations": [
+            "d1s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d1s0",
+              "text": "launched on August 20, 1977"
+            }
+          ],
+          "reason": "Evidence directly states the launch date."
+        },
+        "u2": {
+          "label": "SUPPORTED",
+          "value": "August 25, 1989",
+          "citations": [
+            "d2s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d2s0",
+              "text": "took place on August 25, 1989"
+            }
+          ],
+          "reason": "Evidence directly states the Neptune flyby date."
+        }
+      },
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d2s0"
+      ],
+      "semantic_review": false
+    },
+    {
+      "sequence": 11,
+      "time_s": 15.255294,
+      "type": "utterance",
+      "action": "Progress",
+      "text": "I'm putting the verified information into an answer.",
+      "claims": [],
+      "feedback_source": "fallback",
+      "feedback_status_claim": "formulating",
+      "feedback_fallback_reason": "TimeoutError",
+      "execution_state": {
+        "stage": "formulating",
+        "searches_started": 1,
+        "searches_completed": 1,
+        "active_searches": 0,
+        "evidence_count": 2,
+        "supported_units": 2,
+        "output_units": 0
+      },
+      "language": "en"
+    },
+    {
+      "sequence": 12,
+      "time_s": 15.913522,
+      "type": "verification_reply",
+      "reply": {
+        "approved": true,
+        "facts_valid": true,
+        "expressed_unit_ids": [
+          "u1",
+          "u2"
+        ],
+        "reason": "All stated dates match the approved facts and no extra claims are made."
+      },
+      "output_unit_ids": [
+        "u1",
+        "u2"
+      ],
+      "output_action": "Final Answer",
+      "dependency_unit_ids": [],
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d2s0"
+      ]
+    },
+    {
+      "sequence": 13,
+      "time_s": 15.913581,
+      "type": "utterance",
+      "action": "Final Answer",
+      "text": "Voyager 2 launched on August 20, 1977. Voyager 2 flew by Neptune on August 25, 1989.",
+      "claims": [
+        {
+          "unit_id": "u1",
+          "description": "date of launch of Voyager 2",
+          "value": "August 20, 1977",
+          "citations": [
+            "d1s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d1s0",
+              "text": "launched on August 20, 1977"
+            }
+          ]
+        },
+        {
+          "unit_id": "u2",
+          "description": "date Voyager 2 flew by Neptune",
+          "value": "August 25, 1989",
+          "citations": [
+            "d2s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d2s0",
+              "text": "took place on August 25, 1989"
+            }
+          ]
+        }
+      ],
+      "unresolved": [],
+      "fallback": false,
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d2s0"
+      ],
+      "language": "en"
+    },
+    {
+      "sequence": 14,
+      "time_s": 15.914028,
+      "type": "finished",
+      "status": "complete"
+    }
+  ],
+  "note": "Prototype model judgments are not independent gold scores. Output event times are not spoken claim times.",
+  "evidence_mode": "scheduled_trace",
+  "audio": {
+    "enabled": true,
+    "mode": "windows",
+    "play": false,
+    "status": "ok",
+    "errors": [],
+    "records": [
+      {
+        "event_sequence": 1,
+        "sentence_index": 1,
+        "sentence_count": 1,
+        "language": "en",
+        "text": "Let me check.",
+        "action": "Backchannel",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 6.003867100000207,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval debug20\\artifacts\\runs\\20261118T042104Z-af3cd283\\samples\\0034\\audio\\segments\\0001_01.wav",
+        "duration_s": 1.649297052154195,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 6.781676499998866,
+        "synthesis_and_playback_s": 0.7780827999995381
+      },
+      {
+        "event_sequence": 11,
+        "sentence_index": 1,
+        "sentence_count": 1,
+        "language": "en",
+        "text": "I'm putting the verified information into an answer.",
+        "action": "Progress",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 15.255792899999506,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval debug20\\artifacts\\runs\\20261118T042104Z-af3cd283\\samples\\0034\\audio\\segments\\0011_01.wav",
+        "duration_s": 3.44875283446712,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 16.045840299997508,
+        "synthesis_and_playback_s": 0.790312900000572
+      },
+      {
+        "event_sequence": 13,
+        "sentence_index": 1,
+        "sentence_count": 2,
+        "language": "en",
+        "text": "Voyager 2 launched on August 20, 1977.",
+        "action": "Final Answer",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 16.04611169999771,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval debug20\\artifacts\\runs\\20261118T042104Z-af3cd283\\samples\\0034\\audio\\segments\\0013_01.wav",
+        "duration_s": 4.848662131519275,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 16.850215200000093,
+        "synthesis_and_playback_s": 0.8043711999998777
+      },
+      {
+        "event_sequence": 13,
+        "sentence_index": 2,
+        "sentence_count": 2,
+        "language": "en",
+        "text": "Voyager 2 flew by Neptune on August 25, 1989.",
+        "action": "Final Answer",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 16.850488299998688,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval debug20\\artifacts\\runs\\20261118T042104Z-af3cd283\\samples\\0034\\audio\\segments\\0013_02.wav",
+        "duration_s": 5.283628117913832,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 17.67958329999965,
+        "synthesis_and_playback_s": 0.8293559000012465
+      }
+    ],
+    "wave": {
+      "path": "D:\\UIUC\\CS546\\moshi-rag\\eval debug20\\artifacts\\runs\\20261118T042104Z-af3cd283\\samples\\0034\\audio\\response.wav",
+      "duration_s": 29.626893424036282,
+      "timeline": [
+        {
+          "event_sequence": 1,
+          "sentence_index": 1,
+          "action": "Backchannel",
+          "text": "Let me check.",
+          "wave_start_s": 6.781678004535148,
+          "wave_end_s": 8.430975056689343
+        },
+        {
+          "event_sequence": 11,
+          "sentence_index": 1,
+          "action": "Progress",
+          "text": "I'm putting the verified information into an answer.",
+          "wave_start_s": 16.045850340136056,
+          "wave_end_s": 19.494603174603174
+        },
+        {
+          "event_sequence": 13,
+          "sentence_index": 1,
+          "action": "Final Answer",
+          "text": "Voyager 2 launched on August 20, 1977.",
+          "wave_start_s": 19.494603174603174,
+          "wave_end_s": 24.34326530612245
+        },
+        {
+          "event_sequence": 13,
+          "sentence_index": 2,
+          "action": "Final Answer",
+          "text": "Voyager 2 flew by Neptune on August 25, 1989.",
+          "wave_start_s": 24.34326530612245,
+          "wave_end_s": 29.626893424036282
+        }
+      ]
+    }
+  },
+  "evaluation": {
+    "mode": "b_debug_trace",
+    "trace_id": "custom_nasa_voyager2_immediate",
+    "sample_id": "custom_nasa_voyager2",
+    "total_wall_s": 17.681457799997588,
+    "question_timeout_s": 180,
+    "audio_enabled": true,
+    "history_enabled": false,
+    "text_pipeline_wall_s": 15.914166999998997,
+    "effective_settings": {
+      "base_url": "https://tinker.thinkingmachines.dev/services/tinker-prod/oai/api/v1",
+      "model": "openai/gpt-oss-120b",
+      "wiki_language": "en",
+      "user_agent": "CascadeSystem/0.1 (educational research prototype)",
+      "timeout_s": 45.0,
+      "max_tokens": 4096,
+      "reasoning_effort": "low",
+      "progress_s": 3.0,
+      "feedback_timeout_s": 6.0,
+      "search_limit": 3,
+      "max_units": 8,
+      "max_searches": 16,
+      "max_sources": 2,
+      "source_chars": 61,
+      "evidence_chars": 99,
+      "concurrency": 3
+    },
+    "timing_kind": "unknown",
+    "scheduler": "wall-paced fixed B arrivals"
+  }
+}

@@ -1,0 +1,2330 @@
+{
+  "question": "Which film has the director who died earlier, A Trip to Paris or The Truth About Women (1957)?",
+  "resolved_question": "Which film has the director who died earlier, A Trip to Paris or The Truth About Women (1957)?",
+  "used_history_turn_ids": [],
+  "response_language": "en",
+  "status": "incomplete",
+  "clock": "wall_monotonic",
+  "time_origin": "question_text_ready_after_optional_asr",
+  "model": "openai/gpt-oss-120b",
+  "judge_model": "tinker://f9e9a6c1-e203-5c2c-acdd-68fe67378ca4:train:0/sampler_weights/epoch-0001",
+  "units": [
+    {
+      "unit_id": "u1",
+      "description": "director of A Trip to Paris",
+      "necessary": true,
+      "depends_on": [],
+      "queries": [
+        "A Trip to Paris director",
+        "A Trip to Paris (film) director"
+      ],
+      "subject": "A Trip to Paris (film)"
+    },
+    {
+      "unit_id": "u2",
+      "description": "death date of the director of A Trip to Paris",
+      "necessary": true,
+      "depends_on": [
+        "u1"
+      ],
+      "queries": [
+        "{u1} death date",
+        "{u1} died"
+      ],
+      "subject": "{u1}"
+    },
+    {
+      "unit_id": "u3",
+      "description": "director of The Truth About Women (1957)",
+      "necessary": true,
+      "depends_on": [],
+      "queries": [
+        "The Truth About Women 1957 director",
+        "The Truth About Women (1957 film) director"
+      ],
+      "subject": "The Truth About Women (1957 film)"
+    },
+    {
+      "unit_id": "u4",
+      "description": "death date of the director of The Truth About Women (1957)",
+      "necessary": true,
+      "depends_on": [
+        "u3"
+      ],
+      "queries": [
+        "{u3} death date",
+        "{u3} died"
+      ],
+      "subject": "{u3}"
+    },
+    {
+      "unit_id": "u5",
+      "description": "which film's director died earlier",
+      "necessary": true,
+      "depends_on": [
+        "u2",
+        "u4",
+        "u1",
+        "u3"
+      ],
+      "queries": [
+        "compare death dates of {u1} and {u3}"
+      ],
+      "subject": ""
+    }
+  ],
+  "judgments": {
+    "u1": {
+      "label": "SUPPORTED",
+      "value": "Malcolm St. Clair",
+      "citations": [
+        "d4s0"
+      ],
+      "quotes": [
+        {
+          "evidence_id": "d4s0",
+          "text": "A Trip to Paris is a 1938 American comedy film directed by Malcolm St. Clair and starring Jed Prouty, Shirley Deane and Spring Byington."
+        }
+      ],
+      "reason": "Supported by the cited visible sentences and dependencies."
+    },
+    "u2": {
+      "label": "UNRESOLVED",
+      "value": "",
+      "citations": [],
+      "quotes": [],
+      "reason": "Rejected entity identity: citation concerns an ambiguous or differently qualified namesake"
+    },
+    "u3": {
+      "label": "UNRESOLVED",
+      "value": "",
+      "citations": [],
+      "quotes": [],
+      "reason": "Rejected entity identity: citation concerns an ambiguous or differently qualified namesake"
+    },
+    "u4": {
+      "label": "UNRESOLVED",
+      "value": "",
+      "citations": [],
+      "quotes": [],
+      "reason": "Dependency is not supported"
+    },
+    "u5": {
+      "label": "UNRESOLVED",
+      "value": "",
+      "citations": [],
+      "quotes": [],
+      "reason": "Dependency is not supported"
+    }
+  },
+  "evidence": [
+    {
+      "evidence_id": "d1s0",
+      "title": "The Truth About Juliet",
+      "url": "https://trace.invalid/2wikimultihopqa_d57ccc52087b11ebbd69ac1f6bf848b6_long/d1s0",
+      "text": "The Truth About Juliet is a 1997 comedy film directed by Sean McGinly.",
+      "visible_time_s": 5.953000000008615,
+      "requested_subject": "",
+      "resolved_title": "The Truth About Juliet",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d1s1",
+      "title": "The Truth About Juliet",
+      "url": "https://trace.invalid/2wikimultihopqa_d57ccc52087b11ebbd69ac1f6bf848b6_long/d1s1",
+      "text": "The plot concerns four friends in Los Angeles.",
+      "visible_time_s": 5.953000000008615,
+      "requested_subject": "",
+      "resolved_title": "The Truth About Juliet",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d4s0",
+      "title": "A Trip to Paris",
+      "url": "https://trace.invalid/2wikimultihopqa_d57ccc52087b11ebbd69ac1f6bf848b6_long/d4s0",
+      "text": "A Trip to Paris is a 1938 American comedy film directed by Malcolm St. Clair and starring Jed Prouty, Shirley Deane and Spring Byington.",
+      "visible_time_s": 5.953000000008615,
+      "requested_subject": "",
+      "resolved_title": "A Trip to Paris",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d4s1",
+      "title": "A Trip to Paris",
+      "url": "https://trace.invalid/2wikimultihopqa_d57ccc52087b11ebbd69ac1f6bf848b6_long/d4s1",
+      "text": "It was part of the Jones Family series of films.",
+      "visible_time_s": 5.953000000008615,
+      "requested_subject": "",
+      "resolved_title": "A Trip to Paris",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d4s2",
+      "title": "A Trip to Paris",
+      "url": "https://trace.invalid/2wikimultihopqa_d57ccc52087b11ebbd69ac1f6bf848b6_long/d4s2",
+      "text": "In the film, the family take a vacation to Paris.",
+      "visible_time_s": 5.953000000008615,
+      "requested_subject": "",
+      "resolved_title": "A Trip to Paris",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d4s3",
+      "title": "A Trip to Paris",
+      "url": "https://trace.invalid/2wikimultihopqa_d57ccc52087b11ebbd69ac1f6bf848b6_long/d4s3",
+      "text": "The film's sets were designed by the art directors Haldane Douglas and Bernard Herzbrun.",
+      "visible_time_s": 5.953000000008615,
+      "requested_subject": "",
+      "resolved_title": "A Trip to Paris",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d6s0",
+      "title": "Tully (2000 film)",
+      "url": "https://trace.invalid/2wikimultihopqa_d57ccc52087b11ebbd69ac1f6bf848b6_long/d6s0",
+      "text": "Tully is a 2000 American drama film written and directed by Hilary Birmingham and starring Glenn Fitzgerald, Anson Mount, Bob Burrus, and Julianne Nicholson.",
+      "visible_time_s": 5.953000000008615,
+      "requested_subject": "",
+      "resolved_title": "Tully (2000 film)",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d6s1",
+      "title": "Tully (2000 film)",
+      "url": "https://trace.invalid/2wikimultihopqa_d57ccc52087b11ebbd69ac1f6bf848b6_long/d6s1",
+      "text": "The film was screened at the Los Angeles Independent Film Festival on April 14, 2000 and received a limited release in the United States on November 1, 2002.",
+      "visible_time_s": 5.953000000008615,
+      "requested_subject": "",
+      "resolved_title": "Tully (2000 film)",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d6s2",
+      "title": "Tully (2000 film)",
+      "url": "https://trace.invalid/2wikimultihopqa_d57ccc52087b11ebbd69ac1f6bf848b6_long/d6s2",
+      "text": "It is based on an O. Henry Award- winning short story by author Tom McNeal.",
+      "visible_time_s": 5.953000000008615,
+      "requested_subject": "",
+      "resolved_title": "Tully (2000 film)",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d6s3",
+      "title": "Tully (2000 film)",
+      "url": "https://trace.invalid/2wikimultihopqa_d57ccc52087b11ebbd69ac1f6bf848b6_long/d6s3",
+      "text": "Originally titled\" The Truth About Tully\", the film changed its name to avoid confusion with Jonathan Demme's\" The Truth About Charlie\".",
+      "visible_time_s": 5.953000000008615,
+      "requested_subject": "",
+      "resolved_title": "Tully (2000 film)",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d8s0",
+      "title": "The Truth About Love (film)",
+      "url": "https://trace.invalid/2wikimultihopqa_d57ccc52087b11ebbd69ac1f6bf848b6_long/d8s0",
+      "text": "The Truth About Love is a 2005 film directed by John Hay and starring Jennifer Love Hewitt, Jimi Mistry and Dougray Scott.",
+      "visible_time_s": 5.953000000008615,
+      "requested_subject": "",
+      "resolved_title": "The Truth About Love (film)",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d10s0",
+      "title": "The Truth About Women",
+      "url": "https://trace.invalid/2wikimultihopqa_d57ccc52087b11ebbd69ac1f6bf848b6_long/d10s0",
+      "text": "The Truth About Women is a 1957 British comedy film directed by Muriel Box and starring Laurence Harvey, Julie Harris, Mai Zetterling and Diane Cilento.",
+      "visible_time_s": 5.953000000008615,
+      "requested_subject": "",
+      "resolved_title": "The Truth About Women",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d2s0",
+      "title": "The Irrefutable Truth about Demons",
+      "url": "https://trace.invalid/2wikimultihopqa_d57ccc52087b11ebbd69ac1f6bf848b6_long/d2s0",
+      "text": "The Irrefutable Truth about Demons is a New Zealand horror film released in 2000.",
+      "visible_time_s": 11.64100000000326,
+      "requested_subject": "",
+      "resolved_title": "The Irrefutable Truth about Demons",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d2s1",
+      "title": "The Irrefutable Truth about Demons",
+      "url": "https://trace.invalid/2wikimultihopqa_d57ccc52087b11ebbd69ac1f6bf848b6_long/d2s1",
+      "text": "It was directed by Glenn Standring and stars Karl Urban, Katie Wolfe, and Jonathon Hendry.",
+      "visible_time_s": 11.64100000000326,
+      "requested_subject": "",
+      "resolved_title": "The Irrefutable Truth about Demons",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d2s2",
+      "title": "The Irrefutable Truth about Demons",
+      "url": "https://trace.invalid/2wikimultihopqa_d57ccc52087b11ebbd69ac1f6bf848b6_long/d2s2",
+      "text": "The film's UK DVD title is\" The Truth About Demons\".",
+      "visible_time_s": 11.64100000000326,
+      "requested_subject": "",
+      "resolved_title": "The Irrefutable Truth about Demons",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d3s0",
+      "title": "Muriel Box",
+      "url": "https://trace.invalid/2wikimultihopqa_d57ccc52087b11ebbd69ac1f6bf848b6_long/d3s0",
+      "text": "Violette, Lady Gardiner( 22 September 1905 – 18 May 1991), known professionally as Muriel Box, was an English screenwriter and director.",
+      "visible_time_s": 11.64100000000326,
+      "requested_subject": "",
+      "resolved_title": "Muriel Box",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d5s0",
+      "title": "Malcolm St. Clair (filmmaker)",
+      "url": "https://trace.invalid/2wikimultihopqa_d57ccc52087b11ebbd69ac1f6bf848b6_long/d5s0",
+      "text": "Malcolm St. Clair( May 17, 1897 – June 1, 1952) was a Hollywood film director, writer, producer and actor.",
+      "visible_time_s": 11.64100000000326,
+      "requested_subject": "",
+      "resolved_title": "Malcolm St. Clair (filmmaker)",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d7s0",
+      "title": "The Truth About Women (1924 film)",
+      "url": "https://trace.invalid/2wikimultihopqa_d57ccc52087b11ebbd69ac1f6bf848b6_long/d7s0",
+      "text": "The Truth About Women is a lost 1924 American silent film drama directed by Burton King and starring Hope Hampton and Lowell Sherman.",
+      "visible_time_s": 11.64100000000326,
+      "requested_subject": "",
+      "resolved_title": "The Truth About Women (1924 film)",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d9s0",
+      "title": "The Truth About Emanuel",
+      "url": "https://trace.invalid/2wikimultihopqa_d57ccc52087b11ebbd69ac1f6bf848b6_long/d9s0",
+      "text": "The Truth About Emanuel( previously Emanuel and the Truth About Fishes) is a 2013 American thriller drama film written, directed and produced by Francesca Gregorini.",
+      "visible_time_s": 11.64100000000326,
+      "requested_subject": "",
+      "resolved_title": "The Truth About Emanuel",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d9s1",
+      "title": "The Truth About Emanuel",
+      "url": "https://trace.invalid/2wikimultihopqa_d57ccc52087b11ebbd69ac1f6bf848b6_long/d9s1",
+      "text": "The film stars Jessica Biel, Kaya Scodelario, Alfred Molina, Jimmi Simpson, Aneurin Barnard and Frances O'Connor.",
+      "visible_time_s": 11.64100000000326,
+      "requested_subject": "",
+      "resolved_title": "The Truth About Emanuel",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d9s2",
+      "title": "The Truth About Emanuel",
+      "url": "https://trace.invalid/2wikimultihopqa_d57ccc52087b11ebbd69ac1f6bf848b6_long/d9s2",
+      "text": "It premiered at the Sundance Film Festival on January 18, 2013.",
+      "visible_time_s": 11.64100000000326,
+      "requested_subject": "",
+      "resolved_title": "The Truth About Emanuel",
+      "entity_resolution": "unspecified"
+    }
+  ],
+  "searches": [
+    {
+      "query": "[scheduled evidence]",
+      "subject": "",
+      "status": "ok",
+      "returned_pages": [],
+      "mode": "trace",
+      "unit_id": "__scheduled_evidence__"
+    },
+    {
+      "query": "[scheduled evidence]",
+      "subject": "",
+      "status": "ok",
+      "returned_pages": [],
+      "mode": "trace",
+      "unit_id": "__scheduled_evidence__"
+    },
+    {
+      "query": "[scheduled evidence]",
+      "subject": "",
+      "status": "ok",
+      "returned_pages": [],
+      "mode": "trace",
+      "unit_id": "__scheduled_evidence__"
+    }
+  ],
+  "search_failures": [],
+  "llm_calls": [
+    {
+      "purpose": "feedback_generate",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 416,
+        "completion_tokens": 74,
+        "total_tokens": 490,
+        "prompt_tokens_details": {
+          "cached_tokens": 384
+        }
+      },
+      "latency_s": 1.031
+    },
+    {
+      "purpose": "feedback_verify",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 377,
+        "completion_tokens": 59,
+        "total_tokens": 436,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        }
+      },
+      "latency_s": 0.891
+    },
+    {
+      "purpose": "decompose",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 806,
+        "completion_tokens": 429,
+        "total_tokens": 1235,
+        "prompt_tokens_details": {
+          "cached_tokens": 768
+        }
+      },
+      "latency_s": 2.984
+    },
+    {
+      "purpose": "plan_review",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 1196,
+        "completion_tokens": 492,
+        "total_tokens": 1688,
+        "prompt_tokens_details": {
+          "cached_tokens": 896
+        }
+      },
+      "latency_s": 2.969
+    },
+    {
+      "purpose": "feedback_generate",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 416,
+        "completion_tokens": 69,
+        "total_tokens": 485,
+        "prompt_tokens_details": {
+          "cached_tokens": 384
+        }
+      },
+      "latency_s": 1.047
+    },
+    {
+      "purpose": "feedback_verify",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 362,
+        "completion_tokens": 66,
+        "total_tokens": 428,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        }
+      },
+      "latency_s": 1.093
+    },
+    {
+      "purpose": "judge",
+      "model": "tinker://f9e9a6c1-e203-5c2c-acdd-68fe67378ca4:train:0/sampler_weights/epoch-0001",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 3128,
+        "completion_tokens": 343,
+        "total_tokens": 3471,
+        "prompt_tokens_details": {
+          "cached_tokens": 1024
+        }
+      },
+      "latency_s": 2.281
+    },
+    {
+      "purpose": "generate",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 680,
+        "completion_tokens": 95,
+        "total_tokens": 775,
+        "prompt_tokens_details": {
+          "cached_tokens": 512
+        }
+      },
+      "latency_s": 1.141
+    },
+    {
+      "purpose": "verify",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 920,
+        "completion_tokens": 121,
+        "total_tokens": 1041,
+        "prompt_tokens_details": {
+          "cached_tokens": 512
+        }
+      },
+      "latency_s": 2.266
+    },
+    {
+      "purpose": "judge",
+      "model": "tinker://f9e9a6c1-e203-5c2c-acdd-68fe67378ca4:train:0/sampler_weights/epoch-0001",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 4470,
+        "completion_tokens": 574,
+        "total_tokens": 5044,
+        "prompt_tokens_details": {
+          "cached_tokens": 1408
+        }
+      },
+      "latency_s": 3.328
+    },
+    {
+      "purpose": "feedback_generate",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 416,
+        "completion_tokens": 60,
+        "total_tokens": 476,
+        "prompt_tokens_details": {
+          "cached_tokens": 384
+        }
+      },
+      "latency_s": 1.172
+    },
+    {
+      "purpose": "feedback_verify",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 357,
+        "completion_tokens": 64,
+        "total_tokens": 421,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        }
+      },
+      "latency_s": 0.89
+    },
+    {
+      "purpose": "judge",
+      "model": "tinker://f9e9a6c1-e203-5c2c-acdd-68fe67378ca4:train:0/sampler_weights/epoch-0001",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 4637,
+        "completion_tokens": 574,
+        "total_tokens": 5211,
+        "prompt_tokens_details": {
+          "cached_tokens": 1152
+        }
+      },
+      "latency_s": 3.531
+    }
+  ],
+  "search_diagnostics": [],
+  "output_enqueued_units": {
+    "u1": "Malcolm St. Clair"
+  },
+  "events": [
+    {
+      "sequence": 0,
+      "time_s": 0.0,
+      "type": "feedback_requested",
+      "feedback_kind": "opening",
+      "execution_state": {
+        "stage": "planning",
+        "searches_started": 0,
+        "searches_completed": 0,
+        "active_searches": 0,
+        "evidence_count": 0,
+        "supported_units": 0,
+        "output_units": 0
+      }
+    },
+    {
+      "sequence": 1,
+      "time_s": 1.922,
+      "type": "utterance",
+      "action": "Backchannel",
+      "text": "Let me check.",
+      "claims": [],
+      "feedback_source": "fallback",
+      "feedback_status_claim": "intent",
+      "feedback_fallback_reason": "feedback_not_approved",
+      "execution_state": {
+        "stage": "planning",
+        "searches_started": 0,
+        "searches_completed": 0,
+        "active_searches": 0,
+        "evidence_count": 0,
+        "supported_units": 0,
+        "output_units": 0
+      },
+      "language": "en"
+    },
+    {
+      "sequence": 2,
+      "time_s": 2.984,
+      "type": "decompose_reply",
+      "reply": {
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "director of A Trip to Paris",
+            "subject": "A Trip to Paris (film)",
+            "necessary": true,
+            "depends_on": [],
+            "queries": [
+              "A Trip to Paris director"
+            ]
+          },
+          {
+            "unit_id": "u2",
+            "description": "death date of the director of A Trip to Paris",
+            "subject": "{u1}",
+            "necessary": true,
+            "depends_on": [
+              "u1"
+            ],
+            "queries": [
+              "{u1} death date"
+            ]
+          },
+          {
+            "unit_id": "u3",
+            "description": "director of The Truth About Women (1957)",
+            "subject": "The Truth About Women (1957 film)",
+            "necessary": true,
+            "depends_on": [],
+            "queries": [
+              "The Truth About Women 1957 director"
+            ]
+          },
+          {
+            "unit_id": "u4",
+            "description": "death date of the director of The Truth About Women (1957)",
+            "subject": "{u3}",
+            "necessary": true,
+            "depends_on": [
+              "u3"
+            ],
+            "queries": [
+              "{u3} death date"
+            ]
+          },
+          {
+            "unit_id": "u5",
+            "description": "which film's director died earlier",
+            "subject": "",
+            "necessary": true,
+            "depends_on": [
+              "u2",
+              "u4"
+            ],
+            "queries": [
+              "compare death dates of {u1} and {u3}"
+            ]
+          }
+        ]
+      },
+      "attempt": 1,
+      "repair": false
+    },
+    {
+      "sequence": 3,
+      "time_s": 2.984,
+      "type": "protocol_validation_failed",
+      "stage": "decompose",
+      "attempt": 1,
+      "error": "Placeholders must name explicit dependencies"
+    },
+    {
+      "sequence": 4,
+      "time_s": 2.984,
+      "type": "protocol_normalized",
+      "stage": "decompose",
+      "changes": [
+        {
+          "unit_id": "u5",
+          "added_dependencies": [
+            "u1",
+            "u3"
+          ]
+        }
+      ],
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "director of A Trip to Paris",
+          "necessary": true,
+          "depends_on": [],
+          "queries": [
+            "A Trip to Paris director"
+          ],
+          "subject": "A Trip to Paris (film)"
+        },
+        {
+          "unit_id": "u2",
+          "description": "death date of the director of A Trip to Paris",
+          "necessary": true,
+          "depends_on": [
+            "u1"
+          ],
+          "queries": [
+            "{u1} death date"
+          ],
+          "subject": "{u1}"
+        },
+        {
+          "unit_id": "u3",
+          "description": "director of The Truth About Women (1957)",
+          "necessary": true,
+          "depends_on": [],
+          "queries": [
+            "The Truth About Women 1957 director"
+          ],
+          "subject": "The Truth About Women (1957 film)"
+        },
+        {
+          "unit_id": "u4",
+          "description": "death date of the director of The Truth About Women (1957)",
+          "necessary": true,
+          "depends_on": [
+            "u3"
+          ],
+          "queries": [
+            "{u3} death date"
+          ],
+          "subject": "{u3}"
+        },
+        {
+          "unit_id": "u5",
+          "description": "which film's director died earlier",
+          "necessary": true,
+          "depends_on": [
+            "u2",
+            "u4",
+            "u1",
+            "u3"
+          ],
+          "queries": [
+            "compare death dates of {u1} and {u3}"
+          ],
+          "subject": ""
+        }
+      ],
+      "no_facts_added": true
+    },
+    {
+      "sequence": 5,
+      "time_s": 2.984,
+      "type": "plan_review_requested",
+      "max_reviews": 1,
+      "question_only": true
+    },
+    {
+      "sequence": 6,
+      "time_s": 4.969,
+      "type": "feedback_requested",
+      "feedback_kind": "progress",
+      "execution_state": {
+        "stage": "planning",
+        "searches_started": 0,
+        "searches_completed": 0,
+        "active_searches": 0,
+        "evidence_count": 0,
+        "supported_units": 0,
+        "output_units": 0
+      }
+    },
+    {
+      "sequence": 7,
+      "time_s": 5.953,
+      "type": "plan_review_reply",
+      "reply": {
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "director of A Trip to Paris",
+            "subject": "A Trip to Paris (film)",
+            "necessary": true,
+            "depends_on": [],
+            "queries": [
+              "A Trip to Paris director",
+              "A Trip to Paris (film) director"
+            ]
+          },
+          {
+            "unit_id": "u2",
+            "description": "death date of the director of A Trip to Paris",
+            "subject": "{u1}",
+            "necessary": true,
+            "depends_on": [
+              "u1"
+            ],
+            "queries": [
+              "{u1} death date",
+              "{u1} died"
+            ]
+          },
+          {
+            "unit_id": "u3",
+            "description": "director of The Truth About Women (1957)",
+            "subject": "The Truth About Women (1957 film)",
+            "necessary": true,
+            "depends_on": [],
+            "queries": [
+              "The Truth About Women 1957 director",
+              "The Truth About Women (1957 film) director"
+            ]
+          },
+          {
+            "unit_id": "u4",
+            "description": "death date of the director of The Truth About Women (1957)",
+            "subject": "{u3}",
+            "necessary": true,
+            "depends_on": [
+              "u3"
+            ],
+            "queries": [
+              "{u3} death date",
+              "{u3} died"
+            ]
+          },
+          {
+            "unit_id": "u5",
+            "description": "which film's director died earlier",
+            "subject": "",
+            "necessary": true,
+            "depends_on": [
+              "u2",
+              "u4"
+            ],
+            "queries": [
+              "compare death dates of {u1} and {u3}"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "sequence": 8,
+      "time_s": 5.953,
+      "type": "protocol_normalized",
+      "stage": "plan_review",
+      "changes": [
+        {
+          "unit_id": "u5",
+          "added_dependencies": [
+            "u1",
+            "u3"
+          ]
+        }
+      ],
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "director of A Trip to Paris",
+          "necessary": true,
+          "depends_on": [],
+          "queries": [
+            "A Trip to Paris director",
+            "A Trip to Paris (film) director"
+          ],
+          "subject": "A Trip to Paris (film)"
+        },
+        {
+          "unit_id": "u2",
+          "description": "death date of the director of A Trip to Paris",
+          "necessary": true,
+          "depends_on": [
+            "u1"
+          ],
+          "queries": [
+            "{u1} death date",
+            "{u1} died"
+          ],
+          "subject": "{u1}"
+        },
+        {
+          "unit_id": "u3",
+          "description": "director of The Truth About Women (1957)",
+          "necessary": true,
+          "depends_on": [],
+          "queries": [
+            "The Truth About Women 1957 director",
+            "The Truth About Women (1957 film) director"
+          ],
+          "subject": "The Truth About Women (1957 film)"
+        },
+        {
+          "unit_id": "u4",
+          "description": "death date of the director of The Truth About Women (1957)",
+          "necessary": true,
+          "depends_on": [
+            "u3"
+          ],
+          "queries": [
+            "{u3} death date",
+            "{u3} died"
+          ],
+          "subject": "{u3}"
+        },
+        {
+          "unit_id": "u5",
+          "description": "which film's director died earlier",
+          "necessary": true,
+          "depends_on": [
+            "u2",
+            "u4",
+            "u1",
+            "u3"
+          ],
+          "queries": [
+            "compare death dates of {u1} and {u3}"
+          ],
+          "subject": ""
+        }
+      ],
+      "no_facts_added": true
+    },
+    {
+      "sequence": 9,
+      "time_s": 5.953,
+      "type": "plan_review_finished",
+      "changed": true,
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "director of A Trip to Paris",
+          "necessary": true,
+          "depends_on": [],
+          "queries": [
+            "A Trip to Paris director",
+            "A Trip to Paris (film) director"
+          ],
+          "subject": "A Trip to Paris (film)"
+        },
+        {
+          "unit_id": "u2",
+          "description": "death date of the director of A Trip to Paris",
+          "necessary": true,
+          "depends_on": [
+            "u1"
+          ],
+          "queries": [
+            "{u1} death date",
+            "{u1} died"
+          ],
+          "subject": "{u1}"
+        },
+        {
+          "unit_id": "u3",
+          "description": "director of The Truth About Women (1957)",
+          "necessary": true,
+          "depends_on": [],
+          "queries": [
+            "The Truth About Women 1957 director",
+            "The Truth About Women (1957 film) director"
+          ],
+          "subject": "The Truth About Women (1957 film)"
+        },
+        {
+          "unit_id": "u4",
+          "description": "death date of the director of The Truth About Women (1957)",
+          "necessary": true,
+          "depends_on": [
+            "u3"
+          ],
+          "queries": [
+            "{u3} death date",
+            "{u3} died"
+          ],
+          "subject": "{u3}"
+        },
+        {
+          "unit_id": "u5",
+          "description": "which film's director died earlier",
+          "necessary": true,
+          "depends_on": [
+            "u2",
+            "u4",
+            "u1",
+            "u3"
+          ],
+          "queries": [
+            "compare death dates of {u1} and {u3}"
+          ],
+          "subject": ""
+        }
+      ],
+      "question_only": true
+    },
+    {
+      "sequence": 10,
+      "time_s": 5.953,
+      "type": "plan",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "director of A Trip to Paris",
+          "necessary": true,
+          "depends_on": [],
+          "queries": [
+            "A Trip to Paris director",
+            "A Trip to Paris (film) director"
+          ],
+          "subject": "A Trip to Paris (film)"
+        },
+        {
+          "unit_id": "u2",
+          "description": "death date of the director of A Trip to Paris",
+          "necessary": true,
+          "depends_on": [
+            "u1"
+          ],
+          "queries": [
+            "{u1} death date",
+            "{u1} died"
+          ],
+          "subject": "{u1}"
+        },
+        {
+          "unit_id": "u3",
+          "description": "director of The Truth About Women (1957)",
+          "necessary": true,
+          "depends_on": [],
+          "queries": [
+            "The Truth About Women 1957 director",
+            "The Truth About Women (1957 film) director"
+          ],
+          "subject": "The Truth About Women (1957 film)"
+        },
+        {
+          "unit_id": "u4",
+          "description": "death date of the director of The Truth About Women (1957)",
+          "necessary": true,
+          "depends_on": [
+            "u3"
+          ],
+          "queries": [
+            "{u3} death date",
+            "{u3} died"
+          ],
+          "subject": "{u3}"
+        },
+        {
+          "unit_id": "u5",
+          "description": "which film's director died earlier",
+          "necessary": true,
+          "depends_on": [
+            "u2",
+            "u4",
+            "u1",
+            "u3"
+          ],
+          "queries": [
+            "compare death dates of {u1} and {u3}"
+          ],
+          "subject": ""
+        }
+      ]
+    },
+    {
+      "sequence": 11,
+      "time_s": 5.953,
+      "type": "trace_batch_requested"
+    },
+    {
+      "sequence": 12,
+      "time_s": 5.953,
+      "type": "search_finished",
+      "query": "[scheduled evidence]",
+      "subject": "",
+      "status": "ok",
+      "returned_pages": [],
+      "mode": "trace",
+      "unit_id": "__scheduled_evidence__"
+    },
+    {
+      "sequence": 13,
+      "time_s": 5.953,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d1s0",
+        "title": "The Truth About Juliet",
+        "url": "https://trace.invalid/2wikimultihopqa_d57ccc52087b11ebbd69ac1f6bf848b6_long/d1s0",
+        "text": "The Truth About Juliet is a 1997 comedy film directed by Sean McGinly.",
+        "visible_time_s": 5.953000000008615,
+        "requested_subject": "",
+        "resolved_title": "The Truth About Juliet",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 14,
+      "time_s": 5.953,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d1s1",
+        "title": "The Truth About Juliet",
+        "url": "https://trace.invalid/2wikimultihopqa_d57ccc52087b11ebbd69ac1f6bf848b6_long/d1s1",
+        "text": "The plot concerns four friends in Los Angeles.",
+        "visible_time_s": 5.953000000008615,
+        "requested_subject": "",
+        "resolved_title": "The Truth About Juliet",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 15,
+      "time_s": 5.953,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d4s0",
+        "title": "A Trip to Paris",
+        "url": "https://trace.invalid/2wikimultihopqa_d57ccc52087b11ebbd69ac1f6bf848b6_long/d4s0",
+        "text": "A Trip to Paris is a 1938 American comedy film directed by Malcolm St. Clair and starring Jed Prouty, Shirley Deane and Spring Byington.",
+        "visible_time_s": 5.953000000008615,
+        "requested_subject": "",
+        "resolved_title": "A Trip to Paris",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 16,
+      "time_s": 5.953,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d4s1",
+        "title": "A Trip to Paris",
+        "url": "https://trace.invalid/2wikimultihopqa_d57ccc52087b11ebbd69ac1f6bf848b6_long/d4s1",
+        "text": "It was part of the Jones Family series of films.",
+        "visible_time_s": 5.953000000008615,
+        "requested_subject": "",
+        "resolved_title": "A Trip to Paris",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 17,
+      "time_s": 5.953,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d4s2",
+        "title": "A Trip to Paris",
+        "url": "https://trace.invalid/2wikimultihopqa_d57ccc52087b11ebbd69ac1f6bf848b6_long/d4s2",
+        "text": "In the film, the family take a vacation to Paris.",
+        "visible_time_s": 5.953000000008615,
+        "requested_subject": "",
+        "resolved_title": "A Trip to Paris",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 18,
+      "time_s": 5.953,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d4s3",
+        "title": "A Trip to Paris",
+        "url": "https://trace.invalid/2wikimultihopqa_d57ccc52087b11ebbd69ac1f6bf848b6_long/d4s3",
+        "text": "The film's sets were designed by the art directors Haldane Douglas and Bernard Herzbrun.",
+        "visible_time_s": 5.953000000008615,
+        "requested_subject": "",
+        "resolved_title": "A Trip to Paris",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 19,
+      "time_s": 5.953,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d6s0",
+        "title": "Tully (2000 film)",
+        "url": "https://trace.invalid/2wikimultihopqa_d57ccc52087b11ebbd69ac1f6bf848b6_long/d6s0",
+        "text": "Tully is a 2000 American drama film written and directed by Hilary Birmingham and starring Glenn Fitzgerald, Anson Mount, Bob Burrus, and Julianne Nicholson.",
+        "visible_time_s": 5.953000000008615,
+        "requested_subject": "",
+        "resolved_title": "Tully (2000 film)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 20,
+      "time_s": 5.953,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d6s1",
+        "title": "Tully (2000 film)",
+        "url": "https://trace.invalid/2wikimultihopqa_d57ccc52087b11ebbd69ac1f6bf848b6_long/d6s1",
+        "text": "The film was screened at the Los Angeles Independent Film Festival on April 14, 2000 and received a limited release in the United States on November 1, 2002.",
+        "visible_time_s": 5.953000000008615,
+        "requested_subject": "",
+        "resolved_title": "Tully (2000 film)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 21,
+      "time_s": 5.953,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d6s2",
+        "title": "Tully (2000 film)",
+        "url": "https://trace.invalid/2wikimultihopqa_d57ccc52087b11ebbd69ac1f6bf848b6_long/d6s2",
+        "text": "It is based on an O. Henry Award- winning short story by author Tom McNeal.",
+        "visible_time_s": 5.953000000008615,
+        "requested_subject": "",
+        "resolved_title": "Tully (2000 film)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 22,
+      "time_s": 5.953,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d6s3",
+        "title": "Tully (2000 film)",
+        "url": "https://trace.invalid/2wikimultihopqa_d57ccc52087b11ebbd69ac1f6bf848b6_long/d6s3",
+        "text": "Originally titled\" The Truth About Tully\", the film changed its name to avoid confusion with Jonathan Demme's\" The Truth About Charlie\".",
+        "visible_time_s": 5.953000000008615,
+        "requested_subject": "",
+        "resolved_title": "Tully (2000 film)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 23,
+      "time_s": 5.953,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d8s0",
+        "title": "The Truth About Love (film)",
+        "url": "https://trace.invalid/2wikimultihopqa_d57ccc52087b11ebbd69ac1f6bf848b6_long/d8s0",
+        "text": "The Truth About Love is a 2005 film directed by John Hay and starring Jennifer Love Hewitt, Jimi Mistry and Dougray Scott.",
+        "visible_time_s": 5.953000000008615,
+        "requested_subject": "",
+        "resolved_title": "The Truth About Love (film)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 24,
+      "time_s": 5.953,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d10s0",
+        "title": "The Truth About Women",
+        "url": "https://trace.invalid/2wikimultihopqa_d57ccc52087b11ebbd69ac1f6bf848b6_long/d10s0",
+        "text": "The Truth About Women is a 1957 British comedy film directed by Muriel Box and starring Laurence Harvey, Julie Harris, Mai Zetterling and Diane Cilento.",
+        "visible_time_s": 5.953000000008615,
+        "requested_subject": "",
+        "resolved_title": "The Truth About Women",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 25,
+      "time_s": 7.109,
+      "type": "utterance",
+      "action": "Progress",
+      "text": "I'm planning how to find the director info for those films.",
+      "claims": [],
+      "feedback_source": "model",
+      "feedback_status_claim": "processing",
+      "feedback_fallback_reason": "",
+      "execution_state": {
+        "stage": "checking",
+        "searches_started": 1,
+        "searches_completed": 1,
+        "active_searches": 0,
+        "evidence_count": 12,
+        "supported_units": 0,
+        "output_units": 0
+      },
+      "language": "en"
+    },
+    {
+      "sequence": 26,
+      "time_s": 8.234,
+      "type": "judge_reply",
+      "reply": {
+        "judgments": [
+          {
+            "unit_id": "u1",
+            "label": "SUPPORTED",
+            "value": "Malcolm St. Clair",
+            "citations": [
+              "d4s0"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d4s0",
+                "text": "A Trip to Paris is a 1938 American comedy film directed by Malcolm St. Clair and starring Jed Prouty, Shirley Deane and Spring Byington."
+              }
+            ],
+            "reason": "Supported by the cited visible sentences and dependencies."
+          },
+          {
+            "unit_id": "u2",
+            "label": "UNRESOLVED",
+            "value": "",
+            "citations": [],
+            "quotes": [],
+            "reason": "The current visible evidence does not establish this unit."
+          },
+          {
+            "unit_id": "u3",
+            "label": "SUPPORTED",
+            "value": "Muriel Box",
+            "citations": [
+              "d10s0"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d10s0",
+                "text": "The Truth About Women is a 1957 British comedy film directed by Muriel Box and starring Laurence Harvey, Julie Harris, Mai Zetterling and Diane Cilento."
+              }
+            ],
+            "reason": "Supported by the cited visible sentences and dependencies."
+          },
+          {
+            "unit_id": "u4",
+            "label": "UNRESOLVED",
+            "value": "",
+            "citations": [],
+            "quotes": [],
+            "reason": "The current visible evidence does not establish this unit."
+          },
+          {
+            "unit_id": "u5",
+            "label": "UNRESOLVED",
+            "value": "",
+            "citations": [],
+            "quotes": [],
+            "reason": "The current visible evidence does not establish this unit."
+          }
+        ]
+      },
+      "attempt": 1,
+      "repair": false,
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d1s1",
+        "d4s0",
+        "d4s1",
+        "d4s2",
+        "d4s3",
+        "d6s0",
+        "d6s1",
+        "d6s2",
+        "d6s3",
+        "d8s0",
+        "d10s0"
+      ]
+    },
+    {
+      "sequence": 27,
+      "time_s": 8.234,
+      "type": "judgments",
+      "judgments": {
+        "u1": {
+          "label": "SUPPORTED",
+          "value": "Malcolm St. Clair",
+          "citations": [
+            "d4s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d4s0",
+              "text": "A Trip to Paris is a 1938 American comedy film directed by Malcolm St. Clair and starring Jed Prouty, Shirley Deane and Spring Byington."
+            }
+          ],
+          "reason": "Supported by the cited visible sentences and dependencies."
+        },
+        "u2": {
+          "label": "UNRESOLVED",
+          "value": "",
+          "citations": [],
+          "quotes": [],
+          "reason": "The current visible evidence does not establish this unit."
+        },
+        "u3": {
+          "label": "UNRESOLVED",
+          "value": "",
+          "citations": [],
+          "quotes": [],
+          "reason": "Rejected entity identity: citation concerns an ambiguous or differently qualified namesake"
+        },
+        "u4": {
+          "label": "UNRESOLVED",
+          "value": "",
+          "citations": [],
+          "quotes": [],
+          "reason": "The current visible evidence does not establish this unit."
+        },
+        "u5": {
+          "label": "UNRESOLVED",
+          "value": "",
+          "citations": [],
+          "quotes": [],
+          "reason": "The current visible evidence does not establish this unit."
+        }
+      },
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d1s1",
+        "d4s0",
+        "d4s1",
+        "d4s2",
+        "d4s3",
+        "d6s0",
+        "d6s1",
+        "d6s2",
+        "d6s3",
+        "d8s0",
+        "d10s0"
+      ],
+      "semantic_review": false
+    },
+    {
+      "sequence": 28,
+      "time_s": 8.234,
+      "type": "trace_batch_requested"
+    },
+    {
+      "sequence": 29,
+      "time_s": 11.641,
+      "type": "verification_reply",
+      "reply": {
+        "approved": true,
+        "facts_valid": true,
+        "expressed_unit_ids": [
+          "u1"
+        ],
+        "reason": "The draft correctly states the director of A Trip to Paris as Malcolm St. Clair, matching the approved fact."
+      },
+      "output_unit_ids": [
+        "u1"
+      ],
+      "output_action": "Partial Answer",
+      "dependency_unit_ids": [],
+      "evidence_snapshot_ids": [
+        "d4s0"
+      ]
+    },
+    {
+      "sequence": 30,
+      "time_s": 11.641,
+      "type": "utterance",
+      "action": "Partial Answer",
+      "text": "The director of A Trip to Paris is Malcolm St. Clair.",
+      "claims": [
+        {
+          "unit_id": "u1",
+          "description": "director of A Trip to Paris",
+          "value": "Malcolm St. Clair",
+          "citations": [
+            "d4s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d4s0",
+              "text": "A Trip to Paris is a 1938 American comedy film directed by Malcolm St. Clair and starring Jed Prouty, Shirley Deane and Spring Byington."
+            }
+          ]
+        }
+      ],
+      "unresolved": [],
+      "fallback": false,
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d1s1",
+        "d4s0",
+        "d4s1",
+        "d4s2",
+        "d4s3",
+        "d6s0",
+        "d6s1",
+        "d6s2",
+        "d6s3",
+        "d8s0",
+        "d10s0"
+      ],
+      "language": "en"
+    },
+    {
+      "sequence": 31,
+      "time_s": 11.641,
+      "type": "search_finished",
+      "query": "[scheduled evidence]",
+      "subject": "",
+      "status": "ok",
+      "returned_pages": [],
+      "mode": "trace",
+      "unit_id": "__scheduled_evidence__"
+    },
+    {
+      "sequence": 32,
+      "time_s": 11.641,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d2s0",
+        "title": "The Irrefutable Truth about Demons",
+        "url": "https://trace.invalid/2wikimultihopqa_d57ccc52087b11ebbd69ac1f6bf848b6_long/d2s0",
+        "text": "The Irrefutable Truth about Demons is a New Zealand horror film released in 2000.",
+        "visible_time_s": 11.64100000000326,
+        "requested_subject": "",
+        "resolved_title": "The Irrefutable Truth about Demons",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 33,
+      "time_s": 11.641,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d2s1",
+        "title": "The Irrefutable Truth about Demons",
+        "url": "https://trace.invalid/2wikimultihopqa_d57ccc52087b11ebbd69ac1f6bf848b6_long/d2s1",
+        "text": "It was directed by Glenn Standring and stars Karl Urban, Katie Wolfe, and Jonathon Hendry.",
+        "visible_time_s": 11.64100000000326,
+        "requested_subject": "",
+        "resolved_title": "The Irrefutable Truth about Demons",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 34,
+      "time_s": 11.641,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d2s2",
+        "title": "The Irrefutable Truth about Demons",
+        "url": "https://trace.invalid/2wikimultihopqa_d57ccc52087b11ebbd69ac1f6bf848b6_long/d2s2",
+        "text": "The film's UK DVD title is\" The Truth About Demons\".",
+        "visible_time_s": 11.64100000000326,
+        "requested_subject": "",
+        "resolved_title": "The Irrefutable Truth about Demons",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 35,
+      "time_s": 11.641,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d3s0",
+        "title": "Muriel Box",
+        "url": "https://trace.invalid/2wikimultihopqa_d57ccc52087b11ebbd69ac1f6bf848b6_long/d3s0",
+        "text": "Violette, Lady Gardiner( 22 September 1905 – 18 May 1991), known professionally as Muriel Box, was an English screenwriter and director.",
+        "visible_time_s": 11.64100000000326,
+        "requested_subject": "",
+        "resolved_title": "Muriel Box",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 36,
+      "time_s": 11.641,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d5s0",
+        "title": "Malcolm St. Clair (filmmaker)",
+        "url": "https://trace.invalid/2wikimultihopqa_d57ccc52087b11ebbd69ac1f6bf848b6_long/d5s0",
+        "text": "Malcolm St. Clair( May 17, 1897 – June 1, 1952) was a Hollywood film director, writer, producer and actor.",
+        "visible_time_s": 11.64100000000326,
+        "requested_subject": "",
+        "resolved_title": "Malcolm St. Clair (filmmaker)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 37,
+      "time_s": 11.641,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d7s0",
+        "title": "The Truth About Women (1924 film)",
+        "url": "https://trace.invalid/2wikimultihopqa_d57ccc52087b11ebbd69ac1f6bf848b6_long/d7s0",
+        "text": "The Truth About Women is a lost 1924 American silent film drama directed by Burton King and starring Hope Hampton and Lowell Sherman.",
+        "visible_time_s": 11.64100000000326,
+        "requested_subject": "",
+        "resolved_title": "The Truth About Women (1924 film)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 38,
+      "time_s": 11.641,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d9s0",
+        "title": "The Truth About Emanuel",
+        "url": "https://trace.invalid/2wikimultihopqa_d57ccc52087b11ebbd69ac1f6bf848b6_long/d9s0",
+        "text": "The Truth About Emanuel( previously Emanuel and the Truth About Fishes) is a 2013 American thriller drama film written, directed and produced by Francesca Gregorini.",
+        "visible_time_s": 11.64100000000326,
+        "requested_subject": "",
+        "resolved_title": "The Truth About Emanuel",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 39,
+      "time_s": 11.641,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d9s1",
+        "title": "The Truth About Emanuel",
+        "url": "https://trace.invalid/2wikimultihopqa_d57ccc52087b11ebbd69ac1f6bf848b6_long/d9s1",
+        "text": "The film stars Jessica Biel, Kaya Scodelario, Alfred Molina, Jimmi Simpson, Aneurin Barnard and Frances O'Connor.",
+        "visible_time_s": 11.64100000000326,
+        "requested_subject": "",
+        "resolved_title": "The Truth About Emanuel",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 40,
+      "time_s": 11.641,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d9s2",
+        "title": "The Truth About Emanuel",
+        "url": "https://trace.invalid/2wikimultihopqa_d57ccc52087b11ebbd69ac1f6bf848b6_long/d9s2",
+        "text": "It premiered at the Sundance Film Festival on January 18, 2013.",
+        "visible_time_s": 11.64100000000326,
+        "requested_subject": "",
+        "resolved_title": "The Truth About Emanuel",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 41,
+      "time_s": 14.75,
+      "type": "feedback_requested",
+      "feedback_kind": "progress",
+      "execution_state": {
+        "stage": "checking",
+        "searches_started": 2,
+        "searches_completed": 2,
+        "active_searches": 0,
+        "evidence_count": 21,
+        "supported_units": 1,
+        "output_units": 1
+      }
+    },
+    {
+      "sequence": 42,
+      "time_s": 14.969,
+      "type": "judge_reply",
+      "reply": {
+        "judgments": [
+          {
+            "unit_id": "u1",
+            "label": "SUPPORTED",
+            "value": "Malcolm St. Clair",
+            "citations": [
+              "d4s0"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d4s0",
+                "text": "A Trip to Paris is a 1938 American comedy film directed by Malcolm St. Clair and starring Jed Prouty, Shirley Deane and Spring Byington."
+              }
+            ],
+            "reason": "Supported by the cited visible sentences and dependencies."
+          },
+          {
+            "unit_id": "u2",
+            "label": "SUPPORTED",
+            "value": "June 1, 1952",
+            "citations": [
+              "d5s0"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d5s0",
+                "text": "Malcolm St. Clair( May 17, 1897 – June 1, 1952) was a Hollywood film director, writer, producer and actor."
+              }
+            ],
+            "reason": "Supported by the cited visible sentences and dependencies."
+          },
+          {
+            "unit_id": "u3",
+            "label": "SUPPORTED",
+            "value": "Muriel Box",
+            "citations": [
+              "d10s0"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d10s0",
+                "text": "The Truth About Women is a 1957 British comedy film directed by Muriel Box and starring Laurence Harvey, Julie Harris, Mai Zetterling and Diane Cilento."
+              }
+            ],
+            "reason": "Supported by the cited visible sentences and dependencies."
+          },
+          {
+            "unit_id": "u4",
+            "label": "SUPPORTED",
+            "value": "18 May 1991",
+            "citations": [
+              "d3s0"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d3s0",
+                "text": "Violette, Lady Gardiner( 22 September 1905 – 18 May 1991), known professionally as Muriel Box, was an English screenwriter and director."
+              }
+            ],
+            "reason": "Supported by the cited visible sentences and dependencies."
+          },
+          {
+            "unit_id": "u5",
+            "label": "SUPPORTED",
+            "value": "A Trip to Paris",
+            "citations": [
+              "d5s0",
+              "d3s0"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d5s0",
+                "text": "Malcolm St. Clair( May 17, 1897 – June 1, 1952) was a Hollywood film director, writer, producer and actor."
+              },
+              {
+                "evidence_id": "d3s0",
+                "text": "Violette, Lady Gardiner( 22 September 1905 – 18 May 1991), known professionally as Muriel Box, was an English screenwriter and director."
+              }
+            ],
+            "reason": "Supported by the cited visible sentences and dependencies."
+          }
+        ]
+      },
+      "attempt": 1,
+      "repair": false,
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d1s1",
+        "d4s0",
+        "d4s1",
+        "d4s2",
+        "d4s3",
+        "d6s0",
+        "d6s1",
+        "d6s2",
+        "d6s3",
+        "d8s0",
+        "d10s0",
+        "d2s0",
+        "d2s1",
+        "d2s2",
+        "d3s0",
+        "d5s0",
+        "d7s0",
+        "d9s0",
+        "d9s1",
+        "d9s2"
+      ]
+    },
+    {
+      "sequence": 43,
+      "time_s": 14.969,
+      "type": "judgments",
+      "judgments": {
+        "u1": {
+          "label": "SUPPORTED",
+          "value": "Malcolm St. Clair",
+          "citations": [
+            "d4s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d4s0",
+              "text": "A Trip to Paris is a 1938 American comedy film directed by Malcolm St. Clair and starring Jed Prouty, Shirley Deane and Spring Byington."
+            }
+          ],
+          "reason": "Supported by the cited visible sentences and dependencies."
+        },
+        "u2": {
+          "label": "UNRESOLVED",
+          "value": "",
+          "citations": [],
+          "quotes": [],
+          "reason": "Rejected entity identity: citation concerns an ambiguous or differently qualified namesake"
+        },
+        "u3": {
+          "label": "UNRESOLVED",
+          "value": "",
+          "citations": [],
+          "quotes": [],
+          "reason": "Rejected entity identity: citation concerns an ambiguous or differently qualified namesake"
+        },
+        "u4": {
+          "label": "UNRESOLVED",
+          "value": "",
+          "citations": [],
+          "quotes": [],
+          "reason": "Dependency is not supported"
+        },
+        "u5": {
+          "label": "UNRESOLVED",
+          "value": "",
+          "citations": [],
+          "quotes": [],
+          "reason": "Dependency is not supported"
+        }
+      },
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d1s1",
+        "d4s0",
+        "d4s1",
+        "d4s2",
+        "d4s3",
+        "d6s0",
+        "d6s1",
+        "d6s2",
+        "d6s3",
+        "d8s0",
+        "d10s0",
+        "d2s0",
+        "d2s1",
+        "d2s2",
+        "d3s0",
+        "d5s0",
+        "d7s0",
+        "d9s0",
+        "d9s1",
+        "d9s2"
+      ],
+      "semantic_review": false
+    },
+    {
+      "sequence": 44,
+      "time_s": 14.969,
+      "type": "trace_batch_requested"
+    },
+    {
+      "sequence": 45,
+      "time_s": 14.969,
+      "type": "search_finished",
+      "query": "[scheduled evidence]",
+      "subject": "",
+      "status": "ok",
+      "returned_pages": [],
+      "mode": "trace",
+      "unit_id": "__scheduled_evidence__"
+    },
+    {
+      "sequence": 46,
+      "time_s": 14.969,
+      "type": "semantic_review_requested",
+      "target_unit_ids": [
+        "u2",
+        "u3",
+        "u4",
+        "u5"
+      ],
+      "review_unit_ids": [
+        "u1",
+        "u2",
+        "u3",
+        "u4",
+        "u5"
+      ],
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d1s1",
+        "d4s0",
+        "d4s1",
+        "d4s2",
+        "d4s3",
+        "d6s0",
+        "d6s1",
+        "d6s2",
+        "d6s3",
+        "d8s0",
+        "d10s0",
+        "d2s0",
+        "d2s1",
+        "d2s2",
+        "d3s0",
+        "d5s0",
+        "d7s0",
+        "d9s0",
+        "d9s1",
+        "d9s2"
+      ],
+      "max_reviews": 1
+    },
+    {
+      "sequence": 47,
+      "time_s": 16.812,
+      "type": "utterance",
+      "action": "Progress",
+      "text": "I'm reviewing the gathered evidence now.",
+      "claims": [],
+      "feedback_source": "model",
+      "feedback_status_claim": "checking",
+      "feedback_fallback_reason": "",
+      "execution_state": {
+        "stage": "checking",
+        "searches_started": 3,
+        "searches_completed": 3,
+        "active_searches": 0,
+        "evidence_count": 21,
+        "supported_units": 1,
+        "output_units": 1
+      },
+      "language": "en"
+    },
+    {
+      "sequence": 48,
+      "time_s": 18.5,
+      "type": "semantic_review_reply",
+      "reply": {
+        "judgments": [
+          {
+            "unit_id": "u1",
+            "label": "SUPPORTED",
+            "value": "Malcolm St. Clair",
+            "citations": [
+              "d4s0"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d4s0",
+                "text": "A Trip to Paris is a 1938 American comedy film directed by Malcolm St. Clair and starring Jed Prouty, Shirley Deane and Spring Byington."
+              }
+            ],
+            "reason": "Supported by the cited visible sentences and dependencies."
+          },
+          {
+            "unit_id": "u2",
+            "label": "SUPPORTED",
+            "value": "June 1, 1952",
+            "citations": [
+              "d5s0"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d5s0",
+                "text": "Malcolm St. Clair( May 17, 1897 – June 1, 1952) was a Hollywood film director, writer, producer and actor."
+              }
+            ],
+            "reason": "Supported by the cited visible sentences and dependencies."
+          },
+          {
+            "unit_id": "u3",
+            "label": "SUPPORTED",
+            "value": "Muriel Box",
+            "citations": [
+              "d10s0"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d10s0",
+                "text": "The Truth About Women is a 1957 British comedy film directed by Muriel Box and starring Laurence Harvey, Julie Harris, Mai Zetterling and Diane Cilento."
+              }
+            ],
+            "reason": "Supported by the cited visible sentences and dependencies."
+          },
+          {
+            "unit_id": "u4",
+            "label": "SUPPORTED",
+            "value": "18 May 1991",
+            "citations": [
+              "d3s0"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d3s0",
+                "text": "Violette, Lady Gardiner( 22 September 1905 – 18 May 1991), known professionally as Muriel Box, was an English screenwriter and director."
+              }
+            ],
+            "reason": "Supported by the cited visible sentences and dependencies."
+          },
+          {
+            "unit_id": "u5",
+            "label": "SUPPORTED",
+            "value": "A Trip to Paris",
+            "citations": [
+              "d5s0",
+              "d3s0"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d5s0",
+                "text": "Malcolm St. Clair( May 17, 1897 – June 1, 1952) was a Hollywood film director, writer, producer and actor."
+              },
+              {
+                "evidence_id": "d3s0",
+                "text": "Violette, Lady Gardiner( 22 September 1905 – 18 May 1991), known professionally as Muriel Box, was an English screenwriter and director."
+              }
+            ],
+            "reason": "Supported by the cited visible sentences and dependencies."
+          }
+        ]
+      },
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d1s1",
+        "d4s0",
+        "d4s1",
+        "d4s2",
+        "d4s3",
+        "d6s0",
+        "d6s1",
+        "d6s2",
+        "d6s3",
+        "d8s0",
+        "d10s0",
+        "d2s0",
+        "d2s1",
+        "d2s2",
+        "d3s0",
+        "d5s0",
+        "d7s0",
+        "d9s0",
+        "d9s1",
+        "d9s2"
+      ]
+    },
+    {
+      "sequence": 49,
+      "time_s": 18.5,
+      "type": "semantic_review_finished",
+      "review_unit_ids": [
+        "u1",
+        "u2",
+        "u3",
+        "u4",
+        "u5"
+      ],
+      "recovered_unit_ids": []
+    },
+    {
+      "sequence": 50,
+      "time_s": 18.5,
+      "type": "judgments",
+      "judgments": {
+        "u1": {
+          "label": "SUPPORTED",
+          "value": "Malcolm St. Clair",
+          "citations": [
+            "d4s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d4s0",
+              "text": "A Trip to Paris is a 1938 American comedy film directed by Malcolm St. Clair and starring Jed Prouty, Shirley Deane and Spring Byington."
+            }
+          ],
+          "reason": "Supported by the cited visible sentences and dependencies."
+        },
+        "u2": {
+          "label": "UNRESOLVED",
+          "value": "",
+          "citations": [],
+          "quotes": [],
+          "reason": "Rejected entity identity: citation concerns an ambiguous or differently qualified namesake"
+        },
+        "u3": {
+          "label": "UNRESOLVED",
+          "value": "",
+          "citations": [],
+          "quotes": [],
+          "reason": "Rejected entity identity: citation concerns an ambiguous or differently qualified namesake"
+        },
+        "u4": {
+          "label": "UNRESOLVED",
+          "value": "",
+          "citations": [],
+          "quotes": [],
+          "reason": "Dependency is not supported"
+        },
+        "u5": {
+          "label": "UNRESOLVED",
+          "value": "",
+          "citations": [],
+          "quotes": [],
+          "reason": "Dependency is not supported"
+        }
+      },
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d1s1",
+        "d4s0",
+        "d4s1",
+        "d4s2",
+        "d4s3",
+        "d6s0",
+        "d6s1",
+        "d6s2",
+        "d6s3",
+        "d8s0",
+        "d10s0",
+        "d2s0",
+        "d2s1",
+        "d2s2",
+        "d3s0",
+        "d5s0",
+        "d7s0",
+        "d9s0",
+        "d9s1",
+        "d9s2"
+      ],
+      "semantic_review": true
+    },
+    {
+      "sequence": 51,
+      "time_s": 18.5,
+      "type": "utterance",
+      "action": "Final Answer",
+      "text": "I could not confirm death date of the director of A Trip to Paris, director of The Truth About Women (1957), death date of the director of The Truth About Women (1957) and which film's director died earlier.",
+      "claims": [],
+      "unresolved": [
+        "u2",
+        "u3",
+        "u4",
+        "u5"
+      ],
+      "fallback": false,
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d1s1",
+        "d4s0",
+        "d4s1",
+        "d4s2",
+        "d4s3",
+        "d6s0",
+        "d6s1",
+        "d6s2",
+        "d6s3",
+        "d8s0",
+        "d10s0",
+        "d2s0",
+        "d2s1",
+        "d2s2",
+        "d3s0",
+        "d5s0",
+        "d7s0",
+        "d9s0",
+        "d9s1",
+        "d9s2"
+      ],
+      "language": "en"
+    },
+    {
+      "sequence": 52,
+      "time_s": 18.5,
+      "type": "finished",
+      "status": "incomplete"
+    }
+  ],
+  "note": "Prototype model judgments are not independent gold scores. Output event times are not spoken claim times.",
+  "evidence_mode": "scheduled_trace",
+  "audio": {
+    "enabled": true,
+    "mode": "windows",
+    "play": false,
+    "status": "ok",
+    "errors": [],
+    "records": [
+      {
+        "event_sequence": 1,
+        "sentence_index": 1,
+        "sentence_count": 1,
+        "language": "en",
+        "text": "Let me check.",
+        "action": "Backchannel",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 1.9220000000059372,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1-continued\\samples\\0396\\audio\\segments\\0001_01.wav",
+        "duration_s": 1.649297052154195,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 2.7339999999967404,
+        "synthesis_and_playback_s": 0.8119999999908032
+      },
+      {
+        "event_sequence": 25,
+        "sentence_index": 1,
+        "sentence_count": 1,
+        "language": "en",
+        "text": "I'm planning how to find the director info for those films.",
+        "action": "Progress",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 7.10899999999674,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1-continued\\samples\\0396\\audio\\segments\\0025_01.wav",
+        "duration_s": 4.008843537414966,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 7.937000000005355,
+        "synthesis_and_playback_s": 0.8280000000086147
+      },
+      {
+        "event_sequence": 30,
+        "sentence_index": 1,
+        "sentence_count": 1,
+        "language": "en",
+        "text": "The director of A Trip to Paris is Malcolm St. Clair.",
+        "action": "Partial Answer",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 11.64100000000326,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1-continued\\samples\\0396\\audio\\segments\\0030_01.wav",
+        "duration_s": 3.7836281179138322,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 12.437000000005355,
+        "synthesis_and_playback_s": 0.8120000000053551
+      },
+      {
+        "event_sequence": 47,
+        "sentence_index": 1,
+        "sentence_count": 1,
+        "language": "en",
+        "text": "I'm reviewing the gathered evidence now.",
+        "action": "Progress",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 16.812000000005355,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1-continued\\samples\\0396\\audio\\segments\\0047_01.wav",
+        "duration_s": 2.608979591836735,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 17.60899999999674,
+        "synthesis_and_playback_s": 0.7969999999913853
+      },
+      {
+        "event_sequence": 51,
+        "sentence_index": 1,
+        "sentence_count": 1,
+        "language": "en",
+        "text": "I could not confirm death date of the director of A Trip to Paris, director of The Truth About Women (1957), death date of the director of The Truth About Women (1957) and which film's director died earlier.",
+        "action": "Final Answer",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 18.5,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1-continued\\samples\\0396\\audio\\segments\\0051_01.wav",
+        "duration_s": 15.081904761904761,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 19.297000000005937,
+        "synthesis_and_playback_s": 0.7970000000059372
+      }
+    ],
+    "wave": {
+      "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1-continued\\samples\\0396\\audio\\response.wav",
+      "duration_s": 35.29986394557823,
+      "timeline": [
+        {
+          "event_sequence": 1,
+          "sentence_index": 1,
+          "action": "Backchannel",
+          "text": "Let me check.",
+          "wave_start_s": 2.734013605442177,
+          "wave_end_s": 4.383310657596372
+        },
+        {
+          "event_sequence": 25,
+          "sentence_index": 1,
+          "action": "Progress",
+          "text": "I'm planning how to find the director info for those films.",
+          "wave_start_s": 7.937006802721088,
+          "wave_end_s": 11.945850340136055
+        },
+        {
+          "event_sequence": 30,
+          "sentence_index": 1,
+          "action": "Partial Answer",
+          "text": "The director of A Trip to Paris is Malcolm St. Clair.",
+          "wave_start_s": 12.437006802721088,
+          "wave_end_s": 16.22063492063492
+        },
+        {
+          "event_sequence": 47,
+          "sentence_index": 1,
+          "action": "Progress",
+          "text": "I'm reviewing the gathered evidence now.",
+          "wave_start_s": 17.608979591836736,
+          "wave_end_s": 20.217959183673468
+        },
+        {
+          "event_sequence": 51,
+          "sentence_index": 1,
+          "action": "Final Answer",
+          "text": "I could not confirm death date of the director of A Trip to Paris, director of The Truth About Women (1957), death date of the director of The Truth About Women (1957) and which film's director died earlier.",
+          "wave_start_s": 20.217959183673468,
+          "wave_end_s": 35.29986394557823
+        }
+      ]
+    }
+  },
+  "evaluation": {
+    "mode": "b_final_revised_trace",
+    "trace_id": "2wikimultihopqa_d57ccc52087b11ebbd69ac1f6bf848b6_long",
+    "sample_id": "2wikimultihopqa_d57ccc52087b11ebbd69ac1f6bf848b6",
+    "total_wall_s": 19.297000000005937,
+    "question_timeout_s": 180,
+    "audio_enabled": true,
+    "history_enabled": false,
+    "text_pipeline_wall_s": 18.5,
+    "effective_settings": {
+      "base_url": "https://tinker.thinkingmachines.dev/services/tinker-prod/oai/api/v1",
+      "model": "openai/gpt-oss-120b",
+      "judge_model": "tinker://f9e9a6c1-e203-5c2c-acdd-68fe67378ca4:train:0/sampler_weights/epoch-0001",
+      "judge_reasoning_effort": "low",
+      "wiki_language": "en",
+      "user_agent": "CascadeSystem/0.1 (educational research prototype)",
+      "timeout_s": 45.0,
+      "max_tokens": 4096,
+      "reasoning_effort": "low",
+      "progress_s": 3.0,
+      "feedback_timeout_s": 6.0,
+      "search_limit": 3,
+      "max_units": 8,
+      "max_searches": 16,
+      "max_sources": 21,
+      "source_chars": 165,
+      "evidence_chars": 2175,
+      "concurrency": 3
+    },
+    "timing_kind": "unknown",
+    "scheduler": "wall-paced fixed B arrivals",
+    "split": "eval_reserved",
+    "empty_evidence_sentences_ignored": 0
+  }
+}

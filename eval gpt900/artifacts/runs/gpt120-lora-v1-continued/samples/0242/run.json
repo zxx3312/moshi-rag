@@ -1,0 +1,3799 @@
+{
+  "question": "Do the directors of Who Are You, Polly Maggoo? and Mother Night have the same stated nationality?",
+  "resolved_question": "Do the directors of Who Are You, Polly Maggoo? and Mother Night have the same stated nationality?",
+  "used_history_turn_ids": [],
+  "response_language": "en",
+  "status": "incomplete",
+  "clock": "wall_monotonic",
+  "time_origin": "question_text_ready_after_optional_asr",
+  "model": "openai/gpt-oss-120b",
+  "judge_model": "tinker://f9e9a6c1-e203-5c2c-acdd-68fe67378ca4:train:0/sampler_weights/epoch-0001",
+  "units": [
+    {
+      "unit_id": "u1",
+      "description": "director of Who Are You, Polly Maggoo?",
+      "necessary": true,
+      "depends_on": [],
+      "queries": [
+        "Who Are You, Polly Maggoo? director",
+        "Who Are You, Polly Maggoo? film director"
+      ],
+      "subject": "Who Are You, Polly Maggoo?"
+    },
+    {
+      "unit_id": "u2",
+      "description": "director of Mother Night",
+      "necessary": true,
+      "depends_on": [],
+      "queries": [
+        "Mother Night director",
+        "Mother Night film director"
+      ],
+      "subject": "Mother Night"
+    },
+    {
+      "unit_id": "u3",
+      "description": "nationality of the director of Who Are You, Polly Maggoo?",
+      "necessary": true,
+      "depends_on": [
+        "u1"
+      ],
+      "queries": [
+        "{u1} nationality",
+        "nationality of {u1}"
+      ],
+      "subject": "{u1}"
+    },
+    {
+      "unit_id": "u4",
+      "description": "nationality of the director of Mother Night",
+      "necessary": true,
+      "depends_on": [
+        "u2"
+      ],
+      "queries": [
+        "{u2} nationality",
+        "nationality of {u2}"
+      ],
+      "subject": "{u2}"
+    },
+    {
+      "unit_id": "u5",
+      "description": "whether the directors of Who Are You, Polly Maggoo? and Mother Night have the same stated nationality",
+      "necessary": true,
+      "depends_on": [
+        "u3",
+        "u4",
+        "u1",
+        "u2"
+      ],
+      "queries": [
+        "compare nationality of {u1} and {u2}"
+      ],
+      "subject": ""
+    }
+  ],
+  "judgments": {
+    "u1": {
+      "label": "SUPPORTED",
+      "value": "William Klein",
+      "citations": [
+        "d1s1"
+      ],
+      "quotes": [
+        {
+          "evidence_id": "d1s1",
+          "text": "is a 1966 French film directed by William Klein."
+        }
+      ],
+      "reason": "Supported by the cited visible sentences and dependencies."
+    },
+    "u2": {
+      "label": "UNRESOLVED",
+      "value": "",
+      "citations": [],
+      "quotes": [],
+      "reason": "Rejected entity identity: citation concerns an ambiguous or differently qualified namesake"
+    },
+    "u3": {
+      "label": "UNRESOLVED",
+      "value": "",
+      "citations": [],
+      "quotes": [],
+      "reason": "Rejected entity identity: citation concerns an ambiguous or differently qualified namesake"
+    },
+    "u4": {
+      "label": "UNRESOLVED",
+      "value": "",
+      "citations": [],
+      "quotes": [],
+      "reason": "Dependency is not supported"
+    },
+    "u5": {
+      "label": "UNRESOLVED",
+      "value": "",
+      "citations": [],
+      "quotes": [],
+      "reason": "Dependency is not supported"
+    }
+  },
+  "evidence": [
+    {
+      "evidence_id": "d1s0",
+      "title": "Who Are You, Polly Maggoo?",
+      "url": "https://trace.invalid/2wikimultihopqa_803aef7808d311ebbd96ac1f6bf848b6_short/d1s0",
+      "text": "Who Are You, Polly Maggoo?",
+      "visible_time_s": 7.5310000000026776,
+      "requested_subject": "",
+      "resolved_title": "Who Are You, Polly Maggoo?",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d1s1",
+      "title": "Who Are You, Polly Maggoo?",
+      "url": "https://trace.invalid/2wikimultihopqa_803aef7808d311ebbd96ac1f6bf848b6_short/d1s1",
+      "text": "is a 1966 French film directed by William Klein.",
+      "visible_time_s": 7.5310000000026776,
+      "requested_subject": "",
+      "resolved_title": "Who Are You, Polly Maggoo?",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d1s2",
+      "title": "Who Are You, Polly Maggoo?",
+      "url": "https://trace.invalid/2wikimultihopqa_803aef7808d311ebbd96ac1f6bf848b6_short/d1s2",
+      "text": "It is a satirical art house movie spoofing the fashion world and its excesses.",
+      "visible_time_s": 7.5310000000026776,
+      "requested_subject": "",
+      "resolved_title": "Who Are You, Polly Maggoo?",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d1s3",
+      "title": "Who Are You, Polly Maggoo?",
+      "url": "https://trace.invalid/2wikimultihopqa_803aef7808d311ebbd96ac1f6bf848b6_short/d1s3",
+      "text": "It stars Dorothy McGowan as supermodel Polly Maggoo being followed by a French television crew.",
+      "visible_time_s": 7.5310000000026776,
+      "requested_subject": "",
+      "resolved_title": "Who Are You, Polly Maggoo?",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d1s4",
+      "title": "Who Are You, Polly Maggoo?",
+      "url": "https://trace.invalid/2wikimultihopqa_803aef7808d311ebbd96ac1f6bf848b6_short/d1s4",
+      "text": "It also stars Grayson Hall as Miss Maxwell, a fashion magazine editor modeled after Diana Vreeland, and Philippe Noiret as the TV reporter and director.",
+      "visible_time_s": 7.5310000000026776,
+      "requested_subject": "",
+      "resolved_title": "Who Are You, Polly Maggoo?",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d1s5",
+      "title": "Who Are You, Polly Maggoo?",
+      "url": "https://trace.invalid/2wikimultihopqa_803aef7808d311ebbd96ac1f6bf848b6_short/d1s5",
+      "text": "Also appearing in the film are Jean Rochefort, Sami Frey, and Alice Sapritch.",
+      "visible_time_s": 7.5310000000026776,
+      "requested_subject": "",
+      "resolved_title": "Who Are You, Polly Maggoo?",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d1s6",
+      "title": "Who Are You, Polly Maggoo?",
+      "url": "https://trace.invalid/2wikimultihopqa_803aef7808d311ebbd96ac1f6bf848b6_short/d1s6",
+      "text": "McGowan was an Irish- American model prior to the film; she modeled for\" Vogue\" and\" Harper's Bazaar\".",
+      "visible_time_s": 7.5310000000026776,
+      "requested_subject": "",
+      "resolved_title": "Who Are You, Polly Maggoo?",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d1s7",
+      "title": "Who Are You, Polly Maggoo?",
+      "url": "https://trace.invalid/2wikimultihopqa_803aef7808d311ebbd96ac1f6bf848b6_short/d1s7",
+      "text": "After the release of the film, which was McGowan's first and only film role, she disappeared from public view and apparently neither acted nor modeled again, according to Klein.",
+      "visible_time_s": 7.5310000000026776,
+      "requested_subject": "",
+      "resolved_title": "Who Are You, Polly Maggoo?",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d2s0",
+      "title": "Dorothy McGowan",
+      "url": "https://trace.invalid/2wikimultihopqa_803aef7808d311ebbd96ac1f6bf848b6_short/d2s0",
+      "text": "Dorothy McGowan( sometimes credited as Dorothy MacGowan, born circa 1939) is a Brooklyn, New York- born former model and actress.",
+      "visible_time_s": 7.5310000000026776,
+      "requested_subject": "",
+      "resolved_title": "Dorothy McGowan",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d2s1",
+      "title": "Dorothy McGowan",
+      "url": "https://trace.invalid/2wikimultihopqa_803aef7808d311ebbd96ac1f6bf848b6_short/d2s1",
+      "text": "As a model McGowan appeared on numerous covers of\" VogueHarper's BazaarElleGlamour\", and other publications in the 1960s.",
+      "visible_time_s": 7.5310000000026776,
+      "requested_subject": "",
+      "resolved_title": "Dorothy McGowan",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d2s2",
+      "title": "Dorothy McGowan",
+      "url": "https://trace.invalid/2wikimultihopqa_803aef7808d311ebbd96ac1f6bf848b6_short/d2s2",
+      "text": "She was photographed by Richard Avedon, Irving Penn, Melvin Sokolsky, Francesco Scavullo, and others.",
+      "visible_time_s": 7.5310000000026776,
+      "requested_subject": "",
+      "resolved_title": "Dorothy McGowan",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d2s3",
+      "title": "Dorothy McGowan",
+      "url": "https://trace.invalid/2wikimultihopqa_803aef7808d311ebbd96ac1f6bf848b6_short/d2s3",
+      "text": "A daughter of Irish immigrants Sarah and Michael McGowan and born in the Bay Ridge section of Brooklyn, she had one sister, Mary, and two brothers, Peter( 1930 – 2007), a policeman who became a Roman Catholic priest, and James, a policeman whose role as lead negotiator in a hostage crisis was dramatized in the film\" Dog Day Afternoon\".",
+      "visible_time_s": 7.5310000000026776,
+      "requested_subject": "",
+      "resolved_title": "Dorothy McGowan",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d2s4",
+      "title": "Dorothy McGowan",
+      "url": "https://trace.invalid/2wikimultihopqa_803aef7808d311ebbd96ac1f6bf848b6_short/d2s4",
+      "text": "McGowan was one of photographer William Klein's favorite models.",
+      "visible_time_s": 7.5310000000026776,
+      "requested_subject": "",
+      "resolved_title": "Dorothy McGowan",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d2s5",
+      "title": "Dorothy McGowan",
+      "url": "https://trace.invalid/2wikimultihopqa_803aef7808d311ebbd96ac1f6bf848b6_short/d2s5",
+      "text": "After the release of his film\" Who Are You, Polly Maggoo?\", in which she starred, she disappeared from public view and apparently neither acted nor modeled again.",
+      "visible_time_s": 7.5310000000026776,
+      "requested_subject": "",
+      "resolved_title": "Dorothy McGowan",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d2s6",
+      "title": "Dorothy McGowan",
+      "url": "https://trace.invalid/2wikimultihopqa_803aef7808d311ebbd96ac1f6bf848b6_short/d2s6",
+      "text": "She was married to, and divorced, from photographer Didier Dorot, with whom she has two children.",
+      "visible_time_s": 7.5310000000026776,
+      "requested_subject": "",
+      "resolved_title": "Dorothy McGowan",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d2s7",
+      "title": "Dorothy McGowan",
+      "url": "https://trace.invalid/2wikimultihopqa_803aef7808d311ebbd96ac1f6bf848b6_short/d2s7",
+      "text": "In 2007 Dorothy Dorot was living in Mamaroneck, New York.",
+      "visible_time_s": 7.5310000000026776,
+      "requested_subject": "",
+      "resolved_title": "Dorothy McGowan",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d3s0",
+      "title": "Mother Night (film)",
+      "url": "https://trace.invalid/2wikimultihopqa_803aef7808d311ebbd96ac1f6bf848b6_short/d3s0",
+      "text": "Mother Night is a 1996 American romantic war drama film produced and directed by Keith Gordon.",
+      "visible_time_s": 7.5310000000026776,
+      "requested_subject": "",
+      "resolved_title": "Mother Night (film)",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d3s1",
+      "title": "Mother Night (film)",
+      "url": "https://trace.invalid/2wikimultihopqa_803aef7808d311ebbd96ac1f6bf848b6_short/d3s1",
+      "text": "It is based on Kurt Vonnegut's 1961 novel of the same name.",
+      "visible_time_s": 7.5310000000026776,
+      "requested_subject": "",
+      "resolved_title": "Mother Night (film)",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d3s2",
+      "title": "Mother Night (film)",
+      "url": "https://trace.invalid/2wikimultihopqa_803aef7808d311ebbd96ac1f6bf848b6_short/d3s2",
+      "text": "Nick Nolte stars as Howard W. Campbell, Jr., an American who moves with his family to Germany after World War I and goes on to become a successful German language playwright.",
+      "visible_time_s": 7.5310000000026776,
+      "requested_subject": "",
+      "resolved_title": "Mother Night (film)",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d3s3",
+      "title": "Mother Night (film)",
+      "url": "https://trace.invalid/2wikimultihopqa_803aef7808d311ebbd96ac1f6bf848b6_short/d3s3",
+      "text": "As World War II looms, Campbell meets a man who claims to be from the United States Department of War, and is recruited to spy for the U.S., transmitting Nazi propaganda containing hidden messages that can only be decoded by Allied intelligence.",
+      "visible_time_s": 7.5310000000026776,
+      "requested_subject": "",
+      "resolved_title": "Mother Night (film)",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d3s4",
+      "title": "Mother Night (film)",
+      "url": "https://trace.invalid/2wikimultihopqa_803aef7808d311ebbd96ac1f6bf848b6_short/d3s4",
+      "text": "After the war, Campbell relocates to New York City, where he attempts to live in obscurity.",
+      "visible_time_s": 7.5310000000026776,
+      "requested_subject": "",
+      "resolved_title": "Mother Night (film)",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d3s5",
+      "title": "Mother Night (film)",
+      "url": "https://trace.invalid/2wikimultihopqa_803aef7808d311ebbd96ac1f6bf848b6_short/d3s5",
+      "text": "Since the Americans keep his true war time role a closely guarded secret, Campbell is forced to live under an assumed identity.",
+      "visible_time_s": 7.5310000000026776,
+      "requested_subject": "",
+      "resolved_title": "Mother Night (film)",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d3s6",
+      "title": "Mother Night (film)",
+      "url": "https://trace.invalid/2wikimultihopqa_803aef7808d311ebbd96ac1f6bf848b6_short/d3s6",
+      "text": "The film is narrated by Campbell, through a series of flashbacks, as he sits in a jail cell in Israel, writing his memoirs, and awaiting trial for war crimes.",
+      "visible_time_s": 7.5310000000026776,
+      "requested_subject": "",
+      "resolved_title": "Mother Night (film)",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d3s7",
+      "title": "Mother Night (film)",
+      "url": "https://trace.invalid/2wikimultihopqa_803aef7808d311ebbd96ac1f6bf848b6_short/d3s7",
+      "text": "The film also stars Sheryl Lee, John Goodman, Alan Arkin, and Frankie Faison.",
+      "visible_time_s": 7.5310000000026776,
+      "requested_subject": "",
+      "resolved_title": "Mother Night (film)",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d3s8",
+      "title": "Mother Night (film)",
+      "url": "https://trace.invalid/2wikimultihopqa_803aef7808d311ebbd96ac1f6bf848b6_short/d3s8",
+      "text": "Vonnegut makes a brief appearance in a scene in New York City.",
+      "visible_time_s": 7.5310000000026776,
+      "requested_subject": "",
+      "resolved_title": "Mother Night (film)",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d5s0",
+      "title": "Tallgrass Film Festival",
+      "url": "https://trace.invalid/2wikimultihopqa_803aef7808d311ebbd96ac1f6bf848b6_short/d5s0",
+      "text": "The Tallgrass Film Festival is an annual film festival held in Wichita, Kansas, specializing in independent films.",
+      "visible_time_s": 7.5310000000026776,
+      "requested_subject": "",
+      "resolved_title": "Tallgrass Film Festival",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d5s1",
+      "title": "Tallgrass Film Festival",
+      "url": "https://trace.invalid/2wikimultihopqa_803aef7808d311ebbd96ac1f6bf848b6_short/d5s1",
+      "text": "It was founded in 2003 by Timothy Gruver.",
+      "visible_time_s": 7.5310000000026776,
+      "requested_subject": "",
+      "resolved_title": "Tallgrass Film Festival",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d5s2",
+      "title": "Tallgrass Film Festival",
+      "url": "https://trace.invalid/2wikimultihopqa_803aef7808d311ebbd96ac1f6bf848b6_short/d5s2",
+      "text": "Gruver was raised in Wichita.",
+      "visible_time_s": 7.5310000000026776,
+      "requested_subject": "",
+      "resolved_title": "Tallgrass Film Festival",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d5s3",
+      "title": "Tallgrass Film Festival",
+      "url": "https://trace.invalid/2wikimultihopqa_803aef7808d311ebbd96ac1f6bf848b6_short/d5s3",
+      "text": "He studied filmmaking at Brigham Young University.",
+      "visible_time_s": 7.5310000000026776,
+      "requested_subject": "",
+      "resolved_title": "Tallgrass Film Festival",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d5s4",
+      "title": "Tallgrass Film Festival",
+      "url": "https://trace.invalid/2wikimultihopqa_803aef7808d311ebbd96ac1f6bf848b6_short/d5s4",
+      "text": "After college, Gruver worked for the animation wing of Steven Spielberg's DreamWorks studio.",
+      "visible_time_s": 7.5310000000026776,
+      "requested_subject": "",
+      "resolved_title": "Tallgrass Film Festival",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d5s5",
+      "title": "Tallgrass Film Festival",
+      "url": "https://trace.invalid/2wikimultihopqa_803aef7808d311ebbd96ac1f6bf848b6_short/d5s5",
+      "text": "Gruver had worked for other film festivals and modeled Tallgrass after the Telluride Film Festival.",
+      "visible_time_s": 7.5310000000026776,
+      "requested_subject": "",
+      "resolved_title": "Tallgrass Film Festival",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d5s6",
+      "title": "Tallgrass Film Festival",
+      "url": "https://trace.invalid/2wikimultihopqa_803aef7808d311ebbd96ac1f6bf848b6_short/d5s6",
+      "text": "Tallgrass is operated by the non-profit organization Tallgrass Film Association.",
+      "visible_time_s": 7.5310000000026776,
+      "requested_subject": "",
+      "resolved_title": "Tallgrass Film Festival",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d5s7",
+      "title": "Tallgrass Film Festival",
+      "url": "https://trace.invalid/2wikimultihopqa_803aef7808d311ebbd96ac1f6bf848b6_short/d5s7",
+      "text": "There were 190 features and shorts screened in 2012.",
+      "visible_time_s": 7.5310000000026776,
+      "requested_subject": "",
+      "resolved_title": "Tallgrass Film Festival",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d5s8",
+      "title": "Tallgrass Film Festival",
+      "url": "https://trace.invalid/2wikimultihopqa_803aef7808d311ebbd96ac1f6bf848b6_short/d5s8",
+      "text": "The festival takes place at several locations in downtown Wichita including the Orpheum Theatre.",
+      "visible_time_s": 7.5310000000026776,
+      "requested_subject": "",
+      "resolved_title": "Tallgrass Film Festival",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d5s9",
+      "title": "Tallgrass Film Festival",
+      "url": "https://trace.invalid/2wikimultihopqa_803aef7808d311ebbd96ac1f6bf848b6_short/d5s9",
+      "text": "In 2012, over 11,000 people attended.",
+      "visible_time_s": 7.5310000000026776,
+      "requested_subject": "",
+      "resolved_title": "Tallgrass Film Festival",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d5s10",
+      "title": "Tallgrass Film Festival",
+      "url": "https://trace.invalid/2wikimultihopqa_803aef7808d311ebbd96ac1f6bf848b6_short/d5s10",
+      "text": "Since its creation in 2003, over 100,000 people have attended with approximately 200 filmmakers, actors and guests coming in for the festival from all over the world.",
+      "visible_time_s": 7.5310000000026776,
+      "requested_subject": "",
+      "resolved_title": "Tallgrass Film Festival",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d5s11",
+      "title": "Tallgrass Film Festival",
+      "url": "https://trace.invalid/2wikimultihopqa_803aef7808d311ebbd96ac1f6bf848b6_short/d5s11",
+      "text": "The 2003 festival screened 40 features and 55 short films at several venues in the downtown& Oldtown area.",
+      "visible_time_s": 7.5310000000026776,
+      "requested_subject": "",
+      "resolved_title": "Tallgrass Film Festival",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d5s12",
+      "title": "Tallgrass Film Festival",
+      "url": "https://trace.invalid/2wikimultihopqa_803aef7808d311ebbd96ac1f6bf848b6_short/d5s12",
+      "text": "4,172 people attended the festival, including 28 filmmakers.",
+      "visible_time_s": 7.5310000000026776,
+      "requested_subject": "",
+      "resolved_title": "Tallgrass Film Festival",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d5s13",
+      "title": "Tallgrass Film Festival",
+      "url": "https://trace.invalid/2wikimultihopqa_803aef7808d311ebbd96ac1f6bf848b6_short/d5s13",
+      "text": "The first public event hosted by Tallgrass was a screening of Y Tu Mama Tambien in Dodge City, KS.",
+      "visible_time_s": 7.5310000000026776,
+      "requested_subject": "",
+      "resolved_title": "Tallgrass Film Festival",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d5s14",
+      "title": "Tallgrass Film Festival",
+      "url": "https://trace.invalid/2wikimultihopqa_803aef7808d311ebbd96ac1f6bf848b6_short/d5s14",
+      "text": "Academy Award nominee Gary Busey attended in conjunction with the screening of The Buddy Holly Story, a documentary.",
+      "visible_time_s": 7.5310000000026776,
+      "requested_subject": "",
+      "resolved_title": "Tallgrass Film Festival",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d5s15",
+      "title": "Tallgrass Film Festival",
+      "url": "https://trace.invalid/2wikimultihopqa_803aef7808d311ebbd96ac1f6bf848b6_short/d5s15",
+      "text": "Cloris Leachman was a guest at the 2004 Festival.",
+      "visible_time_s": 7.5310000000026776,
+      "requested_subject": "",
+      "resolved_title": "Tallgrass Film Festival",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d5s16",
+      "title": "Tallgrass Film Festival",
+      "url": "https://trace.invalid/2wikimultihopqa_803aef7808d311ebbd96ac1f6bf848b6_short/d5s16",
+      "text": "That year's festival included 24 feature films and 32 short films.",
+      "visible_time_s": 7.5310000000026776,
+      "requested_subject": "",
+      "resolved_title": "Tallgrass Film Festival",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d5s17",
+      "title": "Tallgrass Film Festival",
+      "url": "https://trace.invalid/2wikimultihopqa_803aef7808d311ebbd96ac1f6bf848b6_short/d5s17",
+      "text": "Former baseball star Jose Canseco introduced the Opening Night Movie, the baseball documentary Up For Grabs.",
+      "visible_time_s": 7.5310000000026776,
+      "requested_subject": "",
+      "resolved_title": "Tallgrass Film Festival",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d5s18",
+      "title": "Tallgrass Film Festival",
+      "url": "https://trace.invalid/2wikimultihopqa_803aef7808d311ebbd96ac1f6bf848b6_short/d5s18",
+      "text": "The 2005 Festival was shortened to a one- day event due to the death of Gruver.",
+      "visible_time_s": 7.5310000000026776,
+      "requested_subject": "",
+      "resolved_title": "Tallgrass Film Festival",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d5s19",
+      "title": "Tallgrass Film Festival",
+      "url": "https://trace.invalid/2wikimultihopqa_803aef7808d311ebbd96ac1f6bf848b6_short/d5s19",
+      "text": "2,500 people attended.",
+      "visible_time_s": 7.5310000000026776,
+      "requested_subject": "",
+      "resolved_title": "Tallgrass Film Festival",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d5s20",
+      "title": "Tallgrass Film Festival",
+      "url": "https://trace.invalid/2wikimultihopqa_803aef7808d311ebbd96ac1f6bf848b6_short/d5s20",
+      "text": "4,850 people attended the 2007 Festival, including ten filmmakers.",
+      "visible_time_s": 7.5310000000026776,
+      "requested_subject": "",
+      "resolved_title": "Tallgrass Film Festival",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d5s21",
+      "title": "Tallgrass Film Festival",
+      "url": "https://trace.invalid/2wikimultihopqa_803aef7808d311ebbd96ac1f6bf848b6_short/d5s21",
+      "text": "Official Selections have included Audience Award winners",
+      "visible_time_s": 7.5310000000026776,
+      "requested_subject": "",
+      "resolved_title": "Tallgrass Film Festival",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d5s22",
+      "title": "Tallgrass Film Festival",
+      "url": "https://trace.invalid/2wikimultihopqa_803aef7808d311ebbd96ac1f6bf848b6_short/d5s22",
+      "text": "The Big Bad Swim and 39 Pounds of Love; as well as the 2006 Independent Spirit Award winner Conventioneers, the 2007 Independent Spirit Award nominee Trials of Darryl Hunt as well as Bomb The System, Manhattan, Kansas, Dreamland, The Real Dirt on Farmer John, Fat Girls, Iraq in Fragments, The Last Picture Show, The Buddy Holly Story and the popular High School Shorts Program and Timothy Gruver Spotlight on Kansas Filmmakers.",
+      "visible_time_s": 7.5310000000026776,
+      "requested_subject": "",
+      "resolved_title": "Tallgrass Film Festival",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d5s23",
+      "title": "Tallgrass Film Festival",
+      "url": "https://trace.invalid/2wikimultihopqa_803aef7808d311ebbd96ac1f6bf848b6_short/d5s23",
+      "text": "2003 Opening Night Film: Bomb The System 2004 Opening Night Film: Up For Grabs 2005( Shortgrass)",
+      "visible_time_s": 7.5310000000026776,
+      "requested_subject": "",
+      "resolved_title": "Tallgrass Film Festival",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d5s24",
+      "title": "Tallgrass Film Festival",
+      "url": "https://trace.invalid/2wikimultihopqa_803aef7808d311ebbd96ac1f6bf848b6_short/d5s24",
+      "text": "Opening Night Film: Conventioneers 2006 Opening Night Film: Manhattan, Kansas 2007 Opening Night Film: Kansas v. Darwin 2008 Opening Night Film: What's the Matter with Kansas?",
+      "visible_time_s": 7.5310000000026776,
+      "requested_subject": "",
+      "resolved_title": "Tallgrass Film Festival",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d5s25",
+      "title": "Tallgrass Film Festival",
+      "url": "https://trace.invalid/2wikimultihopqa_803aef7808d311ebbd96ac1f6bf848b6_short/d5s25",
+      "text": "2009 Opening Night Film: The Only Good Indian 2010 Opening Night Film: The Dry Land 2011 Opening",
+      "visible_time_s": 7.5310000000026776,
+      "requested_subject": "",
+      "resolved_title": "Tallgrass Film Festival",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d5s26",
+      "title": "Tallgrass Film Festival",
+      "url": "https://trace.invalid/2wikimultihopqa_803aef7808d311ebbd96ac1f6bf848b6_short/d5s26",
+      "text": "Night Film: Der Sandmann 2012 Opening",
+      "visible_time_s": 7.5310000000026776,
+      "requested_subject": "",
+      "resolved_title": "Tallgrass Film Festival",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d5s27",
+      "title": "Tallgrass Film Festival",
+      "url": "https://trace.invalid/2wikimultihopqa_803aef7808d311ebbd96ac1f6bf848b6_short/d5s27",
+      "text": "Night Film: Pablo 2013 2014 2015 2016 2017 2018 Opening",
+      "visible_time_s": 7.5310000000026776,
+      "requested_subject": "",
+      "resolved_title": "Tallgrass Film Festival",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d5s28",
+      "title": "Tallgrass Film Festival",
+      "url": "https://trace.invalid/2wikimultihopqa_803aef7808d311ebbd96ac1f6bf848b6_short/d5s28",
+      "text": "Night Film: Bathtubs Over Broadway",
+      "visible_time_s": 7.5310000000026776,
+      "requested_subject": "",
+      "resolved_title": "Tallgrass Film Festival",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d7s0",
+      "title": "Mother Night (comics)",
+      "url": "https://trace.invalid/2wikimultihopqa_803aef7808d311ebbd96ac1f6bf848b6_short/d7s0",
+      "text": "Mother Night is a fictional character appearing in American comic books published by Marvel Comics.",
+      "visible_time_s": 7.5310000000026776,
+      "requested_subject": "",
+      "resolved_title": "Mother Night (comics)",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d4s0",
+      "title": "Where Are You",
+      "url": "https://trace.invalid/2wikimultihopqa_803aef7808d311ebbd96ac1f6bf848b6_short/d4s0",
+      "text": "Where Are You may refer to:",
+      "visible_time_s": 7.5310000000026776,
+      "requested_subject": "",
+      "resolved_title": "Where Are You",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d6s0",
+      "title": "Who Are You (disambiguation)",
+      "url": "https://trace.invalid/2wikimultihopqa_803aef7808d311ebbd96ac1f6bf848b6_short/d6s0",
+      "text": "Who Are You is a 1978 album by The Who.",
+      "visible_time_s": 7.5310000000026776,
+      "requested_subject": "",
+      "resolved_title": "Who Are You (disambiguation)",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d6s1",
+      "title": "Who Are You (disambiguation)",
+      "url": "https://trace.invalid/2wikimultihopqa_803aef7808d311ebbd96ac1f6bf848b6_short/d6s1",
+      "text": "Who Are You also may refer to:",
+      "visible_time_s": 7.5310000000026776,
+      "requested_subject": "",
+      "resolved_title": "Who Are You (disambiguation)",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d8s0",
+      "title": "William Klein (photographer)",
+      "url": "https://trace.invalid/2wikimultihopqa_803aef7808d311ebbd96ac1f6bf848b6_short/d8s0",
+      "text": "William Klein( born April 19, 1928) is an American- born French photographer and filmmaker noted for his ironic approach to both media and his extensive use of unusual photographic techniques in the context of photojournalism and fashion photography.",
+      "visible_time_s": 7.5310000000026776,
+      "requested_subject": "",
+      "resolved_title": "William Klein (photographer)",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d8s1",
+      "title": "William Klein (photographer)",
+      "url": "https://trace.invalid/2wikimultihopqa_803aef7808d311ebbd96ac1f6bf848b6_short/d8s1",
+      "text": "He was ranked 25th on\" Professional Photographer\" s list of 100 most influential photographers.",
+      "visible_time_s": 7.5310000000026776,
+      "requested_subject": "",
+      "resolved_title": "William Klein (photographer)",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d8s2",
+      "title": "William Klein (photographer)",
+      "url": "https://trace.invalid/2wikimultihopqa_803aef7808d311ebbd96ac1f6bf848b6_short/d8s2",
+      "text": "Klein trained as a painter, studying under Fernand Léger, and found early success with exhibitions of his work.",
+      "visible_time_s": 7.5310000000026776,
+      "requested_subject": "",
+      "resolved_title": "William Klein (photographer)",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d8s3",
+      "title": "William Klein (photographer)",
+      "url": "https://trace.invalid/2wikimultihopqa_803aef7808d311ebbd96ac1f6bf848b6_short/d8s3",
+      "text": "He soon moved on to photography and achieved widespread fame as a fashion photographer for\" Vogue\" and for his photo essays on various cities.",
+      "visible_time_s": 7.5310000000026776,
+      "requested_subject": "",
+      "resolved_title": "William Klein (photographer)",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d8s4",
+      "title": "William Klein (photographer)",
+      "url": "https://trace.invalid/2wikimultihopqa_803aef7808d311ebbd96ac1f6bf848b6_short/d8s4",
+      "text": "He has directed feature- length fiction films, numerous short and feature- length documentaries and has produced over 250 television commercials.",
+      "visible_time_s": 7.5310000000026776,
+      "requested_subject": "",
+      "resolved_title": "William Klein (photographer)",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d8s5",
+      "title": "William Klein (photographer)",
+      "url": "https://trace.invalid/2wikimultihopqa_803aef7808d311ebbd96ac1f6bf848b6_short/d8s5",
+      "text": "He has been awarded the Prix Nadar in 1957, the Royal Photographic Society's Centenary Medal and Honorary Fellowship( Hon FRPS) in 1999, and the Outstanding Contribution to Photography Award at the Sony World Photography Awards in 2012.",
+      "visible_time_s": 7.5310000000026776,
+      "requested_subject": "",
+      "resolved_title": "William Klein (photographer)",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d9s0",
+      "title": "Keith Gordon",
+      "url": "https://trace.invalid/2wikimultihopqa_803aef7808d311ebbd96ac1f6bf848b6_short/d9s0",
+      "text": "Keith Gordon( born February 3, 1961) is an American actor and film director.",
+      "visible_time_s": 7.5310000000026776,
+      "requested_subject": "",
+      "resolved_title": "Keith Gordon",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d10s0",
+      "title": "Who Are You (Emine Sari song)",
+      "url": "https://trace.invalid/2wikimultihopqa_803aef7808d311ebbd96ac1f6bf848b6_short/d10s0",
+      "text": "\" Who Are You\" is a song by Turkish singer/ songwriter Emine Sari.",
+      "visible_time_s": 7.5310000000026776,
+      "requested_subject": "",
+      "resolved_title": "Who Are You (Emine Sari song)",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d10s1",
+      "title": "Who Are You (Emine Sari song)",
+      "url": "https://trace.invalid/2wikimultihopqa_803aef7808d311ebbd96ac1f6bf848b6_short/d10s1",
+      "text": "It was written by Emine for her single\" Who Are You\"( 2012), while production was helmed by Çağrı Açıkgöz.",
+      "visible_time_s": 7.5310000000026776,
+      "requested_subject": "",
+      "resolved_title": "Who Are You (Emine Sari song)",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d10s2",
+      "title": "Who Are You (Emine Sari song)",
+      "url": "https://trace.invalid/2wikimultihopqa_803aef7808d311ebbd96ac1f6bf848b6_short/d10s2",
+      "text": "The single was released via digital download on 18 June 2012.",
+      "visible_time_s": 7.5310000000026776,
+      "requested_subject": "",
+      "resolved_title": "Who Are You (Emine Sari song)",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d10s3",
+      "title": "Who Are You (Emine Sari song)",
+      "url": "https://trace.invalid/2wikimultihopqa_803aef7808d311ebbd96ac1f6bf848b6_short/d10s3",
+      "text": "Recorded in Turkey, Istanbul.",
+      "visible_time_s": 7.5310000000026776,
+      "requested_subject": "",
+      "resolved_title": "Who Are You (Emine Sari song)",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d10s4",
+      "title": "Who Are You (Emine Sari song)",
+      "url": "https://trace.invalid/2wikimultihopqa_803aef7808d311ebbd96ac1f6bf848b6_short/d10s4",
+      "text": "Musically,\" Who Are You\" is a mid- tempo jazz/ swing style song.",
+      "visible_time_s": 7.5310000000026776,
+      "requested_subject": "",
+      "resolved_title": "Who Are You (Emine Sari song)",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d10s5",
+      "title": "Who Are You (Emine Sari song)",
+      "url": "https://trace.invalid/2wikimultihopqa_803aef7808d311ebbd96ac1f6bf848b6_short/d10s5",
+      "text": "The song received very positive reviews from music critics, who complimented her vocals and lyrics in the song.",
+      "visible_time_s": 7.5310000000026776,
+      "requested_subject": "",
+      "resolved_title": "Who Are You (Emine Sari song)",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d10s6",
+      "title": "Who Are You (Emine Sari song)",
+      "url": "https://trace.invalid/2wikimultihopqa_803aef7808d311ebbd96ac1f6bf848b6_short/d10s6",
+      "text": "Emine Sari Wons",
+      "visible_time_s": 7.5310000000026776,
+      "requested_subject": "",
+      "resolved_title": "Who Are You (Emine Sari song)",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d10s7",
+      "title": "Who Are You (Emine Sari song)",
+      "url": "https://trace.invalid/2wikimultihopqa_803aef7808d311ebbd96ac1f6bf848b6_short/d10s7",
+      "text": "Best Unsigned Act at Mp3 Music Awards' 2013 with her song\" Who Are You\".",
+      "visible_time_s": 7.5310000000026776,
+      "requested_subject": "",
+      "resolved_title": "Who Are You (Emine Sari song)",
+      "entity_resolution": "unspecified"
+    }
+  ],
+  "searches": [
+    {
+      "query": "[scheduled evidence]",
+      "subject": "",
+      "status": "ok",
+      "returned_pages": [],
+      "mode": "trace",
+      "unit_id": "__scheduled_evidence__"
+    },
+    {
+      "query": "[scheduled evidence]",
+      "subject": "",
+      "status": "ok",
+      "returned_pages": [],
+      "mode": "trace",
+      "unit_id": "__scheduled_evidence__"
+    }
+  ],
+  "search_failures": [],
+  "llm_calls": [
+    {
+      "purpose": "feedback_generate",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 414,
+        "completion_tokens": 77,
+        "total_tokens": 491,
+        "prompt_tokens_details": {
+          "cached_tokens": 384
+        }
+      },
+      "latency_s": 1.359
+    },
+    {
+      "purpose": "decompose",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 804,
+        "completion_tokens": 447,
+        "total_tokens": 1251,
+        "prompt_tokens_details": {
+          "cached_tokens": 768
+        }
+      },
+      "latency_s": 3.031
+    },
+    {
+      "purpose": "feedback_generate",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 414,
+        "completion_tokens": 68,
+        "total_tokens": 482,
+        "prompt_tokens_details": {
+          "cached_tokens": 384
+        }
+      },
+      "latency_s": 0.843
+    },
+    {
+      "purpose": "feedback_verify",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 362,
+        "completion_tokens": 88,
+        "total_tokens": 450,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        }
+      },
+      "latency_s": 1.016
+    },
+    {
+      "purpose": "plan_review",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 1230,
+        "completion_tokens": 538,
+        "total_tokens": 1768,
+        "prompt_tokens_details": {
+          "cached_tokens": 896
+        }
+      },
+      "latency_s": 4.484
+    },
+    {
+      "purpose": "judge",
+      "model": "tinker://f9e9a6c1-e203-5c2c-acdd-68fe67378ca4:train:0/sampler_weights/epoch-0001",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 11323,
+        "completion_tokens": 515,
+        "total_tokens": 11838,
+        "prompt_tokens_details": {
+          "cached_tokens": 1024
+        }
+      },
+      "latency_s": 3.078
+    },
+    {
+      "purpose": "generate",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 666,
+        "completion_tokens": 96,
+        "total_tokens": 762,
+        "prompt_tokens_details": {
+          "cached_tokens": 512
+        }
+      },
+      "latency_s": 1.313
+    },
+    {
+      "purpose": "verify",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 895,
+        "completion_tokens": 111,
+        "total_tokens": 1006,
+        "prompt_tokens_details": {
+          "cached_tokens": 512
+        }
+      },
+      "latency_s": 1.25
+    },
+    {
+      "purpose": "judge",
+      "model": "tinker://f9e9a6c1-e203-5c2c-acdd-68fe67378ca4:train:0/sampler_weights/epoch-0001",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 11574,
+        "completion_tokens": 515,
+        "total_tokens": 12089,
+        "prompt_tokens_details": {
+          "cached_tokens": 1152
+        }
+      },
+      "latency_s": 3.218
+    },
+    {
+      "purpose": "feedback_generate",
+      "model": "openai/gpt-oss-120b",
+      "status": "cancelled",
+      "latency_s": 0.109
+    }
+  ],
+  "search_diagnostics": [],
+  "output_enqueued_units": {
+    "u1": "William Klein"
+  },
+  "events": [
+    {
+      "sequence": 0,
+      "time_s": 0.0,
+      "type": "feedback_requested",
+      "feedback_kind": "opening",
+      "execution_state": {
+        "stage": "planning",
+        "searches_started": 0,
+        "searches_completed": 0,
+        "active_searches": 0,
+        "evidence_count": 0,
+        "supported_units": 0,
+        "output_units": 0
+      }
+    },
+    {
+      "sequence": 1,
+      "time_s": 1.359,
+      "type": "utterance",
+      "action": "Backchannel",
+      "text": "Let me check.",
+      "claims": [],
+      "feedback_source": "fallback",
+      "feedback_status_claim": "intent",
+      "feedback_fallback_reason": "feedback_language_or_sentence_count",
+      "execution_state": {
+        "stage": "planning",
+        "searches_started": 0,
+        "searches_completed": 0,
+        "active_searches": 0,
+        "evidence_count": 0,
+        "supported_units": 0,
+        "output_units": 0
+      },
+      "language": "en"
+    },
+    {
+      "sequence": 2,
+      "time_s": 3.031,
+      "type": "decompose_reply",
+      "reply": {
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "director of Who Are You, Polly Maggoo?",
+            "subject": "Who Are You, Polly Maggoo?",
+            "necessary": true,
+            "depends_on": [],
+            "queries": [
+              "Who Are You, Polly Maggoo? director",
+              "Who Are You, Polly Maggoo? film director"
+            ]
+          },
+          {
+            "unit_id": "u2",
+            "description": "director of Mother Night",
+            "subject": "Mother Night",
+            "necessary": true,
+            "depends_on": [],
+            "queries": [
+              "Mother Night director",
+              "Mother Night film director"
+            ]
+          },
+          {
+            "unit_id": "u3",
+            "description": "nationality of the director of Who Are You, Polly Maggoo?",
+            "subject": "{u1}",
+            "necessary": true,
+            "depends_on": [
+              "u1"
+            ],
+            "queries": [
+              "{u1} nationality",
+              "nationality of {u1}"
+            ]
+          },
+          {
+            "unit_id": "u4",
+            "description": "nationality of the director of Mother Night",
+            "subject": "{u2}",
+            "necessary": true,
+            "depends_on": [
+              "u2"
+            ],
+            "queries": [
+              "{u2} nationality",
+              "nationality of {u2}"
+            ]
+          },
+          {
+            "unit_id": "u5",
+            "description": "whether the directors of Who Are You, Polly Maggoo? and Mother Night have the same stated nationality",
+            "subject": "",
+            "necessary": true,
+            "depends_on": [
+              "u3",
+              "u4"
+            ],
+            "queries": [
+              "compare nationality of {u1} and {u2}"
+            ]
+          }
+        ]
+      },
+      "attempt": 1,
+      "repair": false
+    },
+    {
+      "sequence": 3,
+      "time_s": 3.031,
+      "type": "protocol_validation_failed",
+      "stage": "decompose",
+      "attempt": 1,
+      "error": "Placeholders must name explicit dependencies"
+    },
+    {
+      "sequence": 4,
+      "time_s": 3.031,
+      "type": "protocol_normalized",
+      "stage": "decompose",
+      "changes": [
+        {
+          "unit_id": "u5",
+          "added_dependencies": [
+            "u1",
+            "u2"
+          ]
+        }
+      ],
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "director of Who Are You, Polly Maggoo?",
+          "necessary": true,
+          "depends_on": [],
+          "queries": [
+            "Who Are You, Polly Maggoo? director",
+            "Who Are You, Polly Maggoo? film director"
+          ],
+          "subject": "Who Are You, Polly Maggoo?"
+        },
+        {
+          "unit_id": "u2",
+          "description": "director of Mother Night",
+          "necessary": true,
+          "depends_on": [],
+          "queries": [
+            "Mother Night director",
+            "Mother Night film director"
+          ],
+          "subject": "Mother Night"
+        },
+        {
+          "unit_id": "u3",
+          "description": "nationality of the director of Who Are You, Polly Maggoo?",
+          "necessary": true,
+          "depends_on": [
+            "u1"
+          ],
+          "queries": [
+            "{u1} nationality",
+            "nationality of {u1}"
+          ],
+          "subject": "{u1}"
+        },
+        {
+          "unit_id": "u4",
+          "description": "nationality of the director of Mother Night",
+          "necessary": true,
+          "depends_on": [
+            "u2"
+          ],
+          "queries": [
+            "{u2} nationality",
+            "nationality of {u2}"
+          ],
+          "subject": "{u2}"
+        },
+        {
+          "unit_id": "u5",
+          "description": "whether the directors of Who Are You, Polly Maggoo? and Mother Night have the same stated nationality",
+          "necessary": true,
+          "depends_on": [
+            "u3",
+            "u4",
+            "u1",
+            "u2"
+          ],
+          "queries": [
+            "compare nationality of {u1} and {u2}"
+          ],
+          "subject": ""
+        }
+      ],
+      "no_facts_added": true
+    },
+    {
+      "sequence": 5,
+      "time_s": 3.031,
+      "type": "plan_review_requested",
+      "max_reviews": 1,
+      "question_only": true
+    },
+    {
+      "sequence": 6,
+      "time_s": 4.469,
+      "type": "feedback_requested",
+      "feedback_kind": "progress",
+      "execution_state": {
+        "stage": "planning",
+        "searches_started": 0,
+        "searches_completed": 0,
+        "active_searches": 0,
+        "evidence_count": 0,
+        "supported_units": 0,
+        "output_units": 0
+      }
+    },
+    {
+      "sequence": 7,
+      "time_s": 6.328,
+      "type": "utterance",
+      "action": "Progress",
+      "text": "Got it, I'm planning how to tackle the directors' nationalities.",
+      "claims": [],
+      "feedback_source": "model",
+      "feedback_status_claim": "processing",
+      "feedback_fallback_reason": "",
+      "execution_state": {
+        "stage": "planning",
+        "searches_started": 0,
+        "searches_completed": 0,
+        "active_searches": 0,
+        "evidence_count": 0,
+        "supported_units": 0,
+        "output_units": 0
+      },
+      "language": "en"
+    },
+    {
+      "sequence": 8,
+      "time_s": 7.515,
+      "type": "plan_review_reply",
+      "reply": {
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "director of Who Are You, Polly Maggoo?",
+            "subject": "Who Are You, Polly Maggoo?",
+            "necessary": true,
+            "depends_on": [],
+            "queries": [
+              "Who Are You, Polly Maggoo? director",
+              "Who Are You, Polly Maggoo? film director"
+            ]
+          },
+          {
+            "unit_id": "u2",
+            "description": "director of Mother Night",
+            "subject": "Mother Night",
+            "necessary": true,
+            "depends_on": [],
+            "queries": [
+              "Mother Night director",
+              "Mother Night film director"
+            ]
+          },
+          {
+            "unit_id": "u3",
+            "description": "nationality of the director of Who Are You, Polly Maggoo?",
+            "subject": "{u1}",
+            "necessary": true,
+            "depends_on": [
+              "u1"
+            ],
+            "queries": [
+              "{u1} nationality",
+              "nationality of {u1}"
+            ]
+          },
+          {
+            "unit_id": "u4",
+            "description": "nationality of the director of Mother Night",
+            "subject": "{u2}",
+            "necessary": true,
+            "depends_on": [
+              "u2"
+            ],
+            "queries": [
+              "{u2} nationality",
+              "nationality of {u2}"
+            ]
+          },
+          {
+            "unit_id": "u5",
+            "description": "whether the directors of Who Are You, Polly Maggoo? and Mother Night have the same stated nationality",
+            "subject": "",
+            "necessary": true,
+            "depends_on": [
+              "u3",
+              "u4"
+            ],
+            "queries": [
+              "compare nationality of {u1} and {u2}"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "sequence": 9,
+      "time_s": 7.531,
+      "type": "protocol_normalized",
+      "stage": "plan_review",
+      "changes": [
+        {
+          "unit_id": "u5",
+          "added_dependencies": [
+            "u1",
+            "u2"
+          ]
+        }
+      ],
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "director of Who Are You, Polly Maggoo?",
+          "necessary": true,
+          "depends_on": [],
+          "queries": [
+            "Who Are You, Polly Maggoo? director",
+            "Who Are You, Polly Maggoo? film director"
+          ],
+          "subject": "Who Are You, Polly Maggoo?"
+        },
+        {
+          "unit_id": "u2",
+          "description": "director of Mother Night",
+          "necessary": true,
+          "depends_on": [],
+          "queries": [
+            "Mother Night director",
+            "Mother Night film director"
+          ],
+          "subject": "Mother Night"
+        },
+        {
+          "unit_id": "u3",
+          "description": "nationality of the director of Who Are You, Polly Maggoo?",
+          "necessary": true,
+          "depends_on": [
+            "u1"
+          ],
+          "queries": [
+            "{u1} nationality",
+            "nationality of {u1}"
+          ],
+          "subject": "{u1}"
+        },
+        {
+          "unit_id": "u4",
+          "description": "nationality of the director of Mother Night",
+          "necessary": true,
+          "depends_on": [
+            "u2"
+          ],
+          "queries": [
+            "{u2} nationality",
+            "nationality of {u2}"
+          ],
+          "subject": "{u2}"
+        },
+        {
+          "unit_id": "u5",
+          "description": "whether the directors of Who Are You, Polly Maggoo? and Mother Night have the same stated nationality",
+          "necessary": true,
+          "depends_on": [
+            "u3",
+            "u4",
+            "u1",
+            "u2"
+          ],
+          "queries": [
+            "compare nationality of {u1} and {u2}"
+          ],
+          "subject": ""
+        }
+      ],
+      "no_facts_added": true
+    },
+    {
+      "sequence": 10,
+      "time_s": 7.531,
+      "type": "plan_review_finished",
+      "changed": false,
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "director of Who Are You, Polly Maggoo?",
+          "necessary": true,
+          "depends_on": [],
+          "queries": [
+            "Who Are You, Polly Maggoo? director",
+            "Who Are You, Polly Maggoo? film director"
+          ],
+          "subject": "Who Are You, Polly Maggoo?"
+        },
+        {
+          "unit_id": "u2",
+          "description": "director of Mother Night",
+          "necessary": true,
+          "depends_on": [],
+          "queries": [
+            "Mother Night director",
+            "Mother Night film director"
+          ],
+          "subject": "Mother Night"
+        },
+        {
+          "unit_id": "u3",
+          "description": "nationality of the director of Who Are You, Polly Maggoo?",
+          "necessary": true,
+          "depends_on": [
+            "u1"
+          ],
+          "queries": [
+            "{u1} nationality",
+            "nationality of {u1}"
+          ],
+          "subject": "{u1}"
+        },
+        {
+          "unit_id": "u4",
+          "description": "nationality of the director of Mother Night",
+          "necessary": true,
+          "depends_on": [
+            "u2"
+          ],
+          "queries": [
+            "{u2} nationality",
+            "nationality of {u2}"
+          ],
+          "subject": "{u2}"
+        },
+        {
+          "unit_id": "u5",
+          "description": "whether the directors of Who Are You, Polly Maggoo? and Mother Night have the same stated nationality",
+          "necessary": true,
+          "depends_on": [
+            "u3",
+            "u4",
+            "u1",
+            "u2"
+          ],
+          "queries": [
+            "compare nationality of {u1} and {u2}"
+          ],
+          "subject": ""
+        }
+      ],
+      "question_only": true
+    },
+    {
+      "sequence": 11,
+      "time_s": 7.531,
+      "type": "plan",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "director of Who Are You, Polly Maggoo?",
+          "necessary": true,
+          "depends_on": [],
+          "queries": [
+            "Who Are You, Polly Maggoo? director",
+            "Who Are You, Polly Maggoo? film director"
+          ],
+          "subject": "Who Are You, Polly Maggoo?"
+        },
+        {
+          "unit_id": "u2",
+          "description": "director of Mother Night",
+          "necessary": true,
+          "depends_on": [],
+          "queries": [
+            "Mother Night director",
+            "Mother Night film director"
+          ],
+          "subject": "Mother Night"
+        },
+        {
+          "unit_id": "u3",
+          "description": "nationality of the director of Who Are You, Polly Maggoo?",
+          "necessary": true,
+          "depends_on": [
+            "u1"
+          ],
+          "queries": [
+            "{u1} nationality",
+            "nationality of {u1}"
+          ],
+          "subject": "{u1}"
+        },
+        {
+          "unit_id": "u4",
+          "description": "nationality of the director of Mother Night",
+          "necessary": true,
+          "depends_on": [
+            "u2"
+          ],
+          "queries": [
+            "{u2} nationality",
+            "nationality of {u2}"
+          ],
+          "subject": "{u2}"
+        },
+        {
+          "unit_id": "u5",
+          "description": "whether the directors of Who Are You, Polly Maggoo? and Mother Night have the same stated nationality",
+          "necessary": true,
+          "depends_on": [
+            "u3",
+            "u4",
+            "u1",
+            "u2"
+          ],
+          "queries": [
+            "compare nationality of {u1} and {u2}"
+          ],
+          "subject": ""
+        }
+      ]
+    },
+    {
+      "sequence": 12,
+      "time_s": 7.531,
+      "type": "trace_batch_requested"
+    },
+    {
+      "sequence": 13,
+      "time_s": 7.531,
+      "type": "search_finished",
+      "query": "[scheduled evidence]",
+      "subject": "",
+      "status": "ok",
+      "returned_pages": [],
+      "mode": "trace",
+      "unit_id": "__scheduled_evidence__"
+    },
+    {
+      "sequence": 14,
+      "time_s": 7.531,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d1s0",
+        "title": "Who Are You, Polly Maggoo?",
+        "url": "https://trace.invalid/2wikimultihopqa_803aef7808d311ebbd96ac1f6bf848b6_short/d1s0",
+        "text": "Who Are You, Polly Maggoo?",
+        "visible_time_s": 7.5310000000026776,
+        "requested_subject": "",
+        "resolved_title": "Who Are You, Polly Maggoo?",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 15,
+      "time_s": 7.531,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d1s1",
+        "title": "Who Are You, Polly Maggoo?",
+        "url": "https://trace.invalid/2wikimultihopqa_803aef7808d311ebbd96ac1f6bf848b6_short/d1s1",
+        "text": "is a 1966 French film directed by William Klein.",
+        "visible_time_s": 7.5310000000026776,
+        "requested_subject": "",
+        "resolved_title": "Who Are You, Polly Maggoo?",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 16,
+      "time_s": 7.531,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d1s2",
+        "title": "Who Are You, Polly Maggoo?",
+        "url": "https://trace.invalid/2wikimultihopqa_803aef7808d311ebbd96ac1f6bf848b6_short/d1s2",
+        "text": "It is a satirical art house movie spoofing the fashion world and its excesses.",
+        "visible_time_s": 7.5310000000026776,
+        "requested_subject": "",
+        "resolved_title": "Who Are You, Polly Maggoo?",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 17,
+      "time_s": 7.531,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d1s3",
+        "title": "Who Are You, Polly Maggoo?",
+        "url": "https://trace.invalid/2wikimultihopqa_803aef7808d311ebbd96ac1f6bf848b6_short/d1s3",
+        "text": "It stars Dorothy McGowan as supermodel Polly Maggoo being followed by a French television crew.",
+        "visible_time_s": 7.5310000000026776,
+        "requested_subject": "",
+        "resolved_title": "Who Are You, Polly Maggoo?",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 18,
+      "time_s": 7.531,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d1s4",
+        "title": "Who Are You, Polly Maggoo?",
+        "url": "https://trace.invalid/2wikimultihopqa_803aef7808d311ebbd96ac1f6bf848b6_short/d1s4",
+        "text": "It also stars Grayson Hall as Miss Maxwell, a fashion magazine editor modeled after Diana Vreeland, and Philippe Noiret as the TV reporter and director.",
+        "visible_time_s": 7.5310000000026776,
+        "requested_subject": "",
+        "resolved_title": "Who Are You, Polly Maggoo?",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 19,
+      "time_s": 7.531,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d1s5",
+        "title": "Who Are You, Polly Maggoo?",
+        "url": "https://trace.invalid/2wikimultihopqa_803aef7808d311ebbd96ac1f6bf848b6_short/d1s5",
+        "text": "Also appearing in the film are Jean Rochefort, Sami Frey, and Alice Sapritch.",
+        "visible_time_s": 7.5310000000026776,
+        "requested_subject": "",
+        "resolved_title": "Who Are You, Polly Maggoo?",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 20,
+      "time_s": 7.531,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d1s6",
+        "title": "Who Are You, Polly Maggoo?",
+        "url": "https://trace.invalid/2wikimultihopqa_803aef7808d311ebbd96ac1f6bf848b6_short/d1s6",
+        "text": "McGowan was an Irish- American model prior to the film; she modeled for\" Vogue\" and\" Harper's Bazaar\".",
+        "visible_time_s": 7.5310000000026776,
+        "requested_subject": "",
+        "resolved_title": "Who Are You, Polly Maggoo?",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 21,
+      "time_s": 7.531,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d1s7",
+        "title": "Who Are You, Polly Maggoo?",
+        "url": "https://trace.invalid/2wikimultihopqa_803aef7808d311ebbd96ac1f6bf848b6_short/d1s7",
+        "text": "After the release of the film, which was McGowan's first and only film role, she disappeared from public view and apparently neither acted nor modeled again, according to Klein.",
+        "visible_time_s": 7.5310000000026776,
+        "requested_subject": "",
+        "resolved_title": "Who Are You, Polly Maggoo?",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 22,
+      "time_s": 7.531,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d2s0",
+        "title": "Dorothy McGowan",
+        "url": "https://trace.invalid/2wikimultihopqa_803aef7808d311ebbd96ac1f6bf848b6_short/d2s0",
+        "text": "Dorothy McGowan( sometimes credited as Dorothy MacGowan, born circa 1939) is a Brooklyn, New York- born former model and actress.",
+        "visible_time_s": 7.5310000000026776,
+        "requested_subject": "",
+        "resolved_title": "Dorothy McGowan",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 23,
+      "time_s": 7.531,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d2s1",
+        "title": "Dorothy McGowan",
+        "url": "https://trace.invalid/2wikimultihopqa_803aef7808d311ebbd96ac1f6bf848b6_short/d2s1",
+        "text": "As a model McGowan appeared on numerous covers of\" VogueHarper's BazaarElleGlamour\", and other publications in the 1960s.",
+        "visible_time_s": 7.5310000000026776,
+        "requested_subject": "",
+        "resolved_title": "Dorothy McGowan",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 24,
+      "time_s": 7.531,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d2s2",
+        "title": "Dorothy McGowan",
+        "url": "https://trace.invalid/2wikimultihopqa_803aef7808d311ebbd96ac1f6bf848b6_short/d2s2",
+        "text": "She was photographed by Richard Avedon, Irving Penn, Melvin Sokolsky, Francesco Scavullo, and others.",
+        "visible_time_s": 7.5310000000026776,
+        "requested_subject": "",
+        "resolved_title": "Dorothy McGowan",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 25,
+      "time_s": 7.531,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d2s3",
+        "title": "Dorothy McGowan",
+        "url": "https://trace.invalid/2wikimultihopqa_803aef7808d311ebbd96ac1f6bf848b6_short/d2s3",
+        "text": "A daughter of Irish immigrants Sarah and Michael McGowan and born in the Bay Ridge section of Brooklyn, she had one sister, Mary, and two brothers, Peter( 1930 – 2007), a policeman who became a Roman Catholic priest, and James, a policeman whose role as lead negotiator in a hostage crisis was dramatized in the film\" Dog Day Afternoon\".",
+        "visible_time_s": 7.5310000000026776,
+        "requested_subject": "",
+        "resolved_title": "Dorothy McGowan",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 26,
+      "time_s": 7.531,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d2s4",
+        "title": "Dorothy McGowan",
+        "url": "https://trace.invalid/2wikimultihopqa_803aef7808d311ebbd96ac1f6bf848b6_short/d2s4",
+        "text": "McGowan was one of photographer William Klein's favorite models.",
+        "visible_time_s": 7.5310000000026776,
+        "requested_subject": "",
+        "resolved_title": "Dorothy McGowan",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 27,
+      "time_s": 7.531,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d2s5",
+        "title": "Dorothy McGowan",
+        "url": "https://trace.invalid/2wikimultihopqa_803aef7808d311ebbd96ac1f6bf848b6_short/d2s5",
+        "text": "After the release of his film\" Who Are You, Polly Maggoo?\", in which she starred, she disappeared from public view and apparently neither acted nor modeled again.",
+        "visible_time_s": 7.5310000000026776,
+        "requested_subject": "",
+        "resolved_title": "Dorothy McGowan",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 28,
+      "time_s": 7.531,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d2s6",
+        "title": "Dorothy McGowan",
+        "url": "https://trace.invalid/2wikimultihopqa_803aef7808d311ebbd96ac1f6bf848b6_short/d2s6",
+        "text": "She was married to, and divorced, from photographer Didier Dorot, with whom she has two children.",
+        "visible_time_s": 7.5310000000026776,
+        "requested_subject": "",
+        "resolved_title": "Dorothy McGowan",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 29,
+      "time_s": 7.531,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d2s7",
+        "title": "Dorothy McGowan",
+        "url": "https://trace.invalid/2wikimultihopqa_803aef7808d311ebbd96ac1f6bf848b6_short/d2s7",
+        "text": "In 2007 Dorothy Dorot was living in Mamaroneck, New York.",
+        "visible_time_s": 7.5310000000026776,
+        "requested_subject": "",
+        "resolved_title": "Dorothy McGowan",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 30,
+      "time_s": 7.531,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d3s0",
+        "title": "Mother Night (film)",
+        "url": "https://trace.invalid/2wikimultihopqa_803aef7808d311ebbd96ac1f6bf848b6_short/d3s0",
+        "text": "Mother Night is a 1996 American romantic war drama film produced and directed by Keith Gordon.",
+        "visible_time_s": 7.5310000000026776,
+        "requested_subject": "",
+        "resolved_title": "Mother Night (film)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 31,
+      "time_s": 7.531,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d3s1",
+        "title": "Mother Night (film)",
+        "url": "https://trace.invalid/2wikimultihopqa_803aef7808d311ebbd96ac1f6bf848b6_short/d3s1",
+        "text": "It is based on Kurt Vonnegut's 1961 novel of the same name.",
+        "visible_time_s": 7.5310000000026776,
+        "requested_subject": "",
+        "resolved_title": "Mother Night (film)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 32,
+      "time_s": 7.531,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d3s2",
+        "title": "Mother Night (film)",
+        "url": "https://trace.invalid/2wikimultihopqa_803aef7808d311ebbd96ac1f6bf848b6_short/d3s2",
+        "text": "Nick Nolte stars as Howard W. Campbell, Jr., an American who moves with his family to Germany after World War I and goes on to become a successful German language playwright.",
+        "visible_time_s": 7.5310000000026776,
+        "requested_subject": "",
+        "resolved_title": "Mother Night (film)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 33,
+      "time_s": 7.531,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d3s3",
+        "title": "Mother Night (film)",
+        "url": "https://trace.invalid/2wikimultihopqa_803aef7808d311ebbd96ac1f6bf848b6_short/d3s3",
+        "text": "As World War II looms, Campbell meets a man who claims to be from the United States Department of War, and is recruited to spy for the U.S., transmitting Nazi propaganda containing hidden messages that can only be decoded by Allied intelligence.",
+        "visible_time_s": 7.5310000000026776,
+        "requested_subject": "",
+        "resolved_title": "Mother Night (film)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 34,
+      "time_s": 7.531,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d3s4",
+        "title": "Mother Night (film)",
+        "url": "https://trace.invalid/2wikimultihopqa_803aef7808d311ebbd96ac1f6bf848b6_short/d3s4",
+        "text": "After the war, Campbell relocates to New York City, where he attempts to live in obscurity.",
+        "visible_time_s": 7.5310000000026776,
+        "requested_subject": "",
+        "resolved_title": "Mother Night (film)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 35,
+      "time_s": 7.531,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d3s5",
+        "title": "Mother Night (film)",
+        "url": "https://trace.invalid/2wikimultihopqa_803aef7808d311ebbd96ac1f6bf848b6_short/d3s5",
+        "text": "Since the Americans keep his true war time role a closely guarded secret, Campbell is forced to live under an assumed identity.",
+        "visible_time_s": 7.5310000000026776,
+        "requested_subject": "",
+        "resolved_title": "Mother Night (film)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 36,
+      "time_s": 7.531,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d3s6",
+        "title": "Mother Night (film)",
+        "url": "https://trace.invalid/2wikimultihopqa_803aef7808d311ebbd96ac1f6bf848b6_short/d3s6",
+        "text": "The film is narrated by Campbell, through a series of flashbacks, as he sits in a jail cell in Israel, writing his memoirs, and awaiting trial for war crimes.",
+        "visible_time_s": 7.5310000000026776,
+        "requested_subject": "",
+        "resolved_title": "Mother Night (film)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 37,
+      "time_s": 7.531,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d3s7",
+        "title": "Mother Night (film)",
+        "url": "https://trace.invalid/2wikimultihopqa_803aef7808d311ebbd96ac1f6bf848b6_short/d3s7",
+        "text": "The film also stars Sheryl Lee, John Goodman, Alan Arkin, and Frankie Faison.",
+        "visible_time_s": 7.5310000000026776,
+        "requested_subject": "",
+        "resolved_title": "Mother Night (film)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 38,
+      "time_s": 7.531,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d3s8",
+        "title": "Mother Night (film)",
+        "url": "https://trace.invalid/2wikimultihopqa_803aef7808d311ebbd96ac1f6bf848b6_short/d3s8",
+        "text": "Vonnegut makes a brief appearance in a scene in New York City.",
+        "visible_time_s": 7.5310000000026776,
+        "requested_subject": "",
+        "resolved_title": "Mother Night (film)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 39,
+      "time_s": 7.531,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d5s0",
+        "title": "Tallgrass Film Festival",
+        "url": "https://trace.invalid/2wikimultihopqa_803aef7808d311ebbd96ac1f6bf848b6_short/d5s0",
+        "text": "The Tallgrass Film Festival is an annual film festival held in Wichita, Kansas, specializing in independent films.",
+        "visible_time_s": 7.5310000000026776,
+        "requested_subject": "",
+        "resolved_title": "Tallgrass Film Festival",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 40,
+      "time_s": 7.531,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d5s1",
+        "title": "Tallgrass Film Festival",
+        "url": "https://trace.invalid/2wikimultihopqa_803aef7808d311ebbd96ac1f6bf848b6_short/d5s1",
+        "text": "It was founded in 2003 by Timothy Gruver.",
+        "visible_time_s": 7.5310000000026776,
+        "requested_subject": "",
+        "resolved_title": "Tallgrass Film Festival",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 41,
+      "time_s": 7.531,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d5s2",
+        "title": "Tallgrass Film Festival",
+        "url": "https://trace.invalid/2wikimultihopqa_803aef7808d311ebbd96ac1f6bf848b6_short/d5s2",
+        "text": "Gruver was raised in Wichita.",
+        "visible_time_s": 7.5310000000026776,
+        "requested_subject": "",
+        "resolved_title": "Tallgrass Film Festival",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 42,
+      "time_s": 7.531,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d5s3",
+        "title": "Tallgrass Film Festival",
+        "url": "https://trace.invalid/2wikimultihopqa_803aef7808d311ebbd96ac1f6bf848b6_short/d5s3",
+        "text": "He studied filmmaking at Brigham Young University.",
+        "visible_time_s": 7.5310000000026776,
+        "requested_subject": "",
+        "resolved_title": "Tallgrass Film Festival",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 43,
+      "time_s": 7.531,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d5s4",
+        "title": "Tallgrass Film Festival",
+        "url": "https://trace.invalid/2wikimultihopqa_803aef7808d311ebbd96ac1f6bf848b6_short/d5s4",
+        "text": "After college, Gruver worked for the animation wing of Steven Spielberg's DreamWorks studio.",
+        "visible_time_s": 7.5310000000026776,
+        "requested_subject": "",
+        "resolved_title": "Tallgrass Film Festival",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 44,
+      "time_s": 7.531,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d5s5",
+        "title": "Tallgrass Film Festival",
+        "url": "https://trace.invalid/2wikimultihopqa_803aef7808d311ebbd96ac1f6bf848b6_short/d5s5",
+        "text": "Gruver had worked for other film festivals and modeled Tallgrass after the Telluride Film Festival.",
+        "visible_time_s": 7.5310000000026776,
+        "requested_subject": "",
+        "resolved_title": "Tallgrass Film Festival",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 45,
+      "time_s": 7.531,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d5s6",
+        "title": "Tallgrass Film Festival",
+        "url": "https://trace.invalid/2wikimultihopqa_803aef7808d311ebbd96ac1f6bf848b6_short/d5s6",
+        "text": "Tallgrass is operated by the non-profit organization Tallgrass Film Association.",
+        "visible_time_s": 7.5310000000026776,
+        "requested_subject": "",
+        "resolved_title": "Tallgrass Film Festival",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 46,
+      "time_s": 7.531,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d5s7",
+        "title": "Tallgrass Film Festival",
+        "url": "https://trace.invalid/2wikimultihopqa_803aef7808d311ebbd96ac1f6bf848b6_short/d5s7",
+        "text": "There were 190 features and shorts screened in 2012.",
+        "visible_time_s": 7.5310000000026776,
+        "requested_subject": "",
+        "resolved_title": "Tallgrass Film Festival",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 47,
+      "time_s": 7.531,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d5s8",
+        "title": "Tallgrass Film Festival",
+        "url": "https://trace.invalid/2wikimultihopqa_803aef7808d311ebbd96ac1f6bf848b6_short/d5s8",
+        "text": "The festival takes place at several locations in downtown Wichita including the Orpheum Theatre.",
+        "visible_time_s": 7.5310000000026776,
+        "requested_subject": "",
+        "resolved_title": "Tallgrass Film Festival",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 48,
+      "time_s": 7.531,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d5s9",
+        "title": "Tallgrass Film Festival",
+        "url": "https://trace.invalid/2wikimultihopqa_803aef7808d311ebbd96ac1f6bf848b6_short/d5s9",
+        "text": "In 2012, over 11,000 people attended.",
+        "visible_time_s": 7.5310000000026776,
+        "requested_subject": "",
+        "resolved_title": "Tallgrass Film Festival",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 49,
+      "time_s": 7.531,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d5s10",
+        "title": "Tallgrass Film Festival",
+        "url": "https://trace.invalid/2wikimultihopqa_803aef7808d311ebbd96ac1f6bf848b6_short/d5s10",
+        "text": "Since its creation in 2003, over 100,000 people have attended with approximately 200 filmmakers, actors and guests coming in for the festival from all over the world.",
+        "visible_time_s": 7.5310000000026776,
+        "requested_subject": "",
+        "resolved_title": "Tallgrass Film Festival",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 50,
+      "time_s": 7.531,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d5s11",
+        "title": "Tallgrass Film Festival",
+        "url": "https://trace.invalid/2wikimultihopqa_803aef7808d311ebbd96ac1f6bf848b6_short/d5s11",
+        "text": "The 2003 festival screened 40 features and 55 short films at several venues in the downtown& Oldtown area.",
+        "visible_time_s": 7.5310000000026776,
+        "requested_subject": "",
+        "resolved_title": "Tallgrass Film Festival",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 51,
+      "time_s": 7.531,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d5s12",
+        "title": "Tallgrass Film Festival",
+        "url": "https://trace.invalid/2wikimultihopqa_803aef7808d311ebbd96ac1f6bf848b6_short/d5s12",
+        "text": "4,172 people attended the festival, including 28 filmmakers.",
+        "visible_time_s": 7.5310000000026776,
+        "requested_subject": "",
+        "resolved_title": "Tallgrass Film Festival",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 52,
+      "time_s": 7.531,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d5s13",
+        "title": "Tallgrass Film Festival",
+        "url": "https://trace.invalid/2wikimultihopqa_803aef7808d311ebbd96ac1f6bf848b6_short/d5s13",
+        "text": "The first public event hosted by Tallgrass was a screening of Y Tu Mama Tambien in Dodge City, KS.",
+        "visible_time_s": 7.5310000000026776,
+        "requested_subject": "",
+        "resolved_title": "Tallgrass Film Festival",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 53,
+      "time_s": 7.531,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d5s14",
+        "title": "Tallgrass Film Festival",
+        "url": "https://trace.invalid/2wikimultihopqa_803aef7808d311ebbd96ac1f6bf848b6_short/d5s14",
+        "text": "Academy Award nominee Gary Busey attended in conjunction with the screening of The Buddy Holly Story, a documentary.",
+        "visible_time_s": 7.5310000000026776,
+        "requested_subject": "",
+        "resolved_title": "Tallgrass Film Festival",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 54,
+      "time_s": 7.531,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d5s15",
+        "title": "Tallgrass Film Festival",
+        "url": "https://trace.invalid/2wikimultihopqa_803aef7808d311ebbd96ac1f6bf848b6_short/d5s15",
+        "text": "Cloris Leachman was a guest at the 2004 Festival.",
+        "visible_time_s": 7.5310000000026776,
+        "requested_subject": "",
+        "resolved_title": "Tallgrass Film Festival",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 55,
+      "time_s": 7.531,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d5s16",
+        "title": "Tallgrass Film Festival",
+        "url": "https://trace.invalid/2wikimultihopqa_803aef7808d311ebbd96ac1f6bf848b6_short/d5s16",
+        "text": "That year's festival included 24 feature films and 32 short films.",
+        "visible_time_s": 7.5310000000026776,
+        "requested_subject": "",
+        "resolved_title": "Tallgrass Film Festival",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 56,
+      "time_s": 7.531,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d5s17",
+        "title": "Tallgrass Film Festival",
+        "url": "https://trace.invalid/2wikimultihopqa_803aef7808d311ebbd96ac1f6bf848b6_short/d5s17",
+        "text": "Former baseball star Jose Canseco introduced the Opening Night Movie, the baseball documentary Up For Grabs.",
+        "visible_time_s": 7.5310000000026776,
+        "requested_subject": "",
+        "resolved_title": "Tallgrass Film Festival",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 57,
+      "time_s": 7.531,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d5s18",
+        "title": "Tallgrass Film Festival",
+        "url": "https://trace.invalid/2wikimultihopqa_803aef7808d311ebbd96ac1f6bf848b6_short/d5s18",
+        "text": "The 2005 Festival was shortened to a one- day event due to the death of Gruver.",
+        "visible_time_s": 7.5310000000026776,
+        "requested_subject": "",
+        "resolved_title": "Tallgrass Film Festival",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 58,
+      "time_s": 7.531,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d5s19",
+        "title": "Tallgrass Film Festival",
+        "url": "https://trace.invalid/2wikimultihopqa_803aef7808d311ebbd96ac1f6bf848b6_short/d5s19",
+        "text": "2,500 people attended.",
+        "visible_time_s": 7.5310000000026776,
+        "requested_subject": "",
+        "resolved_title": "Tallgrass Film Festival",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 59,
+      "time_s": 7.531,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d5s20",
+        "title": "Tallgrass Film Festival",
+        "url": "https://trace.invalid/2wikimultihopqa_803aef7808d311ebbd96ac1f6bf848b6_short/d5s20",
+        "text": "4,850 people attended the 2007 Festival, including ten filmmakers.",
+        "visible_time_s": 7.5310000000026776,
+        "requested_subject": "",
+        "resolved_title": "Tallgrass Film Festival",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 60,
+      "time_s": 7.531,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d5s21",
+        "title": "Tallgrass Film Festival",
+        "url": "https://trace.invalid/2wikimultihopqa_803aef7808d311ebbd96ac1f6bf848b6_short/d5s21",
+        "text": "Official Selections have included Audience Award winners",
+        "visible_time_s": 7.5310000000026776,
+        "requested_subject": "",
+        "resolved_title": "Tallgrass Film Festival",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 61,
+      "time_s": 7.531,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d5s22",
+        "title": "Tallgrass Film Festival",
+        "url": "https://trace.invalid/2wikimultihopqa_803aef7808d311ebbd96ac1f6bf848b6_short/d5s22",
+        "text": "The Big Bad Swim and 39 Pounds of Love; as well as the 2006 Independent Spirit Award winner Conventioneers, the 2007 Independent Spirit Award nominee Trials of Darryl Hunt as well as Bomb The System, Manhattan, Kansas, Dreamland, The Real Dirt on Farmer John, Fat Girls, Iraq in Fragments, The Last Picture Show, The Buddy Holly Story and the popular High School Shorts Program and Timothy Gruver Spotlight on Kansas Filmmakers.",
+        "visible_time_s": 7.5310000000026776,
+        "requested_subject": "",
+        "resolved_title": "Tallgrass Film Festival",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 62,
+      "time_s": 7.531,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d5s23",
+        "title": "Tallgrass Film Festival",
+        "url": "https://trace.invalid/2wikimultihopqa_803aef7808d311ebbd96ac1f6bf848b6_short/d5s23",
+        "text": "2003 Opening Night Film: Bomb The System 2004 Opening Night Film: Up For Grabs 2005( Shortgrass)",
+        "visible_time_s": 7.5310000000026776,
+        "requested_subject": "",
+        "resolved_title": "Tallgrass Film Festival",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 63,
+      "time_s": 7.531,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d5s24",
+        "title": "Tallgrass Film Festival",
+        "url": "https://trace.invalid/2wikimultihopqa_803aef7808d311ebbd96ac1f6bf848b6_short/d5s24",
+        "text": "Opening Night Film: Conventioneers 2006 Opening Night Film: Manhattan, Kansas 2007 Opening Night Film: Kansas v. Darwin 2008 Opening Night Film: What's the Matter with Kansas?",
+        "visible_time_s": 7.5310000000026776,
+        "requested_subject": "",
+        "resolved_title": "Tallgrass Film Festival",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 64,
+      "time_s": 7.531,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d5s25",
+        "title": "Tallgrass Film Festival",
+        "url": "https://trace.invalid/2wikimultihopqa_803aef7808d311ebbd96ac1f6bf848b6_short/d5s25",
+        "text": "2009 Opening Night Film: The Only Good Indian 2010 Opening Night Film: The Dry Land 2011 Opening",
+        "visible_time_s": 7.5310000000026776,
+        "requested_subject": "",
+        "resolved_title": "Tallgrass Film Festival",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 65,
+      "time_s": 7.531,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d5s26",
+        "title": "Tallgrass Film Festival",
+        "url": "https://trace.invalid/2wikimultihopqa_803aef7808d311ebbd96ac1f6bf848b6_short/d5s26",
+        "text": "Night Film: Der Sandmann 2012 Opening",
+        "visible_time_s": 7.5310000000026776,
+        "requested_subject": "",
+        "resolved_title": "Tallgrass Film Festival",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 66,
+      "time_s": 7.531,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d5s27",
+        "title": "Tallgrass Film Festival",
+        "url": "https://trace.invalid/2wikimultihopqa_803aef7808d311ebbd96ac1f6bf848b6_short/d5s27",
+        "text": "Night Film: Pablo 2013 2014 2015 2016 2017 2018 Opening",
+        "visible_time_s": 7.5310000000026776,
+        "requested_subject": "",
+        "resolved_title": "Tallgrass Film Festival",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 67,
+      "time_s": 7.531,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d5s28",
+        "title": "Tallgrass Film Festival",
+        "url": "https://trace.invalid/2wikimultihopqa_803aef7808d311ebbd96ac1f6bf848b6_short/d5s28",
+        "text": "Night Film: Bathtubs Over Broadway",
+        "visible_time_s": 7.5310000000026776,
+        "requested_subject": "",
+        "resolved_title": "Tallgrass Film Festival",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 68,
+      "time_s": 7.531,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d7s0",
+        "title": "Mother Night (comics)",
+        "url": "https://trace.invalid/2wikimultihopqa_803aef7808d311ebbd96ac1f6bf848b6_short/d7s0",
+        "text": "Mother Night is a fictional character appearing in American comic books published by Marvel Comics.",
+        "visible_time_s": 7.5310000000026776,
+        "requested_subject": "",
+        "resolved_title": "Mother Night (comics)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 69,
+      "time_s": 7.531,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d4s0",
+        "title": "Where Are You",
+        "url": "https://trace.invalid/2wikimultihopqa_803aef7808d311ebbd96ac1f6bf848b6_short/d4s0",
+        "text": "Where Are You may refer to:",
+        "visible_time_s": 7.5310000000026776,
+        "requested_subject": "",
+        "resolved_title": "Where Are You",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 70,
+      "time_s": 7.531,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d6s0",
+        "title": "Who Are You (disambiguation)",
+        "url": "https://trace.invalid/2wikimultihopqa_803aef7808d311ebbd96ac1f6bf848b6_short/d6s0",
+        "text": "Who Are You is a 1978 album by The Who.",
+        "visible_time_s": 7.5310000000026776,
+        "requested_subject": "",
+        "resolved_title": "Who Are You (disambiguation)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 71,
+      "time_s": 7.531,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d6s1",
+        "title": "Who Are You (disambiguation)",
+        "url": "https://trace.invalid/2wikimultihopqa_803aef7808d311ebbd96ac1f6bf848b6_short/d6s1",
+        "text": "Who Are You also may refer to:",
+        "visible_time_s": 7.5310000000026776,
+        "requested_subject": "",
+        "resolved_title": "Who Are You (disambiguation)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 72,
+      "time_s": 7.531,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d8s0",
+        "title": "William Klein (photographer)",
+        "url": "https://trace.invalid/2wikimultihopqa_803aef7808d311ebbd96ac1f6bf848b6_short/d8s0",
+        "text": "William Klein( born April 19, 1928) is an American- born French photographer and filmmaker noted for his ironic approach to both media and his extensive use of unusual photographic techniques in the context of photojournalism and fashion photography.",
+        "visible_time_s": 7.5310000000026776,
+        "requested_subject": "",
+        "resolved_title": "William Klein (photographer)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 73,
+      "time_s": 7.531,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d8s1",
+        "title": "William Klein (photographer)",
+        "url": "https://trace.invalid/2wikimultihopqa_803aef7808d311ebbd96ac1f6bf848b6_short/d8s1",
+        "text": "He was ranked 25th on\" Professional Photographer\" s list of 100 most influential photographers.",
+        "visible_time_s": 7.5310000000026776,
+        "requested_subject": "",
+        "resolved_title": "William Klein (photographer)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 74,
+      "time_s": 7.531,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d8s2",
+        "title": "William Klein (photographer)",
+        "url": "https://trace.invalid/2wikimultihopqa_803aef7808d311ebbd96ac1f6bf848b6_short/d8s2",
+        "text": "Klein trained as a painter, studying under Fernand Léger, and found early success with exhibitions of his work.",
+        "visible_time_s": 7.5310000000026776,
+        "requested_subject": "",
+        "resolved_title": "William Klein (photographer)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 75,
+      "time_s": 7.531,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d8s3",
+        "title": "William Klein (photographer)",
+        "url": "https://trace.invalid/2wikimultihopqa_803aef7808d311ebbd96ac1f6bf848b6_short/d8s3",
+        "text": "He soon moved on to photography and achieved widespread fame as a fashion photographer for\" Vogue\" and for his photo essays on various cities.",
+        "visible_time_s": 7.5310000000026776,
+        "requested_subject": "",
+        "resolved_title": "William Klein (photographer)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 76,
+      "time_s": 7.531,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d8s4",
+        "title": "William Klein (photographer)",
+        "url": "https://trace.invalid/2wikimultihopqa_803aef7808d311ebbd96ac1f6bf848b6_short/d8s4",
+        "text": "He has directed feature- length fiction films, numerous short and feature- length documentaries and has produced over 250 television commercials.",
+        "visible_time_s": 7.5310000000026776,
+        "requested_subject": "",
+        "resolved_title": "William Klein (photographer)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 77,
+      "time_s": 7.531,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d8s5",
+        "title": "William Klein (photographer)",
+        "url": "https://trace.invalid/2wikimultihopqa_803aef7808d311ebbd96ac1f6bf848b6_short/d8s5",
+        "text": "He has been awarded the Prix Nadar in 1957, the Royal Photographic Society's Centenary Medal and Honorary Fellowship( Hon FRPS) in 1999, and the Outstanding Contribution to Photography Award at the Sony World Photography Awards in 2012.",
+        "visible_time_s": 7.5310000000026776,
+        "requested_subject": "",
+        "resolved_title": "William Klein (photographer)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 78,
+      "time_s": 7.531,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d9s0",
+        "title": "Keith Gordon",
+        "url": "https://trace.invalid/2wikimultihopqa_803aef7808d311ebbd96ac1f6bf848b6_short/d9s0",
+        "text": "Keith Gordon( born February 3, 1961) is an American actor and film director.",
+        "visible_time_s": 7.5310000000026776,
+        "requested_subject": "",
+        "resolved_title": "Keith Gordon",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 79,
+      "time_s": 7.531,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d10s0",
+        "title": "Who Are You (Emine Sari song)",
+        "url": "https://trace.invalid/2wikimultihopqa_803aef7808d311ebbd96ac1f6bf848b6_short/d10s0",
+        "text": "\" Who Are You\" is a song by Turkish singer/ songwriter Emine Sari.",
+        "visible_time_s": 7.5310000000026776,
+        "requested_subject": "",
+        "resolved_title": "Who Are You (Emine Sari song)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 80,
+      "time_s": 7.531,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d10s1",
+        "title": "Who Are You (Emine Sari song)",
+        "url": "https://trace.invalid/2wikimultihopqa_803aef7808d311ebbd96ac1f6bf848b6_short/d10s1",
+        "text": "It was written by Emine for her single\" Who Are You\"( 2012), while production was helmed by Çağrı Açıkgöz.",
+        "visible_time_s": 7.5310000000026776,
+        "requested_subject": "",
+        "resolved_title": "Who Are You (Emine Sari song)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 81,
+      "time_s": 7.531,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d10s2",
+        "title": "Who Are You (Emine Sari song)",
+        "url": "https://trace.invalid/2wikimultihopqa_803aef7808d311ebbd96ac1f6bf848b6_short/d10s2",
+        "text": "The single was released via digital download on 18 June 2012.",
+        "visible_time_s": 7.5310000000026776,
+        "requested_subject": "",
+        "resolved_title": "Who Are You (Emine Sari song)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 82,
+      "time_s": 7.531,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d10s3",
+        "title": "Who Are You (Emine Sari song)",
+        "url": "https://trace.invalid/2wikimultihopqa_803aef7808d311ebbd96ac1f6bf848b6_short/d10s3",
+        "text": "Recorded in Turkey, Istanbul.",
+        "visible_time_s": 7.5310000000026776,
+        "requested_subject": "",
+        "resolved_title": "Who Are You (Emine Sari song)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 83,
+      "time_s": 7.531,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d10s4",
+        "title": "Who Are You (Emine Sari song)",
+        "url": "https://trace.invalid/2wikimultihopqa_803aef7808d311ebbd96ac1f6bf848b6_short/d10s4",
+        "text": "Musically,\" Who Are You\" is a mid- tempo jazz/ swing style song.",
+        "visible_time_s": 7.5310000000026776,
+        "requested_subject": "",
+        "resolved_title": "Who Are You (Emine Sari song)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 84,
+      "time_s": 7.531,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d10s5",
+        "title": "Who Are You (Emine Sari song)",
+        "url": "https://trace.invalid/2wikimultihopqa_803aef7808d311ebbd96ac1f6bf848b6_short/d10s5",
+        "text": "The song received very positive reviews from music critics, who complimented her vocals and lyrics in the song.",
+        "visible_time_s": 7.5310000000026776,
+        "requested_subject": "",
+        "resolved_title": "Who Are You (Emine Sari song)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 85,
+      "time_s": 7.531,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d10s6",
+        "title": "Who Are You (Emine Sari song)",
+        "url": "https://trace.invalid/2wikimultihopqa_803aef7808d311ebbd96ac1f6bf848b6_short/d10s6",
+        "text": "Emine Sari Wons",
+        "visible_time_s": 7.5310000000026776,
+        "requested_subject": "",
+        "resolved_title": "Who Are You (Emine Sari song)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 86,
+      "time_s": 7.531,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d10s7",
+        "title": "Who Are You (Emine Sari song)",
+        "url": "https://trace.invalid/2wikimultihopqa_803aef7808d311ebbd96ac1f6bf848b6_short/d10s7",
+        "text": "Best Unsigned Act at Mp3 Music Awards' 2013 with her song\" Who Are You\".",
+        "visible_time_s": 7.5310000000026776,
+        "requested_subject": "",
+        "resolved_title": "Who Are You (Emine Sari song)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 87,
+      "time_s": 10.609,
+      "type": "judge_reply",
+      "reply": {
+        "judgments": [
+          {
+            "unit_id": "u1",
+            "label": "SUPPORTED",
+            "value": "William Klein",
+            "citations": [
+              "d1s1"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d1s1",
+                "text": "is a 1966 French film directed by William Klein."
+              }
+            ],
+            "reason": "Supported by the cited visible sentences and dependencies."
+          },
+          {
+            "unit_id": "u2",
+            "label": "SUPPORTED",
+            "value": "Keith Gordon",
+            "citations": [
+              "d3s0"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d3s0",
+                "text": "Mother Night is a 1996 American romantic war drama film produced and directed by Keith Gordon."
+              }
+            ],
+            "reason": "Supported by the cited visible sentences and dependencies."
+          },
+          {
+            "unit_id": "u3",
+            "label": "SUPPORTED",
+            "value": "American",
+            "citations": [
+              "d8s0"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d8s0",
+                "text": "William Klein( born April 19, 1928) is an American- born French photographer and filmmaker noted for his ironic approach to both media and his extensive use of unusual photographic techniques in the context of photojournalism and fashion photography."
+              }
+            ],
+            "reason": "Supported by the cited visible sentences and dependencies."
+          },
+          {
+            "unit_id": "u4",
+            "label": "SUPPORTED",
+            "value": "American",
+            "citations": [
+              "d9s0"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d9s0",
+                "text": "Keith Gordon( born February 3, 1961) is an American actor and film director."
+              }
+            ],
+            "reason": "Supported by the cited visible sentences and dependencies."
+          },
+          {
+            "unit_id": "u5",
+            "label": "SUPPORTED",
+            "value": "yes",
+            "citations": [
+              "d8s0",
+              "d9s0"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d8s0",
+                "text": "William Klein( born April 19, 1928) is an American- born French photographer and filmmaker noted for his ironic approach to both media and his extensive use of unusual photographic techniques in the context of photojournalism and fashion photography."
+              },
+              {
+                "evidence_id": "d9s0",
+                "text": "Keith Gordon( born February 3, 1961) is an American actor and film director."
+              }
+            ],
+            "reason": "Supported by the cited visible sentences and dependencies."
+          }
+        ]
+      },
+      "attempt": 1,
+      "repair": false,
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d1s1",
+        "d1s2",
+        "d1s3",
+        "d1s4",
+        "d1s5",
+        "d1s6",
+        "d1s7",
+        "d2s0",
+        "d2s1",
+        "d2s2",
+        "d2s3",
+        "d2s4",
+        "d2s5",
+        "d2s6",
+        "d2s7",
+        "d3s0",
+        "d3s1",
+        "d3s2",
+        "d3s3",
+        "d3s4",
+        "d3s5",
+        "d3s6",
+        "d3s7",
+        "d3s8",
+        "d5s0",
+        "d5s1",
+        "d5s2",
+        "d5s3",
+        "d5s4",
+        "d5s5",
+        "d5s6",
+        "d5s7",
+        "d5s8",
+        "d5s9",
+        "d5s10",
+        "d5s11",
+        "d5s12",
+        "d5s13",
+        "d5s14",
+        "d5s15",
+        "d5s16",
+        "d5s17",
+        "d5s18",
+        "d5s19",
+        "d5s20",
+        "d5s21",
+        "d5s22",
+        "d5s23",
+        "d5s24",
+        "d5s25",
+        "d5s26",
+        "d5s27",
+        "d5s28",
+        "d7s0",
+        "d4s0",
+        "d6s0",
+        "d6s1",
+        "d8s0",
+        "d8s1",
+        "d8s2",
+        "d8s3",
+        "d8s4",
+        "d8s5",
+        "d9s0",
+        "d10s0",
+        "d10s1",
+        "d10s2",
+        "d10s3",
+        "d10s4",
+        "d10s5",
+        "d10s6",
+        "d10s7"
+      ]
+    },
+    {
+      "sequence": 88,
+      "time_s": 10.609,
+      "type": "judgments",
+      "judgments": {
+        "u1": {
+          "label": "SUPPORTED",
+          "value": "William Klein",
+          "citations": [
+            "d1s1"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d1s1",
+              "text": "is a 1966 French film directed by William Klein."
+            }
+          ],
+          "reason": "Supported by the cited visible sentences and dependencies."
+        },
+        "u2": {
+          "label": "UNRESOLVED",
+          "value": "",
+          "citations": [],
+          "quotes": [],
+          "reason": "Rejected entity identity: citation concerns an ambiguous or differently qualified namesake"
+        },
+        "u3": {
+          "label": "UNRESOLVED",
+          "value": "",
+          "citations": [],
+          "quotes": [],
+          "reason": "Rejected entity identity: citation concerns an ambiguous or differently qualified namesake"
+        },
+        "u4": {
+          "label": "UNRESOLVED",
+          "value": "",
+          "citations": [],
+          "quotes": [],
+          "reason": "Dependency is not supported"
+        },
+        "u5": {
+          "label": "UNRESOLVED",
+          "value": "",
+          "citations": [],
+          "quotes": [],
+          "reason": "Dependency is not supported"
+        }
+      },
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d1s1",
+        "d1s2",
+        "d1s3",
+        "d1s4",
+        "d1s5",
+        "d1s6",
+        "d1s7",
+        "d2s0",
+        "d2s1",
+        "d2s2",
+        "d2s3",
+        "d2s4",
+        "d2s5",
+        "d2s6",
+        "d2s7",
+        "d3s0",
+        "d3s1",
+        "d3s2",
+        "d3s3",
+        "d3s4",
+        "d3s5",
+        "d3s6",
+        "d3s7",
+        "d3s8",
+        "d5s0",
+        "d5s1",
+        "d5s2",
+        "d5s3",
+        "d5s4",
+        "d5s5",
+        "d5s6",
+        "d5s7",
+        "d5s8",
+        "d5s9",
+        "d5s10",
+        "d5s11",
+        "d5s12",
+        "d5s13",
+        "d5s14",
+        "d5s15",
+        "d5s16",
+        "d5s17",
+        "d5s18",
+        "d5s19",
+        "d5s20",
+        "d5s21",
+        "d5s22",
+        "d5s23",
+        "d5s24",
+        "d5s25",
+        "d5s26",
+        "d5s27",
+        "d5s28",
+        "d7s0",
+        "d4s0",
+        "d6s0",
+        "d6s1",
+        "d8s0",
+        "d8s1",
+        "d8s2",
+        "d8s3",
+        "d8s4",
+        "d8s5",
+        "d9s0",
+        "d10s0",
+        "d10s1",
+        "d10s2",
+        "d10s3",
+        "d10s4",
+        "d10s5",
+        "d10s6",
+        "d10s7"
+      ],
+      "semantic_review": false
+    },
+    {
+      "sequence": 89,
+      "time_s": 10.609,
+      "type": "trace_batch_requested"
+    },
+    {
+      "sequence": 90,
+      "time_s": 13.172,
+      "type": "verification_reply",
+      "reply": {
+        "approved": true,
+        "facts_valid": true,
+        "expressed_unit_ids": [
+          "u1"
+        ],
+        "reason": "The draft correctly states the director as William Klein, matching the approved fact and citation, with no extra claims."
+      },
+      "output_unit_ids": [
+        "u1"
+      ],
+      "output_action": "Partial Answer",
+      "dependency_unit_ids": [],
+      "evidence_snapshot_ids": [
+        "d1s1"
+      ]
+    },
+    {
+      "sequence": 91,
+      "time_s": 13.172,
+      "type": "utterance",
+      "action": "Partial Answer",
+      "text": "The director of Who Are You, Polly Maggoo? is William Klein.",
+      "claims": [
+        {
+          "unit_id": "u1",
+          "description": "director of Who Are You, Polly Maggoo?",
+          "value": "William Klein",
+          "citations": [
+            "d1s1"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d1s1",
+              "text": "is a 1966 French film directed by William Klein."
+            }
+          ]
+        }
+      ],
+      "unresolved": [],
+      "fallback": false,
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d1s1",
+        "d1s2",
+        "d1s3",
+        "d1s4",
+        "d1s5",
+        "d1s6",
+        "d1s7",
+        "d2s0",
+        "d2s1",
+        "d2s2",
+        "d2s3",
+        "d2s4",
+        "d2s5",
+        "d2s6",
+        "d2s7",
+        "d3s0",
+        "d3s1",
+        "d3s2",
+        "d3s3",
+        "d3s4",
+        "d3s5",
+        "d3s6",
+        "d3s7",
+        "d3s8",
+        "d5s0",
+        "d5s1",
+        "d5s2",
+        "d5s3",
+        "d5s4",
+        "d5s5",
+        "d5s6",
+        "d5s7",
+        "d5s8",
+        "d5s9",
+        "d5s10",
+        "d5s11",
+        "d5s12",
+        "d5s13",
+        "d5s14",
+        "d5s15",
+        "d5s16",
+        "d5s17",
+        "d5s18",
+        "d5s19",
+        "d5s20",
+        "d5s21",
+        "d5s22",
+        "d5s23",
+        "d5s24",
+        "d5s25",
+        "d5s26",
+        "d5s27",
+        "d5s28",
+        "d7s0",
+        "d4s0",
+        "d6s0",
+        "d6s1",
+        "d8s0",
+        "d8s1",
+        "d8s2",
+        "d8s3",
+        "d8s4",
+        "d8s5",
+        "d9s0",
+        "d10s0",
+        "d10s1",
+        "d10s2",
+        "d10s3",
+        "d10s4",
+        "d10s5",
+        "d10s6",
+        "d10s7"
+      ],
+      "language": "en"
+    },
+    {
+      "sequence": 92,
+      "time_s": 13.172,
+      "type": "search_finished",
+      "query": "[scheduled evidence]",
+      "subject": "",
+      "status": "ok",
+      "returned_pages": [],
+      "mode": "trace",
+      "unit_id": "__scheduled_evidence__"
+    },
+    {
+      "sequence": 93,
+      "time_s": 13.172,
+      "type": "semantic_review_requested",
+      "target_unit_ids": [
+        "u2",
+        "u3",
+        "u4",
+        "u5"
+      ],
+      "review_unit_ids": [
+        "u1",
+        "u2",
+        "u3",
+        "u4",
+        "u5"
+      ],
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d1s1",
+        "d1s2",
+        "d1s3",
+        "d1s4",
+        "d1s5",
+        "d1s6",
+        "d1s7",
+        "d2s0",
+        "d2s1",
+        "d2s2",
+        "d2s3",
+        "d2s4",
+        "d2s5",
+        "d2s6",
+        "d2s7",
+        "d3s0",
+        "d3s1",
+        "d3s2",
+        "d3s3",
+        "d3s4",
+        "d3s5",
+        "d3s6",
+        "d3s7",
+        "d3s8",
+        "d5s0",
+        "d5s1",
+        "d5s2",
+        "d5s3",
+        "d5s4",
+        "d5s5",
+        "d5s6",
+        "d5s7",
+        "d5s8",
+        "d5s9",
+        "d5s10",
+        "d5s11",
+        "d5s12",
+        "d5s13",
+        "d5s14",
+        "d5s15",
+        "d5s16",
+        "d5s17",
+        "d5s18",
+        "d5s19",
+        "d5s20",
+        "d5s21",
+        "d5s22",
+        "d5s23",
+        "d5s24",
+        "d5s25",
+        "d5s26",
+        "d5s27",
+        "d5s28",
+        "d7s0",
+        "d4s0",
+        "d6s0",
+        "d6s1",
+        "d8s0",
+        "d8s1",
+        "d8s2",
+        "d8s3",
+        "d8s4",
+        "d8s5",
+        "d9s0",
+        "d10s0",
+        "d10s1",
+        "d10s2",
+        "d10s3",
+        "d10s4",
+        "d10s5",
+        "d10s6",
+        "d10s7"
+      ],
+      "max_reviews": 1
+    },
+    {
+      "sequence": 94,
+      "time_s": 16.281,
+      "type": "feedback_requested",
+      "feedback_kind": "progress",
+      "execution_state": {
+        "stage": "checking",
+        "searches_started": 2,
+        "searches_completed": 2,
+        "active_searches": 0,
+        "evidence_count": 73,
+        "supported_units": 1,
+        "output_units": 1
+      }
+    },
+    {
+      "sequence": 95,
+      "time_s": 16.39,
+      "type": "semantic_review_reply",
+      "reply": {
+        "judgments": [
+          {
+            "unit_id": "u1",
+            "label": "SUPPORTED",
+            "value": "William Klein",
+            "citations": [
+              "d1s1"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d1s1",
+                "text": "is a 1966 French film directed by William Klein."
+              }
+            ],
+            "reason": "Supported by the cited visible sentences and dependencies."
+          },
+          {
+            "unit_id": "u2",
+            "label": "SUPPORTED",
+            "value": "Keith Gordon",
+            "citations": [
+              "d3s0"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d3s0",
+                "text": "Mother Night is a 1996 American romantic war drama film produced and directed by Keith Gordon."
+              }
+            ],
+            "reason": "Supported by the cited visible sentences and dependencies."
+          },
+          {
+            "unit_id": "u3",
+            "label": "SUPPORTED",
+            "value": "American",
+            "citations": [
+              "d8s0"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d8s0",
+                "text": "William Klein( born April 19, 1928) is an American- born French photographer and filmmaker noted for his ironic approach to both media and his extensive use of unusual photographic techniques in the context of photojournalism and fashion photography."
+              }
+            ],
+            "reason": "Supported by the cited visible sentences and dependencies."
+          },
+          {
+            "unit_id": "u4",
+            "label": "SUPPORTED",
+            "value": "American",
+            "citations": [
+              "d9s0"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d9s0",
+                "text": "Keith Gordon( born February 3, 1961) is an American actor and film director."
+              }
+            ],
+            "reason": "Supported by the cited visible sentences and dependencies."
+          },
+          {
+            "unit_id": "u5",
+            "label": "SUPPORTED",
+            "value": "yes",
+            "citations": [
+              "d8s0",
+              "d9s0"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d8s0",
+                "text": "William Klein( born April 19, 1928) is an American- born French photographer and filmmaker noted for his ironic approach to both media and his extensive use of unusual photographic techniques in the context of photojournalism and fashion photography."
+              },
+              {
+                "evidence_id": "d9s0",
+                "text": "Keith Gordon( born February 3, 1961) is an American actor and film director."
+              }
+            ],
+            "reason": "Supported by the cited visible sentences and dependencies."
+          }
+        ]
+      },
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d1s1",
+        "d1s2",
+        "d1s3",
+        "d1s4",
+        "d1s5",
+        "d1s6",
+        "d1s7",
+        "d2s0",
+        "d2s1",
+        "d2s2",
+        "d2s3",
+        "d2s4",
+        "d2s5",
+        "d2s6",
+        "d2s7",
+        "d3s0",
+        "d3s1",
+        "d3s2",
+        "d3s3",
+        "d3s4",
+        "d3s5",
+        "d3s6",
+        "d3s7",
+        "d3s8",
+        "d5s0",
+        "d5s1",
+        "d5s2",
+        "d5s3",
+        "d5s4",
+        "d5s5",
+        "d5s6",
+        "d5s7",
+        "d5s8",
+        "d5s9",
+        "d5s10",
+        "d5s11",
+        "d5s12",
+        "d5s13",
+        "d5s14",
+        "d5s15",
+        "d5s16",
+        "d5s17",
+        "d5s18",
+        "d5s19",
+        "d5s20",
+        "d5s21",
+        "d5s22",
+        "d5s23",
+        "d5s24",
+        "d5s25",
+        "d5s26",
+        "d5s27",
+        "d5s28",
+        "d7s0",
+        "d4s0",
+        "d6s0",
+        "d6s1",
+        "d8s0",
+        "d8s1",
+        "d8s2",
+        "d8s3",
+        "d8s4",
+        "d8s5",
+        "d9s0",
+        "d10s0",
+        "d10s1",
+        "d10s2",
+        "d10s3",
+        "d10s4",
+        "d10s5",
+        "d10s6",
+        "d10s7"
+      ]
+    },
+    {
+      "sequence": 96,
+      "time_s": 16.39,
+      "type": "semantic_review_finished",
+      "review_unit_ids": [
+        "u1",
+        "u2",
+        "u3",
+        "u4",
+        "u5"
+      ],
+      "recovered_unit_ids": []
+    },
+    {
+      "sequence": 97,
+      "time_s": 16.39,
+      "type": "judgments",
+      "judgments": {
+        "u1": {
+          "label": "SUPPORTED",
+          "value": "William Klein",
+          "citations": [
+            "d1s1"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d1s1",
+              "text": "is a 1966 French film directed by William Klein."
+            }
+          ],
+          "reason": "Supported by the cited visible sentences and dependencies."
+        },
+        "u2": {
+          "label": "UNRESOLVED",
+          "value": "",
+          "citations": [],
+          "quotes": [],
+          "reason": "Rejected entity identity: citation concerns an ambiguous or differently qualified namesake"
+        },
+        "u3": {
+          "label": "UNRESOLVED",
+          "value": "",
+          "citations": [],
+          "quotes": [],
+          "reason": "Rejected entity identity: citation concerns an ambiguous or differently qualified namesake"
+        },
+        "u4": {
+          "label": "UNRESOLVED",
+          "value": "",
+          "citations": [],
+          "quotes": [],
+          "reason": "Dependency is not supported"
+        },
+        "u5": {
+          "label": "UNRESOLVED",
+          "value": "",
+          "citations": [],
+          "quotes": [],
+          "reason": "Dependency is not supported"
+        }
+      },
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d1s1",
+        "d1s2",
+        "d1s3",
+        "d1s4",
+        "d1s5",
+        "d1s6",
+        "d1s7",
+        "d2s0",
+        "d2s1",
+        "d2s2",
+        "d2s3",
+        "d2s4",
+        "d2s5",
+        "d2s6",
+        "d2s7",
+        "d3s0",
+        "d3s1",
+        "d3s2",
+        "d3s3",
+        "d3s4",
+        "d3s5",
+        "d3s6",
+        "d3s7",
+        "d3s8",
+        "d5s0",
+        "d5s1",
+        "d5s2",
+        "d5s3",
+        "d5s4",
+        "d5s5",
+        "d5s6",
+        "d5s7",
+        "d5s8",
+        "d5s9",
+        "d5s10",
+        "d5s11",
+        "d5s12",
+        "d5s13",
+        "d5s14",
+        "d5s15",
+        "d5s16",
+        "d5s17",
+        "d5s18",
+        "d5s19",
+        "d5s20",
+        "d5s21",
+        "d5s22",
+        "d5s23",
+        "d5s24",
+        "d5s25",
+        "d5s26",
+        "d5s27",
+        "d5s28",
+        "d7s0",
+        "d4s0",
+        "d6s0",
+        "d6s1",
+        "d8s0",
+        "d8s1",
+        "d8s2",
+        "d8s3",
+        "d8s4",
+        "d8s5",
+        "d9s0",
+        "d10s0",
+        "d10s1",
+        "d10s2",
+        "d10s3",
+        "d10s4",
+        "d10s5",
+        "d10s6",
+        "d10s7"
+      ],
+      "semantic_review": true
+    },
+    {
+      "sequence": 98,
+      "time_s": 16.39,
+      "type": "utterance",
+      "action": "Final Answer",
+      "text": "I could not confirm director of Mother Night, nationality of the director of Who Are You, Polly Maggoo, nationality of the director of Mother Night and whether the directors of Who Are You, Polly Maggoo? and Mother Night have the same stated nationality.",
+      "claims": [],
+      "unresolved": [
+        "u2",
+        "u3",
+        "u4",
+        "u5"
+      ],
+      "fallback": false,
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d1s1",
+        "d1s2",
+        "d1s3",
+        "d1s4",
+        "d1s5",
+        "d1s6",
+        "d1s7",
+        "d2s0",
+        "d2s1",
+        "d2s2",
+        "d2s3",
+        "d2s4",
+        "d2s5",
+        "d2s6",
+        "d2s7",
+        "d3s0",
+        "d3s1",
+        "d3s2",
+        "d3s3",
+        "d3s4",
+        "d3s5",
+        "d3s6",
+        "d3s7",
+        "d3s8",
+        "d5s0",
+        "d5s1",
+        "d5s2",
+        "d5s3",
+        "d5s4",
+        "d5s5",
+        "d5s6",
+        "d5s7",
+        "d5s8",
+        "d5s9",
+        "d5s10",
+        "d5s11",
+        "d5s12",
+        "d5s13",
+        "d5s14",
+        "d5s15",
+        "d5s16",
+        "d5s17",
+        "d5s18",
+        "d5s19",
+        "d5s20",
+        "d5s21",
+        "d5s22",
+        "d5s23",
+        "d5s24",
+        "d5s25",
+        "d5s26",
+        "d5s27",
+        "d5s28",
+        "d7s0",
+        "d4s0",
+        "d6s0",
+        "d6s1",
+        "d8s0",
+        "d8s1",
+        "d8s2",
+        "d8s3",
+        "d8s4",
+        "d8s5",
+        "d9s0",
+        "d10s0",
+        "d10s1",
+        "d10s2",
+        "d10s3",
+        "d10s4",
+        "d10s5",
+        "d10s6",
+        "d10s7"
+      ],
+      "language": "en"
+    },
+    {
+      "sequence": 99,
+      "time_s": 16.39,
+      "type": "finished",
+      "status": "incomplete"
+    }
+  ],
+  "note": "Prototype model judgments are not independent gold scores. Output event times are not spoken claim times.",
+  "evidence_mode": "scheduled_trace",
+  "audio": {
+    "enabled": true,
+    "mode": "windows",
+    "play": false,
+    "status": "ok",
+    "errors": [],
+    "records": [
+      {
+        "event_sequence": 1,
+        "sentence_index": 1,
+        "sentence_count": 1,
+        "language": "en",
+        "text": "Let me check.",
+        "action": "Backchannel",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 1.3589999999967404,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1\\samples\\0242\\audio\\segments\\0001_01.wav",
+        "duration_s": 1.649297052154195,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 2.139999999999418,
+        "synthesis_and_playback_s": 0.7810000000026776
+      },
+      {
+        "event_sequence": 7,
+        "sentence_index": 1,
+        "sentence_count": 1,
+        "language": "en",
+        "text": "Got it, I'm planning how to tackle the directors' nationalities.",
+        "action": "Progress",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 6.327999999994063,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1\\samples\\0242\\audio\\segments\\0007_01.wav",
+        "duration_s": 4.55859410430839,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 7.125,
+        "synthesis_and_playback_s": 0.7970000000059372
+      },
+      {
+        "event_sequence": 91,
+        "sentence_index": 1,
+        "sentence_count": 2,
+        "language": "en",
+        "text": "The director of Who Are You, Polly Maggoo?",
+        "action": "Partial Answer",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 13.171999999991385,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1\\samples\\0242\\audio\\segments\\0091_01.wav",
+        "duration_s": 3.3039909297052152,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 13.98399999999674,
+        "synthesis_and_playback_s": 0.8120000000053551
+      },
+      {
+        "event_sequence": 91,
+        "sentence_index": 2,
+        "sentence_count": 2,
+        "language": "en",
+        "text": "is William Klein.",
+        "action": "Partial Answer",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 13.98399999999674,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1\\samples\\0242\\audio\\segments\\0091_02.wav",
+        "duration_s": 1.844172335600907,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 14.764999999999418,
+        "synthesis_and_playback_s": 0.7810000000026776
+      },
+      {
+        "event_sequence": 98,
+        "sentence_index": 1,
+        "sentence_count": 2,
+        "language": "en",
+        "text": "I could not confirm director of Mother Night, nationality of the director of Who Are You, Polly Maggoo, nationality of the director of Mother Night and whether the directors of Who Are You, Polly Maggoo?",
+        "action": "Final Answer",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 16.389999999999418,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1\\samples\\0242\\audio\\segments\\0098_01.wav",
+        "duration_s": 12.292380952380952,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 17.186999999990803,
+        "synthesis_and_playback_s": 0.7969999999913853
+      },
+      {
+        "event_sequence": 98,
+        "sentence_index": 2,
+        "sentence_count": 2,
+        "language": "en",
+        "text": "and Mother Night have the same stated nationality.",
+        "action": "Final Answer",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 17.186999999990803,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1\\samples\\0242\\audio\\segments\\0098_02.wav",
+        "duration_s": 3.348888888888889,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 17.952999999994063,
+        "synthesis_and_playback_s": 0.7660000000032596
+      }
+    ],
+    "wave": {
+      "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1\\samples\\0242\\audio\\response.wav",
+      "duration_s": 34.77342403628118,
+      "timeline": [
+        {
+          "event_sequence": 1,
+          "sentence_index": 1,
+          "action": "Backchannel",
+          "text": "Let me check.",
+          "wave_start_s": 2.14,
+          "wave_end_s": 3.789297052154195
+        },
+        {
+          "event_sequence": 7,
+          "sentence_index": 1,
+          "action": "Progress",
+          "text": "Got it, I'm planning how to tackle the directors' nationalities.",
+          "wave_start_s": 7.1249886621315195,
+          "wave_end_s": 11.68358276643991
+        },
+        {
+          "event_sequence": 91,
+          "sentence_index": 1,
+          "action": "Partial Answer",
+          "text": "The director of Who Are You, Polly Maggoo?",
+          "wave_start_s": 13.983990929705216,
+          "wave_end_s": 17.28798185941043
+        },
+        {
+          "event_sequence": 91,
+          "sentence_index": 2,
+          "action": "Partial Answer",
+          "text": "is William Klein.",
+          "wave_start_s": 17.28798185941043,
+          "wave_end_s": 19.13215419501134
+        },
+        {
+          "event_sequence": 98,
+          "sentence_index": 1,
+          "action": "Final Answer",
+          "text": "I could not confirm director of Mother Night, nationality of the director of Who Are You, Polly Maggoo, nationality of the director of Mother Night and whether the directors of Who Are You, Polly Maggoo?",
+          "wave_start_s": 19.13215419501134,
+          "wave_end_s": 31.42453514739229
+        },
+        {
+          "event_sequence": 98,
+          "sentence_index": 2,
+          "action": "Final Answer",
+          "text": "and Mother Night have the same stated nationality.",
+          "wave_start_s": 31.42453514739229,
+          "wave_end_s": 34.77342403628118
+        }
+      ]
+    }
+  },
+  "evaluation": {
+    "mode": "b_final_revised_trace",
+    "trace_id": "2wikimultihopqa_803aef7808d311ebbd96ac1f6bf848b6_short",
+    "sample_id": "2wikimultihopqa_803aef7808d311ebbd96ac1f6bf848b6",
+    "total_wall_s": 17.952999999994063,
+    "question_timeout_s": 180,
+    "audio_enabled": true,
+    "history_enabled": false,
+    "text_pipeline_wall_s": 16.389999999999418,
+    "effective_settings": {
+      "base_url": "https://tinker.thinkingmachines.dev/services/tinker-prod/oai/api/v1",
+      "model": "openai/gpt-oss-120b",
+      "judge_model": "tinker://f9e9a6c1-e203-5c2c-acdd-68fe67378ca4:train:0/sampler_weights/epoch-0001",
+      "judge_reasoning_effort": "low",
+      "wiki_language": "en",
+      "user_agent": "CascadeSystem/0.1 (educational research prototype)",
+      "timeout_s": 45.0,
+      "max_tokens": 4096,
+      "reasoning_effort": "low",
+      "progress_s": 3.0,
+      "feedback_timeout_s": 6.0,
+      "search_limit": 3,
+      "max_units": 8,
+      "max_searches": 16,
+      "max_sources": 73,
+      "source_chars": 428,
+      "evidence_chars": 7287,
+      "concurrency": 3
+    },
+    "timing_kind": "unknown",
+    "scheduler": "wall-paced fixed B arrivals",
+    "split": "eval_reserved",
+    "empty_evidence_sentences_ignored": 0
+  }
+}

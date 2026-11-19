@@ -1,0 +1,341 @@
+{
+  "run": "20261118T175701Z-e9e7665c",
+  "questions": 20,
+  "runs": 60,
+  "controller_statuses": {
+    "complete": 48,
+    "incomplete": 11,
+    "error": 1
+  },
+  "assisted_reading": {
+    "explicit_core_answer": 48,
+    "partial_or_missing": 8,
+    "operational_error": 1,
+    "answer_then_confusing_uncertainty": 3
+  },
+  "reading_by_schedule": {
+    "immediate": {
+      "explicit_core_answer": 16,
+      "partial_or_missing": 3,
+      "answer_then_confusing_uncertainty": 1
+    },
+    "short": {
+      "explicit_core_answer": 16,
+      "partial_or_missing": 3,
+      "answer_then_confusing_uncertainty": 1
+    },
+    "long": {
+      "explicit_core_answer": 16,
+      "partial_or_missing": 2,
+      "operational_error": 1,
+      "answer_then_confusing_uncertainty": 1
+    }
+  },
+  "questions_explicitly_answered_in_all_three": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    20
+  ],
+  "raw_claims": 118,
+  "assisted_mappings": 110,
+  "unmapped_claims": 8,
+  "assisted_b_groups": [
+    {
+      "policy": "cascadesystem_question_only",
+      "data_version": "debug-v0",
+      "clock": "simulated",
+      "timing_kind": "unknown",
+      "runs": 60,
+      "questions": 20,
+      "status_counts": {
+        "ok": 59,
+        "error": 1
+      },
+      "unit_scored_runs": 51,
+      "unit_score_coverage": 0.85,
+      "mean_unit_em_on_scored_runs": 0.8627450980392157,
+      "mean_unit_f1_on_scored_runs": 0.8725490196078431,
+      "claims": 117,
+      "scored_claims": 109,
+      "claims_needing_review": 8,
+      "claim_coverage": 0.9316239316239316,
+      "unsupported_claims": 15,
+      "unsupported_rate_on_scored_claims": 0.13761467889908258,
+      "unsupported_claim_rate": null,
+      "approximate_mapping_claims": 0,
+      "by_omission_supported": 0,
+      "by_presupposition_supported": 3,
+      "recorded_grounded_completions": 39,
+      "recorded_grounded_completion_rate": 0.65,
+      "completion_unknown_runs": 9,
+      "ttfr_s": {
+        "median": null,
+        "count": 0,
+        "runs": 60
+      },
+      "ttfgi_s": {
+        "median": null,
+        "count": 0,
+        "runs": 60
+      },
+      "ttca_s": {
+        "median": null,
+        "count": 0,
+        "runs": 60
+      }
+    }
+  ],
+  "value_diagnostic_b_groups": [
+    {
+      "policy": "cascadesystem_question_only",
+      "data_version": "debug-v0",
+      "clock": "simulated",
+      "timing_kind": "unknown",
+      "runs": 60,
+      "questions": 20,
+      "status_counts": {
+        "ok": 59,
+        "error": 1
+      },
+      "unit_scored_runs": 41,
+      "unit_score_coverage": 0.6833333333333333,
+      "mean_unit_em_on_scored_runs": 0.926829268292683,
+      "mean_unit_f1_on_scored_runs": 0.926829268292683,
+      "claims": 117,
+      "scored_claims": 96,
+      "claims_needing_review": 21,
+      "claim_coverage": 0.8205128205128205,
+      "unsupported_claims": 5,
+      "unsupported_rate_on_scored_claims": 0.052083333333333336,
+      "unsupported_claim_rate": null,
+      "approximate_mapping_claims": 96,
+      "by_omission_supported": 0,
+      "by_presupposition_supported": 0,
+      "recorded_grounded_completions": 33,
+      "recorded_grounded_completion_rate": 0.55,
+      "completion_unknown_runs": 19,
+      "ttfr_s": {
+        "median": null,
+        "count": 0,
+        "runs": 60
+      },
+      "ttfgi_s": {
+        "median": null,
+        "count": 0,
+        "runs": 60
+      },
+      "ttca_s": {
+        "median": null,
+        "count": 0,
+        "runs": 60
+      }
+    }
+  ],
+  "b_statuses": {
+    "ok": 59,
+    "error": 1
+  },
+  "b_claim_labels": {
+    "SUPPORTED": 94,
+    "UNSUPPORTED": 15,
+    "NEEDS_REVIEW": 8
+  },
+  "b_claim_reasons": {
+    "gold_support_and_citations": 94,
+    "missing_gold_support_or_citation": 5,
+    "claim_mapping_required": 8,
+    "wrong_gold_value": 10
+  },
+  "partial_runs_by_schedule": {
+    "immediate": 3,
+    "short": 10,
+    "long": 17
+  },
+  "partial_outputs": 31,
+  "fallback_factual_outputs": 8,
+  "correction_outputs": 0,
+  "text_pipeline_wall_median_all_runs_s": 11.206251649993646,
+  "total_wall_median_all_runs_s": 12.026071849999425,
+  "calls": {
+    "ok": {
+      "feedback_generate": {
+        "n": 170,
+        "median_s": 0.9876825
+      },
+      "decompose": {
+        "n": 60,
+        "median_s": 1.759792
+      },
+      "feedback_verify": {
+        "n": 116,
+        "median_s": 0.8063130000000001
+      },
+      "plan_review": {
+        "n": 60,
+        "median_s": 1.584685
+      },
+      "judge": {
+        "n": 97,
+        "median_s": 1.684828
+      },
+      "generate": {
+        "n": 90,
+        "median_s": 1.1078805
+      },
+      "verify": {
+        "n": 90,
+        "median_s": 1.3382495
+      }
+    },
+    "non_ok": {
+      "feedback_verify:cancelled": 18,
+      "feedback_generate:cancelled": 7,
+      "judge:error": 1
+    }
+  },
+  "previous_calls": {
+    "ok": {
+      "feedback_generate": {
+        "n": 163,
+        "median_s": 1.043025
+      },
+      "decompose": {
+        "n": 60,
+        "median_s": 2.146135
+      },
+      "feedback_verify": {
+        "n": 119,
+        "median_s": 1.016923
+      },
+      "plan_review": {
+        "n": 60,
+        "median_s": 1.9580505000000001
+      },
+      "judge": {
+        "n": 90,
+        "median_s": 2.5365655
+      },
+      "generate": {
+        "n": 70,
+        "median_s": 1.245205
+      },
+      "verify": {
+        "n": 70,
+        "median_s": 1.7881835
+      },
+      "judge_repair": {
+        "n": 4,
+        "median_s": 2.1694885
+      }
+    },
+    "non_ok": {
+      "feedback_verify:cancelled": 21,
+      "feedback_generate:cancelled": 5
+    }
+  },
+  "comparison": [
+    {
+      "sample": "0004",
+      "question_index": 2,
+      "schedule": "immediate",
+      "previous": "operational_error",
+      "latest": "explicit_core_answer"
+    },
+    {
+      "sample": "0011",
+      "question_index": 4,
+      "schedule": "short",
+      "previous": "partial_or_missing",
+      "latest": "explicit_core_answer"
+    },
+    {
+      "sample": "0012",
+      "question_index": 4,
+      "schedule": "long",
+      "previous": "operational_error",
+      "latest": "explicit_core_answer"
+    },
+    {
+      "sample": "0016",
+      "question_index": 6,
+      "schedule": "immediate",
+      "previous": "operational_error",
+      "latest": "partial_or_missing"
+    },
+    {
+      "sample": "0017",
+      "question_index": 6,
+      "schedule": "short",
+      "previous": "operational_error",
+      "latest": "partial_or_missing"
+    },
+    {
+      "sample": "0018",
+      "question_index": 6,
+      "schedule": "long",
+      "previous": "explicit_core_answer",
+      "latest": "partial_or_missing"
+    },
+    {
+      "sample": "0022",
+      "question_index": 8,
+      "schedule": "immediate",
+      "previous": "partial_or_missing",
+      "latest": "explicit_core_answer"
+    },
+    {
+      "sample": "0048",
+      "question_index": 16,
+      "schedule": "long",
+      "previous": "partial_or_missing",
+      "latest": "operational_error"
+    },
+    {
+      "sample": "0052",
+      "question_index": 18,
+      "schedule": "immediate",
+      "previous": "partial_or_missing",
+      "latest": "explicit_core_answer"
+    },
+    {
+      "sample": "0055",
+      "question_index": 19,
+      "schedule": "immediate",
+      "previous": "explicit_core_answer",
+      "latest": "partial_or_missing"
+    }
+  ],
+  "note": "Assistant-assisted core-answer reading; no independent human review. Not overall semantic accuracy, acoustic timing, or a controlled LoRA ablation.",
+  "b_answer_complete": {
+    "True": 44,
+    "None": 9,
+    "False": 7
+  },
+  "b_grounded_complete": {
+    "True": 39,
+    "False": 12,
+    "None": 9
+  },
+  "common_scored_comparison": {
+    "runs": 47,
+    "previous_mean_em": 0.8723404255319149,
+    "latest_mean_em": 0.8936170212765957
+  },
+  "quote_literal_check": {
+    "instances": 221,
+    "nonliteral": 0,
+    "scope": "Parseable judge/semantic review replies; not a semantic support check."
+  }
+}

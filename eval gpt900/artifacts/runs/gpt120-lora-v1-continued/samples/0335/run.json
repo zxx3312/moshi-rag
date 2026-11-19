@@ -1,0 +1,2697 @@
+{
+  "question": "Which film has the director who is older than the other, Belle (2013 Film) or The Crown Of The Russian Empire, Or Once Again The Elusive Avengers?",
+  "resolved_question": "Which film has the director who is older than the other, Belle (2013 Film) or The Crown Of The Russian Empire, Or Once Again The Elusive Avengers?",
+  "used_history_turn_ids": [],
+  "response_language": "en",
+  "status": "incomplete",
+  "clock": "wall_monotonic",
+  "time_origin": "question_text_ready_after_optional_asr",
+  "model": "openai/gpt-oss-120b",
+  "judge_model": "tinker://f9e9a6c1-e203-5c2c-acdd-68fe67378ca4:train:0/sampler_weights/epoch-0001",
+  "units": [
+    {
+      "unit_id": "u1",
+      "description": "director of Belle (2013 film)",
+      "necessary": true,
+      "depends_on": [],
+      "queries": [
+        "Belle (2013 film) director"
+      ],
+      "subject": "Belle (2013 film)"
+    },
+    {
+      "unit_id": "u2",
+      "description": "birth year of the director of Belle (2013 film)",
+      "necessary": true,
+      "depends_on": [
+        "u1"
+      ],
+      "queries": [
+        "{u1} birth year"
+      ],
+      "subject": "{u1}"
+    },
+    {
+      "unit_id": "u3",
+      "description": "director of The Crown Of The Russian Empire",
+      "necessary": true,
+      "depends_on": [],
+      "queries": [
+        "The Crown Of The Russian Empire director"
+      ],
+      "subject": "The Crown Of The Russian Empire"
+    },
+    {
+      "unit_id": "u4",
+      "description": "birth year of the director of The Crown Of The Russian Empire",
+      "necessary": true,
+      "depends_on": [
+        "u3"
+      ],
+      "queries": [
+        "{u3} birth year"
+      ],
+      "subject": "{u3}"
+    },
+    {
+      "unit_id": "u5",
+      "description": "director of Once Again The Elusive Avengers",
+      "necessary": true,
+      "depends_on": [],
+      "queries": [
+        "Once Again The Elusive Avengers director"
+      ],
+      "subject": "Once Again The Elusive Avengers"
+    },
+    {
+      "unit_id": "u6",
+      "description": "birth year of the director of Once Again The Elusive Avengers",
+      "necessary": true,
+      "depends_on": [
+        "u5"
+      ],
+      "queries": [
+        "{u5} birth year"
+      ],
+      "subject": "{u5}"
+    },
+    {
+      "unit_id": "u7",
+      "description": "film whose director is older than the directors of the other two films",
+      "necessary": true,
+      "depends_on": [
+        "u2",
+        "u4",
+        "u6"
+      ],
+      "queries": [
+        "compare birth years of {u2}, {u4}, {u6} to determine which is earliest"
+      ],
+      "subject": ""
+    }
+  ],
+  "judgments": {
+    "u1": {
+      "label": "SUPPORTED",
+      "value": "Amma Asante",
+      "citations": [
+        "d7s0"
+      ],
+      "quotes": [
+        {
+          "evidence_id": "d7s0",
+          "text": "Belle is a 2013 British period drama film directed by Amma Asante, written by Misan Sagay and produced by Damian Jones."
+        }
+      ],
+      "reason": "Supported by the cited visible sentences and dependencies."
+    },
+    "u2": {
+      "label": "SUPPORTED",
+      "value": "1969",
+      "citations": [
+        "d1s0"
+      ],
+      "quotes": [
+        {
+          "evidence_id": "d1s0",
+          "text": "Amma Asante( born 13 September 1969) is a British filmmaker, screenwriter, and former actress, born in London to parents from Ghana."
+        }
+      ],
+      "reason": "Supported by the cited visible sentences and dependencies."
+    },
+    "u3": {
+      "label": "SUPPORTED",
+      "value": "Edmond Keosayan",
+      "citations": [
+        "d3s0"
+      ],
+      "quotes": [
+        {
+          "evidence_id": "d3s0",
+          "text": "The Crown of the Russian Empire, or Once Again the Elusive Avengers( translit.\" Korona Rossiyskoy Imperii, ili Snova Neulovimye\") is a 1971 Soviet action movie, a second sequel of\" The Elusive Avengers\", directed by Edmond Keosayan and made on Mosfilm."
+        }
+      ],
+      "reason": "Supported by the cited visible sentences and dependencies."
+    },
+    "u4": {
+      "label": "SUPPORTED",
+      "value": "1936",
+      "citations": [
+        "d4s0"
+      ],
+      "quotes": [
+        {
+          "evidence_id": "d4s0",
+          "text": "Edmond Gareginovich Keosayan (9 October 1936 – 21 April 1994) was an Armenian Soviet film director and musician."
+        }
+      ],
+      "reason": "Supported by the cited visible sentences and dependencies."
+    },
+    "u5": {
+      "label": "UNRESOLVED",
+      "value": "",
+      "citations": [],
+      "quotes": [],
+      "reason": "The current visible evidence does not establish this unit."
+    },
+    "u6": {
+      "label": "UNRESOLVED",
+      "value": "",
+      "citations": [],
+      "quotes": [],
+      "reason": "The current visible evidence does not establish this unit."
+    },
+    "u7": {
+      "label": "UNRESOLVED",
+      "value": "",
+      "citations": [],
+      "quotes": [],
+      "reason": "The current visible evidence does not establish this unit."
+    }
+  },
+  "evidence": [
+    {
+      "evidence_id": "d2s0",
+      "title": "Ben Palmer",
+      "url": "https://trace.invalid/2wikimultihopqa_bbf9c2fc08c711ebbd91ac1f6bf848b6_short/d2s0",
+      "text": "Ben Palmer is a British film and television director who is known for being the director of\" Bo' Selecta\" and\" The Inbetweeners\".",
+      "visible_time_s": 9.953999999997905,
+      "requested_subject": "",
+      "resolved_title": "Ben Palmer",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d3s0",
+      "title": "The Crown of the Russian Empire, or Once Again the Elusive Avengers",
+      "url": "https://trace.invalid/2wikimultihopqa_bbf9c2fc08c711ebbd91ac1f6bf848b6_short/d3s0",
+      "text": "The Crown of the Russian Empire, or Once Again the Elusive Avengers( translit.\" Korona Rossiyskoy Imperii, ili Snova Neulovimye\") is a 1971 Soviet action movie, a second sequel of\" The Elusive Avengers\", directed by Edmond Keosayan and made on Mosfilm.",
+      "visible_time_s": 9.953999999997905,
+      "requested_subject": "",
+      "resolved_title": "The Crown of the Russian Empire, or Once Again the Elusive Avengers",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d6s0",
+      "title": "The Elusive Avengers",
+      "url": "https://trace.invalid/2wikimultihopqa_bbf9c2fc08c711ebbd91ac1f6bf848b6_short/d6s0",
+      "text": "The Elusive Avengers( translit.\" Neulovimye mstiteli\") is a 1967 Soviet adventure film directed by Edmond Keosayan and made by Mosfilm.",
+      "visible_time_s": 9.953999999997905,
+      "requested_subject": "",
+      "resolved_title": "The Elusive Avengers",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d6s1",
+      "title": "The Elusive Avengers",
+      "url": "https://trace.invalid/2wikimultihopqa_bbf9c2fc08c711ebbd91ac1f6bf848b6_short/d6s1",
+      "text": "It is loosely based on the novel Red Devilets by Pavel Blyakhin, already filmed in 1923 under its original name.",
+      "visible_time_s": 9.953999999997905,
+      "requested_subject": "",
+      "resolved_title": "The Elusive Avengers",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d6s2",
+      "title": "The Elusive Avengers",
+      "url": "https://trace.invalid/2wikimultihopqa_bbf9c2fc08c711ebbd91ac1f6bf848b6_short/d6s2",
+      "text": "The film is an example of Ostern, set in Russian Civil War era Ukraine.",
+      "visible_time_s": 9.953999999997905,
+      "requested_subject": "",
+      "resolved_title": "The Elusive Avengers",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d6s3",
+      "title": "The Elusive Avengers",
+      "url": "https://trace.invalid/2wikimultihopqa_bbf9c2fc08c711ebbd91ac1f6bf848b6_short/d6s3",
+      "text": "The film has spawned two sequels,\" The New Adventures of the Elusive Avengers\"( 1968) and\" The Crown of the Russian Empire, or Once Again the Elusive Avengers\"( 1971).",
+      "visible_time_s": 9.953999999997905,
+      "requested_subject": "",
+      "resolved_title": "The Elusive Avengers",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d7s0",
+      "title": "Belle (2013 film)",
+      "url": "https://trace.invalid/2wikimultihopqa_bbf9c2fc08c711ebbd91ac1f6bf848b6_short/d7s0",
+      "text": "Belle is a 2013 British period drama film directed by Amma Asante, written by Misan Sagay and produced by Damian Jones.",
+      "visible_time_s": 9.953999999997905,
+      "requested_subject": "",
+      "resolved_title": "Belle (2013 film)",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d7s1",
+      "title": "Belle (2013 film)",
+      "url": "https://trace.invalid/2wikimultihopqa_bbf9c2fc08c711ebbd91ac1f6bf848b6_short/d7s1",
+      "text": "It stars Gugu Mbatha- Raw, Tom Wilkinson, Miranda Richardson, Penelope Wilton, Sam Reid, Matthew Goode, Emily Watson, Sarah Gadon, Tom Felton and James Norton.",
+      "visible_time_s": 9.953999999997905,
+      "requested_subject": "",
+      "resolved_title": "Belle (2013 film)",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d7s2",
+      "title": "Belle (2013 film)",
+      "url": "https://trace.invalid/2wikimultihopqa_bbf9c2fc08c711ebbd91ac1f6bf848b6_short/d7s2",
+      "text": "The film is inspired by the 1779 painting of Dido Elizabeth Belle beside her cousin Lady Elizabeth Murray, at Kenwood House, which was commissioned by their great- uncle, William Murray, 1st Earl of Mansfield, then Lord Chief Justice of England.",
+      "visible_time_s": 9.953999999997905,
+      "requested_subject": "",
+      "resolved_title": "Belle (2013 film)",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d7s3",
+      "title": "Belle (2013 film)",
+      "url": "https://trace.invalid/2wikimultihopqa_bbf9c2fc08c711ebbd91ac1f6bf848b6_short/d7s3",
+      "text": "Very little is known about the life of Dido Belle, who was born in the West Indies and was the illegitimate mixed- race daughter of Mansfield's nephew, Sir John Lindsay.",
+      "visible_time_s": 9.953999999997905,
+      "requested_subject": "",
+      "resolved_title": "Belle (2013 film)",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d7s4",
+      "title": "Belle (2013 film)",
+      "url": "https://trace.invalid/2wikimultihopqa_bbf9c2fc08c711ebbd91ac1f6bf848b6_short/d7s4",
+      "text": "She is found living in poverty by her father and entrusted to the care of Mansfield and his wife.",
+      "visible_time_s": 9.953999999997905,
+      "requested_subject": "",
+      "resolved_title": "Belle (2013 film)",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d7s5",
+      "title": "Belle (2013 film)",
+      "url": "https://trace.invalid/2wikimultihopqa_bbf9c2fc08c711ebbd91ac1f6bf848b6_short/d7s5",
+      "text": "The fictional film centres on Dido's relationship with an aspiring lawyer; it is set at a time of legal significance, as a court case is heard on what became known as the\" Zong\" massacre, when slaves were thrown overboard from a slave ship and the owner filed with his insurance company for the losses.",
+      "visible_time_s": 9.953999999997905,
+      "requested_subject": "",
+      "resolved_title": "Belle (2013 film)",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d7s6",
+      "title": "Belle (2013 film)",
+      "url": "https://trace.invalid/2wikimultihopqa_bbf9c2fc08c711ebbd91ac1f6bf848b6_short/d7s6",
+      "text": "Lord Mansfield rules on this case in England's Court of King's Bench in 1786, in a decision seen to contribute to the Abolition of the Slave Trade Act of 1807.",
+      "visible_time_s": 9.953999999997905,
+      "requested_subject": "",
+      "resolved_title": "Belle (2013 film)",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d9s0",
+      "title": "The New Adventures of the Elusive Avengers",
+      "url": "https://trace.invalid/2wikimultihopqa_bbf9c2fc08c711ebbd91ac1f6bf848b6_short/d9s0",
+      "text": "The New Adventures of the Elusive Avengers( translit.",
+      "visible_time_s": 9.953999999997905,
+      "requested_subject": "",
+      "resolved_title": "The New Adventures of the Elusive Avengers",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d9s1",
+      "title": "The New Adventures of the Elusive Avengers",
+      "url": "https://trace.invalid/2wikimultihopqa_bbf9c2fc08c711ebbd91ac1f6bf848b6_short/d9s1",
+      "text": "\" Novye prikluchenya Neulovimykh\") is a 1968 Soviet action movie, a sequel of\" The Elusive Avengers\", directed by Edmond Keosayan and made on Mosfilm.",
+      "visible_time_s": 9.953999999997905,
+      "requested_subject": "",
+      "resolved_title": "The New Adventures of the Elusive Avengers",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d9s2",
+      "title": "The New Adventures of the Elusive Avengers",
+      "url": "https://trace.invalid/2wikimultihopqa_bbf9c2fc08c711ebbd91ac1f6bf848b6_short/d9s2",
+      "text": "The movie was followed by\" The Crown of the Russian Empire, or Once Again the Elusive Avengers\" released in 1971.",
+      "visible_time_s": 9.953999999997905,
+      "requested_subject": "",
+      "resolved_title": "The New Adventures of the Elusive Avengers",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d1s0",
+      "title": "Amma Asante",
+      "url": "https://trace.invalid/2wikimultihopqa_bbf9c2fc08c711ebbd91ac1f6bf848b6_short/d1s0",
+      "text": "Amma Asante( born 13 September 1969) is a British filmmaker, screenwriter, and former actress, born in London to parents from Ghana.",
+      "visible_time_s": 9.953999999997905,
+      "requested_subject": "",
+      "resolved_title": "Amma Asante",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d1s1",
+      "title": "Amma Asante",
+      "url": "https://trace.invalid/2wikimultihopqa_bbf9c2fc08c711ebbd91ac1f6bf848b6_short/d1s1",
+      "text": "Her love for the film industry started when she received her first role in BBC's\" Grange Hill\".",
+      "visible_time_s": 9.953999999997905,
+      "requested_subject": "",
+      "resolved_title": "Amma Asante",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d1s2",
+      "title": "Amma Asante",
+      "url": "https://trace.invalid/2wikimultihopqa_bbf9c2fc08c711ebbd91ac1f6bf848b6_short/d1s2",
+      "text": "Later, she was given the opportunity to travel to Washington, DC, for an anti-drugs campaign, where she met former First Lady Nancy Reagan.",
+      "visible_time_s": 9.953999999997905,
+      "requested_subject": "",
+      "resolved_title": "Amma Asante",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d1s3",
+      "title": "Amma Asante",
+      "url": "https://trace.invalid/2wikimultihopqa_bbf9c2fc08c711ebbd91ac1f6bf848b6_short/d1s3",
+      "text": "Asante wrote and produced the 1998 BBC Two series\" Brothers and Sisters\", starring David Oyelowo.",
+      "visible_time_s": 9.953999999997905,
+      "requested_subject": "",
+      "resolved_title": "Amma Asante",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d1s4",
+      "title": "Amma Asante",
+      "url": "https://trace.invalid/2wikimultihopqa_bbf9c2fc08c711ebbd91ac1f6bf848b6_short/d1s4",
+      "text": "She was a childhood friend of model Naomi Campbell, whom she met when they were seven years old.",
+      "visible_time_s": 9.953999999997905,
+      "requested_subject": "",
+      "resolved_title": "Amma Asante",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d4s0",
+      "title": "Edmond Keosayan",
+      "url": "https://trace.invalid/2wikimultihopqa_bbf9c2fc08c711ebbd91ac1f6bf848b6_short/d4s0",
+      "text": "Edmond Gareginovich Keosayan (9 October 1936 – 21 April 1994) was an Armenian Soviet film director and musician.",
+      "visible_time_s": 9.953999999997905,
+      "requested_subject": "",
+      "resolved_title": "Edmond Keosayan",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d4s1",
+      "title": "Edmond Keosayan",
+      "url": "https://trace.invalid/2wikimultihopqa_bbf9c2fc08c711ebbd91ac1f6bf848b6_short/d4s1",
+      "text": "He was also a compere of the Soviet State Variety Orchestra.",
+      "visible_time_s": 9.953999999997905,
+      "requested_subject": "",
+      "resolved_title": "Edmond Keosayan",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d4s2",
+      "title": "Edmond Keosayan",
+      "url": "https://trace.invalid/2wikimultihopqa_bbf9c2fc08c711ebbd91ac1f6bf848b6_short/d4s2",
+      "text": "His films are mainly in the Armenian and Russian languages.",
+      "visible_time_s": 9.953999999997905,
+      "requested_subject": "",
+      "resolved_title": "Edmond Keosayan",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d5s0",
+      "title": "Detour (2013 film)",
+      "url": "https://trace.invalid/2wikimultihopqa_bbf9c2fc08c711ebbd91ac1f6bf848b6_short/d5s0",
+      "text": "Detour is a 2013 film directed by William Dickerson.",
+      "visible_time_s": 9.953999999997905,
+      "requested_subject": "",
+      "resolved_title": "Detour (2013 film)",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d8s0",
+      "title": "Viktor Kosykh",
+      "url": "https://trace.invalid/2wikimultihopqa_bbf9c2fc08c711ebbd91ac1f6bf848b6_short/d8s0",
+      "text": "Viktor Kosykh( January 27, 1950 — December 22, 2011) was a Soviet and Russian theater and cinema actor.",
+      "visible_time_s": 9.953999999997905,
+      "requested_subject": "",
+      "resolved_title": "Viktor Kosykh",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d8s1",
+      "title": "Viktor Kosykh",
+      "url": "https://trace.invalid/2wikimultihopqa_bbf9c2fc08c711ebbd91ac1f6bf848b6_short/d8s1",
+      "text": "He is probably best known for the role of Danko Schusya in the famous film\" The Elusive Avengers\" and in its sequels,\" The New Adventures of the Elusive Avengers\" and\" The Crown of the Russian Empire, or Once Again the Elusive Avengers\".",
+      "visible_time_s": 9.953999999997905,
+      "requested_subject": "",
+      "resolved_title": "Viktor Kosykh",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d8s2",
+      "title": "Viktor Kosykh",
+      "url": "https://trace.invalid/2wikimultihopqa_bbf9c2fc08c711ebbd91ac1f6bf848b6_short/d8s2",
+      "text": "He is buried at the Khovanskoye Cemetery.",
+      "visible_time_s": 9.953999999997905,
+      "requested_subject": "",
+      "resolved_title": "Viktor Kosykh",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d10s0",
+      "title": "Armen Dzhigarkhanyan",
+      "url": "https://trace.invalid/2wikimultihopqa_bbf9c2fc08c711ebbd91ac1f6bf848b6_short/d10s0",
+      "text": "Armen Dzhigarkhanyan( born 3 October 1935) is a Soviet, Armenian and Russian actor.",
+      "visible_time_s": 9.953999999997905,
+      "requested_subject": "",
+      "resolved_title": "Armen Dzhigarkhanyan",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d10s1",
+      "title": "Armen Dzhigarkhanyan",
+      "url": "https://trace.invalid/2wikimultihopqa_bbf9c2fc08c711ebbd91ac1f6bf848b6_short/d10s1",
+      "text": "Born and raised in Yerevan, Dzhigarkhanyan started acting in the academic and Russian theaters of the city, before moving to Moscow to continue stage acting.",
+      "visible_time_s": 9.953999999997905,
+      "requested_subject": "",
+      "resolved_title": "Armen Dzhigarkhanyan",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d10s2",
+      "title": "Armen Dzhigarkhanyan",
+      "url": "https://trace.invalid/2wikimultihopqa_bbf9c2fc08c711ebbd91ac1f6bf848b6_short/d10s2",
+      "text": "Since 1960, he appeared in a number of Armenian films.",
+      "visible_time_s": 9.953999999997905,
+      "requested_subject": "",
+      "resolved_title": "Armen Dzhigarkhanyan",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d10s3",
+      "title": "Armen Dzhigarkhanyan",
+      "url": "https://trace.invalid/2wikimultihopqa_bbf9c2fc08c711ebbd91ac1f6bf848b6_short/d10s3",
+      "text": "He became popular in the 1970s with the various roles he portrayed in Soviet films like\" The New Adventures of the Elusive Avengers\"( 1968), its sequel\" The Crown of the Russian Empire, or Once Again the Elusive Avengers\"( 1971) and\" The Meeting Place Can not Be Changed\"( 1979).",
+      "visible_time_s": 9.953999999997905,
+      "requested_subject": "",
+      "resolved_title": "Armen Dzhigarkhanyan",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d10s4",
+      "title": "Armen Dzhigarkhanyan",
+      "url": "https://trace.invalid/2wikimultihopqa_bbf9c2fc08c711ebbd91ac1f6bf848b6_short/d10s4",
+      "text": "After almost 30 years on the stage of the Mayakovsky Theatre, Dzhigarkhanyan taught at VGIK and in 1996 he founded his own drama theater in Moscow.",
+      "visible_time_s": 9.953999999997905,
+      "requested_subject": "",
+      "resolved_title": "Armen Dzhigarkhanyan",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d10s5",
+      "title": "Armen Dzhigarkhanyan",
+      "url": "https://trace.invalid/2wikimultihopqa_bbf9c2fc08c711ebbd91ac1f6bf848b6_short/d10s5",
+      "text": "Dzhigarkhanyan, one of the most renowned living film and stage Armenian and Russian actors, has appeared in more films than any other Russian actor with more than 250 appearances.",
+      "visible_time_s": 9.953999999997905,
+      "requested_subject": "",
+      "resolved_title": "Armen Dzhigarkhanyan",
+      "entity_resolution": "unspecified"
+    }
+  ],
+  "searches": [
+    {
+      "query": "[scheduled evidence]",
+      "subject": "",
+      "status": "ok",
+      "returned_pages": [],
+      "mode": "trace",
+      "unit_id": "__scheduled_evidence__"
+    },
+    {
+      "query": "[scheduled evidence]",
+      "subject": "",
+      "status": "ok",
+      "returned_pages": [],
+      "mode": "trace",
+      "unit_id": "__scheduled_evidence__"
+    }
+  ],
+  "search_failures": [],
+  "llm_calls": [
+    {
+      "purpose": "feedback_generate",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 427,
+        "completion_tokens": 72,
+        "total_tokens": 499,
+        "prompt_tokens_details": {
+          "cached_tokens": 384
+        }
+      },
+      "latency_s": 1.344
+    },
+    {
+      "purpose": "feedback_verify",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 393,
+        "completion_tokens": 78,
+        "total_tokens": 471,
+        "prompt_tokens_details": {
+          "cached_tokens": 384
+        }
+      },
+      "latency_s": 1.266
+    },
+    {
+      "purpose": "decompose",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 817,
+        "completion_tokens": 519,
+        "total_tokens": 1336,
+        "prompt_tokens_details": {
+          "cached_tokens": 768
+        }
+      },
+      "latency_s": 4.516
+    },
+    {
+      "purpose": "feedback_generate",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 427,
+        "completion_tokens": 66,
+        "total_tokens": 493,
+        "prompt_tokens_details": {
+          "cached_tokens": 384
+        }
+      },
+      "latency_s": 1.063
+    },
+    {
+      "purpose": "feedback_verify",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 372,
+        "completion_tokens": 67,
+        "total_tokens": 439,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        }
+      },
+      "latency_s": 0.953
+    },
+    {
+      "purpose": "plan_review",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 1326,
+        "completion_tokens": 687,
+        "total_tokens": 2013,
+        "prompt_tokens_details": {
+          "cached_tokens": 896
+        }
+      },
+      "latency_s": 5.438
+    },
+    {
+      "purpose": "judge",
+      "model": "tinker://f9e9a6c1-e203-5c2c-acdd-68fe67378ca4:train:0/sampler_weights/epoch-0001",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 6658,
+        "completion_tokens": 563,
+        "total_tokens": 7221,
+        "prompt_tokens_details": {
+          "cached_tokens": 1024
+        }
+      },
+      "latency_s": 4.219
+    },
+    {
+      "purpose": "generate",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 1171,
+        "completion_tokens": 161,
+        "total_tokens": 1332,
+        "prompt_tokens_details": {
+          "cached_tokens": 512
+        }
+      },
+      "latency_s": 1.828
+    },
+    {
+      "purpose": "verify",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 1930,
+        "completion_tokens": 369,
+        "total_tokens": 2299,
+        "prompt_tokens_details": {
+          "cached_tokens": 640
+        }
+      },
+      "latency_s": 3.484
+    },
+    {
+      "purpose": "judge",
+      "model": "tinker://f9e9a6c1-e203-5c2c-acdd-68fe67378ca4:train:0/sampler_weights/epoch-0001",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 7147,
+        "completion_tokens": 563,
+        "total_tokens": 7710,
+        "prompt_tokens_details": {
+          "cached_tokens": 1152
+        }
+      },
+      "latency_s": 4.047
+    },
+    {
+      "purpose": "feedback_generate",
+      "model": "openai/gpt-oss-120b",
+      "status": "cancelled",
+      "latency_s": 1.031
+    }
+  ],
+  "search_diagnostics": [],
+  "output_enqueued_units": {
+    "u1": "Amma Asante",
+    "u2": "1969",
+    "u3": "Edmond Keosayan",
+    "u4": "1936"
+  },
+  "events": [
+    {
+      "sequence": 0,
+      "time_s": 0.0,
+      "type": "feedback_requested",
+      "feedback_kind": "opening",
+      "execution_state": {
+        "stage": "planning",
+        "searches_started": 0,
+        "searches_completed": 0,
+        "active_searches": 0,
+        "evidence_count": 0,
+        "supported_units": 0,
+        "output_units": 0
+      }
+    },
+    {
+      "sequence": 1,
+      "time_s": 2.61,
+      "type": "utterance",
+      "action": "Backchannel",
+      "text": "Got it, I’ll look up which director is older between Belle (2013) and The Crown Of The Russian Empire/Once Again The Elusive Avengers.",
+      "claims": [],
+      "feedback_source": "model",
+      "feedback_status_claim": "intent",
+      "feedback_fallback_reason": "",
+      "execution_state": {
+        "stage": "planning",
+        "searches_started": 0,
+        "searches_completed": 0,
+        "active_searches": 0,
+        "evidence_count": 0,
+        "supported_units": 0,
+        "output_units": 0
+      },
+      "language": "en"
+    },
+    {
+      "sequence": 2,
+      "time_s": 4.516,
+      "type": "decompose_reply",
+      "reply": {
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "director of Belle (2013 film)",
+            "subject": "Belle (2013 film)",
+            "necessary": false,
+            "depends_on": [],
+            "queries": [
+              "Belle (2013 film) director"
+            ]
+          },
+          {
+            "unit_id": "u2",
+            "description": "birth year of the director of Belle (2013 film)",
+            "subject": "{u1}",
+            "necessary": false,
+            "depends_on": [
+              "u1"
+            ],
+            "queries": [
+              "{u1} birth year"
+            ]
+          },
+          {
+            "unit_id": "u3",
+            "description": "director of The Crown Of The Russian Empire",
+            "subject": "The Crown Of The Russian Empire",
+            "necessary": false,
+            "depends_on": [],
+            "queries": [
+              "The Crown Of The Russian Empire director"
+            ]
+          },
+          {
+            "unit_id": "u4",
+            "description": "birth year of the director of The Crown Of The Russian Empire",
+            "subject": "{u3}",
+            "necessary": false,
+            "depends_on": [
+              "u3"
+            ],
+            "queries": [
+              "{u3} birth year"
+            ]
+          },
+          {
+            "unit_id": "u5",
+            "description": "director of Once Again The Elusive Avengers",
+            "subject": "Once Again The Elusive Avengers",
+            "necessary": false,
+            "depends_on": [],
+            "queries": [
+              "Once Again The Elusive Avengers director"
+            ]
+          },
+          {
+            "unit_id": "u6",
+            "description": "birth year of the director of Once Again The Elusive Avengers",
+            "subject": "{u5}",
+            "necessary": false,
+            "depends_on": [
+              "u5"
+            ],
+            "queries": [
+              "{u5} birth year"
+            ]
+          },
+          {
+            "unit_id": "u7",
+            "description": "film whose director is older than the directors of the other two films",
+            "subject": "",
+            "necessary": true,
+            "depends_on": [
+              "u2",
+              "u4",
+              "u6"
+            ],
+            "queries": [
+              "compare birth years of {u2}, {u4}, {u6} to determine which is earliest"
+            ]
+          }
+        ]
+      },
+      "attempt": 1,
+      "repair": false
+    },
+    {
+      "sequence": 3,
+      "time_s": 4.516,
+      "type": "plan_review_requested",
+      "max_reviews": 1,
+      "question_only": true
+    },
+    {
+      "sequence": 4,
+      "time_s": 5.75,
+      "type": "feedback_requested",
+      "feedback_kind": "progress",
+      "execution_state": {
+        "stage": "planning",
+        "searches_started": 0,
+        "searches_completed": 0,
+        "active_searches": 0,
+        "evidence_count": 0,
+        "supported_units": 0,
+        "output_units": 0
+      }
+    },
+    {
+      "sequence": 5,
+      "time_s": 7.766,
+      "type": "utterance",
+      "action": "Progress",
+      "text": "I'm still working on your question.",
+      "claims": [],
+      "feedback_source": "fallback",
+      "feedback_status_claim": "processing",
+      "feedback_fallback_reason": "feedback_not_approved",
+      "execution_state": {
+        "stage": "planning",
+        "searches_started": 0,
+        "searches_completed": 0,
+        "active_searches": 0,
+        "evidence_count": 0,
+        "supported_units": 0,
+        "output_units": 0
+      },
+      "language": "en"
+    },
+    {
+      "sequence": 6,
+      "time_s": 9.954,
+      "type": "plan_review_reply",
+      "reply": {
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "director of Belle (2013 film)",
+            "subject": "Belle (2013 film)",
+            "necessary": true,
+            "depends_on": [],
+            "queries": [
+              "Belle (2013 film) director"
+            ]
+          },
+          {
+            "unit_id": "u2",
+            "description": "birth year of the director of Belle (2013 film)",
+            "subject": "{u1}",
+            "necessary": true,
+            "depends_on": [
+              "u1"
+            ],
+            "queries": [
+              "{u1} birth year"
+            ]
+          },
+          {
+            "unit_id": "u3",
+            "description": "director of The Crown Of The Russian Empire",
+            "subject": "The Crown Of The Russian Empire",
+            "necessary": true,
+            "depends_on": [],
+            "queries": [
+              "The Crown Of The Russian Empire director"
+            ]
+          },
+          {
+            "unit_id": "u4",
+            "description": "birth year of the director of The Crown Of The Russian Empire",
+            "subject": "{u3}",
+            "necessary": true,
+            "depends_on": [
+              "u3"
+            ],
+            "queries": [
+              "{u3} birth year"
+            ]
+          },
+          {
+            "unit_id": "u5",
+            "description": "director of Once Again The Elusive Avengers",
+            "subject": "Once Again The Elusive Avengers",
+            "necessary": true,
+            "depends_on": [],
+            "queries": [
+              "Once Again The Elusive Avengers director"
+            ]
+          },
+          {
+            "unit_id": "u6",
+            "description": "birth year of the director of Once Again The Elusive Avengers",
+            "subject": "{u5}",
+            "necessary": true,
+            "depends_on": [
+              "u5"
+            ],
+            "queries": [
+              "{u5} birth year"
+            ]
+          },
+          {
+            "unit_id": "u7",
+            "description": "film whose director is older than the directors of the other two films",
+            "subject": "",
+            "necessary": true,
+            "depends_on": [
+              "u2",
+              "u4",
+              "u6"
+            ],
+            "queries": [
+              "compare birth years of {u2}, {u4}, {u6} to determine which is earliest"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "sequence": 7,
+      "time_s": 9.954,
+      "type": "plan_review_finished",
+      "changed": true,
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "director of Belle (2013 film)",
+          "necessary": true,
+          "depends_on": [],
+          "queries": [
+            "Belle (2013 film) director"
+          ],
+          "subject": "Belle (2013 film)"
+        },
+        {
+          "unit_id": "u2",
+          "description": "birth year of the director of Belle (2013 film)",
+          "necessary": true,
+          "depends_on": [
+            "u1"
+          ],
+          "queries": [
+            "{u1} birth year"
+          ],
+          "subject": "{u1}"
+        },
+        {
+          "unit_id": "u3",
+          "description": "director of The Crown Of The Russian Empire",
+          "necessary": true,
+          "depends_on": [],
+          "queries": [
+            "The Crown Of The Russian Empire director"
+          ],
+          "subject": "The Crown Of The Russian Empire"
+        },
+        {
+          "unit_id": "u4",
+          "description": "birth year of the director of The Crown Of The Russian Empire",
+          "necessary": true,
+          "depends_on": [
+            "u3"
+          ],
+          "queries": [
+            "{u3} birth year"
+          ],
+          "subject": "{u3}"
+        },
+        {
+          "unit_id": "u5",
+          "description": "director of Once Again The Elusive Avengers",
+          "necessary": true,
+          "depends_on": [],
+          "queries": [
+            "Once Again The Elusive Avengers director"
+          ],
+          "subject": "Once Again The Elusive Avengers"
+        },
+        {
+          "unit_id": "u6",
+          "description": "birth year of the director of Once Again The Elusive Avengers",
+          "necessary": true,
+          "depends_on": [
+            "u5"
+          ],
+          "queries": [
+            "{u5} birth year"
+          ],
+          "subject": "{u5}"
+        },
+        {
+          "unit_id": "u7",
+          "description": "film whose director is older than the directors of the other two films",
+          "necessary": true,
+          "depends_on": [
+            "u2",
+            "u4",
+            "u6"
+          ],
+          "queries": [
+            "compare birth years of {u2}, {u4}, {u6} to determine which is earliest"
+          ],
+          "subject": ""
+        }
+      ],
+      "question_only": true
+    },
+    {
+      "sequence": 8,
+      "time_s": 9.954,
+      "type": "plan",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "director of Belle (2013 film)",
+          "necessary": true,
+          "depends_on": [],
+          "queries": [
+            "Belle (2013 film) director"
+          ],
+          "subject": "Belle (2013 film)"
+        },
+        {
+          "unit_id": "u2",
+          "description": "birth year of the director of Belle (2013 film)",
+          "necessary": true,
+          "depends_on": [
+            "u1"
+          ],
+          "queries": [
+            "{u1} birth year"
+          ],
+          "subject": "{u1}"
+        },
+        {
+          "unit_id": "u3",
+          "description": "director of The Crown Of The Russian Empire",
+          "necessary": true,
+          "depends_on": [],
+          "queries": [
+            "The Crown Of The Russian Empire director"
+          ],
+          "subject": "The Crown Of The Russian Empire"
+        },
+        {
+          "unit_id": "u4",
+          "description": "birth year of the director of The Crown Of The Russian Empire",
+          "necessary": true,
+          "depends_on": [
+            "u3"
+          ],
+          "queries": [
+            "{u3} birth year"
+          ],
+          "subject": "{u3}"
+        },
+        {
+          "unit_id": "u5",
+          "description": "director of Once Again The Elusive Avengers",
+          "necessary": true,
+          "depends_on": [],
+          "queries": [
+            "Once Again The Elusive Avengers director"
+          ],
+          "subject": "Once Again The Elusive Avengers"
+        },
+        {
+          "unit_id": "u6",
+          "description": "birth year of the director of Once Again The Elusive Avengers",
+          "necessary": true,
+          "depends_on": [
+            "u5"
+          ],
+          "queries": [
+            "{u5} birth year"
+          ],
+          "subject": "{u5}"
+        },
+        {
+          "unit_id": "u7",
+          "description": "film whose director is older than the directors of the other two films",
+          "necessary": true,
+          "depends_on": [
+            "u2",
+            "u4",
+            "u6"
+          ],
+          "queries": [
+            "compare birth years of {u2}, {u4}, {u6} to determine which is earliest"
+          ],
+          "subject": ""
+        }
+      ]
+    },
+    {
+      "sequence": 9,
+      "time_s": 9.954,
+      "type": "trace_batch_requested"
+    },
+    {
+      "sequence": 10,
+      "time_s": 9.954,
+      "type": "search_finished",
+      "query": "[scheduled evidence]",
+      "subject": "",
+      "status": "ok",
+      "returned_pages": [],
+      "mode": "trace",
+      "unit_id": "__scheduled_evidence__"
+    },
+    {
+      "sequence": 11,
+      "time_s": 9.954,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d2s0",
+        "title": "Ben Palmer",
+        "url": "https://trace.invalid/2wikimultihopqa_bbf9c2fc08c711ebbd91ac1f6bf848b6_short/d2s0",
+        "text": "Ben Palmer is a British film and television director who is known for being the director of\" Bo' Selecta\" and\" The Inbetweeners\".",
+        "visible_time_s": 9.953999999997905,
+        "requested_subject": "",
+        "resolved_title": "Ben Palmer",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 12,
+      "time_s": 9.954,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d3s0",
+        "title": "The Crown of the Russian Empire, or Once Again the Elusive Avengers",
+        "url": "https://trace.invalid/2wikimultihopqa_bbf9c2fc08c711ebbd91ac1f6bf848b6_short/d3s0",
+        "text": "The Crown of the Russian Empire, or Once Again the Elusive Avengers( translit.\" Korona Rossiyskoy Imperii, ili Snova Neulovimye\") is a 1971 Soviet action movie, a second sequel of\" The Elusive Avengers\", directed by Edmond Keosayan and made on Mosfilm.",
+        "visible_time_s": 9.953999999997905,
+        "requested_subject": "",
+        "resolved_title": "The Crown of the Russian Empire, or Once Again the Elusive Avengers",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 13,
+      "time_s": 9.954,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d6s0",
+        "title": "The Elusive Avengers",
+        "url": "https://trace.invalid/2wikimultihopqa_bbf9c2fc08c711ebbd91ac1f6bf848b6_short/d6s0",
+        "text": "The Elusive Avengers( translit.\" Neulovimye mstiteli\") is a 1967 Soviet adventure film directed by Edmond Keosayan and made by Mosfilm.",
+        "visible_time_s": 9.953999999997905,
+        "requested_subject": "",
+        "resolved_title": "The Elusive Avengers",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 14,
+      "time_s": 9.954,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d6s1",
+        "title": "The Elusive Avengers",
+        "url": "https://trace.invalid/2wikimultihopqa_bbf9c2fc08c711ebbd91ac1f6bf848b6_short/d6s1",
+        "text": "It is loosely based on the novel Red Devilets by Pavel Blyakhin, already filmed in 1923 under its original name.",
+        "visible_time_s": 9.953999999997905,
+        "requested_subject": "",
+        "resolved_title": "The Elusive Avengers",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 15,
+      "time_s": 9.954,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d6s2",
+        "title": "The Elusive Avengers",
+        "url": "https://trace.invalid/2wikimultihopqa_bbf9c2fc08c711ebbd91ac1f6bf848b6_short/d6s2",
+        "text": "The film is an example of Ostern, set in Russian Civil War era Ukraine.",
+        "visible_time_s": 9.953999999997905,
+        "requested_subject": "",
+        "resolved_title": "The Elusive Avengers",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 16,
+      "time_s": 9.954,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d6s3",
+        "title": "The Elusive Avengers",
+        "url": "https://trace.invalid/2wikimultihopqa_bbf9c2fc08c711ebbd91ac1f6bf848b6_short/d6s3",
+        "text": "The film has spawned two sequels,\" The New Adventures of the Elusive Avengers\"( 1968) and\" The Crown of the Russian Empire, or Once Again the Elusive Avengers\"( 1971).",
+        "visible_time_s": 9.953999999997905,
+        "requested_subject": "",
+        "resolved_title": "The Elusive Avengers",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 17,
+      "time_s": 9.954,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d7s0",
+        "title": "Belle (2013 film)",
+        "url": "https://trace.invalid/2wikimultihopqa_bbf9c2fc08c711ebbd91ac1f6bf848b6_short/d7s0",
+        "text": "Belle is a 2013 British period drama film directed by Amma Asante, written by Misan Sagay and produced by Damian Jones.",
+        "visible_time_s": 9.953999999997905,
+        "requested_subject": "",
+        "resolved_title": "Belle (2013 film)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 18,
+      "time_s": 9.954,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d7s1",
+        "title": "Belle (2013 film)",
+        "url": "https://trace.invalid/2wikimultihopqa_bbf9c2fc08c711ebbd91ac1f6bf848b6_short/d7s1",
+        "text": "It stars Gugu Mbatha- Raw, Tom Wilkinson, Miranda Richardson, Penelope Wilton, Sam Reid, Matthew Goode, Emily Watson, Sarah Gadon, Tom Felton and James Norton.",
+        "visible_time_s": 9.953999999997905,
+        "requested_subject": "",
+        "resolved_title": "Belle (2013 film)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 19,
+      "time_s": 9.954,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d7s2",
+        "title": "Belle (2013 film)",
+        "url": "https://trace.invalid/2wikimultihopqa_bbf9c2fc08c711ebbd91ac1f6bf848b6_short/d7s2",
+        "text": "The film is inspired by the 1779 painting of Dido Elizabeth Belle beside her cousin Lady Elizabeth Murray, at Kenwood House, which was commissioned by their great- uncle, William Murray, 1st Earl of Mansfield, then Lord Chief Justice of England.",
+        "visible_time_s": 9.953999999997905,
+        "requested_subject": "",
+        "resolved_title": "Belle (2013 film)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 20,
+      "time_s": 9.954,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d7s3",
+        "title": "Belle (2013 film)",
+        "url": "https://trace.invalid/2wikimultihopqa_bbf9c2fc08c711ebbd91ac1f6bf848b6_short/d7s3",
+        "text": "Very little is known about the life of Dido Belle, who was born in the West Indies and was the illegitimate mixed- race daughter of Mansfield's nephew, Sir John Lindsay.",
+        "visible_time_s": 9.953999999997905,
+        "requested_subject": "",
+        "resolved_title": "Belle (2013 film)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 21,
+      "time_s": 9.954,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d7s4",
+        "title": "Belle (2013 film)",
+        "url": "https://trace.invalid/2wikimultihopqa_bbf9c2fc08c711ebbd91ac1f6bf848b6_short/d7s4",
+        "text": "She is found living in poverty by her father and entrusted to the care of Mansfield and his wife.",
+        "visible_time_s": 9.953999999997905,
+        "requested_subject": "",
+        "resolved_title": "Belle (2013 film)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 22,
+      "time_s": 9.954,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d7s5",
+        "title": "Belle (2013 film)",
+        "url": "https://trace.invalid/2wikimultihopqa_bbf9c2fc08c711ebbd91ac1f6bf848b6_short/d7s5",
+        "text": "The fictional film centres on Dido's relationship with an aspiring lawyer; it is set at a time of legal significance, as a court case is heard on what became known as the\" Zong\" massacre, when slaves were thrown overboard from a slave ship and the owner filed with his insurance company for the losses.",
+        "visible_time_s": 9.953999999997905,
+        "requested_subject": "",
+        "resolved_title": "Belle (2013 film)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 23,
+      "time_s": 9.954,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d7s6",
+        "title": "Belle (2013 film)",
+        "url": "https://trace.invalid/2wikimultihopqa_bbf9c2fc08c711ebbd91ac1f6bf848b6_short/d7s6",
+        "text": "Lord Mansfield rules on this case in England's Court of King's Bench in 1786, in a decision seen to contribute to the Abolition of the Slave Trade Act of 1807.",
+        "visible_time_s": 9.953999999997905,
+        "requested_subject": "",
+        "resolved_title": "Belle (2013 film)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 24,
+      "time_s": 9.954,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d9s0",
+        "title": "The New Adventures of the Elusive Avengers",
+        "url": "https://trace.invalid/2wikimultihopqa_bbf9c2fc08c711ebbd91ac1f6bf848b6_short/d9s0",
+        "text": "The New Adventures of the Elusive Avengers( translit.",
+        "visible_time_s": 9.953999999997905,
+        "requested_subject": "",
+        "resolved_title": "The New Adventures of the Elusive Avengers",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 25,
+      "time_s": 9.954,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d9s1",
+        "title": "The New Adventures of the Elusive Avengers",
+        "url": "https://trace.invalid/2wikimultihopqa_bbf9c2fc08c711ebbd91ac1f6bf848b6_short/d9s1",
+        "text": "\" Novye prikluchenya Neulovimykh\") is a 1968 Soviet action movie, a sequel of\" The Elusive Avengers\", directed by Edmond Keosayan and made on Mosfilm.",
+        "visible_time_s": 9.953999999997905,
+        "requested_subject": "",
+        "resolved_title": "The New Adventures of the Elusive Avengers",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 26,
+      "time_s": 9.954,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d9s2",
+        "title": "The New Adventures of the Elusive Avengers",
+        "url": "https://trace.invalid/2wikimultihopqa_bbf9c2fc08c711ebbd91ac1f6bf848b6_short/d9s2",
+        "text": "The movie was followed by\" The Crown of the Russian Empire, or Once Again the Elusive Avengers\" released in 1971.",
+        "visible_time_s": 9.953999999997905,
+        "requested_subject": "",
+        "resolved_title": "The New Adventures of the Elusive Avengers",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 27,
+      "time_s": 9.954,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d1s0",
+        "title": "Amma Asante",
+        "url": "https://trace.invalid/2wikimultihopqa_bbf9c2fc08c711ebbd91ac1f6bf848b6_short/d1s0",
+        "text": "Amma Asante( born 13 September 1969) is a British filmmaker, screenwriter, and former actress, born in London to parents from Ghana.",
+        "visible_time_s": 9.953999999997905,
+        "requested_subject": "",
+        "resolved_title": "Amma Asante",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 28,
+      "time_s": 9.954,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d1s1",
+        "title": "Amma Asante",
+        "url": "https://trace.invalid/2wikimultihopqa_bbf9c2fc08c711ebbd91ac1f6bf848b6_short/d1s1",
+        "text": "Her love for the film industry started when she received her first role in BBC's\" Grange Hill\".",
+        "visible_time_s": 9.953999999997905,
+        "requested_subject": "",
+        "resolved_title": "Amma Asante",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 29,
+      "time_s": 9.954,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d1s2",
+        "title": "Amma Asante",
+        "url": "https://trace.invalid/2wikimultihopqa_bbf9c2fc08c711ebbd91ac1f6bf848b6_short/d1s2",
+        "text": "Later, she was given the opportunity to travel to Washington, DC, for an anti-drugs campaign, where she met former First Lady Nancy Reagan.",
+        "visible_time_s": 9.953999999997905,
+        "requested_subject": "",
+        "resolved_title": "Amma Asante",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 30,
+      "time_s": 9.954,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d1s3",
+        "title": "Amma Asante",
+        "url": "https://trace.invalid/2wikimultihopqa_bbf9c2fc08c711ebbd91ac1f6bf848b6_short/d1s3",
+        "text": "Asante wrote and produced the 1998 BBC Two series\" Brothers and Sisters\", starring David Oyelowo.",
+        "visible_time_s": 9.953999999997905,
+        "requested_subject": "",
+        "resolved_title": "Amma Asante",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 31,
+      "time_s": 9.954,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d1s4",
+        "title": "Amma Asante",
+        "url": "https://trace.invalid/2wikimultihopqa_bbf9c2fc08c711ebbd91ac1f6bf848b6_short/d1s4",
+        "text": "She was a childhood friend of model Naomi Campbell, whom she met when they were seven years old.",
+        "visible_time_s": 9.953999999997905,
+        "requested_subject": "",
+        "resolved_title": "Amma Asante",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 32,
+      "time_s": 9.954,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d4s0",
+        "title": "Edmond Keosayan",
+        "url": "https://trace.invalid/2wikimultihopqa_bbf9c2fc08c711ebbd91ac1f6bf848b6_short/d4s0",
+        "text": "Edmond Gareginovich Keosayan (9 October 1936 – 21 April 1994) was an Armenian Soviet film director and musician.",
+        "visible_time_s": 9.953999999997905,
+        "requested_subject": "",
+        "resolved_title": "Edmond Keosayan",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 33,
+      "time_s": 9.954,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d4s1",
+        "title": "Edmond Keosayan",
+        "url": "https://trace.invalid/2wikimultihopqa_bbf9c2fc08c711ebbd91ac1f6bf848b6_short/d4s1",
+        "text": "He was also a compere of the Soviet State Variety Orchestra.",
+        "visible_time_s": 9.953999999997905,
+        "requested_subject": "",
+        "resolved_title": "Edmond Keosayan",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 34,
+      "time_s": 9.954,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d4s2",
+        "title": "Edmond Keosayan",
+        "url": "https://trace.invalid/2wikimultihopqa_bbf9c2fc08c711ebbd91ac1f6bf848b6_short/d4s2",
+        "text": "His films are mainly in the Armenian and Russian languages.",
+        "visible_time_s": 9.953999999997905,
+        "requested_subject": "",
+        "resolved_title": "Edmond Keosayan",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 35,
+      "time_s": 9.954,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d5s0",
+        "title": "Detour (2013 film)",
+        "url": "https://trace.invalid/2wikimultihopqa_bbf9c2fc08c711ebbd91ac1f6bf848b6_short/d5s0",
+        "text": "Detour is a 2013 film directed by William Dickerson.",
+        "visible_time_s": 9.953999999997905,
+        "requested_subject": "",
+        "resolved_title": "Detour (2013 film)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 36,
+      "time_s": 9.954,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d8s0",
+        "title": "Viktor Kosykh",
+        "url": "https://trace.invalid/2wikimultihopqa_bbf9c2fc08c711ebbd91ac1f6bf848b6_short/d8s0",
+        "text": "Viktor Kosykh( January 27, 1950 — December 22, 2011) was a Soviet and Russian theater and cinema actor.",
+        "visible_time_s": 9.953999999997905,
+        "requested_subject": "",
+        "resolved_title": "Viktor Kosykh",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 37,
+      "time_s": 9.954,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d8s1",
+        "title": "Viktor Kosykh",
+        "url": "https://trace.invalid/2wikimultihopqa_bbf9c2fc08c711ebbd91ac1f6bf848b6_short/d8s1",
+        "text": "He is probably best known for the role of Danko Schusya in the famous film\" The Elusive Avengers\" and in its sequels,\" The New Adventures of the Elusive Avengers\" and\" The Crown of the Russian Empire, or Once Again the Elusive Avengers\".",
+        "visible_time_s": 9.953999999997905,
+        "requested_subject": "",
+        "resolved_title": "Viktor Kosykh",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 38,
+      "time_s": 9.954,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d8s2",
+        "title": "Viktor Kosykh",
+        "url": "https://trace.invalid/2wikimultihopqa_bbf9c2fc08c711ebbd91ac1f6bf848b6_short/d8s2",
+        "text": "He is buried at the Khovanskoye Cemetery.",
+        "visible_time_s": 9.953999999997905,
+        "requested_subject": "",
+        "resolved_title": "Viktor Kosykh",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 39,
+      "time_s": 9.954,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d10s0",
+        "title": "Armen Dzhigarkhanyan",
+        "url": "https://trace.invalid/2wikimultihopqa_bbf9c2fc08c711ebbd91ac1f6bf848b6_short/d10s0",
+        "text": "Armen Dzhigarkhanyan( born 3 October 1935) is a Soviet, Armenian and Russian actor.",
+        "visible_time_s": 9.953999999997905,
+        "requested_subject": "",
+        "resolved_title": "Armen Dzhigarkhanyan",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 40,
+      "time_s": 9.954,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d10s1",
+        "title": "Armen Dzhigarkhanyan",
+        "url": "https://trace.invalid/2wikimultihopqa_bbf9c2fc08c711ebbd91ac1f6bf848b6_short/d10s1",
+        "text": "Born and raised in Yerevan, Dzhigarkhanyan started acting in the academic and Russian theaters of the city, before moving to Moscow to continue stage acting.",
+        "visible_time_s": 9.953999999997905,
+        "requested_subject": "",
+        "resolved_title": "Armen Dzhigarkhanyan",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 41,
+      "time_s": 9.954,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d10s2",
+        "title": "Armen Dzhigarkhanyan",
+        "url": "https://trace.invalid/2wikimultihopqa_bbf9c2fc08c711ebbd91ac1f6bf848b6_short/d10s2",
+        "text": "Since 1960, he appeared in a number of Armenian films.",
+        "visible_time_s": 9.953999999997905,
+        "requested_subject": "",
+        "resolved_title": "Armen Dzhigarkhanyan",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 42,
+      "time_s": 9.954,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d10s3",
+        "title": "Armen Dzhigarkhanyan",
+        "url": "https://trace.invalid/2wikimultihopqa_bbf9c2fc08c711ebbd91ac1f6bf848b6_short/d10s3",
+        "text": "He became popular in the 1970s with the various roles he portrayed in Soviet films like\" The New Adventures of the Elusive Avengers\"( 1968), its sequel\" The Crown of the Russian Empire, or Once Again the Elusive Avengers\"( 1971) and\" The Meeting Place Can not Be Changed\"( 1979).",
+        "visible_time_s": 9.953999999997905,
+        "requested_subject": "",
+        "resolved_title": "Armen Dzhigarkhanyan",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 43,
+      "time_s": 9.954,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d10s4",
+        "title": "Armen Dzhigarkhanyan",
+        "url": "https://trace.invalid/2wikimultihopqa_bbf9c2fc08c711ebbd91ac1f6bf848b6_short/d10s4",
+        "text": "After almost 30 years on the stage of the Mayakovsky Theatre, Dzhigarkhanyan taught at VGIK and in 1996 he founded his own drama theater in Moscow.",
+        "visible_time_s": 9.953999999997905,
+        "requested_subject": "",
+        "resolved_title": "Armen Dzhigarkhanyan",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 44,
+      "time_s": 9.954,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d10s5",
+        "title": "Armen Dzhigarkhanyan",
+        "url": "https://trace.invalid/2wikimultihopqa_bbf9c2fc08c711ebbd91ac1f6bf848b6_short/d10s5",
+        "text": "Dzhigarkhanyan, one of the most renowned living film and stage Armenian and Russian actors, has appeared in more films than any other Russian actor with more than 250 appearances.",
+        "visible_time_s": 9.953999999997905,
+        "requested_subject": "",
+        "resolved_title": "Armen Dzhigarkhanyan",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 45,
+      "time_s": 14.188,
+      "type": "judge_reply",
+      "reply": {
+        "judgments": [
+          {
+            "unit_id": "u1",
+            "label": "SUPPORTED",
+            "value": "Amma Asante",
+            "citations": [
+              "d7s0"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d7s0",
+                "text": "Belle is a 2013 British period drama film directed by Amma Asante, written by Misan Sagay and produced by Damian Jones."
+              }
+            ],
+            "reason": "Supported by the cited visible sentences and dependencies."
+          },
+          {
+            "unit_id": "u2",
+            "label": "SUPPORTED",
+            "value": "1969",
+            "citations": [
+              "d1s0"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d1s0",
+                "text": "Amma Asante( born 13 September 1969) is a British filmmaker, screenwriter, and former actress, born in London to parents from Ghana."
+              }
+            ],
+            "reason": "Supported by the cited visible sentences and dependencies."
+          },
+          {
+            "unit_id": "u3",
+            "label": "SUPPORTED",
+            "value": "Edmond Keosayan",
+            "citations": [
+              "d3s0"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d3s0",
+                "text": "The Crown of the Russian Empire, or Once Again the Elusive Avengers( translit.\" Korona Rossiyskoy Imperii, ili Snova Neulovimye\") is a 1971 Soviet action movie, a second sequel of\" The Elusive Avengers\", directed by Edmond Keosayan and made on Mosfilm."
+              }
+            ],
+            "reason": "Supported by the cited visible sentences and dependencies."
+          },
+          {
+            "unit_id": "u4",
+            "label": "SUPPORTED",
+            "value": "1936",
+            "citations": [
+              "d4s0"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d4s0",
+                "text": "Edmond Gareginovich Keosayan (9 October 1936 – 21 April 1994) was an Armenian Soviet film director and musician."
+              }
+            ],
+            "reason": "Supported by the cited visible sentences and dependencies."
+          },
+          {
+            "unit_id": "u5",
+            "label": "UNRESOLVED",
+            "value": "",
+            "citations": [],
+            "quotes": [],
+            "reason": "The current visible evidence does not establish this unit."
+          },
+          {
+            "unit_id": "u6",
+            "label": "UNRESOLVED",
+            "value": "",
+            "citations": [],
+            "quotes": [],
+            "reason": "The current visible evidence does not establish this unit."
+          },
+          {
+            "unit_id": "u7",
+            "label": "UNRESOLVED",
+            "value": "",
+            "citations": [],
+            "quotes": [],
+            "reason": "The current visible evidence does not establish this unit."
+          }
+        ]
+      },
+      "attempt": 1,
+      "repair": false,
+      "evidence_snapshot_ids": [
+        "d2s0",
+        "d3s0",
+        "d6s0",
+        "d6s1",
+        "d6s2",
+        "d6s3",
+        "d7s0",
+        "d7s1",
+        "d7s2",
+        "d7s3",
+        "d7s4",
+        "d7s5",
+        "d7s6",
+        "d9s0",
+        "d9s1",
+        "d9s2",
+        "d1s0",
+        "d1s1",
+        "d1s2",
+        "d1s3",
+        "d1s4",
+        "d4s0",
+        "d4s1",
+        "d4s2",
+        "d5s0",
+        "d8s0",
+        "d8s1",
+        "d8s2",
+        "d10s0",
+        "d10s1",
+        "d10s2",
+        "d10s3",
+        "d10s4",
+        "d10s5"
+      ]
+    },
+    {
+      "sequence": 46,
+      "time_s": 14.188,
+      "type": "judgments",
+      "judgments": {
+        "u1": {
+          "label": "SUPPORTED",
+          "value": "Amma Asante",
+          "citations": [
+            "d7s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d7s0",
+              "text": "Belle is a 2013 British period drama film directed by Amma Asante, written by Misan Sagay and produced by Damian Jones."
+            }
+          ],
+          "reason": "Supported by the cited visible sentences and dependencies."
+        },
+        "u2": {
+          "label": "SUPPORTED",
+          "value": "1969",
+          "citations": [
+            "d1s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d1s0",
+              "text": "Amma Asante( born 13 September 1969) is a British filmmaker, screenwriter, and former actress, born in London to parents from Ghana."
+            }
+          ],
+          "reason": "Supported by the cited visible sentences and dependencies."
+        },
+        "u3": {
+          "label": "SUPPORTED",
+          "value": "Edmond Keosayan",
+          "citations": [
+            "d3s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d3s0",
+              "text": "The Crown of the Russian Empire, or Once Again the Elusive Avengers( translit.\" Korona Rossiyskoy Imperii, ili Snova Neulovimye\") is a 1971 Soviet action movie, a second sequel of\" The Elusive Avengers\", directed by Edmond Keosayan and made on Mosfilm."
+            }
+          ],
+          "reason": "Supported by the cited visible sentences and dependencies."
+        },
+        "u4": {
+          "label": "SUPPORTED",
+          "value": "1936",
+          "citations": [
+            "d4s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d4s0",
+              "text": "Edmond Gareginovich Keosayan (9 October 1936 – 21 April 1994) was an Armenian Soviet film director and musician."
+            }
+          ],
+          "reason": "Supported by the cited visible sentences and dependencies."
+        },
+        "u5": {
+          "label": "UNRESOLVED",
+          "value": "",
+          "citations": [],
+          "quotes": [],
+          "reason": "The current visible evidence does not establish this unit."
+        },
+        "u6": {
+          "label": "UNRESOLVED",
+          "value": "",
+          "citations": [],
+          "quotes": [],
+          "reason": "The current visible evidence does not establish this unit."
+        },
+        "u7": {
+          "label": "UNRESOLVED",
+          "value": "",
+          "citations": [],
+          "quotes": [],
+          "reason": "The current visible evidence does not establish this unit."
+        }
+      },
+      "evidence_snapshot_ids": [
+        "d2s0",
+        "d3s0",
+        "d6s0",
+        "d6s1",
+        "d6s2",
+        "d6s3",
+        "d7s0",
+        "d7s1",
+        "d7s2",
+        "d7s3",
+        "d7s4",
+        "d7s5",
+        "d7s6",
+        "d9s0",
+        "d9s1",
+        "d9s2",
+        "d1s0",
+        "d1s1",
+        "d1s2",
+        "d1s3",
+        "d1s4",
+        "d4s0",
+        "d4s1",
+        "d4s2",
+        "d5s0",
+        "d8s0",
+        "d8s1",
+        "d8s2",
+        "d10s0",
+        "d10s1",
+        "d10s2",
+        "d10s3",
+        "d10s4",
+        "d10s5"
+      ],
+      "semantic_review": false
+    },
+    {
+      "sequence": 47,
+      "time_s": 14.188,
+      "type": "trace_batch_requested"
+    },
+    {
+      "sequence": 48,
+      "time_s": 19.5,
+      "type": "verification_reply",
+      "reply": {
+        "approved": false,
+        "facts_valid": true,
+        "expressed_unit_ids": [
+          "u1",
+          "u2",
+          "u3",
+          "u4"
+        ],
+        "reason": "The draft adds a conclusion about which film has the older director, which is not among the selected output units."
+      },
+      "output_unit_ids": [
+        "u1",
+        "u2",
+        "u3",
+        "u4"
+      ],
+      "output_action": "Partial Answer",
+      "dependency_unit_ids": [],
+      "evidence_snapshot_ids": [
+        "d3s0",
+        "d7s0",
+        "d1s0",
+        "d4s0"
+      ]
+    },
+    {
+      "sequence": 49,
+      "time_s": 19.5,
+      "type": "draft_rejected",
+      "reason": "Draft wording or output-unit accounting rejected",
+      "output_unit_ids": [
+        "u1",
+        "u2",
+        "u3",
+        "u4"
+      ],
+      "expressed_unit_ids": [
+        "u1",
+        "u2",
+        "u3",
+        "u4"
+      ]
+    },
+    {
+      "sequence": 50,
+      "time_s": 19.5,
+      "type": "utterance",
+      "action": "Partial Answer",
+      "text": "Director of Belle (2013 film) is Amma Asante. Birth year of the director of Belle (2013 film) is 1969. Director of The Crown Of The Russian Empire is Edmond Keosayan. Birth year of the director of The Crown Of The Russian Empire is 1936.",
+      "claims": [
+        {
+          "unit_id": "u1",
+          "description": "director of Belle (2013 film)",
+          "value": "Amma Asante",
+          "citations": [
+            "d7s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d7s0",
+              "text": "Belle is a 2013 British period drama film directed by Amma Asante, written by Misan Sagay and produced by Damian Jones."
+            }
+          ]
+        },
+        {
+          "unit_id": "u2",
+          "description": "birth year of the director of Belle (2013 film)",
+          "value": "1969",
+          "citations": [
+            "d1s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d1s0",
+              "text": "Amma Asante( born 13 September 1969) is a British filmmaker, screenwriter, and former actress, born in London to parents from Ghana."
+            }
+          ]
+        },
+        {
+          "unit_id": "u3",
+          "description": "director of The Crown Of The Russian Empire",
+          "value": "Edmond Keosayan",
+          "citations": [
+            "d3s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d3s0",
+              "text": "The Crown of the Russian Empire, or Once Again the Elusive Avengers( translit.\" Korona Rossiyskoy Imperii, ili Snova Neulovimye\") is a 1971 Soviet action movie, a second sequel of\" The Elusive Avengers\", directed by Edmond Keosayan and made on Mosfilm."
+            }
+          ]
+        },
+        {
+          "unit_id": "u4",
+          "description": "birth year of the director of The Crown Of The Russian Empire",
+          "value": "1936",
+          "citations": [
+            "d4s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d4s0",
+              "text": "Edmond Gareginovich Keosayan (9 October 1936 – 21 April 1994) was an Armenian Soviet film director and musician."
+            }
+          ]
+        }
+      ],
+      "unresolved": [],
+      "fallback": true,
+      "evidence_snapshot_ids": [
+        "d2s0",
+        "d3s0",
+        "d6s0",
+        "d6s1",
+        "d6s2",
+        "d6s3",
+        "d7s0",
+        "d7s1",
+        "d7s2",
+        "d7s3",
+        "d7s4",
+        "d7s5",
+        "d7s6",
+        "d9s0",
+        "d9s1",
+        "d9s2",
+        "d1s0",
+        "d1s1",
+        "d1s2",
+        "d1s3",
+        "d1s4",
+        "d4s0",
+        "d4s1",
+        "d4s2",
+        "d5s0",
+        "d8s0",
+        "d8s1",
+        "d8s2",
+        "d10s0",
+        "d10s1",
+        "d10s2",
+        "d10s3",
+        "d10s4",
+        "d10s5"
+      ],
+      "language": "en"
+    },
+    {
+      "sequence": 51,
+      "time_s": 19.5,
+      "type": "search_finished",
+      "query": "[scheduled evidence]",
+      "subject": "",
+      "status": "ok",
+      "returned_pages": [],
+      "mode": "trace",
+      "unit_id": "__scheduled_evidence__"
+    },
+    {
+      "sequence": 52,
+      "time_s": 19.5,
+      "type": "semantic_review_requested",
+      "target_unit_ids": [
+        "u5",
+        "u6",
+        "u7"
+      ],
+      "review_unit_ids": [
+        "u1",
+        "u2",
+        "u3",
+        "u4",
+        "u5",
+        "u6",
+        "u7"
+      ],
+      "evidence_snapshot_ids": [
+        "d2s0",
+        "d3s0",
+        "d6s0",
+        "d6s1",
+        "d6s2",
+        "d6s3",
+        "d7s0",
+        "d7s1",
+        "d7s2",
+        "d7s3",
+        "d7s4",
+        "d7s5",
+        "d7s6",
+        "d9s0",
+        "d9s1",
+        "d9s2",
+        "d1s0",
+        "d1s1",
+        "d1s2",
+        "d1s3",
+        "d1s4",
+        "d4s0",
+        "d4s1",
+        "d4s2",
+        "d5s0",
+        "d8s0",
+        "d8s1",
+        "d8s2",
+        "d10s0",
+        "d10s1",
+        "d10s2",
+        "d10s3",
+        "d10s4",
+        "d10s5"
+      ],
+      "max_reviews": 1
+    },
+    {
+      "sequence": 53,
+      "time_s": 22.516,
+      "type": "feedback_requested",
+      "feedback_kind": "progress",
+      "execution_state": {
+        "stage": "checking",
+        "searches_started": 2,
+        "searches_completed": 2,
+        "active_searches": 0,
+        "evidence_count": 34,
+        "supported_units": 4,
+        "output_units": 4
+      }
+    },
+    {
+      "sequence": 54,
+      "time_s": 23.547,
+      "type": "semantic_review_reply",
+      "reply": {
+        "judgments": [
+          {
+            "unit_id": "u1",
+            "label": "SUPPORTED",
+            "value": "Amma Asante",
+            "citations": [
+              "d7s0"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d7s0",
+                "text": "Belle is a 2013 British period drama film directed by Amma Asante, written by Misan Sagay and produced by Damian Jones."
+              }
+            ],
+            "reason": "Supported by the cited visible sentences and dependencies."
+          },
+          {
+            "unit_id": "u2",
+            "label": "SUPPORTED",
+            "value": "1969",
+            "citations": [
+              "d1s0"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d1s0",
+                "text": "Amma Asante( born 13 September 1969) is a British filmmaker, screenwriter, and former actress, born in London to parents from Ghana."
+              }
+            ],
+            "reason": "Supported by the cited visible sentences and dependencies."
+          },
+          {
+            "unit_id": "u3",
+            "label": "SUPPORTED",
+            "value": "Edmond Keosayan",
+            "citations": [
+              "d3s0"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d3s0",
+                "text": "The Crown of the Russian Empire, or Once Again the Elusive Avengers( translit.\" Korona Rossiyskoy Imperii, ili Snova Neulovimye\") is a 1971 Soviet action movie, a second sequel of\" The Elusive Avengers\", directed by Edmond Keosayan and made on Mosfilm."
+              }
+            ],
+            "reason": "Supported by the cited visible sentences and dependencies."
+          },
+          {
+            "unit_id": "u4",
+            "label": "SUPPORTED",
+            "value": "1936",
+            "citations": [
+              "d4s0"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d4s0",
+                "text": "Edmond Gareginovich Keosayan (9 October 1936 – 21 April 1994) was an Armenian Soviet film director and musician."
+              }
+            ],
+            "reason": "Supported by the cited visible sentences and dependencies."
+          },
+          {
+            "unit_id": "u5",
+            "label": "UNRESOLVED",
+            "value": "",
+            "citations": [],
+            "quotes": [],
+            "reason": "The current visible evidence does not establish this unit."
+          },
+          {
+            "unit_id": "u6",
+            "label": "UNRESOLVED",
+            "value": "",
+            "citations": [],
+            "quotes": [],
+            "reason": "The current visible evidence does not establish this unit."
+          },
+          {
+            "unit_id": "u7",
+            "label": "UNRESOLVED",
+            "value": "",
+            "citations": [],
+            "quotes": [],
+            "reason": "The current visible evidence does not establish this unit."
+          }
+        ]
+      },
+      "evidence_snapshot_ids": [
+        "d2s0",
+        "d3s0",
+        "d6s0",
+        "d6s1",
+        "d6s2",
+        "d6s3",
+        "d7s0",
+        "d7s1",
+        "d7s2",
+        "d7s3",
+        "d7s4",
+        "d7s5",
+        "d7s6",
+        "d9s0",
+        "d9s1",
+        "d9s2",
+        "d1s0",
+        "d1s1",
+        "d1s2",
+        "d1s3",
+        "d1s4",
+        "d4s0",
+        "d4s1",
+        "d4s2",
+        "d5s0",
+        "d8s0",
+        "d8s1",
+        "d8s2",
+        "d10s0",
+        "d10s1",
+        "d10s2",
+        "d10s3",
+        "d10s4",
+        "d10s5"
+      ]
+    },
+    {
+      "sequence": 55,
+      "time_s": 23.547,
+      "type": "semantic_review_finished",
+      "review_unit_ids": [
+        "u1",
+        "u2",
+        "u3",
+        "u4",
+        "u5",
+        "u6",
+        "u7"
+      ],
+      "recovered_unit_ids": []
+    },
+    {
+      "sequence": 56,
+      "time_s": 23.547,
+      "type": "judgments",
+      "judgments": {
+        "u1": {
+          "label": "SUPPORTED",
+          "value": "Amma Asante",
+          "citations": [
+            "d7s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d7s0",
+              "text": "Belle is a 2013 British period drama film directed by Amma Asante, written by Misan Sagay and produced by Damian Jones."
+            }
+          ],
+          "reason": "Supported by the cited visible sentences and dependencies."
+        },
+        "u2": {
+          "label": "SUPPORTED",
+          "value": "1969",
+          "citations": [
+            "d1s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d1s0",
+              "text": "Amma Asante( born 13 September 1969) is a British filmmaker, screenwriter, and former actress, born in London to parents from Ghana."
+            }
+          ],
+          "reason": "Supported by the cited visible sentences and dependencies."
+        },
+        "u3": {
+          "label": "SUPPORTED",
+          "value": "Edmond Keosayan",
+          "citations": [
+            "d3s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d3s0",
+              "text": "The Crown of the Russian Empire, or Once Again the Elusive Avengers( translit.\" Korona Rossiyskoy Imperii, ili Snova Neulovimye\") is a 1971 Soviet action movie, a second sequel of\" The Elusive Avengers\", directed by Edmond Keosayan and made on Mosfilm."
+            }
+          ],
+          "reason": "Supported by the cited visible sentences and dependencies."
+        },
+        "u4": {
+          "label": "SUPPORTED",
+          "value": "1936",
+          "citations": [
+            "d4s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d4s0",
+              "text": "Edmond Gareginovich Keosayan (9 October 1936 – 21 April 1994) was an Armenian Soviet film director and musician."
+            }
+          ],
+          "reason": "Supported by the cited visible sentences and dependencies."
+        },
+        "u5": {
+          "label": "UNRESOLVED",
+          "value": "",
+          "citations": [],
+          "quotes": [],
+          "reason": "The current visible evidence does not establish this unit."
+        },
+        "u6": {
+          "label": "UNRESOLVED",
+          "value": "",
+          "citations": [],
+          "quotes": [],
+          "reason": "The current visible evidence does not establish this unit."
+        },
+        "u7": {
+          "label": "UNRESOLVED",
+          "value": "",
+          "citations": [],
+          "quotes": [],
+          "reason": "The current visible evidence does not establish this unit."
+        }
+      },
+      "evidence_snapshot_ids": [
+        "d2s0",
+        "d3s0",
+        "d6s0",
+        "d6s1",
+        "d6s2",
+        "d6s3",
+        "d7s0",
+        "d7s1",
+        "d7s2",
+        "d7s3",
+        "d7s4",
+        "d7s5",
+        "d7s6",
+        "d9s0",
+        "d9s1",
+        "d9s2",
+        "d1s0",
+        "d1s1",
+        "d1s2",
+        "d1s3",
+        "d1s4",
+        "d4s0",
+        "d4s1",
+        "d4s2",
+        "d5s0",
+        "d8s0",
+        "d8s1",
+        "d8s2",
+        "d10s0",
+        "d10s1",
+        "d10s2",
+        "d10s3",
+        "d10s4",
+        "d10s5"
+      ],
+      "semantic_review": true
+    },
+    {
+      "sequence": 57,
+      "time_s": 23.547,
+      "type": "utterance",
+      "action": "Final Answer",
+      "text": "I could not confirm director of Once Again The Elusive Avengers, birth year of the director of Once Again The Elusive Avengers and film whose director is older than the directors of the other two films.",
+      "claims": [],
+      "unresolved": [
+        "u5",
+        "u6",
+        "u7"
+      ],
+      "fallback": false,
+      "evidence_snapshot_ids": [
+        "d2s0",
+        "d3s0",
+        "d6s0",
+        "d6s1",
+        "d6s2",
+        "d6s3",
+        "d7s0",
+        "d7s1",
+        "d7s2",
+        "d7s3",
+        "d7s4",
+        "d7s5",
+        "d7s6",
+        "d9s0",
+        "d9s1",
+        "d9s2",
+        "d1s0",
+        "d1s1",
+        "d1s2",
+        "d1s3",
+        "d1s4",
+        "d4s0",
+        "d4s1",
+        "d4s2",
+        "d5s0",
+        "d8s0",
+        "d8s1",
+        "d8s2",
+        "d10s0",
+        "d10s1",
+        "d10s2",
+        "d10s3",
+        "d10s4",
+        "d10s5"
+      ],
+      "language": "en"
+    },
+    {
+      "sequence": 58,
+      "time_s": 23.547,
+      "type": "finished",
+      "status": "incomplete"
+    }
+  ],
+  "note": "Prototype model judgments are not independent gold scores. Output event times are not spoken claim times.",
+  "evidence_mode": "scheduled_trace",
+  "audio": {
+    "enabled": true,
+    "mode": "windows",
+    "play": false,
+    "status": "ok",
+    "errors": [],
+    "records": [
+      {
+        "event_sequence": 1,
+        "sentence_index": 1,
+        "sentence_count": 1,
+        "language": "en",
+        "text": "Got it, I’ll look up which director is older between Belle (2013) and The Crown Of The Russian Empire/Once Again The Elusive Avengers.",
+        "action": "Backchannel",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 2.610000000000582,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1-continued\\samples\\0335\\audio\\segments\\0001_01.wav",
+        "duration_s": 10.227573696145125,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 3.4069999999919673,
+        "synthesis_and_playback_s": 0.8119999999908032
+      },
+      {
+        "event_sequence": 5,
+        "sentence_index": 1,
+        "sentence_count": 1,
+        "language": "en",
+        "text": "I'm still working on your question.",
+        "action": "Progress",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 7.76600000000326,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1-continued\\samples\\0335\\audio\\segments\\0005_01.wav",
+        "duration_s": 2.629160997732426,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 8.593999999997322,
+        "synthesis_and_playback_s": 0.8279999999940628
+      },
+      {
+        "event_sequence": 50,
+        "sentence_index": 1,
+        "sentence_count": 4,
+        "language": "en",
+        "text": "Director of Belle (2013 film) is Amma Asante.",
+        "action": "Partial Answer",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 19.5,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1-continued\\samples\\0335\\audio\\segments\\0050_01.wav",
+        "duration_s": 5.2686621315192745,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 20.296999999991385,
+        "synthesis_and_playback_s": 0.7969999999913853
+      },
+      {
+        "event_sequence": 50,
+        "sentence_index": 2,
+        "sentence_count": 4,
+        "language": "en",
+        "text": "Birth year of the director of Belle (2013 film) is 1969.",
+        "action": "Partial Answer",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 20.296999999991385,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1-continued\\samples\\0335\\audio\\segments\\0050_02.wav",
+        "duration_s": 6.558684807256236,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 21.078999999997905,
+        "synthesis_and_playback_s": 0.7820000000065193
+      },
+      {
+        "event_sequence": 50,
+        "sentence_index": 3,
+        "sentence_count": 4,
+        "language": "en",
+        "text": "Director of The Crown Of The Russian Empire is Edmond Keosayan.",
+        "action": "Partial Answer",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 21.078999999997905,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1-continued\\samples\\0335\\audio\\segments\\0050_03.wav",
+        "duration_s": 4.258548752834467,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 21.860000000000582,
+        "synthesis_and_playback_s": 0.7810000000026776
+      },
+      {
+        "event_sequence": 50,
+        "sentence_index": 4,
+        "sentence_count": 4,
+        "language": "en",
+        "text": "Birth year of the director of The Crown Of The Russian Empire is 1936.",
+        "action": "Partial Answer",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 21.860000000000582,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1-continued\\samples\\0335\\audio\\segments\\0050_04.wav",
+        "duration_s": 5.268480725623583,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 22.64100000000326,
+        "synthesis_and_playback_s": 0.7810000000026776
+      },
+      {
+        "event_sequence": 57,
+        "sentence_index": 1,
+        "sentence_count": 1,
+        "language": "en",
+        "text": "I could not confirm director of Once Again The Elusive Avengers, birth year of the director of Once Again The Elusive Avengers and film whose director is older than the directors of the other two films.",
+        "action": "Final Answer",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 23.546999999991385,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1-continued\\samples\\0335\\audio\\segments\\0057_01.wav",
+        "duration_s": 11.232244897959184,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 24.39100000000326,
+        "synthesis_and_playback_s": 0.8440000000118744
+      }
+    ],
+    "wave": {
+      "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1-continued\\samples\\0335\\audio\\response.wav",
+      "duration_s": 52.88362811791383,
+      "timeline": [
+        {
+          "event_sequence": 1,
+          "sentence_index": 1,
+          "action": "Backchannel",
+          "text": "Got it, I’ll look up which director is older between Belle (2013) and The Crown Of The Russian Empire/Once Again The Elusive Avengers.",
+          "wave_start_s": 3.406984126984127,
+          "wave_end_s": 13.634557823129251
+        },
+        {
+          "event_sequence": 5,
+          "sentence_index": 1,
+          "action": "Progress",
+          "text": "I'm still working on your question.",
+          "wave_start_s": 13.634557823129251,
+          "wave_end_s": 16.263718820861676
+        },
+        {
+          "event_sequence": 50,
+          "sentence_index": 1,
+          "action": "Partial Answer",
+          "text": "Director of Belle (2013 film) is Amma Asante.",
+          "wave_start_s": 20.29700680272109,
+          "wave_end_s": 25.565668934240364
+        },
+        {
+          "event_sequence": 50,
+          "sentence_index": 2,
+          "action": "Partial Answer",
+          "text": "Birth year of the director of Belle (2013 film) is 1969.",
+          "wave_start_s": 25.565668934240364,
+          "wave_end_s": 32.1243537414966
+        },
+        {
+          "event_sequence": 50,
+          "sentence_index": 3,
+          "action": "Partial Answer",
+          "text": "Director of The Crown Of The Russian Empire is Edmond Keosayan.",
+          "wave_start_s": 32.1243537414966,
+          "wave_end_s": 36.38290249433106
+        },
+        {
+          "event_sequence": 50,
+          "sentence_index": 4,
+          "action": "Partial Answer",
+          "text": "Birth year of the director of The Crown Of The Russian Empire is 1936.",
+          "wave_start_s": 36.38290249433106,
+          "wave_end_s": 41.651383219954646
+        },
+        {
+          "event_sequence": 57,
+          "sentence_index": 1,
+          "action": "Final Answer",
+          "text": "I could not confirm director of Once Again The Elusive Avengers, birth year of the director of Once Again The Elusive Avengers and film whose director is older than the directors of the other two films.",
+          "wave_start_s": 41.651383219954646,
+          "wave_end_s": 52.88362811791383
+        }
+      ]
+    }
+  },
+  "evaluation": {
+    "mode": "b_final_revised_trace",
+    "trace_id": "2wikimultihopqa_bbf9c2fc08c711ebbd91ac1f6bf848b6_short",
+    "sample_id": "2wikimultihopqa_bbf9c2fc08c711ebbd91ac1f6bf848b6",
+    "total_wall_s": 24.39100000000326,
+    "question_timeout_s": 180,
+    "audio_enabled": true,
+    "history_enabled": false,
+    "text_pipeline_wall_s": 23.546999999991385,
+    "effective_settings": {
+      "base_url": "https://tinker.thinkingmachines.dev/services/tinker-prod/oai/api/v1",
+      "model": "openai/gpt-oss-120b",
+      "judge_model": "tinker://f9e9a6c1-e203-5c2c-acdd-68fe67378ca4:train:0/sampler_weights/epoch-0001",
+      "judge_reasoning_effort": "low",
+      "wiki_language": "en",
+      "user_agent": "CascadeSystem/0.1 (educational research prototype)",
+      "timeout_s": 45.0,
+      "max_tokens": 4096,
+      "reasoning_effort": "low",
+      "progress_s": 3.0,
+      "feedback_timeout_s": 6.0,
+      "search_limit": 3,
+      "max_units": 8,
+      "max_searches": 16,
+      "max_sources": 34,
+      "source_chars": 302,
+      "evidence_chars": 4554,
+      "concurrency": 3
+    },
+    "timing_kind": "unknown",
+    "scheduler": "wall-paced fixed B arrivals",
+    "split": "eval_reserved",
+    "empty_evidence_sentences_ignored": 0
+  }
+}

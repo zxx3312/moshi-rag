@@ -907,3 +907,14 @@ a-cascade，父c23d6ae6e7250b793c026e7ec01ae9166728f5af+dirty；未读取预留�
 187系统+28 Debug20+30最终入口共245项测试已通过、退出0，功能代码此后未改。
 不创建PR、不执行merge、不推main、不强制覆盖分支；本次发布commit与远端状态以Git提交/推送记录为准。
 本地.env、训练checkpoint记录、数据、运行结果和report.md均留在忽略目录，不随代码上传。
+
+### 补传两个eval的运行产物（2026-11-18，用户明确授权）
+
+用户确认此前代码提交未包含runs后，明确要求上传两个eval的运行内容；本次授权包括运行结果、报告、文字与音频的commit及push。
+范围仅为eval debug20/artifacts/runs和eval gpt900/artifacts/runs，共5个运行目录；排除Python字节码缓存。
+22596个运行文件，共2820868710字节；暂存区逐文件Git blob与原始文件一致，SHA256清单核对通过，退出0。
+调整两个eval的忽略规则，继续忽略inputs、evaluator缓存和其他artifact目录；.gitattributes对runs禁用换行转换，保留原始字节。
+发布前保存逐文件大小、SHA256及Git blob身份，仅做传输完整性核对，不查看评测题目、答案或证据，不改模型、提示词或评分结果。
+本次不执行推理、训练或评分；无功能代码变化，以文件清单和blob核对验证上传完整性，不重复运行功能测试。
+目标仍为origin/a-cascade，父提交d337547065bb71bd4bf439c919e62d8499dbb193；不merge、不推main。
+上传完成状态及提交号以本次Git记录为准；共享文档尚未同步到main。

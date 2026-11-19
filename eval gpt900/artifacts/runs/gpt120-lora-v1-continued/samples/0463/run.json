@@ -1,0 +1,2620 @@
+{
+  "question": "Which hospital opened first, St. Elizabeths Hospital or Providence Hospital?",
+  "resolved_question": "Which hospital opened first, St. Elizabeths Hospital or Providence Hospital?",
+  "used_history_turn_ids": [],
+  "response_language": "en",
+  "status": "incomplete",
+  "clock": "wall_monotonic",
+  "time_origin": "question_text_ready_after_optional_asr",
+  "model": "openai/gpt-oss-120b",
+  "judge_model": "tinker://f9e9a6c1-e203-5c2c-acdd-68fe67378ca4:train:0/sampler_weights/epoch-0001",
+  "units": [
+    {
+      "unit_id": "u1",
+      "description": "Opening date of St. Elizabeths Hospital",
+      "necessary": true,
+      "depends_on": [],
+      "queries": [
+        "St. Elizabeths Hospital opening date",
+        "St. Elizabeths Hospital founded"
+      ],
+      "subject": "St. Elizabeths Hospital"
+    },
+    {
+      "unit_id": "u2",
+      "description": "Opening date of Providence Hospital (the specific hospital intended in the question)",
+      "necessary": true,
+      "depends_on": [],
+      "queries": [
+        "Providence Hospital opening date",
+        "Providence Hospital founded"
+      ],
+      "subject": "Providence Hospital"
+    },
+    {
+      "unit_id": "u3",
+      "description": "Which hospital opened first",
+      "necessary": true,
+      "depends_on": [
+        "u1",
+        "u2"
+      ],
+      "queries": [
+        "Which opened earlier St. Elizabeths Hospital Providence Hospital"
+      ],
+      "subject": ""
+    }
+  ],
+  "judgments": {
+    "u1": {
+      "label": "SUPPORTED",
+      "value": "1855",
+      "citations": [
+        "d8s0"
+      ],
+      "quotes": [
+        {
+          "evidence_id": "d8s0",
+          "text": "St. Elizabeths Hospital opened in 1855 as the first federally operated psychiatric hospital in the United States."
+        }
+      ],
+      "reason": "Supported by the cited visible sentences and dependencies."
+    },
+    "u2": {
+      "label": "UNRESOLVED",
+      "value": "",
+      "citations": [],
+      "quotes": [],
+      "reason": "Rejected entity identity: citation concerns an ambiguous or differently qualified namesake"
+    },
+    "u3": {
+      "label": "UNRESOLVED",
+      "value": "",
+      "citations": [],
+      "quotes": [],
+      "reason": "Dependency is not supported"
+    }
+  },
+  "evidence": [
+    {
+      "evidence_id": "d1s0",
+      "title": "Heritage Hospital",
+      "url": "https://trace.invalid/hotpotqa_5a738b855542992d56e7e363_immediate/d1s0",
+      "text": "Heritage Hospital is a hospital located in Tarboro, North Carolina.",
+      "visible_time_s": 3.327999999994063,
+      "requested_subject": "",
+      "resolved_title": "Heritage Hospital",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d1s1",
+      "title": "Heritage Hospital",
+      "url": "https://trace.invalid/hotpotqa_5a738b855542992d56e7e363_immediate/d1s1",
+      "text": "It is a part of the University Health Systems of Eastern Carolina (UHSEC).",
+      "visible_time_s": 3.327999999994063,
+      "requested_subject": "",
+      "resolved_title": "Heritage Hospital",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d1s2",
+      "title": "Heritage Hospital",
+      "url": "https://trace.invalid/hotpotqa_5a738b855542992d56e7e363_immediate/d1s2",
+      "text": "Edgecombe General Hospital opened as a county-owned hospital in 1916.",
+      "visible_time_s": 3.327999999994063,
+      "requested_subject": "",
+      "resolved_title": "Heritage Hospital",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d1s3",
+      "title": "Heritage Hospital",
+      "url": "https://trace.invalid/hotpotqa_5a738b855542992d56e7e363_immediate/d1s3",
+      "text": "It succeeded Pittman Hospital, which opened in 1901.",
+      "visible_time_s": 3.327999999994063,
+      "requested_subject": "",
+      "resolved_title": "Heritage Hospital",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d1s4",
+      "title": "Heritage Hospital",
+      "url": "https://trace.invalid/hotpotqa_5a738b855542992d56e7e363_immediate/d1s4",
+      "text": "In 1959, the Hill-Burton Act helped combine Edgecombe General Hospital, with three other facilities.",
+      "visible_time_s": 3.327999999994063,
+      "requested_subject": "",
+      "resolved_title": "Heritage Hospital",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d1s5",
+      "title": "Heritage Hospital",
+      "url": "https://trace.invalid/hotpotqa_5a738b855542992d56e7e363_immediate/d1s5",
+      "text": "Edgecombe County sold the hospital to Hospital Corporation of America (HCA) in 1982.",
+      "visible_time_s": 3.327999999994063,
+      "requested_subject": "",
+      "resolved_title": "Heritage Hospital",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d1s6",
+      "title": "Heritage Hospital",
+      "url": "https://trace.invalid/hotpotqa_5a738b855542992d56e7e363_immediate/d1s6",
+      "text": "HCA opened a 127-bed facility in 1985, named Heritage Hospital.",
+      "visible_time_s": 3.327999999994063,
+      "requested_subject": "",
+      "resolved_title": "Heritage Hospital",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d1s7",
+      "title": "Heritage Hospital",
+      "url": "https://trace.invalid/hotpotqa_5a738b855542992d56e7e363_immediate/d1s7",
+      "text": "UHSEC bought Heritage Hospital in 1998 from HCA.",
+      "visible_time_s": 3.327999999994063,
+      "requested_subject": "",
+      "resolved_title": "Heritage Hospital",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d1s8",
+      "title": "Heritage Hospital",
+      "url": "https://trace.invalid/hotpotqa_5a738b855542992d56e7e363_immediate/d1s8",
+      "text": "The hospitals focus is as a community hospital.",
+      "visible_time_s": 3.327999999994063,
+      "requested_subject": "",
+      "resolved_title": "Heritage Hospital",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d1s9",
+      "title": "Heritage Hospital",
+      "url": "https://trace.invalid/hotpotqa_5a738b855542992d56e7e363_immediate/d1s9",
+      "text": "The hospital has 101 general and 16 rehabilitation hospital beds.",
+      "visible_time_s": 3.327999999994063,
+      "requested_subject": "",
+      "resolved_title": "Heritage Hospital",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d1s10",
+      "title": "Heritage Hospital",
+      "url": "https://trace.invalid/hotpotqa_5a738b855542992d56e7e363_immediate/d1s10",
+      "text": "It has five Shared Inpatient/Ambulatory Surgery, two Endoscopy, and one C-Section operating rooms.",
+      "visible_time_s": 3.327999999994063,
+      "requested_subject": "",
+      "resolved_title": "Heritage Hospital",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d2s0",
+      "title": "Winfred Overholser",
+      "url": "https://trace.invalid/hotpotqa_5a738b855542992d56e7e363_immediate/d2s0",
+      "text": "Winfred Overholser (1892 – October 6, 1964) was an American psychiatrist, president of the American Psychiatric Association, and for 25 years the superintendent of St. Elizabeths Hospital, a federal institution for the mentally ill in Washington, D.C.",
+      "visible_time_s": 3.327999999994063,
+      "requested_subject": "",
+      "resolved_title": "Winfred Overholser",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d3s0",
+      "title": "Congress Heights station",
+      "url": "https://trace.invalid/hotpotqa_5a738b855542992d56e7e363_immediate/d3s0",
+      "text": "Congress Heights is an island platformed Washington Metro station in the Congress Heights neighborhood of Washington, D.C., United States.",
+      "visible_time_s": 3.327999999994063,
+      "requested_subject": "",
+      "resolved_title": "Congress Heights station",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d3s1",
+      "title": "Congress Heights station",
+      "url": "https://trace.invalid/hotpotqa_5a738b855542992d56e7e363_immediate/d3s1",
+      "text": "The station was opened on January 13, 2001, and is operated by the Washington Metropolitan Area Transit Authority (WMATA).",
+      "visible_time_s": 3.327999999994063,
+      "requested_subject": "",
+      "resolved_title": "Congress Heights station",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d3s2",
+      "title": "Congress Heights station",
+      "url": "https://trace.invalid/hotpotqa_5a738b855542992d56e7e363_immediate/d3s2",
+      "text": "Providing service for only the Green Line, the station is located at Alabama Avenue and 13th Street, lying under St. Elizabeths Hospital.",
+      "visible_time_s": 3.327999999994063,
+      "requested_subject": "",
+      "resolved_title": "Congress Heights station",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d3s3",
+      "title": "Congress Heights station",
+      "url": "https://trace.invalid/hotpotqa_5a738b855542992d56e7e363_immediate/d3s3",
+      "text": "Congress Heights is the last Green Line station in the District of Columbia going southeast.",
+      "visible_time_s": 3.327999999994063,
+      "requested_subject": "",
+      "resolved_title": "Congress Heights station",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d4s0",
+      "title": "Providence Hospital (Washington, D.C.)",
+      "url": "https://trace.invalid/hotpotqa_5a738b855542992d56e7e363_immediate/d4s0",
+      "text": "Providence Hospital is a 408 bed hospital located in the District of Columbia.",
+      "visible_time_s": 3.327999999994063,
+      "requested_subject": "",
+      "resolved_title": "Providence Hospital (Washington, D.C.)",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d4s1",
+      "title": "Providence Hospital (Washington, D.C.)",
+      "url": "https://trace.invalid/hotpotqa_5a738b855542992d56e7e363_immediate/d4s1",
+      "text": "Founded in 1861, it is the longest continuously operating hospital in the District.",
+      "visible_time_s": 3.327999999994063,
+      "requested_subject": "",
+      "resolved_title": "Providence Hospital (Washington, D.C.)",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d4s2",
+      "title": "Providence Hospital (Washington, D.C.)",
+      "url": "https://trace.invalid/hotpotqa_5a738b855542992d56e7e363_immediate/d4s2",
+      "text": "Providence Hospital is a member of Ascension Health, the largest non-profit health care organization in the United States.",
+      "visible_time_s": 3.327999999994063,
+      "requested_subject": "",
+      "resolved_title": "Providence Hospital (Washington, D.C.)",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d5s0",
+      "title": "Congress Heights",
+      "url": "https://trace.invalid/hotpotqa_5a738b855542992d56e7e363_immediate/d5s0",
+      "text": "Congress Heights is a residential neighborhood in southeast Washington, D.C., in the United States.",
+      "visible_time_s": 3.327999999994063,
+      "requested_subject": "",
+      "resolved_title": "Congress Heights",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d5s1",
+      "title": "Congress Heights",
+      "url": "https://trace.invalid/hotpotqa_5a738b855542992d56e7e363_immediate/d5s1",
+      "text": "The irregularly shaped neighborhood is bounded by the St. Elizabeths Hospital campus, Lebaum Street SE, 4th Street SE, and Newcomb Street SE on the northeast; Shepard Parkway and South Capitol Street on the west; Atlantic Street SE and 1st Street SE (as far as Chesapeake Street SE) on the south; Oxon Run Parkway on the southeast; and Wheeler Street SE and Alabama Avenue SE on the east.",
+      "visible_time_s": 3.327999999994063,
+      "requested_subject": "",
+      "resolved_title": "Congress Heights",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d5s2",
+      "title": "Congress Heights",
+      "url": "https://trace.invalid/hotpotqa_5a738b855542992d56e7e363_immediate/d5s2",
+      "text": "Commercial development is heavy along Martin Luther King, Jr.",
+      "visible_time_s": 3.327999999994063,
+      "requested_subject": "",
+      "resolved_title": "Congress Heights",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d5s3",
+      "title": "Congress Heights",
+      "url": "https://trace.invalid/hotpotqa_5a738b855542992d56e7e363_immediate/d5s3",
+      "text": "Avenue and Malcolm X Avenue.",
+      "visible_time_s": 3.327999999994063,
+      "requested_subject": "",
+      "resolved_title": "Congress Heights",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d6s0",
+      "title": "History of psychiatric hospitals in Pittsburgh",
+      "url": "https://trace.invalid/hotpotqa_5a738b855542992d56e7e363_immediate/d6s0",
+      "text": "Pittsburgh, Pennsylvania, United States, is home to a plethora of hospitals, be it for the physically ill or, what was defined as the insane and feeble minded.",
+      "visible_time_s": 3.327999999994063,
+      "requested_subject": "",
+      "resolved_title": "History of psychiatric hospitals in Pittsburgh",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d6s1",
+      "title": "History of psychiatric hospitals in Pittsburgh",
+      "url": "https://trace.invalid/hotpotqa_5a738b855542992d56e7e363_immediate/d6s1",
+      "text": "In 1891, the St. Margaret Memorial Hospital opened under John H. Shoenberger.",
+      "visible_time_s": 3.327999999994063,
+      "requested_subject": "",
+      "resolved_title": "History of psychiatric hospitals in Pittsburgh",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d6s2",
+      "title": "History of psychiatric hospitals in Pittsburgh",
+      "url": "https://trace.invalid/hotpotqa_5a738b855542992d56e7e363_immediate/d6s2",
+      "text": "In 1908, the Pittsburgh Hospital was run under C. A. Fagan, and on June 1, 1889, the South Side Hospital opened under Anna M. Rindlaub.",
+      "visible_time_s": 3.327999999994063,
+      "requested_subject": "",
+      "resolved_title": "History of psychiatric hospitals in Pittsburgh",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d6s3",
+      "title": "History of psychiatric hospitals in Pittsburgh",
+      "url": "https://trace.invalid/hotpotqa_5a738b855542992d56e7e363_immediate/d6s3",
+      "text": "Pittsburgh, commonly known as the \"Steel City,\" also built up a reputation for its abundance of hospitals that had opened up within a fairly close time period of each other.",
+      "visible_time_s": 3.327999999994063,
+      "requested_subject": "",
+      "resolved_title": "History of psychiatric hospitals in Pittsburgh",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d6s4",
+      "title": "History of psychiatric hospitals in Pittsburgh",
+      "url": "https://trace.invalid/hotpotqa_5a738b855542992d56e7e363_immediate/d6s4",
+      "text": "During this time, many new mental hospitals were established due to overcrowding.",
+      "visible_time_s": 3.327999999994063,
+      "requested_subject": "",
+      "resolved_title": "History of psychiatric hospitals in Pittsburgh",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d6s5",
+      "title": "History of psychiatric hospitals in Pittsburgh",
+      "url": "https://trace.invalid/hotpotqa_5a738b855542992d56e7e363_immediate/d6s5",
+      "text": "In 1899, a building to house the mentally insane, Mayview State Hospital, was constructed; but it was not long before the complex had a reputation “as a place of sorrow” due to the lack of proper health care patients received during their stay.",
+      "visible_time_s": 3.327999999994063,
+      "requested_subject": "",
+      "resolved_title": "History of psychiatric hospitals in Pittsburgh",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d7s0",
+      "title": "Loreta Janeta Velázquez",
+      "url": "https://trace.invalid/hotpotqa_5a738b855542992d56e7e363_immediate/d7s0",
+      "text": "Loreta Janeta Velázquez (June 26, 1842 – 1923), was a Cuban-born woman who masqueraded as a male Confederate soldier during the American Civil War.",
+      "visible_time_s": 3.327999999994063,
+      "requested_subject": "",
+      "resolved_title": "Loreta Janeta Velázquez",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d7s1",
+      "title": "Loreta Janeta Velázquez",
+      "url": "https://trace.invalid/hotpotqa_5a738b855542992d56e7e363_immediate/d7s1",
+      "text": "After her soldier husband's accidental death, she enlisted in the Confederate States Army in 1861.",
+      "visible_time_s": 3.327999999994063,
+      "requested_subject": "",
+      "resolved_title": "Loreta Janeta Velázquez",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d7s2",
+      "title": "Loreta Janeta Velázquez",
+      "url": "https://trace.invalid/hotpotqa_5a738b855542992d56e7e363_immediate/d7s2",
+      "text": "She then fought at Bull Run, Ball's Bluff, and Fort Donelson, but was discharged when her gender was discovered while in New Orleans.",
+      "visible_time_s": 3.327999999994063,
+      "requested_subject": "",
+      "resolved_title": "Loreta Janeta Velázquez",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d7s3",
+      "title": "Loreta Janeta Velázquez",
+      "url": "https://trace.invalid/hotpotqa_5a738b855542992d56e7e363_immediate/d7s3",
+      "text": "Undeterred, she reenlisted and fought at Shiloh, until unmasked once more.",
+      "visible_time_s": 3.327999999994063,
+      "requested_subject": "",
+      "resolved_title": "Loreta Janeta Velázquez",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d7s4",
+      "title": "Loreta Janeta Velázquez",
+      "url": "https://trace.invalid/hotpotqa_5a738b855542992d56e7e363_immediate/d7s4",
+      "text": "She then became a Confederate spy, working in both male and female guises, and as a double agent also reporting to the U.S. Secret Service.",
+      "visible_time_s": 3.327999999994063,
+      "requested_subject": "",
+      "resolved_title": "Loreta Janeta Velázquez",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d7s5",
+      "title": "Loreta Janeta Velázquez",
+      "url": "https://trace.invalid/hotpotqa_5a738b855542992d56e7e363_immediate/d7s5",
+      "text": "She remarried three more times, being widowed in each instance.",
+      "visible_time_s": 3.327999999994063,
+      "requested_subject": "",
+      "resolved_title": "Loreta Janeta Velázquez",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d7s6",
+      "title": "Loreta Janeta Velázquez",
+      "url": "https://trace.invalid/hotpotqa_5a738b855542992d56e7e363_immediate/d7s6",
+      "text": "According to William C Davis, she died in January 1923 under the name Loretta J. Beard after many years away from the public eye in a public psychiatric facility, St. Elizabeths Hospital.",
+      "visible_time_s": 3.327999999994063,
+      "requested_subject": "",
+      "resolved_title": "Loreta Janeta Velázquez",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d7s7",
+      "title": "Loreta Janeta Velázquez",
+      "url": "https://trace.invalid/hotpotqa_5a738b855542992d56e7e363_immediate/d7s7",
+      "text": "She spied on the Union for about 5 years.",
+      "visible_time_s": 3.327999999994063,
+      "requested_subject": "",
+      "resolved_title": "Loreta Janeta Velázquez",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d8s0",
+      "title": "St. Elizabeths Hospital",
+      "url": "https://trace.invalid/hotpotqa_5a738b855542992d56e7e363_immediate/d8s0",
+      "text": "St. Elizabeths Hospital opened in 1855 as the first federally operated psychiatric hospital in the United States.",
+      "visible_time_s": 3.327999999994063,
+      "requested_subject": "",
+      "resolved_title": "St. Elizabeths Hospital",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d8s1",
+      "title": "St. Elizabeths Hospital",
+      "url": "https://trace.invalid/hotpotqa_5a738b855542992d56e7e363_immediate/d8s1",
+      "text": "Housing over 8,000 patients at its peak in the 1950s, the hospital at one point had a fully functioning medical-surgical unit, a school of nursing, and accredited internships and psychiatric residencies.",
+      "visible_time_s": 3.327999999994063,
+      "requested_subject": "",
+      "resolved_title": "St. Elizabeths Hospital",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d8s2",
+      "title": "St. Elizabeths Hospital",
+      "url": "https://trace.invalid/hotpotqa_5a738b855542992d56e7e363_immediate/d8s2",
+      "text": "Its campus was designated a National Historic Landmark in 1990.",
+      "visible_time_s": 3.327999999994063,
+      "requested_subject": "",
+      "resolved_title": "St. Elizabeths Hospital",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d9s0",
+      "title": "Vassar Brothers Medical Center",
+      "url": "https://trace.invalid/hotpotqa_5a738b855542992d56e7e363_immediate/d9s0",
+      "text": "Vassar Brother Medical Center (locally known as Vassar Hospital or VBMC) is a major medical facility located in the city of Poughkeepsie, New York that is a member of the Health Quest network, a nonprofit family of hospitals and healthcare centers in the Hudson Valley area.",
+      "visible_time_s": 3.327999999994063,
+      "requested_subject": "",
+      "resolved_title": "Vassar Brothers Medical Center",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d9s1",
+      "title": "Vassar Brothers Medical Center",
+      "url": "https://trace.invalid/hotpotqa_5a738b855542992d56e7e363_immediate/d9s1",
+      "text": "VBMC is one of two major medical centers located in Dutchess County, New York, the other being Mid-Hudson Regional Hospital of Westchester Medical Center.",
+      "visible_time_s": 3.327999999994063,
+      "requested_subject": "",
+      "resolved_title": "Vassar Brothers Medical Center",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d9s2",
+      "title": "Vassar Brothers Medical Center",
+      "url": "https://trace.invalid/hotpotqa_5a738b855542992d56e7e363_immediate/d9s2",
+      "text": "The hospital was first incorporated in 1882 under the name Vassar Brothers Hospital, following contributions made by John Guy Vassar following the death of his brother.",
+      "visible_time_s": 3.327999999994063,
+      "requested_subject": "",
+      "resolved_title": "Vassar Brothers Medical Center",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d9s3",
+      "title": "Vassar Brothers Medical Center",
+      "url": "https://trace.invalid/hotpotqa_5a738b855542992d56e7e363_immediate/d9s3",
+      "text": "The hospital opened its doors in 1887, and initially had 40 beds divided up into four wards, each containing ten beds.",
+      "visible_time_s": 3.327999999994063,
+      "requested_subject": "",
+      "resolved_title": "Vassar Brothers Medical Center",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d9s4",
+      "title": "Vassar Brothers Medical Center",
+      "url": "https://trace.invalid/hotpotqa_5a738b855542992d56e7e363_immediate/d9s4",
+      "text": "At the time the hospital opened it also contained a labor and delivery ward, a children's ward, a nursery, three private rooms, and two isolation rooms.",
+      "visible_time_s": 3.327999999994063,
+      "requested_subject": "",
+      "resolved_title": "Vassar Brothers Medical Center",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d9s5",
+      "title": "Vassar Brothers Medical Center",
+      "url": "https://trace.invalid/hotpotqa_5a738b855542992d56e7e363_immediate/d9s5",
+      "text": "Several major renovations occurred in 1983, 1991, and 2001; adding critical care areas, a new operating and delivery wing, and a cancer care center, respectively.",
+      "visible_time_s": 3.327999999994063,
+      "requested_subject": "",
+      "resolved_title": "Vassar Brothers Medical Center",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d9s6",
+      "title": "Vassar Brothers Medical Center",
+      "url": "https://trace.invalid/hotpotqa_5a738b855542992d56e7e363_immediate/d9s6",
+      "text": "In 2002 Vassar Brothers Hospital officially became Vassar Brothers Medical Center.",
+      "visible_time_s": 3.327999999994063,
+      "requested_subject": "",
+      "resolved_title": "Vassar Brothers Medical Center",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d9s7",
+      "title": "Vassar Brothers Medical Center",
+      "url": "https://trace.invalid/hotpotqa_5a738b855542992d56e7e363_immediate/d9s7",
+      "text": "In September 2016, VBMC announced a new $500 million expansion which would almost double the number of available rooms.",
+      "visible_time_s": 3.327999999994063,
+      "requested_subject": "",
+      "resolved_title": "Vassar Brothers Medical Center",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d9s8",
+      "title": "Vassar Brothers Medical Center",
+      "url": "https://trace.invalid/hotpotqa_5a738b855542992d56e7e363_immediate/d9s8",
+      "text": "Construction on the expansion is expected to be completed in 2019.",
+      "visible_time_s": 3.327999999994063,
+      "requested_subject": "",
+      "resolved_title": "Vassar Brothers Medical Center",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d10s0",
+      "title": "Douglass (Washington, D.C.)",
+      "url": "https://trace.invalid/hotpotqa_5a738b855542992d56e7e363_immediate/d10s0",
+      "text": "Douglass is a residential neighborhood in Southeast Washington, D.C., on the eastern side of St. Elizabeths Hospital, on the border of the Congress Heights Metro Station.",
+      "visible_time_s": 3.327999999994063,
+      "requested_subject": "",
+      "resolved_title": "Douglass (Washington, D.C.)",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d10s1",
+      "title": "Douglass (Washington, D.C.)",
+      "url": "https://trace.invalid/hotpotqa_5a738b855542992d56e7e363_immediate/d10s1",
+      "text": "It is bounded by Suitland Parkway to the north and east, Alabama Avenue to the south, and the St. Elizabeths campus to the west.",
+      "visible_time_s": 3.327999999994063,
+      "requested_subject": "",
+      "resolved_title": "Douglass (Washington, D.C.)",
+      "entity_resolution": "unspecified"
+    }
+  ],
+  "searches": [
+    {
+      "query": "[scheduled evidence]",
+      "subject": "",
+      "status": "ok",
+      "returned_pages": [],
+      "mode": "trace",
+      "unit_id": "__scheduled_evidence__"
+    },
+    {
+      "query": "[scheduled evidence]",
+      "subject": "",
+      "status": "ok",
+      "returned_pages": [],
+      "mode": "trace",
+      "unit_id": "__scheduled_evidence__"
+    }
+  ],
+  "search_failures": [],
+  "llm_calls": [
+    {
+      "purpose": "decompose",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 797,
+        "completion_tokens": 279,
+        "total_tokens": 1076,
+        "prompt_tokens_details": {
+          "cached_tokens": 768
+        }
+      },
+      "latency_s": 1.656
+    },
+    {
+      "purpose": "feedback_generate",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 407,
+        "completion_tokens": 63,
+        "total_tokens": 470,
+        "prompt_tokens_details": {
+          "cached_tokens": 384
+        }
+      },
+      "latency_s": 1.719
+    },
+    {
+      "purpose": "feedback_verify",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 364,
+        "completion_tokens": 70,
+        "total_tokens": 434,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        }
+      },
+      "latency_s": 0.937
+    },
+    {
+      "purpose": "plan_review",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 1064,
+        "completion_tokens": 302,
+        "total_tokens": 1366,
+        "prompt_tokens_details": {
+          "cached_tokens": 768
+        }
+      },
+      "latency_s": 1.672
+    },
+    {
+      "purpose": "judge",
+      "model": "tinker://f9e9a6c1-e203-5c2c-acdd-68fe67378ca4:train:0/sampler_weights/epoch-0001",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 7824,
+        "completion_tokens": 304,
+        "total_tokens": 8128,
+        "prompt_tokens_details": {
+          "cached_tokens": 896
+        }
+      },
+      "latency_s": 2.156
+    },
+    {
+      "purpose": "generate",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 659,
+        "completion_tokens": 86,
+        "total_tokens": 745,
+        "prompt_tokens_details": {
+          "cached_tokens": 512
+        }
+      },
+      "latency_s": 1.047
+    },
+    {
+      "purpose": "feedback_generate",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 408,
+        "completion_tokens": 53,
+        "total_tokens": 461,
+        "prompt_tokens_details": {
+          "cached_tokens": 384
+        }
+      },
+      "latency_s": 0.765
+    },
+    {
+      "purpose": "feedback_verify",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 351,
+        "completion_tokens": 87,
+        "total_tokens": 438,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        }
+      },
+      "latency_s": 2.125
+    },
+    {
+      "purpose": "verify",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 881,
+        "completion_tokens": 145,
+        "total_tokens": 1026,
+        "prompt_tokens_details": {
+          "cached_tokens": 640
+        }
+      },
+      "latency_s": 2.188
+    },
+    {
+      "purpose": "judge",
+      "model": "tinker://f9e9a6c1-e203-5c2c-acdd-68fe67378ca4:train:0/sampler_weights/epoch-0001",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 8052,
+        "completion_tokens": 304,
+        "total_tokens": 8356,
+        "prompt_tokens_details": {
+          "cached_tokens": 1024
+        }
+      },
+      "latency_s": 2.015
+    }
+  ],
+  "search_diagnostics": [],
+  "output_enqueued_units": {
+    "u1": "1855"
+  },
+  "events": [
+    {
+      "sequence": 0,
+      "time_s": 0.0,
+      "type": "feedback_requested",
+      "feedback_kind": "opening",
+      "execution_state": {
+        "stage": "planning",
+        "searches_started": 0,
+        "searches_completed": 0,
+        "active_searches": 0,
+        "evidence_count": 0,
+        "supported_units": 0,
+        "output_units": 0
+      }
+    },
+    {
+      "sequence": 1,
+      "time_s": 1.656,
+      "type": "decompose_reply",
+      "reply": {
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "Opening date of St. Elizabeths Hospital",
+            "subject": "St. Elizabeths Hospital",
+            "necessary": true,
+            "depends_on": [],
+            "queries": [
+              "St. Elizabeths Hospital opening date",
+              "St. Elizabeths Hospital founded"
+            ]
+          },
+          {
+            "unit_id": "u2",
+            "description": "Opening date of Providence Hospital",
+            "subject": "Providence Hospital",
+            "necessary": true,
+            "depends_on": [],
+            "queries": [
+              "Providence Hospital opening date",
+              "Providence Hospital founded"
+            ]
+          },
+          {
+            "unit_id": "u3",
+            "description": "Which hospital opened first",
+            "subject": "",
+            "necessary": true,
+            "depends_on": [
+              "u1",
+              "u2"
+            ],
+            "queries": [
+              "Which opened earlier St. Elizabeths Hospital Providence Hospital"
+            ]
+          }
+        ]
+      },
+      "attempt": 1,
+      "repair": false
+    },
+    {
+      "sequence": 2,
+      "time_s": 1.656,
+      "type": "plan_review_requested",
+      "max_reviews": 1,
+      "question_only": true
+    },
+    {
+      "sequence": 3,
+      "time_s": 2.656,
+      "type": "utterance",
+      "action": "Backchannel",
+      "text": "I see you're asking which opened first, St. Elizabeths Hospital or Providence Hospital, and I'll look that up.",
+      "claims": [],
+      "feedback_source": "model",
+      "feedback_status_claim": "intent",
+      "feedback_fallback_reason": "",
+      "execution_state": {
+        "stage": "planning",
+        "searches_started": 0,
+        "searches_completed": 0,
+        "active_searches": 0,
+        "evidence_count": 0,
+        "supported_units": 0,
+        "output_units": 0
+      },
+      "language": "en"
+    },
+    {
+      "sequence": 4,
+      "time_s": 3.328,
+      "type": "plan_review_reply",
+      "reply": {
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "Opening date of St. Elizabeths Hospital",
+            "subject": "St. Elizabeths Hospital",
+            "necessary": true,
+            "depends_on": [],
+            "queries": [
+              "St. Elizabeths Hospital opening date",
+              "St. Elizabeths Hospital founded"
+            ]
+          },
+          {
+            "unit_id": "u2",
+            "description": "Opening date of Providence Hospital (the specific hospital intended in the question)",
+            "subject": "Providence Hospital",
+            "necessary": true,
+            "depends_on": [],
+            "queries": [
+              "Providence Hospital opening date",
+              "Providence Hospital founded"
+            ]
+          },
+          {
+            "unit_id": "u3",
+            "description": "Which hospital opened first",
+            "subject": "",
+            "necessary": true,
+            "depends_on": [
+              "u1",
+              "u2"
+            ],
+            "queries": [
+              "Which opened earlier St. Elizabeths Hospital Providence Hospital"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "sequence": 5,
+      "time_s": 3.328,
+      "type": "plan_review_finished",
+      "changed": true,
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "Opening date of St. Elizabeths Hospital",
+          "necessary": true,
+          "depends_on": [],
+          "queries": [
+            "St. Elizabeths Hospital opening date",
+            "St. Elizabeths Hospital founded"
+          ],
+          "subject": "St. Elizabeths Hospital"
+        },
+        {
+          "unit_id": "u2",
+          "description": "Opening date of Providence Hospital (the specific hospital intended in the question)",
+          "necessary": true,
+          "depends_on": [],
+          "queries": [
+            "Providence Hospital opening date",
+            "Providence Hospital founded"
+          ],
+          "subject": "Providence Hospital"
+        },
+        {
+          "unit_id": "u3",
+          "description": "Which hospital opened first",
+          "necessary": true,
+          "depends_on": [
+            "u1",
+            "u2"
+          ],
+          "queries": [
+            "Which opened earlier St. Elizabeths Hospital Providence Hospital"
+          ],
+          "subject": ""
+        }
+      ],
+      "question_only": true
+    },
+    {
+      "sequence": 6,
+      "time_s": 3.328,
+      "type": "plan",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "Opening date of St. Elizabeths Hospital",
+          "necessary": true,
+          "depends_on": [],
+          "queries": [
+            "St. Elizabeths Hospital opening date",
+            "St. Elizabeths Hospital founded"
+          ],
+          "subject": "St. Elizabeths Hospital"
+        },
+        {
+          "unit_id": "u2",
+          "description": "Opening date of Providence Hospital (the specific hospital intended in the question)",
+          "necessary": true,
+          "depends_on": [],
+          "queries": [
+            "Providence Hospital opening date",
+            "Providence Hospital founded"
+          ],
+          "subject": "Providence Hospital"
+        },
+        {
+          "unit_id": "u3",
+          "description": "Which hospital opened first",
+          "necessary": true,
+          "depends_on": [
+            "u1",
+            "u2"
+          ],
+          "queries": [
+            "Which opened earlier St. Elizabeths Hospital Providence Hospital"
+          ],
+          "subject": ""
+        }
+      ]
+    },
+    {
+      "sequence": 7,
+      "time_s": 3.328,
+      "type": "trace_batch_requested"
+    },
+    {
+      "sequence": 8,
+      "time_s": 3.328,
+      "type": "search_finished",
+      "query": "[scheduled evidence]",
+      "subject": "",
+      "status": "ok",
+      "returned_pages": [],
+      "mode": "trace",
+      "unit_id": "__scheduled_evidence__"
+    },
+    {
+      "sequence": 9,
+      "time_s": 3.328,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d1s0",
+        "title": "Heritage Hospital",
+        "url": "https://trace.invalid/hotpotqa_5a738b855542992d56e7e363_immediate/d1s0",
+        "text": "Heritage Hospital is a hospital located in Tarboro, North Carolina.",
+        "visible_time_s": 3.327999999994063,
+        "requested_subject": "",
+        "resolved_title": "Heritage Hospital",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 10,
+      "time_s": 3.328,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d1s1",
+        "title": "Heritage Hospital",
+        "url": "https://trace.invalid/hotpotqa_5a738b855542992d56e7e363_immediate/d1s1",
+        "text": "It is a part of the University Health Systems of Eastern Carolina (UHSEC).",
+        "visible_time_s": 3.327999999994063,
+        "requested_subject": "",
+        "resolved_title": "Heritage Hospital",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 11,
+      "time_s": 3.328,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d1s2",
+        "title": "Heritage Hospital",
+        "url": "https://trace.invalid/hotpotqa_5a738b855542992d56e7e363_immediate/d1s2",
+        "text": "Edgecombe General Hospital opened as a county-owned hospital in 1916.",
+        "visible_time_s": 3.327999999994063,
+        "requested_subject": "",
+        "resolved_title": "Heritage Hospital",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 12,
+      "time_s": 3.328,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d1s3",
+        "title": "Heritage Hospital",
+        "url": "https://trace.invalid/hotpotqa_5a738b855542992d56e7e363_immediate/d1s3",
+        "text": "It succeeded Pittman Hospital, which opened in 1901.",
+        "visible_time_s": 3.327999999994063,
+        "requested_subject": "",
+        "resolved_title": "Heritage Hospital",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 13,
+      "time_s": 3.328,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d1s4",
+        "title": "Heritage Hospital",
+        "url": "https://trace.invalid/hotpotqa_5a738b855542992d56e7e363_immediate/d1s4",
+        "text": "In 1959, the Hill-Burton Act helped combine Edgecombe General Hospital, with three other facilities.",
+        "visible_time_s": 3.327999999994063,
+        "requested_subject": "",
+        "resolved_title": "Heritage Hospital",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 14,
+      "time_s": 3.328,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d1s5",
+        "title": "Heritage Hospital",
+        "url": "https://trace.invalid/hotpotqa_5a738b855542992d56e7e363_immediate/d1s5",
+        "text": "Edgecombe County sold the hospital to Hospital Corporation of America (HCA) in 1982.",
+        "visible_time_s": 3.327999999994063,
+        "requested_subject": "",
+        "resolved_title": "Heritage Hospital",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 15,
+      "time_s": 3.328,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d1s6",
+        "title": "Heritage Hospital",
+        "url": "https://trace.invalid/hotpotqa_5a738b855542992d56e7e363_immediate/d1s6",
+        "text": "HCA opened a 127-bed facility in 1985, named Heritage Hospital.",
+        "visible_time_s": 3.327999999994063,
+        "requested_subject": "",
+        "resolved_title": "Heritage Hospital",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 16,
+      "time_s": 3.328,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d1s7",
+        "title": "Heritage Hospital",
+        "url": "https://trace.invalid/hotpotqa_5a738b855542992d56e7e363_immediate/d1s7",
+        "text": "UHSEC bought Heritage Hospital in 1998 from HCA.",
+        "visible_time_s": 3.327999999994063,
+        "requested_subject": "",
+        "resolved_title": "Heritage Hospital",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 17,
+      "time_s": 3.328,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d1s8",
+        "title": "Heritage Hospital",
+        "url": "https://trace.invalid/hotpotqa_5a738b855542992d56e7e363_immediate/d1s8",
+        "text": "The hospitals focus is as a community hospital.",
+        "visible_time_s": 3.327999999994063,
+        "requested_subject": "",
+        "resolved_title": "Heritage Hospital",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 18,
+      "time_s": 3.328,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d1s9",
+        "title": "Heritage Hospital",
+        "url": "https://trace.invalid/hotpotqa_5a738b855542992d56e7e363_immediate/d1s9",
+        "text": "The hospital has 101 general and 16 rehabilitation hospital beds.",
+        "visible_time_s": 3.327999999994063,
+        "requested_subject": "",
+        "resolved_title": "Heritage Hospital",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 19,
+      "time_s": 3.328,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d1s10",
+        "title": "Heritage Hospital",
+        "url": "https://trace.invalid/hotpotqa_5a738b855542992d56e7e363_immediate/d1s10",
+        "text": "It has five Shared Inpatient/Ambulatory Surgery, two Endoscopy, and one C-Section operating rooms.",
+        "visible_time_s": 3.327999999994063,
+        "requested_subject": "",
+        "resolved_title": "Heritage Hospital",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 20,
+      "time_s": 3.328,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d2s0",
+        "title": "Winfred Overholser",
+        "url": "https://trace.invalid/hotpotqa_5a738b855542992d56e7e363_immediate/d2s0",
+        "text": "Winfred Overholser (1892 – October 6, 1964) was an American psychiatrist, president of the American Psychiatric Association, and for 25 years the superintendent of St. Elizabeths Hospital, a federal institution for the mentally ill in Washington, D.C.",
+        "visible_time_s": 3.327999999994063,
+        "requested_subject": "",
+        "resolved_title": "Winfred Overholser",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 21,
+      "time_s": 3.328,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d3s0",
+        "title": "Congress Heights station",
+        "url": "https://trace.invalid/hotpotqa_5a738b855542992d56e7e363_immediate/d3s0",
+        "text": "Congress Heights is an island platformed Washington Metro station in the Congress Heights neighborhood of Washington, D.C., United States.",
+        "visible_time_s": 3.327999999994063,
+        "requested_subject": "",
+        "resolved_title": "Congress Heights station",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 22,
+      "time_s": 3.328,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d3s1",
+        "title": "Congress Heights station",
+        "url": "https://trace.invalid/hotpotqa_5a738b855542992d56e7e363_immediate/d3s1",
+        "text": "The station was opened on January 13, 2001, and is operated by the Washington Metropolitan Area Transit Authority (WMATA).",
+        "visible_time_s": 3.327999999994063,
+        "requested_subject": "",
+        "resolved_title": "Congress Heights station",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 23,
+      "time_s": 3.328,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d3s2",
+        "title": "Congress Heights station",
+        "url": "https://trace.invalid/hotpotqa_5a738b855542992d56e7e363_immediate/d3s2",
+        "text": "Providing service for only the Green Line, the station is located at Alabama Avenue and 13th Street, lying under St. Elizabeths Hospital.",
+        "visible_time_s": 3.327999999994063,
+        "requested_subject": "",
+        "resolved_title": "Congress Heights station",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 24,
+      "time_s": 3.328,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d3s3",
+        "title": "Congress Heights station",
+        "url": "https://trace.invalid/hotpotqa_5a738b855542992d56e7e363_immediate/d3s3",
+        "text": "Congress Heights is the last Green Line station in the District of Columbia going southeast.",
+        "visible_time_s": 3.327999999994063,
+        "requested_subject": "",
+        "resolved_title": "Congress Heights station",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 25,
+      "time_s": 3.328,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d4s0",
+        "title": "Providence Hospital (Washington, D.C.)",
+        "url": "https://trace.invalid/hotpotqa_5a738b855542992d56e7e363_immediate/d4s0",
+        "text": "Providence Hospital is a 408 bed hospital located in the District of Columbia.",
+        "visible_time_s": 3.327999999994063,
+        "requested_subject": "",
+        "resolved_title": "Providence Hospital (Washington, D.C.)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 26,
+      "time_s": 3.328,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d4s1",
+        "title": "Providence Hospital (Washington, D.C.)",
+        "url": "https://trace.invalid/hotpotqa_5a738b855542992d56e7e363_immediate/d4s1",
+        "text": "Founded in 1861, it is the longest continuously operating hospital in the District.",
+        "visible_time_s": 3.327999999994063,
+        "requested_subject": "",
+        "resolved_title": "Providence Hospital (Washington, D.C.)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 27,
+      "time_s": 3.328,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d4s2",
+        "title": "Providence Hospital (Washington, D.C.)",
+        "url": "https://trace.invalid/hotpotqa_5a738b855542992d56e7e363_immediate/d4s2",
+        "text": "Providence Hospital is a member of Ascension Health, the largest non-profit health care organization in the United States.",
+        "visible_time_s": 3.327999999994063,
+        "requested_subject": "",
+        "resolved_title": "Providence Hospital (Washington, D.C.)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 28,
+      "time_s": 3.328,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d5s0",
+        "title": "Congress Heights",
+        "url": "https://trace.invalid/hotpotqa_5a738b855542992d56e7e363_immediate/d5s0",
+        "text": "Congress Heights is a residential neighborhood in southeast Washington, D.C., in the United States.",
+        "visible_time_s": 3.327999999994063,
+        "requested_subject": "",
+        "resolved_title": "Congress Heights",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 29,
+      "time_s": 3.328,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d5s1",
+        "title": "Congress Heights",
+        "url": "https://trace.invalid/hotpotqa_5a738b855542992d56e7e363_immediate/d5s1",
+        "text": "The irregularly shaped neighborhood is bounded by the St. Elizabeths Hospital campus, Lebaum Street SE, 4th Street SE, and Newcomb Street SE on the northeast; Shepard Parkway and South Capitol Street on the west; Atlantic Street SE and 1st Street SE (as far as Chesapeake Street SE) on the south; Oxon Run Parkway on the southeast; and Wheeler Street SE and Alabama Avenue SE on the east.",
+        "visible_time_s": 3.327999999994063,
+        "requested_subject": "",
+        "resolved_title": "Congress Heights",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 30,
+      "time_s": 3.328,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d5s2",
+        "title": "Congress Heights",
+        "url": "https://trace.invalid/hotpotqa_5a738b855542992d56e7e363_immediate/d5s2",
+        "text": "Commercial development is heavy along Martin Luther King, Jr.",
+        "visible_time_s": 3.327999999994063,
+        "requested_subject": "",
+        "resolved_title": "Congress Heights",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 31,
+      "time_s": 3.328,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d5s3",
+        "title": "Congress Heights",
+        "url": "https://trace.invalid/hotpotqa_5a738b855542992d56e7e363_immediate/d5s3",
+        "text": "Avenue and Malcolm X Avenue.",
+        "visible_time_s": 3.327999999994063,
+        "requested_subject": "",
+        "resolved_title": "Congress Heights",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 32,
+      "time_s": 3.328,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d6s0",
+        "title": "History of psychiatric hospitals in Pittsburgh",
+        "url": "https://trace.invalid/hotpotqa_5a738b855542992d56e7e363_immediate/d6s0",
+        "text": "Pittsburgh, Pennsylvania, United States, is home to a plethora of hospitals, be it for the physically ill or, what was defined as the insane and feeble minded.",
+        "visible_time_s": 3.327999999994063,
+        "requested_subject": "",
+        "resolved_title": "History of psychiatric hospitals in Pittsburgh",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 33,
+      "time_s": 3.328,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d6s1",
+        "title": "History of psychiatric hospitals in Pittsburgh",
+        "url": "https://trace.invalid/hotpotqa_5a738b855542992d56e7e363_immediate/d6s1",
+        "text": "In 1891, the St. Margaret Memorial Hospital opened under John H. Shoenberger.",
+        "visible_time_s": 3.327999999994063,
+        "requested_subject": "",
+        "resolved_title": "History of psychiatric hospitals in Pittsburgh",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 34,
+      "time_s": 3.328,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d6s2",
+        "title": "History of psychiatric hospitals in Pittsburgh",
+        "url": "https://trace.invalid/hotpotqa_5a738b855542992d56e7e363_immediate/d6s2",
+        "text": "In 1908, the Pittsburgh Hospital was run under C. A. Fagan, and on June 1, 1889, the South Side Hospital opened under Anna M. Rindlaub.",
+        "visible_time_s": 3.327999999994063,
+        "requested_subject": "",
+        "resolved_title": "History of psychiatric hospitals in Pittsburgh",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 35,
+      "time_s": 3.328,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d6s3",
+        "title": "History of psychiatric hospitals in Pittsburgh",
+        "url": "https://trace.invalid/hotpotqa_5a738b855542992d56e7e363_immediate/d6s3",
+        "text": "Pittsburgh, commonly known as the \"Steel City,\" also built up a reputation for its abundance of hospitals that had opened up within a fairly close time period of each other.",
+        "visible_time_s": 3.327999999994063,
+        "requested_subject": "",
+        "resolved_title": "History of psychiatric hospitals in Pittsburgh",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 36,
+      "time_s": 3.328,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d6s4",
+        "title": "History of psychiatric hospitals in Pittsburgh",
+        "url": "https://trace.invalid/hotpotqa_5a738b855542992d56e7e363_immediate/d6s4",
+        "text": "During this time, many new mental hospitals were established due to overcrowding.",
+        "visible_time_s": 3.327999999994063,
+        "requested_subject": "",
+        "resolved_title": "History of psychiatric hospitals in Pittsburgh",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 37,
+      "time_s": 3.328,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d6s5",
+        "title": "History of psychiatric hospitals in Pittsburgh",
+        "url": "https://trace.invalid/hotpotqa_5a738b855542992d56e7e363_immediate/d6s5",
+        "text": "In 1899, a building to house the mentally insane, Mayview State Hospital, was constructed; but it was not long before the complex had a reputation “as a place of sorrow” due to the lack of proper health care patients received during their stay.",
+        "visible_time_s": 3.327999999994063,
+        "requested_subject": "",
+        "resolved_title": "History of psychiatric hospitals in Pittsburgh",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 38,
+      "time_s": 3.328,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d7s0",
+        "title": "Loreta Janeta Velázquez",
+        "url": "https://trace.invalid/hotpotqa_5a738b855542992d56e7e363_immediate/d7s0",
+        "text": "Loreta Janeta Velázquez (June 26, 1842 – 1923), was a Cuban-born woman who masqueraded as a male Confederate soldier during the American Civil War.",
+        "visible_time_s": 3.327999999994063,
+        "requested_subject": "",
+        "resolved_title": "Loreta Janeta Velázquez",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 39,
+      "time_s": 3.328,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d7s1",
+        "title": "Loreta Janeta Velázquez",
+        "url": "https://trace.invalid/hotpotqa_5a738b855542992d56e7e363_immediate/d7s1",
+        "text": "After her soldier husband's accidental death, she enlisted in the Confederate States Army in 1861.",
+        "visible_time_s": 3.327999999994063,
+        "requested_subject": "",
+        "resolved_title": "Loreta Janeta Velázquez",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 40,
+      "time_s": 3.328,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d7s2",
+        "title": "Loreta Janeta Velázquez",
+        "url": "https://trace.invalid/hotpotqa_5a738b855542992d56e7e363_immediate/d7s2",
+        "text": "She then fought at Bull Run, Ball's Bluff, and Fort Donelson, but was discharged when her gender was discovered while in New Orleans.",
+        "visible_time_s": 3.327999999994063,
+        "requested_subject": "",
+        "resolved_title": "Loreta Janeta Velázquez",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 41,
+      "time_s": 3.328,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d7s3",
+        "title": "Loreta Janeta Velázquez",
+        "url": "https://trace.invalid/hotpotqa_5a738b855542992d56e7e363_immediate/d7s3",
+        "text": "Undeterred, she reenlisted and fought at Shiloh, until unmasked once more.",
+        "visible_time_s": 3.327999999994063,
+        "requested_subject": "",
+        "resolved_title": "Loreta Janeta Velázquez",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 42,
+      "time_s": 3.328,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d7s4",
+        "title": "Loreta Janeta Velázquez",
+        "url": "https://trace.invalid/hotpotqa_5a738b855542992d56e7e363_immediate/d7s4",
+        "text": "She then became a Confederate spy, working in both male and female guises, and as a double agent also reporting to the U.S. Secret Service.",
+        "visible_time_s": 3.327999999994063,
+        "requested_subject": "",
+        "resolved_title": "Loreta Janeta Velázquez",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 43,
+      "time_s": 3.328,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d7s5",
+        "title": "Loreta Janeta Velázquez",
+        "url": "https://trace.invalid/hotpotqa_5a738b855542992d56e7e363_immediate/d7s5",
+        "text": "She remarried three more times, being widowed in each instance.",
+        "visible_time_s": 3.327999999994063,
+        "requested_subject": "",
+        "resolved_title": "Loreta Janeta Velázquez",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 44,
+      "time_s": 3.328,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d7s6",
+        "title": "Loreta Janeta Velázquez",
+        "url": "https://trace.invalid/hotpotqa_5a738b855542992d56e7e363_immediate/d7s6",
+        "text": "According to William C Davis, she died in January 1923 under the name Loretta J. Beard after many years away from the public eye in a public psychiatric facility, St. Elizabeths Hospital.",
+        "visible_time_s": 3.327999999994063,
+        "requested_subject": "",
+        "resolved_title": "Loreta Janeta Velázquez",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 45,
+      "time_s": 3.328,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d7s7",
+        "title": "Loreta Janeta Velázquez",
+        "url": "https://trace.invalid/hotpotqa_5a738b855542992d56e7e363_immediate/d7s7",
+        "text": "She spied on the Union for about 5 years.",
+        "visible_time_s": 3.327999999994063,
+        "requested_subject": "",
+        "resolved_title": "Loreta Janeta Velázquez",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 46,
+      "time_s": 3.328,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d8s0",
+        "title": "St. Elizabeths Hospital",
+        "url": "https://trace.invalid/hotpotqa_5a738b855542992d56e7e363_immediate/d8s0",
+        "text": "St. Elizabeths Hospital opened in 1855 as the first federally operated psychiatric hospital in the United States.",
+        "visible_time_s": 3.327999999994063,
+        "requested_subject": "",
+        "resolved_title": "St. Elizabeths Hospital",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 47,
+      "time_s": 3.328,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d8s1",
+        "title": "St. Elizabeths Hospital",
+        "url": "https://trace.invalid/hotpotqa_5a738b855542992d56e7e363_immediate/d8s1",
+        "text": "Housing over 8,000 patients at its peak in the 1950s, the hospital at one point had a fully functioning medical-surgical unit, a school of nursing, and accredited internships and psychiatric residencies.",
+        "visible_time_s": 3.327999999994063,
+        "requested_subject": "",
+        "resolved_title": "St. Elizabeths Hospital",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 48,
+      "time_s": 3.328,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d8s2",
+        "title": "St. Elizabeths Hospital",
+        "url": "https://trace.invalid/hotpotqa_5a738b855542992d56e7e363_immediate/d8s2",
+        "text": "Its campus was designated a National Historic Landmark in 1990.",
+        "visible_time_s": 3.327999999994063,
+        "requested_subject": "",
+        "resolved_title": "St. Elizabeths Hospital",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 49,
+      "time_s": 3.328,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d9s0",
+        "title": "Vassar Brothers Medical Center",
+        "url": "https://trace.invalid/hotpotqa_5a738b855542992d56e7e363_immediate/d9s0",
+        "text": "Vassar Brother Medical Center (locally known as Vassar Hospital or VBMC) is a major medical facility located in the city of Poughkeepsie, New York that is a member of the Health Quest network, a nonprofit family of hospitals and healthcare centers in the Hudson Valley area.",
+        "visible_time_s": 3.327999999994063,
+        "requested_subject": "",
+        "resolved_title": "Vassar Brothers Medical Center",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 50,
+      "time_s": 3.328,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d9s1",
+        "title": "Vassar Brothers Medical Center",
+        "url": "https://trace.invalid/hotpotqa_5a738b855542992d56e7e363_immediate/d9s1",
+        "text": "VBMC is one of two major medical centers located in Dutchess County, New York, the other being Mid-Hudson Regional Hospital of Westchester Medical Center.",
+        "visible_time_s": 3.327999999994063,
+        "requested_subject": "",
+        "resolved_title": "Vassar Brothers Medical Center",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 51,
+      "time_s": 3.328,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d9s2",
+        "title": "Vassar Brothers Medical Center",
+        "url": "https://trace.invalid/hotpotqa_5a738b855542992d56e7e363_immediate/d9s2",
+        "text": "The hospital was first incorporated in 1882 under the name Vassar Brothers Hospital, following contributions made by John Guy Vassar following the death of his brother.",
+        "visible_time_s": 3.327999999994063,
+        "requested_subject": "",
+        "resolved_title": "Vassar Brothers Medical Center",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 52,
+      "time_s": 3.328,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d9s3",
+        "title": "Vassar Brothers Medical Center",
+        "url": "https://trace.invalid/hotpotqa_5a738b855542992d56e7e363_immediate/d9s3",
+        "text": "The hospital opened its doors in 1887, and initially had 40 beds divided up into four wards, each containing ten beds.",
+        "visible_time_s": 3.327999999994063,
+        "requested_subject": "",
+        "resolved_title": "Vassar Brothers Medical Center",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 53,
+      "time_s": 3.328,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d9s4",
+        "title": "Vassar Brothers Medical Center",
+        "url": "https://trace.invalid/hotpotqa_5a738b855542992d56e7e363_immediate/d9s4",
+        "text": "At the time the hospital opened it also contained a labor and delivery ward, a children's ward, a nursery, three private rooms, and two isolation rooms.",
+        "visible_time_s": 3.327999999994063,
+        "requested_subject": "",
+        "resolved_title": "Vassar Brothers Medical Center",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 54,
+      "time_s": 3.328,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d9s5",
+        "title": "Vassar Brothers Medical Center",
+        "url": "https://trace.invalid/hotpotqa_5a738b855542992d56e7e363_immediate/d9s5",
+        "text": "Several major renovations occurred in 1983, 1991, and 2001; adding critical care areas, a new operating and delivery wing, and a cancer care center, respectively.",
+        "visible_time_s": 3.327999999994063,
+        "requested_subject": "",
+        "resolved_title": "Vassar Brothers Medical Center",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 55,
+      "time_s": 3.328,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d9s6",
+        "title": "Vassar Brothers Medical Center",
+        "url": "https://trace.invalid/hotpotqa_5a738b855542992d56e7e363_immediate/d9s6",
+        "text": "In 2002 Vassar Brothers Hospital officially became Vassar Brothers Medical Center.",
+        "visible_time_s": 3.327999999994063,
+        "requested_subject": "",
+        "resolved_title": "Vassar Brothers Medical Center",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 56,
+      "time_s": 3.328,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d9s7",
+        "title": "Vassar Brothers Medical Center",
+        "url": "https://trace.invalid/hotpotqa_5a738b855542992d56e7e363_immediate/d9s7",
+        "text": "In September 2016, VBMC announced a new $500 million expansion which would almost double the number of available rooms.",
+        "visible_time_s": 3.327999999994063,
+        "requested_subject": "",
+        "resolved_title": "Vassar Brothers Medical Center",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 57,
+      "time_s": 3.328,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d9s8",
+        "title": "Vassar Brothers Medical Center",
+        "url": "https://trace.invalid/hotpotqa_5a738b855542992d56e7e363_immediate/d9s8",
+        "text": "Construction on the expansion is expected to be completed in 2019.",
+        "visible_time_s": 3.327999999994063,
+        "requested_subject": "",
+        "resolved_title": "Vassar Brothers Medical Center",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 58,
+      "time_s": 3.328,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d10s0",
+        "title": "Douglass (Washington, D.C.)",
+        "url": "https://trace.invalid/hotpotqa_5a738b855542992d56e7e363_immediate/d10s0",
+        "text": "Douglass is a residential neighborhood in Southeast Washington, D.C., on the eastern side of St. Elizabeths Hospital, on the border of the Congress Heights Metro Station.",
+        "visible_time_s": 3.327999999994063,
+        "requested_subject": "",
+        "resolved_title": "Douglass (Washington, D.C.)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 59,
+      "time_s": 3.328,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d10s1",
+        "title": "Douglass (Washington, D.C.)",
+        "url": "https://trace.invalid/hotpotqa_5a738b855542992d56e7e363_immediate/d10s1",
+        "text": "It is bounded by Suitland Parkway to the north and east, Alabama Avenue to the south, and the St. Elizabeths campus to the west.",
+        "visible_time_s": 3.327999999994063,
+        "requested_subject": "",
+        "resolved_title": "Douglass (Washington, D.C.)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 60,
+      "time_s": 5.484,
+      "type": "judge_reply",
+      "reply": {
+        "judgments": [
+          {
+            "unit_id": "u1",
+            "label": "SUPPORTED",
+            "value": "1855",
+            "citations": [
+              "d8s0"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d8s0",
+                "text": "St. Elizabeths Hospital opened in 1855 as the first federally operated psychiatric hospital in the United States."
+              }
+            ],
+            "reason": "Supported by the cited visible sentences and dependencies."
+          },
+          {
+            "unit_id": "u2",
+            "label": "SUPPORTED",
+            "value": "1861",
+            "citations": [
+              "d4s1"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d4s1",
+                "text": "Founded in 1861, it is the longest continuously operating hospital in the District."
+              }
+            ],
+            "reason": "Supported by the cited visible sentences and dependencies."
+          },
+          {
+            "unit_id": "u3",
+            "label": "SUPPORTED",
+            "value": "St. Elizabeths Hospital",
+            "citations": [
+              "d8s0",
+              "d4s1"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d8s0",
+                "text": "St. Elizabeths Hospital opened in 1855 as the first federally operated psychiatric hospital in the United States."
+              },
+              {
+                "evidence_id": "d4s1",
+                "text": "Founded in 1861, it is the longest continuously operating hospital in the District."
+              }
+            ],
+            "reason": "Supported by the cited visible sentences and dependencies."
+          }
+        ]
+      },
+      "attempt": 1,
+      "repair": false,
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d1s1",
+        "d1s2",
+        "d1s3",
+        "d1s4",
+        "d1s5",
+        "d1s6",
+        "d1s7",
+        "d1s8",
+        "d1s9",
+        "d1s10",
+        "d2s0",
+        "d3s0",
+        "d3s1",
+        "d3s2",
+        "d3s3",
+        "d4s0",
+        "d4s1",
+        "d4s2",
+        "d5s0",
+        "d5s1",
+        "d5s2",
+        "d5s3",
+        "d6s0",
+        "d6s1",
+        "d6s2",
+        "d6s3",
+        "d6s4",
+        "d6s5",
+        "d7s0",
+        "d7s1",
+        "d7s2",
+        "d7s3",
+        "d7s4",
+        "d7s5",
+        "d7s6",
+        "d7s7",
+        "d8s0",
+        "d8s1",
+        "d8s2",
+        "d9s0",
+        "d9s1",
+        "d9s2",
+        "d9s3",
+        "d9s4",
+        "d9s5",
+        "d9s6",
+        "d9s7",
+        "d9s8",
+        "d10s0",
+        "d10s1"
+      ]
+    },
+    {
+      "sequence": 61,
+      "time_s": 5.484,
+      "type": "judgments",
+      "judgments": {
+        "u1": {
+          "label": "SUPPORTED",
+          "value": "1855",
+          "citations": [
+            "d8s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d8s0",
+              "text": "St. Elizabeths Hospital opened in 1855 as the first federally operated psychiatric hospital in the United States."
+            }
+          ],
+          "reason": "Supported by the cited visible sentences and dependencies."
+        },
+        "u2": {
+          "label": "UNRESOLVED",
+          "value": "",
+          "citations": [],
+          "quotes": [],
+          "reason": "Rejected entity identity: citation concerns an ambiguous or differently qualified namesake"
+        },
+        "u3": {
+          "label": "UNRESOLVED",
+          "value": "",
+          "citations": [],
+          "quotes": [],
+          "reason": "Dependency is not supported"
+        }
+      },
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d1s1",
+        "d1s2",
+        "d1s3",
+        "d1s4",
+        "d1s5",
+        "d1s6",
+        "d1s7",
+        "d1s8",
+        "d1s9",
+        "d1s10",
+        "d2s0",
+        "d3s0",
+        "d3s1",
+        "d3s2",
+        "d3s3",
+        "d4s0",
+        "d4s1",
+        "d4s2",
+        "d5s0",
+        "d5s1",
+        "d5s2",
+        "d5s3",
+        "d6s0",
+        "d6s1",
+        "d6s2",
+        "d6s3",
+        "d6s4",
+        "d6s5",
+        "d7s0",
+        "d7s1",
+        "d7s2",
+        "d7s3",
+        "d7s4",
+        "d7s5",
+        "d7s6",
+        "d7s7",
+        "d8s0",
+        "d8s1",
+        "d8s2",
+        "d9s0",
+        "d9s1",
+        "d9s2",
+        "d9s3",
+        "d9s4",
+        "d9s5",
+        "d9s6",
+        "d9s7",
+        "d9s8",
+        "d10s0",
+        "d10s1"
+      ],
+      "semantic_review": false
+    },
+    {
+      "sequence": 62,
+      "time_s": 5.484,
+      "type": "trace_batch_requested"
+    },
+    {
+      "sequence": 63,
+      "time_s": 5.797,
+      "type": "feedback_requested",
+      "feedback_kind": "progress",
+      "execution_state": {
+        "stage": "formulating",
+        "searches_started": 2,
+        "searches_completed": 1,
+        "active_searches": 0,
+        "evidence_count": 51,
+        "supported_units": 1,
+        "output_units": 0
+      }
+    },
+    {
+      "sequence": 64,
+      "time_s": 8.687,
+      "type": "utterance",
+      "action": "Progress",
+      "text": "Formulating the answer with gathered evidence.",
+      "claims": [],
+      "feedback_source": "model",
+      "feedback_status_claim": "formulating",
+      "feedback_fallback_reason": "",
+      "execution_state": {
+        "stage": "formulating",
+        "searches_started": 2,
+        "searches_completed": 1,
+        "active_searches": 0,
+        "evidence_count": 51,
+        "supported_units": 1,
+        "output_units": 0
+      },
+      "language": "en"
+    },
+    {
+      "sequence": 65,
+      "time_s": 8.719,
+      "type": "verification_reply",
+      "reply": {
+        "approved": true,
+        "facts_valid": true,
+        "expressed_unit_ids": [
+          "u1"
+        ],
+        "reason": "The draft correctly states the opening date of St. Elizabeths Hospital as 1855, matching the approved fact and evidence, with no extra or missing claims."
+      },
+      "output_unit_ids": [
+        "u1"
+      ],
+      "output_action": "Partial Answer",
+      "dependency_unit_ids": [],
+      "evidence_snapshot_ids": [
+        "d8s0"
+      ]
+    },
+    {
+      "sequence": 66,
+      "time_s": 8.719,
+      "type": "utterance",
+      "action": "Partial Answer",
+      "text": "St. Elizabeths Hospital opened in 1855.",
+      "claims": [
+        {
+          "unit_id": "u1",
+          "description": "Opening date of St. Elizabeths Hospital",
+          "value": "1855",
+          "citations": [
+            "d8s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d8s0",
+              "text": "St. Elizabeths Hospital opened in 1855 as the first federally operated psychiatric hospital in the United States."
+            }
+          ]
+        }
+      ],
+      "unresolved": [],
+      "fallback": false,
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d1s1",
+        "d1s2",
+        "d1s3",
+        "d1s4",
+        "d1s5",
+        "d1s6",
+        "d1s7",
+        "d1s8",
+        "d1s9",
+        "d1s10",
+        "d2s0",
+        "d3s0",
+        "d3s1",
+        "d3s2",
+        "d3s3",
+        "d4s0",
+        "d4s1",
+        "d4s2",
+        "d5s0",
+        "d5s1",
+        "d5s2",
+        "d5s3",
+        "d6s0",
+        "d6s1",
+        "d6s2",
+        "d6s3",
+        "d6s4",
+        "d6s5",
+        "d7s0",
+        "d7s1",
+        "d7s2",
+        "d7s3",
+        "d7s4",
+        "d7s5",
+        "d7s6",
+        "d7s7",
+        "d8s0",
+        "d8s1",
+        "d8s2",
+        "d9s0",
+        "d9s1",
+        "d9s2",
+        "d9s3",
+        "d9s4",
+        "d9s5",
+        "d9s6",
+        "d9s7",
+        "d9s8",
+        "d10s0",
+        "d10s1"
+      ],
+      "language": "en"
+    },
+    {
+      "sequence": 67,
+      "time_s": 8.719,
+      "type": "search_finished",
+      "query": "[scheduled evidence]",
+      "subject": "",
+      "status": "ok",
+      "returned_pages": [],
+      "mode": "trace",
+      "unit_id": "__scheduled_evidence__"
+    },
+    {
+      "sequence": 68,
+      "time_s": 8.719,
+      "type": "semantic_review_requested",
+      "target_unit_ids": [
+        "u2",
+        "u3"
+      ],
+      "review_unit_ids": [
+        "u1",
+        "u2",
+        "u3"
+      ],
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d1s1",
+        "d1s2",
+        "d1s3",
+        "d1s4",
+        "d1s5",
+        "d1s6",
+        "d1s7",
+        "d1s8",
+        "d1s9",
+        "d1s10",
+        "d2s0",
+        "d3s0",
+        "d3s1",
+        "d3s2",
+        "d3s3",
+        "d4s0",
+        "d4s1",
+        "d4s2",
+        "d5s0",
+        "d5s1",
+        "d5s2",
+        "d5s3",
+        "d6s0",
+        "d6s1",
+        "d6s2",
+        "d6s3",
+        "d6s4",
+        "d6s5",
+        "d7s0",
+        "d7s1",
+        "d7s2",
+        "d7s3",
+        "d7s4",
+        "d7s5",
+        "d7s6",
+        "d7s7",
+        "d8s0",
+        "d8s1",
+        "d8s2",
+        "d9s0",
+        "d9s1",
+        "d9s2",
+        "d9s3",
+        "d9s4",
+        "d9s5",
+        "d9s6",
+        "d9s7",
+        "d9s8",
+        "d10s0",
+        "d10s1"
+      ],
+      "max_reviews": 1
+    },
+    {
+      "sequence": 69,
+      "time_s": 10.734,
+      "type": "semantic_review_reply",
+      "reply": {
+        "judgments": [
+          {
+            "unit_id": "u1",
+            "label": "SUPPORTED",
+            "value": "1855",
+            "citations": [
+              "d8s0"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d8s0",
+                "text": "St. Elizabeths Hospital opened in 1855 as the first federally operated psychiatric hospital in the United States."
+              }
+            ],
+            "reason": "Supported by the cited visible sentences and dependencies."
+          },
+          {
+            "unit_id": "u2",
+            "label": "SUPPORTED",
+            "value": "1861",
+            "citations": [
+              "d4s1"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d4s1",
+                "text": "Founded in 1861, it is the longest continuously operating hospital in the District."
+              }
+            ],
+            "reason": "Supported by the cited visible sentences and dependencies."
+          },
+          {
+            "unit_id": "u3",
+            "label": "SUPPORTED",
+            "value": "St. Elizabeths Hospital",
+            "citations": [
+              "d8s0",
+              "d4s1"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d8s0",
+                "text": "St. Elizabeths Hospital opened in 1855 as the first federally operated psychiatric hospital in the United States."
+              },
+              {
+                "evidence_id": "d4s1",
+                "text": "Founded in 1861, it is the longest continuously operating hospital in the District."
+              }
+            ],
+            "reason": "Supported by the cited visible sentences and dependencies."
+          }
+        ]
+      },
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d1s1",
+        "d1s2",
+        "d1s3",
+        "d1s4",
+        "d1s5",
+        "d1s6",
+        "d1s7",
+        "d1s8",
+        "d1s9",
+        "d1s10",
+        "d2s0",
+        "d3s0",
+        "d3s1",
+        "d3s2",
+        "d3s3",
+        "d4s0",
+        "d4s1",
+        "d4s2",
+        "d5s0",
+        "d5s1",
+        "d5s2",
+        "d5s3",
+        "d6s0",
+        "d6s1",
+        "d6s2",
+        "d6s3",
+        "d6s4",
+        "d6s5",
+        "d7s0",
+        "d7s1",
+        "d7s2",
+        "d7s3",
+        "d7s4",
+        "d7s5",
+        "d7s6",
+        "d7s7",
+        "d8s0",
+        "d8s1",
+        "d8s2",
+        "d9s0",
+        "d9s1",
+        "d9s2",
+        "d9s3",
+        "d9s4",
+        "d9s5",
+        "d9s6",
+        "d9s7",
+        "d9s8",
+        "d10s0",
+        "d10s1"
+      ]
+    },
+    {
+      "sequence": 70,
+      "time_s": 10.734,
+      "type": "semantic_review_finished",
+      "review_unit_ids": [
+        "u1",
+        "u2",
+        "u3"
+      ],
+      "recovered_unit_ids": []
+    },
+    {
+      "sequence": 71,
+      "time_s": 10.734,
+      "type": "judgments",
+      "judgments": {
+        "u1": {
+          "label": "SUPPORTED",
+          "value": "1855",
+          "citations": [
+            "d8s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d8s0",
+              "text": "St. Elizabeths Hospital opened in 1855 as the first federally operated psychiatric hospital in the United States."
+            }
+          ],
+          "reason": "Supported by the cited visible sentences and dependencies."
+        },
+        "u2": {
+          "label": "UNRESOLVED",
+          "value": "",
+          "citations": [],
+          "quotes": [],
+          "reason": "Rejected entity identity: citation concerns an ambiguous or differently qualified namesake"
+        },
+        "u3": {
+          "label": "UNRESOLVED",
+          "value": "",
+          "citations": [],
+          "quotes": [],
+          "reason": "Dependency is not supported"
+        }
+      },
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d1s1",
+        "d1s2",
+        "d1s3",
+        "d1s4",
+        "d1s5",
+        "d1s6",
+        "d1s7",
+        "d1s8",
+        "d1s9",
+        "d1s10",
+        "d2s0",
+        "d3s0",
+        "d3s1",
+        "d3s2",
+        "d3s3",
+        "d4s0",
+        "d4s1",
+        "d4s2",
+        "d5s0",
+        "d5s1",
+        "d5s2",
+        "d5s3",
+        "d6s0",
+        "d6s1",
+        "d6s2",
+        "d6s3",
+        "d6s4",
+        "d6s5",
+        "d7s0",
+        "d7s1",
+        "d7s2",
+        "d7s3",
+        "d7s4",
+        "d7s5",
+        "d7s6",
+        "d7s7",
+        "d8s0",
+        "d8s1",
+        "d8s2",
+        "d9s0",
+        "d9s1",
+        "d9s2",
+        "d9s3",
+        "d9s4",
+        "d9s5",
+        "d9s6",
+        "d9s7",
+        "d9s8",
+        "d10s0",
+        "d10s1"
+      ],
+      "semantic_review": true
+    },
+    {
+      "sequence": 72,
+      "time_s": 10.734,
+      "type": "utterance",
+      "action": "Final Answer",
+      "text": "I could not confirm Opening date of Providence Hospital (the specific hospital intended in the question) and Which hospital opened first.",
+      "claims": [],
+      "unresolved": [
+        "u2",
+        "u3"
+      ],
+      "fallback": false,
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d1s1",
+        "d1s2",
+        "d1s3",
+        "d1s4",
+        "d1s5",
+        "d1s6",
+        "d1s7",
+        "d1s8",
+        "d1s9",
+        "d1s10",
+        "d2s0",
+        "d3s0",
+        "d3s1",
+        "d3s2",
+        "d3s3",
+        "d4s0",
+        "d4s1",
+        "d4s2",
+        "d5s0",
+        "d5s1",
+        "d5s2",
+        "d5s3",
+        "d6s0",
+        "d6s1",
+        "d6s2",
+        "d6s3",
+        "d6s4",
+        "d6s5",
+        "d7s0",
+        "d7s1",
+        "d7s2",
+        "d7s3",
+        "d7s4",
+        "d7s5",
+        "d7s6",
+        "d7s7",
+        "d8s0",
+        "d8s1",
+        "d8s2",
+        "d9s0",
+        "d9s1",
+        "d9s2",
+        "d9s3",
+        "d9s4",
+        "d9s5",
+        "d9s6",
+        "d9s7",
+        "d9s8",
+        "d10s0",
+        "d10s1"
+      ],
+      "language": "en"
+    },
+    {
+      "sequence": 73,
+      "time_s": 10.734,
+      "type": "finished",
+      "status": "incomplete"
+    }
+  ],
+  "note": "Prototype model judgments are not independent gold scores. Output event times are not spoken claim times.",
+  "evidence_mode": "scheduled_trace",
+  "audio": {
+    "enabled": true,
+    "mode": "windows",
+    "play": false,
+    "status": "ok",
+    "errors": [],
+    "records": [
+      {
+        "event_sequence": 3,
+        "sentence_index": 1,
+        "sentence_count": 1,
+        "language": "en",
+        "text": "I see you're asking which opened first, St. Elizabeths Hospital or Providence Hospital, and I'll look that up.",
+        "action": "Backchannel",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 2.6560000000026776,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1-continued\\samples\\0463\\audio\\segments\\0003_01.wav",
+        "duration_s": 7.58312925170068,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 3.452999999994063,
+        "synthesis_and_playback_s": 0.7969999999913853
+      },
+      {
+        "event_sequence": 64,
+        "sentence_index": 1,
+        "sentence_count": 1,
+        "language": "en",
+        "text": "Formulating the answer with gathered evidence.",
+        "action": "Progress",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 8.686999999990803,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1-continued\\samples\\0463\\audio\\segments\\0064_01.wav",
+        "duration_s": 3.113968253968254,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 9.5,
+        "synthesis_and_playback_s": 0.8130000000091968
+      },
+      {
+        "event_sequence": 66,
+        "sentence_index": 1,
+        "sentence_count": 1,
+        "language": "en",
+        "text": "St. Elizabeths Hospital opened in 1855.",
+        "action": "Partial Answer",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 9.5,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1-continued\\samples\\0463\\audio\\segments\\0066_01.wav",
+        "duration_s": 5.003673469387755,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 10.375,
+        "synthesis_and_playback_s": 0.875
+      },
+      {
+        "event_sequence": 72,
+        "sentence_index": 1,
+        "sentence_count": 1,
+        "language": "en",
+        "text": "I could not confirm Opening date of Providence Hospital (the specific hospital intended in the question) and Which hospital opened first.",
+        "action": "Final Answer",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 10.73399999999674,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1-continued\\samples\\0463\\audio\\segments\\0072_01.wav",
+        "duration_s": 8.757868480725623,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 11.546999999991385,
+        "synthesis_and_playback_s": 0.8129999999946449
+      }
+    ],
+    "wave": {
+      "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1-continued\\samples\\0463\\audio\\response.wav",
+      "duration_s": 27.911655328798187,
+      "timeline": [
+        {
+          "event_sequence": 3,
+          "sentence_index": 1,
+          "action": "Backchannel",
+          "text": "I see you're asking which opened first, St. Elizabeths Hospital or Providence Hospital, and I'll look that up.",
+          "wave_start_s": 3.453015873015873,
+          "wave_end_s": 11.036145124716553
+        },
+        {
+          "event_sequence": 64,
+          "sentence_index": 1,
+          "action": "Progress",
+          "text": "Formulating the answer with gathered evidence.",
+          "wave_start_s": 11.036145124716553,
+          "wave_end_s": 14.150113378684807
+        },
+        {
+          "event_sequence": 66,
+          "sentence_index": 1,
+          "action": "Partial Answer",
+          "text": "St. Elizabeths Hospital opened in 1855.",
+          "wave_start_s": 14.150113378684807,
+          "wave_end_s": 19.153786848072563
+        },
+        {
+          "event_sequence": 72,
+          "sentence_index": 1,
+          "action": "Final Answer",
+          "text": "I could not confirm Opening date of Providence Hospital (the specific hospital intended in the question) and Which hospital opened first.",
+          "wave_start_s": 19.153786848072563,
+          "wave_end_s": 27.911655328798187
+        }
+      ]
+    }
+  },
+  "evaluation": {
+    "mode": "b_final_revised_trace",
+    "trace_id": "hotpotqa_5a738b855542992d56e7e363_immediate",
+    "sample_id": "hotpotqa_5a738b855542992d56e7e363",
+    "total_wall_s": 11.546999999991385,
+    "question_timeout_s": 180,
+    "audio_enabled": true,
+    "history_enabled": false,
+    "text_pipeline_wall_s": 10.73399999999674,
+    "effective_settings": {
+      "base_url": "https://tinker.thinkingmachines.dev/services/tinker-prod/oai/api/v1",
+      "model": "openai/gpt-oss-120b",
+      "judge_model": "tinker://f9e9a6c1-e203-5c2c-acdd-68fe67378ca4:train:0/sampler_weights/epoch-0001",
+      "judge_reasoning_effort": "low",
+      "wiki_language": "en",
+      "user_agent": "CascadeSystem/0.1 (educational research prototype)",
+      "timeout_s": 45.0,
+      "max_tokens": 4096,
+      "reasoning_effort": "low",
+      "progress_s": 3.0,
+      "feedback_timeout_s": 6.0,
+      "search_limit": 3,
+      "max_units": 8,
+      "max_searches": 16,
+      "max_sources": 51,
+      "source_chars": 388,
+      "evidence_chars": 6089,
+      "concurrency": 3
+    },
+    "timing_kind": "unknown",
+    "scheduler": "wall-paced fixed B arrivals",
+    "split": "eval_reserved",
+    "empty_evidence_sentences_ignored": 0
+  }
+}

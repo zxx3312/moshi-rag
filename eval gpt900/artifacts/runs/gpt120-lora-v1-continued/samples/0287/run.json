@@ -1,0 +1,1404 @@
+{
+  "question": "Which film has the director who died later, Searchlight On Japan or Beauties Of The Night?",
+  "resolved_question": "Which film has the director who died later, Searchlight On Japan or Beauties Of The Night?",
+  "used_history_turn_ids": [],
+  "response_language": "en",
+  "status": "error",
+  "clock": "wall_monotonic",
+  "time_origin": "question_text_ready_after_optional_asr",
+  "model": "openai/gpt-oss-120b",
+  "judge_model": "tinker://f9e9a6c1-e203-5c2c-acdd-68fe67378ca4:train:0/sampler_weights/epoch-0001",
+  "units": [
+    {
+      "unit_id": "u1",
+      "description": "director of Searchlight On Japan",
+      "necessary": false,
+      "depends_on": [],
+      "queries": [
+        "Searchlight On Japan director",
+        "Searchlight On Japan film director"
+      ],
+      "subject": "Searchlight On Japan"
+    },
+    {
+      "unit_id": "u2",
+      "description": "director of Beauties Of The Night",
+      "necessary": false,
+      "depends_on": [],
+      "queries": [
+        "Beauties Of The Night director",
+        "Beauties Of The Night film director"
+      ],
+      "subject": "Beauties Of The Night"
+    },
+    {
+      "unit_id": "u3",
+      "description": "death date of the director of Searchlight On Japan",
+      "necessary": false,
+      "depends_on": [
+        "u1"
+      ],
+      "queries": [
+        "{u1} death date",
+        "{u1} died"
+      ],
+      "subject": "{u1}"
+    },
+    {
+      "unit_id": "u4",
+      "description": "death date of the director of Beauties Of The Night",
+      "necessary": false,
+      "depends_on": [
+        "u2"
+      ],
+      "queries": [
+        "{u2} death date",
+        "{u2} died"
+      ],
+      "subject": "{u2}"
+    },
+    {
+      "unit_id": "u5",
+      "description": "which film's director died later",
+      "necessary": true,
+      "depends_on": [
+        "u1",
+        "u2",
+        "u3",
+        "u4"
+      ],
+      "queries": [
+        "compare death dates of {u1} and {u2}"
+      ],
+      "subject": ""
+    }
+  ],
+  "judgments": {
+    "u1": {
+      "label": "UNRESOLVED",
+      "value": "",
+      "citations": [],
+      "quotes": [],
+      "reason": ""
+    },
+    "u2": {
+      "label": "UNRESOLVED",
+      "value": "",
+      "citations": [],
+      "quotes": [],
+      "reason": ""
+    },
+    "u3": {
+      "label": "UNRESOLVED",
+      "value": "",
+      "citations": [],
+      "quotes": [],
+      "reason": ""
+    },
+    "u4": {
+      "label": "UNRESOLVED",
+      "value": "",
+      "citations": [],
+      "quotes": [],
+      "reason": ""
+    },
+    "u5": {
+      "label": "UNRESOLVED",
+      "value": "",
+      "citations": [],
+      "quotes": [],
+      "reason": ""
+    }
+  },
+  "evidence": [
+    {
+      "evidence_id": "d1s0",
+      "title": "Abhishek Saxena",
+      "url": "https://trace.invalid/2wikimultihopqa_995e4c44088711ebbd6dac1f6bf848b6_short/d1s0",
+      "text": "Abhishek Saxena is an Indian Bollywood and Punjabi film director who directed the movie Phullu.",
+      "visible_time_s": 4.26600000000326,
+      "requested_subject": "",
+      "resolved_title": "Abhishek Saxena",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d1s1",
+      "title": "Abhishek Saxena",
+      "url": "https://trace.invalid/2wikimultihopqa_995e4c44088711ebbd6dac1f6bf848b6_short/d1s1",
+      "text": "The Phullu movie was released in theaters on 16 June 2017, in which film Sharib Hashmi is the lead role.",
+      "visible_time_s": 4.26600000000326,
+      "requested_subject": "",
+      "resolved_title": "Abhishek Saxena",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d1s2",
+      "title": "Abhishek Saxena",
+      "url": "https://trace.invalid/2wikimultihopqa_995e4c44088711ebbd6dac1f6bf848b6_short/d1s2",
+      "text": "Apart from these, he has also directed Patiala Dreamz, this is a Punjabi film.",
+      "visible_time_s": 4.26600000000326,
+      "requested_subject": "",
+      "resolved_title": "Abhishek Saxena",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d1s3",
+      "title": "Abhishek Saxena",
+      "url": "https://trace.invalid/2wikimultihopqa_995e4c44088711ebbd6dac1f6bf848b6_short/d1s3",
+      "text": "This film was screened in cinemas in 2014.",
+      "visible_time_s": 4.26600000000326,
+      "requested_subject": "",
+      "resolved_title": "Abhishek Saxena",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d4s0",
+      "title": "Searchlight on Japan",
+      "url": "https://trace.invalid/2wikimultihopqa_995e4c44088711ebbd6dac1f6bf848b6_short/d4s0",
+      "text": "Searchlight on Japan is an Australian documentary about the Allied occupation of Japan after World War II directed by Ken G. Hall.",
+      "visible_time_s": 4.26600000000326,
+      "requested_subject": "",
+      "resolved_title": "Searchlight on Japan",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d4s1",
+      "title": "Searchlight on Japan",
+      "url": "https://trace.invalid/2wikimultihopqa_995e4c44088711ebbd6dac1f6bf848b6_short/d4s1",
+      "text": "The film was sold to American television.",
+      "visible_time_s": 4.26600000000326,
+      "requested_subject": "",
+      "resolved_title": "Searchlight on Japan",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d5s0",
+      "title": "Robert Forsyth (writer)",
+      "url": "https://trace.invalid/2wikimultihopqa_995e4c44088711ebbd6dac1f6bf848b6_short/d5s0",
+      "text": "Robert Forsyth( 1766– 1845), was a Scottish writer, best known for his five- volume work,\" The Beauties of Scotland\".",
+      "visible_time_s": 4.26600000000326,
+      "requested_subject": "",
+      "resolved_title": "Robert Forsyth (writer)",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d8s0",
+      "title": "Marhy",
+      "url": "https://trace.invalid/2wikimultihopqa_995e4c44088711ebbd6dac1f6bf848b6_short/d8s0",
+      "text": ", is a Japanese artist, singer- songwriter, and arranger based on Japan.",
+      "visible_time_s": 4.26600000000326,
+      "requested_subject": "",
+      "resolved_title": "Marhy",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d9s0",
+      "title": "Beauties of the Night",
+      "url": "https://trace.invalid/2wikimultihopqa_995e4c44088711ebbd6dac1f6bf848b6_short/d9s0",
+      "text": "Les Belles de nuit (US title: Beauties of the Night) is a 1952 French language motion picture fantasy directed and written by René Clair who co-produced with Angelo Rizzoli.",
+      "visible_time_s": 4.26600000000326,
+      "requested_subject": "",
+      "resolved_title": "Beauties of the Night",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d9s1",
+      "title": "Beauties of the Night",
+      "url": "https://trace.invalid/2wikimultihopqa_995e4c44088711ebbd6dac1f6bf848b6_short/d9s1",
+      "text": "The film stars Gérard Philipe, Martine Carol, Gina Lollobrigida and Magali Vendeuil.",
+      "visible_time_s": 4.26600000000326,
+      "requested_subject": "",
+      "resolved_title": "Beauties of the Night",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d9s2",
+      "title": "Beauties of the Night",
+      "url": "https://trace.invalid/2wikimultihopqa_995e4c44088711ebbd6dac1f6bf848b6_short/d9s2",
+      "text": "It was nominated the Venice Film Festival for Golden Lion (René Clair).",
+      "visible_time_s": 4.26600000000326,
+      "requested_subject": "",
+      "resolved_title": "Beauties of the Night",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d2s0",
+      "title": "René Clair",
+      "url": "https://trace.invalid/2wikimultihopqa_995e4c44088711ebbd6dac1f6bf848b6_short/d2s0",
+      "text": "René Clair( 11 November 1898 – 15 March 1981) born René- Lucien Chomette, was a French filmmaker and writer.",
+      "visible_time_s": 4.26600000000326,
+      "requested_subject": "",
+      "resolved_title": "René Clair",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d2s1",
+      "title": "René Clair",
+      "url": "https://trace.invalid/2wikimultihopqa_995e4c44088711ebbd6dac1f6bf848b6_short/d2s1",
+      "text": "He first established his reputation in the 1920s as a director of silent films in which comedy was often mingled with fantasy.",
+      "visible_time_s": 4.26600000000326,
+      "requested_subject": "",
+      "resolved_title": "René Clair",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d2s2",
+      "title": "René Clair",
+      "url": "https://trace.invalid/2wikimultihopqa_995e4c44088711ebbd6dac1f6bf848b6_short/d2s2",
+      "text": "He went on to make some of the most innovative early sound films in France, before going abroad to work in the UK and USA for more than a decade.",
+      "visible_time_s": 4.26600000000326,
+      "requested_subject": "",
+      "resolved_title": "René Clair",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d2s3",
+      "title": "René Clair",
+      "url": "https://trace.invalid/2wikimultihopqa_995e4c44088711ebbd6dac1f6bf848b6_short/d2s3",
+      "text": "Returning to France after World War II, he continued to make films that were characterised by their elegance and wit, often presenting a nostalgic view of French life in earlier years.",
+      "visible_time_s": 4.26600000000326,
+      "requested_subject": "",
+      "resolved_title": "René Clair",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d2s4",
+      "title": "René Clair",
+      "url": "https://trace.invalid/2wikimultihopqa_995e4c44088711ebbd6dac1f6bf848b6_short/d2s4",
+      "text": "He was elected to the Académie française in 1960.",
+      "visible_time_s": 4.26600000000326,
+      "requested_subject": "",
+      "resolved_title": "René Clair",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d2s5",
+      "title": "René Clair",
+      "url": "https://trace.invalid/2wikimultihopqa_995e4c44088711ebbd6dac1f6bf848b6_short/d2s5",
+      "text": "Clair's best known films include\" The Italian Straw Hat\"( 1928),\" Under the Roofs of Paris\"( 1930),\" Le Million\"( 1931),\" À nous la liberté\"( 1931),\" I Married a Witch\"( 1942), and\" And Then There Were None\"( 1945).",
+      "visible_time_s": 4.26600000000326,
+      "requested_subject": "",
+      "resolved_title": "René Clair",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d3s0",
+      "title": "Brian Kennedy (gallery director)",
+      "url": "https://trace.invalid/2wikimultihopqa_995e4c44088711ebbd6dac1f6bf848b6_short/d3s0",
+      "text": "Brian Patrick Kennedy( born 5 November 1961) is an Irish- born art museum director who has worked in Ireland and Australia, and now lives and works in the United States.",
+      "visible_time_s": 4.26600000000326,
+      "requested_subject": "",
+      "resolved_title": "Brian Kennedy (gallery director)",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d3s1",
+      "title": "Brian Kennedy (gallery director)",
+      "url": "https://trace.invalid/2wikimultihopqa_995e4c44088711ebbd6dac1f6bf848b6_short/d3s1",
+      "text": "He is currently the director of the Peabody Essex Museum.",
+      "visible_time_s": 4.26600000000326,
+      "requested_subject": "",
+      "resolved_title": "Brian Kennedy (gallery director)",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d3s2",
+      "title": "Brian Kennedy (gallery director)",
+      "url": "https://trace.invalid/2wikimultihopqa_995e4c44088711ebbd6dac1f6bf848b6_short/d3s2",
+      "text": "He was the director of the Toledo Museum of Art in Ohio from 2010 to 2019.",
+      "visible_time_s": 4.26600000000326,
+      "requested_subject": "",
+      "resolved_title": "Brian Kennedy (gallery director)",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d3s3",
+      "title": "Brian Kennedy (gallery director)",
+      "url": "https://trace.invalid/2wikimultihopqa_995e4c44088711ebbd6dac1f6bf848b6_short/d3s3",
+      "text": "He was the director of the Hood Museum of Art from 2005 to 2010, and the National Gallery of Australia( Canberra) from 1997- 2004.",
+      "visible_time_s": 4.26600000000326,
+      "requested_subject": "",
+      "resolved_title": "Brian Kennedy (gallery director)",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d6s0",
+      "title": "Ken G. Hall",
+      "url": "https://trace.invalid/2wikimultihopqa_995e4c44088711ebbd6dac1f6bf848b6_short/d6s0",
+      "text": "Kenneth George Hall, AO, OBE( 22 February 1901 – 8 February 1994), better known as Ken G. Hall, was an Australian film producer and director, considered one of the most important figures in the history of the Australian film industry.",
+      "visible_time_s": 4.26600000000326,
+      "requested_subject": "",
+      "resolved_title": "Ken G. Hall",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d6s1",
+      "title": "Ken G. Hall",
+      "url": "https://trace.invalid/2wikimultihopqa_995e4c44088711ebbd6dac1f6bf848b6_short/d6s1",
+      "text": "He was the first Australian to win an Academy Award.",
+      "visible_time_s": 4.26600000000326,
+      "requested_subject": "",
+      "resolved_title": "Ken G. Hall",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d7s0",
+      "title": "Ben Palmer",
+      "url": "https://trace.invalid/2wikimultihopqa_995e4c44088711ebbd6dac1f6bf848b6_short/d7s0",
+      "text": "Ben Palmer is a British film and television director who is known for being the director of\" Bo' Selecta\" and\" The Inbetweeners\".",
+      "visible_time_s": 4.26600000000326,
+      "requested_subject": "",
+      "resolved_title": "Ben Palmer",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d10s0",
+      "title": "Jaime Chik",
+      "url": "https://trace.invalid/2wikimultihopqa_995e4c44088711ebbd6dac1f6bf848b6_short/d10s0",
+      "text": "Jaime Chik Mei-chun( born 5 January 1962) is a Hong Kong TVB actress and was named as one of the Five Beauties of TVB.",
+      "visible_time_s": 4.26600000000326,
+      "requested_subject": "",
+      "resolved_title": "Jaime Chik",
+      "entity_resolution": "unspecified"
+    }
+  ],
+  "searches": [
+    {
+      "query": "[scheduled evidence]",
+      "subject": "",
+      "status": "ok",
+      "returned_pages": [],
+      "mode": "trace",
+      "unit_id": "__scheduled_evidence__"
+    }
+  ],
+  "search_failures": [],
+  "llm_calls": [
+    {
+      "purpose": "feedback_generate",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 413,
+        "completion_tokens": 83,
+        "total_tokens": 496,
+        "prompt_tokens_details": {
+          "cached_tokens": 384
+        }
+      },
+      "latency_s": 1.188
+    },
+    {
+      "purpose": "feedback_verify",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 369,
+        "completion_tokens": 64,
+        "total_tokens": 433,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        }
+      },
+      "latency_s": 0.766
+    },
+    {
+      "purpose": "decompose",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 803,
+        "completion_tokens": 398,
+        "total_tokens": 1201,
+        "prompt_tokens_details": {
+          "cached_tokens": 768
+        }
+      },
+      "latency_s": 2.297
+    },
+    {
+      "purpose": "plan_review",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 1180,
+        "completion_tokens": 480,
+        "total_tokens": 1660,
+        "prompt_tokens_details": {
+          "cached_tokens": 1024
+        }
+      },
+      "latency_s": 1.969
+    },
+    {
+      "purpose": "feedback_generate",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 413,
+        "completion_tokens": 66,
+        "total_tokens": 479,
+        "prompt_tokens_details": {
+          "cached_tokens": 384
+        }
+      },
+      "latency_s": 1.047
+    },
+    {
+      "purpose": "judge",
+      "model": "tinker://f9e9a6c1-e203-5c2c-acdd-68fe67378ca4:train:0/sampler_weights/epoch-0001",
+      "status": "error",
+      "latency_s": 2.469
+    },
+    {
+      "purpose": "feedback_verify",
+      "model": "openai/gpt-oss-120b",
+      "status": "cancelled",
+      "latency_s": 0.688
+    }
+  ],
+  "search_diagnostics": [],
+  "output_enqueued_units": {},
+  "events": [
+    {
+      "sequence": 0,
+      "time_s": 0.0,
+      "type": "feedback_requested",
+      "feedback_kind": "opening",
+      "execution_state": {
+        "stage": "planning",
+        "searches_started": 0,
+        "searches_completed": 0,
+        "active_searches": 0,
+        "evidence_count": 0,
+        "supported_units": 0,
+        "output_units": 0
+      }
+    },
+    {
+      "sequence": 1,
+      "time_s": 1.954,
+      "type": "utterance",
+      "action": "Backchannel",
+      "text": "I’ll look up which film’s director died later, Searchlight On Japan or Beauties Of The Night.",
+      "claims": [],
+      "feedback_source": "model",
+      "feedback_status_claim": "intent",
+      "feedback_fallback_reason": "",
+      "execution_state": {
+        "stage": "planning",
+        "searches_started": 0,
+        "searches_completed": 0,
+        "active_searches": 0,
+        "evidence_count": 0,
+        "supported_units": 0,
+        "output_units": 0
+      },
+      "language": "en"
+    },
+    {
+      "sequence": 2,
+      "time_s": 2.297,
+      "type": "decompose_reply",
+      "reply": {
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "director of Searchlight On Japan",
+            "subject": "Searchlight On Japan",
+            "necessary": false,
+            "depends_on": [],
+            "queries": [
+              "Searchlight On Japan director"
+            ]
+          },
+          {
+            "unit_id": "u2",
+            "description": "director of Beauties Of The Night",
+            "subject": "Beauties Of The Night",
+            "necessary": false,
+            "depends_on": [],
+            "queries": [
+              "Beauties Of The Night director"
+            ]
+          },
+          {
+            "unit_id": "u3",
+            "description": "death date of the director of Searchlight On Japan",
+            "subject": "{u1}",
+            "necessary": false,
+            "depends_on": [
+              "u1"
+            ],
+            "queries": [
+              "{u1} death date"
+            ]
+          },
+          {
+            "unit_id": "u4",
+            "description": "death date of the director of Beauties Of The Night",
+            "subject": "{u2}",
+            "necessary": false,
+            "depends_on": [
+              "u2"
+            ],
+            "queries": [
+              "{u2} death date"
+            ]
+          },
+          {
+            "unit_id": "u5",
+            "description": "which film's director died later",
+            "subject": "",
+            "necessary": true,
+            "depends_on": [
+              "u3",
+              "u4"
+            ],
+            "queries": [
+              "compare death dates of {u1} and {u2}"
+            ]
+          }
+        ]
+      },
+      "attempt": 1,
+      "repair": false
+    },
+    {
+      "sequence": 3,
+      "time_s": 2.297,
+      "type": "protocol_validation_failed",
+      "stage": "decompose",
+      "attempt": 1,
+      "error": "Placeholders must name explicit dependencies"
+    },
+    {
+      "sequence": 4,
+      "time_s": 2.297,
+      "type": "protocol_normalized",
+      "stage": "decompose",
+      "changes": [
+        {
+          "unit_id": "u5",
+          "added_dependencies": [
+            "u1",
+            "u2"
+          ]
+        }
+      ],
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "director of Searchlight On Japan",
+          "necessary": false,
+          "depends_on": [],
+          "queries": [
+            "Searchlight On Japan director"
+          ],
+          "subject": "Searchlight On Japan"
+        },
+        {
+          "unit_id": "u2",
+          "description": "director of Beauties Of The Night",
+          "necessary": false,
+          "depends_on": [],
+          "queries": [
+            "Beauties Of The Night director"
+          ],
+          "subject": "Beauties Of The Night"
+        },
+        {
+          "unit_id": "u3",
+          "description": "death date of the director of Searchlight On Japan",
+          "necessary": false,
+          "depends_on": [
+            "u1"
+          ],
+          "queries": [
+            "{u1} death date"
+          ],
+          "subject": "{u1}"
+        },
+        {
+          "unit_id": "u4",
+          "description": "death date of the director of Beauties Of The Night",
+          "necessary": false,
+          "depends_on": [
+            "u2"
+          ],
+          "queries": [
+            "{u2} death date"
+          ],
+          "subject": "{u2}"
+        },
+        {
+          "unit_id": "u5",
+          "description": "which film's director died later",
+          "necessary": true,
+          "depends_on": [
+            "u3",
+            "u4",
+            "u1",
+            "u2"
+          ],
+          "queries": [
+            "compare death dates of {u1} and {u2}"
+          ],
+          "subject": ""
+        }
+      ],
+      "no_facts_added": true
+    },
+    {
+      "sequence": 5,
+      "time_s": 2.297,
+      "type": "plan_review_requested",
+      "max_reviews": 1,
+      "question_only": true
+    },
+    {
+      "sequence": 6,
+      "time_s": 4.266,
+      "type": "plan_review_reply",
+      "reply": {
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "director of Searchlight On Japan",
+            "subject": "Searchlight On Japan",
+            "necessary": false,
+            "depends_on": [],
+            "queries": [
+              "Searchlight On Japan director",
+              "Searchlight On Japan film director"
+            ]
+          },
+          {
+            "unit_id": "u2",
+            "description": "director of Beauties Of The Night",
+            "subject": "Beauties Of The Night",
+            "necessary": false,
+            "depends_on": [],
+            "queries": [
+              "Beauties Of The Night director",
+              "Beauties Of The Night film director"
+            ]
+          },
+          {
+            "unit_id": "u3",
+            "description": "death date of the director of Searchlight On Japan",
+            "subject": "{u1}",
+            "necessary": false,
+            "depends_on": [
+              "u1"
+            ],
+            "queries": [
+              "{u1} death date",
+              "{u1} died"
+            ]
+          },
+          {
+            "unit_id": "u4",
+            "description": "death date of the director of Beauties Of The Night",
+            "subject": "{u2}",
+            "necessary": false,
+            "depends_on": [
+              "u2"
+            ],
+            "queries": [
+              "{u2} death date",
+              "{u2} died"
+            ]
+          },
+          {
+            "unit_id": "u5",
+            "description": "which film's director died later",
+            "subject": "",
+            "necessary": true,
+            "depends_on": [
+              "u1",
+              "u2",
+              "u3",
+              "u4"
+            ],
+            "queries": [
+              "compare death dates of {u1} and {u2}"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "sequence": 7,
+      "time_s": 4.266,
+      "type": "plan_review_finished",
+      "changed": true,
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "director of Searchlight On Japan",
+          "necessary": false,
+          "depends_on": [],
+          "queries": [
+            "Searchlight On Japan director",
+            "Searchlight On Japan film director"
+          ],
+          "subject": "Searchlight On Japan"
+        },
+        {
+          "unit_id": "u2",
+          "description": "director of Beauties Of The Night",
+          "necessary": false,
+          "depends_on": [],
+          "queries": [
+            "Beauties Of The Night director",
+            "Beauties Of The Night film director"
+          ],
+          "subject": "Beauties Of The Night"
+        },
+        {
+          "unit_id": "u3",
+          "description": "death date of the director of Searchlight On Japan",
+          "necessary": false,
+          "depends_on": [
+            "u1"
+          ],
+          "queries": [
+            "{u1} death date",
+            "{u1} died"
+          ],
+          "subject": "{u1}"
+        },
+        {
+          "unit_id": "u4",
+          "description": "death date of the director of Beauties Of The Night",
+          "necessary": false,
+          "depends_on": [
+            "u2"
+          ],
+          "queries": [
+            "{u2} death date",
+            "{u2} died"
+          ],
+          "subject": "{u2}"
+        },
+        {
+          "unit_id": "u5",
+          "description": "which film's director died later",
+          "necessary": true,
+          "depends_on": [
+            "u1",
+            "u2",
+            "u3",
+            "u4"
+          ],
+          "queries": [
+            "compare death dates of {u1} and {u2}"
+          ],
+          "subject": ""
+        }
+      ],
+      "question_only": true
+    },
+    {
+      "sequence": 8,
+      "time_s": 4.266,
+      "type": "plan",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "director of Searchlight On Japan",
+          "necessary": false,
+          "depends_on": [],
+          "queries": [
+            "Searchlight On Japan director",
+            "Searchlight On Japan film director"
+          ],
+          "subject": "Searchlight On Japan"
+        },
+        {
+          "unit_id": "u2",
+          "description": "director of Beauties Of The Night",
+          "necessary": false,
+          "depends_on": [],
+          "queries": [
+            "Beauties Of The Night director",
+            "Beauties Of The Night film director"
+          ],
+          "subject": "Beauties Of The Night"
+        },
+        {
+          "unit_id": "u3",
+          "description": "death date of the director of Searchlight On Japan",
+          "necessary": false,
+          "depends_on": [
+            "u1"
+          ],
+          "queries": [
+            "{u1} death date",
+            "{u1} died"
+          ],
+          "subject": "{u1}"
+        },
+        {
+          "unit_id": "u4",
+          "description": "death date of the director of Beauties Of The Night",
+          "necessary": false,
+          "depends_on": [
+            "u2"
+          ],
+          "queries": [
+            "{u2} death date",
+            "{u2} died"
+          ],
+          "subject": "{u2}"
+        },
+        {
+          "unit_id": "u5",
+          "description": "which film's director died later",
+          "necessary": true,
+          "depends_on": [
+            "u1",
+            "u2",
+            "u3",
+            "u4"
+          ],
+          "queries": [
+            "compare death dates of {u1} and {u2}"
+          ],
+          "subject": ""
+        }
+      ]
+    },
+    {
+      "sequence": 9,
+      "time_s": 4.266,
+      "type": "trace_batch_requested"
+    },
+    {
+      "sequence": 10,
+      "time_s": 4.266,
+      "type": "search_finished",
+      "query": "[scheduled evidence]",
+      "subject": "",
+      "status": "ok",
+      "returned_pages": [],
+      "mode": "trace",
+      "unit_id": "__scheduled_evidence__"
+    },
+    {
+      "sequence": 11,
+      "time_s": 4.266,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d1s0",
+        "title": "Abhishek Saxena",
+        "url": "https://trace.invalid/2wikimultihopqa_995e4c44088711ebbd6dac1f6bf848b6_short/d1s0",
+        "text": "Abhishek Saxena is an Indian Bollywood and Punjabi film director who directed the movie Phullu.",
+        "visible_time_s": 4.26600000000326,
+        "requested_subject": "",
+        "resolved_title": "Abhishek Saxena",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 12,
+      "time_s": 4.266,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d1s1",
+        "title": "Abhishek Saxena",
+        "url": "https://trace.invalid/2wikimultihopqa_995e4c44088711ebbd6dac1f6bf848b6_short/d1s1",
+        "text": "The Phullu movie was released in theaters on 16 June 2017, in which film Sharib Hashmi is the lead role.",
+        "visible_time_s": 4.26600000000326,
+        "requested_subject": "",
+        "resolved_title": "Abhishek Saxena",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 13,
+      "time_s": 4.266,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d1s2",
+        "title": "Abhishek Saxena",
+        "url": "https://trace.invalid/2wikimultihopqa_995e4c44088711ebbd6dac1f6bf848b6_short/d1s2",
+        "text": "Apart from these, he has also directed Patiala Dreamz, this is a Punjabi film.",
+        "visible_time_s": 4.26600000000326,
+        "requested_subject": "",
+        "resolved_title": "Abhishek Saxena",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 14,
+      "time_s": 4.266,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d1s3",
+        "title": "Abhishek Saxena",
+        "url": "https://trace.invalid/2wikimultihopqa_995e4c44088711ebbd6dac1f6bf848b6_short/d1s3",
+        "text": "This film was screened in cinemas in 2014.",
+        "visible_time_s": 4.26600000000326,
+        "requested_subject": "",
+        "resolved_title": "Abhishek Saxena",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 15,
+      "time_s": 4.266,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d4s0",
+        "title": "Searchlight on Japan",
+        "url": "https://trace.invalid/2wikimultihopqa_995e4c44088711ebbd6dac1f6bf848b6_short/d4s0",
+        "text": "Searchlight on Japan is an Australian documentary about the Allied occupation of Japan after World War II directed by Ken G. Hall.",
+        "visible_time_s": 4.26600000000326,
+        "requested_subject": "",
+        "resolved_title": "Searchlight on Japan",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 16,
+      "time_s": 4.266,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d4s1",
+        "title": "Searchlight on Japan",
+        "url": "https://trace.invalid/2wikimultihopqa_995e4c44088711ebbd6dac1f6bf848b6_short/d4s1",
+        "text": "The film was sold to American television.",
+        "visible_time_s": 4.26600000000326,
+        "requested_subject": "",
+        "resolved_title": "Searchlight on Japan",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 17,
+      "time_s": 4.266,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d5s0",
+        "title": "Robert Forsyth (writer)",
+        "url": "https://trace.invalid/2wikimultihopqa_995e4c44088711ebbd6dac1f6bf848b6_short/d5s0",
+        "text": "Robert Forsyth( 1766– 1845), was a Scottish writer, best known for his five- volume work,\" The Beauties of Scotland\".",
+        "visible_time_s": 4.26600000000326,
+        "requested_subject": "",
+        "resolved_title": "Robert Forsyth (writer)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 18,
+      "time_s": 4.266,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d8s0",
+        "title": "Marhy",
+        "url": "https://trace.invalid/2wikimultihopqa_995e4c44088711ebbd6dac1f6bf848b6_short/d8s0",
+        "text": ", is a Japanese artist, singer- songwriter, and arranger based on Japan.",
+        "visible_time_s": 4.26600000000326,
+        "requested_subject": "",
+        "resolved_title": "Marhy",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 19,
+      "time_s": 4.266,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d9s0",
+        "title": "Beauties of the Night",
+        "url": "https://trace.invalid/2wikimultihopqa_995e4c44088711ebbd6dac1f6bf848b6_short/d9s0",
+        "text": "Les Belles de nuit (US title: Beauties of the Night) is a 1952 French language motion picture fantasy directed and written by René Clair who co-produced with Angelo Rizzoli.",
+        "visible_time_s": 4.26600000000326,
+        "requested_subject": "",
+        "resolved_title": "Beauties of the Night",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 20,
+      "time_s": 4.266,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d9s1",
+        "title": "Beauties of the Night",
+        "url": "https://trace.invalid/2wikimultihopqa_995e4c44088711ebbd6dac1f6bf848b6_short/d9s1",
+        "text": "The film stars Gérard Philipe, Martine Carol, Gina Lollobrigida and Magali Vendeuil.",
+        "visible_time_s": 4.26600000000326,
+        "requested_subject": "",
+        "resolved_title": "Beauties of the Night",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 21,
+      "time_s": 4.266,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d9s2",
+        "title": "Beauties of the Night",
+        "url": "https://trace.invalid/2wikimultihopqa_995e4c44088711ebbd6dac1f6bf848b6_short/d9s2",
+        "text": "It was nominated the Venice Film Festival for Golden Lion (René Clair).",
+        "visible_time_s": 4.26600000000326,
+        "requested_subject": "",
+        "resolved_title": "Beauties of the Night",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 22,
+      "time_s": 4.266,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d2s0",
+        "title": "René Clair",
+        "url": "https://trace.invalid/2wikimultihopqa_995e4c44088711ebbd6dac1f6bf848b6_short/d2s0",
+        "text": "René Clair( 11 November 1898 – 15 March 1981) born René- Lucien Chomette, was a French filmmaker and writer.",
+        "visible_time_s": 4.26600000000326,
+        "requested_subject": "",
+        "resolved_title": "René Clair",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 23,
+      "time_s": 4.266,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d2s1",
+        "title": "René Clair",
+        "url": "https://trace.invalid/2wikimultihopqa_995e4c44088711ebbd6dac1f6bf848b6_short/d2s1",
+        "text": "He first established his reputation in the 1920s as a director of silent films in which comedy was often mingled with fantasy.",
+        "visible_time_s": 4.26600000000326,
+        "requested_subject": "",
+        "resolved_title": "René Clair",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 24,
+      "time_s": 4.266,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d2s2",
+        "title": "René Clair",
+        "url": "https://trace.invalid/2wikimultihopqa_995e4c44088711ebbd6dac1f6bf848b6_short/d2s2",
+        "text": "He went on to make some of the most innovative early sound films in France, before going abroad to work in the UK and USA for more than a decade.",
+        "visible_time_s": 4.26600000000326,
+        "requested_subject": "",
+        "resolved_title": "René Clair",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 25,
+      "time_s": 4.266,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d2s3",
+        "title": "René Clair",
+        "url": "https://trace.invalid/2wikimultihopqa_995e4c44088711ebbd6dac1f6bf848b6_short/d2s3",
+        "text": "Returning to France after World War II, he continued to make films that were characterised by their elegance and wit, often presenting a nostalgic view of French life in earlier years.",
+        "visible_time_s": 4.26600000000326,
+        "requested_subject": "",
+        "resolved_title": "René Clair",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 26,
+      "time_s": 4.266,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d2s4",
+        "title": "René Clair",
+        "url": "https://trace.invalid/2wikimultihopqa_995e4c44088711ebbd6dac1f6bf848b6_short/d2s4",
+        "text": "He was elected to the Académie française in 1960.",
+        "visible_time_s": 4.26600000000326,
+        "requested_subject": "",
+        "resolved_title": "René Clair",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 27,
+      "time_s": 4.266,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d2s5",
+        "title": "René Clair",
+        "url": "https://trace.invalid/2wikimultihopqa_995e4c44088711ebbd6dac1f6bf848b6_short/d2s5",
+        "text": "Clair's best known films include\" The Italian Straw Hat\"( 1928),\" Under the Roofs of Paris\"( 1930),\" Le Million\"( 1931),\" À nous la liberté\"( 1931),\" I Married a Witch\"( 1942), and\" And Then There Were None\"( 1945).",
+        "visible_time_s": 4.26600000000326,
+        "requested_subject": "",
+        "resolved_title": "René Clair",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 28,
+      "time_s": 4.266,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d3s0",
+        "title": "Brian Kennedy (gallery director)",
+        "url": "https://trace.invalid/2wikimultihopqa_995e4c44088711ebbd6dac1f6bf848b6_short/d3s0",
+        "text": "Brian Patrick Kennedy( born 5 November 1961) is an Irish- born art museum director who has worked in Ireland and Australia, and now lives and works in the United States.",
+        "visible_time_s": 4.26600000000326,
+        "requested_subject": "",
+        "resolved_title": "Brian Kennedy (gallery director)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 29,
+      "time_s": 4.266,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d3s1",
+        "title": "Brian Kennedy (gallery director)",
+        "url": "https://trace.invalid/2wikimultihopqa_995e4c44088711ebbd6dac1f6bf848b6_short/d3s1",
+        "text": "He is currently the director of the Peabody Essex Museum.",
+        "visible_time_s": 4.26600000000326,
+        "requested_subject": "",
+        "resolved_title": "Brian Kennedy (gallery director)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 30,
+      "time_s": 4.266,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d3s2",
+        "title": "Brian Kennedy (gallery director)",
+        "url": "https://trace.invalid/2wikimultihopqa_995e4c44088711ebbd6dac1f6bf848b6_short/d3s2",
+        "text": "He was the director of the Toledo Museum of Art in Ohio from 2010 to 2019.",
+        "visible_time_s": 4.26600000000326,
+        "requested_subject": "",
+        "resolved_title": "Brian Kennedy (gallery director)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 31,
+      "time_s": 4.266,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d3s3",
+        "title": "Brian Kennedy (gallery director)",
+        "url": "https://trace.invalid/2wikimultihopqa_995e4c44088711ebbd6dac1f6bf848b6_short/d3s3",
+        "text": "He was the director of the Hood Museum of Art from 2005 to 2010, and the National Gallery of Australia( Canberra) from 1997- 2004.",
+        "visible_time_s": 4.26600000000326,
+        "requested_subject": "",
+        "resolved_title": "Brian Kennedy (gallery director)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 32,
+      "time_s": 4.266,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d6s0",
+        "title": "Ken G. Hall",
+        "url": "https://trace.invalid/2wikimultihopqa_995e4c44088711ebbd6dac1f6bf848b6_short/d6s0",
+        "text": "Kenneth George Hall, AO, OBE( 22 February 1901 – 8 February 1994), better known as Ken G. Hall, was an Australian film producer and director, considered one of the most important figures in the history of the Australian film industry.",
+        "visible_time_s": 4.26600000000326,
+        "requested_subject": "",
+        "resolved_title": "Ken G. Hall",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 33,
+      "time_s": 4.266,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d6s1",
+        "title": "Ken G. Hall",
+        "url": "https://trace.invalid/2wikimultihopqa_995e4c44088711ebbd6dac1f6bf848b6_short/d6s1",
+        "text": "He was the first Australian to win an Academy Award.",
+        "visible_time_s": 4.26600000000326,
+        "requested_subject": "",
+        "resolved_title": "Ken G. Hall",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 34,
+      "time_s": 4.266,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d7s0",
+        "title": "Ben Palmer",
+        "url": "https://trace.invalid/2wikimultihopqa_995e4c44088711ebbd6dac1f6bf848b6_short/d7s0",
+        "text": "Ben Palmer is a British film and television director who is known for being the director of\" Bo' Selecta\" and\" The Inbetweeners\".",
+        "visible_time_s": 4.26600000000326,
+        "requested_subject": "",
+        "resolved_title": "Ben Palmer",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 35,
+      "time_s": 4.266,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d10s0",
+        "title": "Jaime Chik",
+        "url": "https://trace.invalid/2wikimultihopqa_995e4c44088711ebbd6dac1f6bf848b6_short/d10s0",
+        "text": "Jaime Chik Mei-chun( born 5 January 1962) is a Hong Kong TVB actress and was named as one of the Five Beauties of TVB.",
+        "visible_time_s": 4.26600000000326,
+        "requested_subject": "",
+        "resolved_title": "Jaime Chik",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 36,
+      "time_s": 5.0,
+      "type": "feedback_requested",
+      "feedback_kind": "progress",
+      "execution_state": {
+        "stage": "checking",
+        "searches_started": 1,
+        "searches_completed": 1,
+        "active_searches": 0,
+        "evidence_count": 25,
+        "supported_units": 0,
+        "output_units": 0
+      }
+    },
+    {
+      "sequence": 37,
+      "time_s": 6.735,
+      "type": "failure",
+      "error": "LLM did not return one valid JSON object"
+    },
+    {
+      "sequence": 38,
+      "time_s": 6.735,
+      "type": "utterance",
+      "action": "Final Answer",
+      "claims": [],
+      "text": "The search or verification failed, so I cannot give a reliable answer yet.",
+      "language": "en"
+    },
+    {
+      "sequence": 39,
+      "time_s": 6.735,
+      "type": "finished",
+      "status": "error"
+    }
+  ],
+  "note": "Prototype model judgments are not independent gold scores. Output event times are not spoken claim times.",
+  "evidence_mode": "scheduled_trace",
+  "audio": {
+    "enabled": true,
+    "mode": "windows",
+    "play": false,
+    "status": "ok",
+    "errors": [],
+    "records": [
+      {
+        "event_sequence": 1,
+        "sentence_index": 1,
+        "sentence_count": 1,
+        "language": "en",
+        "text": "I’ll look up which film’s director died later, Searchlight On Japan or Beauties Of The Night.",
+        "action": "Backchannel",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 1.9539999999979045,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1\\samples\\0287\\audio\\segments\\0001_01.wav",
+        "duration_s": 6.098367346938775,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 2.735000000000582,
+        "synthesis_and_playback_s": 0.7810000000026776
+      },
+      {
+        "event_sequence": 38,
+        "sentence_index": 1,
+        "sentence_count": 1,
+        "language": "en",
+        "text": "The search or verification failed, so I cannot give a reliable answer yet.",
+        "action": "Final Answer",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 6.735000000000582,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1\\samples\\0287\\audio\\segments\\0038_01.wav",
+        "duration_s": 5.348526077097506,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 7.51600000000326,
+        "synthesis_and_playback_s": 0.7810000000026776
+      }
+    ],
+    "wave": {
+      "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1\\samples\\0287\\audio\\response.wav",
+      "duration_s": 14.181904761904763,
+      "timeline": [
+        {
+          "event_sequence": 1,
+          "sentence_index": 1,
+          "action": "Backchannel",
+          "text": "I’ll look up which film’s director died later, Searchlight On Japan or Beauties Of The Night.",
+          "wave_start_s": 2.735011337868481,
+          "wave_end_s": 8.833378684807256
+        },
+        {
+          "event_sequence": 38,
+          "sentence_index": 1,
+          "action": "Final Answer",
+          "text": "The search or verification failed, so I cannot give a reliable answer yet.",
+          "wave_start_s": 8.833378684807256,
+          "wave_end_s": 14.181904761904763
+        }
+      ]
+    }
+  },
+  "evaluation": {
+    "mode": "b_final_revised_trace",
+    "trace_id": "2wikimultihopqa_995e4c44088711ebbd6dac1f6bf848b6_short",
+    "sample_id": "2wikimultihopqa_995e4c44088711ebbd6dac1f6bf848b6",
+    "total_wall_s": 7.531999999991967,
+    "question_timeout_s": 180,
+    "audio_enabled": true,
+    "history_enabled": false,
+    "text_pipeline_wall_s": 6.735000000000582,
+    "effective_settings": {
+      "base_url": "https://tinker.thinkingmachines.dev/services/tinker-prod/oai/api/v1",
+      "model": "openai/gpt-oss-120b",
+      "judge_model": "tinker://f9e9a6c1-e203-5c2c-acdd-68fe67378ca4:train:0/sampler_weights/epoch-0001",
+      "judge_reasoning_effort": "low",
+      "wiki_language": "en",
+      "user_agent": "CascadeSystem/0.1 (educational research prototype)",
+      "timeout_s": 45.0,
+      "max_tokens": 4096,
+      "reasoning_effort": "low",
+      "progress_s": 3.0,
+      "feedback_timeout_s": 6.0,
+      "search_limit": 3,
+      "max_units": 8,
+      "max_searches": 16,
+      "max_sources": 25,
+      "source_chars": 234,
+      "evidence_chars": 2797,
+      "concurrency": 3
+    },
+    "timing_kind": "unknown",
+    "scheduler": "wall-paced fixed B arrivals",
+    "split": "eval_reserved",
+    "empty_evidence_sentences_ignored": 0
+  }
+}

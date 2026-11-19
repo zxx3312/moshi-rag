@@ -1,0 +1,2253 @@
+{
+  "question": "Which film has the director born later, The Borrowed Babies or Ayaash?",
+  "resolved_question": "Which film has the director born later, The Borrowed Babies or Ayaash?",
+  "used_history_turn_ids": [],
+  "response_language": "en",
+  "status": "complete",
+  "clock": "wall_monotonic",
+  "time_origin": "question_text_ready_after_optional_asr",
+  "model": "openai/gpt-oss-120b",
+  "judge_model": "tinker://f9e9a6c1-e203-5c2c-acdd-68fe67378ca4:train:0/sampler_weights/epoch-0001",
+  "units": [
+    {
+      "unit_id": "u1",
+      "description": "director of The Borrowed Babies",
+      "necessary": false,
+      "depends_on": [],
+      "queries": [
+        "The Borrowed Babies film director",
+        "The Borrowed Babies director"
+      ],
+      "subject": "The Borrowed Babies"
+    },
+    {
+      "unit_id": "u2",
+      "description": "director of Ayaash",
+      "necessary": false,
+      "depends_on": [],
+      "queries": [
+        "Ayaash film director",
+        "Ayaash director"
+      ],
+      "subject": "Ayaash"
+    },
+    {
+      "unit_id": "u3",
+      "description": "birth year of the director of The Borrowed Babies",
+      "necessary": false,
+      "depends_on": [
+        "u1"
+      ],
+      "queries": [
+        "{u1} birth year",
+        "{u1} date of birth"
+      ],
+      "subject": "{u1}"
+    },
+    {
+      "unit_id": "u4",
+      "description": "birth year of the director of Ayaash",
+      "necessary": false,
+      "depends_on": [
+        "u2"
+      ],
+      "queries": [
+        "{u2} birth year",
+        "{u2} date of birth"
+      ],
+      "subject": "{u2}"
+    },
+    {
+      "unit_id": "u5",
+      "description": "which film has the director born later",
+      "necessary": true,
+      "depends_on": [
+        "u3",
+        "u4"
+      ],
+      "queries": [
+        "compare birth years {u3} and {u4}"
+      ],
+      "subject": ""
+    }
+  ],
+  "judgments": {
+    "u1": {
+      "label": "SUPPORTED",
+      "value": "Michael Curtiz",
+      "citations": [
+        "d2s0"
+      ],
+      "quotes": [
+        {
+          "evidence_id": "d2s0",
+          "text": "The Borrowed Babies is a 1914 Austro- Hungarian film directed by Michael Curtiz."
+        }
+      ],
+      "reason": "Supported by the cited visible sentences and dependencies."
+    },
+    "u2": {
+      "label": "SUPPORTED",
+      "value": "Shakti Samanta",
+      "citations": [
+        "d6s0"
+      ],
+      "quotes": [
+        {
+          "evidence_id": "d6s0",
+          "text": "Ayaash is a 1982 Indian Bollywood film produced and directed by Shakti Samanta."
+        }
+      ],
+      "reason": "Supported by the cited visible sentences and dependencies."
+    },
+    "u3": {
+      "label": "SUPPORTED",
+      "value": "1886",
+      "citations": [
+        "d7s0",
+        "d7s1"
+      ],
+      "quotes": [
+        {
+          "evidence_id": "d7s0",
+          "text": "Michael Curtiz (born Manó Kaminer(1886-1905)"
+        },
+        {
+          "evidence_id": "d7s1",
+          "text": "Mihály Kertész (1905); December 24, 1886 April 11, 1962) was a Hungarian-born American film director, recognized as one of the most prolific directors in history."
+        }
+      ],
+      "reason": "Supported by the cited visible sentences and dependencies."
+    },
+    "u4": {
+      "label": "SUPPORTED",
+      "value": "1926",
+      "citations": [
+        "d3s0"
+      ],
+      "quotes": [
+        {
+          "evidence_id": "d3s0",
+          "text": "Shakti Samanta( 13 January 1926 – 9 April 2009) was an Indian film director and producer, who founded Shakti Films in 1957, which is most known for films such as\" Howrah BridgeChina TownKashmir Ki KaliAn Evening in ParisAradhanaKati Patang\", and\" Amar Prem\"."
+        }
+      ],
+      "reason": "Supported by the cited visible sentences and dependencies."
+    },
+    "u5": {
+      "label": "SUPPORTED",
+      "value": "Ayaash",
+      "citations": [
+        "d7s0",
+        "d7s1"
+      ],
+      "quotes": [
+        {
+          "evidence_id": "d7s0",
+          "text": "Michael Curtiz (born Manó Kaminer(1886-1905)"
+        },
+        {
+          "evidence_id": "d7s1",
+          "text": "Mihály Kertész (1905); December 24, 1886 April 11, 1962) was a Hungarian-born American film director, recognized as one of the most prolific directors in history."
+        }
+      ],
+      "reason": "Supported by the cited visible sentences and dependencies."
+    }
+  },
+  "evidence": [
+    {
+      "evidence_id": "d1s0",
+      "title": "Fred Roy Krug",
+      "url": "https://trace.invalid/2wikimultihopqa_98a3e5e9089111ebbd73ac1f6bf848b6_long/d1s0",
+      "text": "Fred R. Krug is an American film and television producer- director born in Bern, Switzerland.",
+      "visible_time_s": 5.375,
+      "requested_subject": "",
+      "resolved_title": "Fred Roy Krug",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d2s0",
+      "title": "The Borrowed Babies",
+      "url": "https://trace.invalid/2wikimultihopqa_98a3e5e9089111ebbd73ac1f6bf848b6_long/d2s0",
+      "text": "The Borrowed Babies is a 1914 Austro- Hungarian film directed by Michael Curtiz.",
+      "visible_time_s": 5.375,
+      "requested_subject": "",
+      "resolved_title": "The Borrowed Babies",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d5s0",
+      "title": "Sepideh Farsi",
+      "url": "https://trace.invalid/2wikimultihopqa_98a3e5e9089111ebbd73ac1f6bf848b6_long/d5s0",
+      "text": "Sepideh Farsi is an Iranian film director, born in Tehran in 1965.",
+      "visible_time_s": 5.375,
+      "requested_subject": "",
+      "resolved_title": "Sepideh Farsi",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d6s0",
+      "title": "Ayaash",
+      "url": "https://trace.invalid/2wikimultihopqa_98a3e5e9089111ebbd73ac1f6bf848b6_long/d6s0",
+      "text": "Ayaash is a 1982 Indian Bollywood film produced and directed by Shakti Samanta.",
+      "visible_time_s": 5.375,
+      "requested_subject": "",
+      "resolved_title": "Ayaash",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d6s1",
+      "title": "Ayaash",
+      "url": "https://trace.invalid/2wikimultihopqa_98a3e5e9089111ebbd73ac1f6bf848b6_long/d6s1",
+      "text": "It stars Sanjeev Kumar and Rati Agnihotri in pivotal roles.",
+      "visible_time_s": 5.375,
+      "requested_subject": "",
+      "resolved_title": "Ayaash",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d6s2",
+      "title": "Ayaash",
+      "url": "https://trace.invalid/2wikimultihopqa_98a3e5e9089111ebbd73ac1f6bf848b6_long/d6s2",
+      "text": "The movie is based on the 1972 Bengali movie\" Stree\".",
+      "visible_time_s": 5.375,
+      "requested_subject": "",
+      "resolved_title": "Ayaash",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d9s0",
+      "title": "W. Augustus Barratt",
+      "url": "https://trace.invalid/2wikimultihopqa_98a3e5e9089111ebbd73ac1f6bf848b6_long/d9s0",
+      "text": "W. Augustus Barratt( 1873- 1947) was a Scottish- born, later American, songwriter and musician.",
+      "visible_time_s": 5.375,
+      "requested_subject": "",
+      "resolved_title": "W. Augustus Barratt",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d3s0",
+      "title": "Shakti Samanta",
+      "url": "https://trace.invalid/2wikimultihopqa_98a3e5e9089111ebbd73ac1f6bf848b6_long/d3s0",
+      "text": "Shakti Samanta( 13 January 1926 – 9 April 2009) was an Indian film director and producer, who founded Shakti Films in 1957, which is most known for films such as\" Howrah BridgeChina TownKashmir Ki KaliAn Evening in ParisAradhanaKati Patang\", and\" Amar Prem\".",
+      "visible_time_s": 10.656000000002678,
+      "requested_subject": "",
+      "resolved_title": "Shakti Samanta",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d3s1",
+      "title": "Shakti Samanta",
+      "url": "https://trace.invalid/2wikimultihopqa_98a3e5e9089111ebbd73ac1f6bf848b6_long/d3s1",
+      "text": "He received Filmfare Awards for Best Film for\" Aradhana\"( 1969),\" Anuraag\"( 1973) and\" Amanush\", which was also made in Bengali, a language in which he made six films, including an Indo- Bangladesh joint production in 1984.",
+      "visible_time_s": 10.656000000002678,
+      "requested_subject": "",
+      "resolved_title": "Shakti Samanta",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d4s0",
+      "title": "Jacques Décombe",
+      "url": "https://trace.invalid/2wikimultihopqa_98a3e5e9089111ebbd73ac1f6bf848b6_long/d4s0",
+      "text": "Jacques Décombe is a French author, actor and director born in 1953.",
+      "visible_time_s": 10.656000000002678,
+      "requested_subject": "",
+      "resolved_title": "Jacques Décombe",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d7s0",
+      "title": "Michael Curtiz",
+      "url": "https://trace.invalid/2wikimultihopqa_98a3e5e9089111ebbd73ac1f6bf848b6_long/d7s0",
+      "text": "Michael Curtiz (born Manó Kaminer(1886-1905)",
+      "visible_time_s": 10.656000000002678,
+      "requested_subject": "",
+      "resolved_title": "Michael Curtiz",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d7s1",
+      "title": "Michael Curtiz",
+      "url": "https://trace.invalid/2wikimultihopqa_98a3e5e9089111ebbd73ac1f6bf848b6_long/d7s1",
+      "text": "Mihály Kertész (1905); December 24, 1886 April 11, 1962) was a Hungarian-born American film director, recognized as one of the most prolific directors in history.",
+      "visible_time_s": 10.656000000002678,
+      "requested_subject": "",
+      "resolved_title": "Michael Curtiz",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d7s2",
+      "title": "Michael Curtiz",
+      "url": "https://trace.invalid/2wikimultihopqa_98a3e5e9089111ebbd73ac1f6bf848b6_long/d7s2",
+      "text": "He directed classic films from the silent era and numerous others during Hollywood's Golden Age, when the studio system was prevalent.",
+      "visible_time_s": 10.656000000002678,
+      "requested_subject": "",
+      "resolved_title": "Michael Curtiz",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d7s3",
+      "title": "Michael Curtiz",
+      "url": "https://trace.invalid/2wikimultihopqa_98a3e5e9089111ebbd73ac1f6bf848b6_long/d7s3",
+      "text": "Curtiz was already a well-known director in Europe when Warner Bros. invited him to Hollywood in 1926, when he was 39 years of age.",
+      "visible_time_s": 10.656000000002678,
+      "requested_subject": "",
+      "resolved_title": "Michael Curtiz",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d7s4",
+      "title": "Michael Curtiz",
+      "url": "https://trace.invalid/2wikimultihopqa_98a3e5e9089111ebbd73ac1f6bf848b6_long/d7s4",
+      "text": "He had already directed 64 films in Europe, and soon helped Warner Bros. become the fastest-growing movie studio.",
+      "visible_time_s": 10.656000000002678,
+      "requested_subject": "",
+      "resolved_title": "Michael Curtiz",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d7s5",
+      "title": "Michael Curtiz",
+      "url": "https://trace.invalid/2wikimultihopqa_98a3e5e9089111ebbd73ac1f6bf848b6_long/d7s5",
+      "text": "He directed 102 films during his Hollywood career, mostly at Warners, where he directed ten actors to Oscar nominations.",
+      "visible_time_s": 10.656000000002678,
+      "requested_subject": "",
+      "resolved_title": "Michael Curtiz",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d7s6",
+      "title": "Michael Curtiz",
+      "url": "https://trace.invalid/2wikimultihopqa_98a3e5e9089111ebbd73ac1f6bf848b6_long/d7s6",
+      "text": "James Cagney and Joan Crawford won their only Academy Awards under Curtiz's direction.",
+      "visible_time_s": 10.656000000002678,
+      "requested_subject": "",
+      "resolved_title": "Michael Curtiz",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d7s7",
+      "title": "Michael Curtiz",
+      "url": "https://trace.invalid/2wikimultihopqa_98a3e5e9089111ebbd73ac1f6bf848b6_long/d7s7",
+      "text": "He put Doris Day and John Garfield on screen for the first time, and he made stars of Errol Flynn, Olivia de Havilland, and Bette Davis.",
+      "visible_time_s": 10.656000000002678,
+      "requested_subject": "",
+      "resolved_title": "Michael Curtiz",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d7s8",
+      "title": "Michael Curtiz",
+      "url": "https://trace.invalid/2wikimultihopqa_98a3e5e9089111ebbd73ac1f6bf848b6_long/d7s8",
+      "text": "He himself was nominated five times and won twice, once for Best Short Subject for \"Sons of Liberty\" and once as Best Director for \"Casablanca\".",
+      "visible_time_s": 10.656000000002678,
+      "requested_subject": "",
+      "resolved_title": "Michael Curtiz",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d7s9",
+      "title": "Michael Curtiz",
+      "url": "https://trace.invalid/2wikimultihopqa_98a3e5e9089111ebbd73ac1f6bf848b6_long/d7s9",
+      "text": "Curtiz introduced to Hollywood a unique visual style using artistic lighting, extensive and fluid camera movement, high crane shots, and unusual camera angles.",
+      "visible_time_s": 10.656000000002678,
+      "requested_subject": "",
+      "resolved_title": "Michael Curtiz",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d7s10",
+      "title": "Michael Curtiz",
+      "url": "https://trace.invalid/2wikimultihopqa_98a3e5e9089111ebbd73ac1f6bf848b6_long/d7s10",
+      "text": "He was versatile and could handle any kind of picture: melodrama, comedy, love story, film noir, musical, war story, Western, or historical epic.",
+      "visible_time_s": 10.656000000002678,
+      "requested_subject": "",
+      "resolved_title": "Michael Curtiz",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d7s11",
+      "title": "Michael Curtiz",
+      "url": "https://trace.invalid/2wikimultihopqa_98a3e5e9089111ebbd73ac1f6bf848b6_long/d7s11",
+      "text": "He always paid attention to the human-interest aspect of every story, stating that the \"human and fundamental problems of real people\" were the basis of all good drama.",
+      "visible_time_s": 10.656000000002678,
+      "requested_subject": "",
+      "resolved_title": "Michael Curtiz",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d7s12",
+      "title": "Michael Curtiz",
+      "url": "https://trace.invalid/2wikimultihopqa_98a3e5e9089111ebbd73ac1f6bf848b6_long/d7s12",
+      "text": "Curtiz helped popularize the classic swashbuckler with films such as \"Captain Blood\" (1935) and \"The Adventures of Robin Hood\" (1938).",
+      "visible_time_s": 10.656000000002678,
+      "requested_subject": "",
+      "resolved_title": "Michael Curtiz",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d7s13",
+      "title": "Michael Curtiz",
+      "url": "https://trace.invalid/2wikimultihopqa_98a3e5e9089111ebbd73ac1f6bf848b6_long/d7s13",
+      "text": "He directed many dramas which today are also considered classics, \"Angels with Dirty Faces\" (1938), \"The Sea Wolf\" (1941), \"Casablanca\" (1942), and \"Mildred Pierce\" (1945).",
+      "visible_time_s": 10.656000000002678,
+      "requested_subject": "",
+      "resolved_title": "Michael Curtiz",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d7s14",
+      "title": "Michael Curtiz",
+      "url": "https://trace.invalid/2wikimultihopqa_98a3e5e9089111ebbd73ac1f6bf848b6_long/d7s14",
+      "text": "He directed leading musicals, including \"Yankee Doodle Dandy\" (1942), \"",
+      "visible_time_s": 10.656000000002678,
+      "requested_subject": "",
+      "resolved_title": "Michael Curtiz",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d7s15",
+      "title": "Michael Curtiz",
+      "url": "https://trace.invalid/2wikimultihopqa_98a3e5e9089111ebbd73ac1f6bf848b6_long/d7s15",
+      "text": "This Is the Army\" (1943), and \"White Christmas\", and he made comedies with \"Life With Father\" (1947) and \"We're No Angels\" (1955).",
+      "visible_time_s": 10.656000000002678,
+      "requested_subject": "",
+      "resolved_title": "Michael Curtiz",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d8s0",
+      "title": "Yolonda Ross",
+      "url": "https://trace.invalid/2wikimultihopqa_98a3e5e9089111ebbd73ac1f6bf848b6_long/d8s0",
+      "text": "Yolonda Ross is an American character actress, writer and director born (31 July 1974).",
+      "visible_time_s": 10.656000000002678,
+      "requested_subject": "",
+      "resolved_title": "Yolonda Ross",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d10s0",
+      "title": "Claude Weisz",
+      "url": "https://trace.invalid/2wikimultihopqa_98a3e5e9089111ebbd73ac1f6bf848b6_long/d10s0",
+      "text": "Claude Weisz is a French film director born in Paris.",
+      "visible_time_s": 10.656000000002678,
+      "requested_subject": "",
+      "resolved_title": "Claude Weisz",
+      "entity_resolution": "unspecified"
+    }
+  ],
+  "searches": [
+    {
+      "query": "[scheduled evidence]",
+      "subject": "",
+      "status": "ok",
+      "returned_pages": [],
+      "mode": "trace",
+      "unit_id": "__scheduled_evidence__"
+    },
+    {
+      "query": "[scheduled evidence]",
+      "subject": "",
+      "status": "ok",
+      "returned_pages": [],
+      "mode": "trace",
+      "unit_id": "__scheduled_evidence__"
+    }
+  ],
+  "search_failures": [],
+  "llm_calls": [
+    {
+      "purpose": "feedback_generate",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 409,
+        "completion_tokens": 72,
+        "total_tokens": 481,
+        "prompt_tokens_details": {
+          "cached_tokens": 384
+        }
+      },
+      "latency_s": 1.36
+    },
+    {
+      "purpose": "decompose",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 799,
+        "completion_tokens": 392,
+        "total_tokens": 1191,
+        "prompt_tokens_details": {
+          "cached_tokens": 768
+        }
+      },
+      "latency_s": 2.406
+    },
+    {
+      "purpose": "feedback_generate",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 409,
+        "completion_tokens": 69,
+        "total_tokens": 478,
+        "prompt_tokens_details": {
+          "cached_tokens": 384
+        }
+      },
+      "latency_s": 0.703
+    },
+    {
+      "purpose": "plan_review",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 1158,
+        "completion_tokens": 650,
+        "total_tokens": 1808,
+        "prompt_tokens_details": {
+          "cached_tokens": 896
+        }
+      },
+      "latency_s": 2.969
+    },
+    {
+      "purpose": "feedback_verify",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 355,
+        "completion_tokens": 77,
+        "total_tokens": 432,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        }
+      },
+      "latency_s": 0.828
+    },
+    {
+      "purpose": "judge",
+      "model": "tinker://f9e9a6c1-e203-5c2c-acdd-68fe67378ca4:train:0/sampler_weights/epoch-0001",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 2364,
+        "completion_tokens": 314,
+        "total_tokens": 2678,
+        "prompt_tokens_details": {
+          "cached_tokens": 1024
+        }
+      },
+      "latency_s": 1.969
+    },
+    {
+      "purpose": "generate",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 780,
+        "completion_tokens": 81,
+        "total_tokens": 861,
+        "prompt_tokens_details": {
+          "cached_tokens": 512
+        }
+      },
+      "latency_s": 1.297
+    },
+    {
+      "purpose": "verify",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 1131,
+        "completion_tokens": 112,
+        "total_tokens": 1243,
+        "prompt_tokens_details": {
+          "cached_tokens": 768
+        }
+      },
+      "latency_s": 2.015
+    },
+    {
+      "purpose": "judge",
+      "model": "tinker://f9e9a6c1-e203-5c2c-acdd-68fe67378ca4:train:0/sampler_weights/epoch-0001",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 5448,
+        "completion_tokens": 609,
+        "total_tokens": 6057,
+        "prompt_tokens_details": {
+          "cached_tokens": 1280
+        }
+      },
+      "latency_s": 2.75
+    },
+    {
+      "purpose": "generate",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 724,
+        "completion_tokens": 54,
+        "total_tokens": 778,
+        "prompt_tokens_details": {
+          "cached_tokens": 384
+        }
+      },
+      "latency_s": 1.172
+    },
+    {
+      "purpose": "feedback_generate",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 410,
+        "completion_tokens": 52,
+        "total_tokens": 462,
+        "prompt_tokens_details": {
+          "cached_tokens": 384
+        }
+      },
+      "latency_s": 0.781
+    },
+    {
+      "purpose": "feedback_verify",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 353,
+        "completion_tokens": 86,
+        "total_tokens": 439,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        }
+      },
+      "latency_s": 0.984
+    },
+    {
+      "purpose": "verify",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 2178,
+        "completion_tokens": 158,
+        "total_tokens": 2336,
+        "prompt_tokens_details": {
+          "cached_tokens": 512
+        }
+      },
+      "latency_s": 2.188
+    }
+  ],
+  "search_diagnostics": [],
+  "output_enqueued_units": {
+    "u1": "Michael Curtiz",
+    "u2": "Shakti Samanta",
+    "u5": "Ayaash"
+  },
+  "events": [
+    {
+      "sequence": 0,
+      "time_s": 0.0,
+      "type": "feedback_requested",
+      "feedback_kind": "opening",
+      "execution_state": {
+        "stage": "planning",
+        "searches_started": 0,
+        "searches_completed": 0,
+        "active_searches": 0,
+        "evidence_count": 0,
+        "supported_units": 0,
+        "output_units": 0
+      }
+    },
+    {
+      "sequence": 1,
+      "time_s": 1.36,
+      "type": "utterance",
+      "action": "Backchannel",
+      "text": "Let me check.",
+      "claims": [],
+      "feedback_source": "fallback",
+      "feedback_status_claim": "intent",
+      "feedback_fallback_reason": "feedback_may_contain_answer_or_unearned_result",
+      "execution_state": {
+        "stage": "planning",
+        "searches_started": 0,
+        "searches_completed": 0,
+        "active_searches": 0,
+        "evidence_count": 0,
+        "supported_units": 0,
+        "output_units": 0
+      },
+      "language": "en"
+    },
+    {
+      "sequence": 2,
+      "time_s": 2.406,
+      "type": "decompose_reply",
+      "reply": {
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "director of The Borrowed Babies",
+            "subject": "The Borrowed Babies",
+            "necessary": false,
+            "depends_on": [],
+            "queries": [
+              "The Borrowed Babies film director"
+            ]
+          },
+          {
+            "unit_id": "u2",
+            "description": "director of Ayaash",
+            "subject": "Ayaash",
+            "necessary": false,
+            "depends_on": [],
+            "queries": [
+              "Ayaash film director"
+            ]
+          },
+          {
+            "unit_id": "u3",
+            "description": "birth year of the director of The Borrowed Babies",
+            "subject": "{u1}",
+            "necessary": false,
+            "depends_on": [
+              "u1"
+            ],
+            "queries": [
+              "{u1} birth year"
+            ]
+          },
+          {
+            "unit_id": "u4",
+            "description": "birth year of the director of Ayaash",
+            "subject": "{u2}",
+            "necessary": false,
+            "depends_on": [
+              "u2"
+            ],
+            "queries": [
+              "{u2} birth year"
+            ]
+          },
+          {
+            "unit_id": "u5",
+            "description": "which film has the director born later",
+            "subject": "",
+            "necessary": true,
+            "depends_on": [
+              "u3",
+              "u4"
+            ],
+            "queries": [
+              "compare birth years {u3} and {u4}"
+            ]
+          }
+        ]
+      },
+      "attempt": 1,
+      "repair": false
+    },
+    {
+      "sequence": 3,
+      "time_s": 2.406,
+      "type": "plan_review_requested",
+      "max_reviews": 1,
+      "question_only": true
+    },
+    {
+      "sequence": 4,
+      "time_s": 4.469,
+      "type": "feedback_requested",
+      "feedback_kind": "progress",
+      "execution_state": {
+        "stage": "planning",
+        "searches_started": 0,
+        "searches_completed": 0,
+        "active_searches": 0,
+        "evidence_count": 0,
+        "supported_units": 0,
+        "output_units": 0
+      }
+    },
+    {
+      "sequence": 5,
+      "time_s": 5.375,
+      "type": "plan_review_reply",
+      "reply": {
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "director of The Borrowed Babies",
+            "subject": "The Borrowed Babies",
+            "necessary": false,
+            "depends_on": [],
+            "queries": [
+              "The Borrowed Babies film director",
+              "The Borrowed Babies director"
+            ]
+          },
+          {
+            "unit_id": "u2",
+            "description": "director of Ayaash",
+            "subject": "Ayaash",
+            "necessary": false,
+            "depends_on": [],
+            "queries": [
+              "Ayaash film director",
+              "Ayaash director"
+            ]
+          },
+          {
+            "unit_id": "u3",
+            "description": "birth year of the director of The Borrowed Babies",
+            "subject": "{u1}",
+            "necessary": false,
+            "depends_on": [
+              "u1"
+            ],
+            "queries": [
+              "{u1} birth year",
+              "{u1} date of birth"
+            ]
+          },
+          {
+            "unit_id": "u4",
+            "description": "birth year of the director of Ayaash",
+            "subject": "{u2}",
+            "necessary": false,
+            "depends_on": [
+              "u2"
+            ],
+            "queries": [
+              "{u2} birth year",
+              "{u2} date of birth"
+            ]
+          },
+          {
+            "unit_id": "u5",
+            "description": "which film has the director born later",
+            "subject": "",
+            "necessary": true,
+            "depends_on": [
+              "u3",
+              "u4"
+            ],
+            "queries": [
+              "compare birth years {u3} and {u4}"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "sequence": 6,
+      "time_s": 5.375,
+      "type": "plan_review_finished",
+      "changed": true,
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "director of The Borrowed Babies",
+          "necessary": false,
+          "depends_on": [],
+          "queries": [
+            "The Borrowed Babies film director",
+            "The Borrowed Babies director"
+          ],
+          "subject": "The Borrowed Babies"
+        },
+        {
+          "unit_id": "u2",
+          "description": "director of Ayaash",
+          "necessary": false,
+          "depends_on": [],
+          "queries": [
+            "Ayaash film director",
+            "Ayaash director"
+          ],
+          "subject": "Ayaash"
+        },
+        {
+          "unit_id": "u3",
+          "description": "birth year of the director of The Borrowed Babies",
+          "necessary": false,
+          "depends_on": [
+            "u1"
+          ],
+          "queries": [
+            "{u1} birth year",
+            "{u1} date of birth"
+          ],
+          "subject": "{u1}"
+        },
+        {
+          "unit_id": "u4",
+          "description": "birth year of the director of Ayaash",
+          "necessary": false,
+          "depends_on": [
+            "u2"
+          ],
+          "queries": [
+            "{u2} birth year",
+            "{u2} date of birth"
+          ],
+          "subject": "{u2}"
+        },
+        {
+          "unit_id": "u5",
+          "description": "which film has the director born later",
+          "necessary": true,
+          "depends_on": [
+            "u3",
+            "u4"
+          ],
+          "queries": [
+            "compare birth years {u3} and {u4}"
+          ],
+          "subject": ""
+        }
+      ],
+      "question_only": true
+    },
+    {
+      "sequence": 7,
+      "time_s": 5.375,
+      "type": "plan",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "director of The Borrowed Babies",
+          "necessary": false,
+          "depends_on": [],
+          "queries": [
+            "The Borrowed Babies film director",
+            "The Borrowed Babies director"
+          ],
+          "subject": "The Borrowed Babies"
+        },
+        {
+          "unit_id": "u2",
+          "description": "director of Ayaash",
+          "necessary": false,
+          "depends_on": [],
+          "queries": [
+            "Ayaash film director",
+            "Ayaash director"
+          ],
+          "subject": "Ayaash"
+        },
+        {
+          "unit_id": "u3",
+          "description": "birth year of the director of The Borrowed Babies",
+          "necessary": false,
+          "depends_on": [
+            "u1"
+          ],
+          "queries": [
+            "{u1} birth year",
+            "{u1} date of birth"
+          ],
+          "subject": "{u1}"
+        },
+        {
+          "unit_id": "u4",
+          "description": "birth year of the director of Ayaash",
+          "necessary": false,
+          "depends_on": [
+            "u2"
+          ],
+          "queries": [
+            "{u2} birth year",
+            "{u2} date of birth"
+          ],
+          "subject": "{u2}"
+        },
+        {
+          "unit_id": "u5",
+          "description": "which film has the director born later",
+          "necessary": true,
+          "depends_on": [
+            "u3",
+            "u4"
+          ],
+          "queries": [
+            "compare birth years {u3} and {u4}"
+          ],
+          "subject": ""
+        }
+      ]
+    },
+    {
+      "sequence": 8,
+      "time_s": 5.375,
+      "type": "trace_batch_requested"
+    },
+    {
+      "sequence": 9,
+      "time_s": 5.375,
+      "type": "search_finished",
+      "query": "[scheduled evidence]",
+      "subject": "",
+      "status": "ok",
+      "returned_pages": [],
+      "mode": "trace",
+      "unit_id": "__scheduled_evidence__"
+    },
+    {
+      "sequence": 10,
+      "time_s": 5.375,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d1s0",
+        "title": "Fred Roy Krug",
+        "url": "https://trace.invalid/2wikimultihopqa_98a3e5e9089111ebbd73ac1f6bf848b6_long/d1s0",
+        "text": "Fred R. Krug is an American film and television producer- director born in Bern, Switzerland.",
+        "visible_time_s": 5.375,
+        "requested_subject": "",
+        "resolved_title": "Fred Roy Krug",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 11,
+      "time_s": 5.375,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d2s0",
+        "title": "The Borrowed Babies",
+        "url": "https://trace.invalid/2wikimultihopqa_98a3e5e9089111ebbd73ac1f6bf848b6_long/d2s0",
+        "text": "The Borrowed Babies is a 1914 Austro- Hungarian film directed by Michael Curtiz.",
+        "visible_time_s": 5.375,
+        "requested_subject": "",
+        "resolved_title": "The Borrowed Babies",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 12,
+      "time_s": 5.375,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d5s0",
+        "title": "Sepideh Farsi",
+        "url": "https://trace.invalid/2wikimultihopqa_98a3e5e9089111ebbd73ac1f6bf848b6_long/d5s0",
+        "text": "Sepideh Farsi is an Iranian film director, born in Tehran in 1965.",
+        "visible_time_s": 5.375,
+        "requested_subject": "",
+        "resolved_title": "Sepideh Farsi",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 13,
+      "time_s": 5.375,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d6s0",
+        "title": "Ayaash",
+        "url": "https://trace.invalid/2wikimultihopqa_98a3e5e9089111ebbd73ac1f6bf848b6_long/d6s0",
+        "text": "Ayaash is a 1982 Indian Bollywood film produced and directed by Shakti Samanta.",
+        "visible_time_s": 5.375,
+        "requested_subject": "",
+        "resolved_title": "Ayaash",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 14,
+      "time_s": 5.375,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d6s1",
+        "title": "Ayaash",
+        "url": "https://trace.invalid/2wikimultihopqa_98a3e5e9089111ebbd73ac1f6bf848b6_long/d6s1",
+        "text": "It stars Sanjeev Kumar and Rati Agnihotri in pivotal roles.",
+        "visible_time_s": 5.375,
+        "requested_subject": "",
+        "resolved_title": "Ayaash",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 15,
+      "time_s": 5.375,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d6s2",
+        "title": "Ayaash",
+        "url": "https://trace.invalid/2wikimultihopqa_98a3e5e9089111ebbd73ac1f6bf848b6_long/d6s2",
+        "text": "The movie is based on the 1972 Bengali movie\" Stree\".",
+        "visible_time_s": 5.375,
+        "requested_subject": "",
+        "resolved_title": "Ayaash",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 16,
+      "time_s": 5.375,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d9s0",
+        "title": "W. Augustus Barratt",
+        "url": "https://trace.invalid/2wikimultihopqa_98a3e5e9089111ebbd73ac1f6bf848b6_long/d9s0",
+        "text": "W. Augustus Barratt( 1873- 1947) was a Scottish- born, later American, songwriter and musician.",
+        "visible_time_s": 5.375,
+        "requested_subject": "",
+        "resolved_title": "W. Augustus Barratt",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 17,
+      "time_s": 6.0,
+      "type": "utterance",
+      "action": "Progress",
+      "text": "I'm planning the steps to compare the directors' birth dates.",
+      "claims": [],
+      "feedback_source": "model",
+      "feedback_status_claim": "processing",
+      "feedback_fallback_reason": "",
+      "execution_state": {
+        "stage": "checking",
+        "searches_started": 1,
+        "searches_completed": 1,
+        "active_searches": 0,
+        "evidence_count": 7,
+        "supported_units": 0,
+        "output_units": 0
+      },
+      "language": "en"
+    },
+    {
+      "sequence": 18,
+      "time_s": 7.344,
+      "type": "judge_reply",
+      "reply": {
+        "judgments": [
+          {
+            "unit_id": "u1",
+            "label": "SUPPORTED",
+            "value": "Michael Curtiz",
+            "citations": [
+              "d2s0"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d2s0",
+                "text": "The Borrowed Babies is a 1914 Austro- Hungarian film directed by Michael Curtiz."
+              }
+            ],
+            "reason": "Supported by the cited visible sentences and dependencies."
+          },
+          {
+            "unit_id": "u2",
+            "label": "SUPPORTED",
+            "value": "Shakti Samanta",
+            "citations": [
+              "d6s0"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d6s0",
+                "text": "Ayaash is a 1982 Indian Bollywood film produced and directed by Shakti Samanta."
+              }
+            ],
+            "reason": "Supported by the cited visible sentences and dependencies."
+          },
+          {
+            "unit_id": "u3",
+            "label": "UNRESOLVED",
+            "value": "",
+            "citations": [],
+            "quotes": [],
+            "reason": "The current visible evidence does not establish this unit."
+          },
+          {
+            "unit_id": "u4",
+            "label": "UNRESOLVED",
+            "value": "",
+            "citations": [],
+            "quotes": [],
+            "reason": "The current visible evidence does not establish this unit."
+          },
+          {
+            "unit_id": "u5",
+            "label": "UNRESOLVED",
+            "value": "",
+            "citations": [],
+            "quotes": [],
+            "reason": "The current visible evidence does not establish this unit."
+          }
+        ]
+      },
+      "attempt": 1,
+      "repair": false,
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d2s0",
+        "d5s0",
+        "d6s0",
+        "d6s1",
+        "d6s2",
+        "d9s0"
+      ]
+    },
+    {
+      "sequence": 19,
+      "time_s": 7.344,
+      "type": "judgments",
+      "judgments": {
+        "u1": {
+          "label": "SUPPORTED",
+          "value": "Michael Curtiz",
+          "citations": [
+            "d2s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d2s0",
+              "text": "The Borrowed Babies is a 1914 Austro- Hungarian film directed by Michael Curtiz."
+            }
+          ],
+          "reason": "Supported by the cited visible sentences and dependencies."
+        },
+        "u2": {
+          "label": "SUPPORTED",
+          "value": "Shakti Samanta",
+          "citations": [
+            "d6s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d6s0",
+              "text": "Ayaash is a 1982 Indian Bollywood film produced and directed by Shakti Samanta."
+            }
+          ],
+          "reason": "Supported by the cited visible sentences and dependencies."
+        },
+        "u3": {
+          "label": "UNRESOLVED",
+          "value": "",
+          "citations": [],
+          "quotes": [],
+          "reason": "The current visible evidence does not establish this unit."
+        },
+        "u4": {
+          "label": "UNRESOLVED",
+          "value": "",
+          "citations": [],
+          "quotes": [],
+          "reason": "The current visible evidence does not establish this unit."
+        },
+        "u5": {
+          "label": "UNRESOLVED",
+          "value": "",
+          "citations": [],
+          "quotes": [],
+          "reason": "The current visible evidence does not establish this unit."
+        }
+      },
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d2s0",
+        "d5s0",
+        "d6s0",
+        "d6s1",
+        "d6s2",
+        "d9s0"
+      ],
+      "semantic_review": false
+    },
+    {
+      "sequence": 20,
+      "time_s": 7.344,
+      "type": "trace_batch_requested"
+    },
+    {
+      "sequence": 21,
+      "time_s": 10.656,
+      "type": "verification_reply",
+      "reply": {
+        "approved": true,
+        "facts_valid": true,
+        "expressed_unit_ids": [
+          "u1",
+          "u2"
+        ],
+        "reason": "All stated facts match approved facts and no extra claims."
+      },
+      "output_unit_ids": [
+        "u1",
+        "u2"
+      ],
+      "output_action": "Partial Answer",
+      "dependency_unit_ids": [],
+      "evidence_snapshot_ids": [
+        "d2s0",
+        "d6s0"
+      ]
+    },
+    {
+      "sequence": 22,
+      "time_s": 10.656,
+      "type": "utterance",
+      "action": "Partial Answer",
+      "text": "The director of The Borrowed Babies is Michael Curtiz. The director of Ayaash is Shakti Samanta.",
+      "claims": [
+        {
+          "unit_id": "u1",
+          "description": "director of The Borrowed Babies",
+          "value": "Michael Curtiz",
+          "citations": [
+            "d2s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d2s0",
+              "text": "The Borrowed Babies is a 1914 Austro- Hungarian film directed by Michael Curtiz."
+            }
+          ]
+        },
+        {
+          "unit_id": "u2",
+          "description": "director of Ayaash",
+          "value": "Shakti Samanta",
+          "citations": [
+            "d6s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d6s0",
+              "text": "Ayaash is a 1982 Indian Bollywood film produced and directed by Shakti Samanta."
+            }
+          ]
+        }
+      ],
+      "unresolved": [],
+      "fallback": false,
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d2s0",
+        "d5s0",
+        "d6s0",
+        "d6s1",
+        "d6s2",
+        "d9s0"
+      ],
+      "language": "en"
+    },
+    {
+      "sequence": 23,
+      "time_s": 10.656,
+      "type": "search_finished",
+      "query": "[scheduled evidence]",
+      "subject": "",
+      "status": "ok",
+      "returned_pages": [],
+      "mode": "trace",
+      "unit_id": "__scheduled_evidence__"
+    },
+    {
+      "sequence": 24,
+      "time_s": 10.656,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d3s0",
+        "title": "Shakti Samanta",
+        "url": "https://trace.invalid/2wikimultihopqa_98a3e5e9089111ebbd73ac1f6bf848b6_long/d3s0",
+        "text": "Shakti Samanta( 13 January 1926 – 9 April 2009) was an Indian film director and producer, who founded Shakti Films in 1957, which is most known for films such as\" Howrah BridgeChina TownKashmir Ki KaliAn Evening in ParisAradhanaKati Patang\", and\" Amar Prem\".",
+        "visible_time_s": 10.656000000002678,
+        "requested_subject": "",
+        "resolved_title": "Shakti Samanta",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 25,
+      "time_s": 10.656,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d3s1",
+        "title": "Shakti Samanta",
+        "url": "https://trace.invalid/2wikimultihopqa_98a3e5e9089111ebbd73ac1f6bf848b6_long/d3s1",
+        "text": "He received Filmfare Awards for Best Film for\" Aradhana\"( 1969),\" Anuraag\"( 1973) and\" Amanush\", which was also made in Bengali, a language in which he made six films, including an Indo- Bangladesh joint production in 1984.",
+        "visible_time_s": 10.656000000002678,
+        "requested_subject": "",
+        "resolved_title": "Shakti Samanta",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 26,
+      "time_s": 10.656,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d4s0",
+        "title": "Jacques Décombe",
+        "url": "https://trace.invalid/2wikimultihopqa_98a3e5e9089111ebbd73ac1f6bf848b6_long/d4s0",
+        "text": "Jacques Décombe is a French author, actor and director born in 1953.",
+        "visible_time_s": 10.656000000002678,
+        "requested_subject": "",
+        "resolved_title": "Jacques Décombe",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 27,
+      "time_s": 10.656,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d7s0",
+        "title": "Michael Curtiz",
+        "url": "https://trace.invalid/2wikimultihopqa_98a3e5e9089111ebbd73ac1f6bf848b6_long/d7s0",
+        "text": "Michael Curtiz (born Manó Kaminer(1886-1905)",
+        "visible_time_s": 10.656000000002678,
+        "requested_subject": "",
+        "resolved_title": "Michael Curtiz",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 28,
+      "time_s": 10.656,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d7s1",
+        "title": "Michael Curtiz",
+        "url": "https://trace.invalid/2wikimultihopqa_98a3e5e9089111ebbd73ac1f6bf848b6_long/d7s1",
+        "text": "Mihály Kertész (1905); December 24, 1886 April 11, 1962) was a Hungarian-born American film director, recognized as one of the most prolific directors in history.",
+        "visible_time_s": 10.656000000002678,
+        "requested_subject": "",
+        "resolved_title": "Michael Curtiz",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 29,
+      "time_s": 10.656,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d7s2",
+        "title": "Michael Curtiz",
+        "url": "https://trace.invalid/2wikimultihopqa_98a3e5e9089111ebbd73ac1f6bf848b6_long/d7s2",
+        "text": "He directed classic films from the silent era and numerous others during Hollywood's Golden Age, when the studio system was prevalent.",
+        "visible_time_s": 10.656000000002678,
+        "requested_subject": "",
+        "resolved_title": "Michael Curtiz",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 30,
+      "time_s": 10.656,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d7s3",
+        "title": "Michael Curtiz",
+        "url": "https://trace.invalid/2wikimultihopqa_98a3e5e9089111ebbd73ac1f6bf848b6_long/d7s3",
+        "text": "Curtiz was already a well-known director in Europe when Warner Bros. invited him to Hollywood in 1926, when he was 39 years of age.",
+        "visible_time_s": 10.656000000002678,
+        "requested_subject": "",
+        "resolved_title": "Michael Curtiz",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 31,
+      "time_s": 10.656,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d7s4",
+        "title": "Michael Curtiz",
+        "url": "https://trace.invalid/2wikimultihopqa_98a3e5e9089111ebbd73ac1f6bf848b6_long/d7s4",
+        "text": "He had already directed 64 films in Europe, and soon helped Warner Bros. become the fastest-growing movie studio.",
+        "visible_time_s": 10.656000000002678,
+        "requested_subject": "",
+        "resolved_title": "Michael Curtiz",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 32,
+      "time_s": 10.656,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d7s5",
+        "title": "Michael Curtiz",
+        "url": "https://trace.invalid/2wikimultihopqa_98a3e5e9089111ebbd73ac1f6bf848b6_long/d7s5",
+        "text": "He directed 102 films during his Hollywood career, mostly at Warners, where he directed ten actors to Oscar nominations.",
+        "visible_time_s": 10.656000000002678,
+        "requested_subject": "",
+        "resolved_title": "Michael Curtiz",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 33,
+      "time_s": 10.656,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d7s6",
+        "title": "Michael Curtiz",
+        "url": "https://trace.invalid/2wikimultihopqa_98a3e5e9089111ebbd73ac1f6bf848b6_long/d7s6",
+        "text": "James Cagney and Joan Crawford won their only Academy Awards under Curtiz's direction.",
+        "visible_time_s": 10.656000000002678,
+        "requested_subject": "",
+        "resolved_title": "Michael Curtiz",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 34,
+      "time_s": 10.656,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d7s7",
+        "title": "Michael Curtiz",
+        "url": "https://trace.invalid/2wikimultihopqa_98a3e5e9089111ebbd73ac1f6bf848b6_long/d7s7",
+        "text": "He put Doris Day and John Garfield on screen for the first time, and he made stars of Errol Flynn, Olivia de Havilland, and Bette Davis.",
+        "visible_time_s": 10.656000000002678,
+        "requested_subject": "",
+        "resolved_title": "Michael Curtiz",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 35,
+      "time_s": 10.656,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d7s8",
+        "title": "Michael Curtiz",
+        "url": "https://trace.invalid/2wikimultihopqa_98a3e5e9089111ebbd73ac1f6bf848b6_long/d7s8",
+        "text": "He himself was nominated five times and won twice, once for Best Short Subject for \"Sons of Liberty\" and once as Best Director for \"Casablanca\".",
+        "visible_time_s": 10.656000000002678,
+        "requested_subject": "",
+        "resolved_title": "Michael Curtiz",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 36,
+      "time_s": 10.656,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d7s9",
+        "title": "Michael Curtiz",
+        "url": "https://trace.invalid/2wikimultihopqa_98a3e5e9089111ebbd73ac1f6bf848b6_long/d7s9",
+        "text": "Curtiz introduced to Hollywood a unique visual style using artistic lighting, extensive and fluid camera movement, high crane shots, and unusual camera angles.",
+        "visible_time_s": 10.656000000002678,
+        "requested_subject": "",
+        "resolved_title": "Michael Curtiz",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 37,
+      "time_s": 10.656,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d7s10",
+        "title": "Michael Curtiz",
+        "url": "https://trace.invalid/2wikimultihopqa_98a3e5e9089111ebbd73ac1f6bf848b6_long/d7s10",
+        "text": "He was versatile and could handle any kind of picture: melodrama, comedy, love story, film noir, musical, war story, Western, or historical epic.",
+        "visible_time_s": 10.656000000002678,
+        "requested_subject": "",
+        "resolved_title": "Michael Curtiz",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 38,
+      "time_s": 10.656,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d7s11",
+        "title": "Michael Curtiz",
+        "url": "https://trace.invalid/2wikimultihopqa_98a3e5e9089111ebbd73ac1f6bf848b6_long/d7s11",
+        "text": "He always paid attention to the human-interest aspect of every story, stating that the \"human and fundamental problems of real people\" were the basis of all good drama.",
+        "visible_time_s": 10.656000000002678,
+        "requested_subject": "",
+        "resolved_title": "Michael Curtiz",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 39,
+      "time_s": 10.656,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d7s12",
+        "title": "Michael Curtiz",
+        "url": "https://trace.invalid/2wikimultihopqa_98a3e5e9089111ebbd73ac1f6bf848b6_long/d7s12",
+        "text": "Curtiz helped popularize the classic swashbuckler with films such as \"Captain Blood\" (1935) and \"The Adventures of Robin Hood\" (1938).",
+        "visible_time_s": 10.656000000002678,
+        "requested_subject": "",
+        "resolved_title": "Michael Curtiz",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 40,
+      "time_s": 10.656,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d7s13",
+        "title": "Michael Curtiz",
+        "url": "https://trace.invalid/2wikimultihopqa_98a3e5e9089111ebbd73ac1f6bf848b6_long/d7s13",
+        "text": "He directed many dramas which today are also considered classics, \"Angels with Dirty Faces\" (1938), \"The Sea Wolf\" (1941), \"Casablanca\" (1942), and \"Mildred Pierce\" (1945).",
+        "visible_time_s": 10.656000000002678,
+        "requested_subject": "",
+        "resolved_title": "Michael Curtiz",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 41,
+      "time_s": 10.656,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d7s14",
+        "title": "Michael Curtiz",
+        "url": "https://trace.invalid/2wikimultihopqa_98a3e5e9089111ebbd73ac1f6bf848b6_long/d7s14",
+        "text": "He directed leading musicals, including \"Yankee Doodle Dandy\" (1942), \"",
+        "visible_time_s": 10.656000000002678,
+        "requested_subject": "",
+        "resolved_title": "Michael Curtiz",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 42,
+      "time_s": 10.656,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d7s15",
+        "title": "Michael Curtiz",
+        "url": "https://trace.invalid/2wikimultihopqa_98a3e5e9089111ebbd73ac1f6bf848b6_long/d7s15",
+        "text": "This Is the Army\" (1943), and \"White Christmas\", and he made comedies with \"Life With Father\" (1947) and \"We're No Angels\" (1955).",
+        "visible_time_s": 10.656000000002678,
+        "requested_subject": "",
+        "resolved_title": "Michael Curtiz",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 43,
+      "time_s": 10.656,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d8s0",
+        "title": "Yolonda Ross",
+        "url": "https://trace.invalid/2wikimultihopqa_98a3e5e9089111ebbd73ac1f6bf848b6_long/d8s0",
+        "text": "Yolonda Ross is an American character actress, writer and director born (31 July 1974).",
+        "visible_time_s": 10.656000000002678,
+        "requested_subject": "",
+        "resolved_title": "Yolonda Ross",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 44,
+      "time_s": 10.656,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d10s0",
+        "title": "Claude Weisz",
+        "url": "https://trace.invalid/2wikimultihopqa_98a3e5e9089111ebbd73ac1f6bf848b6_long/d10s0",
+        "text": "Claude Weisz is a French film director born in Paris.",
+        "visible_time_s": 10.656000000002678,
+        "requested_subject": "",
+        "resolved_title": "Claude Weisz",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 45,
+      "time_s": 13.406,
+      "type": "judge_reply",
+      "reply": {
+        "judgments": [
+          {
+            "unit_id": "u1",
+            "label": "SUPPORTED",
+            "value": "Michael Curtiz",
+            "citations": [
+              "d2s0"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d2s0",
+                "text": "The Borrowed Babies is a 1914 Austro- Hungarian film directed by Michael Curtiz."
+              }
+            ],
+            "reason": "Supported by the cited visible sentences and dependencies."
+          },
+          {
+            "unit_id": "u2",
+            "label": "SUPPORTED",
+            "value": "Shakti Samanta",
+            "citations": [
+              "d6s0"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d6s0",
+                "text": "Ayaash is a 1982 Indian Bollywood film produced and directed by Shakti Samanta."
+              }
+            ],
+            "reason": "Supported by the cited visible sentences and dependencies."
+          },
+          {
+            "unit_id": "u3",
+            "label": "SUPPORTED",
+            "value": "1886",
+            "citations": [
+              "d7s0",
+              "d7s1"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d7s0",
+                "text": "Michael Curtiz (born Manó Kaminer(1886-1905)"
+              },
+              {
+                "evidence_id": "d7s1",
+                "text": "Mihály Kertész (1905); December 24, 1886 April 11, 1962) was a Hungarian-born American film director, recognized as one of the most prolific directors in history."
+              }
+            ],
+            "reason": "Supported by the cited visible sentences and dependencies."
+          },
+          {
+            "unit_id": "u4",
+            "label": "SUPPORTED",
+            "value": "1926",
+            "citations": [
+              "d3s0"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d3s0",
+                "text": "Shakti Samanta( 13 January 1926 – 9 April 2009) was an Indian film director and producer, who founded Shakti Films in 1957, which is most known for films such as\" Howrah BridgeChina TownKashmir Ki KaliAn Evening in ParisAradhanaKati Patang\", and\" Amar Prem\"."
+              }
+            ],
+            "reason": "Supported by the cited visible sentences and dependencies."
+          },
+          {
+            "unit_id": "u5",
+            "label": "SUPPORTED",
+            "value": "Ayaash",
+            "citations": [
+              "d7s0",
+              "d7s1"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d7s0",
+                "text": "Michael Curtiz (born Manó Kaminer(1886-1905)"
+              },
+              {
+                "evidence_id": "d7s1",
+                "text": "Mihály Kertész (1905); December 24, 1886 April 11, 1962) was a Hungarian-born American film director, recognized as one of the most prolific directors in history."
+              }
+            ],
+            "reason": "Supported by the cited visible sentences and dependencies."
+          }
+        ]
+      },
+      "attempt": 1,
+      "repair": false,
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d2s0",
+        "d5s0",
+        "d6s0",
+        "d6s1",
+        "d6s2",
+        "d9s0",
+        "d3s0",
+        "d3s1",
+        "d4s0",
+        "d7s0",
+        "d7s1",
+        "d7s2",
+        "d7s3",
+        "d7s4",
+        "d7s5",
+        "d7s6",
+        "d7s7",
+        "d7s8",
+        "d7s9",
+        "d7s10",
+        "d7s11",
+        "d7s12",
+        "d7s13",
+        "d7s14",
+        "d7s15",
+        "d8s0",
+        "d10s0"
+      ]
+    },
+    {
+      "sequence": 46,
+      "time_s": 13.406,
+      "type": "judgments",
+      "judgments": {
+        "u1": {
+          "label": "SUPPORTED",
+          "value": "Michael Curtiz",
+          "citations": [
+            "d2s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d2s0",
+              "text": "The Borrowed Babies is a 1914 Austro- Hungarian film directed by Michael Curtiz."
+            }
+          ],
+          "reason": "Supported by the cited visible sentences and dependencies."
+        },
+        "u2": {
+          "label": "SUPPORTED",
+          "value": "Shakti Samanta",
+          "citations": [
+            "d6s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d6s0",
+              "text": "Ayaash is a 1982 Indian Bollywood film produced and directed by Shakti Samanta."
+            }
+          ],
+          "reason": "Supported by the cited visible sentences and dependencies."
+        },
+        "u3": {
+          "label": "SUPPORTED",
+          "value": "1886",
+          "citations": [
+            "d7s0",
+            "d7s1"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d7s0",
+              "text": "Michael Curtiz (born Manó Kaminer(1886-1905)"
+            },
+            {
+              "evidence_id": "d7s1",
+              "text": "Mihály Kertész (1905); December 24, 1886 April 11, 1962) was a Hungarian-born American film director, recognized as one of the most prolific directors in history."
+            }
+          ],
+          "reason": "Supported by the cited visible sentences and dependencies."
+        },
+        "u4": {
+          "label": "SUPPORTED",
+          "value": "1926",
+          "citations": [
+            "d3s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d3s0",
+              "text": "Shakti Samanta( 13 January 1926 – 9 April 2009) was an Indian film director and producer, who founded Shakti Films in 1957, which is most known for films such as\" Howrah BridgeChina TownKashmir Ki KaliAn Evening in ParisAradhanaKati Patang\", and\" Amar Prem\"."
+            }
+          ],
+          "reason": "Supported by the cited visible sentences and dependencies."
+        },
+        "u5": {
+          "label": "SUPPORTED",
+          "value": "Ayaash",
+          "citations": [
+            "d7s0",
+            "d7s1"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d7s0",
+              "text": "Michael Curtiz (born Manó Kaminer(1886-1905)"
+            },
+            {
+              "evidence_id": "d7s1",
+              "text": "Mihály Kertész (1905); December 24, 1886 April 11, 1962) was a Hungarian-born American film director, recognized as one of the most prolific directors in history."
+            }
+          ],
+          "reason": "Supported by the cited visible sentences and dependencies."
+        }
+      },
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d2s0",
+        "d5s0",
+        "d6s0",
+        "d6s1",
+        "d6s2",
+        "d9s0",
+        "d3s0",
+        "d3s1",
+        "d4s0",
+        "d7s0",
+        "d7s1",
+        "d7s2",
+        "d7s3",
+        "d7s4",
+        "d7s5",
+        "d7s6",
+        "d7s7",
+        "d7s8",
+        "d7s9",
+        "d7s10",
+        "d7s11",
+        "d7s12",
+        "d7s13",
+        "d7s14",
+        "d7s15",
+        "d8s0",
+        "d10s0"
+      ],
+      "semantic_review": false
+    },
+    {
+      "sequence": 47,
+      "time_s": 13.86,
+      "type": "feedback_requested",
+      "feedback_kind": "progress",
+      "execution_state": {
+        "stage": "formulating",
+        "searches_started": 2,
+        "searches_completed": 2,
+        "active_searches": 0,
+        "evidence_count": 28,
+        "supported_units": 5,
+        "output_units": 2
+      }
+    },
+    {
+      "sequence": 48,
+      "time_s": 15.625,
+      "type": "utterance",
+      "action": "Progress",
+      "text": "Formulating the answer with gathered evidence.",
+      "claims": [],
+      "feedback_source": "model",
+      "feedback_status_claim": "formulating",
+      "feedback_fallback_reason": "",
+      "execution_state": {
+        "stage": "formulating",
+        "searches_started": 2,
+        "searches_completed": 2,
+        "active_searches": 0,
+        "evidence_count": 28,
+        "supported_units": 5,
+        "output_units": 2
+      },
+      "language": "en"
+    },
+    {
+      "sequence": 49,
+      "time_s": 16.766,
+      "type": "verification_reply",
+      "reply": {
+        "approved": true,
+        "facts_valid": true,
+        "expressed_unit_ids": [
+          "u5"
+        ],
+        "reason": "The draft correctly states that Ayaash's director was born later, matching the approved fact and using no extra claims."
+      },
+      "output_unit_ids": [
+        "u5"
+      ],
+      "output_action": "Final Answer",
+      "dependency_unit_ids": [
+        "u1",
+        "u2",
+        "u3",
+        "u4"
+      ],
+      "evidence_snapshot_ids": [
+        "d2s0",
+        "d6s0",
+        "d3s0",
+        "d7s0",
+        "d7s1"
+      ]
+    },
+    {
+      "sequence": 50,
+      "time_s": 16.766,
+      "type": "utterance",
+      "action": "Final Answer",
+      "text": "Ayaash is the film whose director was born later.",
+      "claims": [
+        {
+          "unit_id": "u5",
+          "description": "which film has the director born later",
+          "value": "Ayaash",
+          "citations": [
+            "d7s0",
+            "d7s1"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d7s0",
+              "text": "Michael Curtiz (born Manó Kaminer(1886-1905)"
+            },
+            {
+              "evidence_id": "d7s1",
+              "text": "Mihály Kertész (1905); December 24, 1886 April 11, 1962) was a Hungarian-born American film director, recognized as one of the most prolific directors in history."
+            }
+          ]
+        }
+      ],
+      "unresolved": [],
+      "fallback": false,
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d2s0",
+        "d5s0",
+        "d6s0",
+        "d6s1",
+        "d6s2",
+        "d9s0",
+        "d3s0",
+        "d3s1",
+        "d4s0",
+        "d7s0",
+        "d7s1",
+        "d7s2",
+        "d7s3",
+        "d7s4",
+        "d7s5",
+        "d7s6",
+        "d7s7",
+        "d7s8",
+        "d7s9",
+        "d7s10",
+        "d7s11",
+        "d7s12",
+        "d7s13",
+        "d7s14",
+        "d7s15",
+        "d8s0",
+        "d10s0"
+      ],
+      "language": "en"
+    },
+    {
+      "sequence": 51,
+      "time_s": 16.766,
+      "type": "finished",
+      "status": "complete"
+    }
+  ],
+  "note": "Prototype model judgments are not independent gold scores. Output event times are not spoken claim times.",
+  "evidence_mode": "scheduled_trace",
+  "audio": {
+    "enabled": true,
+    "mode": "windows",
+    "play": false,
+    "status": "ok",
+    "errors": [],
+    "records": [
+      {
+        "event_sequence": 1,
+        "sentence_index": 1,
+        "sentence_count": 1,
+        "language": "en",
+        "text": "Let me check.",
+        "action": "Backchannel",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 1.375,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1\\samples\\0285\\audio\\segments\\0001_01.wav",
+        "duration_s": 1.649297052154195,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 2.172000000005937,
+        "synthesis_and_playback_s": 0.7970000000059372
+      },
+      {
+        "event_sequence": 17,
+        "sentence_index": 1,
+        "sentence_count": 1,
+        "language": "en",
+        "text": "I'm planning the steps to compare the directors' birth dates.",
+        "action": "Progress",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 6.0,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1\\samples\\0285\\audio\\segments\\0017_01.wav",
+        "duration_s": 3.908662131519274,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 6.797000000005937,
+        "synthesis_and_playback_s": 0.8129999999946449
+      },
+      {
+        "event_sequence": 22,
+        "sentence_index": 1,
+        "sentence_count": 2,
+        "language": "en",
+        "text": "The director of The Borrowed Babies is Michael Curtiz.",
+        "action": "Partial Answer",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 10.656000000002678,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1\\samples\\0285\\audio\\segments\\0022_01.wav",
+        "duration_s": 3.5537868480725625,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 11.452999999994063,
+        "synthesis_and_playback_s": 0.7969999999913853
+      },
+      {
+        "event_sequence": 22,
+        "sentence_index": 2,
+        "sentence_count": 2,
+        "language": "en",
+        "text": "The director of Ayaash is Shakti Samanta.",
+        "action": "Partial Answer",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 11.452999999994063,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1\\samples\\0285\\audio\\segments\\0022_02.wav",
+        "duration_s": 3.1439455782312926,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 12.26600000000326,
+        "synthesis_and_playback_s": 0.8130000000091968
+      },
+      {
+        "event_sequence": 48,
+        "sentence_index": 1,
+        "sentence_count": 1,
+        "language": "en",
+        "text": "Formulating the answer with gathered evidence.",
+        "action": "Progress",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 15.625,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1\\samples\\0285\\audio\\segments\\0048_01.wav",
+        "duration_s": 3.113968253968254,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 16.406000000002678,
+        "synthesis_and_playback_s": 0.7810000000026776
+      },
+      {
+        "event_sequence": 50,
+        "sentence_index": 1,
+        "sentence_count": 1,
+        "language": "en",
+        "text": "Ayaash is the film whose director was born later.",
+        "action": "Final Answer",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 16.76600000000326,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1\\samples\\0285\\audio\\segments\\0050_01.wav",
+        "duration_s": 3.3989115646258505,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 17.562999999994645,
+        "synthesis_and_playback_s": 0.7969999999913853
+      }
+    ],
+    "wave": {
+      "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1\\samples\\0285\\audio\\response.wav",
+      "duration_s": 24.66362811791383,
+      "timeline": [
+        {
+          "event_sequence": 1,
+          "sentence_index": 1,
+          "action": "Backchannel",
+          "text": "Let me check.",
+          "wave_start_s": 2.1720181405895693,
+          "wave_end_s": 3.8213151927437643
+        },
+        {
+          "event_sequence": 17,
+          "sentence_index": 1,
+          "action": "Progress",
+          "text": "I'm planning the steps to compare the directors' birth dates.",
+          "wave_start_s": 6.797006802721088,
+          "wave_end_s": 10.705668934240363
+        },
+        {
+          "event_sequence": 22,
+          "sentence_index": 1,
+          "action": "Partial Answer",
+          "text": "The director of The Borrowed Babies is Michael Curtiz.",
+          "wave_start_s": 11.453015873015874,
+          "wave_end_s": 15.006802721088436
+        },
+        {
+          "event_sequence": 22,
+          "sentence_index": 2,
+          "action": "Partial Answer",
+          "text": "The director of Ayaash is Shakti Samanta.",
+          "wave_start_s": 15.006802721088436,
+          "wave_end_s": 18.150748299319726
+        },
+        {
+          "event_sequence": 48,
+          "sentence_index": 1,
+          "action": "Progress",
+          "text": "Formulating the answer with gathered evidence.",
+          "wave_start_s": 18.150748299319726,
+          "wave_end_s": 21.264716553287982
+        },
+        {
+          "event_sequence": 50,
+          "sentence_index": 1,
+          "action": "Final Answer",
+          "text": "Ayaash is the film whose director was born later.",
+          "wave_start_s": 21.264716553287982,
+          "wave_end_s": 24.66362811791383
+        }
+      ]
+    }
+  },
+  "evaluation": {
+    "mode": "b_final_revised_trace",
+    "trace_id": "2wikimultihopqa_98a3e5e9089111ebbd73ac1f6bf848b6_long",
+    "sample_id": "2wikimultihopqa_98a3e5e9089111ebbd73ac1f6bf848b6",
+    "total_wall_s": 17.562999999994645,
+    "question_timeout_s": 180,
+    "audio_enabled": true,
+    "history_enabled": false,
+    "text_pipeline_wall_s": 16.76600000000326,
+    "effective_settings": {
+      "base_url": "https://tinker.thinkingmachines.dev/services/tinker-prod/oai/api/v1",
+      "model": "openai/gpt-oss-120b",
+      "judge_model": "tinker://f9e9a6c1-e203-5c2c-acdd-68fe67378ca4:train:0/sampler_weights/epoch-0001",
+      "judge_reasoning_effort": "low",
+      "wiki_language": "en",
+      "user_agent": "CascadeSystem/0.1 (educational research prototype)",
+      "timeout_s": 45.0,
+      "max_tokens": 4096,
+      "reasoning_effort": "low",
+      "progress_s": 3.0,
+      "feedback_timeout_s": 6.0,
+      "search_limit": 3,
+      "max_units": 8,
+      "max_searches": 16,
+      "max_sources": 28,
+      "source_chars": 258,
+      "evidence_chars": 3263,
+      "concurrency": 3
+    },
+    "timing_kind": "unknown",
+    "scheduler": "wall-paced fixed B arrivals",
+    "split": "eval_reserved",
+    "empty_evidence_sentences_ignored": 0
+  }
+}

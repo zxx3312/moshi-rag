@@ -1,0 +1,1603 @@
+{
+  "question": "Who is older, Vincent Walker or David Usher?",
+  "resolved_question": "Who is older, Vincent Walker or David Usher?",
+  "used_history_turn_ids": [],
+  "response_language": "en",
+  "status": "complete",
+  "clock": "wall_monotonic",
+  "time_origin": "question_text_ready_after_optional_asr",
+  "model": "openai/gpt-oss-120b",
+  "judge_model": "tinker://f9e9a6c1-e203-5c2c-acdd-68fe67378ca4:train:0/sampler_weights/epoch-0001",
+  "units": [
+    {
+      "unit_id": "u1",
+      "description": "Vincent Walker's date of birth",
+      "necessary": true,
+      "depends_on": [],
+      "queries": [
+        "Vincent Walker date of birth",
+        "Vincent Walker born"
+      ],
+      "subject": "Vincent Walker"
+    },
+    {
+      "unit_id": "u2",
+      "description": "David Usher's date of birth",
+      "necessary": true,
+      "depends_on": [],
+      "queries": [
+        "David Usher date of birth",
+        "David Usher born"
+      ],
+      "subject": "David Usher"
+    },
+    {
+      "unit_id": "u3",
+      "description": "Comparison of ages to determine who is older",
+      "necessary": true,
+      "depends_on": [
+        "u1",
+        "u2"
+      ],
+      "queries": [
+        "Vincent Walker age compared to David Usher",
+        "who is older Vincent Walker or David Usher"
+      ],
+      "subject": ""
+    }
+  ],
+  "judgments": {
+    "u1": {
+      "label": "SUPPORTED",
+      "value": "March 2, 1980",
+      "citations": [
+        "d5s0"
+      ],
+      "quotes": [
+        {
+          "evidence_id": "d5s0",
+          "text": "Vincent Francis Walker (born March 2, 1980), better known as Vince Walker, is an American multi-instrumentalist, best known as the lead singer of third-wave ska band Suburban Legends."
+        }
+      ],
+      "reason": "Supported by the cited visible sentences and dependencies."
+    },
+    "u2": {
+      "label": "SUPPORTED",
+      "value": "April 24, 1966",
+      "citations": [
+        "d1s0"
+      ],
+      "quotes": [
+        {
+          "evidence_id": "d1s0",
+          "text": "David Usher (born April 24, 1966) is an English-born Canadian musician, best-selling author, keynote speaker and activist, known as the lead singer of the alternative rock band Moist."
+        }
+      ],
+      "reason": "Supported by the cited visible sentences and dependencies."
+    },
+    "u3": {
+      "label": "SUPPORTED",
+      "value": "David Usher",
+      "citations": [
+        "d5s0",
+        "d1s0"
+      ],
+      "quotes": [
+        {
+          "evidence_id": "d5s0",
+          "text": "Vincent Francis Walker (born March 2, 1980), better known as Vince Walker, is an American multi-instrumentalist, best known as the lead singer of third-wave ska band Suburban Legends."
+        },
+        {
+          "evidence_id": "d1s0",
+          "text": "David Usher (born April 24, 1966) is an English-born Canadian musician, best-selling author, keynote speaker and activist, known as the lead singer of the alternative rock band Moist."
+        }
+      ],
+      "reason": "Supported by the cited visible sentences and dependencies."
+    }
+  },
+  "evidence": [
+    {
+      "evidence_id": "d1s0",
+      "title": "David Usher",
+      "url": "https://trace.invalid/hotpotqa_5a7bb84d554299294a54aaa1_immediate/d1s0",
+      "text": "David Usher (born April 24, 1966) is an English-born Canadian musician, best-selling author, keynote speaker and activist, known as the lead singer of the alternative rock band Moist.",
+      "visible_time_s": 3.187999999994645,
+      "requested_subject": "",
+      "resolved_title": "David Usher",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d2s0",
+      "title": "Let It Play",
+      "url": "https://trace.invalid/hotpotqa_5a7bb84d554299294a54aaa1_immediate/d2s0",
+      "text": "Let It Play is the ninth studio album by Canadian solo artist David Usher.",
+      "visible_time_s": 3.187999999994645,
+      "requested_subject": "",
+      "resolved_title": "Let It Play",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d2s1",
+      "title": "Let It Play",
+      "url": "https://trace.invalid/hotpotqa_5a7bb84d554299294a54aaa1_immediate/d2s1",
+      "text": "It was released on October 21, 2016 via David Usher's own music label, Evil Empire Inc..",
+      "visible_time_s": 3.187999999994645,
+      "requested_subject": "",
+      "resolved_title": "Let It Play",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d2s2",
+      "title": "Let It Play",
+      "url": "https://trace.invalid/hotpotqa_5a7bb84d554299294a54aaa1_immediate/d2s2",
+      "text": "The album features English translations of French Canadian songs.",
+      "visible_time_s": 3.187999999994645,
+      "requested_subject": "",
+      "resolved_title": "Let It Play",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d3s0",
+      "title": "Billy Bang",
+      "url": "https://trace.invalid/hotpotqa_5a7bb84d554299294a54aaa1_immediate/d3s0",
+      "text": "Billy Bang (September 20, 1947 – April 11, 2011), born William Vincent Walker, was an American free jazz violinist and composer.",
+      "visible_time_s": 3.187999999994645,
+      "requested_subject": "",
+      "resolved_title": "Billy Bang",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d4s0",
+      "title": "Brian Robertson (trombonist)",
+      "url": "https://trace.invalid/hotpotqa_5a7bb84d554299294a54aaa1_immediate/d4s0",
+      "text": "Brian Robertson (born October 19, 1979) is the trombone player for the Orange County-based third-wave ska band Suburban Legends and, along with Vincent Walker, is one of the two members to have played with the band since its origin as Bomb Squad.",
+      "visible_time_s": 3.187999999994645,
+      "requested_subject": "",
+      "resolved_title": "Brian Robertson (trombonist)",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d4s1",
+      "title": "Brian Robertson (trombonist)",
+      "url": "https://trace.invalid/hotpotqa_5a7bb84d554299294a54aaa1_immediate/d4s1",
+      "text": "He met other ex-Suburban Legends / Bomb Squad members, trumpet player Aaron Bertram and best friend and trombone player Ryan Dallas Cook through the Huntington Beach High School Marching Band.",
+      "visible_time_s": 3.187999999994645,
+      "requested_subject": "",
+      "resolved_title": "Brian Robertson (trombonist)",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d4s2",
+      "title": "Brian Robertson (trombonist)",
+      "url": "https://trace.invalid/hotpotqa_5a7bb84d554299294a54aaa1_immediate/d4s2",
+      "text": "In 2007, Robertson started to be known by the nickname 'Robot', most likely a reference to the dance moves he does onstage with the band, the first three letters of his last name, and/or to avoid confusion with the band's other Brian, Brian Klemm.",
+      "visible_time_s": 3.187999999994645,
+      "requested_subject": "",
+      "resolved_title": "Brian Robertson (trombonist)",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d5s0",
+      "title": "Vincent Walker",
+      "url": "https://trace.invalid/hotpotqa_5a7bb84d554299294a54aaa1_immediate/d5s0",
+      "text": "Vincent Francis Walker (born March 2, 1980), better known as Vince Walker, is an American multi-instrumentalist, best known as the lead singer of third-wave ska band Suburban Legends.",
+      "visible_time_s": 3.187999999994645,
+      "requested_subject": "",
+      "resolved_title": "Vincent Walker",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d5s1",
+      "title": "Vincent Walker",
+      "url": "https://trace.invalid/hotpotqa_5a7bb84d554299294a54aaa1_immediate/d5s1",
+      "text": "He was formerly the lead trumpet player, and left sometime after the release of \"Rump Shaker\", but returned to the band in September 2005 for the band's appearance on the Jerry Lewis MDA Telethon, which happened to be lead singer Tim Maurer's last performance.",
+      "visible_time_s": 3.187999999994645,
+      "requested_subject": "",
+      "resolved_title": "Vincent Walker",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d5s2",
+      "title": "Vincent Walker",
+      "url": "https://trace.invalid/hotpotqa_5a7bb84d554299294a54aaa1_immediate/d5s2",
+      "text": "He replaced Maurer as the singer in an odd switching of roles, and continues with the band as frontman.",
+      "visible_time_s": 3.187999999994645,
+      "requested_subject": "",
+      "resolved_title": "Vincent Walker",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d6s0",
+      "title": "Vince Foster",
+      "url": "https://trace.invalid/hotpotqa_5a7bb84d554299294a54aaa1_immediate/d6s0",
+      "text": "Vincent Walker \"Vince\" Foster Jr. (January 15, 1945 – July 20, 1993) was a Deputy White House Counsel during the first half-year of President Bill Clinton's administration.",
+      "visible_time_s": 3.187999999994645,
+      "requested_subject": "",
+      "resolved_title": "Vince Foster",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d6s1",
+      "title": "Vince Foster",
+      "url": "https://trace.invalid/hotpotqa_5a7bb84d554299294a54aaa1_immediate/d6s1",
+      "text": "Prior to that, he was a partner at Rose Law Firm in Little Rock, Arkansas, where he was a colleague and friend of Hillary Rodham Clinton and where, as \"The Washington Post\" later wrote, he rose to \"the pinnacle of the Arkansas legal establishment.\"",
+      "visible_time_s": 3.187999999994645,
+      "requested_subject": "",
+      "resolved_title": "Vince Foster",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d6s2",
+      "title": "Vince Foster",
+      "url": "https://trace.invalid/hotpotqa_5a7bb84d554299294a54aaa1_immediate/d6s2",
+      "text": "At the White House he was unhappy with work in politics and spiraled into depression.",
+      "visible_time_s": 3.187999999994645,
+      "requested_subject": "",
+      "resolved_title": "Vince Foster",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d6s3",
+      "title": "Vince Foster",
+      "url": "https://trace.invalid/hotpotqa_5a7bb84d554299294a54aaa1_immediate/d6s3",
+      "text": "His death by gunshot was attributed by five official or governmental investigations to suicide but several conspiracy theories emerged.",
+      "visible_time_s": 3.187999999994645,
+      "requested_subject": "",
+      "resolved_title": "Vince Foster",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d7s0",
+      "title": "Black Black Heart",
+      "url": "https://trace.invalid/hotpotqa_5a7bb84d554299294a54aaa1_immediate/d7s0",
+      "text": "\"Black Black Heart\" is a song written by David Usher and Jeff Pearce and released as a second single off Usher's 2001 album \"Morning Orbit\".",
+      "visible_time_s": 3.187999999994645,
+      "requested_subject": "",
+      "resolved_title": "Black Black Heart",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d8s0",
+      "title": "Day Job (Suburban Legends album)",
+      "url": "https://trace.invalid/hotpotqa_5a7bb84d554299294a54aaa1_immediate/d8s0",
+      "text": "Day Job is Suburban Legends' fifth album, released on April 3, 2012.",
+      "visible_time_s": 3.187999999994645,
+      "requested_subject": "",
+      "resolved_title": "Day Job (Suburban Legends album)",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d8s1",
+      "title": "Day Job (Suburban Legends album)",
+      "url": "https://trace.invalid/hotpotqa_5a7bb84d554299294a54aaa1_immediate/d8s1",
+      "text": "Aaron Bertram, Brian Robertson, Derek Rock, and Vincent Walker appeared on local online radio program \"TNN Radio\" to announce the album on February 18, 2012.",
+      "visible_time_s": 3.187999999994645,
+      "requested_subject": "",
+      "resolved_title": "Day Job (Suburban Legends album)",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d9s0",
+      "title": "Charles Vincent Walker",
+      "url": "https://trace.invalid/hotpotqa_5a7bb84d554299294a54aaa1_immediate/d9s0",
+      "text": "Charles Vincent Walker FRS (20 March 1812 – 24 December 1882) was an English electrical engineer and publisher, a major influence on the development of railway telecommunications, he was also the first person to send a submarine telegraph signal.",
+      "visible_time_s": 3.187999999994645,
+      "requested_subject": "",
+      "resolved_title": "Charles Vincent Walker",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d10s0",
+      "title": "Tim Maurer",
+      "url": "https://trace.invalid/hotpotqa_5a7bb84d554299294a54aaa1_immediate/d10s0",
+      "text": "Timothy Robert \"Tim\" Maurer (born October 10, 1980) is an American singer, best known as the former lead singer of third-wave ska band Suburban Legends.",
+      "visible_time_s": 3.187999999994645,
+      "requested_subject": "",
+      "resolved_title": "Tim Maurer",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d10s1",
+      "title": "Tim Maurer",
+      "url": "https://trace.invalid/hotpotqa_5a7bb84d554299294a54aaa1_immediate/d10s1",
+      "text": "He has left the band on two separate occasions.",
+      "visible_time_s": 3.187999999994645,
+      "requested_subject": "",
+      "resolved_title": "Tim Maurer",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d10s2",
+      "title": "Tim Maurer",
+      "url": "https://trace.invalid/hotpotqa_5a7bb84d554299294a54aaa1_immediate/d10s2",
+      "text": "The first was in 2000 after the recording of Origin Edition.",
+      "visible_time_s": 3.187999999994645,
+      "requested_subject": "",
+      "resolved_title": "Tim Maurer",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d10s3",
+      "title": "Tim Maurer",
+      "url": "https://trace.invalid/hotpotqa_5a7bb84d554299294a54aaa1_immediate/d10s3",
+      "text": "He rejoined the band in early 2002 after his replacement singer Chris Batstone left the band.",
+      "visible_time_s": 3.187999999994645,
+      "requested_subject": "",
+      "resolved_title": "Tim Maurer",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d10s4",
+      "title": "Tim Maurer",
+      "url": "https://trace.invalid/hotpotqa_5a7bb84d554299294a54aaa1_immediate/d10s4",
+      "text": "He officially left the band again in September 2005 after the band's third consecutive appearance on the Jerry Lewis MDA Telethon, performing a new song entitled \"Moving Closer.\"",
+      "visible_time_s": 3.187999999994645,
+      "requested_subject": "",
+      "resolved_title": "Tim Maurer",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d10s5",
+      "title": "Tim Maurer",
+      "url": "https://trace.invalid/hotpotqa_5a7bb84d554299294a54aaa1_immediate/d10s5",
+      "text": "The band's former trumpet player, Vincent Walker, rejoined the band for the performance, then took over as lead singer afterward.",
+      "visible_time_s": 3.187999999994645,
+      "requested_subject": "",
+      "resolved_title": "Tim Maurer",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d10s6",
+      "title": "Tim Maurer",
+      "url": "https://trace.invalid/hotpotqa_5a7bb84d554299294a54aaa1_immediate/d10s6",
+      "text": "Maurer returned for a final performance with the band on November 29, 2005 at Huntington Beach High School for a benefit show for the Ryan Dallas Cook Memorial Fund, which was set up following the death of Suburban Legends' trombonist Dallas Cook.",
+      "visible_time_s": 3.187999999994645,
+      "requested_subject": "",
+      "resolved_title": "Tim Maurer",
+      "entity_resolution": "unspecified"
+    }
+  ],
+  "searches": [
+    {
+      "query": "[scheduled evidence]",
+      "subject": "",
+      "status": "ok",
+      "returned_pages": [],
+      "mode": "trace",
+      "unit_id": "__scheduled_evidence__"
+    }
+  ],
+  "search_failures": [],
+  "llm_calls": [
+    {
+      "purpose": "feedback_generate",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 404,
+        "completion_tokens": 58,
+        "total_tokens": 462,
+        "prompt_tokens_details": {
+          "cached_tokens": 384
+        }
+      },
+      "latency_s": 1.188
+    },
+    {
+      "purpose": "decompose",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 794,
+        "completion_tokens": 277,
+        "total_tokens": 1071,
+        "prompt_tokens_details": {
+          "cached_tokens": 768
+        }
+      },
+      "latency_s": 1.875
+    },
+    {
+      "purpose": "feedback_verify",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 355,
+        "completion_tokens": 75,
+        "total_tokens": 430,
+        "prompt_tokens_details": {
+          "cached_tokens": 128
+        }
+      },
+      "latency_s": 0.844
+    },
+    {
+      "purpose": "plan_review",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 1072,
+        "completion_tokens": 290,
+        "total_tokens": 1362,
+        "prompt_tokens_details": {
+          "cached_tokens": 896
+        }
+      },
+      "latency_s": 1.313
+    },
+    {
+      "purpose": "judge",
+      "model": "tinker://f9e9a6c1-e203-5c2c-acdd-68fe67378ca4:train:0/sampler_weights/epoch-0001",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 4773,
+        "completion_tokens": 402,
+        "total_tokens": 5175,
+        "prompt_tokens_details": {
+          "cached_tokens": 1024
+        }
+      },
+      "latency_s": 2.344
+    },
+    {
+      "purpose": "feedback_generate",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 404,
+        "completion_tokens": 69,
+        "total_tokens": 473,
+        "prompt_tokens_details": {
+          "cached_tokens": 384
+        }
+      },
+      "latency_s": 1.0
+    },
+    {
+      "purpose": "generate",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 1073,
+        "completion_tokens": 111,
+        "total_tokens": 1184,
+        "prompt_tokens_details": {
+          "cached_tokens": 512
+        }
+      },
+      "latency_s": 0.843
+    },
+    {
+      "purpose": "feedback_generate",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 405,
+        "completion_tokens": 53,
+        "total_tokens": 458,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        }
+      },
+      "latency_s": 0.719
+    },
+    {
+      "purpose": "verify",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 1471,
+        "completion_tokens": 129,
+        "total_tokens": 1600,
+        "prompt_tokens_details": {
+          "cached_tokens": 640
+        }
+      },
+      "latency_s": 0.954
+    },
+    {
+      "purpose": "feedback_verify",
+      "model": "openai/gpt-oss-120b",
+      "status": "cancelled",
+      "latency_s": 0.375
+    }
+  ],
+  "search_diagnostics": [],
+  "output_enqueued_units": {
+    "u1": "March 2, 1980",
+    "u2": "April 24, 1966",
+    "u3": "David Usher"
+  },
+  "events": [
+    {
+      "sequence": 0,
+      "time_s": 0.0,
+      "type": "feedback_requested",
+      "feedback_kind": "opening",
+      "execution_state": {
+        "stage": "planning",
+        "searches_started": 0,
+        "searches_completed": 0,
+        "active_searches": 0,
+        "evidence_count": 0,
+        "supported_units": 0,
+        "output_units": 0
+      }
+    },
+    {
+      "sequence": 1,
+      "time_s": 1.875,
+      "type": "decompose_reply",
+      "reply": {
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "Vincent Walker's date of birth",
+            "subject": "Vincent Walker",
+            "necessary": true,
+            "depends_on": [],
+            "queries": [
+              "Vincent Walker date of birth",
+              "Vincent Walker born"
+            ]
+          },
+          {
+            "unit_id": "u2",
+            "description": "David Usher's date of birth",
+            "subject": "David Usher",
+            "necessary": true,
+            "depends_on": [],
+            "queries": [
+              "David Usher date of birth",
+              "David Usher born"
+            ]
+          },
+          {
+            "unit_id": "u3",
+            "description": "Comparison of ages to determine who is older",
+            "subject": "",
+            "necessary": true,
+            "depends_on": [
+              "u1",
+              "u2"
+            ],
+            "queries": [
+              "Vincent Walker age compared to David Usher",
+              "who is older Vincent Walker or David Usher"
+            ]
+          }
+        ]
+      },
+      "attempt": 1,
+      "repair": false
+    },
+    {
+      "sequence": 2,
+      "time_s": 1.875,
+      "type": "plan_review_requested",
+      "max_reviews": 1,
+      "question_only": true
+    },
+    {
+      "sequence": 3,
+      "time_s": 2.032,
+      "type": "utterance",
+      "action": "Backchannel",
+      "text": "Got it, I’ll look up the ages of Vincent Walker and David Usher.",
+      "claims": [],
+      "feedback_source": "model",
+      "feedback_status_claim": "intent",
+      "feedback_fallback_reason": "",
+      "execution_state": {
+        "stage": "planning",
+        "searches_started": 0,
+        "searches_completed": 0,
+        "active_searches": 0,
+        "evidence_count": 0,
+        "supported_units": 0,
+        "output_units": 0
+      },
+      "language": "en"
+    },
+    {
+      "sequence": 4,
+      "time_s": 3.188,
+      "type": "plan_review_reply",
+      "reply": {
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "Vincent Walker's date of birth",
+            "subject": "Vincent Walker",
+            "necessary": true,
+            "depends_on": [],
+            "queries": [
+              "Vincent Walker date of birth",
+              "Vincent Walker born"
+            ]
+          },
+          {
+            "unit_id": "u2",
+            "description": "David Usher's date of birth",
+            "subject": "David Usher",
+            "necessary": true,
+            "depends_on": [],
+            "queries": [
+              "David Usher date of birth",
+              "David Usher born"
+            ]
+          },
+          {
+            "unit_id": "u3",
+            "description": "Comparison of ages to determine who is older",
+            "subject": "",
+            "necessary": true,
+            "depends_on": [
+              "u1",
+              "u2"
+            ],
+            "queries": [
+              "Vincent Walker age compared to David Usher",
+              "who is older Vincent Walker or David Usher"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "sequence": 5,
+      "time_s": 3.188,
+      "type": "plan_review_finished",
+      "changed": false,
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "Vincent Walker's date of birth",
+          "necessary": true,
+          "depends_on": [],
+          "queries": [
+            "Vincent Walker date of birth",
+            "Vincent Walker born"
+          ],
+          "subject": "Vincent Walker"
+        },
+        {
+          "unit_id": "u2",
+          "description": "David Usher's date of birth",
+          "necessary": true,
+          "depends_on": [],
+          "queries": [
+            "David Usher date of birth",
+            "David Usher born"
+          ],
+          "subject": "David Usher"
+        },
+        {
+          "unit_id": "u3",
+          "description": "Comparison of ages to determine who is older",
+          "necessary": true,
+          "depends_on": [
+            "u1",
+            "u2"
+          ],
+          "queries": [
+            "Vincent Walker age compared to David Usher",
+            "who is older Vincent Walker or David Usher"
+          ],
+          "subject": ""
+        }
+      ],
+      "question_only": true
+    },
+    {
+      "sequence": 6,
+      "time_s": 3.188,
+      "type": "plan",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "Vincent Walker's date of birth",
+          "necessary": true,
+          "depends_on": [],
+          "queries": [
+            "Vincent Walker date of birth",
+            "Vincent Walker born"
+          ],
+          "subject": "Vincent Walker"
+        },
+        {
+          "unit_id": "u2",
+          "description": "David Usher's date of birth",
+          "necessary": true,
+          "depends_on": [],
+          "queries": [
+            "David Usher date of birth",
+            "David Usher born"
+          ],
+          "subject": "David Usher"
+        },
+        {
+          "unit_id": "u3",
+          "description": "Comparison of ages to determine who is older",
+          "necessary": true,
+          "depends_on": [
+            "u1",
+            "u2"
+          ],
+          "queries": [
+            "Vincent Walker age compared to David Usher",
+            "who is older Vincent Walker or David Usher"
+          ],
+          "subject": ""
+        }
+      ]
+    },
+    {
+      "sequence": 7,
+      "time_s": 3.188,
+      "type": "trace_batch_requested"
+    },
+    {
+      "sequence": 8,
+      "time_s": 3.188,
+      "type": "search_finished",
+      "query": "[scheduled evidence]",
+      "subject": "",
+      "status": "ok",
+      "returned_pages": [],
+      "mode": "trace",
+      "unit_id": "__scheduled_evidence__"
+    },
+    {
+      "sequence": 9,
+      "time_s": 3.188,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d1s0",
+        "title": "David Usher",
+        "url": "https://trace.invalid/hotpotqa_5a7bb84d554299294a54aaa1_immediate/d1s0",
+        "text": "David Usher (born April 24, 1966) is an English-born Canadian musician, best-selling author, keynote speaker and activist, known as the lead singer of the alternative rock band Moist.",
+        "visible_time_s": 3.187999999994645,
+        "requested_subject": "",
+        "resolved_title": "David Usher",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 10,
+      "time_s": 3.188,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d2s0",
+        "title": "Let It Play",
+        "url": "https://trace.invalid/hotpotqa_5a7bb84d554299294a54aaa1_immediate/d2s0",
+        "text": "Let It Play is the ninth studio album by Canadian solo artist David Usher.",
+        "visible_time_s": 3.187999999994645,
+        "requested_subject": "",
+        "resolved_title": "Let It Play",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 11,
+      "time_s": 3.188,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d2s1",
+        "title": "Let It Play",
+        "url": "https://trace.invalid/hotpotqa_5a7bb84d554299294a54aaa1_immediate/d2s1",
+        "text": "It was released on October 21, 2016 via David Usher's own music label, Evil Empire Inc..",
+        "visible_time_s": 3.187999999994645,
+        "requested_subject": "",
+        "resolved_title": "Let It Play",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 12,
+      "time_s": 3.188,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d2s2",
+        "title": "Let It Play",
+        "url": "https://trace.invalid/hotpotqa_5a7bb84d554299294a54aaa1_immediate/d2s2",
+        "text": "The album features English translations of French Canadian songs.",
+        "visible_time_s": 3.187999999994645,
+        "requested_subject": "",
+        "resolved_title": "Let It Play",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 13,
+      "time_s": 3.188,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d3s0",
+        "title": "Billy Bang",
+        "url": "https://trace.invalid/hotpotqa_5a7bb84d554299294a54aaa1_immediate/d3s0",
+        "text": "Billy Bang (September 20, 1947 – April 11, 2011), born William Vincent Walker, was an American free jazz violinist and composer.",
+        "visible_time_s": 3.187999999994645,
+        "requested_subject": "",
+        "resolved_title": "Billy Bang",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 14,
+      "time_s": 3.188,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d4s0",
+        "title": "Brian Robertson (trombonist)",
+        "url": "https://trace.invalid/hotpotqa_5a7bb84d554299294a54aaa1_immediate/d4s0",
+        "text": "Brian Robertson (born October 19, 1979) is the trombone player for the Orange County-based third-wave ska band Suburban Legends and, along with Vincent Walker, is one of the two members to have played with the band since its origin as Bomb Squad.",
+        "visible_time_s": 3.187999999994645,
+        "requested_subject": "",
+        "resolved_title": "Brian Robertson (trombonist)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 15,
+      "time_s": 3.188,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d4s1",
+        "title": "Brian Robertson (trombonist)",
+        "url": "https://trace.invalid/hotpotqa_5a7bb84d554299294a54aaa1_immediate/d4s1",
+        "text": "He met other ex-Suburban Legends / Bomb Squad members, trumpet player Aaron Bertram and best friend and trombone player Ryan Dallas Cook through the Huntington Beach High School Marching Band.",
+        "visible_time_s": 3.187999999994645,
+        "requested_subject": "",
+        "resolved_title": "Brian Robertson (trombonist)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 16,
+      "time_s": 3.188,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d4s2",
+        "title": "Brian Robertson (trombonist)",
+        "url": "https://trace.invalid/hotpotqa_5a7bb84d554299294a54aaa1_immediate/d4s2",
+        "text": "In 2007, Robertson started to be known by the nickname 'Robot', most likely a reference to the dance moves he does onstage with the band, the first three letters of his last name, and/or to avoid confusion with the band's other Brian, Brian Klemm.",
+        "visible_time_s": 3.187999999994645,
+        "requested_subject": "",
+        "resolved_title": "Brian Robertson (trombonist)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 17,
+      "time_s": 3.188,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d5s0",
+        "title": "Vincent Walker",
+        "url": "https://trace.invalid/hotpotqa_5a7bb84d554299294a54aaa1_immediate/d5s0",
+        "text": "Vincent Francis Walker (born March 2, 1980), better known as Vince Walker, is an American multi-instrumentalist, best known as the lead singer of third-wave ska band Suburban Legends.",
+        "visible_time_s": 3.187999999994645,
+        "requested_subject": "",
+        "resolved_title": "Vincent Walker",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 18,
+      "time_s": 3.188,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d5s1",
+        "title": "Vincent Walker",
+        "url": "https://trace.invalid/hotpotqa_5a7bb84d554299294a54aaa1_immediate/d5s1",
+        "text": "He was formerly the lead trumpet player, and left sometime after the release of \"Rump Shaker\", but returned to the band in September 2005 for the band's appearance on the Jerry Lewis MDA Telethon, which happened to be lead singer Tim Maurer's last performance.",
+        "visible_time_s": 3.187999999994645,
+        "requested_subject": "",
+        "resolved_title": "Vincent Walker",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 19,
+      "time_s": 3.188,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d5s2",
+        "title": "Vincent Walker",
+        "url": "https://trace.invalid/hotpotqa_5a7bb84d554299294a54aaa1_immediate/d5s2",
+        "text": "He replaced Maurer as the singer in an odd switching of roles, and continues with the band as frontman.",
+        "visible_time_s": 3.187999999994645,
+        "requested_subject": "",
+        "resolved_title": "Vincent Walker",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 20,
+      "time_s": 3.188,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d6s0",
+        "title": "Vince Foster",
+        "url": "https://trace.invalid/hotpotqa_5a7bb84d554299294a54aaa1_immediate/d6s0",
+        "text": "Vincent Walker \"Vince\" Foster Jr. (January 15, 1945 – July 20, 1993) was a Deputy White House Counsel during the first half-year of President Bill Clinton's administration.",
+        "visible_time_s": 3.187999999994645,
+        "requested_subject": "",
+        "resolved_title": "Vince Foster",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 21,
+      "time_s": 3.188,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d6s1",
+        "title": "Vince Foster",
+        "url": "https://trace.invalid/hotpotqa_5a7bb84d554299294a54aaa1_immediate/d6s1",
+        "text": "Prior to that, he was a partner at Rose Law Firm in Little Rock, Arkansas, where he was a colleague and friend of Hillary Rodham Clinton and where, as \"The Washington Post\" later wrote, he rose to \"the pinnacle of the Arkansas legal establishment.\"",
+        "visible_time_s": 3.187999999994645,
+        "requested_subject": "",
+        "resolved_title": "Vince Foster",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 22,
+      "time_s": 3.188,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d6s2",
+        "title": "Vince Foster",
+        "url": "https://trace.invalid/hotpotqa_5a7bb84d554299294a54aaa1_immediate/d6s2",
+        "text": "At the White House he was unhappy with work in politics and spiraled into depression.",
+        "visible_time_s": 3.187999999994645,
+        "requested_subject": "",
+        "resolved_title": "Vince Foster",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 23,
+      "time_s": 3.188,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d6s3",
+        "title": "Vince Foster",
+        "url": "https://trace.invalid/hotpotqa_5a7bb84d554299294a54aaa1_immediate/d6s3",
+        "text": "His death by gunshot was attributed by five official or governmental investigations to suicide but several conspiracy theories emerged.",
+        "visible_time_s": 3.187999999994645,
+        "requested_subject": "",
+        "resolved_title": "Vince Foster",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 24,
+      "time_s": 3.188,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d7s0",
+        "title": "Black Black Heart",
+        "url": "https://trace.invalid/hotpotqa_5a7bb84d554299294a54aaa1_immediate/d7s0",
+        "text": "\"Black Black Heart\" is a song written by David Usher and Jeff Pearce and released as a second single off Usher's 2001 album \"Morning Orbit\".",
+        "visible_time_s": 3.187999999994645,
+        "requested_subject": "",
+        "resolved_title": "Black Black Heart",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 25,
+      "time_s": 3.188,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d8s0",
+        "title": "Day Job (Suburban Legends album)",
+        "url": "https://trace.invalid/hotpotqa_5a7bb84d554299294a54aaa1_immediate/d8s0",
+        "text": "Day Job is Suburban Legends' fifth album, released on April 3, 2012.",
+        "visible_time_s": 3.187999999994645,
+        "requested_subject": "",
+        "resolved_title": "Day Job (Suburban Legends album)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 26,
+      "time_s": 3.188,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d8s1",
+        "title": "Day Job (Suburban Legends album)",
+        "url": "https://trace.invalid/hotpotqa_5a7bb84d554299294a54aaa1_immediate/d8s1",
+        "text": "Aaron Bertram, Brian Robertson, Derek Rock, and Vincent Walker appeared on local online radio program \"TNN Radio\" to announce the album on February 18, 2012.",
+        "visible_time_s": 3.187999999994645,
+        "requested_subject": "",
+        "resolved_title": "Day Job (Suburban Legends album)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 27,
+      "time_s": 3.188,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d9s0",
+        "title": "Charles Vincent Walker",
+        "url": "https://trace.invalid/hotpotqa_5a7bb84d554299294a54aaa1_immediate/d9s0",
+        "text": "Charles Vincent Walker FRS (20 March 1812 – 24 December 1882) was an English electrical engineer and publisher, a major influence on the development of railway telecommunications, he was also the first person to send a submarine telegraph signal.",
+        "visible_time_s": 3.187999999994645,
+        "requested_subject": "",
+        "resolved_title": "Charles Vincent Walker",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 28,
+      "time_s": 3.188,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d10s0",
+        "title": "Tim Maurer",
+        "url": "https://trace.invalid/hotpotqa_5a7bb84d554299294a54aaa1_immediate/d10s0",
+        "text": "Timothy Robert \"Tim\" Maurer (born October 10, 1980) is an American singer, best known as the former lead singer of third-wave ska band Suburban Legends.",
+        "visible_time_s": 3.187999999994645,
+        "requested_subject": "",
+        "resolved_title": "Tim Maurer",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 29,
+      "time_s": 3.188,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d10s1",
+        "title": "Tim Maurer",
+        "url": "https://trace.invalid/hotpotqa_5a7bb84d554299294a54aaa1_immediate/d10s1",
+        "text": "He has left the band on two separate occasions.",
+        "visible_time_s": 3.187999999994645,
+        "requested_subject": "",
+        "resolved_title": "Tim Maurer",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 30,
+      "time_s": 3.188,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d10s2",
+        "title": "Tim Maurer",
+        "url": "https://trace.invalid/hotpotqa_5a7bb84d554299294a54aaa1_immediate/d10s2",
+        "text": "The first was in 2000 after the recording of Origin Edition.",
+        "visible_time_s": 3.187999999994645,
+        "requested_subject": "",
+        "resolved_title": "Tim Maurer",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 31,
+      "time_s": 3.188,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d10s3",
+        "title": "Tim Maurer",
+        "url": "https://trace.invalid/hotpotqa_5a7bb84d554299294a54aaa1_immediate/d10s3",
+        "text": "He rejoined the band in early 2002 after his replacement singer Chris Batstone left the band.",
+        "visible_time_s": 3.187999999994645,
+        "requested_subject": "",
+        "resolved_title": "Tim Maurer",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 32,
+      "time_s": 3.188,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d10s4",
+        "title": "Tim Maurer",
+        "url": "https://trace.invalid/hotpotqa_5a7bb84d554299294a54aaa1_immediate/d10s4",
+        "text": "He officially left the band again in September 2005 after the band's third consecutive appearance on the Jerry Lewis MDA Telethon, performing a new song entitled \"Moving Closer.\"",
+        "visible_time_s": 3.187999999994645,
+        "requested_subject": "",
+        "resolved_title": "Tim Maurer",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 33,
+      "time_s": 3.188,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d10s5",
+        "title": "Tim Maurer",
+        "url": "https://trace.invalid/hotpotqa_5a7bb84d554299294a54aaa1_immediate/d10s5",
+        "text": "The band's former trumpet player, Vincent Walker, rejoined the band for the performance, then took over as lead singer afterward.",
+        "visible_time_s": 3.187999999994645,
+        "requested_subject": "",
+        "resolved_title": "Tim Maurer",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 34,
+      "time_s": 3.188,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d10s6",
+        "title": "Tim Maurer",
+        "url": "https://trace.invalid/hotpotqa_5a7bb84d554299294a54aaa1_immediate/d10s6",
+        "text": "Maurer returned for a final performance with the band on November 29, 2005 at Huntington Beach High School for a benefit show for the Ryan Dallas Cook Memorial Fund, which was set up following the death of Suburban Legends' trombonist Dallas Cook.",
+        "visible_time_s": 3.187999999994645,
+        "requested_subject": "",
+        "resolved_title": "Tim Maurer",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 35,
+      "time_s": 5.235,
+      "type": "feedback_requested",
+      "feedback_kind": "progress",
+      "execution_state": {
+        "stage": "checking",
+        "searches_started": 1,
+        "searches_completed": 1,
+        "active_searches": 0,
+        "evidence_count": 26,
+        "supported_units": 0,
+        "output_units": 0
+      }
+    },
+    {
+      "sequence": 36,
+      "time_s": 5.532,
+      "type": "judge_reply",
+      "reply": {
+        "judgments": [
+          {
+            "unit_id": "u1",
+            "label": "SUPPORTED",
+            "value": "March 2, 1980",
+            "citations": [
+              "d5s0"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d5s0",
+                "text": "Vincent Francis Walker (born March 2, 1980), better known as Vince Walker, is an American multi-instrumentalist, best known as the lead singer of third-wave ska band Suburban Legends."
+              }
+            ],
+            "reason": "Supported by the cited visible sentences and dependencies."
+          },
+          {
+            "unit_id": "u2",
+            "label": "SUPPORTED",
+            "value": "April 24, 1966",
+            "citations": [
+              "d1s0"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d1s0",
+                "text": "David Usher (born April 24, 1966) is an English-born Canadian musician, best-selling author, keynote speaker and activist, known as the lead singer of the alternative rock band Moist."
+              }
+            ],
+            "reason": "Supported by the cited visible sentences and dependencies."
+          },
+          {
+            "unit_id": "u3",
+            "label": "SUPPORTED",
+            "value": "David Usher",
+            "citations": [
+              "d5s0",
+              "d1s0"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d5s0",
+                "text": "Vincent Francis Walker (born March 2, 1980), better known as Vince Walker, is an American multi-instrumentalist, best known as the lead singer of third-wave ska band Suburban Legends."
+              },
+              {
+                "evidence_id": "d1s0",
+                "text": "David Usher (born April 24, 1966) is an English-born Canadian musician, best-selling author, keynote speaker and activist, known as the lead singer of the alternative rock band Moist."
+              }
+            ],
+            "reason": "Supported by the cited visible sentences and dependencies."
+          }
+        ]
+      },
+      "attempt": 1,
+      "repair": false,
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d2s0",
+        "d2s1",
+        "d2s2",
+        "d3s0",
+        "d4s0",
+        "d4s1",
+        "d4s2",
+        "d5s0",
+        "d5s1",
+        "d5s2",
+        "d6s0",
+        "d6s1",
+        "d6s2",
+        "d6s3",
+        "d7s0",
+        "d8s0",
+        "d8s1",
+        "d9s0",
+        "d10s0",
+        "d10s1",
+        "d10s2",
+        "d10s3",
+        "d10s4",
+        "d10s5",
+        "d10s6"
+      ]
+    },
+    {
+      "sequence": 37,
+      "time_s": 5.532,
+      "type": "judgments",
+      "judgments": {
+        "u1": {
+          "label": "SUPPORTED",
+          "value": "March 2, 1980",
+          "citations": [
+            "d5s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d5s0",
+              "text": "Vincent Francis Walker (born March 2, 1980), better known as Vince Walker, is an American multi-instrumentalist, best known as the lead singer of third-wave ska band Suburban Legends."
+            }
+          ],
+          "reason": "Supported by the cited visible sentences and dependencies."
+        },
+        "u2": {
+          "label": "SUPPORTED",
+          "value": "April 24, 1966",
+          "citations": [
+            "d1s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d1s0",
+              "text": "David Usher (born April 24, 1966) is an English-born Canadian musician, best-selling author, keynote speaker and activist, known as the lead singer of the alternative rock band Moist."
+            }
+          ],
+          "reason": "Supported by the cited visible sentences and dependencies."
+        },
+        "u3": {
+          "label": "SUPPORTED",
+          "value": "David Usher",
+          "citations": [
+            "d5s0",
+            "d1s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d5s0",
+              "text": "Vincent Francis Walker (born March 2, 1980), better known as Vince Walker, is an American multi-instrumentalist, best known as the lead singer of third-wave ska band Suburban Legends."
+            },
+            {
+              "evidence_id": "d1s0",
+              "text": "David Usher (born April 24, 1966) is an English-born Canadian musician, best-selling author, keynote speaker and activist, known as the lead singer of the alternative rock band Moist."
+            }
+          ],
+          "reason": "Supported by the cited visible sentences and dependencies."
+        }
+      },
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d2s0",
+        "d2s1",
+        "d2s2",
+        "d3s0",
+        "d4s0",
+        "d4s1",
+        "d4s2",
+        "d5s0",
+        "d5s1",
+        "d5s2",
+        "d6s0",
+        "d6s1",
+        "d6s2",
+        "d6s3",
+        "d7s0",
+        "d8s0",
+        "d8s1",
+        "d9s0",
+        "d10s0",
+        "d10s1",
+        "d10s2",
+        "d10s3",
+        "d10s4",
+        "d10s5",
+        "d10s6"
+      ],
+      "semantic_review": false
+    },
+    {
+      "sequence": 38,
+      "time_s": 7.329,
+      "type": "verification_reply",
+      "reply": {
+        "approved": true,
+        "facts_valid": true,
+        "expressed_unit_ids": [
+          "u1",
+          "u2",
+          "u3"
+        ],
+        "reason": "All statements are supported by the provided citations and correctly answer the question."
+      },
+      "output_unit_ids": [
+        "u1",
+        "u2",
+        "u3"
+      ],
+      "output_action": "Final Answer",
+      "dependency_unit_ids": [],
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d5s0"
+      ]
+    },
+    {
+      "sequence": 39,
+      "time_s": 7.329,
+      "type": "utterance",
+      "action": "Final Answer",
+      "text": "Vincent Walker was born on March 2, 1980. David Usher was born on April 24, 1966. David Usher is older than Vincent Walker.",
+      "claims": [
+        {
+          "unit_id": "u1",
+          "description": "Vincent Walker's date of birth",
+          "value": "March 2, 1980",
+          "citations": [
+            "d5s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d5s0",
+              "text": "Vincent Francis Walker (born March 2, 1980), better known as Vince Walker, is an American multi-instrumentalist, best known as the lead singer of third-wave ska band Suburban Legends."
+            }
+          ]
+        },
+        {
+          "unit_id": "u2",
+          "description": "David Usher's date of birth",
+          "value": "April 24, 1966",
+          "citations": [
+            "d1s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d1s0",
+              "text": "David Usher (born April 24, 1966) is an English-born Canadian musician, best-selling author, keynote speaker and activist, known as the lead singer of the alternative rock band Moist."
+            }
+          ]
+        },
+        {
+          "unit_id": "u3",
+          "description": "Comparison of ages to determine who is older",
+          "value": "David Usher",
+          "citations": [
+            "d5s0",
+            "d1s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d5s0",
+              "text": "Vincent Francis Walker (born March 2, 1980), better known as Vince Walker, is an American multi-instrumentalist, best known as the lead singer of third-wave ska band Suburban Legends."
+            },
+            {
+              "evidence_id": "d1s0",
+              "text": "David Usher (born April 24, 1966) is an English-born Canadian musician, best-selling author, keynote speaker and activist, known as the lead singer of the alternative rock band Moist."
+            }
+          ]
+        }
+      ],
+      "unresolved": [],
+      "fallback": false,
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d2s0",
+        "d2s1",
+        "d2s2",
+        "d3s0",
+        "d4s0",
+        "d4s1",
+        "d4s2",
+        "d5s0",
+        "d5s1",
+        "d5s2",
+        "d6s0",
+        "d6s1",
+        "d6s2",
+        "d6s3",
+        "d7s0",
+        "d8s0",
+        "d8s1",
+        "d9s0",
+        "d10s0",
+        "d10s1",
+        "d10s2",
+        "d10s3",
+        "d10s4",
+        "d10s5",
+        "d10s6"
+      ],
+      "language": "en"
+    },
+    {
+      "sequence": 40,
+      "time_s": 7.329,
+      "type": "finished",
+      "status": "complete"
+    }
+  ],
+  "note": "Prototype model judgments are not independent gold scores. Output event times are not spoken claim times.",
+  "evidence_mode": "scheduled_trace",
+  "audio": {
+    "enabled": true,
+    "mode": "windows",
+    "play": false,
+    "status": "ok",
+    "errors": [],
+    "records": [
+      {
+        "event_sequence": 3,
+        "sentence_index": 1,
+        "sentence_count": 1,
+        "language": "en",
+        "text": "Got it, I’ll look up the ages of Vincent Walker and David Usher.",
+        "action": "Backchannel",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 2.0319999999919673,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1-continued\\samples\\0715\\audio\\segments\\0003_01.wav",
+        "duration_s": 4.59360544217687,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 2.860000000000582,
+        "synthesis_and_playback_s": 0.8280000000086147
+      },
+      {
+        "event_sequence": 39,
+        "sentence_index": 1,
+        "sentence_count": 3,
+        "language": "en",
+        "text": "Vincent Walker was born on March 2, 1980.",
+        "action": "Final Answer",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 7.3289999999979045,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1-continued\\samples\\0715\\audio\\segments\\0039_01.wav",
+        "duration_s": 4.12875283446712,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 8.14100000000326,
+        "synthesis_and_playback_s": 0.8120000000053551
+      },
+      {
+        "event_sequence": 39,
+        "sentence_index": 2,
+        "sentence_count": 3,
+        "language": "en",
+        "text": "David Usher was born on April 24, 1966.",
+        "action": "Final Answer",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 8.14100000000326,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1-continued\\samples\\0715\\audio\\segments\\0039_02.wav",
+        "duration_s": 5.043673469387755,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 8.953999999997905,
+        "synthesis_and_playback_s": 0.8129999999946449
+      },
+      {
+        "event_sequence": 39,
+        "sentence_index": 3,
+        "sentence_count": 3,
+        "language": "en",
+        "text": "David Usher is older than Vincent Walker.",
+        "action": "Final Answer",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 8.953999999997905,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1-continued\\samples\\0715\\audio\\segments\\0039_03.wav",
+        "duration_s": 3.0490249433106578,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 9.781999999991967,
+        "synthesis_and_playback_s": 0.8279999999940628
+      }
+    ],
+    "wave": {
+      "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1-continued\\samples\\0715\\audio\\response.wav",
+      "duration_s": 20.362448979591836,
+      "timeline": [
+        {
+          "event_sequence": 3,
+          "sentence_index": 1,
+          "action": "Backchannel",
+          "text": "Got it, I’ll look up the ages of Vincent Walker and David Usher.",
+          "wave_start_s": 2.86,
+          "wave_end_s": 7.453605442176871
+        },
+        {
+          "event_sequence": 39,
+          "sentence_index": 1,
+          "action": "Final Answer",
+          "text": "Vincent Walker was born on March 2, 1980.",
+          "wave_start_s": 8.140997732426303,
+          "wave_end_s": 12.269750566893425
+        },
+        {
+          "event_sequence": 39,
+          "sentence_index": 2,
+          "action": "Final Answer",
+          "text": "David Usher was born on April 24, 1966.",
+          "wave_start_s": 12.269750566893425,
+          "wave_end_s": 17.31342403628118
+        },
+        {
+          "event_sequence": 39,
+          "sentence_index": 3,
+          "action": "Final Answer",
+          "text": "David Usher is older than Vincent Walker.",
+          "wave_start_s": 17.31342403628118,
+          "wave_end_s": 20.362448979591836
+        }
+      ]
+    }
+  },
+  "evaluation": {
+    "mode": "b_final_revised_trace",
+    "trace_id": "hotpotqa_5a7bb84d554299294a54aaa1_immediate",
+    "sample_id": "hotpotqa_5a7bb84d554299294a54aaa1",
+    "total_wall_s": 9.781999999991967,
+    "question_timeout_s": 180,
+    "audio_enabled": true,
+    "history_enabled": false,
+    "text_pipeline_wall_s": 7.3289999999979045,
+    "effective_settings": {
+      "base_url": "https://tinker.thinkingmachines.dev/services/tinker-prod/oai/api/v1",
+      "model": "openai/gpt-oss-120b",
+      "judge_model": "tinker://f9e9a6c1-e203-5c2c-acdd-68fe67378ca4:train:0/sampler_weights/epoch-0001",
+      "judge_reasoning_effort": "low",
+      "wiki_language": "en",
+      "user_agent": "CascadeSystem/0.1 (educational research prototype)",
+      "timeout_s": 45.0,
+      "max_tokens": 4096,
+      "reasoning_effort": "low",
+      "progress_s": 3.0,
+      "feedback_timeout_s": 6.0,
+      "search_limit": 3,
+      "max_units": 8,
+      "max_searches": 16,
+      "max_sources": 26,
+      "source_chars": 260,
+      "evidence_chars": 3926,
+      "concurrency": 3
+    },
+    "timing_kind": "unknown",
+    "scheduler": "wall-paced fixed B arrivals",
+    "split": "eval_reserved",
+    "empty_evidence_sentences_ignored": 0
+  }
+}

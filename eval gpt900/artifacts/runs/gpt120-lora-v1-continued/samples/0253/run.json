@@ -1,0 +1,1831 @@
+{
+  "question": "Which film whose director was born first, Curry And Pepper or End Of Watch?",
+  "resolved_question": "Which film whose director was born first, Curry And Pepper or End Of Watch?",
+  "used_history_turn_ids": [],
+  "response_language": "en",
+  "status": "complete",
+  "clock": "wall_monotonic",
+  "time_origin": "question_text_ready_after_optional_asr",
+  "model": "openai/gpt-oss-120b",
+  "judge_model": "tinker://f9e9a6c1-e203-5c2c-acdd-68fe67378ca4:train:0/sampler_weights/epoch-0001",
+  "units": [
+    {
+      "unit_id": "u1",
+      "description": "director of Curry & Pepper",
+      "necessary": true,
+      "depends_on": [],
+      "queries": [
+        "Curry & Pepper film director",
+        "Curry & Pepper movie director"
+      ],
+      "subject": "Curry & Pepper"
+    },
+    {
+      "unit_id": "u2",
+      "description": "birth date of the director of Curry & Pepper",
+      "necessary": true,
+      "depends_on": [
+        "u1"
+      ],
+      "queries": [
+        "birth date of {u1}",
+        "date of birth {u1}"
+      ],
+      "subject": ""
+    },
+    {
+      "unit_id": "u3",
+      "description": "director of End of Watch",
+      "necessary": true,
+      "depends_on": [],
+      "queries": [
+        "End of Watch film director",
+        "End of Watch movie director"
+      ],
+      "subject": "End of Watch"
+    },
+    {
+      "unit_id": "u4",
+      "description": "birth date of the director of End of Watch",
+      "necessary": true,
+      "depends_on": [
+        "u3"
+      ],
+      "queries": [
+        "birth date of {u3}",
+        "date of birth {u3}"
+      ],
+      "subject": ""
+    },
+    {
+      "unit_id": "u5",
+      "description": "which director was born earlier",
+      "necessary": true,
+      "depends_on": [
+        "u2",
+        "u4"
+      ],
+      "queries": [
+        "compare birth dates of {u2} and {u4}"
+      ],
+      "subject": ""
+    }
+  ],
+  "judgments": {
+    "u1": {
+      "label": "SUPPORTED",
+      "value": "Blackie Ko",
+      "citations": [
+        "d4s0"
+      ],
+      "quotes": [
+        {
+          "evidence_id": "d4s0",
+          "text": "Curry and Pepper is a 1990 Hong Kong action comedy film directed by Blackie Ko and starring Jacky Cheung and Stephen Chow."
+        }
+      ],
+      "reason": "Supported by the cited visible sentences and dependencies."
+    },
+    "u2": {
+      "label": "SUPPORTED",
+      "value": "February 22, 1953",
+      "citations": [
+        "d5s1"
+      ],
+      "quotes": [
+        {
+          "evidence_id": "d5s1",
+          "text": "Ko( February 22, 1953 – December 9, 2003) was a Taiwanese film director, producer, stuntman, singer and actor."
+        }
+      ],
+      "reason": "Supported by the cited visible sentences and dependencies."
+    },
+    "u3": {
+      "label": "SUPPORTED",
+      "value": "David Ayer",
+      "citations": [
+        "d1s0"
+      ],
+      "quotes": [
+        {
+          "evidence_id": "d1s0",
+          "text": "End of Watch is a 2012 American action thriller film written and directed by David Ayer."
+        }
+      ],
+      "reason": "Supported by the cited visible sentences and dependencies."
+    },
+    "u4": {
+      "label": "SUPPORTED",
+      "value": "January 18, 1968",
+      "citations": [
+        "d10s0"
+      ],
+      "quotes": [
+        {
+          "evidence_id": "d10s0",
+          "text": "David Ayer( born January 18, 1968) is an American film director, producer and screenwriter."
+        }
+      ],
+      "reason": "Supported by the cited visible sentences and dependencies."
+    },
+    "u5": {
+      "label": "SUPPORTED",
+      "value": "Blackie Ko",
+      "citations": [
+        "d5s1",
+        "d10s0"
+      ],
+      "quotes": [
+        {
+          "evidence_id": "d5s1",
+          "text": "Ko( February 22, 1953 – December 9, 2003) was a Taiwanese film director, producer, stuntman, singer and actor."
+        },
+        {
+          "evidence_id": "d10s0",
+          "text": "David Ayer( born January 18, 1968) is an American film director, producer and screenwriter."
+        }
+      ],
+      "reason": "Supported by the cited visible sentences and dependencies."
+    }
+  },
+  "evidence": [
+    {
+      "evidence_id": "d1s0",
+      "title": "End of Watch",
+      "url": "https://trace.invalid/2wikimultihopqa_826592ec08bc11ebbd88ac1f6bf848b6_immediate/d1s0",
+      "text": "End of Watch is a 2012 American action thriller film written and directed by David Ayer.",
+      "visible_time_s": 5.35899999999674,
+      "requested_subject": "",
+      "resolved_title": "End of Watch",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d1s1",
+      "title": "End of Watch",
+      "url": "https://trace.invalid/2wikimultihopqa_826592ec08bc11ebbd88ac1f6bf848b6_immediate/d1s1",
+      "text": "It stars Jake Gyllenhaal and Michael Peña as Brian Taylor and Miguel Zavala, two Los Angeles Police Department officers who work in South Los Angeles.",
+      "visible_time_s": 5.35899999999674,
+      "requested_subject": "",
+      "resolved_title": "End of Watch",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d1s2",
+      "title": "End of Watch",
+      "url": "https://trace.invalid/2wikimultihopqa_826592ec08bc11ebbd88ac1f6bf848b6_immediate/d1s2",
+      "text": "The film focuses on their day- to- day police work, their dealings with a certain group of gang members, their friendship with each other, and their personal relationships.",
+      "visible_time_s": 5.35899999999674,
+      "requested_subject": "",
+      "resolved_title": "End of Watch",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d1s3",
+      "title": "End of Watch",
+      "url": "https://trace.invalid/2wikimultihopqa_826592ec08bc11ebbd88ac1f6bf848b6_immediate/d1s3",
+      "text": "Ayer, who had written several police procedural films previously, wanted the film to focus more on the friendship between partners and honest police work rather than corruption.",
+      "visible_time_s": 5.35899999999674,
+      "requested_subject": "",
+      "resolved_title": "End of Watch",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d1s4",
+      "title": "End of Watch",
+      "url": "https://trace.invalid/2wikimultihopqa_826592ec08bc11ebbd88ac1f6bf848b6_immediate/d1s4",
+      "text": "Gyllenhaal, Peña, and other cast members underwent an intensive training program to prepare for their roles as police officers.",
+      "visible_time_s": 5.35899999999674,
+      "requested_subject": "",
+      "resolved_title": "End of Watch",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d1s5",
+      "title": "End of Watch",
+      "url": "https://trace.invalid/2wikimultihopqa_826592ec08bc11ebbd88ac1f6bf848b6_immediate/d1s5",
+      "text": "Filming took place in Los Angeles in August 2011 with a budget of$ 7 million.",
+      "visible_time_s": 5.35899999999674,
+      "requested_subject": "",
+      "resolved_title": "End of Watch",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d1s6",
+      "title": "End of Watch",
+      "url": "https://trace.invalid/2wikimultihopqa_826592ec08bc11ebbd88ac1f6bf848b6_immediate/d1s6",
+      "text": "\" End of Watch\" premiered on September 8, 2012 at the Toronto International Film Festival and was released in American theaters on September 21, grossing over$ 57 million at the box office.",
+      "visible_time_s": 5.35899999999674,
+      "requested_subject": "",
+      "resolved_title": "End of Watch",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d1s7",
+      "title": "End of Watch",
+      "url": "https://trace.invalid/2wikimultihopqa_826592ec08bc11ebbd88ac1f6bf848b6_immediate/d1s7",
+      "text": "The film received a number of accolades, including two Independent Spirit Award nominations.",
+      "visible_time_s": 5.35899999999674,
+      "requested_subject": "",
+      "resolved_title": "End of Watch",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d2s0",
+      "title": "Ringo-en no shōjo",
+      "url": "https://trace.invalid/2wikimultihopqa_826592ec08bc11ebbd88ac1f6bf848b6_immediate/d2s0",
+      "text": "The art director was Tomoo Shimogawara.",
+      "visible_time_s": 5.35899999999674,
+      "requested_subject": "",
+      "resolved_title": "Ringo-en no shōjo",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d3s0",
+      "title": "Deepak Sareen",
+      "url": "https://trace.invalid/2wikimultihopqa_826592ec08bc11ebbd88ac1f6bf848b6_immediate/d3s0",
+      "text": "Deepak Sareen is a Bollywood film director and assistant director.",
+      "visible_time_s": 5.35899999999674,
+      "requested_subject": "",
+      "resolved_title": "Deepak Sareen",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d3s1",
+      "title": "Deepak Sareen",
+      "url": "https://trace.invalid/2wikimultihopqa_826592ec08bc11ebbd88ac1f6bf848b6_immediate/d3s1",
+      "text": "His first film as director was\" Ranbhoomi\" and last film as director was\" Albela\".",
+      "visible_time_s": 5.35899999999674,
+      "requested_subject": "",
+      "resolved_title": "Deepak Sareen",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d4s0",
+      "title": "Curry and Pepper",
+      "url": "https://trace.invalid/2wikimultihopqa_826592ec08bc11ebbd88ac1f6bf848b6_immediate/d4s0",
+      "text": "Curry and Pepper is a 1990 Hong Kong action comedy film directed by Blackie Ko and starring Jacky Cheung and Stephen Chow.",
+      "visible_time_s": 5.35899999999674,
+      "requested_subject": "",
+      "resolved_title": "Curry and Pepper",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d4s1",
+      "title": "Curry and Pepper",
+      "url": "https://trace.invalid/2wikimultihopqa_826592ec08bc11ebbd88ac1f6bf848b6_immediate/d4s1",
+      "text": "This film is Cheung and Chow's second film collaboration after the 1988 film,\" Faithfully Yours\".",
+      "visible_time_s": 5.35899999999674,
+      "requested_subject": "",
+      "resolved_title": "Curry and Pepper",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d5s0",
+      "title": "Blackie Ko",
+      "url": "https://trace.invalid/2wikimultihopqa_826592ec08bc11ebbd88ac1f6bf848b6_immediate/d5s0",
+      "text": "Blackie",
+      "visible_time_s": 5.35899999999674,
+      "requested_subject": "",
+      "resolved_title": "Blackie Ko",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d5s1",
+      "title": "Blackie Ko",
+      "url": "https://trace.invalid/2wikimultihopqa_826592ec08bc11ebbd88ac1f6bf848b6_immediate/d5s1",
+      "text": "Ko( February 22, 1953 – December 9, 2003) was a Taiwanese film director, producer, stuntman, singer and actor.",
+      "visible_time_s": 5.35899999999674,
+      "requested_subject": "",
+      "resolved_title": "Blackie Ko",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d5s2",
+      "title": "Blackie Ko",
+      "url": "https://trace.invalid/2wikimultihopqa_826592ec08bc11ebbd88ac1f6bf848b6_immediate/d5s2",
+      "text": "Blackie was considered as the greatest automotive stunt choreographer in Asia.",
+      "visible_time_s": 5.35899999999674,
+      "requested_subject": "",
+      "resolved_title": "Blackie Ko",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d6s0",
+      "title": "Henry Moore (cricketer)",
+      "url": "https://trace.invalid/2wikimultihopqa_826592ec08bc11ebbd88ac1f6bf848b6_immediate/d6s0",
+      "text": "Henry Walter Moore( 1849 – 20 August 1916) was an English- born first- class cricketer who spent most of his life in New Zealand.",
+      "visible_time_s": 5.35899999999674,
+      "requested_subject": "",
+      "resolved_title": "Henry Moore (cricketer)",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d7s0",
+      "title": "Hartley Lobban",
+      "url": "https://trace.invalid/2wikimultihopqa_826592ec08bc11ebbd88ac1f6bf848b6_immediate/d7s0",
+      "text": "Hartley W Lobban (9 May 1926 – 15 October 2004) was a Jamaican-born first-class cricketer who played 17 matches for Worcestershire in the early 1950s.",
+      "visible_time_s": 5.35899999999674,
+      "requested_subject": "",
+      "resolved_title": "Hartley Lobban",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d8s0",
+      "title": "Wale Adebanwi",
+      "url": "https://trace.invalid/2wikimultihopqa_826592ec08bc11ebbd88ac1f6bf848b6_immediate/d8s0",
+      "text": "Wale Adebanwi( born 1969) is a Nigerian- born first Black Rhodes Professor at St Antony's College, Oxford.",
+      "visible_time_s": 5.35899999999674,
+      "requested_subject": "",
+      "resolved_title": "Wale Adebanwi",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d9s0",
+      "title": "John McMahon (Surrey and Somerset cricketer)",
+      "url": "https://trace.invalid/2wikimultihopqa_826592ec08bc11ebbd88ac1f6bf848b6_immediate/d9s0",
+      "text": "John William Joseph McMahon( 28 December 1917 – 8 May 2001) was an Australian- born first- class cricketer who played for Surrey and Somerset in England from 1947 to 1957.",
+      "visible_time_s": 5.35899999999674,
+      "requested_subject": "",
+      "resolved_title": "John McMahon (Surrey and Somerset cricketer)",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d10s0",
+      "title": "David Ayer",
+      "url": "https://trace.invalid/2wikimultihopqa_826592ec08bc11ebbd88ac1f6bf848b6_immediate/d10s0",
+      "text": "David Ayer( born January 18, 1968) is an American film director, producer and screenwriter.",
+      "visible_time_s": 5.35899999999674,
+      "requested_subject": "",
+      "resolved_title": "David Ayer",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d10s1",
+      "title": "David Ayer",
+      "url": "https://trace.invalid/2wikimultihopqa_826592ec08bc11ebbd88ac1f6bf848b6_immediate/d10s1",
+      "text": "He wrote\" Training Day\"( 2001), co-wrote\" The Fast and the Furious\"( 2001), and directed\" Harsh Times\"( 2005),\" Street Kings\"( 2008),\" End of Watch\"( 2012),\" Sabotage\"( 2014),\" Fury\"( 2014),\" Suicide Squad\"( 2016) and\" Bright\"( 2017).",
+      "visible_time_s": 5.35899999999674,
+      "requested_subject": "",
+      "resolved_title": "David Ayer",
+      "entity_resolution": "unspecified"
+    }
+  ],
+  "searches": [
+    {
+      "query": "[scheduled evidence]",
+      "subject": "",
+      "status": "ok",
+      "returned_pages": [],
+      "mode": "trace",
+      "unit_id": "__scheduled_evidence__"
+    }
+  ],
+  "search_failures": [],
+  "llm_calls": [
+    {
+      "purpose": "feedback_generate",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 409,
+        "completion_tokens": 103,
+        "total_tokens": 512,
+        "prompt_tokens_details": {
+          "cached_tokens": 384
+        }
+      },
+      "latency_s": 1.297
+    },
+    {
+      "purpose": "feedback_verify",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 362,
+        "completion_tokens": 70,
+        "total_tokens": 432,
+        "prompt_tokens_details": {
+          "cached_tokens": 128
+        }
+      },
+      "latency_s": 0.687
+    },
+    {
+      "purpose": "decompose",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 799,
+        "completion_tokens": 446,
+        "total_tokens": 1245,
+        "prompt_tokens_details": {
+          "cached_tokens": 768
+        }
+      },
+      "latency_s": 2.281
+    },
+    {
+      "purpose": "plan_review",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 1179,
+        "completion_tokens": 486,
+        "total_tokens": 1665,
+        "prompt_tokens_details": {
+          "cached_tokens": 1024
+        }
+      },
+      "latency_s": 3.078
+    },
+    {
+      "purpose": "feedback_generate",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 409,
+        "completion_tokens": 66,
+        "total_tokens": 475,
+        "prompt_tokens_details": {
+          "cached_tokens": 384
+        }
+      },
+      "latency_s": 0.672
+    },
+    {
+      "purpose": "feedback_verify",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 356,
+        "completion_tokens": 94,
+        "total_tokens": 450,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        }
+      },
+      "latency_s": 1.937
+    },
+    {
+      "purpose": "judge",
+      "model": "tinker://f9e9a6c1-e203-5c2c-acdd-68fe67378ca4:train:0/sampler_weights/epoch-0001",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 4510,
+        "completion_tokens": 527,
+        "total_tokens": 5037,
+        "prompt_tokens_details": {
+          "cached_tokens": 1024
+        }
+      },
+      "latency_s": 2.329
+    },
+    {
+      "purpose": "generate",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 1303,
+        "completion_tokens": 148,
+        "total_tokens": 1451,
+        "prompt_tokens_details": {
+          "cached_tokens": 384
+        }
+      },
+      "latency_s": 0.89
+    },
+    {
+      "purpose": "verify",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 1959,
+        "completion_tokens": 176,
+        "total_tokens": 2135,
+        "prompt_tokens_details": {
+          "cached_tokens": 512
+        }
+      },
+      "latency_s": 2.25
+    }
+  ],
+  "search_diagnostics": [],
+  "output_enqueued_units": {
+    "u1": "Blackie Ko",
+    "u2": "February 22, 1953",
+    "u3": "David Ayer",
+    "u4": "January 18, 1968",
+    "u5": "Blackie Ko"
+  },
+  "events": [
+    {
+      "sequence": 0,
+      "time_s": 0.0,
+      "type": "feedback_requested",
+      "feedback_kind": "opening",
+      "execution_state": {
+        "stage": "planning",
+        "searches_started": 0,
+        "searches_completed": 0,
+        "active_searches": 0,
+        "evidence_count": 0,
+        "supported_units": 0,
+        "output_units": 0
+      }
+    },
+    {
+      "sequence": 1,
+      "time_s": 1.984,
+      "type": "utterance",
+      "action": "Backchannel",
+      "text": "I’ll look up the birth dates of the directors of Curry And Pepper and End Of Watch.",
+      "claims": [],
+      "feedback_source": "model",
+      "feedback_status_claim": "intent",
+      "feedback_fallback_reason": "",
+      "execution_state": {
+        "stage": "planning",
+        "searches_started": 0,
+        "searches_completed": 0,
+        "active_searches": 0,
+        "evidence_count": 0,
+        "supported_units": 0,
+        "output_units": 0
+      },
+      "language": "en"
+    },
+    {
+      "sequence": 2,
+      "time_s": 2.281,
+      "type": "decompose_reply",
+      "reply": {
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "director of Curry And Pepper",
+            "subject": "",
+            "necessary": true,
+            "depends_on": [],
+            "queries": [
+              "Curry And Pepper film director",
+              "Curry & Pepper movie director"
+            ]
+          },
+          {
+            "unit_id": "u2",
+            "description": "birth date of the director of Curry And Pepper",
+            "subject": "",
+            "necessary": true,
+            "depends_on": [
+              "u1"
+            ],
+            "queries": [
+              "birth date of {u1}",
+              "date of birth {u1}"
+            ]
+          },
+          {
+            "unit_id": "u3",
+            "description": "director of End Of Watch",
+            "subject": "",
+            "necessary": true,
+            "depends_on": [],
+            "queries": [
+              "End Of Watch film director",
+              "End of Watch movie director"
+            ]
+          },
+          {
+            "unit_id": "u4",
+            "description": "birth date of the director of End Of Watch",
+            "subject": "",
+            "necessary": true,
+            "depends_on": [
+              "u3"
+            ],
+            "queries": [
+              "birth date of {u3}",
+              "date of birth {u3}"
+            ]
+          },
+          {
+            "unit_id": "u5",
+            "description": "which director was born earlier",
+            "subject": "",
+            "necessary": true,
+            "depends_on": [
+              "u2",
+              "u4"
+            ],
+            "queries": [
+              "compare birth dates of {u2} and {u4}"
+            ]
+          }
+        ]
+      },
+      "attempt": 1,
+      "repair": false
+    },
+    {
+      "sequence": 3,
+      "time_s": 2.281,
+      "type": "plan_review_requested",
+      "max_reviews": 1,
+      "question_only": true
+    },
+    {
+      "sequence": 4,
+      "time_s": 5.016,
+      "type": "feedback_requested",
+      "feedback_kind": "progress",
+      "execution_state": {
+        "stage": "planning",
+        "searches_started": 0,
+        "searches_completed": 0,
+        "active_searches": 0,
+        "evidence_count": 0,
+        "supported_units": 0,
+        "output_units": 0
+      }
+    },
+    {
+      "sequence": 5,
+      "time_s": 5.359,
+      "type": "plan_review_reply",
+      "reply": {
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "director of Curry & Pepper",
+            "subject": "Curry & Pepper",
+            "necessary": true,
+            "depends_on": [],
+            "queries": [
+              "Curry & Pepper film director",
+              "Curry & Pepper movie director"
+            ]
+          },
+          {
+            "unit_id": "u2",
+            "description": "birth date of the director of Curry & Pepper",
+            "subject": "",
+            "necessary": true,
+            "depends_on": [
+              "u1"
+            ],
+            "queries": [
+              "birth date of {u1}",
+              "date of birth {u1}"
+            ]
+          },
+          {
+            "unit_id": "u3",
+            "description": "director of End of Watch",
+            "subject": "End of Watch",
+            "necessary": true,
+            "depends_on": [],
+            "queries": [
+              "End of Watch film director",
+              "End of Watch movie director"
+            ]
+          },
+          {
+            "unit_id": "u4",
+            "description": "birth date of the director of End of Watch",
+            "subject": "",
+            "necessary": true,
+            "depends_on": [
+              "u3"
+            ],
+            "queries": [
+              "birth date of {u3}",
+              "date of birth {u3}"
+            ]
+          },
+          {
+            "unit_id": "u5",
+            "description": "which director was born earlier",
+            "subject": "",
+            "necessary": true,
+            "depends_on": [
+              "u2",
+              "u4"
+            ],
+            "queries": [
+              "compare birth dates of {u2} and {u4}"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "sequence": 6,
+      "time_s": 5.359,
+      "type": "plan_review_finished",
+      "changed": true,
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "director of Curry & Pepper",
+          "necessary": true,
+          "depends_on": [],
+          "queries": [
+            "Curry & Pepper film director",
+            "Curry & Pepper movie director"
+          ],
+          "subject": "Curry & Pepper"
+        },
+        {
+          "unit_id": "u2",
+          "description": "birth date of the director of Curry & Pepper",
+          "necessary": true,
+          "depends_on": [
+            "u1"
+          ],
+          "queries": [
+            "birth date of {u1}",
+            "date of birth {u1}"
+          ],
+          "subject": ""
+        },
+        {
+          "unit_id": "u3",
+          "description": "director of End of Watch",
+          "necessary": true,
+          "depends_on": [],
+          "queries": [
+            "End of Watch film director",
+            "End of Watch movie director"
+          ],
+          "subject": "End of Watch"
+        },
+        {
+          "unit_id": "u4",
+          "description": "birth date of the director of End of Watch",
+          "necessary": true,
+          "depends_on": [
+            "u3"
+          ],
+          "queries": [
+            "birth date of {u3}",
+            "date of birth {u3}"
+          ],
+          "subject": ""
+        },
+        {
+          "unit_id": "u5",
+          "description": "which director was born earlier",
+          "necessary": true,
+          "depends_on": [
+            "u2",
+            "u4"
+          ],
+          "queries": [
+            "compare birth dates of {u2} and {u4}"
+          ],
+          "subject": ""
+        }
+      ],
+      "question_only": true
+    },
+    {
+      "sequence": 7,
+      "time_s": 5.359,
+      "type": "plan",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "director of Curry & Pepper",
+          "necessary": true,
+          "depends_on": [],
+          "queries": [
+            "Curry & Pepper film director",
+            "Curry & Pepper movie director"
+          ],
+          "subject": "Curry & Pepper"
+        },
+        {
+          "unit_id": "u2",
+          "description": "birth date of the director of Curry & Pepper",
+          "necessary": true,
+          "depends_on": [
+            "u1"
+          ],
+          "queries": [
+            "birth date of {u1}",
+            "date of birth {u1}"
+          ],
+          "subject": ""
+        },
+        {
+          "unit_id": "u3",
+          "description": "director of End of Watch",
+          "necessary": true,
+          "depends_on": [],
+          "queries": [
+            "End of Watch film director",
+            "End of Watch movie director"
+          ],
+          "subject": "End of Watch"
+        },
+        {
+          "unit_id": "u4",
+          "description": "birth date of the director of End of Watch",
+          "necessary": true,
+          "depends_on": [
+            "u3"
+          ],
+          "queries": [
+            "birth date of {u3}",
+            "date of birth {u3}"
+          ],
+          "subject": ""
+        },
+        {
+          "unit_id": "u5",
+          "description": "which director was born earlier",
+          "necessary": true,
+          "depends_on": [
+            "u2",
+            "u4"
+          ],
+          "queries": [
+            "compare birth dates of {u2} and {u4}"
+          ],
+          "subject": ""
+        }
+      ]
+    },
+    {
+      "sequence": 8,
+      "time_s": 5.359,
+      "type": "trace_batch_requested"
+    },
+    {
+      "sequence": 9,
+      "time_s": 5.359,
+      "type": "search_finished",
+      "query": "[scheduled evidence]",
+      "subject": "",
+      "status": "ok",
+      "returned_pages": [],
+      "mode": "trace",
+      "unit_id": "__scheduled_evidence__"
+    },
+    {
+      "sequence": 10,
+      "time_s": 5.359,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d1s0",
+        "title": "End of Watch",
+        "url": "https://trace.invalid/2wikimultihopqa_826592ec08bc11ebbd88ac1f6bf848b6_immediate/d1s0",
+        "text": "End of Watch is a 2012 American action thriller film written and directed by David Ayer.",
+        "visible_time_s": 5.35899999999674,
+        "requested_subject": "",
+        "resolved_title": "End of Watch",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 11,
+      "time_s": 5.359,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d1s1",
+        "title": "End of Watch",
+        "url": "https://trace.invalid/2wikimultihopqa_826592ec08bc11ebbd88ac1f6bf848b6_immediate/d1s1",
+        "text": "It stars Jake Gyllenhaal and Michael Peña as Brian Taylor and Miguel Zavala, two Los Angeles Police Department officers who work in South Los Angeles.",
+        "visible_time_s": 5.35899999999674,
+        "requested_subject": "",
+        "resolved_title": "End of Watch",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 12,
+      "time_s": 5.359,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d1s2",
+        "title": "End of Watch",
+        "url": "https://trace.invalid/2wikimultihopqa_826592ec08bc11ebbd88ac1f6bf848b6_immediate/d1s2",
+        "text": "The film focuses on their day- to- day police work, their dealings with a certain group of gang members, their friendship with each other, and their personal relationships.",
+        "visible_time_s": 5.35899999999674,
+        "requested_subject": "",
+        "resolved_title": "End of Watch",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 13,
+      "time_s": 5.359,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d1s3",
+        "title": "End of Watch",
+        "url": "https://trace.invalid/2wikimultihopqa_826592ec08bc11ebbd88ac1f6bf848b6_immediate/d1s3",
+        "text": "Ayer, who had written several police procedural films previously, wanted the film to focus more on the friendship between partners and honest police work rather than corruption.",
+        "visible_time_s": 5.35899999999674,
+        "requested_subject": "",
+        "resolved_title": "End of Watch",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 14,
+      "time_s": 5.359,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d1s4",
+        "title": "End of Watch",
+        "url": "https://trace.invalid/2wikimultihopqa_826592ec08bc11ebbd88ac1f6bf848b6_immediate/d1s4",
+        "text": "Gyllenhaal, Peña, and other cast members underwent an intensive training program to prepare for their roles as police officers.",
+        "visible_time_s": 5.35899999999674,
+        "requested_subject": "",
+        "resolved_title": "End of Watch",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 15,
+      "time_s": 5.359,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d1s5",
+        "title": "End of Watch",
+        "url": "https://trace.invalid/2wikimultihopqa_826592ec08bc11ebbd88ac1f6bf848b6_immediate/d1s5",
+        "text": "Filming took place in Los Angeles in August 2011 with a budget of$ 7 million.",
+        "visible_time_s": 5.35899999999674,
+        "requested_subject": "",
+        "resolved_title": "End of Watch",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 16,
+      "time_s": 5.359,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d1s6",
+        "title": "End of Watch",
+        "url": "https://trace.invalid/2wikimultihopqa_826592ec08bc11ebbd88ac1f6bf848b6_immediate/d1s6",
+        "text": "\" End of Watch\" premiered on September 8, 2012 at the Toronto International Film Festival and was released in American theaters on September 21, grossing over$ 57 million at the box office.",
+        "visible_time_s": 5.35899999999674,
+        "requested_subject": "",
+        "resolved_title": "End of Watch",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 17,
+      "time_s": 5.359,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d1s7",
+        "title": "End of Watch",
+        "url": "https://trace.invalid/2wikimultihopqa_826592ec08bc11ebbd88ac1f6bf848b6_immediate/d1s7",
+        "text": "The film received a number of accolades, including two Independent Spirit Award nominations.",
+        "visible_time_s": 5.35899999999674,
+        "requested_subject": "",
+        "resolved_title": "End of Watch",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 18,
+      "time_s": 5.359,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d2s0",
+        "title": "Ringo-en no shōjo",
+        "url": "https://trace.invalid/2wikimultihopqa_826592ec08bc11ebbd88ac1f6bf848b6_immediate/d2s0",
+        "text": "The art director was Tomoo Shimogawara.",
+        "visible_time_s": 5.35899999999674,
+        "requested_subject": "",
+        "resolved_title": "Ringo-en no shōjo",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 19,
+      "time_s": 5.359,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d3s0",
+        "title": "Deepak Sareen",
+        "url": "https://trace.invalid/2wikimultihopqa_826592ec08bc11ebbd88ac1f6bf848b6_immediate/d3s0",
+        "text": "Deepak Sareen is a Bollywood film director and assistant director.",
+        "visible_time_s": 5.35899999999674,
+        "requested_subject": "",
+        "resolved_title": "Deepak Sareen",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 20,
+      "time_s": 5.359,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d3s1",
+        "title": "Deepak Sareen",
+        "url": "https://trace.invalid/2wikimultihopqa_826592ec08bc11ebbd88ac1f6bf848b6_immediate/d3s1",
+        "text": "His first film as director was\" Ranbhoomi\" and last film as director was\" Albela\".",
+        "visible_time_s": 5.35899999999674,
+        "requested_subject": "",
+        "resolved_title": "Deepak Sareen",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 21,
+      "time_s": 5.359,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d4s0",
+        "title": "Curry and Pepper",
+        "url": "https://trace.invalid/2wikimultihopqa_826592ec08bc11ebbd88ac1f6bf848b6_immediate/d4s0",
+        "text": "Curry and Pepper is a 1990 Hong Kong action comedy film directed by Blackie Ko and starring Jacky Cheung and Stephen Chow.",
+        "visible_time_s": 5.35899999999674,
+        "requested_subject": "",
+        "resolved_title": "Curry and Pepper",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 22,
+      "time_s": 5.359,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d4s1",
+        "title": "Curry and Pepper",
+        "url": "https://trace.invalid/2wikimultihopqa_826592ec08bc11ebbd88ac1f6bf848b6_immediate/d4s1",
+        "text": "This film is Cheung and Chow's second film collaboration after the 1988 film,\" Faithfully Yours\".",
+        "visible_time_s": 5.35899999999674,
+        "requested_subject": "",
+        "resolved_title": "Curry and Pepper",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 23,
+      "time_s": 5.359,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d5s0",
+        "title": "Blackie Ko",
+        "url": "https://trace.invalid/2wikimultihopqa_826592ec08bc11ebbd88ac1f6bf848b6_immediate/d5s0",
+        "text": "Blackie",
+        "visible_time_s": 5.35899999999674,
+        "requested_subject": "",
+        "resolved_title": "Blackie Ko",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 24,
+      "time_s": 5.359,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d5s1",
+        "title": "Blackie Ko",
+        "url": "https://trace.invalid/2wikimultihopqa_826592ec08bc11ebbd88ac1f6bf848b6_immediate/d5s1",
+        "text": "Ko( February 22, 1953 – December 9, 2003) was a Taiwanese film director, producer, stuntman, singer and actor.",
+        "visible_time_s": 5.35899999999674,
+        "requested_subject": "",
+        "resolved_title": "Blackie Ko",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 25,
+      "time_s": 5.359,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d5s2",
+        "title": "Blackie Ko",
+        "url": "https://trace.invalid/2wikimultihopqa_826592ec08bc11ebbd88ac1f6bf848b6_immediate/d5s2",
+        "text": "Blackie was considered as the greatest automotive stunt choreographer in Asia.",
+        "visible_time_s": 5.35899999999674,
+        "requested_subject": "",
+        "resolved_title": "Blackie Ko",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 26,
+      "time_s": 5.359,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d6s0",
+        "title": "Henry Moore (cricketer)",
+        "url": "https://trace.invalid/2wikimultihopqa_826592ec08bc11ebbd88ac1f6bf848b6_immediate/d6s0",
+        "text": "Henry Walter Moore( 1849 – 20 August 1916) was an English- born first- class cricketer who spent most of his life in New Zealand.",
+        "visible_time_s": 5.35899999999674,
+        "requested_subject": "",
+        "resolved_title": "Henry Moore (cricketer)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 27,
+      "time_s": 5.359,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d7s0",
+        "title": "Hartley Lobban",
+        "url": "https://trace.invalid/2wikimultihopqa_826592ec08bc11ebbd88ac1f6bf848b6_immediate/d7s0",
+        "text": "Hartley W Lobban (9 May 1926 – 15 October 2004) was a Jamaican-born first-class cricketer who played 17 matches for Worcestershire in the early 1950s.",
+        "visible_time_s": 5.35899999999674,
+        "requested_subject": "",
+        "resolved_title": "Hartley Lobban",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 28,
+      "time_s": 5.359,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d8s0",
+        "title": "Wale Adebanwi",
+        "url": "https://trace.invalid/2wikimultihopqa_826592ec08bc11ebbd88ac1f6bf848b6_immediate/d8s0",
+        "text": "Wale Adebanwi( born 1969) is a Nigerian- born first Black Rhodes Professor at St Antony's College, Oxford.",
+        "visible_time_s": 5.35899999999674,
+        "requested_subject": "",
+        "resolved_title": "Wale Adebanwi",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 29,
+      "time_s": 5.359,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d9s0",
+        "title": "John McMahon (Surrey and Somerset cricketer)",
+        "url": "https://trace.invalid/2wikimultihopqa_826592ec08bc11ebbd88ac1f6bf848b6_immediate/d9s0",
+        "text": "John William Joseph McMahon( 28 December 1917 – 8 May 2001) was an Australian- born first- class cricketer who played for Surrey and Somerset in England from 1947 to 1957.",
+        "visible_time_s": 5.35899999999674,
+        "requested_subject": "",
+        "resolved_title": "John McMahon (Surrey and Somerset cricketer)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 30,
+      "time_s": 5.359,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d10s0",
+        "title": "David Ayer",
+        "url": "https://trace.invalid/2wikimultihopqa_826592ec08bc11ebbd88ac1f6bf848b6_immediate/d10s0",
+        "text": "David Ayer( born January 18, 1968) is an American film director, producer and screenwriter.",
+        "visible_time_s": 5.35899999999674,
+        "requested_subject": "",
+        "resolved_title": "David Ayer",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 31,
+      "time_s": 5.359,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d10s1",
+        "title": "David Ayer",
+        "url": "https://trace.invalid/2wikimultihopqa_826592ec08bc11ebbd88ac1f6bf848b6_immediate/d10s1",
+        "text": "He wrote\" Training Day\"( 2001), co-wrote\" The Fast and the Furious\"( 2001), and directed\" Harsh Times\"( 2005),\" Street Kings\"( 2008),\" End of Watch\"( 2012),\" Sabotage\"( 2014),\" Fury\"( 2014),\" Suicide Squad\"( 2016) and\" Bright\"( 2017).",
+        "visible_time_s": 5.35899999999674,
+        "requested_subject": "",
+        "resolved_title": "David Ayer",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 32,
+      "time_s": 7.625,
+      "type": "utterance",
+      "action": "Progress",
+      "text": "I'm checking the sources that arrived.",
+      "claims": [],
+      "feedback_source": "fallback",
+      "feedback_status_claim": "checking",
+      "feedback_fallback_reason": "feedback_not_approved",
+      "execution_state": {
+        "stage": "checking",
+        "searches_started": 1,
+        "searches_completed": 1,
+        "active_searches": 0,
+        "evidence_count": 22,
+        "supported_units": 0,
+        "output_units": 0
+      },
+      "language": "en"
+    },
+    {
+      "sequence": 33,
+      "time_s": 7.688,
+      "type": "judge_reply",
+      "reply": {
+        "judgments": [
+          {
+            "unit_id": "u1",
+            "label": "SUPPORTED",
+            "value": "Blackie Ko",
+            "citations": [
+              "d4s0"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d4s0",
+                "text": "Curry and Pepper is a 1990 Hong Kong action comedy film directed by Blackie Ko and starring Jacky Cheung and Stephen Chow."
+              }
+            ],
+            "reason": "Supported by the cited visible sentences and dependencies."
+          },
+          {
+            "unit_id": "u2",
+            "label": "SUPPORTED",
+            "value": "February 22, 1953",
+            "citations": [
+              "d5s1"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d5s1",
+                "text": "Ko( February 22, 1953 – December 9, 2003) was a Taiwanese film director, producer, stuntman, singer and actor."
+              }
+            ],
+            "reason": "Supported by the cited visible sentences and dependencies."
+          },
+          {
+            "unit_id": "u3",
+            "label": "SUPPORTED",
+            "value": "David Ayer",
+            "citations": [
+              "d1s0"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d1s0",
+                "text": "End of Watch is a 2012 American action thriller film written and directed by David Ayer."
+              }
+            ],
+            "reason": "Supported by the cited visible sentences and dependencies."
+          },
+          {
+            "unit_id": "u4",
+            "label": "SUPPORTED",
+            "value": "January 18, 1968",
+            "citations": [
+              "d10s0"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d10s0",
+                "text": "David Ayer( born January 18, 1968) is an American film director, producer and screenwriter."
+              }
+            ],
+            "reason": "Supported by the cited visible sentences and dependencies."
+          },
+          {
+            "unit_id": "u5",
+            "label": "SUPPORTED",
+            "value": "Blackie Ko",
+            "citations": [
+              "d5s1",
+              "d10s0"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d5s1",
+                "text": "Ko( February 22, 1953 – December 9, 2003) was a Taiwanese film director, producer, stuntman, singer and actor."
+              },
+              {
+                "evidence_id": "d10s0",
+                "text": "David Ayer( born January 18, 1968) is an American film director, producer and screenwriter."
+              }
+            ],
+            "reason": "Supported by the cited visible sentences and dependencies."
+          }
+        ]
+      },
+      "attempt": 1,
+      "repair": false,
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d1s1",
+        "d1s2",
+        "d1s3",
+        "d1s4",
+        "d1s5",
+        "d1s6",
+        "d1s7",
+        "d2s0",
+        "d3s0",
+        "d3s1",
+        "d4s0",
+        "d4s1",
+        "d5s0",
+        "d5s1",
+        "d5s2",
+        "d6s0",
+        "d7s0",
+        "d8s0",
+        "d9s0",
+        "d10s0",
+        "d10s1"
+      ]
+    },
+    {
+      "sequence": 34,
+      "time_s": 7.688,
+      "type": "judgments",
+      "judgments": {
+        "u1": {
+          "label": "SUPPORTED",
+          "value": "Blackie Ko",
+          "citations": [
+            "d4s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d4s0",
+              "text": "Curry and Pepper is a 1990 Hong Kong action comedy film directed by Blackie Ko and starring Jacky Cheung and Stephen Chow."
+            }
+          ],
+          "reason": "Supported by the cited visible sentences and dependencies."
+        },
+        "u2": {
+          "label": "SUPPORTED",
+          "value": "February 22, 1953",
+          "citations": [
+            "d5s1"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d5s1",
+              "text": "Ko( February 22, 1953 – December 9, 2003) was a Taiwanese film director, producer, stuntman, singer and actor."
+            }
+          ],
+          "reason": "Supported by the cited visible sentences and dependencies."
+        },
+        "u3": {
+          "label": "SUPPORTED",
+          "value": "David Ayer",
+          "citations": [
+            "d1s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d1s0",
+              "text": "End of Watch is a 2012 American action thriller film written and directed by David Ayer."
+            }
+          ],
+          "reason": "Supported by the cited visible sentences and dependencies."
+        },
+        "u4": {
+          "label": "SUPPORTED",
+          "value": "January 18, 1968",
+          "citations": [
+            "d10s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d10s0",
+              "text": "David Ayer( born January 18, 1968) is an American film director, producer and screenwriter."
+            }
+          ],
+          "reason": "Supported by the cited visible sentences and dependencies."
+        },
+        "u5": {
+          "label": "SUPPORTED",
+          "value": "Blackie Ko",
+          "citations": [
+            "d5s1",
+            "d10s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d5s1",
+              "text": "Ko( February 22, 1953 – December 9, 2003) was a Taiwanese film director, producer, stuntman, singer and actor."
+            },
+            {
+              "evidence_id": "d10s0",
+              "text": "David Ayer( born January 18, 1968) is an American film director, producer and screenwriter."
+            }
+          ],
+          "reason": "Supported by the cited visible sentences and dependencies."
+        }
+      },
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d1s1",
+        "d1s2",
+        "d1s3",
+        "d1s4",
+        "d1s5",
+        "d1s6",
+        "d1s7",
+        "d2s0",
+        "d3s0",
+        "d3s1",
+        "d4s0",
+        "d4s1",
+        "d5s0",
+        "d5s1",
+        "d5s2",
+        "d6s0",
+        "d7s0",
+        "d8s0",
+        "d9s0",
+        "d10s0",
+        "d10s1"
+      ],
+      "semantic_review": false
+    },
+    {
+      "sequence": 35,
+      "time_s": 10.828,
+      "type": "verification_reply",
+      "reply": {
+        "approved": true,
+        "facts_valid": true,
+        "expressed_unit_ids": [
+          "u1",
+          "u2",
+          "u3",
+          "u4",
+          "u5"
+        ],
+        "reason": "All factual claims are supported by the approved evidence and correspond to the requested units."
+      },
+      "output_unit_ids": [
+        "u1",
+        "u2",
+        "u3",
+        "u4",
+        "u5"
+      ],
+      "output_action": "Final Answer",
+      "dependency_unit_ids": [],
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d4s0",
+        "d5s1",
+        "d10s0"
+      ]
+    },
+    {
+      "sequence": 36,
+      "time_s": 10.828,
+      "type": "utterance",
+      "action": "Final Answer",
+      "text": "Blackie Ko directed Curry & Pepper. Blackie Ko was born on February 22, 1953. David Ayer directed End of Watch. David Ayer was born on January 18, 1968. Blackie Ko was born earlier than David Ayer.",
+      "claims": [
+        {
+          "unit_id": "u1",
+          "description": "director of Curry & Pepper",
+          "value": "Blackie Ko",
+          "citations": [
+            "d4s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d4s0",
+              "text": "Curry and Pepper is a 1990 Hong Kong action comedy film directed by Blackie Ko and starring Jacky Cheung and Stephen Chow."
+            }
+          ]
+        },
+        {
+          "unit_id": "u2",
+          "description": "birth date of the director of Curry & Pepper",
+          "value": "February 22, 1953",
+          "citations": [
+            "d5s1"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d5s1",
+              "text": "Ko( February 22, 1953 – December 9, 2003) was a Taiwanese film director, producer, stuntman, singer and actor."
+            }
+          ]
+        },
+        {
+          "unit_id": "u3",
+          "description": "director of End of Watch",
+          "value": "David Ayer",
+          "citations": [
+            "d1s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d1s0",
+              "text": "End of Watch is a 2012 American action thriller film written and directed by David Ayer."
+            }
+          ]
+        },
+        {
+          "unit_id": "u4",
+          "description": "birth date of the director of End of Watch",
+          "value": "January 18, 1968",
+          "citations": [
+            "d10s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d10s0",
+              "text": "David Ayer( born January 18, 1968) is an American film director, producer and screenwriter."
+            }
+          ]
+        },
+        {
+          "unit_id": "u5",
+          "description": "which director was born earlier",
+          "value": "Blackie Ko",
+          "citations": [
+            "d5s1",
+            "d10s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d5s1",
+              "text": "Ko( February 22, 1953 – December 9, 2003) was a Taiwanese film director, producer, stuntman, singer and actor."
+            },
+            {
+              "evidence_id": "d10s0",
+              "text": "David Ayer( born January 18, 1968) is an American film director, producer and screenwriter."
+            }
+          ]
+        }
+      ],
+      "unresolved": [],
+      "fallback": false,
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d1s1",
+        "d1s2",
+        "d1s3",
+        "d1s4",
+        "d1s5",
+        "d1s6",
+        "d1s7",
+        "d2s0",
+        "d3s0",
+        "d3s1",
+        "d4s0",
+        "d4s1",
+        "d5s0",
+        "d5s1",
+        "d5s2",
+        "d6s0",
+        "d7s0",
+        "d8s0",
+        "d9s0",
+        "d10s0",
+        "d10s1"
+      ],
+      "language": "en"
+    },
+    {
+      "sequence": 37,
+      "time_s": 10.828,
+      "type": "finished",
+      "status": "complete"
+    }
+  ],
+  "note": "Prototype model judgments are not independent gold scores. Output event times are not spoken claim times.",
+  "evidence_mode": "scheduled_trace",
+  "audio": {
+    "enabled": true,
+    "mode": "windows",
+    "play": false,
+    "status": "ok",
+    "errors": [],
+    "records": [
+      {
+        "event_sequence": 1,
+        "sentence_index": 1,
+        "sentence_count": 1,
+        "language": "en",
+        "text": "I’ll look up the birth dates of the directors of Curry And Pepper and End Of Watch.",
+        "action": "Backchannel",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 1.9839999999967404,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1\\samples\\0253\\audio\\segments\\0001_01.wav",
+        "duration_s": 4.813424036281179,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 2.7809999999881256,
+        "synthesis_and_playback_s": 0.7969999999913853
+      },
+      {
+        "event_sequence": 32,
+        "sentence_index": 1,
+        "sentence_count": 1,
+        "language": "en",
+        "text": "I'm checking the sources that arrived.",
+        "action": "Progress",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 7.625,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1\\samples\\0253\\audio\\segments\\0032_01.wav",
+        "duration_s": 2.6690702947845804,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 8.421999999991385,
+        "synthesis_and_playback_s": 0.7969999999913853
+      },
+      {
+        "event_sequence": 36,
+        "sentence_index": 1,
+        "sentence_count": 5,
+        "language": "en",
+        "text": "Blackie Ko directed Curry & Pepper.",
+        "action": "Final Answer",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 10.827999999994063,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1\\samples\\0253\\audio\\segments\\0036_01.wav",
+        "duration_s": 3.1839455782312927,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 11.593999999997322,
+        "synthesis_and_playback_s": 0.7810000000026776
+      },
+      {
+        "event_sequence": 36,
+        "sentence_index": 2,
+        "sentence_count": 5,
+        "language": "en",
+        "text": "Blackie Ko was born on February 22, 1953.",
+        "action": "Final Answer",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 11.60899999999674,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1\\samples\\0253\\audio\\segments\\0036_02.wav",
+        "duration_s": 5.283673469387755,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 12.390999999988708,
+        "synthesis_and_playback_s": 0.7819999999919673
+      },
+      {
+        "event_sequence": 36,
+        "sentence_index": 3,
+        "sentence_count": 5,
+        "language": "en",
+        "text": "David Ayer directed End of Watch.",
+        "action": "Final Answer",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 12.390999999988708,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1\\samples\\0253\\audio\\segments\\0036_03.wav",
+        "duration_s": 2.6640816326530614,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 13.171999999991385,
+        "synthesis_and_playback_s": 0.7810000000026776
+      },
+      {
+        "event_sequence": 36,
+        "sentence_index": 4,
+        "sentence_count": 5,
+        "language": "en",
+        "text": "David Ayer was born on January 18, 1968.",
+        "action": "Final Answer",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 13.171999999991385,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1\\samples\\0253\\audio\\segments\\0036_04.wav",
+        "duration_s": 4.668798185941043,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 13.968999999997322,
+        "synthesis_and_playback_s": 0.7970000000059372
+      },
+      {
+        "event_sequence": 36,
+        "sentence_index": 5,
+        "sentence_count": 5,
+        "language": "en",
+        "text": "Blackie Ko was born earlier than David Ayer.",
+        "action": "Final Answer",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 13.968999999997322,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1\\samples\\0253\\audio\\segments\\0036_05.wav",
+        "duration_s": 3.3337868480725623,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 14.765999999988708,
+        "synthesis_and_playback_s": 0.7969999999913853
+      }
+    ],
+    "wave": {
+      "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1\\samples\\0253\\audio\\response.wav",
+      "duration_s": 30.728299319727892,
+      "timeline": [
+        {
+          "event_sequence": 1,
+          "sentence_index": 1,
+          "action": "Backchannel",
+          "text": "I’ll look up the birth dates of the directors of Curry And Pepper and End Of Watch.",
+          "wave_start_s": 2.7809977324263038,
+          "wave_end_s": 7.594421768707483
+        },
+        {
+          "event_sequence": 32,
+          "sentence_index": 1,
+          "action": "Progress",
+          "text": "I'm checking the sources that arrived.",
+          "wave_start_s": 8.421995464852607,
+          "wave_end_s": 11.091065759637187
+        },
+        {
+          "event_sequence": 36,
+          "sentence_index": 1,
+          "action": "Final Answer",
+          "text": "Blackie Ko directed Curry & Pepper.",
+          "wave_start_s": 11.594013605442177,
+          "wave_end_s": 14.777959183673469
+        },
+        {
+          "event_sequence": 36,
+          "sentence_index": 2,
+          "action": "Final Answer",
+          "text": "Blackie Ko was born on February 22, 1953.",
+          "wave_start_s": 14.777959183673469,
+          "wave_end_s": 20.061632653061224
+        },
+        {
+          "event_sequence": 36,
+          "sentence_index": 3,
+          "action": "Final Answer",
+          "text": "David Ayer directed End of Watch.",
+          "wave_start_s": 20.061632653061224,
+          "wave_end_s": 22.725714285714286
+        },
+        {
+          "event_sequence": 36,
+          "sentence_index": 4,
+          "action": "Final Answer",
+          "text": "David Ayer was born on January 18, 1968.",
+          "wave_start_s": 22.725714285714286,
+          "wave_end_s": 27.39451247165533
+        },
+        {
+          "event_sequence": 36,
+          "sentence_index": 5,
+          "action": "Final Answer",
+          "text": "Blackie Ko was born earlier than David Ayer.",
+          "wave_start_s": 27.39451247165533,
+          "wave_end_s": 30.728299319727892
+        }
+      ]
+    }
+  },
+  "evaluation": {
+    "mode": "b_final_revised_trace",
+    "trace_id": "2wikimultihopqa_826592ec08bc11ebbd88ac1f6bf848b6_immediate",
+    "sample_id": "2wikimultihopqa_826592ec08bc11ebbd88ac1f6bf848b6",
+    "total_wall_s": 14.765999999988708,
+    "question_timeout_s": 180,
+    "audio_enabled": true,
+    "history_enabled": false,
+    "text_pipeline_wall_s": 10.827999999994063,
+    "effective_settings": {
+      "base_url": "https://tinker.thinkingmachines.dev/services/tinker-prod/oai/api/v1",
+      "model": "openai/gpt-oss-120b",
+      "judge_model": "tinker://f9e9a6c1-e203-5c2c-acdd-68fe67378ca4:train:0/sampler_weights/epoch-0001",
+      "judge_reasoning_effort": "low",
+      "wiki_language": "en",
+      "user_agent": "CascadeSystem/0.1 (educational research prototype)",
+      "timeout_s": 45.0,
+      "max_tokens": 4096,
+      "reasoning_effort": "low",
+      "progress_s": 3.0,
+      "feedback_timeout_s": 6.0,
+      "search_limit": 3,
+      "max_units": 8,
+      "max_searches": 16,
+      "max_sources": 22,
+      "source_chars": 234,
+      "evidence_chars": 2554,
+      "concurrency": 3
+    },
+    "timing_kind": "unknown",
+    "scheduler": "wall-paced fixed B arrivals",
+    "split": "eval_reserved",
+    "empty_evidence_sentences_ignored": 0
+  }
+}

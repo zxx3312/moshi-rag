@@ -1,0 +1,491 @@
+{
+  "question": "Which film has the director who died later, The Obsessed Of Catule or Countess Ironing-Maid?",
+  "resolved_question": "Which film has the director who died later, The Obsessed Of Catule or Countess Ironing-Maid?",
+  "used_history_turn_ids": [],
+  "response_language": "en",
+  "status": "error",
+  "clock": "wall_monotonic",
+  "time_origin": "question_text_ready_after_optional_asr",
+  "model": "openai/gpt-oss-120b",
+  "units": [],
+  "judgments": {},
+  "evidence": [],
+  "searches": [],
+  "search_failures": [],
+  "llm_calls": [
+    {
+      "purpose": "feedback_generate",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 416,
+        "completion_tokens": 96,
+        "total_tokens": 512,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        }
+      },
+      "latency_s": 1.253409
+    },
+    {
+      "purpose": "feedback_verify",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 375,
+        "completion_tokens": 70,
+        "total_tokens": 445,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        }
+      },
+      "latency_s": 0.644388
+    },
+    {
+      "purpose": "decompose",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 806,
+        "completion_tokens": 435,
+        "total_tokens": 1241,
+        "prompt_tokens_details": {
+          "cached_tokens": 768
+        }
+      },
+      "latency_s": 2.089847
+    },
+    {
+      "purpose": "plan_review",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 1197,
+        "completion_tokens": 528,
+        "total_tokens": 1725,
+        "prompt_tokens_details": {
+          "cached_tokens": 768
+        }
+      },
+      "latency_s": 3.431541
+    },
+    {
+      "purpose": "feedback_generate",
+      "model": "openai/gpt-oss-120b",
+      "status": "cancelled",
+      "latency_s": 0.4949
+    }
+  ],
+  "search_diagnostics": [],
+  "output_enqueued_units": {},
+  "events": [
+    {
+      "sequence": 0,
+      "time_s": 0.000432,
+      "type": "feedback_requested",
+      "feedback_kind": "opening",
+      "execution_state": {
+        "stage": "planning",
+        "searches_started": 0,
+        "searches_completed": 0,
+        "active_searches": 0,
+        "evidence_count": 0,
+        "supported_units": 0,
+        "output_units": 0
+      }
+    },
+    {
+      "sequence": 1,
+      "time_s": 1.898477,
+      "type": "utterance",
+      "action": "Backchannel",
+      "text": "I see you're asking which film's director died later, The Obsessed Of Catule or Countess Ironing-Maid.",
+      "claims": [],
+      "feedback_source": "model",
+      "feedback_status_claim": "intent",
+      "feedback_fallback_reason": "",
+      "execution_state": {
+        "stage": "planning",
+        "searches_started": 0,
+        "searches_completed": 0,
+        "active_searches": 0,
+        "evidence_count": 0,
+        "supported_units": 0,
+        "output_units": 0
+      },
+      "language": "en"
+    },
+    {
+      "sequence": 2,
+      "time_s": 2.090242,
+      "type": "decompose_reply",
+      "reply": {
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "director of The Obsessed Of Catule",
+            "subject": "The Obsessed Of Catule",
+            "necessary": false,
+            "depends_on": [],
+            "queries": [
+              "The Obsessed Of Catule director"
+            ]
+          },
+          {
+            "unit_id": "u2",
+            "description": "death date of the director of The Obsessed Of Catule",
+            "subject": "{u1}",
+            "necessary": false,
+            "depends_on": [
+              "u1"
+            ],
+            "queries": [
+              "{u1} death date"
+            ]
+          },
+          {
+            "unit_id": "u3",
+            "description": "director of Countess Ironing-Maid",
+            "subject": "Countess Ironing-Maid",
+            "necessary": false,
+            "depends_on": [],
+            "queries": [
+              "Countess Ironing-Maid director"
+            ]
+          },
+          {
+            "unit_id": "u4",
+            "description": "death date of the director of Countess Ironing-Maid",
+            "subject": "{u3}",
+            "necessary": false,
+            "depends_on": [
+              "u3"
+            ],
+            "queries": [
+              "{u3} death date"
+            ]
+          },
+          {
+            "unit_id": "u5",
+            "description": "which film has the director who died later",
+            "subject": "",
+            "necessary": true,
+            "depends_on": [
+              "u2",
+              "u4"
+            ],
+            "queries": [
+              "compare death dates of {u1} and {u3}"
+            ]
+          }
+        ]
+      },
+      "attempt": 1,
+      "repair": false
+    },
+    {
+      "sequence": 3,
+      "time_s": 2.090364,
+      "type": "protocol_validation_failed",
+      "stage": "decompose",
+      "attempt": 1,
+      "error": "Placeholders must name explicit dependencies"
+    },
+    {
+      "sequence": 4,
+      "time_s": 2.090509,
+      "type": "protocol_normalized",
+      "stage": "decompose",
+      "changes": [
+        {
+          "unit_id": "u5",
+          "added_dependencies": [
+            "u1",
+            "u3"
+          ]
+        }
+      ],
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "director of The Obsessed Of Catule",
+          "necessary": false,
+          "depends_on": [],
+          "queries": [
+            "The Obsessed Of Catule director"
+          ],
+          "subject": "The Obsessed Of Catule"
+        },
+        {
+          "unit_id": "u2",
+          "description": "death date of the director of The Obsessed Of Catule",
+          "necessary": false,
+          "depends_on": [
+            "u1"
+          ],
+          "queries": [
+            "{u1} death date"
+          ],
+          "subject": "{u1}"
+        },
+        {
+          "unit_id": "u3",
+          "description": "director of Countess Ironing-Maid",
+          "necessary": false,
+          "depends_on": [],
+          "queries": [
+            "Countess Ironing-Maid director"
+          ],
+          "subject": "Countess Ironing-Maid"
+        },
+        {
+          "unit_id": "u4",
+          "description": "death date of the director of Countess Ironing-Maid",
+          "necessary": false,
+          "depends_on": [
+            "u3"
+          ],
+          "queries": [
+            "{u3} death date"
+          ],
+          "subject": "{u3}"
+        },
+        {
+          "unit_id": "u5",
+          "description": "which film has the director who died later",
+          "necessary": true,
+          "depends_on": [
+            "u2",
+            "u4",
+            "u1",
+            "u3"
+          ],
+          "queries": [
+            "compare death dates of {u1} and {u3}"
+          ],
+          "subject": ""
+        }
+      ],
+      "no_facts_added": true
+    },
+    {
+      "sequence": 5,
+      "time_s": 2.090549,
+      "type": "plan_review_requested",
+      "max_reviews": 1,
+      "question_only": true
+    },
+    {
+      "sequence": 6,
+      "time_s": 5.027741,
+      "type": "feedback_requested",
+      "feedback_kind": "progress",
+      "execution_state": {
+        "stage": "planning",
+        "searches_started": 0,
+        "searches_completed": 0,
+        "active_searches": 0,
+        "evidence_count": 0,
+        "supported_units": 0,
+        "output_units": 0
+      }
+    },
+    {
+      "sequence": 7,
+      "time_s": 5.522131,
+      "type": "plan_review_reply",
+      "reply": {
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "director of The Obsessed Of Catule",
+            "subject": "The Obsessed Of Catule",
+            "necessary": true,
+            "depends_on": [],
+            "queries": [
+              "The Obsessed Of Catule director",
+              "director of The Obsessed Of Catule"
+            ]
+          },
+          {
+            "unit_id": "u2",
+            "description": "death date of the director of The Obsessed Of Catule",
+            "subject": "{u1}",
+            "necessary": true,
+            "depends_on": [
+              "u1"
+            ],
+            "queries": [
+              "{u1} death date",
+              "date of death {u1}"
+            ]
+          },
+          {
+            "unit_id": "u3",
+            "description": "director of Countess Ironing-Maid",
+            "subject": "Countess Ironing-Maid",
+            "necessary": true,
+            "depends_on": [],
+            "queries": [
+              "Countess Ironing-Maid director",
+              "director of Countess Ironing-Maid"
+            ]
+          },
+          {
+            "unit_id": "u4",
+            "description": "death date of the director of Countess Ironing-Maid",
+            "subject": "{u3}",
+            "necessary": true,
+            "depends_on": [
+              "u3"
+            ],
+            "queries": [
+              "{u3} death date",
+              "date of death {u3}"
+            ]
+          },
+          {
+            "unit_id": "u5",
+            "description": "which film has the director who died later",
+            "subject": "",
+            "necessary": true,
+            "depends_on": [
+              "u2",
+              "u4"
+            ],
+            "queries": [
+              "compare death dates of {u1} and {u3}",
+              "who died later {u1} {u3}"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "sequence": 8,
+      "time_s": 5.522272,
+      "type": "plan_review_rejected",
+      "error": "Placeholders must name explicit dependencies"
+    },
+    {
+      "sequence": 9,
+      "time_s": 5.522289,
+      "type": "failure",
+      "error": "Placeholders must name explicit dependencies"
+    },
+    {
+      "sequence": 10,
+      "time_s": 5.522296,
+      "type": "utterance",
+      "action": "Final Answer",
+      "claims": [],
+      "text": "The search or verification failed, so I cannot give a reliable answer yet.",
+      "language": "en"
+    },
+    {
+      "sequence": 11,
+      "time_s": 5.522776,
+      "type": "finished",
+      "status": "error"
+    }
+  ],
+  "note": "Prototype model judgments are not independent gold scores. Output event times are not spoken claim times.",
+  "evidence_mode": "scheduled_trace",
+  "audio": {
+    "enabled": true,
+    "mode": "windows",
+    "play": false,
+    "status": "ok",
+    "errors": [],
+    "records": [
+      {
+        "event_sequence": 1,
+        "sentence_index": 1,
+        "sentence_count": 1,
+        "language": "en",
+        "text": "I see you're asking which film's director died later, The Obsessed Of Catule or Countess Ironing-Maid.",
+        "action": "Backchannel",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 1.8999487000037334,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval debug20\\artifacts\\runs\\20261118T052754Z-eebc4a69\\samples\\0004\\audio\\segments\\0001_01.wav",
+        "duration_s": 6.663265306122449,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 2.6964940000034403,
+        "synthesis_and_playback_s": 0.7968162999968627
+      },
+      {
+        "event_sequence": 10,
+        "sentence_index": 1,
+        "sentence_count": 1,
+        "language": "en",
+        "text": "The search or verification failed, so I cannot give a reliable answer yet.",
+        "action": "Final Answer",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 5.522686500000418,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval debug20\\artifacts\\runs\\20261118T052754Z-eebc4a69\\samples\\0004\\audio\\segments\\0010_01.wav",
+        "duration_s": 5.348526077097506,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 6.335198300002958,
+        "synthesis_and_playback_s": 0.81280390000029
+      }
+    ],
+    "wave": {
+      "path": "D:\\UIUC\\CS546\\moshi-rag\\eval debug20\\artifacts\\runs\\20261118T052754Z-eebc4a69\\samples\\0004\\audio\\response.wav",
+      "duration_s": 14.70829931972789,
+      "timeline": [
+        {
+          "event_sequence": 1,
+          "sentence_index": 1,
+          "action": "Backchannel",
+          "text": "I see you're asking which film's director died later, The Obsessed Of Catule or Countess Ironing-Maid.",
+          "wave_start_s": 2.6965079365079365,
+          "wave_end_s": 9.359773242630386
+        },
+        {
+          "event_sequence": 10,
+          "sentence_index": 1,
+          "action": "Final Answer",
+          "text": "The search or verification failed, so I cannot give a reliable answer yet.",
+          "wave_start_s": 9.359773242630386,
+          "wave_end_s": 14.70829931972789
+        }
+      ]
+    }
+  },
+  "evaluation": {
+    "mode": "b_debug_trace",
+    "trace_id": "2wikimultihopqa_36ec2b3a086411ebbd5eac1f6bf848b6_immediate",
+    "sample_id": "2wikimultihopqa_36ec2b3a086411ebbd5eac1f6bf848b6",
+    "total_wall_s": 6.338297800000873,
+    "question_timeout_s": 180,
+    "audio_enabled": true,
+    "history_enabled": false,
+    "text_pipeline_wall_s": 5.522831300004327,
+    "effective_settings": {
+      "base_url": "https://tinker.thinkingmachines.dev/services/tinker-prod/oai/api/v1",
+      "model": "openai/gpt-oss-120b",
+      "wiki_language": "en",
+      "user_agent": "CascadeSystem/0.1 (educational research prototype)",
+      "timeout_s": 45.0,
+      "max_tokens": 4096,
+      "reasoning_effort": "low",
+      "progress_s": 3.0,
+      "feedback_timeout_s": 6.0,
+      "search_limit": 3,
+      "max_units": 8,
+      "max_searches": 16,
+      "max_sources": 35,
+      "source_chars": 298,
+      "evidence_chars": 4486,
+      "concurrency": 3
+    },
+    "timing_kind": "unknown",
+    "scheduler": "wall-paced fixed B arrivals"
+  }
+}

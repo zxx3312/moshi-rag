@@ -1,0 +1,2443 @@
+{
+  "question": "Which team based in South Wales participated in a final game of 1980 Welsh Cup Final?",
+  "resolved_question": "Which team based in South Wales participated in a final game of 1980 Welsh Cup Final?",
+  "used_history_turn_ids": [],
+  "response_language": "en",
+  "status": "incomplete",
+  "clock": "wall_monotonic",
+  "time_origin": "question_text_ready_after_optional_asr",
+  "model": "openai/gpt-oss-120b",
+  "judge_model": "tinker://f9e9a6c1-e203-5c2c-acdd-68fe67378ca4:train:0/sampler_weights/epoch-0001",
+  "units": [
+    {
+      "unit_id": "u1",
+      "description": "Teams that participated in the 1980 Welsh Cup Final",
+      "necessary": true,
+      "depends_on": [],
+      "queries": [
+        "1980 Welsh Cup Final teams",
+        "Welsh Cup Final 1980 participants"
+      ],
+      "subject": "1980 Welsh Cup Final"
+    },
+    {
+      "unit_id": "u2",
+      "description": "Location (city/region) of the first team listed in {u1}",
+      "necessary": false,
+      "depends_on": [
+        "u1"
+      ],
+      "queries": [
+        "{team1} football club location",
+        "{team1} based in"
+      ],
+      "subject": "{team1}"
+    },
+    {
+      "unit_id": "u3",
+      "description": "Location (city/region) of the second team listed in {u1}",
+      "necessary": false,
+      "depends_on": [
+        "u1"
+      ],
+      "queries": [
+        "{team2} football club location",
+        "{team2} based in"
+      ],
+      "subject": "{team2}"
+    },
+    {
+      "unit_id": "u4",
+      "description": "Identify which team from {u1} is based in South Wales",
+      "necessary": true,
+      "depends_on": [
+        "u1",
+        "u2",
+        "u3"
+      ],
+      "queries": [
+        "Which 1980 Welsh Cup Final team is based in South Wales",
+        "South Wales football club in 1980 Welsh Cup Final"
+      ],
+      "subject": ""
+    }
+  ],
+  "judgments": {
+    "u1": {
+      "label": "SUPPORTED",
+      "value": "Newport County and Shrewsbury Town",
+      "citations": [
+        "d3s0",
+        "d3s1"
+      ],
+      "quotes": [
+        {
+          "evidence_id": "d3s0",
+          "text": "The 1980 Welsh Cup Final was the final of the 93rd season of the main domestic football cup competition in Wales, the Welsh Cup."
+        },
+        {
+          "evidence_id": "d3s1",
+          "text": "The final was contested between Newport County and Shrewsbury Town over two legs."
+        }
+      ],
+      "reason": "Supported by the cited visible sentences and dependencies."
+    },
+    "u2": {
+      "label": "SUPPORTED",
+      "value": "Newport",
+      "citations": [
+        "d5s0"
+      ],
+      "quotes": [
+        {
+          "evidence_id": "d5s0",
+          "text": "Newport County Association Football Club (Welsh: \"Clwb Pêl-droed Sir Casnewydd\" ) is a professional association football club based in the city of Newport, South Wales."
+        }
+      ],
+      "reason": "Supported by the cited visible sentences and dependencies."
+    },
+    "u3": {
+      "label": "UNRESOLVED",
+      "value": "",
+      "citations": [],
+      "quotes": [],
+      "reason": "The current visible evidence does not establish this unit."
+    },
+    "u4": {
+      "label": "UNRESOLVED",
+      "value": "",
+      "citations": [],
+      "quotes": [],
+      "reason": "Dependency is not supported"
+    }
+  },
+  "evidence": [
+    {
+      "evidence_id": "d1s0",
+      "title": "2000 Welsh Cup Final",
+      "url": "https://trace.invalid/hotpotqa_5ab1c693554299722f9b4c66_long/d1s0",
+      "text": "The 2000 Welsh Cup Final saw Bangor City win the Welsh Cup after beating Cwmbran Town 1–0 at Racecourse Ground in the 113th Welsh Cup Final.",
+      "visible_time_s": 6.2189999999973224,
+      "requested_subject": "",
+      "resolved_title": "2000 Welsh Cup Final",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d3s0",
+      "title": "1980 Welsh Cup Final",
+      "url": "https://trace.invalid/hotpotqa_5ab1c693554299722f9b4c66_long/d3s0",
+      "text": "The 1980 Welsh Cup Final was the final of the 93rd season of the main domestic football cup competition in Wales, the Welsh Cup.",
+      "visible_time_s": 6.2189999999973224,
+      "requested_subject": "",
+      "resolved_title": "1980 Welsh Cup Final",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d3s1",
+      "title": "1980 Welsh Cup Final",
+      "url": "https://trace.invalid/hotpotqa_5ab1c693554299722f9b4c66_long/d3s1",
+      "text": "The final was contested between Newport County and Shrewsbury Town over two legs.",
+      "visible_time_s": 6.2189999999973224,
+      "requested_subject": "",
+      "resolved_title": "1980 Welsh Cup Final",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d3s2",
+      "title": "1980 Welsh Cup Final",
+      "url": "https://trace.invalid/hotpotqa_5ab1c693554299722f9b4c66_long/d3s2",
+      "text": "Newport County won 5–1 on aggregate, winning both legs.",
+      "visible_time_s": 6.2189999999973224,
+      "requested_subject": "",
+      "resolved_title": "1980 Welsh Cup Final",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d4s0",
+      "title": "1991 Welsh Cup Final",
+      "url": "https://trace.invalid/hotpotqa_5ab1c693554299722f9b4c66_long/d4s0",
+      "text": "The 1991 Welsh Cup Final saw Swansea City win the Welsh Cup for the tenth time, by beating Wrexham 2–0 at National Stadium in the 104th Welsh Cup Final.",
+      "visible_time_s": 6.2189999999973224,
+      "requested_subject": "",
+      "resolved_title": "1991 Welsh Cup Final",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d7s0",
+      "title": "2010 Welsh Cup Final",
+      "url": "https://trace.invalid/hotpotqa_5ab1c693554299722f9b4c66_long/d7s0",
+      "text": "The 2010 Welsh Cup Final was the final of the 124th season of the main domestic football cup competition in Wales, the Welsh Cup.",
+      "visible_time_s": 6.2189999999973224,
+      "requested_subject": "",
+      "resolved_title": "2010 Welsh Cup Final",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d7s1",
+      "title": "2010 Welsh Cup Final",
+      "url": "https://trace.invalid/hotpotqa_5ab1c693554299722f9b4c66_long/d7s1",
+      "text": "The final was played at Parc y Scarlets in Llanelli on 1 May 2010 and marked the second time the final has been staged at the stadium.",
+      "visible_time_s": 6.2189999999973224,
+      "requested_subject": "",
+      "resolved_title": "2010 Welsh Cup Final",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d7s2",
+      "title": "2010 Welsh Cup Final",
+      "url": "https://trace.invalid/hotpotqa_5ab1c693554299722f9b4c66_long/d7s2",
+      "text": "The match was contested by Port Talbot Town, who beat Bala Town 1–0 in their semi-final, and Bangor City who beat Prestatyn Town 2–0 in their semi-final.",
+      "visible_time_s": 6.2189999999973224,
+      "requested_subject": "",
+      "resolved_title": "2010 Welsh Cup Final",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d9s0",
+      "title": "1889 Welsh Cup Final",
+      "url": "https://trace.invalid/hotpotqa_5ab1c693554299722f9b4c66_long/d9s0",
+      "text": "The 1889 Welsh Cup Final, the 12th in the competition, was contested by Bangor and Northwich Victoria at the Racecourse Ground.",
+      "visible_time_s": 6.2189999999973224,
+      "requested_subject": "",
+      "resolved_title": "1889 Welsh Cup Final",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d9s1",
+      "title": "1889 Welsh Cup Final",
+      "url": "https://trace.invalid/hotpotqa_5ab1c693554299722f9b4c66_long/d9s1",
+      "text": "Bangor, in their first Welsh Cup final, won 2–1 in a match that would mark the first time these two teams, future founders and rivals of the Northern Premier League and Alliance Premier League would meet in a major final.",
+      "visible_time_s": 6.2189999999973224,
+      "requested_subject": "",
+      "resolved_title": "1889 Welsh Cup Final",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d9s2",
+      "title": "1889 Welsh Cup Final",
+      "url": "https://trace.invalid/hotpotqa_5ab1c693554299722f9b4c66_long/d9s2",
+      "text": "The most recent was the 1984 FA Trophy Final.",
+      "visible_time_s": 6.2189999999973224,
+      "requested_subject": "",
+      "resolved_title": "1889 Welsh Cup Final",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d2s0",
+      "title": "Welsh League Cup",
+      "url": "https://trace.invalid/hotpotqa_5ab1c693554299722f9b4c66_long/d2s0",
+      "text": "The Welsh League Cup (also known as the League of Wales Cup, Welsh Premier League Cup or The Word Cup) is a cup competition in Welsh football organised by the Welsh Premier League.",
+      "visible_time_s": 10.843999999997322,
+      "requested_subject": "",
+      "resolved_title": "Welsh League Cup",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d2s1",
+      "title": "Welsh League Cup",
+      "url": "https://trace.invalid/hotpotqa_5ab1c693554299722f9b4c66_long/d2s1",
+      "text": "The competition was established in 1992 and is considered to be the second-most important domestic cup competition for Welsh football clubs, after the older and more prestigious Welsh Cup.",
+      "visible_time_s": 10.843999999997322,
+      "requested_subject": "",
+      "resolved_title": "Welsh League Cup",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d2s2",
+      "title": "Welsh League Cup",
+      "url": "https://trace.invalid/hotpotqa_5ab1c693554299722f9b4c66_long/d2s2",
+      "text": "Unlike the Welsh Cup, where 135 teams entered in 2008–09, the competition is only open to the members of the Welsh Premier League and a very select few other clubs.",
+      "visible_time_s": 10.843999999997322,
+      "requested_subject": "",
+      "resolved_title": "Welsh League Cup",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d2s3",
+      "title": "Welsh League Cup",
+      "url": "https://trace.invalid/hotpotqa_5ab1c693554299722f9b4c66_long/d2s3",
+      "text": "It should not be confused with the Welsh Football League Cup, which is for the clubs in the Welsh Football League, which despite its name only covers the south and centre of Wales.",
+      "visible_time_s": 10.843999999997322,
+      "requested_subject": "",
+      "resolved_title": "Welsh League Cup",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d5s0",
+      "title": "Newport County A.F.C.",
+      "url": "https://trace.invalid/hotpotqa_5ab1c693554299722f9b4c66_long/d5s0",
+      "text": "Newport County Association Football Club (Welsh: \"Clwb Pêl-droed Sir Casnewydd\" ) is a professional association football club based in the city of Newport, South Wales.",
+      "visible_time_s": 10.843999999997322,
+      "requested_subject": "",
+      "resolved_title": "Newport County A.F.C.",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d5s1",
+      "title": "Newport County A.F.C.",
+      "url": "https://trace.invalid/hotpotqa_5ab1c693554299722f9b4c66_long/d5s1",
+      "text": "The team play in League Two, the fourth tier of the English football league system.",
+      "visible_time_s": 10.843999999997322,
+      "requested_subject": "",
+      "resolved_title": "Newport County A.F.C.",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d5s2",
+      "title": "Newport County A.F.C.",
+      "url": "https://trace.invalid/hotpotqa_5ab1c693554299722f9b4c66_long/d5s2",
+      "text": "Most recently reformed in 1989, the club is a continuation of the Newport County club which was founded in 1912 and was a founder member of the Football League's new Third Division in 1920.",
+      "visible_time_s": 10.843999999997322,
+      "requested_subject": "",
+      "resolved_title": "Newport County A.F.C.",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d6s0",
+      "title": "Richard Johnson (rugby)",
+      "url": "https://trace.invalid/hotpotqa_5ab1c693554299722f9b4c66_long/d6s0",
+      "text": "Richard Johnston, born (26-02-1980) in Neath, Wales, first started his career at Neath RFC in 1998 where he gained representative honours for Wales under 18/19's.",
+      "visible_time_s": 10.843999999997322,
+      "requested_subject": "",
+      "resolved_title": "Richard Johnson (rugby)",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d6s1",
+      "title": "Richard Johnson (rugby)",
+      "url": "https://trace.invalid/hotpotqa_5ab1c693554299722f9b4c66_long/d6s1",
+      "text": "In 2000 Richard signed for Pontypridd RFC where he spent three years.",
+      "visible_time_s": 10.843999999997322,
+      "requested_subject": "",
+      "resolved_title": "Richard Johnson (rugby)",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d6s2",
+      "title": "Richard Johnson (rugby)",
+      "url": "https://trace.invalid/hotpotqa_5ab1c693554299722f9b4c66_long/d6s2",
+      "text": "In his time at Ponty, Richard was selected for Wales U21's and Wales 7's and was involved in the squad that won the Welsh Cup in 2002 and narrowly lost to Sale in the Parker Pen European Shield Final.",
+      "visible_time_s": 10.843999999997322,
+      "requested_subject": "",
+      "resolved_title": "Richard Johnson (rugby)",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d6s3",
+      "title": "Richard Johnson (rugby)",
+      "url": "https://trace.invalid/hotpotqa_5ab1c693554299722f9b4c66_long/d6s3",
+      "text": "After regional rugby was formed he returned to Neath RFC winning the league twice and Welsh Cup in a three-year stint.",
+      "visible_time_s": 10.843999999997322,
+      "requested_subject": "",
+      "resolved_title": "Richard Johnson (rugby)",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d6s4",
+      "title": "Richard Johnson (rugby)",
+      "url": "https://trace.invalid/hotpotqa_5ab1c693554299722f9b4c66_long/d6s4",
+      "text": "Richard then changed codes, signing for Crusader RL and won 4 caps for Wales.",
+      "visible_time_s": 10.843999999997322,
+      "requested_subject": "",
+      "resolved_title": "Richard Johnson (rugby)",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d6s5",
+      "title": "Richard Johnson (rugby)",
+      "url": "https://trace.invalid/hotpotqa_5ab1c693554299722f9b4c66_long/d6s5",
+      "text": "He also played on the 7's circuit playing for Samurai 7's, White Hart Marauders, Crusaders and Scorpions.",
+      "visible_time_s": 10.843999999997322,
+      "requested_subject": "",
+      "resolved_title": "Richard Johnson (rugby)",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d6s6",
+      "title": "Richard Johnson (rugby)",
+      "url": "https://trace.invalid/hotpotqa_5ab1c693554299722f9b4c66_long/d6s6",
+      "text": "In 2007 Richard left rugby to pursue a career outside sport but continues to play on the 7's circuit and now vets competitions.",
+      "visible_time_s": 10.843999999997322,
+      "requested_subject": "",
+      "resolved_title": "Richard Johnson (rugby)",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d8s0",
+      "title": "2011 Welsh Cup Final",
+      "url": "https://trace.invalid/hotpotqa_5ab1c693554299722f9b4c66_long/d8s0",
+      "text": "The 2011 Welsh Cup Final was the final of the 125th season of the main domestic football cup competition in Wales, the Welsh Cup.",
+      "visible_time_s": 10.843999999997322,
+      "requested_subject": "",
+      "resolved_title": "2011 Welsh Cup Final",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d8s1",
+      "title": "2011 Welsh Cup Final",
+      "url": "https://trace.invalid/hotpotqa_5ab1c693554299722f9b4c66_long/d8s1",
+      "text": "The final was played at Parc y Scarlets in Llanelli on 8 May 2011 and marked the third time the final has been staged at the stadium.",
+      "visible_time_s": 10.843999999997322,
+      "requested_subject": "",
+      "resolved_title": "2011 Welsh Cup Final",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d8s2",
+      "title": "2011 Welsh Cup Final",
+      "url": "https://trace.invalid/hotpotqa_5ab1c693554299722f9b4c66_long/d8s2",
+      "text": "The match was contested by Bangor City, who beat Gap Connah's Quay 1-0 in their semi-final, and Llanelli who beat The New Saints 1-0 in their semi-final.",
+      "visible_time_s": 10.843999999997322,
+      "requested_subject": "",
+      "resolved_title": "2011 Welsh Cup Final",
+      "entity_resolution": "unspecified"
+    },
+    {
+      "evidence_id": "d10s0",
+      "title": "1979–80 Welsh Cup",
+      "url": "https://trace.invalid/hotpotqa_5ab1c693554299722f9b4c66_long/d10s0",
+      "text": "The 1979–80 Welsh Cup was the final of the 93rd season of the main domestic football cup competition in Wales, the Welsh Cup.",
+      "visible_time_s": 10.843999999997322,
+      "requested_subject": "",
+      "resolved_title": "1979–80 Welsh Cup",
+      "entity_resolution": "unspecified"
+    }
+  ],
+  "searches": [
+    {
+      "query": "[scheduled evidence]",
+      "subject": "",
+      "status": "ok",
+      "returned_pages": [],
+      "mode": "trace",
+      "unit_id": "__scheduled_evidence__"
+    },
+    {
+      "query": "[scheduled evidence]",
+      "subject": "",
+      "status": "ok",
+      "returned_pages": [],
+      "mode": "trace",
+      "unit_id": "__scheduled_evidence__"
+    },
+    {
+      "query": "[scheduled evidence]",
+      "subject": "",
+      "status": "ok",
+      "returned_pages": [],
+      "mode": "trace",
+      "unit_id": "__scheduled_evidence__"
+    }
+  ],
+  "search_failures": [],
+  "llm_calls": [
+    {
+      "purpose": "feedback_generate",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 412,
+        "completion_tokens": 66,
+        "total_tokens": 478,
+        "prompt_tokens_details": {
+          "cached_tokens": 384
+        }
+      },
+      "latency_s": 1.36
+    },
+    {
+      "purpose": "feedback_verify",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 373,
+        "completion_tokens": 96,
+        "total_tokens": 469,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        }
+      },
+      "latency_s": 0.89
+    },
+    {
+      "purpose": "decompose",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 802,
+        "completion_tokens": 513,
+        "total_tokens": 1315,
+        "prompt_tokens_details": {
+          "cached_tokens": 768
+        }
+      },
+      "latency_s": 2.813
+    },
+    {
+      "purpose": "feedback_generate",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 412,
+        "completion_tokens": 73,
+        "total_tokens": 485,
+        "prompt_tokens_details": {
+          "cached_tokens": 384
+        }
+      },
+      "latency_s": 0.704
+    },
+    {
+      "purpose": "plan_review",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 1186,
+        "completion_tokens": 521,
+        "total_tokens": 1707,
+        "prompt_tokens_details": {
+          "cached_tokens": 896
+        }
+      },
+      "latency_s": 3.406
+    },
+    {
+      "purpose": "feedback_verify",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 365,
+        "completion_tokens": 81,
+        "total_tokens": 446,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        }
+      },
+      "latency_s": 0.734
+    },
+    {
+      "purpose": "judge",
+      "model": "tinker://f9e9a6c1-e203-5c2c-acdd-68fe67378ca4:train:0/sampler_weights/epoch-0001",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 2922,
+        "completion_tokens": 282,
+        "total_tokens": 3204,
+        "prompt_tokens_details": {
+          "cached_tokens": 1024
+        }
+      },
+      "latency_s": 1.594
+    },
+    {
+      "purpose": "generate",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 723,
+        "completion_tokens": 88,
+        "total_tokens": 811,
+        "prompt_tokens_details": {
+          "cached_tokens": 512
+        }
+      },
+      "latency_s": 0.828
+    },
+    {
+      "purpose": "verify",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 1076,
+        "completion_tokens": 180,
+        "total_tokens": 1256,
+        "prompt_tokens_details": {
+          "cached_tokens": 640
+        }
+      },
+      "latency_s": 2.203
+    },
+    {
+      "purpose": "judge",
+      "model": "tinker://f9e9a6c1-e203-5c2c-acdd-68fe67378ca4:train:0/sampler_weights/epoch-0001",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 5481,
+        "completion_tokens": 401,
+        "total_tokens": 5882,
+        "prompt_tokens_details": {
+          "cached_tokens": 1280
+        }
+      },
+      "latency_s": 2.266
+    },
+    {
+      "purpose": "generate",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 703,
+        "completion_tokens": 114,
+        "total_tokens": 817,
+        "prompt_tokens_details": {
+          "cached_tokens": 512
+        }
+      },
+      "latency_s": 0.953
+    },
+    {
+      "purpose": "feedback_generate",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 413,
+        "completion_tokens": 50,
+        "total_tokens": 463,
+        "prompt_tokens_details": {
+          "cached_tokens": 384
+        }
+      },
+      "latency_s": 0.828
+    },
+    {
+      "purpose": "verify",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 1399,
+        "completion_tokens": 209,
+        "total_tokens": 1608,
+        "prompt_tokens_details": {
+          "cached_tokens": 640
+        }
+      },
+      "latency_s": 1.469
+    },
+    {
+      "purpose": "feedback_verify",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 356,
+        "completion_tokens": 88,
+        "total_tokens": 444,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        }
+      },
+      "latency_s": 0.828
+    },
+    {
+      "purpose": "feedback_generate",
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 412,
+        "completion_tokens": 58,
+        "total_tokens": 470,
+        "prompt_tokens_details": {
+          "cached_tokens": 384
+        }
+      },
+      "latency_s": 2.016
+    },
+    {
+      "purpose": "judge",
+      "model": "tinker://f9e9a6c1-e203-5c2c-acdd-68fe67378ca4:train:0/sampler_weights/epoch-0001",
+      "status": "ok",
+      "usage": {
+        "prompt_tokens": 5694,
+        "completion_tokens": 335,
+        "total_tokens": 6029,
+        "prompt_tokens_details": {
+          "cached_tokens": 1152
+        }
+      },
+      "latency_s": 2.312
+    },
+    {
+      "purpose": "feedback_verify",
+      "model": "openai/gpt-oss-120b",
+      "status": "cancelled",
+      "latency_s": 0.14
+    }
+  ],
+  "search_diagnostics": [],
+  "output_enqueued_units": {
+    "u1": "Newport County and Shrewsbury Town",
+    "u2": "Newport"
+  },
+  "events": [
+    {
+      "sequence": 0,
+      "time_s": 0.0,
+      "type": "feedback_requested",
+      "feedback_kind": "opening",
+      "execution_state": {
+        "stage": "planning",
+        "searches_started": 0,
+        "searches_completed": 0,
+        "active_searches": 0,
+        "evidence_count": 0,
+        "supported_units": 0,
+        "output_units": 0
+      }
+    },
+    {
+      "sequence": 1,
+      "time_s": 2.25,
+      "type": "utterance",
+      "action": "Backchannel",
+      "text": "I see you want to know which South Wales team played in the 1980 Welsh Cup Final, and I’ll look that up.",
+      "claims": [],
+      "feedback_source": "model",
+      "feedback_status_claim": "intent",
+      "feedback_fallback_reason": "",
+      "execution_state": {
+        "stage": "planning",
+        "searches_started": 0,
+        "searches_completed": 0,
+        "active_searches": 0,
+        "evidence_count": 0,
+        "supported_units": 0,
+        "output_units": 0
+      },
+      "language": "en"
+    },
+    {
+      "sequence": 2,
+      "time_s": 2.813,
+      "type": "decompose_reply",
+      "reply": {
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "Teams that participated in the 1980 Welsh Cup Final",
+            "subject": "1980 Welsh Cup Final",
+            "necessary": true,
+            "depends_on": [],
+            "queries": [
+              "1980 Welsh Cup Final teams",
+              "Welsh Cup Final 1980 participants"
+            ]
+          },
+          {
+            "unit_id": "u2",
+            "description": "Location (city/region) of {u1} team {team1}",
+            "subject": "{team1}",
+            "necessary": false,
+            "depends_on": [
+              "u1"
+            ],
+            "queries": [
+              "{team1} football club location",
+              "{team1} based in"
+            ]
+          },
+          {
+            "unit_id": "u3",
+            "description": "Location (city/region) of {u1} team {team2}",
+            "subject": "{team2}",
+            "necessary": false,
+            "depends_on": [
+              "u1"
+            ],
+            "queries": [
+              "{team2} football club location",
+              "{team2} based in"
+            ]
+          },
+          {
+            "unit_id": "u4",
+            "description": "Identify which team from {u1} is based in South Wales",
+            "subject": "",
+            "necessary": true,
+            "depends_on": [
+              "u1",
+              "u2",
+              "u3"
+            ],
+            "queries": [
+              "Which 1980 Welsh Cup Final team is based in South Wales",
+              "South Wales football club in 1980 Welsh Cup Final"
+            ]
+          }
+        ]
+      },
+      "attempt": 1,
+      "repair": false
+    },
+    {
+      "sequence": 3,
+      "time_s": 2.813,
+      "type": "plan_review_requested",
+      "max_reviews": 1,
+      "question_only": true
+    },
+    {
+      "sequence": 4,
+      "time_s": 5.25,
+      "type": "feedback_requested",
+      "feedback_kind": "progress",
+      "execution_state": {
+        "stage": "planning",
+        "searches_started": 0,
+        "searches_completed": 0,
+        "active_searches": 0,
+        "evidence_count": 0,
+        "supported_units": 0,
+        "output_units": 0
+      }
+    },
+    {
+      "sequence": 5,
+      "time_s": 6.219,
+      "type": "plan_review_reply",
+      "reply": {
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "Teams that participated in the 1980 Welsh Cup Final",
+            "subject": "1980 Welsh Cup Final",
+            "necessary": true,
+            "depends_on": [],
+            "queries": [
+              "1980 Welsh Cup Final teams",
+              "Welsh Cup Final 1980 participants"
+            ]
+          },
+          {
+            "unit_id": "u2",
+            "description": "Location (city/region) of the first team listed in {u1}",
+            "subject": "{team1}",
+            "necessary": false,
+            "depends_on": [
+              "u1"
+            ],
+            "queries": [
+              "{team1} football club location",
+              "{team1} based in"
+            ]
+          },
+          {
+            "unit_id": "u3",
+            "description": "Location (city/region) of the second team listed in {u1}",
+            "subject": "{team2}",
+            "necessary": false,
+            "depends_on": [
+              "u1"
+            ],
+            "queries": [
+              "{team2} football club location",
+              "{team2} based in"
+            ]
+          },
+          {
+            "unit_id": "u4",
+            "description": "Identify which team from {u1} is based in South Wales",
+            "subject": "",
+            "necessary": true,
+            "depends_on": [
+              "u1",
+              "u2",
+              "u3"
+            ],
+            "queries": [
+              "Which 1980 Welsh Cup Final team is based in South Wales",
+              "South Wales football club in 1980 Welsh Cup Final"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "sequence": 6,
+      "time_s": 6.219,
+      "type": "plan_review_finished",
+      "changed": true,
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "Teams that participated in the 1980 Welsh Cup Final",
+          "necessary": true,
+          "depends_on": [],
+          "queries": [
+            "1980 Welsh Cup Final teams",
+            "Welsh Cup Final 1980 participants"
+          ],
+          "subject": "1980 Welsh Cup Final"
+        },
+        {
+          "unit_id": "u2",
+          "description": "Location (city/region) of the first team listed in {u1}",
+          "necessary": false,
+          "depends_on": [
+            "u1"
+          ],
+          "queries": [
+            "{team1} football club location",
+            "{team1} based in"
+          ],
+          "subject": "{team1}"
+        },
+        {
+          "unit_id": "u3",
+          "description": "Location (city/region) of the second team listed in {u1}",
+          "necessary": false,
+          "depends_on": [
+            "u1"
+          ],
+          "queries": [
+            "{team2} football club location",
+            "{team2} based in"
+          ],
+          "subject": "{team2}"
+        },
+        {
+          "unit_id": "u4",
+          "description": "Identify which team from {u1} is based in South Wales",
+          "necessary": true,
+          "depends_on": [
+            "u1",
+            "u2",
+            "u3"
+          ],
+          "queries": [
+            "Which 1980 Welsh Cup Final team is based in South Wales",
+            "South Wales football club in 1980 Welsh Cup Final"
+          ],
+          "subject": ""
+        }
+      ],
+      "question_only": true
+    },
+    {
+      "sequence": 7,
+      "time_s": 6.219,
+      "type": "plan",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "Teams that participated in the 1980 Welsh Cup Final",
+          "necessary": true,
+          "depends_on": [],
+          "queries": [
+            "1980 Welsh Cup Final teams",
+            "Welsh Cup Final 1980 participants"
+          ],
+          "subject": "1980 Welsh Cup Final"
+        },
+        {
+          "unit_id": "u2",
+          "description": "Location (city/region) of the first team listed in {u1}",
+          "necessary": false,
+          "depends_on": [
+            "u1"
+          ],
+          "queries": [
+            "{team1} football club location",
+            "{team1} based in"
+          ],
+          "subject": "{team1}"
+        },
+        {
+          "unit_id": "u3",
+          "description": "Location (city/region) of the second team listed in {u1}",
+          "necessary": false,
+          "depends_on": [
+            "u1"
+          ],
+          "queries": [
+            "{team2} football club location",
+            "{team2} based in"
+          ],
+          "subject": "{team2}"
+        },
+        {
+          "unit_id": "u4",
+          "description": "Identify which team from {u1} is based in South Wales",
+          "necessary": true,
+          "depends_on": [
+            "u1",
+            "u2",
+            "u3"
+          ],
+          "queries": [
+            "Which 1980 Welsh Cup Final team is based in South Wales",
+            "South Wales football club in 1980 Welsh Cup Final"
+          ],
+          "subject": ""
+        }
+      ]
+    },
+    {
+      "sequence": 8,
+      "time_s": 6.219,
+      "type": "trace_batch_requested"
+    },
+    {
+      "sequence": 9,
+      "time_s": 6.219,
+      "type": "search_finished",
+      "query": "[scheduled evidence]",
+      "subject": "",
+      "status": "ok",
+      "returned_pages": [],
+      "mode": "trace",
+      "unit_id": "__scheduled_evidence__"
+    },
+    {
+      "sequence": 10,
+      "time_s": 6.219,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d1s0",
+        "title": "2000 Welsh Cup Final",
+        "url": "https://trace.invalid/hotpotqa_5ab1c693554299722f9b4c66_long/d1s0",
+        "text": "The 2000 Welsh Cup Final saw Bangor City win the Welsh Cup after beating Cwmbran Town 1–0 at Racecourse Ground in the 113th Welsh Cup Final.",
+        "visible_time_s": 6.2189999999973224,
+        "requested_subject": "",
+        "resolved_title": "2000 Welsh Cup Final",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 11,
+      "time_s": 6.219,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d3s0",
+        "title": "1980 Welsh Cup Final",
+        "url": "https://trace.invalid/hotpotqa_5ab1c693554299722f9b4c66_long/d3s0",
+        "text": "The 1980 Welsh Cup Final was the final of the 93rd season of the main domestic football cup competition in Wales, the Welsh Cup.",
+        "visible_time_s": 6.2189999999973224,
+        "requested_subject": "",
+        "resolved_title": "1980 Welsh Cup Final",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 12,
+      "time_s": 6.219,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d3s1",
+        "title": "1980 Welsh Cup Final",
+        "url": "https://trace.invalid/hotpotqa_5ab1c693554299722f9b4c66_long/d3s1",
+        "text": "The final was contested between Newport County and Shrewsbury Town over two legs.",
+        "visible_time_s": 6.2189999999973224,
+        "requested_subject": "",
+        "resolved_title": "1980 Welsh Cup Final",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 13,
+      "time_s": 6.219,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d3s2",
+        "title": "1980 Welsh Cup Final",
+        "url": "https://trace.invalid/hotpotqa_5ab1c693554299722f9b4c66_long/d3s2",
+        "text": "Newport County won 5–1 on aggregate, winning both legs.",
+        "visible_time_s": 6.2189999999973224,
+        "requested_subject": "",
+        "resolved_title": "1980 Welsh Cup Final",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 14,
+      "time_s": 6.219,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d4s0",
+        "title": "1991 Welsh Cup Final",
+        "url": "https://trace.invalid/hotpotqa_5ab1c693554299722f9b4c66_long/d4s0",
+        "text": "The 1991 Welsh Cup Final saw Swansea City win the Welsh Cup for the tenth time, by beating Wrexham 2–0 at National Stadium in the 104th Welsh Cup Final.",
+        "visible_time_s": 6.2189999999973224,
+        "requested_subject": "",
+        "resolved_title": "1991 Welsh Cup Final",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 15,
+      "time_s": 6.219,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d7s0",
+        "title": "2010 Welsh Cup Final",
+        "url": "https://trace.invalid/hotpotqa_5ab1c693554299722f9b4c66_long/d7s0",
+        "text": "The 2010 Welsh Cup Final was the final of the 124th season of the main domestic football cup competition in Wales, the Welsh Cup.",
+        "visible_time_s": 6.2189999999973224,
+        "requested_subject": "",
+        "resolved_title": "2010 Welsh Cup Final",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 16,
+      "time_s": 6.219,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d7s1",
+        "title": "2010 Welsh Cup Final",
+        "url": "https://trace.invalid/hotpotqa_5ab1c693554299722f9b4c66_long/d7s1",
+        "text": "The final was played at Parc y Scarlets in Llanelli on 1 May 2010 and marked the second time the final has been staged at the stadium.",
+        "visible_time_s": 6.2189999999973224,
+        "requested_subject": "",
+        "resolved_title": "2010 Welsh Cup Final",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 17,
+      "time_s": 6.219,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d7s2",
+        "title": "2010 Welsh Cup Final",
+        "url": "https://trace.invalid/hotpotqa_5ab1c693554299722f9b4c66_long/d7s2",
+        "text": "The match was contested by Port Talbot Town, who beat Bala Town 1–0 in their semi-final, and Bangor City who beat Prestatyn Town 2–0 in their semi-final.",
+        "visible_time_s": 6.2189999999973224,
+        "requested_subject": "",
+        "resolved_title": "2010 Welsh Cup Final",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 18,
+      "time_s": 6.219,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d9s0",
+        "title": "1889 Welsh Cup Final",
+        "url": "https://trace.invalid/hotpotqa_5ab1c693554299722f9b4c66_long/d9s0",
+        "text": "The 1889 Welsh Cup Final, the 12th in the competition, was contested by Bangor and Northwich Victoria at the Racecourse Ground.",
+        "visible_time_s": 6.2189999999973224,
+        "requested_subject": "",
+        "resolved_title": "1889 Welsh Cup Final",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 19,
+      "time_s": 6.219,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d9s1",
+        "title": "1889 Welsh Cup Final",
+        "url": "https://trace.invalid/hotpotqa_5ab1c693554299722f9b4c66_long/d9s1",
+        "text": "Bangor, in their first Welsh Cup final, won 2–1 in a match that would mark the first time these two teams, future founders and rivals of the Northern Premier League and Alliance Premier League would meet in a major final.",
+        "visible_time_s": 6.2189999999973224,
+        "requested_subject": "",
+        "resolved_title": "1889 Welsh Cup Final",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 20,
+      "time_s": 6.219,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d9s2",
+        "title": "1889 Welsh Cup Final",
+        "url": "https://trace.invalid/hotpotqa_5ab1c693554299722f9b4c66_long/d9s2",
+        "text": "The most recent was the 1984 FA Trophy Final.",
+        "visible_time_s": 6.2189999999973224,
+        "requested_subject": "",
+        "resolved_title": "1889 Welsh Cup Final",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 21,
+      "time_s": 6.688,
+      "type": "utterance",
+      "action": "Progress",
+      "text": "I'm still planning the steps to find the 1980 Welsh Cup Final team from South Wales.",
+      "claims": [],
+      "feedback_source": "model",
+      "feedback_status_claim": "processing",
+      "feedback_fallback_reason": "",
+      "execution_state": {
+        "stage": "checking",
+        "searches_started": 1,
+        "searches_completed": 1,
+        "active_searches": 0,
+        "evidence_count": 11,
+        "supported_units": 0,
+        "output_units": 0
+      },
+      "language": "en"
+    },
+    {
+      "sequence": 22,
+      "time_s": 7.813,
+      "type": "judge_reply",
+      "reply": {
+        "judgments": [
+          {
+            "unit_id": "u1",
+            "label": "SUPPORTED",
+            "value": "Newport County and Shrewsbury Town",
+            "citations": [
+              "d3s0",
+              "d3s1"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d3s0",
+                "text": "The 1980 Welsh Cup Final was the final of the 93rd season of the main domestic football cup competition in Wales, the Welsh Cup."
+              },
+              {
+                "evidence_id": "d3s1",
+                "text": "The final was contested between Newport County and Shrewsbury Town over two legs."
+              }
+            ],
+            "reason": "Supported by the cited visible sentences and dependencies."
+          },
+          {
+            "unit_id": "u2",
+            "label": "UNRESOLVED",
+            "value": "",
+            "citations": [],
+            "quotes": [],
+            "reason": "The current visible evidence does not establish this unit."
+          },
+          {
+            "unit_id": "u3",
+            "label": "UNRESOLVED",
+            "value": "",
+            "citations": [],
+            "quotes": [],
+            "reason": "The current visible evidence does not establish this unit."
+          },
+          {
+            "unit_id": "u4",
+            "label": "UNRESOLVED",
+            "value": "",
+            "citations": [],
+            "quotes": [],
+            "reason": "The current visible evidence does not establish this unit."
+          }
+        ]
+      },
+      "attempt": 1,
+      "repair": false,
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d3s0",
+        "d3s1",
+        "d3s2",
+        "d4s0",
+        "d7s0",
+        "d7s1",
+        "d7s2",
+        "d9s0",
+        "d9s1",
+        "d9s2"
+      ]
+    },
+    {
+      "sequence": 23,
+      "time_s": 7.813,
+      "type": "judgments",
+      "judgments": {
+        "u1": {
+          "label": "SUPPORTED",
+          "value": "Newport County and Shrewsbury Town",
+          "citations": [
+            "d3s0",
+            "d3s1"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d3s0",
+              "text": "The 1980 Welsh Cup Final was the final of the 93rd season of the main domestic football cup competition in Wales, the Welsh Cup."
+            },
+            {
+              "evidence_id": "d3s1",
+              "text": "The final was contested between Newport County and Shrewsbury Town over two legs."
+            }
+          ],
+          "reason": "Supported by the cited visible sentences and dependencies."
+        },
+        "u2": {
+          "label": "UNRESOLVED",
+          "value": "",
+          "citations": [],
+          "quotes": [],
+          "reason": "The current visible evidence does not establish this unit."
+        },
+        "u3": {
+          "label": "UNRESOLVED",
+          "value": "",
+          "citations": [],
+          "quotes": [],
+          "reason": "The current visible evidence does not establish this unit."
+        },
+        "u4": {
+          "label": "UNRESOLVED",
+          "value": "",
+          "citations": [],
+          "quotes": [],
+          "reason": "The current visible evidence does not establish this unit."
+        }
+      },
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d3s0",
+        "d3s1",
+        "d3s2",
+        "d4s0",
+        "d7s0",
+        "d7s1",
+        "d7s2",
+        "d9s0",
+        "d9s1",
+        "d9s2"
+      ],
+      "semantic_review": false
+    },
+    {
+      "sequence": 24,
+      "time_s": 7.813,
+      "type": "trace_batch_requested"
+    },
+    {
+      "sequence": 25,
+      "time_s": 8.641,
+      "type": "generation_fallback",
+      "reason": "Draft omitted a value or had invalid length",
+      "output_unit_ids": [
+        "u1"
+      ]
+    },
+    {
+      "sequence": 26,
+      "time_s": 10.844,
+      "type": "verification_reply",
+      "reply": {
+        "approved": true,
+        "facts_valid": true,
+        "expressed_unit_ids": [
+          "u1"
+        ],
+        "reason": "The draft correctly states the two teams from the approved facts, matches the requested unit, and adds no unsupported information."
+      },
+      "output_unit_ids": [
+        "u1"
+      ],
+      "output_action": "Partial Answer",
+      "dependency_unit_ids": [],
+      "evidence_snapshot_ids": [
+        "d3s0",
+        "d3s1"
+      ]
+    },
+    {
+      "sequence": 27,
+      "time_s": 10.844,
+      "type": "utterance",
+      "action": "Partial Answer",
+      "text": "Teams that participated in the 1980 Welsh Cup Final is Newport County and Shrewsbury Town.",
+      "claims": [
+        {
+          "unit_id": "u1",
+          "description": "Teams that participated in the 1980 Welsh Cup Final",
+          "value": "Newport County and Shrewsbury Town",
+          "citations": [
+            "d3s0",
+            "d3s1"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d3s0",
+              "text": "The 1980 Welsh Cup Final was the final of the 93rd season of the main domestic football cup competition in Wales, the Welsh Cup."
+            },
+            {
+              "evidence_id": "d3s1",
+              "text": "The final was contested between Newport County and Shrewsbury Town over two legs."
+            }
+          ]
+        }
+      ],
+      "unresolved": [],
+      "fallback": true,
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d3s0",
+        "d3s1",
+        "d3s2",
+        "d4s0",
+        "d7s0",
+        "d7s1",
+        "d7s2",
+        "d9s0",
+        "d9s1",
+        "d9s2"
+      ],
+      "language": "en"
+    },
+    {
+      "sequence": 28,
+      "time_s": 10.844,
+      "type": "search_finished",
+      "query": "[scheduled evidence]",
+      "subject": "",
+      "status": "ok",
+      "returned_pages": [],
+      "mode": "trace",
+      "unit_id": "__scheduled_evidence__"
+    },
+    {
+      "sequence": 29,
+      "time_s": 10.844,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d2s0",
+        "title": "Welsh League Cup",
+        "url": "https://trace.invalid/hotpotqa_5ab1c693554299722f9b4c66_long/d2s0",
+        "text": "The Welsh League Cup (also known as the League of Wales Cup, Welsh Premier League Cup or The Word Cup) is a cup competition in Welsh football organised by the Welsh Premier League.",
+        "visible_time_s": 10.843999999997322,
+        "requested_subject": "",
+        "resolved_title": "Welsh League Cup",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 30,
+      "time_s": 10.844,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d2s1",
+        "title": "Welsh League Cup",
+        "url": "https://trace.invalid/hotpotqa_5ab1c693554299722f9b4c66_long/d2s1",
+        "text": "The competition was established in 1992 and is considered to be the second-most important domestic cup competition for Welsh football clubs, after the older and more prestigious Welsh Cup.",
+        "visible_time_s": 10.843999999997322,
+        "requested_subject": "",
+        "resolved_title": "Welsh League Cup",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 31,
+      "time_s": 10.844,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d2s2",
+        "title": "Welsh League Cup",
+        "url": "https://trace.invalid/hotpotqa_5ab1c693554299722f9b4c66_long/d2s2",
+        "text": "Unlike the Welsh Cup, where 135 teams entered in 2008–09, the competition is only open to the members of the Welsh Premier League and a very select few other clubs.",
+        "visible_time_s": 10.843999999997322,
+        "requested_subject": "",
+        "resolved_title": "Welsh League Cup",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 32,
+      "time_s": 10.844,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d2s3",
+        "title": "Welsh League Cup",
+        "url": "https://trace.invalid/hotpotqa_5ab1c693554299722f9b4c66_long/d2s3",
+        "text": "It should not be confused with the Welsh Football League Cup, which is for the clubs in the Welsh Football League, which despite its name only covers the south and centre of Wales.",
+        "visible_time_s": 10.843999999997322,
+        "requested_subject": "",
+        "resolved_title": "Welsh League Cup",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 33,
+      "time_s": 10.844,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d5s0",
+        "title": "Newport County A.F.C.",
+        "url": "https://trace.invalid/hotpotqa_5ab1c693554299722f9b4c66_long/d5s0",
+        "text": "Newport County Association Football Club (Welsh: \"Clwb Pêl-droed Sir Casnewydd\" ) is a professional association football club based in the city of Newport, South Wales.",
+        "visible_time_s": 10.843999999997322,
+        "requested_subject": "",
+        "resolved_title": "Newport County A.F.C.",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 34,
+      "time_s": 10.844,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d5s1",
+        "title": "Newport County A.F.C.",
+        "url": "https://trace.invalid/hotpotqa_5ab1c693554299722f9b4c66_long/d5s1",
+        "text": "The team play in League Two, the fourth tier of the English football league system.",
+        "visible_time_s": 10.843999999997322,
+        "requested_subject": "",
+        "resolved_title": "Newport County A.F.C.",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 35,
+      "time_s": 10.844,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d5s2",
+        "title": "Newport County A.F.C.",
+        "url": "https://trace.invalid/hotpotqa_5ab1c693554299722f9b4c66_long/d5s2",
+        "text": "Most recently reformed in 1989, the club is a continuation of the Newport County club which was founded in 1912 and was a founder member of the Football League's new Third Division in 1920.",
+        "visible_time_s": 10.843999999997322,
+        "requested_subject": "",
+        "resolved_title": "Newport County A.F.C.",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 36,
+      "time_s": 10.844,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d6s0",
+        "title": "Richard Johnson (rugby)",
+        "url": "https://trace.invalid/hotpotqa_5ab1c693554299722f9b4c66_long/d6s0",
+        "text": "Richard Johnston, born (26-02-1980) in Neath, Wales, first started his career at Neath RFC in 1998 where he gained representative honours for Wales under 18/19's.",
+        "visible_time_s": 10.843999999997322,
+        "requested_subject": "",
+        "resolved_title": "Richard Johnson (rugby)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 37,
+      "time_s": 10.844,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d6s1",
+        "title": "Richard Johnson (rugby)",
+        "url": "https://trace.invalid/hotpotqa_5ab1c693554299722f9b4c66_long/d6s1",
+        "text": "In 2000 Richard signed for Pontypridd RFC where he spent three years.",
+        "visible_time_s": 10.843999999997322,
+        "requested_subject": "",
+        "resolved_title": "Richard Johnson (rugby)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 38,
+      "time_s": 10.844,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d6s2",
+        "title": "Richard Johnson (rugby)",
+        "url": "https://trace.invalid/hotpotqa_5ab1c693554299722f9b4c66_long/d6s2",
+        "text": "In his time at Ponty, Richard was selected for Wales U21's and Wales 7's and was involved in the squad that won the Welsh Cup in 2002 and narrowly lost to Sale in the Parker Pen European Shield Final.",
+        "visible_time_s": 10.843999999997322,
+        "requested_subject": "",
+        "resolved_title": "Richard Johnson (rugby)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 39,
+      "time_s": 10.844,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d6s3",
+        "title": "Richard Johnson (rugby)",
+        "url": "https://trace.invalid/hotpotqa_5ab1c693554299722f9b4c66_long/d6s3",
+        "text": "After regional rugby was formed he returned to Neath RFC winning the league twice and Welsh Cup in a three-year stint.",
+        "visible_time_s": 10.843999999997322,
+        "requested_subject": "",
+        "resolved_title": "Richard Johnson (rugby)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 40,
+      "time_s": 10.844,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d6s4",
+        "title": "Richard Johnson (rugby)",
+        "url": "https://trace.invalid/hotpotqa_5ab1c693554299722f9b4c66_long/d6s4",
+        "text": "Richard then changed codes, signing for Crusader RL and won 4 caps for Wales.",
+        "visible_time_s": 10.843999999997322,
+        "requested_subject": "",
+        "resolved_title": "Richard Johnson (rugby)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 41,
+      "time_s": 10.844,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d6s5",
+        "title": "Richard Johnson (rugby)",
+        "url": "https://trace.invalid/hotpotqa_5ab1c693554299722f9b4c66_long/d6s5",
+        "text": "He also played on the 7's circuit playing for Samurai 7's, White Hart Marauders, Crusaders and Scorpions.",
+        "visible_time_s": 10.843999999997322,
+        "requested_subject": "",
+        "resolved_title": "Richard Johnson (rugby)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 42,
+      "time_s": 10.844,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d6s6",
+        "title": "Richard Johnson (rugby)",
+        "url": "https://trace.invalid/hotpotqa_5ab1c693554299722f9b4c66_long/d6s6",
+        "text": "In 2007 Richard left rugby to pursue a career outside sport but continues to play on the 7's circuit and now vets competitions.",
+        "visible_time_s": 10.843999999997322,
+        "requested_subject": "",
+        "resolved_title": "Richard Johnson (rugby)",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 43,
+      "time_s": 10.844,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d8s0",
+        "title": "2011 Welsh Cup Final",
+        "url": "https://trace.invalid/hotpotqa_5ab1c693554299722f9b4c66_long/d8s0",
+        "text": "The 2011 Welsh Cup Final was the final of the 125th season of the main domestic football cup competition in Wales, the Welsh Cup.",
+        "visible_time_s": 10.843999999997322,
+        "requested_subject": "",
+        "resolved_title": "2011 Welsh Cup Final",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 44,
+      "time_s": 10.844,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d8s1",
+        "title": "2011 Welsh Cup Final",
+        "url": "https://trace.invalid/hotpotqa_5ab1c693554299722f9b4c66_long/d8s1",
+        "text": "The final was played at Parc y Scarlets in Llanelli on 8 May 2011 and marked the third time the final has been staged at the stadium.",
+        "visible_time_s": 10.843999999997322,
+        "requested_subject": "",
+        "resolved_title": "2011 Welsh Cup Final",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 45,
+      "time_s": 10.844,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d8s2",
+        "title": "2011 Welsh Cup Final",
+        "url": "https://trace.invalid/hotpotqa_5ab1c693554299722f9b4c66_long/d8s2",
+        "text": "The match was contested by Bangor City, who beat Gap Connah's Quay 1-0 in their semi-final, and Llanelli who beat The New Saints 1-0 in their semi-final.",
+        "visible_time_s": 10.843999999997322,
+        "requested_subject": "",
+        "resolved_title": "2011 Welsh Cup Final",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 46,
+      "time_s": 10.844,
+      "type": "evidence",
+      "evidence": {
+        "evidence_id": "d10s0",
+        "title": "1979–80 Welsh Cup",
+        "url": "https://trace.invalid/hotpotqa_5ab1c693554299722f9b4c66_long/d10s0",
+        "text": "The 1979–80 Welsh Cup was the final of the 93rd season of the main domestic football cup competition in Wales, the Welsh Cup.",
+        "visible_time_s": 10.843999999997322,
+        "requested_subject": "",
+        "resolved_title": "1979–80 Welsh Cup",
+        "entity_resolution": "unspecified"
+      }
+    },
+    {
+      "sequence": 47,
+      "time_s": 13.11,
+      "type": "judge_reply",
+      "reply": {
+        "judgments": [
+          {
+            "unit_id": "u1",
+            "label": "SUPPORTED",
+            "value": "Newport County and Shrewsbury Town",
+            "citations": [
+              "d3s0",
+              "d3s1"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d3s0",
+                "text": "The 1980 Welsh Cup Final was the final of the 93rd season of the main domestic football cup competition in Wales, the Welsh Cup."
+              },
+              {
+                "evidence_id": "d3s1",
+                "text": "The final was contested between Newport County and Shrewsbury Town over two legs."
+              }
+            ],
+            "reason": "Supported by the cited visible sentences and dependencies."
+          },
+          {
+            "unit_id": "u2",
+            "label": "SUPPORTED",
+            "value": "Newport",
+            "citations": [
+              "d5s0"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d5s0",
+                "text": "Newport County Association Football Club (Welsh: \"Clwb Pêl-droed Sir Casnewydd\" ) is a professional association football club based in the city of Newport, South Wales."
+              }
+            ],
+            "reason": "Supported by the cited visible sentences and dependencies."
+          },
+          {
+            "unit_id": "u3",
+            "label": "UNRESOLVED",
+            "value": "",
+            "citations": [],
+            "quotes": [],
+            "reason": "The current visible evidence does not establish this unit."
+          },
+          {
+            "unit_id": "u4",
+            "label": "SUPPORTED",
+            "value": "Newport County",
+            "citations": [
+              "d5s0"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d5s0",
+                "text": "Newport County Association Football Club (Welsh: \"Clwb Pêl-droed Sir Casnewydd\" ) is a professional association football club based in the city of Newport, South Wales."
+              }
+            ],
+            "reason": "Supported by the cited visible sentences and dependencies."
+          }
+        ]
+      },
+      "attempt": 1,
+      "repair": false,
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d3s0",
+        "d3s1",
+        "d3s2",
+        "d4s0",
+        "d7s0",
+        "d7s1",
+        "d7s2",
+        "d9s0",
+        "d9s1",
+        "d9s2",
+        "d2s0",
+        "d2s1",
+        "d2s2",
+        "d2s3",
+        "d5s0",
+        "d5s1",
+        "d5s2",
+        "d6s0",
+        "d6s1",
+        "d6s2",
+        "d6s3",
+        "d6s4",
+        "d6s5",
+        "d6s6",
+        "d8s0",
+        "d8s1",
+        "d8s2",
+        "d10s0"
+      ]
+    },
+    {
+      "sequence": 48,
+      "time_s": 13.11,
+      "type": "judgments",
+      "judgments": {
+        "u1": {
+          "label": "SUPPORTED",
+          "value": "Newport County and Shrewsbury Town",
+          "citations": [
+            "d3s0",
+            "d3s1"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d3s0",
+              "text": "The 1980 Welsh Cup Final was the final of the 93rd season of the main domestic football cup competition in Wales, the Welsh Cup."
+            },
+            {
+              "evidence_id": "d3s1",
+              "text": "The final was contested between Newport County and Shrewsbury Town over two legs."
+            }
+          ],
+          "reason": "Supported by the cited visible sentences and dependencies."
+        },
+        "u2": {
+          "label": "SUPPORTED",
+          "value": "Newport",
+          "citations": [
+            "d5s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d5s0",
+              "text": "Newport County Association Football Club (Welsh: \"Clwb Pêl-droed Sir Casnewydd\" ) is a professional association football club based in the city of Newport, South Wales."
+            }
+          ],
+          "reason": "Supported by the cited visible sentences and dependencies."
+        },
+        "u3": {
+          "label": "UNRESOLVED",
+          "value": "",
+          "citations": [],
+          "quotes": [],
+          "reason": "The current visible evidence does not establish this unit."
+        },
+        "u4": {
+          "label": "UNRESOLVED",
+          "value": "",
+          "citations": [],
+          "quotes": [],
+          "reason": "Dependency is not supported"
+        }
+      },
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d3s0",
+        "d3s1",
+        "d3s2",
+        "d4s0",
+        "d7s0",
+        "d7s1",
+        "d7s2",
+        "d9s0",
+        "d9s1",
+        "d9s2",
+        "d2s0",
+        "d2s1",
+        "d2s2",
+        "d2s3",
+        "d5s0",
+        "d5s1",
+        "d5s2",
+        "d6s0",
+        "d6s1",
+        "d6s2",
+        "d6s3",
+        "d6s4",
+        "d6s5",
+        "d6s6",
+        "d8s0",
+        "d8s1",
+        "d8s2",
+        "d10s0"
+      ],
+      "semantic_review": false
+    },
+    {
+      "sequence": 49,
+      "time_s": 13.11,
+      "type": "trace_batch_requested"
+    },
+    {
+      "sequence": 50,
+      "time_s": 14.032,
+      "type": "feedback_requested",
+      "feedback_kind": "progress",
+      "execution_state": {
+        "stage": "formulating",
+        "searches_started": 3,
+        "searches_completed": 2,
+        "active_searches": 0,
+        "evidence_count": 29,
+        "supported_units": 2,
+        "output_units": 1
+      }
+    },
+    {
+      "sequence": 51,
+      "time_s": 15.532,
+      "type": "verification_reply",
+      "reply": {
+        "approved": false,
+        "facts_valid": true,
+        "expressed_unit_ids": [
+          "u2"
+        ],
+        "reason": "Draft includes an extra factual claim about participation that is not part of the selected unit u2, violating the requirement to express only the requested facts."
+      },
+      "output_unit_ids": [
+        "u2"
+      ],
+      "output_action": "Partial Answer",
+      "dependency_unit_ids": [
+        "u1"
+      ],
+      "evidence_snapshot_ids": [
+        "d3s0",
+        "d3s1",
+        "d5s0"
+      ]
+    },
+    {
+      "sequence": 52,
+      "time_s": 15.532,
+      "type": "draft_rejected",
+      "reason": "Draft wording or output-unit accounting rejected",
+      "output_unit_ids": [
+        "u2"
+      ],
+      "expressed_unit_ids": [
+        "u2"
+      ]
+    },
+    {
+      "sequence": 53,
+      "time_s": 15.532,
+      "type": "utterance",
+      "action": "Partial Answer",
+      "text": "Location (city/region) of the first team listed in Newport County and Shrewsbury Town is Newport.",
+      "claims": [
+        {
+          "unit_id": "u2",
+          "description": "Location (city/region) of the first team listed in Newport County and Shrewsbury Town",
+          "value": "Newport",
+          "citations": [
+            "d5s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d5s0",
+              "text": "Newport County Association Football Club (Welsh: \"Clwb Pêl-droed Sir Casnewydd\" ) is a professional association football club based in the city of Newport, South Wales."
+            }
+          ]
+        }
+      ],
+      "unresolved": [],
+      "fallback": true,
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d3s0",
+        "d3s1",
+        "d3s2",
+        "d4s0",
+        "d7s0",
+        "d7s1",
+        "d7s2",
+        "d9s0",
+        "d9s1",
+        "d9s2",
+        "d2s0",
+        "d2s1",
+        "d2s2",
+        "d2s3",
+        "d5s0",
+        "d5s1",
+        "d5s2",
+        "d6s0",
+        "d6s1",
+        "d6s2",
+        "d6s3",
+        "d6s4",
+        "d6s5",
+        "d6s6",
+        "d8s0",
+        "d8s1",
+        "d8s2",
+        "d10s0"
+      ],
+      "language": "en"
+    },
+    {
+      "sequence": 54,
+      "time_s": 15.532,
+      "type": "search_finished",
+      "query": "[scheduled evidence]",
+      "subject": "",
+      "status": "ok",
+      "returned_pages": [],
+      "mode": "trace",
+      "unit_id": "__scheduled_evidence__"
+    },
+    {
+      "sequence": 55,
+      "time_s": 15.532,
+      "type": "semantic_review_requested",
+      "target_unit_ids": [
+        "u4"
+      ],
+      "review_unit_ids": [
+        "u1",
+        "u2",
+        "u3",
+        "u4"
+      ],
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d3s0",
+        "d3s1",
+        "d3s2",
+        "d4s0",
+        "d7s0",
+        "d7s1",
+        "d7s2",
+        "d9s0",
+        "d9s1",
+        "d9s2",
+        "d2s0",
+        "d2s1",
+        "d2s2",
+        "d2s3",
+        "d5s0",
+        "d5s1",
+        "d5s2",
+        "d6s0",
+        "d6s1",
+        "d6s2",
+        "d6s3",
+        "d6s4",
+        "d6s5",
+        "d6s6",
+        "d8s0",
+        "d8s1",
+        "d8s2",
+        "d10s0"
+      ],
+      "max_reviews": 1
+    },
+    {
+      "sequence": 56,
+      "time_s": 17.844,
+      "type": "semantic_review_reply",
+      "reply": {
+        "judgments": [
+          {
+            "unit_id": "u1",
+            "label": "SUPPORTED",
+            "value": "Newport County and Shrewsbury Town",
+            "citations": [
+              "d3s0",
+              "d3s1"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d3s0",
+                "text": "The 1980 Welsh Cup Final was the final of the 93rd season of the main domestic football cup competition in Wales, the Welsh Cup."
+              },
+              {
+                "evidence_id": "d3s1",
+                "text": "The final was contested between Newport County and Shrewsbury Town over two legs."
+              }
+            ],
+            "reason": "Supported by the cited visible sentences and dependencies."
+          },
+          {
+            "unit_id": "u2",
+            "label": "SUPPORTED",
+            "value": "Newport",
+            "citations": [
+              "d5s0"
+            ],
+            "quotes": [
+              {
+                "evidence_id": "d5s0",
+                "text": "Newport County Association Football Club (Welsh: \"Clwb Pêl-droed Sir Casnewydd\" ) is a professional association football club based in the city of Newport, South Wales."
+              }
+            ],
+            "reason": "Supported by the cited visible sentences and dependencies."
+          },
+          {
+            "unit_id": "u3",
+            "label": "UNRESOLVED",
+            "value": "",
+            "citations": [],
+            "quotes": [],
+            "reason": "The current visible evidence does not establish this unit."
+          },
+          {
+            "unit_id": "u4",
+            "label": "UNRESOLVED",
+            "value": "",
+            "citations": [],
+            "quotes": [],
+            "reason": "Dependency is not supported"
+          }
+        ]
+      },
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d3s0",
+        "d3s1",
+        "d3s2",
+        "d4s0",
+        "d7s0",
+        "d7s1",
+        "d7s2",
+        "d9s0",
+        "d9s1",
+        "d9s2",
+        "d2s0",
+        "d2s1",
+        "d2s2",
+        "d2s3",
+        "d5s0",
+        "d5s1",
+        "d5s2",
+        "d6s0",
+        "d6s1",
+        "d6s2",
+        "d6s3",
+        "d6s4",
+        "d6s5",
+        "d6s6",
+        "d8s0",
+        "d8s1",
+        "d8s2",
+        "d10s0"
+      ]
+    },
+    {
+      "sequence": 57,
+      "time_s": 17.844,
+      "type": "semantic_review_finished",
+      "review_unit_ids": [
+        "u1",
+        "u2",
+        "u3",
+        "u4"
+      ],
+      "recovered_unit_ids": []
+    },
+    {
+      "sequence": 58,
+      "time_s": 17.844,
+      "type": "judgments",
+      "judgments": {
+        "u1": {
+          "label": "SUPPORTED",
+          "value": "Newport County and Shrewsbury Town",
+          "citations": [
+            "d3s0",
+            "d3s1"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d3s0",
+              "text": "The 1980 Welsh Cup Final was the final of the 93rd season of the main domestic football cup competition in Wales, the Welsh Cup."
+            },
+            {
+              "evidence_id": "d3s1",
+              "text": "The final was contested between Newport County and Shrewsbury Town over two legs."
+            }
+          ],
+          "reason": "Supported by the cited visible sentences and dependencies."
+        },
+        "u2": {
+          "label": "SUPPORTED",
+          "value": "Newport",
+          "citations": [
+            "d5s0"
+          ],
+          "quotes": [
+            {
+              "evidence_id": "d5s0",
+              "text": "Newport County Association Football Club (Welsh: \"Clwb Pêl-droed Sir Casnewydd\" ) is a professional association football club based in the city of Newport, South Wales."
+            }
+          ],
+          "reason": "Supported by the cited visible sentences and dependencies."
+        },
+        "u3": {
+          "label": "UNRESOLVED",
+          "value": "",
+          "citations": [],
+          "quotes": [],
+          "reason": "The current visible evidence does not establish this unit."
+        },
+        "u4": {
+          "label": "UNRESOLVED",
+          "value": "",
+          "citations": [],
+          "quotes": [],
+          "reason": "Dependency is not supported"
+        }
+      },
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d3s0",
+        "d3s1",
+        "d3s2",
+        "d4s0",
+        "d7s0",
+        "d7s1",
+        "d7s2",
+        "d9s0",
+        "d9s1",
+        "d9s2",
+        "d2s0",
+        "d2s1",
+        "d2s2",
+        "d2s3",
+        "d5s0",
+        "d5s1",
+        "d5s2",
+        "d6s0",
+        "d6s1",
+        "d6s2",
+        "d6s3",
+        "d6s4",
+        "d6s5",
+        "d6s6",
+        "d8s0",
+        "d8s1",
+        "d8s2",
+        "d10s0"
+      ],
+      "semantic_review": true
+    },
+    {
+      "sequence": 59,
+      "time_s": 17.844,
+      "type": "utterance",
+      "action": "Final Answer",
+      "text": "I could not confirm which team from Newport County and Shrewsbury Town is based in South Wales.",
+      "claims": [],
+      "unresolved": [
+        "u4"
+      ],
+      "fallback": false,
+      "evidence_snapshot_ids": [
+        "d1s0",
+        "d3s0",
+        "d3s1",
+        "d3s2",
+        "d4s0",
+        "d7s0",
+        "d7s1",
+        "d7s2",
+        "d9s0",
+        "d9s1",
+        "d9s2",
+        "d2s0",
+        "d2s1",
+        "d2s2",
+        "d2s3",
+        "d5s0",
+        "d5s1",
+        "d5s2",
+        "d6s0",
+        "d6s1",
+        "d6s2",
+        "d6s3",
+        "d6s4",
+        "d6s5",
+        "d6s6",
+        "d8s0",
+        "d8s1",
+        "d8s2",
+        "d10s0"
+      ],
+      "language": "en"
+    },
+    {
+      "sequence": 60,
+      "time_s": 17.844,
+      "type": "finished",
+      "status": "incomplete"
+    }
+  ],
+  "note": "Prototype model judgments are not independent gold scores. Output event times are not spoken claim times.",
+  "evidence_mode": "scheduled_trace",
+  "audio": {
+    "enabled": true,
+    "mode": "windows",
+    "play": false,
+    "status": "ok",
+    "errors": [],
+    "records": [
+      {
+        "event_sequence": 1,
+        "sentence_index": 1,
+        "sentence_count": 1,
+        "language": "en",
+        "text": "I see you want to know which South Wales team played in the 1980 Welsh Cup Final, and I’ll look that up.",
+        "action": "Backchannel",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 2.25,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1-continued\\samples\\0657\\audio\\segments\\0001_01.wav",
+        "duration_s": 6.7582312925170065,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 3.0319999999919673,
+        "synthesis_and_playback_s": 0.7969999999913853
+      },
+      {
+        "event_sequence": 21,
+        "sentence_index": 1,
+        "sentence_count": 1,
+        "language": "en",
+        "text": "I'm still planning the steps to find the 1980 Welsh Cup Final team from South Wales.",
+        "action": "Progress",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 6.687999999994645,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1-continued\\samples\\0657\\audio\\segments\\0021_01.wav",
+        "duration_s": 5.953514739229025,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 7.51600000000326,
+        "synthesis_and_playback_s": 0.8280000000086147
+      },
+      {
+        "event_sequence": 27,
+        "sentence_index": 1,
+        "sentence_count": 1,
+        "language": "en",
+        "text": "Teams that participated in the 1980 Welsh Cup Final is Newport County and Shrewsbury Town.",
+        "action": "Partial Answer",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 10.843999999997322,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1-continued\\samples\\0657\\audio\\segments\\0027_01.wav",
+        "duration_s": 6.353242630385488,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 11.64100000000326,
+        "synthesis_and_playback_s": 0.7970000000059372
+      },
+      {
+        "event_sequence": 53,
+        "sentence_index": 1,
+        "sentence_count": 1,
+        "language": "en",
+        "text": "Location (city/region) of the first team listed in Newport County and Shrewsbury Town is Newport.",
+        "action": "Partial Answer",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 15.531999999991967,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1-continued\\samples\\0657\\audio\\segments\\0053_01.wav",
+        "duration_s": 7.5082086167800455,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 16.343999999997322,
+        "synthesis_and_playback_s": 0.8120000000053551
+      },
+      {
+        "event_sequence": 59,
+        "sentence_index": 1,
+        "sentence_count": 1,
+        "language": "en",
+        "text": "I could not confirm which team from Newport County and Shrewsbury Town is based in South Wales.",
+        "action": "Final Answer",
+        "status": "ok",
+        "played": false,
+        "playback_started_s": null,
+        "playback_finished_s": null,
+        "synthesis_started_s": 17.843999999997322,
+        "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1-continued\\samples\\0657\\audio\\segments\\0059_01.wav",
+        "duration_s": 6.103265306122449,
+        "voice": "Microsoft Zira Desktop",
+        "synthesis_finished_s": 18.625,
+        "synthesis_and_playback_s": 0.7810000000026776
+      }
+    ],
+    "wave": {
+      "path": "D:\\UIUC\\CS546\\moshi-rag\\eval gpt900\\artifacts\\runs\\gpt120-lora-v1-continued\\samples\\0657\\audio\\response.wav",
+      "duration_s": 35.70848072562358,
+      "timeline": [
+        {
+          "event_sequence": 1,
+          "sentence_index": 1,
+          "action": "Backchannel",
+          "text": "I see you want to know which South Wales team played in the 1980 Welsh Cup Final, and I’ll look that up.",
+          "wave_start_s": 3.032018140589569,
+          "wave_end_s": 9.790249433106576
+        },
+        {
+          "event_sequence": 21,
+          "sentence_index": 1,
+          "action": "Progress",
+          "text": "I'm still planning the steps to find the 1980 Welsh Cup Final team from South Wales.",
+          "wave_start_s": 9.790249433106576,
+          "wave_end_s": 15.7437641723356
+        },
+        {
+          "event_sequence": 27,
+          "sentence_index": 1,
+          "action": "Partial Answer",
+          "text": "Teams that participated in the 1980 Welsh Cup Final is Newport County and Shrewsbury Town.",
+          "wave_start_s": 15.7437641723356,
+          "wave_end_s": 22.09700680272109
+        },
+        {
+          "event_sequence": 53,
+          "sentence_index": 1,
+          "action": "Partial Answer",
+          "text": "Location (city/region) of the first team listed in Newport County and Shrewsbury Town is Newport.",
+          "wave_start_s": 22.09700680272109,
+          "wave_end_s": 29.605215419501135
+        },
+        {
+          "event_sequence": 59,
+          "sentence_index": 1,
+          "action": "Final Answer",
+          "text": "I could not confirm which team from Newport County and Shrewsbury Town is based in South Wales.",
+          "wave_start_s": 29.605215419501135,
+          "wave_end_s": 35.70848072562358
+        }
+      ]
+    }
+  },
+  "evaluation": {
+    "mode": "b_final_revised_trace",
+    "trace_id": "hotpotqa_5ab1c693554299722f9b4c66_long",
+    "sample_id": "hotpotqa_5ab1c693554299722f9b4c66",
+    "total_wall_s": 18.625,
+    "question_timeout_s": 180,
+    "audio_enabled": true,
+    "history_enabled": false,
+    "text_pipeline_wall_s": 17.843999999997322,
+    "effective_settings": {
+      "base_url": "https://tinker.thinkingmachines.dev/services/tinker-prod/oai/api/v1",
+      "model": "openai/gpt-oss-120b",
+      "judge_model": "tinker://f9e9a6c1-e203-5c2c-acdd-68fe67378ca4:train:0/sampler_weights/epoch-0001",
+      "judge_reasoning_effort": "low",
+      "wiki_language": "en",
+      "user_agent": "CascadeSystem/0.1 (educational research prototype)",
+      "timeout_s": 45.0,
+      "max_tokens": 4096,
+      "reasoning_effort": "low",
+      "progress_s": 3.0,
+      "feedback_timeout_s": 6.0,
+      "search_limit": 3,
+      "max_units": 8,
+      "max_searches": 16,
+      "max_sources": 29,
+      "source_chars": 221,
+      "evidence_chars": 3915,
+      "concurrency": 3
+    },
+    "timing_kind": "unknown",
+    "scheduler": "wall-paced fixed B arrivals",
+    "split": "eval_reserved",
+    "empty_evidence_sentences_ignored": 0
+  }
+}
