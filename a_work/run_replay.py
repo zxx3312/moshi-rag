@@ -29,6 +29,7 @@ and needs a Python with piper-tts; --asr FILE gives each question as the ASR hea
 import argparse
 import hashlib
 import json
+import math
 import statistics
 import sys
 import wave
@@ -46,6 +47,13 @@ from turntaking.llm import ChatClient, load_tape  # noqa: E402
 from turntaking.policies import EvidenceAware, FirstEvidence, FixedProgress, TimeOnly, WaitAll  # noqa: E402
 from turntaking.preview import preview_metrics  # noqa: E402
 from turntaking.replay import load_jsonl, replay, units_without_gold, write_jsonl  # noqa: E402
+
+
+def nonnegative_seconds(value):
+    seconds = float(value)
+    if not math.isfinite(seconds) or seconds < 0:
+        raise argparse.ArgumentTypeError("seconds must be finite and nonnegative")
+    return seconds
 
 def fmt(values, total=None):
     present = [v for v in values if v is not None]
@@ -128,6 +136,12 @@ def main():
     ap.add_argument("--judge-model", default=None, help="Served name of the judge; default --model.")
     ap.add_argument("--judge-name", default="prompt", help="Name in the policy column.")
     ap.add_argument("--no-examples", action="store_true", help="Judge without few-shot examples (LoRA).")
+    ap.add_argument("--time-only-at-s", type=nonnegative_seconds, default=3.0,
+                    help="Time-Only answer threshold in seconds (default: 3).")
+    ap.add_argument("--fixed-progress-at-s", type=nonnegative_seconds, default=1.0,
+                    help="Fixed-Progress feedback threshold in seconds (default: 1).")
+    ap.add_argument("--evidence-progress-after-s", type=nonnegative_seconds, default=3.0,
+                    help="Evidence-Aware feedback threshold in seconds (default: 3).")
     ap.add_argument("--grounded-model", default=None,
                     help="Model on the judge's server that phrases evidence-aware sentences; default --model.")
     ap.add_argument("--thinking", action="store_true")
@@ -156,14 +170,17 @@ def main():
     generator = Generator(client, grounded_client) if args.generate else None
     tts = load_tts(args.tts)
     heard = {r["sample_id"]: Heard(r["text"], float(r["latency_s"])) for r in load_jsonl(args.asr)} if args.asr else {}
-    rules = [WaitAll(), FixedProgress(), TimeOnly(), FirstEvidence()]
+    rules = [WaitAll(), FixedProgress(args.fixed_progress_at_s),
+             TimeOnly(args.time_only_at_s), FirstEvidence()]
     oracle_judge = OracleJudge(golds.values())
     # (policy, uses the model's own units, judges and generates while speaking)
-    ours = [(EvidenceAware(oracle_judge), False), (EvidenceAware(judge, name=f"evidence_aware+{args.judge_name}"), False),
-            (EvidenceAware(judge, name=f"evidence_aware+{args.judge_name}_real"), True)]
+    ours = [(EvidenceAware(oracle_judge, args.evidence_progress_after_s), False),
+            (EvidenceAware(judge, args.evidence_progress_after_s, name=f"evidence_aware+{args.judge_name}"), False),
+            (EvidenceAware(judge, args.evidence_progress_after_s, name=f"evidence_aware+{args.judge_name}_real"), True)]
     ours = [(p, real, False) for p, real in ours]
     if args.concurrent:
-        ours += [(EvidenceAware(p.judge, name=p.name + "+concurrent"), real, True) for p, real, _ in ours]
+        ours += [(EvidenceAware(p.judge, args.evidence_progress_after_s, name=p.name + "+concurrent"), real, True)
+                 for p, real, _ in ours]
 
     decomposed, logs, rows = {}, [], []
     for trace in traces:
@@ -195,7 +212,7 @@ def main():
 
     clients = list({id(c): c for c in (client, judge_client, grounded_client)}.values())
     args.out.mkdir(parents=True, exist_ok=True)
-    (args.out / "run_config.json").write_text(json.dumps({k: v if isinstance(v, (bool, type(None))) else
+    (args.out / "run_config.json").write_text(json.dumps({k: v if isinstance(v, (bool, int, float, type(None))) else
                                                           [str(x) for x in v] if isinstance(v, list) else str(v)
                                                           for k, v in vars(args).items()}, indent=2), encoding="utf-8")
     write_jsonl(args.out / "policy_log.jsonl", logs)

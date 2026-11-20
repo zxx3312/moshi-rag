@@ -7,6 +7,42 @@ D 编号对应 spec 第 11 节。一次只做一步；只做部分就标“进�
 最后核对：2026-11-11。当前任务只处理 **P0 的文档整理和进度核对**。
 **用户自行提交。助手不 commit、不 push，不自行创建其他工作区或仓库副本。**
 
+## 开发集参数对照（2026-11-20）
+
+用户授权开始参数实验。工作分支 `a-dev-parameter-sweep` 从最新
+`origin/a-method-integration` 的 `3c74cf6` 创建。这个集成版本已包含 Wait-All 的时间分析，
+尚未合并 `a-eval-refinement` 的特殊标签校验；下面结果均记录在该代码版本下。
+
+本次选择 1、3、5 秒做小范围开发诊断，围绕原默认设置逐次只改变一个参数。
+这组候选由助手为开发测试确定，不是最终参数。
+
+| 配置 | Time-Only 回答阈值 | Fixed Progress 反馈阈值 | Evidence-Aware 反馈阈值 |
+|---|---:|---:|---:|
+| baseline | 3 | 1 | 3 |
+| time_1 / time_5 | 1 / 5 | 1 | 3 |
+| fixed_3 / fixed_5 | 3 | 3 / 5 | 3 |
+| evidence_1 / evidence_5 | 3 | 1 | 1 / 5 |
+
+只用 20 道 debug 题和三档已有 trace，共 60 条；模型 Qwen3-14B 和 Qwen3-4B LoRA。
+每个配置产生 600 条策略运行。B evaluator 固定 `ea39057`，评分需要复核时保留未知。
+模型调用 temperature 为 0，各配置独立 GPU 调用仍可能存在输出或时延波动。
+Time-Only 的阈值直接改变固定时间答题策略；Progress 参数用于比较反馈出现时机，
+它们不同于首条有依据事实的时间。候选参数选择先依据开发集，经确认后单独冻结。
+
+已用 `b_q1_20_gen_v7_lora` 的 A100 模型调用记录完成 baseline、time_5、fixed_3、
+fixed_5、evidence_5 五组 CPU 重放和 B 评分，每组 600 条、评分状态均为 ok。
+`time_1` 产生新的生成请求、`evidence_1` 产生新的 judge 请求，旧 tape 均缺失，
+相应 CPU 运行以 TapeMiss 停止，保留为缺失而不是补造结果。
+重放产物位于 `a_work/results/parameter_sweeps/tape_feasibility_20261120/`。
+
+为保证 7 组统一 H100 条件，已提交 Slurm 数组 `12602396_0`–`12602396_6`，
+使用 `dilek-ic`、normal QoS、nice 0，申请每组 1 张 H100、最多 4 组并行、每组 45 分钟。
+作业名称 `a-dev-sweep`，完整输入、adapter 和代码快照及 hash 位于
+`a_work/results/code_snapshots/dev_thresholds_20261120_v1/`；
+预计输出 `a_work/results/parameter_sweeps/dev_thresholds_20261120_v1/case_0/` 至 `case_6/`。
+实际分片状态、评分和输入覆盖需在作业结束后核验。CPU 历史输出为 A100，不与 H100 直接比较时延。
+当前代码测试 A 组 100 项、控制测试 19 项均通过，Slurm 脚本通过 bash 语法检查。
+
 ## Wait-All 发言时间对照（2026-11-18）
 
 用户确认比较原策略及相同内容的两种播放时机。在 `a-baseline-ablation` 实施，起点为

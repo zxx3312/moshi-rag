@@ -12,7 +12,7 @@
 #
 #SBATCH --job-name=a-eval-judge
 #SBATCH --partition=secondary
-# Group account: much higher fair-share priority than the default campusclusterusers.
+# Authorized project account; actual scheduling priority follows the cluster configuration.
 #SBATCH --account=dilek-ic
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
@@ -36,7 +36,8 @@ export HF_HUB_OFFLINE=1
 # FlashInfer's JIT-built sampler (the judge decodes greedily, so the result is the same).
 export PATH="$VLLM_ENV/bin:$PATH"
 export VLLM_USE_FLASHINFER_SAMPLER=0
-PORT="$((20000 + ${SLURM_JOB_ID:-0} % 20000))"
+# Reserve two adjacent ports per job for the main and judge servers.
+PORT="$((20000 + 2 * (${SLURM_JOB_ID:-0} % 20000)))"
 SCRIPT="${SCRIPT:-a_work/eval_judge.py}"
 OUT="a_work/results/${RESULT_GROUP:-judge}/$RUN_NAME"
 read -r -a VLLM_EXTRA <<< "${VLLM_ARGS:-}"

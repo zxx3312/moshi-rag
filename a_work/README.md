@@ -25,6 +25,7 @@ python3 a_work/run_demo.py                      # two hand-made traces with plac
 | `run_replay.py` | All policies over a trace file; writes `summary.md`, `policy_log.jsonl`, `trace_metrics.jsonl`, `llm_calls.jsonl` |
 | `eval_with_b.py` | Scores a run with B's evaluator (unpacked from B's branch) next to the self-check |
 | `compare_wait_all.py` | Compares concurrent Evidence-Aware with Wait-All on paired debug traces and replays the same factual utterances under two speech schedules |
+| `run_parameter_case.py`, `slurm/parameter_sweep.slurm` | Runs one-factor-at-a-time development threshold comparisons and scores each configuration with B's evaluator |
 | `make_question_audio.py`, `run_asr.py` | Speak the questions with Piper; transcribe them with Whisper |
 | `eval_judge.py`, `eval_sft.py`, `train_lora_judge.py` | Judge evaluation on traces, on B's SFT dev set, and LoRA training |
 | `slurm/` | `eval_judge.slurm` serves the models and runs a script; `train_lora.slurm` |
@@ -86,6 +87,10 @@ RUN_NAME=my_run GPU_UTIL=0.55 JUDGE_GPU_UTIL=0.30 JUDGE_BASE=Qwen/Qwen3-4B \
 
 - `--concurrent` adds a `+concurrent` copy of each evidence-aware policy that judges and generates while
   the agent speaks.
+- `--time-only-at-s`, `--fixed-progress-at-s`, and `--evidence-progress-after-s` set the three
+  policy thresholds in seconds. Defaults are 3, 1, and 3. Every run records them in `run_config.json`.
+  Seven development configurations are defined in `run_parameter_case.py` and can run as a Slurm
+  array using a frozen snapshot. Configuration choices must be confirmed before final evaluation.
 - `--grounded-model Qwen/Qwen3-4B` lets the judge's base model phrase the evidence-aware sentences.
 - The cascade: add `PYTHON=$TTS_ENV/bin/python` and `--tts piper:VOICE.onnx --save-audio`; for ASR also
   `PRE_CMD="$VLLM_ENV/bin/python $S/run_asr.py --audio $I/question_audio --out OUT/asr.jsonl"` and
