@@ -24,10 +24,37 @@ python3 a_work/run_demo.py                      # two hand-made traces with plac
 | `turntaking/llm.py` | Chat client that times every call and keeps a tape of calls for offline replay |
 | `run_replay.py` | All policies over a trace file; writes `summary.md`, `policy_log.jsonl`, `trace_metrics.jsonl`, `llm_calls.jsonl` |
 | `eval_with_b.py` | Scores a run with B's evaluator (unpacked from B's branch) next to the self-check |
+| `compare_wait_all.py` | Compares concurrent Evidence-Aware with Wait-All on paired debug traces and replays the same factual utterances under two speech schedules |
 | `make_question_audio.py`, `run_asr.py` | Speak the questions with Piper; transcribe them with Whisper |
 | `eval_judge.py`, `eval_sft.py`, `train_lora_judge.py` | Judge evaluation on traces, on B's SFT dev set, and LoRA training |
 | `slurm/` | `eval_judge.slurm` serves the models and runs a script; `train_lora.slurm` |
 | `unit_schema.md`, `judge_notes.md`, `lora_judge.md`, `cascade.md`, `evaluation_notes.md` | Rules, speech setup, and development/evaluation notes (Chinese) |
+
+## Wait-All scheduling comparison
+
+To reproduce the Wait-All scheduling comparison, run the following from the repository root.
+Use a fresh output directory for each run. For the Prompt experiment use `b_q1_20_gen_v7` in place of the LoRA run.
+
+```bash
+python3 a_work/compare_wait_all.py \
+    --run a_work/results/replay/b_q1_20_gen_v7_lora \
+    --traces a_work/results/inputs/b_debug_q1_20_gold13/traces_debug.jsonl \
+    --out a_work/results/analysis/wait_all_timing_v7_debug_20261118/lora
+```
+
+The system comparison uses B's existing TTFGI and TTCA. For the fixed-content comparison, each arm
+plays the same intact utterances in recorded order. All registered claims in an eligible utterance
+must have a B support label and a located spoken value. The analysis holds preparation times fixed.
+One arm plays each prepared utterance as soon as the channel is available. The other also waits for
+retrieval completion before playback. The first fact uses its recorded offset within the utterance.
+The fixed-script finish measures the end of its last utterance. Each trace pair and the input hashes
+are available in the output directory.
+
+`actual_timing_breakdown` totals Partial playback before and after retrieval ends across all traces in
+the group. For each pair with B's TTCA available on both sides, it locates the utterance containing
+the last required fact and measures how long its prepared audio waited behind a playing Partial.
+The signed component means add up to Evidence-Aware TTCA minus Wait-All TTCA. Positive values in
+this breakdown denote extra time. The paired advance summaries use the opposite sign.
 
 ## Data flow
 
