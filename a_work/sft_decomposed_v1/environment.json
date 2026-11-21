@@ -1,0 +1,83 @@
+{
+  "backend": "vllm-json-schema",
+  "packages": {
+    "vllm": "0.32.0",
+    "torch": "2.13.0",
+    "transformers": "5.19.0",
+    "tokenizers": "0.23.3",
+    "xgrammar": "0.2.8",
+    "safetensors": "0.8.0"
+  },
+  "model": "Qwen/Qwen3-14B",
+  "model_snapshot": "40c069824f4251a91eefaf281ebe4c544efd3e18",
+  "model_path": "/projects/illinois/eng/cs/dilek/xzhu81/hf_home/hub/models--Qwen--Qwen3-14B/snapshots/40c069824f4251a91eefaf281ebe4c544efd3e18",
+  "job_id": "12608904",
+  "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+  "node": "ccc0499",
+  "generation": {
+    "temperature": 0.0,
+    "max_tokens": 1024,
+    "enable_thinking": false,
+    "response_format": "json_schema"
+  },
+  "server": {
+    "max_model_len": 16384,
+    "reasoning_parser": "qwen3",
+    "gpu_memory_utilization": 0.9,
+    "VLLM_USE_FLASHINFER_SAMPLER": "0",
+    "HF_HUB_OFFLINE": "1"
+  },
+  "source_sha256": {
+    "a_work/turntaking/decompose.py": "ff95e544e2648686bf77bf24704cddc0dec32050196214221439249bf734710f",
+    "a_work/turntaking/llm.py": "96b917968484deffa45fcfe52d01f1eafc8c90650649dd34482f50049226967a",
+    "a_work/decompose_sft.py": "37f73e090da2403ea63f112a6c4a6ed1c5990ff836a86809827f4b2024cf6275",
+    "a_work/slurm/eval_judge.slurm": "ef35ff05dcbe0916d81d7f28815d1995812b0166e1662767d582bb74c94d917d"
+  },
+  "model_config_sha256": {
+    "config.json": "e73c3664ca09b10a673fef0c22e8a6b456201d49bd4713c9691f775720e8857a",
+    "generation_config.json": "2325da0f15bb848e018c5ae071b7943332e9f871d6b60e2ed22ca97d4cb993d2",
+    "tokenizer_config.json": "d5d09f07b48c3086c508b30d1c9114bd1189145b74e982a265350c923acd8101"
+  },
+  "note": "Core vLLM/torch/transformers versions and model snapshot match A default environment. Hardware may differ; this is not a formal latency experiment.",
+  "a_environment_package_versions": {
+    "vllm": "0.32.0",
+    "torch": "2.13.0",
+    "transformers": "5.19.0",
+    "tokenizers": "0.23.3",
+    "xgrammar": "0.2.8",
+    "safetensors": "0.8.0"
+  },
+  "package_version_comparison": {
+    "vllm": {
+      "a": "0.32.0",
+      "independent": "0.32.0",
+      "same": true
+    },
+    "torch": {
+      "a": "2.13.0",
+      "independent": "2.13.0",
+      "same": true
+    },
+    "transformers": {
+      "a": "5.19.0",
+      "independent": "5.19.0",
+      "same": true
+    },
+    "tokenizers": {
+      "a": "0.23.3",
+      "independent": "0.23.3",
+      "same": true
+    },
+    "xgrammar": {
+      "a": "0.2.8",
+      "independent": "0.2.8",
+      "same": true
+    },
+    "safetensors": {
+      "a": "0.8.0",
+      "independent": "0.8.0",
+      "same": true
+    }
+  },
+  "gpu_validation": "passed: 300 real JSON-schema decomposition requests completed"
+}

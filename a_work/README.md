@@ -13,6 +13,8 @@ python3 a_work/run_demo.py                      # two hand-made traces with plac
 
 | File | Role |
 |---|---|
+| `annotate_sft_review.py` | Reapply reviewed SFT Markdown annotations without changing raw decompositions |
+| `sft_decomposed_v1/comparison_human.md`, `sft_decomposed_v1/human_comparison_review.json` | AI-assisted comparison of 300 SFT questions; retain reasonable generated units and remap supervision |
 | `turntaking/schema.py` | Action and label names from B's interface v1; observation and decision types |
 | `turntaking/decompose.py` | Splits a question into answer units (sees the question only) |
 | `turntaking/judge.py` | `OracleJudge` (gold support sets), `PromptJudge` (few-shot LLM, or a LoRA adapter without examples), dependency resolution, sufficiency state |

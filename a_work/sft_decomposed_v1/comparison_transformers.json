@@ -1,0 +1,471 @@
+{
+  "summary": {
+    "questions": 300,
+    "splits": {
+      "train": 243,
+      "dev": 57
+    },
+    "fallback_count": 0,
+    "question_types": {
+      "comparison": 105,
+      "bridge": 129,
+      "bridge_comparison": 34,
+      "single": 26,
+      "multipart": 6
+    },
+    "exact_decomposition_matches": 292,
+    "changed_questions": 8,
+    "type_changed": 3,
+    "count_changed": 4,
+    "structure_changed": 4,
+    "units_changed": 8,
+    "b_source_hashes_unchanged": true,
+    "note": "Exact equality compares question_type and all unit fields. Structural equality is not semantic equivalence; differences cannot be attributed solely to JSON constraints because backends and hardware also differ."
+  },
+  "records": [
+    {
+      "sample_id": "2wikimultihopqa_75141b5d086911ebbd5eac1f6bf848b6",
+      "split": "train",
+      "question": "Do both Americanizing Shelley and Road Agent (1952 film) films have the directors from the same country?",
+      "transformers_type": "comparison",
+      "vllm_type": "comparison",
+      "transformers_units": [
+        {
+          "unit_id": "u1",
+          "description": "country of director of Americanizing Shelley",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "country of director of Road Agent (1952 film)",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u3",
+          "description": "whether both directors are from the same country",
+          "necessary": true,
+          "depends_on": [
+            "u1",
+            "u2"
+          ]
+        }
+      ],
+      "vllm_units": [
+        {
+          "unit_id": "u1",
+          "description": "director of Americanizing Shelley",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "country of origin of {u1}",
+          "necessary": false,
+          "depends_on": [
+            "u1"
+          ]
+        },
+        {
+          "unit_id": "u3",
+          "description": "director of Road Agent (1952 film)",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u4",
+          "description": "country of origin of {u3}",
+          "necessary": false,
+          "depends_on": [
+            "u3"
+          ]
+        },
+        {
+          "unit_id": "u5",
+          "description": "whether {u2} and {u4} are the same",
+          "necessary": true,
+          "depends_on": [
+            "u2",
+            "u4"
+          ]
+        }
+      ],
+      "type_changed": false,
+      "count_changed": true,
+      "structure_changed": true,
+      "units_changed": true
+    },
+    {
+      "sample_id": "2wikimultihopqa_8b1a578708a211ebbd7aac1f6bf848b6",
+      "split": "train",
+      "question": "Who lived longer, Sergio Tofano or Diego Cisneros?",
+      "transformers_type": "bridge_comparison",
+      "vllm_type": "comparison",
+      "transformers_units": [
+        {
+          "unit_id": "u1",
+          "description": "birth date of Sergio Tofano",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "death date of Sergio Tofano",
+          "necessary": false,
+          "depends_on": [
+            "u1"
+          ]
+        },
+        {
+          "unit_id": "u3",
+          "description": "birth date of Diego Cisneros",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u4",
+          "description": "death date of Diego Cisneros",
+          "necessary": false,
+          "depends_on": [
+            "u3"
+          ]
+        },
+        {
+          "unit_id": "u5",
+          "description": "who lived longer",
+          "necessary": true,
+          "depends_on": [
+            "u2",
+            "u4"
+          ]
+        }
+      ],
+      "vllm_units": [
+        {
+          "unit_id": "u1",
+          "description": "death date of Sergio Tofano",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "death date of Diego Cisneros",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u3",
+          "description": "who lived longer",
+          "necessary": true,
+          "depends_on": [
+            "u1",
+            "u2"
+          ]
+        }
+      ],
+      "type_changed": true,
+      "count_changed": true,
+      "structure_changed": true,
+      "units_changed": true
+    },
+    {
+      "sample_id": "hotpotqa_5ab3c3b155429969a97a81b6",
+      "split": "train",
+      "question": "Which film was released first, Big Hero 6 or Muppet Treasure Island?",
+      "transformers_type": "comparison",
+      "vllm_type": "comparison",
+      "transformers_units": [
+        {
+          "unit_id": "u1",
+          "description": "release date of Big Hero 6",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "release date of Muppet Treasure Island",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u3",
+          "description": "which film was released first",
+          "necessary": true,
+          "depends_on": [
+            "u1",
+            "u2"
+          ]
+        }
+      ],
+      "vllm_units": [
+        {
+          "unit_id": "u1",
+          "description": "release year of Big Hero 6",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "release year of Muppet Treasure Island",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u3",
+          "description": "which film was released first",
+          "necessary": true,
+          "depends_on": [
+            "u1",
+            "u2"
+          ]
+        }
+      ],
+      "type_changed": false,
+      "count_changed": false,
+      "structure_changed": false,
+      "units_changed": true
+    },
+    {
+      "sample_id": "hotpotqa_5ab8292c55429934fafe6cfe",
+      "split": "train",
+      "question": "Anna Ranch Heritage Center is a former cattle ranch in a census-designated place with a population of what in 2010?",
+      "transformers_type": "bridge",
+      "vllm_type": "single",
+      "transformers_units": [
+        {
+          "unit_id": "u1",
+          "description": "census-designated place where Anna Ranch Heritage Center is located",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "population of {u1} in 2010",
+          "necessary": true,
+          "depends_on": [
+            "u1"
+          ]
+        }
+      ],
+      "vllm_units": [
+        {
+          "unit_id": "u1",
+          "description": "population of the census-designated place where Anna Ranch Heritage Center is located in 2010",
+          "necessary": true,
+          "depends_on": []
+        }
+      ],
+      "type_changed": true,
+      "count_changed": true,
+      "structure_changed": true,
+      "units_changed": true
+    },
+    {
+      "sample_id": "hotpotqa_5ac16e3055429964131be1f3",
+      "split": "train",
+      "question": "Big Dreamers and This Is Elvis are both what type of film?",
+      "transformers_type": "comparison",
+      "vllm_type": "comparison",
+      "transformers_units": [
+        {
+          "unit_id": "u1",
+          "description": "type of film Big Dreamers is",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "type of film This Is Elvis is",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u3",
+          "description": "what type of film both Big Dreamers and This Is Elvis are",
+          "necessary": true,
+          "depends_on": [
+            "u1",
+            "u2"
+          ]
+        }
+      ],
+      "vllm_units": [
+        {
+          "unit_id": "u1",
+          "description": "type of film Big Dreamers is",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "type of film This Is Elvis is",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u3",
+          "description": "common type of film for Big Dreamers and This Is Elvis",
+          "necessary": true,
+          "depends_on": [
+            "u1",
+            "u2"
+          ]
+        }
+      ],
+      "type_changed": false,
+      "count_changed": false,
+      "structure_changed": false,
+      "units_changed": true
+    },
+    {
+      "sample_id": "2wikimultihopqa_75be1186086711ebbd5eac1f6bf848b6",
+      "split": "dev",
+      "question": "Are director of film Vivasaayi Magan and director of film When The Evening Bells Ring (1951 Film) both from the same country?",
+      "transformers_type": "comparison",
+      "vllm_type": "comparison",
+      "transformers_units": [
+        {
+          "unit_id": "u1",
+          "description": "country of director of film Vivasaayi Magan",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "country of director of film When The Evening Bells Ring (1951 Film)",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u3",
+          "description": "whether director of film Vivasaayi Magan and director of film When The Evening Bells Ring (1951 Film) are from the same country",
+          "necessary": true,
+          "depends_on": [
+            "u1",
+            "u2"
+          ]
+        }
+      ],
+      "vllm_units": [
+        {
+          "unit_id": "u1",
+          "description": "country of director of film Vivasaayi Magan",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "country of director of film When The Evening Bells Ring (1951 Film)",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u3",
+          "description": "whether directors of Vivasaayi Magan and When The Evening Bells Ring (1951 Film) are from the same country",
+          "necessary": true,
+          "depends_on": [
+            "u1",
+            "u2"
+          ]
+        }
+      ],
+      "type_changed": false,
+      "count_changed": false,
+      "structure_changed": false,
+      "units_changed": true
+    },
+    {
+      "sample_id": "hotpotqa_5a7aa8565542995eb53be88b",
+      "split": "dev",
+      "question": "What movie did Katy Mixon star in that was directed by Seth Gordon?",
+      "transformers_type": "bridge",
+      "vllm_type": "single",
+      "transformers_units": [
+        {
+          "unit_id": "u1",
+          "description": "movie directed by Seth Gordon",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "movie starring Katy Mixon directed by Seth Gordon",
+          "necessary": true,
+          "depends_on": [
+            "u1"
+          ]
+        }
+      ],
+      "vllm_units": [
+        {
+          "unit_id": "u1",
+          "description": "movie directed by Seth Gordon that Katy Mixon starred in",
+          "necessary": true,
+          "depends_on": []
+        }
+      ],
+      "type_changed": true,
+      "count_changed": true,
+      "structure_changed": true,
+      "units_changed": true
+    },
+    {
+      "sample_id": "hotpotqa_5ab7eff35542993667794059",
+      "split": "dev",
+      "question": "What kind of musician does Neil Hannon and Stephen Malkmus have in common?",
+      "transformers_type": "bridge_comparison",
+      "vllm_type": "bridge_comparison",
+      "transformers_units": [
+        {
+          "unit_id": "u1",
+          "description": "musician type of Neil Hannon",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "musician type of Stephen Malkmus",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u3",
+          "description": "common musician type of Neil Hannon and Stephen Malkmus",
+          "necessary": true,
+          "depends_on": [
+            "u1",
+            "u2"
+          ]
+        }
+      ],
+      "vllm_units": [
+        {
+          "unit_id": "u1",
+          "description": "music genre of Neil Hannon",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "music genre of Stephen Malkmus",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u3",
+          "description": "common music genre of Neil Hannon and Stephen Malkmus",
+          "necessary": true,
+          "depends_on": [
+            "u1",
+            "u2"
+          ]
+        }
+      ],
+      "type_changed": false,
+      "count_changed": false,
+      "structure_changed": false,
+      "units_changed": true
+    }
+  ]
+}

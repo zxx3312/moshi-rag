@@ -1,0 +1,1699 @@
+{
+  "annotation_version": "a-decompose-v1",
+  "status": "needs_review",
+  "records": [
+    {
+      "sample_id": "2wikimultihopqa_008905100baf11ebab90acde48001122",
+      "split": "dev",
+      "question": "Who is Apama Iii's father-in-law?",
+      "sft_snapshot_count": 8,
+      "question_type": "bridge",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "spouse of Apama Iii",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "father of {u1}, Apama Iii's father-in-law",
+          "necessary": true,
+          "depends_on": [
+            "u1"
+          ]
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 1.7543672230094671
+    },
+    {
+      "sample_id": "2wikimultihopqa_363145e20baf11ebab90acde48001122",
+      "split": "dev",
+      "question": "Who is the paternal grandfather of Helvis Of Cyprus?",
+      "sft_snapshot_count": 9,
+      "question_type": "bridge",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "father of Helvis Of Cyprus",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "father of {u1}, Helvis Of Cyprus's paternal grandfather",
+          "necessary": true,
+          "depends_on": [
+            "u1"
+          ]
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 1.7128721750341356
+    },
+    {
+      "sample_id": "2wikimultihopqa_3a2fe93e0bda11eba7f7acde48001122",
+      "split": "dev",
+      "question": "What nationality is Keith Batey's wife?",
+      "sft_snapshot_count": 8,
+      "question_type": "bridge",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "wife of Keith Batey",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "nationality of {u1}",
+          "necessary": true,
+          "depends_on": [
+            "u1"
+          ]
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 1.5666364019270986
+    },
+    {
+      "sample_id": "2wikimultihopqa_4dc594f408cd11ebbd93ac1f6bf848b6",
+      "split": "dev",
+      "question": "Which film has the director died earlier, Schwarzwaldmelodie or Vacations in the Other World?",
+      "sft_snapshot_count": 10,
+      "question_type": "bridge_comparison",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "director of Schwarzwaldmelodie",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "death date of {u1}",
+          "necessary": false,
+          "depends_on": [
+            "u1"
+          ]
+        },
+        {
+          "unit_id": "u3",
+          "description": "director of Vacations in the Other World",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u4",
+          "description": "death date of {u3}",
+          "necessary": false,
+          "depends_on": [
+            "u3"
+          ]
+        },
+        {
+          "unit_id": "u5",
+          "description": "which film's director died earlier",
+          "necessary": true,
+          "depends_on": [
+            "u2",
+            "u4"
+          ]
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 3.7365872010122985
+    },
+    {
+      "sample_id": "2wikimultihopqa_5ea97157099411ebbdb0ac1f6bf848b6",
+      "split": "dev",
+      "question": "Are Rasas and Barakuh, Roshtkhar located in the same country?",
+      "sft_snapshot_count": 7,
+      "question_type": "comparison",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "country of Rasas",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "country of Barakuh, Roshtkhar",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u3",
+          "description": "whether Rasas and Barakuh, Roshtkhar are in the same country",
+          "necessary": true,
+          "depends_on": [
+            "u1",
+            "u2"
+          ]
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 2.5473493470344692
+    },
+    {
+      "sample_id": "2wikimultihopqa_640bede1095311ebbdaeac1f6bf848b6",
+      "split": "dev",
+      "question": "Are Daher-Socata and Dsf Refractories & Minerals Ltd both located in the same country?",
+      "sft_snapshot_count": 8,
+      "question_type": "comparison",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "country where Daher-Socata is located",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "country where Dsf Refractories & Minerals Ltd is located",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u3",
+          "description": "whether Daher-Socata and Dsf Refractories & Minerals Ltd are located in the same country",
+          "necessary": true,
+          "depends_on": [
+            "u1",
+            "u2"
+          ]
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 2.776422425871715
+    },
+    {
+      "sample_id": "2wikimultihopqa_6968dcf40bdc11eba7f7acde48001122",
+      "split": "dev",
+      "question": "When is Adele Khoury Graham's husband's birthday?",
+      "sft_snapshot_count": 9,
+      "question_type": "bridge",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "husband of Adele Khoury Graham",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "birthday of {u1}",
+          "necessary": true,
+          "depends_on": [
+            "u1"
+          ]
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 1.6083550958428532
+    },
+    {
+      "sample_id": "2wikimultihopqa_6be60084088e11ebbd70ac1f6bf848b6",
+      "split": "dev",
+      "question": "Which film has the director born earlier, Two Can Play or The Faithful River (Film)?",
+      "sft_snapshot_count": 10,
+      "question_type": "bridge_comparison",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "director of Two Can Play",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "birth date of {u1}",
+          "necessary": false,
+          "depends_on": [
+            "u1"
+          ]
+        },
+        {
+          "unit_id": "u3",
+          "description": "director of The Faithful River (Film)",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u4",
+          "description": "birth date of {u3}",
+          "necessary": false,
+          "depends_on": [
+            "u3"
+          ]
+        },
+        {
+          "unit_id": "u5",
+          "description": "which film's director was born earlier",
+          "necessary": true,
+          "depends_on": [
+            "u2",
+            "u4"
+          ]
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 3.715518777957186
+    },
+    {
+      "sample_id": "2wikimultihopqa_75be1186086711ebbd5eac1f6bf848b6",
+      "split": "dev",
+      "question": "Are director of film Vivasaayi Magan and director of film When The Evening Bells Ring (1951 Film) both from the same country?",
+      "sft_snapshot_count": 10,
+      "question_type": "comparison",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "country of director of film Vivasaayi Magan",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "country of director of film When The Evening Bells Ring (1951 Film)",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u3",
+          "description": "whether directors of Vivasaayi Magan and When The Evening Bells Ring (1951 Film) are from the same country",
+          "necessary": true,
+          "depends_on": [
+            "u1",
+            "u2"
+          ]
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 3.069906980963424
+    },
+    {
+      "sample_id": "2wikimultihopqa_7728ea720bb011ebab90acde48001122",
+      "split": "dev",
+      "question": "Who is Mariota, Countess Of Ross's father-in-law?",
+      "sft_snapshot_count": 8,
+      "question_type": "bridge",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "husband of Mariota, Countess Of Ross",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "father of {u1}, Mariota, Countess Of Ross's father-in-law",
+          "necessary": true,
+          "depends_on": [
+            "u1"
+          ]
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 1.879458287032321
+    },
+    {
+      "sample_id": "2wikimultihopqa_7b9cef6a0bdb11eba7f7acde48001122",
+      "split": "dev",
+      "question": "What is the cause of death of director of film The Magic Of Lassie?",
+      "sft_snapshot_count": 9,
+      "question_type": "bridge",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "director of film The Magic Of Lassie",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "cause of death of {u1}",
+          "necessary": true,
+          "depends_on": [
+            "u1"
+          ]
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 1.6504837640095502
+    },
+    {
+      "sample_id": "2wikimultihopqa_874c55c20bda11eba7f7acde48001122",
+      "split": "dev",
+      "question": "What is the date of death of the director of film The Social Buccaneer (1916 Film)?",
+      "sft_snapshot_count": 8,
+      "question_type": "bridge",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "director of The Social Buccaneer (1916 Film)",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "date of death of {u1}",
+          "necessary": true,
+          "depends_on": [
+            "u1"
+          ]
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 1.7124860060866922
+    },
+    {
+      "sample_id": "2wikimultihopqa_8e463167086c11ebbd61ac1f6bf848b6",
+      "split": "dev",
+      "question": "Which film has the director who died later, The Purple Heart or How Mcdougall Topped The Score?",
+      "sft_snapshot_count": 10,
+      "question_type": "bridge_comparison",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "director of The Purple Heart",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "death date of {u1}",
+          "necessary": false,
+          "depends_on": [
+            "u1"
+          ]
+        },
+        {
+          "unit_id": "u3",
+          "description": "director of How Mcdougall Topped The Score",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u4",
+          "description": "death date of {u3}",
+          "necessary": false,
+          "depends_on": [
+            "u3"
+          ]
+        },
+        {
+          "unit_id": "u5",
+          "description": "which film's director died later",
+          "necessary": true,
+          "depends_on": [
+            "u2",
+            "u4"
+          ]
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 3.7578161859419197
+    },
+    {
+      "sample_id": "2wikimultihopqa_8ec76c0808db11ebbd9cac1f6bf848b6",
+      "split": "dev",
+      "question": "Do both films: All The Winners and Mano Po 6: A Mother'S Love have the directors from the same country?",
+      "sft_snapshot_count": 10,
+      "question_type": "comparison",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "country of director of All The Winners",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "country of director of Mano Po 6: A Mother'S Love",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u3",
+          "description": "whether both directors are from the same country",
+          "necessary": true,
+          "depends_on": [
+            "u1",
+            "u2"
+          ]
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 2.505723109934479
+    },
+    {
+      "sample_id": "2wikimultihopqa_971f9d7a0bd911eba7f7acde48001122",
+      "split": "dev",
+      "question": "When was the director of film The Big Bang (1989 Film) born?",
+      "sft_snapshot_count": 9,
+      "question_type": "bridge",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "director of The Big Bang (1989 Film)",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "birth date of {u1}",
+          "necessary": true,
+          "depends_on": [
+            "u1"
+          ]
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 1.6718141469173133
+    },
+    {
+      "sample_id": "2wikimultihopqa_9eb9f3480baf11ebab90acde48001122",
+      "split": "dev",
+      "question": "Who is the paternal grandfather of Princess Jeguk?",
+      "sft_snapshot_count": 8,
+      "question_type": "bridge",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "father of Princess Jeguk",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "father of {u1}, Princess Jeguk's paternal grandfather",
+          "necessary": true,
+          "depends_on": [
+            "u1"
+          ]
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 1.6712184690404683
+    },
+    {
+      "sample_id": "2wikimultihopqa_b200fa00097e11ebbdb0ac1f6bf848b6",
+      "split": "dev",
+      "question": "Which film was released earlier, It'S Kind Of A Funny Story (Film) or The Education Of Nicky?",
+      "sft_snapshot_count": 8,
+      "question_type": "comparison",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "release year of It'S Kind Of A Funny Story (Film)",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "release year of The Education Of Nicky",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u3",
+          "description": "which film was released earlier",
+          "necessary": true,
+          "depends_on": [
+            "u1",
+            "u2"
+          ]
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 2.4233290411066264
+    },
+    {
+      "sample_id": "2wikimultihopqa_ba5637db098c11ebbdb0ac1f6bf848b6",
+      "split": "dev",
+      "question": "Are Nahr-E Shahab and Bazm, Fars located in the same country?",
+      "sft_snapshot_count": 9,
+      "question_type": "comparison",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "country of Nahr-E Shahab",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "country of Bazm, Fars",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u3",
+          "description": "whether Nahr-E Shahab and Bazm, Fars are located in the same country",
+          "necessary": true,
+          "depends_on": [
+            "u1",
+            "u2"
+          ]
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 2.567884550895542
+    },
+    {
+      "sample_id": "2wikimultihopqa_bc7761cc088511ebbd6dac1f6bf848b6",
+      "split": "dev",
+      "question": "Do both films, Joe Somebody and Figures of the Night, have the directors who are from the same country?",
+      "sft_snapshot_count": 10,
+      "question_type": "comparison",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "country of director of Joe Somebody",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "country of director of Figures of the Night",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u3",
+          "description": "whether the directors of Joe Somebody and Figures of the Night are from the same country",
+          "necessary": true,
+          "depends_on": [
+            "u1",
+            "u2"
+          ]
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 2.5264019190799445
+    },
+    {
+      "sample_id": "2wikimultihopqa_bf1ebaa80bda11eba7f7acde48001122",
+      "split": "dev",
+      "question": "What is the date of death of Lord Frederick Spencer Hamilton's mother?",
+      "sft_snapshot_count": 8,
+      "question_type": "bridge",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "mother of Lord Frederick Spencer Hamilton",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "date of death of {u1}",
+          "necessary": true,
+          "depends_on": [
+            "u1"
+          ]
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 1.5875205339398235
+    },
+    {
+      "sample_id": "2wikimultihopqa_d690e9a809bc11ebbdb0ac1f6bf848b6",
+      "split": "dev",
+      "question": "Are both high schools, Warwick Valley High School and Yoncalla High School, located in the same country?",
+      "sft_snapshot_count": 9,
+      "question_type": "comparison",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "country where Warwick Valley High School is located",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "country where Yoncalla High School is located",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u3",
+          "description": "whether both high schools are located in the same country",
+          "necessary": true,
+          "depends_on": [
+            "u1",
+            "u2"
+          ]
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 2.4847110230475664
+    },
+    {
+      "sample_id": "2wikimultihopqa_d996cdce0baf11ebab90acde48001122",
+      "split": "dev",
+      "question": "Who is the child of Uday Tikekar?",
+      "sft_snapshot_count": 8,
+      "question_type": "single",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "child of Uday Tikekar",
+          "necessary": true,
+          "depends_on": []
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 0.920423282077536
+    },
+    {
+      "sample_id": "2wikimultihopqa_e5f6937a0bae11ebab90acde48001122",
+      "split": "dev",
+      "question": "Who is the maternal grandfather of Tiberius Gemellus?",
+      "sft_snapshot_count": 8,
+      "question_type": "bridge",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "mother of Tiberius Gemellus",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "father of {u1}, Tiberius Gemellus's maternal grandfather",
+          "necessary": true,
+          "depends_on": [
+            "u1"
+          ]
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 1.7970336370635778
+    },
+    {
+      "sample_id": "2wikimultihopqa_e95cb5fc085d11ebbd5cac1f6bf848b6",
+      "split": "dev",
+      "question": "Which film whose director was born first, Zanjeer (1973 Film) or The Legend Of Lylah Clare?",
+      "sft_snapshot_count": 10,
+      "question_type": "bridge_comparison",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "director of Zanjeer (1973 Film)",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "birth date of {u1}",
+          "necessary": false,
+          "depends_on": [
+            "u1"
+          ]
+        },
+        {
+          "unit_id": "u3",
+          "description": "director of The Legend Of Lylah Clare",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u4",
+          "description": "birth date of {u3}",
+          "necessary": false,
+          "depends_on": [
+            "u3"
+          ]
+        },
+        {
+          "unit_id": "u5",
+          "description": "which film's director was born first",
+          "necessary": true,
+          "depends_on": [
+            "u2",
+            "u4"
+          ]
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 3.8623365990351886
+    },
+    {
+      "sample_id": "2wikimultihopqa_ea8045620bdb11eba7f7acde48001122",
+      "split": "dev",
+      "question": "What nationality is the director of film Lorai: Play To Live?",
+      "sft_snapshot_count": 8,
+      "question_type": "bridge",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "director of film Lorai: Play To Live",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "nationality of {u1}",
+          "necessary": true,
+          "depends_on": [
+            "u1"
+          ]
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 1.6291083279065788
+    },
+    {
+      "sample_id": "2wikimultihopqa_f48d9c60093011ebbdaeac1f6bf848b6",
+      "split": "dev",
+      "question": "Which film was released first, Upasane or Emilio (Film)?",
+      "sft_snapshot_count": 7,
+      "question_type": "comparison",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "release year of Upasane",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "release year of Emilio (Film)",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u3",
+          "description": "which film was released first",
+          "necessary": true,
+          "depends_on": [
+            "u1",
+            "u2"
+          ]
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 2.2767270060721785
+    },
+    {
+      "sample_id": "2wikimultihopqa_f5972e880baf11ebab90acde48001122",
+      "split": "dev",
+      "question": "Who is Erzsébet Thurzó's paternal grandfather?",
+      "sft_snapshot_count": 8,
+      "question_type": "bridge",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "father of Erzsébet Thurzó",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "father of {u1}, Erzsébet Thurzó's paternal grandfather",
+          "necessary": true,
+          "depends_on": [
+            "u1"
+          ]
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 1.8386406160425395
+    },
+    {
+      "sample_id": "2wikimultihopqa_f618d408084c11ebbd56ac1f6bf848b6",
+      "split": "dev",
+      "question": "Were both Andreas (Comics) and Albert Üksip, born in the same place?",
+      "sft_snapshot_count": 9,
+      "question_type": "comparison",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "birthplace of Andreas (Comics)",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "birthplace of Albert Üksip",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u3",
+          "description": "whether Andreas (Comics) and Albert Üksip were born in the same place",
+          "necessary": true,
+          "depends_on": [
+            "u1",
+            "u2"
+          ]
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 2.5470793009735644
+    },
+    {
+      "sample_id": "hotpotqa_5a745a8755429979e288291e",
+      "split": "dev",
+      "question": "Wellesley College and Vanderbilt University are both what?",
+      "sft_snapshot_count": 8,
+      "question_type": "comparison",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "type of Wellesley College",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "type of Vanderbilt University",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u3",
+          "description": "common classification of Wellesley College and Vanderbilt University",
+          "necessary": true,
+          "depends_on": [
+            "u1",
+            "u2"
+          ]
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 2.3176670991815627
+    },
+    {
+      "sample_id": "hotpotqa_5a75dc7a5542992d0ec06004",
+      "split": "dev",
+      "question": "What is the term for the service provided by HCL Technologies involving discovery, interpretation, and communication of patterns in data?",
+      "sft_snapshot_count": 9,
+      "question_type": "single",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "term for the service provided by HCL Technologies involving discovery, interpretation, and communication of patterns in data",
+          "necessary": true,
+          "depends_on": []
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 1.1931867490056902
+    },
+    {
+      "sample_id": "hotpotqa_5a7755e05542993735360237",
+      "split": "dev",
+      "question": "Which computer animated film was released first, Khan Kluay or A Christmas Carol starring Jim Carrey?",
+      "sft_snapshot_count": 9,
+      "question_type": "bridge_comparison",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "release date of Khan Kluay",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "release date of A Christmas Carol starring Jim Carrey",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u3",
+          "description": "which film was released first",
+          "necessary": true,
+          "depends_on": [
+            "u1",
+            "u2"
+          ]
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 2.380467767827213
+    },
+    {
+      "sample_id": "hotpotqa_5a77a8365542995d83181250",
+      "split": "dev",
+      "question": "Gândul Mâței and KMFDM, are what type of musical organization?",
+      "sft_snapshot_count": 9,
+      "question_type": "comparison",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "type of musical organization Gândul Mâței is",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "type of musical organization KMFDM is",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u3",
+          "description": "what type of musical organization they are",
+          "necessary": true,
+          "depends_on": [
+            "u1",
+            "u2"
+          ]
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 2.463832790032029
+    },
+    {
+      "sample_id": "hotpotqa_5a78f57a554299148911f9bf",
+      "split": "dev",
+      "question": "For which Minneapolis-St. Paul area sports team did Zenon Konopka play? ",
+      "sft_snapshot_count": 9,
+      "question_type": "bridge",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "sports team Zenon Konopka played for in the Minneapolis-St. Paul area",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "name of the team {u1}",
+          "necessary": true,
+          "depends_on": [
+            "u1"
+          ]
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 1.7969197088386863
+    },
+    {
+      "sample_id": "hotpotqa_5a7a51485542990783324f0e",
+      "split": "dev",
+      "question": "Under the Yum Yum Tree starred this actress who was born in April, 1927?",
+      "sft_snapshot_count": 9,
+      "question_type": "bridge",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "actress who starred in Under the Yum Yum Tree",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "birth date of {u1}, given she was born in April, 1927",
+          "necessary": true,
+          "depends_on": [
+            "u1"
+          ]
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 1.9646021709777415
+    },
+    {
+      "sample_id": "hotpotqa_5a7aa8565542995eb53be88b",
+      "split": "dev",
+      "question": "What movie did Katy Mixon star in that was directed by Seth Gordon?",
+      "sft_snapshot_count": 9,
+      "question_type": "single",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "movie directed by Seth Gordon that Katy Mixon starred in",
+          "necessary": true,
+          "depends_on": []
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 1.0038843371439725
+    },
+    {
+      "sample_id": "hotpotqa_5a7cfdb755429909bec768e2",
+      "split": "dev",
+      "question": "The Frogman Corps is the maritime special operations force of the unified armed forces of what kingdom?",
+      "sft_snapshot_count": 7,
+      "question_type": "single",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "kingdom whose unified armed forces include the Frogman Corps",
+          "necessary": true,
+          "depends_on": []
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 1.0038795699365437
+    },
+    {
+      "sample_id": "hotpotqa_5a7f359f55429930675136a9",
+      "split": "dev",
+      "question": "Who was a Canadian film producer, director, actor and screenwriter, Randal Kirk II or Sidney Olcott?",
+      "sft_snapshot_count": 9,
+      "question_type": "comparison",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "whether Randal Kirk II was a Canadian film producer, director, actor and screenwriter",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "whether Sidney Olcott was a Canadian film producer, director, actor and screenwriter",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u3",
+          "description": "who was a Canadian film producer, director, actor and screenwriter",
+          "necessary": true,
+          "depends_on": [
+            "u1",
+            "u2"
+          ]
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 2.86071729590185
+    },
+    {
+      "sample_id": "hotpotqa_5a81d03d55429903bc27b9c7",
+      "split": "dev",
+      "question": "Are Gurinder Chadha and Hou Hsiao-hsien both from England?",
+      "sft_snapshot_count": 8,
+      "question_type": "comparison",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "whether Gurinder Chadha is from England",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "whether Hou Hsiao-hsien is from England",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u3",
+          "description": "whether both Gurinder Chadha and Hou Hsiao-hsien are from England",
+          "necessary": true,
+          "depends_on": [
+            "u1",
+            "u2"
+          ]
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 2.6516231789719313
+    },
+    {
+      "sample_id": "hotpotqa_5a8715fb5542991e771816bb",
+      "split": "dev",
+      "question": " A Time for Miracles chronicles the life story of America's first native born saint who was born in what year?",
+      "sft_snapshot_count": 9,
+      "question_type": "single",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "year America's first native born saint was born",
+          "necessary": true,
+          "depends_on": []
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 0.9626098400913179
+    },
+    {
+      "sample_id": "hotpotqa_5a87e93155429938390d3ea4",
+      "split": "dev",
+      "question": "Are Purbanchal University and California State University, Northridge, both public universities?",
+      "sft_snapshot_count": 9,
+      "question_type": "comparison",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "whether Purbanchal University is a public university",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "whether California State University, Northridge is a public university",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u3",
+          "description": "whether both are public universities",
+          "necessary": true,
+          "depends_on": [
+            "u1",
+            "u2"
+          ]
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 2.4430623741354793
+    },
+    {
+      "sample_id": "hotpotqa_5a88b15b5542994846c1ceba",
+      "split": "dev",
+      "question": "Chino Moreno and Needtobreathe, are of which nationality?",
+      "sft_snapshot_count": 6,
+      "question_type": "multipart",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "nationality of Chino Moreno",
+          "necessary": true,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "nationality of Needtobreathe",
+          "necessary": true,
+          "depends_on": []
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 1.5676632809918374
+    },
+    {
+      "sample_id": "hotpotqa_5a9060f05542990a98493604",
+      "split": "dev",
+      "question": "What novel written by an American novelist born in 1804 was adapted into a British silent drama film?",
+      "sft_snapshot_count": 9,
+      "question_type": "bridge",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "American novelist born in 1804",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "novel written by {u1}",
+          "necessary": false,
+          "depends_on": [
+            "u1"
+          ]
+        },
+        {
+          "unit_id": "u3",
+          "description": "British silent drama film adaptation of {u2}",
+          "necessary": true,
+          "depends_on": [
+            "u2"
+          ]
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 2.401720725931227
+    },
+    {
+      "sample_id": "hotpotqa_5ab2585855429970612095e6",
+      "split": "dev",
+      "question": "Between the Akita and Boykin Spaniel, which dog breed is larger?",
+      "sft_snapshot_count": 9,
+      "question_type": "comparison",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "weight of the Akita breed",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "weight of the Boykin Spaniel breed",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u3",
+          "description": "which dog breed is larger",
+          "necessary": true,
+          "depends_on": [
+            "u1",
+            "u2"
+          ]
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 2.2972117150202394
+    },
+    {
+      "sample_id": "hotpotqa_5ab27ea3554299340b5254e4",
+      "split": "dev",
+      "question": "are Meet the Patels and Arakimentari the same genre of film",
+      "sft_snapshot_count": 9,
+      "question_type": "comparison",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "genre of Meet the Patels",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "genre of Arakimentari",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u3",
+          "description": "whether Meet the Patels and Arakimentari are the same genre of film",
+          "necessary": true,
+          "depends_on": [
+            "u1",
+            "u2"
+          ]
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 2.484947669086978
+    },
+    {
+      "sample_id": "hotpotqa_5ab2a4a7554299295394678b",
+      "split": "dev",
+      "question": "What year was the founder of Mac Fisheries born?",
+      "sft_snapshot_count": 9,
+      "question_type": "bridge",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "founder of Mac Fisheries",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "birth year of {u1}",
+          "necessary": true,
+          "depends_on": [
+            "u1"
+          ]
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 1.545586254214868
+    },
+    {
+      "sample_id": "hotpotqa_5ab33cec554299753aec595c",
+      "split": "dev",
+      "question": "When would be the album release in which \"Too Much to Ask\" is the third single song?",
+      "sft_snapshot_count": 9,
+      "question_type": "bridge",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "album containing \"Too Much to Ask\" as the third single",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "release date of {u1}",
+          "necessary": true,
+          "depends_on": [
+            "u1"
+          ]
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 1.6929946490563452
+    },
+    {
+      "sample_id": "hotpotqa_5ab406ce55429976abd1bd36",
+      "split": "dev",
+      "question": "Was Lev Kuleshov and Lo Wei work in the same country?",
+      "sft_snapshot_count": 9,
+      "question_type": "comparison",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "country where Lev Kuleshov worked",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "country where Lo Wei worked",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u3",
+          "description": "whether Lev Kuleshov and Lo Wei worked in the same country",
+          "necessary": true,
+          "depends_on": [
+            "u1",
+            "u2"
+          ]
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 2.463660313980654
+    },
+    {
+      "sample_id": "hotpotqa_5ab7eff35542993667794059",
+      "split": "dev",
+      "question": "What kind of musician does Neil Hannon and Stephen Malkmus have in common?",
+      "sft_snapshot_count": 8,
+      "question_type": "bridge_comparison",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "music genre of Neil Hannon",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "music genre of Stephen Malkmus",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u3",
+          "description": "common music genre of Neil Hannon and Stephen Malkmus",
+          "necessary": true,
+          "depends_on": [
+            "u1",
+            "u2"
+          ]
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 2.4011203420814127
+    },
+    {
+      "sample_id": "hotpotqa_5ab850d75542990e739ec8c0",
+      "split": "dev",
+      "question": "Which writter is known to have wrote Harry Potter, Mary Gordon or J. K. Rowling?",
+      "sft_snapshot_count": 6,
+      "question_type": "comparison",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "whether Mary Gordon wrote Harry Potter",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "whether J. K. Rowling wrote Harry Potter",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u3",
+          "description": "which writer is known to have written Harry Potter",
+          "necessary": true,
+          "depends_on": [
+            "u1",
+            "u2"
+          ]
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 2.401617013150826
+    },
+    {
+      "sample_id": "hotpotqa_5ab9d4a9554299232ef4a21c",
+      "split": "dev",
+      "question": "The Pittsburgh Penguins 2003 first overall draft pick tied the franchise record for how many goalie wins?",
+      "sft_snapshot_count": 8,
+      "question_type": "bridge",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "Pittsburgh Penguins 2003 first overall draft pick",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "franchise record for goalie wins tied by {u1}",
+          "necessary": true,
+          "depends_on": [
+            "u1"
+          ]
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 1.8179893461056054
+    },
+    {
+      "sample_id": "hotpotqa_5abe97dc5542994516f453cf",
+      "split": "dev",
+      "question": "What South East London-based post-punk/art rock group took their name from a American radical feminist that is best known for attempting to murder artist Andy Warhol?",
+      "sft_snapshot_count": 9,
+      "question_type": "single",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "South East London-based post-punk/art rock group named after an American radical feminist known for attempting to murder Andy Warhol",
+          "necessary": true,
+          "depends_on": []
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 1.275393201969564
+    },
+    {
+      "sample_id": "hotpotqa_5ac149705542994d76dccdd0",
+      "split": "dev",
+      "question": "Did Glamour or W come first?",
+      "sft_snapshot_count": 8,
+      "question_type": "comparison",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "year Glamour was founded",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "year W was founded",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u3",
+          "description": "which came first",
+          "necessary": true,
+          "depends_on": [
+            "u1",
+            "u2"
+          ]
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 2.1504611808340997
+    },
+    {
+      "sample_id": "hotpotqa_5adbf5d8554299438c868cec",
+      "split": "dev",
+      "question": "Zota was a foe of the superhero appearing in comic books by which company?",
+      "sft_snapshot_count": 9,
+      "question_type": "bridge",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "superhero that Zota was a foe of",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "company that published comic books featuring {u1}",
+          "necessary": true,
+          "depends_on": [
+            "u1"
+          ]
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 1.693065958097577
+    },
+    {
+      "sample_id": "hotpotqa_5ade960d554299728e26c747",
+      "split": "dev",
+      "question": "What is the nationality of the top scorer of the 2012–13 Primeira Liga?",
+      "sft_snapshot_count": 8,
+      "question_type": "bridge",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "top scorer of the 2012–13 Primeira Liga",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "nationality of {u1}",
+          "necessary": true,
+          "depends_on": [
+            "u1"
+          ]
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 1.7546496479772031
+    },
+    {
+      "sample_id": "hotpotqa_5ae1e7275542997f29b3c18b",
+      "split": "dev",
+      "question": "Paul Eiding has the role of the Vault Tec Rep from the video game developed by which company?",
+      "sft_snapshot_count": 9,
+      "question_type": "bridge",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "video game featuring Paul Eiding as the Vault Tec Rep",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "developer of {u1}",
+          "necessary": true,
+          "depends_on": [
+            "u1"
+          ]
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 1.6502721069846302
+    },
+    {
+      "sample_id": "hotpotqa_5ae29b615542992decbdcd4f",
+      "split": "dev",
+      "question": "Huainan and Wuzhishan City, in in which country?",
+      "sft_snapshot_count": 6,
+      "question_type": "bridge_comparison",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "country of Huainan",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "country of Wuzhishan City",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u3",
+          "description": "whether Huainan and Wuzhishan City are in the same country",
+          "necessary": true,
+          "depends_on": [
+            "u1",
+            "u2"
+          ]
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 2.52642215997912
+    },
+    {
+      "sample_id": "hotpotqa_5ae517665542990ba0bbb1b2",
+      "split": "dev",
+      "question": "What singer did the Tiny Dancers support who was in The Verve?",
+      "sft_snapshot_count": 8,
+      "question_type": "bridge",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "singer supported by the Tiny Dancers",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "singer in The Verve who was supported by the Tiny Dancers",
+          "necessary": true,
+          "depends_on": [
+            "u1"
+          ]
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 1.775558773893863
+    }
+  ]
+}
