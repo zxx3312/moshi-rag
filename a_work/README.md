@@ -24,11 +24,31 @@ python3 a_work/run_demo.py                      # two hand-made traces with plac
 | `turntaking/llm.py` | Chat client that times every call and keeps a tape of calls for offline replay |
 | `run_replay.py` | All policies over a trace file; writes `summary.md`, `policy_log.jsonl`, `trace_metrics.jsonl`, `llm_calls.jsonl` |
 | `eval_with_b.py` | Scores a run with B's evaluator (unpacked from B's branch) next to the self-check |
+| `export_speech.py`, `slurm/export_speech.slurm` | Synthesize saved policy logs into ordered per-run and per-sentence WAVs using Piper |
 | `compare_wait_all.py` | Compares concurrent Evidence-Aware with Wait-All on paired debug traces and replays the same factual utterances under two speech schedules |
 | `make_question_audio.py`, `run_asr.py` | Speak the questions with Piper; transcribe them with Whisper |
 | `eval_judge.py`, `eval_sft.py`, `train_lora_judge.py` | Judge evaluation on traces, on B's SFT dev set, and LoRA training |
 | `slurm/` | `eval_judge.slurm` serves the models and runs a script; `train_lora.slurm` |
 | `unit_schema.md`, `judge_notes.md`, `lora_judge.md`, `cascade.md`, `evaluation_notes.md` | Rules, speech setup, and development/evaluation notes (Chinese) |
+
+## Export speech from saved answers
+
+Use the Piper Python environment and a local ONNX voice. For example, from the repository root:
+
+```bash
+/projects/illinois/eng/cs/dilek/xzhu81/envs/tts/bin/python a_work/export_speech.py \
+  --logs a_work/results/replay/b_q1_20_gen_v7_lora/policy_log.jsonl \
+  --voice /projects/illinois/eng/cs/dilek/xzhu81/piper_voices/en_US-lessac-medium.onnx \
+  --policy evidence_aware+lora_real+concurrent --max-runs 2 \
+  --out a_work/results/audio/tts_example
+```
+
+Omit `--max-runs` for every matching run. Repeat `--policy` for additional policies, or omit it
+to include all policies. The output folder must be new. Its `manifest.json` maps each original run ID
+to a folder with `response.wav`, `transcript.txt`, `segments.json`, and individual sentence WAVs.
+The exporter synthesizes each logged spoken action in order, using a fixed 0.25-second gap by default.
+The merged WAV is an offline listening preview. Its offsets are not online TTFR/TTFGI/TTCA timings.
+Source output times, voice and input hashes, and failed runs are retained in the output index.
 
 ## Wait-All scheduling comparison
 

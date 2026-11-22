@@ -14,6 +14,18 @@
 - `run_replay.py --save-audio`：保存每个不同回答的 WAV 和索引。它不输出完整对话混音。
 - `llm_calls.jsonl`：保存调用结果与延迟，供同样请求的离线回放使用。
 
+## 已有回答的语音导出（2026-11-20）
+
+`a_work/export_speech.py` 将现有 A 策略日志按 run ID 分组，保留 Backchannel、
+Progress、Partial 和 Final 的原先顺序。句子切分参考 `a-cascade` @ `d337547` 的
+`cascadesystem/presentation.py`，合成复用 A 的 `PiperTTS`。每个运行保存整段
+`response.wav`、单句音频、`segments.json` 和原文转录，顶层 manifest 保留源日志与音色 hash、
+run ID、状态与输出路径。合成失败保留错误信息，处理其他运行后以非零状态退出。
+
+这是已有文字的离线语音预览，句间默认加入 0.25 秒静音。片段的实际音频内偏移与源日志
+原有的输出时间分别记录；不能把预览时间当成在线对话的实测发言时间。
+使用示例见 A README。整段音频尚需听读专名、数字和完整性。
+
 ## 首次 smoke test
 
 使用 debug 输入中按原顺序出现的第一道 bridge 和第一道 multipart 题：Caroline 的祖父、
