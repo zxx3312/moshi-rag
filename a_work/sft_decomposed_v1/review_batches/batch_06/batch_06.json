@@ -1,0 +1,2874 @@
+{
+  "annotation_version": "note-aligned-v3",
+  "status": "reviewed",
+  "batch_id": "batch_06",
+  "records": [
+    {
+      "sample_id": "hotpotqa_5a7f66cb55429969796c1a32",
+      "split": "train",
+      "question": "Between Cranium and Auf Achse, which game had more people involved in creating?",
+      "sft_snapshot_count": 7,
+      "question_type": "comparison",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "number of people involved in creating Cranium",
+          "necessary": false,
+          "depends_on": [],
+          "expected_answer": "2",
+          "support_sets": [
+            [
+              "d7s0"
+            ],
+            [
+              "d4s1",
+              "d4s2"
+            ]
+          ],
+          "aliases": [
+            "two"
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u2",
+          "description": "number of people involved in creating Auf Achse",
+          "necessary": false,
+          "depends_on": [],
+          "expected_answer": "1",
+          "support_sets": [
+            [
+              "d10s0"
+            ]
+          ],
+          "aliases": [
+            "one"
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u3",
+          "description": "which game had more people involved in creating",
+          "necessary": true,
+          "depends_on": [
+            "u1",
+            "u2"
+          ],
+          "expected_answer": "Cranium",
+          "support_sets": [
+            []
+          ],
+          "support_basis": "derived_from_dependencies"
+        }
+      ],
+      "fell_back": false,
+      "status": "reviewed",
+      "latency_s": 2.4429951880592853,
+      "annotation_review": {
+        "human_note": "题型应该是comparison，保留三单元，跟拆词器结构一致，证据跟旧的一样",
+        "execution_note": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。 题型修正为 comparison。",
+        "issues": [],
+        "author": "assistant",
+        "human_approved": true,
+        "approval_basis": "用户于 2026-11-28 确认已审核通过；按最新 Note 落实"
+      },
+      "raw_decomposition": {
+        "sample_id": "hotpotqa_5a7f66cb55429969796c1a32",
+        "split": "train",
+        "question": "Between Cranium and Auf Achse, which game had more people involved in creating?",
+        "sft_snapshot_count": 7,
+        "question_type": "bridge_comparison",
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "number of people involved in creating Cranium",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u2",
+            "description": "number of people involved in creating Auf Achse",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u3",
+            "description": "which game had more people involved in creating",
+            "necessary": true,
+            "depends_on": [
+              "u1",
+              "u2"
+            ]
+          }
+        ],
+        "fell_back": false,
+        "status": "needs_review",
+        "latency_s": 2.4429951880592853
+      }
+    },
+    {
+      "sample_id": "hotpotqa_5a7fc61155429969796c1b57",
+      "split": "train",
+      "question": "The catalyst for the Peekskill riots was a concert annouced by a black singer that played football at what college?",
+      "sft_snapshot_count": 8,
+      "question_type": "bridge",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "black singer whose announced concert was the catalyst for the Peekskill riots",
+          "necessary": false,
+          "depends_on": [],
+          "expected_answer": "Paul Robeson",
+          "support_sets": [
+            [
+              "d2s1"
+            ]
+          ],
+          "aliases": [
+            "Paul Leroy Robeson"
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u2",
+          "description": "college where {u1} played football",
+          "necessary": true,
+          "depends_on": [
+            "u1"
+          ],
+          "expected_answer": "Rutgers College",
+          "support_sets": [
+            [
+              "d10s1"
+            ]
+          ],
+          "aliases": [
+            "Rutgers"
+          ],
+          "support_basis": "context"
+        }
+      ],
+      "fell_back": false,
+      "status": "reviewed",
+      "latency_s": 1.7348413281142712,
+      "annotation_review": {
+        "human_note": "跟新版本对齐",
+        "execution_note": "保留两单元及当前修正描述：Paul Robeson 是已宣布音乐会的演出者；不要求证明他本人发布公告。",
+        "issues": [],
+        "author": "assistant",
+        "human_approved": true,
+        "approval_basis": "用户于 2026-11-28 确认已审核通过；按最新 Note 落实",
+        "resolution_note": "保留两单元及当前修正描述：Paul Robeson 是已宣布音乐会的演出者；不要求证明他本人发布公告。"
+      },
+      "raw_decomposition": {
+        "sample_id": "hotpotqa_5a7fc61155429969796c1b57",
+        "split": "train",
+        "question": "The catalyst for the Peekskill riots was a concert annouced by a black singer that played football at what college?",
+        "sft_snapshot_count": 8,
+        "question_type": "bridge",
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "black singer who announced the concert that caused the Peekskill riots",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u2",
+            "description": "college where {u1} played football",
+            "necessary": true,
+            "depends_on": [
+              "u1"
+            ]
+          }
+        ],
+        "fell_back": false,
+        "status": "needs_review",
+        "latency_s": 1.7348413281142712
+      }
+    },
+    {
+      "sample_id": "hotpotqa_5a8009885542992e7d278deb",
+      "split": "train",
+      "question": "Who is best known as the vocalist of indie rock band Florence and the Machine, Florence Welch or Floor Jansen ?",
+      "sft_snapshot_count": 6,
+      "question_type": "comparison",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "whether Florence Welch is best known as the vocalist of Florence and the Machine",
+          "necessary": false,
+          "depends_on": [],
+          "expected_answer": "yes",
+          "support_sets": [
+            [
+              "d6s0"
+            ],
+            [
+              "d2s0",
+              "d2s1"
+            ],
+            [
+              "d8s0",
+              "d8s1"
+            ],
+            [
+              "d9s0",
+              "d9s1"
+            ]
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u2",
+          "description": "whether Floor Jansen is best known as the vocalist of Florence and the Machine",
+          "necessary": false,
+          "depends_on": [],
+          "expected_answer": "no",
+          "support_sets": [],
+          "support_basis": "no_direct_support",
+          "annotation_note": "无直接支持集合；不能仅由 expected_answer 将本单元标为 SUPPORTED。候选题结论可按独立的 presupposition_sets 路径判断。"
+        },
+        {
+          "unit_id": "u3",
+          "description": "who is best known as the vocalist of Florence and the Machine",
+          "necessary": true,
+          "depends_on": [
+            "u1",
+            "u2"
+          ],
+          "expected_answer": "Florence Welch",
+          "support_sets": [
+            []
+          ],
+          "aliases": [
+            "Florence Leontine Mary Welch",
+            "Welch"
+          ],
+          "by_presupposition": true,
+          "presupposition_sets": [
+            [
+              "d6s0"
+            ],
+            [
+              "d2s0",
+              "d2s1"
+            ],
+            [
+              "d8s0",
+              "d8s1"
+            ],
+            [
+              "d9s0",
+              "d9s1"
+            ]
+          ],
+          "support_basis": "question_presupposition"
+        }
+      ],
+      "fell_back": false,
+      "status": "reviewed",
+      "latency_s": 2.75626129982993,
+      "annotation_review": {
+        "human_note": "",
+        "execution_note": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+        "issues": [],
+        "author": "assistant",
+        "human_approved": true,
+        "approval_basis": "用户于 2026-11-28 确认已审核通过；按最新 Note 落实"
+      },
+      "raw_decomposition": {
+        "sample_id": "hotpotqa_5a8009885542992e7d278deb",
+        "split": "train",
+        "question": "Who is best known as the vocalist of indie rock band Florence and the Machine, Florence Welch or Floor Jansen ?",
+        "sft_snapshot_count": 6,
+        "question_type": "comparison",
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "whether Florence Welch is best known as the vocalist of Florence and the Machine",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u2",
+            "description": "whether Floor Jansen is best known as the vocalist of Florence and the Machine",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u3",
+            "description": "who is best known as the vocalist of Florence and the Machine",
+            "necessary": true,
+            "depends_on": [
+              "u1",
+              "u2"
+            ]
+          }
+        ],
+        "fell_back": false,
+        "status": "needs_review",
+        "latency_s": 2.75626129982993
+      }
+    },
+    {
+      "sample_id": "hotpotqa_5a809152554299485f598658",
+      "split": "train",
+      "question": "What is  Lauri Ylönen and Kim Jong-hyun's main occupation?",
+      "sft_snapshot_count": 9,
+      "question_type": "multipart",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "main occupation of Lauri Ylönen",
+          "necessary": true,
+          "depends_on": [],
+          "expected_answer": "singer-songwriter",
+          "support_sets": [
+            [
+              "d7s0"
+            ],
+            [
+              "d3s1"
+            ]
+          ],
+          "aliases": [
+            "singer and songwriter"
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u2",
+          "description": "main occupation of Kim Jong-hyun",
+          "necessary": true,
+          "depends_on": [],
+          "expected_answer": "singer-songwriter",
+          "support_sets": [
+            [
+              "d5s0"
+            ]
+          ],
+          "aliases": [
+            "singer and songwriter"
+          ],
+          "support_basis": "context"
+        }
+      ],
+      "fell_back": false,
+      "status": "reviewed",
+      "latency_s": 1.5873869538772851,
+      "annotation_review": {
+        "human_note": "如果新拆分的两个necessary单元足以得到答案，就取消u3，之后对于这种类型的题目，也这样处理",
+        "execution_note": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+        "issues": [],
+        "author": "assistant",
+        "human_approved": true,
+        "approval_basis": "用户于 2026-11-28 确认已审核通过；按最新 Note 落实"
+      },
+      "raw_decomposition": {
+        "sample_id": "hotpotqa_5a809152554299485f598658",
+        "split": "train",
+        "question": "What is  Lauri Ylönen and Kim Jong-hyun's main occupation?",
+        "sft_snapshot_count": 9,
+        "question_type": "multipart",
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "main occupation of Lauri Ylönen",
+            "necessary": true,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u2",
+            "description": "main occupation of Kim Jong-hyun",
+            "necessary": true,
+            "depends_on": []
+          }
+        ],
+        "fell_back": false,
+        "status": "needs_review",
+        "latency_s": 1.5873869538772851
+      }
+    },
+    {
+      "sample_id": "hotpotqa_5a825f5955429954d2e2eb1c",
+      "split": "train",
+      "question": "Do theflowering plants Hypoxis and Monarda belong to the same family?",
+      "sft_snapshot_count": 8,
+      "question_type": "comparison",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "family of Hypoxis",
+          "necessary": false,
+          "depends_on": [],
+          "expected_answer": "Hypoxidaceae",
+          "support_sets": [
+            [
+              "d3s0"
+            ],
+            [
+              "d3s5"
+            ]
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u2",
+          "description": "family of Monarda",
+          "necessary": false,
+          "depends_on": [],
+          "expected_answer": "Lamiaceae",
+          "support_sets": [
+            [
+              "d10s0"
+            ]
+          ],
+          "aliases": [
+            "mint family"
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u3",
+          "description": "whether Hypoxis and Monarda belong to the same family",
+          "necessary": true,
+          "depends_on": [
+            "u1",
+            "u2"
+          ],
+          "expected_answer": "no",
+          "support_sets": [
+            []
+          ],
+          "support_basis": "derived_from_dependencies"
+        }
+      ],
+      "fell_back": false,
+      "status": "reviewed",
+      "latency_s": 2.3397132370155305,
+      "annotation_review": {
+        "human_note": "",
+        "execution_note": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+        "issues": [],
+        "author": "assistant",
+        "human_approved": true,
+        "approval_basis": "用户于 2026-11-28 确认已审核通过；按最新 Note 落实"
+      },
+      "raw_decomposition": {
+        "sample_id": "hotpotqa_5a825f5955429954d2e2eb1c",
+        "split": "train",
+        "question": "Do theflowering plants Hypoxis and Monarda belong to the same family?",
+        "sft_snapshot_count": 8,
+        "question_type": "comparison",
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "family of Hypoxis",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u2",
+            "description": "family of Monarda",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u3",
+            "description": "whether Hypoxis and Monarda belong to the same family",
+            "necessary": true,
+            "depends_on": [
+              "u1",
+              "u2"
+            ]
+          }
+        ],
+        "fell_back": false,
+        "status": "needs_review",
+        "latency_s": 2.3397132370155305
+      }
+    },
+    {
+      "sample_id": "hotpotqa_5a82f8e955429966c78a6abf",
+      "split": "train",
+      "question": "Are Mark Wystrach and Doc Neeson of the same nationality?",
+      "sft_snapshot_count": 9,
+      "question_type": "comparison",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "nationality of Mark Wystrach",
+          "necessary": false,
+          "depends_on": [],
+          "expected_answer": "American",
+          "support_sets": [
+            [
+              "d4s0"
+            ]
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u2",
+          "description": "nationality of Doc Neeson",
+          "necessary": false,
+          "depends_on": [],
+          "expected_answer": "Australian",
+          "support_sets": [
+            [
+              "d9s0"
+            ]
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u3",
+          "description": "whether Mark Wystrach and Doc Neeson are of the same nationality",
+          "necessary": true,
+          "depends_on": [
+            "u1",
+            "u2"
+          ],
+          "expected_answer": "no",
+          "support_sets": [
+            []
+          ],
+          "support_basis": "derived_from_dependencies"
+        }
+      ],
+      "fell_back": false,
+      "status": "reviewed",
+      "latency_s": 2.4634736739099026,
+      "annotation_review": {
+        "human_note": "",
+        "execution_note": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+        "issues": [],
+        "author": "assistant",
+        "human_approved": true,
+        "approval_basis": "用户于 2026-11-28 确认已审核通过；按最新 Note 落实"
+      },
+      "raw_decomposition": {
+        "sample_id": "hotpotqa_5a82f8e955429966c78a6abf",
+        "split": "train",
+        "question": "Are Mark Wystrach and Doc Neeson of the same nationality?",
+        "sft_snapshot_count": 9,
+        "question_type": "comparison",
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "nationality of Mark Wystrach",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u2",
+            "description": "nationality of Doc Neeson",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u3",
+            "description": "whether Mark Wystrach and Doc Neeson are of the same nationality",
+            "necessary": true,
+            "depends_on": [
+              "u1",
+              "u2"
+            ]
+          }
+        ],
+        "fell_back": false,
+        "status": "needs_review",
+        "latency_s": 2.4634736739099026
+      }
+    },
+    {
+      "sample_id": "hotpotqa_5a83a5df5542992ef85e233f",
+      "split": "train",
+      "question": "Chad Michaels was a runner up on the fourth season of RuPaul's Drag Race and is known for impersonating which singer?",
+      "sft_snapshot_count": 6,
+      "question_type": "single",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "singer impersonated by Chad Michaels",
+          "necessary": true,
+          "depends_on": [],
+          "expected_answer": "Cher",
+          "support_sets": [
+            [
+              "d4s0"
+            ]
+          ],
+          "support_basis": "context"
+        }
+      ],
+      "fell_back": false,
+      "status": "reviewed",
+      "latency_s": 0.9202973039355129,
+      "annotation_review": {
+        "human_note": "对于问题中显性包含已知信息的题目，不需要再去context里找证据，按照新的拆分方法拆分，是否合理",
+        "execution_note": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+        "issues": [],
+        "author": "assistant",
+        "human_approved": true,
+        "approval_basis": "用户于 2026-11-28 确认已审核通过；按最新 Note 落实"
+      },
+      "raw_decomposition": {
+        "sample_id": "hotpotqa_5a83a5df5542992ef85e233f",
+        "split": "train",
+        "question": "Chad Michaels was a runner up on the fourth season of RuPaul's Drag Race and is known for impersonating which singer?",
+        "sft_snapshot_count": 6,
+        "question_type": "single",
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "singer impersonated by Chad Michaels",
+            "necessary": true,
+            "depends_on": []
+          }
+        ],
+        "fell_back": false,
+        "status": "needs_review",
+        "latency_s": 0.9202973039355129
+      }
+    },
+    {
+      "sample_id": "hotpotqa_5a83c3a95542996488c2e4c1",
+      "split": "train",
+      "question": "Which court case, Gonzales v. Carhart or Lawrence v. Texas, struck down the sodomy law?",
+      "sft_snapshot_count": 5,
+      "question_type": "comparison",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "whether Gonzales v. Carhart struck down the sodomy law",
+          "necessary": false,
+          "depends_on": [],
+          "expected_answer": "no",
+          "support_sets": [],
+          "support_basis": "no_direct_support",
+          "annotation_note": "无直接支持集合；不能仅由 expected_answer 将本单元标为 SUPPORTED。候选题结论可按独立的 presupposition_sets 路径判断。"
+        },
+        {
+          "unit_id": "u2",
+          "description": "whether Lawrence v. Texas struck down the sodomy law",
+          "necessary": false,
+          "depends_on": [],
+          "expected_answer": "yes",
+          "support_sets": [
+            [
+              "d10s1"
+            ]
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u3",
+          "description": "which court case struck down the sodomy law",
+          "necessary": true,
+          "depends_on": [
+            "u1",
+            "u2"
+          ],
+          "expected_answer": "Lawrence v. Texas",
+          "support_sets": [
+            []
+          ],
+          "by_presupposition": true,
+          "presupposition_sets": [
+            [
+              "d10s1"
+            ]
+          ],
+          "support_basis": "question_presupposition"
+        }
+      ],
+      "fell_back": false,
+      "status": "reviewed",
+      "latency_s": 2.589664153987542,
+      "annotation_review": {
+        "human_note": "",
+        "execution_note": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+        "issues": [],
+        "author": "assistant",
+        "human_approved": true,
+        "approval_basis": "用户于 2026-11-28 确认已审核通过；按最新 Note 落实"
+      },
+      "raw_decomposition": {
+        "sample_id": "hotpotqa_5a83c3a95542996488c2e4c1",
+        "split": "train",
+        "question": "Which court case, Gonzales v. Carhart or Lawrence v. Texas, struck down the sodomy law?",
+        "sft_snapshot_count": 5,
+        "question_type": "comparison",
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "whether Gonzales v. Carhart struck down the sodomy law",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u2",
+            "description": "whether Lawrence v. Texas struck down the sodomy law",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u3",
+            "description": "which court case struck down the sodomy law",
+            "necessary": true,
+            "depends_on": [
+              "u1",
+              "u2"
+            ]
+          }
+        ],
+        "fell_back": false,
+        "status": "needs_review",
+        "latency_s": 2.589664153987542
+      }
+    },
+    {
+      "sample_id": "hotpotqa_5a8492b65542997b5ce3fec5",
+      "split": "train",
+      "question": "Pylon and Bullet for My Valentine, is what type of musical organization?",
+      "sft_snapshot_count": 7,
+      "question_type": "single",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "type of musical organization for Pylon and Bullet for My Valentine",
+          "necessary": true,
+          "depends_on": [],
+          "expected_answer": "band",
+          "support_sets": [
+            [
+              "d2s0",
+              "d9s0"
+            ],
+            [
+              "d2s0",
+              "d9s1"
+            ],
+            [
+              "d2s0",
+              "d9s6"
+            ],
+            [
+              "d2s0",
+              "d9s7"
+            ],
+            [
+              "d2s0",
+              "d9s8"
+            ],
+            [
+              "d2s0",
+              "d3s1"
+            ],
+            [
+              "d2s0",
+              "d3s2"
+            ],
+            [
+              "d2s0",
+              "d4s0"
+            ],
+            [
+              "d2s0",
+              "d1s0"
+            ],
+            [
+              "d2s1",
+              "d9s0"
+            ],
+            [
+              "d2s1",
+              "d9s1"
+            ],
+            [
+              "d2s1",
+              "d9s6"
+            ],
+            [
+              "d2s1",
+              "d9s7"
+            ],
+            [
+              "d2s1",
+              "d9s8"
+            ],
+            [
+              "d2s1",
+              "d3s1"
+            ],
+            [
+              "d2s1",
+              "d3s2"
+            ],
+            [
+              "d2s1",
+              "d4s0"
+            ],
+            [
+              "d2s1",
+              "d1s0"
+            ]
+          ],
+          "support_basis": "context"
+        }
+      ],
+      "fell_back": false,
+      "status": "reviewed",
+      "latency_s": 1.0243847090750933,
+      "annotation_review": {
+        "human_note": "保留single，同时验证一下对应原来旧gold中的u1u2的证据是否都需要，保留需要的证据集合。",
+        "execution_note": "保留用户指定 single；共同属性必须联合两方证据，不允许由一方推另一方。",
+        "issues": [],
+        "author": "assistant",
+        "human_approved": true,
+        "approval_basis": "用户于 2026-11-28 确认已审核通过；按最新 Note 落实"
+      },
+      "raw_decomposition": {
+        "sample_id": "hotpotqa_5a8492b65542997b5ce3fec5",
+        "split": "train",
+        "question": "Pylon and Bullet for My Valentine, is what type of musical organization?",
+        "sft_snapshot_count": 7,
+        "question_type": "single",
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "type of musical organization for Pylon and Bullet for My Valentine",
+            "necessary": true,
+            "depends_on": []
+          }
+        ],
+        "fell_back": false,
+        "status": "needs_review",
+        "latency_s": 1.0243847090750933
+      }
+    },
+    {
+      "sample_id": "hotpotqa_5a84b72b5542991dd0999dab",
+      "split": "train",
+      "question": "What genre, usually involving a mysterious death, is exhibited by a book who features detective Sir Henry Merrivale?",
+      "sft_snapshot_count": 9,
+      "question_type": "bridge",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "genre of a book featuring detective Sir Henry Merrivale",
+          "necessary": false,
+          "expected_answer": "mystery novel",
+          "depends_on": [],
+          "support_sets": [
+            [
+              "d1s0",
+              "d1s1"
+            ],
+            [
+              "d2s0",
+              "d2s1"
+            ],
+            [
+              "d4s0",
+              "d4s1"
+            ],
+            [
+              "d5s0",
+              "d5s1"
+            ],
+            [
+              "d6s0",
+              "d6s1"
+            ],
+            [
+              "d7s0",
+              "d7s1"
+            ],
+            [
+              "d8s0",
+              "d8s1"
+            ],
+            [
+              "d9s0",
+              "d9s1"
+            ],
+            [
+              "d10s0",
+              "d10s1"
+            ]
+          ],
+          "aliases": [
+            "mystery"
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u2",
+          "description": "genre usually involving a mysterious death to which {u1} belongs",
+          "necessary": true,
+          "expected_answer": "mystery fiction",
+          "depends_on": [
+            "u1"
+          ],
+          "support_sets": [
+            [
+              "d3s0"
+            ]
+          ],
+          "support_basis": "context"
+        }
+      ],
+      "fell_back": false,
+      "status": "reviewed",
+      "latency_s": 0.983025155030191,
+      "annotation_review": {
+        "human_note": "我觉得这种题目并不属于题干中包含已知信息，应该按照旧gold的结构拆分",
+        "execution_note": "采用旧版多单元/查询目标，保留可独立表达的中间事实；按 context 核对答案与证据。",
+        "issues": [],
+        "author": "assistant",
+        "human_approved": true,
+        "approval_basis": "用户于 2026-11-28 确认已审核通过；按最新 Note 落实"
+      },
+      "raw_decomposition": {
+        "sample_id": "hotpotqa_5a84b72b5542991dd0999dab",
+        "split": "train",
+        "question": "What genre, usually involving a mysterious death, is exhibited by a book who features detective Sir Henry Merrivale?",
+        "sft_snapshot_count": 9,
+        "question_type": "single",
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "genre of books featuring detective Sir Henry Merrivale",
+            "necessary": true,
+            "depends_on": []
+          }
+        ],
+        "fell_back": false,
+        "status": "needs_review",
+        "latency_s": 0.983025155030191
+      }
+    },
+    {
+      "sample_id": "hotpotqa_5a84f8b65542997b5ce3ff94",
+      "split": "train",
+      "question": "Which is a flowering plant the tolerates sandy soil and low rainfall: Luma or Cowpea?",
+      "sft_snapshot_count": 5,
+      "question_type": "comparison",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "whether Luma tolerates sandy soil and low rainfall",
+          "necessary": false,
+          "depends_on": [],
+          "expected_answer": "no",
+          "support_sets": [],
+          "support_basis": "no_direct_support",
+          "annotation_note": "无直接支持集合；不能仅由 expected_answer 将本单元标为 SUPPORTED。候选题结论可按独立的 presupposition_sets 路径判断。"
+        },
+        {
+          "unit_id": "u2",
+          "description": "whether Cowpea tolerates sandy soil and low rainfall",
+          "necessary": false,
+          "depends_on": [],
+          "expected_answer": "yes",
+          "support_sets": [
+            [
+              "d5s1"
+            ]
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u3",
+          "description": "which is a flowering plant that tolerates sandy soil and low rainfall",
+          "necessary": true,
+          "depends_on": [
+            "u1",
+            "u2"
+          ],
+          "expected_answer": "cowpea",
+          "support_sets": [
+            []
+          ],
+          "aliases": [
+            "Vigna unguiculata"
+          ],
+          "by_presupposition": true,
+          "presupposition_sets": [
+            [
+              "d5s1"
+            ]
+          ],
+          "support_basis": "question_presupposition"
+        }
+      ],
+      "fell_back": false,
+      "status": "reviewed",
+      "latency_s": 2.610079834004864,
+      "annotation_review": {
+        "human_note": "",
+        "execution_note": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+        "issues": [],
+        "author": "assistant",
+        "human_approved": true,
+        "approval_basis": "用户于 2026-11-28 确认已审核通过；按最新 Note 落实"
+      },
+      "raw_decomposition": {
+        "sample_id": "hotpotqa_5a84f8b65542997b5ce3ff94",
+        "split": "train",
+        "question": "Which is a flowering plant the tolerates sandy soil and low rainfall: Luma or Cowpea?",
+        "sft_snapshot_count": 5,
+        "question_type": "comparison",
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "whether Luma tolerates sandy soil and low rainfall",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u2",
+            "description": "whether Cowpea tolerates sandy soil and low rainfall",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u3",
+            "description": "which is a flowering plant that tolerates sandy soil and low rainfall",
+            "necessary": true,
+            "depends_on": [
+              "u1",
+              "u2"
+            ]
+          }
+        ],
+        "fell_back": false,
+        "status": "needs_review",
+        "latency_s": 2.610079834004864
+      }
+    },
+    {
+      "sample_id": "hotpotqa_5a861e86554299211dda2a72",
+      "split": "train",
+      "question": "Do Michel Butor and Joanne Harris share the same nationality?",
+      "sft_snapshot_count": 9,
+      "question_type": "comparison",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "nationality of Michel Butor",
+          "necessary": false,
+          "depends_on": [],
+          "expected_answer": "French",
+          "support_sets": [
+            [
+              "d5s0"
+            ],
+            [
+              "d1s1"
+            ]
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u2",
+          "description": "nationality of Joanne Harris",
+          "necessary": false,
+          "depends_on": [],
+          "expected_answer": "English",
+          "support_sets": [
+            [
+              "d8s0"
+            ]
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u3",
+          "description": "whether Michel Butor and Joanne Harris share the same nationality",
+          "necessary": true,
+          "depends_on": [
+            "u1",
+            "u2"
+          ],
+          "expected_answer": "no",
+          "support_sets": [
+            []
+          ],
+          "support_basis": "derived_from_dependencies"
+        }
+      ],
+      "fell_back": false,
+      "status": "reviewed",
+      "latency_s": 2.4011620739474893,
+      "annotation_review": {
+        "human_note": "",
+        "execution_note": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+        "issues": [],
+        "author": "assistant",
+        "human_approved": true,
+        "approval_basis": "用户于 2026-11-28 确认已审核通过；按最新 Note 落实"
+      },
+      "raw_decomposition": {
+        "sample_id": "hotpotqa_5a861e86554299211dda2a72",
+        "split": "train",
+        "question": "Do Michel Butor and Joanne Harris share the same nationality?",
+        "sft_snapshot_count": 9,
+        "question_type": "comparison",
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "nationality of Michel Butor",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u2",
+            "description": "nationality of Joanne Harris",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u3",
+            "description": "whether Michel Butor and Joanne Harris share the same nationality",
+            "necessary": true,
+            "depends_on": [
+              "u1",
+              "u2"
+            ]
+          }
+        ],
+        "fell_back": false,
+        "status": "needs_review",
+        "latency_s": 2.4011620739474893
+      }
+    },
+    {
+      "sample_id": "hotpotqa_5a88ec08554299206df2b3ad",
+      "split": "train",
+      "question": "What are are commonly known as milkworts or snakeroots, Nothofagus or Polygala ?",
+      "sft_snapshot_count": 6,
+      "question_type": "comparison",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "common name of Nothofagus",
+          "necessary": false,
+          "depends_on": [],
+          "expected_answer": "southern beeches",
+          "support_sets": [
+            [
+              "d4s0"
+            ]
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u2",
+          "description": "common name of Polygala",
+          "necessary": false,
+          "depends_on": [],
+          "expected_answer": "milkworts or snakeroots",
+          "support_sets": [
+            [
+              "d8s0",
+              "d8s1"
+            ]
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u3",
+          "description": "which of them are commonly known as milkworts or snakeroots",
+          "necessary": true,
+          "depends_on": [
+            "u1",
+            "u2"
+          ],
+          "expected_answer": "Polygala",
+          "support_sets": [
+            []
+          ],
+          "support_basis": "derived_from_dependencies"
+        }
+      ],
+      "fell_back": false,
+      "status": "reviewed",
+      "latency_s": 2.4857665977906436,
+      "annotation_review": {
+        "human_note": "保留新拆法",
+        "execution_note": "保留新顺序及 common name 查询；改为名称值而非旧 yes/no，结论依赖两方。",
+        "issues": [],
+        "author": "assistant",
+        "human_approved": true,
+        "approval_basis": "用户于 2026-11-28 确认已审核通过；按最新 Note 落实"
+      },
+      "raw_decomposition": {
+        "sample_id": "hotpotqa_5a88ec08554299206df2b3ad",
+        "split": "train",
+        "question": "What are are commonly known as milkworts or snakeroots, Nothofagus or Polygala ?",
+        "sft_snapshot_count": 6,
+        "question_type": "comparison",
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "common name of Nothofagus",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u2",
+            "description": "common name of Polygala",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u3",
+            "description": "which of them are commonly known as milkworts or snakeroots",
+            "necessary": true,
+            "depends_on": [
+              "u1",
+              "u2"
+            ]
+          }
+        ],
+        "fell_back": false,
+        "status": "needs_review",
+        "latency_s": 2.4857665977906436
+      }
+    },
+    {
+      "sample_id": "hotpotqa_5a899d165542993b751ca961",
+      "split": "train",
+      "question": "Which case is cited as the business purpose doctrine: Gregory v. Helvering or Ableman v. Booth?",
+      "sft_snapshot_count": 4,
+      "question_type": "comparison",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "whether Gregory v. Helvering is cited as the business purpose doctrine",
+          "necessary": false,
+          "depends_on": [],
+          "expected_answer": "yes",
+          "support_sets": [
+            [
+              "d10s1"
+            ]
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u2",
+          "description": "whether Ableman v. Booth is cited as the business purpose doctrine",
+          "necessary": false,
+          "depends_on": [],
+          "expected_answer": "no",
+          "support_sets": [],
+          "support_basis": "no_direct_support",
+          "annotation_note": "无直接支持集合；不能仅由 expected_answer 将本单元标为 SUPPORTED。候选题结论可按独立的 presupposition_sets 路径判断。"
+        },
+        {
+          "unit_id": "u3",
+          "description": "which case is cited as the business purpose doctrine",
+          "necessary": true,
+          "depends_on": [
+            "u1",
+            "u2"
+          ],
+          "expected_answer": "Gregory v. Helvering",
+          "support_sets": [
+            []
+          ],
+          "by_presupposition": true,
+          "presupposition_sets": [
+            [
+              "d10s1"
+            ]
+          ],
+          "support_basis": "question_presupposition"
+        }
+      ],
+      "fell_back": false,
+      "status": "reviewed",
+      "latency_s": 2.6516377099324018,
+      "annotation_review": {
+        "human_note": "",
+        "execution_note": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+        "issues": [],
+        "author": "assistant",
+        "human_approved": true,
+        "approval_basis": "用户于 2026-11-28 确认已审核通过；按最新 Note 落实"
+      },
+      "raw_decomposition": {
+        "sample_id": "hotpotqa_5a899d165542993b751ca961",
+        "split": "train",
+        "question": "Which case is cited as the business purpose doctrine: Gregory v. Helvering or Ableman v. Booth?",
+        "sft_snapshot_count": 4,
+        "question_type": "comparison",
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "whether Gregory v. Helvering is cited as the business purpose doctrine",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u2",
+            "description": "whether Ableman v. Booth is cited as the business purpose doctrine",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u3",
+            "description": "which case is cited as the business purpose doctrine",
+            "necessary": true,
+            "depends_on": [
+              "u1",
+              "u2"
+            ]
+          }
+        ],
+        "fell_back": false,
+        "status": "needs_review",
+        "latency_s": 2.6516377099324018
+      }
+    },
+    {
+      "sample_id": "hotpotqa_5a8ad70d5542992d82986f94",
+      "split": "train",
+      "question": "American producer K.E. on the Track worked with Fetty Wap on a song named after which shoemaker?",
+      "sft_snapshot_count": 5,
+      "question_type": "bridge",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "song by Fetty Wap produced by K.E. on the Track",
+          "necessary": false,
+          "depends_on": [],
+          "expected_answer": "Jimmy Choo",
+          "support_sets": [
+            [
+              "d4s0",
+              "d4s1"
+            ]
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u2",
+          "description": "shoemaker after whom the song is named, given {u1}",
+          "necessary": true,
+          "depends_on": [
+            "u1"
+          ],
+          "expected_answer": null,
+          "support_sets": [],
+          "support_basis": "no_direct_support",
+          "full_context_label": "UNRESOLVED",
+          "annotation_note": "context 不支持鞋匠身份及命名关系；答案留空，不能标为 SUPPORTED，也不能标为 CONTRADICTED。"
+        }
+      ],
+      "fell_back": false,
+      "status": "reviewed",
+      "latency_s": 1.9005417649168521,
+      "annotation_review": {
+        "human_note": "题目预设“以某位鞋匠命名”，并不足以单独证明那位鞋匠就与歌名完全同名，标签应该依据context",
+        "execution_note": "按 Note 严格依据 context。u1 为歌曲 Jimmy Choo；u2 无命名关系直接证据，取消预设路径，答案留空，完整 context 下仍为 UNRESOLVED。旧 gold 的 Jimmy Choo 仅作历史参考。",
+        "issues": [],
+        "author": "assistant",
+        "human_approved": true,
+        "approval_basis": "用户于 2026-11-28 确认已审核通过；按最新 Note 落实",
+        "resolution_note": "按 Note 严格依据 context。u1 为歌曲 Jimmy Choo；u2 无命名关系直接证据，取消预设路径，答案留空，完整 context 下仍为 UNRESOLVED。旧 gold 的 Jimmy Choo 仅作历史参考。"
+      },
+      "raw_decomposition": {
+        "sample_id": "hotpotqa_5a8ad70d5542992d82986f94",
+        "split": "train",
+        "question": "American producer K.E. on the Track worked with Fetty Wap on a song named after which shoemaker?",
+        "sft_snapshot_count": 5,
+        "question_type": "bridge",
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "song produced by K.E. on the Track and Fetty Wap",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u2",
+            "description": "shoemaker after whom the song is named, given {u1}",
+            "necessary": true,
+            "depends_on": [
+              "u1"
+            ]
+          }
+        ],
+        "fell_back": false,
+        "status": "needs_review",
+        "latency_s": 1.9005417649168521
+      }
+    },
+    {
+      "sample_id": "hotpotqa_5a8ad7ae5542992d82986f97",
+      "split": "train",
+      "question": "Are Friedman Memorial Airport and Watertown International Airport in the same state?",
+      "sft_snapshot_count": 8,
+      "question_type": "comparison",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "state of Friedman Memorial Airport",
+          "necessary": false,
+          "depends_on": [],
+          "expected_answer": "Idaho",
+          "support_sets": [
+            [
+              "d3s0"
+            ],
+            [
+              "d8s2"
+            ]
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u2",
+          "description": "state of Watertown International Airport",
+          "necessary": false,
+          "depends_on": [],
+          "expected_answer": "New York",
+          "support_sets": [
+            [
+              "d7s0"
+            ]
+          ],
+          "aliases": [
+            "New York State"
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u3",
+          "description": "whether Friedman Memorial Airport and Watertown International Airport are in the same state",
+          "necessary": true,
+          "depends_on": [
+            "u1",
+            "u2"
+          ],
+          "expected_answer": "no",
+          "support_sets": [
+            []
+          ],
+          "support_basis": "derived_from_dependencies"
+        }
+      ],
+      "fell_back": false,
+      "status": "reviewed",
+      "latency_s": 2.4638708389829844,
+      "annotation_review": {
+        "human_note": "",
+        "execution_note": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+        "issues": [],
+        "author": "assistant",
+        "human_approved": true,
+        "approval_basis": "用户于 2026-11-28 确认已审核通过；按最新 Note 落实"
+      },
+      "raw_decomposition": {
+        "sample_id": "hotpotqa_5a8ad7ae5542992d82986f97",
+        "split": "train",
+        "question": "Are Friedman Memorial Airport and Watertown International Airport in the same state?",
+        "sft_snapshot_count": 8,
+        "question_type": "comparison",
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "state of Friedman Memorial Airport",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u2",
+            "description": "state of Watertown International Airport",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u3",
+            "description": "whether Friedman Memorial Airport and Watertown International Airport are in the same state",
+            "necessary": true,
+            "depends_on": [
+              "u1",
+              "u2"
+            ]
+          }
+        ],
+        "fell_back": false,
+        "status": "needs_review",
+        "latency_s": 2.4638708389829844
+      }
+    },
+    {
+      "sample_id": "hotpotqa_5a8b848d5542997f31a41d5c",
+      "split": "train",
+      "question": "Are Haig P. Manoogian and Luther George Simjian both professors?",
+      "sft_snapshot_count": 9,
+      "question_type": "comparison",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "whether Haig P. Manoogian is a professor",
+          "necessary": false,
+          "depends_on": [],
+          "expected_answer": "yes",
+          "support_sets": [
+            [
+              "d2s0"
+            ]
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u2",
+          "description": "whether Luther George Simjian is a professor",
+          "necessary": false,
+          "depends_on": [],
+          "expected_answer": "no",
+          "support_sets": [
+            [
+              "d9s0"
+            ]
+          ],
+          "by_omission": true,
+          "support_basis": "definition_omission"
+        },
+        {
+          "unit_id": "u3",
+          "description": "whether both Haig P. Manoogian and Luther George Simjian are professors",
+          "necessary": true,
+          "depends_on": [
+            "u1",
+            "u2"
+          ],
+          "expected_answer": "no",
+          "support_sets": [
+            []
+          ],
+          "support_basis": "derived_from_dependencies"
+        }
+      ],
+      "fell_back": false,
+      "status": "reviewed",
+      "latency_s": 2.6721364341210574,
+      "annotation_review": {
+        "human_note": "",
+        "execution_note": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+        "issues": [],
+        "author": "assistant",
+        "human_approved": true,
+        "approval_basis": "用户于 2026-11-28 确认已审核通过；按最新 Note 落实"
+      },
+      "raw_decomposition": {
+        "sample_id": "hotpotqa_5a8b848d5542997f31a41d5c",
+        "split": "train",
+        "question": "Are Haig P. Manoogian and Luther George Simjian both professors?",
+        "sft_snapshot_count": 9,
+        "question_type": "comparison",
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "whether Haig P. Manoogian is a professor",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u2",
+            "description": "whether Luther George Simjian is a professor",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u3",
+            "description": "whether both Haig P. Manoogian and Luther George Simjian are professors",
+            "necessary": true,
+            "depends_on": [
+              "u1",
+              "u2"
+            ]
+          }
+        ],
+        "fell_back": false,
+        "status": "needs_review",
+        "latency_s": 2.6721364341210574
+      }
+    },
+    {
+      "sample_id": "hotpotqa_5a8b85f355429971feec4731",
+      "split": "train",
+      "question": "Jean-Baptiste Andrea wrote and directed what 2003 French horror drama that was remade in 2014?",
+      "sft_snapshot_count": 9,
+      "question_type": "bridge",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "2003 film that was remade in 2014",
+          "necessary": false,
+          "expected_answer": "Dead End",
+          "depends_on": [],
+          "support_sets": [
+            [
+              "d2s0",
+              "d2s1"
+            ]
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u2",
+          "description": "film written and directed by Jean-Baptiste Andrea, given {u1}",
+          "necessary": true,
+          "expected_answer": "Dead End",
+          "depends_on": [
+            "u1"
+          ],
+          "support_sets": [
+            [
+              "d8s0"
+            ]
+          ],
+          "support_basis": "context"
+        }
+      ],
+      "fell_back": false,
+      "status": "reviewed",
+      "latency_s": 1.317721250001341,
+      "annotation_review": {
+        "human_note": "我觉得旧gold的拆分结构是合理的，你再检查一下",
+        "execution_note": "采用用户要求的两单元结构；去掉旧描述泄露的 Mumbai 125 KM，第一步验证 2014 年翻拍与 2003 年原作，第二步验证编导。",
+        "issues": [],
+        "author": "assistant",
+        "human_approved": true,
+        "approval_basis": "用户于 2026-11-28 确认已审核通过；按最新 Note 落实"
+      },
+      "raw_decomposition": {
+        "sample_id": "hotpotqa_5a8b85f355429971feec4731",
+        "split": "train",
+        "question": "Jean-Baptiste Andrea wrote and directed what 2003 French horror drama that was remade in 2014?",
+        "sft_snapshot_count": 9,
+        "question_type": "single",
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "2003 French horror drama written and directed by Jean-Baptiste Andrea that was remade in 2014",
+            "necessary": true,
+            "depends_on": []
+          }
+        ],
+        "fell_back": false,
+        "status": "needs_review",
+        "latency_s": 1.317721250001341
+      }
+    },
+    {
+      "sample_id": "hotpotqa_5a8dd9b8554299068b959e06",
+      "split": "train",
+      "question": "What islands are home to Rhinosolea microlepidota and are known in Japanese as the \"Nansei\" Islands?",
+      "sft_snapshot_count": 7,
+      "question_type": "bridge",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "islands around which Rhinosolea microlepidota is native",
+          "necessary": false,
+          "expected_answer": "Ryukyu Islands",
+          "depends_on": [],
+          "support_sets": [
+            [
+              "d9s0"
+            ]
+          ],
+          "aliases": [
+            "Ryūkyū Islands"
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u2",
+          "description": "islands home to Rhinosolea microlepidota that are known in Japanese as the \"Nansei\" Islands, given {u1}",
+          "necessary": true,
+          "expected_answer": "Ryukyu Islands",
+          "depends_on": [
+            "u1"
+          ],
+          "support_sets": [
+            [
+              "d4s0"
+            ],
+            [
+              "d6s0"
+            ]
+          ],
+          "aliases": [
+            "Ryūkyū Islands"
+          ],
+          "support_basis": "context"
+        }
+      ],
+      "fell_back": false,
+      "status": "reviewed",
+      "latency_s": 1.213400635169819,
+      "annotation_review": {
+        "human_note": "应该拆分成两个unit，是否合理",
+        "execution_note": "采用旧版多单元/查询目标，保留可独立表达的中间事实；按 context 核对答案与证据。",
+        "issues": [],
+        "author": "assistant",
+        "human_approved": true,
+        "approval_basis": "用户于 2026-11-28 确认已审核通过；按最新 Note 落实"
+      },
+      "raw_decomposition": {
+        "sample_id": "hotpotqa_5a8dd9b8554299068b959e06",
+        "split": "train",
+        "question": "What islands are home to Rhinosolea microlepidota and are known in Japanese as the \"Nansei\" Islands?",
+        "sft_snapshot_count": 7,
+        "question_type": "single",
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "islands home to Rhinosolea microlepidota known as the \"Nansei\" Islands",
+            "necessary": true,
+            "depends_on": []
+          }
+        ],
+        "fell_back": false,
+        "status": "needs_review",
+        "latency_s": 1.213400635169819
+      }
+    },
+    {
+      "sample_id": "hotpotqa_5a8e28ba5542990e94052a80",
+      "split": "train",
+      "question": "Destiny and A Village Romeo and Juliet, is what type of play?",
+      "sft_snapshot_count": 8,
+      "question_type": "comparison",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "type of work Destiny is",
+          "necessary": false,
+          "expected_answer": "opera",
+          "depends_on": [],
+          "support_sets": [
+            [
+              "d1s0"
+            ]
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u2",
+          "description": "type of work A Village Romeo and Juliet is",
+          "necessary": false,
+          "expected_answer": "opera",
+          "depends_on": [],
+          "support_sets": [
+            [
+              "d9s0"
+            ]
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u3",
+          "description": "type of play that Destiny and A Village Romeo and Juliet both are",
+          "necessary": true,
+          "expected_answer": "opera",
+          "depends_on": [
+            "u1",
+            "u2"
+          ],
+          "support_sets": [
+            []
+          ],
+          "support_basis": "derived_from_dependencies"
+        }
+      ],
+      "fell_back": false,
+      "status": "reviewed",
+      "latency_s": 1.567181914113462,
+      "annotation_review": {
+        "human_note": "我觉得u3是有必要的，不能默认题干中的两个对象一定是同一个类别",
+        "execution_note": "采用旧版多单元/查询目标，保留可独立表达的中间事实；按 context 核对答案与证据。",
+        "issues": [],
+        "author": "assistant",
+        "human_approved": true,
+        "approval_basis": "用户于 2026-11-28 确认已审核通过；按最新 Note 落实"
+      },
+      "raw_decomposition": {
+        "sample_id": "hotpotqa_5a8e28ba5542990e94052a80",
+        "split": "train",
+        "question": "Destiny and A Village Romeo and Juliet, is what type of play?",
+        "sft_snapshot_count": 8,
+        "question_type": "multipart",
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "type of play Destiny is",
+            "necessary": true,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u2",
+            "description": "type of play A Village Romeo and Juliet is",
+            "necessary": true,
+            "depends_on": []
+          }
+        ],
+        "fell_back": false,
+        "status": "needs_review",
+        "latency_s": 1.567181914113462
+      }
+    },
+    {
+      "sample_id": "hotpotqa_5a8e88875542990e94052b36",
+      "split": "train",
+      "question": "The head coach for the 2004-05 Florida Gators men's college basketball team is currently the head coach for what National Basketball Association team?",
+      "sft_snapshot_count": 9,
+      "question_type": "bridge",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "head coach for the 2004-05 Florida Gators men's college basketball team",
+          "necessary": false,
+          "depends_on": [],
+          "expected_answer": "Billy Donovan",
+          "support_sets": [
+            [
+              "d8s2"
+            ]
+          ],
+          "aliases": [
+            "William John Donovan Jr."
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u2",
+          "description": "current head coach team of {u1} in the National Basketball Association",
+          "necessary": true,
+          "depends_on": [
+            "u1"
+          ],
+          "expected_answer": "Oklahoma City Thunder",
+          "support_sets": [
+            [
+              "d9s0"
+            ]
+          ],
+          "support_basis": "context"
+        }
+      ],
+      "fell_back": false,
+      "status": "reviewed",
+      "latency_s": 2.0267780569847673,
+      "annotation_review": {
+        "human_note": "",
+        "execution_note": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+        "issues": [],
+        "author": "assistant",
+        "human_approved": true,
+        "approval_basis": "用户于 2026-11-28 确认已审核通过；按最新 Note 落实"
+      },
+      "raw_decomposition": {
+        "sample_id": "hotpotqa_5a8e88875542990e94052b36",
+        "split": "train",
+        "question": "The head coach for the 2004-05 Florida Gators men's college basketball team is currently the head coach for what National Basketball Association team?",
+        "sft_snapshot_count": 9,
+        "question_type": "bridge",
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "head coach for the 2004-05 Florida Gators men's college basketball team",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u2",
+            "description": "current head coach team of {u1} in the National Basketball Association",
+            "necessary": true,
+            "depends_on": [
+              "u1"
+            ]
+          }
+        ],
+        "fell_back": false,
+        "status": "needs_review",
+        "latency_s": 2.0267780569847673
+      }
+    },
+    {
+      "sample_id": "hotpotqa_5a908d1f55429916514e74f1",
+      "split": "train",
+      "question": "Rachel Carson and Walter Mosley, are which nationality?",
+      "sft_snapshot_count": 8,
+      "question_type": "multipart",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "nationality of Rachel Carson",
+          "necessary": true,
+          "depends_on": [],
+          "expected_answer": "American",
+          "support_sets": [
+            [
+              "d8s0"
+            ]
+          ],
+          "aliases": [
+            "United States"
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u2",
+          "description": "nationality of Walter Mosley",
+          "necessary": true,
+          "depends_on": [],
+          "expected_answer": "American",
+          "support_sets": [
+            [
+              "d4s0"
+            ]
+          ],
+          "aliases": [
+            "United States"
+          ],
+          "support_basis": "context"
+        }
+      ],
+      "fell_back": false,
+      "status": "reviewed",
+      "latency_s": 1.5038254701066762,
+      "annotation_review": {
+        "human_note": "保留新版两个必要单元，分别使用 d8s0、d4s0 支持各自国籍。不根据题干预设两人国籍相同，不通过一人的证据推断另一人；两方均有支持才判为完整回答。",
+        "execution_note": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+        "issues": [],
+        "author": "assistant",
+        "human_approved": true,
+        "approval_basis": "用户于 2026-11-28 确认已审核通过；按最新 Note 落实"
+      },
+      "raw_decomposition": {
+        "sample_id": "hotpotqa_5a908d1f55429916514e74f1",
+        "split": "train",
+        "question": "Rachel Carson and Walter Mosley, are which nationality?",
+        "sft_snapshot_count": 8,
+        "question_type": "multipart",
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "nationality of Rachel Carson",
+            "necessary": true,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u2",
+            "description": "nationality of Walter Mosley",
+            "necessary": true,
+            "depends_on": []
+          }
+        ],
+        "fell_back": false,
+        "status": "needs_review",
+        "latency_s": 1.5038254701066762
+      }
+    },
+    {
+      "sample_id": "hotpotqa_5ab25a9d5542993be8fa98df",
+      "split": "train",
+      "question": "The American fashion designer for Bjork's Greatest Hits Tour is the director of what fashion house?",
+      "sft_snapshot_count": 7,
+      "question_type": "bridge",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "American fashion designer for Bjork's Greatest Hits Tour",
+          "necessary": false,
+          "depends_on": [],
+          "expected_answer": "Jeremy Scott",
+          "support_sets": [
+            [
+              "d4s6",
+              "d5s0"
+            ]
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u2",
+          "description": "fashion house directed by {u1}",
+          "necessary": true,
+          "depends_on": [
+            "u1"
+          ],
+          "expected_answer": "Moschino",
+          "support_sets": [
+            [
+              "d5s1"
+            ]
+          ],
+          "support_basis": "context"
+        }
+      ],
+      "fell_back": false,
+      "status": "reviewed",
+      "latency_s": 1.6918047729413956,
+      "annotation_review": {
+        "human_note": "",
+        "execution_note": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+        "issues": [],
+        "author": "assistant",
+        "human_approved": true,
+        "approval_basis": "用户于 2026-11-28 确认已审核通过；按最新 Note 落实"
+      },
+      "raw_decomposition": {
+        "sample_id": "hotpotqa_5ab25a9d5542993be8fa98df",
+        "split": "train",
+        "question": "The American fashion designer for Bjork's Greatest Hits Tour is the director of what fashion house?",
+        "sft_snapshot_count": 7,
+        "question_type": "bridge",
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "American fashion designer for Bjork's Greatest Hits Tour",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u2",
+            "description": "fashion house directed by {u1}",
+            "necessary": true,
+            "depends_on": [
+              "u1"
+            ]
+          }
+        ],
+        "fell_back": false,
+        "status": "needs_review",
+        "latency_s": 1.6918047729413956
+      }
+    },
+    {
+      "sample_id": "hotpotqa_5ab292b4554299449642c901",
+      "split": "train",
+      "question": "The top brand of beer in North Korea is brewed by which company ?",
+      "sft_snapshot_count": 9,
+      "question_type": "bridge",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "top brand of beer in North Korea",
+          "necessary": false,
+          "expected_answer": "Taedonggang",
+          "depends_on": [],
+          "support_sets": [
+            [
+              "d2s1"
+            ]
+          ],
+          "aliases": [
+            "Taedonggang Beer"
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u2",
+          "description": "company that brews {u1}",
+          "necessary": true,
+          "expected_answer": "Taedonggang Brewing Company",
+          "depends_on": [
+            "u1"
+          ],
+          "support_sets": [
+            [
+              "d1s0"
+            ]
+          ],
+          "aliases": [
+            "the state-owned Taedonggang Brewing Company"
+          ],
+          "support_basis": "context"
+        }
+      ],
+      "fell_back": false,
+      "status": "reviewed",
+      "latency_s": 1.0046009961515665,
+      "annotation_review": {
+        "human_note": "旧的gold结构是正确的",
+        "execution_note": "采用旧版多单元/查询目标，保留可独立表达的中间事实；按 context 核对答案与证据。",
+        "issues": [],
+        "author": "assistant",
+        "human_approved": true,
+        "approval_basis": "用户于 2026-11-28 确认已审核通过；按最新 Note 落实"
+      },
+      "raw_decomposition": {
+        "sample_id": "hotpotqa_5ab292b4554299449642c901",
+        "split": "train",
+        "question": "The top brand of beer in North Korea is brewed by which company ?",
+        "sft_snapshot_count": 9,
+        "question_type": "single",
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "brewery of the top brand of beer in North Korea",
+            "necessary": true,
+            "depends_on": []
+          }
+        ],
+        "fell_back": false,
+        "status": "needs_review",
+        "latency_s": 1.0046009961515665
+      }
+    },
+    {
+      "sample_id": "hotpotqa_5ab2989b554299194fa93423",
+      "split": "train",
+      "question": "What American professional mixed martial artist who is currently fighting in the Middleweight division of the Ultimate Fighting Championship was trained by Matt Hume?",
+      "sft_snapshot_count": 9,
+      "question_type": "bridge",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "American professional mixed martial artist fighting in the Middleweight division of the Ultimate Fighting Championship",
+          "necessary": false,
+          "depends_on": [],
+          "expected_answer": "Tim Boetsch",
+          "support_sets": [
+            [
+              "d2s0"
+            ]
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u2",
+          "description": "fighter among {u1} trained by Matt Hume",
+          "necessary": true,
+          "depends_on": [
+            "u1"
+          ],
+          "expected_answer": "Tim Boetsch",
+          "support_sets": [
+            [
+              "d1s1"
+            ]
+          ],
+          "support_basis": "context"
+        }
+      ],
+      "fell_back": false,
+      "status": "reviewed",
+      "latency_s": 1.7762983050197363,
+      "annotation_review": {
+        "human_note": "与新版对齐",
+        "execution_note": "保留新查找顺序，先职业/级别、再训练者；重映射证据，最终返回人物。",
+        "issues": [],
+        "author": "assistant",
+        "human_approved": true,
+        "approval_basis": "用户于 2026-11-28 确认已审核通过；按最新 Note 落实"
+      },
+      "raw_decomposition": {
+        "sample_id": "hotpotqa_5ab2989b554299194fa93423",
+        "split": "train",
+        "question": "What American professional mixed martial artist who is currently fighting in the Middleweight division of the Ultimate Fighting Championship was trained by Matt Hume?",
+        "sft_snapshot_count": 9,
+        "question_type": "bridge",
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "American professional mixed martial artist fighting in the Middleweight division of the Ultimate Fighting Championship",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u2",
+            "description": "fighter trained by Matt Hume",
+            "necessary": true,
+            "depends_on": [
+              "u1"
+            ]
+          }
+        ],
+        "fell_back": false,
+        "status": "needs_review",
+        "latency_s": 1.7762983050197363
+      }
+    },
+    {
+      "sample_id": "hotpotqa_5ab2ad8b554299340b525544",
+      "split": "train",
+      "question": "Who wrote the 1953 novel about a postliterate society?",
+      "sft_snapshot_count": 9,
+      "question_type": "bridge",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "1953 novel about a postliterate society",
+          "necessary": false,
+          "depends_on": [],
+          "expected_answer": "Fahrenheit 451",
+          "support_sets": [
+            [
+              "d3s2",
+              "d5s0"
+            ],
+            [
+              "d3s2",
+              "d1s1"
+            ]
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u2",
+          "description": "author of {u1}",
+          "necessary": true,
+          "depends_on": [
+            "u1"
+          ],
+          "expected_answer": "Ray Bradbury",
+          "support_sets": [
+            [
+              "d5s0"
+            ],
+            [
+              "d1s1"
+            ],
+            [
+              "d3s2"
+            ]
+          ],
+          "support_basis": "context"
+        }
+      ],
+      "fell_back": false,
+      "status": "reviewed",
+      "latency_s": 1.6503090229816735,
+      "annotation_review": {
+        "human_note": "",
+        "execution_note": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+        "issues": [],
+        "author": "assistant",
+        "human_approved": true,
+        "approval_basis": "用户于 2026-11-28 确认已审核通过；按最新 Note 落实"
+      },
+      "raw_decomposition": {
+        "sample_id": "hotpotqa_5ab2ad8b554299340b525544",
+        "split": "train",
+        "question": "Who wrote the 1953 novel about a postliterate society?",
+        "sft_snapshot_count": 9,
+        "question_type": "bridge",
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "1953 novel about a postliterate society",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u2",
+            "description": "author of {u1}",
+            "necessary": true,
+            "depends_on": [
+              "u1"
+            ]
+          }
+        ],
+        "fell_back": false,
+        "status": "needs_review",
+        "latency_s": 1.6503090229816735
+      }
+    },
+    {
+      "sample_id": "hotpotqa_5ab3c3b155429969a97a81b6",
+      "split": "train",
+      "question": "Which film was released first, Big Hero 6 or Muppet Treasure Island?",
+      "sft_snapshot_count": 9,
+      "question_type": "comparison",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "release year of Big Hero 6",
+          "necessary": false,
+          "depends_on": [],
+          "expected_answer": "2014",
+          "support_sets": [
+            [
+              "d1s0"
+            ],
+            [
+              "d2s2"
+            ],
+            [
+              "d4s1"
+            ],
+            [
+              "d5s1"
+            ]
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u2",
+          "description": "release year of Muppet Treasure Island",
+          "necessary": false,
+          "depends_on": [],
+          "expected_answer": "1996",
+          "support_sets": [
+            [
+              "d6s0"
+            ],
+            [
+              "d10s3"
+            ]
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u3",
+          "description": "which film was released first",
+          "necessary": true,
+          "depends_on": [
+            "u1",
+            "u2"
+          ],
+          "expected_answer": "Muppet Treasure Island",
+          "support_sets": [
+            []
+          ],
+          "support_basis": "derived_from_dependencies"
+        }
+      ],
+      "fell_back": false,
+      "status": "reviewed",
+      "latency_s": 2.2974437021184713,
+      "annotation_review": {
+        "human_note": "",
+        "execution_note": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+        "issues": [],
+        "author": "assistant",
+        "human_approved": true,
+        "approval_basis": "用户于 2026-11-28 确认已审核通过；按最新 Note 落实"
+      },
+      "raw_decomposition": {
+        "sample_id": "hotpotqa_5ab3c3b155429969a97a81b6",
+        "split": "train",
+        "question": "Which film was released first, Big Hero 6 or Muppet Treasure Island?",
+        "sft_snapshot_count": 9,
+        "question_type": "comparison",
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "release year of Big Hero 6",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u2",
+            "description": "release year of Muppet Treasure Island",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u3",
+            "description": "which film was released first",
+            "necessary": true,
+            "depends_on": [
+              "u1",
+              "u2"
+            ]
+          }
+        ],
+        "fell_back": false,
+        "status": "needs_review",
+        "latency_s": 2.2974437021184713
+      }
+    },
+    {
+      "sample_id": "hotpotqa_5ab42d235542991751b4d6d1",
+      "split": "train",
+      "question": "Who directed the Walt Disney Television movie that John William Minton was a cast member of?",
+      "sft_snapshot_count": 9,
+      "question_type": "bridge",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "Walt Disney Television movie that John William Minton was a cast member of",
+          "necessary": false,
+          "depends_on": [],
+          "expected_answer": "Double Agent",
+          "support_sets": [
+            [
+              "d6s0",
+              "d3s0",
+              "d3s2"
+            ]
+          ],
+          "aliases": [
+            "Double Agent (1987 film)"
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u2",
+          "description": "director of {u1}",
+          "necessary": true,
+          "depends_on": [
+            "u1"
+          ],
+          "expected_answer": "Michael Vejar",
+          "support_sets": [
+            [
+              "d3s0"
+            ]
+          ],
+          "support_basis": "context"
+        }
+      ],
+      "fell_back": false,
+      "status": "reviewed",
+      "latency_s": 1.7333680680021644,
+      "annotation_review": {
+        "human_note": "按照新拆法，检查一下标签",
+        "execution_note": "保留新两单元，第一单元联合本名—艺名—演员表证据。",
+        "issues": [],
+        "author": "assistant",
+        "human_approved": true,
+        "approval_basis": "用户于 2026-11-28 确认已审核通过；按最新 Note 落实"
+      },
+      "raw_decomposition": {
+        "sample_id": "hotpotqa_5ab42d235542991751b4d6d1",
+        "split": "train",
+        "question": "Who directed the Walt Disney Television movie that John William Minton was a cast member of?",
+        "sft_snapshot_count": 9,
+        "question_type": "bridge",
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "Walt Disney Television movie that John William Minton was a cast member of",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u2",
+            "description": "director of {u1}",
+            "necessary": true,
+            "depends_on": [
+              "u1"
+            ]
+          }
+        ],
+        "fell_back": false,
+        "status": "needs_review",
+        "latency_s": 1.7333680680021644
+      }
+    },
+    {
+      "sample_id": "hotpotqa_5ab443ca5542991779162c43",
+      "split": "train",
+      "question": "What do Lindsay Anderson and Aaron Kozak have in common?",
+      "sft_snapshot_count": 9,
+      "question_type": "single",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "commonality between Lindsay Anderson and Aaron Kozak",
+          "necessary": true,
+          "depends_on": [],
+          "expected_answer": "filmmaker",
+          "support_sets": [
+            [
+              "d5s0",
+              "d3s0"
+            ],
+            [
+              "d7s4",
+              "d3s0"
+            ],
+            [
+              "d4s0",
+              "d3s0"
+            ]
+          ],
+          "support_basis": "context"
+        }
+      ],
+      "fell_back": false,
+      "status": "reviewed",
+      "latency_s": 0.9838799489662051,
+      "annotation_review": {
+        "human_note": "保留single",
+        "execution_note": "保留用户指定 single；共同属性必须联合两方证据，不允许由一方推另一方。",
+        "issues": [],
+        "author": "assistant",
+        "human_approved": true,
+        "approval_basis": "用户于 2026-11-28 确认已审核通过；按最新 Note 落实"
+      },
+      "raw_decomposition": {
+        "sample_id": "hotpotqa_5ab443ca5542991779162c43",
+        "split": "train",
+        "question": "What do Lindsay Anderson and Aaron Kozak have in common?",
+        "sft_snapshot_count": 9,
+        "question_type": "single",
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "commonality between Lindsay Anderson and Aaron Kozak",
+            "necessary": true,
+            "depends_on": []
+          }
+        ],
+        "fell_back": false,
+        "status": "needs_review",
+        "latency_s": 0.9838799489662051
+      }
+    },
+    {
+      "sample_id": "hotpotqa_5ab461c25542991751b4d754",
+      "split": "train",
+      "question": "In between Pizza Inn and Extreme Pizza which one was founded in 1994?",
+      "sft_snapshot_count": 5,
+      "question_type": "comparison",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "whether Pizza Inn was founded in 1994",
+          "necessary": false,
+          "depends_on": [],
+          "expected_answer": "no",
+          "support_sets": [],
+          "support_basis": "no_direct_support",
+          "annotation_note": "无直接支持集合；不能仅由 expected_answer 将本单元标为 SUPPORTED。候选题结论可按独立的 presupposition_sets 路径判断。"
+        },
+        {
+          "unit_id": "u2",
+          "description": "whether Extreme Pizza was founded in 1994",
+          "necessary": false,
+          "depends_on": [],
+          "expected_answer": "yes",
+          "support_sets": [
+            [
+              "d7s0"
+            ]
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u3",
+          "description": "which pizza chain was founded in 1994",
+          "necessary": true,
+          "depends_on": [
+            "u1",
+            "u2"
+          ],
+          "expected_answer": "Extreme Pizza",
+          "support_sets": [
+            []
+          ],
+          "by_presupposition": true,
+          "presupposition_sets": [
+            [
+              "d7s0"
+            ]
+          ],
+          "support_basis": "question_presupposition"
+        }
+      ],
+      "fell_back": false,
+      "status": "reviewed",
+      "latency_s": 2.589291170006618,
+      "annotation_review": {
+        "human_note": "",
+        "execution_note": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+        "issues": [],
+        "author": "assistant",
+        "human_approved": true,
+        "approval_basis": "用户于 2026-11-28 确认已审核通过；按最新 Note 落实"
+      },
+      "raw_decomposition": {
+        "sample_id": "hotpotqa_5ab461c25542991751b4d754",
+        "split": "train",
+        "question": "In between Pizza Inn and Extreme Pizza which one was founded in 1994?",
+        "sft_snapshot_count": 5,
+        "question_type": "comparison",
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "whether Pizza Inn was founded in 1994",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u2",
+            "description": "whether Extreme Pizza was founded in 1994",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u3",
+            "description": "which pizza chain was founded in 1994",
+            "necessary": true,
+            "depends_on": [
+              "u1",
+              "u2"
+            ]
+          }
+        ],
+        "fell_back": false,
+        "status": "needs_review",
+        "latency_s": 2.589291170006618
+      }
+    }
+  ],
+  "source_index": [
+    {
+      "batch_number": 1,
+      "global_number": 151,
+      "sample_id": "hotpotqa_5a7f66cb55429969796c1a32",
+      "split": "train",
+      "source_number": 151,
+      "review_status": "modify_generated"
+    },
+    {
+      "batch_number": 2,
+      "global_number": 152,
+      "sample_id": "hotpotqa_5a7fc61155429969796c1b57",
+      "split": "train",
+      "source_number": 152,
+      "review_status": "review"
+    },
+    {
+      "batch_number": 3,
+      "global_number": 153,
+      "sample_id": "hotpotqa_5a8009885542992e7d278deb",
+      "split": "train",
+      "source_number": 153,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 4,
+      "global_number": 154,
+      "sample_id": "hotpotqa_5a809152554299485f598658",
+      "split": "train",
+      "source_number": 154,
+      "review_status": "keep_generated_relabel"
+    },
+    {
+      "batch_number": 5,
+      "global_number": 155,
+      "sample_id": "hotpotqa_5a825f5955429954d2e2eb1c",
+      "split": "train",
+      "source_number": 155,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 6,
+      "global_number": 156,
+      "sample_id": "hotpotqa_5a82f8e955429966c78a6abf",
+      "split": "train",
+      "source_number": 156,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 7,
+      "global_number": 157,
+      "sample_id": "hotpotqa_5a83a5df5542992ef85e233f",
+      "split": "train",
+      "source_number": 157,
+      "review_status": "keep_generated_relabel"
+    },
+    {
+      "batch_number": 8,
+      "global_number": 158,
+      "sample_id": "hotpotqa_5a83c3a95542996488c2e4c1",
+      "split": "train",
+      "source_number": 158,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 9,
+      "global_number": 159,
+      "sample_id": "hotpotqa_5a8492b65542997b5ce3fec5",
+      "split": "train",
+      "source_number": 159,
+      "review_status": "keep_generated_relabel"
+    },
+    {
+      "batch_number": 10,
+      "global_number": 160,
+      "sample_id": "hotpotqa_5a84b72b5542991dd0999dab",
+      "split": "train",
+      "source_number": 160,
+      "review_status": "keep_generated_relabel"
+    },
+    {
+      "batch_number": 11,
+      "global_number": 161,
+      "sample_id": "hotpotqa_5a84f8b65542997b5ce3ff94",
+      "split": "train",
+      "source_number": 161,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 12,
+      "global_number": 162,
+      "sample_id": "hotpotqa_5a861e86554299211dda2a72",
+      "split": "train",
+      "source_number": 162,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 13,
+      "global_number": 163,
+      "sample_id": "hotpotqa_5a88ec08554299206df2b3ad",
+      "split": "train",
+      "source_number": 163,
+      "review_status": "keep_generated_relabel"
+    },
+    {
+      "batch_number": 14,
+      "global_number": 164,
+      "sample_id": "hotpotqa_5a899d165542993b751ca961",
+      "split": "train",
+      "source_number": 164,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 15,
+      "global_number": 165,
+      "sample_id": "hotpotqa_5a8ad70d5542992d82986f94",
+      "split": "train",
+      "source_number": 165,
+      "review_status": "modify_generated"
+    },
+    {
+      "batch_number": 16,
+      "global_number": 166,
+      "sample_id": "hotpotqa_5a8ad7ae5542992d82986f97",
+      "split": "train",
+      "source_number": 166,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 17,
+      "global_number": 167,
+      "sample_id": "hotpotqa_5a8b848d5542997f31a41d5c",
+      "split": "train",
+      "source_number": 167,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 18,
+      "global_number": 168,
+      "sample_id": "hotpotqa_5a8b85f355429971feec4731",
+      "split": "train",
+      "source_number": 168,
+      "review_status": "keep_generated_relabel"
+    },
+    {
+      "batch_number": 19,
+      "global_number": 169,
+      "sample_id": "hotpotqa_5a8dd9b8554299068b959e06",
+      "split": "train",
+      "source_number": 169,
+      "review_status": "keep_generated_relabel"
+    },
+    {
+      "batch_number": 20,
+      "global_number": 170,
+      "sample_id": "hotpotqa_5a8e28ba5542990e94052a80",
+      "split": "train",
+      "source_number": 170,
+      "review_status": "keep_generated_relabel"
+    },
+    {
+      "batch_number": 21,
+      "global_number": 171,
+      "sample_id": "hotpotqa_5a8e88875542990e94052b36",
+      "split": "train",
+      "source_number": 171,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 22,
+      "global_number": 172,
+      "sample_id": "hotpotqa_5a908d1f55429916514e74f1",
+      "split": "train",
+      "source_number": 172,
+      "review_status": "keep_generated_relabel"
+    },
+    {
+      "batch_number": 23,
+      "global_number": 173,
+      "sample_id": "hotpotqa_5ab25a9d5542993be8fa98df",
+      "split": "train",
+      "source_number": 173,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 24,
+      "global_number": 174,
+      "sample_id": "hotpotqa_5ab292b4554299449642c901",
+      "split": "train",
+      "source_number": 174,
+      "review_status": "keep_generated_relabel"
+    },
+    {
+      "batch_number": 25,
+      "global_number": 175,
+      "sample_id": "hotpotqa_5ab2989b554299194fa93423",
+      "split": "train",
+      "source_number": 175,
+      "review_status": "keep_generated_relabel"
+    },
+    {
+      "batch_number": 26,
+      "global_number": 176,
+      "sample_id": "hotpotqa_5ab2ad8b554299340b525544",
+      "split": "train",
+      "source_number": 176,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 27,
+      "global_number": 177,
+      "sample_id": "hotpotqa_5ab3c3b155429969a97a81b6",
+      "split": "train",
+      "source_number": 177,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 28,
+      "global_number": 178,
+      "sample_id": "hotpotqa_5ab42d235542991751b4d6d1",
+      "split": "train",
+      "source_number": 178,
+      "review_status": "keep_generated_relabel"
+    },
+    {
+      "batch_number": 29,
+      "global_number": 179,
+      "sample_id": "hotpotqa_5ab443ca5542991779162c43",
+      "split": "train",
+      "source_number": 179,
+      "review_status": "keep_generated_relabel"
+    },
+    {
+      "batch_number": 30,
+      "global_number": 180,
+      "sample_id": "hotpotqa_5ab461c25542991751b4d754",
+      "split": "train",
+      "source_number": 180,
+      "review_status": "no_change"
+    }
+  ]
+}

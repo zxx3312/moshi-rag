@@ -1,0 +1,2866 @@
+{
+  "annotation_version": "note-aligned-v3",
+  "status": "reviewed",
+  "batch_id": "batch_10",
+  "records": [
+    {
+      "sample_id": "2wikimultihopqa_f618d408084c11ebbd56ac1f6bf848b6",
+      "split": "dev",
+      "question": "Were both Andreas (Comics) and Albert Üksip, born in the same place?",
+      "sft_snapshot_count": 9,
+      "question_type": "comparison",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "birthplace of Andreas (Comics)",
+          "necessary": false,
+          "depends_on": [],
+          "expected_answer": "Weißenfels",
+          "support_sets": [
+            [
+              "d7s0"
+            ]
+          ],
+          "aliases": [
+            "Weissenfels",
+            "Weißenfels, Germany"
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u2",
+          "description": "birthplace of Albert Üksip",
+          "necessary": false,
+          "depends_on": [],
+          "expected_answer": "Narva",
+          "support_sets": [
+            [
+              "d4s0"
+            ]
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u3",
+          "description": "whether Andreas (Comics) and Albert Üksip were born in the same place",
+          "necessary": true,
+          "depends_on": [
+            "u1",
+            "u2"
+          ],
+          "expected_answer": "no",
+          "support_sets": [
+            []
+          ],
+          "support_basis": "derived_from_dependencies"
+        }
+      ],
+      "fell_back": false,
+      "status": "reviewed",
+      "latency_s": 2.5470793009735644,
+      "annotation_review": {
+        "human_note": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+        "execution_note": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+        "issues": [],
+        "author": "assistant",
+        "human_approved": true,
+        "approval_basis": "用户于 2026-11-28 确认已审核通过；按最新 Note 落实"
+      },
+      "raw_decomposition": {
+        "sample_id": "2wikimultihopqa_f618d408084c11ebbd56ac1f6bf848b6",
+        "split": "dev",
+        "question": "Were both Andreas (Comics) and Albert Üksip, born in the same place?",
+        "sft_snapshot_count": 9,
+        "question_type": "comparison",
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "birthplace of Andreas (Comics)",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u2",
+            "description": "birthplace of Albert Üksip",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u3",
+            "description": "whether Andreas (Comics) and Albert Üksip were born in the same place",
+            "necessary": true,
+            "depends_on": [
+              "u1",
+              "u2"
+            ]
+          }
+        ],
+        "fell_back": false,
+        "status": "needs_review",
+        "latency_s": 2.5470793009735644
+      }
+    },
+    {
+      "sample_id": "hotpotqa_5a745a8755429979e288291e",
+      "split": "dev",
+      "question": "Wellesley College and Vanderbilt University are both what?",
+      "sft_snapshot_count": 8,
+      "question_type": "comparison",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "type of Wellesley College",
+          "necessary": false,
+          "depends_on": [],
+          "expected_answer": "private women's liberal arts college",
+          "support_sets": [
+            [
+              "d10s0"
+            ]
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u2",
+          "description": "type of Vanderbilt University",
+          "necessary": false,
+          "depends_on": [],
+          "expected_answer": "private research university",
+          "support_sets": [
+            [
+              "d7s0"
+            ]
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u3",
+          "description": "common classification of Wellesley College and Vanderbilt University",
+          "necessary": true,
+          "depends_on": [
+            "u1",
+            "u2"
+          ],
+          "expected_answer": "private",
+          "support_sets": [
+            []
+          ],
+          "aliases": [
+            "private institutions",
+            "private schools"
+          ],
+          "support_basis": "derived_from_dependencies"
+        }
+      ],
+      "fell_back": false,
+      "status": "reviewed",
+      "latency_s": 2.3176670991815627,
+      "annotation_review": {
+        "human_note": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。如果没有其他明确相同的类别，保留旧答案 private 及别名，并要求两方证据。",
+        "execution_note": "按 Note 保留 private 及已有别名作为标注目标，结论必须由两方类别证据支持；不声称这是自然语言中唯一可能的共同类别。",
+        "issues": [],
+        "author": "assistant",
+        "human_approved": true,
+        "approval_basis": "用户于 2026-11-28 确认已审核通过；按最新 Note 落实",
+        "resolution_note": "按 Note 保留 private 及已有别名作为标注目标，结论必须由两方类别证据支持；不声称这是自然语言中唯一可能的共同类别。"
+      },
+      "raw_decomposition": {
+        "sample_id": "hotpotqa_5a745a8755429979e288291e",
+        "split": "dev",
+        "question": "Wellesley College and Vanderbilt University are both what?",
+        "sft_snapshot_count": 8,
+        "question_type": "comparison",
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "type of Wellesley College",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u2",
+            "description": "type of Vanderbilt University",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u3",
+            "description": "common classification of Wellesley College and Vanderbilt University",
+            "necessary": true,
+            "depends_on": [
+              "u1",
+              "u2"
+            ]
+          }
+        ],
+        "fell_back": false,
+        "status": "needs_review",
+        "latency_s": 2.3176670991815627
+      }
+    },
+    {
+      "sample_id": "hotpotqa_5a75dc7a5542992d0ec06004",
+      "split": "dev",
+      "question": "What is the term for the service provided by HCL Technologies involving discovery, interpretation, and communication of patterns in data?",
+      "sft_snapshot_count": 9,
+      "question_type": "bridge",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "term for the discovery, interpretation, and communication of patterns in data",
+          "necessary": false,
+          "expected_answer": "Analytics",
+          "depends_on": [],
+          "support_sets": [
+            [
+              "d2s0"
+            ]
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u2",
+          "description": "service provided by HCL Technologies involving the discovery, interpretation, and communication of patterns in data, given {u1}",
+          "necessary": true,
+          "expected_answer": "Analytics",
+          "depends_on": [
+            "u1"
+          ],
+          "support_sets": [
+            [
+              "d9s4"
+            ]
+          ],
+          "aliases": [
+            "Digital & Analytics"
+          ],
+          "support_basis": "context"
+        }
+      ],
+      "fell_back": false,
+      "status": "reviewed",
+      "latency_s": 1.1931867490056902,
+      "annotation_review": {
+        "human_note": "采用旧版多单元/查询目标，保留可独立表达的中间事实；按 context 核对答案与证据。",
+        "execution_note": "采用旧版多单元/查询目标，保留可独立表达的中间事实；按 context 核对答案与证据。",
+        "issues": [],
+        "author": "assistant",
+        "human_approved": true,
+        "approval_basis": "用户于 2026-11-28 确认已审核通过；按最新 Note 落实"
+      },
+      "raw_decomposition": {
+        "sample_id": "hotpotqa_5a75dc7a5542992d0ec06004",
+        "split": "dev",
+        "question": "What is the term for the service provided by HCL Technologies involving discovery, interpretation, and communication of patterns in data?",
+        "sft_snapshot_count": 9,
+        "question_type": "single",
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "term for the service provided by HCL Technologies involving discovery, interpretation, and communication of patterns in data",
+            "necessary": true,
+            "depends_on": []
+          }
+        ],
+        "fell_back": false,
+        "status": "needs_review",
+        "latency_s": 1.1931867490056902
+      }
+    },
+    {
+      "sample_id": "hotpotqa_5a7755e05542993735360237",
+      "split": "dev",
+      "question": "Which computer animated film was released first, Khan Kluay or A Christmas Carol starring Jim Carrey?",
+      "sft_snapshot_count": 9,
+      "question_type": "comparison",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "release year of Khan Kluay",
+          "necessary": false,
+          "depends_on": [],
+          "expected_answer": "2006",
+          "support_sets": [
+            [
+              "d7s0"
+            ],
+            [
+              "d4s2"
+            ],
+            [
+              "d10s3"
+            ]
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u2",
+          "description": "release year of A Christmas Carol starring Jim Carrey",
+          "necessary": false,
+          "depends_on": [],
+          "expected_answer": "2009",
+          "support_sets": [
+            [
+              "d6s0",
+              "d6s1"
+            ]
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u3",
+          "description": "which film was released first",
+          "necessary": true,
+          "depends_on": [
+            "u1",
+            "u2"
+          ],
+          "expected_answer": "Khan Kluay",
+          "support_sets": [
+            []
+          ],
+          "support_basis": "derived_from_dependencies"
+        }
+      ],
+      "fell_back": false,
+      "status": "reviewed",
+      "latency_s": 2.380467767827213,
+      "annotation_review": {
+        "human_note": "改 comparison，context 只给年份，统一为 release year，保留三单元。",
+        "execution_note": "改 comparison，context 只给年份，统一为 release year，保留三单元。",
+        "issues": [],
+        "author": "assistant",
+        "human_approved": true,
+        "approval_basis": "用户于 2026-11-28 确认已审核通过；按最新 Note 落实"
+      },
+      "raw_decomposition": {
+        "sample_id": "hotpotqa_5a7755e05542993735360237",
+        "split": "dev",
+        "question": "Which computer animated film was released first, Khan Kluay or A Christmas Carol starring Jim Carrey?",
+        "sft_snapshot_count": 9,
+        "question_type": "bridge_comparison",
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "release date of Khan Kluay",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u2",
+            "description": "release date of A Christmas Carol starring Jim Carrey",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u3",
+            "description": "which film was released first",
+            "necessary": true,
+            "depends_on": [
+              "u1",
+              "u2"
+            ]
+          }
+        ],
+        "fell_back": false,
+        "status": "needs_review",
+        "latency_s": 2.380467767827213
+      }
+    },
+    {
+      "sample_id": "hotpotqa_5a77a8365542995d83181250",
+      "split": "dev",
+      "question": "Gândul Mâței and KMFDM, are what type of musical organization?",
+      "sft_snapshot_count": 9,
+      "question_type": "comparison",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "type of musical organization Gândul Mâței is",
+          "necessary": false,
+          "depends_on": [],
+          "expected_answer": "band",
+          "support_sets": [
+            [
+              "d4s0"
+            ]
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u2",
+          "description": "type of musical organization KMFDM is",
+          "necessary": false,
+          "depends_on": [],
+          "expected_answer": "band",
+          "support_sets": [
+            [
+              "d9s0"
+            ]
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u3",
+          "description": "what type of musical organization they are",
+          "necessary": true,
+          "depends_on": [
+            "u1",
+            "u2"
+          ],
+          "expected_answer": "band",
+          "support_sets": [
+            []
+          ],
+          "support_basis": "derived_from_dependencies"
+        }
+      ],
+      "fell_back": false,
+      "status": "reviewed",
+      "latency_s": 2.463832790032029,
+      "annotation_review": {
+        "human_note": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+        "execution_note": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+        "issues": [],
+        "author": "assistant",
+        "human_approved": true,
+        "approval_basis": "用户于 2026-11-28 确认已审核通过；按最新 Note 落实"
+      },
+      "raw_decomposition": {
+        "sample_id": "hotpotqa_5a77a8365542995d83181250",
+        "split": "dev",
+        "question": "Gândul Mâței and KMFDM, are what type of musical organization?",
+        "sft_snapshot_count": 9,
+        "question_type": "comparison",
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "type of musical organization Gândul Mâței is",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u2",
+            "description": "type of musical organization KMFDM is",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u3",
+            "description": "what type of musical organization they are",
+            "necessary": true,
+            "depends_on": [
+              "u1",
+              "u2"
+            ]
+          }
+        ],
+        "fell_back": false,
+        "status": "needs_review",
+        "latency_s": 2.463832790032029
+      }
+    },
+    {
+      "sample_id": "hotpotqa_5a78f57a554299148911f9bf",
+      "split": "dev",
+      "question": "For which Minneapolis-St. Paul area sports team did Zenon Konopka play? ",
+      "sft_snapshot_count": 9,
+      "question_type": "bridge",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "teams Zenon Konopka played for",
+          "necessary": false,
+          "expected_answer": "Mighty Ducks of Anaheim, Columbus Blue Jackets, Tampa Bay Lightning, New York Islanders, Ottawa Senators, Minnesota Wild and Buffalo Sabres",
+          "depends_on": [],
+          "support_sets": [
+            [
+              "d3s1"
+            ]
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u2",
+          "description": "which of {u1} is a Minneapolis-St. Paul area sports team",
+          "necessary": true,
+          "expected_answer": "Minnesota Wild",
+          "depends_on": [
+            "u1"
+          ],
+          "support_sets": [
+            [
+              "d8s2",
+              "d8s3"
+            ]
+          ],
+          "support_basis": "context"
+        }
+      ],
+      "fell_back": false,
+      "status": "reviewed",
+      "latency_s": 1.7969197088386863,
+      "annotation_review": {
+        "human_note": "采用旧版多单元/查询目标，保留可独立表达的中间事实；按 context 核对答案与证据。",
+        "execution_note": "采用旧版多单元/查询目标，保留可独立表达的中间事实；按 context 核对答案与证据。",
+        "issues": [],
+        "author": "assistant",
+        "human_approved": true,
+        "approval_basis": "用户于 2026-11-28 确认已审核通过；按最新 Note 落实"
+      },
+      "raw_decomposition": {
+        "sample_id": "hotpotqa_5a78f57a554299148911f9bf",
+        "split": "dev",
+        "question": "For which Minneapolis-St. Paul area sports team did Zenon Konopka play? ",
+        "sft_snapshot_count": 9,
+        "question_type": "bridge",
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "sports team Zenon Konopka played for in the Minneapolis-St. Paul area",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u2",
+            "description": "name of the team {u1}",
+            "necessary": true,
+            "depends_on": [
+              "u1"
+            ]
+          }
+        ],
+        "fell_back": false,
+        "status": "needs_review",
+        "latency_s": 1.7969197088386863
+      }
+    },
+    {
+      "sample_id": "hotpotqa_5a7a51485542990783324f0e",
+      "split": "dev",
+      "question": "Under the Yum Yum Tree starred this actress who was born in April, 1927?",
+      "sft_snapshot_count": 9,
+      "question_type": "bridge",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "lead cast of Under the Yum Yum Tree listed in the context",
+          "necessary": false,
+          "depends_on": [],
+          "expected_answer": "Jack Lemmon; Carol Lynley; Dean Jones; Edie Adams",
+          "support_sets": [
+            [
+              "d4s0"
+            ]
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u2",
+          "description": "actress among {u1} born in April 1927",
+          "necessary": true,
+          "depends_on": [
+            "u1"
+          ],
+          "expected_answer": "Edie Adams",
+          "support_sets": [
+            [
+              "d2s0"
+            ]
+          ],
+          "support_basis": "context"
+        }
+      ],
+      "fell_back": false,
+      "status": "reviewed",
+      "latency_s": 1.9646021709777415,
+      "annotation_review": {
+        "human_note": "保留先演员后生日筛选；先列演员候选，最终输出女演员姓名而非生日，不提前泄露筛选结果。",
+        "execution_note": "保留先演员后生日筛选；先列演员候选，最终输出女演员姓名而非生日，不提前泄露筛选结果。",
+        "issues": [],
+        "author": "assistant",
+        "human_approved": true,
+        "approval_basis": "用户于 2026-11-28 确认已审核通过；按最新 Note 落实"
+      },
+      "raw_decomposition": {
+        "sample_id": "hotpotqa_5a7a51485542990783324f0e",
+        "split": "dev",
+        "question": "Under the Yum Yum Tree starred this actress who was born in April, 1927?",
+        "sft_snapshot_count": 9,
+        "question_type": "bridge",
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "actress who starred in Under the Yum Yum Tree",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u2",
+            "description": "birth date of {u1}, given she was born in April, 1927",
+            "necessary": true,
+            "depends_on": [
+              "u1"
+            ]
+          }
+        ],
+        "fell_back": false,
+        "status": "needs_review",
+        "latency_s": 1.9646021709777415
+      }
+    },
+    {
+      "sample_id": "hotpotqa_5a7aa8565542995eb53be88b",
+      "split": "dev",
+      "question": "What movie did Katy Mixon star in that was directed by Seth Gordon?",
+      "sft_snapshot_count": 9,
+      "question_type": "bridge",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "films in which Katy Mixon had roles",
+          "necessary": false,
+          "expected_answer": "The Quiet, Four Christmases, and State of Play",
+          "depends_on": [],
+          "support_sets": [
+            [
+              "d9s1"
+            ]
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u2",
+          "description": "film among {u1} directed by Seth Gordon",
+          "necessary": true,
+          "expected_answer": "Four Christmases",
+          "depends_on": [
+            "u1"
+          ],
+          "support_sets": [
+            [
+              "d1s4"
+            ]
+          ],
+          "support_basis": "context"
+        }
+      ],
+      "fell_back": false,
+      "status": "reviewed",
+      "latency_s": 1.0038843371439725,
+      "annotation_review": {
+        "human_note": "采用旧版多单元/查询目标，保留可独立表达的中间事实；按 context 核对答案与证据。",
+        "execution_note": "采用旧版多单元/查询目标，保留可独立表达的中间事实；按 context 核对答案与证据。",
+        "issues": [],
+        "author": "assistant",
+        "human_approved": true,
+        "approval_basis": "用户于 2026-11-28 确认已审核通过；按最新 Note 落实"
+      },
+      "raw_decomposition": {
+        "sample_id": "hotpotqa_5a7aa8565542995eb53be88b",
+        "split": "dev",
+        "question": "What movie did Katy Mixon star in that was directed by Seth Gordon?",
+        "sft_snapshot_count": 9,
+        "question_type": "single",
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "movie directed by Seth Gordon that Katy Mixon starred in",
+            "necessary": true,
+            "depends_on": []
+          }
+        ],
+        "fell_back": false,
+        "status": "needs_review",
+        "latency_s": 1.0038843371439725
+      }
+    },
+    {
+      "sample_id": "hotpotqa_5a7cfdb755429909bec768e2",
+      "split": "dev",
+      "question": "The Frogman Corps is the maritime special operations force of the unified armed forces of what kingdom?",
+      "sft_snapshot_count": 7,
+      "question_type": "bridge",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "unified armed forces of which the Frogman Corps is the maritime special operations force",
+          "necessary": false,
+          "expected_answer": "Danish Defence",
+          "depends_on": [],
+          "support_sets": [
+            [
+              "d10s0"
+            ]
+          ],
+          "aliases": [
+            "Forsvaret"
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u2",
+          "description": "kingdom whose unified armed forces are {u1}",
+          "necessary": true,
+          "expected_answer": "Kingdom of Denmark",
+          "depends_on": [
+            "u1"
+          ],
+          "support_sets": [
+            [
+              "d3s0"
+            ]
+          ],
+          "aliases": [
+            "Denmark"
+          ],
+          "support_basis": "context"
+        }
+      ],
+      "fell_back": false,
+      "status": "reviewed",
+      "latency_s": 1.0038795699365437,
+      "annotation_review": {
+        "human_note": "采用旧版多单元/查询目标，保留可独立表达的中间事实；按 context 核对答案与证据。",
+        "execution_note": "采用旧版多单元/查询目标，保留可独立表达的中间事实；按 context 核对答案与证据。",
+        "issues": [],
+        "author": "assistant",
+        "human_approved": true,
+        "approval_basis": "用户于 2026-11-28 确认已审核通过；按最新 Note 落实"
+      },
+      "raw_decomposition": {
+        "sample_id": "hotpotqa_5a7cfdb755429909bec768e2",
+        "split": "dev",
+        "question": "The Frogman Corps is the maritime special operations force of the unified armed forces of what kingdom?",
+        "sft_snapshot_count": 7,
+        "question_type": "single",
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "kingdom whose unified armed forces include the Frogman Corps",
+            "necessary": true,
+            "depends_on": []
+          }
+        ],
+        "fell_back": false,
+        "status": "needs_review",
+        "latency_s": 1.0038795699365437
+      }
+    },
+    {
+      "sample_id": "hotpotqa_5a7f359f55429930675136a9",
+      "split": "dev",
+      "question": "Who was a Canadian film producer, director, actor and screenwriter, Randal Kirk II or Sidney Olcott?",
+      "sft_snapshot_count": 9,
+      "question_type": "comparison",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "whether Randal Kirk II was a Canadian film producer, director, actor and screenwriter",
+          "necessary": false,
+          "depends_on": [],
+          "expected_answer": "no",
+          "support_sets": [
+            [
+              "d3s0"
+            ]
+          ],
+          "by_omission": true,
+          "support_basis": "definition_omission"
+        },
+        {
+          "unit_id": "u2",
+          "description": "whether Sidney Olcott was a Canadian film producer, director, actor and screenwriter",
+          "necessary": false,
+          "depends_on": [],
+          "expected_answer": "yes",
+          "support_sets": [
+            [
+              "d1s0"
+            ]
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u3",
+          "description": "who was a Canadian film producer, director, actor and screenwriter",
+          "necessary": true,
+          "depends_on": [
+            "u1",
+            "u2"
+          ],
+          "expected_answer": "Sidney Olcott",
+          "support_sets": [
+            []
+          ],
+          "support_basis": "derived_from_dependencies"
+        }
+      ],
+      "fell_back": false,
+      "status": "reviewed",
+      "latency_s": 2.86071729590185,
+      "annotation_review": {
+        "human_note": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+        "execution_note": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+        "issues": [],
+        "author": "assistant",
+        "human_approved": true,
+        "approval_basis": "用户于 2026-11-28 确认已审核通过；按最新 Note 落实"
+      },
+      "raw_decomposition": {
+        "sample_id": "hotpotqa_5a7f359f55429930675136a9",
+        "split": "dev",
+        "question": "Who was a Canadian film producer, director, actor and screenwriter, Randal Kirk II or Sidney Olcott?",
+        "sft_snapshot_count": 9,
+        "question_type": "comparison",
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "whether Randal Kirk II was a Canadian film producer, director, actor and screenwriter",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u2",
+            "description": "whether Sidney Olcott was a Canadian film producer, director, actor and screenwriter",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u3",
+            "description": "who was a Canadian film producer, director, actor and screenwriter",
+            "necessary": true,
+            "depends_on": [
+              "u1",
+              "u2"
+            ]
+          }
+        ],
+        "fell_back": false,
+        "status": "needs_review",
+        "latency_s": 2.86071729590185
+      }
+    },
+    {
+      "sample_id": "hotpotqa_5a81d03d55429903bc27b9c7",
+      "split": "dev",
+      "question": "Are Gurinder Chadha and Hou Hsiao-hsien both from England?",
+      "sft_snapshot_count": 8,
+      "question_type": "comparison",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "whether Gurinder Chadha is from England",
+          "necessary": false,
+          "depends_on": [],
+          "expected_answer": "yes",
+          "support_sets": [
+            [
+              "d10s0"
+            ]
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u2",
+          "description": "whether Hou Hsiao-hsien is from England",
+          "necessary": false,
+          "depends_on": [],
+          "expected_answer": "no",
+          "support_sets": [
+            [
+              "d4s0"
+            ]
+          ],
+          "by_omission": true,
+          "support_basis": "definition_omission"
+        },
+        {
+          "unit_id": "u3",
+          "description": "whether both Gurinder Chadha and Hou Hsiao-hsien are from England",
+          "necessary": true,
+          "depends_on": [
+            "u1",
+            "u2"
+          ],
+          "expected_answer": "no",
+          "support_sets": [
+            []
+          ],
+          "support_basis": "derived_from_dependencies"
+        }
+      ],
+      "fell_back": false,
+      "status": "reviewed",
+      "latency_s": 2.6516231789719313,
+      "annotation_review": {
+        "human_note": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+        "execution_note": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+        "issues": [],
+        "author": "assistant",
+        "human_approved": true,
+        "approval_basis": "用户于 2026-11-28 确认已审核通过；按最新 Note 落实"
+      },
+      "raw_decomposition": {
+        "sample_id": "hotpotqa_5a81d03d55429903bc27b9c7",
+        "split": "dev",
+        "question": "Are Gurinder Chadha and Hou Hsiao-hsien both from England?",
+        "sft_snapshot_count": 8,
+        "question_type": "comparison",
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "whether Gurinder Chadha is from England",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u2",
+            "description": "whether Hou Hsiao-hsien is from England",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u3",
+            "description": "whether both Gurinder Chadha and Hou Hsiao-hsien are from England",
+            "necessary": true,
+            "depends_on": [
+              "u1",
+              "u2"
+            ]
+          }
+        ],
+        "fell_back": false,
+        "status": "needs_review",
+        "latency_s": 2.6516231789719313
+      }
+    },
+    {
+      "sample_id": "hotpotqa_5a8715fb5542991e771816bb",
+      "split": "dev",
+      "question": " A Time for Miracles chronicles the life story of America's first native born saint who was born in what year?",
+      "sft_snapshot_count": 9,
+      "question_type": "single",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "year America's first native born saint was born",
+          "necessary": true,
+          "depends_on": [],
+          "expected_answer": "1774",
+          "support_sets": [
+            [
+              "d3s0"
+            ]
+          ],
+          "support_basis": "context"
+        }
+      ],
+      "fell_back": false,
+      "status": "reviewed",
+      "latency_s": 0.9626098400913179,
+      "annotation_review": {
+        "human_note": "保留 single，d3s0 同时给出首位本土圣人身份和出生年，电影说明不是必需证据。",
+        "execution_note": "保留 single，d3s0 同时给出首位本土圣人身份和出生年，电影说明不是必需证据。",
+        "issues": [],
+        "author": "assistant",
+        "human_approved": true,
+        "approval_basis": "用户于 2026-11-28 确认已审核通过；按最新 Note 落实"
+      },
+      "raw_decomposition": {
+        "sample_id": "hotpotqa_5a8715fb5542991e771816bb",
+        "split": "dev",
+        "question": " A Time for Miracles chronicles the life story of America's first native born saint who was born in what year?",
+        "sft_snapshot_count": 9,
+        "question_type": "single",
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "year America's first native born saint was born",
+            "necessary": true,
+            "depends_on": []
+          }
+        ],
+        "fell_back": false,
+        "status": "needs_review",
+        "latency_s": 0.9626098400913179
+      }
+    },
+    {
+      "sample_id": "hotpotqa_5a87e93155429938390d3ea4",
+      "split": "dev",
+      "question": "Are Purbanchal University and California State University, Northridge, both public universities?",
+      "sft_snapshot_count": 9,
+      "question_type": "comparison",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "whether Purbanchal University is a public university",
+          "necessary": false,
+          "depends_on": [],
+          "expected_answer": "yes",
+          "support_sets": [
+            [
+              "d6s0"
+            ]
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u2",
+          "description": "whether California State University, Northridge is a public university",
+          "necessary": false,
+          "depends_on": [],
+          "expected_answer": "yes",
+          "support_sets": [
+            [
+              "d2s0"
+            ]
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u3",
+          "description": "whether both are public universities",
+          "necessary": true,
+          "depends_on": [
+            "u1",
+            "u2"
+          ],
+          "expected_answer": "yes",
+          "support_sets": [
+            []
+          ],
+          "support_basis": "derived_from_dependencies"
+        }
+      ],
+      "fell_back": false,
+      "status": "reviewed",
+      "latency_s": 2.4430623741354793,
+      "annotation_review": {
+        "human_note": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+        "execution_note": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+        "issues": [],
+        "author": "assistant",
+        "human_approved": true,
+        "approval_basis": "用户于 2026-11-28 确认已审核通过；按最新 Note 落实"
+      },
+      "raw_decomposition": {
+        "sample_id": "hotpotqa_5a87e93155429938390d3ea4",
+        "split": "dev",
+        "question": "Are Purbanchal University and California State University, Northridge, both public universities?",
+        "sft_snapshot_count": 9,
+        "question_type": "comparison",
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "whether Purbanchal University is a public university",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u2",
+            "description": "whether California State University, Northridge is a public university",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u3",
+            "description": "whether both are public universities",
+            "necessary": true,
+            "depends_on": [
+              "u1",
+              "u2"
+            ]
+          }
+        ],
+        "fell_back": false,
+        "status": "needs_review",
+        "latency_s": 2.4430623741354793
+      }
+    },
+    {
+      "sample_id": "hotpotqa_5a88b15b5542994846c1ceba",
+      "split": "dev",
+      "question": "Chino Moreno and Needtobreathe, are of which nationality?",
+      "sft_snapshot_count": 6,
+      "question_type": "multipart",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "nationality of Chino Moreno",
+          "necessary": true,
+          "depends_on": [],
+          "expected_answer": "American",
+          "support_sets": [
+            [
+              "d10s0"
+            ]
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u2",
+          "description": "nationality of Needtobreathe",
+          "necessary": true,
+          "depends_on": [],
+          "expected_answer": "American",
+          "support_sets": [
+            [
+              "d1s0"
+            ]
+          ],
+          "support_basis": "context"
+        }
+      ],
+      "fell_back": false,
+      "status": "reviewed",
+      "latency_s": 1.5676632809918374,
+      "annotation_review": {
+        "human_note": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+        "execution_note": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+        "issues": [],
+        "author": "assistant",
+        "human_approved": true,
+        "approval_basis": "用户于 2026-11-28 确认已审核通过；按最新 Note 落实"
+      },
+      "raw_decomposition": {
+        "sample_id": "hotpotqa_5a88b15b5542994846c1ceba",
+        "split": "dev",
+        "question": "Chino Moreno and Needtobreathe, are of which nationality?",
+        "sft_snapshot_count": 6,
+        "question_type": "multipart",
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "nationality of Chino Moreno",
+            "necessary": true,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u2",
+            "description": "nationality of Needtobreathe",
+            "necessary": true,
+            "depends_on": []
+          }
+        ],
+        "fell_back": false,
+        "status": "needs_review",
+        "latency_s": 1.5676632809918374
+      }
+    },
+    {
+      "sample_id": "hotpotqa_5a9060f05542990a98493604",
+      "split": "dev",
+      "question": "What novel written by an American novelist born in 1804 was adapted into a British silent drama film?",
+      "sft_snapshot_count": 9,
+      "question_type": "bridge",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "American novelist born in 1804",
+          "necessary": false,
+          "expected_answer": "Nathaniel Hawthorne",
+          "depends_on": [],
+          "support_sets": [
+            [
+              "d7s0"
+            ]
+          ],
+          "aliases": [
+            "Hawthorne"
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u2",
+          "description": "novel by {u1} adapted into a British silent drama film",
+          "necessary": true,
+          "expected_answer": "The Scarlet Letter",
+          "depends_on": [
+            "u1"
+          ],
+          "support_sets": [
+            [
+              "d2s0",
+              "d2s1"
+            ]
+          ],
+          "aliases": [
+            "The Scarlett Letter",
+            "Scarlet Letter"
+          ],
+          "support_basis": "context"
+        }
+      ],
+      "fell_back": false,
+      "status": "reviewed",
+      "latency_s": 2.401720725931227,
+      "annotation_review": {
+        "human_note": "采用旧版多单元/查询目标，保留可独立表达的中间事实；按 context 核对答案与证据。",
+        "execution_note": "采用旧版多单元/查询目标，保留可独立表达的中间事实；按 context 核对答案与证据。",
+        "issues": [],
+        "author": "assistant",
+        "human_approved": true,
+        "approval_basis": "用户于 2026-11-28 确认已审核通过；按最新 Note 落实"
+      },
+      "raw_decomposition": {
+        "sample_id": "hotpotqa_5a9060f05542990a98493604",
+        "split": "dev",
+        "question": "What novel written by an American novelist born in 1804 was adapted into a British silent drama film?",
+        "sft_snapshot_count": 9,
+        "question_type": "bridge",
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "American novelist born in 1804",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u2",
+            "description": "novel written by {u1}",
+            "necessary": false,
+            "depends_on": [
+              "u1"
+            ]
+          },
+          {
+            "unit_id": "u3",
+            "description": "British silent drama film adaptation of {u2}",
+            "necessary": true,
+            "depends_on": [
+              "u2"
+            ]
+          }
+        ],
+        "fell_back": false,
+        "status": "needs_review",
+        "latency_s": 2.401720725931227
+      }
+    },
+    {
+      "sample_id": "hotpotqa_5ab2585855429970612095e6",
+      "split": "dev",
+      "question": "Between the Akita and Boykin Spaniel, which dog breed is larger?",
+      "sft_snapshot_count": 9,
+      "question_type": "comparison",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "size of the Akita dog breed",
+          "necessary": false,
+          "expected_answer": "large",
+          "depends_on": [],
+          "support_sets": [
+            [
+              "d8s0"
+            ]
+          ],
+          "aliases": [
+            "large breed"
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u2",
+          "description": "size of the Boykin Spaniel dog breed",
+          "necessary": false,
+          "expected_answer": "medium-sized",
+          "depends_on": [],
+          "support_sets": [
+            [
+              "d5s0"
+            ]
+          ],
+          "aliases": [
+            "medium",
+            "medium-sized breed"
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u3",
+          "description": "which of the Akita and the Boykin Spaniel is the larger dog breed",
+          "necessary": true,
+          "expected_answer": "Akita",
+          "depends_on": [
+            "u1",
+            "u2"
+          ],
+          "support_sets": [
+            []
+          ],
+          "support_basis": "derived_from_dependencies"
+        }
+      ],
+      "fell_back": false,
+      "status": "reviewed",
+      "latency_s": 2.2972117150202394,
+      "annotation_review": {
+        "human_note": "采用旧版多单元/查询目标，保留可独立表达的中间事实；按 context 核对答案与证据。",
+        "execution_note": "采用旧版多单元/查询目标，保留可独立表达的中间事实；按 context 核对答案与证据。",
+        "issues": [],
+        "author": "assistant",
+        "human_approved": true,
+        "approval_basis": "用户于 2026-11-28 确认已审核通过；按最新 Note 落实"
+      },
+      "raw_decomposition": {
+        "sample_id": "hotpotqa_5ab2585855429970612095e6",
+        "split": "dev",
+        "question": "Between the Akita and Boykin Spaniel, which dog breed is larger?",
+        "sft_snapshot_count": 9,
+        "question_type": "comparison",
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "weight of the Akita breed",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u2",
+            "description": "weight of the Boykin Spaniel breed",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u3",
+            "description": "which dog breed is larger",
+            "necessary": true,
+            "depends_on": [
+              "u1",
+              "u2"
+            ]
+          }
+        ],
+        "fell_back": false,
+        "status": "needs_review",
+        "latency_s": 2.2972117150202394
+      }
+    },
+    {
+      "sample_id": "hotpotqa_5ab27ea3554299340b5254e4",
+      "split": "dev",
+      "question": "are Meet the Patels and Arakimentari the same genre of film",
+      "sft_snapshot_count": 9,
+      "question_type": "comparison",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "genre of Meet the Patels",
+          "necessary": false,
+          "depends_on": [],
+          "expected_answer": "documentary",
+          "support_sets": [
+            [
+              "d8s0"
+            ],
+            [
+              "d1s1"
+            ]
+          ],
+          "aliases": [
+            "documentary film"
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u2",
+          "description": "genre of Arakimentari",
+          "necessary": false,
+          "depends_on": [],
+          "expected_answer": "documentary",
+          "support_sets": [
+            [
+              "d9s1"
+            ]
+          ],
+          "aliases": [
+            "documentary film"
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u3",
+          "description": "whether Meet the Patels and Arakimentari are the same genre of film",
+          "necessary": true,
+          "depends_on": [
+            "u1",
+            "u2"
+          ],
+          "expected_answer": "yes",
+          "support_sets": [
+            []
+          ],
+          "support_basis": "derived_from_dependencies"
+        }
+      ],
+      "fell_back": false,
+      "status": "reviewed",
+      "latency_s": 2.484947669086978,
+      "annotation_review": {
+        "human_note": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+        "execution_note": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+        "issues": [],
+        "author": "assistant",
+        "human_approved": true,
+        "approval_basis": "用户于 2026-11-28 确认已审核通过；按最新 Note 落实"
+      },
+      "raw_decomposition": {
+        "sample_id": "hotpotqa_5ab27ea3554299340b5254e4",
+        "split": "dev",
+        "question": "are Meet the Patels and Arakimentari the same genre of film",
+        "sft_snapshot_count": 9,
+        "question_type": "comparison",
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "genre of Meet the Patels",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u2",
+            "description": "genre of Arakimentari",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u3",
+            "description": "whether Meet the Patels and Arakimentari are the same genre of film",
+            "necessary": true,
+            "depends_on": [
+              "u1",
+              "u2"
+            ]
+          }
+        ],
+        "fell_back": false,
+        "status": "needs_review",
+        "latency_s": 2.484947669086978
+      }
+    },
+    {
+      "sample_id": "hotpotqa_5ab2a4a7554299295394678b",
+      "split": "dev",
+      "question": "What year was the founder of Mac Fisheries born?",
+      "sft_snapshot_count": 9,
+      "question_type": "bridge",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "founder of Mac Fisheries",
+          "necessary": false,
+          "depends_on": [],
+          "expected_answer": "William Lever, 1st Viscount Leverhulme",
+          "support_sets": [
+            [
+              "d5s0"
+            ]
+          ],
+          "aliases": [
+            "William Lever",
+            "William Hesketh Lever",
+            "Lord Leverhulme"
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u2",
+          "description": "birth year of {u1}",
+          "necessary": true,
+          "depends_on": [
+            "u1"
+          ],
+          "expected_answer": "1851",
+          "support_sets": [
+            [
+              "d7s0"
+            ]
+          ],
+          "support_basis": "context"
+        }
+      ],
+      "fell_back": false,
+      "status": "reviewed",
+      "latency_s": 1.545586254214868,
+      "annotation_review": {
+        "human_note": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+        "execution_note": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+        "issues": [],
+        "author": "assistant",
+        "human_approved": true,
+        "approval_basis": "用户于 2026-11-28 确认已审核通过；按最新 Note 落实"
+      },
+      "raw_decomposition": {
+        "sample_id": "hotpotqa_5ab2a4a7554299295394678b",
+        "split": "dev",
+        "question": "What year was the founder of Mac Fisheries born?",
+        "sft_snapshot_count": 9,
+        "question_type": "bridge",
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "founder of Mac Fisheries",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u2",
+            "description": "birth year of {u1}",
+            "necessary": true,
+            "depends_on": [
+              "u1"
+            ]
+          }
+        ],
+        "fell_back": false,
+        "status": "needs_review",
+        "latency_s": 1.545586254214868
+      }
+    },
+    {
+      "sample_id": "hotpotqa_5ab33cec554299753aec595c",
+      "split": "dev",
+      "question": "When would be the album release in which \"Too Much to Ask\" is the third single song?",
+      "sft_snapshot_count": 9,
+      "question_type": "bridge",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "album containing \"Too Much to Ask\" as the third single",
+          "necessary": false,
+          "depends_on": [],
+          "expected_answer": "Flicker",
+          "support_sets": [
+            [
+              "d9s2"
+            ]
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u2",
+          "description": "release date of {u1}",
+          "necessary": true,
+          "depends_on": [
+            "u1"
+          ],
+          "expected_answer": "October 20, 2017",
+          "support_sets": [
+            [
+              "d3s1"
+            ]
+          ],
+          "support_basis": "context"
+        }
+      ],
+      "fell_back": false,
+      "status": "reviewed",
+      "latency_s": 1.6929946490563452,
+      "annotation_review": {
+        "human_note": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+        "execution_note": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+        "issues": [],
+        "author": "assistant",
+        "human_approved": true,
+        "approval_basis": "用户于 2026-11-28 确认已审核通过；按最新 Note 落实"
+      },
+      "raw_decomposition": {
+        "sample_id": "hotpotqa_5ab33cec554299753aec595c",
+        "split": "dev",
+        "question": "When would be the album release in which \"Too Much to Ask\" is the third single song?",
+        "sft_snapshot_count": 9,
+        "question_type": "bridge",
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "album containing \"Too Much to Ask\" as the third single",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u2",
+            "description": "release date of {u1}",
+            "necessary": true,
+            "depends_on": [
+              "u1"
+            ]
+          }
+        ],
+        "fell_back": false,
+        "status": "needs_review",
+        "latency_s": 1.6929946490563452
+      }
+    },
+    {
+      "sample_id": "hotpotqa_5ab406ce55429976abd1bd36",
+      "split": "dev",
+      "question": "Was Lev Kuleshov and Lo Wei work in the same country?",
+      "sft_snapshot_count": 9,
+      "question_type": "comparison",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "country where Lev Kuleshov worked",
+          "necessary": false,
+          "depends_on": [],
+          "expected_answer": "Soviet Union",
+          "support_sets": [
+            [
+              "d9s0"
+            ],
+            [
+              "d3s0"
+            ]
+          ],
+          "aliases": [
+            "USSR",
+            "Soviet"
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u2",
+          "description": "country where Lo Wei worked",
+          "necessary": false,
+          "depends_on": [],
+          "expected_answer": "Hong Kong",
+          "support_sets": [
+            [
+              "d5s0"
+            ]
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u3",
+          "description": "whether Lev Kuleshov and Lo Wei worked in the same country",
+          "necessary": true,
+          "depends_on": [
+            "u1",
+            "u2"
+          ],
+          "expected_answer": "no",
+          "support_sets": [
+            []
+          ],
+          "support_basis": "derived_from_dependencies"
+        }
+      ],
+      "fell_back": false,
+      "status": "reviewed",
+      "latency_s": 2.463660313980654,
+      "annotation_review": {
+        "human_note": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+        "execution_note": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+        "issues": [],
+        "author": "assistant",
+        "human_approved": true,
+        "approval_basis": "用户于 2026-11-28 确认已审核通过；按最新 Note 落实"
+      },
+      "raw_decomposition": {
+        "sample_id": "hotpotqa_5ab406ce55429976abd1bd36",
+        "split": "dev",
+        "question": "Was Lev Kuleshov and Lo Wei work in the same country?",
+        "sft_snapshot_count": 9,
+        "question_type": "comparison",
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "country where Lev Kuleshov worked",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u2",
+            "description": "country where Lo Wei worked",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u3",
+            "description": "whether Lev Kuleshov and Lo Wei worked in the same country",
+            "necessary": true,
+            "depends_on": [
+              "u1",
+              "u2"
+            ]
+          }
+        ],
+        "fell_back": false,
+        "status": "needs_review",
+        "latency_s": 2.463660313980654
+      }
+    },
+    {
+      "sample_id": "hotpotqa_5ab7eff35542993667794059",
+      "split": "dev",
+      "question": "What kind of musician does Neil Hannon and Stephen Malkmus have in common?",
+      "sft_snapshot_count": 8,
+      "question_type": "comparison",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "kind of musician Neil Hannon is",
+          "necessary": false,
+          "expected_answer": "singer",
+          "depends_on": [],
+          "support_sets": [
+            [
+              "d4s0"
+            ]
+          ],
+          "aliases": [
+            "singer and songwriter",
+            "singer-songwriter"
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u2",
+          "description": "kind of musician Stephen Malkmus is",
+          "necessary": false,
+          "expected_answer": "singer",
+          "depends_on": [],
+          "support_sets": [
+            [
+              "d10s0"
+            ],
+            [
+              "d5s1"
+            ],
+            [
+              "d7s1"
+            ],
+            [
+              "d6s2"
+            ]
+          ],
+          "aliases": [
+            "lead singer",
+            "vocalist"
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u3",
+          "description": "kind of musician that Neil Hannon and Stephen Malkmus have in common",
+          "necessary": true,
+          "expected_answer": "singer",
+          "depends_on": [
+            "u1",
+            "u2"
+          ],
+          "support_sets": [
+            []
+          ],
+          "aliases": [
+            "singers",
+            "vocalist"
+          ],
+          "support_basis": "derived_from_dependencies"
+        }
+      ],
+      "fell_back": false,
+      "status": "reviewed",
+      "latency_s": 2.4011203420814127,
+      "annotation_review": {
+        "human_note": "采用旧版多单元/查询目标，保留可独立表达的中间事实；按 context 核对答案与证据。",
+        "execution_note": "采用旧版多单元/查询目标，保留可独立表达的中间事实；按 context 核对答案与证据。",
+        "issues": [],
+        "author": "assistant",
+        "human_approved": true,
+        "approval_basis": "用户于 2026-11-28 确认已审核通过；按最新 Note 落实"
+      },
+      "raw_decomposition": {
+        "sample_id": "hotpotqa_5ab7eff35542993667794059",
+        "split": "dev",
+        "question": "What kind of musician does Neil Hannon and Stephen Malkmus have in common?",
+        "sft_snapshot_count": 8,
+        "question_type": "bridge_comparison",
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "music genre of Neil Hannon",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u2",
+            "description": "music genre of Stephen Malkmus",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u3",
+            "description": "common music genre of Neil Hannon and Stephen Malkmus",
+            "necessary": true,
+            "depends_on": [
+              "u1",
+              "u2"
+            ]
+          }
+        ],
+        "fell_back": false,
+        "status": "needs_review",
+        "latency_s": 2.4011203420814127
+      }
+    },
+    {
+      "sample_id": "hotpotqa_5ab850d75542990e739ec8c0",
+      "split": "dev",
+      "question": "Which writter is known to have wrote Harry Potter, Mary Gordon or J. K. Rowling?",
+      "sft_snapshot_count": 6,
+      "question_type": "comparison",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "whether Mary Gordon wrote Harry Potter",
+          "necessary": false,
+          "depends_on": [],
+          "expected_answer": "no",
+          "support_sets": [],
+          "support_basis": "no_direct_support",
+          "annotation_note": "无直接支持集合；不能仅由 expected_answer 将本单元标为 SUPPORTED。候选题结论可按独立的 presupposition_sets 路径判断。"
+        },
+        {
+          "unit_id": "u2",
+          "description": "whether J. K. Rowling wrote Harry Potter",
+          "necessary": false,
+          "depends_on": [],
+          "expected_answer": "yes",
+          "support_sets": [
+            [
+              "d5s0"
+            ],
+            [
+              "d2s1"
+            ],
+            [
+              "d3s0"
+            ],
+            [
+              "d4s0"
+            ],
+            [
+              "d6s0"
+            ],
+            [
+              "d9s0"
+            ],
+            [
+              "d9s4"
+            ],
+            [
+              "d10s1"
+            ],
+            [
+              "d1s1"
+            ]
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u3",
+          "description": "which writer is known to have written Harry Potter",
+          "necessary": true,
+          "depends_on": [
+            "u1",
+            "u2"
+          ],
+          "expected_answer": "J. K. Rowling",
+          "support_sets": [
+            []
+          ],
+          "aliases": [
+            "Joanne Rowling",
+            "Rowling"
+          ],
+          "by_presupposition": true,
+          "presupposition_sets": [
+            [
+              "d5s0"
+            ],
+            [
+              "d2s1"
+            ],
+            [
+              "d3s0"
+            ],
+            [
+              "d4s0"
+            ],
+            [
+              "d6s0"
+            ],
+            [
+              "d9s0"
+            ],
+            [
+              "d9s4"
+            ],
+            [
+              "d10s1"
+            ],
+            [
+              "d1s1"
+            ]
+          ],
+          "support_basis": "question_presupposition"
+        }
+      ],
+      "fell_back": false,
+      "status": "reviewed",
+      "latency_s": 2.401617013150826,
+      "annotation_review": {
+        "human_note": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+        "execution_note": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+        "issues": [],
+        "author": "assistant",
+        "human_approved": true,
+        "approval_basis": "用户于 2026-11-28 确认已审核通过；按最新 Note 落实"
+      },
+      "raw_decomposition": {
+        "sample_id": "hotpotqa_5ab850d75542990e739ec8c0",
+        "split": "dev",
+        "question": "Which writter is known to have wrote Harry Potter, Mary Gordon or J. K. Rowling?",
+        "sft_snapshot_count": 6,
+        "question_type": "comparison",
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "whether Mary Gordon wrote Harry Potter",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u2",
+            "description": "whether J. K. Rowling wrote Harry Potter",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u3",
+            "description": "which writer is known to have written Harry Potter",
+            "necessary": true,
+            "depends_on": [
+              "u1",
+              "u2"
+            ]
+          }
+        ],
+        "fell_back": false,
+        "status": "needs_review",
+        "latency_s": 2.401617013150826
+      }
+    },
+    {
+      "sample_id": "hotpotqa_5ab9d4a9554299232ef4a21c",
+      "split": "dev",
+      "question": "The Pittsburgh Penguins 2003 first overall draft pick tied the franchise record for how many goalie wins?",
+      "sft_snapshot_count": 8,
+      "question_type": "bridge",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "Pittsburgh Penguins 2003 first overall draft pick",
+          "necessary": false,
+          "depends_on": [],
+          "expected_answer": "Marc-André Fleury",
+          "support_sets": [
+            [
+              "d1s1"
+            ]
+          ],
+          "aliases": [
+            "Marc-Andre Fleury",
+            "Fleury"
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u2",
+          "description": "franchise record for goalie wins tied by {u1}",
+          "necessary": true,
+          "depends_on": [
+            "u1"
+          ],
+          "expected_answer": "226",
+          "support_sets": [
+            [
+              "d4s5"
+            ]
+          ],
+          "support_basis": "context"
+        }
+      ],
+      "fell_back": false,
+      "status": "reviewed",
+      "latency_s": 1.8179893461056054,
+      "annotation_review": {
+        "human_note": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+        "execution_note": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+        "issues": [],
+        "author": "assistant",
+        "human_approved": true,
+        "approval_basis": "用户于 2026-11-28 确认已审核通过；按最新 Note 落实"
+      },
+      "raw_decomposition": {
+        "sample_id": "hotpotqa_5ab9d4a9554299232ef4a21c",
+        "split": "dev",
+        "question": "The Pittsburgh Penguins 2003 first overall draft pick tied the franchise record for how many goalie wins?",
+        "sft_snapshot_count": 8,
+        "question_type": "bridge",
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "Pittsburgh Penguins 2003 first overall draft pick",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u2",
+            "description": "franchise record for goalie wins tied by {u1}",
+            "necessary": true,
+            "depends_on": [
+              "u1"
+            ]
+          }
+        ],
+        "fell_back": false,
+        "status": "needs_review",
+        "latency_s": 1.8179893461056054
+      }
+    },
+    {
+      "sample_id": "hotpotqa_5abe97dc5542994516f453cf",
+      "split": "dev",
+      "question": "What South East London-based post-punk/art rock group took their name from a American radical feminist that is best known for attempting to murder artist Andy Warhol?",
+      "sft_snapshot_count": 9,
+      "question_type": "bridge",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "American radical feminist best known for attempting to murder artist Andy Warhol",
+          "necessary": false,
+          "expected_answer": "Valerie Solanas",
+          "depends_on": [],
+          "support_sets": [
+            [
+              "d8s0"
+            ]
+          ],
+          "aliases": [
+            "Valerie Jean Solanas"
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u2",
+          "description": "South East London-based post-punk/art rock group named after the manifesto written by {u1}",
+          "necessary": true,
+          "expected_answer": "S.C.U.M",
+          "depends_on": [
+            "u1"
+          ],
+          "support_sets": [
+            [
+              "d4s0",
+              "d4s3"
+            ]
+          ],
+          "aliases": [
+            "SCUM"
+          ],
+          "support_basis": "context"
+        }
+      ],
+      "fell_back": false,
+      "status": "reviewed",
+      "latency_s": 1.275393201969564,
+      "annotation_review": {
+        "human_note": "【保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。 待题干称乐队得名于女权主义者，context 明确是她的 SCUM Manifesto。已给出人物→其宣言命名的乐队的两步修正，不需要改动原问题，需要这样的问题表述。",
+        "execution_note": "按 Note 保留原问题措辞，采用人物→以其宣言命名的乐队两步解释；最终 S.C.U.M 由 d4s0/d4s3 支持，不把它说成以 Valerie Solanas 本人姓名命名。",
+        "issues": [],
+        "author": "assistant",
+        "human_approved": true,
+        "approval_basis": "用户于 2026-11-28 确认已审核通过；按最新 Note 落实",
+        "resolution_note": "按 Note 保留原问题措辞，采用人物→以其宣言命名的乐队两步解释；最终 S.C.U.M 由 d4s0/d4s3 支持，不把它说成以 Valerie Solanas 本人姓名命名。"
+      },
+      "raw_decomposition": {
+        "sample_id": "hotpotqa_5abe97dc5542994516f453cf",
+        "split": "dev",
+        "question": "What South East London-based post-punk/art rock group took their name from a American radical feminist that is best known for attempting to murder artist Andy Warhol?",
+        "sft_snapshot_count": 9,
+        "question_type": "single",
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "South East London-based post-punk/art rock group named after an American radical feminist known for attempting to murder Andy Warhol",
+            "necessary": true,
+            "depends_on": []
+          }
+        ],
+        "fell_back": false,
+        "status": "needs_review",
+        "latency_s": 1.275393201969564
+      }
+    },
+    {
+      "sample_id": "hotpotqa_5ac149705542994d76dccdd0",
+      "split": "dev",
+      "question": "Did Glamour or W come first?",
+      "sft_snapshot_count": 8,
+      "question_type": "comparison",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "year Glamour was founded",
+          "necessary": false,
+          "depends_on": [],
+          "expected_answer": "1939",
+          "support_sets": [
+            [
+              "d6s1"
+            ]
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u2",
+          "description": "year W was founded",
+          "necessary": false,
+          "depends_on": [],
+          "expected_answer": "1971",
+          "support_sets": [
+            [
+              "d5s1"
+            ]
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u3",
+          "description": "which came first",
+          "necessary": true,
+          "depends_on": [
+            "u1",
+            "u2"
+          ],
+          "expected_answer": "Glamour",
+          "support_sets": [
+            []
+          ],
+          "aliases": [
+            "Glamour magazine"
+          ],
+          "support_basis": "derived_from_dependencies"
+        }
+      ],
+      "fell_back": false,
+      "status": "reviewed",
+      "latency_s": 2.1504611808340997,
+      "annotation_review": {
+        "human_note": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+        "execution_note": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+        "issues": [],
+        "author": "assistant",
+        "human_approved": true,
+        "approval_basis": "用户于 2026-11-28 确认已审核通过；按最新 Note 落实"
+      },
+      "raw_decomposition": {
+        "sample_id": "hotpotqa_5ac149705542994d76dccdd0",
+        "split": "dev",
+        "question": "Did Glamour or W come first?",
+        "sft_snapshot_count": 8,
+        "question_type": "comparison",
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "year Glamour was founded",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u2",
+            "description": "year W was founded",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u3",
+            "description": "which came first",
+            "necessary": true,
+            "depends_on": [
+              "u1",
+              "u2"
+            ]
+          }
+        ],
+        "fell_back": false,
+        "status": "needs_review",
+        "latency_s": 2.1504611808340997
+      }
+    },
+    {
+      "sample_id": "hotpotqa_5adbf5d8554299438c868cec",
+      "split": "dev",
+      "question": "Zota was a foe of the superhero appearing in comic books by which company?",
+      "sft_snapshot_count": 9,
+      "question_type": "bridge",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "superhero that Zota was a foe of",
+          "necessary": false,
+          "depends_on": [],
+          "expected_answer": "Doctor Strange",
+          "support_sets": [
+            [
+              "d4s1"
+            ]
+          ],
+          "aliases": [
+            "Stephen Strange",
+            "Doctor Stephen Vincent Strange"
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u2",
+          "description": "company that published comic books featuring {u1}",
+          "necessary": true,
+          "depends_on": [
+            "u1"
+          ],
+          "expected_answer": "Marvel Comics",
+          "support_sets": [
+            [
+              "d1s0"
+            ]
+          ],
+          "aliases": [
+            "Marvel"
+          ],
+          "support_basis": "context"
+        }
+      ],
+      "fell_back": false,
+      "status": "reviewed",
+      "latency_s": 1.693065958097577,
+      "annotation_review": {
+        "human_note": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+        "execution_note": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+        "issues": [],
+        "author": "assistant",
+        "human_approved": true,
+        "approval_basis": "用户于 2026-11-28 确认已审核通过；按最新 Note 落实"
+      },
+      "raw_decomposition": {
+        "sample_id": "hotpotqa_5adbf5d8554299438c868cec",
+        "split": "dev",
+        "question": "Zota was a foe of the superhero appearing in comic books by which company?",
+        "sft_snapshot_count": 9,
+        "question_type": "bridge",
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "superhero that Zota was a foe of",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u2",
+            "description": "company that published comic books featuring {u1}",
+            "necessary": true,
+            "depends_on": [
+              "u1"
+            ]
+          }
+        ],
+        "fell_back": false,
+        "status": "needs_review",
+        "latency_s": 1.693065958097577
+      }
+    },
+    {
+      "sample_id": "hotpotqa_5ade960d554299728e26c747",
+      "split": "dev",
+      "question": "What is the nationality of the top scorer of the 2012–13 Primeira Liga?",
+      "sft_snapshot_count": 8,
+      "question_type": "bridge",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "top scorer of the 2012–13 Primeira Liga",
+          "necessary": false,
+          "depends_on": [],
+          "expected_answer": "Jackson Martínez",
+          "support_sets": [
+            [
+              "d5s4"
+            ]
+          ],
+          "aliases": [
+            "Jackson Martinez",
+            "Jackson Arley Martínez Valencia"
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u2",
+          "description": "nationality of {u1}",
+          "necessary": true,
+          "depends_on": [
+            "u1"
+          ],
+          "expected_answer": "Colombian",
+          "support_sets": [
+            [
+              "d2s0"
+            ]
+          ],
+          "aliases": [
+            "Colombia"
+          ],
+          "support_basis": "context"
+        }
+      ],
+      "fell_back": false,
+      "status": "reviewed",
+      "latency_s": 1.7546496479772031,
+      "annotation_review": {
+        "human_note": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+        "execution_note": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+        "issues": [],
+        "author": "assistant",
+        "human_approved": true,
+        "approval_basis": "用户于 2026-11-28 确认已审核通过；按最新 Note 落实"
+      },
+      "raw_decomposition": {
+        "sample_id": "hotpotqa_5ade960d554299728e26c747",
+        "split": "dev",
+        "question": "What is the nationality of the top scorer of the 2012–13 Primeira Liga?",
+        "sft_snapshot_count": 8,
+        "question_type": "bridge",
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "top scorer of the 2012–13 Primeira Liga",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u2",
+            "description": "nationality of {u1}",
+            "necessary": true,
+            "depends_on": [
+              "u1"
+            ]
+          }
+        ],
+        "fell_back": false,
+        "status": "needs_review",
+        "latency_s": 1.7546496479772031
+      }
+    },
+    {
+      "sample_id": "hotpotqa_5ae1e7275542997f29b3c18b",
+      "split": "dev",
+      "question": "Paul Eiding has the role of the Vault Tec Rep from the video game developed by which company?",
+      "sft_snapshot_count": 9,
+      "question_type": "bridge",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "video game featuring Paul Eiding as the Vault Tec Rep",
+          "necessary": false,
+          "depends_on": [],
+          "expected_answer": "Fallout 4",
+          "support_sets": [
+            [
+              "d6s1"
+            ]
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u2",
+          "description": "developer of {u1}",
+          "necessary": true,
+          "depends_on": [
+            "u1"
+          ],
+          "expected_answer": "Bethesda Game Studios",
+          "support_sets": [
+            [
+              "d10s0"
+            ]
+          ],
+          "aliases": [
+            "Bethesda"
+          ],
+          "support_basis": "context"
+        }
+      ],
+      "fell_back": false,
+      "status": "reviewed",
+      "latency_s": 1.6502721069846302,
+      "annotation_review": {
+        "human_note": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+        "execution_note": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+        "issues": [],
+        "author": "assistant",
+        "human_approved": true,
+        "approval_basis": "用户于 2026-11-28 确认已审核通过；按最新 Note 落实"
+      },
+      "raw_decomposition": {
+        "sample_id": "hotpotqa_5ae1e7275542997f29b3c18b",
+        "split": "dev",
+        "question": "Paul Eiding has the role of the Vault Tec Rep from the video game developed by which company?",
+        "sft_snapshot_count": 9,
+        "question_type": "bridge",
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "video game featuring Paul Eiding as the Vault Tec Rep",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u2",
+            "description": "developer of {u1}",
+            "necessary": true,
+            "depends_on": [
+              "u1"
+            ]
+          }
+        ],
+        "fell_back": false,
+        "status": "needs_review",
+        "latency_s": 1.6502721069846302
+      }
+    },
+    {
+      "sample_id": "hotpotqa_5ae29b615542992decbdcd4f",
+      "split": "dev",
+      "question": "Huainan and Wuzhishan City, in in which country?",
+      "sft_snapshot_count": 6,
+      "question_type": "comparison",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "country containing Huainan",
+          "necessary": false,
+          "expected_answer": "People's Republic of China",
+          "depends_on": [],
+          "support_sets": [
+            [
+              "d1s0"
+            ]
+          ],
+          "aliases": [
+            "China"
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u2",
+          "description": "country containing Wuzhishan City",
+          "necessary": false,
+          "expected_answer": "People's Republic of China",
+          "depends_on": [],
+          "support_sets": [
+            [
+              "d2s0"
+            ]
+          ],
+          "aliases": [
+            "China"
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u3",
+          "description": "country containing both Huainan and Wuzhishan City",
+          "necessary": true,
+          "expected_answer": "People's Republic of China",
+          "depends_on": [
+            "u1",
+            "u2"
+          ],
+          "support_sets": [
+            []
+          ],
+          "aliases": [
+            "China"
+          ],
+          "support_basis": "derived_from_dependencies"
+        }
+      ],
+      "fell_back": false,
+      "status": "reviewed",
+      "latency_s": 2.52642215997912,
+      "annotation_review": {
+        "human_note": "采用旧版多单元/查询目标，保留可独立表达的中间事实；按 context 核对答案与证据。",
+        "execution_note": "采用旧版多单元/查询目标，保留可独立表达的中间事实；按 context 核对答案与证据。",
+        "issues": [],
+        "author": "assistant",
+        "human_approved": true,
+        "approval_basis": "用户于 2026-11-28 确认已审核通过；按最新 Note 落实"
+      },
+      "raw_decomposition": {
+        "sample_id": "hotpotqa_5ae29b615542992decbdcd4f",
+        "split": "dev",
+        "question": "Huainan and Wuzhishan City, in in which country?",
+        "sft_snapshot_count": 6,
+        "question_type": "bridge_comparison",
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "country of Huainan",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u2",
+            "description": "country of Wuzhishan City",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u3",
+            "description": "whether Huainan and Wuzhishan City are in the same country",
+            "necessary": true,
+            "depends_on": [
+              "u1",
+              "u2"
+            ]
+          }
+        ],
+        "fell_back": false,
+        "status": "needs_review",
+        "latency_s": 2.52642215997912
+      }
+    },
+    {
+      "sample_id": "hotpotqa_5ae517665542990ba0bbb1b2",
+      "split": "dev",
+      "question": "What singer did the Tiny Dancers support who was in The Verve?",
+      "sft_snapshot_count": 8,
+      "question_type": "bridge",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "acts supported by the Tiny Dancers listed in the context",
+          "necessary": false,
+          "depends_on": [],
+          "expected_answer": "The Spinto Band; Babyshambles; Richard Ashcroft; Larrikin Love; Bob Dylan",
+          "support_sets": [
+            [
+              "d10s2"
+            ]
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u2",
+          "description": "singer among {u1} who was in The Verve",
+          "necessary": true,
+          "depends_on": [
+            "u1"
+          ],
+          "expected_answer": "Richard Ashcroft",
+          "support_sets": [
+            [
+              "d6s0",
+              "d6s1"
+            ]
+          ],
+          "support_basis": "context"
+        }
+      ],
+      "fell_back": false,
+      "status": "reviewed",
+      "latency_s": 1.775558773893863,
+      "annotation_review": {
+        "human_note": "保留新顺序，先列支持过的艺人/乐队集合，再筛选 The Verve 歌手；不能先验只写 Richard Ashcroft。",
+        "execution_note": "保留新顺序，先列支持过的艺人/乐队集合，再筛选 The Verve 歌手；不能先验只写 Richard Ashcroft。",
+        "issues": [],
+        "author": "assistant",
+        "human_approved": true,
+        "approval_basis": "用户于 2026-11-28 确认已审核通过；按最新 Note 落实"
+      },
+      "raw_decomposition": {
+        "sample_id": "hotpotqa_5ae517665542990ba0bbb1b2",
+        "split": "dev",
+        "question": "What singer did the Tiny Dancers support who was in The Verve?",
+        "sft_snapshot_count": 8,
+        "question_type": "bridge",
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "singer supported by the Tiny Dancers",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u2",
+            "description": "singer in The Verve who was supported by the Tiny Dancers",
+            "necessary": true,
+            "depends_on": [
+              "u1"
+            ]
+          }
+        ],
+        "fell_back": false,
+        "status": "needs_review",
+        "latency_s": 1.775558773893863
+      }
+    }
+  ],
+  "source_index": [
+    {
+      "batch_number": 1,
+      "global_number": 271,
+      "sample_id": "2wikimultihopqa_f618d408084c11ebbd56ac1f6bf848b6",
+      "split": "dev",
+      "source_number": 28,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 2,
+      "global_number": 272,
+      "sample_id": "hotpotqa_5a745a8755429979e288291e",
+      "split": "dev",
+      "source_number": 29,
+      "review_status": "review"
+    },
+    {
+      "batch_number": 3,
+      "global_number": 273,
+      "sample_id": "hotpotqa_5a75dc7a5542992d0ec06004",
+      "split": "dev",
+      "source_number": 30,
+      "review_status": "keep_generated_relabel"
+    },
+    {
+      "batch_number": 4,
+      "global_number": 274,
+      "sample_id": "hotpotqa_5a7755e05542993735360237",
+      "split": "dev",
+      "source_number": 31,
+      "review_status": "modify_generated"
+    },
+    {
+      "batch_number": 5,
+      "global_number": 275,
+      "sample_id": "hotpotqa_5a77a8365542995d83181250",
+      "split": "dev",
+      "source_number": 32,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 6,
+      "global_number": 276,
+      "sample_id": "hotpotqa_5a78f57a554299148911f9bf",
+      "split": "dev",
+      "source_number": 33,
+      "review_status": "keep_generated_relabel"
+    },
+    {
+      "batch_number": 7,
+      "global_number": 277,
+      "sample_id": "hotpotqa_5a7a51485542990783324f0e",
+      "split": "dev",
+      "source_number": 34,
+      "review_status": "modify_generated"
+    },
+    {
+      "batch_number": 8,
+      "global_number": 278,
+      "sample_id": "hotpotqa_5a7aa8565542995eb53be88b",
+      "split": "dev",
+      "source_number": 35,
+      "review_status": "keep_generated_relabel"
+    },
+    {
+      "batch_number": 9,
+      "global_number": 279,
+      "sample_id": "hotpotqa_5a7cfdb755429909bec768e2",
+      "split": "dev",
+      "source_number": 36,
+      "review_status": "keep_generated_relabel"
+    },
+    {
+      "batch_number": 10,
+      "global_number": 280,
+      "sample_id": "hotpotqa_5a7f359f55429930675136a9",
+      "split": "dev",
+      "source_number": 37,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 11,
+      "global_number": 281,
+      "sample_id": "hotpotqa_5a81d03d55429903bc27b9c7",
+      "split": "dev",
+      "source_number": 38,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 12,
+      "global_number": 282,
+      "sample_id": "hotpotqa_5a8715fb5542991e771816bb",
+      "split": "dev",
+      "source_number": 39,
+      "review_status": "keep_generated_relabel"
+    },
+    {
+      "batch_number": 13,
+      "global_number": 283,
+      "sample_id": "hotpotqa_5a87e93155429938390d3ea4",
+      "split": "dev",
+      "source_number": 40,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 14,
+      "global_number": 284,
+      "sample_id": "hotpotqa_5a88b15b5542994846c1ceba",
+      "split": "dev",
+      "source_number": 41,
+      "review_status": "keep_generated_relabel"
+    },
+    {
+      "batch_number": 15,
+      "global_number": 285,
+      "sample_id": "hotpotqa_5a9060f05542990a98493604",
+      "split": "dev",
+      "source_number": 42,
+      "review_status": "modify_generated"
+    },
+    {
+      "batch_number": 16,
+      "global_number": 286,
+      "sample_id": "hotpotqa_5ab2585855429970612095e6",
+      "split": "dev",
+      "source_number": 43,
+      "review_status": "modify_generated"
+    },
+    {
+      "batch_number": 17,
+      "global_number": 287,
+      "sample_id": "hotpotqa_5ab27ea3554299340b5254e4",
+      "split": "dev",
+      "source_number": 44,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 18,
+      "global_number": 288,
+      "sample_id": "hotpotqa_5ab2a4a7554299295394678b",
+      "split": "dev",
+      "source_number": 45,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 19,
+      "global_number": 289,
+      "sample_id": "hotpotqa_5ab33cec554299753aec595c",
+      "split": "dev",
+      "source_number": 46,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 20,
+      "global_number": 290,
+      "sample_id": "hotpotqa_5ab406ce55429976abd1bd36",
+      "split": "dev",
+      "source_number": 47,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 21,
+      "global_number": 291,
+      "sample_id": "hotpotqa_5ab7eff35542993667794059",
+      "split": "dev",
+      "source_number": 48,
+      "review_status": "modify_generated"
+    },
+    {
+      "batch_number": 22,
+      "global_number": 292,
+      "sample_id": "hotpotqa_5ab850d75542990e739ec8c0",
+      "split": "dev",
+      "source_number": 49,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 23,
+      "global_number": 293,
+      "sample_id": "hotpotqa_5ab9d4a9554299232ef4a21c",
+      "split": "dev",
+      "source_number": 50,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 24,
+      "global_number": 294,
+      "sample_id": "hotpotqa_5abe97dc5542994516f453cf",
+      "split": "dev",
+      "source_number": 51,
+      "review_status": "review"
+    },
+    {
+      "batch_number": 25,
+      "global_number": 295,
+      "sample_id": "hotpotqa_5ac149705542994d76dccdd0",
+      "split": "dev",
+      "source_number": 52,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 26,
+      "global_number": 296,
+      "sample_id": "hotpotqa_5adbf5d8554299438c868cec",
+      "split": "dev",
+      "source_number": 53,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 27,
+      "global_number": 297,
+      "sample_id": "hotpotqa_5ade960d554299728e26c747",
+      "split": "dev",
+      "source_number": 54,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 28,
+      "global_number": 298,
+      "sample_id": "hotpotqa_5ae1e7275542997f29b3c18b",
+      "split": "dev",
+      "source_number": 55,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 29,
+      "global_number": 299,
+      "sample_id": "hotpotqa_5ae29b615542992decbdcd4f",
+      "split": "dev",
+      "source_number": 56,
+      "review_status": "modify_generated"
+    },
+    {
+      "batch_number": 30,
+      "global_number": 300,
+      "sample_id": "hotpotqa_5ae517665542990ba0bbb1b2",
+      "split": "dev",
+      "source_number": 57,
+      "review_status": "keep_generated_relabel"
+    }
+  ]
+}

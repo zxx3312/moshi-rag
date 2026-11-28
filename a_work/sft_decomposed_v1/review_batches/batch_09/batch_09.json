@@ -1,0 +1,3109 @@
+{
+  "annotation_version": "note-aligned-v3",
+  "status": "reviewed",
+  "batch_id": "batch_09",
+  "records": [
+    {
+      "sample_id": "hotpotqa_5ae71f455542996d980e7ca9",
+      "split": "train",
+      "question": "Soul Axiom included a port for the Microsoft game console announced in what month?",
+      "sft_snapshot_count": 5,
+      "question_type": "bridge",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "Microsoft game console for which Soul Axiom included a port",
+          "necessary": false,
+          "expected_answer": "Xbox One",
+          "depends_on": [],
+          "support_sets": [
+            [
+              "d6s4",
+              "d7s0"
+            ],
+            [
+              "d6s4",
+              "d7s4"
+            ]
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u2",
+          "description": "month in which {u1} was announced",
+          "necessary": true,
+          "expected_answer": "May 2013",
+          "depends_on": [
+            "u1"
+          ],
+          "support_sets": [
+            [
+              "d7s1"
+            ]
+          ],
+          "aliases": [
+            "May"
+          ],
+          "support_basis": "context"
+        }
+      ],
+      "fell_back": false,
+      "status": "reviewed",
+      "latency_s": 1.6502386128995568,
+      "annotation_review": {
+        "human_note": "采用旧版多单元/查询目标，保留可独立表达的中间事实；按 context 核对答案与证据。",
+        "execution_note": "采用旧版多单元/查询目标，保留可独立表达的中间事实；按 context 核对答案与证据。",
+        "issues": [],
+        "author": "assistant",
+        "human_approved": true,
+        "approval_basis": "用户于 2026-11-28 确认已审核通过；按最新 Note 落实"
+      },
+      "raw_decomposition": {
+        "sample_id": "hotpotqa_5ae71f455542996d980e7ca9",
+        "split": "train",
+        "question": "Soul Axiom included a port for the Microsoft game console announced in what month?",
+        "sft_snapshot_count": 5,
+        "question_type": "bridge",
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "Microsoft game console included in Soul Axiom",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u2",
+            "description": "month the Microsoft game console was announced",
+            "necessary": true,
+            "depends_on": [
+              "u1"
+            ]
+          }
+        ],
+        "fell_back": false,
+        "status": "needs_review",
+        "latency_s": 1.6502386128995568
+      }
+    },
+    {
+      "sample_id": "hotpotqa_5ae74ae95542997b22f6a688",
+      "split": "train",
+      "question": "Rani Velu Nachiyar was a famous queen before which queen that was a leading figure of the Indian Rebellion of 1857?",
+      "sft_snapshot_count": 8,
+      "question_type": "bridge",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "queen that was a leading figure of the Indian Rebellion of 1857",
+          "necessary": false,
+          "depends_on": [],
+          "expected_answer": "Rani of Jhansi",
+          "support_sets": [
+            [
+              "d8s1"
+            ]
+          ],
+          "aliases": [
+            "Lakshmibai",
+            "Rani Lakshmibai",
+            "Lakshmibai, the Rani of Jhansi"
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u2",
+          "description": "queen among {u1} whom Rani Velu Nachiyar preceded in fighting the British",
+          "necessary": true,
+          "depends_on": [
+            "u1"
+          ],
+          "expected_answer": "Rani of Jhansi",
+          "support_sets": [
+            [
+              "d3s1"
+            ]
+          ],
+          "aliases": [
+            "Lakshmibai",
+            "Rani Lakshmibai",
+            "Lakshmibai, the Rani of Jhansi"
+          ],
+          "support_basis": "context"
+        }
+      ],
+      "fell_back": false,
+      "status": "reviewed",
+      "latency_s": 1.9635991710238159,
+      "annotation_review": {
+        "human_note": "保留新反向顺序；末单元明确输出女王而非真假陈述，按新顺序交换证据。",
+        "execution_note": "保留新反向顺序；末单元明确输出女王而非真假陈述，按新顺序交换证据。",
+        "issues": [],
+        "author": "assistant",
+        "human_approved": true,
+        "approval_basis": "用户于 2026-11-28 确认已审核通过；按最新 Note 落实"
+      },
+      "raw_decomposition": {
+        "sample_id": "hotpotqa_5ae74ae95542997b22f6a688",
+        "split": "train",
+        "question": "Rani Velu Nachiyar was a famous queen before which queen that was a leading figure of the Indian Rebellion of 1857?",
+        "sft_snapshot_count": 8,
+        "question_type": "bridge",
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "queen that was a leading figure of the Indian Rebellion of 1857",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u2",
+            "description": "Rani Velu Nachiyar was a famous queen before {u1}",
+            "necessary": true,
+            "depends_on": [
+              "u1"
+            ]
+          }
+        ],
+        "fell_back": false,
+        "status": "needs_review",
+        "latency_s": 1.9635991710238159
+      }
+    },
+    {
+      "sample_id": "hotpotqa_5ae752255542995703ce8be5",
+      "split": "train",
+      "question": "Which river that streams westward from Pittsburgh, Pennsylvania, to Cairo, Illinois is the northern boundary of Downtown Louisville?",
+      "sft_snapshot_count": 8,
+      "question_type": "bridge",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "river that streams westward from Pittsburgh to Cairo, Illinois",
+          "necessary": false,
+          "expected_answer": "Ohio River",
+          "depends_on": [],
+          "support_sets": [
+            [
+              "d6s0"
+            ]
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u2",
+          "description": "river forming the northern boundary of Downtown Louisville, given {u1}",
+          "necessary": true,
+          "expected_answer": "Ohio River",
+          "depends_on": [
+            "u1"
+          ],
+          "support_sets": [
+            [
+              "d8s1"
+            ]
+          ],
+          "support_basis": "context"
+        }
+      ],
+      "fell_back": false,
+      "status": "reviewed",
+      "latency_s": 1.2332746679894626,
+      "annotation_review": {
+        "human_note": "采用旧版多单元/查询目标，保留可独立表达的中间事实；按 context 核对答案与证据。",
+        "execution_note": "采用旧版多单元/查询目标，保留可独立表达的中间事实；按 context 核对答案与证据。",
+        "issues": [],
+        "author": "assistant",
+        "human_approved": true,
+        "approval_basis": "用户于 2026-11-28 确认已审核通过；按最新 Note 落实"
+      },
+      "raw_decomposition": {
+        "sample_id": "hotpotqa_5ae752255542995703ce8be5",
+        "split": "train",
+        "question": "Which river that streams westward from Pittsburgh, Pennsylvania, to Cairo, Illinois is the northern boundary of Downtown Louisville?",
+        "sft_snapshot_count": 8,
+        "question_type": "single",
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "river that streams westward from Pittsburgh, Pennsylvania, to Cairo, Illinois and is the northern boundary of Downtown Louisville",
+            "necessary": true,
+            "depends_on": []
+          }
+        ],
+        "fell_back": false,
+        "status": "needs_review",
+        "latency_s": 1.2332746679894626
+      }
+    },
+    {
+      "sample_id": "2wikimultihopqa_008905100baf11ebab90acde48001122",
+      "split": "dev",
+      "question": "Who is Apama Iii's father-in-law?",
+      "sft_snapshot_count": 8,
+      "question_type": "bridge",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "spouse of Apama Iii",
+          "necessary": false,
+          "depends_on": [],
+          "expected_answer": "Prusias I of Bithynia",
+          "support_sets": [
+            [
+              "d7s8"
+            ]
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u2",
+          "description": "father of {u1}, Apama Iii's father-in-law",
+          "necessary": true,
+          "depends_on": [
+            "u1"
+          ],
+          "expected_answer": "Ziaelas of Bithynia",
+          "support_sets": [
+            [
+              "d4s5"
+            ]
+          ],
+          "support_basis": "context"
+        }
+      ],
+      "fell_back": false,
+      "status": "reviewed",
+      "latency_s": 1.7543672230094671,
+      "annotation_review": {
+        "human_note": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+        "execution_note": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+        "issues": [],
+        "author": "assistant",
+        "human_approved": true,
+        "approval_basis": "用户于 2026-11-28 确认已审核通过；按最新 Note 落实"
+      },
+      "raw_decomposition": {
+        "sample_id": "2wikimultihopqa_008905100baf11ebab90acde48001122",
+        "split": "dev",
+        "question": "Who is Apama Iii's father-in-law?",
+        "sft_snapshot_count": 8,
+        "question_type": "bridge",
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "spouse of Apama Iii",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u2",
+            "description": "father of {u1}, Apama Iii's father-in-law",
+            "necessary": true,
+            "depends_on": [
+              "u1"
+            ]
+          }
+        ],
+        "fell_back": false,
+        "status": "needs_review",
+        "latency_s": 1.7543672230094671
+      }
+    },
+    {
+      "sample_id": "2wikimultihopqa_363145e20baf11ebab90acde48001122",
+      "split": "dev",
+      "question": "Who is the paternal grandfather of Helvis Of Cyprus?",
+      "sft_snapshot_count": 9,
+      "question_type": "bridge",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "father of Helvis Of Cyprus",
+          "necessary": false,
+          "depends_on": [],
+          "expected_answer": "Amalric II of Jerusalem",
+          "support_sets": [
+            [
+              "d2s0"
+            ]
+          ],
+          "aliases": [
+            "Amalric II",
+            "Aimery of Cyprus",
+            "Aimery of Lusignan"
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u2",
+          "description": "father of {u1}, Helvis Of Cyprus's paternal grandfather",
+          "necessary": true,
+          "depends_on": [
+            "u1"
+          ],
+          "expected_answer": "Hugh VIII of Lusignan",
+          "support_sets": [
+            [
+              "d9s0",
+              "d9s2"
+            ]
+          ],
+          "support_basis": "context"
+        }
+      ],
+      "fell_back": false,
+      "status": "reviewed",
+      "latency_s": 1.7128721750341356,
+      "annotation_review": {
+        "human_note": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+        "execution_note": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+        "issues": [],
+        "author": "assistant",
+        "human_approved": true,
+        "approval_basis": "用户于 2026-11-28 确认已审核通过；按最新 Note 落实"
+      },
+      "raw_decomposition": {
+        "sample_id": "2wikimultihopqa_363145e20baf11ebab90acde48001122",
+        "split": "dev",
+        "question": "Who is the paternal grandfather of Helvis Of Cyprus?",
+        "sft_snapshot_count": 9,
+        "question_type": "bridge",
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "father of Helvis Of Cyprus",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u2",
+            "description": "father of {u1}, Helvis Of Cyprus's paternal grandfather",
+            "necessary": true,
+            "depends_on": [
+              "u1"
+            ]
+          }
+        ],
+        "fell_back": false,
+        "status": "needs_review",
+        "latency_s": 1.7128721750341356
+      }
+    },
+    {
+      "sample_id": "2wikimultihopqa_3a2fe93e0bda11eba7f7acde48001122",
+      "split": "dev",
+      "question": "What nationality is Keith Batey's wife?",
+      "sft_snapshot_count": 8,
+      "question_type": "bridge",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "wife of Keith Batey",
+          "necessary": false,
+          "depends_on": [],
+          "expected_answer": "Mavis Batey",
+          "support_sets": [
+            [
+              "d2s0"
+            ]
+          ],
+          "aliases": [
+            "Mavis Lilian Batey"
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u2",
+          "description": "nationality of {u1}",
+          "necessary": true,
+          "depends_on": [
+            "u1"
+          ],
+          "expected_answer": "British",
+          "support_sets": [
+            [
+              "d3s0"
+            ]
+          ],
+          "aliases": [
+            "English"
+          ],
+          "support_basis": "context"
+        }
+      ],
+      "fell_back": false,
+      "status": "reviewed",
+      "latency_s": 1.5666364019270986,
+      "annotation_review": {
+        "human_note": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+        "execution_note": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+        "issues": [],
+        "author": "assistant",
+        "human_approved": true,
+        "approval_basis": "用户于 2026-11-28 确认已审核通过；按最新 Note 落实"
+      },
+      "raw_decomposition": {
+        "sample_id": "2wikimultihopqa_3a2fe93e0bda11eba7f7acde48001122",
+        "split": "dev",
+        "question": "What nationality is Keith Batey's wife?",
+        "sft_snapshot_count": 8,
+        "question_type": "bridge",
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "wife of Keith Batey",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u2",
+            "description": "nationality of {u1}",
+            "necessary": true,
+            "depends_on": [
+              "u1"
+            ]
+          }
+        ],
+        "fell_back": false,
+        "status": "needs_review",
+        "latency_s": 1.5666364019270986
+      }
+    },
+    {
+      "sample_id": "2wikimultihopqa_4dc594f408cd11ebbd93ac1f6bf848b6",
+      "split": "dev",
+      "question": "Which film has the director died earlier, Schwarzwaldmelodie or Vacations in the Other World?",
+      "sft_snapshot_count": 10,
+      "question_type": "bridge_comparison",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "director of Schwarzwaldmelodie",
+          "necessary": false,
+          "depends_on": [],
+          "expected_answer": "Géza von Bolváry",
+          "support_sets": [
+            [
+              "d5s0"
+            ]
+          ],
+          "aliases": [
+            "Géza Maria von Bolváry-Zahn"
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u2",
+          "description": "death date of {u1}",
+          "necessary": false,
+          "depends_on": [
+            "u1"
+          ],
+          "expected_answer": "10 August 1961",
+          "support_sets": [
+            [
+              "d10s0"
+            ]
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u3",
+          "description": "director of Vacations in the Other World",
+          "necessary": false,
+          "depends_on": [],
+          "expected_answer": "Mario Soffici",
+          "support_sets": [
+            [
+              "d2s0"
+            ]
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u4",
+          "description": "death date of {u3}",
+          "necessary": false,
+          "depends_on": [
+            "u3"
+          ],
+          "expected_answer": "10 May 1977",
+          "support_sets": [
+            [
+              "d7s0"
+            ]
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u5",
+          "description": "which film's director died earlier",
+          "necessary": true,
+          "depends_on": [
+            "u2",
+            "u4"
+          ],
+          "expected_answer": "Schwarzwaldmelodie",
+          "support_sets": [
+            []
+          ],
+          "support_basis": "derived_from_dependencies"
+        }
+      ],
+      "fell_back": false,
+      "status": "reviewed",
+      "latency_s": 3.7365872010122985,
+      "annotation_review": {
+        "human_note": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+        "execution_note": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+        "issues": [],
+        "author": "assistant",
+        "human_approved": true,
+        "approval_basis": "用户于 2026-11-28 确认已审核通过；按最新 Note 落实"
+      },
+      "raw_decomposition": {
+        "sample_id": "2wikimultihopqa_4dc594f408cd11ebbd93ac1f6bf848b6",
+        "split": "dev",
+        "question": "Which film has the director died earlier, Schwarzwaldmelodie or Vacations in the Other World?",
+        "sft_snapshot_count": 10,
+        "question_type": "bridge_comparison",
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "director of Schwarzwaldmelodie",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u2",
+            "description": "death date of {u1}",
+            "necessary": false,
+            "depends_on": [
+              "u1"
+            ]
+          },
+          {
+            "unit_id": "u3",
+            "description": "director of Vacations in the Other World",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u4",
+            "description": "death date of {u3}",
+            "necessary": false,
+            "depends_on": [
+              "u3"
+            ]
+          },
+          {
+            "unit_id": "u5",
+            "description": "which film's director died earlier",
+            "necessary": true,
+            "depends_on": [
+              "u2",
+              "u4"
+            ]
+          }
+        ],
+        "fell_back": false,
+        "status": "needs_review",
+        "latency_s": 3.7365872010122985
+      }
+    },
+    {
+      "sample_id": "2wikimultihopqa_5ea97157099411ebbdb0ac1f6bf848b6",
+      "split": "dev",
+      "question": "Are Rasas and Barakuh, Roshtkhar located in the same country?",
+      "sft_snapshot_count": 7,
+      "question_type": "comparison",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "country of Rasas",
+          "necessary": false,
+          "depends_on": [],
+          "expected_answer": "Syria",
+          "support_sets": [
+            [
+              "d9s0"
+            ]
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u2",
+          "description": "country of Barakuh, Roshtkhar",
+          "necessary": false,
+          "depends_on": [],
+          "expected_answer": "Iran",
+          "support_sets": [
+            [
+              "d10s0"
+            ]
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u3",
+          "description": "whether Rasas and Barakuh, Roshtkhar are in the same country",
+          "necessary": true,
+          "depends_on": [
+            "u1",
+            "u2"
+          ],
+          "expected_answer": "no",
+          "support_sets": [
+            []
+          ],
+          "support_basis": "derived_from_dependencies"
+        }
+      ],
+      "fell_back": false,
+      "status": "reviewed",
+      "latency_s": 2.5473493470344692,
+      "annotation_review": {
+        "human_note": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+        "execution_note": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+        "issues": [],
+        "author": "assistant",
+        "human_approved": true,
+        "approval_basis": "用户于 2026-11-28 确认已审核通过；按最新 Note 落实"
+      },
+      "raw_decomposition": {
+        "sample_id": "2wikimultihopqa_5ea97157099411ebbdb0ac1f6bf848b6",
+        "split": "dev",
+        "question": "Are Rasas and Barakuh, Roshtkhar located in the same country?",
+        "sft_snapshot_count": 7,
+        "question_type": "comparison",
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "country of Rasas",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u2",
+            "description": "country of Barakuh, Roshtkhar",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u3",
+            "description": "whether Rasas and Barakuh, Roshtkhar are in the same country",
+            "necessary": true,
+            "depends_on": [
+              "u1",
+              "u2"
+            ]
+          }
+        ],
+        "fell_back": false,
+        "status": "needs_review",
+        "latency_s": 2.5473493470344692
+      }
+    },
+    {
+      "sample_id": "2wikimultihopqa_640bede1095311ebbdaeac1f6bf848b6",
+      "split": "dev",
+      "question": "Are Daher-Socata and Dsf Refractories & Minerals Ltd both located in the same country?",
+      "sft_snapshot_count": 8,
+      "question_type": "comparison",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "country where Daher-Socata is located",
+          "necessary": false,
+          "depends_on": [],
+          "expected_answer": "France",
+          "support_sets": [
+            [
+              "d6s1"
+            ]
+          ],
+          "aliases": [
+            "French"
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u2",
+          "description": "country where Dsf Refractories & Minerals Ltd is located",
+          "necessary": false,
+          "depends_on": [],
+          "expected_answer": "United Kingdom",
+          "support_sets": [
+            [
+              "d4s0"
+            ]
+          ],
+          "aliases": [
+            "British",
+            "UK",
+            "Britain"
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u3",
+          "description": "whether Daher-Socata and Dsf Refractories & Minerals Ltd are located in the same country",
+          "necessary": true,
+          "depends_on": [
+            "u1",
+            "u2"
+          ],
+          "expected_answer": "no",
+          "support_sets": [
+            []
+          ],
+          "support_basis": "derived_from_dependencies"
+        }
+      ],
+      "fell_back": false,
+      "status": "reviewed",
+      "latency_s": 2.776422425871715,
+      "annotation_review": {
+        "human_note": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+        "execution_note": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+        "issues": [],
+        "author": "assistant",
+        "human_approved": true,
+        "approval_basis": "用户于 2026-11-28 确认已审核通过；按最新 Note 落实"
+      },
+      "raw_decomposition": {
+        "sample_id": "2wikimultihopqa_640bede1095311ebbdaeac1f6bf848b6",
+        "split": "dev",
+        "question": "Are Daher-Socata and Dsf Refractories & Minerals Ltd both located in the same country?",
+        "sft_snapshot_count": 8,
+        "question_type": "comparison",
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "country where Daher-Socata is located",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u2",
+            "description": "country where Dsf Refractories & Minerals Ltd is located",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u3",
+            "description": "whether Daher-Socata and Dsf Refractories & Minerals Ltd are located in the same country",
+            "necessary": true,
+            "depends_on": [
+              "u1",
+              "u2"
+            ]
+          }
+        ],
+        "fell_back": false,
+        "status": "needs_review",
+        "latency_s": 2.776422425871715
+      }
+    },
+    {
+      "sample_id": "2wikimultihopqa_6968dcf40bdc11eba7f7acde48001122",
+      "split": "dev",
+      "question": "When is Adele Khoury Graham's husband's birthday?",
+      "sft_snapshot_count": 9,
+      "question_type": "bridge",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "husband of Adele Khoury Graham",
+          "necessary": false,
+          "depends_on": [],
+          "expected_answer": "Bob Graham",
+          "support_sets": [
+            [
+              "d7s1"
+            ]
+          ],
+          "aliases": [
+            "Daniel Robert Graham"
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u2",
+          "description": "birthday of {u1}",
+          "necessary": true,
+          "depends_on": [
+            "u1"
+          ],
+          "expected_answer": "November 9, 1936",
+          "support_sets": [
+            [
+              "d2s0"
+            ]
+          ],
+          "aliases": [
+            "9 November 1936"
+          ],
+          "support_basis": "context"
+        }
+      ],
+      "fell_back": false,
+      "status": "reviewed",
+      "latency_s": 1.6083550958428532,
+      "annotation_review": {
+        "human_note": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+        "execution_note": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+        "issues": [],
+        "author": "assistant",
+        "human_approved": true,
+        "approval_basis": "用户于 2026-11-28 确认已审核通过；按最新 Note 落实"
+      },
+      "raw_decomposition": {
+        "sample_id": "2wikimultihopqa_6968dcf40bdc11eba7f7acde48001122",
+        "split": "dev",
+        "question": "When is Adele Khoury Graham's husband's birthday?",
+        "sft_snapshot_count": 9,
+        "question_type": "bridge",
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "husband of Adele Khoury Graham",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u2",
+            "description": "birthday of {u1}",
+            "necessary": true,
+            "depends_on": [
+              "u1"
+            ]
+          }
+        ],
+        "fell_back": false,
+        "status": "needs_review",
+        "latency_s": 1.6083550958428532
+      }
+    },
+    {
+      "sample_id": "2wikimultihopqa_6be60084088e11ebbd70ac1f6bf848b6",
+      "split": "dev",
+      "question": "Which film has the director born earlier, Two Can Play or The Faithful River (Film)?",
+      "sft_snapshot_count": 10,
+      "question_type": "bridge_comparison",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "director of Two Can Play",
+          "necessary": false,
+          "depends_on": [],
+          "expected_answer": "Nat Ross",
+          "support_sets": [
+            [
+              "d3s0"
+            ]
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u2",
+          "description": "birth date of {u1}",
+          "necessary": false,
+          "depends_on": [
+            "u1"
+          ],
+          "expected_answer": "June 13, 1902",
+          "support_sets": [
+            [
+              "d1s0"
+            ]
+          ],
+          "aliases": [
+            "13 June 1902"
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u3",
+          "description": "director of The Faithful River (Film)",
+          "necessary": false,
+          "depends_on": [],
+          "expected_answer": "Tadeusz Chmielewski",
+          "support_sets": [
+            [
+              "d10s0"
+            ]
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u4",
+          "description": "birth date of {u3}",
+          "necessary": false,
+          "depends_on": [
+            "u3"
+          ],
+          "expected_answer": "7 June 1927",
+          "support_sets": [
+            [
+              "d2s0"
+            ]
+          ],
+          "aliases": [
+            "June 7, 1927"
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u5",
+          "description": "which film's director was born earlier",
+          "necessary": true,
+          "depends_on": [
+            "u2",
+            "u4"
+          ],
+          "expected_answer": "Two Can Play",
+          "support_sets": [
+            []
+          ],
+          "support_basis": "derived_from_dependencies"
+        }
+      ],
+      "fell_back": false,
+      "status": "reviewed",
+      "latency_s": 3.715518777957186,
+      "annotation_review": {
+        "human_note": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+        "execution_note": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+        "issues": [],
+        "author": "assistant",
+        "human_approved": true,
+        "approval_basis": "用户于 2026-11-28 确认已审核通过；按最新 Note 落实"
+      },
+      "raw_decomposition": {
+        "sample_id": "2wikimultihopqa_6be60084088e11ebbd70ac1f6bf848b6",
+        "split": "dev",
+        "question": "Which film has the director born earlier, Two Can Play or The Faithful River (Film)?",
+        "sft_snapshot_count": 10,
+        "question_type": "bridge_comparison",
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "director of Two Can Play",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u2",
+            "description": "birth date of {u1}",
+            "necessary": false,
+            "depends_on": [
+              "u1"
+            ]
+          },
+          {
+            "unit_id": "u3",
+            "description": "director of The Faithful River (Film)",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u4",
+            "description": "birth date of {u3}",
+            "necessary": false,
+            "depends_on": [
+              "u3"
+            ]
+          },
+          {
+            "unit_id": "u5",
+            "description": "which film's director was born earlier",
+            "necessary": true,
+            "depends_on": [
+              "u2",
+              "u4"
+            ]
+          }
+        ],
+        "fell_back": false,
+        "status": "needs_review",
+        "latency_s": 3.715518777957186
+      }
+    },
+    {
+      "sample_id": "2wikimultihopqa_75be1186086711ebbd5eac1f6bf848b6",
+      "split": "dev",
+      "question": "Are director of film Vivasaayi Magan and director of film When The Evening Bells Ring (1951 Film) both from the same country?",
+      "sft_snapshot_count": 10,
+      "question_type": "bridge_comparison",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "director of Vivasaayi Magan",
+          "necessary": false,
+          "expected_answer": "Ramarajan",
+          "depends_on": [],
+          "support_sets": [
+            [
+              "d9s0"
+            ]
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u2",
+          "description": "nationality of {u1}",
+          "necessary": false,
+          "expected_answer": "Indian",
+          "depends_on": [
+            "u1"
+          ],
+          "support_sets": [
+            [
+              "d1s0"
+            ]
+          ],
+          "aliases": [
+            "India"
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u3",
+          "description": "director of When the Evening Bells Ring (1951 film)",
+          "necessary": false,
+          "expected_answer": "Alfred Braun",
+          "depends_on": [],
+          "support_sets": [
+            [
+              "d3s0"
+            ]
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u4",
+          "description": "nationality of {u3}",
+          "necessary": false,
+          "expected_answer": "German",
+          "depends_on": [
+            "u3"
+          ],
+          "support_sets": [
+            [
+              "d4s0"
+            ]
+          ],
+          "aliases": [
+            "Germany"
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u5",
+          "description": "whether the directors of Vivasaayi Magan and When the Evening Bells Ring (1951 film) are from the same country",
+          "necessary": true,
+          "expected_answer": "no",
+          "depends_on": [
+            "u2",
+            "u4"
+          ],
+          "support_sets": [
+            []
+          ],
+          "support_basis": "derived_from_dependencies"
+        }
+      ],
+      "fell_back": false,
+      "status": "reviewed",
+      "latency_s": 3.069906980963424,
+      "annotation_review": {
+        "human_note": "采用旧版多单元/查询目标，保留可独立表达的中间事实；按 context 核对答案与证据。",
+        "execution_note": "采用旧版多单元/查询目标，保留可独立表达的中间事实；按 context 核对答案与证据。",
+        "issues": [],
+        "author": "assistant",
+        "human_approved": true,
+        "approval_basis": "用户于 2026-11-28 确认已审核通过；按最新 Note 落实"
+      },
+      "raw_decomposition": {
+        "sample_id": "2wikimultihopqa_75be1186086711ebbd5eac1f6bf848b6",
+        "split": "dev",
+        "question": "Are director of film Vivasaayi Magan and director of film When The Evening Bells Ring (1951 Film) both from the same country?",
+        "sft_snapshot_count": 10,
+        "question_type": "comparison",
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "country of director of film Vivasaayi Magan",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u2",
+            "description": "country of director of film When The Evening Bells Ring (1951 Film)",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u3",
+            "description": "whether directors of Vivasaayi Magan and When The Evening Bells Ring (1951 Film) are from the same country",
+            "necessary": true,
+            "depends_on": [
+              "u1",
+              "u2"
+            ]
+          }
+        ],
+        "fell_back": false,
+        "status": "needs_review",
+        "latency_s": 3.069906980963424
+      }
+    },
+    {
+      "sample_id": "2wikimultihopqa_7728ea720bb011ebab90acde48001122",
+      "split": "dev",
+      "question": "Who is Mariota, Countess Of Ross's father-in-law?",
+      "sft_snapshot_count": 8,
+      "question_type": "bridge",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "husband of Mariota, Countess Of Ross",
+          "necessary": false,
+          "depends_on": [],
+          "expected_answer": "Domhnall of Islay, Lord of the Isles",
+          "support_sets": [
+            [
+              "d5s1"
+            ]
+          ],
+          "aliases": [
+            "Donald of Islay, Lord of the Isles",
+            "Donald, Lord of the Isles",
+            "Domhnall of Islay"
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u2",
+          "description": "father of {u1}, Mariota, Countess Of Ross's father-in-law",
+          "necessary": true,
+          "depends_on": [
+            "u1"
+          ],
+          "expected_answer": "John of Islay",
+          "support_sets": [
+            [
+              "d6s1"
+            ]
+          ],
+          "aliases": [
+            "John of Islay, Lord of the Isles"
+          ],
+          "support_basis": "context"
+        }
+      ],
+      "fell_back": false,
+      "status": "reviewed",
+      "latency_s": 1.879458287032321,
+      "annotation_review": {
+        "human_note": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+        "execution_note": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+        "issues": [],
+        "author": "assistant",
+        "human_approved": true,
+        "approval_basis": "用户于 2026-11-28 确认已审核通过；按最新 Note 落实"
+      },
+      "raw_decomposition": {
+        "sample_id": "2wikimultihopqa_7728ea720bb011ebab90acde48001122",
+        "split": "dev",
+        "question": "Who is Mariota, Countess Of Ross's father-in-law?",
+        "sft_snapshot_count": 8,
+        "question_type": "bridge",
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "husband of Mariota, Countess Of Ross",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u2",
+            "description": "father of {u1}, Mariota, Countess Of Ross's father-in-law",
+            "necessary": true,
+            "depends_on": [
+              "u1"
+            ]
+          }
+        ],
+        "fell_back": false,
+        "status": "needs_review",
+        "latency_s": 1.879458287032321
+      }
+    },
+    {
+      "sample_id": "2wikimultihopqa_7b9cef6a0bdb11eba7f7acde48001122",
+      "split": "dev",
+      "question": "What is the cause of death of director of film The Magic Of Lassie?",
+      "sft_snapshot_count": 9,
+      "question_type": "bridge",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "director of film The Magic Of Lassie",
+          "necessary": false,
+          "depends_on": [],
+          "expected_answer": "Don Chaffey",
+          "support_sets": [
+            [
+              "d5s0"
+            ]
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u2",
+          "description": "cause of death of {u1}",
+          "necessary": true,
+          "depends_on": [
+            "u1"
+          ],
+          "expected_answer": "heart failure",
+          "support_sets": [
+            [
+              "d1s2"
+            ]
+          ],
+          "support_basis": "context"
+        }
+      ],
+      "fell_back": false,
+      "status": "reviewed",
+      "latency_s": 1.6504837640095502,
+      "annotation_review": {
+        "human_note": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+        "execution_note": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+        "issues": [],
+        "author": "assistant",
+        "human_approved": true,
+        "approval_basis": "用户于 2026-11-28 确认已审核通过；按最新 Note 落实"
+      },
+      "raw_decomposition": {
+        "sample_id": "2wikimultihopqa_7b9cef6a0bdb11eba7f7acde48001122",
+        "split": "dev",
+        "question": "What is the cause of death of director of film The Magic Of Lassie?",
+        "sft_snapshot_count": 9,
+        "question_type": "bridge",
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "director of film The Magic Of Lassie",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u2",
+            "description": "cause of death of {u1}",
+            "necessary": true,
+            "depends_on": [
+              "u1"
+            ]
+          }
+        ],
+        "fell_back": false,
+        "status": "needs_review",
+        "latency_s": 1.6504837640095502
+      }
+    },
+    {
+      "sample_id": "2wikimultihopqa_874c55c20bda11eba7f7acde48001122",
+      "split": "dev",
+      "question": "What is the date of death of the director of film The Social Buccaneer (1916 Film)?",
+      "sft_snapshot_count": 8,
+      "question_type": "bridge",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "director of The Social Buccaneer (1916 Film)",
+          "necessary": false,
+          "depends_on": [],
+          "expected_answer": "Jack Conway",
+          "support_sets": [
+            [
+              "d1s0"
+            ]
+          ],
+          "aliases": [
+            "Jack Ryan Conway"
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u2",
+          "description": "date of death of {u1}",
+          "necessary": true,
+          "depends_on": [
+            "u1"
+          ],
+          "expected_answer": "October 11, 1952",
+          "support_sets": [
+            [
+              "d2s0"
+            ]
+          ],
+          "aliases": [
+            "11 October 1952"
+          ],
+          "support_basis": "context"
+        }
+      ],
+      "fell_back": false,
+      "status": "reviewed",
+      "latency_s": 1.7124860060866922,
+      "annotation_review": {
+        "human_note": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+        "execution_note": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+        "issues": [],
+        "author": "assistant",
+        "human_approved": true,
+        "approval_basis": "用户于 2026-11-28 确认已审核通过；按最新 Note 落实"
+      },
+      "raw_decomposition": {
+        "sample_id": "2wikimultihopqa_874c55c20bda11eba7f7acde48001122",
+        "split": "dev",
+        "question": "What is the date of death of the director of film The Social Buccaneer (1916 Film)?",
+        "sft_snapshot_count": 8,
+        "question_type": "bridge",
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "director of The Social Buccaneer (1916 Film)",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u2",
+            "description": "date of death of {u1}",
+            "necessary": true,
+            "depends_on": [
+              "u1"
+            ]
+          }
+        ],
+        "fell_back": false,
+        "status": "needs_review",
+        "latency_s": 1.7124860060866922
+      }
+    },
+    {
+      "sample_id": "2wikimultihopqa_8e463167086c11ebbd61ac1f6bf848b6",
+      "split": "dev",
+      "question": "Which film has the director who died later, The Purple Heart or How Mcdougall Topped The Score?",
+      "sft_snapshot_count": 10,
+      "question_type": "bridge_comparison",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "director of The Purple Heart",
+          "necessary": false,
+          "depends_on": [],
+          "expected_answer": "Lewis Milestone",
+          "support_sets": [
+            [
+              "d10s0"
+            ]
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u2",
+          "description": "death date of {u1}",
+          "necessary": false,
+          "depends_on": [
+            "u1"
+          ],
+          "expected_answer": "September 25, 1980",
+          "support_sets": [
+            [
+              "d7s0"
+            ]
+          ],
+          "aliases": [
+            "25 September 1980"
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u3",
+          "description": "director of How Mcdougall Topped The Score",
+          "necessary": false,
+          "depends_on": [],
+          "expected_answer": "Victor Upton-Brown",
+          "support_sets": [
+            [
+              "d8s0"
+            ]
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u4",
+          "description": "death date of {u3}",
+          "necessary": false,
+          "depends_on": [
+            "u3"
+          ],
+          "expected_answer": "23 May 1964",
+          "support_sets": [
+            [
+              "d9s0"
+            ]
+          ],
+          "aliases": [
+            "May 23, 1964"
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u5",
+          "description": "which film's director died later",
+          "necessary": true,
+          "depends_on": [
+            "u2",
+            "u4"
+          ],
+          "expected_answer": "The Purple Heart",
+          "support_sets": [
+            []
+          ],
+          "support_basis": "derived_from_dependencies"
+        }
+      ],
+      "fell_back": false,
+      "status": "reviewed",
+      "latency_s": 3.7578161859419197,
+      "annotation_review": {
+        "human_note": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+        "execution_note": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+        "issues": [],
+        "author": "assistant",
+        "human_approved": true,
+        "approval_basis": "用户于 2026-11-28 确认已审核通过；按最新 Note 落实"
+      },
+      "raw_decomposition": {
+        "sample_id": "2wikimultihopqa_8e463167086c11ebbd61ac1f6bf848b6",
+        "split": "dev",
+        "question": "Which film has the director who died later, The Purple Heart or How Mcdougall Topped The Score?",
+        "sft_snapshot_count": 10,
+        "question_type": "bridge_comparison",
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "director of The Purple Heart",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u2",
+            "description": "death date of {u1}",
+            "necessary": false,
+            "depends_on": [
+              "u1"
+            ]
+          },
+          {
+            "unit_id": "u3",
+            "description": "director of How Mcdougall Topped The Score",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u4",
+            "description": "death date of {u3}",
+            "necessary": false,
+            "depends_on": [
+              "u3"
+            ]
+          },
+          {
+            "unit_id": "u5",
+            "description": "which film's director died later",
+            "necessary": true,
+            "depends_on": [
+              "u2",
+              "u4"
+            ]
+          }
+        ],
+        "fell_back": false,
+        "status": "needs_review",
+        "latency_s": 3.7578161859419197
+      }
+    },
+    {
+      "sample_id": "2wikimultihopqa_8ec76c0808db11ebbd9cac1f6bf848b6",
+      "split": "dev",
+      "question": "Do both films: All The Winners and Mano Po 6: A Mother'S Love have the directors from the same country?",
+      "sft_snapshot_count": 10,
+      "question_type": "bridge_comparison",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "director of All the Winners",
+          "necessary": false,
+          "expected_answer": "Geoffrey Malins",
+          "depends_on": [],
+          "support_sets": [
+            [
+              "d7s0"
+            ]
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u2",
+          "description": "nationality of {u1}",
+          "necessary": false,
+          "expected_answer": "British",
+          "depends_on": [
+            "u1"
+          ],
+          "support_sets": [
+            [
+              "d6s0"
+            ]
+          ],
+          "aliases": [
+            "United Kingdom"
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u3",
+          "description": "director of Mano Po 6: A Mother's Love",
+          "necessary": false,
+          "expected_answer": "Joel Lamangan",
+          "depends_on": [],
+          "support_sets": [
+            [
+              "d10s4"
+            ]
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u4",
+          "description": "nationality of {u3}",
+          "necessary": false,
+          "expected_answer": "Filipino",
+          "depends_on": [
+            "u3"
+          ],
+          "support_sets": [
+            [
+              "d5s0"
+            ]
+          ],
+          "aliases": [
+            "Philippines"
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u5",
+          "description": "whether the directors of All the Winners and Mano Po 6: A Mother's Love are from the same country",
+          "necessary": true,
+          "expected_answer": "no",
+          "depends_on": [
+            "u2",
+            "u4"
+          ],
+          "support_sets": [
+            []
+          ],
+          "support_basis": "derived_from_dependencies"
+        }
+      ],
+      "fell_back": false,
+      "status": "reviewed",
+      "latency_s": 2.505723109934479,
+      "annotation_review": {
+        "human_note": "采用旧版多单元/查询目标，保留可独立表达的中间事实；按 context 核对答案与证据。",
+        "execution_note": "采用旧版多单元/查询目标，保留可独立表达的中间事实；按 context 核对答案与证据。",
+        "issues": [],
+        "author": "assistant",
+        "human_approved": true,
+        "approval_basis": "用户于 2026-11-28 确认已审核通过；按最新 Note 落实"
+      },
+      "raw_decomposition": {
+        "sample_id": "2wikimultihopqa_8ec76c0808db11ebbd9cac1f6bf848b6",
+        "split": "dev",
+        "question": "Do both films: All The Winners and Mano Po 6: A Mother'S Love have the directors from the same country?",
+        "sft_snapshot_count": 10,
+        "question_type": "comparison",
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "country of director of All The Winners",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u2",
+            "description": "country of director of Mano Po 6: A Mother'S Love",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u3",
+            "description": "whether both directors are from the same country",
+            "necessary": true,
+            "depends_on": [
+              "u1",
+              "u2"
+            ]
+          }
+        ],
+        "fell_back": false,
+        "status": "needs_review",
+        "latency_s": 2.505723109934479
+      }
+    },
+    {
+      "sample_id": "2wikimultihopqa_971f9d7a0bd911eba7f7acde48001122",
+      "split": "dev",
+      "question": "When was the director of film The Big Bang (1989 Film) born?",
+      "sft_snapshot_count": 9,
+      "question_type": "bridge",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "director of The Big Bang (1989 Film)",
+          "necessary": false,
+          "depends_on": [],
+          "expected_answer": "James Toback",
+          "support_sets": [
+            [
+              "d5s0"
+            ]
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u2",
+          "description": "birth date of {u1}",
+          "necessary": true,
+          "depends_on": [
+            "u1"
+          ],
+          "expected_answer": "November 23, 1944",
+          "support_sets": [
+            [
+              "d4s0"
+            ]
+          ],
+          "aliases": [
+            "23 November 1944"
+          ],
+          "support_basis": "context"
+        }
+      ],
+      "fell_back": false,
+      "status": "reviewed",
+      "latency_s": 1.6718141469173133,
+      "annotation_review": {
+        "human_note": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+        "execution_note": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+        "issues": [],
+        "author": "assistant",
+        "human_approved": true,
+        "approval_basis": "用户于 2026-11-28 确认已审核通过；按最新 Note 落实"
+      },
+      "raw_decomposition": {
+        "sample_id": "2wikimultihopqa_971f9d7a0bd911eba7f7acde48001122",
+        "split": "dev",
+        "question": "When was the director of film The Big Bang (1989 Film) born?",
+        "sft_snapshot_count": 9,
+        "question_type": "bridge",
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "director of The Big Bang (1989 Film)",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u2",
+            "description": "birth date of {u1}",
+            "necessary": true,
+            "depends_on": [
+              "u1"
+            ]
+          }
+        ],
+        "fell_back": false,
+        "status": "needs_review",
+        "latency_s": 1.6718141469173133
+      }
+    },
+    {
+      "sample_id": "2wikimultihopqa_9eb9f3480baf11ebab90acde48001122",
+      "split": "dev",
+      "question": "Who is the paternal grandfather of Princess Jeguk?",
+      "sft_snapshot_count": 8,
+      "question_type": "bridge",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "father of Princess Jeguk",
+          "necessary": false,
+          "depends_on": [],
+          "expected_answer": "Kublai Khan",
+          "support_sets": [
+            [
+              "d9s2"
+            ]
+          ],
+          "aliases": [
+            "Kublai"
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u2",
+          "description": "father of {u1}, Princess Jeguk's paternal grandfather",
+          "necessary": true,
+          "depends_on": [
+            "u1"
+          ],
+          "expected_answer": "Tolui",
+          "support_sets": [
+            [
+              "d4s3"
+            ]
+          ],
+          "support_basis": "context"
+        }
+      ],
+      "fell_back": false,
+      "status": "reviewed",
+      "latency_s": 1.6712184690404683,
+      "annotation_review": {
+        "human_note": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+        "execution_note": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+        "issues": [],
+        "author": "assistant",
+        "human_approved": true,
+        "approval_basis": "用户于 2026-11-28 确认已审核通过；按最新 Note 落实"
+      },
+      "raw_decomposition": {
+        "sample_id": "2wikimultihopqa_9eb9f3480baf11ebab90acde48001122",
+        "split": "dev",
+        "question": "Who is the paternal grandfather of Princess Jeguk?",
+        "sft_snapshot_count": 8,
+        "question_type": "bridge",
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "father of Princess Jeguk",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u2",
+            "description": "father of {u1}, Princess Jeguk's paternal grandfather",
+            "necessary": true,
+            "depends_on": [
+              "u1"
+            ]
+          }
+        ],
+        "fell_back": false,
+        "status": "needs_review",
+        "latency_s": 1.6712184690404683
+      }
+    },
+    {
+      "sample_id": "2wikimultihopqa_b200fa00097e11ebbdb0ac1f6bf848b6",
+      "split": "dev",
+      "question": "Which film was released earlier, It'S Kind Of A Funny Story (Film) or The Education Of Nicky?",
+      "sft_snapshot_count": 8,
+      "question_type": "comparison",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "release year of It'S Kind Of A Funny Story (Film)",
+          "necessary": false,
+          "depends_on": [],
+          "expected_answer": "2010",
+          "support_sets": [
+            [
+              "d5s0"
+            ],
+            [
+              "d5s2"
+            ],
+            [
+              "d8s1"
+            ]
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u2",
+          "description": "release year of The Education Of Nicky",
+          "necessary": false,
+          "depends_on": [],
+          "expected_answer": "1921",
+          "support_sets": [
+            [
+              "d4s0"
+            ]
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u3",
+          "description": "which film was released earlier",
+          "necessary": true,
+          "depends_on": [
+            "u1",
+            "u2"
+          ],
+          "expected_answer": "The Education of Nicky",
+          "support_sets": [
+            []
+          ],
+          "aliases": [
+            "The Education Of Nicky"
+          ],
+          "support_basis": "derived_from_dependencies"
+        }
+      ],
+      "fell_back": false,
+      "status": "reviewed",
+      "latency_s": 2.4233290411066264,
+      "annotation_review": {
+        "human_note": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+        "execution_note": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+        "issues": [],
+        "author": "assistant",
+        "human_approved": true,
+        "approval_basis": "用户于 2026-11-28 确认已审核通过；按最新 Note 落实"
+      },
+      "raw_decomposition": {
+        "sample_id": "2wikimultihopqa_b200fa00097e11ebbdb0ac1f6bf848b6",
+        "split": "dev",
+        "question": "Which film was released earlier, It'S Kind Of A Funny Story (Film) or The Education Of Nicky?",
+        "sft_snapshot_count": 8,
+        "question_type": "comparison",
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "release year of It'S Kind Of A Funny Story (Film)",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u2",
+            "description": "release year of The Education Of Nicky",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u3",
+            "description": "which film was released earlier",
+            "necessary": true,
+            "depends_on": [
+              "u1",
+              "u2"
+            ]
+          }
+        ],
+        "fell_back": false,
+        "status": "needs_review",
+        "latency_s": 2.4233290411066264
+      }
+    },
+    {
+      "sample_id": "2wikimultihopqa_ba5637db098c11ebbdb0ac1f6bf848b6",
+      "split": "dev",
+      "question": "Are Nahr-E Shahab and Bazm, Fars located in the same country?",
+      "sft_snapshot_count": 9,
+      "question_type": "comparison",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "country of Nahr-E Shahab",
+          "necessary": false,
+          "depends_on": [],
+          "expected_answer": "Iran",
+          "support_sets": [
+            [
+              "d8s0"
+            ]
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u2",
+          "description": "country of Bazm, Fars",
+          "necessary": false,
+          "depends_on": [],
+          "expected_answer": "Iran",
+          "support_sets": [
+            [
+              "d10s0"
+            ]
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u3",
+          "description": "whether Nahr-E Shahab and Bazm, Fars are located in the same country",
+          "necessary": true,
+          "depends_on": [
+            "u1",
+            "u2"
+          ],
+          "expected_answer": "yes",
+          "support_sets": [
+            []
+          ],
+          "support_basis": "derived_from_dependencies"
+        }
+      ],
+      "fell_back": false,
+      "status": "reviewed",
+      "latency_s": 2.567884550895542,
+      "annotation_review": {
+        "human_note": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+        "execution_note": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+        "issues": [],
+        "author": "assistant",
+        "human_approved": true,
+        "approval_basis": "用户于 2026-11-28 确认已审核通过；按最新 Note 落实"
+      },
+      "raw_decomposition": {
+        "sample_id": "2wikimultihopqa_ba5637db098c11ebbdb0ac1f6bf848b6",
+        "split": "dev",
+        "question": "Are Nahr-E Shahab and Bazm, Fars located in the same country?",
+        "sft_snapshot_count": 9,
+        "question_type": "comparison",
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "country of Nahr-E Shahab",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u2",
+            "description": "country of Bazm, Fars",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u3",
+            "description": "whether Nahr-E Shahab and Bazm, Fars are located in the same country",
+            "necessary": true,
+            "depends_on": [
+              "u1",
+              "u2"
+            ]
+          }
+        ],
+        "fell_back": false,
+        "status": "needs_review",
+        "latency_s": 2.567884550895542
+      }
+    },
+    {
+      "sample_id": "2wikimultihopqa_bc7761cc088511ebbd6dac1f6bf848b6",
+      "split": "dev",
+      "question": "Do both films, Joe Somebody and Figures of the Night, have the directors who are from the same country?",
+      "sft_snapshot_count": 10,
+      "question_type": "bridge_comparison",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "director of Joe Somebody",
+          "necessary": false,
+          "expected_answer": "John Pasquin",
+          "depends_on": [],
+          "support_sets": [
+            [
+              "d8s0"
+            ]
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u2",
+          "description": "nationality of {u1}",
+          "necessary": false,
+          "expected_answer": "American",
+          "depends_on": [
+            "u1"
+          ],
+          "support_sets": [
+            [
+              "d3s0"
+            ]
+          ],
+          "aliases": [
+            "United States"
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u3",
+          "description": "director of Figures of the Night",
+          "necessary": false,
+          "expected_answer": "Richard Oswald",
+          "depends_on": [],
+          "support_sets": [
+            [
+              "d1s0"
+            ]
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u4",
+          "description": "nationality of {u3}",
+          "necessary": false,
+          "expected_answer": "Austrian",
+          "depends_on": [
+            "u3"
+          ],
+          "support_sets": [
+            [
+              "d10s0"
+            ]
+          ],
+          "aliases": [
+            "Austria"
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u5",
+          "description": "whether the directors of Joe Somebody and Figures of the Night are from the same country",
+          "necessary": true,
+          "expected_answer": "no",
+          "depends_on": [
+            "u2",
+            "u4"
+          ],
+          "support_sets": [
+            []
+          ],
+          "support_basis": "derived_from_dependencies"
+        }
+      ],
+      "fell_back": false,
+      "status": "reviewed",
+      "latency_s": 2.5264019190799445,
+      "annotation_review": {
+        "human_note": "采用旧版多单元/查询目标，保留可独立表达的中间事实；按 context 核对答案与证据。",
+        "execution_note": "采用旧版多单元/查询目标，保留可独立表达的中间事实；按 context 核对答案与证据。",
+        "issues": [],
+        "author": "assistant",
+        "human_approved": true,
+        "approval_basis": "用户于 2026-11-28 确认已审核通过；按最新 Note 落实"
+      },
+      "raw_decomposition": {
+        "sample_id": "2wikimultihopqa_bc7761cc088511ebbd6dac1f6bf848b6",
+        "split": "dev",
+        "question": "Do both films, Joe Somebody and Figures of the Night, have the directors who are from the same country?",
+        "sft_snapshot_count": 10,
+        "question_type": "comparison",
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "country of director of Joe Somebody",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u2",
+            "description": "country of director of Figures of the Night",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u3",
+            "description": "whether the directors of Joe Somebody and Figures of the Night are from the same country",
+            "necessary": true,
+            "depends_on": [
+              "u1",
+              "u2"
+            ]
+          }
+        ],
+        "fell_back": false,
+        "status": "needs_review",
+        "latency_s": 2.5264019190799445
+      }
+    },
+    {
+      "sample_id": "2wikimultihopqa_bf1ebaa80bda11eba7f7acde48001122",
+      "split": "dev",
+      "question": "What is the date of death of Lord Frederick Spencer Hamilton's mother?",
+      "sft_snapshot_count": 8,
+      "question_type": "bridge",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "mother of Lord Frederick Spencer Hamilton",
+          "necessary": false,
+          "depends_on": [],
+          "expected_answer": "Lady Louisa Jane Russell",
+          "support_sets": [
+            [
+              "d7s0"
+            ]
+          ],
+          "aliases": [
+            "Louisa Jane Russell",
+            "Louisa Hamilton, Duchess of Abercorn",
+            "Louisa Jane Hamilton, Duchess of Abercorn"
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u2",
+          "description": "date of death of {u1}",
+          "necessary": true,
+          "depends_on": [
+            "u1"
+          ],
+          "expected_answer": "31 March 1905",
+          "support_sets": [
+            [
+              "d5s0"
+            ]
+          ],
+          "support_basis": "context"
+        }
+      ],
+      "fell_back": false,
+      "status": "reviewed",
+      "latency_s": 1.5875205339398235,
+      "annotation_review": {
+        "human_note": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+        "execution_note": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+        "issues": [],
+        "author": "assistant",
+        "human_approved": true,
+        "approval_basis": "用户于 2026-11-28 确认已审核通过；按最新 Note 落实"
+      },
+      "raw_decomposition": {
+        "sample_id": "2wikimultihopqa_bf1ebaa80bda11eba7f7acde48001122",
+        "split": "dev",
+        "question": "What is the date of death of Lord Frederick Spencer Hamilton's mother?",
+        "sft_snapshot_count": 8,
+        "question_type": "bridge",
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "mother of Lord Frederick Spencer Hamilton",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u2",
+            "description": "date of death of {u1}",
+            "necessary": true,
+            "depends_on": [
+              "u1"
+            ]
+          }
+        ],
+        "fell_back": false,
+        "status": "needs_review",
+        "latency_s": 1.5875205339398235
+      }
+    },
+    {
+      "sample_id": "2wikimultihopqa_d690e9a809bc11ebbdb0ac1f6bf848b6",
+      "split": "dev",
+      "question": "Are both high schools, Warwick Valley High School and Yoncalla High School, located in the same country?",
+      "sft_snapshot_count": 9,
+      "question_type": "comparison",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "country where Warwick Valley High School is located",
+          "necessary": false,
+          "depends_on": [],
+          "expected_answer": "United States",
+          "support_sets": [
+            [
+              "d3s0"
+            ]
+          ],
+          "aliases": [
+            "USA",
+            "U.S."
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u2",
+          "description": "country where Yoncalla High School is located",
+          "necessary": false,
+          "depends_on": [],
+          "expected_answer": "United States",
+          "support_sets": [
+            [
+              "d5s0"
+            ]
+          ],
+          "aliases": [
+            "USA",
+            "U.S."
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u3",
+          "description": "whether both high schools are located in the same country",
+          "necessary": true,
+          "depends_on": [
+            "u1",
+            "u2"
+          ],
+          "expected_answer": "yes",
+          "support_sets": [
+            []
+          ],
+          "support_basis": "derived_from_dependencies"
+        }
+      ],
+      "fell_back": false,
+      "status": "reviewed",
+      "latency_s": 2.4847110230475664,
+      "annotation_review": {
+        "human_note": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+        "execution_note": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+        "issues": [],
+        "author": "assistant",
+        "human_approved": true,
+        "approval_basis": "用户于 2026-11-28 确认已审核通过；按最新 Note 落实"
+      },
+      "raw_decomposition": {
+        "sample_id": "2wikimultihopqa_d690e9a809bc11ebbdb0ac1f6bf848b6",
+        "split": "dev",
+        "question": "Are both high schools, Warwick Valley High School and Yoncalla High School, located in the same country?",
+        "sft_snapshot_count": 9,
+        "question_type": "comparison",
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "country where Warwick Valley High School is located",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u2",
+            "description": "country where Yoncalla High School is located",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u3",
+            "description": "whether both high schools are located in the same country",
+            "necessary": true,
+            "depends_on": [
+              "u1",
+              "u2"
+            ]
+          }
+        ],
+        "fell_back": false,
+        "status": "needs_review",
+        "latency_s": 2.4847110230475664
+      }
+    },
+    {
+      "sample_id": "2wikimultihopqa_d996cdce0baf11ebab90acde48001122",
+      "split": "dev",
+      "question": "Who is the child of Uday Tikekar?",
+      "sft_snapshot_count": 8,
+      "question_type": "single",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "child of Uday Tikekar",
+          "necessary": true,
+          "depends_on": [],
+          "expected_answer": "Swanandi Tikekar",
+          "support_sets": [
+            [
+              "d4s0",
+              "d4s1"
+            ]
+          ],
+          "support_basis": "context"
+        }
+      ],
+      "fell_back": false,
+      "status": "reviewed",
+      "latency_s": 0.920423282077536,
+      "annotation_review": {
+        "human_note": "保留 single，context 直接说明 Swanandi 是 Uday 的女儿，不需要配偶链，也不从妻子的孩子推断父亲。",
+        "execution_note": "保留 single，context 直接说明 Swanandi 是 Uday 的女儿，不需要配偶链，也不从妻子的孩子推断父亲。",
+        "issues": [],
+        "author": "assistant",
+        "human_approved": true,
+        "approval_basis": "用户于 2026-11-28 确认已审核通过；按最新 Note 落实"
+      },
+      "raw_decomposition": {
+        "sample_id": "2wikimultihopqa_d996cdce0baf11ebab90acde48001122",
+        "split": "dev",
+        "question": "Who is the child of Uday Tikekar?",
+        "sft_snapshot_count": 8,
+        "question_type": "single",
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "child of Uday Tikekar",
+            "necessary": true,
+            "depends_on": []
+          }
+        ],
+        "fell_back": false,
+        "status": "needs_review",
+        "latency_s": 0.920423282077536
+      }
+    },
+    {
+      "sample_id": "2wikimultihopqa_e5f6937a0bae11ebab90acde48001122",
+      "split": "dev",
+      "question": "Who is the maternal grandfather of Tiberius Gemellus?",
+      "sft_snapshot_count": 8,
+      "question_type": "bridge",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "mother of Tiberius Gemellus",
+          "necessary": false,
+          "depends_on": [],
+          "expected_answer": "Livilla",
+          "support_sets": [
+            [
+              "d10s3"
+            ]
+          ],
+          "aliases": [
+            "Claudia Livia Julia"
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u2",
+          "description": "father of {u1}, Tiberius Gemellus's maternal grandfather",
+          "necessary": true,
+          "depends_on": [
+            "u1"
+          ],
+          "expected_answer": "Nero Claudius Drusus",
+          "support_sets": [
+            [
+              "d4s0"
+            ]
+          ],
+          "support_basis": "context"
+        }
+      ],
+      "fell_back": false,
+      "status": "reviewed",
+      "latency_s": 1.7970336370635778,
+      "annotation_review": {
+        "human_note": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+        "execution_note": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+        "issues": [],
+        "author": "assistant",
+        "human_approved": true,
+        "approval_basis": "用户于 2026-11-28 确认已审核通过；按最新 Note 落实"
+      },
+      "raw_decomposition": {
+        "sample_id": "2wikimultihopqa_e5f6937a0bae11ebab90acde48001122",
+        "split": "dev",
+        "question": "Who is the maternal grandfather of Tiberius Gemellus?",
+        "sft_snapshot_count": 8,
+        "question_type": "bridge",
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "mother of Tiberius Gemellus",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u2",
+            "description": "father of {u1}, Tiberius Gemellus's maternal grandfather",
+            "necessary": true,
+            "depends_on": [
+              "u1"
+            ]
+          }
+        ],
+        "fell_back": false,
+        "status": "needs_review",
+        "latency_s": 1.7970336370635778
+      }
+    },
+    {
+      "sample_id": "2wikimultihopqa_e95cb5fc085d11ebbd5cac1f6bf848b6",
+      "split": "dev",
+      "question": "Which film whose director was born first, Zanjeer (1973 Film) or The Legend Of Lylah Clare?",
+      "sft_snapshot_count": 10,
+      "question_type": "bridge_comparison",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "director of Zanjeer (1973 Film)",
+          "necessary": false,
+          "depends_on": [],
+          "expected_answer": "Prakash Mehra",
+          "support_sets": [
+            [
+              "d8s0"
+            ]
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u2",
+          "description": "birth date of {u1}",
+          "necessary": false,
+          "depends_on": [
+            "u1"
+          ],
+          "expected_answer": "13 July 1939",
+          "support_sets": [
+            [
+              "d1s0"
+            ]
+          ],
+          "aliases": [
+            "July 13, 1939"
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u3",
+          "description": "director of The Legend Of Lylah Clare",
+          "necessary": false,
+          "depends_on": [],
+          "expected_answer": "Robert Aldrich",
+          "support_sets": [
+            [
+              "d6s0"
+            ]
+          ],
+          "aliases": [
+            "Robert Burgess Aldrich"
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u4",
+          "description": "birth date of {u3}",
+          "necessary": false,
+          "depends_on": [
+            "u3"
+          ],
+          "expected_answer": "August 9, 1918",
+          "support_sets": [
+            [
+              "d5s0"
+            ]
+          ],
+          "aliases": [
+            "9 August 1918"
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u5",
+          "description": "which film's director was born first",
+          "necessary": true,
+          "depends_on": [
+            "u2",
+            "u4"
+          ],
+          "expected_answer": "The Legend of Lylah Clare",
+          "support_sets": [
+            []
+          ],
+          "aliases": [
+            "The Legend Of Lylah Clare"
+          ],
+          "support_basis": "derived_from_dependencies"
+        }
+      ],
+      "fell_back": false,
+      "status": "reviewed",
+      "latency_s": 3.8623365990351886,
+      "annotation_review": {
+        "human_note": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+        "execution_note": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+        "issues": [],
+        "author": "assistant",
+        "human_approved": true,
+        "approval_basis": "用户于 2026-11-28 确认已审核通过；按最新 Note 落实"
+      },
+      "raw_decomposition": {
+        "sample_id": "2wikimultihopqa_e95cb5fc085d11ebbd5cac1f6bf848b6",
+        "split": "dev",
+        "question": "Which film whose director was born first, Zanjeer (1973 Film) or The Legend Of Lylah Clare?",
+        "sft_snapshot_count": 10,
+        "question_type": "bridge_comparison",
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "director of Zanjeer (1973 Film)",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u2",
+            "description": "birth date of {u1}",
+            "necessary": false,
+            "depends_on": [
+              "u1"
+            ]
+          },
+          {
+            "unit_id": "u3",
+            "description": "director of The Legend Of Lylah Clare",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u4",
+            "description": "birth date of {u3}",
+            "necessary": false,
+            "depends_on": [
+              "u3"
+            ]
+          },
+          {
+            "unit_id": "u5",
+            "description": "which film's director was born first",
+            "necessary": true,
+            "depends_on": [
+              "u2",
+              "u4"
+            ]
+          }
+        ],
+        "fell_back": false,
+        "status": "needs_review",
+        "latency_s": 3.8623365990351886
+      }
+    },
+    {
+      "sample_id": "2wikimultihopqa_ea8045620bdb11eba7f7acde48001122",
+      "split": "dev",
+      "question": "What nationality is the director of film Lorai: Play To Live?",
+      "sft_snapshot_count": 8,
+      "question_type": "bridge",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "director of film Lorai: Play To Live",
+          "necessary": false,
+          "depends_on": [],
+          "expected_answer": "Parambrata Chatterjee",
+          "support_sets": [
+            [
+              "d2s0"
+            ]
+          ],
+          "aliases": [
+            "Parambrata Chattopadhyay"
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u2",
+          "description": "nationality of {u1}",
+          "necessary": true,
+          "depends_on": [
+            "u1"
+          ],
+          "expected_answer": "Indian",
+          "support_sets": [
+            [
+              "d5s0"
+            ]
+          ],
+          "aliases": [
+            "India"
+          ],
+          "support_basis": "context"
+        }
+      ],
+      "fell_back": false,
+      "status": "reviewed",
+      "latency_s": 1.6291083279065788,
+      "annotation_review": {
+        "human_note": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+        "execution_note": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+        "issues": [],
+        "author": "assistant",
+        "human_approved": true,
+        "approval_basis": "用户于 2026-11-28 确认已审核通过；按最新 Note 落实"
+      },
+      "raw_decomposition": {
+        "sample_id": "2wikimultihopqa_ea8045620bdb11eba7f7acde48001122",
+        "split": "dev",
+        "question": "What nationality is the director of film Lorai: Play To Live?",
+        "sft_snapshot_count": 8,
+        "question_type": "bridge",
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "director of film Lorai: Play To Live",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u2",
+            "description": "nationality of {u1}",
+            "necessary": true,
+            "depends_on": [
+              "u1"
+            ]
+          }
+        ],
+        "fell_back": false,
+        "status": "needs_review",
+        "latency_s": 1.6291083279065788
+      }
+    },
+    {
+      "sample_id": "2wikimultihopqa_f48d9c60093011ebbdaeac1f6bf848b6",
+      "split": "dev",
+      "question": "Which film was released first, Upasane or Emilio (Film)?",
+      "sft_snapshot_count": 7,
+      "question_type": "comparison",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "release year of Upasane",
+          "necessary": false,
+          "depends_on": [],
+          "expected_answer": "1974",
+          "support_sets": [
+            [
+              "d2s0"
+            ]
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u2",
+          "description": "release year of Emilio (Film)",
+          "necessary": false,
+          "depends_on": [],
+          "expected_answer": "2008",
+          "support_sets": [
+            [
+              "d10s0"
+            ]
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u3",
+          "description": "which film was released first",
+          "necessary": true,
+          "depends_on": [
+            "u1",
+            "u2"
+          ],
+          "expected_answer": "Upasane",
+          "support_sets": [
+            []
+          ],
+          "support_basis": "derived_from_dependencies"
+        }
+      ],
+      "fell_back": false,
+      "status": "reviewed",
+      "latency_s": 2.2767270060721785,
+      "annotation_review": {
+        "human_note": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。 口径说明：新查询为年份，暂以 context 的影片年份 2008 标注；旧 2016 是美国院线上映年。结论仍是 Upasane，是正确的",
+        "execution_note": "按 Note 采用 context 的影片年份口径：1974 与 2008，结论 Upasane；2016 为美国院线上映年份，不作为 2008 的别名。",
+        "issues": [],
+        "author": "assistant",
+        "human_approved": true,
+        "approval_basis": "用户于 2026-11-28 确认已审核通过；按最新 Note 落实",
+        "resolution_note": "按 Note 采用 context 的影片年份口径：1974 与 2008，结论 Upasane；2016 为美国院线上映年份，不作为 2008 的别名。"
+      },
+      "raw_decomposition": {
+        "sample_id": "2wikimultihopqa_f48d9c60093011ebbdaeac1f6bf848b6",
+        "split": "dev",
+        "question": "Which film was released first, Upasane or Emilio (Film)?",
+        "sft_snapshot_count": 7,
+        "question_type": "comparison",
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "release year of Upasane",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u2",
+            "description": "release year of Emilio (Film)",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u3",
+            "description": "which film was released first",
+            "necessary": true,
+            "depends_on": [
+              "u1",
+              "u2"
+            ]
+          }
+        ],
+        "fell_back": false,
+        "status": "needs_review",
+        "latency_s": 2.2767270060721785
+      }
+    },
+    {
+      "sample_id": "2wikimultihopqa_f5972e880baf11ebab90acde48001122",
+      "split": "dev",
+      "question": "Who is Erzsébet Thurzó's paternal grandfather?",
+      "sft_snapshot_count": 8,
+      "question_type": "bridge",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "father of Erzsébet Thurzó",
+          "necessary": false,
+          "depends_on": [],
+          "expected_answer": "Imre Thurzó",
+          "support_sets": [
+            [
+              "d10s0"
+            ]
+          ],
+          "aliases": [
+            "Count Imre Thurzó",
+            "Imre Thurzó de Bethlenfalva"
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u2",
+          "description": "father of {u1}, Erzsébet Thurzó's paternal grandfather",
+          "necessary": true,
+          "depends_on": [
+            "u1"
+          ],
+          "expected_answer": "György Thurzó",
+          "support_sets": [
+            [
+              "d8s0"
+            ]
+          ],
+          "aliases": [
+            "Palatine György Thurzó",
+            "Gyorgy Thurzo"
+          ],
+          "support_basis": "context"
+        }
+      ],
+      "fell_back": false,
+      "status": "reviewed",
+      "latency_s": 1.8386406160425395,
+      "annotation_review": {
+        "human_note": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+        "execution_note": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+        "issues": [],
+        "author": "assistant",
+        "human_approved": true,
+        "approval_basis": "用户于 2026-11-28 确认已审核通过；按最新 Note 落实"
+      },
+      "raw_decomposition": {
+        "sample_id": "2wikimultihopqa_f5972e880baf11ebab90acde48001122",
+        "split": "dev",
+        "question": "Who is Erzsébet Thurzó's paternal grandfather?",
+        "sft_snapshot_count": 8,
+        "question_type": "bridge",
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "father of Erzsébet Thurzó",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u2",
+            "description": "father of {u1}, Erzsébet Thurzó's paternal grandfather",
+            "necessary": true,
+            "depends_on": [
+              "u1"
+            ]
+          }
+        ],
+        "fell_back": false,
+        "status": "needs_review",
+        "latency_s": 1.8386406160425395
+      }
+    }
+  ],
+  "source_index": [
+    {
+      "batch_number": 1,
+      "global_number": 241,
+      "sample_id": "hotpotqa_5ae71f455542996d980e7ca9",
+      "split": "train",
+      "source_number": 241,
+      "review_status": "modify_generated"
+    },
+    {
+      "batch_number": 2,
+      "global_number": 242,
+      "sample_id": "hotpotqa_5ae74ae95542997b22f6a688",
+      "split": "train",
+      "source_number": 242,
+      "review_status": "modify_generated"
+    },
+    {
+      "batch_number": 3,
+      "global_number": 243,
+      "sample_id": "hotpotqa_5ae752255542995703ce8be5",
+      "split": "train",
+      "source_number": 243,
+      "review_status": "keep_generated_relabel"
+    },
+    {
+      "batch_number": 4,
+      "global_number": 244,
+      "sample_id": "2wikimultihopqa_008905100baf11ebab90acde48001122",
+      "split": "dev",
+      "source_number": 1,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 5,
+      "global_number": 245,
+      "sample_id": "2wikimultihopqa_363145e20baf11ebab90acde48001122",
+      "split": "dev",
+      "source_number": 2,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 6,
+      "global_number": 246,
+      "sample_id": "2wikimultihopqa_3a2fe93e0bda11eba7f7acde48001122",
+      "split": "dev",
+      "source_number": 3,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 7,
+      "global_number": 247,
+      "sample_id": "2wikimultihopqa_4dc594f408cd11ebbd93ac1f6bf848b6",
+      "split": "dev",
+      "source_number": 4,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 8,
+      "global_number": 248,
+      "sample_id": "2wikimultihopqa_5ea97157099411ebbdb0ac1f6bf848b6",
+      "split": "dev",
+      "source_number": 5,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 9,
+      "global_number": 249,
+      "sample_id": "2wikimultihopqa_640bede1095311ebbdaeac1f6bf848b6",
+      "split": "dev",
+      "source_number": 6,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 10,
+      "global_number": 250,
+      "sample_id": "2wikimultihopqa_6968dcf40bdc11eba7f7acde48001122",
+      "split": "dev",
+      "source_number": 7,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 11,
+      "global_number": 251,
+      "sample_id": "2wikimultihopqa_6be60084088e11ebbd70ac1f6bf848b6",
+      "split": "dev",
+      "source_number": 8,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 12,
+      "global_number": 252,
+      "sample_id": "2wikimultihopqa_75be1186086711ebbd5eac1f6bf848b6",
+      "split": "dev",
+      "source_number": 9,
+      "review_status": "keep_generated_relabel"
+    },
+    {
+      "batch_number": 13,
+      "global_number": 253,
+      "sample_id": "2wikimultihopqa_7728ea720bb011ebab90acde48001122",
+      "split": "dev",
+      "source_number": 10,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 14,
+      "global_number": 254,
+      "sample_id": "2wikimultihopqa_7b9cef6a0bdb11eba7f7acde48001122",
+      "split": "dev",
+      "source_number": 11,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 15,
+      "global_number": 255,
+      "sample_id": "2wikimultihopqa_874c55c20bda11eba7f7acde48001122",
+      "split": "dev",
+      "source_number": 12,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 16,
+      "global_number": 256,
+      "sample_id": "2wikimultihopqa_8e463167086c11ebbd61ac1f6bf848b6",
+      "split": "dev",
+      "source_number": 13,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 17,
+      "global_number": 257,
+      "sample_id": "2wikimultihopqa_8ec76c0808db11ebbd9cac1f6bf848b6",
+      "split": "dev",
+      "source_number": 14,
+      "review_status": "keep_generated_relabel"
+    },
+    {
+      "batch_number": 18,
+      "global_number": 258,
+      "sample_id": "2wikimultihopqa_971f9d7a0bd911eba7f7acde48001122",
+      "split": "dev",
+      "source_number": 15,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 19,
+      "global_number": 259,
+      "sample_id": "2wikimultihopqa_9eb9f3480baf11ebab90acde48001122",
+      "split": "dev",
+      "source_number": 16,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 20,
+      "global_number": 260,
+      "sample_id": "2wikimultihopqa_b200fa00097e11ebbdb0ac1f6bf848b6",
+      "split": "dev",
+      "source_number": 17,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 21,
+      "global_number": 261,
+      "sample_id": "2wikimultihopqa_ba5637db098c11ebbdb0ac1f6bf848b6",
+      "split": "dev",
+      "source_number": 18,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 22,
+      "global_number": 262,
+      "sample_id": "2wikimultihopqa_bc7761cc088511ebbd6dac1f6bf848b6",
+      "split": "dev",
+      "source_number": 19,
+      "review_status": "keep_generated_relabel"
+    },
+    {
+      "batch_number": 23,
+      "global_number": 263,
+      "sample_id": "2wikimultihopqa_bf1ebaa80bda11eba7f7acde48001122",
+      "split": "dev",
+      "source_number": 20,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 24,
+      "global_number": 264,
+      "sample_id": "2wikimultihopqa_d690e9a809bc11ebbdb0ac1f6bf848b6",
+      "split": "dev",
+      "source_number": 21,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 25,
+      "global_number": 265,
+      "sample_id": "2wikimultihopqa_d996cdce0baf11ebab90acde48001122",
+      "split": "dev",
+      "source_number": 22,
+      "review_status": "keep_generated_relabel"
+    },
+    {
+      "batch_number": 26,
+      "global_number": 266,
+      "sample_id": "2wikimultihopqa_e5f6937a0bae11ebab90acde48001122",
+      "split": "dev",
+      "source_number": 23,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 27,
+      "global_number": 267,
+      "sample_id": "2wikimultihopqa_e95cb5fc085d11ebbd5cac1f6bf848b6",
+      "split": "dev",
+      "source_number": 24,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 28,
+      "global_number": 268,
+      "sample_id": "2wikimultihopqa_ea8045620bdb11eba7f7acde48001122",
+      "split": "dev",
+      "source_number": 25,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 29,
+      "global_number": 269,
+      "sample_id": "2wikimultihopqa_f48d9c60093011ebbdaeac1f6bf848b6",
+      "split": "dev",
+      "source_number": 26,
+      "review_status": "review"
+    },
+    {
+      "batch_number": 30,
+      "global_number": 270,
+      "sample_id": "2wikimultihopqa_f5972e880baf11ebab90acde48001122",
+      "split": "dev",
+      "source_number": 27,
+      "review_status": "no_change"
+    }
+  ]
+}

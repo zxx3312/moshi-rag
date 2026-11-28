@@ -1,0 +1,1525 @@
+{
+  "source_sha256": {
+    "/u/tianyu30/project/moshi-rag-a-tokenizer/a_work/sft_decomposed_v1/train.json": "753cf5ebf877213493eeaddcd44c00e75736eecf0f1385006afed390f311c4f6",
+    "/u/tianyu30/project/moshi-rag-a-tokenizer/a_work/sft_decomposed_v1/dev.json": "1d6a5d6adea665163a083c6d6c01ad4d65a836ab079a124b97dfc84c56a10a4e",
+    "/u/tianyu30/project/moshi-rag-a-tokenizer/a_work/sft_decomposed_v1/train.md": "5d7904518ffde412eec557efe1beb13cfe0ce2d739a34ebefcf5e621df6d02e9",
+    "/u/tianyu30/project/moshi-rag-a-tokenizer/a_work/sft_decomposed_v1/dev.md": "5caeb6fba4a866331e94dc739933ca41c2a6ea7f18270ed260f5c046f7337146",
+    "/u/tianyu30/project/moshi-rag-b/b_work/step4/gold_sft.jsonl": "d59ee38833a591899336c7e2a0badb13a8eb2677689f021eadcbc141b20e03c3"
+  },
+  "decisions": [
+    {
+      "batch": 6,
+      "number": 1,
+      "sample_id": "hotpotqa_5a7f66cb55429969796c1a32",
+      "human_note": "题型应该是comparison，保留三单元，跟拆词器结构一致，证据跟旧的一样",
+      "generated_note": null,
+      "execution": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。 题型修正为 comparison。",
+      "status": "annotated_pending_review",
+      "issues": []
+    },
+    {
+      "batch": 6,
+      "number": 2,
+      "sample_id": "hotpotqa_5a7fc61155429969796c1b57",
+      "human_note": "跟新版本对齐",
+      "generated_note": null,
+      "execution": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+      "status": "needs_resolution",
+      "issues": [
+        "按用户要求保留新版两单元，但 context 只证明“已宣布的演唱会由 Paul Robeson 演出”，不证明由他发布公告；已做最小描述修正。"
+      ]
+    },
+    {
+      "batch": 6,
+      "number": 3,
+      "sample_id": "hotpotqa_5a8009885542992e7d278deb",
+      "human_note": "",
+      "generated_note": null,
+      "execution": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+      "status": "annotated_pending_review",
+      "issues": []
+    },
+    {
+      "batch": 6,
+      "number": 4,
+      "sample_id": "hotpotqa_5a809152554299485f598658",
+      "human_note": "如果新拆分的两个necessary单元足以得到答案，就取消u3，之后对于这种类型的题目，也这样处理",
+      "generated_note": null,
+      "execution": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+      "status": "annotated_pending_review",
+      "issues": []
+    },
+    {
+      "batch": 6,
+      "number": 5,
+      "sample_id": "hotpotqa_5a825f5955429954d2e2eb1c",
+      "human_note": "",
+      "generated_note": null,
+      "execution": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+      "status": "annotated_pending_review",
+      "issues": []
+    },
+    {
+      "batch": 6,
+      "number": 6,
+      "sample_id": "hotpotqa_5a82f8e955429966c78a6abf",
+      "human_note": "",
+      "generated_note": null,
+      "execution": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+      "status": "annotated_pending_review",
+      "issues": []
+    },
+    {
+      "batch": 6,
+      "number": 7,
+      "sample_id": "hotpotqa_5a83a5df5542992ef85e233f",
+      "human_note": "对于问题中显性包含已知信息的题目，不需要再去context里找证据，按照新的拆分方法拆分，是否合理",
+      "generated_note": null,
+      "execution": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+      "status": "annotated_pending_review",
+      "issues": []
+    },
+    {
+      "batch": 6,
+      "number": 8,
+      "sample_id": "hotpotqa_5a83c3a95542996488c2e4c1",
+      "human_note": "",
+      "generated_note": null,
+      "execution": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+      "status": "annotated_pending_review",
+      "issues": []
+    },
+    {
+      "batch": 6,
+      "number": 9,
+      "sample_id": "hotpotqa_5a8492b65542997b5ce3fec5",
+      "human_note": "保留single，同时验证一下对应原来旧gold中的u1u2的证据是否都需要，保留需要的证据集合。",
+      "generated_note": null,
+      "execution": "保留用户指定 single；共同属性必须联合两方证据，不允许由一方推另一方。",
+      "status": "annotated_pending_review",
+      "issues": []
+    },
+    {
+      "batch": 6,
+      "number": 10,
+      "sample_id": "hotpotqa_5a84b72b5542991dd0999dab",
+      "human_note": "我觉得这种题目并不属于题干中包含已知信息，应该按照旧gold的结构拆分",
+      "generated_note": null,
+      "execution": "采用旧版多单元/查询目标，保留可独立表达的中间事实；按 context 核对答案与证据。",
+      "status": "annotated_pending_review",
+      "issues": []
+    },
+    {
+      "batch": 6,
+      "number": 11,
+      "sample_id": "hotpotqa_5a84f8b65542997b5ce3ff94",
+      "human_note": "",
+      "generated_note": null,
+      "execution": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+      "status": "annotated_pending_review",
+      "issues": []
+    },
+    {
+      "batch": 6,
+      "number": 12,
+      "sample_id": "hotpotqa_5a861e86554299211dda2a72",
+      "human_note": "",
+      "generated_note": null,
+      "execution": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+      "status": "annotated_pending_review",
+      "issues": []
+    },
+    {
+      "batch": 6,
+      "number": 13,
+      "sample_id": "hotpotqa_5a88ec08554299206df2b3ad",
+      "human_note": "保留新拆法",
+      "generated_note": null,
+      "execution": "保留新顺序及 common name 查询；改为名称值而非旧 yes/no，结论依赖两方。",
+      "status": "annotated_pending_review",
+      "issues": []
+    },
+    {
+      "batch": 6,
+      "number": 14,
+      "sample_id": "hotpotqa_5a899d165542993b751ca961",
+      "human_note": "",
+      "generated_note": null,
+      "execution": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+      "status": "annotated_pending_review",
+      "issues": []
+    },
+    {
+      "batch": 6,
+      "number": 15,
+      "sample_id": "hotpotqa_5a8ad70d5542992d82986f94",
+      "human_note": "",
+      "generated_note": null,
+      "execution": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+      "status": "needs_resolution",
+      "issues": [
+        "修正 Fetty Wap 被误写为制作人的描述；context 无鞋匠身份或命名关系的直接证据，u2 仅沿用旧 by_presupposition 路径，需确认此预设推理是否接受。"
+      ]
+    },
+    {
+      "batch": 6,
+      "number": 16,
+      "sample_id": "hotpotqa_5a8ad7ae5542992d82986f97",
+      "human_note": "",
+      "generated_note": null,
+      "execution": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+      "status": "annotated_pending_review",
+      "issues": []
+    },
+    {
+      "batch": 6,
+      "number": 17,
+      "sample_id": "hotpotqa_5a8b848d5542997f31a41d5c",
+      "human_note": "",
+      "generated_note": null,
+      "execution": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+      "status": "annotated_pending_review",
+      "issues": []
+    },
+    {
+      "batch": 6,
+      "number": 18,
+      "sample_id": "hotpotqa_5a8b85f355429971feec4731",
+      "human_note": "我觉得旧gold的拆分结构是合理的，你再检查一下",
+      "generated_note": null,
+      "execution": "采用用户要求的两单元结构；去掉旧描述泄露的 Mumbai 125 KM，第一步验证 2014 年翻拍与 2003 年原作，第二步验证编导。",
+      "status": "annotated_pending_review",
+      "issues": []
+    },
+    {
+      "batch": 6,
+      "number": 19,
+      "sample_id": "hotpotqa_5a8dd9b8554299068b959e06",
+      "human_note": "应该拆分成两个unit，是否合理",
+      "generated_note": null,
+      "execution": "采用旧版多单元/查询目标，保留可独立表达的中间事实；按 context 核对答案与证据。",
+      "status": "annotated_pending_review",
+      "issues": []
+    },
+    {
+      "batch": 6,
+      "number": 20,
+      "sample_id": "hotpotqa_5a8e28ba5542990e94052a80",
+      "human_note": "我觉得u3是有必要的，不能默认题干中的两个对象一定是同一个类别",
+      "generated_note": null,
+      "execution": "采用旧版多单元/查询目标，保留可独立表达的中间事实；按 context 核对答案与证据。",
+      "status": "annotated_pending_review",
+      "issues": []
+    },
+    {
+      "batch": 6,
+      "number": 21,
+      "sample_id": "hotpotqa_5a8e88875542990e94052b36",
+      "human_note": "",
+      "generated_note": null,
+      "execution": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+      "status": "annotated_pending_review",
+      "issues": []
+    },
+    {
+      "batch": 6,
+      "number": 22,
+      "sample_id": "hotpotqa_5a908d1f55429916514e74f1",
+      "human_note": "保留新版两个必要单元，分别使用 d8s0、d4s0 支持各自国籍。不根据题干预设两人国籍相同，不通过一人的证据推断另一人；两方均有支持才判为完整回答。",
+      "generated_note": null,
+      "execution": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+      "status": "annotated_pending_review",
+      "issues": []
+    },
+    {
+      "batch": 6,
+      "number": 23,
+      "sample_id": "hotpotqa_5ab25a9d5542993be8fa98df",
+      "human_note": "",
+      "generated_note": null,
+      "execution": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+      "status": "annotated_pending_review",
+      "issues": []
+    },
+    {
+      "batch": 6,
+      "number": 24,
+      "sample_id": "hotpotqa_5ab292b4554299449642c901",
+      "human_note": "旧的gold结构是正确的",
+      "generated_note": null,
+      "execution": "采用旧版多单元/查询目标，保留可独立表达的中间事实；按 context 核对答案与证据。",
+      "status": "annotated_pending_review",
+      "issues": []
+    },
+    {
+      "batch": 6,
+      "number": 25,
+      "sample_id": "hotpotqa_5ab2989b554299194fa93423",
+      "human_note": "与新版对齐",
+      "generated_note": null,
+      "execution": "保留新查找顺序，先职业/级别、再训练者；重映射证据，最终返回人物。",
+      "status": "annotated_pending_review",
+      "issues": []
+    },
+    {
+      "batch": 6,
+      "number": 26,
+      "sample_id": "hotpotqa_5ab2ad8b554299340b525544",
+      "human_note": "",
+      "generated_note": null,
+      "execution": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+      "status": "annotated_pending_review",
+      "issues": []
+    },
+    {
+      "batch": 6,
+      "number": 27,
+      "sample_id": "hotpotqa_5ab3c3b155429969a97a81b6",
+      "human_note": "",
+      "generated_note": null,
+      "execution": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+      "status": "annotated_pending_review",
+      "issues": []
+    },
+    {
+      "batch": 6,
+      "number": 28,
+      "sample_id": "hotpotqa_5ab42d235542991751b4d6d1",
+      "human_note": "按照新拆法，检查一下标签",
+      "generated_note": null,
+      "execution": "保留新两单元，第一单元联合本名—艺名—演员表证据。",
+      "status": "annotated_pending_review",
+      "issues": []
+    },
+    {
+      "batch": 6,
+      "number": 29,
+      "sample_id": "hotpotqa_5ab443ca5542991779162c43",
+      "human_note": "保留single",
+      "generated_note": null,
+      "execution": "保留用户指定 single；共同属性必须联合两方证据，不允许由一方推另一方。",
+      "status": "annotated_pending_review",
+      "issues": []
+    },
+    {
+      "batch": 6,
+      "number": 30,
+      "sample_id": "hotpotqa_5ab461c25542991751b4d754",
+      "human_note": "",
+      "generated_note": null,
+      "execution": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+      "status": "annotated_pending_review",
+      "issues": []
+    },
+    {
+      "batch": 7,
+      "number": 1,
+      "sample_id": "hotpotqa_5ab4da805542996a3a969fd8",
+      "human_note": "保留旧的gold",
+      "generated_note": null,
+      "execution": "采用旧版多单元/查询目标，保留可独立表达的中间事实；按 context 核对答案与证据。",
+      "status": "annotated_pending_review",
+      "issues": []
+    },
+    {
+      "batch": 7,
+      "number": 2,
+      "sample_id": "hotpotqa_5ab5344c5542991751b4d7c5",
+      "human_note": "",
+      "generated_note": null,
+      "execution": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+      "status": "annotated_pending_review",
+      "issues": []
+    },
+    {
+      "batch": 7,
+      "number": 3,
+      "sample_id": "hotpotqa_5ab679e1554299110f219a16",
+      "human_note": "保留旧版",
+      "generated_note": null,
+      "execution": "采用旧版多单元/查询目标，保留可独立表达的中间事实；按 context 核对答案与证据。",
+      "status": "annotated_pending_review",
+      "issues": []
+    },
+    {
+      "batch": 7,
+      "number": 4,
+      "sample_id": "hotpotqa_5ab781f255429928e1fe3862",
+      "human_note": "",
+      "generated_note": null,
+      "execution": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+      "status": "annotated_pending_review",
+      "issues": []
+    },
+    {
+      "batch": 7,
+      "number": 5,
+      "sample_id": "hotpotqa_5ab7f9b65542991d322237f0",
+      "human_note": "",
+      "generated_note": null,
+      "execution": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+      "status": "annotated_pending_review",
+      "issues": []
+    },
+    {
+      "batch": 7,
+      "number": 6,
+      "sample_id": "hotpotqa_5ab8292c55429934fafe6cfe",
+      "human_note": "是否可以按照原题的方法拆分",
+      "generated_note": null,
+      "execution": "采用旧版多单元/查询目标，保留可独立表达的中间事实；按 context 核对答案与证据。",
+      "status": "annotated_pending_review",
+      "issues": []
+    },
+    {
+      "batch": 7,
+      "number": 7,
+      "sample_id": "hotpotqa_5ab8f1ae55429916710eb0c8",
+      "human_note": "这样的题目采用旧版，让模型可以先说一部分事实",
+      "generated_note": null,
+      "execution": "采用旧版多单元/查询目标，保留可独立表达的中间事实；按 context 核对答案与证据。",
+      "status": "annotated_pending_review",
+      "issues": []
+    },
+    {
+      "batch": 7,
+      "number": 8,
+      "sample_id": "hotpotqa_5ab95b28554299743d22eb09",
+      "human_note": "参照原版",
+      "generated_note": null,
+      "execution": "采用旧版多单元/查询目标，保留可独立表达的中间事实；按 context 核对答案与证据。",
+      "status": "annotated_pending_review",
+      "issues": []
+    },
+    {
+      "batch": 7,
+      "number": 9,
+      "sample_id": "hotpotqa_5ab9d58855429939ce03dc3a",
+      "human_note": "",
+      "generated_note": null,
+      "execution": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+      "status": "annotated_pending_review",
+      "issues": []
+    },
+    {
+      "batch": 7,
+      "number": 10,
+      "sample_id": "hotpotqa_5aba9af255429901930fa856",
+      "human_note": "",
+      "generated_note": null,
+      "execution": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+      "status": "annotated_pending_review",
+      "issues": []
+    },
+    {
+      "batch": 7,
+      "number": 11,
+      "sample_id": "hotpotqa_5abb155c55429966062416c8",
+      "human_note": "",
+      "generated_note": null,
+      "execution": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+      "status": "annotated_pending_review",
+      "issues": []
+    },
+    {
+      "batch": 7,
+      "number": 12,
+      "sample_id": "hotpotqa_5abbdaaa5542996606241732",
+      "human_note": "",
+      "generated_note": null,
+      "execution": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+      "status": "annotated_pending_review",
+      "issues": []
+    },
+    {
+      "batch": 7,
+      "number": 13,
+      "sample_id": "hotpotqa_5abc47d055429959677d6a70",
+      "human_note": "",
+      "generated_note": null,
+      "execution": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+      "status": "annotated_pending_review",
+      "issues": []
+    },
+    {
+      "batch": 7,
+      "number": 14,
+      "sample_id": "hotpotqa_5abca3065542993a06baf93a",
+      "human_note": "",
+      "generated_note": null,
+      "execution": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+      "status": "annotated_pending_review",
+      "issues": []
+    },
+    {
+      "batch": 7,
+      "number": 15,
+      "sample_id": "hotpotqa_5abcff15554299114383a1c2",
+      "human_note": "",
+      "generated_note": null,
+      "execution": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+      "status": "annotated_pending_review",
+      "issues": []
+    },
+    {
+      "batch": 7,
+      "number": 16,
+      "sample_id": "hotpotqa_5abdc7fb55429965af743e3a",
+      "human_note": "保留原版",
+      "generated_note": null,
+      "execution": "采用旧版多单元/查询目标，保留可独立表达的中间事实；按 context 核对答案与证据。",
+      "status": "annotated_pending_review",
+      "issues": []
+    },
+    {
+      "batch": 7,
+      "number": 17,
+      "sample_id": "hotpotqa_5ac04afa5542996f0d89cb80",
+      "human_note": "",
+      "generated_note": null,
+      "execution": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+      "status": "needs_resolution",
+      "issues": [
+        "原问题语法含混，暂按原答案口径将 south location 理解为 Hertfordshire，保留新版两单元；是否需同时输出学校与地区待确认。"
+      ]
+    },
+    {
+      "batch": 7,
+      "number": 18,
+      "sample_id": "hotpotqa_5ac119595542992a796dede5",
+      "human_note": "题干中涵已知信息，这种类型的题按照新方法的single拆分",
+      "generated_note": null,
+      "execution": "按用户 Note 将河流流向视为题干给定限定，single 只查水库所拦河流，沿用旧 u1 的直接支持。",
+      "status": "annotated_pending_review",
+      "issues": []
+    },
+    {
+      "batch": 7,
+      "number": 19,
+      "sample_id": "hotpotqa_5ac11f47554299294b2190ae",
+      "human_note": "",
+      "generated_note": null,
+      "execution": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+      "status": "annotated_pending_review",
+      "issues": []
+    },
+    {
+      "batch": 7,
+      "number": 20,
+      "sample_id": "hotpotqa_5ac1334b55429964131be184",
+      "human_note": "保留single",
+      "generated_note": null,
+      "execution": "保留用户指定 single，联合书籍作者和美国作家/Outlander 身份证据。",
+      "status": "annotated_pending_review",
+      "issues": []
+    },
+    {
+      "batch": 7,
+      "number": 21,
+      "sample_id": "hotpotqa_5ac16e3055429964131be1f3",
+      "human_note": "",
+      "generated_note": null,
+      "execution": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+      "status": "annotated_pending_review",
+      "issues": []
+    },
+    {
+      "batch": 7,
+      "number": 22,
+      "sample_id": "hotpotqa_5ac250355542992f1f2b384b",
+      "human_note": "",
+      "generated_note": null,
+      "execution": "保留新版 film credits；答案为文档列出的角色，不把旧人数 7/1 填入角色查询；结论比较角色多样性。",
+      "status": "annotated_pending_review",
+      "issues": []
+    },
+    {
+      "batch": 7,
+      "number": 23,
+      "sample_id": "hotpotqa_5ac3aa9955429939154138a5",
+      "human_note": "",
+      "generated_note": null,
+      "execution": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+      "status": "annotated_pending_review",
+      "issues": []
+    },
+    {
+      "batch": 7,
+      "number": 24,
+      "sample_id": "hotpotqa_5ac3cbbd5542995ef918c23c",
+      "human_note": "",
+      "generated_note": null,
+      "execution": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+      "status": "annotated_pending_review",
+      "issues": []
+    },
+    {
+      "batch": 7,
+      "number": 25,
+      "sample_id": "hotpotqa_5ac445975542995c82c4ad16",
+      "human_note": "",
+      "generated_note": null,
+      "execution": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+      "status": "annotated_pending_review",
+      "issues": []
+    },
+    {
+      "batch": 7,
+      "number": 26,
+      "sample_id": "hotpotqa_5ac51d3355429924173fb5be",
+      "human_note": "",
+      "generated_note": null,
+      "execution": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+      "status": "annotated_pending_review",
+      "issues": []
+    },
+    {
+      "batch": 7,
+      "number": 27,
+      "sample_id": "hotpotqa_5adbf7d855429947ff173879",
+      "human_note": "",
+      "generated_note": null,
+      "execution": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+      "status": "annotated_pending_review",
+      "issues": []
+    },
+    {
+      "batch": 7,
+      "number": 28,
+      "sample_id": "hotpotqa_5adc0b3a5542996e685252b8",
+      "human_note": "",
+      "generated_note": null,
+      "execution": "保留三单元交集结构；u2 联合真人剧、演员及全名对应证据，u3 依赖两方，不使用旧第二跳直接证据冒充结论。",
+      "status": "annotated_pending_review",
+      "issues": []
+    },
+    {
+      "batch": 7,
+      "number": 29,
+      "sample_id": "hotpotqa_5add1b765542990d50227de3",
+      "human_note": "",
+      "generated_note": null,
+      "execution": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+      "status": "annotated_pending_review",
+      "issues": []
+    },
+    {
+      "batch": 7,
+      "number": 30,
+      "sample_id": "hotpotqa_5add24625542994734353874",
+      "human_note": "",
+      "generated_note": null,
+      "execution": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+      "status": "annotated_pending_review",
+      "issues": []
+    },
+    {
+      "batch": 8,
+      "number": 1,
+      "sample_id": "hotpotqa_5addad5c5542995b365fab5c",
+      "human_note": "",
+      "generated_note": null,
+      "execution": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+      "status": "needs_resolution",
+      "issues": [
+        "旧 by_presupposition 用同国航空公司与国有身份识别 TAAG，但 context 没有直接说明与 Air 26 的竞争关系；保留原特殊路径并待确认。"
+      ]
+    },
+    {
+      "batch": 8,
+      "number": 2,
+      "sample_id": "hotpotqa_5adde7085542990dbb2f7f01",
+      "human_note": "这种类型的题目(both, and)按照新的拆分方式拆分，两个对象都要有证据",
+      "generated_note": null,
+      "execution": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+      "status": "annotated_pending_review",
+      "issues": []
+    },
+    {
+      "batch": 8,
+      "number": 3,
+      "sample_id": "hotpotqa_5ade07a95542997dc790712e",
+      "human_note": "保留原拆分",
+      "generated_note": null,
+      "execution": "采用旧版多单元/查询目标，保留可独立表达的中间事实；按 context 核对答案与证据。",
+      "status": "annotated_pending_review",
+      "issues": []
+    },
+    {
+      "batch": 8,
+      "number": 4,
+      "sample_id": "hotpotqa_5ade188e5542990dbb2f7f52",
+      "human_note": "对于这种题干中有需要求证的信息，按照旧拆分的方法",
+      "generated_note": null,
+      "execution": "采用旧版多单元/查询目标，保留可独立表达的中间事实；按 context 核对答案与证据。",
+      "status": "annotated_pending_review",
+      "issues": []
+    },
+    {
+      "batch": 8,
+      "number": 5,
+      "sample_id": "hotpotqa_5ade1b7755429975fa854e55",
+      "human_note": "按 A 的候选属性选择规则改成两个 whether ... founded in the 21st century 单元；保留旧 gold 的预设/排除路径并重新验证，不能给 Goon Moon 编造成立年份",
+      "generated_note": null,
+      "execution": "采用旧版多单元/查询目标，保留可独立表达的中间事实；按 context 核对答案与证据。",
+      "status": "annotated_pending_review",
+      "issues": []
+    },
+    {
+      "batch": 8,
+      "number": 6,
+      "sample_id": "hotpotqa_5ade9914554299728e26c759",
+      "human_note": "u1 补上 known for playing Alice Cullen，",
+      "generated_note": null,
+      "execution": "按 Note 补 Alice Cullen 限定，联合演员表、美国女演员身份及角色证据。",
+      "status": "annotated_pending_review",
+      "issues": []
+    },
+    {
+      "batch": 8,
+      "number": 7,
+      "sample_id": "hotpotqa_5adea8a655429939a52fe92c",
+      "human_note": "",
+      "generated_note": null,
+      "execution": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+      "status": "annotated_pending_review",
+      "issues": []
+    },
+    {
+      "batch": 8,
+      "number": 8,
+      "sample_id": "hotpotqa_5adec3db55429975fa854f83",
+      "human_note": "",
+      "generated_note": null,
+      "execution": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+      "status": "annotated_pending_review",
+      "issues": []
+    },
+    {
+      "batch": 8,
+      "number": 9,
+      "sample_id": "hotpotqa_5adf9e59554299025d62a2e9",
+      "human_note": "题型改成comparison，保持新顺序",
+      "generated_note": null,
+      "execution": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。 题型修正为 comparison。",
+      "status": "annotated_pending_review",
+      "issues": []
+    },
+    {
+      "batch": 8,
+      "number": 10,
+      "sample_id": "hotpotqa_5adfdcf5554299025d62a367",
+      "human_note": "",
+      "generated_note": null,
+      "execution": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+      "status": "annotated_pending_review",
+      "issues": []
+    },
+    {
+      "batch": 8,
+      "number": 11,
+      "sample_id": "hotpotqa_5ae05ae955429945ae959340",
+      "human_note": "",
+      "generated_note": null,
+      "execution": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+      "status": "annotated_pending_review",
+      "issues": []
+    },
+    {
+      "batch": 8,
+      "number": 12,
+      "sample_id": "hotpotqa_5ae0b79355429945ae95943c",
+      "human_note": "保留新拆法，重构标签",
+      "generated_note": null,
+      "execution": "保留演员→出生日期筛选顺序；u1 标注候选演员集合，不在生日证据到达前只标 Nick Offerman。",
+      "status": "annotated_pending_review",
+      "issues": []
+    },
+    {
+      "batch": 8,
+      "number": 13,
+      "sample_id": "hotpotqa_5ae0bf2955429906c02dab1f",
+      "human_note": "",
+      "generated_note": null,
+      "execution": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+      "status": "annotated_pending_review",
+      "issues": []
+    },
+    {
+      "batch": 8,
+      "number": 14,
+      "sample_id": "hotpotqa_5ae130515542997b2ef7d121",
+      "human_note": "",
+      "generated_note": null,
+      "execution": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+      "status": "annotated_pending_review",
+      "issues": []
+    },
+    {
+      "batch": 8,
+      "number": 15,
+      "sample_id": "hotpotqa_5ae13d9d55429920d523433d",
+      "human_note": "",
+      "generated_note": null,
+      "execution": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+      "status": "annotated_pending_review",
+      "issues": []
+    },
+    {
+      "batch": 8,
+      "number": 16,
+      "sample_id": "hotpotqa_5ae143aa55429920d523435d",
+      "human_note": "",
+      "generated_note": null,
+      "execution": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+      "status": "annotated_pending_review",
+      "issues": []
+    },
+    {
+      "batch": 8,
+      "number": 17,
+      "sample_id": "hotpotqa_5ae176ef5542990adbacf79d",
+      "human_note": "",
+      "generated_note": null,
+      "execution": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+      "status": "annotated_pending_review",
+      "issues": []
+    },
+    {
+      "batch": 8,
+      "number": 18,
+      "sample_id": "hotpotqa_5ae1af93554299492dc91b69",
+      "human_note": "",
+      "generated_note": null,
+      "execution": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+      "status": "annotated_pending_review",
+      "issues": []
+    },
+    {
+      "batch": 8,
+      "number": 19,
+      "sample_id": "hotpotqa_5ae1b052554299492dc91b6b",
+      "human_note": "",
+      "generated_note": null,
+      "execution": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+      "status": "annotated_pending_review",
+      "issues": []
+    },
+    {
+      "batch": 8,
+      "number": 20,
+      "sample_id": "hotpotqa_5ae234405542992decbdcc5a",
+      "human_note": "如果题目信息可以算作已知条件，按single拆分",
+      "generated_note": null,
+      "execution": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+      "status": "annotated_pending_review",
+      "issues": []
+    },
+    {
+      "batch": 8,
+      "number": 21,
+      "sample_id": "hotpotqa_5ae266c35542996483e6499a",
+      "human_note": "",
+      "generated_note": null,
+      "execution": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+      "status": "annotated_pending_review",
+      "issues": []
+    },
+    {
+      "batch": 8,
+      "number": 22,
+      "sample_id": "hotpotqa_5ae31f4455429928c423961b",
+      "human_note": "",
+      "generated_note": null,
+      "execution": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+      "status": "annotated_pending_review",
+      "issues": []
+    },
+    {
+      "batch": 8,
+      "number": 23,
+      "sample_id": "hotpotqa_5ae340c45542992f92d82273",
+      "human_note": "按照旧拆法拆分",
+      "generated_note": null,
+      "execution": "采用旧版多单元/查询目标，保留可独立表达的中间事实；按 context 核对答案与证据。",
+      "status": "annotated_pending_review",
+      "issues": []
+    },
+    {
+      "batch": 8,
+      "number": 24,
+      "sample_id": "hotpotqa_5ae3f3cb5542995ad6573cd9",
+      "human_note": "",
+      "generated_note": null,
+      "execution": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+      "status": "annotated_pending_review",
+      "issues": []
+    },
+    {
+      "batch": 8,
+      "number": 25,
+      "sample_id": "hotpotqa_5ae3fc835542995dadf24288",
+      "human_note": "",
+      "generated_note": null,
+      "execution": "保留新 whether 三幕查询，旧 three/two 改为 yes/no，支持证据不变。",
+      "status": "annotated_pending_review",
+      "issues": []
+    },
+    {
+      "batch": 8,
+      "number": 26,
+      "sample_id": "hotpotqa_5ae533495542992663a4f159",
+      "human_note": "按照新的拆分顺序",
+      "generated_note": null,
+      "execution": "按 Note 保留先母公司后模特关系的顺序，修正必要单元使答案明确为公司。",
+      "status": "annotated_pending_review",
+      "issues": []
+    },
+    {
+      "batch": 8,
+      "number": 27,
+      "sample_id": "hotpotqa_5ae5394855429908b6326585",
+      "human_note": "这种并列条件的题可以按照single拆分",
+      "generated_note": null,
+      "execution": "保留用户要求的 single，联合 TVPlayer 设备与遥控游戏能力证据。",
+      "status": "annotated_pending_review",
+      "issues": []
+    },
+    {
+      "batch": 8,
+      "number": 28,
+      "sample_id": "hotpotqa_5ae5397d55429960a22e0276",
+      "human_note": "只将 question_type 改为 comparison，保留当前单元关系",
+      "generated_note": null,
+      "execution": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。 题型修正为 comparison。",
+      "status": "annotated_pending_review",
+      "issues": []
+    },
+    {
+      "batch": 8,
+      "number": 29,
+      "sample_id": "hotpotqa_5ae60b0d554299546bf8302c",
+      "human_note": "保留新的顺序，重构标签",
+      "generated_note": null,
+      "execution": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+      "status": "annotated_pending_review",
+      "issues": []
+    },
+    {
+      "batch": 8,
+      "number": 30,
+      "sample_id": "hotpotqa_5ae64a2155429908198fa575",
+      "human_note": "条件过多，按照旧的拆分方式，让模型可以先回答部分答案",
+      "generated_note": null,
+      "execution": "采用旧版多单元/查询目标，保留可独立表达的中间事实；按 context 核对答案与证据。",
+      "status": "annotated_pending_review",
+      "issues": []
+    },
+    {
+      "batch": 9,
+      "number": 1,
+      "sample_id": "hotpotqa_5ae71f455542996d980e7ca9",
+      "human_note": "",
+      "generated_note": "【按 batch 6–8 人工规则补写，待复核】采用旧版多单元/查询目标，保留可独立表达的中间事实；按 context 核对答案与证据。",
+      "execution": "采用旧版多单元/查询目标，保留可独立表达的中间事实；按 context 核对答案与证据。",
+      "status": "annotated_pending_review",
+      "issues": []
+    },
+    {
+      "batch": 9,
+      "number": 2,
+      "sample_id": "hotpotqa_5ae74ae95542997b22f6a688",
+      "human_note": "",
+      "generated_note": "【按 batch 6–8 人工规则补写，待复核】保留新反向顺序；末单元明确输出女王而非真假陈述，按新顺序交换证据。",
+      "execution": "保留新反向顺序；末单元明确输出女王而非真假陈述，按新顺序交换证据。",
+      "status": "annotated_pending_review",
+      "issues": []
+    },
+    {
+      "batch": 9,
+      "number": 3,
+      "sample_id": "hotpotqa_5ae752255542995703ce8be5",
+      "human_note": "",
+      "generated_note": "【按 batch 6–8 人工规则补写，待复核】采用旧版多单元/查询目标，保留可独立表达的中间事实；按 context 核对答案与证据。",
+      "execution": "采用旧版多单元/查询目标，保留可独立表达的中间事实；按 context 核对答案与证据。",
+      "status": "annotated_pending_review",
+      "issues": []
+    },
+    {
+      "batch": 9,
+      "number": 4,
+      "sample_id": "2wikimultihopqa_008905100baf11ebab90acde48001122",
+      "human_note": "",
+      "generated_note": "【按 batch 6–8 人工规则补写，待复核】保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+      "execution": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+      "status": "annotated_pending_review",
+      "issues": []
+    },
+    {
+      "batch": 9,
+      "number": 5,
+      "sample_id": "2wikimultihopqa_363145e20baf11ebab90acde48001122",
+      "human_note": "",
+      "generated_note": "【按 batch 6–8 人工规则补写，待复核】保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+      "execution": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+      "status": "annotated_pending_review",
+      "issues": []
+    },
+    {
+      "batch": 9,
+      "number": 6,
+      "sample_id": "2wikimultihopqa_3a2fe93e0bda11eba7f7acde48001122",
+      "human_note": "",
+      "generated_note": "【按 batch 6–8 人工规则补写，待复核】保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+      "execution": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+      "status": "annotated_pending_review",
+      "issues": []
+    },
+    {
+      "batch": 9,
+      "number": 7,
+      "sample_id": "2wikimultihopqa_4dc594f408cd11ebbd93ac1f6bf848b6",
+      "human_note": "",
+      "generated_note": "【按 batch 6–8 人工规则补写，待复核】保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+      "execution": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+      "status": "annotated_pending_review",
+      "issues": []
+    },
+    {
+      "batch": 9,
+      "number": 8,
+      "sample_id": "2wikimultihopqa_5ea97157099411ebbdb0ac1f6bf848b6",
+      "human_note": "",
+      "generated_note": "【按 batch 6–8 人工规则补写，待复核】保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+      "execution": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+      "status": "annotated_pending_review",
+      "issues": []
+    },
+    {
+      "batch": 9,
+      "number": 9,
+      "sample_id": "2wikimultihopqa_640bede1095311ebbdaeac1f6bf848b6",
+      "human_note": "",
+      "generated_note": "【按 batch 6–8 人工规则补写，待复核】保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+      "execution": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+      "status": "annotated_pending_review",
+      "issues": []
+    },
+    {
+      "batch": 9,
+      "number": 10,
+      "sample_id": "2wikimultihopqa_6968dcf40bdc11eba7f7acde48001122",
+      "human_note": "",
+      "generated_note": "【按 batch 6–8 人工规则补写，待复核】保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+      "execution": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+      "status": "annotated_pending_review",
+      "issues": []
+    },
+    {
+      "batch": 9,
+      "number": 11,
+      "sample_id": "2wikimultihopqa_6be60084088e11ebbd70ac1f6bf848b6",
+      "human_note": "",
+      "generated_note": "【按 batch 6–8 人工规则补写，待复核】保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+      "execution": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+      "status": "annotated_pending_review",
+      "issues": []
+    },
+    {
+      "batch": 9,
+      "number": 12,
+      "sample_id": "2wikimultihopqa_75be1186086711ebbd5eac1f6bf848b6",
+      "human_note": "",
+      "generated_note": "【按 batch 6–8 人工规则补写，待复核】采用旧版多单元/查询目标，保留可独立表达的中间事实；按 context 核对答案与证据。",
+      "execution": "采用旧版多单元/查询目标，保留可独立表达的中间事实；按 context 核对答案与证据。",
+      "status": "annotated_pending_review",
+      "issues": []
+    },
+    {
+      "batch": 9,
+      "number": 13,
+      "sample_id": "2wikimultihopqa_7728ea720bb011ebab90acde48001122",
+      "human_note": "",
+      "generated_note": "【按 batch 6–8 人工规则补写，待复核】保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+      "execution": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+      "status": "annotated_pending_review",
+      "issues": []
+    },
+    {
+      "batch": 9,
+      "number": 14,
+      "sample_id": "2wikimultihopqa_7b9cef6a0bdb11eba7f7acde48001122",
+      "human_note": "",
+      "generated_note": "【按 batch 6–8 人工规则补写，待复核】保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+      "execution": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+      "status": "annotated_pending_review",
+      "issues": []
+    },
+    {
+      "batch": 9,
+      "number": 15,
+      "sample_id": "2wikimultihopqa_874c55c20bda11eba7f7acde48001122",
+      "human_note": "",
+      "generated_note": "【按 batch 6–8 人工规则补写，待复核】保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+      "execution": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+      "status": "annotated_pending_review",
+      "issues": []
+    },
+    {
+      "batch": 9,
+      "number": 16,
+      "sample_id": "2wikimultihopqa_8e463167086c11ebbd61ac1f6bf848b6",
+      "human_note": "",
+      "generated_note": "【按 batch 6–8 人工规则补写，待复核】保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+      "execution": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+      "status": "annotated_pending_review",
+      "issues": []
+    },
+    {
+      "batch": 9,
+      "number": 17,
+      "sample_id": "2wikimultihopqa_8ec76c0808db11ebbd9cac1f6bf848b6",
+      "human_note": "",
+      "generated_note": "【按 batch 6–8 人工规则补写，待复核】采用旧版多单元/查询目标，保留可独立表达的中间事实；按 context 核对答案与证据。",
+      "execution": "采用旧版多单元/查询目标，保留可独立表达的中间事实；按 context 核对答案与证据。",
+      "status": "annotated_pending_review",
+      "issues": []
+    },
+    {
+      "batch": 9,
+      "number": 18,
+      "sample_id": "2wikimultihopqa_971f9d7a0bd911eba7f7acde48001122",
+      "human_note": "",
+      "generated_note": "【按 batch 6–8 人工规则补写，待复核】保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+      "execution": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+      "status": "annotated_pending_review",
+      "issues": []
+    },
+    {
+      "batch": 9,
+      "number": 19,
+      "sample_id": "2wikimultihopqa_9eb9f3480baf11ebab90acde48001122",
+      "human_note": "",
+      "generated_note": "【按 batch 6–8 人工规则补写，待复核】保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+      "execution": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+      "status": "annotated_pending_review",
+      "issues": []
+    },
+    {
+      "batch": 9,
+      "number": 20,
+      "sample_id": "2wikimultihopqa_b200fa00097e11ebbdb0ac1f6bf848b6",
+      "human_note": "",
+      "generated_note": "【按 batch 6–8 人工规则补写，待复核】保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+      "execution": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+      "status": "annotated_pending_review",
+      "issues": []
+    },
+    {
+      "batch": 9,
+      "number": 21,
+      "sample_id": "2wikimultihopqa_ba5637db098c11ebbdb0ac1f6bf848b6",
+      "human_note": "",
+      "generated_note": "【按 batch 6–8 人工规则补写，待复核】保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+      "execution": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+      "status": "annotated_pending_review",
+      "issues": []
+    },
+    {
+      "batch": 9,
+      "number": 22,
+      "sample_id": "2wikimultihopqa_bc7761cc088511ebbd6dac1f6bf848b6",
+      "human_note": "",
+      "generated_note": "【按 batch 6–8 人工规则补写，待复核】采用旧版多单元/查询目标，保留可独立表达的中间事实；按 context 核对答案与证据。",
+      "execution": "采用旧版多单元/查询目标，保留可独立表达的中间事实；按 context 核对答案与证据。",
+      "status": "annotated_pending_review",
+      "issues": []
+    },
+    {
+      "batch": 9,
+      "number": 23,
+      "sample_id": "2wikimultihopqa_bf1ebaa80bda11eba7f7acde48001122",
+      "human_note": "",
+      "generated_note": "【按 batch 6–8 人工规则补写，待复核】保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+      "execution": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+      "status": "annotated_pending_review",
+      "issues": []
+    },
+    {
+      "batch": 9,
+      "number": 24,
+      "sample_id": "2wikimultihopqa_d690e9a809bc11ebbdb0ac1f6bf848b6",
+      "human_note": "",
+      "generated_note": "【按 batch 6–8 人工规则补写，待复核】保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+      "execution": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+      "status": "annotated_pending_review",
+      "issues": []
+    },
+    {
+      "batch": 9,
+      "number": 25,
+      "sample_id": "2wikimultihopqa_d996cdce0baf11ebab90acde48001122",
+      "human_note": "",
+      "generated_note": "【按 batch 6–8 人工规则补写，待复核】保留 single，context 直接说明 Swanandi 是 Uday 的女儿，不需要配偶链，也不从妻子的孩子推断父亲。",
+      "execution": "保留 single，context 直接说明 Swanandi 是 Uday 的女儿，不需要配偶链，也不从妻子的孩子推断父亲。",
+      "status": "annotated_pending_review",
+      "issues": []
+    },
+    {
+      "batch": 9,
+      "number": 26,
+      "sample_id": "2wikimultihopqa_e5f6937a0bae11ebab90acde48001122",
+      "human_note": "",
+      "generated_note": "【按 batch 6–8 人工规则补写，待复核】保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+      "execution": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+      "status": "annotated_pending_review",
+      "issues": []
+    },
+    {
+      "batch": 9,
+      "number": 27,
+      "sample_id": "2wikimultihopqa_e95cb5fc085d11ebbd5cac1f6bf848b6",
+      "human_note": "",
+      "generated_note": "【按 batch 6–8 人工规则补写，待复核】保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+      "execution": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+      "status": "annotated_pending_review",
+      "issues": []
+    },
+    {
+      "batch": 9,
+      "number": 28,
+      "sample_id": "2wikimultihopqa_ea8045620bdb11eba7f7acde48001122",
+      "human_note": "",
+      "generated_note": "【按 batch 6–8 人工规则补写，待复核】保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+      "execution": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+      "status": "annotated_pending_review",
+      "issues": []
+    },
+    {
+      "batch": 9,
+      "number": 29,
+      "sample_id": "2wikimultihopqa_f48d9c60093011ebbdaeac1f6bf848b6",
+      "human_note": "",
+      "generated_note": "【按 batch 6–8 人工规则补写，待复核】保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。 待确认：新查询为年份，暂以 context 的影片年份 2008 标注；旧 2016 是美国院线上映年。结论仍是 Upasane，但首次发行/影片年份口径需确认；未把两年当作别名。",
+      "execution": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+      "status": "needs_resolution",
+      "issues": [
+        "新查询为年份，暂以 context 的影片年份 2008 标注；旧 2016 是美国院线上映年。结论仍是 Upasane，但首次发行/影片年份口径需确认；未把两年当作别名。"
+      ]
+    },
+    {
+      "batch": 9,
+      "number": 30,
+      "sample_id": "2wikimultihopqa_f5972e880baf11ebab90acde48001122",
+      "human_note": "",
+      "generated_note": "【按 batch 6–8 人工规则补写，待复核】保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+      "execution": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+      "status": "annotated_pending_review",
+      "issues": []
+    },
+    {
+      "batch": 10,
+      "number": 1,
+      "sample_id": "2wikimultihopqa_f618d408084c11ebbd56ac1f6bf848b6",
+      "human_note": "",
+      "generated_note": "【按 batch 6–8 人工规则补写，待复核】保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+      "execution": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+      "status": "annotated_pending_review",
+      "issues": []
+    },
+    {
+      "batch": 10,
+      "number": 2,
+      "sample_id": "hotpotqa_5a745a8755429979e288291e",
+      "human_note": "",
+      "generated_note": "【按 batch 6–8 人工规则补写，待复核】保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。 待确认：both what 可有多个共同类别；暂保留旧答案 private 及别名，并要求两方证据。是否接受其他有据类别需确认。",
+      "execution": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+      "status": "needs_resolution",
+      "issues": [
+        "both what 可有多个共同类别；暂保留旧答案 private 及别名，并要求两方证据。是否接受其他有据类别需确认。"
+      ]
+    },
+    {
+      "batch": 10,
+      "number": 3,
+      "sample_id": "hotpotqa_5a75dc7a5542992d0ec06004",
+      "human_note": "",
+      "generated_note": "【按 batch 6–8 人工规则补写，待复核】采用旧版多单元/查询目标，保留可独立表达的中间事实；按 context 核对答案与证据。",
+      "execution": "采用旧版多单元/查询目标，保留可独立表达的中间事实；按 context 核对答案与证据。",
+      "status": "annotated_pending_review",
+      "issues": []
+    },
+    {
+      "batch": 10,
+      "number": 4,
+      "sample_id": "hotpotqa_5a7755e05542993735360237",
+      "human_note": "",
+      "generated_note": "【按 batch 6–8 人工规则补写，待复核】改 comparison，context 只给年份，统一为 release year，保留三单元。",
+      "execution": "改 comparison，context 只给年份，统一为 release year，保留三单元。",
+      "status": "annotated_pending_review",
+      "issues": []
+    },
+    {
+      "batch": 10,
+      "number": 5,
+      "sample_id": "hotpotqa_5a77a8365542995d83181250",
+      "human_note": "",
+      "generated_note": "【按 batch 6–8 人工规则补写，待复核】保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+      "execution": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+      "status": "annotated_pending_review",
+      "issues": []
+    },
+    {
+      "batch": 10,
+      "number": 6,
+      "sample_id": "hotpotqa_5a78f57a554299148911f9bf",
+      "human_note": "",
+      "generated_note": "【按 batch 6–8 人工规则补写，待复核】采用旧版多单元/查询目标，保留可独立表达的中间事实；按 context 核对答案与证据。",
+      "execution": "采用旧版多单元/查询目标，保留可独立表达的中间事实；按 context 核对答案与证据。",
+      "status": "annotated_pending_review",
+      "issues": []
+    },
+    {
+      "batch": 10,
+      "number": 7,
+      "sample_id": "hotpotqa_5a7a51485542990783324f0e",
+      "human_note": "",
+      "generated_note": "【按 batch 6–8 人工规则补写，待复核】保留先演员后生日筛选；先列演员候选，最终输出女演员姓名而非生日，不提前泄露筛选结果。",
+      "execution": "保留先演员后生日筛选；先列演员候选，最终输出女演员姓名而非生日，不提前泄露筛选结果。",
+      "status": "annotated_pending_review",
+      "issues": []
+    },
+    {
+      "batch": 10,
+      "number": 8,
+      "sample_id": "hotpotqa_5a7aa8565542995eb53be88b",
+      "human_note": "",
+      "generated_note": "【按 batch 6–8 人工规则补写，待复核】采用旧版多单元/查询目标，保留可独立表达的中间事实；按 context 核对答案与证据。",
+      "execution": "采用旧版多单元/查询目标，保留可独立表达的中间事实；按 context 核对答案与证据。",
+      "status": "annotated_pending_review",
+      "issues": []
+    },
+    {
+      "batch": 10,
+      "number": 9,
+      "sample_id": "hotpotqa_5a7cfdb755429909bec768e2",
+      "human_note": "",
+      "generated_note": "【按 batch 6–8 人工规则补写，待复核】采用旧版多单元/查询目标，保留可独立表达的中间事实；按 context 核对答案与证据。",
+      "execution": "采用旧版多单元/查询目标，保留可独立表达的中间事实；按 context 核对答案与证据。",
+      "status": "annotated_pending_review",
+      "issues": []
+    },
+    {
+      "batch": 10,
+      "number": 10,
+      "sample_id": "hotpotqa_5a7f359f55429930675136a9",
+      "human_note": "",
+      "generated_note": "【按 batch 6–8 人工规则补写，待复核】保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+      "execution": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+      "status": "annotated_pending_review",
+      "issues": []
+    },
+    {
+      "batch": 10,
+      "number": 11,
+      "sample_id": "hotpotqa_5a81d03d55429903bc27b9c7",
+      "human_note": "",
+      "generated_note": "【按 batch 6–8 人工规则补写，待复核】保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+      "execution": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+      "status": "annotated_pending_review",
+      "issues": []
+    },
+    {
+      "batch": 10,
+      "number": 12,
+      "sample_id": "hotpotqa_5a8715fb5542991e771816bb",
+      "human_note": "",
+      "generated_note": "【按 batch 6–8 人工规则补写，待复核】保留 single，d3s0 同时给出首位本土圣人身份和出生年，电影说明不是必需证据。",
+      "execution": "保留 single，d3s0 同时给出首位本土圣人身份和出生年，电影说明不是必需证据。",
+      "status": "annotated_pending_review",
+      "issues": []
+    },
+    {
+      "batch": 10,
+      "number": 13,
+      "sample_id": "hotpotqa_5a87e93155429938390d3ea4",
+      "human_note": "",
+      "generated_note": "【按 batch 6–8 人工规则补写，待复核】保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+      "execution": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+      "status": "annotated_pending_review",
+      "issues": []
+    },
+    {
+      "batch": 10,
+      "number": 14,
+      "sample_id": "hotpotqa_5a88b15b5542994846c1ceba",
+      "human_note": "",
+      "generated_note": "【按 batch 6–8 人工规则补写，待复核】保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+      "execution": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+      "status": "annotated_pending_review",
+      "issues": []
+    },
+    {
+      "batch": 10,
+      "number": 15,
+      "sample_id": "hotpotqa_5a9060f05542990a98493604",
+      "human_note": "",
+      "generated_note": "【按 batch 6–8 人工规则补写，待复核】采用旧版多单元/查询目标，保留可独立表达的中间事实；按 context 核对答案与证据。",
+      "execution": "采用旧版多单元/查询目标，保留可独立表达的中间事实；按 context 核对答案与证据。",
+      "status": "annotated_pending_review",
+      "issues": []
+    },
+    {
+      "batch": 10,
+      "number": 16,
+      "sample_id": "hotpotqa_5ab2585855429970612095e6",
+      "human_note": "",
+      "generated_note": "【按 batch 6–8 人工规则补写，待复核】采用旧版多单元/查询目标，保留可独立表达的中间事实；按 context 核对答案与证据。",
+      "execution": "采用旧版多单元/查询目标，保留可独立表达的中间事实；按 context 核对答案与证据。",
+      "status": "annotated_pending_review",
+      "issues": []
+    },
+    {
+      "batch": 10,
+      "number": 17,
+      "sample_id": "hotpotqa_5ab27ea3554299340b5254e4",
+      "human_note": "",
+      "generated_note": "【按 batch 6–8 人工规则补写，待复核】保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+      "execution": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+      "status": "annotated_pending_review",
+      "issues": []
+    },
+    {
+      "batch": 10,
+      "number": 18,
+      "sample_id": "hotpotqa_5ab2a4a7554299295394678b",
+      "human_note": "",
+      "generated_note": "【按 batch 6–8 人工规则补写，待复核】保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+      "execution": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+      "status": "annotated_pending_review",
+      "issues": []
+    },
+    {
+      "batch": 10,
+      "number": 19,
+      "sample_id": "hotpotqa_5ab33cec554299753aec595c",
+      "human_note": "",
+      "generated_note": "【按 batch 6–8 人工规则补写，待复核】保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+      "execution": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+      "status": "annotated_pending_review",
+      "issues": []
+    },
+    {
+      "batch": 10,
+      "number": 20,
+      "sample_id": "hotpotqa_5ab406ce55429976abd1bd36",
+      "human_note": "",
+      "generated_note": "【按 batch 6–8 人工规则补写，待复核】保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+      "execution": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+      "status": "annotated_pending_review",
+      "issues": []
+    },
+    {
+      "batch": 10,
+      "number": 21,
+      "sample_id": "hotpotqa_5ab7eff35542993667794059",
+      "human_note": "",
+      "generated_note": "【按 batch 6–8 人工规则补写，待复核】采用旧版多单元/查询目标，保留可独立表达的中间事实；按 context 核对答案与证据。",
+      "execution": "采用旧版多单元/查询目标，保留可独立表达的中间事实；按 context 核对答案与证据。",
+      "status": "annotated_pending_review",
+      "issues": []
+    },
+    {
+      "batch": 10,
+      "number": 22,
+      "sample_id": "hotpotqa_5ab850d75542990e739ec8c0",
+      "human_note": "",
+      "generated_note": "【按 batch 6–8 人工规则补写，待复核】保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+      "execution": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+      "status": "annotated_pending_review",
+      "issues": []
+    },
+    {
+      "batch": 10,
+      "number": 23,
+      "sample_id": "hotpotqa_5ab9d4a9554299232ef4a21c",
+      "human_note": "",
+      "generated_note": "【按 batch 6–8 人工规则补写，待复核】保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+      "execution": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+      "status": "annotated_pending_review",
+      "issues": []
+    },
+    {
+      "batch": 10,
+      "number": 24,
+      "sample_id": "hotpotqa_5abe97dc5542994516f453cf",
+      "human_note": "",
+      "generated_note": "【按 batch 6–8 人工规则补写，待复核】保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。 待确认：题干称乐队得名于女权主义者，context 明确是她的 SCUM Manifesto。已给出人物→其宣言命名的乐队的两步修正，保留原题不静默改写；问题前提需确认。",
+      "execution": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+      "status": "needs_resolution",
+      "issues": [
+        "题干称乐队得名于女权主义者，context 明确是她的 SCUM Manifesto。已给出人物→其宣言命名的乐队的两步修正，保留原题不静默改写；问题前提需确认。"
+      ]
+    },
+    {
+      "batch": 10,
+      "number": 25,
+      "sample_id": "hotpotqa_5ac149705542994d76dccdd0",
+      "human_note": "",
+      "generated_note": "【按 batch 6–8 人工规则补写，待复核】保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+      "execution": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+      "status": "annotated_pending_review",
+      "issues": []
+    },
+    {
+      "batch": 10,
+      "number": 26,
+      "sample_id": "hotpotqa_5adbf5d8554299438c868cec",
+      "human_note": "",
+      "generated_note": "【按 batch 6–8 人工规则补写，待复核】保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+      "execution": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+      "status": "annotated_pending_review",
+      "issues": []
+    },
+    {
+      "batch": 10,
+      "number": 27,
+      "sample_id": "hotpotqa_5ade960d554299728e26c747",
+      "human_note": "",
+      "generated_note": "【按 batch 6–8 人工规则补写，待复核】保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+      "execution": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+      "status": "annotated_pending_review",
+      "issues": []
+    },
+    {
+      "batch": 10,
+      "number": 28,
+      "sample_id": "hotpotqa_5ae1e7275542997f29b3c18b",
+      "human_note": "",
+      "generated_note": "【按 batch 6–8 人工规则补写，待复核】保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+      "execution": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+      "status": "annotated_pending_review",
+      "issues": []
+    },
+    {
+      "batch": 10,
+      "number": 29,
+      "sample_id": "hotpotqa_5ae29b615542992decbdcd4f",
+      "human_note": "",
+      "generated_note": "【按 batch 6–8 人工规则补写，待复核】采用旧版多单元/查询目标，保留可独立表达的中间事实；按 context 核对答案与证据。",
+      "execution": "采用旧版多单元/查询目标，保留可独立表达的中间事实；按 context 核对答案与证据。",
+      "status": "annotated_pending_review",
+      "issues": []
+    },
+    {
+      "batch": 10,
+      "number": 30,
+      "sample_id": "hotpotqa_5ae517665542990ba0bbb1b2",
+      "human_note": "",
+      "generated_note": "【按 batch 6–8 人工规则补写，待复核】保留新顺序，先列支持过的艺人/乐队集合，再筛选 The Verve 歌手；不能先验只写 Richard Ashcroft。",
+      "execution": "保留新顺序，先列支持过的艺人/乐队集合，再筛选 The Verve 歌手；不能先验只写 Richard Ashcroft。",
+      "status": "annotated_pending_review",
+      "issues": []
+    }
+  ]
+}

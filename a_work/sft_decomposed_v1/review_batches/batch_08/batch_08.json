@@ -1,0 +1,2877 @@
+{
+  "annotation_version": "note-aligned-v3",
+  "status": "reviewed",
+  "batch_id": "batch_08",
+  "records": [
+    {
+      "sample_id": "hotpotqa_5addad5c5542995b365fab5c",
+      "split": "train",
+      "question": "In what year did the state-owned competitor of Air 26 gain flag carrier staus?",
+      "sft_snapshot_count": 4,
+      "question_type": "bridge",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "state-owned competitor of Air 26",
+          "necessary": false,
+          "depends_on": [],
+          "expected_answer": "TAAG Angola Airlines",
+          "support_sets": [
+            [
+              "d2s2",
+              "d4s0"
+            ]
+          ],
+          "aliases": [
+            "TAAG",
+            "TAAG Linhas Aéreas de Angola"
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u2",
+          "description": "year {u1} gained flag carrier status",
+          "necessary": true,
+          "depends_on": [
+            "u1"
+          ],
+          "expected_answer": "1975",
+          "support_sets": [
+            [
+              "d4s2"
+            ]
+          ],
+          "support_basis": "context"
+        }
+      ],
+      "fell_back": false,
+      "status": "reviewed",
+      "latency_s": 1.6720863080117851,
+      "annotation_review": {
+        "human_note": "用户确认：d2s2 与 d4s0 联合作为 u1 的 support。",
+        "execution_note": "按用户确认，将 d2s2 与 d4s0 的联合推断作为 u1 的 context 支持；两条证据必须同时到达。移除 by_presupposition 和 presupposition_sets，答案仍为 TAAG Angola Airlines。",
+        "issues": [],
+        "author": "assistant",
+        "human_approved": true,
+        "approval_basis": "用户于 2026-11-28 确认已审核通过；按最新 Note 落实",
+        "resolution_note": "按用户确认，将 d2s2 与 d4s0 的联合推断作为 u1 的 context 支持；两条证据必须同时到达。移除 by_presupposition 和 presupposition_sets，答案仍为 TAAG Angola Airlines。"
+      },
+      "raw_decomposition": {
+        "sample_id": "hotpotqa_5addad5c5542995b365fab5c",
+        "split": "train",
+        "question": "In what year did the state-owned competitor of Air 26 gain flag carrier staus?",
+        "sft_snapshot_count": 4,
+        "question_type": "bridge",
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "state-owned competitor of Air 26",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u2",
+            "description": "year {u1} gained flag carrier status",
+            "necessary": true,
+            "depends_on": [
+              "u1"
+            ]
+          }
+        ],
+        "fell_back": false,
+        "status": "needs_review",
+        "latency_s": 1.6720863080117851
+      }
+    },
+    {
+      "sample_id": "hotpotqa_5adde7085542990dbb2f7f01",
+      "split": "train",
+      "question": "What are both Dichondra and Peperomia?",
+      "sft_snapshot_count": 8,
+      "question_type": "multipart",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "what Dichondra is",
+          "necessary": true,
+          "depends_on": [],
+          "expected_answer": "plant",
+          "support_sets": [
+            [
+              "d3s0"
+            ],
+            [
+              "d3s1"
+            ]
+          ],
+          "aliases": [
+            "flowering plant",
+            "genus of flowering plants"
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u2",
+          "description": "what Peperomia is",
+          "necessary": true,
+          "depends_on": [],
+          "expected_answer": "plant",
+          "support_sets": [
+            [
+              "d5s0"
+            ],
+            [
+              "d2s0"
+            ]
+          ],
+          "aliases": [
+            "radiator plant",
+            "genus of plants"
+          ],
+          "support_basis": "context"
+        }
+      ],
+      "fell_back": false,
+      "status": "reviewed",
+      "latency_s": 1.5041881820652634,
+      "annotation_review": {
+        "human_note": "这种类型的题目(both, and)按照新的拆分方式拆分，两个对象都要有证据",
+        "execution_note": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+        "issues": [],
+        "author": "assistant",
+        "human_approved": true,
+        "approval_basis": "用户于 2026-11-28 确认已审核通过；按最新 Note 落实"
+      },
+      "raw_decomposition": {
+        "sample_id": "hotpotqa_5adde7085542990dbb2f7f01",
+        "split": "train",
+        "question": "What are both Dichondra and Peperomia?",
+        "sft_snapshot_count": 8,
+        "question_type": "multipart",
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "what Dichondra is",
+            "necessary": true,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u2",
+            "description": "what Peperomia is",
+            "necessary": true,
+            "depends_on": []
+          }
+        ],
+        "fell_back": false,
+        "status": "needs_review",
+        "latency_s": 1.5041881820652634
+      }
+    },
+    {
+      "sample_id": "hotpotqa_5ade07a95542997dc790712e",
+      "split": "train",
+      "question": "Baleine, Nova Scotia is best known as the landing site for a pilot born in which year ?",
+      "sft_snapshot_count": 9,
+      "question_type": "bridge",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "pilot for whom Baleine, Nova Scotia is best known as the landing site",
+          "necessary": false,
+          "expected_answer": "Beryl Markham",
+          "depends_on": [],
+          "support_sets": [
+            [
+              "d2s1"
+            ]
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u2",
+          "description": "birth year of {u1}",
+          "necessary": true,
+          "expected_answer": "1902",
+          "depends_on": [
+            "u1"
+          ],
+          "support_sets": [
+            [
+              "d1s0"
+            ]
+          ],
+          "support_basis": "context"
+        }
+      ],
+      "fell_back": false,
+      "status": "reviewed",
+      "latency_s": 1.6297262131702155,
+      "annotation_review": {
+        "human_note": "保留原拆分",
+        "execution_note": "采用旧版多单元/查询目标，保留可独立表达的中间事实；按 context 核对答案与证据。",
+        "issues": [],
+        "author": "assistant",
+        "human_approved": true,
+        "approval_basis": "用户于 2026-11-28 确认已审核通过；按最新 Note 落实"
+      },
+      "raw_decomposition": {
+        "sample_id": "hotpotqa_5ade07a95542997dc790712e",
+        "split": "train",
+        "question": "Baleine, Nova Scotia is best known as the landing site for a pilot born in which year ?",
+        "sft_snapshot_count": 9,
+        "question_type": "bridge",
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "pilot associated with Baleine, Nova Scotia",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u2",
+            "description": "birth year of {u1}",
+            "necessary": true,
+            "depends_on": [
+              "u1"
+            ]
+          }
+        ],
+        "fell_back": false,
+        "status": "needs_review",
+        "latency_s": 1.6297262131702155
+      }
+    },
+    {
+      "sample_id": "hotpotqa_5ade188e5542990dbb2f7f52",
+      "split": "train",
+      "question": "Who was the italian actor and screen writer from the 1950s, Marco Ferreri or Gordon Wiles?",
+      "sft_snapshot_count": 9,
+      "question_type": "comparison",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "whether Marco Ferreri was an Italian actor and screenwriter from the 1950s",
+          "necessary": false,
+          "expected_answer": "yes",
+          "depends_on": [],
+          "support_sets": [
+            [
+              "d4s0"
+            ]
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u2",
+          "description": "whether Gordon Wiles was an Italian actor and screenwriter from the 1950s",
+          "necessary": false,
+          "expected_answer": "no",
+          "depends_on": [],
+          "support_sets": [
+            [
+              "d7s0"
+            ]
+          ],
+          "by_omission": true,
+          "support_basis": "definition_omission"
+        },
+        {
+          "unit_id": "u3",
+          "description": "which of Marco Ferreri and Gordon Wiles was the Italian actor and screenwriter from the 1950s",
+          "necessary": true,
+          "expected_answer": "Marco Ferreri",
+          "depends_on": [
+            "u1",
+            "u2"
+          ],
+          "support_sets": [
+            []
+          ],
+          "support_basis": "derived_from_dependencies"
+        }
+      ],
+      "fell_back": false,
+      "status": "reviewed",
+      "latency_s": 2.9440718749538064,
+      "annotation_review": {
+        "human_note": "对于这种题干中有需要求证的信息，按照旧拆分的方法",
+        "execution_note": "采用旧版多单元/查询目标，保留可独立表达的中间事实；按 context 核对答案与证据。",
+        "issues": [],
+        "author": "assistant",
+        "human_approved": true,
+        "approval_basis": "用户于 2026-11-28 确认已审核通过；按最新 Note 落实"
+      },
+      "raw_decomposition": {
+        "sample_id": "hotpotqa_5ade188e5542990dbb2f7f52",
+        "split": "train",
+        "question": "Who was the italian actor and screen writer from the 1950s, Marco Ferreri or Gordon Wiles?",
+        "sft_snapshot_count": 9,
+        "question_type": "comparison",
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "whether Marco Ferreri was Italian and worked in the 1950s",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u2",
+            "description": "whether Gordon Wiles was Italian and worked in the 1950s",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u3",
+            "description": "which of them was the Italian actor and screen writer from the 1950s",
+            "necessary": true,
+            "depends_on": [
+              "u1",
+              "u2"
+            ]
+          }
+        ],
+        "fell_back": false,
+        "status": "needs_review",
+        "latency_s": 2.9440718749538064
+      }
+    },
+    {
+      "sample_id": "hotpotqa_5ade1b7755429975fa854e55",
+      "split": "train",
+      "question": "Which band was founded in the 21st century, Foo Fighters or Goon Moon?",
+      "sft_snapshot_count": 6,
+      "question_type": "comparison",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "whether Foo Fighters was founded in the 21st century",
+          "necessary": false,
+          "expected_answer": "no",
+          "depends_on": [],
+          "support_sets": [
+            [
+              "d8s0"
+            ],
+            [
+              "d9s0"
+            ],
+            [
+              "d10s0"
+            ]
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u2",
+          "description": "whether Goon Moon was founded in the 21st century",
+          "necessary": false,
+          "expected_answer": "yes",
+          "depends_on": [],
+          "support_sets": [],
+          "support_basis": "no_direct_support",
+          "annotation_note": "无直接支持集合；不能仅由 expected_answer 将本单元标为 SUPPORTED。候选题结论可按独立的 presupposition_sets 路径判断。"
+        },
+        {
+          "unit_id": "u3",
+          "description": "which of Foo Fighters and Goon Moon was founded in the 21st century",
+          "necessary": true,
+          "expected_answer": "Goon Moon",
+          "depends_on": [
+            "u1",
+            "u2"
+          ],
+          "support_sets": [
+            []
+          ],
+          "by_presupposition": true,
+          "presupposition_sets": [
+            [
+              "d8s0"
+            ],
+            [
+              "d9s0"
+            ],
+            [
+              "d10s0"
+            ]
+          ],
+          "support_basis": "question_presupposition"
+        }
+      ],
+      "fell_back": false,
+      "status": "reviewed",
+      "latency_s": 2.4013139540329576,
+      "annotation_review": {
+        "human_note": "按 A 的候选属性选择规则改成两个 whether ... founded in the 21st century 单元；保留旧 gold 的预设/排除路径并重新验证，不能给 Goon Moon 编造成立年份",
+        "execution_note": "采用旧版多单元/查询目标，保留可独立表达的中间事实；按 context 核对答案与证据。",
+        "issues": [],
+        "author": "assistant",
+        "human_approved": true,
+        "approval_basis": "用户于 2026-11-28 确认已审核通过；按最新 Note 落实"
+      },
+      "raw_decomposition": {
+        "sample_id": "hotpotqa_5ade1b7755429975fa854e55",
+        "split": "train",
+        "question": "Which band was founded in the 21st century, Foo Fighters or Goon Moon?",
+        "sft_snapshot_count": 6,
+        "question_type": "comparison",
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "founding year of Foo Fighters",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u2",
+            "description": "founding year of Goon Moon",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u3",
+            "description": "which band was founded in the 21st century",
+            "necessary": true,
+            "depends_on": [
+              "u1",
+              "u2"
+            ]
+          }
+        ],
+        "fell_back": false,
+        "status": "needs_review",
+        "latency_s": 2.4013139540329576
+      }
+    },
+    {
+      "sample_id": "hotpotqa_5ade9914554299728e26c759",
+      "split": "train",
+      "question": " Burying the Ex is a comedy horror film starring an American actress known for playing Alice Cullen in the film adaptations of what novels?",
+      "sft_snapshot_count": 8,
+      "question_type": "bridge",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "American actress starring in Burying the Ex known for playing Alice Cullen",
+          "necessary": false,
+          "depends_on": [],
+          "expected_answer": "Ashley Greene",
+          "support_sets": [
+            [
+              "d5s1",
+              "d1s0",
+              "d1s1"
+            ]
+          ],
+          "aliases": [
+            "Ashley Michele Greene"
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u2",
+          "description": "novels that feature Alice Cullen as played by {u1}",
+          "necessary": true,
+          "depends_on": [
+            "u1"
+          ],
+          "expected_answer": "Twilight",
+          "support_sets": [
+            [
+              "d1s1"
+            ]
+          ],
+          "aliases": [
+            "Twilight novels",
+            "Stephenie Meyer's Twilight novels",
+            "Twilight series"
+          ],
+          "support_basis": "context"
+        }
+      ],
+      "fell_back": false,
+      "status": "reviewed",
+      "latency_s": 1.7962243880610913,
+      "annotation_review": {
+        "human_note": "u1 补上 known for playing Alice Cullen，",
+        "execution_note": "按 Note 补 Alice Cullen 限定，联合演员表、美国女演员身份及角色证据。",
+        "issues": [],
+        "author": "assistant",
+        "human_approved": true,
+        "approval_basis": "用户于 2026-11-28 确认已审核通过；按最新 Note 落实"
+      },
+      "raw_decomposition": {
+        "sample_id": "hotpotqa_5ade9914554299728e26c759",
+        "split": "train",
+        "question": " Burying the Ex is a comedy horror film starring an American actress known for playing Alice Cullen in the film adaptations of what novels?",
+        "sft_snapshot_count": 8,
+        "question_type": "bridge",
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "American actress who starred in Burying the Ex",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u2",
+            "description": "novels that feature Alice Cullen as played by {u1}",
+            "necessary": true,
+            "depends_on": [
+              "u1"
+            ]
+          }
+        ],
+        "fell_back": false,
+        "status": "needs_review",
+        "latency_s": 1.7962243880610913
+      }
+    },
+    {
+      "sample_id": "hotpotqa_5adea8a655429939a52fe92c",
+      "split": "train",
+      "question": "Are both Andrei Platonov and Edward Albee a writer?",
+      "sft_snapshot_count": 9,
+      "question_type": "comparison",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "whether Andrei Platonov is a writer",
+          "necessary": false,
+          "depends_on": [],
+          "expected_answer": "yes",
+          "support_sets": [
+            [
+              "d7s0"
+            ],
+            [
+              "d8s2"
+            ]
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u2",
+          "description": "whether Edward Albee is a writer",
+          "necessary": false,
+          "depends_on": [],
+          "expected_answer": "yes",
+          "support_sets": [
+            [
+              "d10s0"
+            ],
+            [
+              "d5s0"
+            ],
+            [
+              "d3s0"
+            ]
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u3",
+          "description": "whether both Andrei Platonov and Edward Albee are writers",
+          "necessary": true,
+          "depends_on": [
+            "u1",
+            "u2"
+          ],
+          "expected_answer": "yes",
+          "support_sets": [
+            []
+          ],
+          "support_basis": "derived_from_dependencies"
+        }
+      ],
+      "fell_back": false,
+      "status": "reviewed",
+      "latency_s": 2.5056481338106096,
+      "annotation_review": {
+        "human_note": "",
+        "execution_note": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+        "issues": [],
+        "author": "assistant",
+        "human_approved": true,
+        "approval_basis": "用户于 2026-11-28 确认已审核通过；按最新 Note 落实"
+      },
+      "raw_decomposition": {
+        "sample_id": "hotpotqa_5adea8a655429939a52fe92c",
+        "split": "train",
+        "question": "Are both Andrei Platonov and Edward Albee a writer?",
+        "sft_snapshot_count": 9,
+        "question_type": "comparison",
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "whether Andrei Platonov is a writer",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u2",
+            "description": "whether Edward Albee is a writer",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u3",
+            "description": "whether both Andrei Platonov and Edward Albee are writers",
+            "necessary": true,
+            "depends_on": [
+              "u1",
+              "u2"
+            ]
+          }
+        ],
+        "fell_back": false,
+        "status": "needs_review",
+        "latency_s": 2.5056481338106096
+      }
+    },
+    {
+      "sample_id": "hotpotqa_5adec3db55429975fa854f83",
+      "split": "train",
+      "question": "Are Blood Bowl and Afrikan tähti both games?",
+      "sft_snapshot_count": 9,
+      "question_type": "comparison",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "whether Blood Bowl is a game",
+          "necessary": false,
+          "depends_on": [],
+          "expected_answer": "yes",
+          "support_sets": [
+            [
+              "d7s0"
+            ],
+            [
+              "d7s1"
+            ],
+            [
+              "d5s0"
+            ],
+            [
+              "d4s0"
+            ],
+            [
+              "d6s1"
+            ],
+            [
+              "d9s1"
+            ]
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u2",
+          "description": "whether Afrikan tähti is a game",
+          "necessary": false,
+          "depends_on": [],
+          "expected_answer": "yes",
+          "support_sets": [
+            [
+              "d8s0"
+            ],
+            [
+              "d8s1"
+            ],
+            [
+              "d3s1"
+            ],
+            [
+              "d10s0"
+            ]
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u3",
+          "description": "whether both Blood Bowl and Afrikan tähti are games",
+          "necessary": true,
+          "depends_on": [
+            "u1",
+            "u2"
+          ],
+          "expected_answer": "yes",
+          "support_sets": [
+            []
+          ],
+          "support_basis": "derived_from_dependencies"
+        }
+      ],
+      "fell_back": false,
+      "status": "reviewed",
+      "latency_s": 2.4628136281389743,
+      "annotation_review": {
+        "human_note": "",
+        "execution_note": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+        "issues": [],
+        "author": "assistant",
+        "human_approved": true,
+        "approval_basis": "用户于 2026-11-28 确认已审核通过；按最新 Note 落实"
+      },
+      "raw_decomposition": {
+        "sample_id": "hotpotqa_5adec3db55429975fa854f83",
+        "split": "train",
+        "question": "Are Blood Bowl and Afrikan tähti both games?",
+        "sft_snapshot_count": 9,
+        "question_type": "comparison",
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "whether Blood Bowl is a game",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u2",
+            "description": "whether Afrikan tähti is a game",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u3",
+            "description": "whether both Blood Bowl and Afrikan tähti are games",
+            "necessary": true,
+            "depends_on": [
+              "u1",
+              "u2"
+            ]
+          }
+        ],
+        "fell_back": false,
+        "status": "needs_review",
+        "latency_s": 2.4628136281389743
+      }
+    },
+    {
+      "sample_id": "hotpotqa_5adf9e59554299025d62a2e9",
+      "split": "train",
+      "question": "Was the Pixies a rock band when Pierre Bouvier was a child?",
+      "sft_snapshot_count": 9,
+      "question_type": "comparison",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "birth date of Pierre Bouvier",
+          "necessary": false,
+          "depends_on": [],
+          "expected_answer": "9 May 1979",
+          "support_sets": [
+            [
+              "d5s0"
+            ]
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u2",
+          "description": "year Pixies became a rock band",
+          "necessary": false,
+          "depends_on": [],
+          "expected_answer": "1986",
+          "support_sets": [
+            [
+              "d3s0"
+            ]
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u3",
+          "description": "whether Pixies was a rock band when Pierre Bouvier was a child",
+          "necessary": true,
+          "depends_on": [
+            "u1",
+            "u2"
+          ],
+          "expected_answer": "yes",
+          "support_sets": [
+            []
+          ],
+          "support_basis": "derived_from_dependencies"
+        }
+      ],
+      "fell_back": false,
+      "status": "reviewed",
+      "latency_s": 2.4861910599283874,
+      "annotation_review": {
+        "human_note": "题型改成comparison，保持新顺序",
+        "execution_note": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。 题型修正为 comparison。",
+        "issues": [],
+        "author": "assistant",
+        "human_approved": true,
+        "approval_basis": "用户于 2026-11-28 确认已审核通过；按最新 Note 落实"
+      },
+      "raw_decomposition": {
+        "sample_id": "hotpotqa_5adf9e59554299025d62a2e9",
+        "split": "train",
+        "question": "Was the Pixies a rock band when Pierre Bouvier was a child?",
+        "sft_snapshot_count": 9,
+        "question_type": "bridge_comparison",
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "birth date of Pierre Bouvier",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u2",
+            "description": "year Pixies became a rock band",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u3",
+            "description": "whether Pixies was a rock band when Pierre Bouvier was a child",
+            "necessary": true,
+            "depends_on": [
+              "u1",
+              "u2"
+            ]
+          }
+        ],
+        "fell_back": false,
+        "status": "needs_review",
+        "latency_s": 2.4861910599283874
+      }
+    },
+    {
+      "sample_id": "hotpotqa_5adfdcf5554299025d62a367",
+      "split": "train",
+      "question": " Royal Air Force Valley provides fast-jet training using an advanced trainer aircraft first flown in what year?",
+      "sft_snapshot_count": 7,
+      "question_type": "bridge",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "advanced trainer aircraft used by Royal Air Force Valley",
+          "necessary": false,
+          "depends_on": [],
+          "expected_answer": "BAE Systems Hawk",
+          "support_sets": [
+            [
+              "d1s1"
+            ]
+          ],
+          "aliases": [
+            "Hawk",
+            "Hawker Siddeley Hawk"
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u2",
+          "description": "year the aircraft in {u1} was first flown",
+          "necessary": true,
+          "depends_on": [
+            "u1"
+          ],
+          "expected_answer": "1974",
+          "support_sets": [
+            [
+              "d3s1"
+            ]
+          ],
+          "support_basis": "context"
+        }
+      ],
+      "fell_back": false,
+      "status": "reviewed",
+      "latency_s": 1.7338370559737086,
+      "annotation_review": {
+        "human_note": "",
+        "execution_note": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+        "issues": [],
+        "author": "assistant",
+        "human_approved": true,
+        "approval_basis": "用户于 2026-11-28 确认已审核通过；按最新 Note 落实"
+      },
+      "raw_decomposition": {
+        "sample_id": "hotpotqa_5adfdcf5554299025d62a367",
+        "split": "train",
+        "question": " Royal Air Force Valley provides fast-jet training using an advanced trainer aircraft first flown in what year?",
+        "sft_snapshot_count": 7,
+        "question_type": "bridge",
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "advanced trainer aircraft used by Royal Air Force Valley",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u2",
+            "description": "year the aircraft in {u1} was first flown",
+            "necessary": true,
+            "depends_on": [
+              "u1"
+            ]
+          }
+        ],
+        "fell_back": false,
+        "status": "needs_review",
+        "latency_s": 1.7338370559737086
+      }
+    },
+    {
+      "sample_id": "hotpotqa_5ae05ae955429945ae959340",
+      "split": "train",
+      "question": "On what network did an American actress portray Shirley Partridge, along with David Cassidy, beginning in 1970?",
+      "sft_snapshot_count": 7,
+      "question_type": "bridge",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "television show where Shirley Partridge was portrayed by an American actress along with David Cassidy",
+          "necessary": false,
+          "depends_on": [],
+          "expected_answer": "The Partridge Family",
+          "support_sets": [
+            [
+              "d7s4"
+            ],
+            [
+              "d4s1"
+            ]
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u2",
+          "description": "network that aired {u1}",
+          "necessary": true,
+          "depends_on": [
+            "u1"
+          ],
+          "expected_answer": "ABC",
+          "support_sets": [
+            [
+              "d10s2"
+            ]
+          ],
+          "aliases": [
+            "ABC network",
+            "American Broadcasting Company"
+          ],
+          "support_basis": "context"
+        }
+      ],
+      "fell_back": false,
+      "status": "reviewed",
+      "latency_s": 1.7975308001041412,
+      "annotation_review": {
+        "human_note": "",
+        "execution_note": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+        "issues": [],
+        "author": "assistant",
+        "human_approved": true,
+        "approval_basis": "用户于 2026-11-28 确认已审核通过；按最新 Note 落实"
+      },
+      "raw_decomposition": {
+        "sample_id": "hotpotqa_5ae05ae955429945ae959340",
+        "split": "train",
+        "question": "On what network did an American actress portray Shirley Partridge, along with David Cassidy, beginning in 1970?",
+        "sft_snapshot_count": 7,
+        "question_type": "bridge",
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "television show where Shirley Partridge was portrayed by an American actress along with David Cassidy",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u2",
+            "description": "network that aired {u1}",
+            "necessary": true,
+            "depends_on": [
+              "u1"
+            ]
+          }
+        ],
+        "fell_back": false,
+        "status": "needs_review",
+        "latency_s": 1.7975308001041412
+      }
+    },
+    {
+      "sample_id": "hotpotqa_5ae0b79355429945ae95943c",
+      "split": "train",
+      "question": "Which star of The move The Founder was born on June 26, 1970 ?",
+      "sft_snapshot_count": 8,
+      "question_type": "bridge",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "stars of The Founder listed in the context",
+          "necessary": false,
+          "depends_on": [],
+          "expected_answer": "Michael Keaton; Nick Offerman; John Carroll Lynch",
+          "support_sets": [
+            [
+              "d3s1",
+              "d3s2"
+            ]
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u2",
+          "description": "star of The Founder born on June 26, 1970",
+          "necessary": true,
+          "depends_on": [
+            "u1"
+          ],
+          "expected_answer": "Nick Offerman",
+          "support_sets": [
+            [
+              "d6s0"
+            ]
+          ],
+          "support_basis": "context"
+        }
+      ],
+      "fell_back": false,
+      "status": "reviewed",
+      "latency_s": 1.734381953952834,
+      "annotation_review": {
+        "human_note": "保留新拆法，重构标签",
+        "execution_note": "保留演员→出生日期筛选顺序；u1 标注候选演员集合，不在生日证据到达前只标 Nick Offerman。",
+        "issues": [],
+        "author": "assistant",
+        "human_approved": true,
+        "approval_basis": "用户于 2026-11-28 确认已审核通过；按最新 Note 落实"
+      },
+      "raw_decomposition": {
+        "sample_id": "hotpotqa_5ae0b79355429945ae95943c",
+        "split": "train",
+        "question": "Which star of The move The Founder was born on June 26, 1970 ?",
+        "sft_snapshot_count": 8,
+        "question_type": "bridge",
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "star of The Founder",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u2",
+            "description": "star of The Founder born on June 26, 1970",
+            "necessary": true,
+            "depends_on": [
+              "u1"
+            ]
+          }
+        ],
+        "fell_back": false,
+        "status": "needs_review",
+        "latency_s": 1.734381953952834
+      }
+    },
+    {
+      "sample_id": "hotpotqa_5ae0bf2955429906c02dab1f",
+      "split": "train",
+      "question": "Which band was formed first, Radiohead or My Morning Jacket?",
+      "sft_snapshot_count": 8,
+      "question_type": "comparison",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "year Radiohead was formed",
+          "necessary": false,
+          "depends_on": [],
+          "expected_answer": "1985",
+          "support_sets": [
+            [
+              "d8s0"
+            ]
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u2",
+          "description": "year My Morning Jacket was formed",
+          "necessary": false,
+          "depends_on": [],
+          "expected_answer": "1998",
+          "support_sets": [
+            [
+              "d3s0"
+            ]
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u3",
+          "description": "which band was formed first",
+          "necessary": true,
+          "depends_on": [
+            "u1",
+            "u2"
+          ],
+          "expected_answer": "Radiohead",
+          "support_sets": [
+            []
+          ],
+          "support_basis": "derived_from_dependencies"
+        }
+      ],
+      "fell_back": false,
+      "status": "reviewed",
+      "latency_s": 2.234123889124021,
+      "annotation_review": {
+        "human_note": "",
+        "execution_note": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+        "issues": [],
+        "author": "assistant",
+        "human_approved": true,
+        "approval_basis": "用户于 2026-11-28 确认已审核通过；按最新 Note 落实"
+      },
+      "raw_decomposition": {
+        "sample_id": "hotpotqa_5ae0bf2955429906c02dab1f",
+        "split": "train",
+        "question": "Which band was formed first, Radiohead or My Morning Jacket?",
+        "sft_snapshot_count": 8,
+        "question_type": "comparison",
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "year Radiohead was formed",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u2",
+            "description": "year My Morning Jacket was formed",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u3",
+            "description": "which band was formed first",
+            "necessary": true,
+            "depends_on": [
+              "u1",
+              "u2"
+            ]
+          }
+        ],
+        "fell_back": false,
+        "status": "needs_review",
+        "latency_s": 2.234123889124021
+      }
+    },
+    {
+      "sample_id": "hotpotqa_5ae130515542997b2ef7d121",
+      "split": "train",
+      "question": "These happy Golden Years was written by what American writer known for her series of children's books that were released from 1932 to 1943?",
+      "sft_snapshot_count": 9,
+      "question_type": "bridge",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "American writer known for her series of children's books released from 1932 to 1943",
+          "necessary": false,
+          "depends_on": [],
+          "expected_answer": "Laura Ingalls Wilder",
+          "support_sets": [
+            [
+              "d2s0"
+            ]
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u2",
+          "description": "author of \"These happy Golden Years\", given {u1}",
+          "necessary": true,
+          "depends_on": [
+            "u1"
+          ],
+          "expected_answer": "Laura Ingalls Wilder",
+          "support_sets": [
+            [
+              "d9s0"
+            ],
+            [
+              "d10s0",
+              "d10s1"
+            ]
+          ],
+          "support_basis": "context"
+        }
+      ],
+      "fell_back": false,
+      "status": "reviewed",
+      "latency_s": 2.046838514972478,
+      "annotation_review": {
+        "human_note": "",
+        "execution_note": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+        "issues": [],
+        "author": "assistant",
+        "human_approved": true,
+        "approval_basis": "用户于 2026-11-28 确认已审核通过；按最新 Note 落实"
+      },
+      "raw_decomposition": {
+        "sample_id": "hotpotqa_5ae130515542997b2ef7d121",
+        "split": "train",
+        "question": "These happy Golden Years was written by what American writer known for her series of children's books that were released from 1932 to 1943?",
+        "sft_snapshot_count": 9,
+        "question_type": "bridge",
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "American writer known for her series of children's books released from 1932 to 1943",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u2",
+            "description": "author of \"These happy Golden Years\", given {u1}",
+            "necessary": true,
+            "depends_on": [
+              "u1"
+            ]
+          }
+        ],
+        "fell_back": false,
+        "status": "needs_review",
+        "latency_s": 2.046838514972478
+      }
+    },
+    {
+      "sample_id": "hotpotqa_5ae13d9d55429920d523433d",
+      "split": "train",
+      "question": "Are both Tangshan and Lanxi, Zhejiang from the same province in China?",
+      "sft_snapshot_count": 8,
+      "question_type": "comparison",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "province of Tangshan",
+          "necessary": false,
+          "depends_on": [],
+          "expected_answer": "Hebei",
+          "support_sets": [
+            [
+              "d4s0"
+            ],
+            [
+              "d5s0"
+            ],
+            [
+              "d3s0"
+            ],
+            [
+              "d6s0"
+            ]
+          ],
+          "aliases": [
+            "Hebei province"
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u2",
+          "description": "province of Lanxi, Zhejiang",
+          "necessary": false,
+          "depends_on": [],
+          "expected_answer": "Zhejiang",
+          "support_sets": [
+            [
+              "d9s0"
+            ]
+          ],
+          "aliases": [
+            "Zhejiang Province"
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u3",
+          "description": "whether Tangshan and Lanxi, Zhejiang are from the same province",
+          "necessary": true,
+          "depends_on": [
+            "u1",
+            "u2"
+          ],
+          "expected_answer": "no",
+          "support_sets": [
+            []
+          ],
+          "support_basis": "derived_from_dependencies"
+        }
+      ],
+      "fell_back": false,
+      "status": "reviewed",
+      "latency_s": 2.4638982659671456,
+      "annotation_review": {
+        "human_note": "",
+        "execution_note": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+        "issues": [],
+        "author": "assistant",
+        "human_approved": true,
+        "approval_basis": "用户于 2026-11-28 确认已审核通过；按最新 Note 落实"
+      },
+      "raw_decomposition": {
+        "sample_id": "hotpotqa_5ae13d9d55429920d523433d",
+        "split": "train",
+        "question": "Are both Tangshan and Lanxi, Zhejiang from the same province in China?",
+        "sft_snapshot_count": 8,
+        "question_type": "comparison",
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "province of Tangshan",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u2",
+            "description": "province of Lanxi, Zhejiang",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u3",
+            "description": "whether Tangshan and Lanxi, Zhejiang are from the same province",
+            "necessary": true,
+            "depends_on": [
+              "u1",
+              "u2"
+            ]
+          }
+        ],
+        "fell_back": false,
+        "status": "needs_review",
+        "latency_s": 2.4638982659671456
+      }
+    },
+    {
+      "sample_id": "hotpotqa_5ae143aa55429920d523435d",
+      "split": "train",
+      "question": "Are the bands Skunk Anansie and Anberlin from the same country?",
+      "sft_snapshot_count": 6,
+      "question_type": "comparison",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "country of Skunk Anansie",
+          "necessary": false,
+          "depends_on": [],
+          "expected_answer": "United Kingdom",
+          "support_sets": [
+            [
+              "d1s0"
+            ],
+            [
+              "d6s0"
+            ],
+            [
+              "d2s0"
+            ]
+          ],
+          "aliases": [
+            "UK",
+            "Britain",
+            "British",
+            "England",
+            "English"
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u2",
+          "description": "country of Anberlin",
+          "necessary": false,
+          "depends_on": [],
+          "expected_answer": "United States",
+          "support_sets": [
+            [
+              "d5s0"
+            ]
+          ],
+          "aliases": [
+            "US",
+            "USA",
+            "American"
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u3",
+          "description": "whether Skunk Anansie and Anberlin are from the same country",
+          "necessary": true,
+          "depends_on": [
+            "u1",
+            "u2"
+          ],
+          "expected_answer": "no",
+          "support_sets": [
+            []
+          ],
+          "support_basis": "derived_from_dependencies"
+        }
+      ],
+      "fell_back": false,
+      "status": "reviewed",
+      "latency_s": 2.4640487818978727,
+      "annotation_review": {
+        "human_note": "",
+        "execution_note": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+        "issues": [],
+        "author": "assistant",
+        "human_approved": true,
+        "approval_basis": "用户于 2026-11-28 确认已审核通过；按最新 Note 落实"
+      },
+      "raw_decomposition": {
+        "sample_id": "hotpotqa_5ae143aa55429920d523435d",
+        "split": "train",
+        "question": "Are the bands Skunk Anansie and Anberlin from the same country?",
+        "sft_snapshot_count": 6,
+        "question_type": "comparison",
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "country of Skunk Anansie",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u2",
+            "description": "country of Anberlin",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u3",
+            "description": "whether Skunk Anansie and Anberlin are from the same country",
+            "necessary": true,
+            "depends_on": [
+              "u1",
+              "u2"
+            ]
+          }
+        ],
+        "fell_back": false,
+        "status": "needs_review",
+        "latency_s": 2.4640487818978727
+      }
+    },
+    {
+      "sample_id": "hotpotqa_5ae176ef5542990adbacf79d",
+      "split": "train",
+      "question": "Are Nagisa Oshima and David Hewlett of the same nationality?",
+      "sft_snapshot_count": 9,
+      "question_type": "comparison",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "nationality of Nagisa Oshima",
+          "necessary": false,
+          "depends_on": [],
+          "expected_answer": "Japanese",
+          "support_sets": [
+            [
+              "d4s0"
+            ]
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u2",
+          "description": "nationality of David Hewlett",
+          "necessary": false,
+          "depends_on": [],
+          "expected_answer": "Canadian",
+          "support_sets": [
+            [
+              "d2s0"
+            ]
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u3",
+          "description": "whether Nagisa Oshima and David Hewlett are of the same nationality",
+          "necessary": true,
+          "depends_on": [
+            "u1",
+            "u2"
+          ],
+          "expected_answer": "no",
+          "support_sets": [
+            []
+          ],
+          "support_basis": "derived_from_dependencies"
+        }
+      ],
+      "fell_back": false,
+      "status": "reviewed",
+      "latency_s": 2.464021534891799,
+      "annotation_review": {
+        "human_note": "",
+        "execution_note": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+        "issues": [],
+        "author": "assistant",
+        "human_approved": true,
+        "approval_basis": "用户于 2026-11-28 确认已审核通过；按最新 Note 落实"
+      },
+      "raw_decomposition": {
+        "sample_id": "hotpotqa_5ae176ef5542990adbacf79d",
+        "split": "train",
+        "question": "Are Nagisa Oshima and David Hewlett of the same nationality?",
+        "sft_snapshot_count": 9,
+        "question_type": "comparison",
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "nationality of Nagisa Oshima",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u2",
+            "description": "nationality of David Hewlett",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u3",
+            "description": "whether Nagisa Oshima and David Hewlett are of the same nationality",
+            "necessary": true,
+            "depends_on": [
+              "u1",
+              "u2"
+            ]
+          }
+        ],
+        "fell_back": false,
+        "status": "needs_review",
+        "latency_s": 2.464021534891799
+      }
+    },
+    {
+      "sample_id": "hotpotqa_5ae1af93554299492dc91b69",
+      "split": "train",
+      "question": "are Horia Tecău and Heinz Günthardt nationals of the same country ?",
+      "sft_snapshot_count": 9,
+      "question_type": "comparison",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "nationality of Horia Tecău",
+          "necessary": false,
+          "depends_on": [],
+          "expected_answer": "Romanian",
+          "support_sets": [
+            [
+              "d5s0"
+            ]
+          ],
+          "aliases": [
+            "Romania"
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u2",
+          "description": "nationality of Heinz Günthardt",
+          "necessary": false,
+          "depends_on": [],
+          "expected_answer": "Swiss",
+          "support_sets": [
+            [
+              "d10s0"
+            ]
+          ],
+          "aliases": [
+            "Switzerland"
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u3",
+          "description": "whether Horia Tecău and Heinz Günthardt are nationals of the same country",
+          "necessary": true,
+          "depends_on": [
+            "u1",
+            "u2"
+          ],
+          "expected_answer": "no",
+          "support_sets": [
+            []
+          ],
+          "support_basis": "derived_from_dependencies"
+        }
+      ],
+      "fell_back": false,
+      "status": "reviewed",
+      "latency_s": 2.6513488970231265,
+      "annotation_review": {
+        "human_note": "",
+        "execution_note": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+        "issues": [],
+        "author": "assistant",
+        "human_approved": true,
+        "approval_basis": "用户于 2026-11-28 确认已审核通过；按最新 Note 落实"
+      },
+      "raw_decomposition": {
+        "sample_id": "hotpotqa_5ae1af93554299492dc91b69",
+        "split": "train",
+        "question": "are Horia Tecău and Heinz Günthardt nationals of the same country ?",
+        "sft_snapshot_count": 9,
+        "question_type": "comparison",
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "nationality of Horia Tecău",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u2",
+            "description": "nationality of Heinz Günthardt",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u3",
+            "description": "whether Horia Tecău and Heinz Günthardt are nationals of the same country",
+            "necessary": true,
+            "depends_on": [
+              "u1",
+              "u2"
+            ]
+          }
+        ],
+        "fell_back": false,
+        "status": "needs_review",
+        "latency_s": 2.6513488970231265
+      }
+    },
+    {
+      "sample_id": "hotpotqa_5ae1b052554299492dc91b6b",
+      "split": "train",
+      "question": "Which opera Ernani and Stiffelio.has more acts ?",
+      "sft_snapshot_count": 9,
+      "question_type": "comparison",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "number of acts in Ernani",
+          "necessary": false,
+          "depends_on": [],
+          "expected_answer": "four",
+          "support_sets": [
+            [
+              "d2s0"
+            ]
+          ],
+          "aliases": [
+            "4"
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u2",
+          "description": "number of acts in Stiffelio",
+          "necessary": false,
+          "depends_on": [],
+          "expected_answer": "three",
+          "support_sets": [
+            [
+              "d8s0"
+            ]
+          ],
+          "aliases": [
+            "3"
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u3",
+          "description": "which opera has more acts",
+          "necessary": true,
+          "depends_on": [
+            "u1",
+            "u2"
+          ],
+          "expected_answer": "Ernani",
+          "support_sets": [
+            []
+          ],
+          "support_basis": "derived_from_dependencies"
+        }
+      ],
+      "fell_back": false,
+      "status": "reviewed",
+      "latency_s": 2.317521065939218,
+      "annotation_review": {
+        "human_note": "",
+        "execution_note": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+        "issues": [],
+        "author": "assistant",
+        "human_approved": true,
+        "approval_basis": "用户于 2026-11-28 确认已审核通过；按最新 Note 落实"
+      },
+      "raw_decomposition": {
+        "sample_id": "hotpotqa_5ae1b052554299492dc91b6b",
+        "split": "train",
+        "question": "Which opera Ernani and Stiffelio.has more acts ?",
+        "sft_snapshot_count": 9,
+        "question_type": "comparison",
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "number of acts in Ernani",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u2",
+            "description": "number of acts in Stiffelio",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u3",
+            "description": "which opera has more acts",
+            "necessary": true,
+            "depends_on": [
+              "u1",
+              "u2"
+            ]
+          }
+        ],
+        "fell_back": false,
+        "status": "needs_review",
+        "latency_s": 2.317521065939218
+      }
+    },
+    {
+      "sample_id": "hotpotqa_5ae234405542992decbdcc5a",
+      "split": "train",
+      "question": "In which city will you find the MTR or Mass Transit Railway which stops at Tin Yuet () which is located at ground level at the centre of Tin Shing Road and between Tin Yuet Estate and Tin Ching Estate?",
+      "sft_snapshot_count": 8,
+      "question_type": "single",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "city where the MTR or Mass Transit Railway which stops at Tin Yuet is located",
+          "necessary": true,
+          "depends_on": [],
+          "expected_answer": "Hong Kong",
+          "support_sets": [
+            [
+              "d4s0"
+            ],
+            [
+              "d5s0"
+            ],
+            [
+              "d8s0"
+            ]
+          ],
+          "support_basis": "context"
+        }
+      ],
+      "fell_back": false,
+      "status": "reviewed",
+      "latency_s": 1.1312820869497955,
+      "annotation_review": {
+        "human_note": "如果题目信息可以算作已知条件，按single拆分",
+        "execution_note": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+        "issues": [],
+        "author": "assistant",
+        "human_approved": true,
+        "approval_basis": "用户于 2026-11-28 确认已审核通过；按最新 Note 落实"
+      },
+      "raw_decomposition": {
+        "sample_id": "hotpotqa_5ae234405542992decbdcc5a",
+        "split": "train",
+        "question": "In which city will you find the MTR or Mass Transit Railway which stops at Tin Yuet () which is located at ground level at the centre of Tin Shing Road and between Tin Yuet Estate and Tin Ching Estate?",
+        "sft_snapshot_count": 8,
+        "question_type": "single",
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "city where the MTR or Mass Transit Railway which stops at Tin Yuet is located",
+            "necessary": true,
+            "depends_on": []
+          }
+        ],
+        "fell_back": false,
+        "status": "needs_review",
+        "latency_s": 1.1312820869497955
+      }
+    },
+    {
+      "sample_id": "hotpotqa_5ae266c35542996483e6499a",
+      "split": "train",
+      "question": "Which genus of plants has a larger range, Fritillaria or Teucrium?",
+      "sft_snapshot_count": 8,
+      "question_type": "comparison",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "range of Fritillaria",
+          "necessary": false,
+          "depends_on": [],
+          "expected_answer": "Eurasia, North Africa, and North America",
+          "support_sets": [
+            [
+              "d6s0"
+            ]
+          ],
+          "aliases": [
+            "Eurasian, North African, and North American"
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u2",
+          "description": "range of Teucrium",
+          "necessary": false,
+          "depends_on": [],
+          "expected_answer": "worldwide",
+          "support_sets": [
+            [
+              "d7s5"
+            ]
+          ],
+          "aliases": [
+            "all over the world"
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u3",
+          "description": "which genus has a larger range",
+          "necessary": true,
+          "depends_on": [
+            "u1",
+            "u2"
+          ],
+          "expected_answer": "Teucrium",
+          "support_sets": [
+            []
+          ],
+          "support_basis": "derived_from_dependencies"
+        }
+      ],
+      "fell_back": false,
+      "status": "reviewed",
+      "latency_s": 2.276728839846328,
+      "annotation_review": {
+        "human_note": "",
+        "execution_note": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+        "issues": [],
+        "author": "assistant",
+        "human_approved": true,
+        "approval_basis": "用户于 2026-11-28 确认已审核通过；按最新 Note 落实"
+      },
+      "raw_decomposition": {
+        "sample_id": "hotpotqa_5ae266c35542996483e6499a",
+        "split": "train",
+        "question": "Which genus of plants has a larger range, Fritillaria or Teucrium?",
+        "sft_snapshot_count": 8,
+        "question_type": "comparison",
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "range of Fritillaria",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u2",
+            "description": "range of Teucrium",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u3",
+            "description": "which genus has a larger range",
+            "necessary": true,
+            "depends_on": [
+              "u1",
+              "u2"
+            ]
+          }
+        ],
+        "fell_back": false,
+        "status": "needs_review",
+        "latency_s": 2.276728839846328
+      }
+    },
+    {
+      "sample_id": "hotpotqa_5ae31f4455429928c423961b",
+      "split": "train",
+      "question": "Jordan Lussey is a midfielder for a football club that is based in Telford, Shropshire, England, and whose colours are what?",
+      "sft_snapshot_count": 8,
+      "question_type": "bridge",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "football club that Jordan Lussey plays for",
+          "necessary": false,
+          "depends_on": [],
+          "expected_answer": "A.F.C. Telford United",
+          "support_sets": [
+            [
+              "d6s0"
+            ]
+          ],
+          "aliases": [
+            "AFC Telford United"
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u2",
+          "description": "colours of {u1}",
+          "necessary": true,
+          "depends_on": [
+            "u1"
+          ],
+          "expected_answer": "white with navy blue and red trim",
+          "support_sets": [
+            [
+              "d2s3"
+            ]
+          ],
+          "support_basis": "context"
+        }
+      ],
+      "fell_back": false,
+      "status": "reviewed",
+      "latency_s": 1.6304893589112908,
+      "annotation_review": {
+        "human_note": "",
+        "execution_note": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+        "issues": [],
+        "author": "assistant",
+        "human_approved": true,
+        "approval_basis": "用户于 2026-11-28 确认已审核通过；按最新 Note 落实"
+      },
+      "raw_decomposition": {
+        "sample_id": "hotpotqa_5ae31f4455429928c423961b",
+        "split": "train",
+        "question": "Jordan Lussey is a midfielder for a football club that is based in Telford, Shropshire, England, and whose colours are what?",
+        "sft_snapshot_count": 8,
+        "question_type": "bridge",
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "football club that Jordan Lussey plays for",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u2",
+            "description": "colours of {u1}",
+            "necessary": true,
+            "depends_on": [
+              "u1"
+            ]
+          }
+        ],
+        "fell_back": false,
+        "status": "needs_review",
+        "latency_s": 1.6304893589112908
+      }
+    },
+    {
+      "sample_id": "hotpotqa_5ae340c45542992f92d82273",
+      "split": "train",
+      "question": "The tour that Taylor Swift completed in Singapore on June 12, 2014 grossed how much?",
+      "sft_snapshot_count": 7,
+      "question_type": "bridge",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "Taylor Swift tour that concluded in Singapore on June 12, 2014",
+          "necessary": false,
+          "expected_answer": "The Red Tour",
+          "depends_on": [],
+          "support_sets": [
+            [
+              "d2s1"
+            ],
+            [
+              "d7s5"
+            ]
+          ],
+          "aliases": [
+            "Red Tour"
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u2",
+          "description": "amount grossed by {u1}",
+          "necessary": true,
+          "expected_answer": "over $150 million",
+          "depends_on": [
+            "u1"
+          ],
+          "support_sets": [
+            [
+              "d7s5"
+            ]
+          ],
+          "aliases": [
+            "$150 million"
+          ],
+          "support_basis": "context"
+        }
+      ],
+      "fell_back": false,
+      "status": "reviewed",
+      "latency_s": 1.171009391080588,
+      "annotation_review": {
+        "human_note": "按照旧拆法拆分",
+        "execution_note": "采用旧版多单元/查询目标，保留可独立表达的中间事实；按 context 核对答案与证据。",
+        "issues": [],
+        "author": "assistant",
+        "human_approved": true,
+        "approval_basis": "用户于 2026-11-28 确认已审核通过；按最新 Note 落实"
+      },
+      "raw_decomposition": {
+        "sample_id": "hotpotqa_5ae340c45542992f92d82273",
+        "split": "train",
+        "question": "The tour that Taylor Swift completed in Singapore on June 12, 2014 grossed how much?",
+        "sft_snapshot_count": 7,
+        "question_type": "single",
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "gross revenue of Taylor Swift's Singapore tour on June 12, 2014",
+            "necessary": true,
+            "depends_on": []
+          }
+        ],
+        "fell_back": false,
+        "status": "needs_review",
+        "latency_s": 1.171009391080588
+      }
+    },
+    {
+      "sample_id": "hotpotqa_5ae3f3cb5542995ad6573cd9",
+      "split": "train",
+      "question": "Which company works with petroleum, Apache Corporation or Alexion Pharmaceuticals?",
+      "sft_snapshot_count": 9,
+      "question_type": "comparison",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "whether Apache Corporation works with petroleum",
+          "necessary": false,
+          "depends_on": [],
+          "expected_answer": "yes",
+          "support_sets": [
+            [
+              "d7s0"
+            ]
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u2",
+          "description": "whether Alexion Pharmaceuticals works with petroleum",
+          "necessary": false,
+          "depends_on": [],
+          "expected_answer": "no",
+          "support_sets": [
+            [
+              "d3s0"
+            ]
+          ],
+          "by_omission": true,
+          "support_basis": "definition_omission"
+        },
+        {
+          "unit_id": "u3",
+          "description": "which company works with petroleum",
+          "necessary": true,
+          "depends_on": [
+            "u1",
+            "u2"
+          ],
+          "expected_answer": "Apache Corporation",
+          "support_sets": [
+            []
+          ],
+          "support_basis": "derived_from_dependencies"
+        }
+      ],
+      "fell_back": false,
+      "status": "reviewed",
+      "latency_s": 2.2763143819756806,
+      "annotation_review": {
+        "human_note": "",
+        "execution_note": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+        "issues": [],
+        "author": "assistant",
+        "human_approved": true,
+        "approval_basis": "用户于 2026-11-28 确认已审核通过；按最新 Note 落实"
+      },
+      "raw_decomposition": {
+        "sample_id": "hotpotqa_5ae3f3cb5542995ad6573cd9",
+        "split": "train",
+        "question": "Which company works with petroleum, Apache Corporation or Alexion Pharmaceuticals?",
+        "sft_snapshot_count": 9,
+        "question_type": "comparison",
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "whether Apache Corporation works with petroleum",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u2",
+            "description": "whether Alexion Pharmaceuticals works with petroleum",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u3",
+            "description": "which company works with petroleum",
+            "necessary": true,
+            "depends_on": [
+              "u1",
+              "u2"
+            ]
+          }
+        ],
+        "fell_back": false,
+        "status": "needs_review",
+        "latency_s": 2.2763143819756806
+      }
+    },
+    {
+      "sample_id": "hotpotqa_5ae3fc835542995dadf24288",
+      "split": "train",
+      "question": "In between Die schweigsame Frau and La straniera which one is an opera in three acts?",
+      "sft_snapshot_count": 8,
+      "question_type": "comparison",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "whether Die schweigsame Frau is an opera in three acts",
+          "necessary": false,
+          "depends_on": [],
+          "expected_answer": "yes",
+          "support_sets": [
+            [
+              "d10s0"
+            ]
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u2",
+          "description": "whether La straniera is an opera in three acts",
+          "necessary": false,
+          "depends_on": [],
+          "expected_answer": "no",
+          "support_sets": [
+            [
+              "d8s0"
+            ]
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u3",
+          "description": "which one is an opera in three acts",
+          "necessary": true,
+          "depends_on": [
+            "u1",
+            "u2"
+          ],
+          "expected_answer": "Die schweigsame Frau",
+          "support_sets": [
+            []
+          ],
+          "support_basis": "derived_from_dependencies"
+        }
+      ],
+      "fell_back": false,
+      "status": "reviewed",
+      "latency_s": 2.5689271290320903,
+      "annotation_review": {
+        "human_note": "",
+        "execution_note": "保留新 whether 三幕查询，旧 three/two 改为 yes/no，支持证据不变。",
+        "issues": [],
+        "author": "assistant",
+        "human_approved": true,
+        "approval_basis": "用户于 2026-11-28 确认已审核通过；按最新 Note 落实"
+      },
+      "raw_decomposition": {
+        "sample_id": "hotpotqa_5ae3fc835542995dadf24288",
+        "split": "train",
+        "question": "In between Die schweigsame Frau and La straniera which one is an opera in three acts?",
+        "sft_snapshot_count": 8,
+        "question_type": "comparison",
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "whether Die schweigsame Frau is an opera in three acts",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u2",
+            "description": "whether La straniera is an opera in three acts",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u3",
+            "description": "which one is an opera in three acts",
+            "necessary": true,
+            "depends_on": [
+              "u1",
+              "u2"
+            ]
+          }
+        ],
+        "fell_back": false,
+        "status": "needs_review",
+        "latency_s": 2.5689271290320903
+      }
+    },
+    {
+      "sample_id": "hotpotqa_5ae533495542992663a4f159",
+      "split": "train",
+      "question": "Barbara Linares is a model for what parent company of Aerie?",
+      "sft_snapshot_count": 7,
+      "question_type": "bridge",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "parent company of Aerie",
+          "necessary": false,
+          "depends_on": [],
+          "expected_answer": "American Eagle Outfitters",
+          "support_sets": [
+            [
+              "d7s3"
+            ],
+            [
+              "d4s1"
+            ]
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u2",
+          "description": "parent company {u1} whose Aerie brand Barbara Linares models for",
+          "necessary": true,
+          "depends_on": [
+            "u1"
+          ],
+          "expected_answer": "American Eagle Outfitters",
+          "support_sets": [
+            [
+              "d4s0",
+              "d4s1"
+            ]
+          ],
+          "support_basis": "context"
+        }
+      ],
+      "fell_back": false,
+      "status": "reviewed",
+      "latency_s": 1.608744409168139,
+      "annotation_review": {
+        "human_note": "按照新的拆分顺序",
+        "execution_note": "按 Note 保留先母公司后模特关系的顺序，修正必要单元使答案明确为公司。",
+        "issues": [],
+        "author": "assistant",
+        "human_approved": true,
+        "approval_basis": "用户于 2026-11-28 确认已审核通过；按最新 Note 落实"
+      },
+      "raw_decomposition": {
+        "sample_id": "hotpotqa_5ae533495542992663a4f159",
+        "split": "train",
+        "question": "Barbara Linares is a model for what parent company of Aerie?",
+        "sft_snapshot_count": 7,
+        "question_type": "bridge",
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "parent company of Aerie",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u2",
+            "description": "model Barbara Linares for {u1}",
+            "necessary": true,
+            "depends_on": [
+              "u1"
+            ]
+          }
+        ],
+        "fell_back": false,
+        "status": "needs_review",
+        "latency_s": 1.608744409168139
+      }
+    },
+    {
+      "sample_id": "hotpotqa_5ae5394855429908b6326585",
+      "split": "train",
+      "question": "Which device can air TVPlayer channels for free and allows users to play using a remote?",
+      "sft_snapshot_count": 8,
+      "question_type": "single",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "device that can air TVPlayer channels for free and allows users to play using a remote",
+          "necessary": true,
+          "depends_on": [],
+          "expected_answer": "Amazon Fire TV",
+          "support_sets": [
+            [
+              "d1s0",
+              "d3s2"
+            ]
+          ],
+          "support_basis": "context"
+        }
+      ],
+      "fell_back": false,
+      "status": "reviewed",
+      "latency_s": 1.1292118278797716,
+      "annotation_review": {
+        "human_note": "这种并列条件的题可以按照single拆分",
+        "execution_note": "保留用户要求的 single，联合 TVPlayer 设备与遥控游戏能力证据。",
+        "issues": [],
+        "author": "assistant",
+        "human_approved": true,
+        "approval_basis": "用户于 2026-11-28 确认已审核通过；按最新 Note 落实"
+      },
+      "raw_decomposition": {
+        "sample_id": "hotpotqa_5ae5394855429908b6326585",
+        "split": "train",
+        "question": "Which device can air TVPlayer channels for free and allows users to play using a remote?",
+        "sft_snapshot_count": 8,
+        "question_type": "single",
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "device that can air TVPlayer channels for free and allows users to play using a remote",
+            "necessary": true,
+            "depends_on": []
+          }
+        ],
+        "fell_back": false,
+        "status": "needs_review",
+        "latency_s": 1.1292118278797716
+      }
+    },
+    {
+      "sample_id": "hotpotqa_5ae5397d55429960a22e0276",
+      "split": "train",
+      "question": "Eliot Teltscher and Anastasia Myskina both played what sport?",
+      "sft_snapshot_count": 8,
+      "question_type": "comparison",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "sport played by Eliot Teltscher",
+          "necessary": false,
+          "depends_on": [],
+          "expected_answer": "tennis",
+          "support_sets": [
+            [
+              "d10s0"
+            ],
+            [
+              "d6s0",
+              "d6s3"
+            ],
+            [
+              "d2s0"
+            ]
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u2",
+          "description": "sport played by Anastasia Myskina",
+          "necessary": false,
+          "depends_on": [],
+          "expected_answer": "tennis",
+          "support_sets": [
+            [
+              "d3s0"
+            ],
+            [
+              "d3s1"
+            ],
+            [
+              "d3s2"
+            ]
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u3",
+          "description": "common sport played by both",
+          "necessary": true,
+          "depends_on": [
+            "u1",
+            "u2"
+          ],
+          "expected_answer": "tennis",
+          "support_sets": [
+            []
+          ],
+          "support_basis": "derived_from_dependencies"
+        }
+      ],
+      "fell_back": false,
+      "status": "reviewed",
+      "latency_s": 2.3802522078622133,
+      "annotation_review": {
+        "human_note": "只将 question_type 改为 comparison，保留当前单元关系",
+        "execution_note": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。 题型修正为 comparison。",
+        "issues": [],
+        "author": "assistant",
+        "human_approved": true,
+        "approval_basis": "用户于 2026-11-28 确认已审核通过；按最新 Note 落实"
+      },
+      "raw_decomposition": {
+        "sample_id": "hotpotqa_5ae5397d55429960a22e0276",
+        "split": "train",
+        "question": "Eliot Teltscher and Anastasia Myskina both played what sport?",
+        "sft_snapshot_count": 8,
+        "question_type": "bridge_comparison",
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "sport played by Eliot Teltscher",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u2",
+            "description": "sport played by Anastasia Myskina",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u3",
+            "description": "common sport played by both",
+            "necessary": true,
+            "depends_on": [
+              "u1",
+              "u2"
+            ]
+          }
+        ],
+        "fell_back": false,
+        "status": "needs_review",
+        "latency_s": 2.3802522078622133
+      }
+    },
+    {
+      "sample_id": "hotpotqa_5ae60b0d554299546bf8302c",
+      "split": "train",
+      "question": "Which professional footballer who plays as a left-back for Los Angeles Galaxy did Cheryl Cole divorced ",
+      "sft_snapshot_count": 7,
+      "question_type": "bridge",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "professional footballer who plays as a left-back for Los Angeles Galaxy",
+          "necessary": false,
+          "depends_on": [],
+          "expected_answer": "Ashley Cole",
+          "support_sets": [
+            [
+              "d1s0"
+            ]
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u2",
+          "description": "person Cheryl Cole divorced, given {u1}",
+          "necessary": true,
+          "depends_on": [
+            "u1"
+          ],
+          "expected_answer": "Ashley Cole",
+          "support_sets": [
+            [
+              "d6s0",
+              "d6s4"
+            ]
+          ],
+          "support_basis": "context"
+        }
+      ],
+      "fell_back": false,
+      "status": "reviewed",
+      "latency_s": 1.7751458298880607,
+      "annotation_review": {
+        "human_note": "保留新的顺序，重构标签",
+        "execution_note": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+        "issues": [],
+        "author": "assistant",
+        "human_approved": true,
+        "approval_basis": "用户于 2026-11-28 确认已审核通过；按最新 Note 落实"
+      },
+      "raw_decomposition": {
+        "sample_id": "hotpotqa_5ae60b0d554299546bf8302c",
+        "split": "train",
+        "question": "Which professional footballer who plays as a left-back for Los Angeles Galaxy did Cheryl Cole divorced ",
+        "sft_snapshot_count": 7,
+        "question_type": "bridge",
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "professional footballer who plays as a left-back for Los Angeles Galaxy",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u2",
+            "description": "person Cheryl Cole divorced, given {u1}",
+            "necessary": true,
+            "depends_on": [
+              "u1"
+            ]
+          }
+        ],
+        "fell_back": false,
+        "status": "needs_review",
+        "latency_s": 1.7751458298880607
+      }
+    },
+    {
+      "sample_id": "hotpotqa_5ae64a2155429908198fa575",
+      "split": "train",
+      "question": "What movie starring Ellen Page was directed by Jason Reitman and written by Diablo Cody, premiered at the 2007 Toronto International Film Festival?",
+      "sft_snapshot_count": 6,
+      "question_type": "bridge",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "movie starring Ellen Page that was directed by Jason Reitman and written by Diablo Cody",
+          "necessary": false,
+          "expected_answer": "Juno",
+          "depends_on": [],
+          "support_sets": [
+            [
+              "d10s0",
+              "d10s1"
+            ],
+            [
+              "d10s0",
+              "d5s3"
+            ]
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u2",
+          "description": "movie starring Ellen Page, directed by Jason Reitman and written by Diablo Cody, that premiered at the 2007 Toronto International Film Festival, given {u1}",
+          "necessary": true,
+          "expected_answer": "Juno",
+          "depends_on": [
+            "u1"
+          ],
+          "support_sets": [
+            [
+              "d10s4"
+            ]
+          ],
+          "support_basis": "context"
+        }
+      ],
+      "fell_back": false,
+      "status": "reviewed",
+      "latency_s": 1.3593061629217118,
+      "annotation_review": {
+        "human_note": "条件过多，按照旧的拆分方式，让模型可以先回答部分答案",
+        "execution_note": "采用旧版多单元/查询目标，保留可独立表达的中间事实；按 context 核对答案与证据。",
+        "issues": [],
+        "author": "assistant",
+        "human_approved": true,
+        "approval_basis": "用户于 2026-11-28 确认已审核通过；按最新 Note 落实"
+      },
+      "raw_decomposition": {
+        "sample_id": "hotpotqa_5ae64a2155429908198fa575",
+        "split": "train",
+        "question": "What movie starring Ellen Page was directed by Jason Reitman and written by Diablo Cody, premiered at the 2007 Toronto International Film Festival?",
+        "sft_snapshot_count": 6,
+        "question_type": "single",
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "movie starring Ellen Page directed by Jason Reitman and written by Diablo Cody that premiered at the 2007 Toronto International Film Festival",
+            "necessary": true,
+            "depends_on": []
+          }
+        ],
+        "fell_back": false,
+        "status": "needs_review",
+        "latency_s": 1.3593061629217118
+      }
+    }
+  ],
+  "source_index": [
+    {
+      "batch_number": 1,
+      "global_number": 211,
+      "sample_id": "hotpotqa_5addad5c5542995b365fab5c",
+      "split": "train",
+      "source_number": 211,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 2,
+      "global_number": 212,
+      "sample_id": "hotpotqa_5adde7085542990dbb2f7f01",
+      "split": "train",
+      "source_number": 212,
+      "review_status": "keep_generated_relabel"
+    },
+    {
+      "batch_number": 3,
+      "global_number": 213,
+      "sample_id": "hotpotqa_5ade07a95542997dc790712e",
+      "split": "train",
+      "source_number": 213,
+      "review_status": "modify_generated"
+    },
+    {
+      "batch_number": 4,
+      "global_number": 214,
+      "sample_id": "hotpotqa_5ade188e5542990dbb2f7f52",
+      "split": "train",
+      "source_number": 214,
+      "review_status": "modify_generated"
+    },
+    {
+      "batch_number": 5,
+      "global_number": 215,
+      "sample_id": "hotpotqa_5ade1b7755429975fa854e55",
+      "split": "train",
+      "source_number": 215,
+      "review_status": "modify_generated"
+    },
+    {
+      "batch_number": 6,
+      "global_number": 216,
+      "sample_id": "hotpotqa_5ade9914554299728e26c759",
+      "split": "train",
+      "source_number": 216,
+      "review_status": "modify_generated"
+    },
+    {
+      "batch_number": 7,
+      "global_number": 217,
+      "sample_id": "hotpotqa_5adea8a655429939a52fe92c",
+      "split": "train",
+      "source_number": 217,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 8,
+      "global_number": 218,
+      "sample_id": "hotpotqa_5adec3db55429975fa854f83",
+      "split": "train",
+      "source_number": 218,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 9,
+      "global_number": 219,
+      "sample_id": "hotpotqa_5adf9e59554299025d62a2e9",
+      "split": "train",
+      "source_number": 219,
+      "review_status": "modify_generated"
+    },
+    {
+      "batch_number": 10,
+      "global_number": 220,
+      "sample_id": "hotpotqa_5adfdcf5554299025d62a367",
+      "split": "train",
+      "source_number": 220,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 11,
+      "global_number": 221,
+      "sample_id": "hotpotqa_5ae05ae955429945ae959340",
+      "split": "train",
+      "source_number": 221,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 12,
+      "global_number": 222,
+      "sample_id": "hotpotqa_5ae0b79355429945ae95943c",
+      "split": "train",
+      "source_number": 222,
+      "review_status": "keep_generated_relabel"
+    },
+    {
+      "batch_number": 13,
+      "global_number": 223,
+      "sample_id": "hotpotqa_5ae0bf2955429906c02dab1f",
+      "split": "train",
+      "source_number": 223,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 14,
+      "global_number": 224,
+      "sample_id": "hotpotqa_5ae130515542997b2ef7d121",
+      "split": "train",
+      "source_number": 224,
+      "review_status": "keep_generated_relabel"
+    },
+    {
+      "batch_number": 15,
+      "global_number": 225,
+      "sample_id": "hotpotqa_5ae13d9d55429920d523433d",
+      "split": "train",
+      "source_number": 225,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 16,
+      "global_number": 226,
+      "sample_id": "hotpotqa_5ae143aa55429920d523435d",
+      "split": "train",
+      "source_number": 226,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 17,
+      "global_number": 227,
+      "sample_id": "hotpotqa_5ae176ef5542990adbacf79d",
+      "split": "train",
+      "source_number": 227,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 18,
+      "global_number": 228,
+      "sample_id": "hotpotqa_5ae1af93554299492dc91b69",
+      "split": "train",
+      "source_number": 228,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 19,
+      "global_number": 229,
+      "sample_id": "hotpotqa_5ae1b052554299492dc91b6b",
+      "split": "train",
+      "source_number": 229,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 20,
+      "global_number": 230,
+      "sample_id": "hotpotqa_5ae234405542992decbdcc5a",
+      "split": "train",
+      "source_number": 230,
+      "review_status": "keep_generated_relabel"
+    },
+    {
+      "batch_number": 21,
+      "global_number": 231,
+      "sample_id": "hotpotqa_5ae266c35542996483e6499a",
+      "split": "train",
+      "source_number": 231,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 22,
+      "global_number": 232,
+      "sample_id": "hotpotqa_5ae31f4455429928c423961b",
+      "split": "train",
+      "source_number": 232,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 23,
+      "global_number": 233,
+      "sample_id": "hotpotqa_5ae340c45542992f92d82273",
+      "split": "train",
+      "source_number": 233,
+      "review_status": "modify_generated"
+    },
+    {
+      "batch_number": 24,
+      "global_number": 234,
+      "sample_id": "hotpotqa_5ae3f3cb5542995ad6573cd9",
+      "split": "train",
+      "source_number": 234,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 25,
+      "global_number": 235,
+      "sample_id": "hotpotqa_5ae3fc835542995dadf24288",
+      "split": "train",
+      "source_number": 235,
+      "review_status": "keep_generated_relabel"
+    },
+    {
+      "batch_number": 26,
+      "global_number": 236,
+      "sample_id": "hotpotqa_5ae533495542992663a4f159",
+      "split": "train",
+      "source_number": 236,
+      "review_status": "modify_generated"
+    },
+    {
+      "batch_number": 27,
+      "global_number": 237,
+      "sample_id": "hotpotqa_5ae5394855429908b6326585",
+      "split": "train",
+      "source_number": 237,
+      "review_status": "keep_generated_relabel"
+    },
+    {
+      "batch_number": 28,
+      "global_number": 238,
+      "sample_id": "hotpotqa_5ae5397d55429960a22e0276",
+      "split": "train",
+      "source_number": 238,
+      "review_status": "modify_generated"
+    },
+    {
+      "batch_number": 29,
+      "global_number": 239,
+      "sample_id": "hotpotqa_5ae60b0d554299546bf8302c",
+      "split": "train",
+      "source_number": 239,
+      "review_status": "keep_generated_relabel"
+    },
+    {
+      "batch_number": 30,
+      "global_number": 240,
+      "sample_id": "hotpotqa_5ae64a2155429908198fa575",
+      "split": "train",
+      "source_number": 240,
+      "review_status": "keep_generated_relabel"
+    }
+  ]
+}

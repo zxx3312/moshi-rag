@@ -1,0 +1,2799 @@
+{
+  "annotation_version": "note-aligned-v3",
+  "status": "reviewed",
+  "batch_id": "batch_07",
+  "records": [
+    {
+      "sample_id": "hotpotqa_5ab4da805542996a3a969fd8",
+      "split": "train",
+      "question": "Until which year did this Polish professional boxer who lost to Joe Smith Jr. in 2016 in a knockout victory hold the IBO light heavyweight title?",
+      "sft_snapshot_count": 7,
+      "question_type": "bridge",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "Polish professional boxer who lost to Joe Smith Jr. by knockout in 2016",
+          "necessary": false,
+          "expected_answer": "Andrzej Fonfara",
+          "depends_on": [],
+          "support_sets": [
+            [
+              "d4s1",
+              "d9s0"
+            ]
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u2",
+          "description": "year until which {u1} held the IBO light heavyweight title",
+          "necessary": true,
+          "expected_answer": "2013",
+          "depends_on": [
+            "u1"
+          ],
+          "support_sets": [
+            [
+              "d9s0"
+            ]
+          ],
+          "support_basis": "context"
+        }
+      ],
+      "fell_back": false,
+      "status": "reviewed",
+      "latency_s": 2.026476516155526,
+      "annotation_review": {
+        "human_note": "保留旧的gold",
+        "execution_note": "采用旧版多单元/查询目标，保留可独立表达的中间事实；按 context 核对答案与证据。",
+        "issues": [],
+        "author": "assistant",
+        "human_approved": true,
+        "approval_basis": "用户于 2026-11-28 确认已审核通过；按最新 Note 落实"
+      },
+      "raw_decomposition": {
+        "sample_id": "hotpotqa_5ab4da805542996a3a969fd8",
+        "split": "train",
+        "question": "Until which year did this Polish professional boxer who lost to Joe Smith Jr. in 2016 in a knockout victory hold the IBO light heavyweight title?",
+        "sft_snapshot_count": 7,
+        "question_type": "bridge",
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "Polish professional boxer who lost to Joe Smith Jr. in 2016 in a knockout victory",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u2",
+            "description": "year the IBO light heavyweight title was held by {u1}",
+            "necessary": true,
+            "depends_on": [
+              "u1"
+            ]
+          }
+        ],
+        "fell_back": false,
+        "status": "needs_review",
+        "latency_s": 2.026476516155526
+      }
+    },
+    {
+      "sample_id": "hotpotqa_5ab5344c5542991751b4d7c5",
+      "split": "train",
+      "question": "In which year was this former Australian footballer who played for the Collingwood Football Club and who is an older brother of the Australian rules footballer Robbie Tarrant born?",
+      "sft_snapshot_count": 9,
+      "question_type": "bridge",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "former Australian footballer who played for the Collingwood Football Club and is an older brother of Robbie Tarrant",
+          "necessary": false,
+          "depends_on": [],
+          "expected_answer": "Chris Tarrant",
+          "support_sets": [
+            [
+              "d9s1"
+            ]
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u2",
+          "description": "birth year of {u1}",
+          "necessary": true,
+          "depends_on": [
+            "u1"
+          ],
+          "expected_answer": "1980",
+          "support_sets": [
+            [
+              "d8s0"
+            ]
+          ],
+          "support_basis": "context"
+        }
+      ],
+      "fell_back": false,
+      "status": "reviewed",
+      "latency_s": 1.9007356890942901,
+      "annotation_review": {
+        "human_note": "",
+        "execution_note": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+        "issues": [],
+        "author": "assistant",
+        "human_approved": true,
+        "approval_basis": "用户于 2026-11-28 确认已审核通过；按最新 Note 落实"
+      },
+      "raw_decomposition": {
+        "sample_id": "hotpotqa_5ab5344c5542991751b4d7c5",
+        "split": "train",
+        "question": "In which year was this former Australian footballer who played for the Collingwood Football Club and who is an older brother of the Australian rules footballer Robbie Tarrant born?",
+        "sft_snapshot_count": 9,
+        "question_type": "bridge",
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "former Australian footballer who played for the Collingwood Football Club and is an older brother of Robbie Tarrant",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u2",
+            "description": "birth year of {u1}",
+            "necessary": true,
+            "depends_on": [
+              "u1"
+            ]
+          }
+        ],
+        "fell_back": false,
+        "status": "needs_review",
+        "latency_s": 1.9007356890942901
+      }
+    },
+    {
+      "sample_id": "hotpotqa_5ab679e1554299110f219a16",
+      "split": "train",
+      "question": "Graham Gold is a DJ who broadcasts live Friday nights on a radio station that also broadcasts on what around the UK?",
+      "sft_snapshot_count": 9,
+      "question_type": "bridge",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "radio station on which Graham Gold's sets broadcast live on Friday nights",
+          "necessary": false,
+          "expected_answer": "Kiss",
+          "depends_on": [],
+          "support_sets": [
+            [
+              "d1s1"
+            ]
+          ],
+          "aliases": [
+            "Kiss (UK radio station)",
+            "Kiss FM"
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u2",
+          "description": "what {u1} also broadcasts on around the UK",
+          "necessary": true,
+          "expected_answer": "DAB Digital Radio",
+          "depends_on": [
+            "u1"
+          ],
+          "support_sets": [
+            [
+              "d2s1"
+            ],
+            [
+              "d2s0"
+            ]
+          ],
+          "aliases": [
+            "DAB",
+            "DAB digital radio",
+            "National DAB"
+          ],
+          "support_basis": "context"
+        }
+      ],
+      "fell_back": false,
+      "status": "reviewed",
+      "latency_s": 1.6716893480625004,
+      "annotation_review": {
+        "human_note": "保留旧版",
+        "execution_note": "采用旧版多单元/查询目标，保留可独立表达的中间事实；按 context 核对答案与证据。",
+        "issues": [],
+        "author": "assistant",
+        "human_approved": true,
+        "approval_basis": "用户于 2026-11-28 确认已审核通过；按最新 Note 落实"
+      },
+      "raw_decomposition": {
+        "sample_id": "hotpotqa_5ab679e1554299110f219a16",
+        "split": "train",
+        "question": "Graham Gold is a DJ who broadcasts live Friday nights on a radio station that also broadcasts on what around the UK?",
+        "sft_snapshot_count": 9,
+        "question_type": "bridge",
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "radio station that broadcasts Graham Gold live Friday nights",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u2",
+            "description": "what the radio station broadcasts around the UK",
+            "necessary": true,
+            "depends_on": [
+              "u1"
+            ]
+          }
+        ],
+        "fell_back": false,
+        "status": "needs_review",
+        "latency_s": 1.6716893480625004
+      }
+    },
+    {
+      "sample_id": "hotpotqa_5ab781f255429928e1fe3862",
+      "split": "train",
+      "question": "Did School of Fish and The Commuters perform music in the same genre?",
+      "sft_snapshot_count": 8,
+      "question_type": "comparison",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "genre of School of Fish",
+          "necessary": false,
+          "depends_on": [],
+          "expected_answer": "alternative rock",
+          "support_sets": [
+            [
+              "d4s0"
+            ]
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u2",
+          "description": "genre of The Commuters",
+          "necessary": false,
+          "depends_on": [],
+          "expected_answer": "alternative rock",
+          "support_sets": [
+            [
+              "d5s0"
+            ]
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u3",
+          "description": "whether School of Fish and The Commuters performed music in the same genre",
+          "necessary": true,
+          "depends_on": [
+            "u1",
+            "u2"
+          ],
+          "expected_answer": "yes",
+          "support_sets": [
+            []
+          ],
+          "support_basis": "derived_from_dependencies"
+        }
+      ],
+      "fell_back": false,
+      "status": "reviewed",
+      "latency_s": 2.4006860880181193,
+      "annotation_review": {
+        "human_note": "",
+        "execution_note": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+        "issues": [],
+        "author": "assistant",
+        "human_approved": true,
+        "approval_basis": "用户于 2026-11-28 确认已审核通过；按最新 Note 落实"
+      },
+      "raw_decomposition": {
+        "sample_id": "hotpotqa_5ab781f255429928e1fe3862",
+        "split": "train",
+        "question": "Did School of Fish and The Commuters perform music in the same genre?",
+        "sft_snapshot_count": 8,
+        "question_type": "comparison",
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "genre of School of Fish",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u2",
+            "description": "genre of The Commuters",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u3",
+            "description": "whether School of Fish and The Commuters performed music in the same genre",
+            "necessary": true,
+            "depends_on": [
+              "u1",
+              "u2"
+            ]
+          }
+        ],
+        "fell_back": false,
+        "status": "needs_review",
+        "latency_s": 2.4006860880181193
+      }
+    },
+    {
+      "sample_id": "hotpotqa_5ab7f9b65542991d322237f0",
+      "split": "train",
+      "question": "Metro Broadcast s a wholly owned subsidiary of a company that has its executive office in which city ?",
+      "sft_snapshot_count": 9,
+      "question_type": "bridge",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "parent company of Metro Broadcast",
+          "necessary": false,
+          "depends_on": [],
+          "expected_answer": "WPP plc",
+          "support_sets": [
+            [
+              "d9s1"
+            ]
+          ],
+          "aliases": [
+            "WPP"
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u2",
+          "description": "city where {u1} has its executive office",
+          "necessary": true,
+          "depends_on": [
+            "u1"
+          ],
+          "expected_answer": "Dublin",
+          "support_sets": [
+            [
+              "d4s0"
+            ]
+          ],
+          "aliases": [
+            "Dublin, Ireland"
+          ],
+          "support_basis": "context"
+        }
+      ],
+      "fell_back": false,
+      "status": "reviewed",
+      "latency_s": 1.6292548479977995,
+      "annotation_review": {
+        "human_note": "",
+        "execution_note": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+        "issues": [],
+        "author": "assistant",
+        "human_approved": true,
+        "approval_basis": "用户于 2026-11-28 确认已审核通过；按最新 Note 落实"
+      },
+      "raw_decomposition": {
+        "sample_id": "hotpotqa_5ab7f9b65542991d322237f0",
+        "split": "train",
+        "question": "Metro Broadcast s a wholly owned subsidiary of a company that has its executive office in which city ?",
+        "sft_snapshot_count": 9,
+        "question_type": "bridge",
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "parent company of Metro Broadcast",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u2",
+            "description": "city where {u1} has its executive office",
+            "necessary": true,
+            "depends_on": [
+              "u1"
+            ]
+          }
+        ],
+        "fell_back": false,
+        "status": "needs_review",
+        "latency_s": 1.6292548479977995
+      }
+    },
+    {
+      "sample_id": "hotpotqa_5ab8292c55429934fafe6cfe",
+      "split": "train",
+      "question": "Anna Ranch Heritage Center is a former cattle ranch in a census-designated place with a population of what in 2010?",
+      "sft_snapshot_count": 9,
+      "question_type": "bridge",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "census-designated place in which the former cattle ranch Anna Ranch Heritage Center is located",
+          "necessary": false,
+          "expected_answer": "Waimea, Hawaii County, Hawaii",
+          "depends_on": [],
+          "support_sets": [
+            [
+              "d3s0"
+            ]
+          ],
+          "aliases": [
+            "Waimea",
+            "Kamuela"
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u2",
+          "description": "population of {u1} in 2010",
+          "necessary": true,
+          "expected_answer": "9,212",
+          "depends_on": [
+            "u1"
+          ],
+          "support_sets": [
+            [
+              "d7s1"
+            ]
+          ],
+          "aliases": [
+            "9212"
+          ],
+          "support_basis": "context"
+        }
+      ],
+      "fell_back": false,
+      "status": "reviewed",
+      "latency_s": 1.1922936458140612,
+      "annotation_review": {
+        "human_note": "是否可以按照原题的方法拆分",
+        "execution_note": "采用旧版多单元/查询目标，保留可独立表达的中间事实；按 context 核对答案与证据。",
+        "issues": [],
+        "author": "assistant",
+        "human_approved": true,
+        "approval_basis": "用户于 2026-11-28 确认已审核通过；按最新 Note 落实"
+      },
+      "raw_decomposition": {
+        "sample_id": "hotpotqa_5ab8292c55429934fafe6cfe",
+        "split": "train",
+        "question": "Anna Ranch Heritage Center is a former cattle ranch in a census-designated place with a population of what in 2010?",
+        "sft_snapshot_count": 9,
+        "question_type": "single",
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "population of the census-designated place where Anna Ranch Heritage Center is located in 2010",
+            "necessary": true,
+            "depends_on": []
+          }
+        ],
+        "fell_back": false,
+        "status": "needs_review",
+        "latency_s": 1.1922936458140612
+      }
+    },
+    {
+      "sample_id": "hotpotqa_5ab8f1ae55429916710eb0c8",
+      "split": "train",
+      "question": "Banks are subject to minimum capital requiremets based on what banking regulation recommendations issued by the Basel COmmittee on Banking Supervision? ",
+      "sft_snapshot_count": 8,
+      "question_type": "bridge",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "international set of capital standards on which banks' minimum capital requirements are based",
+          "necessary": false,
+          "expected_answer": "Basel Accords",
+          "depends_on": [],
+          "support_sets": [
+            [
+              "d1s3"
+            ]
+          ],
+          "aliases": [
+            "Basel Accord"
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u2",
+          "description": "banking regulation recommendations issued by the Basel Committee on Banking Supervision, given {u1}",
+          "necessary": true,
+          "expected_answer": "Basel Accords",
+          "depends_on": [
+            "u1"
+          ],
+          "support_sets": [
+            [
+              "d8s0"
+            ],
+            [
+              "d10s0"
+            ]
+          ],
+          "aliases": [
+            "Basel Accord"
+          ],
+          "support_basis": "context"
+        }
+      ],
+      "fell_back": false,
+      "status": "reviewed",
+      "latency_s": 1.1918786158785224,
+      "annotation_review": {
+        "human_note": "这样的题目采用旧版，让模型可以先说一部分事实",
+        "execution_note": "采用旧版多单元/查询目标，保留可独立表达的中间事实；按 context 核对答案与证据。",
+        "issues": [],
+        "author": "assistant",
+        "human_approved": true,
+        "approval_basis": "用户于 2026-11-28 确认已审核通过；按最新 Note 落实"
+      },
+      "raw_decomposition": {
+        "sample_id": "hotpotqa_5ab8f1ae55429916710eb0c8",
+        "split": "train",
+        "question": "Banks are subject to minimum capital requiremets based on what banking regulation recommendations issued by the Basel COmmittee on Banking Supervision? ",
+        "sft_snapshot_count": 8,
+        "question_type": "single",
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "banking regulation recommendations issued by the Basel Committee on Banking Supervision that set minimum capital requirements for banks",
+            "necessary": true,
+            "depends_on": []
+          }
+        ],
+        "fell_back": false,
+        "status": "needs_review",
+        "latency_s": 1.1918786158785224
+      }
+    },
+    {
+      "sample_id": "hotpotqa_5ab95b28554299743d22eb09",
+      "split": "train",
+      "question": "Jack and Jill and Forbes are both what?",
+      "sft_snapshot_count": 8,
+      "question_type": "comparison",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "what Jack and Jill is",
+          "necessary": false,
+          "expected_answer": "magazine",
+          "depends_on": [],
+          "support_sets": [
+            [
+              "d5s0"
+            ]
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u2",
+          "description": "what Forbes is",
+          "necessary": false,
+          "expected_answer": "magazine",
+          "depends_on": [],
+          "support_sets": [
+            [
+              "d3s0"
+            ]
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u3",
+          "description": "what Jack and Jill and Forbes both are",
+          "necessary": true,
+          "expected_answer": "magazine",
+          "depends_on": [
+            "u1",
+            "u2"
+          ],
+          "support_sets": [
+            []
+          ],
+          "aliases": [
+            "magazines"
+          ],
+          "support_basis": "derived_from_dependencies"
+        }
+      ],
+      "fell_back": false,
+      "status": "reviewed",
+      "latency_s": 2.8594324639998376,
+      "annotation_review": {
+        "human_note": "参照原版",
+        "execution_note": "采用旧版多单元/查询目标，保留可独立表达的中间事实；按 context 核对答案与证据。",
+        "issues": [],
+        "author": "assistant",
+        "human_approved": true,
+        "approval_basis": "用户于 2026-11-28 确认已审核通过；按最新 Note 落实"
+      },
+      "raw_decomposition": {
+        "sample_id": "hotpotqa_5ab95b28554299743d22eb09",
+        "split": "train",
+        "question": "Jack and Jill and Forbes are both what?",
+        "sft_snapshot_count": 8,
+        "question_type": "comparison",
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "what Jack is",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u2",
+            "description": "what Jill is",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u3",
+            "description": "what Forbes is",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u4",
+            "description": "common category of Jack, Jill, and Forbes",
+            "necessary": true,
+            "depends_on": [
+              "u1",
+              "u2",
+              "u3"
+            ]
+          }
+        ],
+        "fell_back": false,
+        "status": "needs_review",
+        "latency_s": 2.8594324639998376
+      }
+    },
+    {
+      "sample_id": "hotpotqa_5ab9d58855429939ce03dc3a",
+      "split": "train",
+      "question": "The expert mentor to the celebrities that perform on \"Splash!\" won the 2009 FINA World Championionship in the individual event at what age? ",
+      "sft_snapshot_count": 9,
+      "question_type": "bridge",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "expert mentor to the celebrities that perform on \"Splash!\"",
+          "necessary": false,
+          "depends_on": [],
+          "expected_answer": "Tom Daley",
+          "support_sets": [
+            [
+              "d2s3"
+            ]
+          ],
+          "aliases": [
+            "Thomas Robert Daley"
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u2",
+          "description": "age at which {u1} won the 2009 FINA World Championship in the individual event",
+          "necessary": true,
+          "depends_on": [
+            "u1"
+          ],
+          "expected_answer": "15",
+          "support_sets": [
+            [
+              "d1s1"
+            ]
+          ],
+          "aliases": [
+            "age 15",
+            "the age of 15"
+          ],
+          "support_basis": "context"
+        }
+      ],
+      "fell_back": false,
+      "status": "reviewed",
+      "latency_s": 2.0057792339939624,
+      "annotation_review": {
+        "human_note": "",
+        "execution_note": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+        "issues": [],
+        "author": "assistant",
+        "human_approved": true,
+        "approval_basis": "用户于 2026-11-28 确认已审核通过；按最新 Note 落实"
+      },
+      "raw_decomposition": {
+        "sample_id": "hotpotqa_5ab9d58855429939ce03dc3a",
+        "split": "train",
+        "question": "The expert mentor to the celebrities that perform on \"Splash!\" won the 2009 FINA World Championionship in the individual event at what age? ",
+        "sft_snapshot_count": 9,
+        "question_type": "bridge",
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "expert mentor to the celebrities that perform on \"Splash!\"",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u2",
+            "description": "age at which {u1} won the 2009 FINA World Championship in the individual event",
+            "necessary": true,
+            "depends_on": [
+              "u1"
+            ]
+          }
+        ],
+        "fell_back": false,
+        "status": "needs_review",
+        "latency_s": 2.0057792339939624
+      }
+    },
+    {
+      "sample_id": "hotpotqa_5aba9af255429901930fa856",
+      "split": "train",
+      "question": "The city in which Calisto da Costa trained prior to his participation in the Sydney Olympic Games lies on which sea?",
+      "sft_snapshot_count": 8,
+      "question_type": "bridge",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "city where Calisto da Costa trained prior to the Sydney Olympic Games",
+          "necessary": false,
+          "depends_on": [],
+          "expected_answer": "Darwin",
+          "support_sets": [
+            [
+              "d4s2"
+            ]
+          ],
+          "aliases": [
+            "Darwin, Northern Territory"
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u2",
+          "description": "sea on which {u1} lies",
+          "necessary": true,
+          "depends_on": [
+            "u1"
+          ],
+          "expected_answer": "Timor Sea",
+          "support_sets": [
+            [
+              "d6s1"
+            ]
+          ],
+          "support_basis": "context"
+        }
+      ],
+      "fell_back": false,
+      "status": "reviewed",
+      "latency_s": 1.755859490018338,
+      "annotation_review": {
+        "human_note": "",
+        "execution_note": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+        "issues": [],
+        "author": "assistant",
+        "human_approved": true,
+        "approval_basis": "用户于 2026-11-28 确认已审核通过；按最新 Note 落实"
+      },
+      "raw_decomposition": {
+        "sample_id": "hotpotqa_5aba9af255429901930fa856",
+        "split": "train",
+        "question": "The city in which Calisto da Costa trained prior to his participation in the Sydney Olympic Games lies on which sea?",
+        "sft_snapshot_count": 8,
+        "question_type": "bridge",
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "city where Calisto da Costa trained prior to the Sydney Olympic Games",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u2",
+            "description": "sea on which {u1} lies",
+            "necessary": true,
+            "depends_on": [
+              "u1"
+            ]
+          }
+        ],
+        "fell_back": false,
+        "status": "needs_review",
+        "latency_s": 1.755859490018338
+      }
+    },
+    {
+      "sample_id": "hotpotqa_5abb155c55429966062416c8",
+      "split": "train",
+      "question": "The narrator for \"Pound Shop Wars\" also narrated what Channel 4 reality television series from its inception in 2013 until April 2016?",
+      "sft_snapshot_count": 8,
+      "question_type": "bridge",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "narrator of \"Pound Shop Wars\"",
+          "necessary": false,
+          "depends_on": [],
+          "expected_answer": "Caroline Aherne",
+          "support_sets": [
+            [
+              "d9s1"
+            ]
+          ],
+          "aliases": [
+            "Caroline Mary Aherne"
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u2",
+          "description": "Channel 4 reality television series narrated by {u1} from 2013 to April 2016",
+          "necessary": true,
+          "depends_on": [
+            "u1"
+          ],
+          "expected_answer": "Gogglebox",
+          "support_sets": [
+            [
+              "d3s1"
+            ]
+          ],
+          "support_basis": "context"
+        }
+      ],
+      "fell_back": false,
+      "status": "reviewed",
+      "latency_s": 2.0477181151509285,
+      "annotation_review": {
+        "human_note": "",
+        "execution_note": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+        "issues": [],
+        "author": "assistant",
+        "human_approved": true,
+        "approval_basis": "用户于 2026-11-28 确认已审核通过；按最新 Note 落实"
+      },
+      "raw_decomposition": {
+        "sample_id": "hotpotqa_5abb155c55429966062416c8",
+        "split": "train",
+        "question": "The narrator for \"Pound Shop Wars\" also narrated what Channel 4 reality television series from its inception in 2013 until April 2016?",
+        "sft_snapshot_count": 8,
+        "question_type": "bridge",
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "narrator of \"Pound Shop Wars\"",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u2",
+            "description": "Channel 4 reality television series narrated by {u1} from 2013 to April 2016",
+            "necessary": true,
+            "depends_on": [
+              "u1"
+            ]
+          }
+        ],
+        "fell_back": false,
+        "status": "needs_review",
+        "latency_s": 2.0477181151509285
+      }
+    },
+    {
+      "sample_id": "hotpotqa_5abbdaaa5542996606241732",
+      "split": "train",
+      "question": "Team2015 was setup by this politician who was former Minister of State at the Department for what?",
+      "sft_snapshot_count": 9,
+      "question_type": "bridge",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "politician who setup Team2015",
+          "necessary": false,
+          "depends_on": [],
+          "expected_answer": "Grant Shapps",
+          "support_sets": [
+            [
+              "d5s1"
+            ]
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u2",
+          "description": "Department for which {u1} was former Minister of State",
+          "necessary": true,
+          "depends_on": [
+            "u1"
+          ],
+          "expected_answer": "International Development",
+          "support_sets": [
+            [
+              "d1s0"
+            ]
+          ],
+          "aliases": [
+            "Department for International Development"
+          ],
+          "support_basis": "context"
+        }
+      ],
+      "fell_back": false,
+      "status": "reviewed",
+      "latency_s": 1.7548239398747683,
+      "annotation_review": {
+        "human_note": "",
+        "execution_note": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+        "issues": [],
+        "author": "assistant",
+        "human_approved": true,
+        "approval_basis": "用户于 2026-11-28 确认已审核通过；按最新 Note 落实"
+      },
+      "raw_decomposition": {
+        "sample_id": "hotpotqa_5abbdaaa5542996606241732",
+        "split": "train",
+        "question": "Team2015 was setup by this politician who was former Minister of State at the Department for what?",
+        "sft_snapshot_count": 9,
+        "question_type": "bridge",
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "politician who setup Team2015",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u2",
+            "description": "Department for which {u1} was former Minister of State",
+            "necessary": true,
+            "depends_on": [
+              "u1"
+            ]
+          }
+        ],
+        "fell_back": false,
+        "status": "needs_review",
+        "latency_s": 1.7548239398747683
+      }
+    },
+    {
+      "sample_id": "hotpotqa_5abc47d055429959677d6a70",
+      "split": "train",
+      "question": "Are Rex Wilson and Scott Treleaven both artists who have made use of the film medium?",
+      "sft_snapshot_count": 7,
+      "question_type": "comparison",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "whether Rex Wilson has made use of the film medium",
+          "necessary": false,
+          "depends_on": [],
+          "expected_answer": "yes",
+          "support_sets": [
+            [
+              "d3s0"
+            ],
+            [
+              "d1s0"
+            ],
+            [
+              "d2s0"
+            ],
+            [
+              "d4s0"
+            ],
+            [
+              "d5s0"
+            ],
+            [
+              "d6s0"
+            ],
+            [
+              "d7s0"
+            ],
+            [
+              "d8s0"
+            ],
+            [
+              "d10s0"
+            ]
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u2",
+          "description": "whether Scott Treleaven has made use of the film medium",
+          "necessary": false,
+          "depends_on": [],
+          "expected_answer": "yes",
+          "support_sets": [
+            [
+              "d9s0"
+            ]
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u3",
+          "description": "whether both Rex Wilson and Scott Treleaven have made use of the film medium",
+          "necessary": true,
+          "depends_on": [
+            "u1",
+            "u2"
+          ],
+          "expected_answer": "yes",
+          "support_sets": [
+            []
+          ],
+          "support_basis": "derived_from_dependencies"
+        }
+      ],
+      "fell_back": false,
+      "status": "reviewed",
+      "latency_s": 2.6941646330524236,
+      "annotation_review": {
+        "human_note": "",
+        "execution_note": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+        "issues": [],
+        "author": "assistant",
+        "human_approved": true,
+        "approval_basis": "用户于 2026-11-28 确认已审核通过；按最新 Note 落实"
+      },
+      "raw_decomposition": {
+        "sample_id": "hotpotqa_5abc47d055429959677d6a70",
+        "split": "train",
+        "question": "Are Rex Wilson and Scott Treleaven both artists who have made use of the film medium?",
+        "sft_snapshot_count": 7,
+        "question_type": "comparison",
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "whether Rex Wilson has made use of the film medium",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u2",
+            "description": "whether Scott Treleaven has made use of the film medium",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u3",
+            "description": "whether both Rex Wilson and Scott Treleaven have made use of the film medium",
+            "necessary": true,
+            "depends_on": [
+              "u1",
+              "u2"
+            ]
+          }
+        ],
+        "fell_back": false,
+        "status": "needs_review",
+        "latency_s": 2.6941646330524236
+      }
+    },
+    {
+      "sample_id": "hotpotqa_5abca3065542993a06baf93a",
+      "split": "train",
+      "question": "In which American animated educational interactive children's television program,  created and executive produced by Chris Gifford and Valerie Walsh, did Harrison Chad have a role?",
+      "sft_snapshot_count": 8,
+      "question_type": "bridge",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "American animated educational interactive children's television program created and executive produced by Chris Gifford and Valerie Walsh",
+          "necessary": false,
+          "depends_on": [],
+          "expected_answer": "Go, Diego, Go!",
+          "support_sets": [
+            [
+              "d1s2"
+            ]
+          ],
+          "aliases": [
+            "Go Diego Go"
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u2",
+          "description": "television program in which Harrison Chad had a role, given {u1}",
+          "necessary": true,
+          "depends_on": [
+            "u1"
+          ],
+          "expected_answer": "Go, Diego, Go!",
+          "support_sets": [
+            [
+              "d9s1"
+            ]
+          ],
+          "aliases": [
+            "Go Diego Go",
+            "\"Go, Diego, Go!"
+          ],
+          "support_basis": "context"
+        }
+      ],
+      "fell_back": false,
+      "status": "reviewed",
+      "latency_s": 2.0470318631269038,
+      "annotation_review": {
+        "human_note": "",
+        "execution_note": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+        "issues": [],
+        "author": "assistant",
+        "human_approved": true,
+        "approval_basis": "用户于 2026-11-28 确认已审核通过；按最新 Note 落实"
+      },
+      "raw_decomposition": {
+        "sample_id": "hotpotqa_5abca3065542993a06baf93a",
+        "split": "train",
+        "question": "In which American animated educational interactive children's television program,  created and executive produced by Chris Gifford and Valerie Walsh, did Harrison Chad have a role?",
+        "sft_snapshot_count": 8,
+        "question_type": "bridge",
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "American animated educational interactive children's television program created and executive produced by Chris Gifford and Valerie Walsh",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u2",
+            "description": "television program in which Harrison Chad had a role, given {u1}",
+            "necessary": true,
+            "depends_on": [
+              "u1"
+            ]
+          }
+        ],
+        "fell_back": false,
+        "status": "needs_review",
+        "latency_s": 2.0470318631269038
+      }
+    },
+    {
+      "sample_id": "hotpotqa_5abcff15554299114383a1c2",
+      "split": "train",
+      "question": "Were the documentaties Powaqqatsi and Inside Job directed by the same person?",
+      "sft_snapshot_count": 9,
+      "question_type": "comparison",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "director of Powaqqatsi",
+          "necessary": false,
+          "depends_on": [],
+          "expected_answer": "Godfrey Reggio",
+          "support_sets": [
+            [
+              "d9s0"
+            ]
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u2",
+          "description": "director of Inside Job",
+          "necessary": false,
+          "depends_on": [],
+          "expected_answer": "Charles H. Ferguson",
+          "support_sets": [
+            [
+              "d5s0"
+            ]
+          ],
+          "aliases": [
+            "Charles Ferguson"
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u3",
+          "description": "whether the directors of Powaqqatsi and Inside Job are the same",
+          "necessary": true,
+          "depends_on": [
+            "u1",
+            "u2"
+          ],
+          "expected_answer": "no",
+          "support_sets": [
+            []
+          ],
+          "support_basis": "derived_from_dependencies"
+        }
+      ],
+      "fell_back": false,
+      "status": "reviewed",
+      "latency_s": 2.4423165458720177,
+      "annotation_review": {
+        "human_note": "",
+        "execution_note": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+        "issues": [],
+        "author": "assistant",
+        "human_approved": true,
+        "approval_basis": "用户于 2026-11-28 确认已审核通过；按最新 Note 落实"
+      },
+      "raw_decomposition": {
+        "sample_id": "hotpotqa_5abcff15554299114383a1c2",
+        "split": "train",
+        "question": "Were the documentaties Powaqqatsi and Inside Job directed by the same person?",
+        "sft_snapshot_count": 9,
+        "question_type": "comparison",
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "director of Powaqqatsi",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u2",
+            "description": "director of Inside Job",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u3",
+            "description": "whether the directors of Powaqqatsi and Inside Job are the same",
+            "necessary": true,
+            "depends_on": [
+              "u1",
+              "u2"
+            ]
+          }
+        ],
+        "fell_back": false,
+        "status": "needs_review",
+        "latency_s": 2.4423165458720177
+      }
+    },
+    {
+      "sample_id": "hotpotqa_5abdc7fb55429965af743e3a",
+      "split": "train",
+      "question": "John William Maule Ramsay served as Secretary for Scotland in the administration of a British Liberal statesman and Britian's oldest what?",
+      "sft_snapshot_count": 7,
+      "question_type": "bridge",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "British Liberal statesman in whose administration John William Maule Ramsay served as Secretary for Scotland",
+          "necessary": false,
+          "expected_answer": "William Ewart Gladstone",
+          "depends_on": [],
+          "support_sets": [
+            [
+              "d6s0",
+              "d6s1",
+              "d10s0"
+            ]
+          ],
+          "aliases": [
+            "Gladstone",
+            "William Gladstone"
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u2",
+          "description": "office of which {u1} was Britain's oldest holder",
+          "necessary": true,
+          "expected_answer": "Prime Minister",
+          "depends_on": [
+            "u1"
+          ],
+          "support_sets": [
+            [
+              "d10s2"
+            ]
+          ],
+          "aliases": [
+            "Britain's oldest Prime Minister",
+            "PM"
+          ],
+          "support_basis": "context"
+        }
+      ],
+      "fell_back": false,
+      "status": "reviewed",
+      "latency_s": 1.775873705977574,
+      "annotation_review": {
+        "human_note": "保留原版",
+        "execution_note": "采用旧版多单元/查询目标，保留可独立表达的中间事实；按 context 核对答案与证据。",
+        "issues": [],
+        "author": "assistant",
+        "human_approved": true,
+        "approval_basis": "用户于 2026-11-28 确认已审核通过；按最新 Note 落实"
+      },
+      "raw_decomposition": {
+        "sample_id": "hotpotqa_5abdc7fb55429965af743e3a",
+        "split": "train",
+        "question": "John William Maule Ramsay served as Secretary for Scotland in the administration of a British Liberal statesman and Britian's oldest what?",
+        "sft_snapshot_count": 7,
+        "question_type": "bridge",
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "British Liberal statesman who had John William Maule Ramsay as Secretary for Scotland",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u2",
+            "description": "Britain's oldest {u1}",
+            "necessary": true,
+            "depends_on": [
+              "u1"
+            ]
+          }
+        ],
+        "fell_back": false,
+        "status": "needs_review",
+        "latency_s": 1.775873705977574
+      }
+    },
+    {
+      "sample_id": "hotpotqa_5ac04afa5542996f0d89cb80",
+      "split": "train",
+      "question": "Wells Cathedral School is a co-educational independent school located in Wells, Somerset, England, the school is one of the five specialist musical schools for school-age children in the United Kingdom, includes which specialist music school for children, located in the town of Bushey, in which south location?",
+      "sft_snapshot_count": 5,
+      "question_type": "multipart",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "specialist music school for children located in Bushey",
+          "necessary": true,
+          "depends_on": [],
+          "expected_answer": "Purcell School",
+          "support_sets": [
+            [
+              "d4s0"
+            ]
+          ],
+          "aliases": [
+            "The Purcell School for Young Musicians",
+            "The Purcell School"
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u2",
+          "description": "county in whose southern part {u1} is located",
+          "necessary": true,
+          "depends_on": [
+            "u1"
+          ],
+          "expected_answer": "Hertfordshire",
+          "support_sets": [
+            [
+              "d4s0"
+            ]
+          ],
+          "aliases": [
+            "south Hertfordshire"
+          ],
+          "support_basis": "context"
+        }
+      ],
+      "fell_back": false,
+      "status": "reviewed",
+      "latency_s": 1.651290614856407,
+      "annotation_review": {
+        "human_note": "应该同时输出学校和地区两个答案",
+        "execution_note": "按 Note 同时回答学校和地区：两个单元均为 necessary=true，保留地区对学校的依赖；答案为 Purcell School 和 Hertfordshire，均由 d4s0 支持。",
+        "issues": [],
+        "author": "assistant",
+        "human_approved": true,
+        "approval_basis": "用户于 2026-11-28 确认已审核通过；按最新 Note 落实",
+        "resolution_note": "按 Note 同时回答学校和地区：两个单元均为 necessary=true，保留地区对学校的依赖；答案为 Purcell School 和 Hertfordshire，均由 d4s0 支持。"
+      },
+      "raw_decomposition": {
+        "sample_id": "hotpotqa_5ac04afa5542996f0d89cb80",
+        "split": "train",
+        "question": "Wells Cathedral School is a co-educational independent school located in Wells, Somerset, England, the school is one of the five specialist musical schools for school-age children in the United Kingdom, includes which specialist music school for children, located in the town of Bushey, in which south location?",
+        "sft_snapshot_count": 5,
+        "question_type": "bridge",
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "specialist music school for children located in Bushey",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u2",
+            "description": "south location of {u1}",
+            "necessary": true,
+            "depends_on": [
+              "u1"
+            ]
+          }
+        ],
+        "fell_back": false,
+        "status": "needs_review",
+        "latency_s": 1.651290614856407
+      }
+    },
+    {
+      "sample_id": "hotpotqa_5ac119595542992a796dede5",
+      "split": "train",
+      "question": "Cherokee Lake is a reservoir formed by theimpoundment of what river flowing from Kingsport to Knoxville, Tennessee?",
+      "sft_snapshot_count": 7,
+      "question_type": "single",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "river impounded to form Cherokee Lake",
+          "necessary": true,
+          "depends_on": [],
+          "expected_answer": "Holston River",
+          "support_sets": [
+            [
+              "d1s0"
+            ],
+            [
+              "d9s0",
+              "d9s2"
+            ]
+          ],
+          "support_basis": "context"
+        }
+      ],
+      "fell_back": false,
+      "status": "reviewed",
+      "latency_s": 0.9204760340508074,
+      "annotation_review": {
+        "human_note": "题干中涵已知信息，这种类型的题按照新方法的single拆分",
+        "execution_note": "按用户 Note 将河流流向视为题干给定限定，single 只查水库所拦河流，沿用旧 u1 的直接支持。",
+        "issues": [],
+        "author": "assistant",
+        "human_approved": true,
+        "approval_basis": "用户于 2026-11-28 确认已审核通过；按最新 Note 落实"
+      },
+      "raw_decomposition": {
+        "sample_id": "hotpotqa_5ac119595542992a796dede5",
+        "split": "train",
+        "question": "Cherokee Lake is a reservoir formed by theimpoundment of what river flowing from Kingsport to Knoxville, Tennessee?",
+        "sft_snapshot_count": 7,
+        "question_type": "single",
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "river impounded to form Cherokee Lake",
+            "necessary": true,
+            "depends_on": []
+          }
+        ],
+        "fell_back": false,
+        "status": "needs_review",
+        "latency_s": 0.9204760340508074
+      }
+    },
+    {
+      "sample_id": "hotpotqa_5ac11f47554299294b2190ae",
+      "split": "train",
+      "question": "Which running bank was drafted by the 1983 Los Angeles Rams and later was inducted into the Hall of Fame?",
+      "sft_snapshot_count": 5,
+      "question_type": "bridge",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "running back drafted by the 1983 Los Angeles Rams",
+          "necessary": false,
+          "depends_on": [],
+          "expected_answer": "Eric Dickerson",
+          "support_sets": [
+            [
+              "d9s1"
+            ]
+          ],
+          "aliases": [
+            "Eric Demetric Dickerson"
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u2",
+          "description": "running back inducted into the Hall of Fame, given {u1}",
+          "necessary": true,
+          "depends_on": [
+            "u1"
+          ],
+          "expected_answer": "Eric Dickerson",
+          "support_sets": [
+            [
+              "d2s5"
+            ],
+            [
+              "d9s1"
+            ]
+          ],
+          "aliases": [
+            "Eric Demetric Dickerson"
+          ],
+          "support_basis": "context"
+        }
+      ],
+      "fell_back": false,
+      "status": "reviewed",
+      "latency_s": 1.880144391907379,
+      "annotation_review": {
+        "human_note": "",
+        "execution_note": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+        "issues": [],
+        "author": "assistant",
+        "human_approved": true,
+        "approval_basis": "用户于 2026-11-28 确认已审核通过；按最新 Note 落实"
+      },
+      "raw_decomposition": {
+        "sample_id": "hotpotqa_5ac11f47554299294b2190ae",
+        "split": "train",
+        "question": "Which running bank was drafted by the 1983 Los Angeles Rams and later was inducted into the Hall of Fame?",
+        "sft_snapshot_count": 5,
+        "question_type": "bridge",
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "running back drafted by the 1983 Los Angeles Rams",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u2",
+            "description": "running back inducted into the Hall of Fame, given {u1}",
+            "necessary": true,
+            "depends_on": [
+              "u1"
+            ]
+          }
+        ],
+        "fell_back": false,
+        "status": "needs_review",
+        "latency_s": 1.880144391907379
+      }
+    },
+    {
+      "sample_id": "hotpotqa_5ac1334b55429964131be184",
+      "split": "train",
+      "question": "What American author known for the Outlander series of novels, created her sixth novel, from the same series, called A Breath of Snow?",
+      "sft_snapshot_count": 9,
+      "question_type": "single",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "American author known for the Outlander series who created A Breath of Snow",
+          "necessary": true,
+          "depends_on": [],
+          "expected_answer": "Diana Gabaldon",
+          "support_sets": [
+            [
+              "d7s0",
+              "d6s0"
+            ],
+            [
+              "d7s0",
+              "d10s0"
+            ]
+          ],
+          "aliases": [
+            "Diana J. Gabaldon"
+          ],
+          "support_basis": "context"
+        }
+      ],
+      "fell_back": false,
+      "status": "reviewed",
+      "latency_s": 1.0667584501206875,
+      "annotation_review": {
+        "human_note": "保留single",
+        "execution_note": "保留用户指定 single，联合书籍作者和美国作家/Outlander 身份证据。",
+        "issues": [],
+        "author": "assistant",
+        "human_approved": true,
+        "approval_basis": "用户于 2026-11-28 确认已审核通过；按最新 Note 落实"
+      },
+      "raw_decomposition": {
+        "sample_id": "hotpotqa_5ac1334b55429964131be184",
+        "split": "train",
+        "question": "What American author known for the Outlander series of novels, created her sixth novel, from the same series, called A Breath of Snow?",
+        "sft_snapshot_count": 9,
+        "question_type": "single",
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "American author known for the Outlander series who created A Breath of Snow",
+            "necessary": true,
+            "depends_on": []
+          }
+        ],
+        "fell_back": false,
+        "status": "needs_review",
+        "latency_s": 1.0667584501206875
+      }
+    },
+    {
+      "sample_id": "hotpotqa_5ac16e3055429964131be1f3",
+      "split": "train",
+      "question": "Big Dreamers and This Is Elvis are both what type of film?",
+      "sft_snapshot_count": 9,
+      "question_type": "comparison",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "type of film Big Dreamers is",
+          "necessary": false,
+          "depends_on": [],
+          "expected_answer": "documentary film",
+          "support_sets": [
+            [
+              "d5s0"
+            ]
+          ],
+          "aliases": [
+            "documentary"
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u2",
+          "description": "type of film This Is Elvis is",
+          "necessary": false,
+          "depends_on": [],
+          "expected_answer": "documentary film",
+          "support_sets": [
+            [
+              "d2s0"
+            ]
+          ],
+          "aliases": [
+            "documentary"
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u3",
+          "description": "common type of film for Big Dreamers and This Is Elvis",
+          "necessary": true,
+          "depends_on": [
+            "u1",
+            "u2"
+          ],
+          "expected_answer": "documentary film",
+          "support_sets": [
+            []
+          ],
+          "aliases": [
+            "documentary"
+          ],
+          "support_basis": "derived_from_dependencies"
+        }
+      ],
+      "fell_back": false,
+      "status": "reviewed",
+      "latency_s": 2.4423701791092753,
+      "annotation_review": {
+        "human_note": "",
+        "execution_note": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+        "issues": [],
+        "author": "assistant",
+        "human_approved": true,
+        "approval_basis": "用户于 2026-11-28 确认已审核通过；按最新 Note 落实"
+      },
+      "raw_decomposition": {
+        "sample_id": "hotpotqa_5ac16e3055429964131be1f3",
+        "split": "train",
+        "question": "Big Dreamers and This Is Elvis are both what type of film?",
+        "sft_snapshot_count": 9,
+        "question_type": "comparison",
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "type of film Big Dreamers is",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u2",
+            "description": "type of film This Is Elvis is",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u3",
+            "description": "common type of film for Big Dreamers and This Is Elvis",
+            "necessary": true,
+            "depends_on": [
+              "u1",
+              "u2"
+            ]
+          }
+        ],
+        "fell_back": false,
+        "status": "needs_review",
+        "latency_s": 2.4423701791092753
+      }
+    },
+    {
+      "sample_id": "hotpotqa_5ac250355542992f1f2b384b",
+      "split": "train",
+      "question": "Who had more diverse credits in films, Charles Burnett or Patricio Guzmán?",
+      "sft_snapshot_count": 8,
+      "question_type": "comparison",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "film credits of Charles Burnett",
+          "necessary": false,
+          "depends_on": [],
+          "expected_answer": "film director, film producer, writer, editor, actor, photographer, cinematographer",
+          "support_sets": [
+            [
+              "d1s0"
+            ]
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u2",
+          "description": "film credits of Patricio Guzmán",
+          "necessary": false,
+          "depends_on": [],
+          "expected_answer": "documentary film director",
+          "support_sets": [
+            [
+              "d9s0"
+            ]
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u3",
+          "description": "who had more diverse film credits",
+          "necessary": true,
+          "depends_on": [
+            "u1",
+            "u2"
+          ],
+          "expected_answer": "Charles Burnett",
+          "support_sets": [
+            []
+          ],
+          "aliases": [
+            "Burnett"
+          ],
+          "support_basis": "derived_from_dependencies"
+        }
+      ],
+      "fell_back": false,
+      "status": "reviewed",
+      "latency_s": 2.3179170261137187,
+      "annotation_review": {
+        "human_note": "",
+        "execution_note": "保留新版 film credits；答案为文档列出的角色，不把旧人数 7/1 填入角色查询；结论比较角色多样性。",
+        "issues": [],
+        "author": "assistant",
+        "human_approved": true,
+        "approval_basis": "用户于 2026-11-28 确认已审核通过；按最新 Note 落实"
+      },
+      "raw_decomposition": {
+        "sample_id": "hotpotqa_5ac250355542992f1f2b384b",
+        "split": "train",
+        "question": "Who had more diverse credits in films, Charles Burnett or Patricio Guzmán?",
+        "sft_snapshot_count": 8,
+        "question_type": "comparison",
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "film credits of Charles Burnett",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u2",
+            "description": "film credits of Patricio Guzmán",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u3",
+            "description": "who had more diverse film credits",
+            "necessary": true,
+            "depends_on": [
+              "u1",
+              "u2"
+            ]
+          }
+        ],
+        "fell_back": false,
+        "status": "needs_review",
+        "latency_s": 2.3179170261137187
+      }
+    },
+    {
+      "sample_id": "hotpotqa_5ac3aa9955429939154138a5",
+      "split": "train",
+      "question": "What Chinese novel was the inspiration for the franchise where Sean Schemmel had his most famous or notable voice role?",
+      "sft_snapshot_count": 8,
+      "question_type": "bridge",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "franchise where Sean Schemmel had his most famous or notable voice role",
+          "necessary": false,
+          "depends_on": [],
+          "expected_answer": "Dragon Ball",
+          "support_sets": [
+            [
+              "d1s1"
+            ]
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u2",
+          "description": "Chinese novel that inspired {u1}",
+          "necessary": true,
+          "depends_on": [
+            "u1"
+          ],
+          "expected_answer": "Journey to the West",
+          "support_sets": [
+            [
+              "d5s2"
+            ]
+          ],
+          "support_basis": "context"
+        }
+      ],
+      "fell_back": false,
+      "status": "reviewed",
+      "latency_s": 1.776244284119457,
+      "annotation_review": {
+        "human_note": "",
+        "execution_note": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+        "issues": [],
+        "author": "assistant",
+        "human_approved": true,
+        "approval_basis": "用户于 2026-11-28 确认已审核通过；按最新 Note 落实"
+      },
+      "raw_decomposition": {
+        "sample_id": "hotpotqa_5ac3aa9955429939154138a5",
+        "split": "train",
+        "question": "What Chinese novel was the inspiration for the franchise where Sean Schemmel had his most famous or notable voice role?",
+        "sft_snapshot_count": 8,
+        "question_type": "bridge",
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "franchise where Sean Schemmel had his most famous or notable voice role",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u2",
+            "description": "Chinese novel that inspired {u1}",
+            "necessary": true,
+            "depends_on": [
+              "u1"
+            ]
+          }
+        ],
+        "fell_back": false,
+        "status": "needs_review",
+        "latency_s": 1.776244284119457
+      }
+    },
+    {
+      "sample_id": "hotpotqa_5ac3cbbd5542995ef918c23c",
+      "split": "train",
+      "question": "Which singer was a member of the band Mindless Self Indulgence, Jimmy Urine or Soyou?",
+      "sft_snapshot_count": 6,
+      "question_type": "comparison",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "whether Jimmy Urine was a member of the band Mindless Self Indulgence",
+          "necessary": false,
+          "depends_on": [],
+          "expected_answer": "yes",
+          "support_sets": [
+            [
+              "d1s1"
+            ],
+            [
+              "d5s4"
+            ]
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u2",
+          "description": "whether Soyou was a member of the band Mindless Self Indulgence",
+          "necessary": false,
+          "depends_on": [],
+          "expected_answer": "no",
+          "support_sets": [],
+          "support_basis": "no_direct_support",
+          "annotation_note": "无直接支持集合；不能仅由 expected_answer 将本单元标为 SUPPORTED。候选题结论可按独立的 presupposition_sets 路径判断。"
+        },
+        {
+          "unit_id": "u3",
+          "description": "which singer was a member of the band Mindless Self Indulgence",
+          "necessary": true,
+          "depends_on": [
+            "u1",
+            "u2"
+          ],
+          "expected_answer": "Jimmy Urine",
+          "support_sets": [
+            []
+          ],
+          "aliases": [
+            "James Euringer",
+            "Little Jimmy Urine"
+          ],
+          "by_presupposition": true,
+          "presupposition_sets": [
+            [
+              "d1s1"
+            ],
+            [
+              "d5s4"
+            ]
+          ],
+          "support_basis": "question_presupposition"
+        }
+      ],
+      "fell_back": false,
+      "status": "reviewed",
+      "latency_s": 2.8400339521467686,
+      "annotation_review": {
+        "human_note": "",
+        "execution_note": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+        "issues": [],
+        "author": "assistant",
+        "human_approved": true,
+        "approval_basis": "用户于 2026-11-28 确认已审核通过；按最新 Note 落实"
+      },
+      "raw_decomposition": {
+        "sample_id": "hotpotqa_5ac3cbbd5542995ef918c23c",
+        "split": "train",
+        "question": "Which singer was a member of the band Mindless Self Indulgence, Jimmy Urine or Soyou?",
+        "sft_snapshot_count": 6,
+        "question_type": "comparison",
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "whether Jimmy Urine was a member of the band Mindless Self Indulgence",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u2",
+            "description": "whether Soyou was a member of the band Mindless Self Indulgence",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u3",
+            "description": "which singer was a member of the band Mindless Self Indulgence",
+            "necessary": true,
+            "depends_on": [
+              "u1",
+              "u2"
+            ]
+          }
+        ],
+        "fell_back": false,
+        "status": "needs_review",
+        "latency_s": 2.8400339521467686
+      }
+    },
+    {
+      "sample_id": "hotpotqa_5ac445975542995c82c4ad16",
+      "split": "train",
+      "question": "Which historic edifice has been a focal point of global and national activism since its inception, 1 Wall Street or Riverside Church?",
+      "sft_snapshot_count": 6,
+      "question_type": "comparison",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "whether 1 Wall Street has been a focal point of global and national activism since its inception",
+          "necessary": false,
+          "depends_on": [],
+          "expected_answer": "no",
+          "support_sets": [],
+          "support_basis": "no_direct_support",
+          "annotation_note": "无直接支持集合；不能仅由 expected_answer 将本单元标为 SUPPORTED。候选题结论可按独立的 presupposition_sets 路径判断。"
+        },
+        {
+          "unit_id": "u2",
+          "description": "whether Riverside Church has been a focal point of global and national activism since its inception",
+          "necessary": false,
+          "depends_on": [],
+          "expected_answer": "yes",
+          "support_sets": [
+            [
+              "d2s6"
+            ]
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u3",
+          "description": "which historic edifice has been a focal point of global and national activism since its inception",
+          "necessary": true,
+          "depends_on": [
+            "u1",
+            "u2"
+          ],
+          "expected_answer": "Riverside Church",
+          "support_sets": [
+            []
+          ],
+          "by_presupposition": true,
+          "presupposition_sets": [
+            [
+              "d2s6"
+            ]
+          ],
+          "support_basis": "question_presupposition"
+        }
+      ],
+      "fell_back": false,
+      "status": "reviewed",
+      "latency_s": 2.964685697806999,
+      "annotation_review": {
+        "human_note": "",
+        "execution_note": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+        "issues": [],
+        "author": "assistant",
+        "human_approved": true,
+        "approval_basis": "用户于 2026-11-28 确认已审核通过；按最新 Note 落实"
+      },
+      "raw_decomposition": {
+        "sample_id": "hotpotqa_5ac445975542995c82c4ad16",
+        "split": "train",
+        "question": "Which historic edifice has been a focal point of global and national activism since its inception, 1 Wall Street or Riverside Church?",
+        "sft_snapshot_count": 6,
+        "question_type": "comparison",
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "whether 1 Wall Street has been a focal point of global and national activism since its inception",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u2",
+            "description": "whether Riverside Church has been a focal point of global and national activism since its inception",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u3",
+            "description": "which historic edifice has been a focal point of global and national activism since its inception",
+            "necessary": true,
+            "depends_on": [
+              "u1",
+              "u2"
+            ]
+          }
+        ],
+        "fell_back": false,
+        "status": "needs_review",
+        "latency_s": 2.964685697806999
+      }
+    },
+    {
+      "sample_id": "hotpotqa_5ac51d3355429924173fb5be",
+      "split": "train",
+      "question": "Are Welcome to Nollywood and Burma VJ both documentary films?",
+      "sft_snapshot_count": 6,
+      "question_type": "comparison",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "whether Welcome to Nollywood is a documentary film",
+          "necessary": false,
+          "depends_on": [],
+          "expected_answer": "yes",
+          "support_sets": [
+            [
+              "d10s0"
+            ],
+            [
+              "d8s0"
+            ]
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u2",
+          "description": "whether Burma VJ is a documentary film",
+          "necessary": false,
+          "depends_on": [],
+          "expected_answer": "yes",
+          "support_sets": [
+            [
+              "d4s0"
+            ]
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u3",
+          "description": "whether both Welcome to Nollywood and Burma VJ are documentary films",
+          "necessary": true,
+          "depends_on": [
+            "u1",
+            "u2"
+          ],
+          "expected_answer": "yes",
+          "support_sets": [
+            []
+          ],
+          "support_basis": "derived_from_dependencies"
+        }
+      ],
+      "fell_back": false,
+      "status": "reviewed",
+      "latency_s": 2.5266293520107865,
+      "annotation_review": {
+        "human_note": "",
+        "execution_note": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+        "issues": [],
+        "author": "assistant",
+        "human_approved": true,
+        "approval_basis": "用户于 2026-11-28 确认已审核通过；按最新 Note 落实"
+      },
+      "raw_decomposition": {
+        "sample_id": "hotpotqa_5ac51d3355429924173fb5be",
+        "split": "train",
+        "question": "Are Welcome to Nollywood and Burma VJ both documentary films?",
+        "sft_snapshot_count": 6,
+        "question_type": "comparison",
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "whether Welcome to Nollywood is a documentary film",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u2",
+            "description": "whether Burma VJ is a documentary film",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u3",
+            "description": "whether both Welcome to Nollywood and Burma VJ are documentary films",
+            "necessary": true,
+            "depends_on": [
+              "u1",
+              "u2"
+            ]
+          }
+        ],
+        "fell_back": false,
+        "status": "needs_review",
+        "latency_s": 2.5266293520107865
+      }
+    },
+    {
+      "sample_id": "hotpotqa_5adbf7d855429947ff173879",
+      "split": "train",
+      "question": "Which group contains more species, Willow or Stipa?",
+      "sft_snapshot_count": 8,
+      "question_type": "comparison",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "number of species in Willow",
+          "necessary": false,
+          "depends_on": [],
+          "expected_answer": "around 400",
+          "support_sets": [
+            [
+              "d3s0"
+            ]
+          ],
+          "aliases": [
+            "400"
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u2",
+          "description": "number of species in Stipa",
+          "necessary": false,
+          "depends_on": [],
+          "expected_answer": "around 300",
+          "support_sets": [
+            [
+              "d10s0"
+            ]
+          ],
+          "aliases": [
+            "300"
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u3",
+          "description": "which group contains more species",
+          "necessary": true,
+          "depends_on": [
+            "u1",
+            "u2"
+          ],
+          "expected_answer": "Willow",
+          "support_sets": [
+            []
+          ],
+          "aliases": [
+            "Willows",
+            "Salix"
+          ],
+          "support_basis": "derived_from_dependencies"
+        }
+      ],
+      "fell_back": false,
+      "status": "reviewed",
+      "latency_s": 2.2340141511522233,
+      "annotation_review": {
+        "human_note": "",
+        "execution_note": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+        "issues": [],
+        "author": "assistant",
+        "human_approved": true,
+        "approval_basis": "用户于 2026-11-28 确认已审核通过；按最新 Note 落实"
+      },
+      "raw_decomposition": {
+        "sample_id": "hotpotqa_5adbf7d855429947ff173879",
+        "split": "train",
+        "question": "Which group contains more species, Willow or Stipa?",
+        "sft_snapshot_count": 8,
+        "question_type": "comparison",
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "number of species in Willow",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u2",
+            "description": "number of species in Stipa",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u3",
+            "description": "which group contains more species",
+            "necessary": true,
+            "depends_on": [
+              "u1",
+              "u2"
+            ]
+          }
+        ],
+        "fell_back": false,
+        "status": "needs_review",
+        "latency_s": 2.2340141511522233
+      }
+    },
+    {
+      "sample_id": "hotpotqa_5adc0b3a5542996e685252b8",
+      "split": "train",
+      "question": "What live-action television series was produced for Adult Swim and had Kristen Joy Schaal as an actor?",
+      "sft_snapshot_count": 6,
+      "question_type": "bridge",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "live-action television series produced for Adult Swim",
+          "necessary": false,
+          "depends_on": [],
+          "expected_answer": "The Heart, She Holler",
+          "support_sets": [
+            [
+              "d3s0"
+            ]
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u2",
+          "description": "live-action television series with Kristen Joy Schaal as an actor",
+          "necessary": false,
+          "depends_on": [],
+          "expected_answer": "The Heart, She Holler",
+          "support_sets": [
+            [
+              "d3s0",
+              "d3s1",
+              "d10s0"
+            ]
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u3",
+          "description": "live-action television series that is both {u1} and {u2}",
+          "necessary": true,
+          "depends_on": [
+            "u1",
+            "u2"
+          ],
+          "expected_answer": "The Heart, She Holler",
+          "support_sets": [
+            []
+          ],
+          "support_basis": "derived_from_dependencies"
+        }
+      ],
+      "fell_back": false,
+      "status": "reviewed",
+      "latency_s": 2.631424749037251,
+      "annotation_review": {
+        "human_note": "",
+        "execution_note": "保留三单元交集结构；u2 联合真人剧、演员及全名对应证据，u3 依赖两方，不使用旧第二跳直接证据冒充结论。",
+        "issues": [],
+        "author": "assistant",
+        "human_approved": true,
+        "approval_basis": "用户于 2026-11-28 确认已审核通过；按最新 Note 落实"
+      },
+      "raw_decomposition": {
+        "sample_id": "hotpotqa_5adc0b3a5542996e685252b8",
+        "split": "train",
+        "question": "What live-action television series was produced for Adult Swim and had Kristen Joy Schaal as an actor?",
+        "sft_snapshot_count": 6,
+        "question_type": "bridge",
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "live-action television series produced for Adult Swim",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u2",
+            "description": "live-action television series with Kristen Joy Schaal as an actor",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u3",
+            "description": "live-action television series that is both {u1} and {u2}",
+            "necessary": true,
+            "depends_on": [
+              "u1",
+              "u2"
+            ]
+          }
+        ],
+        "fell_back": false,
+        "status": "needs_review",
+        "latency_s": 2.631424749037251
+      }
+    },
+    {
+      "sample_id": "hotpotqa_5add1b765542990d50227de3",
+      "split": "train",
+      "question": "During which years was the German politician, who issued the Nero Decree, Chancellor of Germany?",
+      "sft_snapshot_count": 8,
+      "question_type": "bridge",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "German politician who issued the Nero Decree",
+          "necessary": false,
+          "depends_on": [],
+          "expected_answer": "Adolf Hitler",
+          "support_sets": [
+            [
+              "d3s0"
+            ]
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u2",
+          "description": "years {u1} was Chancellor of Germany",
+          "necessary": true,
+          "depends_on": [
+            "u1"
+          ],
+          "expected_answer": "1933 to 1945",
+          "support_sets": [
+            [
+              "d2s0"
+            ]
+          ],
+          "aliases": [
+            "1933–1945"
+          ],
+          "support_basis": "context"
+        }
+      ],
+      "fell_back": false,
+      "status": "reviewed",
+      "latency_s": 1.671262238174677,
+      "annotation_review": {
+        "human_note": "",
+        "execution_note": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+        "issues": [],
+        "author": "assistant",
+        "human_approved": true,
+        "approval_basis": "用户于 2026-11-28 确认已审核通过；按最新 Note 落实"
+      },
+      "raw_decomposition": {
+        "sample_id": "hotpotqa_5add1b765542990d50227de3",
+        "split": "train",
+        "question": "During which years was the German politician, who issued the Nero Decree, Chancellor of Germany?",
+        "sft_snapshot_count": 8,
+        "question_type": "bridge",
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "German politician who issued the Nero Decree",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u2",
+            "description": "years {u1} was Chancellor of Germany",
+            "necessary": true,
+            "depends_on": [
+              "u1"
+            ]
+          }
+        ],
+        "fell_back": false,
+        "status": "needs_review",
+        "latency_s": 1.671262238174677
+      }
+    },
+    {
+      "sample_id": "hotpotqa_5add24625542994734353874",
+      "split": "train",
+      "question": "What is the name of the film that Anne Archer starred in that was a sequel to The Hunt for Red October?",
+      "sft_snapshot_count": 7,
+      "question_type": "bridge",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "film sequel to The Hunt for Red October",
+          "necessary": false,
+          "depends_on": [],
+          "expected_answer": "Patriot Games",
+          "support_sets": [
+            [
+              "d3s1"
+            ]
+          ],
+          "support_basis": "context"
+        },
+        {
+          "unit_id": "u2",
+          "description": "film starring Anne Archer that is {u1}",
+          "necessary": true,
+          "depends_on": [
+            "u1"
+          ],
+          "expected_answer": "Patriot Games",
+          "support_sets": [
+            [
+              "d3s1"
+            ],
+            [
+              "d10s2"
+            ]
+          ],
+          "support_basis": "context"
+        }
+      ],
+      "fell_back": false,
+      "status": "reviewed",
+      "latency_s": 1.6716693472117186,
+      "annotation_review": {
+        "human_note": "",
+        "execution_note": "保留新版单元；按语义对应旧答案，并核对 context 中的支持集合。",
+        "issues": [],
+        "author": "assistant",
+        "human_approved": true,
+        "approval_basis": "用户于 2026-11-28 确认已审核通过；按最新 Note 落实"
+      },
+      "raw_decomposition": {
+        "sample_id": "hotpotqa_5add24625542994734353874",
+        "split": "train",
+        "question": "What is the name of the film that Anne Archer starred in that was a sequel to The Hunt for Red October?",
+        "sft_snapshot_count": 7,
+        "question_type": "bridge",
+        "units": [
+          {
+            "unit_id": "u1",
+            "description": "film sequel to The Hunt for Red October",
+            "necessary": false,
+            "depends_on": []
+          },
+          {
+            "unit_id": "u2",
+            "description": "film starring Anne Archer that is {u1}",
+            "necessary": true,
+            "depends_on": [
+              "u1"
+            ]
+          }
+        ],
+        "fell_back": false,
+        "status": "needs_review",
+        "latency_s": 1.6716693472117186
+      }
+    }
+  ],
+  "source_index": [
+    {
+      "batch_number": 1,
+      "global_number": 181,
+      "sample_id": "hotpotqa_5ab4da805542996a3a969fd8",
+      "split": "train",
+      "source_number": 181,
+      "review_status": "modify_generated"
+    },
+    {
+      "batch_number": 2,
+      "global_number": 182,
+      "sample_id": "hotpotqa_5ab5344c5542991751b4d7c5",
+      "split": "train",
+      "source_number": 182,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 3,
+      "global_number": 183,
+      "sample_id": "hotpotqa_5ab679e1554299110f219a16",
+      "split": "train",
+      "source_number": 183,
+      "review_status": "modify_generated"
+    },
+    {
+      "batch_number": 4,
+      "global_number": 184,
+      "sample_id": "hotpotqa_5ab781f255429928e1fe3862",
+      "split": "train",
+      "source_number": 184,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 5,
+      "global_number": 185,
+      "sample_id": "hotpotqa_5ab7f9b65542991d322237f0",
+      "split": "train",
+      "source_number": 185,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 6,
+      "global_number": 186,
+      "sample_id": "hotpotqa_5ab8292c55429934fafe6cfe",
+      "split": "train",
+      "source_number": 186,
+      "review_status": "keep_generated_relabel"
+    },
+    {
+      "batch_number": 7,
+      "global_number": 187,
+      "sample_id": "hotpotqa_5ab8f1ae55429916710eb0c8",
+      "split": "train",
+      "source_number": 187,
+      "review_status": "keep_generated_relabel"
+    },
+    {
+      "batch_number": 8,
+      "global_number": 188,
+      "sample_id": "hotpotqa_5ab95b28554299743d22eb09",
+      "split": "train",
+      "source_number": 188,
+      "review_status": "modify_generated"
+    },
+    {
+      "batch_number": 9,
+      "global_number": 189,
+      "sample_id": "hotpotqa_5ab9d58855429939ce03dc3a",
+      "split": "train",
+      "source_number": 189,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 10,
+      "global_number": 190,
+      "sample_id": "hotpotqa_5aba9af255429901930fa856",
+      "split": "train",
+      "source_number": 190,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 11,
+      "global_number": 191,
+      "sample_id": "hotpotqa_5abb155c55429966062416c8",
+      "split": "train",
+      "source_number": 191,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 12,
+      "global_number": 192,
+      "sample_id": "hotpotqa_5abbdaaa5542996606241732",
+      "split": "train",
+      "source_number": 192,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 13,
+      "global_number": 193,
+      "sample_id": "hotpotqa_5abc47d055429959677d6a70",
+      "split": "train",
+      "source_number": 193,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 14,
+      "global_number": 194,
+      "sample_id": "hotpotqa_5abca3065542993a06baf93a",
+      "split": "train",
+      "source_number": 194,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 15,
+      "global_number": 195,
+      "sample_id": "hotpotqa_5abcff15554299114383a1c2",
+      "split": "train",
+      "source_number": 195,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 16,
+      "global_number": 196,
+      "sample_id": "hotpotqa_5abdc7fb55429965af743e3a",
+      "split": "train",
+      "source_number": 196,
+      "review_status": "modify_generated"
+    },
+    {
+      "batch_number": 17,
+      "global_number": 197,
+      "sample_id": "hotpotqa_5ac04afa5542996f0d89cb80",
+      "split": "train",
+      "source_number": 197,
+      "review_status": "review"
+    },
+    {
+      "batch_number": 18,
+      "global_number": 198,
+      "sample_id": "hotpotqa_5ac119595542992a796dede5",
+      "split": "train",
+      "source_number": 198,
+      "review_status": "keep_generated_relabel"
+    },
+    {
+      "batch_number": 19,
+      "global_number": 199,
+      "sample_id": "hotpotqa_5ac11f47554299294b2190ae",
+      "split": "train",
+      "source_number": 199,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 20,
+      "global_number": 200,
+      "sample_id": "hotpotqa_5ac1334b55429964131be184",
+      "split": "train",
+      "source_number": 200,
+      "review_status": "keep_generated_relabel"
+    },
+    {
+      "batch_number": 21,
+      "global_number": 201,
+      "sample_id": "hotpotqa_5ac16e3055429964131be1f3",
+      "split": "train",
+      "source_number": 201,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 22,
+      "global_number": 202,
+      "sample_id": "hotpotqa_5ac250355542992f1f2b384b",
+      "split": "train",
+      "source_number": 202,
+      "review_status": "keep_generated_relabel"
+    },
+    {
+      "batch_number": 23,
+      "global_number": 203,
+      "sample_id": "hotpotqa_5ac3aa9955429939154138a5",
+      "split": "train",
+      "source_number": 203,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 24,
+      "global_number": 204,
+      "sample_id": "hotpotqa_5ac3cbbd5542995ef918c23c",
+      "split": "train",
+      "source_number": 204,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 25,
+      "global_number": 205,
+      "sample_id": "hotpotqa_5ac445975542995c82c4ad16",
+      "split": "train",
+      "source_number": 205,
+      "review_status": "keep_generated_relabel"
+    },
+    {
+      "batch_number": 26,
+      "global_number": 206,
+      "sample_id": "hotpotqa_5ac51d3355429924173fb5be",
+      "split": "train",
+      "source_number": 206,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 27,
+      "global_number": 207,
+      "sample_id": "hotpotqa_5adbf7d855429947ff173879",
+      "split": "train",
+      "source_number": 207,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 28,
+      "global_number": 208,
+      "sample_id": "hotpotqa_5adc0b3a5542996e685252b8",
+      "split": "train",
+      "source_number": 208,
+      "review_status": "keep_generated_relabel"
+    },
+    {
+      "batch_number": 29,
+      "global_number": 209,
+      "sample_id": "hotpotqa_5add1b765542990d50227de3",
+      "split": "train",
+      "source_number": 209,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 30,
+      "global_number": 210,
+      "sample_id": "hotpotqa_5add24625542994734353874",
+      "split": "train",
+      "source_number": 210,
+      "review_status": "no_change"
+    }
+  ]
+}

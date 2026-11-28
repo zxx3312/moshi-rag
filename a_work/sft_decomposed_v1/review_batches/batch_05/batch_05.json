@@ -1,0 +1,1140 @@
+{
+  "annotation_version": "a-decompose-v1",
+  "status": "needs_review",
+  "batch_id": "batch_05",
+  "records": [
+    {
+      "sample_id": "2wikimultihopqa_f52b042e0baf11ebab90acde48001122",
+      "split": "train",
+      "question": "Who is the paternal grandmother of Charles Of Artois, Count Of Eu?",
+      "sft_snapshot_count": 8,
+      "question_type": "bridge",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "father of Charles Of Artois, Count Of Eu",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "mother of {u1}, Charles Of Artois, Count Of Eu's paternal grandmother",
+          "necessary": true,
+          "depends_on": [
+            "u1"
+          ]
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 1.9216948200482875
+    },
+    {
+      "sample_id": "2wikimultihopqa_f5a1f18c088b11ebbd6fac1f6bf848b6",
+      "split": "train",
+      "question": "Which film has the director died first, Maravil Thirivu Sookshikkuka or Beloved Liar?",
+      "sft_snapshot_count": 10,
+      "question_type": "bridge_comparison",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "director of Maravil Thirivu Sookshikkuka",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "death date of {u1}",
+          "necessary": false,
+          "depends_on": [
+            "u1"
+          ]
+        },
+        {
+          "unit_id": "u3",
+          "description": "director of Beloved Liar",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u4",
+          "description": "death date of {u3}",
+          "necessary": false,
+          "depends_on": [
+            "u3"
+          ]
+        },
+        {
+          "unit_id": "u5",
+          "description": "which film's director died first",
+          "necessary": true,
+          "depends_on": [
+            "u2",
+            "u4"
+          ]
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 3.84181070397608
+    },
+    {
+      "sample_id": "2wikimultihopqa_f96c965908dd11ebbd9eac1f6bf848b6",
+      "split": "train",
+      "question": "Which film has the director who was born earlier, Wives On Strike or Sporting Goods?",
+      "sft_snapshot_count": 10,
+      "question_type": "bridge_comparison",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "director of Wives On Strike",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "birth date of {u1}",
+          "necessary": false,
+          "depends_on": [
+            "u1"
+          ]
+        },
+        {
+          "unit_id": "u3",
+          "description": "director of Sporting Goods",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u4",
+          "description": "birth date of {u3}",
+          "necessary": false,
+          "depends_on": [
+            "u3"
+          ]
+        },
+        {
+          "unit_id": "u5",
+          "description": "which film's director was born earlier",
+          "necessary": true,
+          "depends_on": [
+            "u2",
+            "u4"
+          ]
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 3.6534794808831066
+    },
+    {
+      "sample_id": "2wikimultihopqa_fbad88760bdc11eba7f7acde48001122",
+      "split": "train",
+      "question": "What is the place of birth of Julian Marley's father?",
+      "sft_snapshot_count": 9,
+      "question_type": "bridge",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "father of Julian Marley",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "place of birth of {u1}",
+          "necessary": true,
+          "depends_on": [
+            "u1"
+          ]
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 1.5663038059137762
+    },
+    {
+      "sample_id": "2wikimultihopqa_fc76b898099011ebbdb0ac1f6bf848b6",
+      "split": "train",
+      "question": "Are both villages, Boneh-Ye Khiraleh and Askaru, located in the same country?",
+      "sft_snapshot_count": 9,
+      "question_type": "comparison",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "country of Boneh-Ye Khiraleh",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "country of Askaru",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u3",
+          "description": "whether Boneh-Ye Khiraleh and Askaru are in the same country",
+          "necessary": true,
+          "depends_on": [
+            "u1",
+            "u2"
+          ]
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 2.5473510939627886
+    },
+    {
+      "sample_id": "hotpotqa_5a730a5555429901807daf72",
+      "split": "train",
+      "question": "You Can't Run Away from It starred which eight time Academy Award nominee?",
+      "sft_snapshot_count": 8,
+      "question_type": "single",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "eight time Academy Award nominee who starred in You Can't Run Away from It",
+          "necessary": true,
+          "depends_on": []
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 1.0883643350098282
+    },
+    {
+      "sample_id": "hotpotqa_5a7329c65542992359bc3256",
+      "split": "train",
+      "question": "What is situated in the City of Timmins, Ontario, Canada,  Dome Mine or Con Mine?",
+      "sft_snapshot_count": 6,
+      "question_type": "comparison",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "whether Dome Mine is situated in the City of Timmins, Ontario, Canada",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "whether Con Mine is situated in the City of Timmins, Ontario, Canada",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u3",
+          "description": "which mine is situated in the City of Timmins, Ontario, Canada",
+          "necessary": true,
+          "depends_on": [
+            "u1",
+            "u2"
+          ]
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 2.8184421360492706
+    },
+    {
+      "sample_id": "hotpotqa_5a73301e55429901807dafad",
+      "split": "train",
+      "question": "Pixie Geldof's mother died of what cause?",
+      "sft_snapshot_count": 9,
+      "question_type": "bridge",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "mother of Pixie Geldof",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "cause of death of {u1}",
+          "necessary": true,
+          "depends_on": [
+            "u1"
+          ]
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 1.5874649968463928
+    },
+    {
+      "sample_id": "hotpotqa_5a733a2e5542994cef4bc4df",
+      "split": "train",
+      "question": "Which of these two men worked as a professor at New York University, Frankie Kazarian or Paul Boghossian?",
+      "sft_snapshot_count": 7,
+      "question_type": "comparison",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "whether Frankie Kazarian worked as a professor at New York University",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "whether Paul Boghossian worked as a professor at New York University",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u3",
+          "description": "which of them worked as a professor at New York University",
+          "necessary": true,
+          "depends_on": [
+            "u1",
+            "u2"
+          ]
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 2.6734372021164745
+    },
+    {
+      "sample_id": "hotpotqa_5a736dc755429901807db04e",
+      "split": "train",
+      "question": "Out of the two members of Hi-Gate, which was voted the No. 1 DJ in the world in 1995?",
+      "sft_snapshot_count": 8,
+      "question_type": "comparison",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "whether member 1 of Hi-Gate was voted No. 1 DJ in the world in 1995",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "whether member 2 of Hi-Gate was voted No. 1 DJ in the world in 1995",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u3",
+          "description": "which member of Hi-Gate was voted No. 1 DJ in the world in 1995",
+          "necessary": true,
+          "depends_on": [
+            "u1",
+            "u2"
+          ]
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 3.361781418090686
+    },
+    {
+      "sample_id": "hotpotqa_5a74797655429929fddd843f",
+      "split": "train",
+      "question": "Which pizza shop was created by a company merger, Papa Murphy's or Hungry Howie's Pizza?",
+      "sft_snapshot_count": 5,
+      "question_type": "comparison",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "whether Papa Murphy's was created by a company merger",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "whether Hungry Howie's Pizza was created by a company merger",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u3",
+          "description": "which pizza shop was created by a company merger",
+          "necessary": true,
+          "depends_on": [
+            "u1",
+            "u2"
+          ]
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 2.5684378230944276
+    },
+    {
+      "sample_id": "hotpotqa_5a752d375542996c70cfaea4",
+      "split": "train",
+      "question": "American Hairless Terrier and Old Danish Pointer, are breeds of which animal?",
+      "sft_snapshot_count": 7,
+      "question_type": "single",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "animal breed for American Hairless Terrier and Old Danish Pointer",
+          "necessary": true,
+          "depends_on": []
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 1.0245769859757274
+    },
+    {
+      "sample_id": "hotpotqa_5a7565475542992d0ec05f84",
+      "split": "train",
+      "question": "Which park, Picos de Europa National Park or Caldera de Taburiente National Park is on an island?",
+      "sft_snapshot_count": 6,
+      "question_type": "comparison",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "whether Picos de Europa National Park is on an island",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "whether Caldera de Taburiente National Park is on an island",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u3",
+          "description": "which park is on an island",
+          "necessary": true,
+          "depends_on": [
+            "u1",
+            "u2"
+          ]
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 2.526824663160369
+    },
+    {
+      "sample_id": "hotpotqa_5a75d0325542992db94736d2",
+      "split": "train",
+      "question": "Who was the 1907 football team captain for the oldest Catholic university in the Commonwealth of Pennsylvania?",
+      "sft_snapshot_count": 6,
+      "question_type": "bridge",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "oldest Catholic university in the Commonwealth of Pennsylvania",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "1907 football team captain of {u1}",
+          "necessary": true,
+          "depends_on": [
+            "u1"
+          ]
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 1.7337190948892385
+    },
+    {
+      "sample_id": "hotpotqa_5a75ebe6554299109176e5d2",
+      "split": "train",
+      "question": "Which Walt Disney movie came out first, Tarzan or Honey, I Shrunk the Kids",
+      "sft_snapshot_count": 9,
+      "question_type": "comparison",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "release year of Tarzan",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "release year of Honey, I Shrunk the Kids",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u3",
+          "description": "which Walt Disney movie came out first",
+          "necessary": true,
+          "depends_on": [
+            "u1",
+            "u2"
+          ]
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 2.360420841956511
+    },
+    {
+      "sample_id": "hotpotqa_5a77287a55429972597f1452",
+      "split": "train",
+      "question": "Who is older, Speedy Keen or Shaun Ryder?",
+      "sft_snapshot_count": 8,
+      "question_type": "comparison",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "birth date of Speedy Keen",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "birth date of Shaun Ryder",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u3",
+          "description": "who is older",
+          "necessary": true,
+          "depends_on": [
+            "u1",
+            "u2"
+          ]
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 2.214124527061358
+    },
+    {
+      "sample_id": "hotpotqa_5a7769ea55429966f1a36d2f",
+      "split": "train",
+      "question": "Who died first, Yuri Linnik or Georg Cantor?",
+      "sft_snapshot_count": 8,
+      "question_type": "bridge_comparison",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "death date of Yuri Linnik",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "death date of Georg Cantor",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u3",
+          "description": "who died first",
+          "necessary": true,
+          "depends_on": [
+            "u1",
+            "u2"
+          ]
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 2.25469186110422
+    },
+    {
+      "sample_id": "hotpotqa_5a78aee6554299148911f91f",
+      "split": "train",
+      "question": "What is the full name of the Portuguese footballer who kicked the winning goal in the 2004 Coupe de France Final?",
+      "sft_snapshot_count": 8,
+      "question_type": "bridge",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "Portuguese footballer who kicked the winning goal in the 2004 Coupe de France Final",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "full name of {u1}",
+          "necessary": true,
+          "depends_on": [
+            "u1"
+          ]
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 1.8800450910348445
+    },
+    {
+      "sample_id": "hotpotqa_5a78fb5955429970f5fffe09",
+      "split": "train",
+      "question": "What festival celebrated by the people of Karnataka celebrates a philosopher who died in 1609?",
+      "sft_snapshot_count": 9,
+      "question_type": "bridge",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "festival celebrated by the people of Karnataka",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "philosopher celebrated by {u1} who died in 1609",
+          "necessary": true,
+          "depends_on": [
+            "u1"
+          ]
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 1.817254917928949
+    },
+    {
+      "sample_id": "hotpotqa_5a79188455429974737f7984",
+      "split": "train",
+      "question": "What is the birthday of the composer of the song \"Cups\" that wasn't Luisa Gerstein?",
+      "sft_snapshot_count": 9,
+      "question_type": "bridge",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "composer of the song \"Cups\" that wasn't Luisa Gerstein",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "birthday of {u1}",
+          "necessary": true,
+          "depends_on": [
+            "u1"
+          ]
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 1.7334192029666156
+    },
+    {
+      "sample_id": "hotpotqa_5a79289d55429907847277cf",
+      "split": "train",
+      "question": "What band was formed first, Weezer or Royal Blood?",
+      "sft_snapshot_count": 9,
+      "question_type": "comparison",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "year Weezer was formed",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "year Royal Blood was formed",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u3",
+          "description": "which band was formed first",
+          "necessary": true,
+          "depends_on": [
+            "u1",
+            "u2"
+          ]
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 2.2344877088908106
+    },
+    {
+      "sample_id": "hotpotqa_5a7a166f5542990783324e48",
+      "split": "train",
+      "question": "What American actor stars in the sixth installment in the \"Saw\" franchise?",
+      "sft_snapshot_count": 7,
+      "question_type": "bridge",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "sixth installment in the \"Saw\" franchise",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "American actor starring in {u1}",
+          "necessary": true,
+          "depends_on": [
+            "u1"
+          ]
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 1.6716091048438102
+    },
+    {
+      "sample_id": "hotpotqa_5a7a168a5542996a35c170c7",
+      "split": "train",
+      "question": "The mother of Archduchess Elisabeth Marie of Austria, was born on which day ?",
+      "sft_snapshot_count": 8,
+      "question_type": "bridge",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "mother of Archduchess Elisabeth Marie of Austria",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "birth date of {u1}",
+          "necessary": true,
+          "depends_on": [
+            "u1"
+          ]
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 1.6710649689193815
+    },
+    {
+      "sample_id": "hotpotqa_5a7a22d45542990783324e80",
+      "split": "train",
+      "question": "Tom Choi, born in Taegu, South Korea, is a Korean-American actor best known for \"Teen Wolf\", Teen Wolf is an American television series developed by Jeff Davis, for which channel?",
+      "sft_snapshot_count": 8,
+      "question_type": "single",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "network that airs Teen Wolf",
+          "necessary": true,
+          "depends_on": []
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 0.8796880091540515
+    },
+    {
+      "sample_id": "hotpotqa_5a7a46785542990783324ee5",
+      "split": "train",
+      "question": "What type of publication is Popular Mechanics and Sojourners?",
+      "sft_snapshot_count": 7,
+      "question_type": "multipart",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "type of publication for Popular Mechanics",
+          "necessary": true,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "type of publication for Sojourners",
+          "necessary": true,
+          "depends_on": []
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 1.5675265560857952
+    },
+    {
+      "sample_id": "hotpotqa_5a7a4cba5542990198eaf114",
+      "split": "train",
+      "question": "Who is older, Shaun Ryder or Fish?",
+      "sft_snapshot_count": 8,
+      "question_type": "comparison",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "birth date of Shaun Ryder",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "birth date of Fish",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u3",
+          "description": "who is older",
+          "necessary": true,
+          "depends_on": [
+            "u1",
+            "u2"
+          ]
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 2.1507758209481835
+    },
+    {
+      "sample_id": "hotpotqa_5a7a572e5542990783324f1c",
+      "split": "train",
+      "question": "In literary criticism, stream of consciousness is a narrative mode or method, that attempts to depict the multitudinous thoughts and feelings which pass through the mind, the term was coined by William James in 1890 in his \"The Principles of Psychology\", and in 1918 the novelist May Sinclair, Sinclair was the pseudonym of Mary Amelia St. Clair (24 August 1863 – 14 November 1946), a popular British writer who wrote about how many novels, short stories and poetry?",
+      "sft_snapshot_count": 8,
+      "question_type": "single",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "number of novels, short stories, and poetry written by Mary Amelia St. Clair",
+          "necessary": true,
+          "depends_on": []
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 1.1109163670334965
+    },
+    {
+      "sample_id": "hotpotqa_5a7aa2135542995eb53be882",
+      "split": "train",
+      "question": "Who was born first, James Schuyler or Robert Lowell?",
+      "sft_snapshot_count": 9,
+      "question_type": "comparison",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "birth date of James Schuyler",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "birth date of Robert Lowell",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u3",
+          "description": "who was born first",
+          "necessary": true,
+          "depends_on": [
+            "u1",
+            "u2"
+          ]
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 2.2343638502061367
+    },
+    {
+      "sample_id": "hotpotqa_5a7da4da5542997cc2c47468",
+      "split": "train",
+      "question": "Facing Sudan and Seal Island are both what genre of movie?",
+      "sft_snapshot_count": 9,
+      "question_type": "comparison",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "genre of Facing Sudan",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "genre of Seal Island",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u3",
+          "description": "what genre both movies are",
+          "necessary": true,
+          "depends_on": [
+            "u1",
+            "u2"
+          ]
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 2.171554859029129
+    },
+    {
+      "sample_id": "hotpotqa_5a7f47d05542992e7d278ce2",
+      "split": "train",
+      "question": "When as the DVD box set of the simposon's season that included the episode that Mr. Burns starts to miss his childhood teddy bear released in region 1 ?",
+      "sft_snapshot_count": 6,
+      "question_type": "bridge",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "season of The Simpsons that includes the episode where Mr. Burns starts to miss his childhood teddy bear",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "DVD box set of {u1} released in region 1",
+          "necessary": false,
+          "depends_on": [
+            "u1"
+          ]
+        },
+        {
+          "unit_id": "u3",
+          "description": "release date of {u2}",
+          "necessary": true,
+          "depends_on": [
+            "u2"
+          ]
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 2.6933244441170245
+    }
+  ],
+  "source_index": [
+    {
+      "batch_number": 1,
+      "global_number": 121,
+      "sample_id": "2wikimultihopqa_f52b042e0baf11ebab90acde48001122",
+      "split": "train",
+      "source_number": 121,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 2,
+      "global_number": 122,
+      "sample_id": "2wikimultihopqa_f5a1f18c088b11ebbd6fac1f6bf848b6",
+      "split": "train",
+      "source_number": 122,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 3,
+      "global_number": 123,
+      "sample_id": "2wikimultihopqa_f96c965908dd11ebbd9eac1f6bf848b6",
+      "split": "train",
+      "source_number": 123,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 4,
+      "global_number": 124,
+      "sample_id": "2wikimultihopqa_fbad88760bdc11eba7f7acde48001122",
+      "split": "train",
+      "source_number": 124,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 5,
+      "global_number": 125,
+      "sample_id": "2wikimultihopqa_fc76b898099011ebbdb0ac1f6bf848b6",
+      "split": "train",
+      "source_number": 125,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 6,
+      "global_number": 126,
+      "sample_id": "hotpotqa_5a730a5555429901807daf72",
+      "split": "train",
+      "source_number": 126,
+      "review_status": "keep_generated_relabel"
+    },
+    {
+      "batch_number": 7,
+      "global_number": 127,
+      "sample_id": "hotpotqa_5a7329c65542992359bc3256",
+      "split": "train",
+      "source_number": 127,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 8,
+      "global_number": 128,
+      "sample_id": "hotpotqa_5a73301e55429901807dafad",
+      "split": "train",
+      "source_number": 128,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 9,
+      "global_number": 129,
+      "sample_id": "hotpotqa_5a733a2e5542994cef4bc4df",
+      "split": "train",
+      "source_number": 129,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 10,
+      "global_number": 130,
+      "sample_id": "hotpotqa_5a736dc755429901807db04e",
+      "split": "train",
+      "source_number": 130,
+      "review_status": "modify_generated"
+    },
+    {
+      "batch_number": 11,
+      "global_number": 131,
+      "sample_id": "hotpotqa_5a74797655429929fddd843f",
+      "split": "train",
+      "source_number": 131,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 12,
+      "global_number": 132,
+      "sample_id": "hotpotqa_5a752d375542996c70cfaea4",
+      "split": "train",
+      "source_number": 132,
+      "review_status": "keep_generated_relabel"
+    },
+    {
+      "batch_number": 13,
+      "global_number": 133,
+      "sample_id": "hotpotqa_5a7565475542992d0ec05f84",
+      "split": "train",
+      "source_number": 133,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 14,
+      "global_number": 134,
+      "sample_id": "hotpotqa_5a75d0325542992db94736d2",
+      "split": "train",
+      "source_number": 134,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 15,
+      "global_number": 135,
+      "sample_id": "hotpotqa_5a75ebe6554299109176e5d2",
+      "split": "train",
+      "source_number": 135,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 16,
+      "global_number": 136,
+      "sample_id": "hotpotqa_5a77287a55429972597f1452",
+      "split": "train",
+      "source_number": 136,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 17,
+      "global_number": 137,
+      "sample_id": "hotpotqa_5a7769ea55429966f1a36d2f",
+      "split": "train",
+      "source_number": 137,
+      "review_status": "modify_generated"
+    },
+    {
+      "batch_number": 18,
+      "global_number": 138,
+      "sample_id": "hotpotqa_5a78aee6554299148911f91f",
+      "split": "train",
+      "source_number": 138,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 19,
+      "global_number": 139,
+      "sample_id": "hotpotqa_5a78fb5955429970f5fffe09",
+      "split": "train",
+      "source_number": 139,
+      "review_status": "modify_generated"
+    },
+    {
+      "batch_number": 20,
+      "global_number": 140,
+      "sample_id": "hotpotqa_5a79188455429974737f7984",
+      "split": "train",
+      "source_number": 140,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 21,
+      "global_number": 141,
+      "sample_id": "hotpotqa_5a79289d55429907847277cf",
+      "split": "train",
+      "source_number": 141,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 22,
+      "global_number": 142,
+      "sample_id": "hotpotqa_5a7a166f5542990783324e48",
+      "split": "train",
+      "source_number": 142,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 23,
+      "global_number": 143,
+      "sample_id": "hotpotqa_5a7a168a5542996a35c170c7",
+      "split": "train",
+      "source_number": 143,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 24,
+      "global_number": 144,
+      "sample_id": "hotpotqa_5a7a22d45542990783324e80",
+      "split": "train",
+      "source_number": 144,
+      "review_status": "keep_generated_relabel"
+    },
+    {
+      "batch_number": 25,
+      "global_number": 145,
+      "sample_id": "hotpotqa_5a7a46785542990783324ee5",
+      "split": "train",
+      "source_number": 145,
+      "review_status": "keep_generated_relabel"
+    },
+    {
+      "batch_number": 26,
+      "global_number": 146,
+      "sample_id": "hotpotqa_5a7a4cba5542990198eaf114",
+      "split": "train",
+      "source_number": 146,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 27,
+      "global_number": 147,
+      "sample_id": "hotpotqa_5a7a572e5542990783324f1c",
+      "split": "train",
+      "source_number": 147,
+      "review_status": "keep_generated_relabel"
+    },
+    {
+      "batch_number": 28,
+      "global_number": 148,
+      "sample_id": "hotpotqa_5a7aa2135542995eb53be882",
+      "split": "train",
+      "source_number": 148,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 29,
+      "global_number": 149,
+      "sample_id": "hotpotqa_5a7da4da5542997cc2c47468",
+      "split": "train",
+      "source_number": 149,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 30,
+      "global_number": 150,
+      "sample_id": "hotpotqa_5a7f47d05542992e7d278ce2",
+      "split": "train",
+      "source_number": 150,
+      "review_status": "keep_generated_relabel"
+    }
+  ]
+}

@@ -1,0 +1,1276 @@
+{
+  "annotation_version": "a-decompose-v1",
+  "status": "needs_review",
+  "batch_id": "batch_04",
+  "records": [
+    {
+      "sample_id": "2wikimultihopqa_c3c1a5a00baf11ebab90acde48001122",
+      "split": "train",
+      "question": "Who is Hipparete's father-in-law?",
+      "sft_snapshot_count": 9,
+      "question_type": "bridge",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "husband of Hipparete",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "father of {u1}, Hipparete's father-in-law",
+          "necessary": true,
+          "depends_on": [
+            "u1"
+          ]
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 1.7124351419042796
+    },
+    {
+      "sample_id": "2wikimultihopqa_c3c8e96e0baf11ebab90acde48001122",
+      "split": "train",
+      "question": "Who is the paternal grandmother of John De Southeray?",
+      "sft_snapshot_count": 8,
+      "question_type": "bridge",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "father of John De Southeray",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "mother of {u1}, John De Southeray's paternal grandmother",
+          "necessary": true,
+          "depends_on": [
+            "u1"
+          ]
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 1.7544489160645753
+    },
+    {
+      "sample_id": "2wikimultihopqa_c526bfac0baf11ebab90acde48001122",
+      "split": "train",
+      "question": "Who is the paternal grandmother of Drusus Caesar?",
+      "sft_snapshot_count": 8,
+      "question_type": "bridge",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "father of Drusus Caesar",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "mother of {u1}, Drusus Caesar's paternal grandmother",
+          "necessary": true,
+          "depends_on": [
+            "u1"
+          ]
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 1.713606437901035
+    },
+    {
+      "sample_id": "2wikimultihopqa_c751b94c088211ebbd6dac1f6bf848b6",
+      "split": "train",
+      "question": "Which film has the director born first, Island Of The Blue Dolphins (Film) or House Of Women?",
+      "sft_snapshot_count": 10,
+      "question_type": "bridge_comparison",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "director of Island Of The Blue Dolphins (Film)",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "birth date of {u1}",
+          "necessary": false,
+          "depends_on": [
+            "u1"
+          ]
+        },
+        {
+          "unit_id": "u3",
+          "description": "director of House Of Women",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u4",
+          "description": "birth date of {u3}",
+          "necessary": false,
+          "depends_on": [
+            "u3"
+          ]
+        },
+        {
+          "unit_id": "u5",
+          "description": "which film's director was born first",
+          "necessary": true,
+          "depends_on": [
+            "u2",
+            "u4"
+          ]
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 3.73587391898036
+    },
+    {
+      "sample_id": "2wikimultihopqa_c99c2b3d086f11ebbd62ac1f6bf848b6",
+      "split": "train",
+      "question": "Are both bands, Kreyson and Menace Clan, from the same country?",
+      "sft_snapshot_count": 7,
+      "question_type": "comparison",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "country of Kreyson",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "country of Menace Clan",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u3",
+          "description": "whether Kreyson and Menace Clan are from the same country",
+          "necessary": true,
+          "depends_on": [
+            "u1",
+            "u2"
+          ]
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 2.3813718880992383
+    },
+    {
+      "sample_id": "2wikimultihopqa_cb2146660baf11ebab90acde48001122",
+      "split": "train",
+      "question": "Who is Thorvald Eiriksson's paternal grandfather?",
+      "sft_snapshot_count": 7,
+      "question_type": "bridge",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "father of Thorvald Eiriksson",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "father of {u1}, Thorvald Eiriksson's paternal grandfather",
+          "necessary": true,
+          "depends_on": [
+            "u1"
+          ]
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 1.8378479699604213
+    },
+    {
+      "sample_id": "2wikimultihopqa_cbcd85f00bd911eba7f7acde48001122",
+      "split": "train",
+      "question": "Which country the performer of song Backwater Blues is from?",
+      "sft_snapshot_count": 9,
+      "question_type": "bridge",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "performer of song Backwater Blues",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "country of origin of {u1}",
+          "necessary": true,
+          "depends_on": [
+            "u1"
+          ]
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 1.6094084549695253
+    },
+    {
+      "sample_id": "2wikimultihopqa_cdd42e23087c11ebbd6aac1f6bf848b6",
+      "split": "train",
+      "question": "Do both films: A Doll's House (1917 film) and Circles (film) have the directors from the same country?",
+      "sft_snapshot_count": 10,
+      "question_type": "comparison",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "country of director of A Doll's House (1917 film)",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "country of director of Circles (film)",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u3",
+          "description": "whether the directors of A Doll's House (1917 film) and Circles (film) are from the same country",
+          "necessary": true,
+          "depends_on": [
+            "u1",
+            "u2"
+          ]
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 2.903210303047672
+    },
+    {
+      "sample_id": "2wikimultihopqa_d09d82000bda11eba7f7acde48001122",
+      "split": "train",
+      "question": "What is the date of birth of the performer of song Down To The Honkytonk?",
+      "sft_snapshot_count": 8,
+      "question_type": "bridge",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "performer of song Down To The Honkytonk",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "date of birth of {u1}",
+          "necessary": true,
+          "depends_on": [
+            "u1"
+          ]
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 1.6920602158643305
+    },
+    {
+      "sample_id": "2wikimultihopqa_d2e0be5a08b611ebbd88ac1f6bf848b6",
+      "split": "train",
+      "question": "Which film has the director died later, Panam Paduthum Padu or Taxi!?",
+      "sft_snapshot_count": 10,
+      "question_type": "bridge_comparison",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "director of Panam Paduthum Padu",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "death date of {u1}",
+          "necessary": false,
+          "depends_on": [
+            "u1"
+          ]
+        },
+        {
+          "unit_id": "u3",
+          "description": "director of Taxi!",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u4",
+          "description": "death date of {u3}",
+          "necessary": false,
+          "depends_on": [
+            "u3"
+          ]
+        },
+        {
+          "unit_id": "u5",
+          "description": "which film's director died later",
+          "necessary": true,
+          "depends_on": [
+            "u2",
+            "u4"
+          ]
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 3.674540237057954
+    },
+    {
+      "sample_id": "2wikimultihopqa_d49e4dfd089311ebbd75ac1f6bf848b6",
+      "split": "train",
+      "question": "Are both Pass Island, Newfoundland And Labrador and Elvalandet located in the same country?",
+      "sft_snapshot_count": 7,
+      "question_type": "comparison",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "country of Pass Island, Newfoundland And Labrador",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "country of Elvalandet",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u3",
+          "description": "whether both are located in the same country",
+          "necessary": true,
+          "depends_on": [
+            "u1",
+            "u2"
+          ]
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 2.359459334053099
+    },
+    {
+      "sample_id": "2wikimultihopqa_d764e9480bda11eba7f7acde48001122",
+      "split": "train",
+      "question": "What is the date of death of the director of film More Deadly Than The Male?",
+      "sft_snapshot_count": 8,
+      "question_type": "bridge",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "director of film More Deadly Than The Male",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "date of death of {u1}",
+          "necessary": true,
+          "depends_on": [
+            "u1"
+          ]
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 1.6296637170016766
+    },
+    {
+      "sample_id": "2wikimultihopqa_d976e9ba085c11ebbd5cac1f6bf848b6",
+      "split": "train",
+      "question": "Which film whose director is younger, The Countess Of Parma or Hold 'Em Yale (1928 Film)?",
+      "sft_snapshot_count": 10,
+      "question_type": "bridge_comparison",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "director of The Countess Of Parma",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "birth date of {u1}",
+          "necessary": false,
+          "depends_on": [
+            "u1"
+          ]
+        },
+        {
+          "unit_id": "u3",
+          "description": "director of Hold 'Em Yale (1928 Film)",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u4",
+          "description": "birth date of {u3}",
+          "necessary": false,
+          "depends_on": [
+            "u3"
+          ]
+        },
+        {
+          "unit_id": "u5",
+          "description": "which film's director is younger",
+          "necessary": true,
+          "depends_on": [
+            "u2",
+            "u4"
+          ]
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 3.841737715061754
+    },
+    {
+      "sample_id": "2wikimultihopqa_df25d98608e111ebbda3ac1f6bf848b6",
+      "split": "train",
+      "question": "Do director of film She Fell Among Thieves and director of film Ernest Rides Again have the same nationality?",
+      "sft_snapshot_count": 10,
+      "question_type": "comparison",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "nationality of director of She Fell Among Thieves",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "nationality of director of Ernest Rides Again",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u3",
+          "description": "whether the directors have the same nationality",
+          "necessary": true,
+          "depends_on": [
+            "u1",
+            "u2"
+          ]
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 2.4437658940441906
+    },
+    {
+      "sample_id": "2wikimultihopqa_e092ab3c0bd911eba7f7acde48001122",
+      "split": "train",
+      "question": "What nationality is the performer of song Revolver (Lewis Black Ep)?",
+      "sft_snapshot_count": 9,
+      "question_type": "bridge",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "performer of song Revolver (Lewis Black Ep)",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "nationality of {u1}",
+          "necessary": true,
+          "depends_on": [
+            "u1"
+          ]
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 1.6496244641020894
+    },
+    {
+      "sample_id": "2wikimultihopqa_e1675412087411ebbd67ac1f6bf848b6",
+      "split": "train",
+      "question": "Are both movies, Balala The Fairies: The Movie and Swedenhielms, from the same country?",
+      "sft_snapshot_count": 8,
+      "question_type": "comparison",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "country of Balala The Fairies: The Movie",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "country of Swedenhielms",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u3",
+          "description": "whether both movies are from the same country",
+          "necessary": true,
+          "depends_on": [
+            "u1",
+            "u2"
+          ]
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 2.402863655006513
+    },
+    {
+      "sample_id": "2wikimultihopqa_e43338b108aa11ebbd80ac1f6bf848b6",
+      "split": "train",
+      "question": "Are both schools, Sri Jayawardenepura Maha Vidyalaya and V Gymnasium, located in the same country?",
+      "sft_snapshot_count": 9,
+      "question_type": "comparison",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "country of Sri Jayawardenepura Maha Vidyalaya",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "country of V Gymnasium",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u3",
+          "description": "whether both schools are located in the same country",
+          "necessary": true,
+          "depends_on": [
+            "u1",
+            "u2"
+          ]
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 2.4852357017807662
+    },
+    {
+      "sample_id": "2wikimultihopqa_e436d0220bdb11eba7f7acde48001122",
+      "split": "train",
+      "question": "Who is the spouse of the director of film Lord Of The Manor (Film)?",
+      "sft_snapshot_count": 8,
+      "question_type": "bridge",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "director of film Lord Of The Manor (Film)",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "spouse of {u1}",
+          "necessary": true,
+          "depends_on": [
+            "u1"
+          ]
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 1.630445578834042
+    },
+    {
+      "sample_id": "2wikimultihopqa_e450a7ca08c211ebbd8cac1f6bf848b6",
+      "split": "train",
+      "question": "Which film has the director who died first, Flirting With Love or Strait-Jacket?",
+      "sft_snapshot_count": 10,
+      "question_type": "bridge_comparison",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "director of Flirting With Love",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "death date of {u1}",
+          "necessary": false,
+          "depends_on": [
+            "u1"
+          ]
+        },
+        {
+          "unit_id": "u3",
+          "description": "director of Strait-Jacket",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u4",
+          "description": "death date of {u3}",
+          "necessary": false,
+          "depends_on": [
+            "u3"
+          ]
+        },
+        {
+          "unit_id": "u5",
+          "description": "which film's director died first",
+          "necessary": true,
+          "depends_on": [
+            "u2",
+            "u4"
+          ]
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 3.6527321259491146
+    },
+    {
+      "sample_id": "2wikimultihopqa_e4e452ca087411ebbd67ac1f6bf848b6",
+      "split": "train",
+      "question": "Which film whose director is younger, The Right Connections or Stocks And Blondes?",
+      "sft_snapshot_count": 10,
+      "question_type": "bridge_comparison",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "director of The Right Connections",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "birth date of {u1}",
+          "necessary": false,
+          "depends_on": [
+            "u1"
+          ]
+        },
+        {
+          "unit_id": "u3",
+          "description": "director of Stocks And Blondes",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u4",
+          "description": "birth date of {u3}",
+          "necessary": false,
+          "depends_on": [
+            "u3"
+          ]
+        },
+        {
+          "unit_id": "u5",
+          "description": "which film's director is younger",
+          "necessary": true,
+          "depends_on": [
+            "u2",
+            "u4"
+          ]
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 3.6535513889975846
+    },
+    {
+      "sample_id": "2wikimultihopqa_e4fbf9c1088311ebbd6dac1f6bf848b6",
+      "split": "train",
+      "question": "Are director of film One Exciting Week and director of film The Woman God Changed both from the same country?",
+      "sft_snapshot_count": 10,
+      "question_type": "bridge_comparison",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "director of film One Exciting Week",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "country of origin of {u1}",
+          "necessary": false,
+          "depends_on": [
+            "u1"
+          ]
+        },
+        {
+          "unit_id": "u3",
+          "description": "director of film The Woman God Changed",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u4",
+          "description": "country of origin of {u3}",
+          "necessary": false,
+          "depends_on": [
+            "u3"
+          ]
+        },
+        {
+          "unit_id": "u5",
+          "description": "whether {u2} and {u4} are the same",
+          "necessary": true,
+          "depends_on": [
+            "u2",
+            "u4"
+          ]
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 3.9030863968655467
+    },
+    {
+      "sample_id": "2wikimultihopqa_ec01ce8b08f711ebbdaaac1f6bf848b6",
+      "split": "train",
+      "question": "Who was born earlier, Faizal Yusof or Lenore Glen Offord?",
+      "sft_snapshot_count": 5,
+      "question_type": "comparison",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "birth date of Faizal Yusof",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "birth date of Lenore Glen Offord",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u3",
+          "description": "who was born earlier",
+          "necessary": true,
+          "depends_on": [
+            "u1",
+            "u2"
+          ]
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 2.31767461495474
+    },
+    {
+      "sample_id": "2wikimultihopqa_ed17b36008b511ebbd88ac1f6bf848b6",
+      "split": "train",
+      "question": "Which film whose director was born first, Desperado City or Dhanak?",
+      "sft_snapshot_count": 10,
+      "question_type": "bridge_comparison",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "director of Desperado City",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "birth date of {u1}",
+          "necessary": false,
+          "depends_on": [
+            "u1"
+          ]
+        },
+        {
+          "unit_id": "u3",
+          "description": "director of Dhanak",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u4",
+          "description": "birth date of {u3}",
+          "necessary": false,
+          "depends_on": [
+            "u3"
+          ]
+        },
+        {
+          "unit_id": "u5",
+          "description": "which film's director was born first",
+          "necessary": true,
+          "depends_on": [
+            "u2",
+            "u4"
+          ]
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 3.6743640820495784
+    },
+    {
+      "sample_id": "2wikimultihopqa_ed90d08c0bdb11eba7f7acde48001122",
+      "split": "train",
+      "question": "What is the date of birth of the director of film Fiend (Film)?",
+      "sft_snapshot_count": 8,
+      "question_type": "bridge",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "director of film Fiend (Film)",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "date of birth of {u1}",
+          "necessary": true,
+          "depends_on": [
+            "u1"
+          ]
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 1.609347137156874
+    },
+    {
+      "sample_id": "2wikimultihopqa_ef3a400a087811ebbd67ac1f6bf848b6",
+      "split": "train",
+      "question": "Do both Itty Bitty Titty Committee and Desperate Journey films have the directors from the same country?",
+      "sft_snapshot_count": 10,
+      "question_type": "comparison",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "country of director of Itty Bitty Titty Committee",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "country of director of Desperate Journey",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u3",
+          "description": "whether directors of Itty Bitty Titty Committee and Desperate Journey are from the same country",
+          "necessary": true,
+          "depends_on": [
+            "u1",
+            "u2"
+          ]
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 2.672250083880499
+    },
+    {
+      "sample_id": "2wikimultihopqa_efbc380a0baf11ebab90acde48001122",
+      "split": "train",
+      "question": "Who is the paternal grandmother of Sir Robert Long, 6Th Baronet?",
+      "sft_snapshot_count": 9,
+      "question_type": "bridge",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "father of Sir Robert Long, 6th Baronet",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "mother of {u1}, Sir Robert Long's paternal grandmother",
+          "necessary": true,
+          "depends_on": [
+            "u1"
+          ]
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 1.7974168311338872
+    },
+    {
+      "sample_id": "2wikimultihopqa_f01f570a0baf11ebab90acde48001122",
+      "split": "train",
+      "question": "Who is the paternal grandfather of Psusennes I?",
+      "sft_snapshot_count": 8,
+      "question_type": "bridge",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "father of Psusennes I",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "father of {u1}, Psusennes I's paternal grandfather",
+          "necessary": true,
+          "depends_on": [
+            "u1"
+          ]
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 1.7128383179660887
+    },
+    {
+      "sample_id": "2wikimultihopqa_f05c2009099111ebbdb0ac1f6bf848b6",
+      "split": "train",
+      "question": "Are both villages, Pociūnai (Prienai) and Zaandijk, located in the same country?",
+      "sft_snapshot_count": 9,
+      "question_type": "comparison",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "country where Pociūnai (Prienai) is located",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "country where Zaandijk is located",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u3",
+          "description": "whether Pociūnai (Prienai) and Zaandijk are in the same country",
+          "necessary": true,
+          "depends_on": [
+            "u1",
+            "u2"
+          ]
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 2.7570880129933357
+    },
+    {
+      "sample_id": "2wikimultihopqa_f0864eb00bdc11eba7f7acde48001122",
+      "split": "train",
+      "question": "What is the date of death of the director of film The Shadow Laughs (Film)?",
+      "sft_snapshot_count": 9,
+      "question_type": "bridge",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "director of The Shadow Laughs (Film)",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "date of death of {u1}",
+          "necessary": true,
+          "depends_on": [
+            "u1"
+          ]
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 1.6310887339059263
+    },
+    {
+      "sample_id": "2wikimultihopqa_f3d47a5d08b111ebbd85ac1f6bf848b6",
+      "split": "train",
+      "question": "Which film whose director was born first, A Man On The Road or Burnt Money?",
+      "sft_snapshot_count": 10,
+      "question_type": "bridge_comparison",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "director of A Man On The Road",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "birth date of {u1}",
+          "necessary": false,
+          "depends_on": [
+            "u1"
+          ]
+        },
+        {
+          "unit_id": "u3",
+          "description": "director of Burnt Money",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u4",
+          "description": "birth date of {u3}",
+          "necessary": false,
+          "depends_on": [
+            "u3"
+          ]
+        },
+        {
+          "unit_id": "u5",
+          "description": "which film's director was born first",
+          "necessary": true,
+          "depends_on": [
+            "u2",
+            "u4"
+          ]
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 3.6954968960490078
+    }
+  ],
+  "source_index": [
+    {
+      "batch_number": 1,
+      "global_number": 91,
+      "sample_id": "2wikimultihopqa_c3c1a5a00baf11ebab90acde48001122",
+      "split": "train",
+      "source_number": 91,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 2,
+      "global_number": 92,
+      "sample_id": "2wikimultihopqa_c3c8e96e0baf11ebab90acde48001122",
+      "split": "train",
+      "source_number": 92,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 3,
+      "global_number": 93,
+      "sample_id": "2wikimultihopqa_c526bfac0baf11ebab90acde48001122",
+      "split": "train",
+      "source_number": 93,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 4,
+      "global_number": 94,
+      "sample_id": "2wikimultihopqa_c751b94c088211ebbd6dac1f6bf848b6",
+      "split": "train",
+      "source_number": 94,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 5,
+      "global_number": 95,
+      "sample_id": "2wikimultihopqa_c99c2b3d086f11ebbd62ac1f6bf848b6",
+      "split": "train",
+      "source_number": 95,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 6,
+      "global_number": 96,
+      "sample_id": "2wikimultihopqa_cb2146660baf11ebab90acde48001122",
+      "split": "train",
+      "source_number": 96,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 7,
+      "global_number": 97,
+      "sample_id": "2wikimultihopqa_cbcd85f00bd911eba7f7acde48001122",
+      "split": "train",
+      "source_number": 97,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 8,
+      "global_number": 98,
+      "sample_id": "2wikimultihopqa_cdd42e23087c11ebbd6aac1f6bf848b6",
+      "split": "train",
+      "source_number": 98,
+      "review_status": "keep_generated_relabel"
+    },
+    {
+      "batch_number": 9,
+      "global_number": 99,
+      "sample_id": "2wikimultihopqa_d09d82000bda11eba7f7acde48001122",
+      "split": "train",
+      "source_number": 99,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 10,
+      "global_number": 100,
+      "sample_id": "2wikimultihopqa_d2e0be5a08b611ebbd88ac1f6bf848b6",
+      "split": "train",
+      "source_number": 100,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 11,
+      "global_number": 101,
+      "sample_id": "2wikimultihopqa_d49e4dfd089311ebbd75ac1f6bf848b6",
+      "split": "train",
+      "source_number": 101,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 12,
+      "global_number": 102,
+      "sample_id": "2wikimultihopqa_d764e9480bda11eba7f7acde48001122",
+      "split": "train",
+      "source_number": 102,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 13,
+      "global_number": 103,
+      "sample_id": "2wikimultihopqa_d976e9ba085c11ebbd5cac1f6bf848b6",
+      "split": "train",
+      "source_number": 103,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 14,
+      "global_number": 104,
+      "sample_id": "2wikimultihopqa_df25d98608e111ebbda3ac1f6bf848b6",
+      "split": "train",
+      "source_number": 104,
+      "review_status": "keep_generated_relabel"
+    },
+    {
+      "batch_number": 15,
+      "global_number": 105,
+      "sample_id": "2wikimultihopqa_e092ab3c0bd911eba7f7acde48001122",
+      "split": "train",
+      "source_number": 105,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 16,
+      "global_number": 106,
+      "sample_id": "2wikimultihopqa_e1675412087411ebbd67ac1f6bf848b6",
+      "split": "train",
+      "source_number": 106,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 17,
+      "global_number": 107,
+      "sample_id": "2wikimultihopqa_e43338b108aa11ebbd80ac1f6bf848b6",
+      "split": "train",
+      "source_number": 107,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 18,
+      "global_number": 108,
+      "sample_id": "2wikimultihopqa_e436d0220bdb11eba7f7acde48001122",
+      "split": "train",
+      "source_number": 108,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 19,
+      "global_number": 109,
+      "sample_id": "2wikimultihopqa_e450a7ca08c211ebbd8cac1f6bf848b6",
+      "split": "train",
+      "source_number": 109,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 20,
+      "global_number": 110,
+      "sample_id": "2wikimultihopqa_e4e452ca087411ebbd67ac1f6bf848b6",
+      "split": "train",
+      "source_number": 110,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 21,
+      "global_number": 111,
+      "sample_id": "2wikimultihopqa_e4fbf9c1088311ebbd6dac1f6bf848b6",
+      "split": "train",
+      "source_number": 111,
+      "review_status": "review"
+    },
+    {
+      "batch_number": 22,
+      "global_number": 112,
+      "sample_id": "2wikimultihopqa_ec01ce8b08f711ebbdaaac1f6bf848b6",
+      "split": "train",
+      "source_number": 112,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 23,
+      "global_number": 113,
+      "sample_id": "2wikimultihopqa_ed17b36008b511ebbd88ac1f6bf848b6",
+      "split": "train",
+      "source_number": 113,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 24,
+      "global_number": 114,
+      "sample_id": "2wikimultihopqa_ed90d08c0bdb11eba7f7acde48001122",
+      "split": "train",
+      "source_number": 114,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 25,
+      "global_number": 115,
+      "sample_id": "2wikimultihopqa_ef3a400a087811ebbd67ac1f6bf848b6",
+      "split": "train",
+      "source_number": 115,
+      "review_status": "keep_generated_relabel"
+    },
+    {
+      "batch_number": 26,
+      "global_number": 116,
+      "sample_id": "2wikimultihopqa_efbc380a0baf11ebab90acde48001122",
+      "split": "train",
+      "source_number": 116,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 27,
+      "global_number": 117,
+      "sample_id": "2wikimultihopqa_f01f570a0baf11ebab90acde48001122",
+      "split": "train",
+      "source_number": 117,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 28,
+      "global_number": 118,
+      "sample_id": "2wikimultihopqa_f05c2009099111ebbdb0ac1f6bf848b6",
+      "split": "train",
+      "source_number": 118,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 29,
+      "global_number": 119,
+      "sample_id": "2wikimultihopqa_f0864eb00bdc11eba7f7acde48001122",
+      "split": "train",
+      "source_number": 119,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 30,
+      "global_number": 120,
+      "sample_id": "2wikimultihopqa_f3d47a5d08b111ebbd85ac1f6bf848b6",
+      "split": "train",
+      "source_number": 120,
+      "review_status": "no_change"
+    }
+  ]
+}

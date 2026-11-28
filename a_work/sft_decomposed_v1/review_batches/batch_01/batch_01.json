@@ -1,0 +1,1152 @@
+{
+  "annotation_version": "a-decompose-v1",
+  "status": "needs_review",
+  "batch_id": "batch_01",
+  "records": [
+    {
+      "sample_id": "2wikimultihopqa_015ccd41087711ebbd67ac1f6bf848b6",
+      "split": "train",
+      "question": "Are director of film The Enigma Of The Folies-Bergere and director of film Deep Soul (Film) from the same country?",
+      "sft_snapshot_count": 10,
+      "question_type": "comparison",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "country of director of The Enigma Of The Folies-Bergere",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "country of director of Deep Soul (Film)",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u3",
+          "description": "whether directors are from the same country",
+          "necessary": true,
+          "depends_on": [
+            "u1",
+            "u2"
+          ]
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 2.9513391458895057
+    },
+    {
+      "sample_id": "2wikimultihopqa_057dd7de0bdd11eba7f7acde48001122",
+      "split": "train",
+      "question": "Where was the director of film Two Against The World (1936 Film) born?",
+      "sft_snapshot_count": 8,
+      "question_type": "bridge",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "director of Two Against The World (1936 Film)",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "birthplace of {u1}",
+          "necessary": true,
+          "depends_on": [
+            "u1"
+          ]
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 1.7030588840134442
+    },
+    {
+      "sample_id": "2wikimultihopqa_085f772608c411ebbd8eac1f6bf848b6",
+      "split": "train",
+      "question": "Were K. Alex Müller and Christian Rocca of the same nationality?",
+      "sft_snapshot_count": 8,
+      "question_type": "comparison",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "nationality of K. Alex Müller",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "nationality of Christian Rocca",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u3",
+          "description": "whether K. Alex Müller and Christian Rocca were of the same nationality",
+          "necessary": true,
+          "depends_on": [
+            "u1",
+            "u2"
+          ]
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 2.477027687942609
+    },
+    {
+      "sample_id": "2wikimultihopqa_08d7167e084b11ebbd56ac1f6bf848b6",
+      "split": "train",
+      "question": "Which film has the director who was born earlier, They Came To Cordura or The Unknown Known?",
+      "sft_snapshot_count": 10,
+      "question_type": "bridge_comparison",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "director of They Came To Cordura",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "birth date of {u1}",
+          "necessary": false,
+          "depends_on": [
+            "u1"
+          ]
+        },
+        {
+          "unit_id": "u3",
+          "description": "director of The Unknown Known",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u4",
+          "description": "birth date of {u3}",
+          "necessary": false,
+          "depends_on": [
+            "u3"
+          ]
+        },
+        {
+          "unit_id": "u5",
+          "description": "which film's director was born earlier",
+          "necessary": true,
+          "depends_on": [
+            "u2",
+            "u4"
+          ]
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 3.7166302499826998
+    },
+    {
+      "sample_id": "2wikimultihopqa_0ae4bb72086111ebbd5dac1f6bf848b6",
+      "split": "train",
+      "question": "Who died first, Maude Fealy or Lars Gustafsson?",
+      "sft_snapshot_count": 7,
+      "question_type": "bridge_comparison",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "death date of Maude Fealy",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "death date of Lars Gustafsson",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u3",
+          "description": "who died first",
+          "necessary": true,
+          "depends_on": [
+            "u1",
+            "u2"
+          ]
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 2.2899161130189896
+    },
+    {
+      "sample_id": "2wikimultihopqa_0b4d4cb20bdd11eba7f7acde48001122",
+      "split": "train",
+      "question": "Where was the place of death of the director of film Under The Cherry Moon?",
+      "sft_snapshot_count": 9,
+      "question_type": "bridge",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "director of film Under The Cherry Moon",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "place of death of {u1}",
+          "necessary": true,
+          "depends_on": [
+            "u1"
+          ]
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 1.618038852000609
+    },
+    {
+      "sample_id": "2wikimultihopqa_11f7f17c0bdb11eba7f7acde48001122",
+      "split": "train",
+      "question": "What nationality is the director of film Higher Than A Kite?",
+      "sft_snapshot_count": 8,
+      "question_type": "bridge",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "director of film Higher Than A Kite",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "nationality of {u1}",
+          "necessary": true,
+          "depends_on": [
+            "u1"
+          ]
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 1.6189431631937623
+    },
+    {
+      "sample_id": "2wikimultihopqa_137cbd01098c11ebbdb0ac1f6bf848b6",
+      "split": "train",
+      "question": "Are both villages, Damvant and Gusheh-Ye Mohammad Malek, located in the same country?",
+      "sft_snapshot_count": 9,
+      "question_type": "comparison",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "country of Damvant",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "country of Gusheh-Ye Mohammad Malek",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u3",
+          "description": "whether Damvant and Gusheh-Ye Mohammad Malek are in the same country",
+          "necessary": true,
+          "depends_on": [
+            "u1",
+            "u2"
+          ]
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 2.554295595968142
+    },
+    {
+      "sample_id": "2wikimultihopqa_16a707100bb011ebab90acde48001122",
+      "split": "train",
+      "question": "Who is the paternal grandfather of Princess Mangkubumi?",
+      "sft_snapshot_count": 9,
+      "question_type": "bridge",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "father of Princess Mangkubumi",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "father of {u1}, Princess Mangkubumi's paternal grandfather",
+          "necessary": true,
+          "depends_on": [
+            "u1"
+          ]
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 1.7596377120353281
+    },
+    {
+      "sample_id": "2wikimultihopqa_1b5c5d6a0baf11ebab90acde48001122",
+      "split": "train",
+      "question": "Who is Tiberius (Son Of Justinian Ii)'s paternal grandfather?",
+      "sft_snapshot_count": 8,
+      "question_type": "bridge",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "father of Tiberius (Son Of Justinian Ii)",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "father of {u1}, Tiberius (Son Of Justinian Ii)'s paternal grandfather",
+          "necessary": true,
+          "depends_on": [
+            "u1"
+          ]
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 1.9853552069980651
+    },
+    {
+      "sample_id": "2wikimultihopqa_1ec8b764099211ebbdb0ac1f6bf848b6",
+      "split": "train",
+      "question": "Are both Ilyinskoye, Selivanovsky District, Vladimir Oblast and Chal Lal located in the same country?",
+      "sft_snapshot_count": 9,
+      "question_type": "comparison",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "country of Ilyinskoye, Selivanovsky District, Vladimir Oblast",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "country of Chal Lal",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u3",
+          "description": "whether both locations are in the same country",
+          "necessary": true,
+          "depends_on": [
+            "u1",
+            "u2"
+          ]
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 2.506477207876742
+    },
+    {
+      "sample_id": "2wikimultihopqa_218b92b40bdc11eba7f7acde48001122",
+      "split": "train",
+      "question": "Where was the director of film All By Myself (Film) born?",
+      "sft_snapshot_count": 8,
+      "question_type": "bridge",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "director of All By Myself (Film)",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "birthplace of {u1}",
+          "necessary": true,
+          "depends_on": [
+            "u1"
+          ]
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 1.608527063159272
+    },
+    {
+      "sample_id": "2wikimultihopqa_2547e59c089b11ebbd78ac1f6bf848b6",
+      "split": "train",
+      "question": "Who died later, Landgravine Sophie Of Hesse-Kassel or Juan Riba?",
+      "sft_snapshot_count": 9,
+      "question_type": "bridge_comparison",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "death date of Landgravine Sophie Of Hesse-Kassel",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "death date of Juan Riba",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u3",
+          "description": "who died later",
+          "necessary": true,
+          "depends_on": [
+            "u1",
+            "u2"
+          ]
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 2.359358756104484
+    },
+    {
+      "sample_id": "2wikimultihopqa_254e9ee20bdb11eba7f7acde48001122",
+      "split": "train",
+      "question": "Which country the director of film Kelly Of The Secret Service is from?",
+      "sft_snapshot_count": 7,
+      "question_type": "bridge",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "director of film Kelly Of The Secret Service",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "country of origin of {u1}",
+          "necessary": true,
+          "depends_on": [
+            "u1"
+          ]
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 1.6308583780191839
+    },
+    {
+      "sample_id": "2wikimultihopqa_2564e76e089e11ebbd78ac1f6bf848b6",
+      "split": "train",
+      "question": "Who was born first, Jaime Manuel Gómez or Lars Levi Laestadius?",
+      "sft_snapshot_count": 8,
+      "question_type": "comparison",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "birth date of Jaime Manuel Gómez",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "birth date of Lars Levi Laestadius",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u3",
+          "description": "who was born first",
+          "necessary": true,
+          "depends_on": [
+            "u1",
+            "u2"
+          ]
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 2.3176909850444645
+    },
+    {
+      "sample_id": "2wikimultihopqa_297ea8fb097011ebbdb0ac1f6bf848b6",
+      "split": "train",
+      "question": "Are Aghol Beyk-E Olya and Bardiyeh-Ye Yek located in the same country?",
+      "sft_snapshot_count": 8,
+      "question_type": "comparison",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "country of Aghol Beyk-E Olya",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "country of Bardiyeh-Ye Yek",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u3",
+          "description": "whether Aghol Beyk-E Olya and Bardiyeh-Ye Yek are located in the same country",
+          "necessary": true,
+          "depends_on": [
+            "u1",
+            "u2"
+          ]
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 2.777900642948225
+    },
+    {
+      "sample_id": "2wikimultihopqa_2ec600e40bb011ebab90acde48001122",
+      "split": "train",
+      "question": "Who is the paternal grandfather of Milo (Bishop Of Trier)?",
+      "sft_snapshot_count": 7,
+      "question_type": "bridge",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "father of Milo (Bishop Of Trier)",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "father of {u1}, Milo (Bishop Of Trier)'s paternal grandfather",
+          "necessary": true,
+          "depends_on": [
+            "u1"
+          ]
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 1.8595865641254932
+    },
+    {
+      "sample_id": "2wikimultihopqa_30f1c3da0bb011ebab90acde48001122",
+      "split": "train",
+      "question": "Who is the maternal grandfather of William D'Aubigny, 2Nd Earl Of Arundel?",
+      "sft_snapshot_count": 8,
+      "question_type": "bridge",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "mother of William D'Aubigny, 2nd Earl Of Arundel",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "father of {u1}, William D'Aubigny's maternal grandfather",
+          "necessary": true,
+          "depends_on": [
+            "u1"
+          ]
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 1.9838670659810305
+    },
+    {
+      "sample_id": "2wikimultihopqa_31756c8e085511ebbd59ac1f6bf848b6",
+      "split": "train",
+      "question": "Do both Opium (1919 Film) and Monna Vanna (1915 Film) films have the directors from the same country?",
+      "sft_snapshot_count": 10,
+      "question_type": "comparison",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "country of director of Opium (1919 Film)",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "country of director of Monna Vanna (1915 Film)",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u3",
+          "description": "whether directors of Opium (1919 Film) and Monna Vanna (1915 Film) are from the same country",
+          "necessary": true,
+          "depends_on": [
+            "u1",
+            "u2"
+          ]
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 3.048512827139348
+    },
+    {
+      "sample_id": "2wikimultihopqa_32e5e2840bb011ebab90acde48001122",
+      "split": "train",
+      "question": "Who is the father of Grand Duchess Elizabeth Mikhailovna Of Russia?",
+      "sft_snapshot_count": 7,
+      "question_type": "bridge",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "mother of Grand Duchess Elizabeth Mikhailovna Of Russia",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "father of {u1}, Grand Duchess Elizabeth Mikhailovna Of Russia's father",
+          "necessary": true,
+          "depends_on": [
+            "u1"
+          ]
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 1.8599737759213895
+    },
+    {
+      "sample_id": "2wikimultihopqa_36363b920baf11ebab90acde48001122",
+      "split": "train",
+      "question": "Who is Abba Saga's paternal grandfather?",
+      "sft_snapshot_count": 9,
+      "question_type": "bridge",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "father of Abba Saga",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "father of {u1}, Abba Saga's paternal grandfather",
+          "necessary": true,
+          "depends_on": [
+            "u1"
+          ]
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 1.671702649910003
+    },
+    {
+      "sample_id": "2wikimultihopqa_36df83c7084b11ebbd56ac1f6bf848b6",
+      "split": "train",
+      "question": "Who was born earlier, Eberhard Nestle or Zélia Cardoso De Mello?",
+      "sft_snapshot_count": 8,
+      "question_type": "comparison",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "birth date of Eberhard Nestle",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "birth date of Zélia Cardoso De Mello",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u3",
+          "description": "who was born earlier",
+          "necessary": true,
+          "depends_on": [
+            "u1",
+            "u2"
+          ]
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 2.379537486936897
+    },
+    {
+      "sample_id": "2wikimultihopqa_36f59e640bdd11eba7f7acde48001122",
+      "split": "train",
+      "question": "When was the director of film Artists Under The Big Top: Perplexed born?",
+      "sft_snapshot_count": 8,
+      "question_type": "bridge",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "director of film Artists Under The Big Top: Perplexed",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "birth date of {u1}",
+          "necessary": true,
+          "depends_on": [
+            "u1"
+          ]
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 1.692727321991697
+    },
+    {
+      "sample_id": "2wikimultihopqa_3ac87e2c0baf11ebab90acde48001122",
+      "split": "train",
+      "question": "Who is Stephen Tomašević Of Bosnia's father-in-law?",
+      "sft_snapshot_count": 8,
+      "question_type": "bridge",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "wife of Stephen Tomašević Of Bosnia",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "father of {u1}, Stephen Tomašević Of Bosnia's father-in-law",
+          "necessary": true,
+          "depends_on": [
+            "u1"
+          ]
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 1.900491819018498
+    },
+    {
+      "sample_id": "2wikimultihopqa_3d884fec0bdd11eba7f7acde48001122",
+      "split": "train",
+      "question": "What is the place of birth of the director of film The Outsider (2018 Film)?",
+      "sft_snapshot_count": 9,
+      "question_type": "bridge",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "director of The Outsider (2018 Film)",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "place of birth of {u1}",
+          "necessary": true,
+          "depends_on": [
+            "u1"
+          ]
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 1.691692201886326
+    },
+    {
+      "sample_id": "2wikimultihopqa_43110efa08a311ebbd7bac1f6bf848b6",
+      "split": "train",
+      "question": "Which film has the director died earlier, The Son Of Dr. Jekyll or Man From Montana?",
+      "sft_snapshot_count": 10,
+      "question_type": "bridge_comparison",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "director of The Son Of Dr. Jekyll",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "death date of {u1}",
+          "necessary": false,
+          "depends_on": [
+            "u1"
+          ]
+        },
+        {
+          "unit_id": "u3",
+          "description": "director of Man From Montana",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u4",
+          "description": "death date of {u3}",
+          "necessary": false,
+          "depends_on": [
+            "u3"
+          ]
+        },
+        {
+          "unit_id": "u5",
+          "description": "which film's director died earlier",
+          "necessary": true,
+          "depends_on": [
+            "u2",
+            "u4"
+          ]
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 3.7156884581781924
+    },
+    {
+      "sample_id": "2wikimultihopqa_461f74380bdc11eba7f7acde48001122",
+      "split": "train",
+      "question": "Where was the director of film Jîn born?",
+      "sft_snapshot_count": 9,
+      "question_type": "bridge",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "director of film Jîn",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "birthplace of {u1}",
+          "necessary": true,
+          "depends_on": [
+            "u1"
+          ]
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 1.5657325459178537
+    },
+    {
+      "sample_id": "2wikimultihopqa_481d8b620baf11ebab90acde48001122",
+      "split": "train",
+      "question": "Who is Catherine Of Hungary, Queen Of Serbia's mother-in-law?",
+      "sft_snapshot_count": 7,
+      "question_type": "bridge",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "husband of Catherine Of Hungary, Queen Of Serbia",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "mother of {u1}, Catherine Of Hungary, Queen Of Serbia's mother-in-law",
+          "necessary": true,
+          "depends_on": [
+            "u1"
+          ]
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 1.880392997059971
+    },
+    {
+      "sample_id": "2wikimultihopqa_485a0492085911ebbd5bac1f6bf848b6",
+      "split": "train",
+      "question": "Were Glenn Walker (footballer, born 1998) and Eddie Deezen from the same country?",
+      "sft_snapshot_count": 9,
+      "question_type": "comparison",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "country of Glenn Walker (footballer, born 1998)",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "country of Eddie Deezen",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u3",
+          "description": "whether Glenn Walker (footballer, born 1998) and Eddie Deezen are from the same country",
+          "necessary": true,
+          "depends_on": [
+            "u1",
+            "u2"
+          ]
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 2.7762991569470614
+    },
+    {
+      "sample_id": "2wikimultihopqa_4c0857900bda11eba7f7acde48001122",
+      "split": "train",
+      "question": "Where was the place of death of the director of film Old Clothes?",
+      "sft_snapshot_count": 9,
+      "question_type": "bridge",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "director of film Old Clothes",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "place of death of {u1}",
+          "necessary": true,
+          "depends_on": [
+            "u1"
+          ]
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 1.566216440172866
+    }
+  ],
+  "source_index": [
+    {
+      "batch_number": 1,
+      "global_number": 1,
+      "sample_id": "2wikimultihopqa_015ccd41087711ebbd67ac1f6bf848b6",
+      "split": "train",
+      "source_number": 1,
+      "review_status": "keep_generated_relabel"
+    },
+    {
+      "batch_number": 2,
+      "global_number": 2,
+      "sample_id": "2wikimultihopqa_057dd7de0bdd11eba7f7acde48001122",
+      "split": "train",
+      "source_number": 2,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 3,
+      "global_number": 3,
+      "sample_id": "2wikimultihopqa_085f772608c411ebbd8eac1f6bf848b6",
+      "split": "train",
+      "source_number": 3,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 4,
+      "global_number": 4,
+      "sample_id": "2wikimultihopqa_08d7167e084b11ebbd56ac1f6bf848b6",
+      "split": "train",
+      "source_number": 4,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 5,
+      "global_number": 5,
+      "sample_id": "2wikimultihopqa_0ae4bb72086111ebbd5dac1f6bf848b6",
+      "split": "train",
+      "source_number": 5,
+      "review_status": "modify_generated"
+    },
+    {
+      "batch_number": 6,
+      "global_number": 6,
+      "sample_id": "2wikimultihopqa_0b4d4cb20bdd11eba7f7acde48001122",
+      "split": "train",
+      "source_number": 6,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 7,
+      "global_number": 7,
+      "sample_id": "2wikimultihopqa_11f7f17c0bdb11eba7f7acde48001122",
+      "split": "train",
+      "source_number": 7,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 8,
+      "global_number": 8,
+      "sample_id": "2wikimultihopqa_137cbd01098c11ebbdb0ac1f6bf848b6",
+      "split": "train",
+      "source_number": 8,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 9,
+      "global_number": 9,
+      "sample_id": "2wikimultihopqa_16a707100bb011ebab90acde48001122",
+      "split": "train",
+      "source_number": 9,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 10,
+      "global_number": 10,
+      "sample_id": "2wikimultihopqa_1b5c5d6a0baf11ebab90acde48001122",
+      "split": "train",
+      "source_number": 10,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 11,
+      "global_number": 11,
+      "sample_id": "2wikimultihopqa_1ec8b764099211ebbdb0ac1f6bf848b6",
+      "split": "train",
+      "source_number": 11,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 12,
+      "global_number": 12,
+      "sample_id": "2wikimultihopqa_218b92b40bdc11eba7f7acde48001122",
+      "split": "train",
+      "source_number": 12,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 13,
+      "global_number": 13,
+      "sample_id": "2wikimultihopqa_2547e59c089b11ebbd78ac1f6bf848b6",
+      "split": "train",
+      "source_number": 13,
+      "review_status": "modify_generated"
+    },
+    {
+      "batch_number": 14,
+      "global_number": 14,
+      "sample_id": "2wikimultihopqa_254e9ee20bdb11eba7f7acde48001122",
+      "split": "train",
+      "source_number": 14,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 15,
+      "global_number": 15,
+      "sample_id": "2wikimultihopqa_2564e76e089e11ebbd78ac1f6bf848b6",
+      "split": "train",
+      "source_number": 15,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 16,
+      "global_number": 16,
+      "sample_id": "2wikimultihopqa_297ea8fb097011ebbdb0ac1f6bf848b6",
+      "split": "train",
+      "source_number": 16,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 17,
+      "global_number": 17,
+      "sample_id": "2wikimultihopqa_2ec600e40bb011ebab90acde48001122",
+      "split": "train",
+      "source_number": 17,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 18,
+      "global_number": 18,
+      "sample_id": "2wikimultihopqa_30f1c3da0bb011ebab90acde48001122",
+      "split": "train",
+      "source_number": 18,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 19,
+      "global_number": 19,
+      "sample_id": "2wikimultihopqa_31756c8e085511ebbd59ac1f6bf848b6",
+      "split": "train",
+      "source_number": 19,
+      "review_status": "keep_generated_relabel"
+    },
+    {
+      "batch_number": 20,
+      "global_number": 20,
+      "sample_id": "2wikimultihopqa_32e5e2840bb011ebab90acde48001122",
+      "split": "train",
+      "source_number": 20,
+      "review_status": "modify_generated"
+    },
+    {
+      "batch_number": 21,
+      "global_number": 21,
+      "sample_id": "2wikimultihopqa_36363b920baf11ebab90acde48001122",
+      "split": "train",
+      "source_number": 21,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 22,
+      "global_number": 22,
+      "sample_id": "2wikimultihopqa_36df83c7084b11ebbd56ac1f6bf848b6",
+      "split": "train",
+      "source_number": 22,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 23,
+      "global_number": 23,
+      "sample_id": "2wikimultihopqa_36f59e640bdd11eba7f7acde48001122",
+      "split": "train",
+      "source_number": 23,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 24,
+      "global_number": 24,
+      "sample_id": "2wikimultihopqa_3ac87e2c0baf11ebab90acde48001122",
+      "split": "train",
+      "source_number": 24,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 25,
+      "global_number": 25,
+      "sample_id": "2wikimultihopqa_3d884fec0bdd11eba7f7acde48001122",
+      "split": "train",
+      "source_number": 25,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 26,
+      "global_number": 26,
+      "sample_id": "2wikimultihopqa_43110efa08a311ebbd7bac1f6bf848b6",
+      "split": "train",
+      "source_number": 26,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 27,
+      "global_number": 27,
+      "sample_id": "2wikimultihopqa_461f74380bdc11eba7f7acde48001122",
+      "split": "train",
+      "source_number": 27,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 28,
+      "global_number": 28,
+      "sample_id": "2wikimultihopqa_481d8b620baf11ebab90acde48001122",
+      "split": "train",
+      "source_number": 28,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 29,
+      "global_number": 29,
+      "sample_id": "2wikimultihopqa_485a0492085911ebbd5bac1f6bf848b6",
+      "split": "train",
+      "source_number": 29,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 30,
+      "global_number": 30,
+      "sample_id": "2wikimultihopqa_4c0857900bda11eba7f7acde48001122",
+      "split": "train",
+      "source_number": 30,
+      "review_status": "no_change"
+    }
+  ]
+}

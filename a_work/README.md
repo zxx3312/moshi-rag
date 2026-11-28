@@ -13,6 +13,7 @@ python3 a_work/run_demo.py                      # two hand-made traces with plac
 
 | File | Role |
 |---|---|
+| `sft_decomposed_v1/review_batches/` | Ten human-review batches of 30 SFT questions each, preserving train/dev membership, evidence and review notes |
 | `annotate_sft_review.py` | Reapply reviewed SFT Markdown annotations without changing raw decompositions |
 | `sft_decomposed_v1/comparison_human.md`, `sft_decomposed_v1/human_comparison_review.json` | AI-assisted comparison of 300 SFT questions; retain reasonable generated units and remap supervision |
 | `turntaking/schema.py` | Action and label names from B's interface v1; observation and decision types |
@@ -128,3 +129,7 @@ these mappings were reviewed by Codex and do not constitute independent human an
 - The cascade uses synthetic question audio (Piper) until C's recordings are shared, and Whisper is not streaming.
 - Models that share a GPU may slow each other when they run concurrently; the replay does not simulate that.
 - Only non-Wait actions are logged.
+
+人工 Note 调整后的 batch 6–10（150 题）已补答案、支持集合及特殊推理字段；参见 `sft_decomposed_v1/review_batches/annotation_report_batch06_10.md`。批次 JSON 为当前标注副本，原始推理保存在 raw_decomposition；原始 train/dev 导出未覆盖。
+
+2026-11-28：batch 6–10 已由用户审核，并按最新 Note 完成修订；当前版本 note-aligned-v3。6-15 的鞋匠单元保留证据不足（答案 null）；逐时刻 SFT 尚未重建。历史审阅记录仅供追溯。

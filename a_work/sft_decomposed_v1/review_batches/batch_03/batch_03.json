@@ -1,0 +1,1226 @@
+{
+  "annotation_version": "a-decompose-v1",
+  "status": "needs_review",
+  "batch_id": "batch_03",
+  "records": [
+    {
+      "sample_id": "2wikimultihopqa_8d777f1a095911ebbdaeac1f6bf848b6",
+      "split": "train",
+      "question": "Do the movies Melancholia (2008 Film) and Lost Battalion (1960 Film), originate from the same country?",
+      "sft_snapshot_count": 9,
+      "question_type": "comparison",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "country of origin of Melancholia (2008 Film)",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "country of origin of Lost Battalion (1960 Film)",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u3",
+          "description": "whether Melancholia (2008 Film) and Lost Battalion (1960 Film) originate from the same country",
+          "necessary": true,
+          "depends_on": [
+            "u1",
+            "u2"
+          ]
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 2.9648558138869703
+    },
+    {
+      "sample_id": "2wikimultihopqa_8e43ba54087c11ebbd6aac1f6bf848b6",
+      "split": "train",
+      "question": "Which film was released more recently, Let's Be Famous or The Dilemma?",
+      "sft_snapshot_count": 9,
+      "question_type": "comparison",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "release year of Let's Be Famous",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "release year of The Dilemma",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u3",
+          "description": "which film was released more recently",
+          "necessary": true,
+          "depends_on": [
+            "u1",
+            "u2"
+          ]
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 2.3184153051115572
+    },
+    {
+      "sample_id": "2wikimultihopqa_8f3c6e140baf11ebab90acde48001122",
+      "split": "train",
+      "question": "Who is the paternal grandfather of Edward Montagu, Viscount Hinchingbrooke?",
+      "sft_snapshot_count": 7,
+      "question_type": "bridge",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "father of Edward Montagu, Viscount Hinchingbrooke",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "father of {u1}, Edward Montagu's paternal grandfather",
+          "necessary": true,
+          "depends_on": [
+            "u1"
+          ]
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 1.8175968490540981
+    },
+    {
+      "sample_id": "2wikimultihopqa_8f49c34c089011ebbd72ac1f6bf848b6",
+      "split": "train",
+      "question": "Are The Patriots (Film) and Kungajakt both from the same country?",
+      "sft_snapshot_count": 9,
+      "question_type": "comparison",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "country of The Patriots (Film)",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "country of Kungajakt",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u3",
+          "description": "whether The Patriots (Film) and Kungajakt are from the same country",
+          "necessary": true,
+          "depends_on": [
+            "u1",
+            "u2"
+          ]
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 2.485272131860256
+    },
+    {
+      "sample_id": "2wikimultihopqa_9040c5ab097511ebbdb0ac1f6bf848b6",
+      "split": "train",
+      "question": "Are Bol, Mazandaran and Kozmodemyansk, Perm Krai located in the same country?",
+      "sft_snapshot_count": 8,
+      "question_type": "comparison",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "country of Bol",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "country of Mazandaran",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u3",
+          "description": "country of Kozmodemyansk, Perm Krai",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u4",
+          "description": "whether Bol, Mazandaran and Kozmodemyansk, Perm Krai are located in the same country",
+          "necessary": true,
+          "depends_on": [
+            "u1",
+            "u2",
+            "u3"
+          ]
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 3.3399901958182454
+    },
+    {
+      "sample_id": "2wikimultihopqa_920f21380bda11eba7f7acde48001122",
+      "split": "train",
+      "question": "Who is the founder of the company that published The Friend (Lds Magazine)?",
+      "sft_snapshot_count": 9,
+      "question_type": "bridge",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "company that published The Friend (Lds Magazine)",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "founder of {u1}",
+          "necessary": true,
+          "depends_on": [
+            "u1"
+          ]
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 1.6293015088886023
+    },
+    {
+      "sample_id": "2wikimultihopqa_94e510f308c411ebbd8eac1f6bf848b6",
+      "split": "train",
+      "question": "Which film was released more recently, Trafic or The River'S End (Film)?",
+      "sft_snapshot_count": 7,
+      "question_type": "comparison",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "release year of Trafic",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "release year of The River'S End (Film)",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u3",
+          "description": "which film was released more recently",
+          "necessary": true,
+          "depends_on": [
+            "u1",
+            "u2"
+          ]
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 2.339482621056959
+    },
+    {
+      "sample_id": "2wikimultihopqa_97cea0b00baf11ebab90acde48001122",
+      "split": "train",
+      "question": "Who is Ramesses-Meryamun-Nebweben's paternal grandfather?",
+      "sft_snapshot_count": 9,
+      "question_type": "bridge",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "father of Ramesses-Meryamun-Nebweben",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "father of {u1}, Ramesses-Meryamun-Nebweben's paternal grandfather",
+          "necessary": true,
+          "depends_on": [
+            "u1"
+          ]
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 1.9635076858103275
+    },
+    {
+      "sample_id": "2wikimultihopqa_9be7c0dc088f11ebbd72ac1f6bf848b6",
+      "split": "train",
+      "question": "Which film has the director who is older, They Came Back or Captain Scarlett?",
+      "sft_snapshot_count": 10,
+      "question_type": "bridge_comparison",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "director of They Came Back",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "birth date of {u1}",
+          "necessary": false,
+          "depends_on": [
+            "u1"
+          ]
+        },
+        {
+          "unit_id": "u3",
+          "description": "director of Captain Scarlett",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u4",
+          "description": "birth date of {u3}",
+          "necessary": false,
+          "depends_on": [
+            "u3"
+          ]
+        },
+        {
+          "unit_id": "u5",
+          "description": "which film's director is older",
+          "necessary": true,
+          "depends_on": [
+            "u2",
+            "u4"
+          ]
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 3.6128102459479123
+    },
+    {
+      "sample_id": "2wikimultihopqa_9d785ec3097d11ebbdb0ac1f6bf848b6",
+      "split": "train",
+      "question": "Are both Tavakkolabad, Bam and Bardshelandan located in the same country?",
+      "sft_snapshot_count": 8,
+      "question_type": "comparison",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "country of Tavakkolabad, Bam",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "country of Bardshelandan",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u3",
+          "description": "whether Tavakkolabad, Bam and Bardshelandan are located in the same country",
+          "necessary": true,
+          "depends_on": [
+            "u1",
+            "u2"
+          ]
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 2.610019771847874
+    },
+    {
+      "sample_id": "2wikimultihopqa_9e9948280bdc11eba7f7acde48001122",
+      "split": "train",
+      "question": "What is the date of death of Brien Cokayne, 1St Baron Cullen Of Ashbourne's father?",
+      "sft_snapshot_count": 9,
+      "question_type": "bridge",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "father of Brien Cokayne, 1st Baron Cullen Of Ashbourne",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "date of death of {u1}",
+          "necessary": true,
+          "depends_on": [
+            "u1"
+          ]
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 1.8183563309721649
+    },
+    {
+      "sample_id": "2wikimultihopqa_a1ef2dee085311ebbd59ac1f6bf848b6",
+      "split": "train",
+      "question": "Are director of film A Woman's War and director of film The New Klondike from the same country?",
+      "sft_snapshot_count": 10,
+      "question_type": "comparison",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "country of director of A Woman's War",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "country of director of The New Klondike",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u3",
+          "description": "whether directors of A Woman's War and The New Klondike are from the same country",
+          "necessary": true,
+          "depends_on": [
+            "u1",
+            "u2"
+          ]
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 2.631000477820635
+    },
+    {
+      "sample_id": "2wikimultihopqa_a1f429840baf11ebab90acde48001122",
+      "split": "train",
+      "question": "Who is the paternal grandmother of Mechthild Of Bavaria?",
+      "sft_snapshot_count": 9,
+      "question_type": "bridge",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "father of Mechthild Of Bavaria",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "mother of {u1}, Mechthild Of Bavaria's paternal grandmother",
+          "necessary": true,
+          "depends_on": [
+            "u1"
+          ]
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 1.7957507849205285
+    },
+    {
+      "sample_id": "2wikimultihopqa_a383cf200baf11ebab90acde48001122",
+      "split": "train",
+      "question": "Who is Theodora Of Khazaria's father-in-law?",
+      "sft_snapshot_count": 8,
+      "question_type": "bridge",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "husband of Theodora Of Khazaria",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "father of {u1}, Theodora Of Khazaria's father-in-law",
+          "necessary": true,
+          "depends_on": [
+            "u1"
+          ]
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 1.8805333410855383
+    },
+    {
+      "sample_id": "2wikimultihopqa_a8e8237408a211ebbd7bac1f6bf848b6",
+      "split": "train",
+      "question": "Was Eric Newby or Raymond Griffith born first?",
+      "sft_snapshot_count": 9,
+      "question_type": "comparison",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "birth date of Eric Newby",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "birth date of Raymond Griffith",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u3",
+          "description": "who was born first",
+          "necessary": true,
+          "depends_on": [
+            "u1",
+            "u2"
+          ]
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 2.213762277038768
+    },
+    {
+      "sample_id": "2wikimultihopqa_aaf6d2540bda11eba7f7acde48001122",
+      "split": "train",
+      "question": "Where was the place of death of the director of film The Island Of Desire?",
+      "sft_snapshot_count": 9,
+      "question_type": "bridge",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "director of film The Island Of Desire",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "place of death of {u1}",
+          "necessary": true,
+          "depends_on": [
+            "u1"
+          ]
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 1.608594236895442
+    },
+    {
+      "sample_id": "2wikimultihopqa_afd5796e0bdb11eba7f7acde48001122",
+      "split": "train",
+      "question": "What is the date of death of the director of film For You I Have Sinned?",
+      "sft_snapshot_count": 8,
+      "question_type": "bridge",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "director of film For You I Have Sinned",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "date of death of {u1}",
+          "necessary": true,
+          "depends_on": [
+            "u1"
+          ]
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 1.6553153789136559
+    },
+    {
+      "sample_id": "2wikimultihopqa_b063b1ae0bd911eba7f7acde48001122",
+      "split": "train",
+      "question": "What is the place of birth of the director of film Keystone Hotel (Film)?",
+      "sft_snapshot_count": 8,
+      "question_type": "bridge",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "director of film Keystone Hotel (Film)",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "place of birth of {u1}",
+          "necessary": true,
+          "depends_on": [
+            "u1"
+          ]
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 1.6047272339928895
+    },
+    {
+      "sample_id": "2wikimultihopqa_b14d20df097211ebbdb0ac1f6bf848b6",
+      "split": "train",
+      "question": "Are both Marzian, Lorestan and Vella located in the same country?",
+      "sft_snapshot_count": 8,
+      "question_type": "comparison",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "country of Marzian",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "country of Lorestan",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u3",
+          "description": "country of Vella",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u4",
+          "description": "whether Marzian, Lorestan and Vella are located in the same country",
+          "necessary": true,
+          "depends_on": [
+            "u1",
+            "u2",
+            "u3"
+          ]
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 3.0904848319478333
+    },
+    {
+      "sample_id": "2wikimultihopqa_b2fd9eb4089d11ebbd78ac1f6bf848b6",
+      "split": "train",
+      "question": "Which film has the director who was born later, Ferocious Pal or My Sweet Little Village?",
+      "sft_snapshot_count": 10,
+      "question_type": "bridge_comparison",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "director of Ferocious Pal",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "birth date of {u1}",
+          "necessary": false,
+          "depends_on": [
+            "u1"
+          ]
+        },
+        {
+          "unit_id": "u3",
+          "description": "director of My Sweet Little Village",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u4",
+          "description": "birth date of {u3}",
+          "necessary": false,
+          "depends_on": [
+            "u3"
+          ]
+        },
+        {
+          "unit_id": "u5",
+          "description": "which film's director was born later",
+          "necessary": true,
+          "depends_on": [
+            "u2",
+            "u4"
+          ]
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 3.6739028298761696
+    },
+    {
+      "sample_id": "2wikimultihopqa_b3a5431b08cc11ebbd93ac1f6bf848b6",
+      "split": "train",
+      "question": "Do both directors of films One On One (1977 Film) and Ready Money (Film) share the same nationality?",
+      "sft_snapshot_count": 10,
+      "question_type": "comparison",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "nationality of director of One On One (1977 Film)",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "nationality of director of Ready Money (Film)",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u3",
+          "description": "whether both directors share the same nationality",
+          "necessary": true,
+          "depends_on": [
+            "u1",
+            "u2"
+          ]
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 2.5276728968601674
+    },
+    {
+      "sample_id": "2wikimultihopqa_b69ced00089911ebbd77ac1f6bf848b6",
+      "split": "train",
+      "question": "Were Susan Howatch and Hans Coper of the same nationality?",
+      "sft_snapshot_count": 9,
+      "question_type": "comparison",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "nationality of Susan Howatch",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "nationality of Hans Coper",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u3",
+          "description": "whether Susan Howatch and Hans Coper were of the same nationality",
+          "necessary": true,
+          "depends_on": [
+            "u1",
+            "u2"
+          ]
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 2.422148793004453
+    },
+    {
+      "sample_id": "2wikimultihopqa_b6f259dc0baf11ebab90acde48001122",
+      "split": "train",
+      "question": "Who is the paternal grandmother of Ptolemy Viii Physcon?",
+      "sft_snapshot_count": 8,
+      "question_type": "bridge",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "father of Ptolemy Viii Physcon",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "mother of {u1}, Ptolemy Viii Physcon's paternal grandmother",
+          "necessary": true,
+          "depends_on": [
+            "u1"
+          ]
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 1.8795428031589836
+    },
+    {
+      "sample_id": "2wikimultihopqa_b902985208d411ebbd97ac1f6bf848b6",
+      "split": "train",
+      "question": "Were Sami Yli-Sirniö and Torger Nergård of the same nationality?",
+      "sft_snapshot_count": 8,
+      "question_type": "comparison",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "nationality of Sami Yli-Sirniö",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "nationality of Torger Nergård",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u3",
+          "description": "whether Sami Yli-Sirniö and Torger Nergård were of the same nationality",
+          "necessary": true,
+          "depends_on": [
+            "u1",
+            "u2"
+          ]
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 2.756022533867508
+    },
+    {
+      "sample_id": "2wikimultihopqa_b99cad180baf11ebab90acde48001122",
+      "split": "train",
+      "question": "Who is Scholastique Of Champagne's paternal grandmother?",
+      "sft_snapshot_count": 8,
+      "question_type": "bridge",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "father of Scholastique Of Champagne",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "mother of {u1}, Scholastique Of Champagne's paternal grandmother",
+          "necessary": true,
+          "depends_on": [
+            "u1"
+          ]
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 1.796061712084338
+    },
+    {
+      "sample_id": "2wikimultihopqa_ba94e15808c211ebbd8cac1f6bf848b6",
+      "split": "train",
+      "question": "Who was born earlier, Suzy Mckee Charnas or Tariq Anam Khan?",
+      "sft_snapshot_count": 8,
+      "question_type": "comparison",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "birth date of Suzy Mckee Charnas",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "birth date of Tariq Anam Khan",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u3",
+          "description": "who was born earlier",
+          "necessary": true,
+          "depends_on": [
+            "u1",
+            "u2"
+          ]
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 2.4012000809889287
+    },
+    {
+      "sample_id": "2wikimultihopqa_bd95c40f08bc11ebbd89ac1f6bf848b6",
+      "split": "train",
+      "question": "Do both films, Bad Men Of The Hills and Desert Thieves, have the directors who are from the same country?",
+      "sft_snapshot_count": 10,
+      "question_type": "bridge_comparison",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "director of Bad Men Of The Hills",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "country of origin of {u1}",
+          "necessary": false,
+          "depends_on": [
+            "u1"
+          ]
+        },
+        {
+          "unit_id": "u3",
+          "description": "director of Desert Thieves",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u4",
+          "description": "country of origin of {u3}",
+          "necessary": false,
+          "depends_on": [
+            "u3"
+          ]
+        },
+        {
+          "unit_id": "u5",
+          "description": "whether {u2} and {u4} are the same",
+          "necessary": true,
+          "depends_on": [
+            "u2",
+            "u4"
+          ]
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 3.861787982052192
+    },
+    {
+      "sample_id": "2wikimultihopqa_c09bb4380baf11ebab90acde48001122",
+      "split": "train",
+      "question": "Who is Ultragotha's father-in-law?",
+      "sft_snapshot_count": 8,
+      "question_type": "bridge",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "spouse of Ultragotha",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "father of {u1}, Ultragotha's father-in-law",
+          "necessary": true,
+          "depends_on": [
+            "u1"
+          ]
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 1.712485731113702
+    },
+    {
+      "sample_id": "2wikimultihopqa_c16ac4b4088311ebbd6dac1f6bf848b6",
+      "split": "train",
+      "question": "Which film has the director who died first, Brewster Mccloud or The Crimson Curtain (1953 Film)?",
+      "sft_snapshot_count": 10,
+      "question_type": "bridge_comparison",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "director of Brewster Mccloud",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "death date of {u1}",
+          "necessary": false,
+          "depends_on": [
+            "u1"
+          ]
+        },
+        {
+          "unit_id": "u3",
+          "description": "director of The Crimson Curtain (1953 Film)",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u4",
+          "description": "death date of {u3}",
+          "necessary": false,
+          "depends_on": [
+            "u3"
+          ]
+        },
+        {
+          "unit_id": "u5",
+          "description": "which film's director died first",
+          "necessary": true,
+          "depends_on": [
+            "u2",
+            "u4"
+          ]
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 3.7786595108918846
+    },
+    {
+      "sample_id": "2wikimultihopqa_c1c9fc7a0baf11ebab90acde48001122",
+      "split": "train",
+      "question": "Who is the father-in-law of Aishwarya R. Dhanush?",
+      "sft_snapshot_count": 9,
+      "question_type": "bridge",
+      "units": [
+        {
+          "unit_id": "u1",
+          "description": "husband of Aishwarya R. Dhanush",
+          "necessary": false,
+          "depends_on": []
+        },
+        {
+          "unit_id": "u2",
+          "description": "father of {u1}, Aishwarya R. Dhanush's father-in-law",
+          "necessary": true,
+          "depends_on": [
+            "u1"
+          ]
+        }
+      ],
+      "fell_back": false,
+      "status": "needs_review",
+      "latency_s": 1.9633500729687512
+    }
+  ],
+  "source_index": [
+    {
+      "batch_number": 1,
+      "global_number": 61,
+      "sample_id": "2wikimultihopqa_8d777f1a095911ebbdaeac1f6bf848b6",
+      "split": "train",
+      "source_number": 61,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 2,
+      "global_number": 62,
+      "sample_id": "2wikimultihopqa_8e43ba54087c11ebbd6aac1f6bf848b6",
+      "split": "train",
+      "source_number": 62,
+      "review_status": "keep_generated_relabel"
+    },
+    {
+      "batch_number": 3,
+      "global_number": 63,
+      "sample_id": "2wikimultihopqa_8f3c6e140baf11ebab90acde48001122",
+      "split": "train",
+      "source_number": 63,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 4,
+      "global_number": 64,
+      "sample_id": "2wikimultihopqa_8f49c34c089011ebbd72ac1f6bf848b6",
+      "split": "train",
+      "source_number": 64,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 5,
+      "global_number": 65,
+      "sample_id": "2wikimultihopqa_9040c5ab097511ebbdb0ac1f6bf848b6",
+      "split": "train",
+      "source_number": 65,
+      "review_status": "modify_generated"
+    },
+    {
+      "batch_number": 6,
+      "global_number": 66,
+      "sample_id": "2wikimultihopqa_920f21380bda11eba7f7acde48001122",
+      "split": "train",
+      "source_number": 66,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 7,
+      "global_number": 67,
+      "sample_id": "2wikimultihopqa_94e510f308c411ebbd8eac1f6bf848b6",
+      "split": "train",
+      "source_number": 67,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 8,
+      "global_number": 68,
+      "sample_id": "2wikimultihopqa_97cea0b00baf11ebab90acde48001122",
+      "split": "train",
+      "source_number": 68,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 9,
+      "global_number": 69,
+      "sample_id": "2wikimultihopqa_9be7c0dc088f11ebbd72ac1f6bf848b6",
+      "split": "train",
+      "source_number": 69,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 10,
+      "global_number": 70,
+      "sample_id": "2wikimultihopqa_9d785ec3097d11ebbdb0ac1f6bf848b6",
+      "split": "train",
+      "source_number": 70,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 11,
+      "global_number": 71,
+      "sample_id": "2wikimultihopqa_9e9948280bdc11eba7f7acde48001122",
+      "split": "train",
+      "source_number": 71,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 12,
+      "global_number": 72,
+      "sample_id": "2wikimultihopqa_a1ef2dee085311ebbd59ac1f6bf848b6",
+      "split": "train",
+      "source_number": 72,
+      "review_status": "keep_generated_relabel"
+    },
+    {
+      "batch_number": 13,
+      "global_number": 73,
+      "sample_id": "2wikimultihopqa_a1f429840baf11ebab90acde48001122",
+      "split": "train",
+      "source_number": 73,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 14,
+      "global_number": 74,
+      "sample_id": "2wikimultihopqa_a383cf200baf11ebab90acde48001122",
+      "split": "train",
+      "source_number": 74,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 15,
+      "global_number": 75,
+      "sample_id": "2wikimultihopqa_a8e8237408a211ebbd7bac1f6bf848b6",
+      "split": "train",
+      "source_number": 75,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 16,
+      "global_number": 76,
+      "sample_id": "2wikimultihopqa_aaf6d2540bda11eba7f7acde48001122",
+      "split": "train",
+      "source_number": 76,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 17,
+      "global_number": 77,
+      "sample_id": "2wikimultihopqa_afd5796e0bdb11eba7f7acde48001122",
+      "split": "train",
+      "source_number": 77,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 18,
+      "global_number": 78,
+      "sample_id": "2wikimultihopqa_b063b1ae0bd911eba7f7acde48001122",
+      "split": "train",
+      "source_number": 78,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 19,
+      "global_number": 79,
+      "sample_id": "2wikimultihopqa_b14d20df097211ebbdb0ac1f6bf848b6",
+      "split": "train",
+      "source_number": 79,
+      "review_status": "modify_generated"
+    },
+    {
+      "batch_number": 20,
+      "global_number": 80,
+      "sample_id": "2wikimultihopqa_b2fd9eb4089d11ebbd78ac1f6bf848b6",
+      "split": "train",
+      "source_number": 80,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 21,
+      "global_number": 81,
+      "sample_id": "2wikimultihopqa_b3a5431b08cc11ebbd93ac1f6bf848b6",
+      "split": "train",
+      "source_number": 81,
+      "review_status": "keep_generated_relabel"
+    },
+    {
+      "batch_number": 22,
+      "global_number": 82,
+      "sample_id": "2wikimultihopqa_b69ced00089911ebbd77ac1f6bf848b6",
+      "split": "train",
+      "source_number": 82,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 23,
+      "global_number": 83,
+      "sample_id": "2wikimultihopqa_b6f259dc0baf11ebab90acde48001122",
+      "split": "train",
+      "source_number": 83,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 24,
+      "global_number": 84,
+      "sample_id": "2wikimultihopqa_b902985208d411ebbd97ac1f6bf848b6",
+      "split": "train",
+      "source_number": 84,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 25,
+      "global_number": 85,
+      "sample_id": "2wikimultihopqa_b99cad180baf11ebab90acde48001122",
+      "split": "train",
+      "source_number": 85,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 26,
+      "global_number": 86,
+      "sample_id": "2wikimultihopqa_ba94e15808c211ebbd8cac1f6bf848b6",
+      "split": "train",
+      "source_number": 86,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 27,
+      "global_number": 87,
+      "sample_id": "2wikimultihopqa_bd95c40f08bc11ebbd89ac1f6bf848b6",
+      "split": "train",
+      "source_number": 87,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 28,
+      "global_number": 88,
+      "sample_id": "2wikimultihopqa_c09bb4380baf11ebab90acde48001122",
+      "split": "train",
+      "source_number": 88,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 29,
+      "global_number": 89,
+      "sample_id": "2wikimultihopqa_c16ac4b4088311ebbd6dac1f6bf848b6",
+      "split": "train",
+      "source_number": 89,
+      "review_status": "no_change"
+    },
+    {
+      "batch_number": 30,
+      "global_number": 90,
+      "sample_id": "2wikimultihopqa_c1c9fc7a0baf11ebab90acde48001122",
+      "split": "train",
+      "source_number": 90,
+      "review_status": "no_change"
+    }
+  ]
+}

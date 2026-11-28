@@ -55,3 +55,17 @@ The first run used job `12608904` and log directory `vllm_v1`. The reusable Slur
 本轮 34 题需改生成拆解或题型、57 题保留新拆法并调整监督、6 题待确认、203 题未发现需单独修改的问题。
 原始生成 JSON、B 组 gold 和 SFT 文件未修改；这些文件仍不是已重建监督的可训练数据。
 重新导出 Markdown 后可运行 `python3 a_work/annotate_sft_review.py` 恢复标记。
+
+## 人工审查分批
+
+[review_batches/README.md](review_batches/README.md) 提供 10 个 batch 的分配索引，每批 30 题，各有 JSON 与 Markdown。
+按 train 243 题、dev 57 题的原顺序分批：01–08 每批 30 道 train；09 为 train 3 + dev 27；10 为 dev 30。
+每题保留原 split、sample_id 和原题号。分批仅为审查副本，不改变训练/验证划分，未读取预留测试集。
+Markdown 保留所有原始证据和审阅标记，JSON 的 records 与原生成记录一致；manifest 保存源文件哈希和映射。
+人工修改批次文件不会自动写回原文件；后续按 sample_id 回收，避免覆盖审查成果。
+
+各批文件现位于独立的 `review_batches/batch_01/` 至 `batch_10/` 文件夹中，每个文件夹包含同名 JSON 和 Markdown。
+
+人工 Note 调整后的 batch 6–10（150 题）已补答案、支持集合及特殊推理字段；参见 [标注报告](review_batches/annotation_report_batch06_10.md)。批次 JSON 为当前标注副本，原始推理保存在 raw_decomposition；原始 train/dev 导出未覆盖。
+
+2026-11-28：batch 6–10 已由用户审核，并按最新 Note 完成修订；当前版本 note-aligned-v3。6-15 的鞋匠单元保留证据不足（答案 null）；逐时刻 SFT 尚未重建。历史审阅记录仅供追溯。

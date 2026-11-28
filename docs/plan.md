@@ -262,3 +262,21 @@ B evaluator 未改动，之前固定 B commit 的 31 项通过记录仍保留。
 原始生成 JSON、B 组 gold 和 SFT 文件未修改。后续仍需人工确认、重标答案/证据/逐时刻标签及重建训练样本。
 这不是独立人工标注或正式性能评估；共享文档仅在此工作区更新，尚未同步 main。
 验证：300 条题目顺序和标记覆盖检查通过；train/dev 标记重复渲染一致且去标记后逐字恢复原文；6 个生成/源数据 SHA256 不变；`git diff --check` 通过，检查命令退出码 0。B 工作区保持干净。本轮为文档审阅与标记工具，未运行模型训练或控制器测试套件。
+
+### SFT 人工审查分批（2026-11-20）
+
+按用户要求额外生成 10 个 batch，每批 30 题，分配索引为 `a_work/sft_decomposed_v1/review_batches/README.md`。
+基于 `b-trainset-a-tokenizer` 的 `14083421` + dirty，各批提供 JSON、含完整证据及原审阅意见的 Markdown，另有带源 SHA256 的 manifest。
+沿用 train→dev 原顺序：01–08 各 30 train，09 为 3 train + 27 dev，10 为 30 dev；原划分仍是 243/57，未读取预留评测集。
+完成内容校验：10×30 题、300 个唯一 ID，无遗漏或重复；逐条 JSON 与原记录一致，Markdown 原题正文完整保留，5 个源文件 SHA256 未改变，检查退出码 0。
+原文件和 B 组数据未修改。此步仅完成审查分配副本，人工标签补齐及 SFT 重建尚未开始；不运行 GPU，不 commit/push。
+
+按用户后续要求，将 10 批分别放入 `review_batches/batch_01/` 至 `batch_10/`，更新索引、导航链接及 manifest 文件路径。验证 20 个文件移动完整，JSON 字节不变，Markdown 除导航链接外逐字不变，本地链接有效；退出码 0。未 commit/push。
+
+2026-11-21：按用户要求，在 10 个 batch 的 300 道题问题下方各添加一行空白 `Note:`，便于人工填写修改建议。验证每批 30 行、共 300 行，去除新增行后正文与修改前一致；JSON 和原始 train/dev 文件未改。未 commit/push。
+
+## Batch 6–10 人工 Note 驱动标注（2026-11-27）
+
+在 b-trainset-a-tokenizer 本地未提交工作区按用户授权完成 150 题单元调整、答案及支持集合补齐，保留 batch 6–8 原人工 Note，按其规则补写 batch 9–10 的 60 条 Note。7 题存在问题语义/证据或答案口径待确认，见 a_work/sft_decomposed_v1/review_batches/annotation_report_batch06_10.md。原始模型输出、原 gold、全部 context 与修改前快照均保留；B 文件和原始 train/dev 导出不变。150 题内容保留、依赖 DAG、证据引用、Note 覆盖检查通过，退出码 0。未重建逐时刻 SFT、未训练、未读取预留集、未 commit/push；新增标签为辅助标注，尚未人工验收。
+
+2026-11-28：用户确认 batch 6–10 审核通过，按七题最新 Note 完成 v3 修订。6-15 取消预设支持、答案 null/UNRESOLVED；7-17 改为两个必要答案。保留其余五题的已确认解释及特殊推理依据。清理当前 Markdown/JSON 待审核状态，历史快照保留。未 commit/push，未重建 SFT。
